@@ -28,23 +28,34 @@ jobs:
             set -e
             ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
+            # Create directory if it doesn't exist
+            sudo mkdir -p /var/www/polypdf-site
+            sudo chown -R $USER:$USER /var/www/polypdf-site
+
             # Navigate to the polypdf-site directory
-            cd /var/www/polypdf-site
-            
-            # Stash any local changes and pull latest code
-            git stash
-            git pull origin master
+            cd /var/www
+
+            # Clone repository if it doesn't exist, otherwise pull updates
+            if [ ! -d "polypdf-site/.git" ]; then
+              git clone https://github.com/mohammedbala/polypdf_site.git polypdf-site
+              cd polypdf-site
+            else
+              cd polypdf-site
+              git stash
+              git pull origin master
+            fi
 
             # Install dependencies and build the React app
             npm install
             npm run build
 
-            # For React apps, we typically serve the build folder with nginx or a static server
-            # If using pm2 with serve:
-            npm install -g serve
+            # Install serve globally if not already installed
+            if ! command -v serve &> /dev/null; then
+              npm install -g serve
+            fi
             
             # Check if the app is already running in pm2
-            if pm2 describe polypdf-site > /dev/null; then
+            if pm2 describe polypdf-site > /dev/null 2>&1; then
               pm2 reload polypdf-site
             else
               # Serve the build folder on port 3001 (or your preferred port)
