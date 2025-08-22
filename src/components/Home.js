@@ -105,7 +105,6 @@ const Home = ({ setCurrentPage }) => {
           <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#features" onClick={() => setMobileMenuOpen(false)}>Features</a>
             <a href="#testimonials" onClick={() => setMobileMenuOpen(false)}>Reviews</a>
-            <a href="#pricing" onClick={() => setMobileMenuOpen(false)}>Pricing</a>
             <a 
               href="https://apps.apple.com/app/polypdf" 
               className="nav-download"
