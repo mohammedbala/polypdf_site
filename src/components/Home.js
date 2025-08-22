@@ -61,10 +61,10 @@ const Home = ({ setCurrentPage }) => {
   ];
 
   const stats = [
-    { number: "50K+", label: "Active Users" },
-    { number: "4.8", label: "App Store Rating" },
-    { number: "2M+", label: "PDFs Processed" },
-    { number: "30%", label: "Time Saved" }
+    { number: "3", label: "Detection Modes" },
+    { number: "100%", label: "Offline Ready" },
+    { number: "1-Tap", label: "Measurements" },
+    { number: "Free", label: "To Start" }
   ];
 
   const testimonials = [
@@ -274,7 +274,7 @@ const Home = ({ setCurrentPage }) => {
             viewport={{ once: true }}
           >
             <h2>Ready to Transform Your PDF Workflow?</h2>
-            <p>Join 50,000+ professionals saving time and improving accuracy</p>
+            <p>Start working smarter with professional PDF tools designed for AEC</p>
             <div className="cta-buttons">
               <a href="https://apps.apple.com/app/polypdf" className="primary-btn large">
                 <FaApple /> Download for Free
@@ -294,7 +294,7 @@ const Home = ({ setCurrentPage }) => {
               </div>
               <div className="indicator">
                 <FaCheckCircle />
-                <span>30-Day Money Back</span>
+                <span>Professional Tools</span>
               </div>
             </div>
           </motion.div>
