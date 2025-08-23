@@ -98,7 +98,7 @@ const Home = ({ setCurrentPage }) => {
       >
         <nav className="nav container">
           <a href="#" className="logo">
-            <img src={parrotIcon} alt="PolyPDF" />
+            <img src={parrotIcon} alt="PolyPDF - Professional PDF markup and measurement app logo" />
             <span>PolyPDF</span>
           </a>
           
@@ -173,7 +173,7 @@ const Home = ({ setCurrentPage }) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            <img src={parrotIcon} alt="PolyPDF App" className="hero-icon" />
+            <img src={parrotIcon} alt="PolyPDF app icon - PDF tools for architects and engineers" className="hero-icon" loading="lazy" />
             <div className="floating-badge badge-1">
               <HiOutlineDocumentText /> Smart Detection
             </div>
@@ -304,7 +304,7 @@ const Home = ({ setCurrentPage }) => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-brand">
-              <img src={parrotIcon} alt="PolyPDF" />
+              <img src={parrotIcon} alt="PolyPDF footer logo - PDF markup tools" loading="lazy" />
               <p>The PDF app built for AEC professionals</p>
             </div>
             <div className="footer-links">
