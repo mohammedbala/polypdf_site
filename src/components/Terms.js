@@ -1,61 +1,77 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaFileContract, FaGavel, FaHandshake, FaExclamationTriangle } from 'react-icons/fa';
+import {
+  FaApple,
+  FaArrowLeft,
+  FaFileContract,
+  FaGavel,
+  FaHandshake,
+  FaLock
+} from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
 
-const Terms = ({ setCurrentPage }) => {
+const sections = [
+  {
+    icon: <FaFileContract />,
+    title: 'Scope',
+    content: [
+      'These terms apply to the PolyPDF website, the direct Mac download, the App Store versions of PolyPDF, and related support, licensing, and update services.',
+      'By downloading, installing, purchasing, or using PolyPDF, you agree to these terms.',
+      'If you do not agree, do not use the service or install the app.'
+    ]
+  },
+  {
+    icon: <FaHandshake />,
+    title: 'Free and paid access',
+    content: [
+      'The Mac app may be offered as a free download with limited free measurement usage before purchase is required for additional measurement workflows.',
+      'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
+      'Pricing, feature limits, and platform availability may differ between the direct download channel and the App Store channel.'
+    ]
+  },
+  {
+    icon: <FaApple />,
+    title: 'App Store purchases',
+    content: [
+      'If PolyPDF is later offered through Apple, Apple is the payment processor and merchant for that transaction.',
+      'Any future App Store billing, purchase restoration, taxes, and refunds are governed by Apple terms and policies.',
+      'If PolyPDF is offered as a universal App Store unlock in the future, that entitlement is tied to the Apple account used for the purchase, subject to Apple platform rules.'
+    ]
+  },
+  {
+    icon: <FaLock />,
+    title: 'Direct Mac purchases and license use',
+    content: [
+      'The current direct Mac purchase flow is processed through Lemon Squeezy at buy.polypdf.com and unlocked with a license key.',
+      'A direct Pro purchase grants a personal, non-transferable license to use the Mac app.',
+      'Each direct license may be activated on up to 3 Macs unless PolyPDF states otherwise at checkout.',
+      'You may not resell, sublicense, share, or distribute your license key.',
+      'PolyPDF may suspend or revoke a license for fraud, chargebacks, abuse, or material violation of these terms.'
+    ]
+  }
+];
+
+const Terms = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const sections = [
-    {
-      icon: <FaFileContract />,
-      title: "Acceptance of Terms",
-      content: [
-        "By downloading and using PolyPDF, you agree to these terms",
-        "These terms apply to all users of the app",
-        "We may update these terms from time to time",
-        "Continued use constitutes acceptance of new terms"
-      ]
-    },
-    {
-      icon: <FaHandshake />,
-      title: "License and Usage",
-      content: [
-        "PolyPDF grants you a personal, non-transferable license",
-        "For commercial use, a premium subscription is required",
-        "You may not reverse engineer or modify the app",
-        "One license covers all your personal iOS devices"
-      ]
-    },
-    {
-      icon: <FaGavel />,
-      title: "User Responsibilities",
-      content: [
-        "You are responsible for your use of the app",
-        "You must not use PolyPDF for illegal purposes",
-        "You retain ownership of all documents you create",
-        "You must respect intellectual property rights"
-      ]
-    }
-  ];
 
   return (
     <div className="legal-page terms">
       <header className="legal-header">
         <nav className="nav container">
-          <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); }} className="logo">
+          <Link to="/" className="logo">
             <img src={parrotIcon} alt="PolyPDF" />
             <span>PolyPDF</span>
-          </a>
-          <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); }} className="back-link">
+          </Link>
+          <Link to="/" className="back-link">
             <FaArrowLeft /> Back to Home
-          </a>
+          </Link>
         </nav>
       </header>
 
-      <motion.main 
+      <motion.main
         className="legal-content"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -63,35 +79,36 @@ const Terms = ({ setCurrentPage }) => {
       >
         <div className="container">
           <div className="legal-hero">
-            <h1>Terms of Service</h1>
-            <p className="legal-subtitle">Please read these terms carefully</p>
-            <p className="last-updated">Last updated: January 2024</p>
+            <h1>Terms of Use</h1>
+            <p className="legal-subtitle">Terms for the PolyPDF website, direct Mac download, and any future App Store builds</p>
+            <p className="last-updated">Last updated: March 16, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
-              These Terms of Service ("Terms") govern your use of PolyPDF, our iOS application 
-              for PDF markup and measurement. By using PolyPDF, you agree to be bound by these Terms.
+              These Terms of Use govern your use of PolyPDF, including the PolyPDF website,
+              the direct-download Mac application, any future App Store versions of the app, and related
+              purchasing, licensing, support, and update services.
             </p>
           </div>
 
           <div className="legal-sections">
             {sections.map((section, index) => (
-              <motion.section 
-                key={index}
+              <motion.section
+                key={section.title}
                 className="legal-section"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.08 }}
               >
                 <div className="section-header">
                   <div className="section-icon">{section.icon}</div>
                   <h2>{section.title}</h2>
                 </div>
                 <ul className="section-content">
-                  {section.content.map((item, i) => (
-                    <li key={i}>{item}</li>
+                  {section.content.map((item) => (
+                    <li key={item}>{item}</li>
                   ))}
                 </ul>
               </motion.section>
@@ -99,82 +116,53 @@ const Terms = ({ setCurrentPage }) => {
           </div>
 
           <section className="legal-section">
-            <h2>Subscription Terms</h2>
-            <h3>Premium Features</h3>
+            <h2>Refunds</h2>
             <ul className="section-content">
-              <li>Premium features require an active subscription</li>
-              <li>Subscriptions auto-renew unless cancelled</li>
-              <li>Cancel anytime through your Apple ID settings</li>
-              <li>No refunds for partial subscription periods</li>
-            </ul>
-            
-            <h3>Pricing</h3>
-            <ul className="section-content">
-              <li>Monthly: $9.99/month</li>
-              <li>Annual: $89.99/year (save 25%)</li>
-              <li>Prices may vary by region</li>
-              <li>7-day free trial available for new users</li>
+              <li>Direct Mac purchases are eligible for refunds within 30 days of purchase unless a different policy is displayed at checkout.</li>
+              <li>After 30 days, refunds for direct purchases are generally not provided except where required by law.</li>
+              <li>If an App Store version is offered later, App Store refunds are handled by Apple under Apple policies.</li>
             </ul>
           </section>
 
           <section className="legal-section">
             <div className="section-header">
-              <div className="section-icon"><FaExclamationTriangle /></div>
-              <h2>Disclaimers and Limitations</h2>
+              <div className="section-icon"><FaGavel /></div>
+              <h2>Updates, support, and discontinuation</h2>
             </div>
             <ul className="section-content">
-              <li>PolyPDF is provided "as is" without warranties</li>
-              <li>We are not liable for any indirect damages</li>
-              <li>Our total liability is limited to subscription fees paid</li>
-              <li>Some jurisdictions don't allow limitation of liability</li>
+              <li>The direct Mac app may include in-app update delivery through Sparkle or a similar updater.</li>
+              <li>Any future App Store versions are updated through Apple distribution systems.</li>
+              <li>Your purchase includes access to the software version made available through the purchase channel you used while the service is operated.</li>
+              <li>Future features, future OS compatibility, and continued operation of online services are not guaranteed.</li>
+              <li>If PolyPDF stops operating, already-downloaded software may keep working to the extent technically possible, but ongoing online services, new downloads, and reactivation are not guaranteed.</li>
             </ul>
           </section>
 
           <section className="legal-section">
-            <h2>Intellectual Property</h2>
-            <p>
-              All content, features, and functionality of PolyPDF are owned by us and are 
-              protected by international copyright, trademark, and other intellectual property laws.
-            </p>
+            <h2>Acceptable use</h2>
             <ul className="section-content">
-              <li>The PolyPDF name and logo are our trademarks</li>
-              <li>You may not use our trademarks without permission</li>
-              <li>Your content remains yours</li>
-              <li>You grant us license to display your content within the app</li>
+              <li>You must not use PolyPDF for illegal, fraudulent, or abusive activity.</li>
+              <li>You remain responsible for the documents and data you process with the app.</li>
+              <li>You must respect the intellectual property rights of others when using the app.</li>
             </ul>
           </section>
 
           <section className="legal-section">
-            <h2>Termination</h2>
-            <p>We may terminate or suspend your access to PolyPDF:</p>
+            <h2>Disclaimers and limitation of liability</h2>
             <ul className="section-content">
-              <li>For violations of these Terms</li>
-              <li>For fraudulent or illegal activities</li>
-              <li>For non-payment of subscription fees</li>
-              <li>At our discretion with notice</li>
+              <li>PolyPDF is provided on an “as is” and “as available” basis.</li>
+              <li>To the maximum extent allowed by law, PolyPDF disclaims implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.</li>
+              <li>To the maximum extent allowed by law, PolyPDF is not liable for indirect, incidental, special, consequential, or punitive damages.</li>
+              <li>If liability cannot be excluded, PolyPDF’s total liability is limited to the amount you paid for the applicable purchase.</li>
             </ul>
           </section>
 
           <section className="legal-section">
-            <h2>Governing Law</h2>
-            <p>
-              These Terms are governed by the laws of Delaware, USA, without regard to its 
-              conflict of law provisions. Any disputes shall be resolved in the courts of Delaware.
-            </p>
-          </section>
-
-          <section className="legal-section">
-            <h2>Contact Information</h2>
-            <p>For questions about these Terms, please contact us at:</p>
+            <h2>Contact</h2>
+            <p>Questions about these terms can be sent to:</p>
             <div className="contact-info">
-              <a href="mailto:legal@polypdf.app" className="contact-link">
-                legal@polypdf.app
-              </a>
+              <a href="mailto:support@polypdf.app" className="contact-link">support@polypdf.app</a>
             </div>
-            <p className="note">
-              PolyPDF is a product of [Your Company Name]<br />
-              [Your Address]
-            </p>
           </section>
         </div>
       </motion.main>
@@ -182,11 +170,11 @@ const Terms = ({ setCurrentPage }) => {
       <footer className="legal-footer">
         <div className="container">
           <div className="footer-content">
-            <p>&copy; 2024 PolyPDF. All rights reserved.</p>
+            <p>&copy; 2026 PolyPDF. All rights reserved.</p>
             <div className="footer-links">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); }}>Home</a>
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('privacy'); }}>Privacy Policy</a>
-              <a href="mailto:support@polypdf.app">Contact</a>
+              <Link to="/">Home</Link>
+              <Link to="/support">Support</Link>
+              <Link to="/privacy">Privacy Policy</Link>
             </div>
           </div>
         </div>

@@ -1,27 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Privacy from './components/Privacy';
+import Support from './components/Support';
 import Terms from './components/Terms';
 import './App.css';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('home');
-
-  const renderPage = () => {
-    switch(currentPage) {
-      case 'privacy':
-        return <Privacy setCurrentPage={setCurrentPage} />;
-      case 'terms':
-        return <Terms setCurrentPage={setCurrentPage} />;
-      default:
-        return <Home setCurrentPage={setCurrentPage} />;
-    }
-  };
-
   return (
-    <div className="App">
-      {renderPage()}
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 };
 

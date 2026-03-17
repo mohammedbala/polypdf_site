@@ -1,61 +1,68 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FaArrowLeft, FaShieldAlt, FaLock, FaUserShield, FaEnvelope } from 'react-icons/fa';
+import {
+  FaApple,
+  FaArrowLeft,
+  FaEnvelope,
+  FaLock,
+  FaShieldAlt,
+  FaUserShield
+} from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
 
-const Privacy = ({ setCurrentPage }) => {
+const sections = [
+  {
+    icon: <FaShieldAlt />,
+    title: 'Information we collect',
+    content: [
+      'When you browse the website, we may receive basic technical information such as IP address, browser type, and page requests from our hosting and security providers.',
+      'When you purchase or activate a direct Mac license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
+      'If you later purchase through Apple, Apple handles billing data. PolyPDF may receive limited sales, territory, restore, transaction-status, or refund-related information that Apple makes available to developers.',
+      'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose.'
+    ]
+  },
+  {
+    icon: <FaLock />,
+    title: 'How we use information',
+    content: [
+      'Provide downloads, purchase restoration, license activation, updates, order lookup, and customer support.',
+      'Protect the service against fraud, abuse, and failed or duplicated activations.',
+      'Understand crashes, app version adoption, and other operational issues needed to keep the app working across the direct-download channel and any future App Store channel.'
+    ]
+  },
+  {
+    icon: <FaUserShield />,
+    title: 'Sharing and processors',
+    content: [
+      'Payments for direct Mac purchases are processed by Lemon Squeezy as the merchant of record, including the secure checkout flow at buy.polypdf.com.',
+      'If App Store purchases are offered later, they are processed by Apple under Apple terms and privacy practices.',
+      'Infrastructure providers such as our web host, CDN, update host, analytics or crash tools, and payment tools may process data on our behalf to deliver the service.',
+      'We do not sell your personal information.'
+    ]
+  }
+];
+
+const Privacy = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const sections = [
-    {
-      icon: <FaShieldAlt />,
-      title: "Information We Collect",
-      content: [
-        "Device information (iOS version, device model)",
-        "App usage analytics (features used, frequency)",
-        "Crash reports and performance data",
-        "No personal information is collected without consent"
-      ]
-    },
-    {
-      icon: <FaLock />,
-      title: "How We Use Your Data",
-      content: [
-        "Improve app performance and stability",
-        "Develop new features based on usage patterns",
-        "Fix bugs and technical issues",
-        "Send important app updates (if opted in)"
-      ]
-    },
-    {
-      icon: <FaUserShield />,
-      title: "Data Security",
-      content: [
-        "All data is encrypted in transit and at rest",
-        "We never sell or share your data with third parties",
-        "Your PDF documents never leave your device",
-        "iCloud sync uses Apple's secure infrastructure"
-      ]
-    }
-  ];
 
   return (
     <div className="legal-page privacy">
       <header className="legal-header">
         <nav className="nav container">
-          <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); }} className="logo">
+          <Link to="/" className="logo">
             <img src={parrotIcon} alt="PolyPDF" />
             <span>PolyPDF</span>
-          </a>
-          <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); }} className="back-link">
+          </Link>
+          <Link to="/" className="back-link">
             <FaArrowLeft /> Back to Home
-          </a>
+          </Link>
         </nav>
       </header>
 
-      <motion.main 
+      <motion.main
         className="legal-content"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -64,34 +71,35 @@ const Privacy = ({ setCurrentPage }) => {
         <div className="container">
           <div className="legal-hero">
             <h1>Privacy Policy</h1>
-            <p className="legal-subtitle">Your privacy is our priority</p>
-            <p className="last-updated">Last updated: January 2024</p>
+            <p className="legal-subtitle">How PolyPDF handles website, direct-download, and future App Store data</p>
+            <p className="last-updated">Last updated: March 16, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
-              At PolyPDF, we take your privacy seriously. This policy outlines how we collect, 
-              use, and protect your information when you use our app.
+              This Privacy Policy explains what information PolyPDF collects, how it is used,
+              and how it is shared when you use the website, buy a direct Mac license,
+              or use the app.
             </p>
           </div>
 
           <div className="legal-sections">
             {sections.map((section, index) => (
-              <motion.section 
-                key={index}
+              <motion.section
+                key={section.title}
                 className="legal-section"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.08 }}
               >
                 <div className="section-header">
                   <div className="section-icon">{section.icon}</div>
                   <h2>{section.title}</h2>
                 </div>
                 <ul className="section-content">
-                  {section.content.map((item, i) => (
-                    <li key={i}>{item}</li>
+                  {section.content.map((item) => (
+                    <li key={item}>{item}</li>
                   ))}
                 </ul>
               </motion.section>
@@ -99,57 +107,50 @@ const Privacy = ({ setCurrentPage }) => {
           </div>
 
           <section className="legal-section">
-            <h2>Your Rights</h2>
-            <p>Under GDPR and CCPA, you have the right to:</p>
+            <div className="section-header">
+              <div className="section-icon"><FaApple /></div>
+              <h2>Platform channels</h2>
+            </div>
             <ul className="section-content">
-              <li>Access your personal data</li>
-              <li>Request data deletion</li>
-              <li>Opt-out of analytics</li>
-              <li>Export your data</li>
+              <li>Direct Mac download: PolyPDF handles website delivery, license activation, and direct support.</li>
+              <li>Future App Store builds: Apple would handle the payment transaction, and PolyPDF would handle product support and app operations.</li>
             </ul>
           </section>
 
           <section className="legal-section">
-            <h2>Third-Party Services</h2>
-            <p>We use the following third-party services:</p>
+            <h2>Retention</h2>
             <ul className="section-content">
-              <li><strong>Apple Analytics:</strong> App usage and performance metrics</li>
-              <li><strong>CloudKit:</strong> Secure document sync (optional)</li>
-              <li><strong>RevenueCat:</strong> Subscription management</li>
+              <li>Order, support, and license records may be retained for as long as needed to operate the service, comply with legal obligations, resolve disputes, or enforce agreements.</li>
+              <li>Technical logs are retained for operational and security purposes for limited periods determined by the hosting, crash, analytics, or payment providers involved.</li>
             </ul>
-            <p className="note">
-              All third-party services are selected for their strong privacy practices and 
-              compliance with data protection regulations.
+          </section>
+
+          <section className="legal-section">
+            <h2>Your choices</h2>
+            <ul className="section-content">
+              <li>You can choose not to purchase Pro and continue using the free tier within its limits where available.</li>
+              <li>You can request deletion of support or account-related records where deletion is legally permitted and operationally possible.</li>
+              <li>You can stop using the direct Mac app at any time by uninstalling it and deactivating the license on that Mac if needed.</li>
+            </ul>
+          </section>
+
+          <section className="legal-section">
+            <h2>Third-party terms</h2>
+            <p>
+              Payment, order management, App Store transactions, and certain infrastructure functions
+              may be subject to the privacy terms of the provider handling that function, including
+              Apple, Lemon Squeezy, and our hosting providers.
             </p>
           </section>
 
           <section className="legal-section">
-            <h2>Children's Privacy</h2>
-            <p>
-              PolyPDF is not directed to children under 13. We do not knowingly collect 
-              personal information from children. If you believe we have collected information 
-              from a child, please contact us immediately.
-            </p>
-          </section>
-
-          <section className="legal-section">
-            <h2>Contact Us</h2>
-            <p>
-              If you have questions about this privacy policy or your data, please contact us:
-            </p>
+            <h2>Contact</h2>
+            <p>If you have questions about this policy, contact:</p>
             <div className="contact-info">
-              <a href="mailto:privacy@polypdf.app" className="contact-link">
-                <FaEnvelope /> privacy@polypdf.app
+              <a href="mailto:support@polypdf.app" className="contact-link">
+                <FaEnvelope /> support@polypdf.app
               </a>
             </div>
-          </section>
-
-          <section className="legal-section">
-            <h2>Changes to This Policy</h2>
-            <p>
-              We may update this privacy policy from time to time. We will notify you of any 
-              changes by posting the new policy on this page and updating the "Last updated" date.
-            </p>
           </section>
         </div>
       </motion.main>
@@ -157,11 +158,11 @@ const Privacy = ({ setCurrentPage }) => {
       <footer className="legal-footer">
         <div className="container">
           <div className="footer-content">
-            <p>&copy; 2024 PolyPDF. All rights reserved.</p>
+            <p>&copy; 2026 PolyPDF. All rights reserved.</p>
             <div className="footer-links">
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('home'); }}>Home</a>
-              <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('terms'); }}>Terms of Service</a>
-              <a href="mailto:support@polypdf.app">Contact</a>
+              <Link to="/">Home</Link>
+              <Link to="/support">Support</Link>
+              <Link to="/terms">Terms of Use</Link>
             </div>
           </div>
         </div>
