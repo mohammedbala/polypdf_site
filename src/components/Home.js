@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  FaApple,
   FaBars,
   FaBolt,
   FaCheckCircle,
@@ -18,61 +17,81 @@ import {
 } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 
-const macDownloadURL = '/downloads/PolyPDF-mac.dmg';
-const buyURL =
-  process.env.REACT_APP_POLYPDF_BUY_URL ||
-  'https://buy.polypdf.com/checkout/buy/25095331-d3ee-4ae8-bccd-31b565bcd624';
-const appStoreURL = 'https://apps.apple.com/app/polypdf';
+const macDownloadURL = '/downloads/PolyPDFMac.dmg';
+
+const trackEvent = (name, properties = {}) => {
+  if (window.plausible) {
+    window.plausible(name, { props: properties });
+  }
+  if (window.gtag) {
+    window.gtag('event', name, properties);
+  }
+};
 
 const freeFeatures = [
-  'Download the full Mac app free today',
-  'Open, review, and mark up PDFs',
-  'Calibrate scale on real drawings',
-  '3 free measurements per open document before you decide'
+  'Download the full Mac app free and start with the real product',
+  'Open PDF drawings, calibrate scale, and use markup tools with no trial countdown',
+  'Take up to 3 measurements in every open document to verify fit on your own plans',
+  'Decide after real use, not from a watered-down demo'
 ];
 
 const proFeatures = [
-  'Buy it once. Own your Mac license.',
-  'No subscription. No yearly renewal fee.',
-  'Unlimited measurements with direct in-app updates.',
-  'Secure checkout and billing are handled through buy.polypdf.com.'
+  'Unlock unlimited measurements across all of your documents',
+  'Pay $49.99 once for a direct Mac license you can use on up to 3 Macs',
+  'Keep the same markup and review workflow with public one-click app updates',
+  'Secure Stripe checkout with license delivery by email'
+];
+
+const benefits = [
+  {
+    title: 'Measure PDF drawings with confidence',
+    description: 'Set the scale once and take distance, area, and angle measurements directly on the PDFs your team already uses.'
+  },
+  {
+    title: 'Mark up reviews without tool switching',
+    description: 'Add callouts, highlights, shapes, and notes so site issues, design comments, and decisions are easier to communicate.'
+  },
+  {
+    title: 'Buy only after it proves itself',
+    description: 'The free Mac download lets you test PolyPDF on live work before you unlock unlimited measurements.'
+  }
 ];
 
 const steps = [
   {
-    title: 'Download Free',
-    description: 'Install the Mac DMG and start with the real app, not a crippled demo.'
+    title: 'Download the Mac app free',
+    description: 'Install the DMG and open the full product, not a time-limited trial.'
   },
   {
-    title: 'Test It on a Real Drawing',
-    description: 'Calibrate scale and place up to 3 measurements in every open document before the paywall appears.'
+    title: 'Test it on a real drawing',
+    description: 'Calibrate scale and place up to 3 measurements in each document to confirm it fits your workflow.'
   },
   {
-    title: 'Buy Once, Own It',
-    description: 'Pay $99 one time for the direct Mac app today through secure checkout at buy.polypdf.com. An App Store release is planned later, but it is not live yet.'
+    title: 'Unlock unlimited when ready',
+    description: 'If PolyPDF saves you time, buy once for $49.99 and keep using it without a yearly fee.'
   }
 ];
 
 const faqs = [
   {
-    question: 'Do I have to pay again next year?',
-    answer: 'No. PolyPDF is being sold as a buy-once product. The direct Mac license is a one-time $99 purchase with no annual renewal, subscription timer, or recurring maintenance fee.'
+    question: 'What can I do before I pay?',
+    answer: 'You can download the Mac app free, open your own PDFs, calibrate scale, use the markup tools, and place up to 3 measurements in every open document. That gives you a real-world test before you buy.'
   },
   {
-    question: 'What is live today?',
-    answer: 'Today, the live commercial offer is the direct Mac download from PolyPDF.com. You can download the DMG free, use the app, and unlock the Mac build with a one-time $99 purchase through secure checkout at buy.polypdf.com.'
+    question: 'What does the $49.99 license unlock?',
+    answer: 'The direct Mac license removes the measurement limit so you can keep measuring across all of your documents. It is a one-time purchase, keeps Pro active across app updates, and can be used on up to 3 Macs.'
   },
   {
-    question: 'Will one App Store purchase unlock iPhone, iPad, and Mac?',
-    answer: 'That is the current plan, but it is not live today. Until the App Store build ships, the website checkout remains a Mac-only direct license.'
+    question: 'Is this a subscription?',
+    answer: 'No. PolyPDF for Mac is sold as a one-time $49.99 direct license. There is no annual renewal, no recurring maintenance bill, and no subscription timer.'
   },
   {
-    question: 'What happens after I buy from the website?',
-    answer: 'You receive a license key by email. Paste it into the Mac app once to unlock unlimited measurements, then use that Pro license on up to 3 Macs.'
+    question: 'What happens after I buy?',
+    answer: 'Checkout is handled securely by Stripe. Your license key is delivered by email, and you paste it into the Mac app once to unlock unlimited measurements.'
   },
   {
-    question: 'Can I try it before paying?',
-    answer: 'Yes. The Mac app downloads free, includes the core viewer and markup tools, and gives you 3 free measurements per open document so you can test it on real work.'
+    question: 'How do refunds work?',
+    answer: 'Direct Mac purchases are handled through Stripe and PolyPDF support. Unless required by law, transactions are generally non-refundable; discretionary refund requests may be reviewed within 14 days.'
   }
 ];
 
@@ -93,6 +112,11 @@ const Home = () => {
     setMobileMenuOpen(false);
   };
 
+  const handleDownloadClick = (source) => {
+    trackEvent('download_click', { source, platform: 'mac' });
+    closeMobileMenu();
+  };
+
   return (
     <div className="Home">
       <motion.header
@@ -111,9 +135,8 @@ const Home = () => {
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
             <a href="#faq" onClick={closeMobileMenu}>FAQ</a>
             <Link to="/support" onClick={closeMobileMenu}>Support</Link>
-            <a href={appStoreURL} onClick={closeMobileMenu}>iPhone/iPad app</a>
-            <a href={buyURL} className="nav-buy" onClick={closeMobileMenu}>Buy Once</a>
-            <a href={macDownloadURL} className="nav-download" download onClick={closeMobileMenu}>
+            <Link to="/buy" className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
+            <a href={macDownloadURL} className="nav-download" download onClick={() => handleDownloadClick('nav')}>
               <HiOutlineCloudDownload /> Download Free
             </a>
           </div>
@@ -136,44 +159,45 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="hero-badge">
-              <FaLock /> Built for people tired of yearly PDF license fees
+              <FaLock /> Built for drawing review and takeoff on Mac
             </div>
 
-            <h1>Sick of paying every year just to measure PDFs? Buy PolyPDF once and own it.</h1>
+            <h1>Measure and mark up PDF drawings on Mac without another subscription.</h1>
 
             <p className="hero-subtitle">
-              Download PolyPDF for Mac free today. Review drawings, calibrate scale, and place up to 3
-              free measurements in every open document before you pay. When you are ready, unlock
-              unlimited measurements for $99 once through secure checkout at buy.polypdf.com.
-              No subscription. No annual renewal. An App Store release is planned later, but the
-              direct Mac checkout is the live commercial path today.
+              PolyPDF helps architects, engineers, contractors, estimators, and reviewers calibrate
+              scale, take precise measurements, and mark up the PDFs they already receive. Download it
+              free, test 3 measurements in every document, then unlock unlimited measurements for a
+              one-time $49.99 only if it earns a place in your workflow.
             </p>
 
             <div className="hero-cta">
-              <a href={macDownloadURL} className="primary-btn" download>
-                <HiOutlineCloudDownload /> Download Free DMG
+              <a href={macDownloadURL} className="primary-btn" download onClick={() => handleDownloadClick('hero')}>
+                <HiOutlineCloudDownload /> Download Free for Mac
               </a>
-              <a href={buyURL} className="secondary-btn">
-                <FaInfinity /> Buy Once for $99
-              </a>
+              <Link to="/buy" className="secondary-btn">
+                <FaInfinity /> Unlock Unlimited for $49.99
+              </Link>
             </div>
+
+            <p className="hero-note">Start free on your own drawings. Upgrade only when you need unlimited measurements.</p>
 
             <div className="hero-stats compact-stats">
               <div className="stat">
                 <h3>3</h3>
-                <p>Free measurements</p>
+                <p>Free measurements per document</p>
               </div>
               <div className="stat">
-                <h3>$99</h3>
-                <p>One-time purchase</p>
+                <h3>$49.99</h3>
+                <p>One-time Mac license</p>
               </div>
               <div className="stat">
-                <h3>0</h3>
-                <p>Annual renewals</p>
+                <h3>3 Macs</h3>
+                <p>Included per license</p>
               </div>
               <div className="stat">
-                <h3>Mac now</h3>
-                <p>Checkout at buy.polypdf.com</p>
+                <h3>Stripe</h3>
+                <p>Secure checkout</p>
               </div>
             </div>
           </motion.div>
@@ -185,21 +209,84 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.15 }}
           >
             <img src={parrotIcon} alt="PolyPDF app icon" className="hero-icon" />
+            <p className="summary-heading">What you can do on day one</p>
             <div className="summary-list">
               <div className="summary-item">
                 <HiOutlineDocumentText />
-                <span>Try it on a real PDF before you spend anything.</span>
+                <span>Calibrate scale and measure distances, areas, and angles on real PDF drawings.</span>
               </div>
               <div className="summary-item">
                 <HiOutlineShieldCheck />
-                <span>If you are done with subscription fatigue, this is the direct Mac alternative live today.</span>
+                <span>Mark up punch items, design comments, and review notes without bouncing between tools.</span>
               </div>
               <div className="summary-item">
                 <HiOutlineSparkles />
-                <span>Secure checkout is handled separately at buy.polypdf.com so the main site stays focused on downloads, support, and product details.</span>
+                <span>Try the full Mac app free, then buy once only if unlimited measurements will save you time.</span>
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="benefits">
+        <div className="container">
+          <motion.div
+            className="section-header benefits-header"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>What PolyPDF helps you do faster</h2>
+            <p>Designed for architects, engineers, contractors, estimators, and reviewers working from PDF drawings.</p>
+          </motion.div>
+
+          <div className="benefits-grid">
+            {benefits.map((benefit, index) => (
+              <motion.article
+                key={benefit.title}
+                className="benefit-card"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+              >
+                <h3>{benefit.title}</h3>
+                <p>{benefit.description}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="benefits bluebeam-alternative">
+        <div className="container">
+          <motion.div
+            className="section-header benefits-header"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>A Bluebeam Revu for Mac alternative for drawing review.</h2>
+            <p>
+              Revu no longer gives Mac-first AEC teams a native path. PolyPDF focuses on the everyday
+              review, markup, calibration, and takeoff workflows Mac users still need on construction PDFs.
+            </p>
+          </motion.div>
+
+          <div className="benefits-grid">
+            <motion.article className="benefit-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <h3>Native Mac workflow</h3>
+              <p>Open drawings directly, mark up review comments, calibrate scale, and measure without a Windows VM or browser-only workaround.</p>
+            </motion.article>
+            <motion.article className="benefit-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }}>
+              <h3>AEC takeoff basics</h3>
+              <p>Distance, area, perimeter, angle, count, and dimension tools are built around the PDFs architects, contractors, and estimators already exchange.</p>
+            </motion.article>
+            <motion.article className="benefit-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}>
+              <h3>No annual seat timer</h3>
+              <p>Try real documents for free, then unlock unlimited measurements with a one-time direct Mac license.</p>
+            </motion.article>
+          </div>
         </div>
       </section>
 
@@ -211,8 +298,8 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>One price. No renewal trap.</h2>
-            <p>Direct Mac license available today. The App Store release is planned later, but the live buy flow is the direct Mac checkout.</p>
+            <h2>Start free. Upgrade only when you need unlimited measurements.</h2>
+            <p>The free Mac download handles review and markup. Pro removes the measurement cap for $49.99 once.</p>
           </motion.div>
 
           <div className="pricing-grid">
@@ -223,7 +310,7 @@ const Home = () => {
               viewport={{ once: true }}
             >
               <div className="plan-pill">Free</div>
-              <h3>Try PolyPDF on Mac</h3>
+              <h3>Use PolyPDF on real drawings</h3>
               <p className="plan-price">$0</p>
               <ul className="plan-list">
                 {freeFeatures.map((feature) => (
@@ -232,7 +319,7 @@ const Home = () => {
                   </li>
                 ))}
               </ul>
-              <a href={macDownloadURL} className="secondary-btn full-width" download>
+              <a href={macDownloadURL} className="secondary-btn full-width" download onClick={() => handleDownloadClick('pricing_free')}>
                 <HiOutlineCloudDownload /> Download Free
               </a>
             </motion.article>
@@ -245,8 +332,8 @@ const Home = () => {
               transition={{ delay: 0.1 }}
             >
               <div className="plan-pill plan-pill-dark">Pro Lifetime</div>
-              <h3>Buy it once. Own it.</h3>
-              <p className="plan-price">$99</p>
+              <h3>Unlock unlimited measurements</h3>
+              <p className="plan-price">$49.99</p>
               <ul className="plan-list">
                 {proFeatures.map((feature) => (
                   <li key={feature}>
@@ -254,10 +341,10 @@ const Home = () => {
                   </li>
                 ))}
               </ul>
-              <a href={buyURL} className="primary-btn full-width">
-                <FaInfinity /> Buy Once for $99
-              </a>
-              <p className="plan-note">Perpetual direct Mac license today. Secure checkout at buy.polypdf.com with a 30-day refund window.</p>
+              <Link to="/buy" className="primary-btn full-width">
+                <FaInfinity /> Buy Once for $49.99
+              </Link>
+              <p className="plan-note">One-time direct Mac license for up to 3 Macs. Secure Stripe checkout. Refund requests follow PolyPDF's policy.</p>
             </motion.article>
           </div>
         </div>
@@ -271,8 +358,8 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>Use it first. Pay once only if it earns its place.</h2>
-            <p>The paywall appears after real value, not before.</p>
+            <h2>Try it on your workflow before you buy.</h2>
+            <p>Download free, test it on your own drawings, and pay once only if you want unlimited measurements.</p>
           </motion.div>
 
           <div className="step-grid">
@@ -303,7 +390,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>FAQ</h2>
-            <p>Direct answers for people trying to stop another annual software bill.</p>
+            <p>Short answers to the buying questions that usually block a download.</p>
           </motion.div>
 
           <div className="faq-grid">
@@ -332,15 +419,15 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2>Stop renting your PDF measurement tool every year.</h2>
-            <p>Mac direct download is live today. The checkout flow is on buy.polypdf.com, while the App Store release remains future work.</p>
+            <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
+            <p>Download the Mac app, test it on your own drawings, and unlock unlimited measurements for $49.99 only when you want to remove the cap.</p>
             <div className="cta-download-row">
-              <a href={macDownloadURL} className="primary-btn large" download>
-                <HiOutlineCloudDownload /> Download Free DMG
+              <a href={macDownloadURL} className="primary-btn large" download onClick={() => handleDownloadClick('bottom_cta')}>
+                <HiOutlineCloudDownload /> Download Free for Mac
               </a>
-              <a href={buyURL} className="secondary-btn cta-mac-btn">
-                <FaInfinity /> Buy Once for $99
-              </a>
+              <Link to="/buy" className="secondary-btn cta-mac-btn">
+                <FaInfinity /> Buy Once for $49.99
+              </Link>
             </div>
             <div className="trust-indicators">
               <div className="indicator">
@@ -349,11 +436,11 @@ const Home = () => {
               </div>
               <div className="indicator">
                 <FaCheckCircle />
-                <span>No yearly fee</span>
+                <span>Up to 3 Macs per license</span>
               </div>
               <div className="indicator">
-                <FaApple />
-                <span>App Store release not live yet</span>
+                <HiOutlineShieldCheck />
+                <span>Secure Stripe checkout</span>
               </div>
             </div>
           </motion.div>
@@ -365,12 +452,13 @@ const Home = () => {
           <div className="footer-content">
             <div className="footer-brand">
               <img src={parrotIcon} alt="PolyPDF logo" loading="lazy" />
-              <p>Buy-once PDF measurement tools for people done with yearly license fees.</p>
+              <p>Measure and mark up PDF drawings on Mac without the yearly bill.</p>
             </div>
             <div className="footer-links">
-              <a href={macDownloadURL} download>Download Free</a>
-              <a href={buyURL}>Buy Once</a>
+              <a href={macDownloadURL} download onClick={() => handleDownloadClick('footer')}>Download Free</a>
+              <Link to="/buy">Buy Once</Link>
               <Link to="/support">Support</Link>
+              <Link to="/refund">Refund Policy</Link>
               <Link to="/terms">Terms</Link>
               <Link to="/privacy">Privacy</Link>
             </div>

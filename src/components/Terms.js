@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  FaApple,
   FaArrowLeft,
   FaFileContract,
   FaGavel,
@@ -16,7 +15,8 @@ const sections = [
     icon: <FaFileContract />,
     title: 'Scope',
     content: [
-      'These terms apply to the PolyPDF website, the direct Mac download, the App Store versions of PolyPDF, and related support, licensing, and update services.',
+      'PolyPDF is operated by Euclidean Software LLC.',
+      'These terms apply to the PolyPDF website, the direct Mac download, and related support, licensing, and update services.',
       'By downloading, installing, purchasing, or using PolyPDF, you agree to these terms.',
       'If you do not agree, do not use the service or install the app.'
     ]
@@ -27,23 +27,14 @@ const sections = [
     content: [
       'The Mac app may be offered as a free download with limited free measurement usage before purchase is required for additional measurement workflows.',
       'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
-      'Pricing, feature limits, and platform availability may differ between the direct download channel and the App Store channel.'
-    ]
-  },
-  {
-    icon: <FaApple />,
-    title: 'App Store purchases',
-    content: [
-      'If PolyPDF is later offered through Apple, Apple is the payment processor and merchant for that transaction.',
-      'Any future App Store billing, purchase restoration, taxes, and refunds are governed by Apple terms and policies.',
-      'If PolyPDF is offered as a universal App Store unlock in the future, that entitlement is tied to the Apple account used for the purchase, subject to Apple platform rules.'
+      'The current direct Mac offer includes free markup and review tools, 3 measurements per document, and an optional $49.99 lifetime Pro license.'
     ]
   },
   {
     icon: <FaLock />,
     title: 'Direct Mac purchases and license use',
     content: [
-      'The current direct Mac purchase flow is processed through Lemon Squeezy at buy.polypdf.com and unlocked with a license key.',
+      'The current direct Mac purchase flow is processed through Stripe and unlocked with a PolyPDF license key.',
       'A direct Pro purchase grants a personal, non-transferable license to use the Mac app.',
       'Each direct license may be activated on up to 3 Macs unless PolyPDF states otherwise at checkout.',
       'You may not resell, sublicense, share, or distribute your license key.',
@@ -80,15 +71,15 @@ const Terms = () => {
         <div className="container">
           <div className="legal-hero">
             <h1>Terms of Use</h1>
-            <p className="legal-subtitle">Terms for the PolyPDF website, direct Mac download, and any future App Store builds</p>
-            <p className="last-updated">Last updated: March 16, 2026</p>
+            <p className="legal-subtitle">Terms for the PolyPDF website and direct Mac download</p>
+            <p className="last-updated">Last updated: April 19, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
-              These Terms of Use govern your use of PolyPDF, including the PolyPDF website,
-              the direct-download Mac application, any future App Store versions of the app, and related
-              purchasing, licensing, support, and update services.
+              These Terms of Use are between you and Euclidean Software LLC, and govern your use
+              of PolyPDF, including the PolyPDF website, the direct-download Mac application,
+              and related purchasing, licensing, support, and update services.
             </p>
           </div>
 
@@ -118,9 +109,11 @@ const Terms = () => {
           <section className="legal-section">
             <h2>Refunds</h2>
             <ul className="section-content">
-              <li>Direct Mac purchases are eligible for refunds within 30 days of purchase unless a different policy is displayed at checkout.</li>
-              <li>After 30 days, refunds for direct purchases are generally not provided except where required by law.</li>
-              <li>If an App Store version is offered later, App Store refunds are handled by Apple under Apple policies.</li>
+              <li>Direct Mac purchases are processed by Stripe and are subject to PolyPDF's refund policy.</li>
+              <li>Unless required by applicable law, transactions are generally non-refundable and non-exchangeable.</li>
+              <li>PolyPDF may review discretionary refund requests submitted within 14 days of the transaction date, but a request in that period does not guarantee a refund.</li>
+              <li>Refunded direct licenses may be suspended or revoked after the refund is completed.</li>
+              <li>See the <Link to="/refund">Refund Policy</Link> for request steps and purchase-channel details.</li>
             </ul>
           </section>
 
@@ -131,8 +124,7 @@ const Terms = () => {
             </div>
             <ul className="section-content">
               <li>The direct Mac app may include in-app update delivery through Sparkle or a similar updater.</li>
-              <li>Any future App Store versions are updated through Apple distribution systems.</li>
-              <li>Your purchase includes access to the software version made available through the purchase channel you used while the service is operated.</li>
+              <li>Public app updates may be available to free and paid installs; Pro access stays tied to the license unless it is revoked, refunded, or otherwise suspended under these terms.</li>
               <li>Future features, future OS compatibility, and continued operation of online services are not guaranteed.</li>
               <li>If PolyPDF stops operating, already-downloaded software may keep working to the extent technically possible, but ongoing online services, new downloads, and reactivation are not guaranteed.</li>
             </ul>
@@ -159,7 +151,7 @@ const Terms = () => {
 
           <section className="legal-section">
             <h2>Contact</h2>
-            <p>Questions about these terms can be sent to:</p>
+            <p>Questions for Euclidean Software LLC about these terms can be sent to:</p>
             <div className="contact-info">
               <a href="mailto:support@polypdf.app" className="contact-link">support@polypdf.app</a>
             </div>
@@ -170,10 +162,11 @@ const Terms = () => {
       <footer className="legal-footer">
         <div className="container">
           <div className="footer-content">
-            <p>&copy; 2026 PolyPDF. All rights reserved.</p>
+            <p>&copy; 2026 Euclidean Software LLC. All rights reserved.</p>
             <div className="footer-links">
               <Link to="/">Home</Link>
               <Link to="/support">Support</Link>
+              <Link to="/refund">Refund Policy</Link>
               <Link to="/privacy">Privacy Policy</Link>
             </div>
           </div>

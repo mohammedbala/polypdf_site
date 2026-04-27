@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  FaApple,
   FaArrowLeft,
   FaEnvelope,
   FaLock,
@@ -18,7 +17,6 @@ const sections = [
     content: [
       'When you browse the website, we may receive basic technical information such as IP address, browser type, and page requests from our hosting and security providers.',
       'When you purchase or activate a direct Mac license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
-      'If you later purchase through Apple, Apple handles billing data. PolyPDF may receive limited sales, territory, restore, transaction-status, or refund-related information that Apple makes available to developers.',
       'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose.'
     ]
   },
@@ -26,17 +24,17 @@ const sections = [
     icon: <FaLock />,
     title: 'How we use information',
     content: [
-      'Provide downloads, purchase restoration, license activation, updates, order lookup, and customer support.',
+      'Provide downloads, license reactivation, license activation, updates, order lookup, and customer support.',
       'Protect the service against fraud, abuse, and failed or duplicated activations.',
-      'Understand crashes, app version adoption, and other operational issues needed to keep the app working across the direct-download channel and any future App Store channel.'
+      'Understand crashes, app version adoption, and other operational issues needed to keep the direct Mac app working.'
     ]
   },
   {
     icon: <FaUserShield />,
     title: 'Sharing and processors',
     content: [
-      'Payments for direct Mac purchases are processed by Lemon Squeezy as the merchant of record, including the secure checkout flow at buy.polypdf.com.',
-      'If App Store purchases are offered later, they are processed by Apple under Apple terms and privacy practices.',
+      'Payments for direct Mac purchases are processed by Stripe.',
+      'Transactional license emails may be sent through Resend or another email provider.',
       'Infrastructure providers such as our web host, CDN, update host, analytics or crash tools, and payment tools may process data on our behalf to deliver the service.',
       'We do not sell your personal information.'
     ]
@@ -71,15 +69,14 @@ const Privacy = () => {
         <div className="container">
           <div className="legal-hero">
             <h1>Privacy Policy</h1>
-            <p className="legal-subtitle">How PolyPDF handles website, direct-download, and future App Store data</p>
-            <p className="last-updated">Last updated: March 16, 2026</p>
+            <p className="legal-subtitle">How PolyPDF handles website and direct-download data</p>
+            <p className="last-updated">Last updated: April 19, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
               This Privacy Policy explains what information PolyPDF collects, how it is used,
-              and how it is shared when you use the website, buy a direct Mac license,
-              or use the app.
+              and how it is shared when you use the website, buy a direct Mac license, or use the app.
             </p>
           </div>
 
@@ -107,17 +104,6 @@ const Privacy = () => {
           </div>
 
           <section className="legal-section">
-            <div className="section-header">
-              <div className="section-icon"><FaApple /></div>
-              <h2>Platform channels</h2>
-            </div>
-            <ul className="section-content">
-              <li>Direct Mac download: PolyPDF handles website delivery, license activation, and direct support.</li>
-              <li>Future App Store builds: Apple would handle the payment transaction, and PolyPDF would handle product support and app operations.</li>
-            </ul>
-          </section>
-
-          <section className="legal-section">
             <h2>Retention</h2>
             <ul className="section-content">
               <li>Order, support, and license records may be retained for as long as needed to operate the service, comply with legal obligations, resolve disputes, or enforce agreements.</li>
@@ -137,9 +123,9 @@ const Privacy = () => {
           <section className="legal-section">
             <h2>Third-party terms</h2>
             <p>
-              Payment, order management, App Store transactions, and certain infrastructure functions
+              Payment, order management, license email, analytics, and infrastructure functions
               may be subject to the privacy terms of the provider handling that function, including
-              Apple, Lemon Squeezy, and our hosting providers.
+              Stripe, Resend, analytics providers, crash-reporting providers, and our hosting providers.
             </p>
           </section>
 
@@ -162,6 +148,7 @@ const Privacy = () => {
             <div className="footer-links">
               <Link to="/">Home</Link>
               <Link to="/support">Support</Link>
+              <Link to="/refund">Refund Policy</Link>
               <Link to="/terms">Terms of Use</Link>
             </div>
           </div>

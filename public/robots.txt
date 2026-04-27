@@ -1,4 +1,4 @@
-# robots.txt for https://polypdf.app
+# robots.txt for https://www.polypdf.com
 
 User-agent: *
 Allow: /
@@ -9,7 +9,7 @@ Disallow: /static/js/
 Disallow: /static/css/
 
 # Sitemap location
-Sitemap: https://polypdf.app/sitemap.xml
+Sitemap: https://www.polypdf.com/sitemap.xml
 
 # Crawl-delay for responsible crawling
 Crawl-delay: 1

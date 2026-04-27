@@ -2,11 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 const SEO = ({ title, description, keywords, image, url, type = 'website' }) => {
-  const siteUrl = 'https://polypdf.app';
-  const defaultTitle = 'PolyPDF - PDF Markup & Measure Tools for AEC Professionals';
-  const defaultDescription = 'Professional PDF markup and measurement app for architects, engineers, and construction professionals. Smart line detection and precision tools.';
+  const siteUrl = 'https://www.polypdf.com';
+  const defaultTitle = 'PolyPDF for Mac - PDF Markup, Measurement, and Takeoff';
+  const defaultDescription = 'Native Mac PDF markup and measurement for architects, engineers, contractors, and estimators. A Bluebeam Revu for Mac alternative with a one-time direct license.';
   const defaultImage = `${siteUrl}/og-image.png`;
-  const defaultKeywords = 'PDF markup, PDF measurement, construction app, architecture software, engineering tools, blueprint app, CAD PDF, technical drawing app, iPad PDF editor';
+  const defaultKeywords = 'PDF markup Mac, PDF measurement Mac, Bluebeam Revu for Mac alternative, construction PDF takeoff, AEC PDF markup, architecture software, engineering tools, blueprint measurement app';
 
   const seo = {
     title: title || defaultTitle,

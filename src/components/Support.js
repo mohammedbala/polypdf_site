@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  FaApple,
   FaArrowLeft,
   FaDownload,
   FaEnvelope,
@@ -17,8 +16,8 @@ const sections = [
     title: 'Contact',
     content: [
       'Support email: support@polypdf.app',
-      'Use this address for purchase questions, restore issues, license activation problems, and general product support.',
-      'When possible, include your app version, purchase channel, macOS or iPadOS/iOS version, and a short description of the problem.'
+      'Use this address for purchase questions, license activation problems, and general product support.',
+      'When possible, include your app version, macOS version, Stripe receipt email, license key suffix, and a short description of the problem.'
     ]
   },
   {
@@ -26,26 +25,18 @@ const sections = [
     title: 'Direct Mac download',
     content: [
       'The current live commercial offer on PolyPDF.com is the direct Mac download.',
-      'Direct Mac purchases are processed through Lemon Squeezy at buy.polypdf.com and unlocked with a license key sent by email.',
+      'Direct Mac purchases are processed through Stripe and unlocked with a PolyPDF license key sent by email.',
       'If you need help with activation, deactivation, or refund requests for the direct Mac version, contact support@polypdf.app.'
-    ]
-  },
-  {
-    icon: <FaApple />,
-    title: 'Future App Store release',
-    content: [
-      'PolyPDF is being prepared for an App Store buy-once unlock across iPhone, iPad, and Mac, but that release is not live today.',
-      'Once an App Store build is available, restore purchases will happen inside the app and Apple will handle billing and refund requests through your Apple account.',
-      'If you hit product or feature issues in a future App Store build, contact PolyPDF support with your device, OS version, and screenshots if relevant.'
     ]
   },
   {
     icon: <FaReceipt />,
     title: 'Refunds and billing',
     content: [
-      'Direct Mac purchases: 30-day refund window through the direct purchase channel, subject to the terms on this site.',
-      'App Store purchases: billing and refund handling are managed by Apple under Apple policies.',
-      'If you are unsure which channel you used, send the receipt email or order details to support.'
+      'Direct Mac purchases are subject to PolyPDF\'s refund policy, including any non-waivable consumer rights.',
+      'Unless required by law, transactions are generally non-refundable; PolyPDF may review discretionary refund requests submitted within 14 days.',
+      'For billing questions, use the links in your Stripe receipt or contact PolyPDF support.',
+      'Refunded licenses are deactivated after the refund is completed.'
     ]
   }
 ];
@@ -78,14 +69,14 @@ const Support = () => {
         <div className="container">
           <div className="legal-hero">
             <h1>Support</h1>
-            <p className="legal-subtitle">Purchase, licensing, restore, and product help for PolyPDF</p>
-            <p className="last-updated">Last updated: March 16, 2026</p>
+            <p className="legal-subtitle">Purchase, licensing, and product help for the direct Mac app</p>
+            <p className="last-updated">Last updated: April 19, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
               Use this page for support contact details and purchase-channel guidance.
-              If you are writing in, include which version you are using: the direct Mac download from PolyPDF.com or a future App Store build.
+              If you are writing in, include your Mac app version and Stripe receipt details when relevant.
             </p>
           </div>
 
@@ -118,9 +109,9 @@ const Support = () => {
               <h2>Before you contact support</h2>
             </div>
             <ul className="section-content">
-              <li>Confirm whether you are using the direct Mac build from PolyPDF.com or a future App Store build.</li>
+              <li>Confirm that you are using the direct Mac build downloaded from PolyPDF.com.</li>
               <li>Include the app version and build number if you can.</li>
-              <li>For purchase issues, attach the receipt email or order confirmation.</li>
+              <li>For purchase issues, attach the Stripe receipt email or order confirmation.</li>
             </ul>
           </section>
 
@@ -141,6 +132,7 @@ const Support = () => {
             <p>&copy; 2026 PolyPDF. All rights reserved.</p>
             <div className="footer-links">
               <Link to="/">Home</Link>
+              <Link to="/refund">Refund Policy</Link>
               <Link to="/terms">Terms of Use</Link>
               <Link to="/privacy">Privacy Policy</Link>
             </div>

@@ -1,13 +1,13 @@
 # Deployment Guide for PolyPDF Site
 
-This guide explains how to deploy the PolyPDF landing page to your server.
+This guide explains how to deploy the PolyPDF landing page and its direct-download artifacts to the production server.
 
 ## Prerequisites
 
 1. A DigitalOcean droplet (or any Linux server)
-2. Node.js and npm installed on the server
+2. Node.js 20 and npm installed on the server
 3. Nginx installed (for production deployment)
-4. PM2 installed globally (`npm install -g pm2`)
+4. systemd access for the license API service
 5. Git installed and configured
 
 ## GitHub Secrets Required
@@ -40,8 +40,10 @@ Uses the `deploy-nginx.yml` workflow. This builds the app and serves it with Ngi
 
 1. **Setup Nginx:**
    ```bash
-   # Create directory for the built files
-   sudo mkdir -p /var/www/html/polypdf-site
+   # Create directories for the site build and direct-download artifacts
+   sudo mkdir -p /var/www/polypdf-site/build
+   sudo mkdir -p /var/www/polypdf-downloads
+   sudo mkdir -p /var/lib/polypdf
    
    # Copy the nginx configuration
    sudo cp nginx.conf.example /etc/nginx/sites-available/polypdf-site
@@ -61,7 +63,7 @@ Uses the `deploy-nginx.yml` workflow. This builds the app and serves it with Ngi
    sudo apt-get install certbot python3-certbot-nginx
    
    # Get SSL certificate
-   sudo certbot --nginx -d polypdf.app -d www.polypdf.app
+   sudo certbot --nginx -d polypdf.com -d www.polypdf.com
    ```
 
 ## Manual Deployment
@@ -88,16 +90,75 @@ npm run build
 pm2 start serve --name "polypdf-site" -- -s build -l 3001
 
 # For Nginx deployment:
-sudo cp -r build/* /var/www/html/polypdf-site/
+sudo rsync -av --delete build/ /var/www/polypdf-site/build/
 sudo systemctl reload nginx
 ```
+
+## Downloads And Sparkle
+
+Production serves the website build from `/var/www/polypdf-site/build` and direct-download artifacts from `/var/www/polypdf-downloads`.
+
+- Stable DMG URL: `https://www.polypdf.com/downloads/PolyPDFMac.dmg`
+- Primary Sparkle feed: `https://www.polypdf.com/downloads/polypdfmac-appcast.xml`
+- Legacy `appcast.xml` should redirect to `polypdfmac-appcast.xml` instead of serving a second feed
+- Publish release archives with `scripts/publish_sparkle_release.sh`, then verify the live feed contains the shipped versioned archive
+
+## Stripe License API
+
+The direct Mac app activates against the PolyPDF license API, proxied by Nginx under `https://www.polypdf.com/api/`.
+
+```bash
+cd /var/www/polypdf-site/Website/license-api
+npm install --omit=dev
+sudo install -d -o www-data -g www-data /var/lib/polypdf
+sudo cp .env.example /etc/polypdf/license-api.env
+sudo nano /etc/polypdf/license-api.env
+```
+
+Required production values:
+
+- `STRIPE_SECRET_KEY`
+- `STRIPE_WEBHOOK_SECRET`
+- `STRIPE_PRICE_ID`
+- `LICENSE_SIGNING_SECRET`
+- `RESEND_API_KEY`
+- `SUPPORT_EMAIL=support@polypdf.app`
+
+Example systemd unit:
+
+```ini
+[Unit]
+Description=PolyPDF License API
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/polypdf-site/Website/license-api
+EnvironmentFile=/etc/polypdf/license-api.env
+ExecStart=/usr/bin/npm start
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+```
+
+After installing the unit:
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now polypdf-license-api
+curl -fsS https://www.polypdf.com/api/licenses/healthz || curl -fsS http://127.0.0.1:3087/healthz
+```
+
+Configure Stripe with a one-time `PolyPDF Pro for Mac` price and a webhook destination pointed at `https://www.polypdf.com/api/stripe/webhook` for `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `refund.created`, `refund.updated`, and `charge.refunded`.
 
 ## Environment Variables
 
 If you need environment variables, create a `.env` file in the project root:
 
 ```env
-REACT_APP_API_URL=https://api.polypdf.app
 REACT_APP_ANALYTICS_ID=your-analytics-id
 ```
 
