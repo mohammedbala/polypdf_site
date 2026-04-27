@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import Account from './components/Account';
 import Buy from './components/Buy';
 import Home from './components/Home';
 import Privacy from './components/Privacy';
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/buy" element={<Buy />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
           <Route path="/support" element={<Support />} />

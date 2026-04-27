@@ -686,14 +686,241 @@ body {
   gap: 0.5rem;
 }
 
+.account-hero {
+  max-width: 780px;
+  margin: 0 auto 2rem;
+  text-align: left;
+}
+
+.account-hero h1 {
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.account-hero p {
+  color: var(--gray-700);
+  font-size: 1.12rem;
+  max-width: 68ch;
+}
+
+.account-panel,
+.account-notice {
+  max-width: 920px;
+  margin: 0 auto 1.5rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 22px;
+  background: #fafaf8;
+  box-shadow: var(--shadow-sm);
+}
+
+.account-panel {
+  padding: 1.5rem;
+}
+
+.account-notice {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1rem 1.2rem;
+}
+
+.account-notice.success {
+  border-color: rgba(14, 138, 104, 0.26);
+  background: var(--accent-soft);
+}
+
+.account-notice.warning {
+  border-color: rgba(143, 137, 120, 0.34);
+}
+
+.account-panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.account-kicker {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sign-in-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1.1fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+
+.account-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.account-form label {
+  color: var(--gray-700);
+  font-weight: 700;
+}
+
+.account-form input {
+  width: 100%;
+  min-height: 52px;
+  border: 1px solid var(--gray-300);
+  border-radius: 14px;
+  background: var(--primary-white);
+  color: var(--gray-900);
+  font: inherit;
+  padding: 0.9rem 1rem;
+}
+
+.account-form input:focus {
+  outline: 3px solid rgba(14, 138, 104, 0.16);
+  border-color: var(--accent);
+}
+
+.account-message {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.account-message.success {
+  color: var(--accent);
+}
+
+.account-message.error,
+.checkout-error {
+  color: #9f2d20;
+}
+
+.account-empty {
+  display: grid;
+  justify-items: start;
+  gap: 0.8rem;
+  padding: 2rem 0 0.5rem;
+  color: var(--gray-700);
+}
+
+.account-empty svg {
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+.license-list {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1.2rem;
+}
+
+.license-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 18px;
+  background: var(--primary-white);
+}
+
+.license-row-main h3 {
+  margin: 0.6rem 0 0.25rem;
+}
+
+.license-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--accent);
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.license-status.refunded,
+.license-status.revoked,
+.license-status.suspended {
+  color: #9f2d20;
+}
+
+.license-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.license-metrics div {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.9rem;
+  border-radius: 14px;
+  background: #f7f7f5;
+}
+
+.license-metrics span {
+  color: var(--gray-600);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.license-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  grid-column: 1 / -1;
+}
+
+.license-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--gray-900);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.account-skeleton {
+  height: 18px;
+  max-width: 520px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #eceae4, #f8f7f2, #eceae4);
+  background-size: 220% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+  margin-bottom: 0.9rem;
+}
+
+.account-skeleton.wide {
+  max-width: 760px;
+}
+
+.account-skeleton.short {
+  max-width: 280px;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
 @media (max-width: 960px) {
   .hero-layout,
   .benefits-grid,
   .pricing-grid,
   .buy-grid,
   .buy-detail-grid,
+  .sign-in-panel,
   .step-grid,
   .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .license-row {
     grid-template-columns: 1fr;
   }
 
