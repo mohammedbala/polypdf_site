@@ -133,8 +133,8 @@ const Privacy = () => {
             <h2>Contact</h2>
             <p>If you have questions about this policy, contact:</p>
             <div className="contact-info">
-              <a href="mailto:support@polypdf.app" className="contact-link">
-                <FaEnvelope /> support@polypdf.app
+              <a href="mailto:support@polypdf.com" className="contact-link">
+                <FaEnvelope /> support@polypdf.com
               </a>
             </div>
           </section>

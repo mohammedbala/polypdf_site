@@ -58,7 +58,7 @@ Refunds are handled in Stripe. Completed refund events should set the PolyPDF li
 npm run admin -- resend PPM-AB12-CD34-EF56 buyer@example.com
 ```
 
-The command prints the decrypted key and writes an audit entry. Send the key from `support@polypdf.app` until automatic resend is added.
+The command prints the decrypted key and writes an audit entry. Send the key from `support@polypdf.com` until automatic resend is added.
 
 ## Launch Smoke Checklist
 

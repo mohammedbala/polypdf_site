@@ -62,7 +62,7 @@ const Buy = () => {
       window.location.assign(payload.url);
     } catch (error) {
       setCheckoutStatus('ready');
-      setCheckoutError('Checkout could not load. Please refresh this page or contact support@polypdf.app.');
+      setCheckoutError('Checkout could not load. Please refresh this page or contact support@polypdf.com.');
     }
   };
 
@@ -195,8 +195,8 @@ const Buy = () => {
               </div>
               <p>Purchase, billing, and license questions can be sent to:</p>
               <div className="contact-info">
-                <a href="mailto:support@polypdf.app" className="contact-link">
-                  <FaEnvelope /> support@polypdf.app
+                <a href="mailto:support@polypdf.com" className="contact-link">
+                  <FaEnvelope /> support@polypdf.com
                 </a>
               </div>
             </section>

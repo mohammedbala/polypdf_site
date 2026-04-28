@@ -15,7 +15,7 @@ const sections = [
     icon: <FaEnvelope />,
     title: 'Contact',
     content: [
-      'Support email: support@polypdf.app',
+      'Support email: support@polypdf.com',
       'Use this address for purchase questions, license activation problems, and general product support.',
       'When possible, include your app version, macOS version, Stripe receipt email, license key suffix, and a short description of the problem.'
     ]
@@ -26,7 +26,7 @@ const sections = [
     content: [
       'The current live commercial offer on PolyPDF.com is the direct Mac download.',
       'Direct Mac purchases are processed through Stripe and unlocked with a PolyPDF license key sent by email.',
-      'If you need help with activation, deactivation, or refund requests for the direct Mac version, contact support@polypdf.app.'
+      'If you need help with activation, deactivation, or refund requests for the direct Mac version, contact support@polypdf.com.'
     ]
   },
   {
@@ -118,8 +118,8 @@ const Support = () => {
           <section className="legal-section">
             <h2>Support email</h2>
             <div className="contact-info">
-              <a href="mailto:support@polypdf.app" className="contact-link">
-                <FaEnvelope /> support@polypdf.app
+              <a href="mailto:support@polypdf.com" className="contact-link">
+                <FaEnvelope /> support@polypdf.com
               </a>
             </div>
           </section>

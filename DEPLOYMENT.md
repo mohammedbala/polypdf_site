@@ -122,7 +122,7 @@ Required production values:
 - `STRIPE_PRICE_ID`
 - `LICENSE_SIGNING_SECRET`
 - `RESEND_API_KEY`
-- `SUPPORT_EMAIL=support@polypdf.app`
+- `SUPPORT_EMAIL=support@polypdf.com`
 
 Example systemd unit:
 

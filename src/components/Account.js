@@ -130,7 +130,7 @@ const Account = () => {
       setRequestStatus('sent');
     } catch (error) {
       setRequestStatus('idle');
-      setErrorMessage('The sign-in email could not be sent. Please contact support@polypdf.app.');
+      setErrorMessage('The sign-in email could not be sent. Please contact support@polypdf.com.');
     }
   };
 

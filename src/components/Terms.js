@@ -153,7 +153,7 @@ const Terms = () => {
             <h2>Contact</h2>
             <p>Questions for Euclidean Software LLC about these terms can be sent to:</p>
             <div className="contact-info">
-              <a href="mailto:support@polypdf.app" className="contact-link">support@polypdf.app</a>
+              <a href="mailto:support@polypdf.com" className="contact-link">support@polypdf.com</a>
             </div>
           </section>
         </div>
