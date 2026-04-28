@@ -742,6 +742,19 @@ body {
   border-bottom: 1px solid var(--gray-200);
 }
 
+.account-panel-actions,
+.account-empty-actions,
+.sign-in-download {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.sign-in-download {
+  margin-top: 1rem;
+}
+
 .account-kicker {
   color: var(--gray-600);
   font-size: 0.9rem;

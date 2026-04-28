@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
   FaCheckCircle,
+  FaDownload,
   FaEnvelope,
   FaExternalLinkAlt,
   FaKey,
@@ -12,6 +13,8 @@ import {
   FaSignOutAlt
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+
+const macDownloadURL = '/downloads/PolyPDFMac.dmg';
 
 const currencyFormatter = (amount, currency) => {
   if (typeof amount !== 'number' || !currency) {
@@ -55,7 +58,7 @@ const Account = () => {
       return {
         tone: 'success',
         title: 'Purchase complete',
-        body: 'Your license key is sent by email. Sign in with the checkout email to view purchase history and receipt links.'
+        body: 'Your license key is sent by email. Download PolyPDF, then sign in with the checkout email to view purchase history and receipt links.'
       };
     }
     if (searchParams.get('login') === 'success') {
@@ -195,9 +198,14 @@ const Account = () => {
                   <p className="account-kicker">Signed in as</p>
                   <h2>{account.email}</h2>
                 </div>
-                <button type="button" className="secondary-btn" onClick={logout}>
-                  <FaSignOutAlt /> Sign Out
-                </button>
+                <div className="account-panel-actions">
+                  <a href={macDownloadURL} className="secondary-btn" download>
+                    <FaDownload /> Download App
+                  </a>
+                  <button type="button" className="secondary-btn" onClick={logout}>
+                    <FaSignOutAlt /> Sign Out
+                  </button>
+                </div>
               </div>
 
               {account.licenses.length === 0 ? (
@@ -205,9 +213,14 @@ const Account = () => {
                   <FaReceipt />
                   <h3>No purchases found</h3>
                   <p>Use the same email address entered at Stripe checkout, or contact support if your purchase is missing.</p>
-                  <Link to="/buy" className="primary-btn">
-                    Buy PolyPDF Pro
-                  </Link>
+                  <div className="account-empty-actions">
+                    <a href={macDownloadURL} className="secondary-btn" download>
+                      <FaDownload /> Download App
+                    </a>
+                    <Link to="/buy" className="primary-btn">
+                      Buy PolyPDF Pro
+                    </Link>
+                  </div>
                 </div>
               ) : (
                 <div className="license-list">
@@ -236,6 +249,9 @@ const Account = () => {
                           </div>
                         </div>
                         <div className="license-actions">
+                          <a href={macDownloadURL} download>
+                            Download App <FaDownload />
+                          </a>
                           {license.payment?.receipt_url && (
                             <a href={license.payment.receipt_url} target="_blank" rel="noreferrer">
                               Receipt <FaExternalLinkAlt />
@@ -264,6 +280,11 @@ const Account = () => {
                   Enter the email used at Stripe checkout. If it has PolyPDF purchases,
                   you will receive a short-lived sign-in link.
                 </p>
+                <div className="sign-in-download">
+                  <a href={macDownloadURL} className="secondary-btn" download>
+                    <FaDownload /> Download PolyPDF for Mac
+                  </a>
+                </div>
               </div>
 
               <form className="account-form" onSubmit={requestMagicLink}>
