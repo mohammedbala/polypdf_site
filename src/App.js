@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Privacy from './components/Privacy';
 import Refund from './components/Refund';
 import Support from './components/Support';
+import WindowsPreview from './components/WindowsPreview';
 import Terms from './components/Terms';
 import './App.css';
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
           <Route path="/support" element={<Support />} />
+          <Route path="/windows" element={<WindowsPreview />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
