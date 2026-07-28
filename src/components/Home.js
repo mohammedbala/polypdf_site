@@ -31,7 +31,7 @@ const trackEvent = (name, properties = {}) => {
 const freeFeatures = [
   'Download the full Mac app free and start with the real product',
   'Open PDF drawings, calibrate scale, and use markup tools with no trial countdown',
-  'Take up to 3 measurements in every open document to verify fit on your own plans',
+  'Verify fit on your own plans with up to 3 hand-placed measurements per document, plus unlimited Visual Search auto-counts',
   'Decide after real use, not from a watered-down demo'
 ];
 

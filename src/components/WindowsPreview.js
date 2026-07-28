@@ -37,7 +37,7 @@ const sections = [
     title: 'What "preview" means',
     content: [
       'This is an early Windows build of the same PolyPDF engine that runs on Mac.',
-      'It cannot update itself yet, but it will notify you and link you here when a newer version is available.',
+      'It cannot update itself, and there is no Windows update feed published yet, so a manual check will simply report that you are up to date. Check back on this page for newer preview builds.',
       'As on Mac, your PDFs and measurements stay on your device.'
     ]
   },
