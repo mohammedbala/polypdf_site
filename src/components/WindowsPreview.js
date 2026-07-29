@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -10,6 +10,7 @@ import {
   FaCheckCircle
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+import { fetchWindowsRelease } from './VersionHistory';
 
 const windowsInstallerURL = '/downloads/windows/PolyPDFSetup.exe';
 
@@ -53,8 +54,23 @@ const sections = [
 ];
 
 const WindowsPreview = () => {
+  const [release, setRelease] = useState(null);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  // Read straight from the updater feed so the page cannot fall behind a release.
+  useEffect(() => {
+    let cancelled = false;
+    fetchWindowsRelease()
+      .then((current) => {
+        if (!cancelled) setRelease(current);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   return (
@@ -94,6 +110,16 @@ const WindowsPreview = () => {
                 <FaWindows /> Download PolyPDF for Windows
               </a>
             </div>
+            <p className="last-updated" style={{ marginTop: '0.9rem' }}>
+              {release && (
+                <>
+                  Current version {release.version}
+                  {release.build ? ` (build ${release.build})` : ''}
+                  {release.date ? `, released ${release.date}` : ''}.{' '}
+                </>
+              )}
+              <Link to="/versions">See what changed in every release</Link>.
+            </p>
           </div>
 
           <div className="legal-sections">
@@ -122,7 +148,8 @@ const WindowsPreview = () => {
           <div className="legal-footer-note">
             <p>
               Questions or a bug to report? Email <a href="mailto:support@polypdf.com">support@polypdf.com</a>{' '}
-              and mention you are on Windows. Prefer Mac? <Link to="/">Get the Mac app</Link>.
+              and mention you are on Windows, with the version and build number above.{' '}
+              <Link to="/versions">Version history</Link>. Prefer Mac? <Link to="/">Get the Mac app</Link>.
             </p>
           </div>
         </div>

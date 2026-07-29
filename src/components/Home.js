@@ -302,7 +302,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>See it on a real sheet</h2>
-            <p>PolyPDF 1.1.3 on a demonstration lighting plan — captured from the shipping app, not mocked up.</p>
+            <p>A demonstration lighting plan — captured from the shipping app, not mocked up.</p>
           </motion.div>
           {screenshots.map((shot, index) => (
             <motion.figure
