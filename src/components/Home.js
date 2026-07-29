@@ -258,7 +258,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="benefits bluebeam-alternative">
+      <section className="benefits mac-native-review">
         <div className="container">
           <motion.div
             className="section-header benefits-header"
@@ -266,10 +266,10 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>A Bluebeam Revu for Mac alternative for drawing review.</h2>
+            <h2>Drawing review that is native to the Mac.</h2>
             <p>
-              Revu no longer gives Mac-first AEC teams a native path. PolyPDF focuses on the everyday
-              review, markup, calibration, and takeoff workflows Mac users still need on construction PDFs.
+              Mac-first AEC teams deserve tools built for their platform. PolyPDF focuses on the everyday
+              review, markup, calibration, and takeoff workflows Mac users need on construction PDFs.
             </p>
           </motion.div>
 

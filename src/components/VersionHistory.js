@@ -15,7 +15,7 @@ const releases = [
     highlights: [
       'Saved style defaults, per tool: set highlight color, pen color, font and more once — every new markup uses them, even after quitting and reopening. Right-click a markup and choose "Set as Tool Default", or adjust the style bar with nothing selected.',
       'Text boxes and callouts start empty, so you can place and type straight away.',
-      'The Callout keyboard shortcut is now Q, matching Bluebeam Revu.',
+      'The Callout keyboard shortcut is now Q, matching the key most estimators already use.',
       'Fixed: on Macs without Xcode, PolyPDF could trigger a macOS prompt to install the command line developer tools. They were never needed, and the prompt is gone.'
     ]
   },
