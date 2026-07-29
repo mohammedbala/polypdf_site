@@ -16,6 +16,41 @@ import {
   HiOutlineSparkles
 } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
+import shotVisualSearch from '../assets/screenshots/shot-visual-search-web.png';
+import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.png';
+import shotMeasureTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
+import shotMarkup from '../assets/screenshots/shot-markup-web.png';
+import shotSearch from '../assets/screenshots/shot-search-web.png';
+
+// Real screenshots of PolyPDF 1.1.3 on a fictional demonstration drawing (the sheet itself carries a
+// "FICTIONAL DRAWING" stamp). Every caption states only what the app actually did in the capture.
+const screenshots = [
+  {
+    image: shotVisualSearch,
+    title: 'Find every fixture from one example',
+    caption: 'Visual Search: drag a box around one troffer symbol and PolyPDF finds the matches across the sheet — here 29 at 84% confidence, each boxed for review before counting.'
+  },
+  {
+    image: shotCountCommitted,
+    title: 'One click later, they are a count series',
+    caption: 'Committing the matches turns them into a single numbered Count series — ready to adjust, restyle, or pull into the takeoff worksheet.'
+  },
+  {
+    image: shotMeasureTakeoff,
+    title: 'Calibrate once, measure in real units',
+    caption: 'The sheet is calibrated to its printed scale (1/8" = 1\'-0"), so the corridor dimension reads 40\'-0" and the waiting-room area reads 579 sq ft — and both feed the takeoff worksheet with CSV and PDF export.'
+  },
+  {
+    image: shotMarkup,
+    title: 'Markup that reads like a drawing',
+    caption: 'A revision cloud around the storage room, a callout with a leader, and live measurements — every tool one keystroke away.'
+  },
+  {
+    image: shotSearch,
+    title: 'Search the sheet, see it in context',
+    caption: 'Text search finds "NURSE STATION" in the drawing\'s own text and highlights it right on the sheet.'
+  }
+];
 
 const macDownloadURL = '/downloads/PolyPDFMac.dmg';
 
@@ -255,6 +290,39 @@ const Home = () => {
               </motion.article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="benefits screenshots">
+        <div className="container">
+          <motion.div
+            className="section-header benefits-header"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <h2>See it on a real sheet</h2>
+            <p>PolyPDF 1.1.3 on a demonstration lighting plan — captured from the shipping app, not mocked up.</p>
+          </motion.div>
+          {screenshots.map((shot, index) => (
+            <motion.figure
+              key={shot.title}
+              style={{ margin: '0 0 48px 0' }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.05 }}
+            >
+              <h3 style={{ marginBottom: 12 }}>{shot.title}</h3>
+              <img
+                src={shot.image}
+                alt={shot.title}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                style={{ width: '100%', height: 'auto', borderRadius: 12, border: '1px solid rgba(0,0,0,0.08)', boxShadow: '0 12px 32px rgba(15,23,42,0.12)' }}
+              />
+              <figcaption style={{ marginTop: 10, fontSize: 15, opacity: 0.75 }}>{shot.caption}</figcaption>
+            </motion.figure>
+          ))}
         </div>
       </section>
 
