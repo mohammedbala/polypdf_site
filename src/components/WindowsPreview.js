@@ -6,39 +6,39 @@ import {
   FaWindows,
   FaDownload,
   FaShieldAlt,
-  FaBell,
+  FaSyncAlt,
   FaCheckCircle
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
 
-const windowsPreviewURL = '/downloads/windows-preview/PolyPDF-Windows-Preview-v1.1.0-x64.zip';
+const windowsInstallerURL = '/downloads/windows/PolyPDFSetup.exe';
 
 const sections = [
   {
     icon: <FaDownload />,
-    title: 'Download and run',
+    title: 'Download and install',
     content: [
-      'Download the preview (a portable .zip — there is no installer yet).',
-      'Unzip it anywhere you like, then open the PolyPDF folder.',
-      'Double-click PolyPDF.exe to launch. Nothing is installed — you can move or delete the folder any time.'
+      'Download PolyPDFSetup.exe and run it.',
+      'The installer sets PolyPDF up for your user account — no administrator password needed — and you can pick the install folder if you like.',
+      'PolyPDF opens when the installer finishes. To remove it later, uninstall from Windows Settings like any other app.'
     ]
   },
   {
     icon: <FaShieldAlt />,
-    title: 'The first-launch warning is expected',
+    title: 'Signed for Windows',
     content: [
-      'Because this preview is not code-signed yet, Windows shows a blue "Windows protected your PC" (SmartScreen) screen the first time you run it.',
-      'Click "More info", then "Run anyway". You only need to do this once.',
-      'A properly signed release — no warning, with automatic in-place updates — is on the way.'
+      'The installer and the app are code-signed by Euclidean Software, LLC, so Windows can verify who published them.',
+      'If SmartScreen still shows a notice on a brand-new release (reputation for fresh releases can take Microsoft a little while), click "More info", then "Run anyway".',
+      'As on Mac, your PDFs and measurements stay on your device.'
     ]
   },
   {
-    icon: <FaBell />,
-    title: 'What "preview" means',
+    icon: <FaSyncAlt />,
+    title: 'Updates itself',
     content: [
-      'This is an early Windows build of the same PolyPDF engine that runs on Mac.',
-      'It cannot update itself, and there is no Windows update feed published yet, so a manual check will simply report that you are up to date. Check back on this page for newer preview builds.',
-      'As on Mac, your PDFs and measurements stay on your device.'
+      'PolyPDF for Windows checks for updates automatically and installs them when you quit the app — no manual downloads.',
+      'It is the same PolyPDF engine the Mac app ships, at the same version.',
+      'Used the earlier portable preview? Just run the installer — the preview folder can be deleted afterwards.'
     ]
   },
   {
@@ -46,7 +46,7 @@ const sections = [
     title: 'Requirements',
     content: [
       'Windows 10 or 11, 64-bit (x64).',
-      'About 500 MB of free disk space once unzipped.',
+      'About 500 MB of free disk space.',
       'Same free tier as Mac: full markup and review tools, with 3 measurements per document before Pro.'
     ]
   }
@@ -79,19 +79,19 @@ const WindowsPreview = () => {
       >
         <div className="container">
           <div className="legal-hero">
-            <h1>PolyPDF for Windows <span className="gradient-text">(Preview)</span></h1>
-            <p className="legal-subtitle">An early portable build — download, unzip, and run</p>
+            <h1>PolyPDF for <span className="gradient-text">Windows</span></h1>
+            <p className="legal-subtitle">A signed installer with automatic updates</p>
           </div>
 
           <div className="legal-intro">
             <p>
-              PolyPDF is coming to Windows. This preview lets you try the real app today on Windows 10 or 11.
-              It is a portable build (no installer) and is not code-signed yet, so expect a one-time Windows
-              warning on first launch — the steps below take about a minute.
+              PolyPDF now ships for Windows 10 and 11 as a signed installer. It is the same drawing-review
+              app as on the Mac — open sheets, mark up review comments, calibrate scale, and measure — and it
+              keeps itself up to date automatically.
             </p>
             <div className="cta-download-row" style={{ marginTop: '1.5rem' }}>
-              <a href={windowsPreviewURL} className="primary-btn large" download>
-                <FaWindows /> Download Windows Preview
+              <a href={windowsInstallerURL} className="primary-btn large" download>
+                <FaWindows /> Download PolyPDF for Windows
               </a>
             </div>
           </div>
@@ -122,7 +122,7 @@ const WindowsPreview = () => {
           <div className="legal-footer-note">
             <p>
               Questions or a bug to report? Email <a href="mailto:support@polypdf.com">support@polypdf.com</a>{' '}
-              and mention you are on the Windows preview. Prefer Mac? <Link to="/">Get the Mac app</Link>.
+              and mention you are on Windows. Prefer Mac? <Link to="/">Get the Mac app</Link>.
             </p>
           </div>
         </div>

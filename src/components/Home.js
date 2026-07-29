@@ -511,7 +511,7 @@ const Home = () => {
                 <span>Secure Stripe checkout</span>
               </div>
             </div>
-            <p className="cta-platform-note">Now on Windows too — <Link to="/windows">try the preview</Link>.</p>
+            <p className="cta-platform-note">Now on Windows too — <Link to="/windows">download for Windows</Link>.</p>
           </motion.div>
         </div>
       </section>
@@ -526,7 +526,7 @@ const Home = () => {
             <div className="footer-links">
               <a href={macDownloadURL} download onClick={() => handleDownloadClick('footer')}>Download Free</a>
               <Link to="/buy">Buy Once</Link>
-              <Link to="/windows">Windows Preview</Link>
+              <Link to="/windows">Windows</Link>
               <Link to="/support">Support</Link>
               <Link to="/versions">Version History</Link>
               <Link to="/refund">Refund Policy</Link>
