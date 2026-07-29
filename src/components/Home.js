@@ -460,6 +460,7 @@ const Home = () => {
               <Link to="/buy">Buy Once</Link>
               <Link to="/windows">Windows Preview</Link>
               <Link to="/support">Support</Link>
+              <Link to="/versions">Version History</Link>
               <Link to="/refund">Refund Policy</Link>
               <Link to="/terms">Terms</Link>
               <Link to="/privacy">Privacy</Link>

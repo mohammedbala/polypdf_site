@@ -8,6 +8,7 @@ import Refund from './components/Refund';
 import Support from './components/Support';
 import WindowsPreview from './components/WindowsPreview';
 import Terms from './components/Terms';
+import VersionHistory from './components/VersionHistory';
 import './App.css';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/support" element={<Support />} />
           <Route path="/windows" element={<WindowsPreview />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/versions" element={<VersionHistory />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
