@@ -73,7 +73,7 @@ const freeFeatures = [
 const proFeatures = [
   'Unlock unlimited measurements across all of your documents',
   'Pay $49.99 once for a license you can use on up to 3 computers — Mac or Windows',
-  'Keep the same markup and review workflow with signed one-click app updates',
+  'Keep the same markup and review workflow with signed automatic app updates',
   'Secure Stripe checkout with license delivery by email'
 ];
 
@@ -130,7 +130,7 @@ const faqs = [
   },
   {
     question: 'How do refunds work?',
-    answer: 'Purchases are handled through Stripe and PolyPDF support. Unless required by law, transactions are generally non-refundable; discretionary refund requests may be reviewed within 14 days.'
+    answer: 'Purchases are handled through Stripe and PolyPDF support. Refund requests are reviewed under the refund policy, which also covers your statutory rights.'
   }
 ];
 
@@ -204,10 +204,9 @@ const Home = () => {
             <h1>Measure and mark up PDF drawings without another subscription.</h1>
 
             <p className="hero-subtitle">
-              PolyPDF helps architects, engineers, contractors, estimators, and reviewers calibrate
-              scale, take precise measurements, and mark up the PDFs they already receive. Download it
-              free on Mac or Windows, test 3 measurements in every document, then unlock unlimited
-              measurements for a one-time $49.99 only if it earns a place in your workflow.
+              Calibrate scale, measure precisely, and mark up the drawings you already receive —
+              built for architects, engineers, contractors, and estimators. Free on Mac and Windows;
+              unlimited measurements are a one-time $49.99.
             </p>
 
             <div className="hero-cta">
@@ -217,7 +216,7 @@ const Home = () => {
               </Link>
             </div>
 
-            <p className="hero-note">Start free on your own drawings. Upgrade only when you need unlimited measurements.</p>
+            <p className="hero-note">Signed, notarized builds. Start free on your own drawings — upgrade only when you need unlimited measurements.</p>
 
             <div className="hero-stats compact-stats">
               <div className="stat">
@@ -229,8 +228,8 @@ const Home = () => {
                 <p>One-time license, no renewal</p>
               </div>
               <div className="stat">
-                <h3>3</h3>
-                <p>Computers per license — Mac or Windows</p>
+                <h3>Mac+PC</h3>
+                <p>One license covers 3 computers</p>
               </div>
               <div className="stat">
                 <h3>Stripe</h3>
@@ -339,7 +338,7 @@ const Home = () => {
             <h2>Native on your desktop — Mac and Windows.</h2>
             <p>
               AEC teams deserve tools built for the machine in front of them. PolyPDF runs the same
-              engine natively on macOS and Windows, focused on the everyday review, markup,
+              engine as a real desktop app on macOS and Windows, focused on the everyday review, markup,
               calibration, and takeoff workflows construction PDFs demand.
             </p>
           </motion.div>

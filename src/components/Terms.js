@@ -72,13 +72,13 @@ const Terms = () => {
           <div className="legal-hero">
             <h1>Terms of Use</h1>
             <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
-            <p className="last-updated">Last updated: April 19, 2026</p>
+            <p className="last-updated">Last updated: July 29, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
               These Terms of Use are between you and Euclidean Software LLC, and govern your use
-              of PolyPDF, including the PolyPDF website, the direct-download Mac application,
+              of PolyPDF, including the PolyPDF website, the direct-download desktop applications for macOS and Windows,
               and related purchasing, licensing, support, and update services.
             </p>
           </div>

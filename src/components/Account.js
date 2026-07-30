@@ -16,6 +16,15 @@ import parrotIcon from '../assets/polypdf_icon.png';
 import { DownloadBoth } from './DownloadCTA';
 import { primaryPlatform } from '../lib/platform';
 
+const trackEvent = (name, properties = {}) => {
+  if (window.plausible) {
+    window.plausible(name, { props: properties });
+  }
+  if (window.gtag) {
+    window.gtag('event', name, properties);
+  }
+};
+
 
 const currencyFormatter = (amount, currency) => {
   if (typeof amount !== 'number' || !currency) {
@@ -200,7 +209,12 @@ const Account = () => {
                   <h2>{account.email}</h2>
                 </div>
                 <div className="account-panel-actions">
-                  <a href={primaryPlatform.url} className="secondary-btn" download>
+                  <a
+                    href={primaryPlatform.url}
+                    className="secondary-btn"
+                    download
+                    onClick={() => trackEvent('download_click', { source: 'account_header', platform: primaryPlatform.key })}
+                  >
                     <FaDownload /> Download for {primaryPlatform.name}
                   </a>
                   <button type="button" className="secondary-btn" onClick={logout}>
@@ -215,7 +229,12 @@ const Account = () => {
                   <h3>No purchases found</h3>
                   <p>Use the same email address entered at Stripe checkout, or contact support if your purchase is missing.</p>
                   <div className="account-empty-actions">
-                    <a href={primaryPlatform.url} className="secondary-btn" download>
+                    <a
+                      href={primaryPlatform.url}
+                      className="secondary-btn"
+                      download
+                      onClick={() => trackEvent('download_click', { source: 'account_empty', platform: primaryPlatform.key })}
+                    >
                       <FaDownload /> Download for {primaryPlatform.name}
                     </a>
                     <Link to="/buy" className="primary-btn">

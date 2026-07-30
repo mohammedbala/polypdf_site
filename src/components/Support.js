@@ -70,7 +70,7 @@ const Support = () => {
           <div className="legal-hero">
             <h1>Support</h1>
             <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
-            <p className="last-updated">Last updated: April 19, 2026</p>
+            <p className="last-updated">Last updated: July 29, 2026</p>
           </div>
 
           <div className="legal-intro">

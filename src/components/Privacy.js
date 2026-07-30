@@ -70,7 +70,7 @@ const Privacy = () => {
           <div className="legal-hero">
             <h1>Privacy Policy</h1>
             <p className="legal-subtitle">How PolyPDF handles website and direct-download data</p>
-            <p className="last-updated">Last updated: April 19, 2026</p>
+            <p className="last-updated">Last updated: July 29, 2026</p>
           </div>
 
           <div className="legal-intro">

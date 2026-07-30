@@ -10,7 +10,17 @@ import {
   FaCheckCircle
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+
 import { fetchWindowsRelease } from './VersionHistory';
+
+const trackEvent = (name, properties = {}) => {
+  if (window.plausible) {
+    window.plausible(name, { props: properties });
+  }
+  if (window.gtag) {
+    window.gtag('event', name, properties);
+  }
+};
 
 const windowsInstallerURL = '/downloads/windows/PolyPDFSetup.exe';
 
@@ -106,7 +116,7 @@ const WindowsPreview = () => {
               keeps itself up to date automatically.
             </p>
             <div className="cta-download-row" style={{ marginTop: '1.5rem' }}>
-              <a href={windowsInstallerURL} className="primary-btn large" download>
+              <a href={windowsInstallerURL} className="primary-btn large" download onClick={() => trackEvent('download_click', { source: 'windows_page', platform: 'windows' })}>
                 <FaWindows /> Download PolyPDF for Windows
               </a>
             </div>

@@ -20,7 +20,7 @@ const proFeatures = [
   'One-time $49.99 direct license with no subscription renewal',
   'Use your license on up to 3 computers — Mac or Windows, in any mix',
   'Secure Stripe checkout with license delivery by email',
-  'Signed one-click app updates on both platforms; Pro access stays tied to your license'
+  'Signed automatic app updates on both platforms; Pro access stays tied to your license'
 ];
 
 const trackEvent = (name, properties = {}) => {
@@ -143,7 +143,12 @@ const Buy = () => {
                 <li>Pro removes the measurement limit on both Mac and Windows.</li>
               </ul>
               <div className="buy-actions">
-                <a href={primaryPlatform.url} className="secondary-btn full-width" download>
+                <a
+                  href={primaryPlatform.url}
+                  className="secondary-btn full-width"
+                  download
+                  onClick={() => trackEvent('download_click', { source: 'buy_page', platform: primaryPlatform.key })}
+                >
                   <HiOutlineCloudDownload /> Download free first for {primaryPlatform.name}
                 </a>
               </div>

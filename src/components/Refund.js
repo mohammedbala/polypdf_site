@@ -17,7 +17,7 @@ const sections = [
     icon: <FaUndo />,
     title: 'PolyPDF refund policy applies',
     content: [
-      'Direct PolyPDF Mac purchases made through the website are processed by Stripe, and refund eligibility is governed by this policy.',
+      'Direct PolyPDF purchases — Mac or Windows — made through the website are processed by Stripe, and refund eligibility is governed by this policy.',
       'Unless required by applicable law, transactions are generally non-refundable and non-exchangeable.',
       'PolyPDF may review discretionary refund requests submitted within 14 days of the transaction date, but submitting a request in that period does not guarantee a refund.'
     ]
@@ -70,8 +70,8 @@ const Refund = () => {
         <div className="container">
           <div className="legal-hero">
             <h1>Refund Policy</h1>
-            <p className="legal-subtitle">Refunds for direct PolyPDF Mac purchases</p>
-            <p className="last-updated">Last updated: April 19, 2026</p>
+            <p className="legal-subtitle">Refunds for direct PolyPDF purchases</p>
+            <p className="last-updated">Last updated: July 29, 2026</p>
           </div>
 
           <div className="legal-intro">
