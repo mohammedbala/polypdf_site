@@ -22,24 +22,42 @@ import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.p
 import shotMeasureTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
 import shotMarkup from '../assets/screenshots/shot-markup-web.png';
 
-// Real captures of PolyPDF 1.1.3 in dark mode, working on sheet E-102 of a 2024 Air National Guard
-// Maintenance & Inspection facility standard design — a work of the US federal government, public
-// domain. Every caption states only what the capture actually shows.
+// Real captures of PolyPDF 1.1.3 in dark mode. Each shot works on a DIFFERENT published drawing
+// set and a different discipline — electrical, architectural, mechanical — so each carries its own
+// credit. Attribution belongs to the individual sheet, not to the section.
+//
+// Licence note: the two US federal sets are public domain under 17 U.S.C. 105. The UK school plan
+// is NOT public domain — it is Crown copyright released under the Open Government Licence v3.0,
+// which makes the attribution statement AND a link to the licence a condition of use, so that
+// credit must stay next to the image wherever it appears.
+const OGL_HREF = 'https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/';
+
 const screenshots = [
   {
     image: shotCountCommitted,
     title: 'Count the fixtures, keep the tally on the drawing',
-    caption: 'Seven light fixtures counted across the maintenance bay, each mark landing on the symbol it belongs to. The takeoff worksheet on the left holds one row per item and a running legend — 7 count beside 1,244.07 sq ft of area — and exports to CSV or PDF.'
+    caption: 'Seven light fixtures counted across the maintenance bay, each mark landing on the symbol it belongs to. The takeoff worksheet on the left holds one row per item and a running legend — 7 count beside 1,244.07 sq ft of area — and exports to CSV or PDF.',
+    source:
+      'Sheet E-102, Air National Guard Maintenance & Inspection Facility Standard Design, 23 October 2024 — a work of the US federal government, public domain.'
   },
   {
     image: shotMeasureTakeoff,
-    title: 'Calibrate once, measure in real units',
-    caption: 'The page is calibrated to the scale printed on the sheet itself, 1/4" = 1\'-0" — 18 PDF points per foot — so tracing the bay around its office returns 1,244.07 sq ft. The value stays on the drawing, not just in a side panel.'
+    title: 'Area takeoff on a 1:200 school plan',
+    caption: 'The dining hall of a ground-floor general arrangement plan, traced with the Area tool and reading 204.38 m² with the kitchen and library beside it. The page is calibrated to the 1:200 scale printed on the sheet — 14.17 PDF points per metre — so the figure comes from the drawing, not a guess.',
+    source: (
+      <>
+        Secondary school general arrangement plan, level 00, revision C01, 12 January 2026. Contains
+        public sector information licensed under the{' '}
+        <a href={OGL_HREF} target="_blank" rel="noopener noreferrer">Open Government Licence v3.0</a>.
+      </>
+    )
   },
   {
     image: shotMarkup,
-    title: 'Mark up review comments the way a drawing reads',
-    caption: 'A revision cloud around the office and a leader callout — "RFI 014 – confirm A4E mounting height" — set straight onto the sheet at a size that still reads in a printed set.'
+    title: 'Cloud and callout on a piping plan',
+    caption: 'A revision cloud around one stripping-pump bay of a marine fuel pier enlarged plan, with an RFI callout leadering back to the pump discharge it questions. Set at 22pt so the note still reads once the sheet is printed.',
+    source:
+      'Sheet M-102, Fuel Pier drawings 10009724–10009734, US Department of Defense, November 2020 — a work of the US federal government, public domain.'
   }
 ];
 
@@ -292,7 +310,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>See it on a real sheet</h2>
-            <p>An electrical lighting plan from a 2024 federal facility drawing set — captured from the shipping app, not mocked up. <span className="showcase-source">Sheet E-102, Air National Guard Maintenance &amp; Inspection Facility Standard Design, 23 October 2024 — a work of the US federal government, public domain.</span></p>
+            <p>Three drawing sets, three disciplines — electrical, architectural, mechanical — captured from the shipping app rather than mocked up. Each sheet is a published drawing credited under its own shot; crediting a source does not mean it endorses PolyPDF.</p>
           </motion.div>
 
           {/* Lead shot gets the full-width stage; the rest alternate text/image so the section
@@ -310,6 +328,7 @@ const Home = () => {
             <figcaption>
               <h3>{screenshots[0].title}</h3>
               <p>{screenshots[0].caption}</p>
+              <p className="shot-source">{screenshots[0].source}</p>
             </figcaption>
           </motion.figure>
 
@@ -327,6 +346,7 @@ const Home = () => {
                   <span className="showcase-index">0{index + 2}</span>
                   <h3>{shot.title}</h3>
                   <p>{shot.caption}</p>
+                  <p className="shot-source">{shot.source}</p>
                 </figcaption>
                 <motion.div
                   className="shot-plate"
