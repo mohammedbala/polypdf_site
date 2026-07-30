@@ -1,9 +1,18 @@
 name: CI/CD Pipeline for polypdf-site
 
+# Deploys the marketing site to the droplet, where nginx serves the built assets as static files
+# straight out of /var/www/polypdf-site/build. There is no app server in front of it.
+
 on:
   push:
     branches:
-      - master  # Changed from main to master since that's your default branch
+      - master
+  workflow_dispatch:
+
+concurrency:
+  # Two pushes in quick succession would otherwise run two npm builds writing build/ at once.
+  group: deploy-polypdf-site
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -11,60 +20,42 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set Up SSH Agent
-        uses: webfactory/ssh-agent@v0.5.4
+        uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Add Droplet to Known Hosts
-        run: |
-          ssh-keyscan -H ${{ secrets.DROPLET_HOST }} >> ~/.ssh/known_hosts
+        run: ssh-keyscan -H "${{ secrets.DROPLET_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Deploy to Droplet
         run: |
-          ssh ${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }} << 'EOF'
-            set -e
-            ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+          ssh -o BatchMode=yes "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" bash -euo pipefail << 'EOF'
+            cd /var/www/polypdf-site
 
-            # Create directory if it doesn't exist
-            sudo mkdir -p /var/www/polypdf-site
-            sudo chown -R $USER:$USER /var/www/polypdf-site
+            # Fast-forward only. The previous script ran `git stash`, which silently pocketed any
+            # work sitting on the droplet; failing loudly on a diverged tree is safer than hiding it.
+            git fetch origin master
+            git checkout master
+            git pull --ff-only origin master
 
-            # Navigate to the polypdf-site directory
-            cd /var/www
-
-            # Clone repository if it doesn't exist, otherwise pull updates
-            if [ ! -d "polypdf-site/.git" ]; then
-              git clone https://github.com/mohammedbala/polypdf_site.git polypdf-site
-              cd polypdf-site
-            else
-              cd polypdf-site
-              git stash
-              git pull origin master
-            fi
-
-            # Install dependencies and build the React app
             npm install
-            npm run build
 
-            # Install serve globally if not already installed
-            if ! command -v serve &> /dev/null; then
-              npm install -g serve
-            fi
-            
-            # Check if the app is already running in pm2
-            if pm2 describe polypdf-site > /dev/null 2>&1; then
-              pm2 reload polypdf-site
-            else
-              # Serve the build folder on port 3001 (or your preferred port)
-              pm2 start serve --name "polypdf-site" -- -s build -l 3001
-            fi
+            # The droplet runs Node 18, where react-scripts' serialize-javascript dependency reads
+            # crypto.getRandomValues off the global object — absent until Node 19. Without this flag
+            # the build dies with "crypto is not defined", which is what silently broke this deploy.
+            NODE_OPTIONS=--experimental-global-webcrypto CI=false npm run build
 
-            # Save pm2 configuration
-            pm2 save
-            
-            # Optional: If using nginx, restart it to pick up any config changes
-            # sudo systemctl reload nginx
+            # nginx serves build/ directly, so there is no process to restart. Just prove the build
+            # produced a real index.html rather than leaving a half-written directory behind.
+            test -s build/index.html
+            echo "deployed $(git rev-parse --short HEAD) -> $(ls build/static/js/main.*.js)"
           EOF
+
+      - name: Verify site is live
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' https://polypdf.com/)
+          echo "polypdf.com -> $code"
+          test "$code" = "200"
