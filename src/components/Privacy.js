@@ -16,7 +16,7 @@ const sections = [
     title: 'Information we collect',
     content: [
       'When you browse the website, we may receive basic technical information such as IP address, browser type, and page requests from our hosting and security providers.',
-      'When you purchase or activate a direct Mac license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
+      'When you purchase or activate a direct license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
       'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose.'
     ]
   },
@@ -26,14 +26,14 @@ const sections = [
     content: [
       'Provide downloads, license reactivation, license activation, updates, order lookup, and customer support.',
       'Protect the service against fraud, abuse, and failed or duplicated activations.',
-      'Understand crashes, app version adoption, and other operational issues needed to keep the direct Mac app working.'
+      'Understand crashes, app version adoption, and other operational issues needed to keep the desktop app working.'
     ]
   },
   {
     icon: <FaUserShield />,
     title: 'Sharing and processors',
     content: [
-      'Payments for direct Mac purchases are processed by Stripe.',
+      'Payments for direct purchases are processed by Stripe.',
       'Transactional license emails may be sent through Resend or another email provider.',
       'Infrastructure providers such as our web host, CDN, update host, analytics or crash tools, and payment tools may process data on our behalf to deliver the service.',
       'We do not sell your personal information.'
@@ -76,7 +76,7 @@ const Privacy = () => {
           <div className="legal-intro">
             <p>
               This Privacy Policy explains what information PolyPDF collects, how it is used,
-              and how it is shared when you use the website, buy a direct Mac license, or use the app.
+              and how it is shared when you use the website, buy a direct license, or use the app.
             </p>
           </div>
 
@@ -116,7 +116,7 @@ const Privacy = () => {
             <ul className="section-content">
               <li>You can choose not to purchase Pro and continue using the free tier within its limits where available.</li>
               <li>You can request deletion of support or account-related records where deletion is legally permitted and operationally possible.</li>
-              <li>You can stop using the direct Mac app at any time by uninstalling it and deactivating the license on that Mac if needed.</li>
+              <li>You can stop using the app at any time by uninstalling it and deactivating the license on that computer if needed.</li>
             </ul>
           </section>
 

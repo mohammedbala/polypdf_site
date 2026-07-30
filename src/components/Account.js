@@ -13,8 +13,9 @@ import {
   FaSignOutAlt
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+import { DownloadBoth } from './DownloadCTA';
+import { primaryPlatform } from '../lib/platform';
 
-const macDownloadURL = '/downloads/PolyPDFMac.dmg';
 
 const currencyFormatter = (amount, currency) => {
   if (typeof amount !== 'number' || !currency) {
@@ -173,7 +174,7 @@ const Account = () => {
             </div>
             <h1>PolyPDF Account</h1>
             <p>
-              Sign in with the email used at checkout to view your direct Mac purchase,
+              Sign in with the email used at checkout to view your PolyPDF purchase,
               receipt links, and activation status. License keys are still delivered by email.
             </p>
           </div>
@@ -199,8 +200,8 @@ const Account = () => {
                   <h2>{account.email}</h2>
                 </div>
                 <div className="account-panel-actions">
-                  <a href={macDownloadURL} className="secondary-btn" download>
-                    <FaDownload /> Download App
+                  <a href={primaryPlatform.url} className="secondary-btn" download>
+                    <FaDownload /> Download for {primaryPlatform.name}
                   </a>
                   <button type="button" className="secondary-btn" onClick={logout}>
                     <FaSignOutAlt /> Sign Out
@@ -214,8 +215,8 @@ const Account = () => {
                   <h3>No purchases found</h3>
                   <p>Use the same email address entered at Stripe checkout, or contact support if your purchase is missing.</p>
                   <div className="account-empty-actions">
-                    <a href={macDownloadURL} className="secondary-btn" download>
-                      <FaDownload /> Download App
+                    <a href={primaryPlatform.url} className="secondary-btn" download>
+                      <FaDownload /> Download for {primaryPlatform.name}
                     </a>
                     <Link to="/buy" className="primary-btn">
                       Buy PolyPDF Pro
@@ -232,7 +233,7 @@ const Account = () => {
                           <div className={`license-status ${license.status || 'unknown'}`}>
                             <FaCheckCircle /> {statusLabel(license.status)}
                           </div>
-                          <h3>PolyPDF Pro for Mac</h3>
+                          <h3>PolyPDF Pro</h3>
                           <p>
                             License ending in <strong>{license.license_key_last4 || '----'}</strong>
                             {' '}created {dateFormatter(license.created_at)}
@@ -249,9 +250,7 @@ const Account = () => {
                           </div>
                         </div>
                         <div className="license-actions">
-                          <a href={macDownloadURL} download>
-                            Download App <FaDownload />
-                          </a>
+                          <DownloadBoth source="account_license" />
                           {license.payment?.receipt_url && (
                             <a href={license.payment.receipt_url} target="_blank" rel="noreferrer">
                               Receipt <FaExternalLinkAlt />
@@ -281,9 +280,7 @@ const Account = () => {
                   you will receive a short-lived sign-in link.
                 </p>
                 <div className="sign-in-download">
-                  <a href={macDownloadURL} className="secondary-btn" download>
-                    <FaDownload /> Download PolyPDF for Mac
-                  </a>
+                  <DownloadBoth source="account_signin" />
                 </div>
               </div>
 

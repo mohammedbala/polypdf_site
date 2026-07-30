@@ -27,7 +27,7 @@ const sections = [
     title: 'How to request a refund',
     content: [
       'Contact PolyPDF support from the email address used at checkout and include your Stripe receipt or order details.',
-      'Include your app version, macOS version, license key suffix, and a short description of the issue.',
+      'Include your app version, your OS (macOS or Windows), license key suffix, and a short description of the issue.',
       'If you experience a persistent technical issue or material product defect, contact PolyPDF support first so we can try to resolve it.'
     ]
   },
@@ -76,9 +76,9 @@ const Refund = () => {
 
           <div className="legal-intro">
             <p>
-              PolyPDF is designed so you can download the Mac app free, test it on your own
+              PolyPDF is designed so you can download the app free — on Mac or Windows — and test it on your own
               documents, and only purchase Pro when you want unlimited measurements. This policy
-              explains refund handling for direct Mac purchases processed by Stripe.
+              explains refund handling for direct purchases processed by Stripe.
             </p>
           </div>
 
@@ -142,7 +142,7 @@ const Refund = () => {
               </a>
             </div>
             <p>
-              Include your Stripe receipt email, app version, macOS version, and license key suffix when possible.
+              Include your Stripe receipt email, app version, OS version, and license key suffix when possible.
             </p>
           </section>
         </div>

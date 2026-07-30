@@ -17,23 +17,23 @@ const sections = [
     content: [
       'Support email: support@polypdf.com',
       'Use this address for purchase questions, license activation problems, and general product support.',
-      'When possible, include your app version, macOS version, Stripe receipt email, license key suffix, and a short description of the problem.'
+      'When possible, include your app version, your OS (macOS or Windows) and its version, Stripe receipt email, license key suffix, and a short description of the problem.'
     ]
   },
   {
     icon: <FaDownload />,
-    title: 'Direct Mac download',
+    title: 'Direct download',
     content: [
-      'The current live commercial offer on PolyPDF.com is the direct Mac download.',
-      'Direct Mac purchases are processed through Stripe and unlocked with a PolyPDF license key sent by email.',
-      'If you need help with activation, deactivation, or refund requests for the direct Mac version, contact support@polypdf.com.'
+      'The current live commercial offer on PolyPDF.com is the direct desktop download for macOS and Windows.',
+      'Direct purchases are processed through Stripe and unlocked with a PolyPDF license key sent by email.',
+      'If you need help with activation, deactivation, or refund requests, contact support@polypdf.com.'
     ]
   },
   {
     icon: <FaReceipt />,
     title: 'Refunds and billing',
     content: [
-      'Direct Mac purchases are subject to PolyPDF\'s refund policy, including any non-waivable consumer rights.',
+      'Direct purchases are subject to PolyPDF\'s refund policy, including any non-waivable consumer rights.',
       'Unless required by law, transactions are generally non-refundable; PolyPDF may review discretionary refund requests submitted within 14 days.',
       'For billing questions, use the links in your Stripe receipt or contact PolyPDF support.',
       'Refunded licenses are deactivated after the refund is completed.'
@@ -69,14 +69,14 @@ const Support = () => {
         <div className="container">
           <div className="legal-hero">
             <h1>Support</h1>
-            <p className="legal-subtitle">Purchase, licensing, and product help for the direct Mac app</p>
+            <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
             <p className="last-updated">Last updated: April 19, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
               Use this page for support contact details and purchase-channel guidance.
-              If you are writing in, include your Mac app version and Stripe receipt details when relevant.
+              If you are writing in, include your app version (shown in the About window on both platforms) and Stripe receipt details when relevant.
             </p>
           </div>
 
@@ -109,7 +109,7 @@ const Support = () => {
               <h2>Before you contact support</h2>
             </div>
             <ul className="section-content">
-              <li>Confirm that you are using the direct Mac build downloaded from PolyPDF.com.</li>
+              <li>Confirm that you are using the direct build downloaded from PolyPDF.com.</li>
               <li>Include the app version and build number if you can.</li>
               <li>For purchase issues, attach the Stripe receipt email or order confirmation.</li>
             </ul>

@@ -993,3 +993,145 @@ body {
     border-radius: 20px;
   }
 }
+
+/* ------------------------------------------------------------------------- */
+/* Platform-aware download CTA (DownloadCTA.js) + conversion polish.         */
+/* Appended as a layer over the base styles — later rules win at equal       */
+/* specificity, so the base system above stays untouched.                    */
+
+.dl-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.45rem;
+}
+
+.dl-meta {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--gray-600);
+  padding-left: 0.35rem;
+}
+
+.dl-meta-sep {
+  color: var(--gray-400);
+}
+
+.dl-alt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--gray-700);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--gray-300);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.dl-alt:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.dl-both {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* The dark bottom CTA needs the light-on-dark treatment for the meta line. */
+.cta-section .dl-meta {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.cta-section .dl-alt {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.cta-section .dl-alt:hover {
+  color: var(--primary-white);
+  border-color: var(--primary-white);
+}
+
+.cta-download-row {
+  align-items: flex-start;
+}
+
+.cta-download-row .dl-cta {
+  align-items: center;
+}
+
+/* Conversion polish: presence for the headline, honest pressed states, and
+   visible keyboard focus — the three cheapest trust signals a page can send. */
+
+.hero h1,
+.section-header h2,
+.cta-content h2 {
+  text-wrap: balance;
+}
+
+.hero h1 {
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle {
+  text-wrap: pretty;
+}
+
+.nav-buy:active,
+.nav-download:active,
+.primary-btn:active,
+.secondary-btn:active {
+  transform: translateY(0) scale(0.985);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-buy:focus-visible,
+.nav-download:focus-visible,
+.primary-btn:focus-visible,
+.secondary-btn:focus-visible,
+.dl-alt:focus-visible,
+.footer-links a:focus-visible,
+.nav-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.nav-buy,
+.nav-download,
+.primary-btn,
+.secondary-btn {
+  border-radius: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .nav-buy,
+  .nav-download,
+  .primary-btn,
+  .secondary-btn,
+  .dl-alt {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .dl-cta {
+    width: 100%;
+    align-items: stretch;
+  }
+  .dl-cta .primary-btn {
+    width: 100%;
+  }
+  .dl-meta {
+    justify-content: center;
+    padding-left: 0;
+  }
+}

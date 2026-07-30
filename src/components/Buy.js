@@ -13,15 +13,14 @@ import {
 } from 'react-icons/fa';
 import { HiOutlineCloudDownload, HiOutlineShieldCheck } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
-
-const macDownloadURL = '/downloads/PolyPDFMac.dmg';
+import { primaryPlatform } from '../lib/platform';
 
 const proFeatures = [
   'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
-  'One-time $49.99 direct Mac license with no subscription renewal',
-  'Use your license on up to 3 Macs',
+  'One-time $49.99 direct license with no subscription renewal',
+  'Use your license on up to 3 computers — Mac or Windows, in any mix',
   'Secure Stripe checkout with license delivery by email',
-  'Public one-click app updates through Sparkle; Pro access stays tied to your license'
+  'Signed one-click app updates on both platforms; Pro access stays tied to your license'
 ];
 
 const trackEvent = (name, properties = {}) => {
@@ -89,13 +88,13 @@ const Buy = () => {
         <div className="container">
           <div className="buy-hero">
             <div className="hero-badge">
-              <FaLock /> Secure checkout for the direct Mac license
+              <FaLock /> Secure checkout · one license for Mac &amp; Windows
             </div>
             <h1>Buy PolyPDF Pro once. Measure without a subscription.</h1>
             <p>
-              Unlock unlimited measurements in the direct Mac app for a one-time $49.99.
-              Keep the free markup and review workflow, remove the measurement cap, and use
-              your license on up to 3 Macs.
+              Unlock unlimited measurements for a one-time $49.99. Keep the free markup and
+              review workflow, remove the measurement cap, and use your license on up to
+              3 computers — Mac or Windows.
             </p>
           </div>
 
@@ -107,7 +106,7 @@ const Buy = () => {
               transition={{ delay: 0.08 }}
             >
               <div className="plan-pill plan-pill-dark">Pro Lifetime</div>
-              <h2>PolyPDF Pro for Mac</h2>
+              <h2>PolyPDF Pro</h2>
               <p className="plan-price">$49.99</p>
               <ul className="plan-list">
                 {proFeatures.map((feature) => (
@@ -141,11 +140,11 @@ const Buy = () => {
               <ul className="section-content">
                 <li>Download PolyPDF free first if you want to test it on real drawings.</li>
                 <li>The free app includes markup and review tools plus 3 measurements per document.</li>
-                <li>Pro removes the measurement limit for the direct Mac app.</li>
+                <li>Pro removes the measurement limit on both Mac and Windows.</li>
               </ul>
               <div className="buy-actions">
-                <a href={macDownloadURL} className="secondary-btn full-width" download>
-                  <HiOutlineCloudDownload /> Download Free First
+                <a href={primaryPlatform.url} className="secondary-btn full-width" download>
+                  <HiOutlineCloudDownload /> Download free first for {primaryPlatform.name}
                 </a>
               </div>
             </motion.section>
@@ -159,7 +158,7 @@ const Buy = () => {
               </div>
               <ul className="section-content">
                 <li>You receive a PolyPDF license key by email.</li>
-                <li>Open PolyPDF on your Mac and enter the license key to unlock Pro.</li>
+                <li>Open PolyPDF on your Mac or Windows PC and enter the license key to unlock Pro.</li>
                 <li>Contact support if your receipt or license email does not arrive.</li>
               </ul>
             </section>
@@ -170,7 +169,7 @@ const Buy = () => {
                 <h2>Refund policy</h2>
               </div>
               <ul className="section-content">
-                <li>Direct Mac purchases are processed by Stripe and follow PolyPDF's refund policy.</li>
+                <li>Purchases are processed by Stripe and follow PolyPDF's refund policy.</li>
                 <li>Unless required by law, transactions are generally non-refundable; discretionary refund requests may be reviewed within 14 days.</li>
                 <li>Refunded Pro licenses may be deactivated after the refund is completed.</li>
                 <li><Link to="/refund">Read the refund policy</Link> for request steps and legal rights.</li>
@@ -183,7 +182,7 @@ const Buy = () => {
                 <h2>Private by design</h2>
               </div>
               <ul className="section-content">
-                <li>Your PDFs stay on your Mac unless you choose to export, share, or sync them.</li>
+                <li>Your PDFs stay on your computer unless you choose to export, share, or sync them.</li>
                 <li>Checkout and license records are used to process your purchase and keep Pro activated.</li>
               </ul>
             </section>

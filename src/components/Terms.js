@@ -16,7 +16,7 @@ const sections = [
     title: 'Scope',
     content: [
       'PolyPDF is operated by Euclidean Software LLC.',
-      'These terms apply to the PolyPDF website, the direct Mac download, and related support, licensing, and update services.',
+      'These terms apply to the PolyPDF website, the direct desktop downloads (macOS and Windows), and related support, licensing, and update services.',
       'By downloading, installing, purchasing, or using PolyPDF, you agree to these terms.',
       'If you do not agree, do not use the service or install the app.'
     ]
@@ -25,18 +25,18 @@ const sections = [
     icon: <FaHandshake />,
     title: 'Free and paid access',
     content: [
-      'The Mac app may be offered as a free download with limited free measurement usage before purchase is required for additional measurement workflows.',
+      'The desktop app (macOS and Windows) may be offered as a free download with limited free measurement usage before purchase is required for additional measurement workflows.',
       'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
-      'The current direct Mac offer includes free markup and review tools, 3 measurements per document, and an optional $49.99 lifetime Pro license.'
+      'The current direct offer includes free markup and review tools, 3 measurements per document, and an optional $49.99 lifetime Pro license.'
     ]
   },
   {
     icon: <FaLock />,
-    title: 'Direct Mac purchases and license use',
+    title: 'Direct purchases and license use',
     content: [
-      'The current direct Mac purchase flow is processed through Stripe and unlocked with a PolyPDF license key.',
-      'A direct Pro purchase grants a personal, non-transferable license to use the Mac app.',
-      'Each direct license may be activated on up to 3 Macs unless PolyPDF states otherwise at checkout.',
+      'The current direct purchase flow is processed through Stripe and unlocked with a PolyPDF license key.',
+      'A direct Pro purchase grants a personal, non-transferable license to use the desktop app on up to 3 computers (macOS or Windows).',
+      'Each direct license may be activated on up to 3 computers (macOS or Windows) unless PolyPDF states otherwise at checkout.',
       'You may not resell, sublicense, share, or distribute your license key.',
       'PolyPDF may suspend or revoke a license for fraud, chargebacks, abuse, or material violation of these terms.'
     ]
@@ -71,7 +71,7 @@ const Terms = () => {
         <div className="container">
           <div className="legal-hero">
             <h1>Terms of Use</h1>
-            <p className="legal-subtitle">Terms for the PolyPDF website and direct Mac download</p>
+            <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
             <p className="last-updated">Last updated: April 19, 2026</p>
           </div>
 
@@ -109,7 +109,7 @@ const Terms = () => {
           <section className="legal-section">
             <h2>Refunds</h2>
             <ul className="section-content">
-              <li>Direct Mac purchases are processed by Stripe and are subject to PolyPDF's refund policy.</li>
+              <li>Direct purchases are processed by Stripe and are subject to PolyPDF's refund policy.</li>
               <li>Unless required by applicable law, transactions are generally non-refundable and non-exchangeable.</li>
               <li>PolyPDF may review discretionary refund requests submitted within 14 days of the transaction date, but a request in that period does not guarantee a refund.</li>
               <li>Refunded direct licenses may be suspended or revoked after the refund is completed.</li>
@@ -123,7 +123,7 @@ const Terms = () => {
               <h2>Updates, support, and discontinuation</h2>
             </div>
             <ul className="section-content">
-              <li>The direct Mac app may include in-app update delivery through Sparkle or a similar updater.</li>
+              <li>The desktop app may include in-app update delivery (Sparkle on macOS, electron-updater on Windows).</li>
               <li>Public app updates may be available to free and paid installs; Pro access stays tied to the license unless it is revoked, refunded, or otherwise suspended under these terms.</li>
               <li>Future features, future OS compatibility, and continued operation of online services are not guaranteed.</li>
               <li>If PolyPDF stops operating, already-downloaded software may keep working to the extent technically possible, but ongoing online services, new downloads, and reactivation are not guaranteed.</li>
