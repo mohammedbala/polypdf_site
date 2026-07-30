@@ -18,39 +18,28 @@ import {
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
 import { primaryPlatform } from '../lib/platform';
-import shotVisualSearch from '../assets/screenshots/shot-visual-search-web.png';
 import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.png';
 import shotMeasureTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
 import shotMarkup from '../assets/screenshots/shot-markup-web.png';
-import shotSearch from '../assets/screenshots/shot-search-web.png';
 
-// Real screenshots of PolyPDF 1.1.3 on a fictional demonstration drawing (the sheet itself carries a
-// "FICTIONAL DRAWING" stamp). Every caption states only what the app actually did in the capture.
+// Real captures of PolyPDF 1.1.3 in dark mode, working on the Historic American Buildings Survey
+// measured drawings of the Frederick C. Robie House (1963, HABS IL-1005) — a US government survey,
+// public domain. Every caption states only what the capture actually shows.
 const screenshots = [
   {
-    image: shotVisualSearch,
-    title: 'Find every fixture from one example',
-    caption: 'Visual Search: drag a box around one troffer symbol and PolyPDF finds the matches across the sheet — here 29 at 84% confidence, each boxed for review before counting.'
-  },
-  {
     image: shotCountCommitted,
-    title: 'One click later, they are a count series',
-    caption: 'Committing the matches turns them into a single numbered Count series — ready to adjust, restyle, or pull into the takeoff worksheet.'
+    title: 'Find a repeated symbol, commit it as a count',
+    caption: 'Visual Search matched the arcade openings along the balcony from a single example at 70% confidence, committed as a 5-count series. The takeoff worksheet on the left totals every item — 471.18 sq ft of area alongside the counts — and exports to CSV or PDF.'
   },
   {
     image: shotMeasureTakeoff,
     title: 'Calibrate once, measure in real units',
-    caption: 'The sheet is calibrated to its printed scale (1/8" = 1\'-0"), so the corridor dimension reads 40\'-0" and the waiting-room area reads 579 sq ft — and both feed the takeoff worksheet with CSV and PDF export.'
+    caption: 'The sheet is calibrated against its own printed 92\'-0" dimension, so the living-room area reads 471.18 sq ft and the balcony run measures in feet and inches — on a 1963 scanned survey drawing with no CAD data behind it.'
   },
   {
     image: shotMarkup,
-    title: 'Markup that reads like a drawing',
-    caption: 'A revision cloud around the storage room, a callout with a leader, and live measurements — every tool one keystroke away.'
-  },
-  {
-    image: shotSearch,
-    title: 'Search the sheet, see it in context',
-    caption: 'Text search finds "NURSE STATION" in the drawing\'s own text and highlights it right on the sheet.'
+    title: 'Mark up review comments the way a drawing reads',
+    caption: 'A revision cloud around the kitchen and pantry with a leader callout — "Verify pantry cabinet run before demo" — placed directly on the sheet, every tool one keystroke away.'
   }
 ];
 
@@ -303,7 +292,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>See it on a real sheet</h2>
-            <p>A demonstration lighting plan — captured from the shipping app, not mocked up.</p>
+            <p>Working on the 1963 measured drawings of Frank Lloyd Wright's Robie House — captured from the shipping app, not mocked up. <span className="showcase-source">Sheets: Historic American Buildings Survey, HABS IL-1005 (public domain).</span></p>
           </motion.div>
 
           {/* Lead shot gets the full-width stage; the rest alternate text/image so the section
@@ -316,7 +305,10 @@ const Home = () => {
             transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
           >
             <div className="shot-stage stage-accent">
-              <img src={screenshots[0].image} alt={screenshots[0].title} loading="eager" />
+              <div className="shot-frame">
+                <div className="shot-titlebar" aria-hidden="true"><span /><span /><span /></div>
+                <img src={screenshots[0].image} alt={screenshots[0].title} loading="eager" />
+              </div>
             </div>
             <figcaption>
               <h3>{screenshots[0].title}</h3>
@@ -346,7 +338,10 @@ const Home = () => {
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.65, delay: 0.08, ease: [0.21, 0.65, 0.32, 1] }}
                 >
-                  <img src={shot.image} alt={shot.title} loading="lazy" />
+                  <div className="shot-frame">
+                    <div className="shot-titlebar" aria-hidden="true"><span /><span /><span /></div>
+                    <img src={shot.image} alt={shot.title} loading="lazy" />
+                  </div>
                 </motion.div>
               </motion.figure>
             ))}

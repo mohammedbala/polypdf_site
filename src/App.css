@@ -1300,3 +1300,77 @@ body {
     transform: none;
   }
 }
+
+/* Dark app captures: a light stage would fight them, so the stages go deep and the frame gains a
+   macOS-style title bar (the captures are renderer-only, so the real traffic lights are absent). */
+.stage-accent {
+  background:
+    radial-gradient(120% 90% at 12% 0%, rgba(14, 138, 104, 0.22), transparent 55%),
+    linear-gradient(150deg, #1d211f 0%, #191b1a 55%, #141615 100%);
+}
+
+.stage-paper {
+  background:
+    radial-gradient(110% 80% at 88% 8%, rgba(120, 130, 128, 0.20), transparent 55%),
+    linear-gradient(150deg, #1b1d1c 0%, #131514 100%);
+}
+
+.shot-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.28),
+    0 16px 34px rgba(0, 0, 0, 0.30),
+    0 40px 76px rgba(0, 0, 0, 0.26);
+  transition: transform 0.45s cubic-bezier(0.21, 0.65, 0.32, 1), box-shadow 0.45s ease;
+}
+
+.shot-stage:hover .shot-frame {
+  transform: translateY(-4px) scale(1.006);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 22px 44px rgba(0, 0, 0, 0.34),
+    0 54px 96px rgba(0, 0, 0, 0.3);
+}
+
+.shot-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  background: #2b2f31;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.shot-titlebar span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  display: block;
+}
+
+.shot-titlebar span:nth-child(1) { background: #ec6a5e; }
+.shot-titlebar span:nth-child(2) { background: #f4bf4f; }
+.shot-titlebar span:nth-child(3) { background: #61c454; }
+
+.shot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.shot-stage:hover img {
+  transform: none;
+  box-shadow: none;
+}
+
+.showcase-source {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: var(--gray-500);
+}
