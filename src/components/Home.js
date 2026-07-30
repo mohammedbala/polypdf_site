@@ -294,7 +294,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="benefits screenshots">
+      <section className="showcase">
         <div className="container">
           <motion.div
             className="section-header benefits-header"
@@ -305,25 +305,52 @@ const Home = () => {
             <h2>See it on a real sheet</h2>
             <p>A demonstration lighting plan — captured from the shipping app, not mocked up.</p>
           </motion.div>
-          {screenshots.map((shot, index) => (
-            <motion.figure
-              key={shot.title}
-              style={{ margin: '0 0 48px 0' }}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.05 }}
-            >
-              <h3 style={{ marginBottom: 12 }}>{shot.title}</h3>
-              <img
-                src={shot.image}
-                alt={shot.title}
-                loading={index === 0 ? 'eager' : 'lazy'}
-                style={{ width: '100%', height: 'auto', borderRadius: 12, border: '1px solid rgba(0,0,0,0.08)', boxShadow: '0 12px 32px rgba(15,23,42,0.12)' }}
-              />
-              <figcaption style={{ marginTop: 10, fontSize: 15, opacity: 0.75 }}>{shot.caption}</figcaption>
-            </motion.figure>
-          ))}
+
+          {/* Lead shot gets the full-width stage; the rest alternate text/image so the section
+              reads as a story instead of a stack of identical cards. */}
+          <motion.figure
+            className="showcase-hero"
+            initial={{ opacity: 0, y: 36, scale: 0.985 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, margin: '-80px' }}
+            transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
+          >
+            <div className="shot-stage stage-accent">
+              <img src={screenshots[0].image} alt={screenshots[0].title} loading="eager" />
+            </div>
+            <figcaption>
+              <h3>{screenshots[0].title}</h3>
+              <p>{screenshots[0].caption}</p>
+            </figcaption>
+          </motion.figure>
+
+          <div className="showcase-rows">
+            {screenshots.slice(1).map((shot, index) => (
+              <motion.figure
+                key={shot.title}
+                className={`showcase-row ${index % 2 === 0 ? '' : 'flip'}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.6, ease: [0.21, 0.65, 0.32, 1] }}
+              >
+                <figcaption className="showcase-text">
+                  <span className="showcase-index">0{index + 2}</span>
+                  <h3>{shot.title}</h3>
+                  <p>{shot.caption}</p>
+                </figcaption>
+                <motion.div
+                  className={`shot-stage ${index % 2 === 0 ? 'stage-paper' : 'stage-accent'}`}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? 28 : -28 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: '-60px' }}
+                  transition={{ duration: 0.65, delay: 0.08, ease: [0.21, 0.65, 0.32, 1] }}
+                >
+                  <img src={shot.image} alt={shot.title} loading="lazy" />
+                </motion.div>
+              </motion.figure>
+            ))}
+          </div>
         </div>
       </section>
 
