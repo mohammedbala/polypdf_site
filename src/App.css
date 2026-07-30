@@ -1235,6 +1235,13 @@ body {
   gap: 72px;
 }
 
+/* The row images slide in from a horizontal offset. On a phone that offset is wider than the
+   margin beside them, so mid-animation it pushed the document ~8px wide and the whole page could
+   be scrolled sideways. Clip (not hidden) contains it without creating a scroll container. */
+.showcase {
+  overflow-x: clip;
+}
+
 .showcase-row {
   display: grid;
   grid-template-columns: minmax(240px, 5fr) 12fr;
@@ -1375,29 +1382,6 @@ body {
   color: var(--gray-500);
 }
 
-/* Each shot now sits on a different drawing set, so the public-domain credit belongs to the
-   individual screenshot rather than to the section as a whole. Kept deliberately quiet — it is
-   attribution, not a selling point. */
-.shot-source {
-  margin-top: 10px;
-  font-size: 0.78rem;
-  line-height: 1.45;
-  color: var(--gray-500);
-  text-wrap: pretty;
-}
-
-/* The Open Government Licence credit has to carry a working link to the licence, so the anchor
-   stays legible without turning the credit into a call to action. */
-.shot-source a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.shot-source a:hover,
-.shot-source a:focus-visible {
-  color: var(--gray-700);
-}
 
 /* The beautified captures already carry the window chrome, rounded corners, shadow and gradient
    stage (baked in by scripts/beautify.py at 2x), so the page must NOT re-frame them — it just
