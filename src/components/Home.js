@@ -22,24 +22,24 @@ import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.p
 import shotMeasureTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
 import shotMarkup from '../assets/screenshots/shot-markup-web.png';
 
-// Real captures of PolyPDF 1.1.3 in dark mode, working on the Historic American Buildings Survey
-// measured drawings of the Frederick C. Robie House (1963, HABS IL-1005) — a US government survey,
-// public domain. Every caption states only what the capture actually shows.
+// Real captures of PolyPDF 1.1.3 in dark mode, working on sheet E-102 of a 2024 Air National Guard
+// Maintenance & Inspection facility standard design — a work of the US federal government, public
+// domain. Every caption states only what the capture actually shows.
 const screenshots = [
   {
     image: shotCountCommitted,
-    title: 'Find a repeated symbol, commit it as a count',
-    caption: 'Visual Search matched the arcade openings along the balcony from a single example at 70% confidence, committed as a 5-count series. The takeoff worksheet on the left totals every item — 471.18 sq ft of area alongside the counts — and exports to CSV or PDF.'
+    title: 'Count the fixtures, keep the tally on the drawing',
+    caption: 'Seven light fixtures counted across the maintenance bay, each mark landing on the symbol it belongs to. The takeoff worksheet on the left holds one row per item and a running legend — 7 count beside 1,244.07 sq ft of area — and exports to CSV or PDF.'
   },
   {
     image: shotMeasureTakeoff,
     title: 'Calibrate once, measure in real units',
-    caption: 'The sheet is calibrated against its own printed 92\'-0" dimension, so the living-room area reads 471.18 sq ft and the balcony run measures in feet and inches — on a 1963 scanned survey drawing with no CAD data behind it.'
+    caption: 'The page is calibrated to the scale printed on the sheet itself, 1/4" = 1\'-0" — 18 PDF points per foot — so tracing the bay around its office returns 1,244.07 sq ft. The value stays on the drawing, not just in a side panel.'
   },
   {
     image: shotMarkup,
     title: 'Mark up review comments the way a drawing reads',
-    caption: 'A revision cloud around the kitchen and pantry with a leader callout — "Verify pantry cabinet run before demo" — placed directly on the sheet, every tool one keystroke away.'
+    caption: 'A revision cloud around the office and a leader callout — "RFI 014 – confirm A4E mounting height" — set straight onto the sheet at a size that still reads in a printed set.'
   }
 ];
 
@@ -292,7 +292,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>See it on a real sheet</h2>
-            <p>Working on the 1963 measured drawings of Frank Lloyd Wright's Robie House — captured from the shipping app, not mocked up. <span className="showcase-source">Sheets: Historic American Buildings Survey, HABS IL-1005 (public domain).</span></p>
+            <p>An electrical lighting plan from a 2024 federal facility drawing set — captured from the shipping app, not mocked up. <span className="showcase-source">Sheet E-102, Air National Guard Maintenance &amp; Inspection Facility Standard Design, 23 October 2024 — a work of the US federal government, public domain.</span></p>
           </motion.div>
 
           {/* Lead shot gets the full-width stage; the rest alternate text/image so the section
@@ -304,11 +304,8 @@ const Home = () => {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
           >
-            <div className="shot-stage stage-accent">
-              <div className="shot-frame">
-                <div className="shot-titlebar" aria-hidden="true"><span /><span /><span /></div>
-                <img src={screenshots[0].image} alt={screenshots[0].title} loading="eager" />
-              </div>
+            <div className="shot-plate">
+              <img src={screenshots[0].image} alt={screenshots[0].title} loading="eager" />
             </div>
             <figcaption>
               <h3>{screenshots[0].title}</h3>
@@ -332,16 +329,13 @@ const Home = () => {
                   <p>{shot.caption}</p>
                 </figcaption>
                 <motion.div
-                  className={`shot-stage ${index % 2 === 0 ? 'stage-paper' : 'stage-accent'}`}
+                  className="shot-plate"
                   initial={{ opacity: 0, x: index % 2 === 0 ? 28 : -28 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.65, delay: 0.08, ease: [0.21, 0.65, 0.32, 1] }}
                 >
-                  <div className="shot-frame">
-                    <div className="shot-titlebar" aria-hidden="true"><span /><span /><span /></div>
-                    <img src={shot.image} alt={shot.title} loading="lazy" />
-                  </div>
+                  <img src={shot.image} alt={shot.title} loading="lazy" />
                 </motion.div>
               </motion.figure>
             ))}
