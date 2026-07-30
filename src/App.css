@@ -1374,3 +1374,36 @@ body {
   font-size: 0.82rem;
   color: var(--gray-500);
 }
+
+/* The beautified captures already carry the window chrome, rounded corners, shadow and gradient
+   stage (baked in by scripts/beautify.py at 2x), so the page must NOT re-frame them — it just
+   places the plate and lets it breathe. */
+.shot-plate {
+  border-radius: 18px;
+  overflow: hidden;
+  line-height: 0;
+  transition: transform 0.45s cubic-bezier(0.21, 0.65, 0.32, 1);
+}
+
+.shot-plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.showcase-row:hover .shot-plate,
+.showcase-hero:hover .shot-plate {
+  transform: translateY(-4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shot-plate,
+  .showcase-row:hover .shot-plate,
+  .showcase-hero:hover .shot-plate {
+    transition: none;
+    transform: none;
+  }
+}
