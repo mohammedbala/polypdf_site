@@ -1,4 +1,5 @@
 import routeMetadata from './route-metadata.json';
+import { normalizeRoutePath } from '../components/RouteMetadata';
 
 const expectedRoutes = [
   '/',
@@ -29,4 +30,10 @@ test('defines unique, server-renderable metadata for every public route', () => 
     expect(['index, follow', 'noindex, nofollow']).toContain(entry.robots);
   });
   expect(routeMetadata['/account'].robots).toBe('noindex, nofollow');
+});
+
+test('normalizes the trailing slash added by the production web server', () => {
+  expect(normalizeRoutePath('/')).toBe('/');
+  expect(normalizeRoutePath('/bluebeam-alternative-mac')).toBe('/bluebeam-alternative-mac');
+  expect(normalizeRoutePath('/bluebeam-alternative-mac/')).toBe('/bluebeam-alternative-mac');
 });

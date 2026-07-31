@@ -10,12 +10,15 @@ const setMeta = (selector, attribute, value) => {
   if (element) element.setAttribute(attribute, value);
 };
 
+export const normalizeRoutePath = (pathname) => pathname.replace(/\/+$/, '') || '/';
+
 const RouteMetadata = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const route = routeMetadata[pathname] || routeMetadata['/'];
-    const canonicalPath = routeMetadata[pathname] ? pathname : '/';
+    const normalizedPathname = normalizeRoutePath(pathname);
+    const route = routeMetadata[normalizedPathname] || routeMetadata['/'];
+    const canonicalPath = routeMetadata[normalizedPathname] ? normalizedPathname : '/';
     const url = `${SITE_ORIGIN}${canonicalPath === '/' ? '/' : canonicalPath}`;
 
     document.title = route.title;
