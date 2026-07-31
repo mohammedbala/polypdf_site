@@ -17,7 +17,7 @@ import {
 } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
-import { buyPath } from '../lib/attribution';
+import { buyPath, captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
 import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.png';
@@ -134,6 +134,7 @@ const Home = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    captureAttribution();
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };

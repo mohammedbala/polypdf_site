@@ -31,11 +31,33 @@ test('keeps first-party attribution for checkout and falls back safely', () => {
   });
 
   window.localStorage.clear();
-  expect(checkoutAttribution('')).toEqual({ source: 'buy_page' });
+  expect(checkoutAttribution('')).toEqual({
+    source: 'buy_page',
+    utm_source: 'website',
+    utm_medium: 'owned',
+    utm_campaign: 'founder_launch'
+  });
+});
+
+test('keeps acquisition UTMs when an on-site placement opens the buy page', () => {
+  captureAttribution('?source=directory&utm_source=aec_directory&utm_medium=referral&utm_campaign=july_launch');
+  expect(checkoutAttribution('?source=website_hero')).toEqual({
+    source: 'website_hero',
+    utm_source: 'aec_directory',
+    utm_medium: 'referral',
+    utm_campaign: 'july_launch'
+  });
+
+  expect(checkoutAttribution(
+    '?source=free_measurement_limit&utm_source=desktop_app&utm_medium=product&utm_campaign=free_to_pro'
+  )).toEqual({
+    source: 'free_measurement_limit',
+    utm_source: 'desktop_app',
+    utm_medium: 'product',
+    utm_campaign: 'free_to_pro'
+  });
 });
 
 test('builds owned links with a placement source', () => {
-  expect(buyPath('website_footer')).toBe(
-    '/buy?source=website_footer&utm_source=website&utm_medium=owned&utm_campaign=founder_launch'
-  );
+  expect(buyPath('website_footer')).toBe('/buy?source=website_footer');
 });

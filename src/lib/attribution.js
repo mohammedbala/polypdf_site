@@ -38,28 +38,34 @@ const readStored = () => {
 
 export const captureAttribution = (search = window.location.search) => {
   const incoming = attributionFromSearch(search);
+  const stored = readStored();
   if (Object.keys(incoming).length > 0) {
+    const startsNewCampaign = KEYS.some((key) => key.startsWith('utm_') && incoming[key]);
+    const attribution = startsNewCampaign ? incoming : { ...stored, ...incoming };
     try {
       window.localStorage.setItem(STORAGE_KEY, JSON.stringify({
-        attribution: incoming,
+        attribution,
         capturedAt: Date.now()
       }));
     } catch {
       // Checkout still works when storage is unavailable.
     }
-    return incoming;
+    return attribution;
   }
-  return readStored();
+  return stored;
 };
 
 export const checkoutAttribution = (search = window.location.search) => {
   const attribution = captureAttribution(search);
   return {
     source: attribution.source || 'buy_page',
+    utm_source: attribution.utm_source || 'website',
+    utm_medium: attribution.utm_medium || 'owned',
+    utm_campaign: attribution.utm_campaign || 'founder_launch',
     ...attribution
   };
 };
 
 export const buyPath = (source) => (
-  `/buy?source=${encodeURIComponent(source)}&utm_source=website&utm_medium=owned&utm_campaign=founder_launch`
+  `/buy?source=${encodeURIComponent(source)}`
 );
