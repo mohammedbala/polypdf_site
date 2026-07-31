@@ -10,6 +10,8 @@ import Support from './components/Support';
 import WindowsPreview from './components/WindowsPreview';
 import Terms from './components/Terms';
 import VersionHistory from './components/VersionHistory';
+import WorkflowLanding from './components/WorkflowLanding';
+import { landingPages } from './lib/landingPages';
 import './App.css';
 
 const App = () => {
@@ -27,6 +29,12 @@ const App = () => {
           <Route path="/windows" element={<WindowsPreview />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/versions" element={<VersionHistory />} />
+          <Route path={landingPages.bluebeamAlternativeMac.path} element={<WorkflowLanding page={landingPages.bluebeamAlternativeMac} />} />
+          <Route path={landingPages.pdfTakeoffSoftware.path} element={<WorkflowLanding page={landingPages.pdfTakeoffSoftware} />} />
+          <Route path={landingPages.measurePdfOnMac.path} element={<WorkflowLanding page={landingPages.measurePdfOnMac} />} />
+          <Route path={landingPages.constructionPdfMarkup.path} element={<WorkflowLanding page={landingPages.constructionPdfMarkup} />} />
+          <Route path={landingPages.visualSearchPdfCount.path} element={<WorkflowLanding page={landingPages.visualSearchPdfCount} />} />
+          <Route path={landingPages.comparePdfDrawings.path} element={<WorkflowLanding page={landingPages.comparePdfDrawings} />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>

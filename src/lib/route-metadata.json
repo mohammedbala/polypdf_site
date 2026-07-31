@@ -43,5 +43,35 @@
     "title": "PolyPDF Version History | Release Notes",
     "description": "Review PolyPDF release notes, product improvements, fixes, and current Mac and Windows version information.",
     "robots": "index, follow"
+  },
+  "/bluebeam-alternative-mac": {
+    "title": "Bluebeam Alternative for Mac | PolyPDF",
+    "description": "Try a focused Bluebeam alternative for Mac with desktop PDF markup, drawing measurement, takeoff, and revision review. Download PolyPDF free.",
+    "robots": "index, follow"
+  },
+  "/pdf-takeoff-software": {
+    "title": "PDF Takeoff Software for Mac & Windows | PolyPDF",
+    "description": "Calibrate PDF drawings, measure lengths and areas, count symbols, organize a takeoff worksheet, and export results to CSV or PDF.",
+    "robots": "index, follow"
+  },
+  "/measure-pdf-on-mac": {
+    "title": "Measure a PDF on Mac | PolyPDF Drawing Tools",
+    "description": "Measure PDF drawings on Mac with calibrated distance, area, perimeter, angle, and count tools in a native desktop app. Start free.",
+    "robots": "index, follow"
+  },
+  "/construction-pdf-markup": {
+    "title": "Construction PDF Markup Software | PolyPDF",
+    "description": "Mark up construction PDFs with callouts, highlights, stamps, shapes, and revision clouds, then keep every comment tied to the sheet.",
+    "robots": "index, follow"
+  },
+  "/visual-search-pdf-count": {
+    "title": "Visual Search PDF Symbol Count | PolyPDF",
+    "description": "Capture one drawing symbol, find visual matches across the PDF, review candidates, and commit an auditable numbered count series.",
+    "robots": "index, follow"
+  },
+  "/compare-pdf-drawings": {
+    "title": "Compare PDF Drawings & Revisions | PolyPDF",
+    "description": "Compare PDF drawing revisions, inspect meaningful differences, and add clouds or callouts for coordination, pricing, and review handoff.",
+    "robots": "index, follow"
   }
 }

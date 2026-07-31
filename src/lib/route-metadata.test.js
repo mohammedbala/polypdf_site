@@ -1,6 +1,22 @@
 import routeMetadata from './route-metadata.json';
 
-const expectedRoutes = ['/', '/buy', '/account', '/privacy', '/refund', '/support', '/windows', '/terms', '/versions'];
+const expectedRoutes = [
+  '/',
+  '/buy',
+  '/account',
+  '/privacy',
+  '/refund',
+  '/support',
+  '/windows',
+  '/terms',
+  '/versions',
+  '/bluebeam-alternative-mac',
+  '/pdf-takeoff-software',
+  '/measure-pdf-on-mac',
+  '/construction-pdf-markup',
+  '/visual-search-pdf-count',
+  '/compare-pdf-drawings'
+];
 
 test('defines unique, server-renderable metadata for every public route', () => {
   expect(Object.keys(routeMetadata).sort()).toEqual(expectedRoutes.sort());

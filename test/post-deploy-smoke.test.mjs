@@ -6,7 +6,8 @@ import {
   expectedOffer,
   htmlRoutes,
   routeMetadata,
-  runPostDeploySmoke
+  runPostDeploySmoke,
+  workflowMediaRoutes
 } from '../scripts/post-deploy-smoke.mjs';
 
 async function withFakeSite({ brokenRoute = null } = {}, run) {
@@ -89,6 +90,25 @@ async function withFakeSite({ brokenRoute = null } = {}, run) {
       }
       return;
     }
+    if (workflowMediaRoutes.includes(path)) {
+      if (path.endsWith('.mp4')) {
+        if (request.headers.range === 'bytes=0-0') {
+          response.writeHead(206, {
+            'Content-Type': 'video/mp4',
+            'Content-Length': '1',
+            'Content-Range': 'bytes 0-0/100'
+          });
+          response.end('x');
+        } else {
+          response.writeHead(200, { 'Content-Type': 'video/mp4', 'Content-Length': '100' });
+          response.end('x'.repeat(100));
+        }
+      } else {
+        response.writeHead(200, { 'Content-Type': 'text/vtt; charset=utf-8' });
+        response.end('WEBVTT\n\n00:00.000 --> 00:01.000\nPolyPDF');
+      }
+      return;
+    }
     if (path === '/api/checkout/session' && request.method === 'POST') {
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end('{"url":"https://checkout.stripe.com/c/pay/cs_test_123","smoke":true}');
@@ -109,7 +129,7 @@ async function withFakeSite({ brokenRoute = null } = {}, run) {
 test('passes only when every route, artifact, health check, and checkout pass', async () => {
   await withFakeSite({}, async (baseURL) => {
     const results = await runPostDeploySmoke({ baseURL });
-    assert.equal(results.length, htmlRoutes.length + downloadRoutes.length + 4);
+    assert.equal(results.length, htmlRoutes.length + downloadRoutes.length + workflowMediaRoutes.length + 4);
   });
 });
 

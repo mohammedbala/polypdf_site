@@ -18,12 +18,33 @@ export const htmlRoutes = [
   '/terms',
   '/refund',
   '/versions',
-  '/account'
+  '/account',
+  '/bluebeam-alternative-mac',
+  '/pdf-takeoff-software',
+  '/measure-pdf-on-mac',
+  '/construction-pdf-markup',
+  '/visual-search-pdf-count',
+  '/compare-pdf-drawings'
 ];
 
 export const downloadRoutes = [
   '/downloads/PolyPDFMac.dmg',
   '/downloads/windows/PolyPDFSetup.exe'
+];
+
+export const workflowMediaRoutes = [
+  '/videos/visual-search-short.mp4',
+  '/videos/visual-search-narrated.mp4',
+  '/videos/takeoff-export-short.mp4',
+  '/videos/takeoff-export-narrated.mp4',
+  '/videos/revision-comparison-short.mp4',
+  '/videos/revision-comparison-narrated.mp4',
+  '/videos/visual-search-short.vtt',
+  '/videos/visual-search-narrated.vtt',
+  '/videos/takeoff-export-short.vtt',
+  '/videos/takeoff-export-narrated.vtt',
+  '/videos/revision-comparison-short.vtt',
+  '/videos/revision-comparison-narrated.vtt'
 ];
 
 export const expectedOffer = Object.freeze({
@@ -137,6 +158,32 @@ export async function runPostDeploySmoke({
       `${route} did not prove a non-empty downloadable artifact`
     );
     await response.arrayBuffer();
+    results.push({ route, status: response.status });
+  }
+
+  for (const route of workflowMediaRoutes) {
+    const isVideo = route.endsWith('.mp4');
+    const response = await fetchImpl(`${base}${route}`, {
+      headers: isVideo ? { ...smokeHeaders, Range: 'bytes=0-0' } : smokeHeaders
+    });
+    assertResponse([200, 206].includes(response.status), `${route} returned HTTP ${response.status}`);
+    const contentType = response.headers.get('content-type') || '';
+    assertResponse(
+      isVideo ? /video\/mp4/i.test(contentType) : /text\/vtt/i.test(contentType),
+      `${route} returned the wrong content type`
+    );
+    if (isVideo) {
+      const contentRange = response.headers.get('content-range') || '';
+      const contentLength = Number(response.headers.get('content-length') || 0);
+      assertResponse(
+        response.status === 206 ? /^bytes 0-0\/\d+$/.test(contentRange) : contentLength > 0,
+        `${route} did not prove a non-empty workflow video`
+      );
+      await response.arrayBuffer();
+    } else {
+      const captions = await response.text();
+      assertResponse(captions.startsWith('WEBVTT'), `${route} did not return valid WebVTT captions`);
+    }
     results.push({ route, status: response.status });
   }
 
