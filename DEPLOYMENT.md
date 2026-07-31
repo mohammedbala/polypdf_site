@@ -40,8 +40,8 @@ Uses the `deploy-nginx.yml` workflow. This builds the app and serves it with Ngi
 
 1. **Setup Nginx:**
    ```bash
-   # Create directories for the site build and direct-download artifacts
-   sudo mkdir -p /var/www/polypdf-site/build
+   # Create directories for versioned site releases and direct-download artifacts
+   sudo mkdir -p /var/www/polypdf-site/releases
    sudo mkdir -p /var/www/polypdf-downloads
    sudo mkdir -p /var/lib/polypdf
    
@@ -80,23 +80,25 @@ cd /var/www/polypdf-site
 # Pull latest changes
 git pull origin master
 
-# Install dependencies
-npm install
+# Install the exact locked dependency tree
+npm ci
 
-# Build the project
-npm run build
+# Build into a commit-addressed release and select it atomically
+release_sha=$(git rev-parse HEAD)
+BUILD_PATH="releases/$release_sha" npm run build
+ln -sfn "releases/$release_sha" current.next
+mv -Tf current.next current
 
 # For PM2 deployment:
-pm2 start serve --name "polypdf-site" -- -s build -l 3001
+pm2 start serve --name "polypdf-site" -- -s current -l 3001
 
-# For Nginx deployment:
-sudo rsync -av --delete build/ /var/www/polypdf-site/build/
-sudo systemctl reload nginx
+# For Nginx deployment, configure the document root as:
+# /var/www/polypdf-site/current
 ```
 
 ## Downloads And Sparkle
 
-Production serves the website build from `/var/www/polypdf-site/build` and direct-download artifacts from `/var/www/polypdf-downloads`.
+Production serves the website release selected by `/var/www/polypdf-site/current` and direct-download artifacts from `/var/www/polypdf-downloads`.
 
 - Stable DMG URL: `https://www.polypdf.com/downloads/PolyPDFMac.dmg`
 - Primary Sparkle feed: `https://www.polypdf.com/downloads/polypdfmac-appcast.xml`
@@ -105,14 +107,11 @@ Production serves the website build from `/var/www/polypdf-site/build` and direc
 
 ## Stripe License API
 
-The direct Mac app activates against the PolyPDF license API, proxied by Nginx under `https://www.polypdf.com/api/`.
+The direct Mac and Windows apps activate against the PolyPDF license API, proxied by Nginx under `https://www.polypdf.com/api/`.
 
 ```bash
-cd /var/www/polypdf-site/Website/license-api
-npm install --omit=dev
-sudo install -d -o www-data -g www-data /var/lib/polypdf
-sudo cp .env.example /etc/polypdf/license-api.env
-sudo nano /etc/polypdf/license-api.env
+# From the main PolyPDF repository:
+scripts/deploy_license_api.sh ~/.ssh/polypdf-deploy root@your-server-ip
 ```
 
 Required production values:
@@ -124,35 +123,13 @@ Required production values:
 - `RESEND_API_KEY`
 - `SUPPORT_EMAIL=support@polypdf.com`
 
-Example systemd unit:
-
-```ini
-[Unit]
-Description=PolyPDF License API
-After=network.target
-
-[Service]
-Type=simple
-User=www-data
-WorkingDirectory=/var/www/polypdf-site/Website/license-api
-EnvironmentFile=/etc/polypdf/license-api.env
-ExecStart=/usr/bin/npm start
-Restart=always
-RestartSec=5
-
-[Install]
-WantedBy=multi-user.target
-```
-
-After installing the unit:
+The API deploy keeps versioned releases under `/opt/polypdf-license-api-releases`, atomically selects `/opt/polypdf-license-api`, restarts the existing systemd unit, checks `/api/healthz`, and rolls back automatically if validation fails. Production secrets remain in `/etc/polypdf/license-api.env`.
 
 ```bash
-sudo systemctl daemon-reload
-sudo systemctl enable --now polypdf-license-api
-curl -fsS https://www.polypdf.com/api/licenses/healthz || curl -fsS http://127.0.0.1:3087/healthz
+curl -fsS https://www.polypdf.com/api/healthz
 ```
 
-Configure Stripe with a one-time `PolyPDF Pro for Mac` price and a webhook destination pointed at `https://www.polypdf.com/api/stripe/webhook` for `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `refund.created`, `refund.updated`, and `charge.refunded`.
+Configure Stripe with the one-time `PolyPDF Pro Founder's License — Perpetual 1.x` price and a webhook destination pointed at `https://www.polypdf.com/api/stripe/webhook` for `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `refund.created`, `refund.updated`, and `charge.refunded`.
 
 ## Environment Variables
 
@@ -183,12 +160,11 @@ sudo tail -f /var/log/nginx/polypdf-site.error.log
 
 ## Rollback
 
-To rollback to a previous version:
+The deployment workflow records the prior `current` target and automatically switches back when any revenue/trust smoke fails. For a manual rollback:
 ```bash
 cd /var/www/polypdf-site
-git log --oneline  # Find the commit to rollback to
-git reset --hard <commit-hash>
-npm install
-npm run build
-# Restart/reload your server
+previous=$(cat .deploy-previous-target)
+test -s "$previous/index.html"
+ln -sfn "$previous" current.rollback
+mv -Tf current.rollback current
 ```

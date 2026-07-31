@@ -15,6 +15,7 @@ import {
 import parrotIcon from '../assets/polypdf_icon.png';
 import { DownloadBoth } from './DownloadCTA';
 import { primaryPlatform } from '../lib/platform';
+import { licensePolicyLabel } from '../lib/commercialOffer';
 
 const trackEvent = (name, properties = {}) => {
   if (window.plausible) {
@@ -257,6 +258,7 @@ const Account = () => {
                             License ending in <strong>{license.license_key_last4 || '----'}</strong>
                             {' '}created {dateFormatter(license.created_at)}
                           </p>
+                          <p>{licensePolicyLabel(license)}</p>
                         </div>
                         <div className="license-metrics">
                           <div>

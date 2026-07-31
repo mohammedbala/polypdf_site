@@ -17,6 +17,7 @@ const sections = [
     content: [
       'When you browse the website, we may receive basic technical information such as IP address, browser type, and page requests from our hosting and security providers.',
       'When you purchase or activate a direct license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
+      'The desktop app sends a compact, redacted error report only when you explicitly opt in to sharing diagnostics. Error reports may include app version, platform, an installation-scoped hash, operation context, error message, and stack trace; they do not intentionally include PDF contents or filenames.',
       'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose.'
     ]
   },
@@ -70,7 +71,7 @@ const Privacy = () => {
           <div className="legal-hero">
             <h1>Privacy Policy</h1>
             <p className="legal-subtitle">How PolyPDF handles website and direct-download data</p>
-            <p className="last-updated">Last updated: July 29, 2026</p>
+            <p className="last-updated">Last updated: July 30, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -106,8 +107,9 @@ const Privacy = () => {
           <section className="legal-section">
             <h2>Retention</h2>
             <ul className="section-content">
-              <li>Order, support, and license records may be retained for as long as needed to operate the service, comply with legal obligations, resolve disputes, or enforce agreements.</li>
-              <li>Technical logs are retained for operational and security purposes for limited periods determined by the hosting, crash, analytics, or payment providers involved.</li>
+              <li>License records are retained while needed to provide a perpetual license, prevent fraud, handle refunds, and meet legal obligations. Financial records are retained for applicable tax and accounting obligations.</li>
+              <li>Diagnostic error reports stored by PolyPDF are deleted after 90 days. Expired PolyPDF magic links and account sessions are removed automatically.</li>
+              <li>Web-server and provider logs are retained for operational and security purposes under the applicable host or processor retention schedule.</li>
             </ul>
           </section>
 
@@ -115,6 +117,7 @@ const Privacy = () => {
             <h2>Your choices</h2>
             <ul className="section-content">
               <li>You can choose not to purchase Pro and continue using the free tier within its limits where available.</li>
+              <li>You can keep diagnostic sharing off; it is off by default and can be changed in app settings.</li>
               <li>You can request deletion of support or account-related records where deletion is legally permitted and operationally possible.</li>
               <li>You can stop using the app at any time by uninstalling it and deactivating the license on that computer if needed.</li>
             </ul>

@@ -1,7 +1,7 @@
 name: CI/CD Pipeline for polypdf-site
 
-# Deploys the marketing site to the droplet, where nginx serves the built assets as static files
-# straight out of /var/www/polypdf-site/build. There is no app server in front of it.
+# Deploys the marketing site to the droplet, where nginx serves the release selected by the
+# /var/www/polypdf-site/current symlink. There is no app server in front of it.
 
 on:
   push:
@@ -35,27 +35,55 @@ jobs:
           ssh -o BatchMode=yes "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" bash -euo pipefail << 'EOF'
             cd /var/www/polypdf-site
 
-            # Fast-forward only. The previous script ran `git stash`, which silently pocketed any
-            # work sitting on the droplet; failing loudly on a diverged tree is safer than hiding it.
+            # Fast-forward only. A dirty/diverged production checkout fails loudly.
             git fetch origin master
             git checkout master
             git pull --ff-only origin master
 
-            npm install
+            npm ci
 
             # The droplet runs Node 18, where react-scripts' serialize-javascript dependency reads
-            # crypto.getRandomValues off the global object — absent until Node 19. Without this flag
-            # the build dies with "crypto is not defined", which is what silently broke this deploy.
-            NODE_OPTIONS=--experimental-global-webcrypto CI=false npm run build
+            # crypto.getRandomValues off the global object — absent until Node 19.
+            release_sha=$(git rev-parse HEAD)
+            candidate="releases/${release_sha}.next"
+            release="releases/${release_sha}"
+            mkdir -p releases
+            rm -rf "$candidate"
+            BUILD_PATH="$candidate" NODE_OPTIONS=--experimental-global-webcrypto CI=false npm run build
+            test -s "$candidate/index.html"
+            rm -rf "$release"
+            mv "$candidate" "$release"
 
-            # nginx serves build/ directly, so there is no process to restart. Just prove the build
-            # produced a real index.html rather than leaving a half-written directory behind.
-            test -s build/index.html
-            echo "deployed $(git rev-parse --short HEAD) -> $(ls build/static/js/main.*.js)"
+            # Bootstrap the rollback target on the first atomic deploy from the previously served
+            # build. Later deploys preserve the exact symlink target.
+            previous=$(readlink current || true)
+            if [ -z "$previous" ]; then
+              bootstrap="releases/bootstrap-$(date -u +%Y%m%dT%H%M%SZ)"
+              mkdir -p "$bootstrap"
+              cp -a build/. "$bootstrap/"
+              previous="$bootstrap"
+            fi
+            printf '%s\n' "$previous" > .deploy-previous-target
+
+            # nginx serves current/. Rename the symlink atomically so visitors see either the old
+            # complete release or the new complete release, never an in-progress CRA build.
+            ln -sfn "$release" current.next
+            mv -Tf current.next current
+            echo "activated ${release_sha} (previous: ${previous})"
           EOF
 
-      - name: Verify site is live
+      - name: Verify every revenue and trust route
+        run: node scripts/post-deploy-smoke.mjs --base-url https://www.polypdf.com
+
+      - name: Roll back failed deployment
+        if: failure()
         run: |
-          code=$(curl -s -o /dev/null -w '%{http_code}' https://polypdf.com/)
-          echo "polypdf.com -> $code"
-          test "$code" = "200"
+          ssh -o BatchMode=yes "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" bash -euo pipefail << 'EOF'
+            cd /var/www/polypdf-site
+            previous=$(cat .deploy-previous-target)
+            test -n "$previous"
+            test -s "$previous/index.html"
+            ln -sfn "$previous" current.rollback
+            mv -Tf current.rollback current
+            echo "rolled back to $previous"
+          EOF

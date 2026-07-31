@@ -18,6 +18,7 @@ import {
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
 import { primaryPlatform } from '../lib/platform';
+import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
 import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.png';
 import shotMeasureTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
 import shotMarkup from '../assets/screenshots/shot-markup-web.png';
@@ -64,9 +65,9 @@ const freeFeatures = [
 ];
 
 const proFeatures = [
-  'Unlock unlimited measurements across all of your documents',
-  'Pay $49.99 once for a license you can use on up to 3 computers — Mac or Windows',
-  'Keep the same markup and review workflow with signed automatic app updates',
+  'Unlock unlimited hand-created measurements across all of your documents',
+  `Pay ${commercialOffer.price} once for PolyPDF 1.x on up to 3 computers — Mac or Windows`,
+  'Keep PolyPDF 1.x forever, with every public 1.x update included',
   'Secure Stripe checkout with license delivery by email'
 ];
 
@@ -81,7 +82,7 @@ const benefits = [
   },
   {
     title: 'Buy only after it proves itself',
-    description: 'The free download — Mac or Windows — lets you test PolyPDF on live work before you unlock unlimited measurements.'
+    description: 'The free download — Mac or Windows — lets you test PolyPDF on live work before you unlock unlimited hand-created measurements.'
   }
 ];
 
@@ -92,18 +93,18 @@ const steps = [
   },
   {
     title: 'Test it on a real drawing',
-    description: 'Calibrate scale and place up to 3 measurements in each document to confirm it fits your workflow.'
+    description: 'Calibrate scale and place up to 3 hand-created measurements in each document to confirm it fits your workflow.'
   },
   {
     title: 'Unlock unlimited when ready',
-    description: 'If PolyPDF saves you time, buy once for $49.99 and keep using it without a yearly fee.'
+    description: `If PolyPDF saves you time, buy the ${commercialOffer.price} Founder's License and keep using PolyPDF 1.x without a yearly fee.`
   }
 ];
 
 const faqs = [
   {
     question: 'What can I do before I pay?',
-    answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use the markup tools, and place up to 3 measurements in every open document. That gives you a real-world test before you buy.'
+    answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use the markup tools, place up to 3 hand-created measurements in every open document, and use uncapped Visual Search auto-count. That gives you a real-world test before you buy.'
   },
   {
     question: 'Does one license cover both Mac and Windows?',
@@ -111,15 +112,15 @@ const faqs = [
   },
   {
     question: 'What does the $49.99 license unlock?',
-    answer: 'The license removes the measurement limit so you can keep measuring across all of your documents. It is a one-time purchase, keeps Pro active across app updates, and can be used on up to 3 computers.'
+    answer: `The Founder's License removes the hand-created measurement limit. ${founderRightsText}`
   },
   {
     question: 'Is this a subscription?',
-    answer: 'No. PolyPDF is sold as a one-time $49.99 direct license. There is no annual renewal, no recurring maintenance bill, and no subscription timer.'
+    answer: `No. The PolyPDF Pro Founder's License is ${commercialOffer.price} once. There is no annual renewal, recurring maintenance bill, or subscription timer.`
   },
   {
     question: 'What happens after I buy?',
-    answer: 'Checkout is handled securely by Stripe. Your license key is delivered by email, and you paste it into the app once — on Mac or Windows — to unlock unlimited measurements.'
+    answer: 'Checkout is handled securely by Stripe. Your license key is delivered by email, and you paste it into the app once — on Mac or Windows — to unlock unlimited hand-created measurements.'
   },
   {
     question: 'How do refunds work?',
@@ -199,7 +200,7 @@ const Home = () => {
             <p className="hero-subtitle">
               Calibrate scale, measure precisely, and mark up the drawings you already receive —
               built for architects, engineers, contractors, and estimators. Free on Mac and Windows;
-              unlimited measurements are a one-time $49.99.
+              unlimited hand-created measurements are a one-time $49.99.
             </p>
 
             <div className="hero-cta">
@@ -209,7 +210,7 @@ const Home = () => {
               </Link>
             </div>
 
-            <p className="hero-note">Signed, notarized builds. Start free on your own drawings — upgrade only when you need unlimited measurements.</p>
+            <p className="hero-note">Signed, notarized builds. Start free on your own drawings — upgrade only when you need unlimited hand-created measurements.</p>
 
             <div className="hero-stats compact-stats">
               <div className="stat">
@@ -250,7 +251,7 @@ const Home = () => {
               </div>
               <div className="summary-item">
                 <HiOutlineSparkles />
-                <span>Try the full app free on Mac or Windows, then buy once only if unlimited measurements will save you time.</span>
+                <span>Try the full app free on Mac or Windows, then buy once only if unlimited hand-created measurements will save you time.</span>
               </div>
             </div>
           </motion.div>
@@ -374,7 +375,7 @@ const Home = () => {
             </motion.article>
             <motion.article className="benefit-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}>
               <h3>No annual seat timer</h3>
-              <p>Try real documents for free, then unlock unlimited measurements with one direct license that covers up to 3 computers.</p>
+              <p>Try real documents for free, then unlock unlimited hand-created measurements with one direct license that covers up to 3 computers.</p>
             </motion.article>
           </div>
         </div>
@@ -388,7 +389,7 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>Start free. Upgrade only when you need unlimited measurements.</h2>
+            <h2>Start free. Upgrade only when you need unlimited hand-created measurements.</h2>
             <p>The free download — Mac or Windows — handles review and markup. Pro removes the measurement cap for $49.99 once.</p>
           </motion.div>
 
@@ -421,8 +422,8 @@ const Home = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
             >
-              <div className="plan-pill plan-pill-dark">Pro Lifetime</div>
-              <h3>Unlock unlimited measurements</h3>
+              <div className="plan-pill plan-pill-dark">Founder's License</div>
+              <h3>Unlock unlimited hand-created measurements</h3>
               <p className="plan-price">$49.99</p>
               <ul className="plan-list">
                 {proFeatures.map((feature) => (
@@ -434,7 +435,7 @@ const Home = () => {
               <Link to="/buy" className="primary-btn full-width">
                 <FaInfinity /> Buy Once for $49.99
               </Link>
-              <p className="plan-note">One-time license for up to 3 computers — Mac or Windows. Secure Stripe checkout. Refund requests follow PolyPDF's policy.</p>
+              <p className="plan-note">{founderRightsText} {founderLimitText} Secure Stripe checkout. Refund requests follow PolyPDF's policy.</p>
             </motion.article>
           </div>
         </div>
@@ -449,7 +450,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>Try it on your workflow before you buy.</h2>
-            <p>Download free, test it on your own drawings, and pay once only if you want unlimited measurements.</p>
+            <p>Download free, test it on your own drawings, and pay once only if you want unlimited hand-created measurements.</p>
           </motion.div>
 
           <div className="step-grid">
@@ -510,7 +511,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
-            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited measurements for $49.99 only when you want to remove the cap.</p>
+            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited hand-created measurements for $49.99 only when you want to remove the cap.</p>
             <div className="cta-download-row">
               <DownloadCTA source="bottom_cta" size="large" />
               <Link to="/buy" className="secondary-btn cta-mac-btn">

@@ -9,6 +9,7 @@ import {
   FaReceipt
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+import { founderRightsText } from '../lib/commercialOffer';
 
 const sections = [
   {
@@ -26,6 +27,7 @@ const sections = [
     content: [
       'The current live commercial offer on PolyPDF.com is the direct desktop download for macOS and Windows.',
       'Direct purchases are processed through Stripe and unlocked with a PolyPDF license key sent by email.',
+      founderRightsText,
       'If you need help with activation, deactivation, or refund requests, contact support@polypdf.com.'
     ]
   },
@@ -70,7 +72,7 @@ const Support = () => {
           <div className="legal-hero">
             <h1>Support</h1>
             <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
-            <p className="last-updated">Last updated: July 29, 2026</p>
+            <p className="last-updated">Last updated: July 30, 2026</p>
           </div>
 
           <div className="legal-intro">

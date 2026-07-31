@@ -1,6 +1,6 @@
 # PolyPDF Direct License Support Runbook
 
-Use this for the direct Mac launch with Stripe Checkout and the PolyPDF license API.
+Use this for direct Mac and Windows licensing with Stripe Checkout and the PolyPDF license API.
 
 ## Quick Lookup
 
@@ -12,7 +12,7 @@ npm run admin -- lookup pi_...
 npm run admin -- lookup buyer@example.com
 ```
 
-Ask the customer for their Stripe receipt email, Mac app version, macOS version, and the last 4 characters of the license key.
+Ask the customer for their Stripe receipt email, app version, OS and version, and the last 4 characters of the license key.
 
 ## Activation Fails
 
@@ -27,14 +27,21 @@ Ask the customer for their Stripe receipt email, Mac app version, macOS version,
 
 ## Activation Limit Reached
 
-The launch license allows up to 3 active Macs.
+The direct license allows up to 3 active computers in any Mac and Windows combination.
 
 ```bash
 npm run admin -- lookup PPM-AB12-CD34-EF56
 npm run admin -- reset-activations PPM-AB12-CD34-EF56
 ```
 
-Reset activations when the user replaced a Mac, migrated hardware, or cannot access an old installation. Add a support note with the reason.
+Reset activations when the user replaced a computer, migrated hardware, or cannot access an old installation. Add a support note with the reason.
+
+## Purchase Rights
+
+- New founder purchases: perpetual PolyPDF 1.x use, every public 1.x update, and up to 3 Mac or Windows computers.
+- Purchases without founder metadata from before the July 30, 2026 policy cutoff: grandfathered perpetual Pro use with all future public updates.
+- Future major versions may be optional paid upgrades for founder purchases; PolyPDF 1.x continues to work.
+- Never describe the current offer as a one-year license or as including only one year of updates.
 
 ## Refunds And Chargebacks
 

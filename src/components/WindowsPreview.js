@@ -58,7 +58,7 @@ const sections = [
     content: [
       'Windows 10 or 11, 64-bit (x64).',
       'About 500 MB of free disk space.',
-      'Same free tier as Mac: full markup and review tools, with 3 measurements per document before Pro.'
+      'Same free tier as Mac: full markup and review tools, up to 3 hand-created measurements per document, and uncapped Visual Search auto-count.'
     ]
   }
 ];

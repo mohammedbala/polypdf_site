@@ -14,13 +14,14 @@ import {
 import { HiOutlineCloudDownload, HiOutlineShieldCheck } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import { primaryPlatform } from '../lib/platform';
+import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
 
 const proFeatures = [
   'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
-  'One-time $49.99 direct license with no subscription renewal',
+  `${commercialOffer.price} once with no subscription renewal`,
   'Use your license on up to 3 computers — Mac or Windows, in any mix',
   'Secure Stripe checkout with license delivery by email',
-  'Signed automatic app updates on both platforms; Pro access stays tied to your license'
+  'Every public PolyPDF 1.x update is included'
 ];
 
 const trackEvent = (name, properties = {}) => {
@@ -55,13 +56,20 @@ const Buy = () => {
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok || !payload.url) {
+        if (payload.error === 'founder_offer_ended') {
+          throw new Error('founder_offer_ended');
+        }
         throw new Error(payload.error || 'checkout_unavailable');
       }
       trackEvent('checkout_started', { provider: 'stripe', source: 'buy_page' });
       window.location.assign(payload.url);
     } catch (error) {
       setCheckoutStatus('ready');
-      setCheckoutError('Checkout could not load. Please refresh this page or contact support@polypdf.com.');
+      setCheckoutError(
+        error instanceof Error && error.message === 'founder_offer_ended'
+          ? 'The founder offer has ended. Checkout is temporarily closed while the next offer is prepared.'
+          : 'Checkout could not load. Please refresh this page or contact support@polypdf.com.'
+      );
     }
   };
 
@@ -92,7 +100,7 @@ const Buy = () => {
             </div>
             <h1>Buy PolyPDF Pro once. Measure without a subscription.</h1>
             <p>
-              Unlock unlimited measurements for a one-time $49.99. Keep the free markup and
+              Unlock unlimited hand-created measurements for a one-time $49.99. Keep the free markup and
               review workflow, remove the measurement cap, and use your license on up to
               3 computers — Mac or Windows.
             </p>
@@ -105,8 +113,8 @@ const Buy = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
             >
-              <div className="plan-pill plan-pill-dark">Pro Lifetime</div>
-              <h2>PolyPDF Pro</h2>
+              <div className="plan-pill plan-pill-dark">Founder's License</div>
+              <h2>{commercialOffer.name}</h2>
               <p className="plan-price">$49.99</p>
               <ul className="plan-list">
                 {proFeatures.map((feature) => (
@@ -124,6 +132,8 @@ const Buy = () => {
                 <FaInfinity /> {checkoutStatus === 'loading' ? 'Loading Secure Checkout...' : 'Continue to Secure Checkout'}
               </a>
               {checkoutError && <p className="plan-note checkout-error">{checkoutError}</p>}
+              <p className="plan-note">{founderRightsText}</p>
+              <p className="plan-note">{founderLimitText}</p>
               <p className="plan-note">Your license key is delivered by email after checkout.</p>
             </motion.section>
 
@@ -139,7 +149,7 @@ const Buy = () => {
               </div>
               <ul className="section-content">
                 <li>Download PolyPDF free first if you want to test it on real drawings.</li>
-                <li>The free app includes markup and review tools plus 3 measurements per document.</li>
+                <li>The free app includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Visual Search auto-count.</li>
                 <li>Pro removes the measurement limit on both Mac and Windows.</li>
               </ul>
               <div className="buy-actions">

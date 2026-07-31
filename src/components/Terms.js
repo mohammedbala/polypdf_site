@@ -9,6 +9,7 @@ import {
   FaLock
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+import { commercialOffer, founderLimitText } from '../lib/commercialOffer';
 
 const sections = [
   {
@@ -27,7 +28,7 @@ const sections = [
     content: [
       'The desktop app (macOS and Windows) may be offered as a free download with limited free measurement usage before purchase is required for additional measurement workflows.',
       'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
-      'The current direct offer includes free markup and review tools, 3 measurements per document, and an optional $49.99 lifetime Pro license.'
+      `The current direct offer includes free markup and review tools, 3 hand-created measurements per document, uncapped Visual Search auto-count, and an optional ${commercialOffer.price} Founder's License.`
     ]
   },
   {
@@ -35,8 +36,9 @@ const sections = [
     title: 'Direct purchases and license use',
     content: [
       'The current direct purchase flow is processed through Stripe and unlocked with a PolyPDF license key.',
-      'A direct Pro purchase grants a personal, non-transferable license to use the desktop app on up to 3 computers (macOS or Windows).',
-      'Each direct license may be activated on up to 3 computers (macOS or Windows) unless PolyPDF states otherwise at checkout.',
+      'A new Founder purchase grants a personal, non-transferable license to use PolyPDF 1.x perpetually on up to 3 computers (macOS or Windows), including every public PolyPDF 1.x update.',
+      'Future major versions may be offered as optional paid upgrades. A purchased PolyPDF 1.x license continues to work.',
+      'Purchases made before the July 30, 2026 policy cutoff are grandfathered for perpetual Pro use and all future public PolyPDF app updates.',
       'You may not resell, sublicense, share, or distribute your license key.',
       'PolyPDF may suspend or revoke a license for fraud, chargebacks, abuse, or material violation of these terms.'
     ]
@@ -72,7 +74,7 @@ const Terms = () => {
           <div className="legal-hero">
             <h1>Terms of Use</h1>
             <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
-            <p className="last-updated">Last updated: July 29, 2026</p>
+            <p className="last-updated">Last updated: July 30, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -124,7 +126,8 @@ const Terms = () => {
             </div>
             <ul className="section-content">
               <li>The desktop app may include in-app update delivery (Sparkle on macOS, electron-updater on Windows).</li>
-              <li>Public app updates may be available to free and paid installs; Pro access stays tied to the license unless it is revoked, refunded, or otherwise suspended under these terms.</li>
+              <li>Founder licenses include every public PolyPDF 1.x update. Grandfathered legacy purchases include all future public PolyPDF app updates.</li>
+              <li>{founderLimitText}</li>
               <li>Future features, future OS compatibility, and continued operation of online services are not guaranteed.</li>
               <li>If PolyPDF stops operating, already-downloaded software may keep working to the extent technically possible, but ongoing online services, new downloads, and reactivation are not guaranteed.</li>
             </ul>
