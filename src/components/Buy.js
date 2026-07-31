@@ -15,6 +15,7 @@ import { HiOutlineCloudDownload, HiOutlineShieldCheck } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
+import { captureAttribution, checkoutAttribution } from '../lib/attribution';
 
 const proFeatures = [
   'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
@@ -39,11 +40,13 @@ const Buy = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    captureAttribution();
   }, []);
 
   const handleBuyClick = async (event) => {
     event.preventDefault();
-    trackEvent('buy_click', { provider: 'stripe', source: 'buy_page' });
+    const attribution = checkoutAttribution();
+    trackEvent('buy_click', { provider: 'stripe', source: attribution.source });
     setCheckoutError('');
     setCheckoutStatus('loading');
 
@@ -51,8 +54,10 @@ const Buy = () => {
       const response = await fetch('/api/checkout/session', {
         method: 'POST',
         headers: {
-          Accept: 'application/json'
-        }
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ attribution })
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok || !payload.url) {
@@ -61,7 +66,7 @@ const Buy = () => {
         }
         throw new Error(payload.error || 'checkout_unavailable');
       }
-      trackEvent('checkout_started', { provider: 'stripe', source: 'buy_page' });
+      trackEvent('checkout_started', { provider: 'stripe', source: attribution.source });
       window.location.assign(payload.url);
     } catch (error) {
       setCheckoutStatus('ready');
@@ -78,7 +83,7 @@ const Buy = () => {
       <header className="legal-header">
         <nav className="nav container">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="PolyPDF" />
+            <img src={parrotIcon} alt="PolyPDF" width="1024" height="1024" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">

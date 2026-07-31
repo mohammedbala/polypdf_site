@@ -5,6 +5,7 @@ import Buy from './components/Buy';
 import Home from './components/Home';
 import Privacy from './components/Privacy';
 import Refund from './components/Refund';
+import RouteMetadata from './components/RouteMetadata';
 import Support from './components/Support';
 import WindowsPreview from './components/WindowsPreview';
 import Terms from './components/Terms';
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
+        <RouteMetadata />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/buy" element={<Buy />} />

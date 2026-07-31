@@ -55,7 +55,7 @@ const Terms = () => {
       <header className="legal-header">
         <nav className="nav container">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="PolyPDF" />
+            <img src={parrotIcon} alt="PolyPDF" width="1024" height="1024" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">

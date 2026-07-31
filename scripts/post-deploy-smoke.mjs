@@ -1,6 +1,13 @@
 #!/usr/bin/env node
 
+import fs from 'node:fs';
+import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+
+const projectRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+export const routeMetadata = JSON.parse(
+  fs.readFileSync(path.join(projectRoot, 'src/lib/route-metadata.json'), 'utf8')
+);
 
 export const htmlRoutes = [
   '/',
@@ -45,6 +52,32 @@ export async function runPostDeploySmoke({
     assertResponse(response.ok, `${route} returned HTTP ${response.status}`);
     assertResponse(/text\/html/i.test(response.headers.get('content-type') || ''), `${route} did not return HTML`);
     assertResponse(body.includes('<div id="root"></div>'), `${route} did not return the PolyPDF app shell`);
+    const metadata = routeMetadata[route];
+    const escapedTitle = metadata.title.replaceAll('&', '&amp;');
+    const escapedDescription = metadata.description.replaceAll('&', '&amp;');
+    const canonicalURL = `${base}${route === '/' ? '/' : route}`;
+    assertResponse(body.includes(`<title>${escapedTitle}</title>`), `${route} did not return its route-specific title`);
+    assertResponse(
+      body.includes(`<meta name="description" content="${escapedDescription}"`),
+      `${route} did not return its route-specific description`
+    );
+    assertResponse(
+      body.includes(`<meta name="robots" content="${metadata.robots}"`),
+      `${route} did not return its route-specific robots policy`
+    );
+    assertResponse(
+      body.includes(`<link rel="canonical" href="${canonicalURL}"`),
+      `${route} did not return its route-specific canonical URL`
+    );
+    assertResponse(
+      body.includes(`<meta property="og:url" content="${canonicalURL}"`)
+        && body.includes(`<meta property="og:title" content="${escapedTitle}"`)
+        && body.includes(`<meta property="og:description" content="${escapedDescription}"`)
+        && body.includes(`<meta name="twitter:url" content="${canonicalURL}"`)
+        && body.includes(`<meta name="twitter:title" content="${escapedTitle}"`)
+        && body.includes(`<meta name="twitter:description" content="${escapedDescription}"`),
+      `${route} did not return matching route-specific share metadata`
+    );
     results.push({ route, status: response.status });
   }
 

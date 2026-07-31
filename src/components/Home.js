@@ -17,6 +17,7 @@ import {
 } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
+import { buyPath } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
 import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.png';
@@ -145,6 +146,14 @@ const Home = () => {
     setMobileMenuOpen(false);
   };
 
+  useEffect(() => {
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setMobileMenuOpen(false);
+    };
+    document.addEventListener('keydown', closeOnEscape);
+    return () => document.removeEventListener('keydown', closeOnEscape);
+  }, []);
+
   const handleDownloadClick = (source) => {
     trackEvent('download_click', { source, platform: primaryPlatform.key });
     closeMobileMenu();
@@ -160,29 +169,34 @@ const Home = () => {
       >
         <nav className="nav container">
           <Link to="/" className="logo" onClick={closeMobileMenu}>
-            <img src={parrotIcon} alt="PolyPDF logo" />
+            <img src={parrotIcon} alt="PolyPDF logo" width="1024" height="1024" />
             <span>PolyPDF</span>
           </Link>
 
-          <div className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
             <a href="#faq" onClick={closeMobileMenu}>FAQ</a>
             <Link to="/support" onClick={closeMobileMenu}>Support</Link>
-            <Link to="/buy" className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
+            <Link to={buyPath('website_nav')} className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
             <a href={primaryPlatform.url} className="nav-download" download onClick={() => handleDownloadClick('nav')}>
               <HiOutlineCloudDownload /> Download Free
             </a>
           </div>
 
           <button
+            type="button"
             className="mobile-menu-toggle"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-controls="primary-navigation"
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen((open) => !open)}
           >
             {mobileMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
         </nav>
       </motion.header>
 
+      <main>
       <section className="hero">
         <div className="container hero-layout">
           <motion.div
@@ -205,7 +219,7 @@ const Home = () => {
 
             <div className="hero-cta">
               <DownloadCTA source="hero" onDownload={closeMobileMenu} />
-              <Link to="/buy" className="secondary-btn hero-buy">
+              <Link to={buyPath('website_hero')} className="secondary-btn hero-buy">
                 <FaInfinity /> Unlock Unlimited for $49.99
               </Link>
             </div>
@@ -214,19 +228,19 @@ const Home = () => {
 
             <div className="hero-stats compact-stats">
               <div className="stat">
-                <h3>3</h3>
+                <strong>3</strong>
                 <p>Free measurements per document</p>
               </div>
               <div className="stat">
-                <h3>$49.99</h3>
+                <strong>$49.99</strong>
                 <p>One-time license, no renewal</p>
               </div>
               <div className="stat">
-                <h3>Mac+PC</h3>
+                <strong>Mac+PC</strong>
                 <p>One license covers 3 computers</p>
               </div>
               <div className="stat">
-                <h3>Stripe</h3>
+                <strong>Stripe</strong>
                 <p>Secure checkout</p>
               </div>
             </div>
@@ -238,7 +252,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <img src={parrotIcon} alt="PolyPDF app icon" className="hero-icon" />
+            <img src={parrotIcon} alt="PolyPDF app icon" className="hero-icon" width="1024" height="1024" />
             <p className="summary-heading">What you can do on day one</p>
             <div className="summary-list">
               <div className="summary-item">
@@ -310,7 +324,7 @@ const Home = () => {
             transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
           >
             <div className="shot-plate">
-              <img src={screenshots[0].image} alt={screenshots[0].title} loading="eager" />
+              <img src={screenshots[0].image} alt={screenshots[0].title} loading="eager" width="2280" height="1515" />
             </div>
             <figcaption>
               <h3>{screenshots[0].title}</h3>
@@ -340,7 +354,7 @@ const Home = () => {
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.65, delay: 0.08, ease: [0.21, 0.65, 0.32, 1] }}
                 >
-                  <img src={shot.image} alt={shot.title} loading="lazy" />
+                  <img src={shot.image} alt={shot.title} loading="lazy" width="2280" height="1515" />
                 </motion.div>
               </motion.figure>
             ))}
@@ -432,7 +446,7 @@ const Home = () => {
                   </li>
                 ))}
               </ul>
-              <Link to="/buy" className="primary-btn full-width">
+              <Link to={buyPath('website_pricing')} className="primary-btn full-width">
                 <FaInfinity /> Buy Once for $49.99
               </Link>
               <p className="plan-note">{founderRightsText} {founderLimitText} Secure Stripe checkout. Refund requests follow PolyPDF's policy.</p>
@@ -514,7 +528,7 @@ const Home = () => {
             <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited hand-created measurements for $49.99 only when you want to remove the cap.</p>
             <div className="cta-download-row">
               <DownloadCTA source="bottom_cta" size="large" />
-              <Link to="/buy" className="secondary-btn cta-mac-btn">
+              <Link to={buyPath('website_bottom_cta')} className="secondary-btn cta-mac-btn">
                 <FaInfinity /> Buy Once for $49.99
               </Link>
             </div>
@@ -535,17 +549,18 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      </main>
 
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
             <div className="footer-brand">
-              <img src={parrotIcon} alt="PolyPDF logo" loading="lazy" />
+              <img src={parrotIcon} alt="PolyPDF logo" loading="lazy" width="1024" height="1024" />
               <p>Measure and mark up PDF drawings on Mac and Windows without the yearly bill.</p>
             </div>
             <div className="footer-links">
               <a href={primaryPlatform.url} download onClick={() => handleDownloadClick('footer')}>Download Free</a>
-              <Link to="/buy">Buy Once</Link>
+              <Link to={buyPath('website_footer')}>Buy Once</Link>
               <Link to="/windows">Windows</Link>
               <Link to="/support">Support</Link>
               <Link to="/versions">Version History</Link>

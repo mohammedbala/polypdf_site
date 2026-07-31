@@ -5,6 +5,7 @@ import {
   downloadRoutes,
   expectedOffer,
   htmlRoutes,
+  routeMetadata,
   runPostDeploySmoke
 } from '../scripts/post-deploy-smoke.mjs';
 
@@ -17,8 +18,24 @@ async function withFakeSite({ brokenRoute = null } = {}, run) {
       return;
     }
     if (htmlRoutes.includes(path)) {
+      const metadata = routeMetadata[path];
+      const title = metadata.title.replaceAll('&', '&amp;');
+      const description = metadata.description.replaceAll('&', '&amp;');
+      const canonicalURL = `http://${request.headers.host}${path === '/' ? '/' : path}`;
       response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-      response.end('<!doctype html><div id="root"></div>');
+      response.end(
+        `<!doctype html><title>${title}</title>`
+        + `<meta name="description" content="${description}" />`
+        + `<meta name="robots" content="${metadata.robots}" />`
+        + `<meta property="og:url" content="${canonicalURL}" />`
+        + `<meta property="og:title" content="${title}" />`
+        + `<meta property="og:description" content="${description}" />`
+        + `<meta name="twitter:url" content="${canonicalURL}" />`
+        + `<meta name="twitter:title" content="${title}" />`
+        + `<meta name="twitter:description" content="${description}" />`
+        + `<link rel="canonical" href="${canonicalURL}" />`
+        + '<div id="root"></div>'
+      );
       return;
     }
     if (path === '/api/healthz') {
