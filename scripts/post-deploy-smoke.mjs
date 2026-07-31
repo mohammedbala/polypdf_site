@@ -124,6 +124,7 @@ export async function runPostDeploySmoke({
       checkoutURL?.protocol === 'https:' && /(^|\.)stripe\.com$/i.test(checkoutURL.hostname),
       '/api/checkout/session did not return a secure Stripe URL'
     );
+    assertResponse(checkout?.smoke === true, '/api/checkout/session did not expire its deploy-smoke session');
     results.push({ route: '/api/checkout/session', status: checkoutResponse.status });
   }
 

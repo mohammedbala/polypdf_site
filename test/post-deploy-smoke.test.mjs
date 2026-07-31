@@ -74,7 +74,7 @@ async function withFakeSite({ brokenRoute = null } = {}, run) {
     }
     if (path === '/api/checkout/session' && request.method === 'POST') {
       response.writeHead(200, { 'Content-Type': 'application/json' });
-      response.end('{"url":"https://checkout.stripe.com/c/pay/cs_test_123"}');
+      response.end('{"url":"https://checkout.stripe.com/c/pay/cs_test_123","smoke":true}');
       return;
     }
     response.writeHead(404);
