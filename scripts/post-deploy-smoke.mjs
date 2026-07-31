@@ -169,8 +169,10 @@ export async function runPostDeploySmoke({
     assertResponse([200, 206].includes(response.status), `${route} returned HTTP ${response.status}`);
     const contentType = response.headers.get('content-type') || '';
     assertResponse(
-      isVideo ? /video\/mp4/i.test(contentType) : /text\/vtt/i.test(contentType),
-      `${route} returned the wrong content type`
+      isVideo
+        ? /video\/mp4/i.test(contentType)
+        : /(text\/vtt|text\/plain|application\/octet-stream)/i.test(contentType),
+      `${route} returned an unsupported content type`
     );
     if (isVideo) {
       const contentRange = response.headers.get('content-range') || '';

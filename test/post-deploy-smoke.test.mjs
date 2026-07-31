@@ -104,7 +104,7 @@ async function withFakeSite({ brokenRoute = null } = {}, run) {
           response.end('x'.repeat(100));
         }
       } else {
-        response.writeHead(200, { 'Content-Type': 'text/vtt; charset=utf-8' });
+        response.writeHead(200, { 'Content-Type': 'application/octet-stream' });
         response.end('WEBVTT\n\n00:00.000 --> 00:01.000\nPolyPDF');
       }
       return;

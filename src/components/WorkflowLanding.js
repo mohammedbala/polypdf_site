@@ -8,6 +8,7 @@ import DownloadCTA from './DownloadCTA';
 import { buyPath, captureAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
 import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
+import { captionTrackUrl } from '../lib/workflowCaptions';
 import './WorkflowLanding.css';
 
 const mediaCopy = {
@@ -42,7 +43,7 @@ const WorkflowLanding = ({ page }) => {
   };
 
   const videoSource = `/videos/${page.mediaSlug}-${mediaMode}.mp4`;
-  const captionsSource = `/videos/${page.mediaSlug}-${mediaMode}.vtt`;
+  const captionsSource = captionTrackUrl(page.mediaSlug, mediaMode);
 
   return (
     <div className="workflow-landing">
