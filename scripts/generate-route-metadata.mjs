@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const buildDirectory = path.join(root, 'build');
+const buildDirectory = path.resolve(root, process.env.BUILD_PATH || 'build');
 const metadata = JSON.parse(fs.readFileSync(path.join(root, 'src/lib/route-metadata.json'), 'utf8'));
 const baseHTML = fs.readFileSync(path.join(buildDirectory, 'index.html'), 'utf8');
 const origin = 'https://www.polypdf.com';
