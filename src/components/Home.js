@@ -177,6 +177,7 @@ const Home = () => {
           <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
             <a href="#faq" onClick={closeMobileMenu}>FAQ</a>
+            <Link to="/blog" onClick={closeMobileMenu}>Blog</Link>
             <Link to="/support" onClick={closeMobileMenu}>Support</Link>
             <Link to={buyPath('website_nav')} className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
             <a href={primaryPlatform.url} className="nav-download" download onClick={() => handleDownloadClick('nav')}>
@@ -563,6 +564,7 @@ const Home = () => {
               <a href={primaryPlatform.url} download onClick={() => handleDownloadClick('footer')}>Download Free</a>
               <Link to={buyPath('website_footer')}>Buy Once</Link>
               <Link to="/windows">Windows</Link>
+              <Link to="/blog">Blog</Link>
               <Link to="/support">Support</Link>
               <Link to="/versions">Version History</Link>
               <Link to="/refund">Refund Policy</Link>

@@ -229,6 +229,7 @@ const Buy = () => {
             <p>&copy; 2026 PolyPDF. All rights reserved.</p>
             <div className="footer-links">
               <Link to="/">Home</Link>
+              <Link to="/blog">Blog</Link>
               <Link to="/support">Support</Link>
               <Link to="/refund">Refund Policy</Link>
               <Link to="/terms">Terms of Use</Link>

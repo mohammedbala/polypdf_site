@@ -32,6 +32,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.polypdf.com/blog</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/introducing-polypdf-plugins</loc>
+    <lastmod>2026-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.polypdf.com/privacy</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>

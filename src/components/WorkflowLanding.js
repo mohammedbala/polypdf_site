@@ -289,6 +289,7 @@ const WorkflowLanding = ({ page }) => {
             <p>Desktop PDF measurement and markup for Mac and Windows.</p>
           </div>
           <div className="workflow-footer-links">
+            <Link to="/blog">Blog</Link>
             <Link to="/support">Support</Link>
             <Link to="/refund">Refunds</Link>
             <Link to="/terms">Terms</Link>

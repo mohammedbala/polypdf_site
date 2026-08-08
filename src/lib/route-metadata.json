@@ -1,6 +1,6 @@
 {
   "/": {
-    "title": "PolyPDF | PDF Measurement & Markup for Mac and Windows — No Subscription",
+    "title": "PolyPDF | PDF Measurement & Markup for Mac and Windows \u2014 No Subscription",
     "description": "Measure and mark up PDF drawings on Mac and Windows. Download PolyPDF free, test it on real plans, then unlock unlimited hand-created measurements for a one-time $49.99.",
     "robots": "index, follow"
   },
@@ -13,6 +13,16 @@
     "title": "PolyPDF Account | Manage Your License",
     "description": "Use a secure email sign-in link to view your PolyPDF purchases, license details, and activated computers.",
     "robots": "noindex, nofollow"
+  },
+  "/blog": {
+    "title": "PolyPDF Blog | Product Notes for PDF Measurement and Markup",
+    "description": "Product notes from the PolyPDF team: what shipped in the Mac and Windows apps, how each feature works, and step-by-step guidance for using it on real drawings.",
+    "robots": "index, follow"
+  },
+  "/blog/introducing-polypdf-plugins": {
+    "title": "Introducing PolyPDF Plugins | PolyPDF Blog",
+    "description": "PolyPDF plugins are signed content packages with no executable code. Read how the permission model, Plugin Manager, and the three launch plugins — AISC steel sections, professional seals, and OpenStreetMap maps — work.",
+    "robots": "index, follow"
   },
   "/privacy": {
     "title": "Privacy Policy | PolyPDF",

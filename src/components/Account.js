@@ -334,6 +334,7 @@ const Account = () => {
             <div className="footer-links">
               <Link to="/">Home</Link>
               <Link to="/buy">Buy</Link>
+              <Link to="/blog">Blog</Link>
               <Link to="/support">Support</Link>
               <Link to="/terms">Terms of Use</Link>
               <Link to="/privacy">Privacy Policy</Link>

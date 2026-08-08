@@ -19,6 +19,8 @@ export const htmlRoutes = [
   '/refund',
   '/versions',
   '/account',
+  '/blog',
+  '/blog/introducing-polypdf-plugins',
   '/bluebeam-alternative-mac',
   '/pdf-takeoff-software',
   '/measure-pdf-on-mac',

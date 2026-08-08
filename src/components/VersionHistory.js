@@ -279,6 +279,7 @@ const VersionHistory = () => {
             <div className="footer-links">
               <Link to="/">Home</Link>
               <Link to="/windows">Windows</Link>
+              <Link to="/blog">Blog</Link>
               <Link to="/support">Support</Link>
               <Link to="/terms">Terms of Use</Link>
               <Link to="/privacy">Privacy Policy</Link>
