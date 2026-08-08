@@ -5,7 +5,7 @@ export const commercialOffer = Object.freeze({
   price: '$49.99',
   activationLimit: 3,
   termsVersion: '2026-07-30',
-  founderEndsAt: 'August 29, 2026 at 11:59 p.m. ET',
+  founderEndsAt: 'September 10, 2026 at 11:59 p.m. ET',
   founderMaximumLicenses: 100
 });
 
