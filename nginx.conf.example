@@ -6,13 +6,47 @@ server {
     listen [::]:80;
     server_name polypdf.com www.polypdf.com;
 
-    return 301 https://$server_name$request_uri;
+    # Redirect to the canonical host explicitly. ($server_name expands to the FIRST name in the
+    # list — the apex — which contradicted every canonical/og:url tag on the site pointing at www.)
+    return 301 https://www.polypdf.com$request_uri;
+}
+
+# Canonical-host consolidation: every canonical tag, og:url, and the sitemap use www.polypdf.com,
+# so send https://polypdf.com there instead of serving duplicate content on both hosts.
+# EXCEPTION: /api/ keeps answering on the apex directly — shipped desktop apps may call the licence
+# API here, and a 301 on a POST is not reliably followed by HTTP clients.
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name polypdf.com;
+
+    ssl_certificate /etc/letsencrypt/live/polypdf.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/polypdf.com/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:3087/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 30s;
+    }
+
+    # NOTE before applying to production: if any shipped update feed (Sparkle/WinSparkle appcast)
+    # or installer link points at https://polypdf.com/downloads/..., verify the updater follows
+    # redirects — or copy the /downloads/ locations into this block instead of redirecting them.
+    location / {
+        return 301 https://www.polypdf.com$request_uri;
+    }
 }
 
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
-    server_name polypdf.com www.polypdf.com;
+    server_name www.polypdf.com;
 
     ssl_certificate /etc/letsencrypt/live/polypdf.com/fullchain.pem;
     ssl_certificate_key /etc/letsencrypt/live/polypdf.com/privkey.pem;

@@ -28,7 +28,7 @@ export const blogPosts = Object.freeze([
       'Plugins extend PolyPDF with signed content packages that carry data and artwork instead of executable code. The first three insert AISC steel section profiles, professional seal graphics, and OpenStreetMap maps — as ordinary, editable annotations.',
     metaTitle: 'Introducing PolyPDF Plugins | PolyPDF Blog',
     metaDescription:
-      'PolyPDF plugins are signed content packages with no executable code. Read how the permission model, Plugin Manager, and the three launch plugins — AISC steel sections, professional seals, and OpenStreetMap maps — work.',
+      "How PolyPDF's signed, no-executable-code plugins work: the permission model, the Plugin Manager, and the AISC steel, seal, and map launch plugins.",
     lede:
       'Plugins add new content generators to PolyPDF without turning the app into a place where downloaded code runs. Here is what ships, how the security model works, and the steps to use any plugin.',
     sections: [

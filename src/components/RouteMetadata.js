@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import routeMetadata from '../lib/route-metadata.json';
 
 const SITE_ORIGIN = 'https://www.polypdf.com';
-const SOCIAL_IMAGE = `${SITE_ORIGIN}/logo512.png`;
+const SOCIAL_IMAGE = `${SITE_ORIGIN}/og-image.png`;
 
 const setMeta = (selector, attribute, value) => {
   const element = document.head.querySelector(selector);

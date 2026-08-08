@@ -29,7 +29,10 @@ test('defines unique, server-renderable metadata for every public route', () => 
   Object.entries(routeMetadata).forEach(([route, entry]) => {
     expect(route.startsWith('/')).toBe(true);
     expect(entry.title.length).toBeGreaterThan(10);
+    // Search snippets truncate around 60/155 characters; keep titles and descriptions whole.
+    expect(entry.title.length).toBeLessThanOrEqual(60);
     expect(entry.description.length).toBeGreaterThan(50);
+    expect(entry.description.length).toBeLessThanOrEqual(155);
     expect(['index, follow', 'noindex, nofollow']).toContain(entry.robots);
   });
   expect(routeMetadata['/account'].robots).toBe('noindex, nofollow');

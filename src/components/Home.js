@@ -20,6 +20,7 @@ import DownloadCTA from './DownloadCTA';
 import { buyPath, captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
+import { landingPages } from '../lib/landingPages';
 import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.png';
 import shotMeasureTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
 import shotMarkup from '../assets/screenshots/shot-markup-web.png';
@@ -35,16 +36,19 @@ const screenshots = [
   {
     image: shotCountCommitted,
     title: 'Counts that keep score for you',
+    alt: 'PolyPDF counting symbols on a construction drawing: numbered count markers on the sheet with a running per-subject tally in the takeoff worksheet',
     caption: 'Drop a marker on each symbol and the takeoff worksheet keeps a running tally per subject, right beside your areas and lengths. Number the marks as you go, then export the whole worksheet to CSV or PDF when it is time to price the job.'
   },
   {
     image: shotMeasureTakeoff,
     title: 'Real units from the PDF you were sent',
+    alt: 'PolyPDF measuring a calibrated floor plan: area and length measurements placed on the drawing with results in the takeoff worksheet',
     caption: 'Calibrate to the printed scale once — presets for the common architectural scales, or dial in your own, metric or imperial — then pull areas, lengths and perimeters that land directly on the drawing. No CAD file, no re-drawing, no math on a notepad.'
   },
   {
     image: shotMarkup,
     title: 'Reviews and RFIs, straight on the sheet',
+    alt: 'PolyPDF drawing review on a plan sheet: a revision cloud, leader callout, and stamps with every annotation tracked in the Markups list',
     caption: 'Revision clouds, leader callouts, stamps and highlights, with text sizing you control — so a note that reads on screen still reads on a printed half-size set. Every markup is tracked in the markups list, so nothing you flag gets lost between review rounds.'
   }
 ];
@@ -328,7 +332,7 @@ const Home = () => {
             transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
           >
             <div className="shot-plate">
-              <img src={screenshots[0].image} alt={screenshots[0].title} loading="eager" width="2280" height="1515" />
+              <img src={screenshots[0].image} alt={screenshots[0].alt} loading="eager" width="2280" height="1515" />
             </div>
             <figcaption>
               <h3>{screenshots[0].title}</h3>
@@ -358,7 +362,7 @@ const Home = () => {
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.65, delay: 0.08, ease: [0.21, 0.65, 0.32, 1] }}
                 >
-                  <img src={shot.image} alt={shot.title} loading="lazy" width="2280" height="1515" />
+                  <img src={shot.image} alt={shot.alt} loading="lazy" width="2280" height="1515" />
                 </motion.div>
               </motion.figure>
             ))}
@@ -566,6 +570,11 @@ const Home = () => {
               <a href={primaryPlatform.url} download onClick={() => handleDownloadClick('footer')}>Download Free</a>
               <Link to={buyPath('website_footer')}>Buy Once</Link>
               <Link to="/windows">Windows</Link>
+              <Link to={landingPages.pdfTakeoffSoftware.path}>PDF Takeoff</Link>
+              <Link to={landingPages.measurePdfOnMac.path}>Measure a PDF on Mac</Link>
+              <Link to={landingPages.constructionPdfMarkup.path}>Construction Markup</Link>
+              <Link to={landingPages.visualSearchPdfCount.path}>Symbol Counting</Link>
+              <Link to={landingPages.comparePdfDrawings.path}>Compare Drawings</Link>
               <Link to="/blog">Blog</Link>
               <Link to="/support">Support</Link>
               <Link to="/versions">Version History</Link>
