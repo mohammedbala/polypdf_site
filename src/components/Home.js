@@ -102,7 +102,9 @@ const steps = [
   }
 ];
 
-const faqs = [
+// Exported so scripts/prerender.js can emit the same questions as FAQPage structured data —
+// the schema must never say something the visible page does not.
+export const homeFaqs = [
   {
     question: 'What can I do before I pay?',
     answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use the markup tools, place up to 3 hand-created measurements in every open document, and use uncapped Visual Search auto-count. That gives you a real-world test before you buy.'
@@ -501,7 +503,7 @@ const Home = () => {
           </motion.div>
 
           <div className="faq-grid">
-            {faqs.map((item, index) => (
+            {homeFaqs.map((item, index) => (
               <motion.article
                 key={item.question}
                 className="faq-card"

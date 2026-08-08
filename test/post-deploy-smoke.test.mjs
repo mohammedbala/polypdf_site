@@ -35,7 +35,8 @@ async function withFakeSite({ brokenRoute = null } = {}, run) {
         + `<meta name="twitter:title" content="${title}" />`
         + `<meta name="twitter:description" content="${description}" />`
         + `<link rel="canonical" href="${canonicalURL}" />`
-        + '<div id="root"></div>'
+        + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script>'
+        + `<div id="root"><h1>${title}</h1><p>Prerendered body content for ${path}</p></div>`
       );
       return;
     }

@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && node scripts/generate-route-metadata.mjs",
+    "build": "react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
     "test": "react-scripts test",
     "test:post-deploy": "node --test test/post-deploy-smoke.test.mjs",
     "smoke:production": "node scripts/post-deploy-smoke.mjs",

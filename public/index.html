@@ -42,30 +42,9 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="canonical" href="https://www.polypdf.com/" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "PolyPDF",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "macOS, Windows",
-        "description": "PolyPDF is a desktop PDF measurement and markup app for Mac and Windows — review AEC drawings, calibrate scale, and take precise measurements without a subscription.",
-        "url": "https://www.polypdf.com",
-        "offers": {
-          "@type": "Offer",
-          "name": "PolyPDF Pro Founder's License — Perpetual 1.x",
-          "description": "One-time license for perpetual PolyPDF 1.x use on up to 3 Mac or Windows computers, including every PolyPDF 1.x update.",
-          "price": "49.99",
-          "priceCurrency": "USD",
-          "availabilityEnds": "2026-08-30T03:59:59Z"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "PolyPDF",
-          "url": "https://www.polypdf.com"
-        }
-      }
-    </script>
+    <!-- JSON-LD structured data is injected per route at build time by scripts/prerender.js,
+         sourced from src/lib/commercialOffer.js and friends. Keep it out of this template so a
+         hardcoded offer date can never go stale in every page at once. -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

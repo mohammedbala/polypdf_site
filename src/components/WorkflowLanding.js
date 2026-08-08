@@ -11,7 +11,8 @@ import { commercialOffer, founderLimitText, founderRightsText } from '../lib/com
 import { captionTrackUrl } from '../lib/workflowCaptions';
 import './WorkflowLanding.css';
 
-const mediaCopy = {
+// Exported so scripts/prerender.js can describe the same videos as VideoObject structured data.
+export const mediaCopy = {
   'visual-search': {
     title: 'Watch Visual Search become a reviewed count series.',
     description: 'See the capture, candidate review, and committed count workflow in the current PolyPDF interface.'
