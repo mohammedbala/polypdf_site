@@ -6,49 +6,6 @@ import shotTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
 const landingPage = (page) => Object.freeze(page);
 
 export const landingPages = Object.freeze({
-  bluebeamAlternativeMac: landingPage({
-    path: '/bluebeam-alternative-mac',
-    source: 'landing_bluebeam_mac',
-    mediaSlug: 'revision-comparison',
-    eyebrow: 'A focused desktop option for macOS',
-    title: 'A Bluebeam alternative for Mac teams that need PDF markup and measurement.',
-    lede: 'PolyPDF is a native desktop workspace for reviewing, marking up, calibrating, and measuring construction PDFs on Mac and Windows—without committing every user to another annual subscription.',
-    qualifier: 'PolyPDF is a focused alternative, not a feature-for-feature clone. Download it free and test the workflows that matter on your own drawings before you decide.',
-    image: shotMarkup,
-    imageAlt: 'PolyPDF on macOS showing an HVAC drawing with an RFI callout, revision cloud, and the Markups list',
-    audience: 'For Mac-based architects, estimators, contractors, and reviewers who need dependable everyday drawing tools without running a virtual machine.',
-    proofPoints: [
-      ['Native desktop', 'Mac and Windows builds'],
-      ['Try before buying', 'Real PDFs, no trial timer'],
-      ['Buy once', '$49.99 for PolyPDF 1.x']
-    ],
-    problemTitle: 'Choose around the work you actually do.',
-    problemCopy: 'A replacement decision is easier when it starts with concrete drawing tasks—not a giant feature checklist. PolyPDF concentrates on opening plan sets, recording review notes, calibrating sheets, taking measurements, counting symbols, and exporting the resulting worksheet.',
-    workflow: [
-      ['Open the drawing locally', 'Work from the PDF files already exchanged by your project team. Your drawing content stays on your computer unless you choose to export or share it.'],
-      ['Review and mark up', 'Place callouts, text, shapes, highlights, stamps, and revision clouds directly on the sheet, then use the Markups list to keep comments visible.'],
-      ['Measure when the scale matters', 'Calibrate the page, then take distance, area, perimeter, angle, and count measurements without redrawing the plan in CAD.'],
-      ['Export a usable record', 'Save the marked PDF or export measurement results to CSV or PDF for estimating, handoff, and project records.']
-    ],
-    outcomeTitle: 'A practical fit when your core need is review plus takeoff.',
-    outcomes: [
-      'Runs as a desktop app on current macOS and Windows systems.',
-      'Includes markup and review tools in the free download.',
-      'Allows up to 3 hand-created measurements per document before purchase.',
-      'Keeps Visual Search auto-count uncapped in both Free and Pro.',
-      'Unlocks unlimited hand-created measurements with one Pro license.'
-    ],
-    faq: [
-      ['Is PolyPDF the same as Bluebeam Revu?', 'No. PolyPDF is an independent, focused PDF measurement and markup app. It does not claim feature-for-feature parity. The free download is the fastest way to verify whether its current tools cover your team’s actual workflow.'],
-      ['Can I test PolyPDF on a real plan set before paying?', 'Yes. The free app opens your own PDFs, includes markup and review tools, allows up to 3 hand-created measurements per document, and keeps Visual Search auto-count uncapped.'],
-      ['Does one license work on Mac and Windows?', 'Yes. The Founder’s License activates PolyPDF 1.x on up to 3 computers in any Mac and Windows combination.']
-    ],
-    related: [
-      ['/measure-pdf-on-mac', 'Measure PDF drawings on Mac'],
-      ['/construction-pdf-markup', 'Construction PDF markup'],
-      ['/compare-pdf-drawings', 'Compare drawing revisions']
-    ]
-  }),
   pdfTakeoffSoftware: landingPage({
     path: '/pdf-takeoff-software',
     source: 'landing_pdf_takeoff',
@@ -131,7 +88,7 @@ export const landingPages = Object.freeze({
     ],
     related: [
       ['/pdf-takeoff-software', 'PDF takeoff software'],
-      ['/bluebeam-alternative-mac', 'Bluebeam alternative for Mac'],
+      ['/compare-pdf-drawings', 'Compare drawing revisions'],
       ['/visual-search-pdf-count', 'Count repeated PDF symbols']
     ]
   }),
@@ -174,7 +131,7 @@ export const landingPages = Object.freeze({
     ],
     related: [
       ['/compare-pdf-drawings', 'Compare drawing revisions'],
-      ['/bluebeam-alternative-mac', 'Bluebeam alternative for Mac'],
+      ['/measure-pdf-on-mac', 'Measure PDF drawings on Mac'],
       ['/pdf-takeoff-software', 'PDF takeoff software']
     ]
   }),
@@ -260,7 +217,7 @@ export const landingPages = Object.freeze({
     ],
     related: [
       ['/construction-pdf-markup', 'Construction PDF markup'],
-      ['/bluebeam-alternative-mac', 'Bluebeam alternative for Mac'],
+      ['/visual-search-pdf-count', 'Count repeated PDF symbols'],
       ['/measure-pdf-on-mac', 'Measure PDF drawings on Mac']
     ]
   })

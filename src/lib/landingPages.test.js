@@ -1,11 +1,11 @@
 import { landingPageRoutes } from './landingPages';
 import routeMetadata from './route-metadata.json';
 
-test('defines six substantial, uniquely attributed search landing pages', () => {
-  expect(landingPageRoutes).toHaveLength(6);
-  expect(new Set(landingPageRoutes.map(({ path }) => path)).size).toBe(6);
-  expect(new Set(landingPageRoutes.map(({ source }) => source)).size).toBe(6);
-  expect(new Set(landingPageRoutes.map(({ title }) => title)).size).toBe(6);
+test('defines five substantial, uniquely attributed search landing pages', () => {
+  expect(landingPageRoutes).toHaveLength(5);
+  expect(new Set(landingPageRoutes.map(({ path }) => path)).size).toBe(5);
+  expect(new Set(landingPageRoutes.map(({ source }) => source)).size).toBe(5);
+  expect(new Set(landingPageRoutes.map(({ title }) => title)).size).toBe(5);
 
   landingPageRoutes.forEach((page) => {
     expect(routeMetadata[page.path]?.robots).toBe('index, follow');
@@ -17,5 +17,15 @@ test('defines six substantial, uniquely attributed search landing pages', () => 
     expect(page.faq).toHaveLength(3);
     expect(page.related).toHaveLength(3);
     expect(['visual-search', 'takeoff-export', 'revision-comparison']).toContain(page.mediaSlug);
+
+    // Related links are rendered as internal <Link>s. A path with no route entry would ship a
+    // crawlable link to a page that redirects home — the exact drift a removed landing page
+    // leaves behind if its inbound links are not repointed.
+    const relatedPaths = page.related.map(([path]) => path);
+    expect(new Set(relatedPaths).size).toBe(3);
+    relatedPaths.forEach((path) => {
+      expect(path).not.toBe(page.path);
+      expect(routeMetadata[path]?.robots).toBe('index, follow');
+    });
   });
 });

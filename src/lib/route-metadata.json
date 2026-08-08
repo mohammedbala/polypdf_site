@@ -54,11 +54,6 @@
     "description": "Review PolyPDF release notes, product improvements, fixes, and current Mac and Windows version information.",
     "robots": "index, follow"
   },
-  "/bluebeam-alternative-mac": {
-    "title": "Bluebeam Alternative for Mac | PolyPDF",
-    "description": "Try a focused Bluebeam alternative for Mac with desktop PDF markup, drawing measurement, takeoff, and revision review. Download PolyPDF free.",
-    "robots": "index, follow"
-  },
   "/pdf-takeoff-software": {
     "title": "PDF Takeoff Software for Mac & Windows | PolyPDF",
     "description": "Calibrate PDF drawings, measure lengths and areas, count symbols, organize a takeoff worksheet, and export results to CSV or PDF.",

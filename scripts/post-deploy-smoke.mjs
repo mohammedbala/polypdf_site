@@ -21,7 +21,6 @@ export const htmlRoutes = [
   '/account',
   '/blog',
   '/blog/introducing-polypdf-plugins',
-  '/bluebeam-alternative-mac',
   '/pdf-takeoff-software',
   '/measure-pdf-on-mac',
   '/construction-pdf-markup',
@@ -78,7 +77,7 @@ export async function runPostDeploySmoke({
     // an empty #root means crawlers (and no-JS readers) are getting a blank page again.
     assertResponse(body.includes('<div id="root">'), `${route} did not return the PolyPDF app shell`);
     assertResponse(!body.includes('<div id="root"></div>'), `${route} returned an empty app shell instead of prerendered content`);
-    assertResponse(body.includes('<script type="application/ld+json">') || route === '/account' || route === '/bluebeam-alternative-mac', `${route} did not return JSON-LD structured data`);
+    assertResponse(body.includes('<script type="application/ld+json">') || route === '/account', `${route} did not return JSON-LD structured data`);
     const metadata = routeMetadata[route];
     const escapedTitle = metadata.title.replaceAll('&', '&amp;');
     const escapedDescription = metadata.description.replaceAll('&', '&amp;');

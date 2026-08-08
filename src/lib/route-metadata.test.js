@@ -14,7 +14,6 @@ const expectedRoutes = [
   '/windows',
   '/terms',
   '/versions',
-  '/bluebeam-alternative-mac',
   '/pdf-takeoff-software',
   '/measure-pdf-on-mac',
   '/construction-pdf-markup',
@@ -57,6 +56,6 @@ test('gives every blog post its own crawlable metadata, matching the post', () =
 
 test('normalizes the trailing slash added by the production web server', () => {
   expect(normalizeRoutePath('/')).toBe('/');
-  expect(normalizeRoutePath('/bluebeam-alternative-mac')).toBe('/bluebeam-alternative-mac');
-  expect(normalizeRoutePath('/bluebeam-alternative-mac/')).toBe('/bluebeam-alternative-mac');
+  expect(normalizeRoutePath('/pdf-takeoff-software')).toBe('/pdf-takeoff-software');
+  expect(normalizeRoutePath('/pdf-takeoff-software/')).toBe('/pdf-takeoff-software');
 });

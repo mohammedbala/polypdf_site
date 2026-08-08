@@ -35,11 +35,6 @@ const WEBSITE_ID = `${ORIGIN}/#website`;
 const APP_ID = `${ORIGIN}/#software`;
 const SOCIAL_IMAGE = `${ORIGIN}/og-image.png`;
 
-// This landing page's competitor-comparison copy is under a legal review tracked as a release
-// blocker. Until that settles, the build must not generate any additional artifacts that repeat
-// its copy — so the page gets no structured data at all.
-const STRUCTURED_DATA_SKIP = new Set([landingPages.bluebeamAlternativeMac.path]);
-
 const absolute = (route) => `${ORIGIN}${route === '/' ? '/' : route}`;
 
 const organization = () => ({
@@ -193,7 +188,6 @@ const wrap = (blocks) => blocks.map((block) => ({ '@context': 'https://schema.or
 const buildStructuredData = (route) => {
   const metadata = routeMetadata[route];
   if (!metadata || metadata.robots.includes('noindex')) return [];
-  if (STRUCTURED_DATA_SKIP.has(route)) return [];
 
   if (route === '/') {
     return wrap([

@@ -35,7 +35,6 @@ const AppRoutes = () => {
         <Route path="/windows" element={<WindowsPreview />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/versions" element={<VersionHistory />} />
-        <Route path={landingPages.bluebeamAlternativeMac.path} element={<WorkflowLanding page={landingPages.bluebeamAlternativeMac} />} />
         <Route path={landingPages.pdfTakeoffSoftware.path} element={<WorkflowLanding page={landingPages.pdfTakeoffSoftware} />} />
         <Route path={landingPages.measurePdfOnMac.path} element={<WorkflowLanding page={landingPages.measurePdfOnMac} />} />
         <Route path={landingPages.constructionPdfMarkup.path} element={<WorkflowLanding page={landingPages.constructionPdfMarkup} />} />
