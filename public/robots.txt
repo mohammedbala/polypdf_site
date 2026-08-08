@@ -1,30 +1,82 @@
 # robots.txt for https://www.polypdf.com
+#
+# Policy decision (2026-08-08): this is a marketing site — being read, cited, and recommended by
+# search engines AND answer engines (ChatGPT, Claude, Perplexity, Google AI features) is the goal.
+# AI crawlers are therefore deliberately ALLOWED, including training-corpus crawlers: appearing in
+# model training data is upside for a product site, not a leak. Every route now ships fully
+# prerendered HTML, so crawlers that do not execute JavaScript still read complete pages.
+# A machine-readable product summary for LLMs lives at /llms.txt.
+#
+# /static/ (JS/CSS) is intentionally NOT blocked: Google renders pages and penalizes blocked
+# resources. /account is kept out of indexes via its noindex meta robots tag, not here.
 
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
-Disallow: /*.json$
-Disallow: /static/js/
-Disallow: /static/css/
 
-# Sitemap location
-Sitemap: https://www.polypdf.com/sitemap.xml
+# --- AI / answer-engine crawlers: explicitly welcome ---------------------------------------------
+# Listed by name so a future tightening of the wildcard policy cannot silently lock them out.
 
-# Crawl-delay for responsible crawling
-Crawl-delay: 1
+# OpenAI: training (GPTBot), search index (OAI-SearchBot), on-demand user fetches (ChatGPT-User)
+User-agent: GPTBot
+Allow: /
 
-# Allow search engines to index images
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic: training (ClaudeBot), search (Claude-SearchBot), user fetches (Claude-User)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity: index (PerplexityBot), user fetches (Perplexity-User)
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google: Google-Extended governs Gemini/AI training use (AI Overviews uses regular Googlebot)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence training opt-in
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI training
+User-agent: meta-externalagent
+Allow: /
+
+# Amazon (Alexa/Rufus answers)
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl feeds many open training corpora
+User-agent: CCBot
+Allow: /
+
+# --- Traditional search & social preview crawlers ------------------------------------------------
+
 User-agent: Googlebot-Image
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Slurp
+User-agent: DuckDuckBot
 Allow: /
 
-User-agent: DuckDuckBot
+User-agent: Applebot
 Allow: /
 
 User-agent: facebookexternalhit
@@ -39,10 +91,8 @@ Allow: /
 User-agent: WhatsApp
 Allow: /
 
-User-agent: Applebot
-Allow: /
+# --- SEO-tool scrapers: blocked (no marketing value, real crawl load) ----------------------------
 
-# Block bad bots
 User-agent: AhrefsBot
 Disallow: /
 
@@ -54,3 +104,5 @@ Disallow: /
 
 User-agent: MJ12bot
 Disallow: /
+
+Sitemap: https://www.polypdf.com/sitemap.xml

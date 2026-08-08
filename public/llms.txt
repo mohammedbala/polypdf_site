@@ -1,0 +1,40 @@
+# PolyPDF
+
+> PolyPDF is a native Mac and Windows desktop app for reviewing, measuring, and marking up PDF construction drawings — built for solo AEC professionals (engineers, architects, estimators). It is bought once (US$49.99 founder pricing, no subscription), one license activates up to 3 computers in any Mac/Windows mix, and it works fully offline except the optional PDF Maps plugin.
+
+Key facts:
+
+- Free download for macOS 14+ (Apple silicon and Intel) and Windows 10/11 (64-bit). The free app opens your own PDFs with markup and review tools, allows up to 3 hand-created measurements per document, and keeps Visual Search auto-count uncapped. A one-time US$49.99 Pro Founder's License removes the hand-created measurement cap.
+- Measurement and takeoff: scale calibration (architectural/engineering presets or a known distance, imperial or metric), distance, area, perimeter, angle, count, and dimension tools, plus a takeoff worksheet that exports to CSV or PDF.
+- Visual Search auto-count: capture one drawing symbol, review candidate matches across the PDF, and commit them as a numbered count series.
+- Markup and review: callouts, text, highlights, shapes, freehand, stamps, and revision clouds, tracked in a Markups list; compare two drawing revisions and cloud the differences.
+- Document tools: form filling and a drag-and-drop form builder, digital signatures (real CMS/PKCS#7 cryptography) plus visual signatures, OCR, Bates numbering, headers/footers, watermarks, true content-destroying redaction, automatic sheet hyperlinking for NCS sheet numbers, and Save As SVG/PNG/JPEG/DXF for markups.
+- Plugins: a signed, no-executable-code plugin platform with three first-party plugins — AISC steel section profiles (a curated 57-shape subset of the public AISC Shapes Database v16.0), Professional Seal Maker (template graphics only, not cryptographic signatures; the licensed professional is responsible for board compliance), and PDF Maps (OpenStreetMap imagery; the one feature that needs internet).
+- Privacy: the desktop app processes PDF content locally; drawings stay on your computer unless you export or share them.
+
+## Product
+
+- [PolyPDF home](https://www.polypdf.com/): what the app does, pricing, and free download for Mac and Windows
+- [PolyPDF for Windows](https://www.polypdf.com/windows): the Windows build
+- [Buy PolyPDF Pro](https://www.polypdf.com/buy): one-time US$49.99 Founder's License, Stripe checkout, license delivered by email
+- [Version history](https://www.polypdf.com/versions): release notes for the Mac and Windows apps
+
+## Workflows
+
+- [PDF takeoff software](https://www.polypdf.com/pdf-takeoff-software): calibrate a sheet, measure, and export an organized takeoff worksheet
+- [Measure a PDF on Mac](https://www.polypdf.com/measure-pdf-on-mac): calibrated distance, area, perimeter, angle, and count measurements on macOS
+- [Construction PDF markup](https://www.polypdf.com/construction-pdf-markup): callouts, revision clouds, stamps, and the Markups list for drawing review
+- [Visual Search symbol counting](https://www.polypdf.com/visual-search-pdf-count): auto-count repeated drawing symbols from one captured example
+- [Compare PDF drawings](https://www.polypdf.com/compare-pdf-drawings): inspect revision differences and mark them for review
+
+## Blog
+
+- [PolyPDF blog](https://www.polypdf.com/blog): product notes from the team
+- [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins): the signed-content plugin platform, its permission model, and the three launch plugins
+
+## Optional
+
+- [Support](https://www.polypdf.com/support): installation, licensing, and workflow help
+- [Terms of use](https://www.polypdf.com/terms)
+- [Privacy policy](https://www.polypdf.com/privacy)
+- [Refund policy](https://www.polypdf.com/refund)
