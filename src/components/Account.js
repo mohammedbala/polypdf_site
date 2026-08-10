@@ -85,8 +85,8 @@ const Account = () => {
     if (searchParams.get('login') === 'expired') {
       return {
         tone: 'warning',
-        title: 'Sign-in link expired',
-        body: 'Request a fresh link below. Magic links are intentionally short-lived.'
+        title: 'That sign-in link is no longer valid',
+        body: 'Links last one hour and can be used once. Request a fresh one below — it will open a page asking you to confirm before you are signed in.'
       };
     }
     return null;
