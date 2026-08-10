@@ -22,35 +22,53 @@ import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
 import { landingPages } from '../lib/landingPages';
-import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.png';
-import shotMeasureTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
-import shotMarkup from '../assets/screenshots/shot-markup-web.png';
+import shotSymbolCounting from '../assets/screenshots/shot-symbol-counting-web.png';
+import shotHeroTakeoff from '../assets/screenshots/shot-hero-takeoff-web.png';
+import shotMarkupReview from '../assets/screenshots/shot-markup-review-web.png';
+import shotRealScale from '../assets/screenshots/shot-real-scale-web.png';
+import shotMutcdSigns from '../assets/screenshots/shot-mutcd-signs-web.png';
+import shotCadMap from '../assets/screenshots/shot-cad-map-web.png';
 
-// Real captures of PolyPDF 1.1.3 in dark mode, working on PolyPDF's own sample drawing set — three
-// sheets of one fictional project, drawn by scripts/gen_sample_set.py and owned outright.
-//
-// This replaced three outside drawing sets. Two were defence projects and the third was Crown
-// copyright under the Open Government Licence, which made an attribution line and a licence link a
-// condition of use. Owning the artwork removes all of that: no credits to carry, no agency marks to
-// crop, and the sheets can be redrawn whenever the UI changes.
+// Real captures of PolyPDF 1.3.1 in light mode on the app's own Quick Start sheet (Office Fit-Out
+// Plan Q-101) — fictional, locally stored, owned outright: no credits to carry, no agency marks to
+// crop, and the sheet can be redrawn whenever the UI changes. Captured over CDP at 2x with the
+// window controls composited at their real geometry; the only post-processing.
 const screenshots = [
   {
-    image: shotCountCommitted,
+    image: shotSymbolCounting,
     title: 'Counts that keep score for you',
-    alt: 'PolyPDF counting symbols on a construction drawing: numbered count markers on the sheet with a running per-subject tally in the takeoff worksheet',
-    caption: 'Drop a marker on each symbol and the takeoff worksheet keeps a running tally per subject, right beside your areas and lengths. Number the marks as you go, then export the whole worksheet to CSV or PDF when it is time to price the job.'
+    alt: 'PolyPDF Symbol Search finding 17 matching diffuser symbols on an office plan, each match reviewable before it becomes a count',
+    caption: 'Box one symbol and PolyPDF finds the rest — 17 matches on this sheet, each one reviewable before it joins the count. Committed counts land in the takeoff worksheet with a running per-subject tally, ready for CSV or PDF export.'
   },
   {
-    image: shotMeasureTakeoff,
+    image: shotHeroTakeoff,
     title: 'Real units from the PDF you were sent',
-    alt: 'PolyPDF measuring a calibrated floor plan: area and length measurements placed on the drawing with results in the takeoff worksheet',
-    caption: 'Calibrate to the printed scale once — presets for the common architectural scales, or dial in your own, metric or imperial — then pull areas, lengths and perimeters that land directly on the drawing. No CAD file, no re-drawing, no math on a notepad.'
+    alt: 'PolyPDF measuring a calibrated floor plan: gross area, wall dimensions and a 17-piece count totalled in the takeoff worksheet',
+    caption: 'Calibrate once — from the title block or off any line you know — then pull areas, lengths and counts that read in feet and inches. This sheet: 5,485 sq ft gross, two wall dimensions, a 17-piece diffuser count, all totalled in the worksheet.'
   },
   {
-    image: shotMarkup,
+    image: shotMarkupReview,
     title: 'Reviews and RFIs, straight on the sheet',
-    alt: 'PolyPDF drawing review on a plan sheet: a revision cloud, leader callout, and stamps with every annotation tracked in the Markups list',
-    caption: 'Revision clouds, leader callouts, stamps and highlights, with text sizing you control — so a note that reads on screen still reads on a printed half-size set. Every markup is tracked in the markups list, so nothing you flag gets lost between review rounds.'
+    alt: 'PolyPDF drawing review: revision cloud, leader callout and notes on a plan sheet with every markup tracked in the Markup Table',
+    caption: 'Cloud the change, attach the RFI, and every markup lands in the Markup Table with status, author and date — so nothing you flag gets lost between review rounds.'
+  },
+  {
+    image: shotRealScale,
+    title: 'The scale stays pinned to the sheet',
+    alt: 'PolyPDF status bar showing the drawing scale with a dimension reading in feet and inches on a calibrated plan',
+    caption: 'Set scale from the title block or calibrate off a known line; every measurement reads in real units and the active scale stays pinned in the status bar so you always know what an inch means.'
+  },
+  {
+    image: shotMutcdSigns,
+    title: 'Every MUTCD sign, in the box',
+    alt: 'PolyPDF Tools panel showing the MUTCD Regulatory sign chest with an R1-1 stop sign placed on a drawing',
+    caption: 'Four MUTCD sign series ship built in — Regulatory, Warning, Temporary Traffic Control and School — as crisp vector stamps. Search the chest, drop an R1-1 straight onto the sheet, and it prints as true linework.'
+  },
+  {
+    image: shotCadMap,
+    title: 'A vicinity map, drawn like part of the set',
+    alt: 'PolyPDF Maps plugin placing a Charleston street map rendered in CAD Linework style, shown mid-edit with live zoom and style controls',
+    caption: 'Type a location, pick the CAD Linework style, and the map arrives inked like a drafter drew it — paper-white ground, black linework, live zoom and styling before and after it lands.'
   }
 ];
 
