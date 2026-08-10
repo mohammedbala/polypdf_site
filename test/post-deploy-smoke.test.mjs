@@ -10,12 +10,18 @@ import {
   workflowMediaRoutes
 } from '../scripts/post-deploy-smoke.mjs';
 
-async function withFakeSite({ brokenRoute = null } = {}, run) {
+async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {}, run) {
   const server = createServer((request, response) => {
     const path = new URL(request.url, 'http://127.0.0.1').pathname;
     if (path === brokenRoute) {
       response.writeHead(500, { 'Content-Type': 'text/plain' });
       response.end('broken');
+      return;
+    }
+    // Reproduces nginx's `try_files $uri $uri/ /index.html`: a 200 carrying the app shell.
+    if (path === htmlFallbackRoute) {
+      response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      response.end('<!doctype html><title>PolyPDF</title><div id="root"><h1>PolyPDF</h1></div>');
       return;
     }
     if (htmlRoutes.includes(path)) {
@@ -110,6 +116,11 @@ async function withFakeSite({ brokenRoute = null } = {}, run) {
       }
       return;
     }
+    if (path === '/plugins/polypdf-plugin-pack.mjs') {
+      response.writeHead(200, { 'Content-Type': 'text/javascript' });
+      response.end('#!/usr/bin/env node\n// polypdf-plugin-pack — build, sign and inspect packages.\n');
+      return;
+    }
     if (path === '/api/checkout/session' && request.method === 'POST') {
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end('{"url":"https://checkout.stripe.com/c/pay/cs_test_123","smoke":true}');
@@ -130,7 +141,20 @@ async function withFakeSite({ brokenRoute = null } = {}, run) {
 test('passes only when every route, artifact, health check, and checkout pass', async () => {
   await withFakeSite({}, async (baseURL) => {
     const results = await runPostDeploySmoke({ baseURL });
-    assert.equal(results.length, htmlRoutes.length + downloadRoutes.length + workflowMediaRoutes.length + 4);
+    // +5 = /api/healthz, /api/commercial-offer, the main bundle, the plugin packer, and checkout.
+    assert.equal(results.length, htmlRoutes.length + downloadRoutes.length + workflowMediaRoutes.length + 5);
+  });
+});
+
+// The packer's failure mode is a 200, not a 404: the SPA's try_files fallback serves index.html for
+// any unmatched path, so `curl -O` writes a file of HTML and the author's next command fails with
+// nothing to explain why. Status codes alone would not catch it.
+test('the plugin packer served as the SPA HTML fallback fails the deploy smoke', async () => {
+  await withFakeSite({ htmlFallbackRoute: '/plugins/polypdf-plugin-pack.mjs' }, async (baseURL) => {
+    await assert.rejects(
+      runPostDeploySmoke({ baseURL }),
+      /returned the SPA HTML fallback instead of the packer script/
+    );
   });
 });
 

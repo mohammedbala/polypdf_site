@@ -19,7 +19,8 @@ import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
 import { buyPath, captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
-import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
+import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
+import { useCommercialOffer } from '../lib/useCommercialOffer';
 import { landingPages } from '../lib/landingPages';
 import shotCountCommitted from '../assets/screenshots/shot-count-committed-web.png';
 import shotMeasureTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
@@ -130,6 +131,10 @@ export const homeFaqs = [
     answer: 'Checkout is handled securely by Stripe. Your license key is delivered by email, and you paste it into the app once — on Mac or Windows — to unlock unlimited hand-created measurements.'
   },
   {
+    question: 'How do I activate the license key?',
+    answer: 'Open PolyPDF and choose Upgrade to PolyPDF Pro — it is in the PolyPDF menu on Mac (Command-Shift-L) and the Help menu on Windows (Ctrl-Shift-L). Paste the key from your email, which looks like PPM-XXXX-XXXX-XXXX, and click Activate. There is no restart and no reinstall, and the drawing you have open keeps everything already on it.'
+  },
+  {
     question: 'How do refunds work?',
     answer: 'Purchases are handled through Stripe and PolyPDF support. Refund requests are reviewed under the refund policy, which also covers your statutory rights.'
   }
@@ -138,6 +143,7 @@ export const homeFaqs = [
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const offer = useCommercialOffer();
 
   useEffect(() => {
     captureAttribution();
@@ -411,8 +417,8 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>Start free. Upgrade only when you need unlimited hand-created measurements.</h2>
-            <p>The free download — Mac or Windows — handles review and markup. Pro removes the measurement cap for $49.99 once.</p>
+            <h2>There is nothing to decide until you hit the cap.</h2>
+            <p>Markup, review, calibration and Visual Search auto-count stay free for as long as you want them. The only wall is the fourth hand-created measurement in a document. That is the moment Pro is for, and it costs $49.99 once.</p>
           </motion.div>
 
           <div className="pricing-grid">
@@ -457,7 +463,8 @@ const Home = () => {
               <Link to={buyPath('website_pricing')} className="primary-btn full-width">
                 <FaInfinity /> Buy Once for $49.99
               </Link>
-              <p className="plan-note">{founderRightsText} {founderLimitText} Secure Stripe checkout. Refund requests follow PolyPDF's policy.</p>
+              <p className="plan-note">{founderRightsText} {offer.founderLimitText}</p>
+              <p className="plan-note">Secure Stripe checkout, license key emailed on payment. {refundSummaryText}</p>
             </motion.article>
           </div>
         </div>
@@ -535,7 +542,7 @@ const Home = () => {
             <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
             <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited hand-created measurements for $49.99 only when you want to remove the cap.</p>
             <div className="cta-download-row">
-              <DownloadCTA source="bottom_cta" size="large" />
+              <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
               <Link to={buyPath('website_bottom_cta')} className="secondary-btn cta-mac-btn">
                 <FaInfinity /> Buy Once for $49.99
               </Link>
@@ -576,6 +583,7 @@ const Home = () => {
               <Link to={landingPages.visualSearchPdfCount.path}>Symbol Counting</Link>
               <Link to={landingPages.comparePdfDrawings.path}>Compare Drawings</Link>
               <Link to="/blog">Blog</Link>
+              <Link to="/build-a-plugin">Build a Plugin</Link>
               <Link to="/support">Support</Link>
               <Link to="/versions">Version History</Link>
               <Link to="/refund">Refund Policy</Link>

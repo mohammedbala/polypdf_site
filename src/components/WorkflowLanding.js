@@ -7,7 +7,8 @@ import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
 import { buyPath, captureAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
-import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
+import { commercialOffer, founderRightsText } from '../lib/commercialOffer';
+import { useCommercialOffer } from '../lib/useCommercialOffer';
 import { captionTrackUrl } from '../lib/workflowCaptions';
 import './WorkflowLanding.css';
 
@@ -30,6 +31,7 @@ export const mediaCopy = {
 const WorkflowLanding = ({ page }) => {
   const [mediaMode, setMediaMode] = useState('short');
   const media = mediaCopy[page.mediaSlug];
+  const offer = useCommercialOffer();
 
   useEffect(() => {
     captureAttribution();
@@ -226,7 +228,7 @@ const WorkflowLanding = ({ page }) => {
             <div className="workflow-offer-copy">
               <h2>Try the full workflow free. Pay only to remove the hand-created measurement cap.</h2>
               <p>{founderRightsText}</p>
-              <p className="workflow-offer-limit">{founderLimitText}</p>
+              <p className="workflow-offer-limit">{offer.founderLimitText}</p>
             </div>
             <div className="workflow-offer-actions">
               <Link

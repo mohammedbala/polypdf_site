@@ -9,6 +9,16 @@
     "description": "Unlock unlimited hand-created PDF measurements on up to three Mac or Windows computers with a one-time $49.99 PolyPDF Pro Founder's License.",
     "robots": "index, follow"
   },
+  "/upgrade": {
+    "title": "Upgrade to PolyPDF Pro | Unlimited Measurements",
+    "description": "Remove the 3-measurements-per-document cap for a one-time $49.99. Secure Stripe checkout, license key by email, activation in about a minute.",
+    "robots": "noindex, follow"
+  },
+  "/build-a-plugin": {
+    "title": "Build a PolyPDF Plugin | Developer Guide",
+    "description": "Add your own stamps and symbols to PolyPDF. Plugins are signed data and artwork with no executable code — write one with Node and a drawing tool.",
+    "robots": "index, follow"
+  },
   "/account": {
     "title": "PolyPDF Account | Manage Your License",
     "description": "Use a secure email sign-in link to view your PolyPDF purchases, license details, and activated computers.",

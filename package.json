@@ -2,6 +2,8 @@
   "name": "polypdf-landing",
   "version": "1.0.0",
   "private": true,
+  "_comment_proxy": "Dev server only — CRA ignores `proxy` in production builds, where nginx proxies /api/ to the licence API on 127.0.0.1:3087. Without it, `npm start` cannot exercise /api/commercial-offer or /api/checkout/session at all, which is how the founder deadline drifted twelve days out of sync with the server that enforces it (docs/conversion-audit.md P0-1).",
+  "proxy": "https://www.polypdf.com",
   "dependencies": {
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",

@@ -16,8 +16,13 @@
   --gray-700: #3f3b32;
   --gray-800: #26231d;
   --gray-900: #171510;
-  --accent: #087456;
-  --accent-soft: #dff5ee;
+  /* Petrol, matching the app's own --accent (renderer/styles/01-base-and-dialogs.css).
+     The site used to run a green accent while the product ran teal, so a visitor downloaded one
+     company's website and opened another company's app — at exactly the moment the product has to
+     look established enough to be worth $49.99. Petrol also measures better: 5.98:1 on white
+     against the old green's 5.76:1. */
+  --accent: #0D6E76;
+  --accent-soft: #e2f1f2;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.10);
   --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.12);
@@ -239,7 +244,7 @@ body {
 }
 
 .hero-summary-card {
-  background: linear-gradient(180deg, #ffffff 0%, #f4fbf8 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f2fafb 100%);
   border: 1px solid var(--gray-200);
   border-radius: 28px;
   padding: 2rem;
@@ -341,7 +346,7 @@ body {
 }
 
 .pricing-card-pro {
-  background: linear-gradient(180deg, #0d1412 0%, #141d1a 100%);
+  background: linear-gradient(180deg, #0b1416 0%, #122023 100%);
   color: var(--primary-white);
 }
 
@@ -367,7 +372,7 @@ body {
 
 .plan-pill-dark {
   background: rgba(255, 255, 255, 0.12);
-  color: #d8fff0;
+  color: #d6f2f5;
 }
 
 .plan-price {
@@ -1597,4 +1602,295 @@ body {
   .blog-read-link:hover {
     gap: 0.45rem;
   }
+}
+
+/* ------------------------------------------------------------------------- */
+/* Conversion pass (2026-08-10) — see docs/conversion-audit.md.               */
+/* Appended so the base system above stays untouched; later rules win at      */
+/* equal specificity.                                                         */
+/* ------------------------------------------------------------------------- */
+
+/* AA fix, audit P0-2. .plan-note carried every promise made at the moment of payment — the
+   perpetual-licence rights, the founder deadline, the refund line, "your key is delivered by
+   email" — in --gray-500, which measures 3.49:1 on white and 3.25:1 on --gray-100 against the
+   4.5:1 body-text floor. The page was whispering exactly the sentences that answer "is this
+   safe?". --gray-600 measures 6.18:1 and 5.76:1 on the same two backgrounds.
+   The screenshot source captions were the only other --gray-500 text on the site and failed the
+   same way, at 0.82rem. */
+.plan-note,
+.showcase-source {
+  color: var(--gray-600);
+}
+
+/* Trust answers, at the button rather than one click away. */
+.buy-assurances {
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+  margin: 1.25rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.buy-assurances li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.buy-assurances svg {
+  margin-top: 0.22rem;
+  flex-shrink: 0;
+  color: #7fd4dc;
+}
+
+.buy-assurances a {
+  color: #bfeaef;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.buy-assurances a:hover {
+  color: var(--primary-white);
+}
+
+.offer-closed {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+}
+
+.buy-cancelled {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--accent-soft);
+  color: var(--gray-800);
+  font-size: 0.95rem;
+}
+
+/* Activation, described before it is bought (audit P1-2). Shared by /buy in its in-app view,
+   /account after checkout, and /support. */
+.activation-steps {
+  margin-top: 0.25rem;
+}
+
+.activation-heading {
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 0.9rem;
+}
+
+.activation-list {
+  list-style: none;
+  display: grid;
+  gap: 1.1rem;
+  margin: 0;
+  padding: 0;
+  counter-reset: activation;
+}
+
+.activation-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+.activation-step-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  margin-top: 0.1rem;
+  border-radius: 8px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.activation-list strong {
+  color: var(--gray-900);
+}
+
+.activation-paths {
+  display: grid;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.activation-path {
+  font-size: 0.9rem;
+  color: var(--gray-700);
+}
+
+.activation-path code,
+.license-mask {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.86em;
+  color: var(--gray-900);
+  white-space: nowrap;
+}
+
+.license-mask {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.activation-shortcut {
+  color: var(--gray-600);
+  font-size: 0.86em;
+}
+
+/* The pro card is dark; the same steps have to read on it. */
+.pricing-card-pro .activation-list li,
+.pricing-card-pro .activation-path {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.pricing-card-pro .activation-list strong {
+  color: var(--primary-white);
+}
+
+.buy-aside,
+.account-aside,
+.support-aside {
+  margin-top: 1.1rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--gray-600);
+}
+
+.buy-aside a,
+.account-aside a,
+.support-aside a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.purchase-next {
+  margin-bottom: 1.5rem;
+}
+
+/* The free tier's one limit, stated at the download control (audit P2-1). */
+.dl-terms {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--gray-600);
+  padding-left: 0.35rem;
+  max-width: 48ch;
+}
+
+.cta-section .dl-terms {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* "While it installs" (audit P2-2): shown in place after a download click. No popup, no timer,
+   no email gate — the visitor already gave the only signal that matters. */
+.dl-next {
+  max-width: 52ch;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--gray-700);
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  padding: 0.9rem 1.1rem;
+  margin-top: 0.6rem;
+  text-align: left;
+}
+
+.dl-next-install {
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.dl-next-heading {
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.dl-next-steps {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.dl-next-steps li {
+  padding-left: 0.2rem;
+}
+
+.dl-next-foot {
+  margin-top: 0.85rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(13, 110, 118, 0.22);
+  font-size: 0.86rem;
+  color: var(--gray-600);
+}
+
+/* Same block on the dark bottom CTA. */
+.dl-next.on-dark {
+  background: rgba(255, 255, 255, 0.1);
+  border-left-color: #7fd4dc;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.dl-next.on-dark .dl-next-install {
+  color: var(--primary-white);
+}
+
+.dl-next.on-dark .dl-next-heading {
+  color: #7fd4dc;
+}
+
+.dl-next.on-dark .dl-next-foot {
+  border-top-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 640px) {
+  .dl-terms {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .dl-next {
+    max-width: 100%;
+  }
+
+  .activation-path code {
+    white-space: normal;
+  }
+}
+
+/* .account-panel is not a .legal-section, so it misses the flex treatment that stops
+   .section-header from centring itself and reserving 3rem below. */
+.purchase-next .section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+}
+
+.purchase-next .section-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }

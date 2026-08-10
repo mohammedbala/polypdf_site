@@ -34,3 +34,6 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Local preview config for the Browser-pane dev server (agent tooling, not deployment).
+.claude/

@@ -122,6 +122,24 @@ server {
         add_header Cache-Control "public, immutable";
     }
 
+    # The plugin packer. PLUGIN-AUTHORING.md and /build-a-plugin both tell authors to
+    # `curl -O https://www.polypdf.com/plugins/polypdf-plugin-pack.mjs`, so this path is a published
+    # promise. Two reasons it needs its own block:
+    #   1. `.mjs` is absent from nginx's default mime.types, so it would be served as
+    #      application/octet-stream. Fine for curl, wrong for anything that reads the type.
+    #   2. Without an explicit match, a typo'd or future /plugins/* path falls through to
+    #      `try_files … /index.html` and returns 200 with a page of HTML. `curl -O` then writes
+    #      HTML into a .mjs file and the author's next command fails for an invisible reason.
+    #      The `= ` exact match plus the `^~ /plugins/` guard makes a wrong path 404 honestly.
+    location = /plugins/polypdf-plugin-pack.mjs {
+        default_type text/javascript;
+        try_files $uri =404;
+    }
+
+    location ^~ /plugins/ {
+        try_files $uri =404;
+    }
+
     location / {
         try_files $uri $uri/ /index.html;
     }

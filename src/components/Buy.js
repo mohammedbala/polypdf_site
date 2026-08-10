@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -11,10 +11,17 @@ import {
   FaReceipt,
   FaUndo
 } from 'react-icons/fa';
-import { HiOutlineCloudDownload, HiOutlineShieldCheck } from 'react-icons/hi';
+import { HiOutlineCloudDownload, HiOutlineDesktopComputer, HiOutlineShieldCheck } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
+import ActivationSteps from './ActivationSteps';
 import { primaryPlatform } from '../lib/platform';
-import { commercialOffer, founderLimitText, founderRightsText } from '../lib/commercialOffer';
+import {
+  commercialOffer,
+  founderRightsText,
+  licenseDeliveryText,
+  refundSummaryText
+} from '../lib/commercialOffer';
+import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
 import { captureAttribution, checkoutAttribution } from '../lib/attribution';
 
 const proFeatures = [
@@ -25,6 +32,30 @@ const proFeatures = [
   'Every public PolyPDF 1.x update is included'
 ];
 
+// The desktop app opens this page with source= and utm_source= already set
+// (apps/desktop/src/renderer/dialogs/license-dialogs.ts). Those visitors are the highest-intent
+// traffic the business gets — they installed PolyPDF, used it on real drawings, and hit a wall —
+// and until now they landed on a page whose second panel told them to download the app they had
+// open behind the browser. Reading the parameter that was already in the URL fixes that.
+const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_count', 'license_window']);
+
+// Why they clicked, when the app told us. Named plainly — the visitor already knows what happened;
+// pretending otherwise is what makes a paywall page feel like a sales page.
+const IN_APP_CONTEXT = {
+  free_measurement_limit: {
+    kicker: 'You have used the 3 free measurements in this document',
+    lede: 'The free app caps hand-created measurements at 3 per document. Everything else you were doing — markup, calibration, review, Visual Search auto-count — stays free and uncapped. Pro removes that one cap, for good, for $49.99 once.'
+  },
+  visual_search_auto_count: {
+    kicker: 'Committing this count needs Pro',
+    lede: 'Visual Search finds and reviews matches on the free app. Committing a numbered count series writes measurements, which is where the free tier caps out. Pro removes that cap for $49.99 once.'
+  },
+  license_window: {
+    kicker: 'Upgrade to PolyPDF Pro',
+    lede: 'Unlimited hand-created measurements on every document, on up to 3 computers, for $49.99 once. No subscription, no renewal.'
+  }
+};
+
 const trackEvent = (name, properties = {}) => {
   if (window.plausible) {
     window.plausible(name, { props: properties });
@@ -34,9 +65,17 @@ const trackEvent = (name, properties = {}) => {
   }
 };
 
-const Buy = () => {
+const Buy = ({ forceInApp = false }) => {
+  const [searchParams] = useSearchParams();
   const [checkoutStatus, setCheckoutStatus] = useState('ready');
   const [checkoutError, setCheckoutError] = useState('');
+  const offer = useCommercialOffer();
+
+  const source = searchParams.get('source') || '';
+  const cameFromApp =
+    forceInApp || searchParams.get('utm_source') === 'desktop_app' || IN_APP_SOURCES.has(source);
+  const context = IN_APP_CONTEXT[source] || IN_APP_CONTEXT.license_window;
+  const cancelled = searchParams.get('checkout') === 'cancelled';
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -101,14 +140,24 @@ const Buy = () => {
         <div className="container">
           <div className="buy-hero">
             <div className="hero-badge">
-              <FaLock /> Secure checkout · one license for Mac &amp; Windows
+              {cameFromApp ? <HiOutlineDesktopComputer /> : <FaLock />}{' '}
+              {cameFromApp ? context.kicker : 'Secure checkout · one license for Mac & Windows'}
             </div>
-            <h1>Buy PolyPDF Pro once. Measure without a subscription.</h1>
+            <h1>
+              {cameFromApp
+                ? 'Keep measuring. One payment, no subscription.'
+                : 'Buy PolyPDF Pro once. Measure without a subscription.'}
+            </h1>
             <p>
-              Unlock unlimited hand-created measurements for a one-time $49.99. Keep the free markup and
-              review workflow, remove the measurement cap, and use your license on up to
-              3 computers — Mac or Windows.
+              {cameFromApp
+                ? context.lede
+                : 'Unlock unlimited hand-created measurements for a one-time $49.99. Keep the free markup and review workflow, remove the measurement cap, and use your license on up to 3 computers — Mac or Windows.'}
             </p>
+            {cancelled && (
+              <p className="buy-cancelled">
+                Checkout was cancelled and nothing was charged. The free app keeps working exactly as it did.
+              </p>
+            )}
           </div>
 
           <div className="buy-grid">
@@ -128,18 +177,29 @@ const Buy = () => {
                   </li>
                 ))}
               </ul>
-              <a
-                href="/buy"
-                className="primary-btn full-width"
-                onClick={handleBuyClick}
-                aria-disabled={checkoutStatus === 'loading'}
-              >
-                <FaInfinity /> {checkoutStatus === 'loading' ? 'Loading Secure Checkout...' : 'Continue to Secure Checkout'}
-              </a>
+              {offer.founderAvailable ? (
+                <a
+                  href="/buy"
+                  className="primary-btn full-width"
+                  onClick={handleBuyClick}
+                  aria-disabled={checkoutStatus === 'loading'}
+                >
+                  <FaInfinity /> {checkoutStatus === 'loading' ? 'Loading Secure Checkout...' : 'Continue to Secure Checkout'}
+                </a>
+              ) : (
+                <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
+              )}
               {checkoutError && <p className="plan-note checkout-error">{checkoutError}</p>}
+
+              {/* The three questions asked at the button, answered at the button. */}
+              <ul className="buy-assurances">
+                <li><HiOutlineShieldCheck /> Secure Stripe checkout. PolyPDF never sees your card details.</li>
+                <li><FaEnvelope /> {licenseDeliveryText}</li>
+                <li><FaUndo /> {refundSummaryText} <Link to="/refund">Read the policy</Link>.</li>
+              </ul>
+
               <p className="plan-note">{founderRightsText}</p>
-              <p className="plan-note">{founderLimitText}</p>
-              <p className="plan-note">Your license key is delivered by email after checkout.</p>
+              <p className="plan-note">{offer.founderLimitText}</p>
             </motion.section>
 
             <motion.section
@@ -150,38 +210,49 @@ const Buy = () => {
             >
               <div className="section-header">
                 <div className="section-icon"><FaBolt /></div>
-                <h2>Before you buy</h2>
+                <h2>{cameFromApp ? 'After you pay' : 'Before you buy'}</h2>
               </div>
-              <ul className="section-content">
-                <li>Download PolyPDF free first if you want to test it on real drawings.</li>
-                <li>The free app includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Visual Search auto-count.</li>
-                <li>Pro removes the measurement limit on both Mac and Windows.</li>
-              </ul>
-              <div className="buy-actions">
-                <a
-                  href={primaryPlatform.url}
-                  className="secondary-btn full-width"
-                  download
-                  onClick={() => trackEvent('download_click', { source: 'buy_page', platform: primaryPlatform.key })}
-                >
-                  <HiOutlineCloudDownload /> Download free first for {primaryPlatform.name}
-                </a>
-              </div>
+
+              {cameFromApp ? (
+                <>
+                  <ActivationSteps heading={null} />
+                  <p className="buy-aside">
+                    Your license covers 3 computers, Mac or Windows in any mix. Need PolyPDF on
+                    another machine? <a href={primaryPlatform.url} download onClick={() => trackEvent('download_click', { source: 'buy_in_app', platform: primaryPlatform.key })}>Download it</a> and activate with the same key.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <ul className="section-content">
+                    <li>Download PolyPDF free first if you want to test it on real drawings.</li>
+                    <li>The free app includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Visual Search auto-count.</li>
+                    <li>Pro removes the measurement limit on both Mac and Windows.</li>
+                  </ul>
+                  <div className="buy-actions">
+                    <a
+                      href={primaryPlatform.url}
+                      className="secondary-btn full-width"
+                      download
+                      onClick={() => trackEvent('download_click', { source: 'buy_page', platform: primaryPlatform.key })}
+                    >
+                      <HiOutlineCloudDownload /> Download free first for {primaryPlatform.name}
+                    </a>
+                  </div>
+                </>
+              )}
             </motion.section>
           </div>
 
           <div className="buy-detail-grid">
-            <section className="legal-section">
-              <div className="section-header">
-                <div className="section-icon"><FaReceipt /></div>
-                <h2>What happens after checkout</h2>
-              </div>
-              <ul className="section-content">
-                <li>You receive a PolyPDF license key by email.</li>
-                <li>Open PolyPDF on your Mac or Windows PC and enter the license key to unlock Pro.</li>
-                <li>Contact support if your receipt or license email does not arrive.</li>
-              </ul>
-            </section>
+            {!cameFromApp && (
+              <section className="legal-section">
+                <div className="section-header">
+                  <div className="section-icon"><FaReceipt /></div>
+                  <h2>What happens after checkout</h2>
+                </div>
+                <ActivationSteps heading={null} />
+              </section>
+            )}
 
             <section className="legal-section">
               <div className="section-header">
@@ -231,6 +302,7 @@ const Buy = () => {
               <Link to="/">Home</Link>
               <Link to="/blog">Blog</Link>
               <Link to="/support">Support</Link>
+              <Link to="/build-a-plugin">Build a Plugin</Link>
               <Link to="/refund">Refund Policy</Link>
               <Link to="/terms">Terms of Use</Link>
               <Link to="/privacy">Privacy Policy</Link>

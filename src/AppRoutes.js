@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import Account from './components/Account';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
+import BuildYourOwnPlugin from './components/BuildYourOwnPlugin';
 import Buy from './components/Buy';
 import Home from './components/Home';
 import Privacy from './components/Privacy';
@@ -26,7 +27,13 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/buy" element={<Buy />} />
+        {/* The app's upgrade dialog opens /buy with source=/utm_source= set, and Buy detects that
+            on its own — so every already-installed copy gets the in-app view without an app
+            release. /upgrade is the stable short URL for support replies and for a future build to
+            point at directly; it renders the same view unconditionally. */}
+        <Route path="/upgrade" element={<Buy forceInApp />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/build-a-plugin" element={<BuildYourOwnPlugin />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/privacy" element={<Privacy />} />

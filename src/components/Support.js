@@ -5,11 +5,13 @@ import {
   FaArrowLeft,
   FaDownload,
   FaEnvelope,
+  FaKey,
   FaLifeRing,
   FaReceipt
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
-import { founderRightsText } from '../lib/commercialOffer';
+import ActivationSteps from './ActivationSteps';
+import { founderRightsText, licenseDeliveryText } from '../lib/commercialOffer';
 
 const sections = [
   {
@@ -105,6 +107,22 @@ const Support = () => {
             ))}
           </div>
 
+          {/* The single most-asked post-purchase question, and until now it was answered only
+              inside the licence email. */}
+          <section className="legal-section">
+            <div className="section-header">
+              <div className="section-icon"><FaKey /></div>
+              <h2>Activating your license key</h2>
+            </div>
+            <ActivationSteps heading={null} />
+            <p className="support-aside">{licenseDeliveryText}</p>
+            <p className="support-aside">
+              One license activates up to 3 computers, Mac or Windows in any mix. Moving to a new
+              machine when all 3 are used? Deactivate on the old one from the same window, then
+              activate on the new one.
+            </p>
+          </section>
+
           <section className="legal-section">
             <div className="section-header">
               <div className="section-icon"><FaLifeRing /></div>
@@ -135,6 +153,7 @@ const Support = () => {
             <div className="footer-links">
               <Link to="/">Home</Link>
               <Link to="/blog">Blog</Link>
+              <Link to="/build-a-plugin">Build a Plugin</Link>
               <Link to="/refund">Refund Policy</Link>
               <Link to="/terms">Terms of Use</Link>
               <Link to="/privacy">Privacy Policy</Link>

@@ -12,6 +12,8 @@ export const routeMetadata = JSON.parse(
 export const htmlRoutes = [
   '/',
   '/buy',
+  '/upgrade',
+  '/build-a-plugin',
   '/windows',
   '/support',
   '/privacy',
@@ -77,8 +79,13 @@ export async function runPostDeploySmoke({
     // an empty #root means crawlers (and no-JS readers) are getting a blank page again.
     assertResponse(body.includes('<div id="root">'), `${route} did not return the PolyPDF app shell`);
     assertResponse(!body.includes('<div id="root"></div>'), `${route} returned an empty app shell instead of prerendered content`);
-    assertResponse(body.includes('<script type="application/ld+json">') || route === '/account', `${route} did not return JSON-LD structured data`);
     const metadata = routeMetadata[route];
+    // buildStructuredData() deliberately emits nothing for noindex routes — there is no point
+    // handing schema to a crawler that has been told not to index the page.
+    assertResponse(
+      body.includes('<script type="application/ld+json">') || metadata.robots.includes('noindex'),
+      `${route} did not return JSON-LD structured data`
+    );
     const escapedTitle = metadata.title.replaceAll('&', '&amp;');
     const escapedDescription = metadata.description.replaceAll('&', '&amp;');
     const canonicalURL = `${base}${route === '/' ? '/' : route}`;
@@ -193,6 +200,23 @@ export async function runPostDeploySmoke({
     }
     results.push({ route, status: response.status });
   }
+
+  // The plugin packer is a published promise: PLUGIN-AUTHORING.md and /build-a-plugin both tell
+  // authors to `curl -O` this exact URL. The failure mode is silent — the SPA's try_files fallback
+  // answers 200 with a page of HTML, so curl writes a .mjs file full of markup and the author's
+  // next command fails for a reason nothing explains. Assert on the body, not the status.
+  const packerResponse = await fetchImpl(`${base}/plugins/polypdf-plugin-pack.mjs`, { headers: smokeHeaders });
+  const packer = await packerResponse.text();
+  assertResponse(packerResponse.ok, `/plugins/polypdf-plugin-pack.mjs returned HTTP ${packerResponse.status}`);
+  assertResponse(
+    !/^\s*<!doctype html/i.test(packer) && !packer.includes('<div id="root">'),
+    '/plugins/polypdf-plugin-pack.mjs returned the SPA HTML fallback instead of the packer script'
+  );
+  assertResponse(
+    packer.startsWith('#!/usr/bin/env node') && packer.includes('polypdf-plugin-pack'),
+    '/plugins/polypdf-plugin-pack.mjs did not return the packer script'
+  );
+  results.push({ route: '/plugins/polypdf-plugin-pack.mjs', status: packerResponse.status });
 
   if (requireCheckout) {
     const checkoutResponse = await fetchImpl(`${base}/api/checkout/session`, {

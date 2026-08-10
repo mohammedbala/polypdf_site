@@ -14,20 +14,56 @@ const trackEvent = (name, properties = {}) => {
 
 const PlatformIcon = ({ platform }) => (platform.key === 'mac' ? <FaApple /> : <FaWindows />);
 
+// The free tier's one limit, stated at the control that commits to it.
+//
+// It was already on the page — in the stat tiles, the pricing card, the FAQ and /buy — but never
+// beside a Download button. A cap read before downloading is a fair deal; the same cap met after
+// twenty minutes of work on a real drawing feels like bait. Same fact, different feeling, and the
+// difference is 200 pixels.
+export const FREE_TIER_LIMIT_TEXT =
+  'Free with no trial timer. Hand-created measurements are capped at 3 per document.';
+
 // What to do while the file lands. This is the moment most download funnels leak — the visitor has
 // committed, the browser is quiet, and nothing tells them the next step (or warns Windows users
 // about SmartScreen before it startles them).
-const NEXT_STEPS = {
-  mac: 'Downloading the DMG — open it and drag PolyPDF to Applications, then launch it from there.',
+const INSTALL_STEPS = {
+  mac: 'Open the DMG and drag PolyPDF to Applications, then launch it from there.',
   windows:
-    'Downloading the signed installer — run PolyPDFSetup.exe when it finishes. If SmartScreen shows a notice on a brand-new release, choose "More info", then "Run anyway".'
+    'Run PolyPDFSetup.exe when it finishes. If SmartScreen shows a notice on a brand-new release, choose "More info", then "Run anyway".'
 };
+
+// Three steps to a first real measurement. Calibration is step two because a measurement taken
+// before it is a number without a unit — it is the one thing a new user must not skip, and the one
+// thing nothing on the site used to mention until after the download was already forgotten.
+const FIRST_TAKEOFF_STEPS = [
+  'Open one of the PDF drawings you already have.',
+  'Calibrate the scale once — pick a standard architectural scale, or draw along a known dimension and type what it should read.',
+  'Measure a length or an area. Results land in the takeoff worksheet, ready to export as CSV or PDF.'
+];
+
+// Shown in place after a download click: no popup, no timer, no email gate. It is the only thing
+// standing in the gap between the download and the moment the user meets the measurement cap.
+const WhileItInstalls = ({ platformKey, tone }) => (
+  <div className={`dl-next ${tone}`}>
+    <p className="dl-next-install">{INSTALL_STEPS[platformKey]}</p>
+    <p className="dl-next-heading">Then, three steps to your first takeoff</p>
+    <ol className="dl-next-steps">
+      {FIRST_TAKEOFF_STEPS.map((step) => (
+        <li key={step}>{step}</li>
+      ))}
+    </ol>
+    <p className="dl-next-foot">
+      Everything above is free, for as long as you want it. The one cap is 3 hand-created
+      measurements per document; PolyPDF Pro removes it for $49.99 once, on up to 3 computers.
+    </p>
+  </div>
+);
 
 // The one download control: a primary button for the visitor's detected OS with the requirements
 // line under it, and the other platform one click away. On phones and unknown platforms it offers
 // BOTH desktop builds instead of pushing a 228 MB DMG at a device that cannot run it. `source`
 // feeds the download_click analytics event so the funnel can tell which section converts.
-const DownloadCTA = ({ source, size = '', onDownload }) => {
+const DownloadCTA = ({ source, size = '', onDownload, tone = '' }) => {
   const [started, setStarted] = useState(null);
 
   const click = (platform) => {
@@ -47,7 +83,8 @@ const DownloadCTA = ({ source, size = '', onDownload }) => {
           ))}
         </div>
         <p className="dl-meta">PolyPDF runs on Mac and Windows desktops — grab the build for the machine you work on.</p>
-        {started && <p className="dl-next">{NEXT_STEPS[started]}</p>}
+        <p className="dl-terms">{FREE_TIER_LIMIT_TEXT}</p>
+        {started && <WhileItInstalls platformKey={started} tone={tone} />}
       </div>
     );
   }
@@ -69,7 +106,8 @@ const DownloadCTA = ({ source, size = '', onDownload }) => {
           <PlatformIcon platform={otherPlatform} /> Also on {otherPlatform.name}
         </a>
       </p>
-      {started && <p className="dl-next">{NEXT_STEPS[started]}</p>}
+      <p className="dl-terms">{FREE_TIER_LIMIT_TEXT}</p>
+      {started && <WhileItInstalls platformKey={started} tone={tone} />}
     </div>
   );
 };

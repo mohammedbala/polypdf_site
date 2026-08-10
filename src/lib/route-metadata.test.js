@@ -5,6 +5,8 @@ import { normalizeRoutePath } from '../components/RouteMetadata';
 const expectedRoutes = [
   '/',
   '/buy',
+  '/upgrade',
+  '/build-a-plugin',
   '/account',
   '/blog',
   ...blogPosts.map((entry) => blogPostPath(entry.slug)),
@@ -32,9 +34,13 @@ test('defines unique, server-renderable metadata for every public route', () => 
     expect(entry.title.length).toBeLessThanOrEqual(60);
     expect(entry.description.length).toBeGreaterThan(50);
     expect(entry.description.length).toBeLessThanOrEqual(155);
-    expect(['index, follow', 'noindex, nofollow']).toContain(entry.robots);
+    expect(['index, follow', 'noindex, follow', 'noindex, nofollow']).toContain(entry.robots);
   });
   expect(routeMetadata['/account'].robots).toBe('noindex, nofollow');
+  // /upgrade is /buy rewritten for someone who already has the app open, so it must never be
+  // indexed alongside it — two URLs competing on the same terms is how a page loses to itself.
+  // `follow` rather than `nofollow`: there is no reason to devalue the links it carries.
+  expect(routeMetadata['/upgrade'].robots).toBe('noindex, follow');
 });
 
 // A post with no route entry would render fine in the SPA and ship with the wrong <title> and

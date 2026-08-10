@@ -13,9 +13,10 @@ import {
   FaSignOutAlt
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+import ActivationSteps from './ActivationSteps';
 import { DownloadBoth } from './DownloadCTA';
 import { primaryPlatform } from '../lib/platform';
-import { licensePolicyLabel } from '../lib/commercialOffer';
+import { licenseDeliveryText, licensePolicyLabel } from '../lib/commercialOffer';
 
 const trackEvent = (name, properties = {}) => {
   if (window.plausible) {
@@ -64,12 +65,14 @@ const Account = () => {
   const [requestMessage, setRequestMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const justPurchased = searchParams.get('checkout') === 'success';
+
   const notice = useMemo(() => {
-    if (searchParams.get('checkout') === 'success') {
+    if (justPurchased) {
       return {
         tone: 'success',
-        title: 'Purchase complete',
-        body: 'Your license key is sent by email. Download PolyPDF, then sign in with the checkout email to view purchase history and receipt links.'
+        title: 'Payment complete',
+        body: 'Nothing else is required to unlock Pro — your license key is on its way by email.'
       };
     }
     if (searchParams.get('login') === 'success') {
@@ -87,7 +90,7 @@ const Account = () => {
       };
     }
     return null;
-  }, [searchParams]);
+  }, [searchParams, justPurchased]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -184,8 +187,9 @@ const Account = () => {
             </div>
             <h1>PolyPDF Account</h1>
             <p>
-              Sign in with the email used at checkout to view your PolyPDF purchase,
-              receipt links, and activation status. License keys are still delivered by email.
+              {justPurchased
+                ? 'Your license key is emailed to you — nothing on this page is needed to unlock Pro. Sign in whenever you want your receipt, invoice, and activation count.'
+                : 'Sign in with the email used at checkout to view your PolyPDF purchase, receipt links, and activation status. License keys are still delivered by email.'}
             </p>
           </div>
 
@@ -194,6 +198,24 @@ const Account = () => {
               <strong>{notice.title}</strong>
               <span>{notice.body}</span>
             </div>
+          )}
+
+          {/* Stripe returns every buyer here. Before, the first thing they met was a sign-in form
+              for a session they did not have — a second authentication flow whose only purpose is
+              receipts, at the ninety seconds when a customer is deciding whether the purchase was
+              safe. The answer to "where is my key and what do I do with it?" now comes first. */}
+          {justPurchased && (
+            <section className="account-panel purchase-next">
+              <div className="section-header">
+                <div className="section-icon"><FaKey /></div>
+                <h2>What to do next</h2>
+              </div>
+              <ActivationSteps heading={null} />
+              <p className="account-aside">{licenseDeliveryText}</p>
+              <div className="sign-in-download">
+                <DownloadBoth source="checkout_success" />
+              </div>
+            </section>
           )}
 
           {loadingAccount ? (
@@ -294,15 +316,20 @@ const Account = () => {
               <div>
                 <div className="section-header">
                   <div className="section-icon"><FaKey /></div>
-                  <h2>Email sign-in link</h2>
+                  <h2>{justPurchased ? 'Receipts and invoices (optional)' : 'Email sign-in link'}</h2>
                 </div>
                 <p>
-                  Enter the email used at Stripe checkout. If it has PolyPDF purchases,
-                  you will receive a short-lived sign-in link.
+                  {justPurchased
+                    ? 'Activation does not need an account. Sign in only if you want your receipt, invoice, and activation count — enter the email used at Stripe checkout.'
+                    : 'Enter the email used at Stripe checkout. If it has PolyPDF purchases, you will receive a short-lived sign-in link.'}
                 </p>
-                <div className="sign-in-download">
-                  <DownloadBoth source="account_signin" />
-                </div>
+                {/* The just-purchased panel above already offers both builds; repeating them here
+                    would put four download buttons on one screen. */}
+                {!justPurchased && (
+                  <div className="sign-in-download">
+                    <DownloadBoth source="account_signin" />
+                  </div>
+                )}
               </div>
 
               <form className="account-form" onSubmit={requestMagicLink}>
