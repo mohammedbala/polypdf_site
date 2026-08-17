@@ -74,6 +74,9 @@ export const fetchWindowsRelease = async () => {
   // latest.yml has no build field; the build is the suffix of the versioned installer it points at.
   const build = Number((/PolyPDFSetup-v[\d.]+-(\d+)\.exe/.exec(text) || [])[1]);
   const releaseDate = (/^releaseDate:\s*'?([^'\n]+?)'?\s*$/m.exec(text) || [])[1];
+  const notes = Number.isFinite(build)
+    ? `/downloads/windows/PolyPDFSetup-v${version}-${build}.html`
+    : null;
 
   return {
     platform: 'Windows',
@@ -81,7 +84,7 @@ export const fetchWindowsRelease = async () => {
     build: Number.isFinite(build) ? build : null,
     date: formatFeedDate(releaseDate),
     sortKey: Date.parse(releaseDate) || 0,
-    notes: null
+    notes
   };
 };
 
