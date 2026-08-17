@@ -12,6 +12,7 @@ const expectedRoutes = [
   ...blogPosts.map((entry) => blogPostPath(entry.slug)),
   '/privacy',
   '/refund',
+  '/feature-requests',
   '/support',
   '/windows',
   '/terms',

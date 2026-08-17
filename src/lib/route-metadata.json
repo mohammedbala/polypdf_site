@@ -44,6 +44,11 @@
     "description": "Read the PolyPDF refund policy for one-time Pro license purchases, including eligibility, timing, and statutory rights.",
     "robots": "index, follow"
   },
+  "/feature-requests": {
+    "title": "PolyPDF Feature Requests | Suggest and Track Ideas",
+    "description": "Suggest a PolyPDF improvement, browse public feature requests, and follow ideas from customer workflow to a future Mac or Windows release.",
+    "robots": "index, follow"
+  },
   "/support": {
     "title": "PolyPDF Support | Help With PDF Measurement and Licensing",
     "description": "Get help with PolyPDF installation, PDF measurement and markup workflows, license activation, and account access.",

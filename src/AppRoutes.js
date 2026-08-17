@@ -5,6 +5,7 @@ import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
 import BuildYourOwnPlugin from './components/BuildYourOwnPlugin';
 import Buy from './components/Buy';
+import FeatureRequests from './components/FeatureRequests';
 import Home from './components/Home';
 import Privacy from './components/Privacy';
 import Refund from './components/Refund';
@@ -38,6 +39,7 @@ const AppRoutes = () => {
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/refund" element={<Refund />} />
+        <Route path="/feature-requests" element={<FeatureRequests />} />
         <Route path="/support" element={<Support />} />
         <Route path="/windows" element={<WindowsPreview />} />
         <Route path="/terms" element={<Terms />} />

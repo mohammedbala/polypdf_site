@@ -136,6 +136,19 @@ const Support = () => {
           </section>
 
           <section className="legal-section">
+            <h2>Ideas and feature requests</h2>
+            <p>
+              Browse the public request list, follow work you care about, or submit a structured
+              request describing the drawing workflow you want to improve.
+            </p>
+            <div className="contact-info">
+              <Link to="/feature-requests" className="contact-link">
+                <FaLifeRing /> Open Feature Requests
+              </Link>
+            </div>
+          </section>
+
+          <section className="legal-section">
             <h2>Support email</h2>
             <div className="contact-info">
               <a href="mailto:support@polypdf.com" className="contact-link">
@@ -154,6 +167,7 @@ const Support = () => {
               <Link to="/">Home</Link>
               <Link to="/blog">Blog</Link>
               <Link to="/build-a-plugin">Build a Plugin</Link>
+              <Link to="/feature-requests">Feature Requests</Link>
               <Link to="/refund">Refund Policy</Link>
               <Link to="/terms">Terms of Use</Link>
               <Link to="/privacy">Privacy Policy</Link>

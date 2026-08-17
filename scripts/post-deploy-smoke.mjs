@@ -15,6 +15,7 @@ export const htmlRoutes = [
   '/upgrade',
   '/build-a-plugin',
   '/windows',
+  '/feature-requests',
   '/support',
   '/privacy',
   '/terms',
