@@ -78,8 +78,7 @@ body {
   font-weight: 700;
 }
 
-.logo img,
-.footer-brand img {
+.logo img {
   width: 40px;
   height: 40px;
 }
@@ -97,7 +96,6 @@ body {
 }
 
 .nav-links a:hover,
-.footer-links a:hover,
 .back-link:hover {
   color: var(--primary-black);
 }
@@ -504,41 +502,11 @@ body {
   color: rgba(255, 255, 255, 0.82);
 }
 
-.footer,
-.legal-footer {
-  padding: 32px 0;
-  background: var(--gray-100);
-  border-top: 1px solid var(--gray-200);
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-}
-
-.footer-brand p,
-.footer-bottom,
 .last-updated,
 .note {
   color: var(--gray-600);
 }
 
-.footer-links {
-  display: flex;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-}
-
-.footer-links a,
 .back-link,
 .contact-link {
   text-decoration: none;
@@ -546,12 +514,189 @@ body {
   font-weight: 600;
 }
 
-.footer-bottom {
-  margin-top: 1.4rem;
+/* One canonical footer is rendered by AppRoutes for every route. Keeping its links in one
+   component prevents the workflow, legal, and marketing pages from drifting into different
+   internal-link maps again. */
+.site-footer {
+  padding: clamp(3.5rem, 7vw, 5.75rem) 0 1.75rem;
+  background: #171917;
+  color: rgba(255, 255, 255, 0.72);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-footer-shell {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.82fr) minmax(0, 1.65fr);
+  gap: clamp(3.5rem, 8vw, 7.5rem);
+  align-items: start;
+}
+
+.site-footer-intro {
+  max-width: 390px;
+}
+
+.site-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #f7f7f5;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+}
+
+.site-footer-logo img {
+  width: 42px;
+  height: 42px;
+}
+
+.site-footer-intro > p {
+  margin-top: 1.2rem;
+  max-width: 35ch;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+.site-footer-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.site-footer-downloads a {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  padding: 0.62rem 0.9rem;
+  color: #f7f7f5;
+  border: 1px solid rgba(255, 255, 255, 0.23);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 750;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.site-footer-downloads a:hover {
+  border-color: rgba(255, 255, 255, 0.56);
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-1px);
+}
+
+.site-footer-downloads a:active {
+  transform: translateY(0) scale(0.985);
+}
+
+.site-footer-nav {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+.site-footer-group h2 {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.site-footer-group ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer-group a {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+  text-underline-offset: 0.25em;
+  transition: color 0.2s ease;
+}
+
+.site-footer-group a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.site-footer-logo:focus-visible,
+.site-footer-downloads a:focus-visible,
+.site-footer-group a:focus-visible {
+  outline: 2px solid #76b7bb;
+  outline-offset: 4px;
+  border-radius: 5px;
+}
+
+.site-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: clamp(3rem, 6vw, 5rem);
   padding-top: 1.4rem;
-  border-top: 1px solid var(--gray-200);
-  text-align: center;
-  font-size: 0.92rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 880px) {
+  .site-footer-shell {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .site-footer-intro {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-footer-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .site-footer-group:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer-bottom {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-footer-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer-group:first-child {
+    grid-column: auto;
+  }
+
+  .site-footer-downloads {
+    display: grid;
+  }
+
+  .site-footer-downloads a {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-footer-downloads a,
+  .site-footer-group a {
+    transition: none;
+  }
 }
 
 .legal-page {
@@ -1101,7 +1246,6 @@ body {
 .primary-btn:focus-visible,
 .secondary-btn:focus-visible,
 .dl-alt:focus-visible,
-.footer-links a:focus-visible,
 .nav-links a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;

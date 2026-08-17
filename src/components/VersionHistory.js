@@ -275,21 +275,6 @@ const VersionHistory = () => {
         </div>
       </motion.main>
 
-      <footer className="legal-footer">
-        <div className="container">
-          <div className="footer-content">
-            <p>&copy; 2026 PolyPDF. All rights reserved.</p>
-            <div className="footer-links">
-              <Link to="/">Home</Link>
-              <Link to="/windows">Windows</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/support">Support</Link>
-              <Link to="/terms">Terms of Use</Link>
-              <Link to="/privacy">Privacy Policy</Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

@@ -21,7 +21,6 @@ import { buyPath, captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
-import { landingPages } from '../lib/landingPages';
 import shotSymbolCounting from '../assets/screenshots/shot-symbol-counting-web.png';
 import shotHeroTakeoff from '../assets/screenshots/shot-hero-takeoff-web.png';
 import shotMarkupReview from '../assets/screenshots/shot-markup-review-web.png';
@@ -585,37 +584,6 @@ const Home = () => {
       </section>
       </main>
 
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-brand">
-              <img src={parrotIcon} alt="PolyPDF logo" loading="lazy" width="1024" height="1024" />
-              <p>Measure and mark up PDF drawings on Mac and Windows without the yearly bill.</p>
-            </div>
-            <div className="footer-links">
-              <a href={primaryPlatform.url} download onClick={() => handleDownloadClick('footer')}>Download Free</a>
-              <Link to={buyPath('website_footer')}>Buy Once</Link>
-              <Link to="/windows">Windows</Link>
-              <Link to={landingPages.pdfTakeoffSoftware.path}>PDF Takeoff</Link>
-              <Link to={landingPages.measurePdfOnMac.path}>Measure a PDF on Mac</Link>
-              <Link to={landingPages.constructionPdfMarkup.path}>Construction Markup</Link>
-              <Link to={landingPages.visualSearchPdfCount.path}>Symbol Counting</Link>
-              <Link to={landingPages.comparePdfDrawings.path}>Compare Drawings</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/build-a-plugin">Build a Plugin</Link>
-              <Link to="/feature-requests">Feature Requests</Link>
-              <Link to="/support">Support</Link>
-              <Link to="/versions">Version History</Link>
-              <Link to="/refund">Refund Policy</Link>
-              <Link to="/terms">Terms</Link>
-              <Link to="/privacy">Privacy</Link>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; 2026 PolyPDF. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

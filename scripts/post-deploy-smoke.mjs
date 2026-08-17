@@ -51,6 +51,14 @@ export const workflowMediaRoutes = [
   '/videos/revision-comparison-narrated.vtt'
 ];
 
+export const canonicalFooterRoutes = [
+  '/pdf-takeoff-software',
+  '/measure-pdf-on-mac',
+  '/construction-pdf-markup',
+  '/visual-search-pdf-count',
+  '/compare-pdf-drawings'
+];
+
 export const expectedOffer = Object.freeze({
   id: 'polypdf_pro_founder_1x_2026',
   checkoutLineItemName: "PolyPDF Pro Founder's License — Perpetual 1.x",
@@ -112,6 +120,13 @@ export async function runPostDeploySmoke({
         && body.includes(`<meta name="twitter:description" content="${escapedDescription}"`),
       `${route} did not return matching route-specific share metadata`
     );
+    assertResponse(
+      (body.match(/data-site-footer="true"/g) || []).length === 1,
+      `${route} did not return exactly one canonical footer`
+    );
+    for (const footerRoute of canonicalFooterRoutes) {
+      assertResponse(body.includes(`href="${footerRoute}"`), `${route} footer is missing ${footerRoute}`);
+    }
     results.push({ route, status: response.status });
   }
 

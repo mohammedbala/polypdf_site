@@ -68,15 +68,13 @@
   height: 36px;
 }
 
-.workflow-nav-links,
-.workflow-footer-links {
+.workflow-nav-links {
   display: flex;
   align-items: center;
   gap: 1.6rem;
 }
 
-.workflow-nav-links a,
-.workflow-footer-links a {
+.workflow-nav-links a {
   color: var(--workflow-ink);
   text-decoration: none;
   font-size: 0.9rem;
@@ -573,36 +571,6 @@
   border-right: 0;
 }
 
-.workflow-footer {
-  padding: 3.5rem 0;
-  background: var(--workflow-ink);
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.workflow-footer-grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1.5rem 3rem;
-  align-items: start;
-}
-
-.workflow-footer .workflow-logo,
-.workflow-footer-links a {
-  color: #fff;
-}
-
-.workflow-footer-grid > div:first-child p {
-  margin-top: 0.7rem;
-  font-size: 0.86rem;
-}
-
-.workflow-footer-grid > p {
-  grid-column: 1 / -1;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  font-size: 0.82rem;
-}
-
 .workflow-landing a:focus-visible,
 .workflow-landing button:focus-visible,
 .workflow-landing summary:focus-visible,
@@ -680,8 +648,7 @@
   .workflow-context-grid,
   .workflow-section-heading,
   .workflow-outcomes-grid,
-  .workflow-faq-grid,
-  .workflow-footer-grid {
+  .workflow-faq-grid {
     grid-template-columns: 1fr;
   }
 
@@ -722,10 +689,6 @@
 
   .workflow-related-links a:last-child {
     border-bottom: 0;
-  }
-
-  .workflow-footer-links {
-    flex-wrap: wrap;
   }
 }
 

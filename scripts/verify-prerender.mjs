@@ -32,6 +32,16 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
   const body = rootStart === -1 ? '' : html.slice(rootStart);
   assert(body.length > 2000, `${route}: prerendered body is implausibly small (${body.length} bytes)`);
   assert(html.includes('<link rel="canonical"'), `${route}: canonical link is missing`);
+  assert((body.match(/data-site-footer="true"/g) || []).length === 1, `${route}: canonical footer is missing or duplicated`);
+  for (const footerPath of [
+    '/pdf-takeoff-software',
+    '/measure-pdf-on-mac',
+    '/construction-pdf-markup',
+    '/visual-search-pdf-count',
+    '/compare-pdf-drawings'
+  ]) {
+    assert(body.includes(`href="${footerPath}"`), `${route}: footer is missing ${footerPath}`);
+  }
 
   const indexable = !metadata.robots.includes('noindex');
   if (indexable) {

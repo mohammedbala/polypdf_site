@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import test from 'node:test';
 import {
+  canonicalFooterRoutes,
   downloadRoutes,
   expectedOffer,
   htmlRoutes,
@@ -42,7 +43,10 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
         + `<meta name="twitter:description" content="${description}" />`
         + `<link rel="canonical" href="${canonicalURL}" />`
         + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script>'
-        + `<div id="root"><h1>${title}</h1><p>Prerendered body content for ${path}</p></div>`
+        + `<div id="root"><h1>${title}</h1><p>Prerendered body content for ${path}</p>`
+        + '<footer data-site-footer="true">'
+        + canonicalFooterRoutes.map((route) => `<a href="${route}">${route}</a>`).join('')
+        + '</footer></div>'
       );
       return;
     }

@@ -11,6 +11,7 @@ import Privacy from './components/Privacy';
 import Refund from './components/Refund';
 import RouteMetadata from './components/RouteMetadata';
 import Support from './components/Support';
+import SiteFooter from './components/SiteFooter';
 import WindowsPreview from './components/WindowsPreview';
 import Terms from './components/Terms';
 import VersionHistory from './components/VersionHistory';
@@ -51,6 +52,7 @@ const AppRoutes = () => {
         <Route path={landingPages.comparePdfDrawings.path} element={<WorkflowLanding page={landingPages.comparePdfDrawings} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+      <SiteFooter />
     </div>
   );
 };

@@ -282,25 +282,6 @@ const WorkflowLanding = ({ page }) => {
         </section>
       </main>
 
-      <footer className="workflow-footer">
-        <div className="container workflow-footer-grid">
-          <div>
-            <Link className="workflow-logo" to="/">
-              <img src={parrotIcon} alt="" width="1024" height="1024" />
-              <span>PolyPDF</span>
-            </Link>
-            <p>Desktop PDF measurement and markup for Mac and Windows.</p>
-          </div>
-          <div className="workflow-footer-links">
-            <Link to="/blog">Blog</Link>
-            <Link to="/support">Support</Link>
-            <Link to="/refund">Refunds</Link>
-            <Link to="/terms">Terms</Link>
-            <Link to="/privacy">Privacy</Link>
-          </div>
-          <p>© 2026 PolyPDF. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };
