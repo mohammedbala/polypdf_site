@@ -28,6 +28,8 @@ export const mediaCopy = {
   }
 };
 
+export const CURRENT_INTERFACE_LABEL = 'Current shipping interface · PolyPDF 1.3.4';
+
 const WorkflowLanding = ({ page }) => {
   const [mediaMode, setMediaMode] = useState('short');
   const media = mediaCopy[page.mediaSlug];
@@ -99,7 +101,7 @@ const WorkflowLanding = ({ page }) => {
 
             <figure className="workflow-hero-visual">
               <div className="workflow-capture-label">
-                <span aria-hidden="true" /> Current shipping interface · PolyPDF 1.1.3
+                <span aria-hidden="true" /> {CURRENT_INTERFACE_LABEL}
               </div>
               <img
                 src={page.image}
