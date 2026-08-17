@@ -157,6 +157,10 @@ export async function runPostDeploySmoke({
       && bundle.includes('Future major versions may be optional paid upgrades'),
     'deployed site bundle does not contain the canonical Founder License rights'
   );
+  assertResponse(
+    !bundle.includes('github.com/mohammedbala/polypdf-feedback'),
+    'deployed site bundle still exposes the retired public GitHub feature tracker'
+  );
   results.push({ route: mainBundlePath, status: bundleResponse.status });
 
   for (const route of downloadRoutes) {

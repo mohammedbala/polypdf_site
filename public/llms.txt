@@ -35,7 +35,7 @@ Key facts:
 ## Optional
 
 - [Support](https://www.polypdf.com/support): installation, licensing, and workflow help
-- [Feature Requests](https://www.polypdf.com/feature-requests): submit an idea, browse tracked requests, and follow feature status
+- [Feature Requests](https://www.polypdf.com/feature-requests): email a product idea directly to PolyPDF Support
 - [Terms of use](https://www.polypdf.com/terms)
 - [Privacy policy](https://www.polypdf.com/privacy)
 - [Refund policy](https://www.polypdf.com/refund)

@@ -1,16 +1,7 @@
-import {
-  CLOUD_LINE_REQUEST_URL,
-  FEATURE_REQUEST_URL,
-  FEATURE_REQUESTS_URL
-} from './FeatureRequests';
+import { FEATURE_REQUEST_EMAIL_URL } from './FeatureRequests';
 
-test('points customers to the structured public request workflow', () => {
-  expect(FEATURE_REQUEST_URL).toBe(
-    'https://github.com/mohammedbala/polypdf-feedback/issues/new?template=feature_request.yml'
-  );
-  expect(FEATURE_REQUESTS_URL).toContain('label%3Aenhancement');
-});
-
-test('links the outstanding cloud-line request to its public tracker', () => {
-  expect(CLOUD_LINE_REQUEST_URL).toBe('https://github.com/mohammedbala/polypdf-feedback/issues/1');
+test('routes feature requests directly to support without a public tracker', () => {
+  expect(FEATURE_REQUEST_EMAIL_URL).toMatch(/^mailto:support@polypdf\.com\?/);
+  expect(FEATURE_REQUEST_EMAIL_URL).toContain('Workflow%20I%27m%20trying%20to%20improve');
+  expect(FEATURE_REQUEST_EMAIL_URL).not.toContain('github.com');
 });

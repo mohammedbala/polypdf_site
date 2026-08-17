@@ -138,8 +138,8 @@ const Support = () => {
           <section className="legal-section">
             <h2>Ideas and feature requests</h2>
             <p>
-              Browse the public request list, follow work you care about, or submit a structured
-              request describing the drawing workflow you want to improve.
+              Send PolyPDF Support a structured request describing the drawing workflow you want
+              to improve and what you do today.
             </p>
             <div className="contact-info">
               <Link to="/feature-requests" className="contact-link">

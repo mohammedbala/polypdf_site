@@ -45,8 +45,8 @@
     "robots": "index, follow"
   },
   "/feature-requests": {
-    "title": "PolyPDF Feature Requests | Suggest and Track Ideas",
-    "description": "Suggest a PolyPDF improvement, browse public feature requests, and follow ideas from customer workflow to a future Mac or Windows release.",
+    "title": "PolyPDF Feature Requests | Suggest Product Ideas",
+    "description": "Suggest a PolyPDF improvement by email and learn what details help the team evaluate ideas for future Mac and Windows releases.",
     "robots": "index, follow"
   },
   "/support": {

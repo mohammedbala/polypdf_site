@@ -6,19 +6,14 @@ import {
   FaArrowRight,
   FaCheck,
   FaEnvelope,
-  FaGithub,
   FaLightbulb,
   FaLock,
   FaRegClock
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
 
-export const FEATURE_REQUEST_URL =
-  'https://github.com/mohammedbala/polypdf-feedback/issues/new?template=feature_request.yml';
-export const FEATURE_REQUESTS_URL =
-  'https://github.com/mohammedbala/polypdf-feedback/issues?q=is%3Aissue+label%3Aenhancement';
-export const CLOUD_LINE_REQUEST_URL =
-  'https://github.com/mohammedbala/polypdf-feedback/issues/1';
+export const FEATURE_REQUEST_EMAIL_URL =
+  'mailto:support@polypdf.com?subject=PolyPDF%20feature%20request&body=Platform%20(macOS%20or%20Windows)%3A%0A%0AWorkflow%20I%27m%20trying%20to%20improve%3A%0A%0AWhat%20would%20make%20it%20easier%3A%0A%0ACurrent%20workaround%3A%0A';
 
 const shippedRequests = [
   'Measurement depth for linear and area takeoffs',
@@ -42,8 +37,8 @@ const steps = [
   },
   {
     number: '03',
-    title: 'Follow it publicly',
-    body: 'GitHub keeps the discussion, status, and eventual release reference in one place.'
+    title: 'Hear back directly',
+    body: 'PolyPDF Support replies by email if we need an example, clarification, or have a useful update.'
   }
 ];
 
@@ -74,23 +69,22 @@ const FeatureRequests = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
           >
-            <div className="feature-request-kicker"><FaLightbulb /> Public feature requests</div>
+            <div className="feature-request-kicker"><FaLightbulb /> Feature requests</div>
             <h1>Help shape the next PolyPDF update.</h1>
             <p>
-              Share the drawing workflow you want to improve, see what other customers have asked
-              for, and follow the work from request to release.
+              Send the drawing workflow you want to improve directly to PolyPDF Support and see
+              how recent customer requests made it into a release.
             </p>
             <div className="feature-request-actions">
-              <a className="primary-btn large" href={FEATURE_REQUEST_URL} target="_blank" rel="noreferrer">
-                Submit a request <FaArrowRight />
+              <a className="primary-btn large" href={FEATURE_REQUEST_EMAIL_URL}>
+                <FaEnvelope /> Email a request
               </a>
-              <a className="secondary-btn large" href={FEATURE_REQUESTS_URL} target="_blank" rel="noreferrer">
-                <FaGithub /> Browse requests
+              <a className="secondary-btn large" href="#request-guide">
+                What to include <FaArrowRight />
               </a>
             </div>
             <p className="feature-request-account-note">
-              GitHub account required for public requests. No account?{' '}
-              <a href="mailto:support@polypdf.com?subject=PolyPDF%20feature%20request">Email the same details</a>.
+              No account, public post, or forum sign-in required.
             </p>
           </motion.div>
 
@@ -102,17 +96,16 @@ const FeatureRequests = () => {
             transition={{ duration: 0.45, delay: 0.08 }}
           >
             <div className="request-ledger-heading">
-              <span>Request ledger</span>
-              <span className="request-ledger-live"><i aria-hidden="true" /> Live</span>
+              <span>Request snapshot</span>
+              <span className="request-ledger-live">Product notes</span>
             </div>
-            <a className="request-ledger-row" href={CLOUD_LINE_REQUEST_URL} target="_blank" rel="noreferrer">
+            <div className="request-ledger-row">
               <span className="request-ledger-marker open" aria-hidden="true"><FaRegClock /></span>
               <span>
                 <small>Under review</small>
                 <strong>Cloud in the Line Type menu</strong>
               </span>
-              <FaArrowRight className="request-ledger-arrow" />
-            </a>
+            </div>
             <div className="request-ledger-row shipped">
               <span className="request-ledger-marker" aria-hidden="true"><FaCheck /></span>
               <span>
@@ -130,7 +123,7 @@ const FeatureRequests = () => {
           </motion.aside>
         </section>
 
-        <section className="feature-request-process container" aria-labelledby="request-process-title">
+        <section id="request-guide" className="feature-request-process container" aria-labelledby="request-process-title">
           <div className="feature-request-section-heading">
             <span>How it works</span>
             <h2 id="request-process-title">A request should start with the work.</h2>
@@ -152,7 +145,7 @@ const FeatureRequests = () => {
             <h2 id="recently-shipped-title">Customer requests made the 1.3.4 update.</h2>
             <p>
               These requests came from a real takeoff workflow. They are now available on both Mac
-              and Windows, while the remaining cloud-line request is tracked publicly.
+              and Windows, while the remaining cloud-line request stays under review for a future update.
             </p>
             <Link to="/versions" className="feature-request-text-link">
               Read the 1.3.4 release notes <FaArrowRight />
@@ -169,10 +162,10 @@ const FeatureRequests = () => {
           <div className="feature-request-privacy-icon" aria-hidden="true"><FaLock /></div>
           <div>
             <span className="feature-request-label">Keep private work private</span>
-            <h2 id="request-privacy-title">Public request or private support?</h2>
+            <h2 id="request-privacy-title">What belongs in the email?</h2>
             <p>
-              GitHub requests are visible to everyone. Do not post confidential drawings, license
-              keys, receipts, or personal information. Send anything sensitive directly to support.
+              Describe the workflow first. Do not include license keys or confidential drawings in
+              the initial request; PolyPDF Support will ask if a sanitized example would help.
             </p>
           </div>
           <a className="secondary-btn" href="mailto:support@polypdf.com">
