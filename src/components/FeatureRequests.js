@@ -14,11 +14,11 @@ import {
 import parrotIcon from '../assets/polypdf_icon.png';
 
 export const FEATURE_REQUEST_URL =
-  'https://github.com/mohammedbala/polypdfmac/issues/new?template=feature_request.yml';
+  'https://github.com/mohammedbala/polypdf-feedback/issues/new?template=feature_request.yml';
 export const FEATURE_REQUESTS_URL =
-  'https://github.com/mohammedbala/polypdfmac/issues?q=is%3Aissue+label%3Aenhancement';
+  'https://github.com/mohammedbala/polypdf-feedback/issues?q=is%3Aissue+label%3Aenhancement';
 export const CLOUD_LINE_REQUEST_URL =
-  'https://github.com/mohammedbala/polypdfmac/issues/18';
+  'https://github.com/mohammedbala/polypdf-feedback/issues/1';
 
 const shippedRequests = [
   'Measurement depth for linear and area takeoffs',
