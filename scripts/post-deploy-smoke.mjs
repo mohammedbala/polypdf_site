@@ -124,6 +124,11 @@ export async function runPostDeploySmoke({
       (body.match(/data-site-footer="true"/g) || []).length === 1,
       `${route} did not return exactly one canonical footer`
     );
+    assertResponse(
+      body.includes('https://www.googletagmanager.com/gtag/js?id=G-533RWNRCFP')
+        && body.includes('gtag("config","G-533RWNRCFP"'),
+      `${route} did not contain the approved Google tag`
+    );
     for (const footerRoute of canonicalFooterRoutes) {
       assertResponse(body.includes(`href="${footerRoute}"`), `${route} footer is missing ${footerRoute}`);
     }
@@ -175,6 +180,12 @@ export async function runPostDeploySmoke({
   assertResponse(
     !bundle.includes('github.com/mohammedbala/polypdf-feedback'),
     'deployed site bundle still exposes the retired public GitHub feature tracker'
+  );
+  assertResponse(
+    bundle.includes('/api/checkout/conversion?session_id=')
+      && bundle.includes('polypdf.ga4.purchase.v1.')
+      && bundle.includes('purchase'),
+    'deployed site bundle does not contain verified purchase conversion tracking'
   );
   results.push({ route: mainBundlePath, status: bundleResponse.status });
 
@@ -239,6 +250,16 @@ export async function runPostDeploySmoke({
   results.push({ route: '/plugins/polypdf-plugin-pack.mjs', status: packerResponse.status });
 
   if (requireCheckout) {
+    const conversionResponse = await fetchImpl(
+      `${base}/api/checkout/conversion?session_id=invalid-deploy-smoke`,
+      { headers: { ...smokeHeaders, Accept: 'application/json' } }
+    );
+    assertResponse(
+      conversionResponse.status === 400,
+      `/api/checkout/conversion returned HTTP ${conversionResponse.status} for an invalid session`
+    );
+    results.push({ route: '/api/checkout/conversion', status: conversionResponse.status });
+
     const checkoutResponse = await fetchImpl(`${base}/api/checkout/session`, {
       method: 'POST',
       headers: { ...smokeHeaders, Accept: 'application/json' }

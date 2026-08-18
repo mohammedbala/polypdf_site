@@ -42,6 +42,8 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
         + `<meta name="twitter:title" content="${title}" />`
         + `<meta name="twitter:description" content="${description}" />`
         + `<link rel="canonical" href="${canonicalURL}" />`
+        + '<script async src="https://www.googletagmanager.com/gtag/js?id=G-533RWNRCFP"></script>'
+        + '<script>gtag("config","G-533RWNRCFP",{})</script>'
         + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script>'
         + `<div id="root"><h1>${title}</h1><p>Prerendered body content for ${path}</p>`
         + '<footer data-site-footer="true">'
@@ -80,7 +82,10 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
       response.end([
         "PolyPDF Pro Founder's License",
         'Every PolyPDF 1.x update is included',
-        'Future major versions may be optional paid upgrades'
+        'Future major versions may be optional paid upgrades',
+        '/api/checkout/conversion?session_id=',
+        'polypdf.ga4.purchase.v1.',
+        'purchase'
       ].join(';'));
       return;
     }
@@ -130,6 +135,11 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
       response.end('{"url":"https://checkout.stripe.com/c/pay/cs_test_123","smoke":true}');
       return;
     }
+    if (path === '/api/checkout/conversion') {
+      response.writeHead(400, { 'Content-Type': 'application/json' });
+      response.end('{"error":"invalid_checkout_session"}');
+      return;
+    }
     response.writeHead(404);
     response.end();
   });
@@ -145,8 +155,9 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
 test('passes only when every route, artifact, health check, and checkout pass', async () => {
   await withFakeSite({}, async (baseURL) => {
     const results = await runPostDeploySmoke({ baseURL });
-    // +5 = /api/healthz, /api/commercial-offer, the main bundle, the plugin packer, and checkout.
-    assert.equal(results.length, htmlRoutes.length + downloadRoutes.length + workflowMediaRoutes.length + 5);
+    // +6 = /api/healthz, /api/commercial-offer, the main bundle, the plugin packer,
+    // conversion verification, and checkout.
+    assert.equal(results.length, htmlRoutes.length + downloadRoutes.length + workflowMediaRoutes.length + 6);
   });
 });
 

@@ -17,6 +17,7 @@ import ActivationSteps from './ActivationSteps';
 import { DownloadBoth } from './DownloadCTA';
 import { primaryPlatform } from '../lib/platform';
 import { licenseDeliveryText, licensePolicyLabel } from '../lib/commercialOffer';
+import { trackVerifiedPurchase } from '../lib/analytics';
 
 const trackEvent = (name, properties = {}) => {
   if (window.plausible) {
@@ -66,6 +67,7 @@ const Account = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const justPurchased = searchParams.get('checkout') === 'success';
+  const checkoutSessionID = searchParams.get('session_id');
 
   const notice = useMemo(() => {
     if (justPurchased) {
@@ -96,6 +98,52 @@ const Account = () => {
     window.scrollTo(0, 0);
     loadAccount();
   }, []);
+
+  useEffect(() => {
+    if (!justPurchased || !checkoutSessionID) {
+      return undefined;
+    }
+
+    const controller = new AbortController();
+    let retryTimer;
+    let attempts = 0;
+    const maxAttempts = 12;
+
+    const loadVerifiedPurchase = async () => {
+      attempts += 1;
+      try {
+        const response = await fetch(
+          `/api/checkout/conversion?session_id=${encodeURIComponent(checkoutSessionID)}`,
+          {
+            credentials: 'same-origin',
+            headers: { Accept: 'application/json' },
+            signal: controller.signal
+          }
+        );
+
+        if (response.status === 202 && attempts < maxAttempts) {
+          retryTimer = window.setTimeout(loadVerifiedPurchase, 1500);
+          return;
+        }
+        if (!response.ok) {
+          return;
+        }
+
+        const purchase = await response.json();
+        trackVerifiedPurchase(purchase);
+      } catch (error) {
+        if (error?.name !== 'AbortError' && attempts < maxAttempts) {
+          retryTimer = window.setTimeout(loadVerifiedPurchase, 1500);
+        }
+      }
+    };
+
+    loadVerifiedPurchase();
+    return () => {
+      controller.abort();
+      window.clearTimeout(retryTimer);
+    };
+  }, [checkoutSessionID, justPurchased]);
 
   const loadAccount = async () => {
     setLoadingAccount(true);
