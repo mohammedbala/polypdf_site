@@ -85,6 +85,7 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
         'Future major versions may be optional paid upgrades',
         '/api/checkout/conversion?session_id=',
         'polypdf.ga4.purchase.v1.',
+        'AW-449436603/xb7JCMbVseMcELu3p9YB',
         'purchase'
       ].join(';'));
       return;

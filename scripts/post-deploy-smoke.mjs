@@ -184,6 +184,7 @@ export async function runPostDeploySmoke({
   assertResponse(
     bundle.includes('/api/checkout/conversion?session_id=')
       && bundle.includes('polypdf.ga4.purchase.v1.')
+      && bundle.includes('AW-449436603/xb7JCMbVseMcELu3p9YB')
       && bundle.includes('purchase'),
     'deployed site bundle does not contain verified purchase conversion tracking'
   );

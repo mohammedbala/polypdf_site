@@ -17,7 +17,7 @@ const sections = [
     content: [
       'When you browse the website, we may receive basic technical information such as IP address, browser type, and page requests from our hosting and security providers.',
       'The website stores short campaign codes such as source and UTM parameters for up to 30 days so a checkout can be attributed to the page or app placement that led to it. These codes do not contain document names or document content.',
-      'Google Analytics measures website visits, acquisition sources, and completed purchases. A completed-purchase event contains a Stripe transaction identifier, order value, currency, and product name, but not your email address, license key, document name, or document content.',
+      'Google Analytics and Google Ads measure website visits, acquisition sources, and completed purchases. A completed-purchase event contains a Stripe transaction identifier, order value, currency, and product name, but not your email address, license key, document name, or document content.',
       'When you purchase or activate a direct license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
       'The desktop app sends diagnostics only when you explicitly opt in. This may include a compact redacted error report and fixed product milestones such as opening the sample drawing, setting page scale, making a first measurement, or exporting results. Milestones contain no free-text field; diagnostics do not intentionally include PDF contents or filenames.',
       'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose.'
@@ -113,7 +113,7 @@ const Privacy = () => {
               <li>License records are retained while needed to provide a perpetual license, prevent fraud, handle refunds, and meet legal obligations. Financial records are retained for applicable tax and accounting obligations.</li>
               <li>Diagnostic error reports and opt-in activation milestones stored by PolyPDF are deleted after 90 days. Expired PolyPDF magic links and account sessions are removed automatically.</li>
               <li>Website campaign attribution codes are stored in your browser for up to 30 days and may be cleared at any time through your browser settings.</li>
-              <li>Google Analytics may store browser identifiers used to attribute a visit and a completed purchase. You can clear or block these identifiers through your browser settings.</li>
+              <li>Google Analytics and Google Ads may store browser identifiers used to attribute a visit and a completed purchase. You can clear or block these identifiers through your browser settings.</li>
               <li>Web-server and provider logs are retained for operational and security purposes under the applicable host or processor retention schedule.</li>
             </ul>
           </section>

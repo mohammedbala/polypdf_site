@@ -8,6 +8,7 @@ export const trackEvent = (name, properties = {}) => {
 };
 
 const PURCHASE_STORAGE_PREFIX = 'polypdf.ga4.purchase.v1.';
+const GOOGLE_ADS_PURCHASE_DESTINATION = 'AW-449436603/xb7JCMbVseMcELu3p9YB';
 
 const normalizedPurchase = (purchase) => {
   const transactionID = typeof purchase?.transaction_id === 'string'
@@ -45,6 +46,12 @@ export const trackVerifiedPurchase = (purchase) => {
   }
 
   window.gtag('event', 'purchase', normalized);
+  window.gtag('event', 'conversion', {
+    send_to: GOOGLE_ADS_PURCHASE_DESTINATION,
+    transaction_id: normalized.transaction_id,
+    value: normalized.value,
+    currency: normalized.currency
+  });
   try {
     window.localStorage.setItem(storageKey, 'sent');
   } catch {

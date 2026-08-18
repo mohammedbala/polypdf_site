@@ -22,9 +22,15 @@ test('reports one standard GA4 purchase with value and transaction identity', ()
     ...purchase,
     currency: 'USD'
   });
+  expect(window.gtag).toHaveBeenCalledWith('event', 'conversion', {
+    send_to: 'AW-449436603/xb7JCMbVseMcELu3p9YB',
+    transaction_id: 'pi_paid_123',
+    value: 49.99,
+    currency: 'USD'
+  });
 
   expect(trackVerifiedPurchase(purchase)).toBe(false);
-  expect(window.gtag).toHaveBeenCalledTimes(1);
+  expect(window.gtag).toHaveBeenCalledTimes(2);
 });
 
 test('refuses malformed or unverified purchase payloads', () => {
