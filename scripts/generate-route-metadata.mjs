@@ -7,7 +7,7 @@ const buildDirectory = path.resolve(root, process.env.BUILD_PATH || 'build');
 const metadata = JSON.parse(fs.readFileSync(path.join(root, 'src/lib/route-metadata.json'), 'utf8'));
 const baseHTML = fs.readFileSync(path.join(buildDirectory, 'index.html'), 'utf8');
 const origin = 'https://www.polypdf.com';
-const defaultImage = '/og-image.png';
+const defaultImage = '/og-image.png?v=20260819-currentdev';
 const defaultImageAlt =
   'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription';
 
@@ -23,7 +23,7 @@ const replace = (html, expression, replacement) => {
 };
 
 for (const [route, entry] of Object.entries(metadata)) {
-  const url = `${origin}${route === '/' ? '/' : route}`;
+  const url = `${origin}${route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`}`;
   const title = escapeHTML(entry.title);
   const description = escapeHTML(entry.description);
   const type = escapeHTML(entry.type || 'website');

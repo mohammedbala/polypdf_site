@@ -14,9 +14,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node scripts/generate-discovery-files.js && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
+    "build": "node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
     "test": "react-scripts test",
+    "test:screenshot-evidence": "node --test test/verify-screenshot-evidence.test.mjs",
     "test:post-deploy": "node --test test/post-deploy-smoke.test.mjs",
+    "verify:screenshots": "node scripts/verify-screenshot-evidence.mjs",
     "smoke:production": "node scripts/post-deploy-smoke.mjs",
     "eject": "react-scripts eject"
   },
@@ -43,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "pngjs": "7.0.0"
   }
 }

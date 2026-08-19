@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-08-19T11:23:22.424Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "pdf": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/redaction-output/redaction-supported-working.pdf",
+  "baselineSha256": "588d35c4a28c0041258e588eb3ae3509cfecf4a5d15216bda5c7f8eff027f360",
+  "savedSha256": "506f07e25297edc96222e3fb78fb5b0387363b89c8bf1a3cf9746aaf5ded7461",
+  "fileChangedAfterRedactionAndSave": true,
+  "target": "CASE-ORCHID-742",
+  "checks": {
+    "qpdfSyntaxPasses": true,
+    "pdftotextTargetCount": 0,
+    "qdfUncompressedTargetCount": 0,
+    "pypdfTargetCount": 0,
+    "imageXObjectsRemain": 1,
+    "formXObjectsRemain": 0
+  },
+  "passes": true,
+  "screenshots": {
+    "before": "captures/redaction-lab-before-dark.png",
+    "marked": "captures/redaction-marked-text-dark.png",
+    "confirmation": "captures/redaction-apply-confirmation-dark.png",
+    "applied": "captures/redaction-applied-result-dark.png",
+    "reopenedSearch": "captures/redaction-reopened-search-no-matches-dark.png"
+  },
+  "claimBoundary": [
+    "The saved-file checks prove removal of the one selected synthetic native-text token on this supported fixture.",
+    "The separate top-level image remains and requires independent pixel review.",
+    "The current redactor refused the original filtered page and then refused the qpdf-uncompressed page because that page also used a reusable Form XObject.",
+    "No claim is made that every PDF content structure can currently be redacted."
+  ]
+}

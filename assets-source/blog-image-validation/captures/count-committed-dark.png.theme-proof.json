@@ -1,0 +1,128 @@
+{
+  "capturedAt": "2026-08-19T11:12:48.409Z",
+  "source": {
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "snapshotPath": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "untrackedFiles": [
+      {
+        "path": "apps/desktop/src/renderer/interaction/snap-indicator-lifecycle.ts",
+        "sha256": "c7abf8f55138307005ab0298af6a0caf6e7426422743b18b71748db6333a26f4"
+      },
+      {
+        "path": "scripts/run-snap-indicator-lifecycle-tests.mjs",
+        "sha256": "b093da106ed0073ba48f3079c210d4a3761a75a3c70706c8188e556d2b0ecf97"
+      },
+      {
+        "path": "tests/renderer/snap-indicator-lifecycle.test.ts",
+        "sha256": "25e8bbc58989c49d37659539b24d99c456ec9fc123e6b43e0476fef9083fedd2"
+      }
+    ]
+  },
+  "captureMethod": {
+    "manifest": "count-dark.json",
+    "nativeMaximizeRoute": "window.polyPDF.controlWindow(toggleMaximize) -> BrowserWindow.maximize()",
+    "deviceMetricsOverride": "cleared before capture; no override set",
+    "browserDomainWindowState": "unavailable in this Electron; not claimed",
+    "screenshotMethod": "Page.captureScreenshot(fromSurface=true, captureBeyondViewport=false)",
+    "artifactSha256": "f9f58d39039e36f6797db040c973936111a4e12eb2e473c8f0d7244216a3e25f"
+  },
+  "cgWindowProof": {
+    "api": "CGWindowListCopyWindowInfo",
+    "ownerPid": 65096,
+    "owner": "PolyPDF",
+    "name": "PolyPDF",
+    "layer": 0,
+    "alpha": 1,
+    "boundsDip": {
+      "x": 0,
+      "y": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "matchesRendererAfterBounds": true,
+    "matchesRendererAvailableWorkArea": true,
+    "passes": true
+  },
+  "styleToolbarGate": {
+    "trackSelector": "[data-style-toolbar-track]",
+    "trackPresent": true,
+    "visible": true,
+    "hasOverflowClass": false,
+    "clientWidth": 1657,
+    "scrollWidth": 1657,
+    "scrollLeft": 0,
+    "fullTrackVisible": true,
+    "passes": true
+  },
+  "facts": {
+    "version": "1.3.4",
+    "build": "16",
+    "appAppearance": "dark",
+    "datasetTheme": "dark",
+    "bodyDark": true,
+    "prefersDark": true,
+    "chromeBase": "#26282b",
+    "chromeElevated": "#313437",
+    "panelBase": "",
+    "devicePixelRatio": 2,
+    "innerWidth": 1710,
+    "innerHeight": 1073,
+    "styleToolbar": {
+      "exists": true,
+      "visible": true,
+      "hasOverflowClass": false,
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "sectionCount": 4
+    },
+    "documentName": "symbol-count-demo.pdf",
+    "dialogId": ""
+  },
+  "windowProof": {
+    "before": {
+      "outerWidth": 1440,
+      "outerHeight": 960,
+      "innerWidth": 1440,
+      "innerHeight": 960,
+      "screenX": 215,
+      "screenY": 40,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "after": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "maximizeInvoked": true,
+    "fillsWorkArea": true,
+    "passes": true
+  },
+  "pixelProof": {
+    "width": 3420,
+    "height": 2146,
+    "darkHits": 3705238,
+    "lightHits": 2737735,
+    "darkRatio": 0.5048475880599292,
+    "lightRatio": 0.37302297760555475,
+    "topDarkHits": 582054,
+    "topLightHits": 16,
+    "topDarkRatio": 0.9455068226120857,
+    "expectedWidth": 3420,
+    "expectedHeight": 2146,
+    "passes": true
+  }
+}

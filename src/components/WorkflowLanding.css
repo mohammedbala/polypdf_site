@@ -239,7 +239,6 @@
 
 .workflow-context,
 .workflow-steps,
-.workflow-media,
 .workflow-outcomes,
 .workflow-offer,
 .workflow-faq,
@@ -276,10 +275,6 @@
 
 .workflow-steps .workflow-section-index {
   color: var(--workflow-green);
-}
-
-.workflow-media .workflow-section-index {
-  color: #76b7bb;
 }
 
 .workflow-section-heading {
@@ -323,78 +318,6 @@
 .workflow-step-list p {
   color: var(--workflow-muted);
   line-height: 1.7;
-}
-
-.workflow-media {
-  background: linear-gradient(180deg, #0b1416 0%, #122023 100%);
-  color: #fff;
-}
-
-.workflow-media-grid {
-  display: grid;
-  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1.28fr);
-  gap: clamp(2.5rem, 6vw, 6rem);
-  align-items: center;
-}
-
-.workflow-media h2 {
-  margin: 1rem 0 1.25rem;
-  font-size: clamp(2.2rem, 3.7vw, 3.8rem);
-  line-height: 1.02;
-}
-
-.workflow-media-copy > p:not(.workflow-section-index):not(.workflow-media-note) {
-  color: rgba(255, 255, 255, 0.7);
-  line-height: 1.7;
-}
-
-.workflow-media-toggle {
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-  margin-top: 2rem;
-}
-
-.workflow-media-toggle button {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  width: 100%;
-  padding: 0.85rem 0;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.62);
-  border: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  font: inherit;
-  font-weight: 700;
-  text-align: left;
-  cursor: pointer;
-}
-
-.workflow-media-toggle button.active {
-  color: #d6f2f5;
-  border-bottom-color: #76b7bb;
-}
-
-.workflow-media-note {
-  margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.78rem;
-}
-
-.workflow-video-frame {
-  overflow: hidden;
-  background: #0e100e;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 18px;
-  box-shadow: 0 34px 90px rgba(2, 18, 20, 0.32);
-}
-
-.workflow-video-frame video {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #0e100e;
 }
 
 .workflow-outcomes-grid {
@@ -587,8 +510,7 @@
 
 .workflow-landing a:focus-visible,
 .workflow-landing button:focus-visible,
-.workflow-landing summary:focus-visible,
-.workflow-landing video:focus-visible {
+.workflow-landing summary:focus-visible {
   outline: 3px solid var(--workflow-green);
   outline-offset: 4px;
 }
@@ -603,7 +525,6 @@
   }
 
   .workflow-hero-grid,
-  .workflow-media-grid,
   .workflow-offer-grid {
     grid-template-columns: 1fr;
   }
@@ -618,10 +539,6 @@
 
   .workflow-hero-visual {
     max-width: 880px;
-  }
-
-  .workflow-media-copy {
-    max-width: 680px;
   }
 
   .workflow-offer-actions {

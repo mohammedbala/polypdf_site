@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import routeMetadata from '../lib/route-metadata.json';
 
 const SITE_ORIGIN = 'https://www.polypdf.com';
-const SOCIAL_IMAGE = `${SITE_ORIGIN}/og-image.png`;
+const SOCIAL_IMAGE = `${SITE_ORIGIN}/og-image.png?v=20260819-currentdev`;
 const SOCIAL_IMAGE_ALT =
   'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription';
 
@@ -21,7 +21,7 @@ const RouteMetadata = () => {
     const normalizedPathname = normalizeRoutePath(pathname);
     const route = routeMetadata[normalizedPathname] || routeMetadata['/'];
     const canonicalPath = routeMetadata[normalizedPathname] ? normalizedPathname : '/';
-    const url = `${SITE_ORIGIN}${canonicalPath === '/' ? '/' : canonicalPath}`;
+    const url = `${SITE_ORIGIN}${canonicalPath === '/' ? '/' : `${canonicalPath}/`}`;
     const image = route.image
       ? new URL(route.image, `${SITE_ORIGIN}/`).href
       : SOCIAL_IMAGE;

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<!-- Source template for public/og-image.png (1200x630).
+     Regenerate after editing:
+       "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+         --headless=new --disable-gpu --hide-scrollbars \
+         --window-size=1200,630 --screenshot=public/og-image.png \
+         "file://$(pwd)/assets-source/blog-image-validation/og-image.html"
+     The template stays outside public so only the finished PNG is deployed. -->
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            width: 1200px;
+            height: 630px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #101418;
+            overflow: hidden;
+        }
+        .card {
+            position: relative;
+            width: 1200px;
+            height: 630px;
+            background:
+                radial-gradient(1000px 600px at 88% -10%, rgba(28, 110, 122, 0.28), transparent 60%),
+                linear-gradient(160deg, #14191f 0%, #101418 55%, #0c1013 100%);
+        }
+        /* Drafting-grid backdrop */
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: linear-gradient(115deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 70%);
+            -webkit-mask-image: linear-gradient(115deg, rgba(0,0,0,0.9), rgba(0,0,0,0.25) 70%);
+        }
+        .accent-rule {
+            position: absolute;
+            left: 0; top: 0; bottom: 0;
+            width: 10px;
+            background: linear-gradient(#2b8a99, #1c6e7a);
+        }
+        .copy {
+            position: absolute;
+            left: 72px; top: 0; bottom: 0;
+            width: 560px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 36px;
+        }
+        .brand img { width: 88px; height: 88px; filter: invert(1); }
+        .brand span {
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #f2f5f6;
+        }
+        h1 {
+            margin: 0 0 24px;
+            font-size: 54px;
+            line-height: 1.12;
+            font-weight: 750;
+            letter-spacing: -1px;
+            color: #f2f5f6;
+        }
+        h1 em {
+            font-style: normal;
+            color: #5fc4d4;
+        }
+        p {
+            margin: 0;
+            font-size: 27px;
+            line-height: 1.4;
+            color: #a7b2ba;
+        }
+        .chips { display: flex; gap: 10px; margin-top: 36px; }
+        .chip {
+            font-size: 19px;
+            font-weight: 650;
+            color: #d7e3e6;
+            background: rgba(43, 138, 153, 0.16);
+            border: 1.5px solid rgba(95, 196, 212, 0.45);
+            border-radius: 999px;
+            padding: 10px 14px;
+            white-space: nowrap;
+        }
+        .shot {
+            position: absolute;
+            left: 615px; top: 134px;
+            width: 560px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.14);
+            box-shadow: 0 40px 90px rgba(0,0,0,0.55);
+            transform: rotate(-1.2deg);
+        }
+        .shot img { display: block; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="accent-rule"></div>
+        <div class="copy">
+            <div class="brand">
+                <img src="../../public/logo512.png" alt="">
+                <span>PolyPDF</span>
+            </div>
+            <h1>Measure &amp; mark up PDF drawings — <em>no subscription</em></h1>
+            <p>Drawing review, calibrated takeoff, and markup for architects, engineers, and estimators.</p>
+            <div class="chips">
+                <div class="chip">Mac &amp; Windows</div>
+                <div class="chip">Free download</div>
+                <div class="chip">Core PDF tools local</div>
+            </div>
+        </div>
+        <div class="shot">
+            <img src="../../src/assets/screenshots/takeoff-currentdev-dark-web.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

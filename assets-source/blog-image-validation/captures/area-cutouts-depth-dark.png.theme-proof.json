@@ -1,0 +1,183 @@
+{
+  "capturedAt": "2026-08-19T13:07:39.251Z",
+  "source": {
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "snapshotPath": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "untrackedFiles": [
+      {
+        "path": "apps/desktop/src/renderer/interaction/snap-indicator-lifecycle.ts",
+        "sha256": "c7abf8f55138307005ab0298af6a0caf6e7426422743b18b71748db6333a26f4"
+      },
+      {
+        "path": "scripts/run-snap-indicator-lifecycle-tests.mjs",
+        "sha256": "b093da106ed0073ba48f3079c210d4a3761a75a3c70706c8188e556d2b0ecf97"
+      },
+      {
+        "path": "tests/renderer/snap-indicator-lifecycle.test.ts",
+        "sha256": "25e8bbc58989c49d37659539b24d99c456ec9fc123e6b43e0476fef9083fedd2"
+      }
+    ]
+  },
+  "captureMethod": {
+    "manifest": "area-dark.json",
+    "statePreparation": "Visual-capture manifest injection, then #measurements-view-records-tab clicked before capture",
+    "nativeMaximizeRoute": "window.polyPDF.controlWindow(toggleMaximize) -> BrowserWindow.maximize()",
+    "deviceMetricsOverride": "cleared before capture; no override set",
+    "browserDomainWindowState": "unavailable in this Electron; not claimed",
+    "screenshotMethod": "Page.captureScreenshot(fromSurface=true, captureBeyondViewport=false)",
+    "artifactSha256": "63acb3f256259c8f804c15a569f71b0c5ed5abbc0ff3928bf932072496569ae8"
+  },
+  "fixtureProvenance": {
+    "generatorPath": "assets-source/blog-image-validation/generate_fixtures.py",
+    "generatorSha256": "e2ed9ec9842563ab3e2c98e9c237577d22ec0215cf1ef3d9d5aeca72ec393c6d",
+    "sourceTiffSha256": "b893c65e11e43e99de6b242ba64b9c6153c60c13f30b09aa994c42522f782b76",
+    "sourceTiffPixels": {
+      "width": 14400,
+      "height": 9600
+    },
+    "sourceTiffUrl": "https://tile.loc.gov/storage-services/master/pnp/habshaer/ca/ca3400/ca3441/sheet/00002a.tif",
+    "generatedFixturePath": "assets-source/blog-image-validation/fixtures/hals-piedmont-way-sheet-2.pdf",
+    "generatedFixtureSha256": "7785c5564c1b07f5cbbeec0f4708a9fb58e084780da48cb94e6e4cb0ba0f7794",
+    "embeddedFooter": "Source: Library of Congress HALS CA-2, sheet 2. Public-domain measured drawing; TIFF converted to PDF for this demonstration."
+  },
+  "sourceAttribution": {
+    "historicBaseSheet": {
+      "repository": "Library of Congress",
+      "collection": "Historic American Landscapes Survey",
+      "surveyNumber": "HALS CA-2",
+      "itemTitle": "Piedmont Way & the Berkeley Property Tract, East of College Avenue between Dwight Way & U.C. Memorial Stadium, Berkeley, Alameda County, CA",
+      "itemUrl": "https://www.loc.gov/item/ca3441/",
+      "sheetTitle": "2. 2006 Existing Conditions Plan, Dwight Way to Haste Street",
+      "sheetResourceUrl": "https://www.loc.gov/resource/hhh.ca3441.sheet.00002a/",
+      "rightsAdvisory": "No known restrictions on images made by the U.S. Government; images copied from other sources may be restricted.",
+      "accessRestricted": false
+    },
+    "polyPdfOverlay": {
+      "classification": "synthetic demonstration annotations",
+      "description": "The turquoise curved area, hatch, two cutouts, 28,793.49 sq ft net area, 1'-6\" depth, and 43,190.23 cu ft volume are PolyPDF demo geometry only.",
+      "disclaimer": "They are not authoritative quantities, scope, or interpretation of the historic HALS drawing."
+    }
+  },
+  "cgWindowProof": {
+    "api": "CGWindowListCopyWindowInfo",
+    "ownerPid": 99089,
+    "owner": "PolyPDF",
+    "name": "PolyPDF",
+    "layer": 0,
+    "alpha": 1,
+    "boundsDip": {
+      "x": 0,
+      "y": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "matchesRendererAfterBounds": true,
+    "matchesRendererAvailableWorkArea": true,
+    "passes": true
+  },
+  "styleToolbarGate": {
+    "trackSelector": "[data-style-toolbar-track]",
+    "trackPresent": true,
+    "visible": true,
+    "hasOverflowClass": false,
+    "clientWidth": 1657,
+    "scrollWidth": 1657,
+    "scrollLeft": 0,
+    "fullTrackVisible": true,
+    "passes": true
+  },
+  "stateEvidence": {
+    "recordsTab": {
+      "present": true,
+      "active": true,
+      "ariaSelected": "true",
+      "visible": true
+    },
+    "recordsPanel": {
+      "present": true,
+      "visible": true
+    },
+    "visibleText": {
+      "netArea28793Point49": true,
+      "depthOneFootSixInches": true,
+      "volume43190Point23": true,
+      "reviewed": true
+    },
+    "pageGeometry": {
+      "turquoiseCurvedBoundaryVisible": true,
+      "twoWhiteCutoutsVisible": true,
+      "diagonalCrossHatchVisible": true
+    }
+  },
+  "facts": {
+    "version": "1.3.4",
+    "build": "16",
+    "appAppearance": "dark",
+    "datasetTheme": "dark",
+    "bodyDark": true,
+    "prefersDark": true,
+    "chromeBase": "#26282b",
+    "chromeElevated": "#313437",
+    "panelBase": "",
+    "devicePixelRatio": 2,
+    "innerWidth": 1710,
+    "innerHeight": 1073,
+    "styleToolbar": {
+      "exists": true,
+      "visible": true,
+      "hasOverflowClass": false,
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "sectionCount": 0
+    },
+    "documentName": "hals-piedmont-way-sheet-2.pdf",
+    "dialogId": ""
+  },
+  "windowProof": {
+    "before": {
+      "outerWidth": 1440,
+      "outerHeight": 960,
+      "innerWidth": 1440,
+      "innerHeight": 960,
+      "screenX": 215,
+      "screenY": 40,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "after": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "maximizeInvoked": true,
+    "fillsWorkArea": true,
+    "passes": true
+  },
+  "pixelProof": {
+    "width": 3420,
+    "height": 2146,
+    "darkHits": 3602576,
+    "lightHits": 2885382,
+    "darkRatio": 0.49085964367271084,
+    "lightRatio": 0.39314023642517293,
+    "topDarkHits": 585769,
+    "topLightHits": 16,
+    "topDarkRatio": 0.9515415854450943,
+    "expectedWidth": 3420,
+    "expectedHeight": 2146,
+    "passes": true
+  }
+}

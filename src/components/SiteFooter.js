@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import parrotIcon from '../assets/polypdf_icon.png';
-import { buyPath } from '../lib/attribution';
+import { buyPath, canonicalPagePath } from '../lib/attribution';
 import { DOWNLOADS } from '../lib/platform';
 import { landingPages } from '../lib/landingPages';
 
@@ -75,7 +75,7 @@ const SiteFooter = () => (
             <h2 id={`footer-${group.label.toLowerCase().replaceAll(/[^a-z]+/g, '-')}`}>{group.label}</h2>
             <ul>
               {group.links.map((link) => (
-                <li key={link.to}><Link to={link.to}>{link.label}</Link></li>
+                <li key={link.to}><Link to={canonicalPagePath(link.to)}>{link.label}</Link></li>
               ))}
             </ul>
           </section>

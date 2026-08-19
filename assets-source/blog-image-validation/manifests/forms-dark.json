@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "states": [
+    {
+      "id": "forms-palette-dark",
+      "fixturePath": "../fixtures/form-inspection-checklist.pdf",
+      "currentPage": 1,
+      "zoomMode": "fitPage",
+      "windowSize": { "width": 1440, "height": 960 },
+      "sidebarPanel": "forms",
+      "selectedTool": "select",
+      "markupTable": false,
+      "settleMs": 600000
+    }
+  ]
+}

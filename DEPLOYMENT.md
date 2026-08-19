@@ -5,7 +5,7 @@ This guide explains how to deploy the PolyPDF landing page and its direct-downlo
 ## Prerequisites
 
 1. A DigitalOcean droplet (or any Linux server)
-2. Node.js 20 and npm installed on the server
+2. Node.js 18 and npm installed on the server
 3. Nginx installed (for production deployment)
 4. systemd access for the license API service
 5. Git installed and configured
@@ -18,11 +18,9 @@ Add these secrets to your GitHub repository (Settings → Secrets → Actions):
 - `DROPLET_HOST`: Your server's IP address or domain
 - `DROPLET_USER`: SSH username (usually `root` or a sudo user)
 
-## Deployment Options
+## Deployment Architecture
 
-### Option 1: PM2 with Serve (Simple)
-
-Uses the `deploy.yml` workflow. This serves the React build using PM2 and the `serve` package.
+The `deploy.yml` workflow builds a commit-addressed release, atomically switches the `current` symlink, and lets Nginx serve that selected directory. A live smoke test covers every registered HTML route plus download, trust, checkout, and plugin-authoring artifacts. A post-activation failure restores the previous symlink target; a validation failure before activation leaves the healthy current release untouched.
 
 ```bash
 # On your server, create the directory:
@@ -34,11 +32,9 @@ cd /var/www/polypdf-site
 git clone https://github.com/mohammedbala/polypdf_site.git .
 ```
 
-### Option 2: Nginx (Recommended for Production)
+### Initial Nginx setup
 
-Uses the `deploy-nginx.yml` workflow. This builds the app and serves it with Nginx.
-
-1. **Setup Nginx:**
+1. **Set up Nginx:**
    ```bash
    # Create directories for versioned site releases and direct-download artifacts
    sudo mkdir -p /var/www/polypdf-site/releases
@@ -81,18 +77,25 @@ cd /var/www/polypdf-site
 git pull origin master
 
 # Install the exact locked dependency tree
-npm ci
+npm ci --include=dev
 
-# Build into a commit-addressed release and select it atomically
+# Build into a temporary commit-addressed candidate and select it atomically
 release_sha=$(git rev-parse HEAD)
-BUILD_PATH="releases/$release_sha" npm run build
-ln -sfn "releases/$release_sha" current.next
+release="releases/$release_sha"
+candidate="releases/$release_sha.next"
+if [ "$(readlink current || true)" = "$release" ]; then
+  echo "$release_sha is already active; leaving it intact"
+  exit 0
+fi
+rm -rf "$candidate"
+NODE_OPTIONS=--experimental-global-webcrypto BUILD_PATH="$candidate" npm run build
+test -s "$candidate/index.html"
+rm -rf "$release"
+mv "$candidate" "$release"
+ln -sfn "$release" current.next
 mv -Tf current.next current
 
-# For PM2 deployment:
-pm2 start serve --name "polypdf-site" -- -s current -l 3001
-
-# For Nginx deployment, configure the document root as:
+# Configure the Nginx document root as:
 # /var/www/polypdf-site/current
 ```
 
@@ -141,13 +144,8 @@ REACT_APP_ANALYTICS_ID=your-analytics-id
 
 ## Monitoring
 
-Check the app status:
+Check the Nginx-served site:
 ```bash
-# If using PM2
-pm2 status
-pm2 logs polypdf-site
-
-# If using Nginx
 sudo tail -f /var/log/nginx/polypdf-site.error.log
 ```
 

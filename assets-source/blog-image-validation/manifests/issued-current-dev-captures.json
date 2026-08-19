@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "topic": "prepare-issued-pdf-set",
+  "capturedOn": "2026-08-19",
+  "source": {
+    "snapshotPath": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "packageVersion": "1.3.4",
+    "build": "16",
+    "description": "An isolated build of the exact current development working tree at capture time. The user's shared development app and dist directory were not rebuilt or relaunched."
+  },
+  "fixture": {
+    "path": "../fixtures/issued-set.pdf",
+    "sha256": "1ef69be35c4bb04c6d3b225e3980a467f078431e141cd92da7f58963e997d35b",
+    "rights": "Owned fictional fixture generated for PolyPDF evidence; no customer data and not for construction or professional use.",
+    "pages": 5
+  },
+  "captureContract": {
+    "appearance": "dark",
+    "nativeMaximizedCssPixels": [1710, 1073],
+    "devicePixelRatio": 2,
+    "sourcePngPixels": [3420, 2146],
+    "deviceEmulation": false,
+    "styleToolbar": "Visible, no overflow class, and scrollWidth equals clientWidth in every approved capture.",
+    "proof": "Each source PNG has an adjacent .theme-proof.json with source identity, DOM theme, window geometry, style-toolbar, PNG dimension, and pixel-palette gates."
+  },
+  "captures": [
+    {
+      "state": "visible post-Apply result",
+      "sourcePng": "../captures/issued-final-dark.png",
+      "sourceSha256": "e36f6ac6ca968e5cfae144273db29043b4deb4abf0d6dde0899e9a9070025109",
+      "capturedAt": "2026-08-19T10:58:58.642Z",
+      "claim": "The fictional cover sheet visibly carries Bates identifier ISSUED-IFC-0101 after Apply.",
+      "webPng": "../../../src/assets/screenshots/shot-issued-final-currentdev-dark-web.png",
+      "webSha256": "bddbde726ae422a09ae4011a155d1256fa8e1569c6e993de025c94b1036a3071",
+      "webPixels": [1710, 1073],
+      "publicGuidePng": "../../../public/guides/prepare-issued-pdf-set.png"
+    },
+    {
+      "state": "populated Headers & Footers preview",
+      "sourcePng": "../captures/issued-headers-footers-dialog-dark.png",
+      "sourceSha256": "2e3e9aa1f6260bddf29f6a4b587f96ff37aca973f355ae6dd2d217807a185e4b",
+      "capturedAt": "2026-08-19T10:59:34.591Z",
+      "claim": "Six populated header/footer positions, tokens, margins, page range, and page preview are visible before Apply; the image does not claim recipient approval.",
+      "webPng": "../../../src/assets/screenshots/shot-issued-headers-currentdev-dark-web.png",
+      "webSha256": "9d2d594bbd4a19829217787f7bc597b54b95527a6705e4860b5468f12ced5bd4",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "state": "populated Bates Numbering preview",
+      "sourcePng": "../captures/issued-bates-dialog-dark.png",
+      "sourceSha256": "57d6c71f69a566007213b1f3820dad01e7fdc8354d67ea3a74e8dd799b82ff46",
+      "capturedAt": "2026-08-19T10:58:12.942Z",
+      "claim": "Prefix ISSUED-IFC-, start 101, four digits, and Footer Right placement visibly preview ISSUED-IFC-0101 for one document.",
+      "webPng": "../../../src/assets/screenshots/shot-issued-bates-currentdev-dark-web.png",
+      "webSha256": "ee123480c73f6ec802f1c1ac8a8626c6ea43c53652f50e0e386b85698857dbce",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "state": "completed Accessibility & Preflight assessment",
+      "sourcePng": "../captures/issued-preflight-dark.png",
+      "sourceSha256": "702911df03f4b1aadfaf1c838ce8162b810cc4ea4577826c7b70837a6bb28b9f",
+      "capturedAt": "2026-08-19T11:03:31.047Z",
+      "claim": "The current 10-check screen reports 0 failures, 2 warnings, 7 passes, and 1 informational result; this is screening evidence, not PDF/UA certification or release approval.",
+      "webPng": "../../../src/assets/screenshots/shot-issued-preflight-currentdev-dark-web.png",
+      "webSha256": "1a58957782fd77ad80160680443a21b2635d8f6a35054fcf75705a093fdbcec1",
+      "webPixels": [1710, 1073]
+    }
+  ],
+  "webTransformation": "Exact 50% full-frame derivative of the 3420x2146 native-maximized source, producing 1710x1073 pixels; metadata stripped and PNG compression level 9. No interface elements were added, removed, rearranged, cropped, or retouched."
+}

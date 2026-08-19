@@ -2,127 +2,127 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>PolyPDF Guides and Product Notes</title>
-    <link>https://www.polypdf.com/blog</link>
+    <link>https://www.polypdf.com/blog/</link>
     <atom:link href="https://www.polypdf.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Practical, evidence-backed guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Aug 2026 12:00:00 GMT</lastBuildDate>
     <item>
       <title>How to Calibrate a PDF Drawing Scale</title>
-      <link>https://www.polypdf.com/blog/calibrate-pdf-drawing-scale</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/calibrate-pdf-drawing-scale</guid>
+      <link>https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Set an accurate PDF drawing scale from a printed ratio or a known dimension, then prove it with a second reference before starting takeoff.</description>
       <category>Measure &amp; Takeoff</category>
-      <enclosure url="https://www.polypdf.com/guides/calibrate-pdf-drawing-scale.png" length="355210" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/calibrate-pdf-drawing-scale.png?v=20260819-currentdev" length="281090" type="image/png" />
     </item>
     <item>
       <title>Why PDF Measurements Are Wrong (and How to Fix Them)</title>
-      <link>https://www.polypdf.com/blog/why-pdf-measurements-are-wrong</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/why-pdf-measurements-are-wrong</guid>
+      <link>https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Diagnose bad PDF dimensions by checking page scale, units, endpoints, detail regions, and scan distortion in a deliberate order.</description>
       <category>Measure &amp; Takeoff</category>
-      <enclosure url="https://www.polypdf.com/guides/why-pdf-measurements-are-wrong.png" length="268336" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/why-pdf-measurements-are-wrong.png?v=20260819-currentdev" length="236620" type="image/png" />
     </item>
     <item>
       <title>How to Measure PDF Area with Cutouts and Depth</title>
-      <link>https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth</guid>
+      <link>https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Trace a net PDF area, subtract multiple interior openings, optionally convert it to volume with depth, and keep hatch styling separate from the math.</description>
       <category>Measure &amp; Takeoff</category>
-      <enclosure url="https://www.polypdf.com/guides/measure-pdf-area-cutouts-depth.png" length="399353" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/measure-pdf-area-cutouts-depth.png?v=20260819-currentdev" length="482736" type="image/png" />
     </item>
     <item>
       <title>PDF Takeoff Worked Example: Scale, Area, Length, and Count</title>
-      <link>https://www.polypdf.com/blog/pdf-takeoff-worked-example</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/pdf-takeoff-worked-example</guid>
+      <link>https://www.polypdf.com/blog/pdf-takeoff-worked-example/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/pdf-takeoff-worked-example/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Follow one small plan takeoff from calibration through area, wall lengths, diffuser count, worksheet review, and CSV or PDF export.</description>
       <category>Measure &amp; Takeoff</category>
-      <enclosure url="https://www.polypdf.com/guides/pdf-takeoff-worked-example.png" length="371350" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/pdf-takeoff-worked-example.png?v=20260819-currentdev" length="639422" type="image/png" />
     </item>
     <item>
       <title>How to Count Symbols in a PDF Drawing</title>
-      <link>https://www.polypdf.com/blog/count-pdf-symbols</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/count-pdf-symbols</guid>
+      <link>https://www.polypdf.com/blog/count-pdf-symbols/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/count-pdf-symbols/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Use PolyPDF Symbol Search to find repeated plan symbols, review every candidate, and commit the accepted matches as one linked Count series.</description>
       <category>Review &amp; Markup</category>
-      <enclosure url="https://www.polypdf.com/guides/count-pdf-symbols.png" length="299434" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/count-pdf-symbols.png?v=20260819-currentdev" length="117758" type="image/png" />
     </item>
     <item>
       <title>Use a PDF Markup Table for RFI and Punch-List Review</title>
-      <link>https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list</guid>
+      <link>https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Turn drawing markups into a filterable review register, with clear subjects, comments, statuses, and exports for an existing RFI or punch-list process.</description>
       <category>Review &amp; Markup</category>
-      <enclosure url="https://www.polypdf.com/guides/pdf-markup-table-rfi-punch-list.png" length="384586" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/pdf-markup-table-rfi-punch-list.png?v=20260819-currentdev" length="245028" type="image/png" />
     </item>
     <item>
       <title>How to Compare PDF Drawing Revisions</title>
-      <link>https://www.polypdf.com/blog/compare-pdf-drawing-revisions</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/compare-pdf-drawing-revisions</guid>
+      <link>https://www.polypdf.com/blog/compare-pdf-drawing-revisions/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/compare-pdf-drawing-revisions/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Compare a baseline PDF with a revised file, review the detected regions, and issue a separate comparison record without overwriting the source.</description>
       <category>Review &amp; Markup</category>
-      <enclosure url="https://www.polypdf.com/guides/compare-pdf-drawing-revisions.png" length="111988" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/compare-pdf-drawing-revisions.png?v=20260819-currentdev" length="201650" type="image/png" />
     </item>
     <item>
       <title>How to Create a Fillable PDF Form</title>
-      <link>https://www.polypdf.com/blog/create-fillable-pdf-form</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/create-fillable-pdf-form</guid>
+      <link>https://www.polypdf.com/blog/create-fillable-pdf-form/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/create-fillable-pdf-form/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Add standard AcroForm fields to a compatible PDF, set names and tab order, test the saved copy, and recognize signed, secured, and XFA limits.</description>
       <category>Forms</category>
-      <enclosure url="https://www.polypdf.com/guides/create-fillable-pdf-form.png" length="356924" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/create-fillable-pdf-form.png?v=20260819-currentdev" length="229238" type="image/png" />
     </item>
     <item>
       <title>How to OCR Scanned PDF Drawings</title>
-      <link>https://www.polypdf.com/blog/ocr-scanned-pdf-drawings</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/ocr-scanned-pdf-drawings</guid>
+      <link>https://www.polypdf.com/blog/ocr-scanned-pdf-drawings/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/ocr-scanned-pdf-drawings/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Add a best-effort searchable text layer to scanned PDF drawings, then test search results and verify every value that could affect field or estimating work.</description>
       <category>Search &amp; OCR</category>
-      <enclosure url="https://www.polypdf.com/guides/ocr-scanned-pdf-drawings.png" length="61693" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/ocr-scanned-pdf-drawings.png?v=20260819-currentdev" length="322258" type="image/png" />
     </item>
     <item>
       <title>Digital vs Visual PDF Signatures vs Professional Seals</title>
-      <link>https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal</guid>
+      <link>https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Understand what certificate-backed PDF signatures verify, what visual signature marks cannot prove, and why a professional seal graphic is drafting artwork until separately signed.</description>
       <category>Signatures &amp; Seals</category>
-      <enclosure url="https://www.polypdf.com/guides/digital-signature-vs-visual-signature-vs-seal.png" length="118035" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/digital-signature-vs-visual-signature-vs-seal.png?v=20260819-currentdev" length="296054" type="image/png" />
     </item>
     <item>
       <title>How to Redact and Sanitize a PDF: Limits to Know</title>
-      <link>https://www.polypdf.com/blog/redact-and-sanitize-pdf</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/redact-and-sanitize-pdf</guid>
+      <link>https://www.polypdf.com/blog/redact-and-sanitize-pdf/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/redact-and-sanitize-pdf/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Use PolyPDF redaction for supported searchable text, understand what sanitation can miss, and independently inspect the saved copy before release.</description>
       <category>Document Security</category>
-      <enclosure url="https://www.polypdf.com/guides/redact-and-sanitize-pdf.png" length="65747" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/redact-and-sanitize-pdf.png?v=20260819-currentdev" length="187826" type="image/png" />
     </item>
     <item>
       <title>How to Prepare an Issued PDF Set</title>
-      <link>https://www.polypdf.com/blog/prepare-issued-pdf-set</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/prepare-issued-pdf-set</guid>
+      <link>https://www.polypdf.com/blog/prepare-issued-pdf-set/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/prepare-issued-pdf-set/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
       <description>Build a repeatable issue workflow with page labels, visible Bates identifiers, headers and footers, watermarks, preflight, and final-viewer checks.</description>
       <category>Document Production</category>
-      <enclosure url="https://www.polypdf.com/guides/prepare-issued-pdf-set.png" length="228913" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/prepare-issued-pdf-set.png?v=20260819-currentdev" length="158813" type="image/png" />
     </item>
     <item>
       <title>Introducing PolyPDF Plugins</title>
-      <link>https://www.polypdf.com/blog/introducing-polypdf-plugins</link>
-      <guid isPermaLink="true">https://www.polypdf.com/blog/introducing-polypdf-plugins</guid>
+      <link>https://www.polypdf.com/blog/introducing-polypdf-plugins/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/introducing-polypdf-plugins/</guid>
       <pubDate>Fri, 07 Aug 2026 12:00:00 GMT</pubDate>
-      <description>Plugins extend PolyPDF with signed content packages that carry data and artwork instead of executable code. The first three insert AISC steel section profiles, professional seal graphics, and OpenStreetMap maps — as ordinary, editable annotations.</description>
+      <description>A truthful current-development preview of PolyPDF plugins: declarative packages, one-list management, sideload consent, host-owned generators, and the availability limits on the three first-party validation packages.</description>
       <category>Product</category>
-      <enclosure url="https://www.polypdf.com/og-image.png" length="286178" type="image/png" />
+      <enclosure url="https://www.polypdf.com/guides/introducing-polypdf-plugins.png?v=20260819-currentdev" length="230564" type="image/png" />
     </item>
   </channel>
 </rss>

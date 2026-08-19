@@ -1,4 +1,4 @@
-import formsBuilderImage from '../../assets/screenshots/shot-forms-builder-web.png';
+import formsBuilderImage from '../../assets/screenshots/forms-currentdev-dark-web.png';
 
 const createFillablePdfFormGuide = {
   slug: 'create-fillable-pdf-form',
@@ -18,18 +18,18 @@ const createFillablePdfFormGuide = {
     'A reliable fillable PDF is more than boxes over a page. Its fields need stable names, useful tooltips, sensible tab order, compatible behavior, and a saved-file test in the viewers recipients will use.',
   quickAnswer:
     'For an unsigned, unrestricted PDF, open Forms and place Text, Multiline Text, Checkbox, Radio, Combo Box, or List Box fields. Give each a unique name, tooltip, options, flags, and tab order, then test a saved copy in PolyPDF and another target viewer. PolyPDF authors AcroForms; signed or secured PDFs block authoring, and dynamic XFA is preserved but not filled as an ordinary AcroForm.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: formsBuilderImage,
-    alt: 'PolyPDF Forms panel with six field types beside a fillable invoice containing 42 fields',
+    alt: 'PolyPDF dark-mode Forms panel with six authorable field types beside a ten-field site inspection checklist',
     caption:
-      'Live-app capture from the PolyPDF 1.3.1 dev build on macOS using an owned, bundled sample invoice. It shows the six authorable field types and a 42-field AcroForm. The workflow was re-verified in PolyPDF 1.3.4 build 16.',
-    width: 1800,
-    height: 1125,
+      'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode on an owned fictional Site Inspection Checklist. The Forms palette shows all six authorable field types beside ten logical AcroForm fields: three text fields, two choice fields, one radio group, and four independent checkboxes. All names and values are fictional.',
+    width: 1710,
+    height: 1073,
     provenance:
-      'Real product UI, not a mockup. The source capture is unedited except for redrawn macOS window controls.'
+      'Real current-development product UI. The owned one-page form contains no customer data; the image is an uncropped 50 percent derivative of the native-maximized capture.'
   },
   keywords: [
     'create fillable PDF form',
@@ -208,11 +208,11 @@ const createFillablePdfFormGuide = {
   sources: [
     {
       label: 'PolyPDF 1.3.4 (build 16) Forms panel, form-authoring model, and in-app guidance',
-      note: 'Field types, naming rules, authoring gates, read-only behavior, and XFA disclosures re-verified August 18, 2026.'
+      note: 'Field types, naming rules, authoring gates, read-only behavior, and XFA disclosures re-verified August 19, 2026.'
     },
     {
-      label: 'Owned PolyPDF sample invoice and live-app capture evidence',
-      note: 'The screenshot shows 42 standard AcroForm fields in the bundled sample.'
+      label: 'Owned PolyPDF Site Inspection Checklist and current-development live-app capture',
+      note: 'The screenshot shows six authorable field types and ten logical AcroForm fields in the fictional one-page test form.'
     }
   ],
   cta: {

@@ -142,7 +142,7 @@ const Support = () => {
               to improve and what you do today.
             </p>
             <div className="contact-info">
-              <Link to="/feature-requests" className="contact-link">
+              <Link to="/feature-requests/" className="contact-link">
                 <FaLifeRing /> Open Feature Requests
               </Link>
             </div>

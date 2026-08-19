@@ -66,6 +66,13 @@ export const checkoutAttribution = (search = window.location.search) => {
   };
 };
 
+export const canonicalPagePath = (value) => {
+  if (typeof value !== 'string' || value === '/' || !value.startsWith('/')) return value;
+  const [, pathname = value, suffix = ''] = value.match(/^([^?#]*)(.*)$/) || [];
+  if (!pathname || pathname.endsWith('/') || /\.[^/]+$/.test(pathname)) return value;
+  return `${pathname}/${suffix}`;
+};
+
 export const buyPath = (source) => (
-  `/buy?source=${encodeURIComponent(source)}`
+  canonicalPagePath(`/buy?source=${encodeURIComponent(source)}`)
 );

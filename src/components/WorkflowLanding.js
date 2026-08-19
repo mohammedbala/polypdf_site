@@ -1,38 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaArrowRight, FaCheck, FaInfinity, FaPlayCircle, FaVolumeUp } from 'react-icons/fa';
+import { FaArrowRight, FaCheck, FaInfinity } from 'react-icons/fa';
 import { HiOutlineCloudDownload } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
-import { buyPath, captureAttribution } from '../lib/attribution';
+import { buyPath, canonicalPagePath, captureAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
 import { commercialOffer, founderRightsText } from '../lib/commercialOffer';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
-import { captionTrackUrl } from '../lib/workflowCaptions';
 import './WorkflowLanding.css';
-
-// Exported so scripts/prerender.js can describe the same videos as VideoObject structured data.
-export const mediaCopy = {
-  'visual-search': {
-    title: 'Watch Symbol Search become a reviewed count series.',
-    description: 'See the capture, candidate review, and committed count workflow in the current PolyPDF interface.'
-  },
-  'takeoff-export': {
-    title: 'Watch a calibrated measurement move into the takeoff worksheet.',
-    description: 'See scale calibration, quantity placement, worksheet organization, and export in the current PolyPDF interface.'
-  },
-  'revision-comparison': {
-    title: 'Watch drawing comparison turn into a marked review.',
-    description: 'See revision differences inspected and carried into a cloud-and-callout review workflow.'
-  }
-};
 
 export const CURRENT_INTERFACE_LABEL = 'Live PolyPDF desktop-app capture';
 
 const WorkflowLanding = ({ page }) => {
-  const [mediaMode, setMediaMode] = useState('short');
-  const media = mediaCopy[page.mediaSlug];
   const offer = useCommercialOffer();
 
   useEffect(() => {
@@ -47,9 +28,6 @@ const WorkflowLanding = ({ page }) => {
     });
   };
 
-  const videoSource = `/videos/${page.mediaSlug}-${mediaMode}.mp4`;
-  const captionsSource = captionTrackUrl(page.mediaSlug, mediaMode);
-
   return (
     <div className="workflow-landing">
       <a className="workflow-skip-link" href="#workflow-main">Skip to content</a>
@@ -62,8 +40,7 @@ const WorkflowLanding = ({ page }) => {
           </Link>
           <div className="workflow-nav-links">
             <a href="#how-it-works">Workflow</a>
-            <a href="#watch">Watch</a>
-            <Link to="/support">Support</Link>
+            <Link to="/support/">Support</Link>
           </div>
           <Link
             className="workflow-nav-buy"
@@ -159,57 +136,10 @@ const WorkflowLanding = ({ page }) => {
           </div>
         </section>
 
-        <section className="workflow-media" id="watch">
-          <div className="container workflow-media-grid">
-            <div className="workflow-media-copy">
-              <p className="workflow-section-index">03 / WATCH</p>
-              <h2>{media.title}</h2>
-              <p>{media.description}</p>
-              <div className="workflow-media-toggle" aria-label="Video version">
-                <button
-                  type="button"
-                  className={mediaMode === 'short' ? 'active' : ''}
-                  aria-pressed={mediaMode === 'short'}
-                  onClick={() => setMediaMode('short')}
-                >
-                  <FaPlayCircle /> 15-second overview
-                </button>
-                <button
-                  type="button"
-                  className={mediaMode === 'narrated' ? 'active' : ''}
-                  aria-pressed={mediaMode === 'narrated'}
-                  onClick={() => setMediaMode('narrated')}
-                >
-                  <FaVolumeUp /> Narrated walkthrough
-                </button>
-              </div>
-              <p className="workflow-media-note">Both versions use current PolyPDF product captures. Captions are available in the player.</p>
-            </div>
-            <div className="workflow-video-frame">
-              <video
-                key={videoSource}
-                controls
-                playsInline
-                preload="metadata"
-                poster={page.image}
-                onPlay={() => trackEvent('workflow_video_play', {
-                  source: page.source,
-                  workflow: page.mediaSlug,
-                  version: mediaMode
-                })}
-              >
-                <source src={videoSource} type="video/mp4" />
-                <track default kind="captions" srcLang="en" label="English" src={captionsSource} />
-                Your browser does not support embedded video. Download PolyPDF free to try this workflow directly.
-              </video>
-            </div>
-          </div>
-        </section>
-
         <section className="workflow-outcomes">
           <div className="container workflow-outcomes-grid">
             <div>
-              <p className="workflow-section-index">04 / FIT</p>
+              <p className="workflow-section-index">03 / FIT</p>
               <h2>{page.outcomeTitle}</h2>
             </div>
             <ul>
@@ -258,7 +188,7 @@ const WorkflowLanding = ({ page }) => {
         <section className="workflow-faq">
           <div className="container workflow-faq-grid">
             <div>
-              <p className="workflow-section-index">05 / FAQ</p>
+              <p className="workflow-section-index">04 / FAQ</p>
               <h2>Questions before you test it.</h2>
             </div>
             <div className="workflow-faq-list">
@@ -277,7 +207,7 @@ const WorkflowLanding = ({ page }) => {
             <p className="workflow-section-index">RELATED GUIDES &amp; WORKFLOWS</p>
             <div className="workflow-related-links">
               {page.related.map(([path, label]) => (
-                <Link key={path} to={path}>{label} <FaArrowRight /></Link>
+                <Link key={path} to={canonicalPagePath(path)}>{label} <FaArrowRight /></Link>
               ))}
             </div>
           </div>

@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
 import fs from 'node:fs';
+import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { REQUIRED_CSP_SOURCES } from './reconcile-nginx-config.mjs';
 
 const projectRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 export const routeMetadata = JSON.parse(
@@ -13,9 +15,14 @@ export const htmlRoutes = Object.keys(routeMetadata);
 
 export const articleRoutes = htmlRoutes.filter((route) => routeMetadata[route].type === 'article');
 
-export const shareImageRoutes = [...new Set(articleRoutes
+export const guideImageRoutes = [...new Set(articleRoutes
   .map((route) => routeMetadata[route].image)
   .filter((image) => typeof image === 'string' && image.startsWith('/guides/')))];
+
+export const shareImageRoutes = [
+  ...guideImageRoutes,
+  '/og-image.png?v=20260819-currentdev'
+];
 
 export const discoveryRoutes = ['/robots.txt', '/sitemap.xml', '/llms.txt', '/feed.xml'];
 
@@ -24,27 +31,12 @@ export const downloadRoutes = [
   '/downloads/windows/PolyPDFSetup.exe'
 ];
 
-export const workflowMediaRoutes = [
-  '/videos/visual-search-short.mp4',
-  '/videos/visual-search-narrated.mp4',
-  '/videos/takeoff-export-short.mp4',
-  '/videos/takeoff-export-narrated.mp4',
-  '/videos/revision-comparison-short.mp4',
-  '/videos/revision-comparison-narrated.mp4',
-  '/videos/visual-search-short.vtt',
-  '/videos/visual-search-narrated.vtt',
-  '/videos/takeoff-export-short.vtt',
-  '/videos/takeoff-export-narrated.vtt',
-  '/videos/revision-comparison-short.vtt',
-  '/videos/revision-comparison-narrated.vtt'
-];
-
 export const canonicalFooterRoutes = [
-  '/pdf-takeoff-software',
-  '/measure-pdf-on-mac',
-  '/construction-pdf-markup',
-  '/visual-search-pdf-count',
-  '/compare-pdf-drawings'
+  '/pdf-takeoff-software/',
+  '/measure-pdf-on-mac/',
+  '/construction-pdf-markup/',
+  '/visual-search-pdf-count/',
+  '/compare-pdf-drawings/'
 ];
 
 export const expectedOffer = Object.freeze({
@@ -68,10 +60,22 @@ export async function runPostDeploySmoke({
   const results = [];
 
   for (const route of htmlRoutes) {
-    const response = await fetchImpl(`${base}${route}`, { headers: smokeHeaders });
+    const canonicalURL = `${base}${route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`}`;
+    const response = await fetchImpl(canonicalURL, { headers: smokeHeaders });
     const body = await response.text();
     assertResponse(response.ok, `${route} returned HTTP ${response.status}`);
     assertResponse(/text\/html/i.test(response.headers.get('content-type') || ''), `${route} did not return HTML`);
+    if (route === '/') {
+      const csp = response.headers.get('content-security-policy') || '';
+      for (const [directive, sources] of Object.entries(REQUIRED_CSP_SOURCES)) {
+        const directiveText = csp.split(';').map((part) => part.trim())
+          .find((part) => part === directive || part.startsWith(`${directive} `)) || '';
+        const tokens = directiveText.split(/\s+/);
+        for (const source of sources) {
+          assertResponse(tokens.includes(source), `live CSP ${directive} is missing ${source}`);
+        }
+      }
+    }
     // Since the static-rendering build step, every route must ship prerendered body content —
     // an empty #root means crawlers (and no-JS readers) are getting a blank page again.
     assertResponse(body.includes('<div id="root">'), `${route} did not return the PolyPDF app shell`);
@@ -85,8 +89,10 @@ export async function runPostDeploySmoke({
     );
     const escapedTitle = metadata.title.replaceAll('&', '&amp;');
     const escapedDescription = metadata.description.replaceAll('&', '&amp;');
-    const canonicalURL = `${base}${route === '/' ? '/' : route}`;
-    const imageURL = new URL(metadata.image || '/og-image.png', 'https://www.polypdf.com/').href;
+    if (response.url) {
+      assertResponse(response.url === canonicalURL, `${route} redirected away from its canonical URL`);
+    }
+    const imageURL = new URL(metadata.image || '/og-image.png?v=20260819-currentdev', 'https://www.polypdf.com/').href;
     const imageAlt = (metadata.imageAlt
       || 'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription')
       .replaceAll('&', '&amp;')
@@ -147,6 +153,21 @@ export async function runPostDeploySmoke({
     assertResponse(response.ok, `${route} returned HTTP ${response.status}`);
     assertResponse(/image\/(png|webp|jpeg)/i.test(response.headers.get('content-type') || ''), `${route} did not return an image`);
     assertResponse(image.byteLength > 0, `${route} returned an empty image`);
+    const cacheControl = response.headers.get('cache-control') || '';
+    assertResponse(
+      /max-age=0/i.test(cacheControl)
+        && /must-revalidate/i.test(cacheControl)
+        && !/immutable/i.test(cacheControl),
+      `${route} is not served with the revalidatable stable-image cache policy`
+    );
+    const publicPath = path.join(
+      projectRoot,
+      'public',
+      new URL(route, 'https://www.polypdf.com/').pathname.slice(1)
+    );
+    const expectedHash = createHash('sha256').update(fs.readFileSync(publicPath)).digest('hex');
+    const liveHash = createHash('sha256').update(Buffer.from(image)).digest('hex');
+    assertResponse(liveHash === expectedHash, `${route} did not match the release screenshot bytes`);
     results.push({ route, status: response.status });
   }
 
@@ -163,12 +184,12 @@ export async function runPostDeploySmoke({
     '/robots.txt lost its crawler allowlist or sitemap declaration'
   );
   for (const route of articleRoutes) {
-    const url = `https://www.polypdf.com${route}`;
+    const url = `https://www.polypdf.com${route.replace(/\/+$/, '')}/`;
     assertResponse(discovery['/sitemap.xml'].includes(`<loc>${url}</loc>`), `/sitemap.xml is missing ${route}`);
     assertResponse(discovery['/llms.txt'].includes(`(${url})`), `/llms.txt is missing ${route}`);
     assertResponse(discovery['/feed.xml'].includes(`<link>${url}</link>`), `/feed.xml is missing ${route}`);
   }
-  for (const route of shareImageRoutes) {
+  for (const route of guideImageRoutes) {
     assertResponse(
       discovery['/sitemap.xml'].includes(`<image:loc>https://www.polypdf.com${route}</image:loc>`),
       `/sitemap.xml is missing the guide image ${route}`
@@ -242,34 +263,6 @@ export async function runPostDeploySmoke({
       `${route} did not prove a non-empty downloadable artifact`
     );
     await response.arrayBuffer();
-    results.push({ route, status: response.status });
-  }
-
-  for (const route of workflowMediaRoutes) {
-    const isVideo = route.endsWith('.mp4');
-    const response = await fetchImpl(`${base}${route}`, {
-      headers: isVideo ? { ...smokeHeaders, Range: 'bytes=0-0' } : smokeHeaders
-    });
-    assertResponse([200, 206].includes(response.status), `${route} returned HTTP ${response.status}`);
-    const contentType = response.headers.get('content-type') || '';
-    assertResponse(
-      isVideo
-        ? /video\/mp4/i.test(contentType)
-        : /(text\/vtt|text\/plain|application\/octet-stream)/i.test(contentType),
-      `${route} returned an unsupported content type`
-    );
-    if (isVideo) {
-      const contentRange = response.headers.get('content-range') || '';
-      const contentLength = Number(response.headers.get('content-length') || 0);
-      assertResponse(
-        response.status === 206 ? /^bytes 0-0\/\d+$/.test(contentRange) : contentLength > 0,
-        `${route} did not prove a non-empty workflow video`
-      );
-      await response.arrayBuffer();
-    } else {
-      const captions = await response.text();
-      assertResponse(captions.startsWith('WEBVTT'), `${route} did not return valid WebVTT captions`);
-    }
     results.push({ route, status: response.status });
   }
 

@@ -1,6 +1,6 @@
 import routeMetadata from './route-metadata.json';
-import { blogPostPath } from './blogPosts';
-import { guidePosts } from '../content/guides';
+import { blogPosts, blogPostPath } from './blogPosts';
+import { landingPageRoutes } from './landingPages';
 
 const { buildStructuredData } = require('../../scripts/structured-data');
 
@@ -8,6 +8,14 @@ test('does not emit retired FAQPage structured data on any route', () => {
   Object.keys(routeMetadata).forEach((route) => {
     const types = buildStructuredData(route).map((entry) => entry['@type']);
     expect(types).not.toContain('FAQPage');
+  });
+});
+
+test('does not advertise removed workflow videos on landing routes', () => {
+  landingPageRoutes.forEach(({ path }) => {
+    const blocks = buildStructuredData(path);
+    expect(blocks.map((entry) => entry['@type'])).toEqual(['BreadcrumbList', 'WebPage']);
+    expect(JSON.stringify(blocks)).not.toMatch(/\/videos\/|\.mp4|\.vtt/);
   });
 });
 
@@ -26,8 +34,8 @@ test('static application schema advertises Free but not a closable paid offer', 
   expect(JSON.stringify(application.featureList)).toContain('documented limits');
 });
 
-test('guide BlogPosting schema uses its evidence image and reviewed dates', () => {
-  guidePosts.forEach((entry) => {
+test('BlogPosting schema uses each post evidence image and reviewed dates', () => {
+  blogPosts.forEach((entry) => {
     const route = blogPostPath(entry.slug);
     const blocks = buildStructuredData(route);
     const article = blocks.find((block) => block['@type'] === 'BlogPosting');
@@ -37,6 +45,8 @@ test('guide BlogPosting schema uses its evidence image and reviewed dates', () =
     expect(article.datePublished).toBe(entry.date);
     expect(article.dateModified).toBe(entry.dateModified);
     expect(article.author.url).toBe('https://www.polypdf.com/');
+    expect(article.url).toBe(`https://www.polypdf.com${route}/`);
+    expect(article.mainEntityOfPage).toBe(`https://www.polypdf.com${route}/`);
     expect(article.publisher).toMatchObject({
       '@type': 'Organization',
       '@id': 'https://www.polypdf.com/#organization',
@@ -45,7 +55,7 @@ test('guide BlogPosting schema uses its evidence image and reviewed dates', () =
     });
     expect(article.image).toMatchObject({
       '@type': 'ImageObject',
-      url: `https://www.polypdf.com/guides/${entry.slug}.png`,
+      url: `https://www.polypdf.com/guides/${entry.slug}.png?v=20260819-currentdev`,
       width: entry.heroImage.width,
       height: entry.heroImage.height,
       caption: entry.heroImage.caption

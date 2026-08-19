@@ -1,0 +1,51 @@
+{
+  "pdf": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/sanitize-output/sanitize-working.pdf",
+  "sha256": "81a4ece673bd548001494d7a8ec2d702daf79060f13e5ed117916f779fcb1095",
+  "byteLength": 8871,
+  "pageCount": 1,
+  "metadata": {
+    "/Author": "PolyPDF Evidence Lab",
+    "/CreationDate": "D:20260819060707-04'00'",
+    "/Creator": "anonymous",
+    "/Keywords": "CASE-ORCHID-742 synthetic metadata",
+    "/ModDate": "D:20260819060707-04'00'",
+    "/Producer": "ReportLab PDF Library - (opensource)",
+    "/Subject": "Controlled security-workflow screenshot fixture",
+    "/Title": "Synthetic Redaction Lab",
+    "/Trapped": "/False"
+  },
+  "metadataEntryCount": 9,
+  "catalogMetadataStream": false,
+  "pageMetadataStreams": 0,
+  "nameTrees": {
+    "javaScript": true,
+    "embeddedFiles": false
+  },
+  "catalogAdditionalActions": false,
+  "catalogOpenActionJavaScript": false,
+  "pageAdditionalActions": 0,
+  "catalogAssociatedFiles": 0,
+  "pageAssociatedFiles": 0,
+  "directFileAttachmentAnnotations": {
+    "count": 1,
+    "items": [
+      {
+        "page": 1,
+        "filename": "synthetic-note.txt",
+        "contents": "Synthetic attachment",
+        "payloadBytes": 58,
+        "payloadSha256": "c9d8ce121b3ea28459aa54f2fe5562a8981f6a499181a7b29bb341f2e5c9da33"
+      }
+    ]
+  },
+  "acroFormPresent": false,
+  "pageThumbnails": 0,
+  "xobjects": {
+    "topLevelImages": 1,
+    "nestedImages": 1,
+    "topLevelForms": 1,
+    "nestedForms": 0
+  },
+  "targetTextCount": 2,
+  "extractedTextLength": 533
+}

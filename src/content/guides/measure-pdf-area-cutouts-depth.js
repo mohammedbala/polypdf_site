@@ -1,7 +1,7 @@
-import screenshot from '../../assets/screenshots/shot-area-cutouts-depth-1.3.4-web.png';
+import screenshot from '../../assets/screenshots/area-cutouts-depth-currentdev-dark-web.png';
 
 const screenshotCaption =
-  'Live-app feature proof from PolyPDF 1.3.4 (build 16) on macOS. A generated test fixture shows a selected curved area with two interior cutouts, crosshatch, and a depth of 5′-3″; it is not a customer drawing.';
+  'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode over the public-domain Library of Congress HALS CA-2 sheet “2. 2006 Existing Conditions Plan, Dwight Way to Haste Street.” The turquoise curved boundary, two cutouts, crosshatch, 28,793.49 sq ft net area, 1′-6″ depth, and 43,190.23 cu ft volume are synthetic PolyPDF demonstration annotations—not authoritative quantities, scope, or interpretation of the historic drawing. Courtesy: PGAdesign; Historic American Landscapes Survey, National Park Service; Prints and Photographs Division, Library of Congress; HALS CA-2, sheet 2 of 5. LOC rights advisory: “No known restrictions on images made by the U.S. Government; images copied from other sources may be restricted.”';
 
 const post = {
   slug: 'measure-pdf-area-cutouts-depth',
@@ -21,15 +21,17 @@ const post = {
     'Net-area takeoff is more useful when the annotation records the outer boundary, each excluded opening, and any depth used for volume. PolyPDF 1.3.4 keeps those inputs on one selectable measurement.',
   quickAnswer:
     'To measure net PDF area in PolyPDF, calibrate the current page, choose Area, trace and close the outer boundary, then select the measurement. In the Area Cutouts controls, choose Add Cutout and trace each opening fully inside the boundary. PolyPDF subtracts those cutout polygons from the outer area. If you enter a positive real-world Depth, the result changes from area to volume. Hatch pattern and hatch scale change appearance only, not the measured quantity.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
-    alt: 'PolyPDF 1.3.4 with a selected curved area, two rectangular cutouts, crosshatch, and a 5 foot 3 inch depth',
+    alt: 'PolyPDF dark mode showing a turquoise curved and crosshatched demonstration area with two cutouts, 28,793.49 square feet net, and 1 foot 6 inch depth',
     caption: screenshotCaption,
-    width: 1800,
-    height: 1200
+    width: 1710,
+    height: 1073,
+    provenance:
+      'Real current-development product UI over Library of Congress item ca3441, HALS CA-2 sheet 2. The historic sheet is public-domain source material; every turquoise geometry and displayed takeoff value was added synthetically for this feature demonstration. The image is an uncropped 50 percent derivative of the native-maximized capture.'
   },
   keywords: [
     'measure PDF area',
@@ -67,8 +69,8 @@ const post = {
           src: screenshot,
           alt: 'Live PolyPDF feature proof with an outer area boundary, two empty cutouts, and visible measurement controls',
           caption: screenshotCaption,
-          width: 1800,
-          height: 1200
+          width: 1710,
+          height: 1073
         }
       ]
     },
@@ -133,25 +135,25 @@ const post = {
         {
           kind: 'p',
           text:
-            'Consider a calibrated rectangular slab measuring 40 feet by 30 feet. It contains a 5-by-4-foot shaft opening and a 10-by-3-foot stair opening. Trace the 40-by-30 outer boundary, then add each opening as its own cutout.'
+            'The live demonstration uses one synthetic curved outer boundary and two synthetic closed cutouts over the historic HALS sheet. The Records panel displays a net result of 28,793.49 sq ft. Those annotations were placed to exercise PolyPDF’s geometry and display, not to measure paving shown by the historic survey.'
         },
         {
           kind: 'table',
           caption: 'Example quantity breakdown',
           headers: ['Geometry', 'Calculation', 'Quantity'],
           rows: [
-            ['Outer slab', '40 ft × 30 ft', '1,200 sq ft'],
-            ['Shaft cutout', '5 ft × 4 ft', '−20 sq ft'],
-            ['Stair cutout', '10 ft × 3 ft', '−30 sq ft'],
-            ['Net slab', '1,200 − 20 − 30', '1,150 sq ft']
+            ['Outer boundary', 'Synthetic curved path', 'Included in the net-area calculation'],
+            ['Cutout 1', 'Synthetic closed polygon', 'Subtracted from the outer area'],
+            ['Cutout 2', 'Synthetic closed polygon', 'Subtracted from the outer area'],
+            ['Displayed net area', 'Outer curved area − both cutouts', '28,793.49 sq ft']
           ]
         },
         {
           kind: 'formula',
           label: 'Example net area',
-          formula: '1,200 sq ft − 20 sq ft − 30 sq ft = 1,150 sq ft',
+          formula: 'synthetic curved outer area − cutout 1 − cutout 2 = 28,793.49 sq ft net',
           explanation:
-            'The example is arithmetic for a hypothetical calibrated drawing. Your vertices and project boundary rules determine your result.'
+            'This is the app’s displayed result for the demonstration geometry. It is not a quantity derived from, or asserted about, the historic Piedmont Way survey.'
         },
         {
           kind: 'p',
@@ -167,14 +169,14 @@ const post = {
         {
           kind: 'p',
           text:
-            'A selected area measurement exposes a Depth field. Enter a positive real-world length in the current measurement format—for example, 4 inches, 0.1 metres, or 5 feet 3 inches. PolyPDF multiplies the net area by that depth and changes the worksheet quantity kind from Area to Volume. Clear the field to return to an area quantity.'
+            'A selected area measurement exposes a Depth field. Enter a positive real-world length in the current measurement format—for example, 4 inches, 0.1 metres, or 1 foot 6 inches. PolyPDF multiplies the net area by that depth and changes the worksheet quantity kind from Area to Volume. Clear the field to return to an area quantity.'
         },
         {
           kind: 'formula',
           label: 'Volume from net area',
           formula: 'volume = (outer area − cutout areas) × depth',
           explanation:
-            'For the 1,150 sq ft example, a uniform 4-inch depth is one-third of a foot, producing about 383.333 cu ft.'
+            'For the live demonstration, a 1′-6″ depth produces the displayed 43,190.23 cu ft. PolyPDF calculates from the full-precision geometry; multiplying the rounded 28,793.49 sq ft display can differ by one hundredth.'
         },
         {
           kind: 'p',
@@ -195,7 +197,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'The Hatch controls set the pattern, colour, opacity, and scale used to draw the annotation. Increasing hatch scale changes the spacing or size of the pattern; it does not change the outer geometry, the cutouts, the net area, or the depth. The live 1.3.4 proof above shows a crosshatch at 125 percent so the two empty cutouts remain visually obvious.'
+            'The Hatch controls set the pattern, colour, opacity, and scale used to draw the annotation. Increasing hatch scale changes the spacing or size of the pattern; it does not change the outer geometry, the cutouts, the net area, or the depth. The live current-development proof above shows a diagonal crosshatch at 110 percent so the two empty cutouts remain visually obvious.'
         },
         {
           kind: 'table',
@@ -233,7 +235,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'The screenshot on this page is a live feature proof made from a generated test fixture. It demonstrates the controls and rendered geometry; it is not evidence of a customer project, field condition, or professional quantity conclusion.'
+            'The screenshot is a live product feature proof over public-domain historic source material. Its turquoise area, both cutouts, hatch, depth, net-area value, and volume value are synthetic demonstration additions; none is an authoritative quantity, scope decision, field condition, or interpretation of the HALS drawing.'
         }
       ]
     }
@@ -273,11 +275,26 @@ const post = {
   sources: [
     {
       label: 'PolyPDF: Measure PDF on Mac',
-      url: 'https://www.polypdf.com/measure-pdf-on-mac'
+      url: 'https://www.polypdf.com/measure-pdf-on-mac/'
     },
     {
       label: 'PolyPDF: PDF takeoff software',
-      url: 'https://www.polypdf.com/pdf-takeoff-software'
+      url: 'https://www.polypdf.com/pdf-takeoff-software/'
+    },
+    {
+      label: 'Library of Congress item ca3441: Piedmont Way & the Berkeley Property Tract, East of College Avenue between Dwight Way & U.C. Memorial Stadium, Berkeley, Alameda County, CA',
+      url: 'https://www.loc.gov/item/ca3441/',
+      note: 'Historic American Landscapes Survey HALS CA-2. LOC marks accessRestricted false and gives this rights advisory: “No known restrictions on images made by the U.S. Government; images copied from other sources may be restricted.”'
+    },
+    {
+      label: 'Library of Congress HALS CA-2 sheet 2: “2. 2006 Existing Conditions Plan, Dwight Way to Haste Street”',
+      url: 'https://www.loc.gov/resource/hhh.ca3441.sheet.00002a/',
+      note: 'PGAdesign, measured drawing, Historic American Landscapes Survey, National Park Service, U.S. Department of the Interior, 2006; Prints and Photographs Division, Library of Congress; HALS CA-2, sheet 2 of 5. Base sheet used beneath the synthetic turquoise PolyPDF demonstration geometry.'
+    },
+    {
+      label: 'Library of Congress: HABS, HAER, and HALS rights and restrictions',
+      url: 'https://guides.loc.gov/p-and-p-rights-and-restrictions/rights#114_habs.html',
+      note: 'LOC guidance for publication rights and the requested acknowledgment format for this measured drawing collection.'
     }
   ],
   cta: {

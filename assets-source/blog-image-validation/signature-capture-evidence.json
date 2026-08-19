@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-08-19T11:36:33Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "lifecycleReport": "signature-lifecycle-current2-report.json",
+  "lifecyclePassed": true,
+  "savedPdf": "signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+  "cryptographicChecks": {
+    "signer": "PolyPDF Automation Signer",
+    "identityKind": "isolated-profile self-signed PKCS#12 identity",
+    "byteRangeValid": true,
+    "cmsDigestStatus": "valid",
+    "cmsSignatureStatus": "valid",
+    "trustStatus": "trusted because the self-signed identity was explicitly configured in the isolated profile",
+    "certificateValidityStatus": "valid",
+    "timestampStatus": "missing",
+    "timestampValidationStatus": "missing",
+    "ltvStatus": "missing",
+    "revocationStatus": "missing",
+    "revisionChangeStatus": "incrementalChanges",
+    "modifiedAfterSigning": true,
+    "coversDocument": false,
+    "docMdpPermissionLevel": 3,
+    "appendOnlySaveEligibility": "allowed"
+  },
+  "screenshots": {
+    "validCertificate": {
+      "path": "captures/signature-valid-certificate-dark.png",
+      "claim": "Shows the freshly reopened saved PDF reporting Valid With Changes for the configured self-signed identity, plus current level-3 permission guidance."
+    },
+    "technicalCertificate": {
+      "path": "captures/signature-certificate-technical-dark.png",
+      "claim": "Shows the current expanded validation details: valid byte range, CMS digest/signature, configured trust and certificate validity, along with missing timestamp, timestamp trust, LTV, and revocation evidence and the incremental-change state."
+    },
+    "visualChooser": {
+      "path": "captures/signature-visual-chooser-dark.png",
+      "claim": "Shows the actual current Apply Signature dialog and saved visual-signature choice. It is appearance selection, not cryptographic signing."
+    },
+    "visualStyles": {
+      "path": "captures/signature-visual-styles-dark.png",
+      "claim": "Shows the current built-in visual-signature style choices. These are visual appearances, not certificate identities."
+    },
+    "sealBuilder": {
+      "path": "captures/signature-seal-builder-warning-dark.png",
+      "claim": "Shows the current Professional Seal Maker plugin with deliberately fictional TEST NOT VALID data and its visible warning that the output is graphic artwork, not a cryptographic signature or verified professional credential."
+    },
+    "sealInserted": {
+      "path": "captures/signature-seal-inserted-dark.png",
+      "claim": "Shows that exact fictional TEST NOT VALID seal inserted and selected on a synthetic test sheet. It proves visual placement only."
+    }
+  },
+  "claimBoundary": [
+    "Trusted means matched to a self-signed identity explicitly configured in this isolated test profile; it is not evidence of public certificate-authority trust.",
+    "The signed PDF reports Valid With Changes, not an unchanged whole-document signature. The byte ranges are intact and the later update is an allowed level-3 incremental change.",
+    "No timestamp, timestamp-trust, LTV, or revocation evidence is present; do not imply long-term validation or revocation checking.",
+    "Visual signatures and professional-seal graphics are appearance tools, not cryptographic signatures.",
+    "The seal uses fictional TEST NOT VALID data and does not verify a license, status, discipline, jurisdiction, or board compliance."
+  ],
+  "privateKeyHandling": "All generated PKCS#12 test-key files were moved out of the site asset tree to /tmp/polypdf-blog-current-dev-JwqN0q/signature-test-keys/."
+}

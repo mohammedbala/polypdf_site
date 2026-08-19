@@ -11,3 +11,11 @@ test('keeps workflow pages on the shared site palette and an honest capture labe
   expect(stylesheet).not.toContain('#d8f85d');
   expect(stylesheet).not.toMatch(/\.workflow-steps\s*\{[^}]*background:\s*var\(--workflow-ink\)/s);
 });
+
+test('does not expose the retired landing-page video experience', () => {
+  const component = fs.readFileSync(path.join(process.cwd(), 'src/components/WorkflowLanding.js'), 'utf8');
+  const stylesheet = fs.readFileSync(path.join(process.cwd(), 'src/components/WorkflowLanding.css'), 'utf8');
+
+  expect(component).not.toMatch(/<video|<track|\/videos\/|captionTrackUrl|mediaMode|mediaCopy|#watch|>Watch</);
+  expect(stylesheet).not.toMatch(/\.workflow-(?:media|video)/);
+});

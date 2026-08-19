@@ -1,0 +1,129 @@
+{
+  "capturedAt": "2026-08-19T11:42:33.420Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "untrackedFiles": [
+      {
+        "path": "apps/desktop/src/renderer/interaction/snap-indicator-lifecycle.ts",
+        "sha256": "c7abf8f55138307005ab0298af6a0caf6e7426422743b18b71748db6333a26f4"
+      },
+      {
+        "path": "scripts/run-snap-indicator-lifecycle-tests.mjs",
+        "sha256": "b093da106ed0073ba48f3079c210d4a3761a75a3c70706c8188e556d2b0ecf97"
+      },
+      {
+        "path": "tests/renderer/snap-indicator-lifecycle.test.ts",
+        "sha256": "25e8bbc58989c49d37659539b24d99c456ec9fc123e6b43e0476fef9083fedd2"
+      }
+    ]
+  },
+  "captureMethod": {
+    "api": "Page.captureScreenshot",
+    "nativeWindowMaximizedVia": "window.polyPDF.controlWindow(\"toggleMaximize\") -> BrowserWindow.maximize()",
+    "emulationDeviceMetricsOverrideUsed": false,
+    "browserDomainWindowState": "unavailable in this Electron; not claimed"
+  },
+  "facts": {
+    "version": "1.3.4",
+    "build": "16",
+    "appAppearance": "dark",
+    "datasetTheme": "dark",
+    "bodyDark": true,
+    "prefersDark": true,
+    "chromeBase": "#26282b",
+    "chromeElevated": "#313437",
+    "panelBase": "",
+    "devicePixelRatio": 2,
+    "innerWidth": 1710,
+    "innerHeight": 1073,
+    "styleToolbar": {
+      "exists": true,
+      "visible": true,
+      "hasOverflowClass": false,
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "sectionCount": 0
+    },
+    "documentName": "visual-search-fixture.pdf",
+    "dialogId": ""
+  },
+  "windowProof": {
+    "before": {
+      "outerWidth": 1280,
+      "outerHeight": 900,
+      "innerWidth": 1280,
+      "innerHeight": 900,
+      "screenX": 86,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "after": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "maximizeInvoked": true,
+    "fillsWorkArea": true,
+    "passes": true
+  },
+  "styleToolbarGate": {
+    "passes": true,
+    "visible": true,
+    "hasOverflowClass": false,
+    "clientWidth": 1657,
+    "scrollWidth": 1657,
+    "scrollLeft": 0,
+    "sectionCount": 0,
+    "note": "No annotation is selected during Symbol Search review, so no contextual style sections are expected. The full-width track is visible and has no collapsed or overflow state."
+  },
+  "pixelProof": {
+    "width": 3420,
+    "height": 2146,
+    "darkHits": 4336978,
+    "lightHits": 2398142,
+    "darkRatio": 0.5909236823029926,
+    "lightRatio": 0.3267526146836492,
+    "topDarkHits": 570402,
+    "topLightHits": 26,
+    "topDarkRatio": 0.9265789473684211,
+    "expectedWidth": 3420,
+    "expectedHeight": 2146,
+    "passes": true
+  },
+  "visualSearchEvidence": {
+    "genuineLiveRun": true,
+    "fixtureSha256": "fbb26d273c2d56347bd6ae3740a23c5760622994b93d62ba01f4586cbd0239ea",
+    "planSha256": "ec9157c7cc80308ac117c50e0ed035075821c409e587dfd579a527ea9b65a71d",
+    "validatorReportSha256": "262c90a4bed21e7af6c6dd7438e3fb9a2a32a9fd83cdc4179ef3edb2212678cc",
+    "validatorPassed": true,
+    "reviewReached": true,
+    "searchSummary": "5 matches — 5 selected",
+    "countAction": "Count 5",
+    "subject": "Test Symbol",
+    "candidateOverlays": 5,
+    "acceptedOverlays": 5,
+    "panelInSearchSidebar": true,
+    "progressVisible": false,
+    "committedCount": 5,
+    "oneSeries": true,
+    "sequentialLabels": true,
+    "foundEveryPlantedSymbol": true,
+    "note": "The screenshot was captured after the real matcher reached its review state and immediately before the harness committed the five accepted candidates. The validator then completed successfully."
+  },
+  "screenshotSha256": "29c687c70f09bf310d036db73cbc1c608d8cd5b05a8914499a290728e08aebc2"
+}

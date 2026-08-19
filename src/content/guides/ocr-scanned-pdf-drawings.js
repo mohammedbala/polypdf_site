@@ -1,7 +1,21 @@
-import ocrScreenshot from '../../assets/screenshots/shot-ocr-complete-1.3.4-web.png';
+import ocrCompleteScreenshot from '../../assets/screenshots/ocr-uss-akron-complete-currentdev-dark-web.png';
+import ocrNoTextBeforeScreenshot from '../../assets/screenshots/ocr-uss-akron-no-text-before-currentdev-dark-web.png';
+import ocrSearchHitScreenshot from '../../assets/screenshots/ocr-uss-akron-search-hit-currentdev-dark-web.png';
 
-const ocrCapture =
-  'Live PolyPDF 1.3.4 (build 16) capture using an owned scan fixture. The dialog shows a completed best-effort OCR run at 100%; the window title still reads “OCR in Progress” in this build.';
+const captureProvenance =
+  'Captured in dark mode on August 19, 2026 from the exact current-development snapshot: base commit a0a709c39e35343d3c71f7d615fedffb007db619 with product diff SHA-256 8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250. The app identifies itself as PolyPDF 1.3.4 (build 16).';
+const sourceProvenance =
+  'The scan comes from a NACA U.S.S. Akron report in NASA NTRS (https://ntrs.nasa.gov/citations/19930091505); that record marks it Public and “Work of the US Gov. Public Use Permitted.”';
+const accuracyCaveat =
+  'OCR is best-effort: this run recognized useful text, but some small italic labels and dimension notation contain errors and still require comparison with the scanned pixels.';
+const screenshotProvenance = `${sourceProvenance} ${captureProvenance} ${accuracyCaveat}`;
+
+const noTextBeforeCaption =
+  'Before OCR, the same SURFACE query returns “No matches” because this page is image-only.';
+const ocrCompleteCaption =
+  'The genuine whole-document OCR run has reached “OCR complete” at 100%; the dialog title still reads “OCR in Progress” in this snapshot. Completion proves the run finished, not that every character is correct.';
+const searchHitCaption =
+  'After saving, fully closing the app process, reopening the recognized PDF in a fresh process, and searching SURFACE, PolyPDF returns three result rows and highlights the selected occurrence in yellow on the page.';
 
 const post = {
   slug: 'ocr-scanned-pdf-drawings',
@@ -21,15 +35,16 @@ const post = {
     'OCR can turn a flat scan into a document you can search, but it does not turn uncertain pixels into authoritative text. The useful workflow is recognition, targeted testing, and manual verification of anything consequential.',
   quickAnswer:
     'To OCR a scanned PDF drawing in PolyPDF, save a working copy, choose Document › OCR, and let the whole-document recognition run finish. PolyPDF uses local operating-system OCR and adds a best-effort searchable layer where supported. In version 1.3.4, embedded searchable text is limited to Latin, Greek, and Cyrillic scripts, language availability depends on the computer’s OS and language packs, and there is no accuracy guarantee. Reopen the saved PDF, search representative terms, and visually verify critical dimensions, notes, and identifiers.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
-    src: ocrScreenshot,
-    alt: 'PolyPDF OCR dialog at 100 percent with a best-effort searchable text layer notice',
-    caption: ocrCapture,
-    width: 800,
-    height: 501
+    src: ocrSearchHitScreenshot,
+    alt: 'Dark-mode PolyPDF search panel showing three SURFACE results and a selected highlight on the U.S.S. Akron engineering scan after OCR',
+    caption: searchHitCaption,
+    provenance: screenshotProvenance,
+    width: 1710,
+    height: 1073
   },
   keywords: [
     'OCR scanned PDF drawings',
@@ -47,6 +62,15 @@ const post = {
           kind: 'p',
           text:
             'Open the PDF and try to select a word with the text-selection tool. Then search for an obvious sheet title or note. If you can select individual characters and search already finds them, the page has a text layer; OCR may add duplicate or noisy text rather than help. If selection treats the page as one image and search returns nothing, it is a good OCR candidate.'
+        },
+        {
+          kind: 'figure',
+          src: ocrNoTextBeforeScreenshot,
+          alt: 'Dark-mode PolyPDF search panel showing No matches for SURFACE before OCR on an image-only U.S.S. Akron engineering scan',
+          caption: noTextBeforeCaption,
+          provenance: screenshotProvenance,
+          width: 1710,
+          height: 1073
         },
         {
           kind: 'table',
@@ -84,11 +108,12 @@ const post = {
         },
         {
           kind: 'figure',
-          src: ocrScreenshot,
-          alt: 'Completed PolyPDF OCR progress dialog showing 100 percent',
-          caption: ocrCapture,
-          width: 800,
-          height: 501
+          src: ocrCompleteScreenshot,
+          alt: 'Dark-mode PolyPDF OCR dialog showing OCR complete at 100 percent over the U.S.S. Akron engineering scan',
+          caption: ocrCompleteCaption,
+          provenance: screenshotProvenance,
+          width: 1710,
+          height: 1073
         }
       ]
     },
@@ -129,22 +154,31 @@ const post = {
             'Never copy an OCR-derived dimension, quantity, equipment tag, or specification value into downstream work without comparing it to the page image.',
             'Search results are a navigation aid. The visible drawing remains the source that must be reviewed.'
           ]
+        },
+        {
+          kind: 'figure',
+          src: ocrSearchHitScreenshot,
+          alt: 'Reopened searchable U.S.S. Akron scan in dark-mode PolyPDF with three SURFACE results and a selected on-page highlight',
+          caption: searchHitCaption,
+          provenance: screenshotProvenance,
+          width: 1710,
+          height: 1073
         }
       ]
     },
     {
       icon: 'document',
-      title: 'Worked use case: find room notes in a scanned renovation set',
+      title: 'Worked use case: find “Surface of ship” on a scanned engineering drawing',
       body: [
         {
           kind: 'p',
           text:
-            'Imagine a scanned renovation set where the phrase “existing to remain” appears throughout demolition notes. The source has no selectable text. Save a copy, run whole-document OCR, and reopen the recognized output. Search the full phrase, then the distinctive fragment “remain.” Review every hit on the page and manually visit two known notes that search did not return to estimate the miss pattern.'
+            'The public NACA page shown here is a raster scan with no extractable text before OCR: searching SURFACE returns “No matches.” After the genuine whole-document OCR run, we saved the result, closed the exact app process, opened the saved PDF in a fresh process, and repeated the same search. PolyPDF returned three results and selected one “Surface of ship” occurrence on the drawing.'
         },
         {
           kind: 'p',
           text:
-            'Use the results to navigate and place review markups, but do not turn the hit count into a demolition quantity. A missed phrase, broken word, or note embedded in poor linework can change the count. If a room number or dimension drives a scope decision, verify the characters against the scanned pixels and record the page reference with the markup.'
+            'Independent text extraction from the saved PDF also found “REPORT NATIONAL ADVISORY COMMITTEE FOR AERONAUTICS,” “Surface of ship,” and “U.S. S. Akron.” That proves useful searchable text was embedded; it does not prove a perfect transcription. The same extraction includes errors in small italic labels and dimension notation, so use OCR hits for navigation and compare every consequential identifier, note, or measurement with the visible scan.'
         }
       ]
     },
@@ -199,16 +233,22 @@ const post = {
   ],
   sources: [
     {
+      label: 'NASA NTRS: NACA U.S.S. Akron engineering scan',
+      url: 'https://ntrs.nasa.gov/citations/19930091505',
+      note: 'The NASA record marks the report Public and states that it is a work of the U.S. government with public use permitted.'
+    },
+    {
       label: 'Apple Vision: Recognizing text in images',
       url: 'https://developer.apple.com/documentation/vision/recognizing-text-in-images'
     },
     {
-      label: 'Microsoft Learn: Optical character recognition',
-      url: 'https://learn.microsoft.com/en-us/windows/ai/apis/text-recognition'
+      label: 'Microsoft Learn: Windows.Media.Ocr namespace',
+      url: 'https://learn.microsoft.com/en-us/uwp/api/windows.media.ocr'
     },
     {
-      label: 'PolyPDF 1.3.4 build 16 OCR verification',
-      note: 'Verified with an owned scan fixture on August 18, 2026.'
+      label: 'PolyPDF current-development OCR verification',
+      note:
+        'Verified August 19, 2026 with the public NACA scan in the exact snapshot at base commit a0a709c39e35343d3c71f7d615fedffb007db619 plus product diff SHA-256 8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250.'
     }
   ],
   cta: {

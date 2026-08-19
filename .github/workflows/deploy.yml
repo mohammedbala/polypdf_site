@@ -32,21 +32,32 @@ jobs:
 
       - name: Deploy to Droplet
         run: |
-          ssh -o BatchMode=yes "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" bash -euo pipefail << 'EOF'
+          ssh -o BatchMode=yes "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" "EXPECTED_SHA='${GITHUB_SHA}' bash -euo pipefail" << 'EOF'
             cd /var/www/polypdf-site
+            expected_sha="${EXPECTED_SHA:?missing expected deployment SHA}"
+
+            # A validation or build failure happens before activation. Clear any old marker so the
+            # rollback step can distinguish that safe failure from a failure after the symlink flip.
+            rm -f .deploy-activated-sha
 
             # Fast-forward only. A dirty/diverged production checkout fails loudly.
             git fetch origin master
             git checkout master
             git pull --ff-only origin master
 
-            npm ci
+            release_sha=$(git rev-parse HEAD)
+            test "$release_sha" = "$expected_sha"
+            candidate="releases/${release_sha}.next"
+            release="releases/${release_sha}"
+            if [ "$(readlink current || true)" = "$release" ]; then
+              echo "${release_sha} is already the active release; leaving it intact"
+              exit 0
+            fi
+
+            npm ci --include=dev
 
             # The droplet runs Node 18, where react-scripts' serialize-javascript dependency reads
             # crypto.getRandomValues off the global object — absent until Node 19.
-            release_sha=$(git rev-parse HEAD)
-            candidate="releases/${release_sha}.next"
-            release="releases/${release_sha}"
             mkdir -p releases
             rm -rf "$candidate"
             BUILD_PATH="$candidate" NODE_OPTIONS=--experimental-global-webcrypto CI=false npm run build
@@ -62,12 +73,61 @@ jobs:
               mkdir -p "$bootstrap"
               cp -a build/. "$bootstrap/"
               previous="$bootstrap"
+              ln -sfn "$previous" current.bootstrap
+              mv -Tf current.bootstrap current
             fi
+            test -s "$previous/index.html"
             printf '%s\n' "$previous" > .deploy-previous-target
+
+            # Only after both the new candidate and the currently served fallback are proven do we
+            # reconcile the active PolyPDF server block. The script preserves deployment-specific
+            # sources while adding analytics endpoints, the atomic root, and stable-image cache
+            # exceptions. Invalid config is restored before the website symlink can be activated.
+            nginx_config=""
+            while IFS= read -r candidate_config; do
+              if grep -Eq 'server_name[^;]*www\.polypdf\.com' "$candidate_config"; then
+                nginx_config=$(readlink -f "$candidate_config")
+                break
+              fi
+            done < <(find -L /etc/nginx/sites-enabled /etc/nginx/conf.d -maxdepth 1 -type f 2>/dev/null | sort -u)
+            test -n "$nginx_config"
+
+            nginx_candidate=$(mktemp /tmp/polypdf-nginx-candidate.XXXXXX)
+            nginx_backup=$(mktemp /tmp/polypdf-nginx-backup.XXXXXX)
+            cleanup_nginx_temp() {
+              rm -f -- "$nginx_candidate" "$nginx_backup"
+            }
+            trap cleanup_nginx_temp EXIT
+            cp "$nginx_config" "$nginx_backup"
+            node scripts/reconcile-nginx-config.mjs --input "$nginx_config" --output "$nginx_candidate"
+
+            if [ "$(id -u)" -eq 0 ]; then
+              admin=()
+            else
+              command -v sudo >/dev/null
+              admin=(sudo)
+            fi
+            if ! cmp -s "$nginx_candidate" "$nginx_config"; then
+              "${admin[@]}" install -o root -g root -m 0644 "$nginx_candidate" "$nginx_config"
+              if ! "${admin[@]}" nginx -t; then
+                "${admin[@]}" install -o root -g root -m 0644 "$nginx_backup" "$nginx_config"
+                "${admin[@]}" nginx -t
+                exit 1
+              fi
+              if ! "${admin[@]}" systemctl reload nginx; then
+                "${admin[@]}" install -o root -g root -m 0644 "$nginx_backup" "$nginx_config"
+                "${admin[@]}" nginx -t
+                "${admin[@]}" systemctl reload nginx
+                exit 1
+              fi
+            fi
+            trap - EXIT
+            cleanup_nginx_temp
 
             # nginx serves current/. Rename the symlink atomically so visitors see either the old
             # complete release or the new complete release, never an in-progress CRA build.
             ln -sfn "$release" current.next
+            printf '%s\n' "$release_sha" > .deploy-activated-sha
             mv -Tf current.next current
             echo "activated ${release_sha} (previous: ${previous})"
           EOF
@@ -75,15 +135,37 @@ jobs:
       - name: Verify every revenue and trust route
         run: node scripts/post-deploy-smoke.mjs --base-url https://www.polypdf.com
 
+      - name: Clear deployment activation marker
+        if: success()
+        continue-on-error: true
+        run: |
+          ssh -o BatchMode=yes "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" "EXPECTED_SHA='${GITHUB_SHA}' bash -euo pipefail" << 'EOF'
+            cd /var/www/polypdf-site
+            expected_sha="${EXPECTED_SHA:?missing expected deployment SHA}"
+            if [ -f .deploy-activated-sha ] && [ "$(cat .deploy-activated-sha)" = "$expected_sha" ]; then
+              rm -f .deploy-activated-sha
+            fi
+          EOF
+
       - name: Roll back failed deployment
         if: failure()
         run: |
-          ssh -o BatchMode=yes "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" bash -euo pipefail << 'EOF'
+          ssh -o BatchMode=yes "${{ secrets.DROPLET_USER }}@${{ secrets.DROPLET_HOST }}" "EXPECTED_SHA='${GITHUB_SHA}' bash -euo pipefail" << 'EOF'
             cd /var/www/polypdf-site
+            expected_sha="${EXPECTED_SHA:?missing expected deployment SHA}"
+            if [ ! -f .deploy-activated-sha ] || [ "$(cat .deploy-activated-sha)" != "$expected_sha" ]; then
+              echo "deployment failed before activation; current release remains unchanged"
+              exit 0
+            fi
+            if [ "$(readlink current || true)" != "releases/${expected_sha}" ]; then
+              echo "current release changed outside this deployment; refusing to roll it back"
+              exit 0
+            fi
             previous=$(cat .deploy-previous-target)
             test -n "$previous"
             test -s "$previous/index.html"
             ln -sfn "$previous" current.rollback
             mv -Tf current.rollback current
+            rm -f .deploy-activated-sha
             echo "rolled back to $previous"
           EOF

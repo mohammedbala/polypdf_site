@@ -34,7 +34,8 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
     continue;
   }
   const html = fs.readFileSync(htmlPath, 'utf8');
-  const imageURL = new URL(metadata.image || '/og-image.png', `${origin}/`).href;
+  const imageURL = new URL(metadata.image || '/og-image.png?v=20260819-currentdev', `${origin}/`).href;
+  const canonicalURL = `${origin}${route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`}`;
   const imageAlt = escapeHTML(metadata.imageAlt || defaultImageAlt);
 
   assert(!html.includes('<div id="root"></div>'), `${route}: #root is empty — prerender did not run`);
@@ -43,6 +44,7 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
   const body = rootStart === -1 ? '' : html.slice(rootStart);
   assert(body.length > 2000, `${route}: prerendered body is implausibly small (${body.length} bytes)`);
   assert(html.includes('<link rel="canonical"'), `${route}: canonical link is missing`);
+  assert(html.includes(`<link rel="canonical" href="${canonicalURL}"`), `${route}: canonical URL is wrong`);
   assert(html.includes('<link rel="alternate" type="application/rss+xml"'), `${route}: RSS discovery link is missing`);
   assert(html.includes(`<meta property="og:type" content="${metadata.type || 'website'}"`), `${route}: og:type is wrong`);
   assert(html.includes(`<meta property="og:image" content="${imageURL}"`), `${route}: og:image is wrong`);
@@ -51,11 +53,11 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
   assert(html.includes(`<meta name="twitter:image:alt" content="${imageAlt}"`), `${route}: twitter:image:alt is wrong`);
   assert((body.match(/data-site-footer="true"/g) || []).length === 1, `${route}: canonical footer is missing or duplicated`);
   for (const footerPath of [
-    '/pdf-takeoff-software',
-    '/measure-pdf-on-mac',
-    '/construction-pdf-markup',
-    '/visual-search-pdf-count',
-    '/compare-pdf-drawings'
+    '/pdf-takeoff-software/',
+    '/measure-pdf-on-mac/',
+    '/construction-pdf-markup/',
+    '/visual-search-pdf-count/',
+    '/compare-pdf-drawings/'
   ]) {
     assert(body.includes(`href="${footerPath}"`), `${route}: footer is missing ${footerPath}`);
   }
@@ -92,7 +94,7 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
       assert(Array.isArray(article.about) && article.about.length > 0, `${route}: about topics are missing`);
     }
     if (metadata.image?.startsWith('/guides/')) {
-      const imagePath = path.join(buildDirectory, metadata.image.slice(1));
+      const imagePath = path.join(buildDirectory, new URL(metadata.image, `${origin}/`).pathname.slice(1));
       assert(fs.existsSync(imagePath), `${route}: public guide share image is missing`);
       if (fs.existsSync(imagePath)) {
         assert(fs.statSync(imagePath).size > 0, `${route}: public guide share image is empty`);
@@ -117,7 +119,7 @@ const feed = fs.existsSync(path.join(buildDirectory, 'feed.xml'))
 
 for (const [route, metadata] of Object.entries(routeMetadata)) {
   if (metadata.type !== 'article') continue;
-  const url = `${origin}${route}`;
+  const url = `${origin}${route.replace(/\/+$/, '')}/`;
   assert(sitemap.includes(`<loc>${url}</loc>`), `sitemap.xml: missing ${route}`);
   assert(llms.includes(`(${url})`), `llms.txt: missing ${route}`);
   assert(feed.includes(`<link>${url}</link>`), `feed.xml: missing ${route}`);

@@ -1,0 +1,160 @@
+{
+  "capturedAt": "2026-08-19T10:55:58.040Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "sourceCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "sourceFingerprint": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "nativeWindow": {
+    "windowState": "maximized",
+    "method": "current-dev BrowserWindow.maximize verified by native outer bounds",
+    "browserCdpAvailable": false,
+    "browserCdpError": "'Browser.getWindowForTarget' wasn't found",
+    "bounds": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "workArea": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "viewport": {
+      "width": 1710,
+      "height": 1073
+    },
+    "maximizedByBounds": true
+  },
+  "facts": {
+    "version": "1.3.4",
+    "build": "16",
+    "appAppearance": "dark",
+    "datasetTheme": "dark",
+    "bodyDark": true,
+    "prefersDark": true,
+    "chromeBase": "#26282b",
+    "chromeElevated": "#313437",
+    "devicePixelRatio": 2,
+    "innerWidth": 1710,
+    "innerHeight": 1073,
+    "outerWidth": 1710,
+    "outerHeight": 1073,
+    "screenWidth": 1710,
+    "screenHeight": 1107,
+    "screenAvailWidth": 1710,
+    "screenAvailHeight": 1073,
+    "visualViewportWidth": 1710,
+    "visualViewportHeight": 1073,
+    "documentName": "save-as-forms-signatures-working.pdf",
+    "dialogId": "",
+    "styleToolbar": {
+      "present": true,
+      "trackPresent": true,
+      "className": "style-toolbar",
+      "rect": {
+        "x": 0,
+        "y": 44,
+        "width": 1710,
+        "height": 36
+      },
+      "trackRect": {
+        "x": 43,
+        "y": 44,
+        "width": 1657,
+        "height": 35
+      },
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "hasOverflow": false,
+      "toolbarSingleRow": true,
+      "allSectionsInsideTrack": true,
+      "sectionCount": 3,
+      "sections": [
+        {
+          "id": "line",
+          "text": "Line: 100%⌄⌄ 1 pt",
+          "left": 43,
+          "right": 387,
+          "top": 44,
+          "bottom": 79
+        },
+        {
+          "id": "fill",
+          "text": "Fill: 35%",
+          "left": 387,
+          "right": 546,
+          "top": 44,
+          "bottom": 79
+        },
+        {
+          "id": "hatch",
+          "text": "Hatch: ⌄ 100% 100%",
+          "left": 546,
+          "right": 895,
+          "top": 44,
+          "bottom": 79
+        }
+      ],
+      "controlCount": 16,
+      "scrollButtons": [
+        {
+          "direction": "previous",
+          "display": "none",
+          "hidden": false,
+          "disabled": true
+        },
+        {
+          "direction": "next",
+          "display": "none",
+          "hidden": false,
+          "disabled": true
+        }
+      ]
+    },
+    "injectedWindowProof": {
+      "windowState": "maximized",
+      "method": "current-dev BrowserWindow.maximize verified by native outer bounds",
+      "browserCdpAvailable": false,
+      "browserCdpError": "'Browser.getWindowForTarget' wasn't found",
+      "bounds": {
+        "left": 0,
+        "top": 34,
+        "width": 1710,
+        "height": 1073
+      },
+      "workArea": {
+        "left": 0,
+        "top": 34,
+        "width": 1710,
+        "height": 1073
+      },
+      "viewport": {
+        "width": 1710,
+        "height": 1073
+      },
+      "maximizedByBounds": true
+    }
+  },
+  "pixelProof": {
+    "width": 3420,
+    "height": 2146,
+    "captureScaleX": 2,
+    "captureScaleY": 2,
+    "darkHits": 4800687,
+    "lightHits": 1830467,
+    "darkRatio": 0.6541051487058747,
+    "lightRatio": 0.24940553075761787,
+    "topDarkHits": 568514,
+    "topLightHits": 82,
+    "topDarkRatio": 0.9235120207927225,
+    "nativeMaximized": true,
+    "noViewportEmulation": true,
+    "styleToolbarPasses": true,
+    "darkPasses": true,
+    "passes": true
+  }
+}

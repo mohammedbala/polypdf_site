@@ -308,7 +308,7 @@ const Account = () => {
                     >
                       <FaDownload /> Download for {primaryPlatform.name}
                     </a>
-                    <Link to="/buy" className="primary-btn">
+                    <Link to="/buy/" className="primary-btn">
                       Buy PolyPDF Pro
                     </Link>
                   </div>

@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "states": [
+    {
+      "id": "area-cutouts-depth-dark",
+      "fixturePath": "../fixtures/hals-piedmont-way-sheet-2.pdf",
+      "currentPage": 1,
+      "zoomMode": "fitPage",
+      "windowSize": { "width": 1440, "height": 960 },
+      "sidebarPanel": "measurements",
+      "selectedTool": "select",
+      "markupTable": false,
+      "settleMs": 600000,
+      "annotations": [
+        {
+          "id": "piedmont-paving-area",
+          "kind": "measure",
+          "tool": "areaMeasurement",
+          "page": 1,
+          "pageIndex": 0,
+          "x": 450,
+          "y": 555,
+          "width": 1180,
+          "height": 500,
+          "label": "Paving: 28,793.49 sq ft net @ 1'-6\" depth",
+          "nativeSubject": "Paving: 28,793.49 sq ft net @ 1'-6\" depth",
+          "contents": "Net area 28,793.49 sq ft after two cutouts; at 1'-6\" depth = 43,190.23 cu ft.",
+          "status": "reviewed",
+          "points": [
+            { "x": 0, "y": 165 },
+            { "x": 235, "y": 85 },
+            { "x": 495, "y": 50 },
+            { "x": 785, "y": 0 },
+            { "x": 1080, "y": 110 },
+            { "x": 1180, "y": 255 },
+            { "x": 1080, "y": 405 },
+            { "x": 790, "y": 330 },
+            { "x": 520, "y": 370 },
+            { "x": 245, "y": 430 },
+            { "x": 45, "y": 500 }
+          ],
+          "areaCutouts": [
+            [
+              { "x": 485, "y": 214 },
+              { "x": 575, "y": 190 },
+              { "x": 615, "y": 255 },
+              { "x": 520, "y": 280 }
+            ],
+            [
+              { "x": 760, "y": 170 },
+              { "x": 855, "y": 155 },
+              { "x": 890, "y": 220 },
+              { "x": 795, "y": 240 }
+            ]
+          ],
+          "pathSmoothing": "curve",
+          "scale": {
+            "scaleRegionId": "hals-scale",
+            "pointsPerUnitAtCreation": 3.6,
+            "unitNameAtCreation": "ft",
+            "explicitlySelected": true
+          },
+          "measurementDepth": 1.5,
+          "measurementDepthUnit": "ft",
+          "strokeColor": "#20BFA9",
+          "fillColor": "#20BFA9",
+          "fillOpacity": 0.24,
+          "lineWidth": 4,
+          "hatchPattern": "diagonalCross",
+          "hatchColor": "#20BFA9",
+          "hatchOpacity": 0.82,
+          "hatchScale": 1.1
+        }
+      ]
+    }
+  ]
+}

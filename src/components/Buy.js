@@ -179,7 +179,7 @@ const Buy = ({ forceInApp = false }) => {
               </ul>
               {offer.founderAvailable ? (
                 <a
-                  href="/buy"
+                  href="/buy/"
                   className="primary-btn full-width"
                   onClick={handleBuyClick}
                   aria-disabled={checkoutStatus === 'loading'}
@@ -195,7 +195,7 @@ const Buy = ({ forceInApp = false }) => {
               <ul className="buy-assurances">
                 <li><HiOutlineShieldCheck /> Secure Stripe checkout. PolyPDF never sees your card details.</li>
                 <li><FaEnvelope /> {licenseDeliveryText}</li>
-                <li><FaUndo /> {refundSummaryText} <Link to="/refund">Read the policy</Link>.</li>
+                <li><FaUndo /> {refundSummaryText} <Link to="/refund/">Read the policy</Link>.</li>
               </ul>
 
               <p className="plan-note">{founderRightsText}</p>
@@ -263,7 +263,7 @@ const Buy = ({ forceInApp = false }) => {
                 <li>Purchases are processed by Stripe and follow PolyPDF's refund policy.</li>
                 <li>Unless required by law, transactions are generally non-refundable; discretionary refund requests may be reviewed within 14 days.</li>
                 <li>Refunded Pro licenses may be deactivated after the refund is completed.</li>
-                <li><Link to="/refund">Read the refund policy</Link> for request steps and legal rights.</li>
+                <li><Link to="/refund/">Read the refund policy</Link> for request steps and legal rights.</li>
               </ul>
             </section>
 

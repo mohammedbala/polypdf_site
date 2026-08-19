@@ -1,0 +1,160 @@
+{
+  "capturedAt": "2026-08-19T10:57:52.730Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "sourceCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "sourceFingerprint": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "nativeWindow": {
+    "windowState": "maximized",
+    "method": "current-dev BrowserWindow.maximize verified by native outer bounds",
+    "browserCdpAvailable": false,
+    "browserCdpError": "'Browser.getWindowForTarget' wasn't found",
+    "bounds": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "workArea": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "viewport": {
+      "width": 1710,
+      "height": 1073
+    },
+    "maximizedByBounds": true
+  },
+  "facts": {
+    "version": "1.3.4",
+    "build": "16",
+    "appAppearance": "dark",
+    "datasetTheme": "dark",
+    "bodyDark": true,
+    "prefersDark": true,
+    "chromeBase": "#26282b",
+    "chromeElevated": "#313437",
+    "devicePixelRatio": 2,
+    "innerWidth": 1710,
+    "innerHeight": 1073,
+    "outerWidth": 1710,
+    "outerHeight": 1073,
+    "screenWidth": 1710,
+    "screenHeight": 1107,
+    "screenAvailWidth": 1710,
+    "screenAvailHeight": 1073,
+    "visualViewportWidth": 1710,
+    "visualViewportHeight": 1073,
+    "documentName": "ocr-uss-akron-engineering-scan.pdf",
+    "dialogId": "ocr",
+    "styleToolbar": {
+      "present": true,
+      "trackPresent": true,
+      "className": "style-toolbar",
+      "rect": {
+        "x": 0,
+        "y": 44,
+        "width": 1710,
+        "height": 36
+      },
+      "trackRect": {
+        "x": 43,
+        "y": 44,
+        "width": 1657,
+        "height": 35
+      },
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "hasOverflow": false,
+      "toolbarSingleRow": true,
+      "allSectionsInsideTrack": true,
+      "sectionCount": 3,
+      "sections": [
+        {
+          "id": "",
+          "text": "Name ocr-uss-akron-engineering-scan.pdf",
+          "left": 43,
+          "right": 318,
+          "top": 44,
+          "bottom": 79
+        },
+        {
+          "id": "",
+          "text": "Pages 1",
+          "left": 318,
+          "right": 373,
+          "top": 44,
+          "bottom": 79
+        },
+        {
+          "id": "",
+          "text": "Add Page ⊕",
+          "left": 373,
+          "right": 462,
+          "top": 44,
+          "bottom": 79
+        }
+      ],
+      "controlCount": 3,
+      "scrollButtons": [
+        {
+          "direction": "previous",
+          "display": "none",
+          "hidden": false,
+          "disabled": true
+        },
+        {
+          "direction": "next",
+          "display": "none",
+          "hidden": false,
+          "disabled": true
+        }
+      ]
+    },
+    "injectedWindowProof": {
+      "windowState": "maximized",
+      "method": "current-dev BrowserWindow.maximize verified by native outer bounds",
+      "browserCdpAvailable": false,
+      "browserCdpError": "'Browser.getWindowForTarget' wasn't found",
+      "bounds": {
+        "left": 0,
+        "top": 34,
+        "width": 1710,
+        "height": 1073
+      },
+      "workArea": {
+        "left": 0,
+        "top": 34,
+        "width": 1710,
+        "height": 1073
+      },
+      "viewport": {
+        "width": 1710,
+        "height": 1073
+      },
+      "maximizedByBounds": true
+    }
+  },
+  "pixelProof": {
+    "width": 3420,
+    "height": 2146,
+    "captureScaleX": 2,
+    "captureScaleY": 2,
+    "darkHits": 4954541,
+    "lightHits": 11954,
+    "darkRatio": 0.6750681262024275,
+    "lightRatio": 0.0016287612476360207,
+    "topDarkHits": 572245,
+    "topLightHits": 43,
+    "topDarkRatio": 0.9295727745289148,
+    "nativeMaximized": true,
+    "noViewportEmulation": true,
+    "styleToolbarPasses": true,
+    "darkPasses": true,
+    "passes": true
+  }
+}

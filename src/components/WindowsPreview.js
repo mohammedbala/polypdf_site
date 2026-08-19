@@ -128,7 +128,7 @@ const WindowsPreview = () => {
                   {release.date ? `, released ${release.date}` : ''}.{' '}
                 </>
               )}
-              <Link to="/versions">See what changed in every release</Link>.
+              <Link to="/versions/">See what changed in every release</Link>.
             </p>
           </div>
 
@@ -159,7 +159,7 @@ const WindowsPreview = () => {
             <p>
               Questions or a bug to report? Email <a href="mailto:support@polypdf.com">support@polypdf.com</a>{' '}
               and mention you are on Windows, with the version and build number above.{' '}
-              <Link to="/versions">Version history</Link>. Prefer Mac? <Link to="/">Get the Mac app</Link>.
+              <Link to="/versions/">Version history</Link>. Prefer Mac? <Link to="/">Get the Mac app</Link>.
             </p>
           </div>
         </div>

@@ -227,7 +227,7 @@ node polypdf-plugin-pack.mjs pack my-plugin --key ~/.polypdf-keys/polypdf-plugin
               actually need is how the next one gets chosen.
             </p>
             <div className="contact-info">
-              <Link to="/support" className="contact-link">
+              <Link to="/support/" className="contact-link">
                 <FaPuzzlePiece /> Contact support
               </Link>
             </div>

@@ -1,7 +1,7 @@
-import screenshot from '../../assets/screenshots/shot-measure-takeoff-web.png';
+import screenshot from '../../assets/screenshots/wrong-scale-currentdev-dark-web.png';
 
 const screenshotCaption =
-  'Live PolyPDF 1.1.3 dark-mode capture on the PolyPDF-owned fictional Riverbend Community Library A-201 fixture. It shows a custom 13.5 PDF-point-per-foot input, a 1,506.32 sq ft hand trace and worksheet record, while the older footer still says Uncalibrated—exactly why scale state and a second known dimension must be checked. The workflow was re-verified in PolyPDF 1.3.4 (build 16); the screenshot records the earlier build.';
+  'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode on the owned Measurement Diagnostics fixture. A line drawn over the printed 20-foot reference reads 360.00 PDF points while Measurements › Scale and the footer both report that scale is not set. The red line is deterministic demonstration markup, not a real-project measurement.';
 
 const post = {
   slug: 'why-pdf-measurements-are-wrong',
@@ -21,15 +21,17 @@ const post = {
     'A wrong PDF measurement is usually traceable to the scale, the selected geometry, or the source file. Fixing the cause is safer than applying a correction factor to the final quantities.',
   quickAnswer:
     'If a PDF measurement is wrong, first confirm that the current page has the correct real-world scale and units. Then remeasure a long labeled dimension with snapped endpoints. If that works but a detail does not, check for a different scale inside that detail. If horizontal and vertical reference dimensions disagree by different percentages, the scan is probably nonuniformly distorted and one calibration cannot make the whole page accurate.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
-    alt: 'PolyPDF 1.1.3 showing a 1,506.32 square foot hand trace and custom scale controls on the fictional Riverbend Library A-201 plan',
+    alt: 'PolyPDF dark mode showing Scale Not set and a 360.00 PDF-point line over a printed 20-foot reference',
     caption: screenshotCaption,
-    width: 2280,
-    height: 1515
+    width: 1710,
+    height: 1073,
+    provenance:
+      'Real current-development product UI. The owned one-page PDF and red demonstration annotation contain no customer data; the image is an uncropped 50 percent derivative of the native-maximized capture.'
   },
   keywords: [
     'PDF measurements wrong',
@@ -66,8 +68,8 @@ const post = {
           src: screenshot,
           alt: 'A live PolyPDF takeoff view where the scale, drawing measurements, and worksheet can be checked together',
           caption: screenshotCaption,
-          width: 2280,
-          height: 1515
+          width: 1710,
+          height: 1073
         }
       ]
     },
@@ -245,11 +247,11 @@ const post = {
   sources: [
     {
       label: 'PolyPDF: Measure PDF on Mac',
-      url: 'https://www.polypdf.com/measure-pdf-on-mac'
+      url: 'https://www.polypdf.com/measure-pdf-on-mac/'
     },
     {
       label: 'PolyPDF: PDF takeoff software',
-      url: 'https://www.polypdf.com/pdf-takeoff-software'
+      url: 'https://www.polypdf.com/pdf-takeoff-software/'
     }
   ],
   cta: {

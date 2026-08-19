@@ -1,4 +1,4 @@
-import markupReviewImage from '../../assets/screenshots/shot-markup-review-web.png';
+import markupReviewImage from '../../assets/screenshots/markup-currentdev-dark-web.png';
 
 const pdfMarkupTableGuide = {
   slug: 'pdf-markup-table-rfi-punch-list',
@@ -18,18 +18,18 @@ const pdfMarkupTableGuide = {
     'A cloud on a plan explains where an issue is. A disciplined markup row explains what it is, who must review it, and what can be handed to the system that owns the formal record.',
   quickAnswer:
     'Create one markup per issue, give it a stable subject, put the actionable question or observation in Comments, and assign a review status. Open the Markup Table to select and reveal rows, sort or filter the register, and update statuses. Detailed exports contain all markup rows; summary exports use the visible filtered scope. PolyPDF does not create or attach a formal RFI, submittal, or punch record.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: markupReviewImage,
-    alt: 'PolyPDF floor-plan review with revision clouds, an RFI callout, and the Markup Table open',
+    alt: 'PolyPDF dark-mode review with a rounded RFI callout, revision cloud, completed rectangle, and three Markup Table rows',
     caption:
-      'Live-app capture from the PolyPDF 1.3.1 dev build on macOS using the owned, bundled Quick Start sample. It shows markup rows, comments, status controls, and export; it does not show an attached or formally issued RFI. The workflow was re-verified in PolyPDF 1.3.4 build 16.',
-    width: 1800,
-    height: 1125,
+      'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode on an owned fictional clinic-coordination fixture. Deterministic demonstration markups show an Open rounded RFI callout, an In Progress revision cloud, and a Completed verification rectangle with matching Markup Table rows. They are review examples, not attached or formally issued RFI or punch records.',
+    width: 1710,
+    height: 1073,
     provenance:
-      'Real product UI, not a mockup. The source capture is unedited except for redrawn macOS window controls.'
+      'Real current-development product UI. The owned fixture and demonstration annotations contain no customer data; the image is an uncropped 50 percent derivative of the native-maximized capture.'
   },
   keywords: [
     'PDF markup table',
@@ -57,7 +57,7 @@ const pdfMarkupTableGuide = {
         {
           kind: 'note',
           text:
-            'The screenshot includes a callout labeled “RFI 014” as drawing content. That label is an example written by the reviewer, not evidence that an RFI record or attachment exists elsewhere.'
+            'The screenshot includes a demonstration row and callout titled “RFI - door clearance.” Its comment asks for an 18-inch latch-side-clearance confirmation at Room 302. That reviewer-authored text is not evidence that a formal RFI record, routing event, or attachment exists elsewhere.'
         }
       ]
     },
@@ -228,11 +228,11 @@ const pdfMarkupTableGuide = {
   sources: [
     {
       label: 'PolyPDF 1.3.4 (build 16) Markup Table implementation and in-app guidance',
-      note: 'Row fields, status vocabulary, filtering, selection, and export formats re-verified August 18, 2026.'
+      note: 'Row fields, status vocabulary, filtering, selection, and export formats re-verified August 19, 2026.'
     },
     {
-      label: 'Owned PolyPDF Quick Start drawing and live-app capture evidence',
-      note: 'The example RFI label is drawing markup, not proof of an external project record.'
+      label: 'Owned PolyPDF clinic-coordination fixture and current-development live-app capture',
+      note: 'The deterministic examples demonstrate the Markup Table, comments, and Open, In Progress, and Completed statuses without claiming an external project-system record.'
     }
   ],
   cta: {

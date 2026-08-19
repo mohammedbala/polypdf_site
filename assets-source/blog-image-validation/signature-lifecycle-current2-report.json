@@ -1,0 +1,3583 @@
+{
+  "passed": true,
+  "inputPath": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf/tests/parity/fixtures/external-editors/acrobat-basic-form.pdf",
+  "outputDir": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output",
+  "checks": {
+    "seededIdentity": {
+      "id": "88da57b3-6f22-ed02-e9e0-a0cd18bbd754",
+      "displayName": "PolyPDF Automation Signer",
+      "fingerprint": "88:DA:57:B3:6F:22:ED:02:E9:E0:A0:CD:18:BB:D7:54:81:A2:58:8D:AA:2D:55:F2:64:E5:51:06:39:DB:5A:1B"
+    },
+    "workflow": {
+      "before": {
+        "status": "Fit Page",
+        "statusPerceivable": true,
+        "statusSeverity": "info",
+        "statusPinned": false,
+        "statusJournal": [
+          {
+            "seq": 1,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 2,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 3,
+            "text": "Opened forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 4,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 5,
+            "text": "Fit Page",
+            "severity": "info"
+          }
+        ],
+        "ocrRunActive": false,
+        "primaryTabs": 1,
+        "secondaryTabs": 0,
+        "activeTabLabel": "forms-signatures-working.pdf",
+        "documentName": "forms-signatures-working.pdf",
+        "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/forms-signatures-working.pdf",
+        "documentPages": 1,
+        "isDirty": false,
+        "annotationCount": 1,
+        "pageRotations": [
+          0
+        ],
+        "pageSizes": [
+          {
+            "width": 612,
+            "height": 792
+          }
+        ],
+        "pageShells": 1,
+        "secondaryPageShells": 0,
+        "renderDiagnostics": {
+          "frameTimeMs": 17.2,
+          "queueDepth": 4,
+          "visibleCoverage": 0.516,
+          "staleJobsDropped": 0,
+          "tileGenerations": {
+            "primary": 4,
+            "secondary": 0
+          },
+          "viewportSnapshots": {
+            "primary": {
+              "id": 30,
+              "phase": "scrolling",
+              "scale": 1.0303030303030303,
+              "scrollLeft": 0,
+              "scrollTop": 0,
+              "viewportRect": {
+                "x": 0,
+                "y": 0,
+                "width": 1223,
+                "height": 816
+              },
+              "inputMode": "scrollbar"
+            }
+          },
+          "surfaceStates": [
+            {
+              "pageNumber": 1,
+              "layoutId": 2,
+              "viewportGeneration": 4,
+              "renderGeneration": 2,
+              "state": "tilesReady",
+              "visibleCoverage": 1,
+              "backingKind": "tiles"
+            }
+          ],
+          "resourceCategories": {
+            "renderTiles": {
+              "entries": 4,
+              "bytes": 8307936,
+              "maxBytes": 134217728,
+              "residualThresholdBytes": 0
+            },
+            "coarseBackings": {
+              "entries": 1,
+              "bytes": 717216,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "textPages": {
+              "entries": 1,
+              "bytes": 4952,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "geometry": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "thumbnails": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "search": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "visualSearch": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "importedAnnotations": {
+              "entries": 1,
+              "bytes": 256,
+              "residualThresholdBytes": 0
+            },
+            "documentBytes": {
+              "entries": 1,
+              "bytes": 13328,
+              "residualThresholdBytes": 0
+            },
+            "backgroundJobs": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            }
+          }
+        },
+        "splitVertical": false,
+        "splitHorizontal": false,
+        "secondaryHidden": true,
+        "formValues": {
+          "client.name": "Ada Lovelace",
+          "client.notes": "Line one from the external editor.\nLine two survives round trip.",
+          "approval.ready": true,
+          "priority": "High",
+          "region": "East",
+          "reviewers": [
+            "Mohammed",
+            "QA"
+          ]
+        },
+        "formCount": 7,
+        "overlayFormControls": 7,
+        "signatures": [
+          {
+            "annotationId": "native:43R",
+            "fieldName": "approval.signature",
+            "pageIndex": 0,
+            "source": "nativePDF",
+            "status": "unsigned"
+          }
+        ],
+        "formsPanel": {
+          "panel": "forms",
+          "title": "Forms",
+          "formsCount": "7",
+          "formRows": 7,
+          "signatureRows": 7,
+          "empty": false,
+          "text": "7 form fieldsField TypesDrag onto the page to place this field type.Arrange mode: drag fields to move them, handles to resize, arrows to nudge. Text Multiline Text Checkbox Radio Combo Box List Box•Add FieldReset Fieldsapproval.readyCheckbox • Acrobat • Page 1EditableValue:CheckedDefault:UncheckedDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 3EditGo to PageResetApproval signatureSignature Field • Acrobat • Page 1EditableValue:EmptyWidgets:Page 1 No AP, tab 8EditGo to PageResetclient.nameText • Acrobat • Page 1EditableValue:Ada LovelaceDefault:Ada LovelaceDefault Appearance:0 0 0 rg /Helvetica 22 TfWidgets:Page 1 AP, tab 1Preserved Actions:KJavaScript:Preserved in the PDF; not executed by PolyPDFAction Types:JavaScriptAction Details:K:JavaScript (Unsafe, unsupported)EditGo to PageResetclient.notesMultiline Text • Acrobat • Page 1EditableValue:Line one from the external editor. Line two survives round trip.Flags:multilineDefault Appearance:0 0 0 rg /Helvetica 20 TfWidgets:Page 1 AP, tab 2EditGo to PageResetpriorityRadio • Acrobat • Page 1EditableValue:HighOptions:Low, HighFlags:radioDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 4, Page 1 AP, tab 5EditGo to PageResetregionCombo Box • Acrobat • Page 1EditableValue:EastOptions:East, West, CentralFlags:comboDefault Appearance:0 0 0 rg /Helvetica 18 TfWidgets:Page 1 AP, tab 6EditGo to PageResetreviewersList Box • Acrobat • Page 1EditableValue:Mohammed, QAOptions:Mohammed, QA, LegalFlags:multiSelectDefault Appearance:0 0 0 rg /Helvetica 15 TfWidgets:Page 1 AP, tab 7EditGo to PageReset"
+        },
+        "signaturesPanel": {
+          "panel": "signatures",
+          "title": "Signatures",
+          "formRows": 0,
+          "signatureRows": 1,
+          "empty": false,
+          "text": "1 signature itemImport PKCS#12…Refresh Mac IDsPlace Signature Fieldapproval.signaturePDF • Page 1UnsignedGo to PageSign…Delete FieldEmpty signature field from the PDF — nothing signed, nothing checked"
+        },
+        "digitalIdentityCount": 0
+      },
+      "afterFill": {
+        "status": "Updated form field reviewers",
+        "statusPerceivable": true,
+        "statusSeverity": "success",
+        "statusPinned": false,
+        "statusJournal": [
+          {
+            "seq": 1,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 2,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 3,
+            "text": "Opened forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 4,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 5,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 6,
+            "text": "Updated form field client.name",
+            "severity": "success"
+          },
+          {
+            "seq": 7,
+            "text": "Opened PDF. Importing annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 8,
+            "text": "Updated form field client.notes",
+            "severity": "success"
+          },
+          {
+            "seq": 9,
+            "text": "Updated form field approval.ready",
+            "severity": "success"
+          },
+          {
+            "seq": 10,
+            "text": "Updated form field priority",
+            "severity": "success"
+          },
+          {
+            "seq": 11,
+            "text": "Updated form field region",
+            "severity": "success"
+          },
+          {
+            "seq": 12,
+            "text": "Updated form field reviewers",
+            "severity": "success"
+          }
+        ],
+        "ocrRunActive": false,
+        "primaryTabs": 1,
+        "secondaryTabs": 0,
+        "activeTabLabel": "forms-signatures-working.pdf",
+        "documentName": "forms-signatures-working.pdf",
+        "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/forms-signatures-working.pdf",
+        "documentPages": 1,
+        "isDirty": true,
+        "annotationCount": 1,
+        "pageRotations": [
+          0
+        ],
+        "pageSizes": [
+          {
+            "width": 612,
+            "height": 792
+          }
+        ],
+        "pageShells": 1,
+        "secondaryPageShells": 0,
+        "renderDiagnostics": {
+          "frameTimeMs": 322.6,
+          "queueDepth": 0,
+          "visibleCoverage": 0.516,
+          "staleJobsDropped": 0,
+          "tileGenerations": {
+            "primary": 4,
+            "secondary": 0
+          },
+          "viewportSnapshots": {
+            "primary": {
+              "id": 40,
+              "phase": "idle",
+              "scale": 1.0303030303030303,
+              "scrollLeft": 0,
+              "scrollTop": 0,
+              "viewportRect": {
+                "x": 0,
+                "y": 0,
+                "width": 1223,
+                "height": 816
+              },
+              "inputMode": "none"
+            }
+          },
+          "surfaceStates": [
+            {
+              "pageNumber": 1,
+              "layoutId": 2,
+              "viewportGeneration": 4,
+              "renderGeneration": 2,
+              "state": "tilesReady",
+              "visibleCoverage": 1,
+              "backingKind": "tiles"
+            }
+          ],
+          "resourceCategories": {
+            "renderTiles": {
+              "entries": 4,
+              "bytes": 8307936,
+              "maxBytes": 134217728,
+              "residualThresholdBytes": 0
+            },
+            "coarseBackings": {
+              "entries": 1,
+              "bytes": 717216,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "textPages": {
+              "entries": 1,
+              "bytes": 4952,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "geometry": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "thumbnails": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "search": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "visualSearch": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "importedAnnotations": {
+              "entries": 1,
+              "bytes": 256,
+              "residualThresholdBytes": 0
+            },
+            "documentBytes": {
+              "entries": 1,
+              "bytes": 13328,
+              "residualThresholdBytes": 0
+            },
+            "backgroundJobs": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            }
+          }
+        },
+        "splitVertical": false,
+        "splitHorizontal": false,
+        "secondaryHidden": true,
+        "formValues": {
+          "client.name": "Grace Hopper",
+          "client.notes": "Renderer lifecycle form fill\nPreserved after save and reopen.",
+          "approval.ready": false,
+          "priority": "Low",
+          "region": "West",
+          "reviewers": [
+            "Legal"
+          ]
+        },
+        "formCount": 7,
+        "overlayFormControls": 7,
+        "signatures": [
+          {
+            "annotationId": "native:43R",
+            "fieldName": "approval.signature",
+            "pageIndex": 0,
+            "source": "nativePDF",
+            "status": "unsigned"
+          }
+        ],
+        "formsPanel": {
+          "panel": "forms",
+          "title": "Forms",
+          "formsCount": "7",
+          "formRows": 7,
+          "signatureRows": 7,
+          "empty": false,
+          "text": "7 form fieldsField TypesDrag onto the page to place this field type.Arrange mode: drag fields to move them, handles to resize, arrows to nudge. Text Multiline Text Checkbox Radio Combo Box List Box•Add FieldReset Fieldsapproval.readyCheckbox • Acrobat • Page 1EditableValue:UncheckedDefault:UncheckedDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 3EditGo to PageResetApproval signatureSignature Field • Acrobat • Page 1EditableValue:EmptyWidgets:Page 1 No AP, tab 8EditGo to PageResetclient.nameText • Acrobat • Page 1EditableValue:Grace HopperDefault:Ada LovelaceDefault Appearance:0 0 0 rg /Helvetica 22 TfWidgets:Page 1 AP, tab 1Preserved Actions:KJavaScript:Preserved in the PDF; not executed by PolyPDFAction Types:JavaScriptAction Details:K:JavaScript (Unsafe, unsupported)EditGo to PageResetclient.notesMultiline Text • Acrobat • Page 1EditableValue:Renderer lifecycle form fill Preserved after save and reopen.Flags:multilineDefault Appearance:0 0 0 rg /Helvetica 20 TfWidgets:Page 1 AP, tab 2EditGo to PageResetpriorityRadio • Acrobat • Page 1EditableValue:LowOptions:Low, HighFlags:radioDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 4, Page 1 AP, tab 5EditGo to PageResetregionCombo Box • Acrobat • Page 1EditableValue:WestOptions:East, West, CentralFlags:comboDefault Appearance:0 0 0 rg /Helvetica 18 TfWidgets:Page 1 AP, tab 6EditGo to PageResetreviewersList Box • Acrobat • Page 1EditableValue:LegalOptions:Mohammed, QA, LegalFlags:multiSelectDefault Appearance:0 0 0 rg /Helvetica 15 TfWidgets:Page 1 AP, tab 7EditGo to PageReset"
+        },
+        "signaturesPanel": {
+          "panel": "signatures",
+          "title": "Signatures",
+          "formRows": 0,
+          "signatureRows": 1,
+          "empty": false,
+          "text": "1 signature itemImport PKCS#12…Refresh Mac IDsPlace Signature Fieldapproval.signaturePDF • Page 1UnsignedGo to PageSign…Delete FieldEmpty signature field from the PDF — nothing signed, nothing checked"
+        },
+        "digitalIdentityCount": 0
+      },
+      "afterSign": {
+        "status": "Applied certificate signature metadata.",
+        "statusPerceivable": true,
+        "statusSeverity": "success",
+        "statusPinned": false,
+        "statusJournal": [
+          {
+            "seq": 1,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 2,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 3,
+            "text": "Opened forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 4,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 5,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 6,
+            "text": "Updated form field client.name",
+            "severity": "success"
+          },
+          {
+            "seq": 7,
+            "text": "Opened PDF. Importing annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 8,
+            "text": "Updated form field client.notes",
+            "severity": "success"
+          },
+          {
+            "seq": 9,
+            "text": "Updated form field approval.ready",
+            "severity": "success"
+          },
+          {
+            "seq": 10,
+            "text": "Updated form field priority",
+            "severity": "success"
+          },
+          {
+            "seq": 11,
+            "text": "Updated form field region",
+            "severity": "success"
+          },
+          {
+            "seq": 12,
+            "text": "Updated form field reviewers",
+            "severity": "success"
+          },
+          {
+            "seq": 13,
+            "text": "Applied visual signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 14,
+            "text": "Placed a signature field.",
+            "severity": "success"
+          },
+          {
+            "seq": 15,
+            "text": "Applying certificate signature…",
+            "severity": "info"
+          },
+          {
+            "seq": 16,
+            "text": "Applied certificate signature metadata.",
+            "severity": "success"
+          }
+        ],
+        "ocrRunActive": false,
+        "primaryTabs": 1,
+        "secondaryTabs": 0,
+        "activeTabLabel": "forms-signatures-working.pdf",
+        "documentName": "forms-signatures-working.pdf",
+        "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/forms-signatures-working.pdf",
+        "documentPages": 1,
+        "isDirty": true,
+        "annotationCount": 2,
+        "pageRotations": [
+          0
+        ],
+        "pageSizes": [
+          {
+            "width": 612,
+            "height": 792
+          }
+        ],
+        "pageShells": 1,
+        "secondaryPageShells": 0,
+        "renderDiagnostics": {
+          "frameTimeMs": 52.7,
+          "queueDepth": 0,
+          "visibleCoverage": 0.516,
+          "staleJobsDropped": 0,
+          "tileGenerations": {
+            "primary": 4,
+            "secondary": 0
+          },
+          "viewportSnapshots": {
+            "primary": {
+              "id": 46,
+              "phase": "idle",
+              "scale": 1.0303030303030303,
+              "scrollLeft": 0,
+              "scrollTop": 0,
+              "viewportRect": {
+                "x": 0,
+                "y": 0,
+                "width": 1223,
+                "height": 816
+              },
+              "inputMode": "none"
+            }
+          },
+          "surfaceStates": [
+            {
+              "pageNumber": 1,
+              "layoutId": 2,
+              "viewportGeneration": 4,
+              "renderGeneration": 2,
+              "state": "tilesReady",
+              "visibleCoverage": 1,
+              "backingKind": "tiles"
+            }
+          ],
+          "resourceCategories": {
+            "renderTiles": {
+              "entries": 4,
+              "bytes": 8307936,
+              "maxBytes": 134217728,
+              "residualThresholdBytes": 0
+            },
+            "coarseBackings": {
+              "entries": 1,
+              "bytes": 717216,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "textPages": {
+              "entries": 1,
+              "bytes": 4952,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "geometry": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "thumbnails": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "search": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "visualSearch": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "importedAnnotations": {
+              "entries": 2,
+              "bytes": 512,
+              "residualThresholdBytes": 0
+            },
+            "documentBytes": {
+              "entries": 1,
+              "bytes": 184955,
+              "residualThresholdBytes": 0
+            },
+            "backgroundJobs": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            }
+          }
+        },
+        "splitVertical": false,
+        "splitHorizontal": false,
+        "secondaryHidden": true,
+        "formValues": {
+          "client.name": "Grace Hopper",
+          "client.notes": "Renderer lifecycle form fill\nPreserved after save and reopen.",
+          "approval.ready": false,
+          "priority": "Low",
+          "region": "West",
+          "reviewers": [
+            "Legal"
+          ]
+        },
+        "formCount": 7,
+        "overlayFormControls": 7,
+        "signatures": [
+          {
+            "annotationId": "native:43R",
+            "fieldName": "approval.signature",
+            "pageIndex": 0,
+            "source": "visual",
+            "status": "signed",
+            "signerName": "Visual QA Signer",
+            "validationStatus": "valid",
+            "validationSummary": "Visual signature appearance was applied."
+          },
+          {
+            "annotationId": "signature-1787136784919-bfe9f6737998f",
+            "fieldName": "Signature",
+            "pageIndex": 0,
+            "source": "certificate",
+            "status": "validated",
+            "signerName": "PolyPDF Automation Signer",
+            "validationStatus": "valid",
+            "validationSummary": "Signature ByteRange, CMS messageDigest, and signer signature are valid for the whole document.",
+            "docMdpPermissionLevel": 3,
+            "postSignAllowedChanges": [
+              "Form fields",
+              "Annotations and markups",
+              "Additional signatures"
+            ],
+            "postSignBlockedChanges": [
+              "Edit PDF text for compatible text streams",
+              "Page insert, delete, rotate, crop, and resize",
+              "Security, OCR, flatten, reduce, and archive rewrites"
+            ]
+          }
+        ],
+        "formsPanel": {
+          "panel": "forms",
+          "title": "Forms",
+          "formsCount": "7",
+          "formRows": 7,
+          "signatureRows": 7,
+          "empty": false,
+          "text": "7 form fields•Add FieldReset Fieldsapproval.readyCheckbox • Acrobat • Page 1EditableValue:UncheckedDefault:UncheckedDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 3EditGo to PageResetApproval signatureSignature Field • Acrobat • Page 1EditableValue:EmptyWidgets:Page 1 No AP, tab 8EditGo to PageResetclient.nameText • Acrobat • Page 1EditableValue:Grace HopperDefault:Ada LovelaceDefault Appearance:0 0 0 rg /Helvetica 22 TfWidgets:Page 1 AP, tab 1Preserved Actions:KJavaScript:Preserved in the PDF; not executed by PolyPDFAction Types:JavaScriptAction Details:K:JavaScript (Unsafe, unsupported)EditGo to PageResetclient.notesMultiline Text • Acrobat • Page 1EditableValue:Renderer lifecycle form fill Preserved after save and reopen.Flags:multilineDefault Appearance:0 0 0 rg /Helvetica 20 TfWidgets:Page 1 AP, tab 2EditGo to PageResetpriorityRadio • Acrobat • Page 1EditableValue:LowOptions:Low, HighFlags:radioDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 4, Page 1 AP, tab 5EditGo to PageResetregionCombo Box • Acrobat • Page 1EditableValue:WestOptions:East, West, CentralFlags:comboDefault Appearance:0 0 0 rg /Helvetica 18 TfWidgets:Page 1 AP, tab 6EditGo to PageResetreviewersList Box • Acrobat • Page 1EditableValue:LegalOptions:Mohammed, QA, LegalFlags:multiSelectDefault Appearance:0 0 0 rg /Helvetica 15 TfWidgets:Page 1 AP, tab 7EditGo to PageReset"
+        },
+        "signaturesPanel": {
+          "panel": "signatures",
+          "title": "Signatures",
+          "formRows": 0,
+          "signatureRows": 2,
+          "empty": false,
+          "text": "2 signature itemsImport PKCS#12…Refresh Mac IDsPlace Signature FieldDigital IDs on This MacChoose a specific certificate when you apply a signature. The sidebar groups repeated keychain IDs so the signatures list stays readable.PolyPDF Automation SignerImported PKCS#12approval.signatureVisual • Page 1VisualSigned By:Visual QA SignerVisual signature — not digitally signedA drawn or image appearance was placed on the page.Signing Time:Aug 19, 2026, 6:53 AMTechnical detailsLast Checked:Aug 19, 2026, 6:53 AMSubfilter:visualGo to PageSign…Clear SignatureSignatureCertificate • Page 1ValidSigned By:PolyPDF Automation SignerSignature is validSignature ByteRange, CMS messageDigest, and signer signature are valid for the whole document.Signed Permissions:Certified, level 3Allowed After Signing:Form fields, Annotations and markups, Additional signaturesBlocked After Signing:Edit PDF text for compatible text streams, Page insert, delete, rotate, crop, and resize, Security, OCR, flatten, reduce, and archive rewritesSigning Time:Aug 19, 2026, 6:53 AMTechnical detailsLast Checked:Aug 19, 2026, 6:53 AMSubfilter:adbe.pkcs7.detachedByte Range:0, 150173, 182943, 2012Byte Range Valid:YesCMS Digest:ValidCMS Signature:ValidTrust:Signer certificate matches a configured trusted identity.Trust Status:TrustedCertificate:ValidTimestamp:MissingTimestamp Trust:MissingLTV:MissingRevocation:MissingRevision:NoneCovers Document:YesModified After Signing:NoSigned Bytes:184,955Document Bytes:184,955DocMDP:Allowed (P 3)FieldMDP:AllowedFieldMDP Action:IncludeFieldMDP Fields:SignatureAppend-Only Save:AllowedPost-Sign Edit Policy:DocMDP permits form filling, annotations, and additional signatures in append-only updates.Certificate ChainCN=PolyPDF Automation Signer, O=PolyPDF Automation, C=USFingerprint:1C:FD:F5:61:FD:A9:4F:6F:5A:B6:B6:8C:BF:AD:F9:CC:C0:D2:A2:9EGo to PageSign…Clear Field"
+        },
+        "digitalIdentityCount": 1
+      }
+    },
+    "save": {
+      "snapshot": {
+        "status": "Saved 1 annotation",
+        "statusPerceivable": true,
+        "statusSeverity": "success",
+        "statusPinned": false,
+        "statusJournal": [
+          {
+            "seq": 1,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 2,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 3,
+            "text": "Opened forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 4,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 5,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 6,
+            "text": "Updated form field client.name",
+            "severity": "success"
+          },
+          {
+            "seq": 7,
+            "text": "Opened PDF. Importing annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 8,
+            "text": "Updated form field client.notes",
+            "severity": "success"
+          },
+          {
+            "seq": 9,
+            "text": "Updated form field approval.ready",
+            "severity": "success"
+          },
+          {
+            "seq": 10,
+            "text": "Updated form field priority",
+            "severity": "success"
+          },
+          {
+            "seq": 11,
+            "text": "Updated form field region",
+            "severity": "success"
+          },
+          {
+            "seq": 12,
+            "text": "Updated form field reviewers",
+            "severity": "success"
+          },
+          {
+            "seq": 13,
+            "text": "Applied visual signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 14,
+            "text": "Placed a signature field.",
+            "severity": "success"
+          },
+          {
+            "seq": 15,
+            "text": "Applying certificate signature…",
+            "severity": "info"
+          },
+          {
+            "seq": 16,
+            "text": "Applied certificate signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 17,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 18,
+            "text": "Saved 1 annotation",
+            "severity": "success"
+          }
+        ],
+        "ocrRunActive": false,
+        "primaryTabs": 1,
+        "secondaryTabs": 0,
+        "activeTabLabel": "forms-signatures-working.pdf",
+        "documentName": "forms-signatures-working.pdf",
+        "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/forms-signatures-working.pdf",
+        "documentPages": 1,
+        "isDirty": false,
+        "annotationCount": 2,
+        "pageRotations": [
+          0
+        ],
+        "pageSizes": [
+          {
+            "width": 612,
+            "height": 792
+          }
+        ],
+        "pageShells": 1,
+        "secondaryPageShells": 0,
+        "renderDiagnostics": {
+          "frameTimeMs": 2389.9,
+          "queueDepth": 0,
+          "visibleCoverage": 0.516,
+          "staleJobsDropped": 0,
+          "tileGenerations": {
+            "primary": 4,
+            "secondary": 0
+          },
+          "viewportSnapshots": {
+            "primary": {
+              "id": 48,
+              "phase": "idle",
+              "scale": 1.0303030303030303,
+              "scrollLeft": 0,
+              "scrollTop": 0,
+              "viewportRect": {
+                "x": 0,
+                "y": 0,
+                "width": 1223,
+                "height": 816
+              },
+              "inputMode": "none"
+            }
+          },
+          "surfaceStates": [
+            {
+              "pageNumber": 1,
+              "layoutId": 2,
+              "viewportGeneration": 4,
+              "renderGeneration": 2,
+              "state": "tilesReady",
+              "visibleCoverage": 1,
+              "backingKind": "tiles"
+            }
+          ],
+          "resourceCategories": {
+            "renderTiles": {
+              "entries": 4,
+              "bytes": 8307936,
+              "maxBytes": 134217728,
+              "residualThresholdBytes": 0
+            },
+            "coarseBackings": {
+              "entries": 1,
+              "bytes": 717216,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "textPages": {
+              "entries": 1,
+              "bytes": 4952,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "geometry": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "thumbnails": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "search": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "visualSearch": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "importedAnnotations": {
+              "entries": 2,
+              "bytes": 512,
+              "residualThresholdBytes": 0
+            },
+            "documentBytes": {
+              "entries": 1,
+              "bytes": 191337,
+              "residualThresholdBytes": 0
+            },
+            "backgroundJobs": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            }
+          }
+        },
+        "splitVertical": false,
+        "splitHorizontal": false,
+        "secondaryHidden": true
+      },
+      "file": {
+        "path": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/forms-signatures-working.pdf",
+        "size": 191337
+      }
+    },
+    "saveAs": {
+      "snapshot": {
+        "status": "Saved 1 annotation",
+        "statusPerceivable": true,
+        "statusSeverity": "success",
+        "statusPinned": false,
+        "statusJournal": [
+          {
+            "seq": 1,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 2,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 3,
+            "text": "Opened forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 4,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 5,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 6,
+            "text": "Updated form field client.name",
+            "severity": "success"
+          },
+          {
+            "seq": 7,
+            "text": "Opened PDF. Importing annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 8,
+            "text": "Updated form field client.notes",
+            "severity": "success"
+          },
+          {
+            "seq": 9,
+            "text": "Updated form field approval.ready",
+            "severity": "success"
+          },
+          {
+            "seq": 10,
+            "text": "Updated form field priority",
+            "severity": "success"
+          },
+          {
+            "seq": 11,
+            "text": "Updated form field region",
+            "severity": "success"
+          },
+          {
+            "seq": 12,
+            "text": "Updated form field reviewers",
+            "severity": "success"
+          },
+          {
+            "seq": 13,
+            "text": "Applied visual signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 14,
+            "text": "Placed a signature field.",
+            "severity": "success"
+          },
+          {
+            "seq": 15,
+            "text": "Applying certificate signature…",
+            "severity": "info"
+          },
+          {
+            "seq": 16,
+            "text": "Applied certificate signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 17,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 18,
+            "text": "Saved 1 annotation",
+            "severity": "success"
+          },
+          {
+            "seq": 19,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 20,
+            "text": "Saved 1 annotation",
+            "severity": "success"
+          }
+        ],
+        "ocrRunActive": false,
+        "primaryTabs": 1,
+        "secondaryTabs": 0,
+        "activeTabLabel": "save-as-forms-signatures-working.pdf",
+        "documentName": "save-as-forms-signatures-working.pdf",
+        "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+        "documentPages": 1,
+        "isDirty": false,
+        "annotationCount": 2,
+        "pageRotations": [
+          0
+        ],
+        "pageSizes": [
+          {
+            "width": 612,
+            "height": 792
+          }
+        ],
+        "pageShells": 1,
+        "secondaryPageShells": 0,
+        "renderDiagnostics": {
+          "frameTimeMs": 2431.3,
+          "queueDepth": 0,
+          "visibleCoverage": 0.516,
+          "staleJobsDropped": 0,
+          "tileGenerations": {
+            "primary": 4,
+            "secondary": 0
+          },
+          "viewportSnapshots": {
+            "primary": {
+              "id": 49,
+              "phase": "idle",
+              "scale": 1.0303030303030303,
+              "scrollLeft": 0,
+              "scrollTop": 0,
+              "viewportRect": {
+                "x": 0,
+                "y": 0,
+                "width": 1223,
+                "height": 816
+              },
+              "inputMode": "none"
+            }
+          },
+          "surfaceStates": [
+            {
+              "pageNumber": 1,
+              "layoutId": 2,
+              "viewportGeneration": 4,
+              "renderGeneration": 2,
+              "state": "tilesReady",
+              "visibleCoverage": 1,
+              "backingKind": "tiles"
+            }
+          ],
+          "resourceCategories": {
+            "renderTiles": {
+              "entries": 4,
+              "bytes": 8307936,
+              "maxBytes": 134217728,
+              "residualThresholdBytes": 0
+            },
+            "coarseBackings": {
+              "entries": 1,
+              "bytes": 717216,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "textPages": {
+              "entries": 1,
+              "bytes": 4952,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "geometry": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "thumbnails": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "search": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "visualSearch": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "importedAnnotations": {
+              "entries": 2,
+              "bytes": 512,
+              "residualThresholdBytes": 0
+            },
+            "documentBytes": {
+              "entries": 1,
+              "bytes": 197719,
+              "residualThresholdBytes": 0
+            },
+            "backgroundJobs": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            }
+          }
+        },
+        "splitVertical": false,
+        "splitHorizontal": false,
+        "secondaryHidden": true
+      },
+      "file": {
+        "path": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+        "size": 197719
+      }
+    },
+    "reopened": {
+      "status": "Opened save-as-forms-signatures-working.pdf",
+      "statusPerceivable": true,
+      "statusSeverity": "success",
+      "statusPinned": false,
+      "statusJournal": [
+        {
+          "seq": 1,
+          "text": "Opening...",
+          "severity": "info"
+        },
+        {
+          "seq": 2,
+          "text": "Loading PDF...",
+          "severity": "info"
+        },
+        {
+          "seq": 3,
+          "text": "Opened forms-signatures-working.pdf",
+          "severity": "success"
+        },
+        {
+          "seq": 4,
+          "text": "Fit Page",
+          "severity": "info"
+        },
+        {
+          "seq": 5,
+          "text": "Fit Page",
+          "severity": "info"
+        },
+        {
+          "seq": 6,
+          "text": "Updated form field client.name",
+          "severity": "success"
+        },
+        {
+          "seq": 7,
+          "text": "Opened PDF. Importing annotations...",
+          "severity": "info"
+        },
+        {
+          "seq": 8,
+          "text": "Updated form field client.notes",
+          "severity": "success"
+        },
+        {
+          "seq": 9,
+          "text": "Updated form field approval.ready",
+          "severity": "success"
+        },
+        {
+          "seq": 10,
+          "text": "Updated form field priority",
+          "severity": "success"
+        },
+        {
+          "seq": 11,
+          "text": "Updated form field region",
+          "severity": "success"
+        },
+        {
+          "seq": 12,
+          "text": "Updated form field reviewers",
+          "severity": "success"
+        },
+        {
+          "seq": 13,
+          "text": "Applied visual signature metadata.",
+          "severity": "success"
+        },
+        {
+          "seq": 14,
+          "text": "Placed a signature field.",
+          "severity": "success"
+        },
+        {
+          "seq": 15,
+          "text": "Applying certificate signature…",
+          "severity": "info"
+        },
+        {
+          "seq": 16,
+          "text": "Applied certificate signature metadata.",
+          "severity": "success"
+        },
+        {
+          "seq": 17,
+          "text": "Saving annotations...",
+          "severity": "info"
+        },
+        {
+          "seq": 18,
+          "text": "Saved 1 annotation",
+          "severity": "success"
+        },
+        {
+          "seq": 19,
+          "text": "Saving annotations...",
+          "severity": "info"
+        },
+        {
+          "seq": 20,
+          "text": "Saved 1 annotation",
+          "severity": "success"
+        },
+        {
+          "seq": 21,
+          "text": "Opening...",
+          "severity": "info"
+        },
+        {
+          "seq": 22,
+          "text": "Closed 1 document",
+          "severity": "info"
+        },
+        {
+          "seq": 23,
+          "text": "Loading PDF...",
+          "severity": "info"
+        },
+        {
+          "seq": 24,
+          "text": "Opened save-as-forms-signatures-working.pdf",
+          "severity": "success"
+        }
+      ],
+      "ocrRunActive": false,
+      "primaryTabs": 1,
+      "secondaryTabs": 0,
+      "activeTabLabel": "save-as-forms-signatures-working.pdf",
+      "documentName": "save-as-forms-signatures-working.pdf",
+      "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+      "documentPages": 1,
+      "isDirty": false,
+      "annotationCount": 2,
+      "pageRotations": [
+        0
+      ],
+      "pageSizes": [
+        {
+          "width": 612,
+          "height": 792
+        }
+      ],
+      "pageShells": 1,
+      "secondaryPageShells": 0,
+      "renderDiagnostics": {
+        "frameTimeMs": 17.8,
+        "queueDepth": 9,
+        "visibleCoverage": 0.516,
+        "staleJobsDropped": 0,
+        "tileGenerations": {
+          "primary": 8,
+          "secondary": 0
+        },
+        "viewportSnapshots": {
+          "primary": {
+            "id": 62,
+            "phase": "scrolling",
+            "scale": 1.0303030303030303,
+            "scrollLeft": 0,
+            "scrollTop": 14,
+            "viewportRect": {
+              "x": 0,
+              "y": 14,
+              "width": 1223,
+              "height": 816
+            },
+            "inputMode": "scrollbar"
+          }
+        },
+        "surfaceStates": [
+          {
+            "pageNumber": 1,
+            "layoutId": 4,
+            "viewportGeneration": 8,
+            "renderGeneration": 4,
+            "state": "tilesReady",
+            "visibleCoverage": 1,
+            "backingKind": "tiles"
+          }
+        ],
+        "resourceCategories": {
+          "renderTiles": {
+            "entries": 0,
+            "bytes": 0,
+            "maxBytes": 134217728,
+            "residualThresholdBytes": 0
+          },
+          "coarseBackings": {
+            "entries": 1,
+            "bytes": 717216,
+            "maxBytes": 33554432,
+            "residualThresholdBytes": 0
+          },
+          "textPages": {
+            "entries": 1,
+            "bytes": 4952,
+            "maxBytes": 33554432,
+            "residualThresholdBytes": 0
+          },
+          "geometry": {
+            "entries": 0,
+            "bytes": 0,
+            "residualThresholdBytes": 0
+          },
+          "thumbnails": {
+            "entries": 0,
+            "bytes": 0,
+            "residualThresholdBytes": 0
+          },
+          "search": {
+            "entries": 0,
+            "bytes": 0,
+            "residualThresholdBytes": 0
+          },
+          "visualSearch": {
+            "entries": 0,
+            "bytes": 0,
+            "residualThresholdBytes": 0
+          },
+          "importedAnnotations": {
+            "entries": 2,
+            "bytes": 512,
+            "residualThresholdBytes": 0
+          },
+          "documentBytes": {
+            "entries": 1,
+            "bytes": 197719,
+            "residualThresholdBytes": 0
+          },
+          "backgroundJobs": {
+            "entries": 0,
+            "bytes": 0,
+            "residualThresholdBytes": 0
+          }
+        }
+      },
+      "splitVertical": false,
+      "splitHorizontal": false,
+      "secondaryHidden": true,
+      "formValues": {
+        "client.name": "Grace Hopper",
+        "client.notes": "Renderer lifecycle form fill\nPreserved after save and reopen.",
+        "approval.ready": false,
+        "priority": "Low",
+        "region": "West",
+        "reviewers": [
+          "Legal"
+        ]
+      },
+      "formCount": 7,
+      "overlayFormControls": 7,
+      "signatures": [
+        {
+          "annotationId": "sig-Signature",
+          "fieldName": "Signature",
+          "source": "nativePDF",
+          "status": "validated",
+          "signerName": "PolyPDF Automation Signer",
+          "validationStatus": "validWithChanges",
+          "validationSummary": "Signature byte ranges are intact, but the PDF has incremental changes after the signed revision.",
+          "docMdpPermissionLevel": 3,
+          "postSignAllowedChanges": [
+            "Form fields",
+            "Annotations and markups",
+            "Additional signatures"
+          ],
+          "postSignBlockedChanges": [
+            "Edit PDF text for compatible text streams",
+            "Page insert, delete, rotate, crop, and resize",
+            "Security, OCR, flatten, reduce, and archive rewrites"
+          ]
+        },
+        {
+          "annotationId": "native:43R",
+          "fieldName": "approval.signature",
+          "pageIndex": 0,
+          "source": "visual",
+          "status": "signed",
+          "signerName": "Visual QA Signer",
+          "validationStatus": "valid",
+          "validationSummary": "Visual signature appearance was applied."
+        },
+        {
+          "annotationId": "signature-1787136784919-bfe9f6737998f",
+          "fieldName": "Signature",
+          "pageIndex": 0,
+          "source": "workspace",
+          "status": "unsigned"
+        }
+      ],
+      "formsPanel": {
+        "panel": "forms",
+        "title": "Forms",
+        "formsCount": "7",
+        "formRows": 7,
+        "signatureRows": 7,
+        "empty": false,
+        "text": "7 form fields•Add FieldReset Fieldsapproval.readyCheckbox • Acrobat • Page 1EditableValue:UncheckedDefault:UncheckedDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 3EditGo to PageResetApproval signatureSignature Field • Acrobat • Page 1EditableValue:EmptyWidgets:Page 1 No AP, tab 8EditGo to PageResetclient.nameText • Acrobat • Page 1EditableValue:Grace HopperDefault:Ada LovelaceDefault Appearance:0 0 0 rg /Helvetica 22 TfWidgets:Page 1 AP, tab 1Preserved Actions:KJavaScript:Preserved in the PDF; not executed by PolyPDFAction Types:JavaScriptAction Details:K:JavaScript (Unsafe, unsupported)EditGo to PageResetclient.notesMultiline Text • Acrobat • Page 1EditableValue:Renderer lifecycle form fill Preserved after save and reopen.Flags:multilineDefault Appearance:0 0 0 rg /Helvetica 20 TfWidgets:Page 1 AP, tab 2EditGo to PageResetpriorityRadio • Acrobat • Page 1EditableValue:LowOptions:Low, HighFlags:radioDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 4, Page 1 AP, tab 5EditGo to PageResetregionCombo Box • Acrobat • Page 1EditableValue:WestOptions:East, West, CentralFlags:comboDefault Appearance:0 0 0 rg /Helvetica 18 TfWidgets:Page 1 AP, tab 6EditGo to PageResetreviewersList Box • Acrobat • Page 1EditableValue:LegalOptions:Mohammed, QA, LegalFlags:multiSelectDefault Appearance:0 0 0 rg /Helvetica 15 TfWidgets:Page 1 AP, tab 7EditGo to PageReset"
+      },
+      "signaturesPanel": {
+        "panel": "signatures",
+        "title": "Signatures",
+        "formRows": 0,
+        "signatureRows": 3,
+        "empty": false,
+        "text": "3 signature itemsImport PKCS#12…Refresh Mac IDsPlace Signature FieldDigital IDs on This MacChoose a specific certificate when you apply a signature. The sidebar groups repeated keychain IDs so the signatures list stays readable.PolyPDF Automation SignerImported PKCS#12SignaturePDFValid With ChangesSigned By:PolyPDF Automation SignerSignature is valid with later changesSignature byte ranges are intact, but the PDF has incremental changes after the signed revision.Signed Permissions:Certified, level 3Allowed After Signing:Form fields, Annotations and markups, Additional signaturesBlocked After Signing:Edit PDF text for compatible text streams, Page insert, delete, rotate, crop, and resize, Security, OCR, flatten, reduce, and archive rewritesSigning Time:Aug 19, 2026, 6:53 AMTechnical detailsLast Checked:Aug 19, 2026, 6:53 AMSubfilter:adbe.pkcs7.detachedByte Range:0, 150173, 182943, 2012Byte Range Valid:YesCMS Digest:ValidCMS Signature:ValidTrust:Signer certificate matches a configured trusted identity.Trust Status:TrustedCertificate:ValidTimestamp:MissingTimestamp Trust:MissingLTV:MissingRevocation:MissingRevision:Incremental changesCovers Document:NoModified After Signing:YesSigned Bytes:184,955Document Bytes:197,719DocMDP:Allowed (P 3)FieldMDP:AllowedFieldMDP Action:IncludeFieldMDP Fields:SignatureAppend-Only Save:AllowedPost-Sign Edit Policy:DocMDP permits form filling, annotations, and additional signatures in append-only updates.Certificate ChainCN=PolyPDF Automation Signer, O=PolyPDF Automation, C=USClear SignatureCryptographically checked from the PDFapproval.signatureVisual • Page 1VisualSigned By:Visual QA SignerVisual signature — not digitally signedA drawn or image appearance was placed on the page.Signing Time:Aug 19, 2026, 6:53 AMTechnical detailsLast Checked:Aug 19, 2026, 6:53 AMSubfilter:visualGo to PageSign…Clear SignatureSignaturePolyPDF • Page 1UnsignedGo to PageSign…Clear Field"
+      },
+      "digitalIdentityCount": 1
+    },
+    "uiParityPolish": {
+      "formsPanelShowsWidgetState": true,
+      "formsPanelShowsValues": true,
+      "signaturesPanelShowsByteRange": true,
+      "signaturesPanelShowsCmsDigest": true,
+      "signaturesPanelShowsTrust": true,
+      "signaturesPanelShowsPermissions": true,
+      "signaturesPanelShowsAllowedAfterSigning": true,
+      "signaturesPanelShowsBlockedAfterSigning": true,
+      "signaturesPanelShowsRevision": true
+    },
+    "signedPostSavePolicy": {
+      "appendOnlyEdit": {
+        "before": {
+          "status": "Opened PDF. Importing annotations...",
+          "statusPerceivable": true,
+          "statusSeverity": "info",
+          "statusPinned": false,
+          "statusJournal": [
+            {
+              "seq": 1,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 2,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 3,
+              "text": "Opened forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 4,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 5,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 6,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            },
+            {
+              "seq": 7,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 8,
+              "text": "Updated form field client.notes",
+              "severity": "success"
+            },
+            {
+              "seq": 9,
+              "text": "Updated form field approval.ready",
+              "severity": "success"
+            },
+            {
+              "seq": 10,
+              "text": "Updated form field priority",
+              "severity": "success"
+            },
+            {
+              "seq": 11,
+              "text": "Updated form field region",
+              "severity": "success"
+            },
+            {
+              "seq": 12,
+              "text": "Updated form field reviewers",
+              "severity": "success"
+            },
+            {
+              "seq": 13,
+              "text": "Applied visual signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 14,
+              "text": "Placed a signature field.",
+              "severity": "success"
+            },
+            {
+              "seq": 15,
+              "text": "Applying certificate signature…",
+              "severity": "info"
+            },
+            {
+              "seq": 16,
+              "text": "Applied certificate signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 17,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 18,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 19,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 20,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 21,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 22,
+              "text": "Closed 1 document",
+              "severity": "info"
+            },
+            {
+              "seq": 23,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 24,
+              "text": "Opened save-as-forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 25,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            }
+          ],
+          "ocrRunActive": false,
+          "primaryTabs": 1,
+          "secondaryTabs": 0,
+          "activeTabLabel": "save-as-forms-signatures-working.pdf",
+          "documentName": "save-as-forms-signatures-working.pdf",
+          "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+          "documentPages": 1,
+          "isDirty": false,
+          "annotationCount": 2,
+          "pageRotations": [
+            0
+          ],
+          "pageSizes": [
+            {
+              "width": 612,
+              "height": 792
+            }
+          ],
+          "pageShells": 1,
+          "secondaryPageShells": 0,
+          "renderDiagnostics": {
+            "frameTimeMs": 24.8,
+            "queueDepth": 0,
+            "visibleCoverage": 0.516,
+            "staleJobsDropped": 0,
+            "tileGenerations": {
+              "primary": 8,
+              "secondary": 0
+            },
+            "viewportSnapshots": {
+              "primary": {
+                "id": 74,
+                "phase": "idle",
+                "scale": 1.0303030303030303,
+                "scrollLeft": 0,
+                "scrollTop": 14,
+                "viewportRect": {
+                  "x": 0,
+                  "y": 14,
+                  "width": 1223,
+                  "height": 816
+                },
+                "inputMode": "none"
+              }
+            },
+            "surfaceStates": [
+              {
+                "pageNumber": 1,
+                "layoutId": 4,
+                "viewportGeneration": 8,
+                "renderGeneration": 4,
+                "state": "tilesReady",
+                "visibleCoverage": 1,
+                "backingKind": "tiles"
+              }
+            ],
+            "resourceCategories": {
+              "renderTiles": {
+                "entries": 4,
+                "bytes": 8307936,
+                "maxBytes": 134217728,
+                "residualThresholdBytes": 0
+              },
+              "coarseBackings": {
+                "entries": 1,
+                "bytes": 717216,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "textPages": {
+                "entries": 1,
+                "bytes": 4952,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "geometry": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "thumbnails": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "search": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "visualSearch": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "importedAnnotations": {
+                "entries": 2,
+                "bytes": 512,
+                "residualThresholdBytes": 0
+              },
+              "documentBytes": {
+                "entries": 1,
+                "bytes": 197719,
+                "residualThresholdBytes": 0
+              },
+              "backgroundJobs": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              }
+            }
+          },
+          "splitVertical": false,
+          "splitHorizontal": false,
+          "secondaryHidden": true,
+          "formValues": {
+            "client.name": "Grace Hopper",
+            "client.notes": "Renderer lifecycle form fill\nPreserved after save and reopen.",
+            "approval.ready": false,
+            "priority": "Low",
+            "region": "West",
+            "reviewers": [
+              "Legal"
+            ]
+          },
+          "formCount": 7,
+          "overlayFormControls": 7,
+          "signatures": [
+            {
+              "annotationId": "sig-Signature",
+              "fieldName": "Signature",
+              "source": "nativePDF",
+              "status": "validated",
+              "signerName": "PolyPDF Automation Signer",
+              "validationStatus": "validWithChanges",
+              "validationSummary": "Signature byte ranges are intact, but the PDF has incremental changes after the signed revision.",
+              "docMdpPermissionLevel": 3,
+              "postSignAllowedChanges": [
+                "Form fields",
+                "Annotations and markups",
+                "Additional signatures"
+              ],
+              "postSignBlockedChanges": [
+                "Edit PDF text for compatible text streams",
+                "Page insert, delete, rotate, crop, and resize",
+                "Security, OCR, flatten, reduce, and archive rewrites"
+              ]
+            },
+            {
+              "annotationId": "native:43R",
+              "fieldName": "approval.signature",
+              "pageIndex": 0,
+              "source": "visual",
+              "status": "signed",
+              "signerName": "Visual QA Signer",
+              "validationStatus": "valid",
+              "validationSummary": "Visual signature appearance was applied."
+            },
+            {
+              "annotationId": "signature-1787136784919-bfe9f6737998f",
+              "fieldName": "Signature",
+              "pageIndex": 0,
+              "source": "workspace",
+              "status": "unsigned"
+            }
+          ],
+          "formsPanel": {
+            "panel": "forms",
+            "title": "Forms",
+            "formsCount": "7",
+            "formRows": 7,
+            "signatureRows": 7,
+            "empty": false,
+            "text": "7 form fields•Add FieldReset Fieldsapproval.readyCheckbox • Acrobat • Page 1EditableValue:UncheckedDefault:UncheckedDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 3EditGo to PageResetApproval signatureSignature Field • Acrobat • Page 1EditableValue:EmptyWidgets:Page 1 No AP, tab 8EditGo to PageResetclient.nameText • Acrobat • Page 1EditableValue:Grace HopperDefault:Ada LovelaceDefault Appearance:0 0 0 rg /Helvetica 22 TfWidgets:Page 1 AP, tab 1Preserved Actions:KJavaScript:Preserved in the PDF; not executed by PolyPDFAction Types:JavaScriptAction Details:K:JavaScript (Unsafe, unsupported)EditGo to PageResetclient.notesMultiline Text • Acrobat • Page 1EditableValue:Renderer lifecycle form fill Preserved after save and reopen.Flags:multilineDefault Appearance:0 0 0 rg /Helvetica 20 TfWidgets:Page 1 AP, tab 2EditGo to PageResetpriorityRadio • Acrobat • Page 1EditableValue:LowOptions:Low, HighFlags:radioDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 4, Page 1 AP, tab 5EditGo to PageResetregionCombo Box • Acrobat • Page 1EditableValue:WestOptions:East, West, CentralFlags:comboDefault Appearance:0 0 0 rg /Helvetica 18 TfWidgets:Page 1 AP, tab 6EditGo to PageResetreviewersList Box • Acrobat • Page 1EditableValue:LegalOptions:Mohammed, QA, LegalFlags:multiSelectDefault Appearance:0 0 0 rg /Helvetica 15 TfWidgets:Page 1 AP, tab 7EditGo to PageReset"
+          },
+          "signaturesPanel": {
+            "panel": "signatures",
+            "title": "Signatures",
+            "formRows": 0,
+            "signatureRows": 3,
+            "empty": false,
+            "text": "3 signature itemsImport PKCS#12…Refresh Mac IDsPlace Signature FieldDigital IDs on This MacChoose a specific certificate when you apply a signature. The sidebar groups repeated keychain IDs so the signatures list stays readable.PolyPDF Automation SignerImported PKCS#12SignaturePDFValid With ChangesSigned By:PolyPDF Automation SignerSignature is valid with later changesSignature byte ranges are intact, but the PDF has incremental changes after the signed revision.Signed Permissions:Certified, level 3Allowed After Signing:Form fields, Annotations and markups, Additional signaturesBlocked After Signing:Edit PDF text for compatible text streams, Page insert, delete, rotate, crop, and resize, Security, OCR, flatten, reduce, and archive rewritesSigning Time:Aug 19, 2026, 6:53 AMTechnical detailsLast Checked:Aug 19, 2026, 6:53 AMSubfilter:adbe.pkcs7.detachedByte Range:0, 150173, 182943, 2012Byte Range Valid:YesCMS Digest:ValidCMS Signature:ValidTrust:Signer certificate matches a configured trusted identity.Trust Status:TrustedCertificate:ValidTimestamp:MissingTimestamp Trust:MissingLTV:MissingRevocation:MissingRevision:Incremental changesCovers Document:NoModified After Signing:YesSigned Bytes:184,955Document Bytes:197,719DocMDP:Allowed (P 3)FieldMDP:AllowedFieldMDP Action:IncludeFieldMDP Fields:SignatureAppend-Only Save:AllowedPost-Sign Edit Policy:DocMDP permits form filling, annotations, and additional signatures in append-only updates.Certificate ChainCN=PolyPDF Automation Signer, O=PolyPDF Automation, C=USClear SignatureCryptographically checked from the PDFapproval.signatureVisual • Page 1VisualSigned By:Visual QA SignerVisual signature — not digitally signedA drawn or image appearance was placed on the page.Signing Time:Aug 19, 2026, 6:53 AMTechnical detailsLast Checked:Aug 19, 2026, 6:53 AMSubfilter:visualGo to PageSign…Clear SignatureSignaturePolyPDF • Page 1UnsignedGo to PageSign…Clear Field"
+          },
+          "digitalIdentityCount": 1
+        },
+        "afterEdit": {
+          "status": "Updated form field client.name",
+          "statusPerceivable": true,
+          "statusSeverity": "success",
+          "statusPinned": false,
+          "statusJournal": [
+            {
+              "seq": 1,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 2,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 3,
+              "text": "Opened forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 4,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 5,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 6,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            },
+            {
+              "seq": 7,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 8,
+              "text": "Updated form field client.notes",
+              "severity": "success"
+            },
+            {
+              "seq": 9,
+              "text": "Updated form field approval.ready",
+              "severity": "success"
+            },
+            {
+              "seq": 10,
+              "text": "Updated form field priority",
+              "severity": "success"
+            },
+            {
+              "seq": 11,
+              "text": "Updated form field region",
+              "severity": "success"
+            },
+            {
+              "seq": 12,
+              "text": "Updated form field reviewers",
+              "severity": "success"
+            },
+            {
+              "seq": 13,
+              "text": "Applied visual signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 14,
+              "text": "Placed a signature field.",
+              "severity": "success"
+            },
+            {
+              "seq": 15,
+              "text": "Applying certificate signature…",
+              "severity": "info"
+            },
+            {
+              "seq": 16,
+              "text": "Applied certificate signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 17,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 18,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 19,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 20,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 21,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 22,
+              "text": "Closed 1 document",
+              "severity": "info"
+            },
+            {
+              "seq": 23,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 24,
+              "text": "Opened save-as-forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 25,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 26,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            }
+          ],
+          "ocrRunActive": false,
+          "primaryTabs": 1,
+          "secondaryTabs": 0,
+          "activeTabLabel": "save-as-forms-signatures-working.pdf",
+          "documentName": "save-as-forms-signatures-working.pdf",
+          "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+          "documentPages": 1,
+          "isDirty": true,
+          "annotationCount": 2,
+          "pageRotations": [
+            0
+          ],
+          "pageSizes": [
+            {
+              "width": 612,
+              "height": 792
+            }
+          ],
+          "pageShells": 1,
+          "secondaryPageShells": 0,
+          "renderDiagnostics": {
+            "frameTimeMs": 100.6,
+            "queueDepth": 0,
+            "visibleCoverage": 0.516,
+            "staleJobsDropped": 0,
+            "tileGenerations": {
+              "primary": 8,
+              "secondary": 0
+            },
+            "viewportSnapshots": {
+              "primary": {
+                "id": 75,
+                "phase": "idle",
+                "scale": 1.0303030303030303,
+                "scrollLeft": 0,
+                "scrollTop": 14,
+                "viewportRect": {
+                  "x": 0,
+                  "y": 14,
+                  "width": 1223,
+                  "height": 816
+                },
+                "inputMode": "none"
+              }
+            },
+            "surfaceStates": [
+              {
+                "pageNumber": 1,
+                "layoutId": 4,
+                "viewportGeneration": 8,
+                "renderGeneration": 4,
+                "state": "tilesReady",
+                "visibleCoverage": 1,
+                "backingKind": "tiles"
+              }
+            ],
+            "resourceCategories": {
+              "renderTiles": {
+                "entries": 4,
+                "bytes": 8307936,
+                "maxBytes": 134217728,
+                "residualThresholdBytes": 0
+              },
+              "coarseBackings": {
+                "entries": 1,
+                "bytes": 717216,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "textPages": {
+                "entries": 1,
+                "bytes": 4952,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "geometry": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "thumbnails": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "search": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "visualSearch": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "importedAnnotations": {
+                "entries": 2,
+                "bytes": 512,
+                "residualThresholdBytes": 0
+              },
+              "documentBytes": {
+                "entries": 1,
+                "bytes": 197719,
+                "residualThresholdBytes": 0
+              },
+              "backgroundJobs": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              }
+            }
+          },
+          "splitVertical": false,
+          "splitHorizontal": false,
+          "secondaryHidden": true,
+          "formValues": {
+            "client.name": "Allowed Append-Only Edit",
+            "client.notes": "Renderer lifecycle form fill\nPreserved after save and reopen.",
+            "approval.ready": false,
+            "priority": "Low",
+            "region": "West",
+            "reviewers": [
+              "Legal"
+            ]
+          },
+          "formCount": 7,
+          "overlayFormControls": 7,
+          "signatures": [
+            {
+              "annotationId": "sig-Signature",
+              "fieldName": "Signature",
+              "source": "nativePDF",
+              "status": "validated",
+              "signerName": "PolyPDF Automation Signer",
+              "validationStatus": "validWithChanges",
+              "validationSummary": "Signature byte ranges are intact, but the PDF has incremental changes after the signed revision.",
+              "docMdpPermissionLevel": 3,
+              "postSignAllowedChanges": [
+                "Form fields",
+                "Annotations and markups",
+                "Additional signatures"
+              ],
+              "postSignBlockedChanges": [
+                "Edit PDF text for compatible text streams",
+                "Page insert, delete, rotate, crop, and resize",
+                "Security, OCR, flatten, reduce, and archive rewrites"
+              ]
+            },
+            {
+              "annotationId": "native:43R",
+              "fieldName": "approval.signature",
+              "pageIndex": 0,
+              "source": "visual",
+              "status": "signed",
+              "signerName": "Visual QA Signer",
+              "validationStatus": "valid",
+              "validationSummary": "Visual signature appearance was applied."
+            },
+            {
+              "annotationId": "signature-1787136784919-bfe9f6737998f",
+              "fieldName": "Signature",
+              "pageIndex": 0,
+              "source": "workspace",
+              "status": "unsigned"
+            }
+          ],
+          "formsPanel": {
+            "panel": "forms",
+            "title": "Forms",
+            "formsCount": "7",
+            "formRows": 7,
+            "signatureRows": 7,
+            "empty": false,
+            "text": "7 form fields•Add FieldReset Fieldsapproval.readyCheckbox • Acrobat • Page 1EditableValue:UncheckedDefault:UncheckedDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 3EditGo to PageResetApproval signatureSignature Field • Acrobat • Page 1EditableValue:EmptyWidgets:Page 1 No AP, tab 8EditGo to PageResetclient.nameText • Acrobat • Page 1EditableValue:Allowed Append-Only EditDefault:Ada LovelaceDefault Appearance:0 0 0 rg /Helvetica 22 TfWidgets:Page 1 AP, tab 1Preserved Actions:KJavaScript:Preserved in the PDF; not executed by PolyPDFAction Types:JavaScriptAction Details:K:JavaScript (Unsafe, unsupported)EditGo to PageResetclient.notesMultiline Text • Acrobat • Page 1EditableValue:Renderer lifecycle form fill Preserved after save and reopen.Flags:multilineDefault Appearance:0 0 0 rg /Helvetica 20 TfWidgets:Page 1 AP, tab 2EditGo to PageResetpriorityRadio • Acrobat • Page 1EditableValue:LowOptions:Low, HighFlags:radioDefault Appearance:0 0 0 rg /dummy__noop 0 TfWidgets:Page 1 AP, tab 4, Page 1 AP, tab 5EditGo to PageResetregionCombo Box • Acrobat • Page 1EditableValue:WestOptions:East, West, CentralFlags:comboDefault Appearance:0 0 0 rg /Helvetica 18 TfWidgets:Page 1 AP, tab 6EditGo to PageResetreviewersList Box • Acrobat • Page 1EditableValue:LegalOptions:Mohammed, QA, LegalFlags:multiSelectDefault Appearance:0 0 0 rg /Helvetica 15 TfWidgets:Page 1 AP, tab 7EditGo to PageReset"
+          },
+          "signaturesPanel": {
+            "panel": "signatures",
+            "title": "Signatures",
+            "formRows": 0,
+            "signatureRows": 3,
+            "empty": false,
+            "text": "3 signature itemsImport PKCS#12…Refresh Mac IDsPlace Signature FieldDigital IDs on This MacChoose a specific certificate when you apply a signature. The sidebar groups repeated keychain IDs so the signatures list stays readable.PolyPDF Automation SignerImported PKCS#12SignaturePDFValid With ChangesSigned By:PolyPDF Automation SignerSignature is valid with later changesSignature byte ranges are intact, but the PDF has incremental changes after the signed revision.Signed Permissions:Certified, level 3Allowed After Signing:Form fields, Annotations and markups, Additional signaturesBlocked After Signing:Edit PDF text for compatible text streams, Page insert, delete, rotate, crop, and resize, Security, OCR, flatten, reduce, and archive rewritesSigning Time:Aug 19, 2026, 6:53 AMTechnical detailsLast Checked:Aug 19, 2026, 6:53 AMSubfilter:adbe.pkcs7.detachedByte Range:0, 150173, 182943, 2012Byte Range Valid:YesCMS Digest:ValidCMS Signature:ValidTrust:Signer certificate matches a configured trusted identity.Trust Status:TrustedCertificate:ValidTimestamp:MissingTimestamp Trust:MissingLTV:MissingRevocation:MissingRevision:Incremental changesCovers Document:NoModified After Signing:YesSigned Bytes:184,955Document Bytes:197,719DocMDP:Allowed (P 3)FieldMDP:AllowedFieldMDP Action:IncludeFieldMDP Fields:SignatureAppend-Only Save:AllowedPost-Sign Edit Policy:DocMDP permits form filling, annotations, and additional signatures in append-only updates.Certificate ChainCN=PolyPDF Automation Signer, O=PolyPDF Automation, C=USClear SignatureCryptographically checked from the PDFapproval.signatureVisual • Page 1VisualSigned By:Visual QA SignerVisual signature — not digitally signedA drawn or image appearance was placed on the page.Signing Time:Aug 19, 2026, 6:53 AMTechnical detailsLast Checked:Aug 19, 2026, 6:53 AMSubfilter:visualGo to PageSign…Clear SignatureSignaturePolyPDF • Page 1UnsignedGo to PageSign…Clear Field"
+          },
+          "digitalIdentityCount": 1
+        },
+        "fieldName": "client.name",
+        "attemptedValue": "Allowed Append-Only Edit"
+      },
+      "appendOnlySave": {
+        "status": "Saved 2 annotations",
+        "statusPerceivable": true,
+        "statusSeverity": "success",
+        "statusPinned": false,
+        "statusJournal": [
+          {
+            "seq": 1,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 2,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 3,
+            "text": "Opened forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 4,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 5,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 6,
+            "text": "Updated form field client.name",
+            "severity": "success"
+          },
+          {
+            "seq": 7,
+            "text": "Opened PDF. Importing annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 8,
+            "text": "Updated form field client.notes",
+            "severity": "success"
+          },
+          {
+            "seq": 9,
+            "text": "Updated form field approval.ready",
+            "severity": "success"
+          },
+          {
+            "seq": 10,
+            "text": "Updated form field priority",
+            "severity": "success"
+          },
+          {
+            "seq": 11,
+            "text": "Updated form field region",
+            "severity": "success"
+          },
+          {
+            "seq": 12,
+            "text": "Updated form field reviewers",
+            "severity": "success"
+          },
+          {
+            "seq": 13,
+            "text": "Applied visual signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 14,
+            "text": "Placed a signature field.",
+            "severity": "success"
+          },
+          {
+            "seq": 15,
+            "text": "Applying certificate signature…",
+            "severity": "info"
+          },
+          {
+            "seq": 16,
+            "text": "Applied certificate signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 17,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 18,
+            "text": "Saved 1 annotation",
+            "severity": "success"
+          },
+          {
+            "seq": 19,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 20,
+            "text": "Saved 1 annotation",
+            "severity": "success"
+          },
+          {
+            "seq": 21,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 22,
+            "text": "Closed 1 document",
+            "severity": "info"
+          },
+          {
+            "seq": 23,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 24,
+            "text": "Opened save-as-forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 25,
+            "text": "Opened PDF. Importing annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 26,
+            "text": "Updated form field client.name",
+            "severity": "success"
+          },
+          {
+            "seq": 27,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 28,
+            "text": "Saved 2 annotations",
+            "severity": "success"
+          }
+        ],
+        "ocrRunActive": false,
+        "primaryTabs": 1,
+        "secondaryTabs": 0,
+        "activeTabLabel": "save-as-forms-signatures-working.pdf",
+        "documentName": "save-as-forms-signatures-working.pdf",
+        "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+        "documentPages": 1,
+        "isDirty": false,
+        "annotationCount": 2,
+        "pageRotations": [
+          0
+        ],
+        "pageSizes": [
+          {
+            "width": 612,
+            "height": 792
+          }
+        ],
+        "pageShells": 1,
+        "secondaryPageShells": 0,
+        "renderDiagnostics": {
+          "frameTimeMs": 2320.3,
+          "queueDepth": 0,
+          "visibleCoverage": 0.516,
+          "staleJobsDropped": 0,
+          "tileGenerations": {
+            "primary": 8,
+            "secondary": 0
+          },
+          "viewportSnapshots": {
+            "primary": {
+              "id": 77,
+              "phase": "idle",
+              "scale": 1.0303030303030303,
+              "scrollLeft": 0,
+              "scrollTop": 14,
+              "viewportRect": {
+                "x": 0,
+                "y": 14,
+                "width": 1223,
+                "height": 816
+              },
+              "inputMode": "none"
+            }
+          },
+          "surfaceStates": [
+            {
+              "pageNumber": 1,
+              "layoutId": 4,
+              "viewportGeneration": 8,
+              "renderGeneration": 4,
+              "state": "tilesReady",
+              "visibleCoverage": 1,
+              "backingKind": "tiles"
+            }
+          ],
+          "resourceCategories": {
+            "renderTiles": {
+              "entries": 4,
+              "bytes": 8307936,
+              "maxBytes": 134217728,
+              "residualThresholdBytes": 0
+            },
+            "coarseBackings": {
+              "entries": 1,
+              "bytes": 717216,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "textPages": {
+              "entries": 1,
+              "bytes": 4952,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "geometry": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "thumbnails": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "search": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "visualSearch": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "importedAnnotations": {
+              "entries": 2,
+              "bytes": 512,
+              "residualThresholdBytes": 0
+            },
+            "documentBytes": {
+              "entries": 1,
+              "bytes": 204141,
+              "residualThresholdBytes": 0
+            },
+            "backgroundJobs": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            }
+          }
+        },
+        "splitVertical": false,
+        "splitHorizontal": false,
+        "secondaryHidden": true
+      },
+      "beforeSha256": "a12f390be851299cf33e4b21568e1658bbfaf8b4b3c941f4bcee98c01a17b8a6",
+      "afterSha256": "fcc36bb061aa15902c728eff55ce141ed1aaef746c431ed610cd97848844a9ca",
+      "bytesChangedByAppendOnlyUpdate": true,
+      "attemptedWorkspaceValue": "Allowed Append-Only Edit",
+      "savedFieldValue": "Allowed Append-Only Edit",
+      "saveMessage": "Saved 2 annotations"
+    },
+    "signedPermissionPolicy": {
+      "blockedEditPdf": {
+        "beforeTool": "select",
+        "afterTool": "select",
+        "editModeActive": false,
+        "blockedDialogShown": true,
+        "blockedDialogText": "\n      \n        \n          This PDF is signed\n          \n        \n        \n    \n      \n      \n      \n        “Edit PDF” isn’t available because this PDF is signed.\n        This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.\n      \n    \n    \n  \n        \n    \n      \n      OK\n    \n  \n      \n    ",
+        "status": "Saved 2 annotations"
+      },
+      "blockedDeletePages": {
+        "command": "deletePages",
+        "ok": false,
+        "reason": "signed-policy",
+        "message": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+        "status": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+        "snapshot": {
+          "status": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+          "statusPerceivable": true,
+          "statusSeverity": "error",
+          "statusPinned": true,
+          "statusJournal": [
+            {
+              "seq": 1,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 2,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 3,
+              "text": "Opened forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 4,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 5,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 6,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            },
+            {
+              "seq": 7,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 8,
+              "text": "Updated form field client.notes",
+              "severity": "success"
+            },
+            {
+              "seq": 9,
+              "text": "Updated form field approval.ready",
+              "severity": "success"
+            },
+            {
+              "seq": 10,
+              "text": "Updated form field priority",
+              "severity": "success"
+            },
+            {
+              "seq": 11,
+              "text": "Updated form field region",
+              "severity": "success"
+            },
+            {
+              "seq": 12,
+              "text": "Updated form field reviewers",
+              "severity": "success"
+            },
+            {
+              "seq": 13,
+              "text": "Applied visual signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 14,
+              "text": "Placed a signature field.",
+              "severity": "success"
+            },
+            {
+              "seq": 15,
+              "text": "Applying certificate signature…",
+              "severity": "info"
+            },
+            {
+              "seq": 16,
+              "text": "Applied certificate signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 17,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 18,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 19,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 20,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 21,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 22,
+              "text": "Closed 1 document",
+              "severity": "info"
+            },
+            {
+              "seq": 23,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 24,
+              "text": "Opened save-as-forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 25,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 26,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            },
+            {
+              "seq": 27,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 28,
+              "text": "Saved 2 annotations",
+              "severity": "success"
+            },
+            {
+              "seq": 29,
+              "text": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+              "severity": "error"
+            }
+          ],
+          "ocrRunActive": false,
+          "primaryTabs": 1,
+          "secondaryTabs": 0,
+          "activeTabLabel": "save-as-forms-signatures-working.pdf",
+          "documentName": "save-as-forms-signatures-working.pdf",
+          "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+          "documentPages": 1,
+          "isDirty": false,
+          "annotationCount": 2,
+          "pageRotations": [
+            0
+          ],
+          "pageSizes": [
+            {
+              "width": 612,
+              "height": 792
+            }
+          ],
+          "pageShells": 1,
+          "secondaryPageShells": 0,
+          "renderDiagnostics": {
+            "frameTimeMs": 25,
+            "queueDepth": 0,
+            "visibleCoverage": 0.516,
+            "staleJobsDropped": 0,
+            "tileGenerations": {
+              "primary": 8,
+              "secondary": 0
+            },
+            "viewportSnapshots": {
+              "primary": {
+                "id": 79,
+                "phase": "idle",
+                "scale": 1.0303030303030303,
+                "scrollLeft": 0,
+                "scrollTop": 14,
+                "viewportRect": {
+                  "x": 0,
+                  "y": 14,
+                  "width": 1223,
+                  "height": 816
+                },
+                "inputMode": "none"
+              }
+            },
+            "surfaceStates": [
+              {
+                "pageNumber": 1,
+                "layoutId": 4,
+                "viewportGeneration": 8,
+                "renderGeneration": 4,
+                "state": "tilesReady",
+                "visibleCoverage": 1,
+                "backingKind": "tiles"
+              }
+            ],
+            "resourceCategories": {
+              "renderTiles": {
+                "entries": 4,
+                "bytes": 8307936,
+                "maxBytes": 134217728,
+                "residualThresholdBytes": 0
+              },
+              "coarseBackings": {
+                "entries": 1,
+                "bytes": 717216,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "textPages": {
+                "entries": 1,
+                "bytes": 4952,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "geometry": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "thumbnails": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "search": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "visualSearch": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "importedAnnotations": {
+                "entries": 2,
+                "bytes": 512,
+                "residualThresholdBytes": 0
+              },
+              "documentBytes": {
+                "entries": 1,
+                "bytes": 204141,
+                "residualThresholdBytes": 0
+              },
+              "backgroundJobs": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              }
+            }
+          },
+          "splitVertical": false,
+          "splitHorizontal": false,
+          "secondaryHidden": true,
+          "dialogId": "signedPdfBlocked"
+        }
+      },
+      "blockedPageSetup": {
+        "command": "pageSetup",
+        "ok": false,
+        "reason": "signed-policy",
+        "message": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+        "status": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+        "snapshot": {
+          "status": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+          "statusPerceivable": true,
+          "statusSeverity": "error",
+          "statusPinned": true,
+          "statusJournal": [
+            {
+              "seq": 1,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 2,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 3,
+              "text": "Opened forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 4,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 5,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 6,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            },
+            {
+              "seq": 7,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 8,
+              "text": "Updated form field client.notes",
+              "severity": "success"
+            },
+            {
+              "seq": 9,
+              "text": "Updated form field approval.ready",
+              "severity": "success"
+            },
+            {
+              "seq": 10,
+              "text": "Updated form field priority",
+              "severity": "success"
+            },
+            {
+              "seq": 11,
+              "text": "Updated form field region",
+              "severity": "success"
+            },
+            {
+              "seq": 12,
+              "text": "Updated form field reviewers",
+              "severity": "success"
+            },
+            {
+              "seq": 13,
+              "text": "Applied visual signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 14,
+              "text": "Placed a signature field.",
+              "severity": "success"
+            },
+            {
+              "seq": 15,
+              "text": "Applying certificate signature…",
+              "severity": "info"
+            },
+            {
+              "seq": 16,
+              "text": "Applied certificate signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 17,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 18,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 19,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 20,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 21,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 22,
+              "text": "Closed 1 document",
+              "severity": "info"
+            },
+            {
+              "seq": 23,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 24,
+              "text": "Opened save-as-forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 25,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 26,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            },
+            {
+              "seq": 27,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 28,
+              "text": "Saved 2 annotations",
+              "severity": "success"
+            },
+            {
+              "seq": 29,
+              "text": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+              "severity": "error"
+            },
+            {
+              "seq": 30,
+              "text": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+              "severity": "error"
+            }
+          ],
+          "ocrRunActive": false,
+          "primaryTabs": 1,
+          "secondaryTabs": 0,
+          "activeTabLabel": "save-as-forms-signatures-working.pdf",
+          "documentName": "save-as-forms-signatures-working.pdf",
+          "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+          "documentPages": 1,
+          "isDirty": false,
+          "annotationCount": 2,
+          "pageRotations": [
+            0
+          ],
+          "pageSizes": [
+            {
+              "width": 612,
+              "height": 792
+            }
+          ],
+          "pageShells": 1,
+          "secondaryPageShells": 0,
+          "renderDiagnostics": {
+            "frameTimeMs": 33.3,
+            "queueDepth": 0,
+            "visibleCoverage": 0.516,
+            "staleJobsDropped": 0,
+            "tileGenerations": {
+              "primary": 8,
+              "secondary": 0
+            },
+            "viewportSnapshots": {
+              "primary": {
+                "id": 80,
+                "phase": "idle",
+                "scale": 1.0303030303030303,
+                "scrollLeft": 0,
+                "scrollTop": 14,
+                "viewportRect": {
+                  "x": 0,
+                  "y": 14,
+                  "width": 1223,
+                  "height": 816
+                },
+                "inputMode": "none"
+              }
+            },
+            "surfaceStates": [
+              {
+                "pageNumber": 1,
+                "layoutId": 4,
+                "viewportGeneration": 8,
+                "renderGeneration": 4,
+                "state": "tilesReady",
+                "visibleCoverage": 1,
+                "backingKind": "tiles"
+              }
+            ],
+            "resourceCategories": {
+              "renderTiles": {
+                "entries": 4,
+                "bytes": 8307936,
+                "maxBytes": 134217728,
+                "residualThresholdBytes": 0
+              },
+              "coarseBackings": {
+                "entries": 1,
+                "bytes": 717216,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "textPages": {
+                "entries": 1,
+                "bytes": 4952,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "geometry": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "thumbnails": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "search": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "visualSearch": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "importedAnnotations": {
+                "entries": 2,
+                "bytes": 512,
+                "residualThresholdBytes": 0
+              },
+              "documentBytes": {
+                "entries": 1,
+                "bytes": 204141,
+                "residualThresholdBytes": 0
+              },
+              "backgroundJobs": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              }
+            }
+          },
+          "splitVertical": false,
+          "splitHorizontal": false,
+          "secondaryHidden": true,
+          "dialogId": "signedPdfBlocked"
+        }
+      },
+      "addPostSignMarkup": {
+        "ok": true,
+        "annotationId": "post-sign-markup-mszz3s6p",
+        "status": "Added Post-sign markup.",
+        "snapshot": {
+          "status": "Added Post-sign markup.",
+          "statusPerceivable": true,
+          "statusSeverity": "success",
+          "statusPinned": false,
+          "statusJournal": [
+            {
+              "seq": 1,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 2,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 3,
+              "text": "Opened forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 4,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 5,
+              "text": "Fit Page",
+              "severity": "info"
+            },
+            {
+              "seq": 6,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            },
+            {
+              "seq": 7,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 8,
+              "text": "Updated form field client.notes",
+              "severity": "success"
+            },
+            {
+              "seq": 9,
+              "text": "Updated form field approval.ready",
+              "severity": "success"
+            },
+            {
+              "seq": 10,
+              "text": "Updated form field priority",
+              "severity": "success"
+            },
+            {
+              "seq": 11,
+              "text": "Updated form field region",
+              "severity": "success"
+            },
+            {
+              "seq": 12,
+              "text": "Updated form field reviewers",
+              "severity": "success"
+            },
+            {
+              "seq": 13,
+              "text": "Applied visual signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 14,
+              "text": "Placed a signature field.",
+              "severity": "success"
+            },
+            {
+              "seq": 15,
+              "text": "Applying certificate signature…",
+              "severity": "info"
+            },
+            {
+              "seq": 16,
+              "text": "Applied certificate signature metadata.",
+              "severity": "success"
+            },
+            {
+              "seq": 17,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 18,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 19,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 20,
+              "text": "Saved 1 annotation",
+              "severity": "success"
+            },
+            {
+              "seq": 21,
+              "text": "Opening...",
+              "severity": "info"
+            },
+            {
+              "seq": 22,
+              "text": "Closed 1 document",
+              "severity": "info"
+            },
+            {
+              "seq": 23,
+              "text": "Loading PDF...",
+              "severity": "info"
+            },
+            {
+              "seq": 24,
+              "text": "Opened save-as-forms-signatures-working.pdf",
+              "severity": "success"
+            },
+            {
+              "seq": 25,
+              "text": "Opened PDF. Importing annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 26,
+              "text": "Updated form field client.name",
+              "severity": "success"
+            },
+            {
+              "seq": 27,
+              "text": "Saving annotations...",
+              "severity": "info"
+            },
+            {
+              "seq": 28,
+              "text": "Saved 2 annotations",
+              "severity": "success"
+            },
+            {
+              "seq": 29,
+              "text": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+              "severity": "error"
+            },
+            {
+              "seq": 30,
+              "text": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+              "severity": "error"
+            },
+            {
+              "seq": 31,
+              "text": "Added Post-sign markup.",
+              "severity": "success"
+            }
+          ],
+          "ocrRunActive": false,
+          "primaryTabs": 1,
+          "secondaryTabs": 0,
+          "activeTabLabel": "save-as-forms-signatures-working.pdf",
+          "documentName": "save-as-forms-signatures-working.pdf",
+          "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+          "documentPages": 1,
+          "isDirty": true,
+          "annotationCount": 3,
+          "pageRotations": [
+            0
+          ],
+          "pageSizes": [
+            {
+              "width": 612,
+              "height": 792
+            }
+          ],
+          "pageShells": 1,
+          "secondaryPageShells": 0,
+          "renderDiagnostics": {
+            "frameTimeMs": 34.7,
+            "queueDepth": 0,
+            "visibleCoverage": 0.516,
+            "staleJobsDropped": 0,
+            "tileGenerations": {
+              "primary": 8,
+              "secondary": 0
+            },
+            "viewportSnapshots": {
+              "primary": {
+                "id": 81,
+                "phase": "idle",
+                "scale": 1.0303030303030303,
+                "scrollLeft": 0,
+                "scrollTop": 14,
+                "viewportRect": {
+                  "x": 0,
+                  "y": 14,
+                  "width": 1223,
+                  "height": 816
+                },
+                "inputMode": "none"
+              }
+            },
+            "surfaceStates": [
+              {
+                "pageNumber": 1,
+                "layoutId": 4,
+                "viewportGeneration": 8,
+                "renderGeneration": 4,
+                "state": "tilesReady",
+                "visibleCoverage": 1,
+                "backingKind": "tiles"
+              }
+            ],
+            "resourceCategories": {
+              "renderTiles": {
+                "entries": 4,
+                "bytes": 8307936,
+                "maxBytes": 134217728,
+                "residualThresholdBytes": 0
+              },
+              "coarseBackings": {
+                "entries": 1,
+                "bytes": 717216,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "textPages": {
+                "entries": 1,
+                "bytes": 4952,
+                "maxBytes": 33554432,
+                "residualThresholdBytes": 0
+              },
+              "geometry": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "thumbnails": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "search": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "visualSearch": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              },
+              "importedAnnotations": {
+                "entries": 3,
+                "bytes": 768,
+                "residualThresholdBytes": 0
+              },
+              "documentBytes": {
+                "entries": 1,
+                "bytes": 204141,
+                "residualThresholdBytes": 0
+              },
+              "backgroundJobs": {
+                "entries": 0,
+                "bytes": 0,
+                "residualThresholdBytes": 0
+              }
+            }
+          },
+          "splitVertical": false,
+          "splitHorizontal": false,
+          "secondaryHidden": true,
+          "dialogId": "signedPdfBlocked"
+        }
+      },
+      "postSignMarkupSave": {
+        "status": "Saved 3 annotations",
+        "statusPerceivable": true,
+        "statusSeverity": "success",
+        "statusPinned": false,
+        "statusJournal": [
+          {
+            "seq": 1,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 2,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 3,
+            "text": "Opened forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 4,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 5,
+            "text": "Fit Page",
+            "severity": "info"
+          },
+          {
+            "seq": 6,
+            "text": "Updated form field client.name",
+            "severity": "success"
+          },
+          {
+            "seq": 7,
+            "text": "Opened PDF. Importing annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 8,
+            "text": "Updated form field client.notes",
+            "severity": "success"
+          },
+          {
+            "seq": 9,
+            "text": "Updated form field approval.ready",
+            "severity": "success"
+          },
+          {
+            "seq": 10,
+            "text": "Updated form field priority",
+            "severity": "success"
+          },
+          {
+            "seq": 11,
+            "text": "Updated form field region",
+            "severity": "success"
+          },
+          {
+            "seq": 12,
+            "text": "Updated form field reviewers",
+            "severity": "success"
+          },
+          {
+            "seq": 13,
+            "text": "Applied visual signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 14,
+            "text": "Placed a signature field.",
+            "severity": "success"
+          },
+          {
+            "seq": 15,
+            "text": "Applying certificate signature…",
+            "severity": "info"
+          },
+          {
+            "seq": 16,
+            "text": "Applied certificate signature metadata.",
+            "severity": "success"
+          },
+          {
+            "seq": 17,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 18,
+            "text": "Saved 1 annotation",
+            "severity": "success"
+          },
+          {
+            "seq": 19,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 20,
+            "text": "Saved 1 annotation",
+            "severity": "success"
+          },
+          {
+            "seq": 21,
+            "text": "Opening...",
+            "severity": "info"
+          },
+          {
+            "seq": 22,
+            "text": "Closed 1 document",
+            "severity": "info"
+          },
+          {
+            "seq": 23,
+            "text": "Loading PDF...",
+            "severity": "info"
+          },
+          {
+            "seq": 24,
+            "text": "Opened save-as-forms-signatures-working.pdf",
+            "severity": "success"
+          },
+          {
+            "seq": 25,
+            "text": "Opened PDF. Importing annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 26,
+            "text": "Updated form field client.name",
+            "severity": "success"
+          },
+          {
+            "seq": 27,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 28,
+            "text": "Saved 2 annotations",
+            "severity": "success"
+          },
+          {
+            "seq": 29,
+            "text": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+            "severity": "error"
+          },
+          {
+            "seq": 30,
+            "text": "This signed PDF permits form fields, markups, and additional signatures, but blocks PDF content and page changes.",
+            "severity": "error"
+          },
+          {
+            "seq": 31,
+            "text": "Added Post-sign markup.",
+            "severity": "success"
+          },
+          {
+            "seq": 32,
+            "text": "Saving annotations...",
+            "severity": "info"
+          },
+          {
+            "seq": 33,
+            "text": "Saved 3 annotations",
+            "severity": "success"
+          }
+        ],
+        "ocrRunActive": false,
+        "primaryTabs": 1,
+        "secondaryTabs": 0,
+        "activeTabLabel": "save-as-forms-signatures-working.pdf",
+        "documentName": "save-as-forms-signatures-working.pdf",
+        "documentPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+        "documentPages": 1,
+        "isDirty": false,
+        "annotationCount": 3,
+        "pageRotations": [
+          0
+        ],
+        "pageSizes": [
+          {
+            "width": 612,
+            "height": 792
+          }
+        ],
+        "pageShells": 1,
+        "secondaryPageShells": 0,
+        "renderDiagnostics": {
+          "frameTimeMs": 4009.3,
+          "queueDepth": 0,
+          "visibleCoverage": 0.516,
+          "staleJobsDropped": 0,
+          "tileGenerations": {
+            "primary": 8,
+            "secondary": 0
+          },
+          "viewportSnapshots": {
+            "primary": {
+              "id": 82,
+              "phase": "idle",
+              "scale": 1.0303030303030303,
+              "scrollLeft": 0,
+              "scrollTop": 14,
+              "viewportRect": {
+                "x": 0,
+                "y": 14,
+                "width": 1223,
+                "height": 816
+              },
+              "inputMode": "none"
+            }
+          },
+          "surfaceStates": [
+            {
+              "pageNumber": 1,
+              "layoutId": 4,
+              "viewportGeneration": 8,
+              "renderGeneration": 4,
+              "state": "tilesReady",
+              "visibleCoverage": 1,
+              "backingKind": "tiles"
+            }
+          ],
+          "resourceCategories": {
+            "renderTiles": {
+              "entries": 4,
+              "bytes": 8307936,
+              "maxBytes": 134217728,
+              "residualThresholdBytes": 0
+            },
+            "coarseBackings": {
+              "entries": 1,
+              "bytes": 717216,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "textPages": {
+              "entries": 1,
+              "bytes": 4952,
+              "maxBytes": 33554432,
+              "residualThresholdBytes": 0
+            },
+            "geometry": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "thumbnails": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "search": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "visualSearch": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            },
+            "importedAnnotations": {
+              "entries": 3,
+              "bytes": 768,
+              "residualThresholdBytes": 0
+            },
+            "documentBytes": {
+              "entries": 1,
+              "bytes": 309882,
+              "residualThresholdBytes": 0
+            },
+            "backgroundJobs": {
+              "entries": 0,
+              "bytes": 0,
+              "residualThresholdBytes": 0
+            }
+          }
+        },
+        "splitVertical": false,
+        "splitHorizontal": false,
+        "secondaryHidden": true,
+        "dialogId": "signedPdfBlocked"
+      },
+      "bytesChangedByMarkupUpdate": true,
+      "exportAnnotationCount": 1,
+      "signatureReports": [
+        {
+          "fieldName": "Signature",
+          "cmsDigestStatus": "valid",
+          "revisionChangeStatus": "incrementalChanges",
+          "docMdpPermissionLevel": 3
+        }
+      ]
+    },
+    "pdfStructure": {
+      "fieldCount": 10,
+      "values": {
+        "client.name": "Allowed Append-Only Edit",
+        "client.notes": "Renderer lifecycle form fill\nPreserved after save and reopen.",
+        "approval.ready": false,
+        "priority": "Low",
+        "region": "West",
+        "reviewers": [
+          "Legal"
+        ],
+        "Signature": "64 0 R"
+      },
+      "hasAcroForm": true,
+      "signatureReports": [
+        {
+          "fieldName": "Signature",
+          "signerName": "PolyPDF Automation Signer",
+          "subfilter": "adbe.pkcs7.detached",
+          "byteRangeValid": true,
+          "cmsDigestStatus": "valid",
+          "cmsSignatureStatus": "valid",
+          "trustStatus": "trusted",
+          "certificateValidityStatus": "valid",
+          "timestampStatus": "missing",
+          "timestampValidationStatus": "missing",
+          "ltvStatus": "missing",
+          "revocationStatus": "missing",
+          "documentPermissionStatus": "allowed",
+          "docMdpPermissionLevel": 3,
+          "fieldPermissionStatus": "allowed",
+          "fieldMdpAction": "Include",
+          "fieldMdpFields": [
+            "Signature"
+          ],
+          "appendOnlySaveEligibility": "allowed",
+          "postSignEditReason": "DocMDP permits form filling, annotations, and additional signatures in append-only updates.",
+          "postSignAllowedChanges": [
+            "Form fields",
+            "Annotations and markups",
+            "Additional signatures"
+          ],
+          "postSignBlockedChanges": [
+            "Edit PDF text for compatible text streams",
+            "Page insert, delete, rotate, crop, and resize",
+            "Security, OCR, flatten, reduce, and archive rewrites"
+          ],
+          "revisionChangeStatus": "incrementalChanges",
+          "coversWholeDocument": false,
+          "modifiedAfterSigning": true,
+          "signedRevisionByteLength": 184955,
+          "documentByteLength": 309882,
+          "unsupportedFeatures": [],
+          "summary": "Signature byte ranges are intact, but the PDF has incremental changes after the signed revision."
+        }
+      ]
+    }
+  },
+  "workingPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/signature-lifecycle-current2-output/forms-signatures-working.pdf"
+}

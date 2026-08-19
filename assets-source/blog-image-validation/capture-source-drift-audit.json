@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-08-19",
+  "captureSnapshot": {
+    "path": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "currentDevelopmentTree": {
+    "path": "/Users/mohammedbala/Projects/polypdfmac/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619"
+  },
+  "changesAfterCapture": [
+    {
+      "path": "apps/desktop/src/renderer/interaction/interaction.ts",
+      "classification": "runtime-source-nonfunctional",
+      "detail": "Removed one unused pdfSnapIndicatorReuseRadius named import. The direct re-export remains and the module is still imported for other bindings; rendered UI and behavior are unchanged."
+    },
+    {
+      "path": "config/prettier-legacy-exclusions.json",
+      "classification": "non-runtime",
+      "detail": "Removed one formatting-ledger entry."
+    },
+    {
+      "path": "tests/parity/electron-parity-suite.ts",
+      "classification": "test-only",
+      "detail": "Adjusted source-guard variable placement and regular-expression assertions."
+    },
+    {
+      "path": "tests/renderer/snap-indicator-lifecycle.test.ts",
+      "classification": "test-only",
+      "detail": "Adjusted a test stub guard."
+    }
+  ],
+  "unchangedScopes": [
+    "renderer UI, CSS, and HTML other than the unused import removal noted above",
+    "main process",
+    "preload",
+    "shared runtime code",
+    "runtime package sources",
+    "assets",
+    "package.json"
+  ],
+  "conclusion": {
+    "visibleUiDrift": false,
+    "behavioralDriftRelevantToPublishedScreenshots": false,
+    "recaptureRequired": false
+  }
+}

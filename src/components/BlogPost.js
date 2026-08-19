@@ -22,7 +22,7 @@ import {
 import { HiOutlineSparkles } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
-import { buyPath } from '../lib/attribution';
+import { buyPath, canonicalPagePath } from '../lib/attribution';
 import { blogPostBySlug, blogPostPath } from '../lib/blogPosts';
 
 // Section icons are named in post data. Unknown names fall back to the generic document icon so
@@ -47,9 +47,73 @@ const SECTION_ICONS = {
 
 const sectionIcon = (name) => SECTION_ICONS[name] || SECTION_ICONS.document;
 
-const normalizeImage = (image) => {
+export const normalizeBlogImage = (image) => {
   if (!image) return null;
   return typeof image === 'string' ? { src: image } : image;
+};
+
+/**
+ * One image contract for article evidence and blog cards.
+ *
+ * `mobileSrc` should be a tighter crop of the same truthful product state, not a different
+ * illustration. When it is absent, callers can opt into a horizontally scrollable viewport so a
+ * full desktop window is not compressed until its controls become unreadable on a phone.
+ */
+export const ResponsiveBlogImage = ({
+  image: imageValue,
+  className,
+  pictureClassName,
+  priority = false,
+  scrollOnMobile = false,
+  style
+}) => {
+  const image = normalizeBlogImage(imageValue);
+  if (!image?.src) return null;
+
+  const hasMobileSource = Boolean(image.mobileSrc);
+  const picture = (
+    <picture
+      className={[
+        'blog-responsive-picture',
+        hasMobileSource ? 'blog-responsive-picture-has-mobile' : '',
+        pictureClassName || ''
+      ].filter(Boolean).join(' ')}
+    >
+      {hasMobileSource && (
+        <source
+          media={image.mobileMedia || '(max-width: 760px)'}
+          srcSet={image.mobileSrc}
+          width={image.mobileWidth}
+          height={image.mobileHeight}
+        />
+      )}
+      <img
+        className={className}
+        src={image.src}
+        alt={image.alt || ''}
+        width={image.width}
+        height={image.height}
+        loading={priority ? 'eager' : 'lazy'}
+        decoding="async"
+        style={style}
+      />
+    </picture>
+  );
+
+  if (!scrollOnMobile || hasMobileSource) return picture;
+
+  const panWidth = image.mobilePanWidth || Math.min(image.width || 760, 760);
+  return (
+    <div
+      className="blog-image-viewport blog-image-viewport-scroll-mobile"
+      role="region"
+      aria-label={image.mobileScrollLabel || `Scrollable image: ${image.alt || 'article image'}`}
+      tabIndex="0"
+      style={{ '--blog-image-pan-width': `${panWidth}px` }}
+    >
+      {picture}
+    </div>
+  );
 };
 
 const displayValue = (value) => {
@@ -68,32 +132,37 @@ const dateLabel = (value) => {
   }).format(new Date(`${value}T12:00:00Z`));
 };
 
-const renderFigure = (block, key, priority = false) => {
-  const image = normalizeImage(block.image || block.figure || block);
+export const BlogFigure = ({ block, priority = false }) => {
+  const image = normalizeBlogImage(block.image || block.figure || block);
   if (!image?.src) return null;
 
   const caption = block.caption || image.caption;
   const provenance = block.provenance || image.provenance;
+  const scrollOnMobile = image.mobilePan ?? (!image.mobileSrc && (image.width || 0) >= 1200);
 
   return (
-    <figure key={key} className={`blog-figure${priority ? ' blog-hero-figure' : ''}`}>
-      <img
-        src={image.src}
-        alt={image.alt || ''}
-        width={image.width}
-        height={image.height}
-        loading={priority ? 'eager' : 'lazy'}
-        decoding="async"
+    <figure
+      className={`blog-figure${priority ? ' blog-hero-figure' : ''}`}
+      style={image.width ? { '--blog-figure-source-width': `${image.width}px` } : undefined}
+    >
+      <ResponsiveBlogImage
+        image={image}
+        priority={priority}
+        scrollOnMobile={scrollOnMobile}
       />
       {(caption || provenance) && (
         <figcaption>
-          {caption && <span>{caption}</span>}
+          {caption && <span>{caption}{provenance ? ' ' : null}</span>}
           {provenance && <small>{provenance}</small>}
         </figcaption>
       )}
     </figure>
   );
 };
+
+const renderFigure = (block, key, priority = false) => (
+  <BlogFigure key={key} block={block} priority={priority} />
+);
 
 const renderTable = (block, key) => {
   const headers = block.headers || [];
@@ -227,7 +296,7 @@ const CtaLink = ({ className, href, children }) => {
     return <a className={className} href={href}>{children}</a>;
   }
 
-  return <Link className={className} to={href}>{children}</Link>;
+  return <Link className={className} to={canonicalPagePath(href)}>{children}</Link>;
 };
 
 const BlogPost = () => {
@@ -242,7 +311,7 @@ const BlogPost = () => {
   }, [slug]);
 
   // An unknown slug is a wrong URL, not an error state worth a page of its own.
-  if (!entry) return <Navigate to="/blog" replace />;
+  if (!entry) return <Navigate to="/blog/" replace />;
 
   const relatedPosts = (entry.relatedSlugs || [])
     .map((related) => blogPostBySlug(typeof related === 'string' ? related : related.slug))
@@ -253,7 +322,7 @@ const BlogPost = () => {
   const downloadSource = cta.downloadSource || cta.source || `blog_${entry.slug}`;
   const buySource = cta.buySource || cta.attribution || `website_blog_${entry.slug}`;
   const platforms = Array.isArray(entry.platforms) ? entry.platforms.join(' · ') : entry.platforms;
-  const heroImage = normalizeImage(entry.heroImage);
+  const heroImage = normalizeBlogImage(entry.heroImage);
   const lastVerifiedMachineDate = /^\d{4}-\d{2}-\d{2}$/.test(entry.lastVerified || '')
     ? entry.lastVerified
     : entry.dateModified || entry.date;
@@ -267,7 +336,7 @@ const BlogPost = () => {
             <img src={parrotIcon} alt="" width="1024" height="1024" />
             <span>PolyPDF</span>
           </Link>
-          <Link to="/blog" className="back-link">
+          <Link to="/blog/" className="back-link">
             <FaArrowLeft aria-hidden="true" /> All guides
           </Link>
         </nav>
@@ -294,6 +363,7 @@ const BlogPost = () => {
               </div>
               <h1 id="blog-article-title" ref={headingRef} tabIndex="-1">{entry.title}</h1>
               <QuickAnswer value={entry.quickAnswer} />
+              {heroImage && renderFigure(heroImage, 'hero-image', true)}
               {entry.lede && <p className="legal-subtitle blog-lede">{entry.lede}</p>}
               {entry.author && <p className="blog-byline">By {entry.author}</p>}
 
@@ -321,8 +391,6 @@ const BlogPost = () => {
               )}
             </header>
 
-            {heroImage && renderFigure(heroImage, 'hero-image', true)}
-
             <div className="legal-sections">
               {(entry.sections || []).map((section, index) => (
                 <motion.section
@@ -339,7 +407,7 @@ const BlogPost = () => {
                   </div>
                   {(section.body || section.blocks || []).map((block, blockIndex) => {
                     const blockImage = block.kind === 'figure'
-                      ? normalizeImage(block.image || block.figure || block)
+                      ? normalizeBlogImage(block.image || block.figure || block)
                       : null;
                     // The hero already gives this evidence a full-width treatment. Several guides
                     // intentionally reference the same capture in their first section; rendering it
@@ -400,7 +468,7 @@ const BlogPost = () => {
                   </div>
                   <div className="blog-related-list">
                     {relatedPosts.map((related) => (
-                      <Link key={related.slug} to={blogPostPath(related.slug)} className="blog-related-link">
+                      <Link key={related.slug} to={canonicalPagePath(blogPostPath(related.slug))} className="blog-related-link">
                         <span>{related.category || related.tag || 'Guide'}</span>
                         <strong>{related.title}</strong>
                       </Link>

@@ -1,7 +1,10 @@
-import headersFootersScreenshot from '../../assets/screenshots/shot-headers-footers-1.3.4-web.png';
+import issuedFinalScreenshot from '../../assets/screenshots/shot-issued-final-currentdev-dark-web.png';
+import headersFootersScreenshot from '../../assets/screenshots/shot-issued-headers-currentdev-dark-web.png';
+import batesScreenshot from '../../assets/screenshots/shot-issued-bates-currentdev-dark-web.png';
+import preflightScreenshot from '../../assets/screenshots/shot-issued-preflight-currentdev-dark-web.png';
 
-const headersFootersCapture =
-  'Live PolyPDF 1.3.4 (build 16) capture using an owned five-page fixture. The screenshot shows the Headers & Footers setup and page preview before Apply; it is not a claim that a final issued set has passed review.';
+const captureProvenance =
+  'Captured August 19, 2026 in dark mode from the current PolyPDF development working tree, in a native maximized window with the full toolbar available. The five-sheet issue set is an owned fictional fixture with no customer data.';
 
 const post = {
   slug: 'prepare-issued-pdf-set',
@@ -21,15 +24,17 @@ const post = {
     'An issued set should tell a recipient what each page is, which issue it belongs to, and whether the file survived production intact. That takes a controlled sequence, not one large button press.',
   quickAnswer:
     'To prepare an issued PDF set, preserve the source files, define a manifest and naming rule, distinguish navigation page labels from visible Bates identifiers, then add headers, footers, watermarks, and Bates numbers to each working document. PolyPDF 1.3.4 does not expose a cross-file Batch Process, so continue any Bates sequence by recording the verified last number and setting the next document’s start value manually. Run Accessibility & Preflight, inspect every output in a recipient-style viewer, and sign only after page-content changes are finished.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
-    src: headersFootersScreenshot,
-    alt: 'PolyPDF Headers and Footers dialog with six content positions, margins, tokens, and page preview',
-    caption: headersFootersCapture,
-    width: 1800,
-    height: 1129
+    src: issuedFinalScreenshot,
+    alt: 'Maximized PolyPDF dark-mode window showing a fictional five-sheet issue set with the visible Bates identifier ISSUED-IFC-0101',
+    caption:
+      'The visible post-Apply result carries ISSUED-IFC-0101 on sheet G-001.',
+    provenance: captureProvenance,
+    width: 1710,
+    height: 1073
   },
   keywords: [
     'prepare issued PDF set',
@@ -97,10 +102,12 @@ const post = {
         {
           kind: 'figure',
           src: headersFootersScreenshot,
-          alt: 'Headers and Footers setup with header and footer positions, page range, margins, and preview',
-          caption: headersFootersCapture,
-          width: 1800,
-          height: 1129
+          alt: 'Maximized dark-mode PolyPDF Headers and Footers dialog populated with issue text, page-label and page-number tokens, margins, and six previews',
+          caption:
+            'The current development UI previews all six header and footer positions before Apply. This image proves the populated setup and preview, not recipient approval of the output.',
+          provenance: captureProvenance,
+          width: 1710,
+          height: 1073
         },
         {
           kind: 'p',
@@ -126,6 +133,16 @@ const post = {
           kind: 'p',
           text:
             'PolyPDF 1.3.4 does not expose the former cross-file Batch Process in the user interface. Apply Bates numbering and any text watermark to one working document at a time, save a new output, verify it, and only then calculate the starting number for the next file. This slower sequence keeps the public workflow aligned with the commands users can actually open.'
+        },
+        {
+          kind: 'figure',
+          src: batesScreenshot,
+          alt: 'Maximized dark-mode PolyPDF Bates Numbering dialog set to prefix ISSUED-IFC, start number 101, four digits, and Footer Right placement',
+          caption:
+            "The populated dialog previews ISSUED-IFC-0101 before Apply. The screenshot demonstrates one document's setup; it does not imply an exposed cross-file batch workflow.",
+          provenance: captureProvenance,
+          width: 1710,
+          height: 1073
         },
         {
           kind: 'ol',
@@ -161,6 +178,16 @@ const post = {
           kind: 'p',
           text:
             'Run Document › Accessibility & Preflight on each final candidate. Build 16 reports 10 automated checks across five groups. It is a screening tool, not PDF/UA certification or a substitute for visual and contractual review.'
+        },
+        {
+          kind: 'figure',
+          src: preflightScreenshot,
+          alt: 'Maximized dark-mode PolyPDF Accessibility and Preflight results showing zero failures, two warnings, seven passes, and one informational result',
+          caption:
+            'The current 10-check screen reports 0 failures, 2 warnings, 7 passes, and 1 informational finding for the fictional issue set. A preflight result is a screening record, not PDF/UA certification or release approval.',
+          provenance: captureProvenance,
+          width: 1710,
+          height: 1073
         },
         {
           kind: 'ol',

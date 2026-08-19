@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "states": [
+    {
+      "id": "count-committed-dark",
+      "fixturePath": "../fixtures/symbol-count-demo.pdf",
+      "currentPage": 1,
+      "zoomMode": "fitPage",
+      "windowSize": { "width": 1440, "height": 960 },
+      "sidebarPanel": "measurements",
+      "selectedTool": "select",
+      "markupTable": true,
+      "selectedAnnotationId": "diffuser-count-1",
+      "settleMs": 600000,
+      "annotations": [
+        { "id": "diffuser-count-1", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 129, "y": 401, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "contents": "Reviewed plan item", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-2", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 269, "y": 401, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-3", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 409, "y": 401, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-4", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 549, "y": 401, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-5", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 129, "y": 299, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-6", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 269, "y": 299, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-7", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 409, "y": 299, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-8", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 549, "y": 299, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-9", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 129, "y": 197, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-10", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 269, "y": 197, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-11", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 409, "y": 197, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 },
+        { "id": "diffuser-count-12", "kind": "measure", "tool": "count", "page": 1, "pageIndex": 0, "x": 549, "y": 197, "width": 18, "height": 18, "points": [{ "x": 9, "y": 9 }], "label": "Supply diffuser", "title": "Supply diffuser", "nativeSubject": "Supply diffuser", "author": "Alex Example", "status": "reviewed", "countSeriesId": "supply-diffusers", "strokeColor": "#F59E0B", "fillColor": "#F59E0B", "lineWidth": 2 }
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@ Key facts:
 - Release verified August 18, 2026: PolyPDF 1.3.4 (build 16) for macOS and Windows; /versions reads the live update feeds.
 - Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. Commercial offer verified August 18, 2026: PolyPDF Pro Founder's License removes the hand-created measurement cap for $49.99 once and activates up to 3 computers in any Mac/Windows mix; /buy is authoritative for current availability.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
-- A connection may be needed for PDF Maps, optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.
+- PDF Maps is development-only and blocked pending a production-compliant place-search provider and request pattern. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.
 - Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, count, and dimension tools, plus a worksheet that exports CSV or PDF.
 - Symbol Search auto-count: capture one drawing symbol, review candidate matches, and commit an auditable numbered count series. This auto-count workflow is free and uncapped.
 - Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.
@@ -18,41 +18,41 @@ Key facts:
 ## Product
 
 - [PolyPDF home](https://www.polypdf.com/): product overview, current offer, and free Mac and Windows downloads
-- [PolyPDF for Windows](https://www.polypdf.com/windows): system requirements and Windows download
-- [Buy PolyPDF Pro](https://www.polypdf.com/buy): live availability and terms for the one-time license, Stripe checkout, and license delivery
-- [Version history](https://www.polypdf.com/versions): live Mac and Windows release feeds
+- [PolyPDF for Windows](https://www.polypdf.com/windows/): system requirements and Windows download
+- [Buy PolyPDF Pro](https://www.polypdf.com/buy/): live availability and terms for the one-time license, Stripe checkout, and license delivery
+- [Version history](https://www.polypdf.com/versions/): live Mac and Windows release feeds
 
 ## Practical guides
 
-- [How to Calibrate a PDF Drawing Scale](https://www.polypdf.com/blog/calibrate-pdf-drawing-scale): Set an accurate PDF drawing scale from a printed ratio or a known dimension, then prove it with a second reference before starting takeoff.
-- [Why PDF Measurements Are Wrong (and How to Fix Them)](https://www.polypdf.com/blog/why-pdf-measurements-are-wrong): Diagnose bad PDF dimensions by checking page scale, units, endpoints, detail regions, and scan distortion in a deliberate order.
-- [How to Measure PDF Area with Cutouts and Depth](https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth): Trace a net PDF area, subtract multiple interior openings, optionally convert it to volume with depth, and keep hatch styling separate from the math.
-- [PDF Takeoff Worked Example: Scale, Area, Length, and Count](https://www.polypdf.com/blog/pdf-takeoff-worked-example): Follow one small plan takeoff from calibration through area, wall lengths, diffuser count, worksheet review, and CSV or PDF export.
-- [How to Count Symbols in a PDF Drawing](https://www.polypdf.com/blog/count-pdf-symbols): Use PolyPDF Symbol Search to find repeated plan symbols, review every candidate, and commit the accepted matches as one linked Count series.
-- [Use a PDF Markup Table for RFI and Punch-List Review](https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list): Turn drawing markups into a filterable review register, with clear subjects, comments, statuses, and exports for an existing RFI or punch-list process.
-- [How to Compare PDF Drawing Revisions](https://www.polypdf.com/blog/compare-pdf-drawing-revisions): Compare a baseline PDF with a revised file, review the detected regions, and issue a separate comparison record without overwriting the source.
-- [How to Create a Fillable PDF Form](https://www.polypdf.com/blog/create-fillable-pdf-form): Add standard AcroForm fields to a compatible PDF, set names and tab order, test the saved copy, and recognize signed, secured, and XFA limits.
-- [How to OCR Scanned PDF Drawings](https://www.polypdf.com/blog/ocr-scanned-pdf-drawings): Add a best-effort searchable text layer to scanned PDF drawings, then test search results and verify every value that could affect field or estimating work.
-- [Digital vs Visual PDF Signatures vs Professional Seals](https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal): Understand what certificate-backed PDF signatures verify, what visual signature marks cannot prove, and why a professional seal graphic is drafting artwork until separately signed.
-- [How to Redact and Sanitize a PDF: Limits to Know](https://www.polypdf.com/blog/redact-and-sanitize-pdf): Use PolyPDF redaction for supported searchable text, understand what sanitation can miss, and independently inspect the saved copy before release.
-- [How to Prepare an Issued PDF Set](https://www.polypdf.com/blog/prepare-issued-pdf-set): Build a repeatable issue workflow with page labels, visible Bates identifiers, headers and footers, watermarks, preflight, and final-viewer checks.
+- [How to Calibrate a PDF Drawing Scale](https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/): Set an accurate PDF drawing scale from a printed ratio or a known dimension, then prove it with a second reference before starting takeoff.
+- [Why PDF Measurements Are Wrong (and How to Fix Them)](https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/): Diagnose bad PDF dimensions by checking page scale, units, endpoints, detail regions, and scan distortion in a deliberate order.
+- [How to Measure PDF Area with Cutouts and Depth](https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/): Trace a net PDF area, subtract multiple interior openings, optionally convert it to volume with depth, and keep hatch styling separate from the math.
+- [PDF Takeoff Worked Example: Scale, Area, Length, and Count](https://www.polypdf.com/blog/pdf-takeoff-worked-example/): Follow one small plan takeoff from calibration through area, wall lengths, diffuser count, worksheet review, and CSV or PDF export.
+- [How to Count Symbols in a PDF Drawing](https://www.polypdf.com/blog/count-pdf-symbols/): Use PolyPDF Symbol Search to find repeated plan symbols, review every candidate, and commit the accepted matches as one linked Count series.
+- [Use a PDF Markup Table for RFI and Punch-List Review](https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list/): Turn drawing markups into a filterable review register, with clear subjects, comments, statuses, and exports for an existing RFI or punch-list process.
+- [How to Compare PDF Drawing Revisions](https://www.polypdf.com/blog/compare-pdf-drawing-revisions/): Compare a baseline PDF with a revised file, review the detected regions, and issue a separate comparison record without overwriting the source.
+- [How to Create a Fillable PDF Form](https://www.polypdf.com/blog/create-fillable-pdf-form/): Add standard AcroForm fields to a compatible PDF, set names and tab order, test the saved copy, and recognize signed, secured, and XFA limits.
+- [How to OCR Scanned PDF Drawings](https://www.polypdf.com/blog/ocr-scanned-pdf-drawings/): Add a best-effort searchable text layer to scanned PDF drawings, then test search results and verify every value that could affect field or estimating work.
+- [Digital vs Visual PDF Signatures vs Professional Seals](https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal/): Understand what certificate-backed PDF signatures verify, what visual signature marks cannot prove, and why a professional seal graphic is drafting artwork until separately signed.
+- [How to Redact and Sanitize a PDF: Limits to Know](https://www.polypdf.com/blog/redact-and-sanitize-pdf/): Use PolyPDF redaction for supported searchable text, understand what sanitation can miss, and independently inspect the saved copy before release.
+- [How to Prepare an Issued PDF Set](https://www.polypdf.com/blog/prepare-issued-pdf-set/): Build a repeatable issue workflow with page labels, visible Bates identifiers, headers and footers, watermarks, preflight, and final-viewer checks.
 
 ## Workflow pages
 
-- [PDF takeoff software](https://www.polypdf.com/pdf-takeoff-software): calibrate, measure, organize, and export takeoff records
-- [Measure a PDF on Mac](https://www.polypdf.com/measure-pdf-on-mac): calibrated drawing measurement on macOS
-- [Construction PDF markup](https://www.polypdf.com/construction-pdf-markup): markups and review-list workflow
-- [Symbol Search PDF counting](https://www.polypdf.com/visual-search-pdf-count): capture, review, and commit repeated-symbol matches
-- [Compare PDF drawings](https://www.polypdf.com/compare-pdf-drawings): inspect revision differences and create review markups
+- [PDF takeoff software](https://www.polypdf.com/pdf-takeoff-software/): calibrate, measure, organize, and export takeoff records
+- [Measure a PDF on Mac](https://www.polypdf.com/measure-pdf-on-mac/): calibrated drawing measurement on macOS
+- [Construction PDF markup](https://www.polypdf.com/construction-pdf-markup/): markups and review-list workflow
+- [Symbol Search PDF counting](https://www.polypdf.com/visual-search-pdf-count/): capture, review, and commit repeated-symbol matches
+- [Compare PDF drawings](https://www.polypdf.com/compare-pdf-drawings/): inspect revision differences and create review markups
 
 ## Product notes
 
-- [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins): Plugins extend PolyPDF with signed content packages that carry data and artwork instead of executable code. The first three insert AISC steel section profiles, professional seal graphics, and OpenStreetMap maps — as ordinary, editable annotations.
+- [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins/): A truthful current-development preview of PolyPDF plugins: declarative packages, one-list management, sideload consent, host-owned generators, and the availability limits on the three first-party validation packages.
 
 ## Support and policies
 
-- [Support](https://www.polypdf.com/support)
-- [Feature requests](https://www.polypdf.com/feature-requests)
-- [Terms of use](https://www.polypdf.com/terms)
-- [Privacy policy](https://www.polypdf.com/privacy)
-- [Refund policy](https://www.polypdf.com/refund)
+- [Support](https://www.polypdf.com/support/)
+- [Feature requests](https://www.polypdf.com/feature-requests/)
+- [Terms of use](https://www.polypdf.com/terms/)
+- [Privacy policy](https://www.polypdf.com/privacy/)
+- [Refund policy](https://www.polypdf.com/refund/)

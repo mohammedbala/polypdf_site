@@ -1,7 +1,8 @@
-import shotCount from '../assets/screenshots/shot-count-committed-web.png';
-import shotMarkup from '../assets/screenshots/shot-markup-web.png';
-import shotRevisionCompare from '../assets/screenshots/shot-revision-compare-web.png';
-import shotTakeoff from '../assets/screenshots/shot-measure-takeoff-web.png';
+import shotCalibration from '../assets/screenshots/calibration-verified-second-span-currentdev-dark-web.png';
+import shotMarkup from '../assets/screenshots/markup-currentdev-dark-web.png';
+import shotRevisionCompare from '../assets/screenshots/compare-editable-clouds-currentdev-dark-web.png';
+import shotSymbolSearch from '../assets/screenshots/symbol-search-review-currentdev-dark-web.png';
+import shotTakeoff from '../assets/screenshots/takeoff-currentdev-dark-web.png';
 
 const landingPage = (page) => Object.freeze(page);
 
@@ -9,13 +10,14 @@ export const landingPages = Object.freeze({
   pdfTakeoffSoftware: landingPage({
     path: '/pdf-takeoff-software',
     source: 'landing_pdf_takeoff',
-    mediaSlug: 'takeoff-export',
     eyebrow: 'PDF takeoff for Mac and Windows',
     title: 'Turn scaled PDF drawings into an organized takeoff worksheet.',
     lede: 'Calibrate a sheet once, measure lengths, areas, perimeters, angles, and counts, then keep the results beside the drawing and export them to CSV or PDF.',
     qualifier: 'Built for estimators and contractors who receive PDFs—not perfect CAD files—and need a direct path from drawing to quantity record.',
     image: shotTakeoff,
-    imageAlt: 'PolyPDF showing a calibrated area measurement and takeoff worksheet on a construction PDF',
+    imageWidth: 1710,
+    imageHeight: 1073,
+    imageAlt: 'PolyPDF takeoff worksheet showing 14 items beside a fictional plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
     audience: 'For preconstruction, estimating, and trade workflows that need quantities from architectural or engineering PDF sheets.',
     proofPoints: [
       ['Calibrate once', 'Preset or custom scale'],
@@ -55,13 +57,14 @@ export const landingPages = Object.freeze({
   measurePdfOnMac: landingPage({
     path: '/measure-pdf-on-mac',
     source: 'landing_measure_pdf_mac',
-    mediaSlug: 'takeoff-export',
     eyebrow: 'Measure drawings on macOS',
     title: 'Measure a PDF on Mac without redrawing it in CAD.',
     lede: 'Open the plan, set its scale, and pull real distances, areas, perimeters, angles, and counts directly from the PDF in a desktop app for macOS.',
     qualifier: 'Start with the free Mac download and validate scale accuracy on a drawing you already know. Upgrade only when you need more than 3 hand-created measurements in a document.',
-    image: shotTakeoff,
-    imageAlt: 'PolyPDF for Mac showing an area measurement with calibrated units and worksheet results',
+    image: shotCalibration,
+    imageWidth: 1710,
+    imageHeight: 1073,
+    imageAlt: 'PolyPDF for Mac showing a calibrated quarter-inch equals one-foot page scale and a second known span measured as 12 feet',
     audience: 'For architects, engineers, facilities teams, contractors, and homeowners who need dimensions from a PDF drawing on a Mac.',
     proofPoints: [
       ['Mac ready', 'Signed, notarized DMG'],
@@ -101,13 +104,14 @@ export const landingPages = Object.freeze({
   constructionPdfMarkup: landingPage({
     path: '/construction-pdf-markup',
     source: 'landing_construction_markup',
-    mediaSlug: 'revision-comparison',
     eyebrow: 'Construction drawing review',
     title: 'Mark up construction PDFs so every comment stays tied to the sheet.',
     lede: 'Add callouts, text, highlights, shapes, stamps, and revision clouds directly to plan sets, then use the Markup Table to track what has been flagged.',
     qualifier: 'A local desktop workflow for design review, RFIs, field observations, punch notes, and drawing handoff on Mac or Windows.',
     image: shotMarkup,
-    imageAlt: 'Construction PDF in PolyPDF with an RFI callout, revision cloud, and matching items in the Markup Table',
+    imageWidth: 1710,
+    imageHeight: 1073,
+    imageAlt: 'PolyPDF showing an open RFI callout, an in-progress revision cloud, and a completed green rectangle with three matching Markup Table rows',
     audience: 'For project teams that need comments to remain visually connected to the exact room, detail, symbol, or revision they describe.',
     proofPoints: [
       ['Clear context', 'Notes live on the sheet'],
@@ -147,13 +151,14 @@ export const landingPages = Object.freeze({
   visualSearchPdfCount: landingPage({
     path: '/visual-search-pdf-count',
     source: 'landing_visual_search_count',
-    mediaSlug: 'visual-search',
     eyebrow: 'Symbol Search (formerly Visual Search)',
     title: 'Find one drawing symbol, then count matching instances across the PDF.',
     lede: 'Capture a symbol from the sheet, let PolyPDF find visual matches, review the results, and commit the accepted set as a count series.',
-    qualifier: 'Visual Search auto-count is uncapped in both PolyPDF Free and Pro, so you can test it on a real symbol-heavy drawing before buying anything.',
-    image: shotCount,
-    imageAlt: 'PolyPDF showing numbered count markers and a takeoff worksheet on a construction drawing',
+    qualifier: 'Symbol Search auto-count is uncapped in both PolyPDF Free and Pro, so you can test it on a real symbol-heavy drawing before buying anything.',
+    image: shotSymbolSearch,
+    imageWidth: 1710,
+    imageHeight: 1073,
+    imageAlt: 'PolyPDF Symbol Search review showing five matches, all five selected, with five candidate boxes and Count 5 ready',
     audience: 'For estimators and reviewers counting fixtures, devices, diffusers, outlets, symbols, or other repeated graphics on PDF drawings.',
     proofPoints: [
       ['Start with one', 'Capture a visual example'],
@@ -193,15 +198,14 @@ export const landingPages = Object.freeze({
   comparePdfDrawings: landingPage({
     path: '/compare-pdf-drawings',
     source: 'landing_drawing_comparison',
-    mediaSlug: 'revision-comparison',
     eyebrow: 'Drawing revision comparison',
     title: 'Compare PDF drawings and make revision changes easier to inspect.',
     lede: 'Bring drawing versions into one desktop review workflow, inspect their differences, and mark the areas that need a decision, RFI, or handoff note.',
     qualifier: 'Use comparison as the start of a review—not a substitute for checking sheet identity, scale, alignment, and the issued revision record.',
     image: shotRevisionCompare,
-    imageWidth: 2560,
-    imageHeight: 1800,
-    imageAlt: 'Current PolyPDF split drawing view with two PDF revisions displayed side by side for inspection',
+    imageWidth: 1710,
+    imageHeight: 1073,
+    imageAlt: 'PolyPDF comparison result showing four editable purple revision clouds and four matching rows in the Markup Table',
     audience: 'For architects, engineers, contractors, and owners reviewing addenda, coordination updates, redlines, and issued drawing revisions.',
     proofPoints: [
       ['See change', 'Revision-aware review'],

@@ -1,5 +1,6 @@
 import {
   buyPath,
+  canonicalPagePath,
   captureAttribution,
   checkoutAttribution,
   normalizeAttribution
@@ -59,5 +60,12 @@ test('keeps acquisition UTMs when an on-site placement opens the buy page', () =
 });
 
 test('builds owned links with a placement source', () => {
-  expect(buyPath('website_footer')).toBe('/buy?source=website_footer');
+  expect(buyPath('website_footer')).toBe('/buy/?source=website_footer');
+});
+
+test('uses trailing slashes for page links without changing files or external URLs', () => {
+  expect(canonicalPagePath('/blog')).toBe('/blog/');
+  expect(canonicalPagePath('/buy?source=website')).toBe('/buy/?source=website');
+  expect(canonicalPagePath('/downloads/PolyPDFMac.dmg')).toBe('/downloads/PolyPDFMac.dmg');
+  expect(canonicalPagePath('https://example.com/page')).toBe('https://example.com/page');
 });

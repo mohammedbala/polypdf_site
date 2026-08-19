@@ -21,65 +21,63 @@ import { buyPath, captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
-import shotSymbolCounting from '../assets/screenshots/shot-symbol-counting-web.png';
-import shotHeroTakeoff from '../assets/screenshots/shot-hero-takeoff-web.png';
-import shotMarkupReview from '../assets/screenshots/shot-markup-review-web.png';
-import shotRealScale from '../assets/screenshots/shot-real-scale-web.png';
-import shotMutcdSigns from '../assets/screenshots/shot-mutcd-signs-web.png';
-import shotCadMap from '../assets/screenshots/shot-cad-map-web.png';
+import shotSymbolSearch from '../assets/screenshots/symbol-search-review-currentdev-dark-web.png';
+import shotTakeoff from '../assets/screenshots/takeoff-currentdev-dark-web.png';
+import shotMarkup from '../assets/screenshots/markup-currentdev-dark-web.png';
+import shotCalibration from '../assets/screenshots/calibration-verified-second-span-currentdev-dark-web.png';
+import shotMutcdStop from '../assets/screenshots/mutcd-r1-1-stop-currentdev-dark-web.png';
+import shotAiscPlugin from '../assets/screenshots/plugins-aisc-w24x55-result-currentdev-dark-web.png';
 
-// Real captures of PolyPDF 1.3.1 in light mode on the app's own Quick Start sheet (Office Fit-Out
-// Plan Q-101) — fictional, locally stored, owned outright: no credits to carry, no agency marks to
-// crop, and the sheet can be redrawn whenever the UI changes. Captured over CDP at 2x with the
-// window controls composited at their real geometry; the only post-processing.
+// Current-development dark-mode captures from native-maximized PolyPDF at 2x. Every published
+// image is an exact 50% full-frame derivative (1710 x 1073) of its 3420 x 2146 source: no crop.
 const screenshots = [
   {
-    image: shotSymbolCounting,
-    title: 'Counts that keep score for you',
-    alt: 'PolyPDF Symbol Search reviewing 17 matches on Q-101, including the selected legend target and 16 plan symbols',
-    caption: 'Box one symbol and PolyPDF finds visually similar candidates. This training sheet shows 17 reviewed matches: the selected legend target plus 16 placed plan symbols. Committed counts land in the takeoff worksheet for CSV or PDF export.',
-    width: 1800,
-    height: 1125
+    image: shotSymbolSearch,
+    title: 'Review Symbol Search matches before counting',
+    alt: 'PolyPDF Symbol Search showing five matches, all five selected, on a synthetic symbol fixture',
+    caption: 'Box a representative symbol, inspect the candidates, and commit only the matches you accept. This genuine search result shows 5 matches, all 5 selected, with Count 5 ready.',
+    width: 1710,
+    height: 1073
   },
   {
-    image: shotHeroTakeoff,
-    title: 'Real units from the PDF you were sent',
-    alt: 'PolyPDF measuring a calibrated floor plan with gross area, wall dimensions, and a 17-marker count series that includes its legend target',
-    caption: 'Calibrate once — from the title block or a known line — then pull areas, lengths, and counts in real units. The bundled Q-101 sample shows a 5,485.139 sq ft gross area, two wall dimensions, and a 17-marker count series that includes its legend target.',
-    width: 1800,
-    height: 1125
+    image: shotTakeoff,
+    title: 'Measured quantities stay tied to the sheet',
+    alt: 'PolyPDF takeoff worksheet showing 14 items beside a fictional plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
+    caption: 'The Records view keeps the visible quantities beside their drawing context. This fictional takeoff shows 14 items: a 540 sq ft area, a 30 ft length, and 12 supply-diffuser counts, with matching rows in the Markup Table.',
+    width: 1710,
+    height: 1073
   },
   {
-    image: shotMarkupReview,
+    image: shotMarkup,
     title: 'Reviews and RFIs, straight on the sheet',
-    alt: 'PolyPDF drawing review: revision cloud, leader callout and notes on a plan sheet with every markup tracked in the Markup Table',
-    caption: 'Cloud the change, add an RFI callout, and each visible markup appears in the Markup Table with fields such as status, author, date, color, layer, and workspace.',
-    width: 1800,
-    height: 1125
+    alt: 'PolyPDF showing an RFI callout, a revision cloud, and a green rectangle with three matching rows in the Markup Table',
+    caption: 'A rounded RFI callout, an In Progress revision cloud, and a Completed verification rectangle remain connected to three matching table rows and their review comments.',
+    width: 1710,
+    height: 1073
   },
   {
-    image: shotRealScale,
-    title: 'The scale stays pinned to the sheet',
-    alt: 'PolyPDF status bar showing the drawing scale with a dimension reading in feet and inches on a calibrated plan',
-    caption: 'Set scale from the title block or calibrate from a known line. In this Q-101 capture, the Page Scale panel confirms 12 PDF points per foot while the status bar shows 1 inch = 6 feet.',
-    width: 1800,
-    height: 1125
+    image: shotCalibration,
+    title: 'Calibrate, then verify a second span',
+    alt: 'PolyPDF Page Scale panel showing a calibrated quarter-inch equals one-foot scale and a second 12-foot verification measurement',
+    caption: 'The Page Scale panel confirms 1/4 inch = 1 foot, or 18 PDF points per foot. A second known span on the fictional sheet reads 12 feet before the scale is trusted for takeoff.',
+    width: 1710,
+    height: 1073
   },
   {
-    image: shotMutcdSigns,
+    image: shotMutcdStop,
     title: 'Built-in MUTCD sign toolsets',
-    alt: 'PolyPDF Tools panel showing the MUTCD Regulatory sign chest with an R1-1 stop sign placed on a drawing',
-    caption: 'The built-in MUTCD Regulatory toolset is open in this live capture, with an R1-1 STOP-sign annotation placed on the fictional Q-101 sheet.',
-    width: 1800,
-    height: 1125
+    alt: 'PolyPDF built-in MUTCD Regulatory toolset open beside a selected R1-1 STOP sign on its labeled demonstration target',
+    caption: 'The built-in MUTCD Regulatory reference chest is open with a genuine R1-1 STOP annotation selected inside its labeled target. The owned fixture is a fictional validation sheet, not a field plan.',
+    width: 1710,
+    height: 1073
   },
   {
-    image: shotCadMap,
-    title: 'A vicinity map, drawn like part of the set',
-    alt: 'PolyPDF Plugins panel beside a CAD-style map annotation on the bundled Q-101 sample drawing',
-    caption: 'The Plugins panel lists the three first-party generators, and a PDF Maps output is visible as a map annotation on the bundled sample sheet.',
-    width: 1800,
-    height: 1125
+    image: shotAiscPlugin,
+    title: 'Plugin output stays editable on the PDF',
+    alt: 'PolyPDF Plugins sidebar beside a selected AISC steel-section vector placed in its labeled test target',
+    caption: 'Development evidence: the AISC Steel Sections plugin inserted a selected W24×55 vector into the fictional target. This is not a public-availability promise: AISC data redistribution rights remain unresolved, PDF Maps is blocked pending a production-compliant geocoder and request pattern, and Professional Seal Maker still requires human jurisdiction review. No map or seal output is claimed in this frame.',
+    width: 1710,
+    height: 1073
   }
 ];
 
@@ -217,9 +215,9 @@ const Home = () => {
           <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
             <a href="#faq" onClick={closeMobileMenu}>FAQ</a>
-            <Link to="/blog" onClick={closeMobileMenu}>Guides</Link>
-            <Link to="/feature-requests" onClick={closeMobileMenu}>Requests</Link>
-            <Link to="/support" onClick={closeMobileMenu}>Support</Link>
+            <Link to="/blog/" onClick={closeMobileMenu}>Guides</Link>
+            <Link to="/feature-requests/" onClick={closeMobileMenu}>Requests</Link>
+            <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
             <Link to={buyPath('website_nav')} className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
             <a href={primaryPlatform.url} className="nav-download" download onClick={() => handleDownloadClick('nav')}>
               <HiOutlineCloudDownload /> Download Free
@@ -353,8 +351,8 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>See it on a real sheet</h2>
-            <p>Counting, measuring and drawing review on the bundled fictional Q-101 training sheet. Captured from a live PolyPDF app build, not mocked up.</p>
+            <h2>See current PolyPDF workflows</h2>
+            <p>Six distinct dark-mode states from the native-maximized current development app, shown full-frame on owned or rights-cleared validation sheets—not mockups.</p>
           </motion.div>
 
           {/* Lead shot gets the full-width stage; the rest alternate text/image so the section

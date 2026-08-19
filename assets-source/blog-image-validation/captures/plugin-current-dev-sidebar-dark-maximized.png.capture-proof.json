@@ -1,0 +1,184 @@
+{
+  "schema": "polypdf-blog-current-dev-capture-proof/v1",
+  "state": "plugin-sidebar",
+  "capturedImage": {
+    "path": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png",
+    "filename": "plugin-current-dev-sidebar-dark-maximized.png",
+    "sha256": "7c84629a595cfd41ec0f9eb81578e21697bdf1b1e6e1a3beeee62a9a35cbe1ab",
+    "width": 3420,
+    "height": 2146,
+    "themeProofPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png.theme-proof.json",
+    "themeProofCapturedAt": "2026-08-19T11:44:22.675Z"
+  },
+  "proofCapturedAt": "2026-08-19T11:44:43.249Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "expectedBaseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "expectedWorkingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "rendererBundle": {
+      "path": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf/dist/renderer/app.js",
+      "sha256": "c5cd81d05969d6a45ba416f52a42bf0bcf4dc36dab2eff0e76996d9c8b7fb1df"
+    },
+    "mainBundle": {
+      "path": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf/dist/main/main.js",
+      "sha256": "94585a99f0d877d9fc3c34c02c6d2a47de12a42a64b55d79de2718751a97cf11"
+    },
+    "captureDriver": {
+      "path": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/capture-driver.mjs",
+      "sha256": "fad11c5a0388f0f93838d39bab33050ac3ed12302099f1279807beedf918639c",
+      "noEmulationMechanism": "Emulation.clearDeviceMetricsOverride before native maximize and Page.captureScreenshot"
+    },
+    "mutcdProvenance": {
+      "readmePath": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf/scripts/mutcd-signs-source/README.md",
+      "readmeSha256": "d55eed00d79b0b8f2f2130a07134c1b5ec887d7eeb2a65dbe6af9b5bd8ca059c",
+      "signIndexPath": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf/scripts/mutcd-signs-source/sign-index.json",
+      "signIndexSha256": "4d4dd3d7ffa5e571288360357781515449e30f39b13d951ec3264d0c69eec36a",
+      "officialReleaseStatusUrl": "https://mutcd.fhwa.dot.gov/kno-shs_2024-release-status/index.htm",
+      "sourceStatement": "FHWA Standard Highway Signs 2024, Releases 1–6; U.S. Government work per the repository source record."
+    },
+    "mutcdFixture": {
+      "path": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/fixtures/mutcd-r1-1-reference-sheet.pdf",
+      "sha256": "fc39aa00ee56628d9930737914b9b8a399b465a7a80fee65bcce7969d7e78075",
+      "builderPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/mutcd-generate-reference-fixture.py",
+      "builderSha256": "73266a9d423da37401e8d15b33866f712933bddb40403b491ebdd634d497be7e",
+      "extractedTextSha256": "aa236ae5d18491be2f06f32ada4d8f63523322d2fae820887324dc2410b16c67",
+      "contextLabels": [
+        "OWNED TRAFFIC-CONTROL FIXTURE",
+        "MUTCD REGULATORY SIGN",
+        "R1-1 STOP DEMONSTRATION",
+        "R1-1 PLACEMENT TARGET",
+        "FICTIONAL DEMONSTRATION"
+      ]
+    }
+  },
+  "ownedInstance": {
+    "automationRecordPath": "/private/tmp/polypdf-plugin-current-dev-UDkryF/automation-instance.json",
+    "pid": 64240,
+    "pidTree": [
+      64240,
+      64313,
+      64340,
+      64352,
+      64504,
+      64600,
+      64601,
+      64602
+    ],
+    "userData": "/private/tmp/polypdf-plugin-current-dev-UDkryF",
+    "argv": [
+      ".",
+      "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/fixtures/plugin-reference-sheet.pdf",
+      "--remote-debugging-port=9507",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows"
+    ],
+    "startedAt": "2026-08-19T11:11:39.578Z",
+    "spawnedByPid": 64237,
+    "processCommand": "PolyPDF"
+  },
+  "renderer": {
+    "settings": {
+      "version": "1.3.4",
+      "build": "16",
+      "appearance": "dark"
+    },
+    "theme": {
+      "datasetTheme": "dark",
+      "bodyDark": true,
+      "prefersDark": true,
+      "chromeBase": "#26282b",
+      "chromeElevated": "#313437"
+    },
+    "geometry": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "styleToolbar": {
+      "exists": true,
+      "visible": true,
+      "sectionCount": 3,
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "overflowClass": false,
+      "rect": {
+        "x": 0,
+        "y": 44,
+        "width": 1710,
+        "height": 36
+      }
+    },
+    "documentName": "plugin-reference-sheet.pdf",
+    "activePanel": "plugins",
+    "visiblePanelText": "Pin a command to put it on the sidebar. Right-click a pinned icon to remove it.Manage...AISC Steel SectionsPolyPDF · v1.0.6Insert AISC Steel Section…PinPDF MapsPolyPDF · v1.0.3Insert Map…PinProfessional Seal MakerPolyPDF · v1.0.7Insert Professional Seal…Pin",
+    "dialog": null,
+    "aiscAnnotation": null,
+    "aiscDom": null,
+    "stopAnnotation": null,
+    "stopDom": null,
+    "mutcd": null
+  },
+  "cgWindow": {
+    "capturedAt": "2026-08-19T11:44:43Z",
+    "queriedPID": 64240,
+    "windows": [
+      {
+        "alpha": 1,
+        "bounds": {
+          "height": 1073,
+          "width": 1710,
+          "x": 0,
+          "y": 34
+        },
+        "layer": 0,
+        "onScreen": true,
+        "ownerName": "PolyPDF",
+        "ownerPID": 64240,
+        "sharingState": 1,
+        "windowName": "PolyPDF",
+        "windowNumber": 1997
+      }
+    ]
+  },
+  "assertions": {
+    "exactSourceCommit": true,
+    "exactTrackedDiff": true,
+    "exactOwnedRootPID": true,
+    "exactOwnedUserData": true,
+    "expectedFixtureOpened": true,
+    "processAliveAtProof": true,
+    "appVersion": true,
+    "darkAppSetting": true,
+    "darkRenderer": true,
+    "rendererNativeGeometry": true,
+    "cgWindowNativeGeometry": true,
+    "cgWindowOwnedByExactPID": true,
+    "screenshotExactPhysicalDimensions": true,
+    "screenshotMatchesNativeDpr": true,
+    "themeProofPassed": true,
+    "fullStyleToolbarVisible": true,
+    "noStyleToolbarOverflow": true,
+    "correctOwnedFixture": true,
+    "contextCorrectMutcdFixture": true,
+    "activePluginPanel": true,
+    "noDialog": true,
+    "aiscCard": true,
+    "mapsCard": true,
+    "sealCard": true,
+    "commandNames": true
+  },
+  "failedAssertions": [],
+  "passes": true
+}

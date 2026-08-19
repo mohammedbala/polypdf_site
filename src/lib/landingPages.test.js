@@ -16,7 +16,10 @@ test('defines five substantial, uniquely attributed search landing pages', () =>
     expect(page.outcomes.length).toBeGreaterThanOrEqual(5);
     expect(page.faq).toHaveLength(3);
     expect(page.related.length).toBeGreaterThanOrEqual(6);
-    expect(['visual-search', 'takeoff-export', 'revision-comparison']).toContain(page.mediaSlug);
+    expect(page).not.toHaveProperty('mediaSlug');
+    expect(page.imageWidth).toBe(1710);
+    expect(page.imageHeight).toBe(1073);
+    expect(page.imageAlt).not.toMatch(/Q-101|split drawing view|numbered count markers/i);
 
     // Related links are rendered as internal <Link>s. A path with no route entry would ship a
     // crawlable link to a page that redirects home — the exact drift a removed landing page

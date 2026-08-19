@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import routeMetadata from './route-metadata.json';
 import { blogPosts, blogPostPath } from './blogPosts';
-import { guidePosts } from '../content/guides';
+
+const screenshotImageVersion = '20260819-currentdev';
 
 const readPublic = (name) => fs.readFileSync(path.join(process.cwd(), 'public', name), 'utf8');
 
@@ -15,29 +16,35 @@ test('sitemap, llms.txt and RSS cover every indexable article', () => {
     if (metadata.robots.includes('noindex')) {
       expect(sitemap).not.toContain(`<loc>https://www.polypdf.com${route}</loc>`);
     } else {
-      const url = route === '/' ? 'https://www.polypdf.com/' : `https://www.polypdf.com${route}`;
+      const url = route === '/' ? 'https://www.polypdf.com/' : `https://www.polypdf.com${route}/`;
       expect(sitemap).toContain(`<loc>${url}</loc>`);
     }
   });
 
   blogPosts.forEach((entry) => {
-    const url = `https://www.polypdf.com${blogPostPath(entry.slug)}`;
+    const url = `https://www.polypdf.com${blogPostPath(entry.slug)}/`;
     expect(llms).toContain(`(${url})`);
     expect(feed).toContain(`<link>${url}</link>`);
   });
   expect((feed.match(/<item>/g) || [])).toHaveLength(blogPosts.length);
 });
 
-test('the image sitemap exposes one truthful public screenshot for every guide', () => {
+test('the image sitemap and RSS expose one truthful public screenshot for every post', () => {
   const sitemap = readPublic('sitemap.xml');
+  const feed = readPublic('feed.xml');
   expect(sitemap).toContain('xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"');
 
-  guidePosts.forEach((entry) => {
+  blogPosts.forEach((entry) => {
+    const publicPath = path.join(process.cwd(), 'public', 'guides', `${entry.slug}.png`);
+    const imageUrl = `https://www.polypdf.com/guides/${entry.slug}.png?v=${screenshotImageVersion}`;
     expect(sitemap).toContain(
-      `<image:loc>https://www.polypdf.com/guides/${entry.slug}.png</image:loc>`
+      `<image:loc>${imageUrl}</image:loc>`
     );
-    expect(fs.statSync(path.join(process.cwd(), 'public', 'guides', `${entry.slug}.png`)).size)
-      .toBeGreaterThan(0);
+    const imageLength = fs.statSync(publicPath).size;
+    expect(imageLength).toBeGreaterThan(0);
+    expect(feed).toContain(
+      `<enclosure url="${imageUrl}" length="${imageLength}" type="image/png" />`
+    );
   });
 });
 

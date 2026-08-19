@@ -1,7 +1,9 @@
-import screenshot from '../../assets/screenshots/shot-real-scale-web.png';
+import calibratedVerificationScreenshot from '../../assets/screenshots/calibration-verified-second-span-currentdev-dark-web.png';
+import knownDistanceDialogScreenshot from '../../assets/screenshots/calibration-known-distance-dialog-currentdev-dark-web.png';
+import uncalibratedScreenshot from '../../assets/screenshots/calibration-uncalibrated-currentdev-dark-web.png';
 
-const screenshotCaption =
-  'Live-app capture from the PolyPDF 1.3.1 dev build on macOS, using the bundled Q-101 sample. This guide was re-verified against PolyPDF 1.3.4 (build 16); the screenshot itself records the earlier build.';
+const captureProvenance =
+  'Live PolyPDF 1.3.4 (build 16) capture from the exact current development working-tree snapshot on macOS (base a0a709c; tracked product-diff SHA-256 8d9daab), captured August 19, 2026 with the owned fictional PolyPDF Evidence Lab measurement-diagnostics fixture; no customer data.';
 
 const post = {
   slug: 'calibrate-pdf-drawing-scale',
@@ -21,15 +23,17 @@ const post = {
     'A trustworthy takeoff starts with one page-specific scale and an independent check. PolyPDF lets you apply the scale printed in a title block or draw over a known dimension when the sheet does not state one.',
   quickAnswer:
     'To calibrate a PDF drawing, open the page in PolyPDF, choose Measurements › Scale, and either apply the scale notation printed on the sheet or choose Calibrate by Drawing Line. For line calibration, snap the two endpoints to a known span, enter its real-world length, and then measure a different labeled span. Do not begin takeoff until that second value agrees within the tolerance your work requires.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
-    src: screenshot,
-    alt: 'PolyPDF displaying the Q-101 plan with the Page Scale controls and calibrated measurements',
-    caption: screenshotCaption,
-    width: 1800,
-    height: 1125
+    src: calibratedVerificationScreenshot,
+    alt: 'PolyPDF dark-mode window showing an 18 PDF point per foot calibration and selected 12-foot verification measurement',
+    caption:
+      'Verified result: the Page Scale card reports 18 PDF pt per ft, while a second, independently drawn 216-point span reads 12′-0″ and is selected with its full measurement style controls visible.',
+    provenance: captureProvenance,
+    width: 1710,
+    height: 1073
   },
   keywords: [
     'calibrate PDF drawing scale',
@@ -59,11 +63,13 @@ const post = {
         },
         {
           kind: 'figure',
-          src: screenshot,
-          alt: 'The calibrated Page Scale card beside measurements on the bundled Q-101 drawing',
-          caption: screenshotCaption,
-          width: 1800,
-          height: 1125
+          src: uncalibratedScreenshot,
+          alt: 'PolyPDF dark-mode window showing Scale not set beside printed 20-foot and 12-foot plan dimensions',
+          caption:
+            'Before calibration, the Page Scale card truthfully says “Scale not set,” while the fixture exposes two printed references: a 20′-0″ horizontal span for calibration and a separate 12′-0″ vertical span for verification.',
+          provenance: captureProvenance,
+          width: 1710,
+          height: 1073
         }
       ]
     },
@@ -78,10 +84,20 @@ const post = {
             'Open the Measurements panel, choose the Scale view, and confirm the page number shown in the Page Scale card.',
             'Under “The sheet does not,” choose Calibrate by Drawing Line.',
             'Click or drag from the first known endpoint to the second. Use a horizontal or vertical span when possible because its endpoints are usually easier to identify.',
-            'In Calibrate Page Scale, enter the real-world Known Distance. PolyPDF accepts the current measurement format, including feet and inches or metric input.',
+            'In Calibrate Page Scale, enter the real-world Known Distance. In the verified feet-and-inches workflow below, the bare value 20 is read as 20 feet.',
             'Confirm the card says Calibrated and shows the captured ratio in PDF points per base unit.',
             'Switch to a length measurement tool and measure a second labeled dimension that was not used for calibration.'
           ]
+        },
+        {
+          kind: 'figure',
+          src: knownDistanceDialogScreenshot,
+          alt: 'PolyPDF Calibrate Page Scale dialog showing 360 captured PDF points and a known distance of 20 feet',
+          caption:
+            'After snapping across the printed 20′-0″ reference, PolyPDF reports “Captured 360 PDF points between snapped endpoints.” The Known Distance field contains 20, interpreted as feet in the active ft-in format.',
+          provenance: captureProvenance,
+          width: 1710,
+          height: 1073
         },
         {
           kind: 'note',
@@ -92,24 +108,24 @@ const post = {
     },
     {
       icon: 'document',
-      title: 'Worked calibration: the bundled Q-101 sample',
+      title: 'Worked calibration: the owned Evidence Lab fixture',
       body: [
         {
           kind: 'p',
           text:
-            'PolyPDF’s bundled Quick Start drawing includes a green reference line that is exactly 240 PDF points long and represents 20 feet. Dividing the captured page distance by the known real-world distance produces the page scale used by the sample.'
+            'The owned fictional measurement-diagnostics fixture prints a 20′-0″ horizontal main-plan dimension. Snapping to its two endpoints captures exactly 360 PDF points. Entering 20 feet makes the page conversion explicit rather than assuming the printed 1/4-inch scale survived export or scanning.'
         },
         {
           kind: 'formula',
-          label: 'Q-101 calibration',
-          formula: '240 PDF pt ÷ 20 ft = 12 PDF pt per ft',
+          label: 'Evidence Lab calibration',
+          formula: '360 PDF pt ÷ 20 ft = 18 PDF pt per ft',
           explanation:
-            'At this scale, a measured run of 360 PDF points represents 30 feet. The app performs this conversion after the page calibration is saved.'
+            'The saved Page Scale card therefore reports 18 PDF pt per ft. A different 216-point vertical span should convert to 12 feet: 216 PDF pt ÷ 18 PDF pt/ft = 12 ft.'
         },
         {
           kind: 'p',
           text:
-            'The Q-101 fixture is useful because the correct result is known, but production drawings deserve the same verification routine. After calibrating from one dimension, measure another. If a 30-foot labeled wall reads 29 feet 11 7/8 inches, decide whether that difference is inside the tolerance for your purpose; if it reads 27 feet, stop and investigate rather than correcting quantities later.'
+            'That independent vertical measurement renders as exactly 12′-0″, matching the fixture’s printed dimension. This proves the calculation and interaction sequence for this controlled file; it does not prove that an unrelated production drawing is undistorted. On real work, repeat the check on a second labeled span and stop to investigate when the result falls outside the tolerance required for the takeoff.'
         }
       ]
     },
@@ -214,11 +230,11 @@ const post = {
   sources: [
     {
       label: 'PolyPDF: Measure PDF on Mac',
-      url: 'https://www.polypdf.com/measure-pdf-on-mac'
+      url: 'https://www.polypdf.com/measure-pdf-on-mac/'
     },
     {
       label: 'PolyPDF: PDF takeoff software',
-      url: 'https://www.polypdf.com/pdf-takeoff-software'
+      url: 'https://www.polypdf.com/pdf-takeoff-software/'
     }
   ],
   cta: {

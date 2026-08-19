@@ -1,0 +1,78 @@
+{
+  "capturedAt": "2026-08-19T11:44:22.675Z",
+  "source": {
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "facts": {
+    "version": "1.3.4",
+    "build": "16",
+    "appAppearance": "dark",
+    "datasetTheme": "dark",
+    "bodyDark": true,
+    "prefersDark": true,
+    "chromeBase": "#26282b",
+    "chromeElevated": "#313437",
+    "panelBase": "",
+    "devicePixelRatio": 2,
+    "innerWidth": 1710,
+    "innerHeight": 1073,
+    "styleToolbar": {
+      "exists": true,
+      "visible": true,
+      "hasOverflowClass": false,
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "sectionCount": 3
+    },
+    "documentName": "plugin-reference-sheet.pdf",
+    "dialogId": ""
+  },
+  "windowProof": {
+    "before": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "after": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "maximizeInvoked": false,
+    "controlResult": null,
+    "fillsWorkArea": true,
+    "passes": true
+  },
+  "pixelProof": {
+    "width": 3420,
+    "height": 2146,
+    "darkHits": 2648310,
+    "lightHits": 2359709,
+    "darkRatio": 0.36083860630140124,
+    "lightRatio": 0.32151602600785906,
+    "topDarkHits": 565877,
+    "topLightHits": 33,
+    "topDarkRatio": 0.9192283950617284,
+    "expectedWidth": 3420,
+    "expectedHeight": 2146,
+    "passes": true
+  }
+}

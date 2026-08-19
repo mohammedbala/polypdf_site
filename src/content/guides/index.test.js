@@ -48,12 +48,14 @@ test('high-risk product limits stay explicit in the public guides', () => {
   const area = JSON.stringify(bySlug['measure-pdf-area-cutouts-depth']);
   const form = JSON.stringify(bySlug['create-fillable-pdf-form']);
 
-  expect(redaction).toContain('does not establish complete redaction or sanitation');
-  expect(redaction).toContain('can remain under a black fill');
-  expect(redaction).toContain('direct FileAttachment annotation');
+  expect(redaction).toContain('does not generalize to every PDF structure');
+  expect(redaction).toContain('appearance alone is not saved-byte proof');
+  expect(redaction).toContain('direct FileAttachment annotation and its embedded payload survived');
+  expect(redaction).toContain('new PolyPDF /Producer and /ModDate');
   expect(issuedSet).toContain('does not expose a cross-file Batch Process');
   expect(issuedSet).toContain('10 automated checks');
-  expect(takeoff).toContain('16 plan symbols plus one legend example');
+  expect(takeoff).toContain('12 committed Supply diffuser counts');
+  expect(takeoff).toContain('does not prove how candidates were found');
   expect(area).toContain('does not prove that every connecting edge stays inside');
   expect(form).toContain('restricted safe subset');
 });

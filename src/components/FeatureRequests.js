@@ -147,7 +147,7 @@ const FeatureRequests = () => {
               These requests came from a real takeoff workflow. They are now available on both Mac
               and Windows, while the remaining cloud-line request stays under review for a future update.
             </p>
-            <Link to="/versions" className="feature-request-text-link">
+            <Link to="/versions/" className="feature-request-text-link">
               Read the 1.3.4 release notes <FaArrowRight />
             </Link>
           </div>

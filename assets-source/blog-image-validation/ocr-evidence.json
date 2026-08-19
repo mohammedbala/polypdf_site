@@ -1,0 +1,115 @@
+{
+  "capturedAt": "2026-08-19T11:02:33.737Z",
+  "workflow": "Genuine PolyPDF OCR run on an image-only public-domain scan, saved to disk, followed by exact app process teardown, a fresh app process, reopening the saved PDF, and a text search with a selected on-page hit",
+  "application": {
+    "name": "PolyPDF",
+    "version": "1.3.4",
+    "build": "16",
+    "snapshot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "sourceBaseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "currentProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "appearance": "dark"
+  },
+  "source": {
+    "fixture": "fixtures/nasa-akron-page-6-image-only.pdf",
+    "sha256": "88c5f48e194a3d5aea3f73172a296393fce4f1e90b28015b020236613adf648e",
+    "pages": 1,
+    "preOcrExtractedNonWhitespaceCharacters": 0,
+    "description": "Image-only derivative of page 6 of a scanned U.S. government NACA report showing the U.S.S. Akron model and engineering figures.",
+    "sourceRecord": "https://ntrs.nasa.gov/citations/19930091505",
+    "rights": "NASA NTRS marks the source Public and states: Work of the US Government. Public Use Permitted."
+  },
+  "result": {
+    "file": "captures/ocr-uss-akron-engineering-scan.pdf",
+    "sha256": "169c0c5e2a0465234f49539a9942dacd00d443addf72be5daed21a46aef42a3c",
+    "catalogRecord": {
+      "source": "PolyPDFElectron",
+      "processedPageCount": 1,
+      "textLayerCount": 1,
+      "bornDigitalSkippedCount": 0,
+      "recognizedPageCount": 1,
+      "ocrEngine": "image",
+      "generatedAt": "2026-08-19T10:57:32.825Z"
+    },
+    "verifiedExtractedPhrases": [
+      "REPORT NATIONAL ADVISORY COMMITTEE FOR AERONAUTICS",
+      "Surface of ship",
+      "U.S. S. Akron"
+    ],
+    "reopenedInNewProcess": true,
+    "searchQuery": "SURFACE",
+    "searchResultCount": 3,
+    "selectedResultCount": 1,
+    "selectedOnPageHighlightCount": 1,
+    "footerBadge": "OCR completed — searchable text was added to 1 page."
+  },
+  "caveats": [
+    "PolyPDF describes OCR as best-effort; this evidence does not claim perfect transcription.",
+    "The scan's small italic labels and dimension notation produce visible recognition errors in extracted text.",
+    "The run reported that the recognized arrow and less-than-or-equal symbols remain searchable and copyable but have approximate invisible-layer positioning because the text-layer font lacks those glyphs."
+  ],
+  "screenshots": [
+    {
+      "file": "captures/ocr-uss-akron-no-text-before-dark-maximized.png",
+      "proof": "captures/ocr-uss-akron-no-text-before-dark-maximized.png.capture-proof.json",
+      "sha256": "83d4b85b2ea2716dde678789780440987f3ef220b34938922309c9b3bc1e49c6",
+      "claim": "Before OCR, a search for SURFACE in the image-only public-domain engineering scan returns No matches."
+    },
+    {
+      "file": "captures/ocr-uss-akron-complete-dark-maximized.png",
+      "proof": "captures/ocr-uss-akron-complete-dark-maximized.png.capture-proof.json",
+      "sha256": "2c5c83fa7478e91d1e24c00a8448f74fee956c1b1b0ec5ea9c40cbb75cdd5f13",
+      "claim": "The genuine OCR dialog reaches OCR complete at 100%, and the footer shows the OCR badge."
+    },
+    {
+      "file": "captures/ocr-uss-akron-search-hit-dark-maximized.png",
+      "proof": "captures/ocr-uss-akron-search-hit-dark-maximized.png.capture-proof.json",
+      "sha256": "e8b434d322149f1c24510fa00943de315e6745e24fca753eb988d642e98ca28d",
+      "claim": "After saving, exact process teardown, and reopening in a new process, SURFACE returns three results; a selected sidebar result and yellow on-page highlight prove recognized searchable text."
+    }
+  ],
+  "captureGate": {
+    "pngWidth": 3420,
+    "pngHeight": 2146,
+    "cssViewport": {
+      "width": 1710,
+      "height": 1073
+    },
+    "devicePixelRatio": 2,
+    "nativeWindow": {
+      "windowState": "maximized",
+      "method": "current-dev BrowserWindow.maximize verified by native outer bounds",
+      "bounds": {
+        "left": 0,
+        "top": 34,
+        "width": 1710,
+        "height": 1073
+      },
+      "workArea": {
+        "left": 0,
+        "top": 34,
+        "width": 1710,
+        "height": 1073
+      },
+      "maximizedByBounds": true,
+      "browserCdpAvailable": false,
+      "browserCdpError": "'Browser.getWindowForTarget' wasn't found"
+    },
+    "noViewportEmulation": true,
+    "darkMode": {
+      "appAppearance": "dark",
+      "datasetTheme": "dark",
+      "bodyDark": true,
+      "prefersDark": true
+    },
+    "expandedStyleToolbar": {
+      "present": true,
+      "trackPresent": true,
+      "hasOverflow": false,
+      "singleRow": true,
+      "allSectionsInsideTrack": true
+    },
+    "proofFiles": "Adjacent .capture-proof.json files",
+    "allPass": true
+  }
+}

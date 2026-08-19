@@ -1,0 +1,44 @@
+{
+  "pdf": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/sanitize-output/sanitize-working.pdf",
+  "sha256": "42ce4f1fa883b70f8870554fa4325aa9c6236efbe2a5457fb68257931a9dd4de",
+  "byteLength": 30479,
+  "pageCount": 1,
+  "metadata": {
+    "/Producer": "PolyPDF / PolyPDF 1.3.4",
+    "/ModDate": "D:20260819113255Z"
+  },
+  "metadataEntryCount": 2,
+  "catalogMetadataStream": false,
+  "pageMetadataStreams": 0,
+  "nameTrees": {
+    "javaScript": false,
+    "embeddedFiles": false
+  },
+  "catalogAdditionalActions": false,
+  "catalogOpenActionJavaScript": false,
+  "pageAdditionalActions": 0,
+  "catalogAssociatedFiles": 0,
+  "pageAssociatedFiles": 0,
+  "directFileAttachmentAnnotations": {
+    "count": 1,
+    "items": [
+      {
+        "page": 1,
+        "filename": "synthetic-note.txt",
+        "contents": "Synthetic attachment",
+        "payloadBytes": 58,
+        "payloadSha256": "c9d8ce121b3ea28459aa54f2fe5562a8981f6a499181a7b29bb341f2e5c9da33"
+      }
+    ]
+  },
+  "acroFormPresent": false,
+  "pageThumbnails": 0,
+  "xobjects": {
+    "topLevelImages": 1,
+    "nestedImages": 1,
+    "topLevelForms": 1,
+    "nestedForms": 0
+  },
+  "targetTextCount": 2,
+  "extractedTextLength": 533
+}

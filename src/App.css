@@ -1642,6 +1642,7 @@ body {
 }
 
 .blog-index .blog-card:first-child .blog-card-image-link,
+.blog-index .blog-card:first-child .blog-card-picture,
 .blog-index .blog-card:first-child .blog-card-image {
   height: 100%;
 }
@@ -1672,17 +1673,28 @@ body {
   border-bottom: 1px solid var(--gray-200);
 }
 
+.blog-responsive-picture,
+.blog-card-picture {
+  display: block;
+  width: 100%;
+}
+
+.blog-card-picture {
+  background: #202225;
+}
+
 .blog-card-image {
   width: 100%;
   height: auto;
-  aspect-ratio: 8 / 5;
+  aspect-ratio: 1710 / 1073;
   display: block;
-  object-fit: cover;
+  background: #202225;
+  object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .blog-card:hover .blog-card-image {
-  transform: scale(1.012);
+  transform: none;
 }
 
 .blog-card-copy {
@@ -1929,6 +1941,26 @@ body {
   margin: 1.75rem 0 0;
 }
 
+/* Product screenshots need more room than prose. Inline figures can leave the 70-character
+   reading measure, but never grow past their source pixels or the safe viewport gutters. */
+.blog-post .legal-section > .blog-figure {
+  position: relative;
+  left: 50%;
+  width: min(1050px, calc(100vw - 40px), var(--blog-figure-source-width, 1050px));
+  max-width: none;
+  transform: translateX(-50%);
+}
+
+.blog-image-viewport {
+  width: 100%;
+  max-width: 100%;
+}
+
+.blog-image-viewport:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .blog-figure img {
   width: 100%;
   height: auto;
@@ -1952,16 +1984,20 @@ body {
 .blog-figure figcaption {
   display: grid;
   gap: 0.25rem;
+  min-width: 0;
   max-width: 88ch;
   margin-top: 0.7rem;
   color: var(--gray-700);
   font-size: 0.86rem;
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .blog-figure figcaption small {
+  min-width: 0;
   color: var(--gray-600);
   font-size: 0.78rem;
+  overflow-wrap: anywhere;
 }
 
 .blog-table-scroll {
@@ -2090,9 +2126,17 @@ body {
 
 .blog-sources ol {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.7rem;
+  min-width: 0;
   padding-left: 1.25rem;
   color: var(--gray-700);
+}
+
+.blog-sources li,
+.blog-sources li > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .blog-sources a {
@@ -2171,7 +2215,7 @@ body {
   }
 
   .blog-card-image {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1710 / 1073;
   }
 
   .blog-index .blog-card:first-child.blog-card-with-image {
@@ -2183,9 +2227,10 @@ body {
     border-bottom: 1px solid var(--gray-200);
   }
 
+  .blog-index .blog-card:first-child .blog-card-picture,
   .blog-index .blog-card:first-child .blog-card-image {
     height: auto;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1710 / 1073;
   }
 }
 
@@ -2234,6 +2279,20 @@ body {
   .blog-hero-figure img,
   .blog-figure img {
     border-radius: 8px;
+  }
+
+  /* A purpose-made mobile source fills the normal figure width. If none exists, preserve enough
+     desktop-window detail to read labels and let touch/keyboard users pan instead of shrinking a
+     1,800px app window to a few hundred pixels. */
+  .blog-image-viewport-scroll-mobile {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-gutter: stable;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .blog-image-viewport-scroll-mobile .blog-responsive-picture {
+    width: max(100%, var(--blog-image-pan-width, 760px));
   }
 }
 

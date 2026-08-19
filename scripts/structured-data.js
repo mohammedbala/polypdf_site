@@ -24,15 +24,18 @@ const routeMetadata = req('lib/route-metadata.json');
 const { landingPages } = req('lib/landingPages.js');
 const { blogPosts, blogPostPath } = req('lib/blogPosts.js');
 const { DOWNLOADS } = req('lib/platform.js');
-const { mediaCopy } = req('components/WorkflowLanding.js');
 
 const ORIGIN = 'https://www.polypdf.com';
 const ORG_ID = `${ORIGIN}/#organization`;
 const WEBSITE_ID = `${ORIGIN}/#website`;
 const APP_ID = `${ORIGIN}/#software`;
-const SOCIAL_IMAGE = `${ORIGIN}/og-image.png`;
+const SOCIAL_IMAGE = `${ORIGIN}/og-image.png?v=20260819-currentdev`;
 
-const absolute = (route) => `${ORIGIN}${route === '/' ? '/' : route}`;
+const absolute = (route) => {
+  if (route === '/') return `${ORIGIN}/`;
+  if (/\.[a-z0-9]+(?:\?|$)/i.test(route)) return `${ORIGIN}${route}`;
+  return `${ORIGIN}${route.replace(/\/+$/, '')}/`;
+};
 
 const organization = () => ({
   '@type': 'Organization',
@@ -70,7 +73,7 @@ const FEATURE_LIST = [
   'Redaction for supported searchable text, with documented limits for vector, outlined, image, and nested content',
   'Automatic sheet hyperlinking for NCS sheet numbers',
   'Save markups as SVG, PNG, JPEG, or DXF',
-  'Signed plugin platform with three first-party plugins'
+  'Declarative plugin platform with permission checks and host-owned generators'
 ];
 
 const softwareApplication = (description) => ({
@@ -166,22 +169,6 @@ const blogListing = () => ({
   }))
 });
 
-// The workflow videos shipped with the Phase 2 landing pages on 2026-07-31.
-const WORKFLOW_VIDEO_UPLOAD_DATE = '2026-07-31';
-
-const workflowVideo = (page) => {
-  const copy = mediaCopy[page.mediaSlug];
-  return {
-    '@type': 'VideoObject',
-    name: copy.title,
-    description: copy.description,
-    contentUrl: `${ORIGIN}/videos/${page.mediaSlug}-narrated.mp4`,
-    thumbnailUrl: `${ORIGIN}${page.image}`,
-    uploadDate: WORKFLOW_VIDEO_UPLOAD_DATE,
-    publisher: { '@id': ORG_ID }
-  };
-};
-
 const wrap = (blocks) => blocks.map((block) => ({ '@context': 'https://schema.org', ...block }));
 
 const buildStructuredData = (route) => {
@@ -209,12 +196,11 @@ const buildStructuredData = (route) => {
     return wrap([breadcrumbs([['/'], ['/blog'], [route, post.title]]), blogPosting(post)]);
   }
 
-  const workflowPage = Object.values(landingPages).find((page) => page.path === route);
-  if (workflowPage) {
+  const isWorkflowPage = Object.values(landingPages).some((page) => page.path === route);
+  if (isWorkflowPage) {
     return wrap([
       breadcrumbs([['/'], [route]]),
-      webPage(route),
-      workflowVideo(workflowPage)
+      webPage(route)
     ]);
   }
 

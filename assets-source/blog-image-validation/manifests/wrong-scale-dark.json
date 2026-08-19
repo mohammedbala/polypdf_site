@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "states": [
+    {
+      "id": "wrong-scale-uncalibrated-dark",
+      "fixturePath": "../fixtures/measurement-diagnostics.pdf",
+      "currentPage": 1,
+      "zoomMode": "fitPage",
+      "windowSize": { "width": 1440, "height": 960 },
+      "sidebarPanel": "measurements",
+      "selectedTool": "select",
+      "markupTable": false,
+      "selectedAnnotationId": "wrong-reference-line",
+      "settleMs": 600000,
+      "annotations": [
+        {
+          "id": "wrong-reference-line",
+          "kind": "measure",
+          "tool": "lineMeasurement",
+          "page": 1,
+          "pageIndex": 0,
+          "x": 86,
+          "y": 404,
+          "width": 360,
+          "height": 2,
+          "label": "Known 20-foot span",
+          "nativeSubject": "Reference check before calibration",
+          "contents": "The drawing says 20 feet; this uncalibrated result is only PDF points.",
+          "author": "Alex Example",
+          "status": "open",
+          "strokeColor": "#EF4444",
+          "lineWidth": 4
+        }
+      ]
+    }
+  ]
+}

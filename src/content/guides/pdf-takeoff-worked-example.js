@@ -1,7 +1,7 @@
-import screenshot from '../../assets/screenshots/shot-hero-takeoff-web.png';
+import screenshot from '../../assets/screenshots/takeoff-currentdev-dark-web.png';
 
 const screenshotCaption =
-  'Live-app capture from the PolyPDF 1.3.1 dev build on macOS, using the bundled Q-101 sample. Its 17 diffuser matches comprise 16 plan symbols plus one legend example, so the reviewed plan quantity is 16. This guide was re-verified against PolyPDF 1.3.4 (build 16); the screenshot itself records the earlier build.';
+  'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode on the owned Takeoff Demonstration fixture. Measurements › Records and the Markup Table show 14 deterministic demonstration records: one 540.00 sq ft area, one 30.00 ft length, and 12 Supply diffuser count markers. These seeded records prove the committed takeoff and worksheet presentation, not a Symbol Search run or a professional estimate.';
 
 const post = {
   slug: 'pdf-takeoff-worked-example',
@@ -18,18 +18,20 @@ const post = {
   metaDescription:
     'Follow a practical PDF takeoff example: calibrate the plan, measure area and lengths, auto-count symbols, review records, and export CSV or PDF.',
   lede:
-    'This worked example uses PolyPDF’s bundled Q-101 office fit-out plan so the source, calibration, and expected on-screen evidence are reproducible. The same sequence applies to your own drawing after you verify its scale.',
+    'This worked example uses an owned one-page community-workshop fixture so the source, calibration, and expected on-screen evidence are reproducible. The same sequence applies to your own drawing after you verify its scale.',
   quickAnswer:
-    'A reliable PDF takeoff follows this order: confirm the sheet and revision, calibrate the current page, verify a second known dimension, trace area and length quantities, use Symbol Search for repeated symbols, review the Takeoff Worksheet, then export CSV or a PDF summary. On the bundled Q-101 sample, the calibration line is 240 PDF points for 20 feet, or 12 PDF points per foot; the live capture also shows a 5,485-square-foot gross area and 17 visual diffuser matches—16 plan symbols plus one legend example that must be excluded from the plan quantity.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+    'A reliable PDF takeoff follows this order: confirm the sheet and revision, calibrate the current page, verify a second known dimension, trace area and length quantities, review any repeated-symbol candidates, inspect the Takeoff Worksheet, then export CSV or a PDF summary. The owned 1/4-inch-equals-1-foot fixture uses 18 PDF points per foot; the current capture shows 540.00 sq ft of floor finish, 30.00 ft of partition length, and 12 committed Supply diffuser counts across 14 records.',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
-    alt: 'PolyPDF takeoff on the Q-101 office plan with area, dimensions, diffuser counts, and worksheet totals',
+    alt: 'PolyPDF dark-mode takeoff with a 540 square foot area, 30 foot length, 12 count markers, Records panel, and Markup Table',
     caption: screenshotCaption,
-    width: 1800,
-    height: 1125
+    width: 1710,
+    height: 1073,
+    provenance:
+      'Real current-development product UI. The owned fixture and deterministic demonstration annotations contain no customer data; the image is an uncropped 50 percent derivative of the native-maximized capture.'
   },
   keywords: [
     'PDF takeoff example',
@@ -46,24 +48,24 @@ const post = {
         {
           kind: 'p',
           text:
-            'Open the PolyPDF Quick Start sample and go to sheet Q-101, a 24-by-18-inch office fit-out plan. The capture for this guide records four kinds of evidence on one page: a known calibration, gross floor area, two wall dimensions, and repeated diffuser symbols. It is a teaching fixture rather than a bid document, so use the workflow—not its quantities—as the template for your project.'
+            'Open the owned Takeoff Demonstration fixture, a one-page fictional community-workshop plan labeled T-101 and Revision B. The capture records a calibrated area, a partition length, a committed count series, the Records panel, and the Markup Table on one screen. It is a teaching fixture rather than a bid document, so use the workflow—not its quantities—as the template for your project.'
         },
         {
           kind: 'ul',
           items: [
-            'Area question: what is the traced gross floor area?',
-            'Length question: what wall runs were measured?',
-            'Count question: how many visual matches are present, and which of them belong to the plan quantity?',
+            'Area question: does the traced floor-finish boundary produce the displayed 540.00 sq ft?',
+            'Length question: does the south partition run produce the displayed 30.00 ft?',
+            'Count question: do the 12 committed markers and the worksheet total agree?',
             'Output question: can a reviewer see the items, totals, formula, pages, subject, and status before export?'
           ]
         },
         {
           kind: 'figure',
           src: screenshot,
-          alt: 'The bundled Q-101 plan with colored takeoff annotations and the Takeoff Worksheet open',
+          alt: 'The fictional T-101 takeoff fixture with area, length, 12 count markers, Records, and the Markup Table open',
           caption: screenshotCaption,
-          width: 1800,
-          height: 1125
+          width: 1710,
+          height: 1073
         }
       ]
     },
@@ -74,14 +76,14 @@ const post = {
         {
           kind: 'p',
           text:
-            'The Q-101 sample includes a green reference line that is exactly 240 PDF points long and represents 20 feet. In Measurements › Scale, choose Calibrate by Drawing Line, trace that reference, and enter 20 feet as the known distance. PolyPDF saves the calibration for this page.'
+            'The fixture is plotted at 1/4 inch = 1 foot. At 72 PDF points per inch, that preset corresponds to 18 PDF points per foot. Apply the printed architectural preset to this page, then verify it against the labeled 30-foot horizontal span or another independent dimension before relying on quantities.'
         },
         {
           kind: 'formula',
           label: 'Sample page scale',
-          formula: '240 PDF pt ÷ 20 ft = 12 PDF pt/ft',
+          formula: '72 PDF pt/in × 1/4 in/ft = 18 PDF pt/ft',
           explanation:
-            'This ratio belongs to the bundled fixture. Do not copy 12 PDF pt/ft into an unrelated drawing unless its own geometry proves that value.'
+            'This ratio follows the fixture’s printed scale. Do not copy 18 PDF pt/ft into an unrelated drawing unless that file’s own geometry proves the same plotted relationship.'
         },
         {
           kind: 'p',
@@ -102,7 +104,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'Choose Area and click around the floor boundary, using enough vertices to follow the intended face. Close the polygon at the starting point. The live Q-101 capture shows a gross floor-area measurement of 5,485 square feet. That number describes the traced sample geometry; it is not an estimate of usable, rentable, finish, or code area unless your boundary definition makes it one.'
+            'Choose Area and click around the floor boundary, using enough vertices to follow the intended face. Close the polygon at the starting point. The current capture shows a rectangular 540.00 sq ft floor-finish area and a 30.00 ft south partition run. Those values describe the synthetic fixture geometry; they are not estimates of usable, rentable, finish, or code area for a real project.'
         },
         {
           kind: 'ol',
@@ -117,7 +119,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'The capture shows two wall dimensions as visual examples. Their value is not that there are exactly two; it is that each measurement remains an identifiable record that can be selected from the page or reviewed in the worksheet.'
+            'The capture shows one selected 30.00 ft partition-length record beside the 540.00 sq ft area record. Their value is that each measurement remains identifiable on the page and in the worksheet, with its own subject, status, unit, and formula.'
         }
       ]
     },
@@ -128,7 +130,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'For repeated symbols, open Symbol Search, draw a box tightly around one clean example, run the search, and review the candidates before accepting them as counts. The Q-101 capture shows 17 visual matches: 16 diffuser symbols in the plan plus one matching legend example. Exclude that legend match to reach the 16-item plan quantity, then check for partial symbols, similar-looking devices, and objects hidden by markup.'
+            'For repeated symbols, open Symbol Search, draw a box tightly around one clean example, run the search, and review the candidates before accepting them as counts. This takeoff capture shows the committed outcome—12 Supply diffuser markers and a worksheet total of 12—but those markers were loaded as deterministic demonstration annotations. The image does not prove how candidates were found. See the dedicated symbol-count guide for a genuine five-match live review capture.'
         },
         {
           kind: 'ol',
@@ -219,9 +221,9 @@ const post = {
         'The workflow is designed for review: draw a query around one symbol, inspect the candidates, then accept the matches that should become counts.'
     },
     {
-      question: 'Is the 5,485-square-foot value a recommendation for my project?',
+      question: 'Is the 540-square-foot value a recommendation for my project?',
       answer:
-        'No. It is the gross-area annotation shown on the bundled Q-101 teaching fixture. Your result depends on your drawing, calibration, and chosen boundary definition.'
+        'No. It is the floor-finish annotation shown on an owned fictional teaching fixture. Your result depends on your drawing, calibration, and chosen boundary definition.'
     }
   ],
   relatedSlugs: [
@@ -232,11 +234,11 @@ const post = {
   sources: [
     {
       label: 'PolyPDF: PDF takeoff software',
-      url: 'https://www.polypdf.com/pdf-takeoff-software'
+      url: 'https://www.polypdf.com/pdf-takeoff-software/'
     },
     {
       label: 'PolyPDF: Visual Search PDF count',
-      url: 'https://www.polypdf.com/visual-search-pdf-count'
+      url: 'https://www.polypdf.com/visual-search-pdf-count/'
     }
   ],
   cta: {

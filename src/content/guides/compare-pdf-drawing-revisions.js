@@ -1,4 +1,4 @@
-import compareRevisionsImage from '../../assets/screenshots/shot-compare-revisions-1.3.4-web.png';
+import compareEditableCloudsImage from '../../assets/screenshots/compare-editable-clouds-currentdev-dark-web.png';
 
 const comparePdfDrawingRevisionsGuide = {
   slug: 'compare-pdf-drawing-revisions',
@@ -18,18 +18,18 @@ const comparePdfDrawingRevisionsGuide = {
     'A visual diff can make a revision review faster, but only when the two files are genuinely comparable and every highlighted region is checked in drawing context.',
   quickAnswer:
     'Open the baseline PDF, choose Document > Compare Documents, select the revised PDF, and run Compare. PolyPDF opens a new comparison document and normally marks detected regions with editable violet revision clouds. First confirm sheet identity, page order, size, rotation, scale, and alignment. If a fallback warning says the marks are page content, they are not editable.',
-  lastVerified: '2026-08-18',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-19',
+  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
-    src: compareRevisionsImage,
-    alt: 'PolyPDF comparison output with violet revision clouds around changed regions of a drawing',
+    src: compareEditableCloudsImage,
+    alt: 'Dark-mode PolyPDF comparison result with four violet revision clouds, one selected cloud, full cloud style controls, and four visible Markup Table rows',
     caption:
-      'PolyPDF 1.3.4 live-app comparison-output feature proof from an owned generated fixture. Violet regions identify controlled visual changes; the image is evidence of the feature output, not a customer drawing or mockup.',
-    width: 800,
-    height: 600,
+      'Current-development PolyPDF in dark mode showing the current Compare engine’s output after the unmodified result PDF was reopened through the normal file importer. Four editable violet revision clouds are visible, one cloud is selected with its full Line, Cloud, and Fill controls, and the Markup Table contains four matching rows.',
+    width: 1710,
+    height: 1073,
     provenance:
-      'Current PolyPDF 1.3.4 comparison output from an owned generated test fixture.'
+      'Captured August 19, 2026 from an isolated native-maximized current-development snapshot: base commit a0a709c39e35343d3c71f7d615fedffb007db619 plus tracked product diff SHA-256 8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250. The inputs are the owned controlled pair compare-rev-a.pdf and compare-rev-b.pdf; this 1710 × 1073 web image preserves the complete 3420 × 2146 Retina app capture.'
   },
   keywords: [
     'compare PDF drawing revisions',
@@ -97,7 +97,12 @@ const comparePdfDrawingRevisionsGuide = {
         {
           kind: 'p',
           text:
-            'The screenshot comes from an owned generated fixture with known visual changes. PolyPDF outlined separated raster-diff regions with violet revision clouds. The repeatable evidence proves that the current build produces marked comparison output without customer data or an invented interface.'
+            'The screenshots come from an owned controlled revision pair with four known visual changes. The current Compare engine returned a one-page result with four editable revision-cloud annotations. Reopening those unmodified result bytes through PolyPDF’s normal file importer produced four selectable revision-cloud objects and four matching Markup Table rows, all visible in the hero image. No customer data or invented interface is present.'
+        },
+        {
+          kind: 'note',
+          text:
+            'Capture boundary: the real Compare confirmation created the expected result tab, but that first validation session remained at “Opened PDF. Importing annotations…”. The hero does not claim that stalled tab completed. It shows the unmodified output from the same current Compare engine reopened through the normal importer, where all four editable clouds were validated.'
         },
         {
           kind: 'p',
@@ -216,12 +221,12 @@ const comparePdfDrawingRevisionsGuide = {
   ],
   sources: [
     {
-      label: 'PolyPDF 1.3.4 (build 16) Compare Documents implementation and in-app guidance',
-      note: 'New-document output, progress, editable-cloud default, and non-editable fallback warning re-verified August 18, 2026.'
+      label: 'PolyPDF current-development Compare Documents implementation and in-app guidance',
+      note: 'Verified August 19, 2026 in PolyPDF 1.3.4 build 16 from isolated source snapshot base a0a709c39e35343d3c71f7d615fedffb007db619 plus tracked product diff SHA-256 8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250.'
     },
     {
-      label: 'Owned generated comparison fixture and current feature-proof output',
-      note: 'Used to verify detected regions without customer data.'
+      label: 'Owned controlled compare-rev-a.pdf and compare-rev-b.pdf revision pair',
+      note: 'The current Compare engine detected four regions; the returned PDF contains four editable PolygonCloud annotations with four companion appearances, and the normal importer exposed four editable clouds and four Markup Table rows.'
     }
   ],
   cta: {

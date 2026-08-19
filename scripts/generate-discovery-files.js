@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /*
- * Generate every crawler-facing discovery artifact from the same guide registry the UI renders.
- * This runs before the CRA build so a new guide cannot ship without route metadata, sitemap and
- * llms.txt coverage. Generated files are committed as well, which keeps them useful on GitHub and
- * lets tests catch drift before a production build starts.
+ * Generate every crawler-facing discovery artifact from the same blog registry the UI renders.
+ * This runs before the CRA build so a new post cannot ship without route metadata, sitemap, RSS,
+ * llms.txt, and share-image coverage. Generated files are committed as well, which keeps them
+ * useful on GitHub and lets tests catch drift before a production build starts.
  */
 
 'use strict';
@@ -20,7 +20,8 @@ const sitemapPath = path.join(root, 'public', 'sitemap.xml');
 const llmsPath = path.join(root, 'public', 'llms.txt');
 const feedPath = path.join(root, 'public', 'feed.xml');
 const ORIGIN = 'https://www.polypdf.com';
-const DEFAULT_IMAGE = '/og-image.png';
+const SCREENSHOT_IMAGE_VERSION = '20260819-currentdev';
+const DEFAULT_IMAGE = `/og-image.png?v=${SCREENSHOT_IMAGE_VERSION}`;
 const DEFAULT_IMAGE_ALT =
   'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription';
 
@@ -69,7 +70,17 @@ const pngDimensions = (filename) => {
   return { width: header.readUInt32BE(16), height: header.readUInt32BE(20) };
 };
 
-const absolute = (route) => `${ORIGIN}${route === '/' ? '/' : route}`;
+const absolute = (route) => {
+  if (route === '/') return `${ORIGIN}/`;
+  if (/\.[a-z0-9]+(?:\?|$)/i.test(route)) return `${ORIGIN}${route}`;
+  return `${ORIGIN}${route.replace(/\/+$/, '')}/`;
+};
+const postImagePath = (entry) => `/guides/${entry.slug}.png?v=${SCREENSHOT_IMAGE_VERSION}`;
+const publicFileForUrl = (urlPath) => path.join(
+  root,
+  'public',
+  new URL(urlPath, `${ORIGIN}/`).pathname.slice(1)
+);
 const xmlEscape = (value) => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
@@ -93,12 +104,12 @@ const validatePosts = () => {
     }
   }
 
-  for (const entry of guidePosts) {
+  for (const entry of blogPosts) {
     assert(entry.heroImage?.alt, `${entry.slug} is missing truthful hero image alt text`);
     assert(entry.heroImage?.caption, `${entry.slug} is missing a screenshot evidence caption`);
     assert(Number.isInteger(entry.heroImage?.width), `${entry.slug} is missing image width`);
     assert(Number.isInteger(entry.heroImage?.height), `${entry.slug} is missing image height`);
-    const shareImagePath = path.join(root, 'public', 'guides', `${entry.slug}.png`);
+    const shareImagePath = publicFileForUrl(postImagePath(entry));
     assert(fs.existsSync(shareImagePath), `${entry.slug} is missing ${shareImagePath}`);
     assert(fs.statSync(shareImagePath).size > 0, `${entry.slug} share image is empty`);
     const dimensions = pngDimensions(shareImagePath);
@@ -109,23 +120,19 @@ const validatePosts = () => {
   }
 };
 
-const metadataForPost = (entry, guideSlugs) => {
-  const isGuide = guideSlugs.has(entry.slug);
-  return {
-    title: entry.metaTitle,
-    description: entry.metaDescription,
-    robots: 'index, follow',
-    type: 'article',
-    image: isGuide ? `/guides/${entry.slug}.png` : DEFAULT_IMAGE,
-    imageAlt: entry.heroImage?.alt || `PolyPDF article: ${entry.title}`,
-    imageWidth: entry.heroImage?.width || 1200,
-    imageHeight: entry.heroImage?.height || 630
-  };
-};
+const metadataForPost = (entry) => ({
+  title: entry.metaTitle,
+  description: entry.metaDescription,
+  robots: 'index, follow',
+  type: 'article',
+  image: postImagePath(entry),
+  imageAlt: entry.heroImage.alt,
+  imageWidth: entry.heroImage.width,
+  imageHeight: entry.heroImage.height
+});
 
 const buildRouteMetadata = () => {
   const existing = JSON.parse(fs.readFileSync(routeMetadataPath, 'utf8'));
-  const guideSlugs = new Set(guidePosts.map(({ slug }) => slug));
   const next = {};
 
   for (const [route, entry] of Object.entries(existing)) {
@@ -133,7 +140,7 @@ const buildRouteMetadata = () => {
     next[route] = entry;
     if (route === '/blog') {
       for (const post of blogPosts) {
-        next[blogPostPath(post.slug)] = metadataForPost(post, guideSlugs);
+        next[blogPostPath(post.slug)] = metadataForPost(post);
       }
     }
   }
@@ -146,7 +153,7 @@ const buildRouteMetadata = () => {
 };
 
 const STATIC_LASTMOD = Object.freeze({
-  '/': '2026-08-18',
+  '/': '2026-08-19',
   '/buy': '2026-08-18',
   '/build-a-plugin': '2026-08-18',
   '/privacy': '2026-08-18',
@@ -156,11 +163,11 @@ const STATIC_LASTMOD = Object.freeze({
   '/windows': '2026-08-18',
   '/terms': '2026-08-18',
   '/versions': '2026-08-18',
-  '/pdf-takeoff-software': '2026-08-18',
-  '/measure-pdf-on-mac': '2026-08-18',
-  '/construction-pdf-markup': '2026-08-18',
-  '/visual-search-pdf-count': '2026-08-18',
-  '/compare-pdf-drawings': '2026-08-18'
+  '/pdf-takeoff-software': '2026-08-19',
+  '/measure-pdf-on-mac': '2026-08-19',
+  '/construction-pdf-markup': '2026-08-19',
+  '/visual-search-pdf-count': '2026-08-19',
+  '/compare-pdf-drawings': '2026-08-19'
 });
 
 const sitemapSettings = (route) => {
@@ -177,7 +184,6 @@ const sitemapSettings = (route) => {
 
 const buildSitemap = (metadata) => {
   const postByRoute = new Map(blogPosts.map((entry) => [blogPostPath(entry.slug), entry]));
-  const guideByRoute = new Map(guidePosts.map((entry) => [blogPostPath(entry.slug), entry]));
   const latestPostDate = blogPosts
     .map((entry) => entry.dateModified || entry.date)
     .sort()
@@ -193,12 +199,12 @@ const buildSitemap = (metadata) => {
     });
 
   const urls = entries.map(({ route, lastmod, changefreq, priority }) => {
-    const guide = guideByRoute.get(route);
-    const image = guide ? [
+    const post = postByRoute.get(route);
+    const image = post?.heroImage ? [
       '    <image:image>',
-      `      <image:loc>${xmlEscape(absolute(`/guides/${guide.slug}.png`))}</image:loc>`,
-      `      <image:title>${xmlEscape(guide.heroImage.alt)}</image:title>`,
-      `      <image:caption>${xmlEscape(guide.heroImage.caption)}</image:caption>`,
+      `      <image:loc>${xmlEscape(absolute(postImagePath(post)))}</image:loc>`,
+      `      <image:title>${xmlEscape(post.heroImage.alt)}</image:title>`,
+      `      <image:caption>${xmlEscape(post.heroImage.caption)}</image:caption>`,
       '    </image:image>'
     ] : [];
     return [
@@ -214,7 +220,7 @@ const buildSitemap = (metadata) => {
 
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<!-- Generated from src/lib/route-metadata.json and src/content/guides. -->',
+    '<!-- Generated from src/lib/route-metadata.json and the shared blog registry. -->',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
     urls,
     '</urlset>',
@@ -227,9 +233,8 @@ const rssDate = (date) => new Date(`${date}T12:00:00.000Z`).toUTCString();
 const buildFeed = () => {
   const items = blogPosts.map((entry) => {
     const route = blogPostPath(entry.slug);
-    const guide = guidePosts.find(({ slug }) => slug === entry.slug);
-    const imagePath = guide ? `/guides/${entry.slug}.png` : DEFAULT_IMAGE;
-    const imageFile = path.join(root, 'public', imagePath.slice(1));
+    const imagePath = entry.heroImage ? postImagePath(entry) : DEFAULT_IMAGE;
+    const imageFile = publicFileForUrl(imagePath);
     const imageLength = fs.statSync(imageFile).size;
     return [
       '    <item>',
@@ -250,7 +255,7 @@ const buildFeed = () => {
     '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
     '  <channel>',
     '    <title>PolyPDF Guides and Product Notes</title>',
-    `    <link>${ORIGIN}/blog</link>`,
+    `    <link>${ORIGIN}/blog/</link>`,
     `    <atom:link href="${ORIGIN}/feed.xml" rel="self" type="application/rss+xml" />`,
     '    <description>Practical, evidence-backed guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>',
     '    <language>en-us</language>',
@@ -280,7 +285,7 @@ const buildLlmsText = () => {
     '- Release verified August 18, 2026: PolyPDF 1.3.4 (build 16) for macOS and Windows; /versions reads the live update feeds.',
     `- Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. Commercial offer verified August 18, 2026: ${commercialOffer.name} removes the hand-created measurement cap for ${commercialOffer.price} once and activates up to 3 computers in any Mac/Windows mix; /buy is authoritative for current availability.`,
     '- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.',
-    '- A connection may be needed for PDF Maps, optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
+    '- PDF Maps is development-only and blocked pending a production-compliant place-search provider and request pattern. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
     '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, count, and dimension tools, plus a worksheet that exports CSV or PDF.',
     '- Symbol Search auto-count: capture one drawing symbol, review candidate matches, and commit an auditable numbered count series. This auto-count workflow is free and uncapped.',
     '- Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.',

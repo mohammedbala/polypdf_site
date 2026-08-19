@@ -4,10 +4,43 @@ import { motion, useReducedMotion } from 'framer-motion';
 import { FaArrowLeft, FaArrowRight, FaRegClock } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
 import { blogPostPath, blogPosts } from '../lib/blogPosts';
+import { canonicalPagePath } from '../lib/attribution';
+import { normalizeBlogImage, ResponsiveBlogImage } from './BlogPost';
 
-const cardImage = (entry) => {
-  const image = entry.cardImage || entry.heroImage || null;
-  return typeof image === 'string' ? { src: image } : image;
+export const resolveBlogCardImage = (entry) => {
+  const heroImage = normalizeBlogImage(entry.heroImage);
+  const explicitCardImage = normalizeBlogImage(entry.cardImage);
+  const baseImage = explicitCardImage || heroImage;
+  const cardSrc = entry.cardSrc || explicitCardImage?.cardSrc || heroImage?.cardSrc;
+  const src = cardSrc || baseImage?.src;
+
+  if (!src) return null;
+
+  // A dedicated card crop can have a different intrinsic ratio from the article image. Only carry
+  // the hero dimensions across when the pixels are actually the same; cardWidth/cardHeight can
+  // describe a purpose-made crop when the data supplies them.
+  const usesDedicatedCrop = Boolean(cardSrc && cardSrc !== baseImage?.src);
+  const cardMobileSrc = entry.cardMobileSrc || explicitCardImage?.cardMobileSrc ||
+    heroImage?.cardMobileSrc;
+
+  return {
+    ...baseImage,
+    src,
+    alt: entry.cardAlt || explicitCardImage?.cardAlt || heroImage?.cardAlt ||
+      baseImage?.alt || heroImage?.alt || '',
+    width: entry.cardWidth || explicitCardImage?.cardWidth || heroImage?.cardWidth ||
+      (usesDedicatedCrop ? undefined : baseImage?.width),
+    height: entry.cardHeight || explicitCardImage?.cardHeight || heroImage?.cardHeight ||
+      (usesDedicatedCrop ? undefined : baseImage?.height),
+    mobileSrc: cardMobileSrc || (!usesDedicatedCrop ? baseImage?.mobileSrc : undefined),
+    mobileWidth: entry.cardMobileWidth || explicitCardImage?.cardMobileWidth ||
+      heroImage?.cardMobileWidth || (!usesDedicatedCrop ? baseImage?.mobileWidth : undefined),
+    mobileHeight: entry.cardMobileHeight || explicitCardImage?.cardMobileHeight ||
+      heroImage?.cardMobileHeight || (!usesDedicatedCrop ? baseImage?.mobileHeight : undefined),
+    cardFit: entry.cardFit || explicitCardImage?.cardFit || heroImage?.cardFit,
+    cardPosition: entry.cardPosition || explicitCardImage?.cardPosition ||
+      heroImage?.cardPosition
+  };
 };
 
 const Blog = () => {
@@ -51,8 +84,12 @@ const Blog = () => {
 
           <div className="legal-sections blog-grid">
             {blogPosts.map((entry, index) => {
-              const image = cardImage(entry);
+              const image = resolveBlogCardImage(entry);
               const category = entry.category || entry.tag || 'Guide';
+              const cardImageStyle = {
+                ...(image?.cardFit ? { objectFit: image.cardFit } : {}),
+                ...(image?.cardPosition ? { objectPosition: image.cardPosition } : {})
+              };
 
               return (
                 <motion.article
@@ -65,19 +102,17 @@ const Blog = () => {
                 >
                   {image && (
                     <Link
-                      to={blogPostPath(entry.slug)}
+                      to={canonicalPagePath(blogPostPath(entry.slug))}
                       className="blog-card-image-link"
                       aria-label={`Read ${entry.title}`}
                       tabIndex={-1}
                     >
-                      <img
+                      <ResponsiveBlogImage
+                        image={image}
                         className="blog-card-image"
-                        src={image.src}
-                        alt={image.alt || ''}
-                        width={image.width}
-                        height={image.height}
-                        loading={index === 0 ? 'eager' : 'lazy'}
-                        decoding="async"
+                        pictureClassName="blog-card-picture"
+                        priority={index === 0}
+                        style={Object.keys(cardImageStyle).length > 0 ? cardImageStyle : undefined}
                       />
                     </Link>
                   )}
@@ -93,10 +128,10 @@ const Blog = () => {
                       )}
                     </div>
                     <h2 className="blog-card-title">
-                      <Link to={blogPostPath(entry.slug)}>{entry.title}</Link>
+                      <Link to={canonicalPagePath(blogPostPath(entry.slug))}>{entry.title}</Link>
                     </h2>
                     <p>{entry.excerpt}</p>
-                    <Link to={blogPostPath(entry.slug)} className="blog-read-link">
+                    <Link to={canonicalPagePath(blogPostPath(entry.slug))} className="blog-read-link">
                       Read guide <FaArrowRight aria-hidden="true" />
                     </Link>
                   </div>
