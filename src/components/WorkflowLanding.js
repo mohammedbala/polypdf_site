@@ -15,7 +15,7 @@ import './WorkflowLanding.css';
 // Exported so scripts/prerender.js can describe the same videos as VideoObject structured data.
 export const mediaCopy = {
   'visual-search': {
-    title: 'Watch Visual Search become a reviewed count series.',
+    title: 'Watch Symbol Search become a reviewed count series.',
     description: 'See the capture, candidate review, and committed count workflow in the current PolyPDF interface.'
   },
   'takeoff-export': {
@@ -28,7 +28,7 @@ export const mediaCopy = {
   }
 };
 
-export const CURRENT_INTERFACE_LABEL = 'Current shipping interface · PolyPDF 1.3.4';
+export const CURRENT_INTERFACE_LABEL = 'Live PolyPDF desktop-app capture';
 
 const WorkflowLanding = ({ page }) => {
   const [mediaMode, setMediaMode] = useState('short');
@@ -106,8 +106,8 @@ const WorkflowLanding = ({ page }) => {
               <img
                 src={page.image}
                 alt={page.imageAlt}
-                width="2280"
-                height="1515"
+                width={page.imageWidth || 2280}
+                height={page.imageHeight || 1515}
                 loading="eager"
                 fetchPriority="high"
               />
@@ -274,7 +274,7 @@ const WorkflowLanding = ({ page }) => {
 
         <section className="workflow-related" aria-label="Related PolyPDF workflows">
           <div className="container">
-            <p className="workflow-section-index">RELATED WORKFLOWS</p>
+            <p className="workflow-section-index">RELATED GUIDES &amp; WORKFLOWS</p>
             <div className="workflow-related-links">
               {page.related.map(([path, label]) => (
                 <Link key={path} to={path}>{label} <FaArrowRight /></Link>

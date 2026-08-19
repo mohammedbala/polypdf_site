@@ -113,7 +113,8 @@ const buildMotionStub = () => {
     __esModule: true,
     motion: new Proxy({}, { get: (_target, tag) => staticComponent(tag) }),
     AnimatePresence: ({ children }) => children,
-    MotionConfig: ({ children }) => children
+    MotionConfig: ({ children }) => children,
+    useReducedMotion: () => true
   };
 };
 

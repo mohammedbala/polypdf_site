@@ -44,6 +44,9 @@ export const landingPages = Object.freeze({
       ['Do I need the original CAD file?', 'No. PolyPDF works from the PDF drawing. You calibrate the page using its stated scale or a known distance.']
     ],
     related: [
+      ['/blog/pdf-takeoff-worked-example', 'PDF takeoff worked example'],
+      ['/blog/calibrate-pdf-drawing-scale', 'Calibrate a drawing scale'],
+      ['/blog/measure-pdf-area-cutouts-depth', 'Measure net area and cutouts'],
       ['/measure-pdf-on-mac', 'Measure PDF drawings on Mac'],
       ['/visual-search-pdf-count', 'Count repeated symbols'],
       ['/construction-pdf-markup', 'Mark up construction PDFs']
@@ -55,7 +58,7 @@ export const landingPages = Object.freeze({
     mediaSlug: 'takeoff-export',
     eyebrow: 'Measure drawings on macOS',
     title: 'Measure a PDF on Mac without redrawing it in CAD.',
-    lede: 'Open the plan, set its scale, and pull real distances, areas, perimeters, angles, and counts directly from the PDF in a native desktop app.',
+    lede: 'Open the plan, set its scale, and pull real distances, areas, perimeters, angles, and counts directly from the PDF in a desktop app for macOS.',
     qualifier: 'Start with the free Mac download and validate scale accuracy on a drawing you already know. Upgrade only when you need more than 3 hand-created measurements in a document.',
     image: shotTakeoff,
     imageAlt: 'PolyPDF for Mac showing an area measurement with calibrated units and worksheet results',
@@ -84,9 +87,12 @@ export const landingPages = Object.freeze({
     faq: [
       ['How do I know a PDF measurement is accurate?', 'Start by calibrating against the stated sheet scale or a known printed dimension. Then measure that known distance again as a check before using the page for quantities.'],
       ['Can PolyPDF measure scanned drawings?', 'You can measure a raster or scanned drawing when it has a reliable scale or known reference distance. The source image quality and the accuracy of that reference still matter.'],
-      ['Does PolyPDF upload my plans?', 'The desktop app processes PDF content locally. Your files stay on your computer unless you choose to export, share, or sync them.']
+      ['Does PolyPDF upload my plans?', 'The desktop app processes PDF content locally. Your files stay on your computer unless you choose to export or share them; activation, update checks, and optional support services are separate from document processing.']
     ],
     related: [
+      ['/blog/calibrate-pdf-drawing-scale', 'Calibrate a drawing scale'],
+      ['/blog/why-pdf-measurements-are-wrong', 'Troubleshoot a wrong measurement'],
+      ['/blog/ocr-scanned-pdf-drawings', 'OCR a scanned drawing'],
       ['/pdf-takeoff-software', 'PDF takeoff software'],
       ['/compare-pdf-drawings', 'Compare drawing revisions'],
       ['/visual-search-pdf-count', 'Count repeated PDF symbols']
@@ -98,10 +104,10 @@ export const landingPages = Object.freeze({
     mediaSlug: 'revision-comparison',
     eyebrow: 'Construction drawing review',
     title: 'Mark up construction PDFs so every comment stays tied to the sheet.',
-    lede: 'Add callouts, text, highlights, shapes, stamps, and revision clouds directly to plan sets, then use the Markups list to track what has been flagged.',
+    lede: 'Add callouts, text, highlights, shapes, stamps, and revision clouds directly to plan sets, then use the Markup Table to track what has been flagged.',
     qualifier: 'A local desktop workflow for design review, RFIs, field observations, punch notes, and drawing handoff on Mac or Windows.',
     image: shotMarkup,
-    imageAlt: 'Construction PDF in PolyPDF with an RFI callout, revision cloud, and matching items in the Markups list',
+    imageAlt: 'Construction PDF in PolyPDF with an RFI callout, revision cloud, and matching items in the Markup Table',
     audience: 'For project teams that need comments to remain visually connected to the exact room, detail, symbol, or revision they describe.',
     proofPoints: [
       ['Clear context', 'Notes live on the sheet'],
@@ -113,7 +119,7 @@ export const landingPages = Object.freeze({
     workflow: [
       ['Open the issued drawing set', 'Review the same PDF sheets your team already distributes instead of converting the project into another proprietary format.'],
       ['Place the comment where it belongs', 'Use a leader callout for a specific condition, a revision cloud for an affected region, or text, shapes, highlights, and stamps for the rest.'],
-      ['Check the Markups list', 'Use the sidebar record to see annotations together and reduce the chance that a note disappears in a visually dense plan.'],
+      ['Check the Markup Table', 'Use the table to see annotations together and reduce the chance that a note disappears in a visually dense plan.'],
       ['Save or export the reviewed PDF', 'Create a marked drawing that can be sent through the project’s existing document-control process.']
     ],
     outcomeTitle: 'Review tools built around the drawing, not a chat thread.',
@@ -121,7 +127,7 @@ export const landingPages = Object.freeze({
       'Callouts connect a readable note to an exact point on the sheet.',
       'Revision clouds make changed or questioned regions visible at a glance.',
       'Text sizing can be adjusted for on-screen and printed readability.',
-      'The Markups list keeps annotations discoverable across a busy page.',
+      'The Markup Table keeps annotations discoverable across a busy page.',
       'Measurement tools remain available when a review question also needs a quantity.'
     ],
     faq: [
@@ -130,6 +136,9 @@ export const landingPages = Object.freeze({
       ['Can recipients read the marked PDF without PolyPDF?', 'PolyPDF can save and export PDF output for normal document handoff. As with any PDF workflow, verify the exported file in the recipient’s viewer when interoperability is critical.']
     ],
     related: [
+      ['/blog/pdf-markup-table-rfi-punch-list', 'Build an RFI or punch register'],
+      ['/blog/compare-pdf-drawing-revisions', 'Review drawing revisions'],
+      ['/blog/digital-signature-vs-visual-signature-vs-seal', 'Signature and seal reference'],
       ['/compare-pdf-drawings', 'Compare drawing revisions'],
       ['/measure-pdf-on-mac', 'Measure PDF drawings on Mac'],
       ['/pdf-takeoff-software', 'PDF takeoff software']
@@ -139,7 +148,7 @@ export const landingPages = Object.freeze({
     path: '/visual-search-pdf-count',
     source: 'landing_visual_search_count',
     mediaSlug: 'visual-search',
-    eyebrow: 'Visual Search auto-count',
+    eyebrow: 'Symbol Search (formerly Visual Search)',
     title: 'Find one drawing symbol, then count matching instances across the PDF.',
     lede: 'Capture a symbol from the sheet, let PolyPDF find visual matches, review the results, and commit the accepted set as a count series.',
     qualifier: 'Visual Search auto-count is uncapped in both PolyPDF Free and Pro, so you can test it on a real symbol-heavy drawing before buying anything.',
@@ -152,10 +161,10 @@ export const landingPages = Object.freeze({
       ['Commit counts', 'Numbered series + worksheet']
     ],
     problemTitle: 'Auto-count is fastest when the human stays in control.',
-    problemCopy: 'Drawing symbols vary with scan quality, line weight, rotation, and nearby geometry. PolyPDF treats Visual Search as a reviewable workflow: you choose the example, inspect the candidate matches, and commit the results you are prepared to use.',
+    problemCopy: 'Drawing symbols vary with scan quality, line weight, rotation, and nearby geometry. PolyPDF treats Symbol Search as a reviewable workflow: you choose the example, inspect the candidate matches, and commit the results you are prepared to use.',
     workflow: [
       ['Select a clean example', 'Draw a capture box tightly around one representative symbol and avoid unrelated labels or lines when possible.'],
-      ['Run Visual Search', 'PolyPDF scans the PDF for visually similar regions and returns candidate matches without requiring OCR text or a CAD model.'],
+      ['Run Symbol Search', 'PolyPDF scans the PDF for visually similar regions and returns candidate matches without requiring OCR text or a CAD model.'],
       ['Review the candidates', 'Inspect the highlighted results and adjust the selection or search threshold when the drawing contains similar-looking symbols.'],
       ['Commit the count series', 'Turn the accepted matches into numbered count annotations that feed the takeoff worksheet and remain visible on the page.']
     ],
@@ -168,11 +177,14 @@ export const landingPages = Object.freeze({
       'Remains uncapped in the free app as well as Pro.'
     ],
     faq: [
-      ['Is Visual Search the same as OCR?', 'No. OCR looks for text. Visual Search looks for regions that resemble the symbol example you capture from the drawing.'],
+      ['Is Symbol Search the same as OCR?', 'No. OCR looks for text. Symbol Search looks for regions that resemble the symbol example you capture from the drawing.'],
       ['Will it find every symbol perfectly?', 'Not on every drawing. Match quality depends on the source PDF, symbol consistency, rotation, scan quality, and the capture selection. Review the candidates before committing a count.'],
-      ['Is Visual Search limited in the free version?', 'No. Visual Search auto-count is uncapped in both Free and Pro. The Pro upgrade removes the separate limit on hand-created measurements.']
+      ['Is Symbol Search limited in the free version?', 'No. Symbol Search auto-count is uncapped in both Free and Pro. The Pro upgrade removes the separate limit on hand-created measurements.']
     ],
     related: [
+      ['/blog/count-pdf-symbols', 'Count symbols with Symbol Search'],
+      ['/blog/pdf-takeoff-worked-example', 'PDF takeoff worked example'],
+      ['/blog/calibrate-pdf-drawing-scale', 'Calibrate before measuring'],
       ['/pdf-takeoff-software', 'PDF takeoff software'],
       ['/measure-pdf-on-mac', 'Measure a PDF on Mac'],
       ['/construction-pdf-markup', 'Construction PDF markup']
@@ -187,6 +199,8 @@ export const landingPages = Object.freeze({
     lede: 'Bring drawing versions into one desktop review workflow, inspect their differences, and mark the areas that need a decision, RFI, or handoff note.',
     qualifier: 'Use comparison as the start of a review—not a substitute for checking sheet identity, scale, alignment, and the issued revision record.',
     image: shotRevisionCompare,
+    imageWidth: 2560,
+    imageHeight: 1800,
     imageAlt: 'Current PolyPDF split drawing view with two PDF revisions displayed side by side for inspection',
     audience: 'For architects, engineers, contractors, and owners reviewing addenda, coordination updates, redlines, and issued drawing revisions.',
     proofPoints: [
@@ -216,6 +230,9 @@ export const landingPages = Object.freeze({
       ['Can I mark up the differences afterward?', 'Yes. Use revision clouds, callouts, text, shapes, and stamps to record what the team needs to review or act on.']
     ],
     related: [
+      ['/blog/compare-pdf-drawing-revisions', 'Drawing revision review guide'],
+      ['/blog/pdf-markup-table-rfi-punch-list', 'Turn findings into a review register'],
+      ['/blog/prepare-issued-pdf-set', 'Prepare an issued PDF set'],
       ['/construction-pdf-markup', 'Construction PDF markup'],
       ['/visual-search-pdf-count', 'Count repeated PDF symbols'],
       ['/measure-pdf-on-mac', 'Measure PDF drawings on Mac']

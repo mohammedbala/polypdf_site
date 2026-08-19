@@ -18,6 +18,6 @@ test('derives the Windows release-notes link from the signed installer name', as
     platform: 'Windows',
     version: '1.3.4',
     build: 16,
-    notes: '/downloads/windows/PolyPDFSetup-v1.3.4-16.html'
+    notes: '/downloads/windows/PolyPDFWin-v1.3.4-16.html'
   });
 });

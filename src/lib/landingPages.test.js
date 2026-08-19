@@ -15,14 +15,14 @@ test('defines five substantial, uniquely attributed search landing pages', () =>
     expect(page.workflow).toHaveLength(4);
     expect(page.outcomes.length).toBeGreaterThanOrEqual(5);
     expect(page.faq).toHaveLength(3);
-    expect(page.related).toHaveLength(3);
+    expect(page.related.length).toBeGreaterThanOrEqual(6);
     expect(['visual-search', 'takeoff-export', 'revision-comparison']).toContain(page.mediaSlug);
 
     // Related links are rendered as internal <Link>s. A path with no route entry would ship a
     // crawlable link to a page that redirects home — the exact drift a removed landing page
     // leaves behind if its inbound links are not repointed.
     const relatedPaths = page.related.map(([path]) => path);
-    expect(new Set(relatedPaths).size).toBe(3);
+    expect(new Set(relatedPaths).size).toBe(page.related.length);
     relatedPaths.forEach((path) => {
       expect(path).not.toBe(page.path);
       expect(routeMetadata[path]?.robots).toBe('index, follow');

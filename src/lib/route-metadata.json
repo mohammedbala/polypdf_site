@@ -1,6 +1,6 @@
 {
   "/": {
-    "title": "PolyPDF | PDF Drawing Measurement & Markup \u2014 No Subscription",
+    "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
     "description": "Measure and mark up PDF drawings on Mac and Windows. Get PolyPDF free, test it on real plans, then unlock unlimited hand-created measurements for $49.99.",
     "robots": "index, follow"
   },
@@ -25,14 +25,139 @@
     "robots": "noindex, nofollow"
   },
   "/blog": {
-    "title": "PolyPDF Blog | Product Notes for PDF Measurement and Markup",
-    "description": "Product notes from the PolyPDF team: what shipped in the Mac and Windows apps, how each feature works, and how to use it on real drawings.",
+    "title": "PolyPDF Guides | PDF Measurement, Takeoff & Markup",
+    "description": "Practical guides for PDF calibration, takeoff, symbol counting, markup, revisions, forms, OCR, signatures, redaction, and issued sets.",
     "robots": "index, follow"
+  },
+  "/blog/calibrate-pdf-drawing-scale": {
+    "title": "How to Calibrate a PDF Drawing Scale | PolyPDF",
+    "description": "Calibrate a PDF drawing from a known dimension, verify the scale on a second span, and avoid common takeoff errors in PolyPDF on Mac or Windows.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/calibrate-pdf-drawing-scale.png",
+    "imageAlt": "PolyPDF displaying the Q-101 plan with the Page Scale controls and calibrated measurements",
+    "imageWidth": 1800,
+    "imageHeight": 1125
+  },
+  "/blog/why-pdf-measurements-are-wrong": {
+    "title": "Why PDF Measurements Are Wrong | PolyPDF Guide",
+    "description": "Find the cause of wrong PDF measurements: page scale, units, endpoints, mixed-scale details, or scan distortion. Includes a practical diagnostic order.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/why-pdf-measurements-are-wrong.png",
+    "imageAlt": "PolyPDF 1.1.3 showing a 1,506.32 square foot hand trace and custom scale controls on the fictional Riverbend Library A-201 plan",
+    "imageWidth": 2280,
+    "imageHeight": 1515
+  },
+  "/blog/measure-pdf-area-cutouts-depth": {
+    "title": "Measure PDF Area, Cutouts, and Volume | PolyPDF",
+    "description": "Measure net area in a PDF, subtract multiple cutouts, add a real-world depth for volume, and understand what hatch scale changes in PolyPDF.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/measure-pdf-area-cutouts-depth.png",
+    "imageAlt": "PolyPDF 1.3.4 with a selected curved area, two rectangular cutouts, crosshatch, and a 5 foot 3 inch depth",
+    "imageWidth": 1800,
+    "imageHeight": 1200
+  },
+  "/blog/pdf-takeoff-worked-example": {
+    "title": "PDF Takeoff Worked Example | PolyPDF Guide",
+    "description": "Follow a practical PDF takeoff example: calibrate the plan, measure area and lengths, auto-count symbols, review records, and export CSV or PDF.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/pdf-takeoff-worked-example.png",
+    "imageAlt": "PolyPDF takeoff on the Q-101 office plan with area, dimensions, diffuser counts, and worksheet totals",
+    "imageWidth": 1800,
+    "imageHeight": 1125
+  },
+  "/blog/count-pdf-symbols": {
+    "title": "How to Count Symbols in a PDF Drawing | PolyPDF",
+    "description": "Count repeated symbols in a PDF drawing with PolyPDF Symbol Search, including setup, candidate review, false-positive checks, and takeoff QA.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/count-pdf-symbols.png",
+    "imageAlt": "PolyPDF Symbol Search panel reviewing 17 selected diffuser-symbol matches on a floor plan",
+    "imageWidth": 1800,
+    "imageHeight": 1125
+  },
+  "/blog/pdf-markup-table-rfi-punch-list": {
+    "title": "PDF Markup Table for RFI and Punch Lists | PolyPDF",
+    "description": "Organize PDF comments for RFI and punch-list review with PolyPDF Markup Table filters, statuses, clear issue labels, and CSV or PDF exports.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/pdf-markup-table-rfi-punch-list.png",
+    "imageAlt": "PolyPDF floor-plan review with revision clouds, an RFI callout, and the Markup Table open",
+    "imageWidth": 1800,
+    "imageHeight": 1125
+  },
+  "/blog/compare-pdf-drawing-revisions": {
+    "title": "How to Compare PDF Drawing Revisions | PolyPDF",
+    "description": "Compare two PDF drawing revisions in PolyPDF, prepare aligned source files, review detected change clouds, and verify the saved comparison record.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/compare-pdf-drawing-revisions.png",
+    "imageAlt": "PolyPDF comparison output with violet revision clouds around changed regions of a drawing",
+    "imageWidth": 800,
+    "imageHeight": 600
+  },
+  "/blog/create-fillable-pdf-form": {
+    "title": "How to Create a Fillable PDF Form | PolyPDF",
+    "description": "Create a fillable AcroForm PDF in PolyPDF with text, checkbox, radio, combo, and list fields, plus testing and compatibility checks.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/create-fillable-pdf-form.png",
+    "imageAlt": "PolyPDF Forms panel with six field types beside a fillable invoice containing 42 fields",
+    "imageWidth": 1800,
+    "imageHeight": 1125
+  },
+  "/blog/ocr-scanned-pdf-drawings": {
+    "title": "OCR Scanned PDF Drawings: Practical Guide | PolyPDF",
+    "description": "Run local, best-effort OCR on scanned PDF drawings in PolyPDF, understand script limits, and verify searchable text before relying on the result.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/ocr-scanned-pdf-drawings.png",
+    "imageAlt": "PolyPDF OCR dialog at 100 percent with a best-effort searchable text layer notice",
+    "imageWidth": 800,
+    "imageHeight": 501
+  },
+  "/blog/digital-signature-vs-visual-signature-vs-seal": {
+    "title": "Digital vs Visual PDF Signatures and Seals | PolyPDF",
+    "description": "Compare certificate-backed PDF signatures, visual marks, and professional seal artwork, including integrity, trust, limits, and a safe issue order.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/digital-signature-vs-visual-signature-vs-seal.png",
+    "imageAlt": "PolyPDF drawing with a generated professional seal artwork selected and the Plugins panel open",
+    "imageWidth": 800,
+    "imageHeight": 502
+  },
+  "/blog/redact-and-sanitize-pdf": {
+    "title": "Redact and Sanitize a PDF: PolyPDF Limits",
+    "description": "Learn what PolyPDF 1.3.4 redaction and sanitation can remove, what can survive, and how to verify a saved PDF before deciding whether it is safe to share.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/redact-and-sanitize-pdf.png",
+    "imageAlt": "PolyPDF Sanitize Document dialog showing selectable cleanup categories before processing",
+    "imageWidth": 800,
+    "imageHeight": 501
+  },
+  "/blog/prepare-issued-pdf-set": {
+    "title": "How to Prepare an Issued PDF Set | PolyPDF",
+    "description": "Prepare an issued PDF set with page labels, Bates numbering, headers, footers, watermarks, preflight, and final-viewer verification in PolyPDF.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/prepare-issued-pdf-set.png",
+    "imageAlt": "PolyPDF Headers and Footers dialog with six content positions, margins, tokens, and page preview",
+    "imageWidth": 1800,
+    "imageHeight": 1129
   },
   "/blog/introducing-polypdf-plugins": {
     "title": "Introducing PolyPDF Plugins | PolyPDF Blog",
     "description": "How PolyPDF's signed, no-executable-code plugins work: the permission model, the Plugin Manager, and the AISC steel, seal, and map launch plugins.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/og-image.png",
+    "imageAlt": "PolyPDF article: Introducing PolyPDF Plugins",
+    "imageWidth": 1200,
+    "imageHeight": 630
   },
   "/privacy": {
     "title": "Privacy Policy | PolyPDF",
@@ -76,7 +201,7 @@
   },
   "/measure-pdf-on-mac": {
     "title": "Measure a PDF on Mac | PolyPDF Drawing Tools",
-    "description": "Measure PDF drawings on Mac with calibrated distance, area, perimeter, angle, and count tools in a native desktop app. Start free.",
+    "description": "Measure PDF drawings on Mac with calibrated distance, area, perimeter, angle, and count tools in a local-first desktop app. Start free.",
     "robots": "index, follow"
   },
   "/construction-pdf-markup": {

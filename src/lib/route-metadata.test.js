@@ -1,5 +1,6 @@
 import routeMetadata from './route-metadata.json';
 import { blogPosts, blogPostPath } from './blogPosts';
+import { guidePosts } from '../content/guides';
 import { normalizeRoutePath } from '../components/RouteMetadata';
 
 const expectedRoutes = [
@@ -52,6 +53,8 @@ test('gives every blog post its own crawlable metadata, matching the post', () =
     expect(route).toBeDefined();
     expect(route.title).toBe(entry.metaTitle);
     expect(route.description).toBe(entry.metaDescription);
+    expect(route.type).toBe('article');
+    expect(route.imageAlt).toBe(entry.heroImage?.alt || `PolyPDF article: ${entry.title}`);
     expect(entry.slug).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/);
     expect(entry.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
     expect(entry.excerpt.length).toBeGreaterThan(50);
@@ -59,6 +62,16 @@ test('gives every blog post its own crawlable metadata, matching the post', () =
   });
 
   expect(new Set(blogPosts.map((entry) => entry.slug)).size).toBe(blogPosts.length);
+});
+
+test('uses each real guide screenshot for article share cards', () => {
+  guidePosts.forEach((entry) => {
+    const route = routeMetadata[blogPostPath(entry.slug)];
+    expect(route.image).toBe(`/guides/${entry.slug}.png`);
+    expect(route.imageAlt).toBe(entry.heroImage.alt);
+    expect(route.imageWidth).toBe(entry.heroImage.width);
+    expect(route.imageHeight).toBe(entry.heroImage.height);
+  });
 });
 
 test('normalizes the trailing slash added by the production web server', () => {

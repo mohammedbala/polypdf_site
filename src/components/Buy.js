@@ -44,11 +44,11 @@ const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_co
 const IN_APP_CONTEXT = {
   free_measurement_limit: {
     kicker: 'You have used the 3 free measurements in this document',
-    lede: 'The free app caps hand-created measurements at 3 per document. Everything else you were doing — markup, calibration, review, Visual Search auto-count — stays free and uncapped. Pro removes that one cap, for good, for $49.99 once.'
+    lede: 'The free app caps hand-created measurements at 3 per document. Everything else you were doing — markup, calibration, review, Symbol Search auto-count — stays free and uncapped. Pro removes that one cap, for good, for $49.99 once.'
   },
   visual_search_auto_count: {
-    kicker: 'Committing this count needs Pro',
-    lede: 'Visual Search finds and reviews matches on the free app. Committing a numbered count series writes measurements, which is where the free tier caps out. Pro removes that cap for $49.99 once.'
+    kicker: 'Symbol Search auto-count is free and uncapped',
+    lede: 'You do not need Pro to find, review, or commit a Symbol Search count series. Pro is only needed after you reach the separate 3-per-document limit for hand-created measurements.'
   },
   license_window: {
     kicker: 'Upgrade to PolyPDF Pro',
@@ -225,7 +225,7 @@ const Buy = ({ forceInApp = false }) => {
                 <>
                   <ul className="section-content">
                     <li>Download PolyPDF free first if you want to test it on real drawings.</li>
-                    <li>The free app includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Visual Search auto-count.</li>
+                    <li>The free app includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count.</li>
                     <li>Pro removes the measurement limit on both Mac and Windows.</li>
                   </ul>
                   <div className="buy-actions">
@@ -273,7 +273,7 @@ const Buy = ({ forceInApp = false }) => {
                 <h2>Private by design</h2>
               </div>
               <ul className="section-content">
-                <li>Your PDFs stay on your computer unless you choose to export, share, or sync them.</li>
+                <li>Your PDFs stay on your computer unless you export or share them, including through a separate service you choose.</li>
                 <li>Checkout and license records are used to process your purchase and keep Pro activated.</li>
               </ul>
             </section>

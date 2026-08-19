@@ -36,38 +36,50 @@ const screenshots = [
   {
     image: shotSymbolCounting,
     title: 'Counts that keep score for you',
-    alt: 'PolyPDF Symbol Search finding 17 matching diffuser symbols on an office plan, each match reviewable before it becomes a count',
-    caption: 'Box one symbol and PolyPDF finds the rest — 17 matches on this sheet, each one reviewable before it joins the count. Committed counts land in the takeoff worksheet with a running per-subject tally, ready for CSV or PDF export.'
+    alt: 'PolyPDF Symbol Search reviewing 17 matches on Q-101, including the selected legend target and 16 plan symbols',
+    caption: 'Box one symbol and PolyPDF finds visually similar candidates. This training sheet shows 17 reviewed matches: the selected legend target plus 16 placed plan symbols. Committed counts land in the takeoff worksheet for CSV or PDF export.',
+    width: 1800,
+    height: 1125
   },
   {
     image: shotHeroTakeoff,
     title: 'Real units from the PDF you were sent',
-    alt: 'PolyPDF measuring a calibrated floor plan: gross area, wall dimensions and a 17-piece count totalled in the takeoff worksheet',
-    caption: 'Calibrate once — from the title block or off any line you know — then pull areas, lengths and counts that read in feet and inches. This sheet: 5,485 sq ft gross, two wall dimensions, a 17-piece diffuser count, all totalled in the worksheet.'
+    alt: 'PolyPDF measuring a calibrated floor plan with gross area, wall dimensions, and a 17-marker count series that includes its legend target',
+    caption: 'Calibrate once — from the title block or a known line — then pull areas, lengths, and counts in real units. The bundled Q-101 sample shows a 5,485.139 sq ft gross area, two wall dimensions, and a 17-marker count series that includes its legend target.',
+    width: 1800,
+    height: 1125
   },
   {
     image: shotMarkupReview,
     title: 'Reviews and RFIs, straight on the sheet',
     alt: 'PolyPDF drawing review: revision cloud, leader callout and notes on a plan sheet with every markup tracked in the Markup Table',
-    caption: 'Cloud the change, attach the RFI, and every markup lands in the Markup Table with status, author and date — so nothing you flag gets lost between review rounds.'
+    caption: 'Cloud the change, add an RFI callout, and each visible markup appears in the Markup Table with fields such as status, author, date, color, layer, and workspace.',
+    width: 1800,
+    height: 1125
   },
   {
     image: shotRealScale,
     title: 'The scale stays pinned to the sheet',
     alt: 'PolyPDF status bar showing the drawing scale with a dimension reading in feet and inches on a calibrated plan',
-    caption: 'Set scale from the title block or calibrate off a known line; every measurement reads in real units and the active scale stays pinned in the status bar so you always know what an inch means.'
+    caption: 'Set scale from the title block or calibrate from a known line. In this Q-101 capture, the Page Scale panel confirms 12 PDF points per foot while the status bar shows 1 inch = 6 feet.',
+    width: 1800,
+    height: 1125
   },
   {
     image: shotMutcdSigns,
-    title: 'Every MUTCD sign, in the box',
+    title: 'Built-in MUTCD sign toolsets',
     alt: 'PolyPDF Tools panel showing the MUTCD Regulatory sign chest with an R1-1 stop sign placed on a drawing',
-    caption: 'Four MUTCD sign series ship built in — Regulatory, Warning, Temporary Traffic Control and School — as crisp vector stamps. Search the chest, drop an R1-1 straight onto the sheet, and it prints as true linework.'
+    caption: 'The built-in MUTCD Regulatory toolset is open in this live capture, with an R1-1 STOP-sign annotation placed on the fictional Q-101 sheet.',
+    width: 1800,
+    height: 1125
   },
   {
     image: shotCadMap,
     title: 'A vicinity map, drawn like part of the set',
-    alt: 'PolyPDF Maps plugin placing a Charleston street map rendered in CAD Linework style, shown mid-edit with live zoom and style controls',
-    caption: 'Type a location, pick the CAD Linework style, and the map arrives inked like a drafter drew it — paper-white ground, black linework, live zoom and styling before and after it lands.'
+    alt: 'PolyPDF Plugins panel beside a CAD-style map annotation on the bundled Q-101 sample drawing',
+    caption: 'The Plugins panel lists the three first-party generators, and a PDF Maps output is visible as a map annotation on the bundled sample sheet.',
+    width: 1800,
+    height: 1125
   }
 ];
 
@@ -83,7 +95,7 @@ const trackEvent = (name, properties = {}) => {
 const freeFeatures = [
   'Download the full app free — Mac or Windows — and start with the real product',
   'Open PDF drawings, calibrate scale, and use markup tools with no trial countdown',
-  'Verify fit on your own plans with up to 3 hand-placed measurements per document, plus unlimited Visual Search auto-counts',
+  'Verify fit on your own plans with up to 3 hand-placed measurements per document, plus uncapped Symbol Search auto-counts',
   'Decide after real use, not from a watered-down demo'
 ];
 
@@ -124,12 +136,11 @@ const steps = [
   }
 ];
 
-// Exported so scripts/prerender.js can emit the same questions as FAQPage structured data —
-// the schema must never say something the visible page does not.
+// Exported for content checks and any future presentation that must match the visible answers.
 export const homeFaqs = [
   {
     question: 'What can I do before I pay?',
-    answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use the markup tools, place up to 3 hand-created measurements in every open document, and use uncapped Visual Search auto-count. That gives you a real-world test before you buy.'
+    answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use the markup tools, place up to 3 hand-created measurements in every open document, and use uncapped Symbol Search auto-count. That gives you a real-world test before you buy.'
   },
   {
     question: 'Does one license cover both Mac and Windows?',
@@ -206,7 +217,7 @@ const Home = () => {
           <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
             <a href="#faq" onClick={closeMobileMenu}>FAQ</a>
-            <Link to="/blog" onClick={closeMobileMenu}>Blog</Link>
+            <Link to="/blog" onClick={closeMobileMenu}>Guides</Link>
             <Link to="/feature-requests" onClick={closeMobileMenu}>Requests</Link>
             <Link to="/support" onClick={closeMobileMenu}>Support</Link>
             <Link to={buyPath('website_nav')} className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
@@ -343,7 +354,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>See it on a real sheet</h2>
-            <p>Counting, measuring and drawing review — the work you actually do all day — across three disciplines of one project. Captured from the shipping app, not mocked up.</p>
+            <p>Counting, measuring and drawing review on the bundled fictional Q-101 training sheet. Captured from a live PolyPDF app build, not mocked up.</p>
           </motion.div>
 
           {/* Lead shot gets the full-width stage; the rest alternate text/image so the section
@@ -356,7 +367,7 @@ const Home = () => {
             transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
           >
             <div className="shot-plate">
-              <img src={screenshots[0].image} alt={screenshots[0].alt} loading="eager" width="2280" height="1515" />
+              <img src={screenshots[0].image} alt={screenshots[0].alt} loading="eager" width={screenshots[0].width} height={screenshots[0].height} />
             </div>
             <figcaption>
               <h3>{screenshots[0].title}</h3>
@@ -386,7 +397,7 @@ const Home = () => {
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.65, delay: 0.08, ease: [0.21, 0.65, 0.32, 1] }}
                 >
-                  <img src={shot.image} alt={shot.alt} loading="lazy" width="2280" height="1515" />
+                  <img src={shot.image} alt={shot.alt} loading="lazy" width={shot.width} height={shot.height} />
                 </motion.div>
               </motion.figure>
             ))}
@@ -402,10 +413,9 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>Native on your desktop — Mac and Windows.</h2>
+            <h2>Desktop software for Mac and Windows.</h2>
             <p>
-              AEC teams deserve tools built for the machine in front of them. PolyPDF runs the same
-              engine as a real desktop app on macOS and Windows, focused on the everyday review, markup,
+              PolyPDF runs the same engine as a desktop app on macOS and Windows, focused on everyday review, markup,
               calibration, and takeoff workflows construction PDFs demand.
             </p>
           </motion.div>
@@ -436,7 +446,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>There is nothing to decide until you hit the cap.</h2>
-            <p>Markup, review, calibration and Visual Search auto-count stay free for as long as you want them. The only wall is the fourth hand-created measurement in a document. That is the moment Pro is for, and it costs $49.99 once.</p>
+            <p>Markup, review, calibration and Symbol Search auto-count stay free for as long as you want them. The only wall is the fourth hand-created measurement in a document. That is the moment Pro is for, and it costs $49.99 once.</p>
           </motion.div>
 
           <div className="pricing-grid">

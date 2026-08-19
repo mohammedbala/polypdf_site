@@ -9,27 +9,15 @@ export const routeMetadata = JSON.parse(
   fs.readFileSync(path.join(projectRoot, 'src/lib/route-metadata.json'), 'utf8')
 );
 
-export const htmlRoutes = [
-  '/',
-  '/buy',
-  '/upgrade',
-  '/build-a-plugin',
-  '/windows',
-  '/feature-requests',
-  '/support',
-  '/privacy',
-  '/terms',
-  '/refund',
-  '/versions',
-  '/account',
-  '/blog',
-  '/blog/introducing-polypdf-plugins',
-  '/pdf-takeoff-software',
-  '/measure-pdf-on-mac',
-  '/construction-pdf-markup',
-  '/visual-search-pdf-count',
-  '/compare-pdf-drawings'
-];
+export const htmlRoutes = Object.keys(routeMetadata);
+
+export const articleRoutes = htmlRoutes.filter((route) => routeMetadata[route].type === 'article');
+
+export const shareImageRoutes = [...new Set(articleRoutes
+  .map((route) => routeMetadata[route].image)
+  .filter((image) => typeof image === 'string' && image.startsWith('/guides/')))];
+
+export const discoveryRoutes = ['/robots.txt', '/sitemap.xml', '/llms.txt', '/feed.xml'];
 
 export const downloadRoutes = [
   '/downloads/PolyPDFMac.dmg',
@@ -98,6 +86,13 @@ export async function runPostDeploySmoke({
     const escapedTitle = metadata.title.replaceAll('&', '&amp;');
     const escapedDescription = metadata.description.replaceAll('&', '&amp;');
     const canonicalURL = `${base}${route === '/' ? '/' : route}`;
+    const imageURL = new URL(metadata.image || '/og-image.png', 'https://www.polypdf.com/').href;
+    const imageAlt = (metadata.imageAlt
+      || 'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription')
+      .replaceAll('&', '&amp;')
+      .replaceAll('"', '&quot;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;');
     assertResponse(body.includes(`<title>${escapedTitle}</title>`), `${route} did not return its route-specific title`);
     assertResponse(
       body.includes(`<meta name="description" content="${escapedDescription}"`),
@@ -113,13 +108,24 @@ export async function runPostDeploySmoke({
     );
     assertResponse(
       body.includes(`<meta property="og:url" content="${canonicalURL}"`)
+        && body.includes(`<meta property="og:type" content="${metadata.type || 'website'}"`)
         && body.includes(`<meta property="og:title" content="${escapedTitle}"`)
         && body.includes(`<meta property="og:description" content="${escapedDescription}"`)
+        && body.includes(`<meta property="og:image" content="${imageURL}"`)
+        && body.includes(`<meta property="og:image:alt" content="${imageAlt}"`)
         && body.includes(`<meta name="twitter:url" content="${canonicalURL}"`)
         && body.includes(`<meta name="twitter:title" content="${escapedTitle}"`)
-        && body.includes(`<meta name="twitter:description" content="${escapedDescription}"`),
+        && body.includes(`<meta name="twitter:description" content="${escapedDescription}"`)
+        && body.includes(`<meta name="twitter:image" content="${imageURL}"`)
+        && body.includes(`<meta name="twitter:image:alt" content="${imageAlt}"`),
       `${route} did not return matching route-specific share metadata`
     );
+    assertResponse(
+      body.includes('<link rel="alternate" type="application/rss+xml"')
+        && body.includes('href="https://www.polypdf.com/feed.xml"'),
+      `${route} did not advertise the PolyPDF RSS feed`
+    );
+    assertResponse(!body.includes('"@type":"FAQPage"'), `${route} still emits retired FAQPage JSON-LD`);
     assertResponse(
       (body.match(/data-site-footer="true"/g) || []).length === 1,
       `${route} did not return exactly one canonical footer`
@@ -133,6 +139,40 @@ export async function runPostDeploySmoke({
       assertResponse(body.includes(`href="${footerRoute}"`), `${route} footer is missing ${footerRoute}`);
     }
     results.push({ route, status: response.status });
+  }
+
+  for (const route of shareImageRoutes) {
+    const response = await fetchImpl(`${base}${route}`, { headers: smokeHeaders });
+    const image = await response.arrayBuffer();
+    assertResponse(response.ok, `${route} returned HTTP ${response.status}`);
+    assertResponse(/image\/(png|webp|jpeg)/i.test(response.headers.get('content-type') || ''), `${route} did not return an image`);
+    assertResponse(image.byteLength > 0, `${route} returned an empty image`);
+    results.push({ route, status: response.status });
+  }
+
+  const discovery = {};
+  for (const route of discoveryRoutes) {
+    const response = await fetchImpl(`${base}${route}`, { headers: smokeHeaders });
+    discovery[route] = await response.text();
+    assertResponse(response.ok, `${route} returned HTTP ${response.status}`);
+    results.push({ route, status: response.status });
+  }
+  assertResponse(
+    discovery['/robots.txt'].includes('User-agent: OAI-SearchBot')
+      && discovery['/robots.txt'].includes('Sitemap: https://www.polypdf.com/sitemap.xml'),
+    '/robots.txt lost its crawler allowlist or sitemap declaration'
+  );
+  for (const route of articleRoutes) {
+    const url = `https://www.polypdf.com${route}`;
+    assertResponse(discovery['/sitemap.xml'].includes(`<loc>${url}</loc>`), `/sitemap.xml is missing ${route}`);
+    assertResponse(discovery['/llms.txt'].includes(`(${url})`), `/llms.txt is missing ${route}`);
+    assertResponse(discovery['/feed.xml'].includes(`<link>${url}</link>`), `/feed.xml is missing ${route}`);
+  }
+  for (const route of shareImageRoutes) {
+    assertResponse(
+      discovery['/sitemap.xml'].includes(`<image:loc>https://www.polypdf.com${route}</image:loc>`),
+      `/sitemap.xml is missing the guide image ${route}`
+    );
   }
 
   const healthResponse = await fetchImpl(`${base}/api/healthz`, {

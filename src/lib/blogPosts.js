@@ -1,3 +1,5 @@
+import { guidePosts } from '../content/guides';
+
 // Blog posts are plain data so a new entry is one object, not a new React component.
 //
 // A post body is a list of sections. Each section renders as one card in the same
@@ -10,17 +12,21 @@
 //   { kind: 'ol',    items: [] }          a numbered list, used for the how-to template
 //   { kind: 'sub',   text }               a sub-heading inside a section
 //   { kind: 'note',  text }               a set-apart caveat or clarification
+//   { kind: 'figure', src, alt, caption }  a captioned product-evidence image
+//   { kind: 'table',  headers, rows }      an accessible comparison/reference table
+//   { kind: 'formula', label, formula }    a worked calculation with an explanation
 //
 // `icon` names map to react-icons in BlogPost.js. Add the name there before using a new one.
 
 const post = (entry) => Object.freeze(entry);
 
-export const blogPosts = Object.freeze([
+const productPosts = Object.freeze([
   post({
     slug: 'introducing-polypdf-plugins',
     title: 'Introducing PolyPDF Plugins',
     date: '2026-08-07',
     dateLabel: 'August 7, 2026',
+    dateModified: '2026-08-18',
     author: 'The PolyPDF team',
     readingTime: '7 min read',
     tag: 'Product',
@@ -29,6 +35,13 @@ export const blogPosts = Object.freeze([
     metaTitle: 'Introducing PolyPDF Plugins | PolyPDF Blog',
     metaDescription:
       "How PolyPDF's signed, no-executable-code plugins work: the permission model, the Plugin Manager, and the AISC steel, seal, and map launch plugins.",
+    keywords: [
+      'PolyPDF plugins',
+      'signed PDF plugin packages',
+      'AISC steel section PDF',
+      'professional seal PDF',
+      'OpenStreetMap PDF'
+    ],
     lede:
       'Plugins add new content generators to PolyPDF without turning the app into a place where downloaded code runs. Here is what ships, how the security model works, and the steps to use any plugin.',
     sections: [
@@ -39,12 +52,12 @@ export const blogPosts = Object.freeze([
           {
             kind: 'p',
             text:
-              'PolyPDF is a desktop app for people who work from PDF drawings rather than CAD files — solo engineers, architects, estimators, and the small teams around them. It runs natively on Mac and Windows, it opens and marks up documents without an account or an internet connection, and it is bought once instead of rented.'
+              'PolyPDF is a desktop app for people who work from PDF drawings rather than CAD files — solo engineers, architects, estimators, and the small teams around them. Its core document, markup, measurement, and export work happens locally on Mac and Windows. Maps, license activation, updates, purchases, and support can require a connection.'
           },
           {
             kind: 'p',
             text:
-              'That shape sets the constraints for anything we add. A feature that needs a server, a sign-in, or a subscription tier does not belong in it. Plugins were designed inside those constraints: they are content, not services.'
+              'That local-first shape sets the constraints for anything we add. Plugins were designed inside it: packages carry signed data and artwork, not downloaded executable code or a subscription service.'
           }
         ]
       },
@@ -225,6 +238,11 @@ export const blogPosts = Object.freeze([
       }
     ]
   })
+]);
+
+export const blogPosts = Object.freeze([
+  ...guidePosts.map(post),
+  ...productPosts
 ]);
 
 export const blogPostBySlug = (slug) => blogPosts.find((entry) => entry.slug === slug) || null;

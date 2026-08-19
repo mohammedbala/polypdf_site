@@ -75,7 +75,7 @@ export const fetchWindowsRelease = async () => {
   const build = Number((/PolyPDFSetup-v[\d.]+-(\d+)\.exe/.exec(text) || [])[1]);
   const releaseDate = (/^releaseDate:\s*'?([^'\n]+?)'?\s*$/m.exec(text) || [])[1];
   const notes = Number.isFinite(build)
-    ? `/downloads/windows/PolyPDFSetup-v${version}-${build}.html`
+    ? `/downloads/windows/PolyPDFWin-v${version}-${build}.html`
     : null;
 
   return {
@@ -91,6 +91,18 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.3.4 (16)': [
+    'Fit Height joins Fit Page and Fit Width, with viewport alignment that no longer reserves a scrollbar gutter.',
+    'Command-click inserts a vertex and Command-Shift-click removes one on areas, polylines, and Workspace edges.',
+    'Narrow-sidebar and common laptop layouts keep toolbars, plugin controls, measurement panels, and contextual controls usable.',
+    'Generated seals handle long names more cleanly and export their current artwork correctly.'
+  ],
+  'Windows 1.3.4 (16)': [
+    'Fit Height joins Fit Page and Fit Width, with viewport alignment that no longer reserves a scrollbar gutter.',
+    'Ctrl-click inserts a vertex and Ctrl-Shift-click removes one on areas, polylines, and Workspace edges.',
+    'Narrow-sidebar and common laptop layouts keep toolbars, plugin controls, measurement panels, and contextual controls usable.',
+    'Generated seals export correctly, and opened documents use corrected Windows path handling.'
+  ],
   'macOS 1.1.3 (8)': [
     'Saved style defaults, per tool: set highlight color, pen color, font and more once — every new markup uses them, even after quitting and reopening. Right-click a markup and choose "Set as Tool Default", or adjust the style bar with nothing selected.',
     'Text boxes and callouts start empty, so you can place and type straight away.',
@@ -115,7 +127,7 @@ const RELEASE_PROSE = {
     'Full markup set: clouds, callouts, hatches, industry line styles, stamps, snapshots, and built-in symbol tool sets.',
     'Compare Documents: differences between two revisions arrive as editable revision-cloud markups.',
     'OCR for scanned sheets, including rotated labels on plan sets.',
-    'Forms and digital signatures, Bates numbering, watermarks, flatten, page operations, and true content-removing redaction.'
+    'Forms and digital signatures, Bates numbering, watermarks, flatten, page operations, and redaction for supported decodable text. Current redaction limits for vector or outlined content, nested images, and partial sanitation coverage are documented in the guide.'
   ],
   'macOS 1.0.3 (4)': ['Maintenance release for the original native Mac app.'],
   'macOS 1.0.2 (3)': ['Maintenance release for the original native Mac app.'],
@@ -132,6 +144,13 @@ const proseKey = (release) => `${release.platform} ${release.version} (${release
 // Rendered only while the feeds are still loading, or if one cannot be reached, so the page is never
 // empty. Anything the feeds return replaces it.
 const FALLBACK_RELEASES = [
+  { platform: 'macOS', version: '1.3.4', build: 16, date: 'August 17, 2026', notes: '/downloads/PolyPDFMac-v1.3.4-16.html' },
+  { platform: 'Windows', version: '1.3.4', build: 16, date: 'August 17, 2026', notes: '/downloads/windows/PolyPDFWin-v1.3.4-16.html' },
+  { platform: 'macOS', version: '1.3.2', build: 14, date: 'August 10, 2026', notes: '/downloads/PolyPDFMac-v1.3.2-14.html' },
+  { platform: 'macOS', version: '1.3.1', build: 13, date: 'August 9, 2026', notes: '/downloads/PolyPDFMac-v1.3.1-13.html' },
+  { platform: 'macOS', version: '1.3.0', build: 11, date: 'August 8, 2026', notes: '/downloads/PolyPDFMac-v1.3.0-11.html' },
+  { platform: 'macOS', version: '1.2.1', build: 10, date: 'August 4, 2026', notes: '/downloads/PolyPDFMac-v1.2.1-10.html' },
+  { platform: 'macOS', version: '1.2.0', build: 9, date: 'August 2, 2026', notes: '/downloads/PolyPDFMac-v1.2.0-9.html' },
   { platform: 'Windows', version: '1.1.3', build: 8, date: 'July 29, 2026', notes: null },
   { platform: 'macOS', version: '1.1.3', build: 8, date: 'July 28, 2026', notes: '/downloads/PolyPDFMac-v1.1.3-8.html' },
   { platform: 'macOS', version: '1.1.2', build: 7, date: 'July 28, 2026', notes: '/downloads/PolyPDFMac-v1.1.2-7.html' },

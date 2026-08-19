@@ -1,0 +1,97 @@
+{
+  "app": "PolyPDF 1.3.4 (build 16, Electron desktop app)",
+  "appCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+  "capturePeriod": "August 2026",
+  "purpose": "First-party product evidence selected for PolyPDF's public workflow guides",
+  "capture": {
+    "method": "Screenshots from live app automation and the August 2026 commercial review; no mock UI",
+    "inputs": "Owned, generated, or bundled PolyPDF fixtures only",
+    "postProcessing": "Source copies are unchanged. Web derivatives are byte-for-byte copies except area-cutouts-depth and headers-footers-dialog, which were proportionally downscaled to 1800 pixels on the long edge. No UI content was edited or cropped."
+  },
+  "historicalShots": [
+    {
+      "file": "src/assets/screenshots/shot-measure-takeoff-web.png",
+      "sha256": "94c7c3446d153de9c34b13219b459dd564e894239674f93b6f704859c949dd23",
+      "app": "PolyPDF 1.1.3 (macOS, dark appearance)",
+      "capturePeriod": "July 2026",
+      "dimensions": { "width": 2280, "height": 1515 },
+      "provenance": "Live-app capture introduced by website commit c7e74437a383077fd4c004f7a81fc598cd82fae6; not mock UI",
+      "fixture": "PolyPDF-owned fictional Riverbend Community Library A-201 sample drawing",
+      "visibleEvidence": "Custom 13.5 PDF-point-per-foot input, 1,506.32 sq ft hand trace, worksheet record, and the older footer's Uncalibrated label"
+    }
+  ],
+  "shots": [
+    {
+      "file": "area-cutouts-depth.png",
+      "sha256": "54e855e6b27eb4f70ee27ea689545934f34dd394d2808a4df4a03801fc4a97eb",
+      "dimensions": { "width": 2880, "height": 1920 },
+      "source": "polypdf/.tmp/phil-feature-proof/output/screenshots/phil-depth-cutouts-curved-area-window.png",
+      "fixture": "Generated searchable PolyPDF test fixture",
+      "visibleEvidence": "A selected curved area, two interior cutouts, crosshatch, and a 5 ft 3 in depth control"
+    },
+    {
+      "file": "compare-revision-output.png",
+      "sha256": "041db1f66a4f2576a991d6406a35ac7b17bf52ad39eef9d230e1e05c55387da3",
+      "dimensions": { "width": 800, "height": 600 },
+      "source": "polypdf/docs/audits/commercial-review-2026-08/shots-E/E2-12-compare-clouds-baked.png",
+      "fixture": "Generated comparison fixture",
+      "visibleEvidence": "Comparison output with regions marking detected drawing differences"
+    },
+    {
+      "file": "ocr-complete.png",
+      "sha256": "4a9c89605fa8cf391bf95631338aea1a37855047c88e2571ad7c14cd4a2ed700",
+      "dimensions": { "width": 800, "height": 501 },
+      "source": "polypdf/docs/audits/commercial-review-2026-08/shots-E/E2-28-theme-light-ocr.png",
+      "fixture": "Generated mixed-content PDF fixture",
+      "visibleEvidence": "The local OCR progress dialog at 100 percent with its best-effort and language-coverage notice"
+    },
+    {
+      "file": "sanitize-dialog.png",
+      "sha256": "9bdf04a030c38c6e9a949ce121cd9280e2da3288335d7d0fa8b7cfcfede9794f",
+      "dimensions": { "width": 800, "height": 501 },
+      "source": "polypdf/docs/audits/commercial-review-2026-08/shots-E/E2-24-theme-light-sanitize.png",
+      "fixture": "Generated mixed-content PDF fixture",
+      "visibleEvidence": "Sanitize Document choices for metadata, thumbnails, attachments, JavaScript actions, forms, and signatures"
+    },
+    {
+      "file": "headers-footers-dialog.png",
+      "sha256": "db4bcee2cda5ecce8b2683fca60758a1a8c7bc41fad2044ca0e76c2a9a84ebd3",
+      "dimensions": { "width": 3420, "height": 2146 },
+      "source": "polypdf/docs/audits/commercial-review-2026-08/shots-E/E04-headers-footers-dark.png",
+      "fixture": "Generated five-page PDF fixture",
+      "visibleEvidence": "Headers and Footers controls, margins, page range, page-number tokens, and page preview"
+    },
+    {
+      "file": "professional-seal-on-page.png",
+      "sha256": "a73f66b05a97df6a5775e46f1c07c116195afe0813da4412076454ca1da5662d",
+      "dimensions": { "width": 800, "height": 502 },
+      "source": "polypdf/docs/audits/commercial-review-2026-08/shots-G/G50-seal-on-page.png",
+      "fixture": "Bundled fictional Q-101 Quick Start sheet",
+      "visibleEvidence": "A first-party Professional Seal Maker graphic placed as artwork on the sample sheet"
+    },
+    {
+      "file": "visual-signature-style.png",
+      "sha256": "a4698c96967bbac379fa5aa4059280d83c64aee09cc79e87325788dc284e062b",
+      "dimensions": { "width": 800, "height": 427 },
+      "source": "polypdf/docs/audits/commercial-review-2026-08/shots-D/D06-style-chooser.png",
+      "fixture": "Generated signing fixture",
+      "visibleEvidence": "The visual-signature appearance chooser"
+    },
+    {
+      "file": "certificate-signature.png",
+      "sha256": "fd24be8d5e18dbb23eab3a845422ba729984a354ac6e4be43b3e90669be56508",
+      "dimensions": { "width": 800, "height": 187 },
+      "source": "polypdf/docs/audits/commercial-review-2026-08/shots-D/D09-certificate-appearance.png",
+      "fixture": "Automation-generated test certificate and signing fixture",
+      "visibleEvidence": "A certificate-signature appearance showing signer name, distinguished name, date, and status icon"
+    },
+    {
+      "file": "invalid-signature-verdict.png",
+      "sha256": "36a3fc19ee9c71e5f21c4aed6a099ffb5464b8423441e78e0d76a24fb8c57b90",
+      "dimensions": { "width": 800, "height": 844 },
+      "source": "polypdf/docs/audits/commercial-review-2026-08/shots-D/D11-signature-verdict-card.png",
+      "fixture": "Deliberately tampered test-signature fixture",
+      "visibleEvidence": "An invalid-signature verdict explaining that the CMS digest does not match the signed byte ranges"
+    }
+  ]
+}

@@ -2,12 +2,15 @@ import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
 import test from 'node:test';
 import {
+  articleRoutes,
   canonicalFooterRoutes,
+  discoveryRoutes,
   downloadRoutes,
   expectedOffer,
   htmlRoutes,
   routeMetadata,
   runPostDeploySmoke,
+  shareImageRoutes,
   workflowMediaRoutes
 } from '../scripts/post-deploy-smoke.mjs';
 
@@ -30,17 +33,28 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
       const title = metadata.title.replaceAll('&', '&amp;');
       const description = metadata.description.replaceAll('&', '&amp;');
       const canonicalURL = `http://${request.headers.host}${path === '/' ? '/' : path}`;
+      const imageURL = new URL(metadata.image || '/og-image.png', 'https://www.polypdf.com/').href;
+      const imageAlt = (metadata.imageAlt
+        || 'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription')
+        .replaceAll('&', '&amp;')
+        .replaceAll('"', '&quot;');
       response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       response.end(
         `<!doctype html><title>${title}</title>`
         + `<meta name="description" content="${description}" />`
         + `<meta name="robots" content="${metadata.robots}" />`
+        + `<meta property="og:type" content="${metadata.type || 'website'}" />`
         + `<meta property="og:url" content="${canonicalURL}" />`
         + `<meta property="og:title" content="${title}" />`
         + `<meta property="og:description" content="${description}" />`
+        + `<meta property="og:image" content="${imageURL}" />`
+        + `<meta property="og:image:alt" content="${imageAlt}" />`
         + `<meta name="twitter:url" content="${canonicalURL}" />`
         + `<meta name="twitter:title" content="${title}" />`
         + `<meta name="twitter:description" content="${description}" />`
+        + `<meta name="twitter:image" content="${imageURL}" />`
+        + `<meta name="twitter:image:alt" content="${imageAlt}" />`
+        + '<link rel="alternate" type="application/rss+xml" title="PolyPDF Guides and Product Notes" href="https://www.polypdf.com/feed.xml" />'
         + `<link rel="canonical" href="${canonicalURL}" />`
         + '<script async src="https://www.googletagmanager.com/gtag/js?id=G-533RWNRCFP"></script>'
         + '<script>gtag("config","G-533RWNRCFP",{})</script>'
@@ -50,6 +64,36 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
         + canonicalFooterRoutes.map((route) => `<a href="${route}">${route}</a>`).join('')
         + '</footer></div>'
       );
+      return;
+    }
+    if (shareImageRoutes.includes(path)) {
+      response.writeHead(200, { 'Content-Type': 'image/png', 'Content-Length': '1' });
+      response.end('x');
+      return;
+    }
+    if (path === '/robots.txt') {
+      response.writeHead(200, { 'Content-Type': 'text/plain' });
+      response.end('User-agent: OAI-SearchBot\nAllow: /\nSitemap: https://www.polypdf.com/sitemap.xml\n');
+      return;
+    }
+    if (path === '/sitemap.xml') {
+      response.writeHead(200, { 'Content-Type': 'application/xml' });
+      response.end(
+        '<urlset xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">'
+        + articleRoutes.map((route) => `<url><loc>https://www.polypdf.com${route}</loc></url>`).join('')
+        + shareImageRoutes.map((route) => `<image:image><image:loc>https://www.polypdf.com${route}</image:loc></image:image>`).join('')
+        + '</urlset>'
+      );
+      return;
+    }
+    if (path === '/llms.txt') {
+      response.writeHead(200, { 'Content-Type': 'text/plain' });
+      response.end(articleRoutes.map((route) => `(https://www.polypdf.com${route})`).join('\n'));
+      return;
+    }
+    if (path === '/feed.xml') {
+      response.writeHead(200, { 'Content-Type': 'application/rss+xml' });
+      response.end(`<rss><channel>${articleRoutes.map((route) => `<item><link>https://www.polypdf.com${route}</link></item>`).join('')}</channel></rss>`);
       return;
     }
     if (path === '/api/healthz') {
@@ -158,8 +202,16 @@ test('passes only when every route, artifact, health check, and checkout pass', 
     const results = await runPostDeploySmoke({ baseURL });
     // +6 = /api/healthz, /api/commercial-offer, the main bundle, the plugin packer,
     // conversion verification, and checkout.
-    assert.equal(results.length, htmlRoutes.length + downloadRoutes.length + workflowMediaRoutes.length + 6);
+    assert.equal(
+      results.length,
+      htmlRoutes.length + shareImageRoutes.length + discoveryRoutes.length
+        + downloadRoutes.length + workflowMediaRoutes.length + 6
+    );
   });
+});
+
+test('derives the HTML smoke surface from the route metadata registry', () => {
+  assert.deepEqual(htmlRoutes, Object.keys(routeMetadata));
 });
 
 // The packer's failure mode is a 200, not a 404: the SPA's try_files fallback serves index.html for

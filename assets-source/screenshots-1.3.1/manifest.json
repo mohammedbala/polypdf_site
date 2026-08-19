@@ -11,7 +11,7 @@
     {
       "file": "hero-takeoff.png",
       "feature": "Takeoff \u2014 measurements, auto-counts and the takeoff worksheet",
-      "caption-suggestion": "Calibrate the sheet once, then measure in real units: 5,485 sq ft of gross floor area, two wall dimensions and a 17-piece diffuser count, all totalled in the Takeoff Worksheet.",
+      "caption-suggestion": "Calibrate the sheet once, then measure in real units: 5,485 sq ft of gross floor area, two wall dimensions and 17 visual diffuser matches in the Takeoff Worksheet. One match is the legend example, so the reviewed plan quantity is 16.",
       "sheet": "PolyPDF Quick Start \u2014 Office Fit-Out Plan, sheet Q-101 (bundled sample, 24 x 18 in, 1\" = 6')",
       "dimensions": {
         "width": 3200,

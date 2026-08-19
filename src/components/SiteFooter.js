@@ -22,7 +22,7 @@ export const footerLinkGroups = Object.freeze([
       Object.freeze({ to: buyPath('website_footer'), label: 'Buy PolyPDF Pro' }),
       Object.freeze({ to: '/windows', label: 'PolyPDF for Windows' }),
       Object.freeze({ to: '/versions', label: 'Version history' }),
-      Object.freeze({ to: '/blog', label: 'Product blog' }),
+      Object.freeze({ to: '/blog', label: 'Guides & reference' }),
       Object.freeze({ to: '/build-a-plugin', label: 'Build a plugin' })
     ])
   }),

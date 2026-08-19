@@ -1,106 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- lastmod is the date each page's served HTML last materially changed in this repo, not the date of the deploy.
-     2026-08-08: every route changed at once — the build now prerenders full body content and JSON-LD into each page. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Generated from src/lib/route-metadata.json and src/content/guides. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.polypdf.com/</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.polypdf.com/windows</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.polypdf.com/buy</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.polypdf.com/support</loc>
-    <lastmod>2026-08-08</lastmod>
+    <loc>https://www.polypdf.com/build-a-plugin</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.polypdf.com/feature-requests</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.polypdf.com/versions</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/blog</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-19</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/calibrate-pdf-drawing-scale</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/calibrate-pdf-drawing-scale.png</image:loc>
+      <image:title>PolyPDF displaying the Q-101 plan with the Page Scale controls and calibrated measurements</image:title>
+      <image:caption>Live-app capture from the PolyPDF 1.3.1 dev build on macOS, using the bundled Q-101 sample. This guide was re-verified against PolyPDF 1.3.4 (build 16); the screenshot itself records the earlier build.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/why-pdf-measurements-are-wrong</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/why-pdf-measurements-are-wrong.png</image:loc>
+      <image:title>PolyPDF 1.1.3 showing a 1,506.32 square foot hand trace and custom scale controls on the fictional Riverbend Library A-201 plan</image:title>
+      <image:caption>Live PolyPDF 1.1.3 dark-mode capture on the PolyPDF-owned fictional Riverbend Community Library A-201 fixture. It shows a custom 13.5 PDF-point-per-foot input, a 1,506.32 sq ft hand trace and worksheet record, while the older footer still says Uncalibrated—exactly why scale state and a second known dimension must be checked. The workflow was re-verified in PolyPDF 1.3.4 (build 16); the screenshot records the earlier build.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/measure-pdf-area-cutouts-depth.png</image:loc>
+      <image:title>PolyPDF 1.3.4 with a selected curved area, two rectangular cutouts, crosshatch, and a 5 foot 3 inch depth</image:title>
+      <image:caption>Live-app feature proof from PolyPDF 1.3.4 (build 16) on macOS. A generated test fixture shows a selected curved area with two interior cutouts, crosshatch, and a depth of 5′-3″; it is not a customer drawing.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/pdf-takeoff-worked-example</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/pdf-takeoff-worked-example.png</image:loc>
+      <image:title>PolyPDF takeoff on the Q-101 office plan with area, dimensions, diffuser counts, and worksheet totals</image:title>
+      <image:caption>Live-app capture from the PolyPDF 1.3.1 dev build on macOS, using the bundled Q-101 sample. Its 17 diffuser matches comprise 16 plan symbols plus one legend example, so the reviewed plan quantity is 16. This guide was re-verified against PolyPDF 1.3.4 (build 16); the screenshot itself records the earlier build.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/count-pdf-symbols</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/count-pdf-symbols.png</image:loc>
+      <image:title>PolyPDF Symbol Search panel reviewing 17 selected diffuser-symbol matches on a floor plan</image:title>
+      <image:caption>Live-app capture from the PolyPDF 1.3.1 dev build on macOS using the owned, bundled Quick Start sample. It shows 17 selected candidates: the legend target plus 16 plan symbols. The workflow was re-verified in PolyPDF 1.3.4 build 16.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/pdf-markup-table-rfi-punch-list.png</image:loc>
+      <image:title>PolyPDF floor-plan review with revision clouds, an RFI callout, and the Markup Table open</image:title>
+      <image:caption>Live-app capture from the PolyPDF 1.3.1 dev build on macOS using the owned, bundled Quick Start sample. It shows markup rows, comments, status controls, and export; it does not show an attached or formally issued RFI. The workflow was re-verified in PolyPDF 1.3.4 build 16.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/compare-pdf-drawing-revisions</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/compare-pdf-drawing-revisions.png</image:loc>
+      <image:title>PolyPDF comparison output with violet revision clouds around changed regions of a drawing</image:title>
+      <image:caption>PolyPDF 1.3.4 live-app comparison-output feature proof from an owned generated fixture. Violet regions identify controlled visual changes; the image is evidence of the feature output, not a customer drawing or mockup.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/create-fillable-pdf-form</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/create-fillable-pdf-form.png</image:loc>
+      <image:title>PolyPDF Forms panel with six field types beside a fillable invoice containing 42 fields</image:title>
+      <image:caption>Live-app capture from the PolyPDF 1.3.1 dev build on macOS using an owned, bundled sample invoice. It shows the six authorable field types and a 42-field AcroForm. The workflow was re-verified in PolyPDF 1.3.4 build 16.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/ocr-scanned-pdf-drawings</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/ocr-scanned-pdf-drawings.png</image:loc>
+      <image:title>PolyPDF OCR dialog at 100 percent with a best-effort searchable text layer notice</image:title>
+      <image:caption>Live PolyPDF 1.3.4 (build 16) capture using an owned scan fixture. The dialog shows a completed best-effort OCR run at 100%; the window title still reads “OCR in Progress” in this build.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/digital-signature-vs-visual-signature-vs-seal.png</image:loc>
+      <image:title>PolyPDF drawing with a generated professional seal artwork selected and the Plugins panel open</image:title>
+      <image:caption>A generated professional-seal graphic placed on the owned PolyPDF Quick Start fixture. The visible artwork is not a certificate signature and the capture does not establish licensing-board compliance. Live PolyPDF 1.3.4 (build 16) capture using owned or generated test fixtures. Names and certificates shown are test identities, not customer data.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/redact-and-sanitize-pdf</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/redact-and-sanitize-pdf.png</image:loc>
+      <image:title>PolyPDF Sanitize Document dialog showing selectable cleanup categories before processing</image:title>
+      <image:caption>Live PolyPDF 1.3.4 (build 16) capture using an owned test fixture. The dialog shows the sanitation choices before processing; it does not prove which objects were removed from a saved file.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/prepare-issued-pdf-set</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/prepare-issued-pdf-set.png</image:loc>
+      <image:title>PolyPDF Headers and Footers dialog with six content positions, margins, tokens, and page preview</image:title>
+      <image:caption>Live PolyPDF 1.3.4 (build 16) capture using an owned five-page fixture. The screenshot shows the Headers &amp; Footers setup and page preview before Apply; it is not a claim that a final issued set has passed review.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/introducing-polypdf-plugins</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/privacy</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.polypdf.com/build-a-plugin</loc>
-    <lastmod>2026-08-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.polypdf.com/privacy</loc>
-    <lastmod>2026-08-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.polypdf.com/refund</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/feature-requests</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/support</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/windows</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/terms</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/versions</loc>
+    <lastmod>2026-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/pdf-takeoff-software</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/measure-pdf-on-mac</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/construction-pdf-markup</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/visual-search-pdf-count</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/compare-pdf-drawings</loc>
-    <lastmod>2026-08-08</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
