@@ -1,7 +1,7 @@
 import screenshot from '../../assets/screenshots/wrong-scale-currentdev-dark-web.png';
 
 const screenshotCaption =
-  'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode on the owned Measurement Diagnostics fixture. A line drawn over the printed 20-foot reference reads 360.00 PDF points while Measurements › Scale and the footer both report that scale is not set. The red line is deterministic demonstration markup, not a real-project measurement.';
+  'A line drawn over the printed 20′-0″ reference reads 360.00 PDF points, while Measurements › Scale and the footer both report that no scale is set. Until the page is calibrated, PolyPDF reports PDF points instead of real-world units.';
 
 const post = {
   slug: 'why-pdf-measurements-are-wrong',
@@ -22,7 +22,7 @@ const post = {
   quickAnswer:
     'If a PDF measurement is wrong, first confirm that the current page has the correct real-world scale and units. Then remeasure a long labeled dimension with snapped endpoints. If that works but a detail does not, check for a different scale inside that detail. If horizontal and vertical reference dimensions disagree by different percentages, the scan is probably nonuniformly distorted and one calibration cannot make the whole page accurate.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4 (build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
@@ -30,8 +30,7 @@ const post = {
     caption: screenshotCaption,
     width: 1710,
     height: 1073,
-    provenance:
-      'Real current-development product UI. The owned one-page PDF and red demonstration annotation contain no customer data; the image is an uncropped 50 percent derivative of the native-maximized capture.'
+    provenance: 'The screenshots in this guide use a sample plan sheet.'
   },
   keywords: [
     'PDF measurements wrong',
@@ -60,13 +59,13 @@ const post = {
             ['Only a detail or blowup is wrong', 'Mixed scales on one page', 'Measure outside the detail, then define a Scale Region'],
             ['Small spans vary; long spans are close', 'Endpoint placement or snap error', 'Zoom in and use a longer reference'],
             ['Horizontal and vertical checks disagree differently', 'Nonuniform scan stretch or perspective', 'Compare two directions and obtain a better source'],
-            ['The same record differs between canvas and worksheet', 'Unexpected application behavior', 'Save evidence, stop relying on the value, and report the mismatch as a bug']
+            ['The same record differs between canvas and worksheet', 'Unexpected application behavior', 'Note the page and both values, stop relying on the number, and report the mismatch to us']
           ]
         },
         {
           kind: 'figure',
           src: screenshot,
-          alt: 'A live PolyPDF takeoff view where the scale, drawing measurements, and worksheet can be checked together',
+          alt: 'PolyPDF showing the page scale status beside a line measured over a printed 20-foot reference',
           caption: screenshotCaption,
           width: 1710,
           height: 1073
@@ -90,7 +89,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'A page-scale badge proves that a scale exists, not that it is correct. Always test a second known dimension after calibration.'
+            'A page-scale badge tells you a scale exists, not that it is correct. Always test a second known dimension after calibration.'
         }
       ]
     },
@@ -128,7 +127,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'A few screen pixels can represent a meaningful real-world distance on a zoomed-out plan. Calibrating across a short span magnifies that error. Use the longest reliable dimension available, zoom in, and snap to the actual vector content when possible. PolyPDF’s calibration dialog states whether both endpoints snapped; an unsnapped warning is a reason to inspect, not a promise that the result is unusable.'
+            'A few screen pixels can represent a meaningful real-world distance on a zoomed-out plan. Calibrating across a short span magnifies that error. Use the longest reliable dimension available, zoom in, and snap to the actual vector content when possible. PolyPDF’s calibration dialog tells you whether both endpoints snapped; treat an unsnapped warning as a prompt to zoom in and check where the endpoints landed.'
         },
         {
           kind: 'formula',
@@ -255,7 +254,7 @@ const post = {
     }
   ],
   cta: {
-    title: 'Diagnose the scale on a real drawing',
+    title: 'Diagnose the scale on your own drawing',
     text:
       'Download PolyPDF for macOS or Windows, set the page scale, and use your free measurements to check independent reference dimensions before starting takeoff.',
     buyLabel: 'See the one-time license',

@@ -39,7 +39,7 @@ const sections = [
     title: 'Signed for Windows',
     content: [
       'The installer and the app are code-signed by Euclidean Software, LLC, so Windows can verify who published them.',
-      'If SmartScreen still shows a notice on a brand-new release (reputation for fresh releases can take Microsoft a little while), click "More info", then "Run anyway".',
+      'A brand-new release can still trigger a SmartScreen notice while it builds reputation with Microsoft. Click "More info", then "Run anyway".',
       'As on Mac, your PDFs and measurements stay on your device.'
     ]
   },
@@ -49,7 +49,7 @@ const sections = [
     content: [
       'PolyPDF for Windows checks for updates automatically and installs them when you quit the app — no manual downloads.',
       'It is the same PolyPDF engine the Mac app ships, at the same version.',
-      'Used the earlier portable preview? Just run the installer — the preview folder can be deleted afterwards.'
+      'Running an earlier Windows build from an unzipped folder? Run the installer, then delete the old folder.'
     ]
   },
   {
@@ -58,7 +58,7 @@ const sections = [
     content: [
       'Windows 10 or 11, 64-bit (x64).',
       'About 500 MB of free disk space.',
-      'Same free tier as Mac: full markup and review tools, up to 3 hand-created measurements per document, and uncapped Visual Search auto-count.'
+      'Same free tier as Mac: full markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count.'
     ]
   }
 ];
@@ -111,7 +111,7 @@ const WindowsPreview = () => {
 
           <div className="legal-intro">
             <p>
-              PolyPDF now ships for Windows 10 and 11 as a signed installer. It is the same drawing-review
+              PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review
               app as on the Mac — open sheets, mark up review comments, calibrate scale, and measure — and it
               keeps itself up to date automatically.
             </p>

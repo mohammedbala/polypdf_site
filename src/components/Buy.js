@@ -29,7 +29,7 @@ const proFeatures = [
   `${commercialOffer.price} once with no subscription renewal`,
   'Use your license on up to 3 computers — Mac or Windows, in any mix',
   'Secure Stripe checkout with license delivery by email',
-  'Every public PolyPDF 1.x update is included'
+  'Every PolyPDF 1.x update is included'
 ];
 
 // The desktop app opens this page with source= and utm_source= already set

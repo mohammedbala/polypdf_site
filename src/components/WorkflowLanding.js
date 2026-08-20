@@ -11,7 +11,7 @@ import { commercialOffer, founderRightsText } from '../lib/commercialOffer';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
 import './WorkflowLanding.css';
 
-export const CURRENT_INTERFACE_LABEL = 'Live PolyPDF desktop-app capture';
+export const CURRENT_INTERFACE_LABEL = 'PolyPDF for Mac and Windows';
 
 const WorkflowLanding = ({ page }) => {
   const offer = useCommercialOffer();

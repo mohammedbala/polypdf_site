@@ -19,17 +19,17 @@ const pdfMarkupTableGuide = {
   quickAnswer:
     'Create one markup per issue, give it a stable subject, put the actionable question or observation in Comments, and assign a review status. Open the Markup Table to select and reveal rows, sort or filter the register, and update statuses. Detailed exports contain all markup rows; summary exports use the visible filtered scope. PolyPDF does not create or attach a formal RFI, submittal, or punch record.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4 (build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: markupReviewImage,
-    alt: 'PolyPDF dark-mode review with a rounded RFI callout, revision cloud, completed rectangle, and three Markup Table rows',
+    alt: 'A PolyPDF drawing review with an RFI callout, a revision cloud, a completed-work rectangle, and three matching Markup Table rows',
     caption:
-      'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode on an owned fictional clinic-coordination fixture. Deterministic demonstration markups show an Open rounded RFI callout, an In Progress revision cloud, and a Completed verification rectangle with matching Markup Table rows. They are review examples, not attached or formally issued RFI or punch records.',
+      'Three markups on a clinic coordination sheet — an Open RFI callout, an In Progress revision cloud, and a Completed verification rectangle — each with its own row in the Markup Table. Selecting a row reveals the markup it describes, so a review meeting can work straight down the register.',
     width: 1710,
     height: 1073,
     provenance:
-      'Real current-development product UI. The owned fixture and demonstration annotations contain no customer data; the image is an uncropped 50 percent derivative of the native-maximized capture.'
+      'The sheet is a demo clinic plan we drew for this guide, not a real project.'
   },
   keywords: [
     'PDF markup table',
@@ -47,17 +47,17 @@ const pdfMarkupTableGuide = {
         {
           kind: 'p',
           text:
-            'PolyPDF can hold visual evidence and a structured register of PDF markups. Rows carry subject, status, page, comments, author, dates, color, layer, workspace, and configured custom columns. Selecting a row reveals its page markup.'
+            'PolyPDF holds the marked-up drawing and a structured register of the markups on it. Rows carry subject, status, page, comments, author, dates, color, layer, workspace, and configured custom columns. Selecting a row reveals its page markup.'
         },
         {
           kind: 'p',
           text:
-            'That is useful input to an RFI or punch-list process, but it is not the system of record by itself. PolyPDF does not assign a formal RFI number from a project server, route the question to a design professional, attach an official response, enforce contractual due dates, or prove that an issue was issued. Perform those steps in the project platform or procedure your team has approved.'
+            'That is useful input to an RFI or punch-list process, but it is not the system of record. PolyPDF does not assign a formal RFI number from a project server, route the question to a design professional, attach an official response, or enforce contractual due dates. Those steps stay in the project platform or procedure your team has approved.'
         },
         {
           kind: 'note',
           text:
-            'The screenshot includes a demonstration row and callout titled “RFI - door clearance.” Its comment asks for an 18-inch latch-side-clearance confirmation at Room 302. That reviewer-authored text is not evidence that a formal RFI record, routing event, or attachment exists elsewhere.'
+            'In the screenshot, the callout and row titled “RFI - door clearance” ask for confirmation of 18 inches of latch-side clearance at Room 302. Capturing the question on the drawing is the first step; issuing it as a numbered RFI still happens in your project system.'
         }
       ]
     },
@@ -150,7 +150,7 @@ const pdfMarkupTableGuide = {
     },
     {
       icon: 'export',
-      title: 'Export the evidence your receiving process needs',
+      title: 'Export what the receiving process needs',
       body: [
         {
           kind: 'p',
@@ -177,7 +177,7 @@ const pdfMarkupTableGuide = {
     },
     {
       icon: 'shield',
-      title: 'Closeout checks that keep the register honest',
+      title: 'Closeout checks before you hand the register over',
       body: [
         {
           kind: 'ul',
@@ -228,11 +228,11 @@ const pdfMarkupTableGuide = {
   sources: [
     {
       label: 'PolyPDF 1.3.4 (build 16) Markup Table implementation and in-app guidance',
-      note: 'Row fields, status vocabulary, filtering, selection, and export formats re-verified August 19, 2026.'
+      note: 'Covers the row fields, status vocabulary, filtering, selection, and export formats described above.'
     },
     {
-      label: 'Owned PolyPDF clinic-coordination fixture and current-development live-app capture',
-      note: 'The deterministic examples demonstrate the Markup Table, comments, and Open, In Progress, and Completed statuses without claiming an external project-system record.'
+      label: 'The sample clinic coordination sheet shown in this guide',
+      note: 'Three markups in the Markup Table with comments and the Open, In Progress, and Completed statuses.'
     }
   ],
   cta: {

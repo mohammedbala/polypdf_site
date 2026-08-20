@@ -17,7 +17,7 @@ export const landingPages = Object.freeze({
     image: shotTakeoff,
     imageWidth: 1710,
     imageHeight: 1073,
-    imageAlt: 'PolyPDF takeoff worksheet showing 14 items beside a fictional plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
+    imageAlt: 'PolyPDF takeoff worksheet showing 14 items beside a sample plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
     audience: 'For preconstruction, estimating, and trade workflows that need quantities from architectural or engineering PDF sheets.',
     proofPoints: [
       ['Calibrate once', 'Preset or custom scale'],
@@ -154,7 +154,7 @@ export const landingPages = Object.freeze({
     eyebrow: 'Symbol Search (formerly Visual Search)',
     title: 'Find one drawing symbol, then count matching instances across the PDF.',
     lede: 'Capture a symbol from the sheet, let PolyPDF find visual matches, review the results, and commit the accepted set as a count series.',
-    qualifier: 'Symbol Search auto-count is uncapped in both PolyPDF Free and Pro, so you can test it on a real symbol-heavy drawing before buying anything.',
+    qualifier: 'Symbol Search auto-count is uncapped in both PolyPDF Free and Pro, so you can test it on one of your own symbol-heavy drawings before buying anything.',
     image: shotSymbolSearch,
     imageWidth: 1710,
     imageHeight: 1073,
@@ -173,10 +173,10 @@ export const landingPages = Object.freeze({
       ['Review the candidates', 'Inspect the highlighted results and adjust the selection or search threshold when the drawing contains similar-looking symbols.'],
       ['Commit the count series', 'Turn the accepted matches into numbered count annotations that feed the takeoff worksheet and remain visible on the page.']
     ],
-    outcomeTitle: 'A repeatable count with visible evidence on the drawing.',
+    outcomeTitle: 'A repeatable count you can check against the drawing.',
     outcomes: [
       'Works from visual symbol appearance rather than relying on searchable text.',
-      'Keeps the user responsible for reviewing candidate matches before commitment.',
+      'Keeps candidate matches reviewable and adjustable before the count is committed.',
       'Creates numbered count markers that can be audited against the sheet.',
       'Feeds accepted counts into the same worksheet as lengths and areas.',
       'Remains uncapped in the free app as well as Pro.'
@@ -201,7 +201,7 @@ export const landingPages = Object.freeze({
     eyebrow: 'Drawing revision comparison',
     title: 'Compare PDF drawings and make revision changes easier to inspect.',
     lede: 'Bring drawing versions into one desktop review workflow, inspect their differences, and mark the areas that need a decision, RFI, or handoff note.',
-    qualifier: 'Use comparison as the start of a review—not a substitute for checking sheet identity, scale, alignment, and the issued revision record.',
+    qualifier: 'Built for the review that follows an addendum or revised issue: compare the two sheets, then record the decision, RFI, or coordination note on the drawing.',
     image: shotRevisionCompare,
     imageWidth: 1710,
     imageHeight: 1073,

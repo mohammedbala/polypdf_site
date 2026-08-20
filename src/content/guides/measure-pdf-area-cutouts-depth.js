@@ -1,7 +1,7 @@
 import screenshot from '../../assets/screenshots/area-cutouts-depth-currentdev-dark-web.png';
 
 const screenshotCaption =
-  'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode over the public-domain Library of Congress HALS CA-2 sheet “2. 2006 Existing Conditions Plan, Dwight Way to Haste Street.” The turquoise curved boundary, two cutouts, crosshatch, 28,793.49 sq ft net area, 1′-6″ depth, and 43,190.23 cu ft volume are synthetic PolyPDF demonstration annotations—not authoritative quantities, scope, or interpretation of the historic drawing. Courtesy: PGAdesign; Historic American Landscapes Survey, National Park Service; Prints and Photographs Division, Library of Congress; HALS CA-2, sheet 2 of 5. LOC rights advisory: “No known restrictions on images made by the U.S. Government; images copied from other sources may be restricted.”';
+  'PolyPDF 1.3.4 with one curved area boundary, two cutouts subtracted from it, a 28,793.49 sq ft net area, a 1′-6″ depth, and the 43,190.23 cu ft volume that depth produces. The turquoise geometry is an example takeoff traced over a public-domain survey sheet.';
 
 const post = {
   slug: 'measure-pdf-area-cutouts-depth',
@@ -22,7 +22,7 @@ const post = {
   quickAnswer:
     'To measure net PDF area in PolyPDF, calibrate the current page, choose Area, trace and close the outer boundary, then select the measurement. In the Area Cutouts controls, choose Add Cutout and trace each opening fully inside the boundary. PolyPDF subtracts those cutout polygons from the outer area. If you enter a positive real-world Depth, the result changes from area to volume. Hatch pattern and hatch scale change appearance only, not the measured quantity.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4 (build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
@@ -31,7 +31,7 @@ const post = {
     width: 1710,
     height: 1073,
     provenance:
-      'Real current-development product UI over Library of Congress item ca3441, HALS CA-2 sheet 2. The historic sheet is public-domain source material; every turquoise geometry and displayed takeoff value was added synthetically for this feature demonstration. The image is an uncropped 50 percent derivative of the native-maximized capture.'
+      'Base drawing: PGAdesign, Historic American Landscapes Survey, National Park Service; Prints and Photographs Division, Library of Congress; HALS CA-2, sheet 2 of 5.'
   },
   keywords: [
     'measure PDF area',
@@ -67,7 +67,7 @@ const post = {
         {
           kind: 'figure',
           src: screenshot,
-          alt: 'Live PolyPDF feature proof with an outer area boundary, two empty cutouts, and visible measurement controls',
+          alt: 'PolyPDF showing an outer area boundary, two cutouts inside it, and the area measurement controls',
           caption: screenshotCaption,
           width: 1710,
           height: 1073
@@ -135,25 +135,25 @@ const post = {
         {
           kind: 'p',
           text:
-            'The live demonstration uses one synthetic curved outer boundary and two synthetic closed cutouts over the historic HALS sheet. The Records panel displays a net result of 28,793.49 sq ft. Those annotations were placed to exercise PolyPDF’s geometry and display, not to measure paving shown by the historic survey.'
+            'The example above uses one curved outer boundary and two closed cutouts. The Records panel shows a net result of 28,793.49 sq ft, with both openings already subtracted. Your own totals depend on the drawing you start from, the scale you set for that page, and the boundary you decide to trace.'
         },
         {
           kind: 'table',
           caption: 'Example quantity breakdown',
           headers: ['Geometry', 'Calculation', 'Quantity'],
           rows: [
-            ['Outer boundary', 'Synthetic curved path', 'Included in the net-area calculation'],
-            ['Cutout 1', 'Synthetic closed polygon', 'Subtracted from the outer area'],
-            ['Cutout 2', 'Synthetic closed polygon', 'Subtracted from the outer area'],
+            ['Outer boundary', 'Curved path', 'Included in the net-area calculation'],
+            ['Cutout 1', 'Closed polygon', 'Subtracted from the outer area'],
+            ['Cutout 2', 'Closed polygon', 'Subtracted from the outer area'],
             ['Displayed net area', 'Outer curved area − both cutouts', '28,793.49 sq ft']
           ]
         },
         {
           kind: 'formula',
           label: 'Example net area',
-          formula: 'synthetic curved outer area − cutout 1 − cutout 2 = 28,793.49 sq ft net',
+          formula: 'curved outer area − cutout 1 − cutout 2 = 28,793.49 sq ft net',
           explanation:
-            'This is the app’s displayed result for the demonstration geometry. It is not a quantity derived from, or asserted about, the historic Piedmont Way survey.'
+            'PolyPDF subtracts every stored cutout before it displays a total, so the net figure on screen already accounts for both openings.'
         },
         {
           kind: 'p',
@@ -176,7 +176,7 @@ const post = {
           label: 'Volume from net area',
           formula: 'volume = (outer area − cutout areas) × depth',
           explanation:
-            'For the live demonstration, a 1′-6″ depth produces the displayed 43,190.23 cu ft. PolyPDF calculates from the full-precision geometry; multiplying the rounded 28,793.49 sq ft display can differ by one hundredth.'
+            'In the example above, a 1′-6″ depth produces 43,190.23 cu ft. PolyPDF calculates from the full-precision geometry, so multiplying the rounded 28,793.49 sq ft display by hand can differ by a hundredth.'
         },
         {
           kind: 'p',
@@ -197,7 +197,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'The Hatch controls set the pattern, colour, opacity, and scale used to draw the annotation. Increasing hatch scale changes the spacing or size of the pattern; it does not change the outer geometry, the cutouts, the net area, or the depth. The live current-development proof above shows a diagonal crosshatch at 110 percent so the two empty cutouts remain visually obvious.'
+            'The Hatch controls set the pattern, colour, opacity, and scale used to draw the annotation. Increasing hatch scale changes the spacing or size of the pattern; it does not change the outer geometry, the cutouts, the net area, or the depth. The example above uses a diagonal crosshatch at 110 percent so the two cutouts stay easy to see.'
         },
         {
           kind: 'table',
@@ -221,7 +221,7 @@ const post = {
     },
     {
       icon: 'shield',
-      title: 'Accuracy and access limits to keep visible',
+      title: 'Limits worth knowing before you rely on a total',
       body: [
         {
           kind: 'ul',
@@ -229,13 +229,13 @@ const post = {
             'Calibration converts PDF geometry; it cannot repair nonuniform scan distortion, perspective, or a warped original.',
             'A net-area total is only as defensible as its source revision, boundary convention, scale verification, and cutout review.',
             'CSV or PDF export preserves the calculated records, not the reasoning behind an undocumented scope decision.',
-            'The Free edition allows up to three hand-created measurements per document. Symbol Search auto-count remains uncapped and is separate from this manual area workflow.'
+            'The free edition allows up to three hand-created measurements per document. Symbol Search auto-count is free and uncapped, and is separate from this manual area workflow.'
           ]
         },
         {
           kind: 'note',
           text:
-            'The screenshot is a live product feature proof over public-domain historic source material. Its turquoise area, both cutouts, hatch, depth, net-area value, and volume value are synthetic demonstration additions; none is an authoritative quantity, scope decision, field condition, or interpretation of the HALS drawing.'
+            'A measurement is only as accurate as the drawing it is traced on, the calibration set for that page, and the boundary you chose. PolyPDF calculates the geometry you give it; deciding what belongs inside the boundary stays with you.'
         }
       ]
     }
@@ -284,23 +284,23 @@ const post = {
     {
       label: 'Library of Congress item ca3441: Piedmont Way & the Berkeley Property Tract, East of College Avenue between Dwight Way & U.C. Memorial Stadium, Berkeley, Alameda County, CA',
       url: 'https://www.loc.gov/item/ca3441/',
-      note: 'Historic American Landscapes Survey HALS CA-2. LOC marks accessRestricted false and gives this rights advisory: “No known restrictions on images made by the U.S. Government; images copied from other sources may be restricted.”'
+      note: 'Historic American Landscapes Survey HALS CA-2, the collection record for the drawing used in this guide.'
     },
     {
       label: 'Library of Congress HALS CA-2 sheet 2: “2. 2006 Existing Conditions Plan, Dwight Way to Haste Street”',
       url: 'https://www.loc.gov/resource/hhh.ca3441.sheet.00002a/',
-      note: 'PGAdesign, measured drawing, Historic American Landscapes Survey, National Park Service, U.S. Department of the Interior, 2006; Prints and Photographs Division, Library of Congress; HALS CA-2, sheet 2 of 5. Base sheet used beneath the synthetic turquoise PolyPDF demonstration geometry.'
+      note: 'PGAdesign, measured drawing, Historic American Landscapes Survey, National Park Service, U.S. Department of the Interior, 2006; Prints and Photographs Division, Library of Congress; HALS CA-2, sheet 2 of 5. This is the sheet shown beneath the example measurements.'
     },
     {
       label: 'Library of Congress: HABS, HAER, and HALS rights and restrictions',
       url: 'https://guides.loc.gov/p-and-p-rights-and-restrictions/rights#114_habs.html',
-      note: 'LOC guidance for publication rights and the requested acknowledgment format for this measured drawing collection.'
+      note: 'Library of Congress guidance and the credit format used for this drawing collection.'
     }
   ],
   cta: {
     title: 'Test a net-area workflow on your own PDF',
     text:
-      'Download PolyPDF for macOS or Windows, verify one page scale, and use the Free measurement allowance to trace a real boundary and its openings before deciding whether to unlock unlimited measurements.',
+      'Download PolyPDF for macOS or Windows, set the scale on one page, and use the free edition’s measurement allowance to trace a real boundary and its openings before deciding whether to unlock unlimited measurements.',
     buyLabel: 'See the one-time license',
     downloadSource: 'blog_area_cutouts_depth',
     buySource: 'website_blog_area_cutouts_depth'

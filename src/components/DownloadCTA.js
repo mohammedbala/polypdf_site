@@ -82,7 +82,7 @@ const DownloadCTA = ({ source, size = '', onDownload, tone = '' }) => {
             </a>
           ))}
         </div>
-        <p className="dl-meta">PolyPDF runs on Mac and Windows desktops — grab the build for the machine you work on.</p>
+        <p className="dl-meta">PolyPDF runs on Mac and Windows desktops — pick the download for the machine you work on.</p>
         <p className="dl-terms">{FREE_TIER_LIMIT_TEXT}</p>
         {started && <WhileItInstalls platformKey={started} tone={tone} />}
       </div>

@@ -21,7 +21,7 @@ export const guideImageRoutes = [...new Set(articleRoutes
 
 export const shareImageRoutes = [
   ...guideImageRoutes,
-  '/og-image.png?v=20260819-currentdev'
+  '/og-image.png?v=20260819'
 ];
 
 export const discoveryRoutes = ['/robots.txt', '/sitemap.xml', '/llms.txt', '/feed.xml'];
@@ -92,7 +92,7 @@ export async function runPostDeploySmoke({
     if (response.url) {
       assertResponse(response.url === canonicalURL, `${route} redirected away from its canonical URL`);
     }
-    const imageURL = new URL(metadata.image || '/og-image.png?v=20260819-currentdev', 'https://www.polypdf.com/').href;
+    const imageURL = new URL(metadata.image || '/og-image.png?v=20260819', 'https://www.polypdf.com/').href;
     const imageAlt = (metadata.imageAlt
       || 'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription')
       .replaceAll('&', '&amp;')

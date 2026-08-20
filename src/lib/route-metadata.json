@@ -34,7 +34,7 @@
     "description": "Calibrate a PDF drawing from a known dimension, verify the scale on a second span, and avoid common takeoff errors in PolyPDF on Mac or Windows.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/calibrate-pdf-drawing-scale.png?v=20260819-currentdev",
+    "image": "/guides/calibrate-pdf-drawing-scale.png?v=20260819",
     "imageAlt": "PolyPDF dark-mode window showing an 18 PDF point per foot calibration and selected 12-foot verification measurement",
     "imageWidth": 1710,
     "imageHeight": 1073
@@ -44,7 +44,7 @@
     "description": "Find the cause of wrong PDF measurements: page scale, units, endpoints, mixed-scale details, or scan distortion. Includes a practical diagnostic order.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/why-pdf-measurements-are-wrong.png?v=20260819-currentdev",
+    "image": "/guides/why-pdf-measurements-are-wrong.png?v=20260819",
     "imageAlt": "PolyPDF dark mode showing Scale Not set and a 360.00 PDF-point line over a printed 20-foot reference",
     "imageWidth": 1710,
     "imageHeight": 1073
@@ -54,7 +54,7 @@
     "description": "Measure net area in a PDF, subtract multiple cutouts, add a real-world depth for volume, and understand what hatch scale changes in PolyPDF.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/measure-pdf-area-cutouts-depth.png?v=20260819-currentdev",
+    "image": "/guides/measure-pdf-area-cutouts-depth.png?v=20260819",
     "imageAlt": "PolyPDF dark mode showing a turquoise curved and crosshatched demonstration area with two cutouts, 28,793.49 square feet net, and 1 foot 6 inch depth",
     "imageWidth": 1710,
     "imageHeight": 1073
@@ -64,7 +64,7 @@
     "description": "Follow a practical PDF takeoff example: calibrate the plan, measure area and lengths, auto-count symbols, review records, and export CSV or PDF.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/pdf-takeoff-worked-example.png?v=20260819-currentdev",
+    "image": "/guides/pdf-takeoff-worked-example.png?v=20260819",
     "imageAlt": "PolyPDF dark-mode takeoff with a 540 square foot area, 30 foot length, 12 count markers, Records panel, and Markup Table",
     "imageWidth": 1710,
     "imageHeight": 1073
@@ -74,7 +74,7 @@
     "description": "Count repeated symbols in a PDF drawing with PolyPDF Symbol Search, including setup, candidate review, false-positive checks, and takeoff QA.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/count-pdf-symbols.png?v=20260819-currentdev",
+    "image": "/guides/count-pdf-symbols.png?v=20260819",
     "imageAlt": "PolyPDF dark-mode Symbol Search review showing five matched symbols, five selected candidates, and a Count 5 action",
     "imageWidth": 1710,
     "imageHeight": 1073
@@ -84,8 +84,8 @@
     "description": "Organize PDF comments for RFI and punch-list review with PolyPDF Markup Table filters, statuses, clear issue labels, and CSV or PDF exports.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/pdf-markup-table-rfi-punch-list.png?v=20260819-currentdev",
-    "imageAlt": "PolyPDF dark-mode review with a rounded RFI callout, revision cloud, completed rectangle, and three Markup Table rows",
+    "image": "/guides/pdf-markup-table-rfi-punch-list.png?v=20260819",
+    "imageAlt": "A PolyPDF drawing review with an RFI callout, a revision cloud, a completed-work rectangle, and three matching Markup Table rows",
     "imageWidth": 1710,
     "imageHeight": 1073
   },
@@ -94,7 +94,7 @@
     "description": "Compare two PDF drawing revisions in PolyPDF, prepare aligned source files, review detected change clouds, and verify the saved comparison record.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/compare-pdf-drawing-revisions.png?v=20260819-currentdev",
+    "image": "/guides/compare-pdf-drawing-revisions.png?v=20260819",
     "imageAlt": "Dark-mode PolyPDF comparison result with four violet revision clouds, one selected cloud, full cloud style controls, and four visible Markup Table rows",
     "imageWidth": 1710,
     "imageHeight": 1073
@@ -104,8 +104,8 @@
     "description": "Create a fillable AcroForm PDF in PolyPDF with text, checkbox, radio, combo, and list fields, plus testing and compatibility checks.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/create-fillable-pdf-form.png?v=20260819-currentdev",
-    "imageAlt": "PolyPDF dark-mode Forms panel with six authorable field types beside a ten-field site inspection checklist",
+    "image": "/guides/create-fillable-pdf-form.png?v=20260819",
+    "imageAlt": "The PolyPDF Forms panel showing six field types beside a ten-field site inspection checklist",
     "imageWidth": 1710,
     "imageHeight": 1073
   },
@@ -114,8 +114,8 @@
     "description": "Run local, best-effort OCR on scanned PDF drawings in PolyPDF, understand script limits, and verify searchable text before relying on the result.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/ocr-scanned-pdf-drawings.png?v=20260819-currentdev",
-    "imageAlt": "Dark-mode PolyPDF search panel showing three SURFACE results and a selected highlight on the U.S.S. Akron engineering scan after OCR",
+    "image": "/guides/ocr-scanned-pdf-drawings.png?v=20260819",
+    "imageAlt": "PolyPDF search panel showing three SURFACE results and a selected highlight on the U.S.S. Akron engineering scan after OCR",
     "imageWidth": 1710,
     "imageHeight": 1073
   },
@@ -124,8 +124,8 @@
     "description": "Compare certificate-backed PDF signatures, visual marks, and professional seal artwork, including integrity, trust, limits, and a safe issue order.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/digital-signature-vs-visual-signature-vs-seal.png?v=20260819-currentdev",
-    "imageAlt": "Maximized dark-mode PolyPDF Signatures panel showing the reopened synthetic certificate signature as Valid With Changes with level 3 permissions",
+    "image": "/guides/digital-signature-vs-visual-signature-vs-seal.png?v=20260819",
+    "imageAlt": "PolyPDF Signatures panel showing a reopened signed drawing reported as Valid With Changes with level 3 permissions",
     "imageWidth": 1710,
     "imageHeight": 1073
   },
@@ -134,8 +134,8 @@
     "description": "Learn what PolyPDF 1.3.4 redaction and sanitation can remove, what can survive, and how to verify a saved PDF before deciding whether it is safe to share.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/redact-and-sanitize-pdf.png?v=20260819-currentdev",
-    "imageAlt": "Maximized dark-mode PolyPDF reopened redaction result with a black box and Search showing no matches for CASE-ORCHID-742",
+    "image": "/guides/redact-and-sanitize-pdf.png?v=20260819",
+    "imageAlt": "PolyPDF showing a reopened redaction result with a black region and Search reporting no matches for CASE-ORCHID-742",
     "imageWidth": 1710,
     "imageHeight": 1073
   },
@@ -144,18 +144,18 @@
     "description": "Prepare an issued PDF set with page labels, Bates numbering, headers, footers, watermarks, preflight, and final-viewer verification in PolyPDF.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/prepare-issued-pdf-set.png?v=20260819-currentdev",
-    "imageAlt": "Maximized PolyPDF dark-mode window showing a fictional five-sheet issue set with the visible Bates identifier ISSUED-IFC-0101",
+    "image": "/guides/prepare-issued-pdf-set.png?v=20260819",
+    "imageAlt": "PolyPDF showing a five-sheet issue set with the Bates identifier ISSUED-IFC-0101 printed on sheet G-001",
     "imageWidth": 1710,
     "imageHeight": 1073
   },
   "/blog/introducing-polypdf-plugins": {
-    "title": "PolyPDF Plugins: Current Development Preview",
-    "description": "How PolyPDF plugins handle declarative packages, permissions, sideload consent, and why AISC, seals, and PDF Maps remain development-only.",
+    "title": "PolyPDF Plugins: How They Work",
+    "description": "How PolyPDF plugins handle declarative packages, permissions, sideload consent, and the steel-section, seal, and map generators that come with the app.",
     "robots": "index, follow",
     "type": "article",
-    "image": "/guides/introducing-polypdf-plugins.png?v=20260819-currentdev",
-    "imageAlt": "PolyPDF dark-mode Plugins sidebar listing AISC Steel Sections, PDF Maps, and Professional Seal Maker beside an owned blank reference sheet",
+    "image": "/guides/introducing-polypdf-plugins.png?v=20260819",
+    "imageAlt": "The PolyPDF Plugins sidebar listing AISC Steel Sections, PDF Maps, and Professional Seal Maker beside a blank sample sheet",
     "imageWidth": 1710,
     "imageHeight": 1073
   },

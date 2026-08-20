@@ -144,8 +144,8 @@ const FeatureRequests = () => {
             <span className="feature-request-label">Recently shipped</span>
             <h2 id="recently-shipped-title">Customer requests made the 1.3.4 update.</h2>
             <p>
-              These requests came from a real takeoff workflow. They are now available on both Mac
-              and Windows, while the remaining cloud-line request stays under review for a future update.
+              These came in as customer requests and shipped in 1.3.4. They are on both Mac and
+              Windows today, and the cloud line type is still on the list.
             </p>
             <Link to="/versions/" className="feature-request-text-link">
               Read the 1.3.4 release notes <FaArrowRight />

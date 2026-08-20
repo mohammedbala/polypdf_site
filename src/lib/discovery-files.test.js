@@ -3,7 +3,7 @@ import path from 'path';
 import routeMetadata from './route-metadata.json';
 import { blogPosts, blogPostPath } from './blogPosts';
 
-const screenshotImageVersion = '20260819-currentdev';
+const screenshotImageVersion = '20260819';
 
 const readPublic = (name) => fs.readFileSync(path.join(process.cwd(), 'public', name), 'utf8');
 

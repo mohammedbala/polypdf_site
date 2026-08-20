@@ -19,17 +19,17 @@ const createFillablePdfFormGuide = {
   quickAnswer:
     'For an unsigned, unrestricted PDF, open Forms and place Text, Multiline Text, Checkbox, Radio, Combo Box, or List Box fields. Give each a unique name, tooltip, options, flags, and tab order, then test a saved copy in PolyPDF and another target viewer. PolyPDF authors AcroForms; signed or secured PDFs block authoring, and dynamic XFA is preserved but not filled as an ordinary AcroForm.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4 (build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: formsBuilderImage,
-    alt: 'PolyPDF dark-mode Forms panel with six authorable field types beside a ten-field site inspection checklist',
+    alt: 'The PolyPDF Forms panel showing six field types beside a ten-field site inspection checklist',
     caption:
-      'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode on an owned fictional Site Inspection Checklist. The Forms palette shows all six authorable field types beside ten logical AcroForm fields: three text fields, two choice fields, one radio group, and four independent checkboxes. All names and values are fictional.',
+      'The Forms palette holds all six field types you can author, next to a finished ten-field Site Inspection Checklist. That form uses three text fields, two choice fields, one radio group, and four independent checkboxes.',
     width: 1710,
     height: 1073,
     provenance:
-      'Real current-development product UI. The owned one-page form contains no customer data; the image is an uncropped 50 percent derivative of the native-maximized capture.'
+      'The checklist is a sample form we built for this guide, not a real project document.'
   },
   keywords: [
     'create fillable PDF form',
@@ -141,7 +141,7 @@ const createFillablePdfFormGuide = {
         {
           kind: 'p',
           text:
-            'PolyPDF authors AcroForms, not XFA templates. A dynamic XFA form asks a compatible XFA viewer to generate fields at runtime; PolyPDF preserves that data but cannot fill or author those generated fields as ordinary PDF controls. Dynamic XFA therefore remains a specialist compatibility case, not a promise that any government or enterprise form can be converted by opening it.'
+            'PolyPDF authors AcroForms, not XFA templates. A dynamic XFA form asks a compatible XFA viewer to generate its fields at runtime; PolyPDF preserves that data but cannot fill or author those generated fields as ordinary PDF controls. Some government and enterprise forms are built this way, so check the source form before you plan a conversion around it.'
         },
         {
           kind: 'p',
@@ -151,7 +151,7 @@ const createFillablePdfFormGuide = {
         {
           kind: 'note',
           text:
-            'If the form must remain an XFA document for an agency workflow, use the workflow and viewer specified by that agency. Do not treat a visually correct AcroForm copy as proof of XFA submission compatibility.'
+            'If the form must remain an XFA document for an agency workflow, use the workflow and viewer that agency specifies. An AcroForm copy that looks correct will not always be accepted by that submission system.'
         }
       ]
     },
@@ -208,11 +208,11 @@ const createFillablePdfFormGuide = {
   sources: [
     {
       label: 'PolyPDF 1.3.4 (build 16) Forms panel, form-authoring model, and in-app guidance',
-      note: 'Field types, naming rules, authoring gates, read-only behavior, and XFA disclosures re-verified August 19, 2026.'
+      note: 'Covers the field types, naming rules, authoring limits, read-only behavior, and XFA handling described above.'
     },
     {
-      label: 'Owned PolyPDF Site Inspection Checklist and current-development live-app capture',
-      note: 'The screenshot shows six authorable field types and ten logical AcroForm fields in the fictional one-page test form.'
+      label: 'The sample Site Inspection Checklist shown in this guide',
+      note: 'A one-page sample form with ten AcroForm fields across the six authorable field types.'
     }
   ],
   cta: {

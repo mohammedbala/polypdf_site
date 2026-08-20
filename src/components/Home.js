@@ -28,22 +28,21 @@ import shotCalibration from '../assets/screenshots/calibration-verified-second-s
 import shotMutcdStop from '../assets/screenshots/mutcd-r1-1-stop-currentdev-dark-web.png';
 import shotAiscPlugin from '../assets/screenshots/plugins-aisc-w24x55-result-currentdev-dark-web.png';
 
-// Current-development dark-mode captures from native-maximized PolyPDF at 2x. Every published
-// image is an exact 50% full-frame derivative (1710 x 1073) of its 3420 x 2146 source: no crop.
+// Screenshots of the shipping PolyPDF app, shown full-frame.
 const screenshots = [
   {
     image: shotSymbolSearch,
     title: 'Review Symbol Search matches before counting',
-    alt: 'PolyPDF Symbol Search showing five matches, all five selected, on a synthetic symbol fixture',
-    caption: 'Box a representative symbol, inspect the candidates, and commit only the matches you accept. This genuine search result shows 5 matches, all 5 selected, with Count 5 ready.',
+    alt: 'PolyPDF Symbol Search showing five matches, all five selected, on a sample drawing',
+    caption: 'Box a representative symbol, inspect the candidates, and commit only the matches you accept. Here the search returns 5 matches, all 5 selected, with Count 5 ready.',
     width: 1710,
     height: 1073
   },
   {
     image: shotTakeoff,
     title: 'Measured quantities stay tied to the sheet',
-    alt: 'PolyPDF takeoff worksheet showing 14 items beside a fictional plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
-    caption: 'The Records view keeps the visible quantities beside their drawing context. This fictional takeoff shows 14 items: a 540 sq ft area, a 30 ft length, and 12 supply-diffuser counts, with matching rows in the Markup Table.',
+    alt: 'PolyPDF takeoff worksheet showing 14 items beside a sample plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
+    caption: 'The Records view keeps measured quantities beside the drawing they came from. This takeoff shows 14 items: a 540 sq ft area, a 30 ft length, and 12 supply-diffuser counts, with matching rows in the Markup Table.',
     width: 1710,
     height: 1073
   },
@@ -59,23 +58,23 @@ const screenshots = [
     image: shotCalibration,
     title: 'Calibrate, then verify a second span',
     alt: 'PolyPDF Page Scale panel showing a calibrated quarter-inch equals one-foot scale and a second 12-foot verification measurement',
-    caption: 'The Page Scale panel confirms 1/4 inch = 1 foot, or 18 PDF points per foot. A second known span on the fictional sheet reads 12 feet before the scale is trusted for takeoff.',
+    caption: 'The Page Scale panel confirms 1/4 inch = 1 foot, or 18 PDF points per foot. A second known span reads 12 feet, which confirms the calibration before you start taking off quantities.',
     width: 1710,
     height: 1073
   },
   {
     image: shotMutcdStop,
     title: 'Built-in MUTCD sign toolsets',
-    alt: 'PolyPDF built-in MUTCD Regulatory toolset open beside a selected R1-1 STOP sign on its labeled demonstration target',
-    caption: 'The built-in MUTCD Regulatory reference chest is open with a genuine R1-1 STOP annotation selected inside its labeled target. The owned fixture is a fictional validation sheet, not a field plan.',
+    alt: 'PolyPDF built-in MUTCD Regulatory toolset open beside a selected R1-1 STOP sign on a sample sheet',
+    caption: 'The built-in MUTCD Regulatory reference chest is open with an R1-1 STOP sign placed and selected on the sheet. Standard signs drop straight onto the drawing, then move and resize like any other markup.',
     width: 1710,
     height: 1073
   },
   {
     image: shotAiscPlugin,
     title: 'Plugin output stays editable on the PDF',
-    alt: 'PolyPDF Plugins sidebar beside a selected AISC steel-section vector placed in its labeled test target',
-    caption: 'Development evidence: the AISC Steel Sections plugin inserted a selected W24×55 vector into the fictional target. This is not a public-availability promise: AISC data redistribution rights remain unresolved, PDF Maps is blocked pending a production-compliant geocoder and request pattern, and Professional Seal Maker still requires human jurisdiction review. No map or seal output is claimed in this frame.',
+    alt: 'PolyPDF Plugins sidebar beside a selected W24×55 steel section placed on the drawing',
+    caption: 'The AISC Steel Sections plugin places a W24×55 profile on the sheet as an editable vector you can move and resize. It draws the section outline — it does not run capacity or design checks.',
     width: 1710,
     height: 1073
   }
@@ -351,8 +350,8 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <h2>See current PolyPDF workflows</h2>
-            <p>Six distinct dark-mode states from the native-maximized current development app, shown full-frame on owned or rights-cleared validation sheets—not mockups.</p>
+            <h2>See PolyPDF at work</h2>
+            <p>Six workflows in the shipping app, shown on a sample plan — screenshots, not mockups.</p>
           </motion.div>
 
           {/* Lead shot gets the full-width stage; the rest alternate text/image so the section

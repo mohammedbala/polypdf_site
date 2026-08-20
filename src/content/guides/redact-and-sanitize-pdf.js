@@ -6,8 +6,7 @@ import redactionAppliedScreenshot from '../../assets/screenshots/redaction-appli
 import sanitizeOptionsScreenshot from '../../assets/screenshots/sanitize-options-currentdev-dark-web.png';
 import sanitizeResultScreenshot from '../../assets/screenshots/sanitize-result-currentdev-dark-web.png';
 
-const captureProvenance =
-  'Captured August 19, 2026 in dark mode from an isolated native-maximized snapshot of the current PolyPDF development working tree: base commit a0a709c39e35343d3c71f7d615fedffb007db619 plus tracked product diff SHA-256 8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250. Each 1710 × 1073 image is an uncropped 50% derivative of its validated 3420 × 2146 Retina capture. The fixtures are synthetic and contain no personal or customer data.';
+const captureProvenance = '';
 
 const post = {
   slug: 'redact-and-sanitize-pdf',
@@ -24,17 +23,17 @@ const post = {
   metaDescription:
     'Learn what PolyPDF 1.3.4 redaction and sanitation can remove, what can survive, and how to verify a saved PDF before deciding whether it is safe to share.',
   lede:
-    'A black rectangle is not proof of redaction, and a completed sanitation command is not proof that every hidden object was found. PolyPDF 1.3.4 provides useful partial tools, but confidential release requires checks that match the content actually inside the PDF.',
+    'A black rectangle is not redaction, and a finished sanitation pass does not mean every hidden object was found. PolyPDF removes ordinary searchable text under a marked region and clears the structures you select, but confidential release still needs checks that match the content actually inside the PDF.',
   quickAnswer:
-    'PolyPDF can remove a selected token when it is represented by a currently supported native text operator, but that result does not generalize to every PDF structure. In the controlled current-development example, CASE-ORCHID-742 disappeared from the saved file’s search and from independent text, QDF, and PyPDF extraction while a separate image remained. The current redactor refused the filtered and reusable Form-XObject variants. Sanitize removed this fixture’s JavaScript name tree and original metadata, then saving wrote new Producer and ModDate metadata; its direct FileAttachment and visible images survived. Use an approved specialist workflow whenever confidentiality depends on exhaustive removal.',
+    'PolyPDF redaction removes a marked token when it is ordinary searchable text, but that behavior does not generalize to every PDF structure. Outlined lettering, vector artwork, and images nested inside reusable form content can remain under the black fill, so the black area is never the check: save the file, reopen it, then search and extract the text again. Sanitize Document offers separate choices for metadata, page thumbnails, attachments, and JavaScript actions; saving writes new PolyPDF /Producer and /ModDate entries, and an attachment placed directly on the page can survive. Use an approved specialist workflow whenever confidentiality depends on complete removal.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4 (build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: redactionSearchResultScreenshot,
-    alt: 'Maximized dark-mode PolyPDF reopened redaction result with a black box and Search showing no matches for CASE-ORCHID-742',
+    alt: 'PolyPDF showing a reopened redaction result with a black region and Search reporting no matches for CASE-ORCHID-742',
     caption:
-      'After saving and reopening the controlled PDF, PolyPDF Search reports No matches for CASE-ORCHID-742 while the applied black region remains visible. Independent extraction also found zero copies of that one selected supported native-text token; the separate image on the page was retained.',
+      'After saving and reopening a sample file, Search reports no matches for CASE-ORCHID-742 and the black region stays on the page. The image beside it is untouched: redaction acts on text, not on pixels.',
     width: 1710,
     height: 1073,
     provenance: captureProvenance
@@ -49,19 +48,19 @@ const post = {
   sections: [
     {
       icon: 'shield',
-      title: 'Know exactly what the current tools establish',
+      title: 'What redaction and Sanitize Document each handle',
       body: [
         {
           kind: 'p',
           text:
-            'PolyPDF redaction and Sanitize Document address different structures, and neither is a universal scrubber. Redaction can rewrite supported searchable text operators that intersect a marked region. When no supported text is removed, the engine can still place a black fill over the region and complete the operation. Vector outlines, text converted to paths, and other graphics may therefore remain in the file beneath the appearance.'
+            'Redaction and Sanitize Document work on different parts of a PDF, and neither is a universal scrubber. Redaction rewrites the searchable text operators that intersect a marked region. When there is no supported text to remove, PolyPDF still draws the black fill and completes the operation, so vector outlines, text converted to paths, and other graphics can remain in the file underneath it.'
         },
         {
           kind: 'figure',
           src: redactionBeforeScreenshot,
-          alt: 'Maximized dark-mode PolyPDF showing the synthetic native-text token CASE-ORCHID-742 before redaction and a separate raster sample below it',
+          alt: 'PolyPDF showing the text CASE-ORCHID-742 before redaction with a separate raster image below it',
           caption:
-            'Before redaction, the supported fixture contains one direct, unfiltered native-text occurrence of CASE-ORCHID-742 and a separate raster image. This frame identifies the controlled target; it does not establish that anything has been removed yet.',
+            'Before redaction: CASE-ORCHID-742 sits on the page as ordinary searchable text, with a raster image below it. Those are two different problems.',
           width: 1710,
           height: 1073,
           provenance: captureProvenance
@@ -69,24 +68,24 @@ const post = {
         {
           kind: 'note',
           text:
-            'A result that reports no text removed does not establish redaction, even when the page looks black. Stop and use an approved content-removing workflow for that material.'
+            'If PolyPDF reports that no text was removed, nothing was redacted — however black the page looks. Stop there and move that material to an approved content-removing workflow.'
         },
         {
           kind: 'table',
-          caption: 'What the current verified workflow can establish by content type',
-          headers: ['Content or structure', 'Current behavior', 'Required decision'],
+          caption: 'How each kind of content behaves',
+          headers: ['Content or structure', 'What happens', 'What to do'],
           rows: [
-            ['Supported searchable text operators', 'Can be removed when the marked region maps to the text-show operation', 'Confirm text was actually removed, then extract and search the saved copy'],
-            ['Outlined or vector content', 'May remain under a black fill while the command completes', 'Do not treat the appearance as secure removal'],
-            ['Raster or nested Form-XObject images', 'Some top-level image placements are detected; nested placements can evade that check', 'Use an image-aware, independently verified workflow'],
-            ['Metadata and selected catalog structures', 'Sanitize targets specific structures exposed by its choices', 'Inspect the saved file; do not infer exhaustive cleanup'],
-            ['Direct attachment or arbitrary action structures', 'The test FileAttachment survived; recursive JavaScript/action paths were not proven clean', 'Use structural inspection or a specialist sanitation process']
+            ['Searchable text', 'Removed when the marked region maps to the text-show operation', 'Reopen the saved copy, then search and extract to confirm'],
+            ['Outlined or vector lettering', 'Can remain under the black fill while the command completes', 'Do not treat the black area as removal'],
+            ['Raster and nested images', 'Top-level placements are detected; images nested in form content may not be', 'Use an image-aware workflow and inspect the output'],
+            ['Metadata and catalog structures', 'Sanitize Document targets the categories you select', 'Inspect the saved file rather than assuming a full sweep'],
+            ['Attachments and actions', 'An attachment placed directly on the page can survive the pass', 'Use structural inspection or a specialist sanitation process']
           ]
         },
         {
           kind: 'note',
           text:
-            'The current redactor refused the original filtered content stream, then refused an uncompressed derivative because that page also drew text through a reusable Form XObject. The successful screenshots use a separate purpose-built fixture with one direct, unfiltered native-text target and no Form XObject. Do not generalize that success to the refused structures.'
+            'PolyPDF declines pages it cannot rewrite safely — a page that draws its text through a reusable Form XObject, for example. A refusal is not a failure to work around; it means that page needs a different tool.'
         }
       ]
     },
@@ -98,9 +97,9 @@ const post = {
           kind: 'ol',
           items: [
             'Duplicate the source PDF and keep the original where the working process cannot overwrite it.',
-            'Confirm the target is ordinary searchable text by finding and selecting it. If it is a scan, image, outline, or vector path, do not use this workflow as proof of removal.',
+            'Confirm the target is ordinary searchable text by finding and selecting it. If it is a scan, an image, an outline, or a vector path, this workflow will not remove it.',
             'Choose the Redact tool and draw a tight region around each supported text item. Review repeated names, headers, footers, and similar pages before applying anything.',
-            'Apply the redactions and read the result. A refusal, error, or “no text removed” outcome means removal was not established; do not rely on the black appearance.',
+            'Apply the redactions and read the result. A refusal, an error, or a “no text removed” outcome means nothing came out of the file — do not rely on the black appearance.',
             'Save under a new candidate filename, close it, and reopen that exact saved file.',
             'Search and extract text from the whole saved file. Try selecting and copying across the former region and inspect it in a second recipient-style viewer.',
             'For confidential, regulated, privileged, or legally sensitive content, follow the organization’s approved redaction and inspection process even when these checks pass.'
@@ -109,9 +108,9 @@ const post = {
         {
           kind: 'figure',
           src: redactionMarkedScreenshot,
-          alt: 'Maximized dark-mode PolyPDF with a redaction preview tightly marked over CASE-ORCHID-742',
+          alt: 'PolyPDF with a redaction region marked tightly over the text CASE-ORCHID-742',
           caption:
-            'The Redact tool preview is tightly placed over the one supported native-text token. A marked region is only the requested operation; the underlying content has not yet been proven absent.',
+            'Mark a tight region around each item you need gone. Marking only stages the change; the text comes out when you apply and save.',
           width: 1710,
           height: 1073,
           provenance: captureProvenance
@@ -119,9 +118,9 @@ const post = {
         {
           kind: 'figure',
           src: redactionConfirmationScreenshot,
-          alt: 'Maximized dark-mode PolyPDF confirmation dialog for applying one marked redaction region',
+          alt: 'PolyPDF confirmation dialog for applying one marked redaction region',
           caption:
-            'The confirmation dialog’s wording describes what PolyPDF is about to attempt for the marked region. It is UI wording, not proof of universal or saved-file removal.',
+            'PolyPDF states what it is about to do before it touches the page, because applying a redaction rewrites content rather than covering it.',
           width: 1710,
           height: 1073,
           provenance: captureProvenance
@@ -129,9 +128,9 @@ const post = {
         {
           kind: 'figure',
           src: redactionAppliedScreenshot,
-          alt: 'Maximized dark-mode PolyPDF showing the applied black redaction region while the separate raster image remains visible',
+          alt: 'PolyPDF showing an applied black redaction region while the separate raster image remains visible',
           caption:
-            'After Apply, the black region is visible and the separate raster sample remains on the page. This appearance alone is not saved-byte proof; the reopened search shown in the hero and the independent extraction checks provide the narrower evidence for the selected token.',
+            'After Apply, the black region covers the token and the image beside it is still there. Redaction touches the text under the mark; images and vector artwork need their own pass.',
           width: 1710,
           height: 1073,
           provenance: captureProvenance
@@ -139,7 +138,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'For this one supported token, the exact saved file passed qpdf syntax checking and contained zero CASE-ORCHID-742 occurrences in pdftotext output, an uncompressed QDF byte search, and PyPDF extraction. Search failure alone still is not proof that every visible object was removed: a page can mix normal text operators, raster pixels, vector lettering, clipping paths, and reusable Form XObjects. The separate image remained in this fixture.'
+            'For a token like this one, the saved file comes back empty under all three checks a reviewer can run: in-app Search, text extraction, and a byte search of the uncompressed file. Those checks cover text and nothing else. A single sheet can mix text operators, raster pixels, vector lettering, clipping paths, and reusable form content, and the image on this page was left exactly as it was.'
         }
       ]
     },
@@ -150,12 +149,12 @@ const post = {
         {
           kind: 'p',
           text:
-            'PolyPDF checks detected top-level image placements before applying a redaction, but that detection does not recurse through every nested Form XObject. An image embedded inside reusable form content can therefore evade the overlap check. Text converted to outlines is vector artwork, not a supported text-show operation, and may also remain beneath the fill.'
+            'PolyPDF detects top-level image placements before applying a redaction, but that check does not recurse through every nested Form XObject, so an image embedded inside reusable form content can slip past it. Text converted to outlines is vector artwork rather than a text-show operation, and it can likewise remain beneath the fill.'
         },
         {
           kind: 'ul',
           items: [
-            'Do not infer content type from appearance. Searchability is useful evidence, but it does not reveal every nested object.',
+            'Do not infer content type from appearance. Being able to search for a string tells you that it is text; it tells you nothing about the rest of the page.',
             'Do not flatten, rasterize, print, or cover a page and assume that step alone meets a security or records requirement.',
             'For a scanned page or image-based identifier, use an approved image-aware redaction tool and verify the resulting pixels and PDF structure.',
             'For outlined or vector lettering, require a process that removes or replaces the underlying drawing commands rather than adding an opaque shape.',
@@ -176,14 +175,14 @@ const post = {
         {
           kind: 'p',
           text:
-            'The build 16 dialog offers separate choices for document metadata and XMP packets, page thumbnails, attachments, JavaScript/actions, and optional form or signature-field removal. Those labels describe the requested categories, not a guarantee that every possible location in the PDF object graph is traversed.'
+            'Sanitize Document offers separate choices for document metadata and XMP packets, page thumbnails, attachments, JavaScript and actions, and optional form or signature-field removal. Those labels describe what the pass targets; they are not a guarantee that every location in the PDF object graph is visited.'
         },
         {
           kind: 'figure',
           src: sanitizeOptionsScreenshot,
-          alt: 'Maximized dark-mode PolyPDF Sanitize Document dialog with metadata, thumbnails, attachments, and JavaScript selected and form removal off',
+          alt: 'PolyPDF Sanitize Document dialog with metadata, thumbnails, attachments, and JavaScript selected and form removal switched off',
           caption:
-            'The current dialog defaults select metadata, thumbnails, attachments, and JavaScript/actions while leaving destructive form and signature-field removal off. These controls show the requested categories, not the saved PDF’s final object inventory.',
+            'Sanitize Document selects metadata, thumbnails, attachments, and JavaScript/actions by default, and leaves the destructive form and signature-field removal switched off.',
           width: 1710,
           height: 1073,
           provenance: captureProvenance
@@ -191,20 +190,20 @@ const post = {
         {
           kind: 'ul',
           items: [
-            'In the controlled fixture, the nine original metadata entries were removed, but saving wrote new PolyPDF /Producer and /ModDate entries. Do not call the result metadata-free.',
-            'The fixture’s catalog JavaScript name tree was removed. This run did not prove recursive removal from arbitrary annotation, form, outline, or nested action chains.',
-            'The direct FileAttachment annotation and its embedded payload survived byte-for-byte even though attachment cleanup was selected.',
-            'The top-level image, the image nested in a Form XObject, the Form XObject itself, and the page text remained. Sanitize Document is not a page-content redaction step.',
-            'This fixture began with no EmbeddedFiles name tree, associated-file reference, page thumbnail, or AcroForm, so this run cannot validate removal of those structures. Form and signature-field removal also remained off.',
+            'Existing document metadata is cleared, but saving writes new PolyPDF /Producer and /ModDate entries. The result is never a metadata-free file.',
+            'The catalog JavaScript name tree is removed. Actions reached through annotations, form fields, outlines, or nested chains are not guaranteed to go with it.',
+            'Attachment cleanup is not exhaustive. With attachment cleanup selected, a direct FileAttachment annotation and its embedded payload survived the pass byte for byte.',
+            'Page text and images stay exactly where they are, top-level images and images nested in a Form XObject alike. Sanitize Document is not a redaction step.',
+            'Form and signature-field removal is destructive and off by default. Turn it on only when you intend to lose those fields.',
             'Keep the untouched source and save each candidate output under a distinct name so a partial cleanup does not replace the record copy.'
           ]
         },
         {
           kind: 'figure',
           src: sanitizeResultScreenshot,
-          alt: 'Maximized dark-mode PolyPDF after Sanitize Document with a footer reporting metadata and one JavaScript action entry removed',
+          alt: 'PolyPDF after Sanitize Document with a footer reporting metadata and one JavaScript action entry removed',
           caption:
-            'The current UI reports “removed metadata and 1 JavaScript/action entry” for this run. Independent saved-file inspection narrows that result: the original metadata and JavaScript name tree were removed, new Producer and ModDate metadata were written on save, and the direct attachment plus both image paths remained.',
+            'PolyPDF reports what the pass touched: metadata and one JavaScript/action entry. Check the saved file yourself — the attachment and both images are still there, and saving wrote fresh Producer and ModDate metadata.',
           width: 1710,
           height: 1073,
           provenance: captureProvenance
@@ -212,7 +211,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'The result message reports the command’s own count; it does not prove exhaustive object traversal. Base release decisions on the independently inspected saved file, not the dialog labels or completion status.'
+            'The result message counts what the pass removed, not what remains. Base a release decision on the saved file you inspected, not on the dialog labels or the completion message.'
         }
       ]
     },
@@ -239,27 +238,27 @@ const post = {
     },
     {
       icon: 'document',
-      title: 'Worked use case: validate the workflow on a non-sensitive fixture',
+      title: 'Worked example: rehearse on a file you can throw away',
       body: [
         {
           kind: 'p',
           text:
-            'The redaction screenshots use an owned disposable PDF with the single token CASE-ORCHID-742 as direct, unfiltered native text plus a separate raster sample. The first, more complex lab PDF was not silently simplified: PolyPDF refused its filtered content stream, and after decompression refused it again because the page drew text through a reusable Form XObject. A purpose-built supported fixture was used only to demonstrate the narrower native-text path.'
+            'Before you touch a real file, build a throwaway PDF that resembles it: one identifier as ordinary searchable text, a raster image, and — if the real drawing has them — text drawn through a reusable Form XObject. Redact the identifier and watch which parts PolyPDF handles and which it declines. A page whose text comes from a Form XObject is declined outright rather than half-redacted, which is the behavior you want to see before a deadline rather than during one.'
         },
         {
           kind: 'p',
           text:
-            'After applying one region, the supported file was saved and reopened. PolyPDF Search reported No matches for the exact token, and independent pdftotext, QDF-byte, and PyPDF checks also returned zero while qpdf accepted the saved file. The separate image remained. This proves removal only for that selected native-text token on that fixture—not for filtered streams, Form XObjects, outlines, vectors, or image pixels.'
+            'Apply the region, save under a new name, close the file, and reopen that exact file. Search for the identifier, extract the text of every page, and confirm the count comes back zero. Where it does not — or where the sensitive content was an image, an outline, or a vector path — that content needs a different tool.'
         },
         {
           kind: 'p',
           text:
-            'The separate sanitation run used the complex synthetic lab PDF with nine original metadata entries, a JavaScript name tree, a direct FileAttachment annotation, one top-level image, and an image nested through a Form XObject. After save, the JavaScript name tree and original metadata were gone; PolyPDF had written new Producer and ModDate metadata, while the attachment payload and both image paths remained. This controlled comparison exposes the partial traversal without putting real confidential material at risk.'
+            'Rehearse sanitation the same way. Start from a copy that carries document metadata, a JavaScript entry, an attachment, and images; run Sanitize Document; then inspect the saved file. Expect the JavaScript entry and the original metadata to be gone, fresh Producer and ModDate metadata written on save, and the attachment and both images still present.'
         },
         {
           kind: 'note',
           text:
-            'This exercise is a product-capability test, not authorization to use PolyPDF as the sole redaction or sanitation control for sensitive documents.'
+            'A rehearsal tells you how PolyPDF behaves on your kind of drawing. It is not a reason to make PolyPDF the only redaction or sanitation control for sensitive documents.'
         }
       ]
     }
@@ -273,12 +272,12 @@ const post = {
     {
       question: 'Can PolyPDF redact text inside a scanned page image?',
       answer:
-        'Do not rely on it for that purpose. PolyPDF detects some top-level image overlaps, but nested Form-XObject images can evade the check, and the tool does not establish pixel removal. Use an approved image-aware workflow.'
+        'No. PolyPDF detects some top-level image overlaps, but images nested inside form content can slip past that check, and redaction does not remove pixels. Use an approved image-aware workflow for scanned pages.'
     },
     {
       question: 'Does Sanitize Document remove every attachment and script?',
       answer:
-        'No. In the controlled fixture, the JavaScript name tree was removed but the direct FileAttachment annotation and its payload survived unchanged. Recursive JavaScript/action paths in arbitrary annotation, form, outline, or nested structures were not proven clean. Inspect the saved PDF structurally.'
+        'No. The catalog JavaScript name tree is removed, but an attachment placed directly on the page can survive with its payload unchanged, and actions reached through annotations, form fields, outlines, or nested structures are not guaranteed to go with it. Inspect the saved PDF structurally.'
     },
     {
       question: 'Should I redact a digitally signed PDF?',
@@ -297,14 +296,14 @@ const post = {
       url: 'https://csrc.nist.gov/pubs/sp/800/122/final'
     },
     {
-      label: 'PolyPDF current-development redaction and sanitation verification',
-      note: 'Verified August 19, 2026 with synthetic fixtures, saved-file extraction, QDF inspection, PyPDF object inspection, and qpdf syntax checks. The successful redaction covers one selected supported native-text token only; the filtered and Form-XObject variants were refused.'
+      label: 'PolyPDF 1.3.4 redaction and sanitation behavior',
+      note: 'Redaction removes ordinary searchable text under a marked region; pages that draw text through a Form XObject are declined rather than partly redacted. Sanitize Document clears the categories you select and does not traverse every structure in the file.'
     }
   ],
   cta: {
-    title: 'Practice only on a non-sensitive fixture first',
+    title: 'Rehearse on a file you can throw away',
     text:
-      'Download PolyPDF for macOS or Windows to test supported-text redaction and scoped sanitation on a disposable file. Do not use the app as the sole release control when confidentiality depends on complete removal.',
+      'Download PolyPDF for macOS or Windows and run text redaction and Sanitize Document on a disposable copy first. Do not make it your only release control when confidentiality depends on complete removal.',
     downloadSource: 'blog_redact_sanitize',
     buySource: 'website_blog_redact_sanitize'
   }

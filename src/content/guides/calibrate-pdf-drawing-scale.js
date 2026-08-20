@@ -2,9 +2,6 @@ import calibratedVerificationScreenshot from '../../assets/screenshots/calibrati
 import knownDistanceDialogScreenshot from '../../assets/screenshots/calibration-known-distance-dialog-currentdev-dark-web.png';
 import uncalibratedScreenshot from '../../assets/screenshots/calibration-uncalibrated-currentdev-dark-web.png';
 
-const captureProvenance =
-  'Live PolyPDF 1.3.4 (build 16) capture from the exact current development working-tree snapshot on macOS (base a0a709c; tracked product-diff SHA-256 8d9daab), captured August 19, 2026 with the owned fictional PolyPDF Evidence Lab measurement-diagnostics fixture; no customer data.';
-
 const post = {
   slug: 'calibrate-pdf-drawing-scale',
   title: 'How to Calibrate a PDF Drawing Scale',
@@ -15,7 +12,7 @@ const post = {
   readingTime: '8 min read',
   tag: 'Measure & Takeoff',
   excerpt:
-    'Set an accurate PDF drawing scale from a printed ratio or a known dimension, then prove it with a second reference before starting takeoff.',
+    'Set an accurate PDF drawing scale from a printed ratio or a known dimension, then check it against a second reference before starting takeoff.',
   metaTitle: 'How to Calibrate a PDF Drawing Scale | PolyPDF',
   metaDescription:
     'Calibrate a PDF drawing from a known dimension, verify the scale on a second span, and avoid common takeoff errors in PolyPDF on Mac or Windows.',
@@ -24,14 +21,14 @@ const post = {
   quickAnswer:
     'To calibrate a PDF drawing, open the page in PolyPDF, choose Measurements › Scale, and either apply the scale notation printed on the sheet or choose Calibrate by Drawing Line. For line calibration, snap the two endpoints to a known span, enter its real-world length, and then measure a different labeled span. Do not begin takeoff until that second value agrees within the tolerance your work requires.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4 (build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: calibratedVerificationScreenshot,
     alt: 'PolyPDF dark-mode window showing an 18 PDF point per foot calibration and selected 12-foot verification measurement',
     caption:
-      'Verified result: the Page Scale card reports 18 PDF pt per ft, while a second, independently drawn 216-point span reads 12′-0″ and is selected with its full measurement style controls visible.',
-    provenance: captureProvenance,
+      'The Page Scale card reports 18 PDF pt per ft, and a second, independently drawn 216-point span reads 12′-0″ with its measurement style controls open.',
+    provenance: 'The screenshots in this guide use a sample plan sheet.',
     width: 1710,
     height: 1073
   },
@@ -66,8 +63,7 @@ const post = {
           src: uncalibratedScreenshot,
           alt: 'PolyPDF dark-mode window showing Scale not set beside printed 20-foot and 12-foot plan dimensions',
           caption:
-            'Before calibration, the Page Scale card truthfully says “Scale not set,” while the fixture exposes two printed references: a 20′-0″ horizontal span for calibration and a separate 12′-0″ vertical span for verification.',
-          provenance: captureProvenance,
+            'Before calibration, the Page Scale card reads “Scale not set.” This sheet prints two references: a 20′-0″ horizontal span to calibrate from, and a separate 12′-0″ vertical span to check the result against.',
           width: 1710,
           height: 1073
         }
@@ -84,7 +80,7 @@ const post = {
             'Open the Measurements panel, choose the Scale view, and confirm the page number shown in the Page Scale card.',
             'Under “The sheet does not,” choose Calibrate by Drawing Line.',
             'Click or drag from the first known endpoint to the second. Use a horizontal or vertical span when possible because its endpoints are usually easier to identify.',
-            'In Calibrate Page Scale, enter the real-world Known Distance. In the verified feet-and-inches workflow below, the bare value 20 is read as 20 feet.',
+            'In Calibrate Page Scale, enter the real-world Known Distance. With the feet-and-inches format active, the bare value 20 is read as 20 feet.',
             'Confirm the card says Calibrated and shows the captured ratio in PDF points per base unit.',
             'Switch to a length measurement tool and measure a second labeled dimension that was not used for calibration.'
           ]
@@ -95,29 +91,28 @@ const post = {
           alt: 'PolyPDF Calibrate Page Scale dialog showing 360 captured PDF points and a known distance of 20 feet',
           caption:
             'After snapping across the printed 20′-0″ reference, PolyPDF reports “Captured 360 PDF points between snapped endpoints.” The Known Distance field contains 20, interpreted as feet in the active ft-in format.',
-          provenance: captureProvenance,
           width: 1710,
           height: 1073
         },
         {
           kind: 'note',
           text:
-            'A green “Calibrated” state confirms that a scale was saved; it does not independently prove that the line or typed distance was correct. The second known dimension is the practical proof.'
+            'A green “Calibrated” state means a scale was saved. It does not mean the line or the typed distance was right, which is why the second known dimension matters.'
         }
       ]
     },
     {
       icon: 'document',
-      title: 'Worked calibration: the owned Evidence Lab fixture',
+      title: 'Worked calibration: 20 feet across 360 points',
       body: [
         {
           kind: 'p',
           text:
-            'The owned fictional measurement-diagnostics fixture prints a 20′-0″ horizontal main-plan dimension. Snapping to its two endpoints captures exactly 360 PDF points. Entering 20 feet makes the page conversion explicit rather than assuming the printed 1/4-inch scale survived export or scanning.'
+            'The sample sheet prints a 20′-0″ horizontal dimension on the main plan. Snapping to its two endpoints captures exactly 360 PDF points. Entering 20 feet makes the page conversion explicit rather than assuming the printed 1/4-inch scale survived export or scanning.'
         },
         {
           kind: 'formula',
-          label: 'Evidence Lab calibration',
+          label: 'The calibration math',
           formula: '360 PDF pt ÷ 20 ft = 18 PDF pt per ft',
           explanation:
             'The saved Page Scale card therefore reports 18 PDF pt per ft. A different 216-point vertical span should convert to 12 feet: 216 PDF pt ÷ 18 PDF pt/ft = 12 ft.'
@@ -125,7 +120,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'That independent vertical measurement renders as exactly 12′-0″, matching the fixture’s printed dimension. This proves the calculation and interaction sequence for this controlled file; it does not prove that an unrelated production drawing is undistorted. On real work, repeat the check on a second labeled span and stop to investigate when the result falls outside the tolerance required for the takeoff.'
+            'That independent vertical measurement reads exactly 12′-0″, matching the printed dimension on the sheet. On your own drawings, run the same check on a second labeled span and stop to investigate when the result falls outside the tolerance your takeoff requires. Accuracy depends on the drawing itself, the calibration you set, and where you place each endpoint.'
         }
       ]
     },
@@ -195,7 +190,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'The Free edition includes calibration and up to three hand-created measurements per document. Symbol Search auto-count is uncapped, so you can test a real counting workflow without consuming that manual-measurement allowance.'
+            'The free edition includes calibration and up to three hand-created measurements per document. Symbol Search auto-count is uncapped, so counting symbols does not consume that manual-measurement allowance.'
         }
       ]
     }
@@ -239,9 +234,9 @@ const post = {
   ],
   cta: {
     eyebrow: 'Verify the scale on your own drawing',
-    title: 'Try a real calibration before you commit to a takeoff',
+    title: 'Calibrate your own drawing before you commit to a takeoff',
     text:
-      'PolyPDF runs on macOS and Windows. Calibration is included in Free, so you can check a real page and its second reference dimension first.',
+      'PolyPDF runs on macOS and Windows. Calibration is included in the free edition, so you can set the scale on your own page and check its second reference dimension first.',
     primaryLabel: 'Download PolyPDF Free',
     primaryHref: '/#download',
     secondaryLabel: 'See the measurement workflow',

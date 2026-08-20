@@ -55,7 +55,7 @@ test('BlogPosting schema uses each post evidence image and reviewed dates', () =
     });
     expect(article.image).toMatchObject({
       '@type': 'ImageObject',
-      url: `https://www.polypdf.com/guides/${entry.slug}.png?v=20260819-currentdev`,
+      url: `https://www.polypdf.com/guides/${entry.slug}.png?v=20260819`,
       width: entry.heroImage.width,
       height: entry.heroImage.height,
       caption: entry.heroImage.caption

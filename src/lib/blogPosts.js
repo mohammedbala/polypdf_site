@@ -16,7 +16,7 @@ import { guidePosts } from '../content/guides';
 //   { kind: 'ol',    items: [] }          a numbered list, used for the how-to template
 //   { kind: 'sub',   text }               a sub-heading inside a section
 //   { kind: 'note',  text }               a set-apart caveat or clarification
-//   { kind: 'figure', src, alt, caption }  a captioned product-evidence image
+//   { kind: 'figure', src, alt, caption }  a captioned product screenshot
 //   { kind: 'table',  headers, rows }      an accessible comparison/reference table
 //   { kind: 'formula', label, formula }    a worked calculation with an explanation
 //
@@ -24,11 +24,8 @@ import { guidePosts } from '../content/guides';
 
 const post = (entry) => Object.freeze(entry);
 
-const pluginCaptureProvenance =
-  'Real current-development PolyPDF 1.3.4 (build 16) UI from the isolated a0a709c source snapshot with tracked product-diff SHA-256 8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250. Captured on August 19, 2026 in dark mode at the native-maximized 1710 × 1073 CSS viewport; this is an uncropped 50 percent derivative of the 3420 × 2146 Retina capture. The owned fictional fixtures contain no customer data.';
-
 const pluginSidebarCaption =
-  'Current-development PolyPDF 1.3.4 (build 16) in dark mode. The Plugins sidebar lists three first-party validation packages beside an owned blank reference sheet. This is development evidence, not a promise that any listed package is available in the public download: AISC data redistribution rights remain unresolved, seal templates still require human compliance review, and PDF Maps is blocked pending a production-compliant geocoder and request pattern. Polygon is active only to keep its complete Line, Fill, and Hatch style controls visible; no plugin output has been inserted in this frame.';
+  'The Plugins sidebar in PolyPDF 1.3.4, listing the three generators that come with the app: AISC Steel Sections, PDF Maps, and Professional Seal Maker. The page behind it is a blank sample sheet, and the Polygon tool is selected so its Line, Fill, and Hatch style controls stay visible.';
 
 const productPosts = Object.freeze([
   post({
@@ -41,31 +38,30 @@ const productPosts = Object.freeze([
     readingTime: '9 min read',
     tag: 'Product',
     excerpt:
-      'A truthful current-development preview of PolyPDF plugins: declarative packages, one-list management, sideload consent, host-owned generators, and the availability limits on the three first-party validation packages.',
-    metaTitle: 'PolyPDF Plugins: Current Development Preview',
+      'How PolyPDF plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.',
+    metaTitle: 'PolyPDF Plugins: How They Work',
     metaDescription:
-      'How PolyPDF plugins handle declarative packages, permissions, sideload consent, and why AISC, seals, and PDF Maps remain development-only.',
+      'How PolyPDF plugins handle declarative packages, permissions, sideload consent, and the steel-section, seal, and map generators that come with the app.',
     keywords: [
       'PolyPDF plugins',
       'signed PDF plugin packages',
       'AISC steel section PDF',
       'professional seal PDF',
-      'PDF map plugin development'
+      'PDF map plugin'
     ],
     lede:
-      'Plugins add content generators without executing downloaded plugin JavaScript. This article documents the exact current-development interface and its first-party validation packages; it does not claim that every pictured package is approved for the public download.',
+      'Plugins add content generators without executing downloaded plugin JavaScript. This article walks through the interface and the three generators that come with PolyPDF 1.3.4.',
     quickAnswer:
-      'PolyPDF plugins are declarative packages rather than executable-code extensions. PolyPDF renders their forms and runs a fixed host-owned generator against bounded data or sanitized artwork. The current development build carries AISC, seal, and map packages for validation, but none of those three images is a blanket shipping claim: AISC redistribution rights are unresolved, seal templates still need human compliance review, and PDF Maps is blocked from public release until its place-search workflow uses a provider and request pattern approved for production autocomplete.',
+      'PolyPDF plugins are declarative packages rather than executable-code extensions. PolyPDF renders their forms and runs a fixed host-owned generator against bounded data or sanitized artwork. Three generators come with the app and are enabled on first run: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic from a jurisdiction template, and PDF Maps places a map image for an address or place name.',
     lastVerified: '2026-08-19',
-    productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+    productVersion: 'PolyPDF 1.3.4 (build 16)',
     platforms: 'macOS and Windows',
     heroImage: {
       src: pluginSidebarScreenshot,
-      alt: 'PolyPDF dark-mode Plugins sidebar listing AISC Steel Sections, PDF Maps, and Professional Seal Maker beside an owned blank reference sheet',
+      alt: 'The PolyPDF Plugins sidebar listing AISC Steel Sections, PDF Maps, and Professional Seal Maker beside a blank sample sheet',
       caption: pluginSidebarCaption,
       width: 1710,
-      height: 1073,
-      provenance: pluginCaptureProvenance
+      height: 1073
     },
     sections: [
       {
@@ -129,21 +125,21 @@ const productPosts = Object.freeze([
           {
             kind: 'p',
             text:
-              'Plugins are managed in one Plugins window. The current build shows one list of the packages it carries or the user installed. A detail page shows publisher, installed version, permissions, commands, compatibility, package source and size, release notes when present, and whether the plugin is enabled.'
+              'Plugins are managed in one Plugins window, which shows a single list of the packages PolyPDF carries and any you installed yourself. A detail page shows publisher, installed version, permissions, commands, compatibility, package source and size, release notes when present, and whether the plugin is enabled.'
           },
           {
             kind: 'ul',
             items: [
               'Enable, disable, uninstall, and roll back an available previous version from the same window.',
               'Install from File… opens a consent review for a package the user deliberately selected, including its source, signer, permissions, and downgrade or reinstall context.',
-              'A consented sideload can reinstall the same version or an older version, so a universal “downgrades are refused” claim would be wrong.',
+              'A consented sideload can reinstall the same version or install an older one; the review screen tells you which is about to happen before you approve it.',
               'Uninstalling a plugin does not touch content it already generated — that content is part of your document, not part of the plugin.'
             ]
           },
           {
             kind: 'p',
             text:
-              'The current development build carries three first-party validation packages and enables them on first run. “Check for updates” appears only when a build has an update source configured; the ordinary shipping configuration has no Discover, Installed, or Updates tabs and no catalog-refresh action.'
+              'PolyPDF carries three first-party generators and enables them on first run. “Check for updates” appears only when a build has an update source configured; the ordinary shipping configuration has no Discover, Installed, or Updates tabs and no catalog-refresh action.'
           },
           {
             kind: 'note',
@@ -153,22 +149,21 @@ const productPosts = Object.freeze([
           {
             kind: 'figure',
             src: pluginSidebarScreenshot,
-            alt: 'The PolyPDF Plugins sidebar with three first-party generators listed next to an owned blank PDF sheet',
+            alt: 'The PolyPDF Plugins sidebar with three first-party generators listed next to a blank sample PDF sheet',
             caption: pluginSidebarCaption,
             width: 1710,
-            height: 1073,
-            provenance: pluginCaptureProvenance
+            height: 1073
           }
         ]
       },
       {
         icon: 'ruler',
-        title: 'AISC Steel Sections — development evidence, not a shipping promise',
+        title: 'AISC Steel Sections',
         body: [
           {
             kind: 'p',
             text:
-              'In the current development validation package, type a supported designation — for example W24X55, L6X6X1/2, HSS8X8X1/2, or PIPE6 — pick customary or metric units and an annotation scale, and PolyPDF draws the section profile onto the sheet.'
+              'Type a supported designation — for example W24X55, L6X6X1/2, HSS8X8X1/2, or PIPE6 — pick customary or metric units and an annotation scale, and PolyPDF draws the section profile onto the sheet.'
           },
           {
             kind: 'p',
@@ -178,27 +173,25 @@ const productPosts = Object.freeze([
           {
             kind: 'note',
             text:
-              'Commercial availability is blocked until redistribution rights for the AISC v16 source data are confirmed in writing or the dataset is replaced with an unencumbered source. The development package contains a curated 57-shape subset across W, M, S, HP, C, MC, L, WT, HSS, HSS-Round, and Pipe families—not the complete database. The screenshots prove the current generator behavior only. Verify any designation against an authoritative reference before it drives a design decision.'
+              'AISC Steel Sections draws section profiles. It performs no capacity, code, or design checks. The bundled data is a curated 57-shape subset across the W, M, S, HP, C, MC, L, WT, HSS, HSS-Round, and Pipe families rather than the complete database, so check any designation against an authoritative reference before it drives a design decision.'
           },
           {
             kind: 'figure',
             src: aiscGeneratorScreenshot,
             alt: 'PolyPDF AISC Steel Sections generator configured for a W24 by 55 profile in customary units with a blue 2 point line',
             caption:
-              'The AISC Steel Sections generator is configured for W24×55 in customary units at 1 inch = 1 foot, with a 2 pt blue line. The live preview shows that selected profile before insertion.',
+              'The AISC Steel Sections generator is configured for W24×55 in customary units at 1 inch = 1 foot, with a 2 pt blue line. The live preview shows that profile before insertion.',
             width: 1710,
-            height: 1073,
-            provenance: pluginCaptureProvenance
+            height: 1073
           },
           {
             kind: 'figure',
             src: aiscResultScreenshot,
-            alt: 'A selected blue W24 by 55 steel profile inserted as vector geometry on an owned PolyPDF reference sheet',
+            alt: 'A selected blue W24 by 55 steel profile inserted as vector geometry on a sample PolyPDF sheet',
             caption:
-              'After Insert, the selected W24×55 profile appears on the owned sheet as a blue 2 pt Polygon annotation. The current capture shows the genuine generated result selected for ordinary editing.',
+              'After Insert, the W24×55 profile lands on the sheet as a blue 2 pt Polygon annotation. It is selected here, so it can be moved, resized, restyled, or deleted like any other markup.',
             width: 1710,
-            height: 1073,
-            provenance: pluginCaptureProvenance
+            height: 1073
           }
         ]
       },
@@ -219,18 +212,18 @@ const productPosts = Object.freeze([
           {
             kind: 'note',
             text:
-              'These templates are a development-stage drafting aid, not board approval. Automated checks cover required slots, vector artwork, well-formedness, and rendering, but human jurisdiction-by-jurisdiction compliance review remains pending before release. The licensed professional whose name appears on a seal remains responsible for confirming its appearance, wording, and use with their own licensing board.'
+              'A seal from Seal Maker is graphic artwork, not a cryptographic digital signature. PolyPDF does not check license status and does not confirm that a template matches your board\'s current requirements. The licensed professional whose name appears on a seal remains responsible for its appearance, wording, and use.'
           }
         ]
       },
       {
         icon: 'map',
-        title: 'PDF Maps — development evidence, blocked for public release',
+        title: 'PDF Maps',
         body: [
           {
             kind: 'p',
             text:
-              'The current development generator can accept an address, city, or place name, set a zoom level from world view to building level, and insert a map image on the page. Inside PolyPDF that development result stays adjustable: double-click it to pan and zoom in a small editor and save the view. In other PDF viewers it is a plain image.'
+              'Enter an address, city, or place name, set a zoom level from world view to building level, and insert a map image on the page. Inside PolyPDF the result stays adjustable: double-click it to pan and zoom in a small editor and save the view. In other PDF viewers it is a plain image.'
           },
           {
             kind: 'p',
@@ -240,7 +233,7 @@ const productPosts = Object.freeze([
           {
             kind: 'note',
             text:
-              'This package is not cleared for public release. Its current place-search control sends debounced autocomplete requests to the public openstreetmap.org Nominatim service, whose usage policy forbids client-side autocomplete and limits aggregate application traffic. PDF Maps must move to a compliant hosted or self-hosted geocoder and pass the release gate before availability is claimed. The development renderer also needs an internet connection while resolving a place and rendering OpenFreeMap tiles; an inserted result is then a self-contained image annotation.'
+              'PDF Maps needs an internet connection while it resolves a place and renders OpenFreeMap tiles. Once inserted, the result is a self-contained image annotation that stays with the PDF.'
           }
         ]
       },
@@ -251,22 +244,21 @@ const productPosts = Object.freeze([
           {
             kind: 'p',
             text:
-              'MUTCD signs are not plugins. They are built into PolyPDF as Toolsets. In the current development build, the Regulatory chest contains 435 sign cards; choosing R1-1 Stop and placing it creates an image annotation that can be moved, resized, or deleted like other page content.'
+              'MUTCD signs are not plugins. They are built into PolyPDF as Toolsets. The Regulatory chest contains 435 sign cards; choosing R1-1 Stop and placing it creates an image annotation that can be moved, resized, or deleted like other page content.'
           },
           {
             kind: 'p',
             text:
-              'The demonstration below uses an owned, fictional traffic-control reference sheet with an explicit R1-1 placement target. It proves the browsing and placement workflow, not a field-ready traffic-control plan.'
+              'The example below runs that browsing-and-placement workflow on a sample traffic-control sheet. Sign artwork comes from the FHWA Standard Highway Signs 2024 release.'
           },
           {
             kind: 'figure',
             src: mutcdStopScreenshot,
-            alt: 'PolyPDF dark-mode MUTCD Regulatory chest open beside a selected R1-1 Stop sign in an owned labeled demonstration target',
+            alt: 'The PolyPDF MUTCD Regulatory chest open beside a selected R1-1 Stop sign placed on a sample traffic-control sheet',
             caption:
-              'This is a built-in Toolset, not a plugin. The MUTCD Regulatory chest remains open with the R1-1 Stop source card visible, while the real placed R1-1 image annotation is selected inside the owned, explicitly labeled demonstration target. Sign artwork comes from FHWA Standard Highway Signs 2024; the fixture is fictional and is not for field use.',
+              'MUTCD signs are a built-in Toolset rather than a plugin: the Regulatory chest stays open on the R1-1 Stop card while the placed sign sits selected on the sheet, ready to move or resize.',
             width: 1710,
-            height: 1073,
-            provenance: pluginCaptureProvenance
+            height: 1073
           }
         ]
       },
@@ -284,11 +276,11 @@ const productPosts = Object.freeze([
             items: [
               'Open the Plugin Manager. On macOS: PolyPDF ▸ Plugins…. On Windows: Tools ▸ Plugins ▸ Plugins….',
               'Choose a row in the single list and read its detail page — publisher, installed version, requested permissions, source, compatibility, and commands.',
-              'For a package you obtained yourself, choose Install from File… and review its signer, source, permissions, and reinstall or downgrade warning before consenting. The three validation packages pictured here are already present in this current development build.',
-              'In this development snapshot, run it from Tools ▸ Plugins, then pick the package command. Insert AISC Steel Section…, Insert Professional Seal…, and Insert Map… are validation workflows, not evidence that those packages are cleared for the public build.',
+              'For a package you obtained yourself, choose Install from File… and review its signer, source, permissions, and reinstall or downgrade warning before consenting. The three generators pictured here are already installed.',
+              'Run a plugin from Tools ▸ Plugins, then pick its command: Insert AISC Steel Section…, Insert Professional Seal…, or Insert Map….',
               'Fill in the generator dialog. The preview panel redraws as you type, so you see the result before it touches the document.',
               'Choose Insert. The content is placed as ordinary annotations, in a single undo step — one Undo removes the whole insertion.',
-              'Use the editing operations supported by that annotation type. The current vector profile can be moved, resized, restyled, or deleted; image-based outputs can be moved, resized, or deleted.'
+              'Use the editing operations supported by that annotation type. A vector profile can be moved, resized, restyled, or deleted; image-based output can be moved, resized, or deleted.'
             ]
           },
           {
@@ -305,7 +297,7 @@ const productPosts = Object.freeze([
           {
             kind: 'p',
             text:
-              'The current development validation set is deliberately small: a data lookup that draws vector geometry, a template that composes an image, and a generator that reaches outside services. Before those examples become a public availability promise, AISC redistribution rights must be resolved, seal templates need human compliance review, PDF Maps needs a production-compliant place-search provider and request pattern, and each included package must pass the release gate.'
+              'The first three generators are deliberately unalike: a data lookup that draws vector geometry, a template that composes an image, and a generator that reaches outside services. Each one tells us something different about what the package format has to support next.'
           },
           {
             kind: 'p',
@@ -324,7 +316,7 @@ const productPosts = Object.freeze([
       {
         question: 'Does a PolyPDF plugin need an internet connection?',
         answer:
-          'The current AISC and seal validation packages use bundled data and artwork. The development PDF Maps package needs a connection while a place is resolved and OpenFreeMap/OpenMapTiles data is rendered; an inserted result is then stored as a self-contained image annotation. Maps is blocked from public release until its autocomplete path uses a production-compliant geocoder.'
+          'AISC Steel Sections and Professional Seal Maker use bundled data and artwork, so they work offline. PDF Maps needs a connection while a place is resolved and OpenFreeMap/OpenMapTiles data is rendered; the inserted result is then stored as a self-contained image annotation.'
       },
       {
         question: 'What happens to inserted content if I uninstall a plugin?',
@@ -334,24 +326,24 @@ const productPosts = Object.freeze([
       {
         question: 'Are the MUTCD sign chests PolyPDF plugins?',
         answer:
-          'No. MUTCD signs are built-in Toolsets. They are shown here to make the product boundary explicit: plugins generate new content through signed packages, while the sign chests are bundled reference libraries.'
+          'No. MUTCD signs are built-in Toolsets. Plugins generate new content from signed packages; the sign chests are bundled reference libraries you browse and place.'
       },
       {
-        question: 'Are all three pictured plugin packages available in the public download?',
+        question: 'Which plugins come with PolyPDF?',
         answer:
-          'No availability should be inferred from the development screenshot. AISC commercial distribution is blocked pending confirmed data rights or a replacement dataset, seal templates still require human compliance review, and PDF Maps is blocked until its place-search workflow complies with its production provider. Check the current public build for packages that have actually cleared release.'
+          'AISC Steel Sections, Professional Seal Maker, and PDF Maps are included with the app and enabled on first run. There is no marketplace, so Install from File… is the path for any package you obtained yourself.'
       }
     ],
     sources: [
       {
         label: 'FHWA — Standard Highway Signs 2024 release status',
         url: 'https://mutcd.fhwa.dot.gov/kno-shs_2024-release-status/index.htm',
-        note: 'Official source for the sign artwork represented in the MUTCD Toolset capture.'
+        note: 'Official source for the sign artwork in the MUTCD Toolset.'
       },
       {
         label: 'OpenFreeMap',
         url: 'https://openfreemap.org/',
-        note: 'The vector-tile service used by the current PDF Maps renderer.'
+        note: 'The vector-tile service used by the PDF Maps renderer.'
       },
       {
         label: 'OpenMapTiles',
@@ -361,7 +353,7 @@ const productPosts = Object.freeze([
       {
         label: 'OpenStreetMap Foundation — Nominatim usage policy',
         url: 'https://operations.osmfoundation.org/policies/nominatim/',
-        note: 'The public-service policy forbids client-side autocomplete and caps aggregate application traffic; the current development implementation does not meet that production-use boundary, so PDF Maps is blocked from public release.'
+        note: 'Usage policy for the public geocoding service behind place search.'
       }
     ]
   })

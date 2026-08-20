@@ -78,7 +78,7 @@ const Blog = () => {
             <h1 ref={headingRef} tabIndex="-1">Practical answers for working with PDF drawings</h1>
             <p className="legal-subtitle">
               Step-by-step measurement, takeoff, markup, comparison, forms, and document-safety
-              workflows—grounded in the app and illustrated with real PolyPDF screenshots.
+              workflows—each one illustrated with screenshots from the app.
             </p>
           </motion.header>
 

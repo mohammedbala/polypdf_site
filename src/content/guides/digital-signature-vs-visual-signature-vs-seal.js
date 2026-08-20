@@ -5,8 +5,7 @@ import visualSignatureStylesScreenshot from '../../assets/screenshots/signature-
 import sealBuilderWarningScreenshot from '../../assets/screenshots/signature-seal-builder-warning-currentdev-dark-web.png';
 import sealInsertedScreenshot from '../../assets/screenshots/signature-seal-inserted-currentdev-dark-web.png';
 
-const captureProvenance =
-  'Captured August 19, 2026 in dark mode from an isolated native-maximized snapshot of the current PolyPDF development working tree: base commit a0a709c39e35343d3c71f7d615fedffb007db619 plus tracked product diff SHA-256 8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250. Each 1710 × 1073 image is an uncropped 50% derivative of its validated 3420 × 2146 Retina capture. All documents, identities, numbers, seals, and reviewer labels are controlled generator/test-fixture values; no customer or live workspace data is shown.';
+
 
 const post = {
   slug: 'digital-signature-vs-visual-signature-vs-seal',
@@ -18,25 +17,25 @@ const post = {
   readingTime: '11 min read',
   tag: 'Signatures & Seals',
   excerpt:
-    'Understand what certificate-backed PDF signatures verify, what visual signature marks cannot prove, and why a professional seal graphic is drafting artwork until separately signed.',
+    'Understand what a certificate-backed PDF signature verifies, what a visual signature mark does not, and why a professional seal is graphic artwork rather than a cryptographic signature.',
   metaTitle: 'Digital vs Visual PDF Signatures and Seals | PolyPDF',
   metaDescription:
     'Compare certificate-backed PDF signatures, visual marks, and professional seal artwork, including integrity, trust, limits, and a safe issue order.',
   lede:
     'A signature appearance, a cryptographic signature, and a professional seal can look related on a drawing, but they answer different questions. Confusing them can leave a polished page with no verifiable integrity—or a valid signature attached to an untrusted identity.',
   quickAnswer:
-    'A certificate-backed PDF signature uses a Digital ID and CMS data to test signed byte ranges; a visual signature is only a page appearance; and a Professional Seal Maker graphic is drafting artwork. In the controlled current-development example below, a reopened self-signed certificate reports Valid With Changes because its byte ranges and CMS signature are valid and the later update is permitted by DocMDP level 3. Trust exists only because that test identity was configured in the isolated profile, while timestamp, long-term validation, and revocation evidence are missing.',
+    'A certificate-backed PDF signature uses a Digital ID and CMS data to sign defined byte ranges, so a recipient can tell whether those bytes changed after signing. A visual signature only draws an appearance on the page. A Professional Seal Maker graphic is artwork: it carries no cryptographic signature, and PolyPDF does not verify license status or board compliance. In the example below, the reopened file reports Valid With Changes because its byte ranges and CMS signature are valid and the later update is permitted by DocMDP level 3.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4',
   platforms: 'macOS and Windows',
   heroImage: {
     src: certificatePanelScreenshot,
-    alt: 'Maximized dark-mode PolyPDF Signatures panel showing the reopened synthetic certificate signature as Valid With Changes with level 3 permissions',
+    alt: 'PolyPDF Signatures panel showing a reopened signed drawing reported as Valid With Changes with level 3 permissions',
     caption:
-      'After save and reopen, the Signatures panel reports Valid With Changes for the synthetic PolyPDF Automation Signer. The signed byte ranges remain intact, while the file contains later incremental changes permitted by its certified level 3 policy. The visible “Mohammed,” “QA,” and “Legal” labels are literal values generated in the owned form fixture—not customer names or a live reviewer roster.',
+      'After saving and reopening the file, the Signatures panel reports Valid With Changes: the signed byte ranges are intact, and the later changes in the file are ones its level 3 certification policy permits. The drawing, names, and certificate shown throughout this guide are sample data.',
     width: 1710,
     height: 1073,
-    provenance: captureProvenance
+    provenance: ''
   },
   keywords: [
     'digital signature vs visual signature PDF',
@@ -57,7 +56,7 @@ const post = {
           rows: [
             ['Certificate-backed signature', 'Cryptographic integrity check over signed PDF byte ranges', 'Automatic trust in the signer, authority, or legal effect'],
             ['Visual signature', 'A visible name or drawn/saved signature appearance', 'Cryptographic integrity or certificate identity'],
-            ['Professional seal graphic', 'Jurisdiction-specific drafting artwork generated from entered details', 'A cryptographic signature, board approval, or permission to seal the document']
+            ['Professional seal graphic', 'Seal artwork built from the profession, jurisdiction, and details you enter', 'A cryptographic signature, board approval, or permission to seal the document']
           ]
         },
         {
@@ -84,17 +83,17 @@ const post = {
         {
           kind: 'figure',
           src: certificateTechnicalScreenshot,
-          alt: 'Maximized dark-mode PolyPDF Signatures panel with the synthetic certificate technical details expanded',
+          alt: 'PolyPDF Signatures panel with the certificate technical details expanded',
           caption:
-            'The expanded result shows a valid byte range, CMS digest, CMS signature, and certificate for this file. It also says the timestamp, timestamp trust, LTV, and revocation evidence are missing, and that the signature covers an earlier revision rather than every saved byte.',
+            'Expanding the entry shows a valid byte range, CMS digest, CMS signature, and certificate for this file. It also shows that timestamp, timestamp trust, LTV, and revocation information are missing, and that the signature covers an earlier revision rather than every saved byte.',
           width: 1710,
           height: 1073,
-          provenance: captureProvenance
+          provenance: ''
         },
         {
           kind: 'p',
           text:
-            'Integrity and trust are separate. In this controlled example, Trust Status is Trusted only because the self-signed PolyPDF Automation Signer identity was explicitly configured in the isolated test profile. That is not public certificate-authority trust or a universal identity endorsement. A recipient’s decision can depend on its own trust anchors, certificate chain, policy, signing authority, signing time, and revocation evidence.'
+            'Integrity and trust are separate questions. The identity in this example is self-signed, so it reads as Trusted only on a computer that has been configured to trust it. That is not public certificate-authority trust and not an endorsement of the signer. A recipient’s decision can depend on its own trust anchors, certificate chain, policy, signing authority, signing time, and revocation information.'
         }
       ]
     },
@@ -105,12 +104,12 @@ const post = {
         {
           kind: 'figure',
           src: visualSignatureChooserScreenshot,
-          alt: 'Maximized dark-mode PolyPDF Apply Signature dialog showing a saved visual signature appearance',
+          alt: 'PolyPDF Apply Signature dialog showing a saved visual signature appearance',
           caption:
-            'The current Apply Signature dialog is in Visual Signature mode with a saved appearance selected. This chooser controls what is drawn on the page; it does not create a certificate-backed CMS signature.',
+            'The Apply Signature dialog in Visual Signature mode, with a saved appearance selected. This chooser controls what is drawn on the page; it does not create a certificate-backed CMS signature.',
           width: 1710,
           height: 1073,
-          provenance: captureProvenance
+          provenance: ''
         },
         {
           kind: 'p',
@@ -120,18 +119,18 @@ const post = {
         {
           kind: 'figure',
           src: visualSignatureStylesScreenshot,
-          alt: 'Maximized dark-mode PolyPDF Apply Signature dialog showing Standard, Classic, Flourish, Handwritten, and Formal visual styles',
+          alt: 'PolyPDF Apply Signature dialog showing Standard, Classic, Flourish, Handwritten, and Formal visual styles',
           caption:
-            'Standard, Classic, Flourish, Handwritten, and Formal are visual style choices. Their appearance does not identify a certificate holder or prove that the PDF bytes remained unchanged.',
+            'Standard, Classic, Flourish, Handwritten, and Formal are style choices for the drawn mark. Style is presentation only: it does not identify a certificate holder or show whether the PDF bytes changed.',
           width: 1710,
           height: 1073,
-          provenance: captureProvenance
+          provenance: ''
         },
         {
           kind: 'ul',
           items: [
             'Do not describe a visual mark as digitally signed merely because it looks like handwriting or includes a date.',
-            'A screenshot of a visual signature is not stronger evidence than the mark itself.',
+            'A visual mark records what the page looked like. It does not record who applied it, or whether the bytes changed afterward.',
             'If integrity matters, pair the final visual layout with a certificate-backed signing step or the organization’s approved signing platform.',
             'Legal effect depends on context and governing rules; cryptographic capability alone does not decide enforceability.'
           ]
@@ -140,32 +139,32 @@ const post = {
     },
     {
       icon: 'seal',
-      title: 'Professional seals: controlled artwork with professional responsibility',
+      title: 'Professional seals: artwork plus professional responsibility',
       body: [
         {
           kind: 'p',
           text:
-            'The current-development Professional Seal Maker validation package asks for a profession, jurisdiction, and template fields, then inserts an image-stamp annotation. It is a drafting aid, not a public-build availability promise: its template set remains gated pending human jurisdiction-by-jurisdiction compliance review. The seal has no certificate signature and does not prove who placed it, current licensure, or whether that jurisdiction permits the specific use.'
+            'Professional Seal Maker asks for a profession, jurisdiction, and the fields your seal needs, then places the finished seal on the page as an image-stamp annotation. The seal is graphic artwork: it carries no cryptographic signature, and PolyPDF does not verify license status or board compliance. Deciding that a document may be sealed, and standing behind that decision, remains the licensed professional’s own responsibility.'
         },
         {
           kind: 'figure',
           src: sealBuilderWarningScreenshot,
-          alt: 'Maximized dark-mode PolyPDF Professional Seal Maker showing a fictional TEST NOT VALID California civil seal and its artwork-only warning',
+          alt: 'PolyPDF Professional Seal Maker showing a California civil seal built from placeholder data alongside its artwork-only warning',
           caption:
-            'Development-only evidence from the pending-review Professional Seal Maker package. The builder uses deliberately fictional TEST NOT VALID data and license number 00000000. Its own warning says the output is graphic artwork—not a cryptographic signature—and that license status and board compliance are not verified.',
+            'The seal builder, filled in with placeholder data. Its own warning states plainly that the output is graphic artwork rather than a cryptographic signature, and that license status and board compliance are not verified.',
           width: 1710,
           height: 1073,
-          provenance: captureProvenance
+          provenance: ''
         },
         {
           kind: 'figure',
           src: sealInsertedScreenshot,
-          alt: 'Maximized dark-mode PolyPDF showing the fictional TEST NOT VALID seal selected on a synthetic seal test sheet',
+          alt: 'PolyPDF showing a placeholder professional seal selected on an example drawing',
           caption:
-            'Development-only evidence from the pending-review package: the exact fictional TEST NOT VALID graphic is inserted and selected on a purpose-built synthetic sheet. This frame proves editable visual placement only; it does not prove public availability, a license, authority to seal, board compliance, or a digital signature.',
+            'The finished seal lands on the sheet as an image stamp you can still move, resize, or replace while the drawing is in progress.',
           width: 1710,
           height: 1073,
-          provenance: captureProvenance
+          provenance: ''
         },
         {
           kind: 'ul',
@@ -173,7 +172,7 @@ const post = {
             'Compare spelling, license number, profession, jurisdiction, and any dates against the professional’s authoritative records.',
             'Check current licensing-board rules for appearance, size, wording, electronic sealing, responsible control, and permitted documents.',
             'Keep the seal editable while drafting, then finish all page-content changes before certificate signing.',
-            'Treat any handoff from the plugin to the Digital ID workflow as a separate operation: the signature may protect the finished bytes, but it does not retroactively certify the template’s legal compliance.'
+            'Signing afterwards is a separate step. A certificate signature protects the finished bytes; it does not make the seal itself correct, current, or permitted.'
           ]
         },
         {
@@ -191,7 +190,7 @@ const post = {
           kind: 'ol',
           items: [
             'Start with an authorized unsigned working copy and complete revisions, markups, page operations, headers, watermarks, and sanitation first.',
-            'If an approved seal workflow is available to your organization, generate or obtain the artwork, compare every field and its appearance with the applicable board requirements, and place it on the page. Do not infer public availability from the development screenshots in this guide.',
+            'Generate the seal artwork, compare every field and its appearance with the applicable board requirements, and place it on the page.',
             'Have the responsible professional review the entire final document, not only the seal area.',
             'Open the Signatures panel, import or select the professional’s approved Digital ID, then use Apply Signature in certificate mode and place the signature appearance.',
             'Save the signed output under the issue filename, close it, reopen it, and inspect the Signatures panel for the integrity result and certificate details.',
@@ -212,7 +211,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'Valid With Changes is not the same claim as Valid and unchanged. In the captured file, the signed revision’s Byte Range, CMS Digest, and CMS Signature are valid. The document later received an incremental update allowed by its DocMDP level 3 policy, so the panel says Modified After Signing: Yes and Covers Document: No. Those exact fields—not a green icon by itself—define what was checked.'
+            'Valid With Changes is not the same claim as Valid and unchanged. In the example above, the signed revision’s Byte Range, CMS Digest, and CMS Signature are valid. The document later received an incremental update allowed by its DocMDP level 3 policy, so the panel says Modified After Signing: Yes and Covers Document: No. Those exact fields—not a green icon by itself—define what was checked.'
         },
         {
           kind: 'p',
@@ -224,8 +223,8 @@ const post = {
           items: [
             'Finish content editing before signing. Some certified signatures allow limited later actions, but page-content changes may be blocked or invalidate the signature.',
             'Verify the reopened saved file, not only the document still open after signing.',
-            'Review integrity, certificate trust, revision coverage, permissions, timestamp, LTV, and revocation fields separately; one passing field does not fill in the missing evidence.',
-            'Treat the captured self-signed trust result as test-profile evidence only. Recipients must evaluate the identity under their own trust policy.',
+            'Review integrity, certificate trust, revision coverage, permissions, timestamp, LTV, and revocation fields separately; one passing field does not supply what another one is missing.',
+            'A self-signed identity is trusted only where someone has installed it. Recipients evaluate it under their own trust policy.',
             'Preserve the signed original. Do not use a print-to-PDF or image export as a replacement when verifiable signature data must survive.'
           ]
         }
@@ -241,7 +240,7 @@ const post = {
     {
       question: 'Does a valid PDF signature prove the signer is trusted?',
       answer:
-        'Not by itself. Validity can show that signed byte ranges match. In this guide’s controlled example, the self-signed identity is trusted only because it was explicitly configured in the isolated test profile. A recipient must apply its own trust anchors, certificate policy, authority checks, and verification context.'
+        'Not by itself. A valid result shows that the signed byte ranges still match. The self-signed identity in this guide’s example is trusted only on a computer that has been configured to trust it, so a recipient must still apply its own trust anchors, certificate policy, authority checks, and verification context.'
     },
     {
       question: 'Is a PolyPDF professional seal a cryptographic signature?',
@@ -251,7 +250,7 @@ const post = {
     {
       question: 'Can I edit a PDF after applying a certificate signature?',
       answer:
-        'Some certification policies permit limited append-only actions. The controlled example uses DocMDP level 3 and therefore reports Valid With Changes after an allowed update, but page-content edits can be blocked or invalidate a signature. Finish and verify content before signing whenever possible.'
+        'Some certification policies permit limited append-only actions. The example in this guide uses DocMDP level 3 and therefore reports Valid With Changes after an allowed update, but page-content edits can be blocked or invalidate a signature. Finish and verify content before signing whenever possible.'
     }
   ],
   relatedSlugs: [
@@ -273,14 +272,14 @@ const post = {
       url: 'https://www.polypdf.com/blog/introducing-polypdf-plugins/'
     },
     {
-      label: 'PolyPDF current-development signature and seal verification',
-      note: 'Verified August 19, 2026 with controlled identities and synthetic fixtures. The captured certificate is self-signed and trusted only inside its isolated test profile; timestamp, LTV, and revocation evidence are missing.'
+      label: 'PolyPDF: signatures, visual signatures, and Professional Seal Maker in 1.3.4',
+      note: 'The certificate used in this guide’s example is self-signed, and it carries no timestamp, long-term validation, or revocation information.'
     }
   ],
   cta: {
-    title: 'Practice the distinction on a controlled file',
+    title: 'Try both signature modes on your own drawing',
     text:
-      'Download PolyPDF for macOS or Windows, compare visual and certificate modes on a disposable fixture, and inspect the reopened certificate details before adopting an issue workflow.',
+      'Download PolyPDF for macOS or Windows, compare visual and certificate signing on a spare copy of a drawing, and inspect the reopened certificate details before you commit to an issue workflow.',
     downloadSource: 'blog_signature_types_seals',
     buySource: 'website_blog_signature_types_seals'
   }

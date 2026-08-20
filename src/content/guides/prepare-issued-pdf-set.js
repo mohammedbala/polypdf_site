@@ -3,8 +3,7 @@ import headersFootersScreenshot from '../../assets/screenshots/shot-issued-heade
 import batesScreenshot from '../../assets/screenshots/shot-issued-bates-currentdev-dark-web.png';
 import preflightScreenshot from '../../assets/screenshots/shot-issued-preflight-currentdev-dark-web.png';
 
-const captureProvenance =
-  'Captured August 19, 2026 in dark mode from the current PolyPDF development working tree, in a native maximized window with the full toolbar available. The five-sheet issue set is an owned fictional fixture with no customer data.';
+const captureProvenance = '';
 
 const post = {
   slug: 'prepare-issued-pdf-set',
@@ -23,15 +22,15 @@ const post = {
   lede:
     'An issued set should tell a recipient what each page is, which issue it belongs to, and whether the file survived production intact. That takes a controlled sequence, not one large button press.',
   quickAnswer:
-    'To prepare an issued PDF set, preserve the source files, define a manifest and naming rule, distinguish navigation page labels from visible Bates identifiers, then add headers, footers, watermarks, and Bates numbers to each working document. PolyPDF 1.3.4 does not expose a cross-file Batch Process, so continue any Bates sequence by recording the verified last number and setting the next document’s start value manually. Run Accessibility & Preflight, inspect every output in a recipient-style viewer, and sign only after page-content changes are finished.',
+    'To prepare an issued PDF set, preserve the source files, define a manifest and naming rule, distinguish navigation page labels from visible Bates identifiers, then add headers, footers, watermarks, and Bates numbers to each working document. PolyPDF 1.3.4 does not expose a cross-file Batch Process, so continue any Bates sequence by recording the last number you confirmed and setting the next document’s start value manually. Run Accessibility & Preflight, inspect every output in a recipient-style viewer, and sign only after page-content changes are finished.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4 (build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: issuedFinalScreenshot,
-    alt: 'Maximized PolyPDF dark-mode window showing a fictional five-sheet issue set with the visible Bates identifier ISSUED-IFC-0101',
+    alt: 'PolyPDF showing a five-sheet issue set with the Bates identifier ISSUED-IFC-0101 printed on sheet G-001',
     caption:
-      'The visible post-Apply result carries ISSUED-IFC-0101 on sheet G-001.',
+      'Sheet G-001 of a sample issue set, carrying the Bates identifier ISSUED-IFC-0101 in the footer after Apply.',
     provenance: captureProvenance,
     width: 1710,
     height: 1073
@@ -102,9 +101,9 @@ const post = {
         {
           kind: 'figure',
           src: headersFootersScreenshot,
-          alt: 'Maximized dark-mode PolyPDF Headers and Footers dialog populated with issue text, page-label and page-number tokens, margins, and six previews',
+          alt: 'PolyPDF Headers and Footers dialog populated with issue text, page-label and page-number tokens, margins, and six position previews',
           caption:
-            'The current development UI previews all six header and footer positions before Apply. This image proves the populated setup and preview, not recipient approval of the output.',
+            'Headers & Footers previews all six positions before you apply anything, so issue text can be checked against the title block first.',
           provenance: captureProvenance,
           width: 1710,
           height: 1073
@@ -112,7 +111,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'Open Document › Headers & Footers for each file that needs issue text. Build 16 provides six positions, a page range, font and margin controls, and a preview. Use {page} or {label} exactly as documented; there is no {total} token, so an unsupported token can print literally.'
+            'Open Document › Headers & Footers for each file that needs issue text. The dialog provides six positions, a page range, font and margin controls, and a preview. Use {page} or {label} exactly as documented; there is no {total} token, and an unsupported token prints literally.'
         },
         {
           kind: 'ul',
@@ -132,14 +131,14 @@ const post = {
         {
           kind: 'p',
           text:
-            'PolyPDF 1.3.4 does not expose the former cross-file Batch Process in the user interface. Apply Bates numbering and any text watermark to one working document at a time, save a new output, verify it, and only then calculate the starting number for the next file. This slower sequence keeps the public workflow aligned with the commands users can actually open.'
+            'PolyPDF 1.3.4 does not expose a cross-file Batch Process, so plan the issue one file at a time. Apply Bates numbering and any text watermark to a single working document, save a new output, check it, and only then calculate the starting number for the next file.'
         },
         {
           kind: 'figure',
           src: batesScreenshot,
-          alt: 'Maximized dark-mode PolyPDF Bates Numbering dialog set to prefix ISSUED-IFC, start number 101, four digits, and Footer Right placement',
+          alt: 'PolyPDF Bates Numbering dialog set to prefix ISSUED-IFC, start number 101, four digits, and Footer Right placement',
           caption:
-            "The populated dialog previews ISSUED-IFC-0101 before Apply. The screenshot demonstrates one document's setup; it does not imply an exposed cross-file batch workflow.",
+            'Prefix ISSUED-IFC, start number 101, four digits, footer right: the dialog previews ISSUED-IFC-0101 before you apply it to the document.',
           provenance: captureProvenance,
           width: 1710,
           height: 1073
@@ -150,9 +149,9 @@ const post = {
             'Open the first working PDF in manifest order and confirm its page count and intended page range.',
             'Open Bates Numbering and set the prefix, starting number, digit count, suffix, placement, page range, and styling required by the issue rule.',
             'Apply the number, save to the clean output folder under the manifest name, close it, and reopen the saved copy.',
-            'Verify the first and last Bates value. Record the last verified number rather than relying only on the expected page count.',
+            'Check the first and last Bates value. Record the last number you saw rather than relying only on the expected page count.',
             'Open the next working document and use the recorded last value plus one as its start. Repeat until every volume is accounted for.',
-            'When a text watermark is required, apply it per document with the available placement, opacity, rotation, font-size, color, and layer controls. Build 16 does not add a logo-image watermark.',
+            'When a text watermark is required, apply it per document using the placement, opacity, rotation, font-size, color, and layer controls. Watermarks are text only; there is no logo-image watermark.',
             'Compare the completed output folder against the manifest before preflight and signing.'
           ]
         },
@@ -166,7 +165,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'There is no user-facing cross-file Batch Process in build 16. If you need unattended multi-file production, use an organization-approved external workflow rather than documenting a PolyPDF command that is not exposed.'
+            'There is no cross-file Batch Process in PolyPDF 1.3.4. If you need unattended multi-file production, run it through an organization-approved external workflow.'
         }
       ]
     },
@@ -177,14 +176,14 @@ const post = {
         {
           kind: 'p',
           text:
-            'Run Document › Accessibility & Preflight on each final candidate. Build 16 reports 10 automated checks across five groups. It is a screening tool, not PDF/UA certification or a substitute for visual and contractual review.'
+            'Run Document › Accessibility & Preflight on each final candidate. PolyPDF reports 10 automated checks across five groups. Preflight is a screening tool, not PDF/UA certification and not a substitute for visual and contractual review.'
         },
         {
           kind: 'figure',
           src: preflightScreenshot,
-          alt: 'Maximized dark-mode PolyPDF Accessibility and Preflight results showing zero failures, two warnings, seven passes, and one informational result',
+          alt: 'PolyPDF Accessibility and Preflight results showing zero failures, two warnings, seven passes, and one informational result',
           caption:
-            'The current 10-check screen reports 0 failures, 2 warnings, 7 passes, and 1 informational finding for the fictional issue set. A preflight result is a screening record, not PDF/UA certification or release approval.',
+            'Preflight reports 0 failures, 2 warnings, 7 passes, and 1 informational finding for this issue set. It is a screening check, not PDF/UA certification or approval to issue.',
           provenance: captureProvenance,
           width: 1710,
           height: 1073
@@ -215,7 +214,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'If all 74 pages are numbered, the next unused value should be REV-000175. That arithmetic does not prove the result: verify the first and last value in each volume and the boundaries between volumes. Run preflight, confirm recipient-viewer appearance, then sign if the issue procedure requires it.'
+            'If all 74 pages are numbered, the next unused value should be REV-000175. Arithmetic is not a substitute for looking: check the first and last value in each volume and the boundary between volumes. Run preflight, confirm the appearance in a recipient-style viewer, then sign if the issue procedure requires it.'
         }
       ]
     }
@@ -253,8 +252,8 @@ const post = {
       url: 'https://www.loc.gov/preservation/digital/formats/fdd/fdd000474.shtml'
     },
     {
-      label: 'PolyPDF 1.3.4 build 16 document-production verification',
-      note: 'Headers, footers, Bates numbering, watermark, and the 10-check preflight behavior were verified with owned fixtures on August 18, 2026; cross-file Batch Process is not exposed.'
+      label: 'PolyPDF 1.3.4 document-production behavior',
+      note: 'Headers, footers, Bates numbering, text watermarks, and the 10-check Accessibility & Preflight screen are described as they behave in PolyPDF 1.3.4. A cross-file Batch Process is not exposed.'
     }
   ],
   cta: {

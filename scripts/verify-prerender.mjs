@@ -34,7 +34,7 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
     continue;
   }
   const html = fs.readFileSync(htmlPath, 'utf8');
-  const imageURL = new URL(metadata.image || '/og-image.png?v=20260819-currentdev', `${origin}/`).href;
+  const imageURL = new URL(metadata.image || '/og-image.png?v=20260819', `${origin}/`).href;
   const canonicalURL = `${origin}${route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`}`;
   const imageAlt = escapeHTML(metadata.imageAlt || defaultImageAlt);
 

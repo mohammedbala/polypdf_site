@@ -29,7 +29,7 @@ const ORIGIN = 'https://www.polypdf.com';
 const ORG_ID = `${ORIGIN}/#organization`;
 const WEBSITE_ID = `${ORIGIN}/#website`;
 const APP_ID = `${ORIGIN}/#software`;
-const SOCIAL_IMAGE = `${ORIGIN}/og-image.png?v=20260819-currentdev`;
+const SOCIAL_IMAGE = `${ORIGIN}/og-image.png?v=20260819`;
 
 const absolute = (route) => {
   if (route === '/') return `${ORIGIN}/`;

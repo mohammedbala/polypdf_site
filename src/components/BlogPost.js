@@ -53,9 +53,9 @@ export const normalizeBlogImage = (image) => {
 };
 
 /**
- * One image contract for article evidence and blog cards.
+ * One image contract for article screenshots and blog cards.
  *
- * `mobileSrc` should be a tighter crop of the same truthful product state, not a different
+ * `mobileSrc` should be a tighter crop of the same product state, not a different
  * illustration. When it is absent, callers can opt into a horizontally scrollable viewport so a
  * full desktop window is not compressed until its controls become unreadable on a phone.
  */
@@ -409,8 +409,8 @@ const BlogPost = () => {
                     const blockImage = block.kind === 'figure'
                       ? normalizeBlogImage(block.image || block.figure || block)
                       : null;
-                    // The hero already gives this evidence a full-width treatment. Several guides
-                    // intentionally reference the same capture in their first section; rendering it
+                    // The hero already gives this screenshot a full-width treatment. Several guides
+                    // intentionally reference the same image in their first section; rendering it
                     // twice adds no information and makes the article feel mechanically assembled.
                     if (blockImage?.src && blockImage.src === heroImage?.src) return null;
                     return renderBlock(block, blockIndex);

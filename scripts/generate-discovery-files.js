@@ -20,7 +20,7 @@ const sitemapPath = path.join(root, 'public', 'sitemap.xml');
 const llmsPath = path.join(root, 'public', 'llms.txt');
 const feedPath = path.join(root, 'public', 'feed.xml');
 const ORIGIN = 'https://www.polypdf.com';
-const SCREENSHOT_IMAGE_VERSION = '20260819-currentdev';
+const SCREENSHOT_IMAGE_VERSION = '20260819';
 const DEFAULT_IMAGE = `/og-image.png?v=${SCREENSHOT_IMAGE_VERSION}`;
 const DEFAULT_IMAGE_ALT =
   'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription';
@@ -105,8 +105,8 @@ const validatePosts = () => {
   }
 
   for (const entry of blogPosts) {
-    assert(entry.heroImage?.alt, `${entry.slug} is missing truthful hero image alt text`);
-    assert(entry.heroImage?.caption, `${entry.slug} is missing a screenshot evidence caption`);
+    assert(entry.heroImage?.alt, `${entry.slug} is missing hero image alt text`);
+    assert(entry.heroImage?.caption, `${entry.slug} is missing a hero image caption`);
     assert(Number.isInteger(entry.heroImage?.width), `${entry.slug} is missing image width`);
     assert(Number.isInteger(entry.heroImage?.height), `${entry.slug} is missing image height`);
     const shareImagePath = publicFileForUrl(postImagePath(entry));
@@ -257,7 +257,7 @@ const buildFeed = () => {
     '    <title>PolyPDF Guides and Product Notes</title>',
     `    <link>${ORIGIN}/blog/</link>`,
     `    <atom:link href="${ORIGIN}/feed.xml" rel="self" type="application/rss+xml" />`,
-    '    <description>Practical, evidence-backed guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>',
+    '    <description>Practical guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>',
     '    <language>en-us</language>',
     `    <lastBuildDate>${rssDate(latestDate)}</lastBuildDate>`,
     items,
@@ -282,14 +282,15 @@ const buildLlmsText = () => {
     '',
     'Key facts:',
     '',
-    '- Release verified August 18, 2026: PolyPDF 1.3.4 (build 16) for macOS and Windows; /versions reads the live update feeds.',
-    `- Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. Commercial offer verified August 18, 2026: ${commercialOffer.name} removes the hand-created measurement cap for ${commercialOffer.price} once and activates up to 3 computers in any Mac/Windows mix; /buy is authoritative for current availability.`,
+    '- Current release: PolyPDF 1.3.4 (build 16) for macOS and Windows; /versions reads the live update feeds.',
+    `- Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. ${commercialOffer.name} removes the hand-created measurement cap for ${commercialOffer.price} once and activates up to 3 computers in any Mac/Windows mix; /buy has the current terms.`,
     '- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.',
-    '- PDF Maps is development-only and blocked pending a production-compliant place-search provider and request pattern. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
+    '- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
     '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, count, and dimension tools, plus a worksheet that exports CSV or PDF.',
     '- Symbol Search auto-count: capture one drawing symbol, review candidate matches, and commit an auditable numbered count series. This auto-count workflow is free and uncapped.',
     '- Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.',
     '- Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.',
+    '- Plugins included with the app: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic, and PDF Maps places a map image for an address or place name. AISC Steel Sections performs no capacity or design checks, and a seal graphic is drafting artwork rather than a cryptographic digital signature: PolyPDF does not check licensure or board compliance.',
     '- Redaction can remove text mapped to supported PDF text-show operators, but it is not fail-closed for every content type: vector or outlined content and some nested images can remain under a black fill. Sanitize Document cleans selected structures but can miss some direct attachments and nested actions. Independently inspect sensitive output and use an approved specialist workflow when complete removal matters.',
     '- Privacy: PDF content and measurement work stay on the computer unless the user exports or shares it, or invokes a connected feature.',
     '',
@@ -297,7 +298,7 @@ const buildLlmsText = () => {
     '',
     `${markdownLink('PolyPDF home', '/')}: product overview, current offer, and free Mac and Windows downloads`,
     `${markdownLink('PolyPDF for Windows', '/windows')}: system requirements and Windows download`,
-    `${markdownLink('Buy PolyPDF Pro', '/buy')}: live availability and terms for the one-time license, Stripe checkout, and license delivery`,
+    `${markdownLink('Buy PolyPDF Pro', '/buy')}: one-time license terms, Stripe checkout, and license delivery`,
     `${markdownLink('Version history', '/versions')}: live Mac and Windows release feeds`,
     '',
     '## Practical guides',

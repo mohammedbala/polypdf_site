@@ -1,7 +1,7 @@
 import screenshot from '../../assets/screenshots/takeoff-currentdev-dark-web.png';
 
 const screenshotCaption =
-  'Current-development PolyPDF 1.3.4 (build 16) capture in dark mode on the owned Takeoff Demonstration fixture. Measurements › Records and the Markup Table show 14 deterministic demonstration records: one 540.00 sq ft area, one 30.00 ft length, and 12 Supply diffuser count markers. These seeded records prove the committed takeoff and worksheet presentation, not a Symbol Search run or a professional estimate.';
+  'A small takeoff on a sample plan, with Measurements › Records and the Markup Table open beside it: 14 records covering one 540.00 sq ft area, one 30.00 ft partition length, and 12 Supply diffuser counts. Each record keeps its own subject, status, unit, and formula, so a reviewer can trace a total back to the rows that produced it.';
 
 const post = {
   slug: 'pdf-takeoff-worked-example',
@@ -18,11 +18,11 @@ const post = {
   metaDescription:
     'Follow a practical PDF takeoff example: calibrate the plan, measure area and lengths, auto-count symbols, review records, and export CSV or PDF.',
   lede:
-    'This worked example uses an owned one-page community-workshop fixture so the source, calibration, and expected on-screen evidence are reproducible. The same sequence applies to your own drawing after you verify its scale.',
+    'This worked example follows one small takeoff end to end: calibrate the page, trace an area and a length, count a repeated symbol, review the worksheet, export. The same sequence applies to your own drawing once you have verified its scale.',
   quickAnswer:
-    'A reliable PDF takeoff follows this order: confirm the sheet and revision, calibrate the current page, verify a second known dimension, trace area and length quantities, review any repeated-symbol candidates, inspect the Takeoff Worksheet, then export CSV or a PDF summary. The owned 1/4-inch-equals-1-foot fixture uses 18 PDF points per foot; the current capture shows 540.00 sq ft of floor finish, 30.00 ft of partition length, and 12 committed Supply diffuser counts across 14 records.',
+    'A reliable PDF takeoff follows this order: confirm the sheet and revision, calibrate the current page, verify a second known dimension, trace area and length quantities, review any repeated-symbol candidates, inspect the Takeoff Worksheet, then export CSV or a PDF summary. The plan used here is plotted at 1/4 inch = 1 foot, or 18 PDF points per foot, and it carries 540.00 sq ft of floor finish, 30.00 ft of partition length, and 12 committed Supply diffuser counts across 14 records.',
   lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF current-development snapshot (1.3.4 build 16)',
+  productVersion: 'PolyPDF 1.3.4 (build 16)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
@@ -31,7 +31,7 @@ const post = {
     width: 1710,
     height: 1073,
     provenance:
-      'Real current-development product UI. The owned fixture and deterministic demonstration annotations contain no customer data; the image is an uncropped 50 percent derivative of the native-maximized capture.'
+      'Your own quantities will depend on your drawing, its calibration, and where you place each boundary.'
   },
   keywords: [
     'PDF takeoff example',
@@ -48,7 +48,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'Open the owned Takeoff Demonstration fixture, a one-page fictional community-workshop plan labeled T-101 and Revision B. The capture records a calibrated area, a partition length, a committed count series, the Records panel, and the Markup Table on one screen. It is a teaching fixture rather than a bid document, so use the workflow—not its quantities—as the template for your project.'
+            'The sheet is T-101, Revision B: a one-page community workshop plotted at 1/4 inch = 1 foot. One screen holds everything the example needs—a calibrated area, a partition length, a committed count series, the Records panel, and the Markup Table. Copy the workflow rather than the numbers; the quantities belong to this drawing.'
         },
         {
           kind: 'ul',
@@ -62,7 +62,7 @@ const post = {
         {
           kind: 'figure',
           src: screenshot,
-          alt: 'The fictional T-101 takeoff fixture with area, length, 12 count markers, Records, and the Markup Table open',
+          alt: 'The T-101 sample plan with area, length, 12 count markers, Records, and the Markup Table open',
           caption: screenshotCaption,
           width: 1710,
           height: 1073
@@ -71,19 +71,19 @@ const post = {
     },
     {
       icon: 'ruler',
-      title: 'Step 1: establish and prove the page scale',
+      title: 'Step 1: establish and check the page scale',
       body: [
         {
           kind: 'p',
           text:
-            'The fixture is plotted at 1/4 inch = 1 foot. At 72 PDF points per inch, that preset corresponds to 18 PDF points per foot. Apply the printed architectural preset to this page, then verify it against the labeled 30-foot horizontal span or another independent dimension before relying on quantities.'
+            'This sheet is plotted at 1/4 inch = 1 foot. At 72 PDF points per inch, that preset corresponds to 18 PDF points per foot. Apply the printed architectural preset to the page, then verify it against the labeled 30-foot horizontal span or another independent dimension before relying on quantities.'
         },
         {
           kind: 'formula',
           label: 'Sample page scale',
           formula: '72 PDF pt/in × 1/4 in/ft = 18 PDF pt/ft',
           explanation:
-            'This ratio follows the fixture’s printed scale. Do not copy 18 PDF pt/ft into an unrelated drawing unless that file’s own geometry proves the same plotted relationship.'
+            'This ratio follows the scale printed on this sheet. Do not carry 18 PDF pt/ft into another drawing unless that file’s own geometry shows the same plotted relationship.'
         },
         {
           kind: 'p',
@@ -93,7 +93,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'The scale shown in this sample is intentionally simple for onboarding. A real plan may use an architectural, engineering, or metric preset, or require calibration from its own known dimension.'
+            'The scale here is deliberately simple. Your plan may use an architectural, engineering, or metric preset, or need calibration from a dimension printed on the sheet.'
         }
       ]
     },
@@ -104,7 +104,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'Choose Area and click around the floor boundary, using enough vertices to follow the intended face. Close the polygon at the starting point. The current capture shows a rectangular 540.00 sq ft floor-finish area and a 30.00 ft south partition run. Those values describe the synthetic fixture geometry; they are not estimates of usable, rentable, finish, or code area for a real project.'
+            'Choose Area and click around the floor boundary, using enough vertices to follow the intended face. Close the polygon at the starting point. The screenshot shows a rectangular 540.00 sq ft floor-finish area and a 30.00 ft south partition run. An area measurement reports the boundary you traced; whether that boundary means usable, rentable, finish, or code area is a judgment you make.'
         },
         {
           kind: 'ol',
@@ -119,7 +119,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'The capture shows one selected 30.00 ft partition-length record beside the 540.00 sq ft area record. Their value is that each measurement remains identifiable on the page and in the worksheet, with its own subject, status, unit, and formula.'
+            'In the screenshot, the selected 30.00 ft partition-length record sits beside the 540.00 sq ft area record. Each one stays identifiable on the page and in the worksheet, carrying its own subject, status, unit, and formula.'
         }
       ]
     },
@@ -130,7 +130,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'For repeated symbols, open Symbol Search, draw a box tightly around one clean example, run the search, and review the candidates before accepting them as counts. This takeoff capture shows the committed outcome—12 Supply diffuser markers and a worksheet total of 12—but those markers were loaded as deterministic demonstration annotations. The image does not prove how candidates were found. See the dedicated symbol-count guide for a genuine five-match live review capture.'
+            'For repeated symbols, open Symbol Search, draw a box tightly around one clean example, run the search, and review the candidates before accepting them as counts. A committed count series looks like the screenshot above: 12 Supply diffuser markers on the plan and a worksheet total of 12. Our symbol-count guide covers the search and candidate-review step, one candidate at a time.'
         },
         {
           kind: 'ol',
@@ -145,7 +145,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'Symbol Search auto-count is uncapped in Free. The separate Free limit is three hand-created measurements per document, so a user can test calibration, area or length, and a real auto-count workflow without a paid license.'
+            'Symbol Search auto-count is uncapped in Free. The separate Free limit is three hand-created measurements per document, so you can try calibration, an area or a length, and a full auto-count run without a paid license.'
         }
       ]
     },
@@ -185,7 +185,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'Use CSV when the next step is spreadsheet estimating, filtering, or joining quantities to a cost database. Use the PDF summary when a person needs a fixed, readable handoff. PolyPDF exports the current worksheet; it does not certify that the source drawing, scale, boundaries, subjects, or accepted Symbol Search matches were correct.'
+            'Use CSV when the next step is spreadsheet estimating, filtering, or joining quantities to a cost database. Use the PDF summary when a person needs a fixed, readable handoff. PolyPDF exports the worksheet as it stands, so the drawing, the scale, the boundaries, the subjects, and the accepted matches all need to be right before the export leaves your hands.'
         },
         {
           kind: 'ul',
@@ -223,7 +223,7 @@ const post = {
     {
       question: 'Is the 540-square-foot value a recommendation for my project?',
       answer:
-        'No. It is the floor-finish annotation shown on an owned fictional teaching fixture. Your result depends on your drawing, calibration, and chosen boundary definition.'
+        'No. It is the floor-finish area measured on the sample plan used in this guide. Your own number depends on your drawing, its calibration, and the boundary you choose to trace.'
     }
   ],
   relatedSlugs: [

@@ -4,14 +4,15 @@
 
 Key facts:
 
-- Release verified August 18, 2026: PolyPDF 1.3.4 (build 16) for macOS and Windows; /versions reads the live update feeds.
-- Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. Commercial offer verified August 18, 2026: PolyPDF Pro Founder's License removes the hand-created measurement cap for $49.99 once and activates up to 3 computers in any Mac/Windows mix; /buy is authoritative for current availability.
+- Current release: PolyPDF 1.3.4 (build 16) for macOS and Windows; /versions reads the live update feeds.
+- Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. PolyPDF Pro Founder's License removes the hand-created measurement cap for $49.99 once and activates up to 3 computers in any Mac/Windows mix; /buy has the current terms.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
-- PDF Maps is development-only and blocked pending a production-compliant place-search provider and request pattern. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.
+- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.
 - Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, count, and dimension tools, plus a worksheet that exports CSV or PDF.
 - Symbol Search auto-count: capture one drawing symbol, review candidate matches, and commit an auditable numbered count series. This auto-count workflow is free and uncapped.
 - Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.
 - Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.
+- Plugins included with the app: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic, and PDF Maps places a map image for an address or place name. AISC Steel Sections performs no capacity or design checks, and a seal graphic is drafting artwork rather than a cryptographic digital signature: PolyPDF does not check licensure or board compliance.
 - Redaction can remove text mapped to supported PDF text-show operators, but it is not fail-closed for every content type: vector or outlined content and some nested images can remain under a black fill. Sanitize Document cleans selected structures but can miss some direct attachments and nested actions. Independently inspect sensitive output and use an approved specialist workflow when complete removal matters.
 - Privacy: PDF content and measurement work stay on the computer unless the user exports or shares it, or invokes a connected feature.
 
@@ -19,12 +20,12 @@ Key facts:
 
 - [PolyPDF home](https://www.polypdf.com/): product overview, current offer, and free Mac and Windows downloads
 - [PolyPDF for Windows](https://www.polypdf.com/windows/): system requirements and Windows download
-- [Buy PolyPDF Pro](https://www.polypdf.com/buy/): live availability and terms for the one-time license, Stripe checkout, and license delivery
+- [Buy PolyPDF Pro](https://www.polypdf.com/buy/): one-time license terms, Stripe checkout, and license delivery
 - [Version history](https://www.polypdf.com/versions/): live Mac and Windows release feeds
 
 ## Practical guides
 
-- [How to Calibrate a PDF Drawing Scale](https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/): Set an accurate PDF drawing scale from a printed ratio or a known dimension, then prove it with a second reference before starting takeoff.
+- [How to Calibrate a PDF Drawing Scale](https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/): Set an accurate PDF drawing scale from a printed ratio or a known dimension, then check it against a second reference before starting takeoff.
 - [Why PDF Measurements Are Wrong (and How to Fix Them)](https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/): Diagnose bad PDF dimensions by checking page scale, units, endpoints, detail regions, and scan distortion in a deliberate order.
 - [How to Measure PDF Area with Cutouts and Depth](https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/): Trace a net PDF area, subtract multiple interior openings, optionally convert it to volume with depth, and keep hatch styling separate from the math.
 - [PDF Takeoff Worked Example: Scale, Area, Length, and Count](https://www.polypdf.com/blog/pdf-takeoff-worked-example/): Follow one small plan takeoff from calibration through area, wall lengths, diffuser count, worksheet review, and CSV or PDF export.
@@ -33,7 +34,7 @@ Key facts:
 - [How to Compare PDF Drawing Revisions](https://www.polypdf.com/blog/compare-pdf-drawing-revisions/): Compare a baseline PDF with a revised file, review the detected regions, and issue a separate comparison record without overwriting the source.
 - [How to Create a Fillable PDF Form](https://www.polypdf.com/blog/create-fillable-pdf-form/): Add standard AcroForm fields to a compatible PDF, set names and tab order, test the saved copy, and recognize signed, secured, and XFA limits.
 - [How to OCR Scanned PDF Drawings](https://www.polypdf.com/blog/ocr-scanned-pdf-drawings/): Add a best-effort searchable text layer to scanned PDF drawings, then test search results and verify every value that could affect field or estimating work.
-- [Digital vs Visual PDF Signatures vs Professional Seals](https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal/): Understand what certificate-backed PDF signatures verify, what visual signature marks cannot prove, and why a professional seal graphic is drafting artwork until separately signed.
+- [Digital vs Visual PDF Signatures vs Professional Seals](https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal/): Understand what a certificate-backed PDF signature verifies, what a visual signature mark does not, and why a professional seal is graphic artwork rather than a cryptographic signature.
 - [How to Redact and Sanitize a PDF: Limits to Know](https://www.polypdf.com/blog/redact-and-sanitize-pdf/): Use PolyPDF redaction for supported searchable text, understand what sanitation can miss, and independently inspect the saved copy before release.
 - [How to Prepare an Issued PDF Set](https://www.polypdf.com/blog/prepare-issued-pdf-set/): Build a repeatable issue workflow with page labels, visible Bates identifiers, headers and footers, watermarks, preflight, and final-viewer checks.
 
@@ -47,7 +48,7 @@ Key facts:
 
 ## Product notes
 
-- [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins/): A truthful current-development preview of PolyPDF plugins: declarative packages, one-list management, sideload consent, host-owned generators, and the availability limits on the three first-party validation packages.
+- [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins/): How PolyPDF plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.
 
 ## Support and policies
 

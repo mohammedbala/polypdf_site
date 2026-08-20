@@ -27,7 +27,7 @@ const sections = [
     icon: <FaDownload />,
     title: 'Direct download',
     content: [
-      'The current live commercial offer on PolyPDF.com is the direct desktop download for macOS and Windows.',
+      'PolyPDF for macOS and Windows is sold and downloaded directly from PolyPDF.com.',
       'Direct purchases are processed through Stripe and unlocked with a PolyPDF license key sent by email.',
       founderRightsText,
       'If you need help with activation, deactivation, or refund requests, contact support@polypdf.com.'
@@ -129,7 +129,7 @@ const Support = () => {
               <h2>Before you contact support</h2>
             </div>
             <ul className="section-content">
-              <li>Confirm that you are using the direct build downloaded from PolyPDF.com.</li>
+              <li>Confirm you are running the version you downloaded from PolyPDF.com.</li>
               <li>Include the app version and build number if you can.</li>
               <li>For purchase issues, attach the Stripe receipt email or order confirmation.</li>
             </ul>
@@ -138,8 +138,7 @@ const Support = () => {
           <section className="legal-section">
             <h2>Ideas and feature requests</h2>
             <p>
-              Send PolyPDF Support a structured request describing the drawing workflow you want
-              to improve and what you do today.
+              Tell us the drawing workflow you want to improve and how you handle it today.
             </p>
             <div className="contact-info">
               <Link to="/feature-requests/" className="contact-link">

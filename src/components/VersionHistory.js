@@ -127,7 +127,7 @@ const RELEASE_PROSE = {
     'Full markup set: clouds, callouts, hatches, industry line styles, stamps, snapshots, and built-in symbol tool sets.',
     'Compare Documents: differences between two revisions arrive as editable revision-cloud markups.',
     'OCR for scanned sheets, including rotated labels on plan sets.',
-    'Forms and digital signatures, Bates numbering, watermarks, flatten, page operations, and redaction for supported decodable text. Current redaction limits for vector or outlined content, nested images, and partial sanitation coverage are documented in the guide.'
+    'Forms and digital signatures, Bates numbering, watermarks, flatten, page operations, and redaction. Redaction removes decodable text; vector or outlined content and some nested images can survive under the black fill, so check sensitive output before you send it.'
   ],
   'macOS 1.0.3 (4)': ['Maintenance release for the original native Mac app.'],
   'macOS 1.0.2 (3)': ['Maintenance release for the original native Mac app.'],

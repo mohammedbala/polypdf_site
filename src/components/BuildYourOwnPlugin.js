@@ -179,12 +179,13 @@ node polypdf-plugin-pack.mjs pack my-plugin --key ~/.polypdf-keys/polypdf-plugin
             </p>
             <ul className="section-content">
               <li>
-                It proves the package has not been altered since you built it, and it pins your
+                It confirms the package has not been altered since you built it, and it pins your
                 plugin to your key: an update signed by anyone else is refused.
               </li>
               <li>
-                It does not mean PolyPDF reviewed or approved your plugin. Plugins included with the
-                app carry PolyPDF’s own signature; yours is a separate, clearly-labelled tier.
+                A signature is not a PolyPDF review or approval. The plugins that ship inside
+                PolyPDF are signed by PolyPDF; a plugin you sign yourself is a separate,
+                clearly-labelled tier.
               </li>
               <li>
                 Anyone installing your plugin sees a consent screen first: what it can do in plain
