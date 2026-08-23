@@ -9,6 +9,7 @@ harder structures; this one isolates the supported text-removal path without rea
 from __future__ import annotations
 
 import io
+import os
 from pathlib import Path
 
 from PIL import Image, ImageDraw
@@ -19,7 +20,12 @@ from reportlab.lib.utils import ImageReader
 from reportlab.pdfgen import canvas
 
 
-OUTPUT = Path(__file__).resolve().parent / "redaction-output" / "redaction-supported-working.pdf"
+OUTPUT = Path(
+    os.environ.get(
+        "POLYPDF_REDACTION_FIXTURE_OUTPUT",
+        Path(__file__).resolve().parent / "redaction-output" / "redaction-supported-working.pdf",
+    )
+)
 TARGET = "CASE-ORCHID-742"
 
 

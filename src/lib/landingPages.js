@@ -1,8 +1,8 @@
-import shotCalibration from '../assets/screenshots/calibration-verified-second-span-currentdev-dark-web.png';
-import shotMarkup from '../assets/screenshots/markup-currentdev-dark-web.png';
-import shotRevisionCompare from '../assets/screenshots/compare-editable-clouds-currentdev-dark-web.png';
-import shotSymbolSearch from '../assets/screenshots/symbol-search-review-currentdev-dark-web.png';
-import shotTakeoff from '../assets/screenshots/takeoff-currentdev-dark-web.png';
+import shotCalibration from '../assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png';
+import shotMarkup from '../assets/screenshots/markup-v1-4-dark-web.png';
+import shotRevisionCompare from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web.png';
+import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
+import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
 
 const landingPage = (page) => Object.freeze(page);
 

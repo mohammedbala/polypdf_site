@@ -11,22 +11,22 @@ import {
 } from 'react-icons/fa';
 import {
   HiOutlineCloudDownload,
-  HiOutlineDocumentText,
-  HiOutlineShieldCheck,
-  HiOutlineSparkles
+  HiOutlineShieldCheck
 } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
 import { buyPath, captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
-import { useCommercialOffer } from '../lib/useCommercialOffer';
-import shotSymbolSearch from '../assets/screenshots/symbol-search-review-currentdev-dark-web.png';
-import shotTakeoff from '../assets/screenshots/takeoff-currentdev-dark-web.png';
-import shotMarkup from '../assets/screenshots/markup-currentdev-dark-web.png';
-import shotCalibration from '../assets/screenshots/calibration-verified-second-span-currentdev-dark-web.png';
-import shotMutcdStop from '../assets/screenshots/mutcd-r1-1-stop-currentdev-dark-web.png';
-import shotAiscPlugin from '../assets/screenshots/plugins-aisc-w24x55-result-currentdev-dark-web.png';
+import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
+import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
+import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
+import shotMarkup from '../assets/screenshots/markup-v1-4-dark-web.png';
+import shotCalibration from '../assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png';
+import shotMutcdStop from '../assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png';
+import shotAiscPlugin from '../assets/screenshots/plugins-aisc-w24x55-result-v1-4-dark-web.png';
+import shotPdfMaps from '../assets/screenshots/pdf-maps-v1-4-dark-web.png';
+import shotAutoArea from '../assets/screenshots/auto-area-v1-4-dark-web.png';
 
 // Screenshots of the shipping PolyPDF app, shown full-frame.
 const screenshots = [
@@ -75,6 +75,22 @@ const screenshots = [
     title: 'Plugin output stays editable on the PDF',
     alt: 'PolyPDF Plugins sidebar beside a selected W24×55 steel section placed on the drawing',
     caption: 'The AISC Steel Sections plugin places a W24×55 profile on the sheet as an editable vector you can move and resize. It draws the section outline — it does not run capacity or design checks.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    image: shotPdfMaps,
+    title: 'Frame map context before it reaches the sheet',
+    alt: 'PolyPDF 1.4 PDF Maps generator previewing New York with street zoom and the Liberty base map selected',
+    caption: 'Search for a location, choose the zoom and base-map treatment, and inspect the preview before insertion. PDF Maps keeps that setup beside the drawing so you can place the result without switching apps.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    image: shotAutoArea,
+    title: 'Detect enclosed rooms with Auto Area',
+    alt: 'PolyPDF 1.4 Auto Area showing an enclosed room area with a resized cutout and helper dimensions',
+    caption: 'Auto Area follows enclosed plan linework, while resizable cutouts remove openings from the measured total. Optional helper dimensions make exact adjustments visible while you work.',
     width: 1710,
     height: 1073
   }
@@ -164,6 +180,73 @@ export const homeFaqs = [
     answer: 'Purchases are handled through Stripe and PolyPDF support. Refund requests are reviewed under the refund policy, which also covers your statutory rights.'
   }
 ];
+
+const PricingSection = ({ offer, onDownload }) => (
+  <section className="pricing pricing-early" id="pricing">
+    <div className="container">
+      <motion.div
+        className="section-header"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <h2>Try the real app free. Pay once when you need unlimited measurements.</h2>
+        <p>Markup, review, calibration, and Symbol Search auto-count stay free. Pro removes the fourth-measurement wall for $49.99 once.</p>
+      </motion.div>
+
+      <div className="pricing-grid">
+        <motion.article
+          className="pricing-card"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <div className="plan-pill">Free</div>
+          <h3>Use PolyPDF on real drawings</h3>
+          <p className="plan-price">$0</p>
+          <ul className="plan-list">
+            {freeFeatures.map((feature) => (
+              <li key={feature}>
+                <FaCheckCircle /> {feature}
+              </li>
+            ))}
+          </ul>
+          <a href={primaryPlatform.url} className="secondary-btn full-width" download onClick={() => onDownload('pricing_free')}>
+            <HiOutlineCloudDownload /> Download free for {primaryPlatform.name}
+          </a>
+        </motion.article>
+
+        <motion.article
+          className="pricing-card pricing-card-pro"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          <div className="plan-pill plan-pill-dark">Founder's License</div>
+          <h3>Unlock unlimited hand-created measurements</h3>
+          <p className="plan-price">$49.99</p>
+          <ul className="plan-list">
+            {proFeatures.map((feature) => (
+              <li key={feature}>
+                <FaBolt /> {feature}
+              </li>
+            ))}
+          </ul>
+          {offer.founderAvailable ? (
+            <Link to={buyPath('website_pricing')} className="primary-btn full-width">
+              <FaInfinity /> Buy once — $49.99
+            </Link>
+          ) : (
+            <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
+          )}
+          <p className="plan-note">{founderRightsText} {offer.founderLimitText}</p>
+          <p className="plan-note">Secure Stripe checkout, license key emailed on payment. {refundSummaryText}</p>
+        </motion.article>
+      </div>
+    </div>
+  </section>
+);
 
 const Home = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -258,59 +341,61 @@ const Home = () => {
             </p>
 
             <div className="hero-cta">
-              <DownloadCTA source="hero" onDownload={closeMobileMenu} />
-              <Link to={buyPath('website_hero')} className="secondary-btn hero-buy">
-                <FaInfinity /> Unlock Unlimited for $49.99
-              </Link>
+              <DownloadCTA
+                source="hero"
+                onDownload={closeMobileMenu}
+                adjacentAction={(
+                  <Link to={buyPath('website_hero')} className="secondary-btn hero-buy">
+                    <FaInfinity /> Buy once — $49.99
+                  </Link>
+                )}
+              />
             </div>
 
             <p className="hero-note">Signed, notarized builds. Start free on your own drawings — upgrade only when you need unlimited hand-created measurements.</p>
 
             <div className="hero-stats compact-stats">
               <div className="stat">
-                <strong>3</strong>
-                <p>Free measurements per document</p>
-              </div>
-              <div className="stat">
                 <strong>$49.99</strong>
-                <p>One-time license, no renewal</p>
+                <p>One payment, no renewal</p>
               </div>
               <div className="stat">
-                <strong>Mac+PC</strong>
-                <p>One license covers 3 computers</p>
+                <strong>3</strong>
+                <p>Computers per license</p>
               </div>
               <div className="stat">
-                <strong>Stripe</strong>
-                <p>Secure checkout</p>
+                <strong>Mac + PC</strong>
+                <p>Use either platform in any mix</p>
+              </div>
+              <div className="stat">
+                <strong>1.x</strong>
+                <p>Every public update included</p>
               </div>
             </div>
           </motion.div>
 
-          <motion.div
-            className="hero-summary-card"
+          <motion.figure
+            className="hero-product-shot"
             initial={{ opacity: 0, scale: 0.94 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.15 }}
           >
-            <img src={parrotIcon} alt="PolyPDF app icon" className="hero-icon" width="1024" height="1024" />
-            <p className="summary-heading">What you can do on day one</p>
-            <div className="summary-list">
-              <div className="summary-item">
-                <HiOutlineDocumentText />
-                <span>Calibrate scale and measure distances, areas, and angles on real PDF drawings.</span>
-              </div>
-              <div className="summary-item">
-                <HiOutlineShieldCheck />
-                <span>Mark up punch items, design comments, and review notes without bouncing between tools.</span>
-              </div>
-              <div className="summary-item">
-                <HiOutlineSparkles />
-                <span>Try the full app free on Mac or Windows, then buy once only if unlimited hand-created measurements will save you time.</span>
-              </div>
+            <div className="shot-plate">
+              <img
+                src={shotTakeoff}
+                alt="PolyPDF 1.4 showing measured quantities beside a takeoff drawing"
+                width="1710"
+                height="1073"
+                loading="eager"
+                fetchPriority="high"
+              />
             </div>
-          </motion.div>
+            <figcaption><strong>PolyPDF 1.4</strong> · Measurements and counts stay tied to the sheet.</figcaption>
+          </motion.figure>
         </div>
       </section>
+
+      <PricingSection offer={offer} onDownload={handleDownloadClick} />
 
       <section className="benefits">
         <div className="container">
@@ -351,7 +436,7 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2>See PolyPDF at work</h2>
-            <p>Six workflows in the shipping app, shown on a sample plan — screenshots, not mockups.</p>
+            <p>Eight workflows in PolyPDF 1.4, shown in the shipping app — screenshots, not mockups.</p>
           </motion.div>
 
           {/* Lead shot gets the full-width stage; the rest alternate text/image so the section
@@ -364,7 +449,7 @@ const Home = () => {
             transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
           >
             <div className="shot-plate">
-              <img src={screenshots[0].image} alt={screenshots[0].alt} loading="eager" width={screenshots[0].width} height={screenshots[0].height} />
+              <img src={screenshots[0].image} alt={screenshots[0].alt} loading="lazy" width={screenshots[0].width} height={screenshots[0].height} />
             </div>
             <figcaption>
               <h3>{screenshots[0].title}</h3>
@@ -429,67 +514,6 @@ const Home = () => {
             <motion.article className="benefit-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}>
               <h3>No annual seat timer</h3>
               <p>Try real documents for free, then unlock unlimited hand-created measurements with one direct license that covers up to 3 computers.</p>
-            </motion.article>
-          </div>
-        </div>
-      </section>
-
-      <section className="pricing" id="pricing">
-        <div className="container">
-          <motion.div
-            className="section-header"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <h2>There is nothing to decide until you hit the cap.</h2>
-            <p>Markup, review, calibration and Symbol Search auto-count stay free for as long as you want them. The only wall is the fourth hand-created measurement in a document. That is the moment Pro is for, and it costs $49.99 once.</p>
-          </motion.div>
-
-          <div className="pricing-grid">
-            <motion.article
-              className="pricing-card"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <div className="plan-pill">Free</div>
-              <h3>Use PolyPDF on real drawings</h3>
-              <p className="plan-price">$0</p>
-              <ul className="plan-list">
-                {freeFeatures.map((feature) => (
-                  <li key={feature}>
-                    <FaCheckCircle /> {feature}
-                  </li>
-                ))}
-              </ul>
-              <a href={primaryPlatform.url} className="secondary-btn full-width" download onClick={() => handleDownloadClick('pricing_free')}>
-                <HiOutlineCloudDownload /> Download free for {primaryPlatform.name}
-              </a>
-            </motion.article>
-
-            <motion.article
-              className="pricing-card pricing-card-pro"
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-            >
-              <div className="plan-pill plan-pill-dark">Founder's License</div>
-              <h3>Unlock unlimited hand-created measurements</h3>
-              <p className="plan-price">$49.99</p>
-              <ul className="plan-list">
-                {proFeatures.map((feature) => (
-                  <li key={feature}>
-                    <FaBolt /> {feature}
-                  </li>
-                ))}
-              </ul>
-              <Link to={buyPath('website_pricing')} className="primary-btn full-width">
-                <FaInfinity /> Buy Once for $49.99
-              </Link>
-              <p className="plan-note">{founderRightsText} {offer.founderLimitText}</p>
-              <p className="plan-note">Secure Stripe checkout, license key emailed on payment. {refundSummaryText}</p>
             </motion.article>
           </div>
         </div>

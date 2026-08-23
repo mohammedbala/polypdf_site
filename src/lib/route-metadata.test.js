@@ -1,6 +1,7 @@
 import routeMetadata from './route-metadata.json';
 import { blogPosts, blogPostPath } from './blogPosts';
 import { normalizeRoutePath } from '../components/RouteMetadata';
+import siteRelease from './siteRelease.json';
 
 const expectedRoutes = [
   '/',
@@ -66,7 +67,7 @@ test('gives every blog post its own crawlable metadata, matching the post', () =
 test('uses each real post screenshot for article share cards', () => {
   blogPosts.forEach((entry) => {
     const route = routeMetadata[blogPostPath(entry.slug)];
-    expect(route.image).toBe(`/guides/${entry.slug}.png?v=20260819`);
+    expect(route.image).toBe(`/guides/${entry.slug}.png?v=${siteRelease.screenshotCacheToken}`);
     expect(route.imageAlt).toBe(entry.heroImage.alt);
     expect(route.imageWidth).toBe(entry.heroImage.width);
     expect(route.imageHeight).toBe(entry.heroImage.height);

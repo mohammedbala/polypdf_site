@@ -10,6 +10,9 @@ const projectRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname)
 export const routeMetadata = JSON.parse(
   fs.readFileSync(path.join(projectRoot, 'src/lib/route-metadata.json'), 'utf8')
 );
+export const siteRelease = JSON.parse(
+  fs.readFileSync(path.join(projectRoot, 'src/lib/siteRelease.json'), 'utf8')
+);
 
 export const htmlRoutes = Object.keys(routeMetadata);
 
@@ -21,7 +24,7 @@ export const guideImageRoutes = [...new Set(articleRoutes
 
 export const shareImageRoutes = [
   ...guideImageRoutes,
-  '/og-image.png?v=20260819'
+  `/og-image.png?v=${siteRelease.screenshotCacheToken}`
 ];
 
 export const discoveryRoutes = ['/robots.txt', '/sitemap.xml', '/llms.txt', '/feed.xml'];
@@ -92,7 +95,10 @@ export async function runPostDeploySmoke({
     if (response.url) {
       assertResponse(response.url === canonicalURL, `${route} redirected away from its canonical URL`);
     }
-    const imageURL = new URL(metadata.image || '/og-image.png?v=20260819', 'https://www.polypdf.com/').href;
+    const imageURL = new URL(
+      metadata.image || `/og-image.png?v=${siteRelease.screenshotCacheToken}`,
+      'https://www.polypdf.com/'
+    ).href;
     const imageAlt = (metadata.imageAlt
       || 'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription')
       .replaceAll('&', '&amp;')
@@ -216,6 +222,11 @@ export async function runPostDeploySmoke({
   );
   assertResponse(offer?.price === expectedOffer.price, '/api/commercial-offer returned the wrong price');
   assertResponse(
+    offer?.founder?.endsAt == null
+      && offer?.founder?.maximumFulfilledLicenses === 100,
+    '/api/commercial-offer did not expose the count-only Founder cap'
+  );
+  assertResponse(
     offer?.license?.majorVersions === '1.x'
       && offer?.license?.updates === 'all_1.x'
       && offer?.license?.activationLimit === expectedOffer.activationLimit
@@ -245,7 +256,15 @@ export async function runPostDeploySmoke({
   assertResponse(
     bundle.includes('/api/checkout/conversion?session_id=')
       && bundle.includes('polypdf.ga4.purchase.v1.')
+      && bundle.includes('polypdf.openai-ads.order-created.v1.')
       && bundle.includes('AW-449436603/xb7JCMbVseMcELu3p9YB')
+      && bundle.includes('https://bzrcdn.openai.com/sdk/oaiq.min.js')
+      && bundle.includes('order_created')
+      && bundle.includes('buy_page_view')
+      && bundle.includes('checkout_click')
+      && bundle.includes('checkout_session_created')
+      && bundle.includes('checkout_cancelled')
+      && bundle.includes('checkout_error')
       && bundle.includes('purchase'),
     'deployed site bundle does not contain verified purchase conversion tracking'
   );

@@ -1,6 +1,7 @@
 import routeMetadata from './route-metadata.json';
 import { blogPosts, blogPostPath } from './blogPosts';
 import { landingPageRoutes } from './landingPages';
+import siteRelease from './siteRelease.json';
 
 const { buildStructuredData } = require('../../scripts/structured-data');
 
@@ -55,7 +56,7 @@ test('BlogPosting schema uses each post evidence image and reviewed dates', () =
     });
     expect(article.image).toMatchObject({
       '@type': 'ImageObject',
-      url: `https://www.polypdf.com/guides/${entry.slug}.png?v=20260819`,
+      url: `https://www.polypdf.com/guides/${entry.slug}.png?v=${siteRelease.screenshotCacheToken}`,
       width: entry.heroImage.width,
       height: entry.heroImage.height,
       caption: entry.heroImage.caption

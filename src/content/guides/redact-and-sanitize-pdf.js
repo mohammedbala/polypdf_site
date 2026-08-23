@@ -1,10 +1,10 @@
-import redactionSearchResultScreenshot from '../../assets/screenshots/redaction-reopened-search-no-matches-currentdev-dark-web.png';
-import redactionBeforeScreenshot from '../../assets/screenshots/redaction-lab-before-currentdev-dark-web.png';
-import redactionMarkedScreenshot from '../../assets/screenshots/redaction-marked-text-currentdev-dark-web.png';
-import redactionConfirmationScreenshot from '../../assets/screenshots/redaction-apply-confirmation-currentdev-dark-web.png';
-import redactionAppliedScreenshot from '../../assets/screenshots/redaction-applied-result-currentdev-dark-web.png';
-import sanitizeOptionsScreenshot from '../../assets/screenshots/sanitize-options-currentdev-dark-web.png';
-import sanitizeResultScreenshot from '../../assets/screenshots/sanitize-result-currentdev-dark-web.png';
+import redactionSearchResultScreenshot from '../../assets/screenshots/redaction-reopened-search-no-matches-v1-4-light-web.png';
+import redactionBeforeScreenshot from '../../assets/screenshots/redaction-lab-before-v1-4-light-web.png';
+import redactionMarkedScreenshot from '../../assets/screenshots/redaction-marked-text-v1-4-light-web.png';
+import redactionConfirmationScreenshot from '../../assets/screenshots/redaction-apply-confirmation-v1-4-light-web.png';
+import redactionAppliedScreenshot from '../../assets/screenshots/redaction-applied-result-v1-4-light-web.png';
+import sanitizeOptionsScreenshot from '../../assets/screenshots/sanitize-options-v1-4-light-web.png';
+import sanitizeResultScreenshot from '../../assets/screenshots/sanitize-result-v1-4-light-web.png';
 
 const captureProvenance = '';
 
@@ -13,7 +13,7 @@ const post = {
   title: 'How to Redact and Sanitize a PDF: Limits to Know',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '12 min read',
   tag: 'Document Security',
@@ -21,13 +21,13 @@ const post = {
     'Use PolyPDF redaction for supported searchable text, understand what sanitation can miss, and independently inspect the saved copy before release.',
   metaTitle: 'Redact and Sanitize a PDF: PolyPDF Limits',
   metaDescription:
-    'Learn what PolyPDF 1.3.4 redaction and sanitation can remove, what can survive, and how to verify a saved PDF before deciding whether it is safe to share.',
+    'Learn what PolyPDF 1.4.0 redaction and sanitation can remove, what can survive, and how to verify a saved PDF before deciding whether it is safe to share.',
   lede:
     'A black rectangle is not redaction, and a finished sanitation pass does not mean every hidden object was found. PolyPDF removes ordinary searchable text under a marked region and clears the structures you select, but confidential release still needs checks that match the content actually inside the PDF.',
   quickAnswer:
     'PolyPDF redaction removes a marked token when it is ordinary searchable text, but that behavior does not generalize to every PDF structure. Outlined lettering, vector artwork, and images nested inside reusable form content can remain under the black fill, so the black area is never the check: save the file, reopen it, then search and extract the text again. Sanitize Document offers separate choices for metadata, page thumbnails, attachments, and JavaScript actions; saving writes new PolyPDF /Producer and /ModDate entries, and an attachment placed directly on the page can survive. Use an approved specialist workflow whenever confidentiality depends on complete removal.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: redactionSearchResultScreenshot,
@@ -296,7 +296,7 @@ const post = {
       url: 'https://csrc.nist.gov/pubs/sp/800/122/final'
     },
     {
-      label: 'PolyPDF 1.3.4 redaction and sanitation behavior',
+      label: 'PolyPDF 1.4.0 redaction and sanitation behavior',
       note: 'Redaction removes ordinary searchable text under a marked region; pages that draw text through a Form XObject are declined rather than partly redacted. Sanitize Document clears the categories you select and does not traverse every structure in the file.'
     }
   ],

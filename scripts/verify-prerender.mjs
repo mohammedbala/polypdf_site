@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const buildDirectory = path.resolve(root, process.env.BUILD_PATH || 'build');
 const routeMetadata = JSON.parse(fs.readFileSync(path.join(root, 'src/lib/route-metadata.json'), 'utf8'));
+const siteRelease = JSON.parse(fs.readFileSync(path.join(root, 'src/lib/siteRelease.json'), 'utf8'));
 const origin = 'https://www.polypdf.com';
 const defaultImageAlt =
   'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription';
@@ -34,7 +35,7 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
     continue;
   }
   const html = fs.readFileSync(htmlPath, 'utf8');
-  const imageURL = new URL(metadata.image || '/og-image.png?v=20260819', `${origin}/`).href;
+  const imageURL = new URL(metadata.image || `/og-image.png?v=${siteRelease.screenshotCacheToken}`, `${origin}/`).href;
   const canonicalURL = `${origin}${route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`}`;
   const imageAlt = escapeHTML(metadata.imageAlt || defaultImageAlt);
 

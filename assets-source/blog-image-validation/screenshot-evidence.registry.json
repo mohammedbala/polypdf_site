@@ -1,5 +1,4 @@
 {
-  "$schema": "./screenshot-evidence.schema.json",
   "schemaVersion": 1,
   "records": [
     {
@@ -8,34 +7,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/wrong-scale-dark.png",
-          "sha256": "61df813e8b93d9518e8b5ae2de54f285699ac96fd6cc0cb66b7173df5be1ca80",
+          "sha256": "2c4eee0b1ac58bd8abdb3d5181151ff0bc00b06bc856b9ba0b37d08f3cc34016",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/wrong-scale-dark.png.theme-proof.json",
-          "sha256": "aa7d5b4ccfc271722b9778e17ff54c38f3860b1cdea6519b3e0a6274fcb99874"
+          "sha256": "59a2f1dd7f7e9ff129cb28abf0a9498ba490c68fa9dd0857baa415ca11312e93"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/wrong-scale-dark.json",
-          "sha256": "fa8d182e294893f082d1afb803b28115164793d1d52b50dacf64dd9bcb116b9f"
+          "path": "assets-source/blog-image-validation/captures/wrong-scale-dark.png.theme-proof.json",
+          "sha256": "59a2f1dd7f7e9ff129cb28abf0a9498ba490c68fa9dd0857baa415ca11312e93"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/wrong-scale-currentdev-dark-web.png",
-          "sha256": "80a3b4ad250218b5a9404c00dbbe8ff9167d58d442ce91361cb1f32f69956a02",
+          "path": "src/assets/screenshots/wrong-scale-v1-4-dark-web.png",
+          "sha256": "4c16945802e27e59740ce954a73cdd4a807f3013dc10d9334c78e26e690fb168",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/wrong-scale-dark.png",
@@ -43,10 +42,10 @@
         },
         {
           "path": "public/guides/why-pdf-measurements-are-wrong.png",
-          "sha256": "80a3b4ad250218b5a9404c00dbbe8ff9167d58d442ce91361cb1f32f69956a02",
+          "sha256": "4c16945802e27e59740ce954a73cdd4a807f3013dc10d9334c78e26e690fb168",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/wrong-scale-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/wrong-scale-v1-4-dark-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -57,34 +56,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/takeoff-dark.png",
-          "sha256": "5ea7a35cc28df2ac97eee067ed73ce4cbd0d22d158f6ef45693f2ac9f8e2ff7b",
+          "sha256": "c4dba85a968ad18eb553dbfe1a15876f4939713ce30c8f349d1b09a9e8267bb8",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/takeoff-dark.png.theme-proof.json",
-          "sha256": "67dab523055926501114bef56bbf08fae2e197f391e518ca9753f75387e0f37a"
+          "sha256": "8ac9e60ac0777083fecd71715e5d4f8c59f83e3c8c57391859dfde00136d75d4"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/takeoff-dark.json",
-          "sha256": "847f9119320f651c6236d38ea0cd34794518881eec0dc2cc63ec13e559d8519a"
+          "path": "assets-source/blog-image-validation/captures/takeoff-dark.png.theme-proof.json",
+          "sha256": "8ac9e60ac0777083fecd71715e5d4f8c59f83e3c8c57391859dfde00136d75d4"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/takeoff-currentdev-dark-web.png",
-          "sha256": "ab6ccce902b55b48c7b348df5ac551bcc8d77639a247c530e139853674395c4d",
+          "path": "src/assets/screenshots/takeoff-v1-4-dark-web.png",
+          "sha256": "db8d6f0c5488ded19ecc31f7c8bdaf6fec4210756569b2121359a4554b4d61ad",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/takeoff-dark.png",
@@ -92,10 +91,10 @@
         },
         {
           "path": "public/guides/pdf-takeoff-worked-example.png",
-          "sha256": "ab6ccce902b55b48c7b348df5ac551bcc8d77639a247c530e139853674395c4d",
+          "sha256": "db8d6f0c5488ded19ecc31f7c8bdaf6fec4210756569b2121359a4554b4d61ad",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/takeoff-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/takeoff-v1-4-dark-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -106,34 +105,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/markup-dark.png",
-          "sha256": "6d49f909d5a8d0dab77fee79f68acedc459c5a5dc901d56badb68cbcec232dae",
+          "sha256": "b5253f56b47cf4e99666ce4181ae0e5a7f92e6308233cb5a4a10766351cd15dd",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/markup-dark.png.theme-proof.json",
-          "sha256": "e114a49c251ecd2100d5d55874b3446daed79cce8ec2204ffce66bab2981bb18"
+          "sha256": "5456b9516d15ec327580f1167f445b074fe594c1a63d4912292b5d99e28f3ee0"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/markup-dark.json",
-          "sha256": "95be1314909bf5195ae77731ddbcfb4d84b8e0db60059e29d4e132df1540083d"
+          "path": "assets-source/blog-image-validation/captures/markup-dark.png.theme-proof.json",
+          "sha256": "5456b9516d15ec327580f1167f445b074fe594c1a63d4912292b5d99e28f3ee0"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/markup-currentdev-dark-web.png",
-          "sha256": "4efac5a883510eb9d14abd5878f0e48653ac6382d2748955eb4f69564b014dba",
+          "path": "src/assets/screenshots/markup-v1-4-dark-web.png",
+          "sha256": "f418bffd7442d82a61e5f9ddc3424e98b824ff8a8e17639afa1c58a7c056ab05",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/markup-dark.png",
@@ -141,10 +140,10 @@
         },
         {
           "path": "public/guides/pdf-markup-table-rfi-punch-list.png",
-          "sha256": "4efac5a883510eb9d14abd5878f0e48653ac6382d2748955eb4f69564b014dba",
+          "sha256": "f418bffd7442d82a61e5f9ddc3424e98b824ff8a8e17639afa1c58a7c056ab05",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/markup-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/markup-v1-4-dark-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -154,46 +153,46 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/forms-dark.png",
-          "sha256": "88786b7d40550255e144ed0a4042021b48a822ce45c2f37f9741e9328fc5340f",
+          "path": "assets-source/blog-image-validation/captures/forms-light.png",
+          "sha256": "b508b87d13acd70caca491ddd91c05472045105cd9c6eb0956b39cbd64b3a1d8",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/forms-dark.png.theme-proof.json",
-          "sha256": "3e0677fa050796ddad6e01a4e8129309bdba50730bd888be54fe75245f2a359f"
+          "path": "assets-source/blog-image-validation/captures/forms-light.png.theme-proof.json",
+          "sha256": "13c9ec8fdc6aeb0a3c95e7d09812a642fd42fdfa1e71fb29be6990eb91792b66"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/forms-dark.json",
-          "sha256": "418c58e254f7d82463a573ef4d39c10676e2129e69ffa5365948cc6be8e81686"
+          "path": "assets-source/blog-image-validation/captures/forms-light.png.theme-proof.json",
+          "sha256": "13c9ec8fdc6aeb0a3c95e7d09812a642fd42fdfa1e71fb29be6990eb91792b66"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/forms-currentdev-dark-web.png",
-          "sha256": "2f6125db4d9286aae0f635ba7aa1e7236b9f9e94e22d390128d70b548e43ccf8",
+          "path": "src/assets/screenshots/forms-v1-4-light-web.png",
+          "sha256": "15b2a6ed13ab1d3588a6a8c7d67a6992aa0d9487d1a4d7d83d41aa8af4fa4577",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/forms-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/forms-light.png",
           "transform": "exact-50-percent"
         },
         {
           "path": "public/guides/create-fillable-pdf-form.png",
-          "sha256": "2f6125db4d9286aae0f635ba7aa1e7236b9f9e94e22d390128d70b548e43ccf8",
+          "sha256": "15b2a6ed13ab1d3588a6a8c7d67a6992aa0d9487d1a4d7d83d41aa8af4fa4577",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/forms-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/forms-v1-4-light-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -204,34 +203,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/symbol-search-review-dark.png",
-          "sha256": "29c687c70f09bf310d036db73cbc1c608d8cd5b05a8914499a290728e08aebc2",
+          "sha256": "50a8f9f7bd1118b6662fc5c4ccfd2e9536cc2c6337a7b1a93033450645f59cd4",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/symbol-search-review-dark.png.theme-proof.json",
-          "sha256": "84b1b0677a09323ddff5b8f9892d43cbc31453a1d99a4c9685c5b39e87cc8b63"
+          "sha256": "0bede687bc4ce61bac189069334636d22375dfcf70b18689e3a11d5010fe1552"
         },
         "report": {
           "path": "assets-source/blog-image-validation/captures/symbol-search-review-dark.png.theme-proof.json",
-          "sha256": "84b1b0677a09323ddff5b8f9892d43cbc31453a1d99a4c9685c5b39e87cc8b63"
+          "sha256": "0bede687bc4ce61bac189069334636d22375dfcf70b18689e3a11d5010fe1552"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/symbol-search-review-currentdev-dark-web.png",
-          "sha256": "8e871420ce5e33b53844a0f8cbee5990668525385339703800c3781718c59db6",
+          "path": "src/assets/screenshots/symbol-search-review-v1-4-dark-web.png",
+          "sha256": "100a77a559397db28f7e920081d1c837c4a544ff65b5c30305a8a940c94980b5",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/symbol-search-review-dark.png",
@@ -239,10 +238,10 @@
         },
         {
           "path": "public/guides/count-pdf-symbols.png",
-          "sha256": "8e871420ce5e33b53844a0f8cbee5990668525385339703800c3781718c59db6",
+          "sha256": "100a77a559397db28f7e920081d1c837c4a544ff65b5c30305a8a940c94980b5",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/symbol-search-review-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/symbol-search-review-v1-4-dark-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -253,34 +252,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/count-committed-dark.png",
-          "sha256": "f9f58d39039e36f6797db040c973936111a4e12eb2e473c8f0d7244216a3e25f",
+          "sha256": "2844456247a9420142c2ee5d6d869a47f8414edbab5047071818b2687364cea9",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/count-committed-dark.png.theme-proof.json",
-          "sha256": "8f6b0f3b8aee49c4e35897f102e1f0f236125ec386872ae80ecd303e53771645"
+          "sha256": "b04bcb00095de7662b6f41664988e59723c9b0428d3580b33e2e3f994d6be425"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/count-dark.json",
-          "sha256": "15660d596b7d03157c0849fd6790f11e31012e0de5278427b1b378fb95add38b"
+          "path": "assets-source/blog-image-validation/captures/count-committed-dark.png.theme-proof.json",
+          "sha256": "b04bcb00095de7662b6f41664988e59723c9b0428d3580b33e2e3f994d6be425"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/count-committed-currentdev-dark-web.png",
-          "sha256": "65aa37f66262453ac4cf1650322907c454fbe442e7dbc1e66fb9f4733bdcf259",
+          "path": "src/assets/screenshots/count-committed-v1-4-dark-web.png",
+          "sha256": "dec20dec4bacc92d65bec9045aedb8bb62ee4735b8fca2ef457f179316029d6b",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/count-committed-dark.png",
@@ -294,34 +293,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/area-cutouts-depth-dark.png",
-          "sha256": "63acb3f256259c8f804c15a569f71b0c5ed5abbc0ff3928bf932072496569ae8",
+          "sha256": "129a54ab7b8d36cc80d2ffe1e8ca09305b5c20f31a4d1e700a9535f9dd6e7c09",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/area-cutouts-depth-dark.png.theme-proof.json",
-          "sha256": "c6671785282ae500a74586407f4481288ad995f937a20d1a0dc36f12ffb2d44b"
+          "sha256": "70a7c99ab9ece9ff7cdadae6df45b0b5f84015d568b942d8190c8cba208f38e4"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/area-dark.json",
-          "sha256": "aeb0aa4335d31910ef1f70844f01010c11e340df5e6a65b8d36a2e184f978562"
+          "path": "assets-source/blog-image-validation/captures/area-cutouts-depth-dark.png.theme-proof.json",
+          "sha256": "70a7c99ab9ece9ff7cdadae6df45b0b5f84015d568b942d8190c8cba208f38e4"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/area-cutouts-depth-currentdev-dark-web.png",
-          "sha256": "a9fa4bc2050df6e4951cb0cbe8a563da3f439b8e520d0089f8d1b902d7877694",
+          "path": "src/assets/screenshots/area-cutouts-depth-v1-4-dark-web.png",
+          "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/area-cutouts-depth-dark.png",
@@ -329,10 +328,10 @@
         },
         {
           "path": "public/guides/measure-pdf-area-cutouts-depth.png",
-          "sha256": "a9fa4bc2050df6e4951cb0cbe8a563da3f439b8e520d0089f8d1b902d7877694",
+          "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/area-cutouts-depth-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/area-cutouts-depth-v1-4-dark-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -343,34 +342,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/calibration-uncalibrated-dark.png",
-          "sha256": "2792f72831797e9dc61a11c2d00a5c4273892dec3201fd645c4cc6e63871c6cf",
+          "sha256": "3d524e01914b144db6b2130df6a7f3fc24bcba7b02f977ac05c611b8f751caa3",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/calibration-uncalibrated-dark.png.theme-proof.json",
-          "sha256": "c3d3215b8fe8802fa893df54c0927752c6d0d2d3acef2574556ad1a49150a2a5"
+          "sha256": "8112f76c5fcb3bb76b1e48f0c5dab911c176efbec10737b83d34a4e4efda33de"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/captures/calibration-workflow-report.json",
-          "sha256": "2850ed768868bc01414818d91d7430ba68da0153a351cc598c19a5979a54c66e"
+          "path": "assets-source/blog-image-validation/captures/calibration-uncalibrated-dark.png.theme-proof.json",
+          "sha256": "8112f76c5fcb3bb76b1e48f0c5dab911c176efbec10737b83d34a4e4efda33de"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/calibration-uncalibrated-currentdev-dark-web.png",
-          "sha256": "c782f88c8420f72e2baad4ef970362c475ee3f9e7d6ed5815c99a542fab3005c",
+          "path": "src/assets/screenshots/calibration-uncalibrated-v1-4-dark-web.png",
+          "sha256": "404892474ed9c54ba43ca629570940ea9e20dc561ab2ac998d18994dd2a36df3",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/calibration-uncalibrated-dark.png",
@@ -384,34 +383,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/calibration-known-distance-dialog-dark.png",
-          "sha256": "26f8d41a8b715d34898e9e8a5f56b663795937fc11d28349d5fe9b45b645b607",
+          "sha256": "459f25ae9b536bb50db654261ca23c20247e4ddc1fee471003c3aaa57998dff2",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/calibration-known-distance-dialog-dark.png.theme-proof.json",
-          "sha256": "83c57e0122c012462bc3de5a9642b84401a26f5a2aecd1b96cb9fe34ca88c866"
+          "sha256": "fd8a3d3bd3578092ed35ab951742e8570f7f8647b3bd249a5f4a8443b22bdba1"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/captures/calibration-workflow-report.json",
-          "sha256": "2850ed768868bc01414818d91d7430ba68da0153a351cc598c19a5979a54c66e"
+          "path": "assets-source/blog-image-validation/captures/calibration-known-distance-dialog-dark.png.theme-proof.json",
+          "sha256": "fd8a3d3bd3578092ed35ab951742e8570f7f8647b3bd249a5f4a8443b22bdba1"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/calibration-known-distance-dialog-currentdev-dark-web.png",
-          "sha256": "bef745d21b27b6008f3096c5ca185a426aff99e04b507af86f8aa27664995150",
+          "path": "src/assets/screenshots/calibration-known-distance-dialog-v1-4-dark-web.png",
+          "sha256": "213c5f29f27f6618954baaca9a772c2f08f6f1253248c93b1a09ed51e9e08728",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/calibration-known-distance-dialog-dark.png",
@@ -425,34 +424,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/calibration-verified-second-span-dark.png",
-          "sha256": "0e7272e93f26e7ddb3d1ac670c53242796b5cb1de9406423b93da5a82a55db67",
+          "sha256": "eb7116dbeaef6e54df73157f8fb78456e394540a00f85c6dcd0201056b4133ce",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/calibration-verified-second-span-dark.png.theme-proof.json",
-          "sha256": "2d146e049d291436d2aa16e1c7e352f7dd19631d7dcb65ef326b366e62667b57"
+          "sha256": "40cab86cf5d3c16ae987dadbba84c31c78361881197f621ab4a7c0ab55c5ad32"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/captures/calibration-workflow-report.json",
-          "sha256": "2850ed768868bc01414818d91d7430ba68da0153a351cc598c19a5979a54c66e"
+          "path": "assets-source/blog-image-validation/captures/calibration-verified-second-span-dark.png.theme-proof.json",
+          "sha256": "40cab86cf5d3c16ae987dadbba84c31c78361881197f621ab4a7c0ab55c5ad32"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/calibration-verified-second-span-currentdev-dark-web.png",
-          "sha256": "a0280859db57c4128a5fae469abceb7ef8b1675bd4662d2ee60fefd41f0b8bf8",
+          "path": "src/assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png",
+          "sha256": "27a2bb5ffe16d0867b7438b5c749606e1fcb531d53c9ba3c200e5d15e59d9a8b",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/calibration-verified-second-span-dark.png",
@@ -460,10 +459,10 @@
         },
         {
           "path": "public/guides/calibrate-pdf-drawing-scale.png",
-          "sha256": "a0280859db57c4128a5fae469abceb7ef8b1675bd4662d2ee60fefd41f0b8bf8",
+          "sha256": "27a2bb5ffe16d0867b7438b5c749606e1fcb531d53c9ba3c200e5d15e59d9a8b",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/calibration-verified-second-span-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -474,34 +473,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/compare-editable-clouds-dark.png",
-          "sha256": "c8ef5798ad6171455540ee1aa8c4839029a673c13e2265aba4e58d7222fb1d84",
+          "sha256": "ba60ce448361ee9f65e4be262a45d55361c8891b453545cc6469b53adfe18d38",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/compare-editable-clouds-dark.png.theme-proof.json",
-          "sha256": "809b4551e46cc0e7e1f4d030d9ef011ea88cbcaf9cf0e18714b8f04aba29997c"
+          "sha256": "7be6f524cbaa45baa1fe45606cebf3a5991e97720011d228c309e4d06be4b620"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/compare-current-dev-captures.json",
-          "sha256": "5254caeed81e635b3dfeda570d59765e3514329e9091b247712d33231f08ac68"
+          "path": "assets-source/blog-image-validation/captures/compare-editable-clouds-dark.png.theme-proof.json",
+          "sha256": "7be6f524cbaa45baa1fe45606cebf3a5991e97720011d228c309e4d06be4b620"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/compare-editable-clouds-currentdev-dark-web.png",
-          "sha256": "eb4d206dcafe67f937b02e5936ac2a7d6a267b864b820dac20d1bbb16d79fc2a",
+          "path": "src/assets/screenshots/compare-editable-clouds-v1-4-dark-web.png",
+          "sha256": "35e4f8725e08c29e55788d31db58dbbf9fc64a923871c646a1cc030f4b78f9f1",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/compare-editable-clouds-dark.png",
@@ -509,10 +508,10 @@
         },
         {
           "path": "public/guides/compare-pdf-drawing-revisions.png",
-          "sha256": "eb4d206dcafe67f937b02e5936ac2a7d6a267b864b820dac20d1bbb16d79fc2a",
+          "sha256": "35e4f8725e08c29e55788d31db58dbbf9fc64a923871c646a1cc030f4b78f9f1",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/compare-editable-clouds-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/compare-editable-clouds-v1-4-dark-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -522,38 +521,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-dark-maximized.png",
-          "sha256": "83d4b85b2ea2716dde678789780440987f3ef220b34938922309c9b3bc1e49c6",
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-light.png",
+          "sha256": "667f488bb4bb63309391d9a4648d2c5df5d25210277563008bf146893e9bb7d3",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-dark-maximized.png.capture-proof.json",
-          "sha256": "e4b4e4dc90ea1fc38ddcc465e0182e717772f2535f562fc40e887d6cf8f80c6f"
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-light.png.theme-proof.json",
+          "sha256": "5f1b3051bd96d9fd3508a22e7bd130682d203a6dba7869cfbe57d2c74d3f95c1"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/ocr-evidence.json",
-          "sha256": "b6611c46e3683bce5dbd8c07783edff27aabb49544672a0a32bbf296311b1806"
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-light.png.theme-proof.json",
+          "sha256": "5f1b3051bd96d9fd3508a22e7bd130682d203a6dba7869cfbe57d2c74d3f95c1"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/ocr-uss-akron-no-text-before-currentdev-dark-web.png",
-          "sha256": "3943a51d8488d50a0c5fb895b888776d559747de49a20c138e3b0ee2b70bf9b8",
+          "path": "src/assets/screenshots/ocr-uss-akron-no-text-before-v1-4-light-web.png",
+          "sha256": "c033a84521f063f6b2fa75d69b5d3f4aeaf2bb76d23daf1e3ba118ef5e0fbe3d",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-dark-maximized.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -563,38 +562,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-dark-maximized.png",
-          "sha256": "2c5c83fa7478e91d1e24c00a8448f74fee956c1b1b0ec5ea9c40cbb75cdd5f13",
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-light.png",
+          "sha256": "310176e9b0ef100b7f53b7f24d4e5fd3a7fce2d93e7846540e2672dec7ece154",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-dark-maximized.png.capture-proof.json",
-          "sha256": "10ad6b03c3b37487c49b4315784702403bb3fee0a556e1d7bfd4e2ecf87a7836"
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-light.png.theme-proof.json",
+          "sha256": "c14756ce243d3929be7ea8851427a1a26b6336773100ce4e1935edb5a4be31c7"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/ocr-evidence.json",
-          "sha256": "b6611c46e3683bce5dbd8c07783edff27aabb49544672a0a32bbf296311b1806"
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-light.png.theme-proof.json",
+          "sha256": "c14756ce243d3929be7ea8851427a1a26b6336773100ce4e1935edb5a4be31c7"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/ocr-uss-akron-complete-currentdev-dark-web.png",
-          "sha256": "fb4c872cffae1c8dddc1576c93db405a6cf52239fbc4ec4e836b3ede4649ad54",
+          "path": "src/assets/screenshots/ocr-uss-akron-complete-v1-4-light-web.png",
+          "sha256": "911993184c43fedbaf48fcda74cc62b8ac1923d23e36bb19ac7dca5cd58204c9",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-dark-maximized.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -604,46 +603,46 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-dark-maximized.png",
-          "sha256": "e8b434d322149f1c24510fa00943de315e6745e24fca753eb988d642e98ca28d",
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-light.png",
+          "sha256": "a36dcef1c57282b8a8bcbf497a87543dfccf0c9e3f8c4d3f51002fc1dfdc3f14",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-dark-maximized.png.capture-proof.json",
-          "sha256": "bf2265b9a1c4171cd2617b95a7c3d04282bf2feca9456b22c58373cebc12d941"
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-light.png.theme-proof.json",
+          "sha256": "78f726cb7623dee0f4c8dd55a55d0ef89b01c5471d5a97bc06405fbd44a84e4a"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/ocr-evidence.json",
-          "sha256": "b6611c46e3683bce5dbd8c07783edff27aabb49544672a0a32bbf296311b1806"
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-light.png.theme-proof.json",
+          "sha256": "78f726cb7623dee0f4c8dd55a55d0ef89b01c5471d5a97bc06405fbd44a84e4a"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/ocr-uss-akron-search-hit-currentdev-dark-web.png",
-          "sha256": "b4ee0fc30ab6e5300b1bdc5f264515c9e08a396401f110c6608771d4d4e2ad22",
+          "path": "src/assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png",
+          "sha256": "c89eb58178ae38303cd5262cf443d875e7ed98e7433e28269f5c29d4485ce977",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-dark-maximized.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-light.png",
           "transform": "exact-50-percent"
         },
         {
           "path": "public/guides/ocr-scanned-pdf-drawings.png",
-          "sha256": "b4ee0fc30ab6e5300b1bdc5f264515c9e08a396401f110c6608771d4d4e2ad22",
+          "sha256": "c89eb58178ae38303cd5262cf443d875e7ed98e7433e28269f5c29d4485ce977",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/ocr-uss-akron-search-hit-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -653,46 +652,46 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/issued-final-dark.png",
-          "sha256": "e36f6ac6ca968e5cfae144273db29043b4deb4abf0d6dde0899e9a9070025109",
+          "path": "assets-source/blog-image-validation/captures/issued-final-light.png",
+          "sha256": "7da9e4f7b7213a594827031c8604537ecf29c1c5fde3bdd3e40982de27853694",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/issued-final-dark.png.theme-proof.json",
-          "sha256": "68ff67538a1e566de47af15d97f3babfcf1ade37b4cf8f9d3877d0496141a99b"
+          "path": "assets-source/blog-image-validation/captures/issued-final-light.png.theme-proof.json",
+          "sha256": "ec93b998f958f185d6c9a8c79ed5beeb3df84d2d6463e062202d3064b89b2e88"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/issued-current-dev-captures.json",
-          "sha256": "fe77f1956ffe245b349bbce4440016818415c6b73df00740e0033620e84b3e82"
+          "path": "assets-source/blog-image-validation/captures/issued-final-light.png.theme-proof.json",
+          "sha256": "ec93b998f958f185d6c9a8c79ed5beeb3df84d2d6463e062202d3064b89b2e88"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/shot-issued-final-currentdev-dark-web.png",
-          "sha256": "bddbde726ae422a09ae4011a155d1256fa8e1569c6e993de025c94b1036a3071",
+          "path": "src/assets/screenshots/shot-issued-final-v1-4-light-web.png",
+          "sha256": "efe037a44f197b420840bd10f59990674fc8bc3228e8aa2476e4009f4c215443",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/issued-final-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/issued-final-light.png",
           "transform": "exact-50-percent"
         },
         {
           "path": "public/guides/prepare-issued-pdf-set.png",
-          "sha256": "bddbde726ae422a09ae4011a155d1256fa8e1569c6e993de025c94b1036a3071",
+          "sha256": "efe037a44f197b420840bd10f59990674fc8bc3228e8aa2476e4009f4c215443",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/shot-issued-final-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/shot-issued-final-v1-4-light-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -702,38 +701,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-dark.png",
-          "sha256": "2e3e9aa1f6260bddf29f6a4b587f96ff37aca973f355ae6dd2d217807a185e4b",
+          "path": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-light.png",
+          "sha256": "4d96bcab8680c7bbb6f3314d1952a43fdfda8667b26d899564ffd1294203f07a",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-dark.png.theme-proof.json",
-          "sha256": "fe64fb6b90efb494a9e02af4faa7c3a68328c21c99c4ea9e390d1a44dc91b6d8"
+          "path": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-light.png.theme-proof.json",
+          "sha256": "008fcbdc1a093e4c10ff4bf415334c3a8ab6a16fa4f7fb5d7b6f884ab3ccb708"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/issued-current-dev-captures.json",
-          "sha256": "fe77f1956ffe245b349bbce4440016818415c6b73df00740e0033620e84b3e82"
+          "path": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-light.png.theme-proof.json",
+          "sha256": "008fcbdc1a093e4c10ff4bf415334c3a8ab6a16fa4f7fb5d7b6f884ab3ccb708"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/shot-issued-headers-currentdev-dark-web.png",
-          "sha256": "9d2d594bbd4a19829217787f7bc597b54b95527a6705e4860b5468f12ced5bd4",
+          "path": "src/assets/screenshots/shot-issued-headers-v1-4-light-web.png",
+          "sha256": "e654a9462048b59026386f6f1768f78dfef67a97c8a1300ae728df23f1049ab0",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -743,38 +742,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/issued-bates-dialog-dark.png",
-          "sha256": "57d6c71f69a566007213b1f3820dad01e7fdc8354d67ea3a74e8dd799b82ff46",
+          "path": "assets-source/blog-image-validation/captures/issued-bates-dialog-light.png",
+          "sha256": "f51adbc0b6d5ff8ab95b74ec7e3cf5cc098502686528748adc30aeabfbf14139",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/issued-bates-dialog-dark.png.theme-proof.json",
-          "sha256": "727e3a6f812bfed13aab4dcd8b50bf704de3dfe1ed8184036f9a52e5ae05a2af"
+          "path": "assets-source/blog-image-validation/captures/issued-bates-dialog-light.png.theme-proof.json",
+          "sha256": "5b9b6b05b2a17bdc562d85a35ad5c20f030b56c1ed57240e94a8e2e55908c8d2"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/issued-current-dev-captures.json",
-          "sha256": "fe77f1956ffe245b349bbce4440016818415c6b73df00740e0033620e84b3e82"
+          "path": "assets-source/blog-image-validation/captures/issued-bates-dialog-light.png.theme-proof.json",
+          "sha256": "5b9b6b05b2a17bdc562d85a35ad5c20f030b56c1ed57240e94a8e2e55908c8d2"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/shot-issued-bates-currentdev-dark-web.png",
-          "sha256": "ee123480c73f6ec802f1c1ac8a8626c6ea43c53652f50e0e386b85698857dbce",
+          "path": "src/assets/screenshots/shot-issued-bates-v1-4-light-web.png",
+          "sha256": "fefceb9573b51034b9c8eed1293b8cc9aad2bd01375e684e3668821bab6384a7",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/issued-bates-dialog-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/issued-bates-dialog-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -784,38 +783,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/issued-preflight-dark.png",
-          "sha256": "702911df03f4b1aadfaf1c838ce8162b810cc4ea4577826c7b70837a6bb28b9f",
+          "path": "assets-source/blog-image-validation/captures/issued-preflight-light.png",
+          "sha256": "0e9dae01fc8a4ac0e096c240ff33968b54d3b70ae495ba42b16ca02d592a50f3",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/issued-preflight-dark.png.theme-proof.json",
-          "sha256": "30ec4e58c2132215042dcdb95ae1f47a92652fb95e85f245284a7a7db39e8b12"
+          "path": "assets-source/blog-image-validation/captures/issued-preflight-light.png.theme-proof.json",
+          "sha256": "de13be2d1fd59b1ef3a03ae66b813d4df585aa2fb6aaa9867d6c325d53b2ec67"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/issued-current-dev-captures.json",
-          "sha256": "fe77f1956ffe245b349bbce4440016818415c6b73df00740e0033620e84b3e82"
+          "path": "assets-source/blog-image-validation/captures/issued-preflight-light.png.theme-proof.json",
+          "sha256": "de13be2d1fd59b1ef3a03ae66b813d4df585aa2fb6aaa9867d6c325d53b2ec67"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/shot-issued-preflight-currentdev-dark-web.png",
-          "sha256": "1a58957782fd77ad80160680443a21b2635d8f6a35054fcf75705a093fdbcec1",
+          "path": "src/assets/screenshots/shot-issued-preflight-v1-4-light-web.png",
+          "sha256": "b4c0bf0fd39cc952811ed9a6e7e33e13677d42a1179467047791369359863b60",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/issued-preflight-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/issued-preflight-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -826,34 +825,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png",
-          "sha256": "7c84629a595cfd41ec0f9eb81578e21697bdf1b1e6e1a3beeee62a9a35cbe1ab",
+          "sha256": "111bc3b6769dbf450fdaaa692bc3000f662d9931f03e83c8fdb64dc3fff67fcb",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png.capture-proof.json",
-          "sha256": "a4ee2bf20a99f102607b53f0afc1fb77176443f73d029b7a293284ad56dfce46"
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png.theme-proof.json",
+          "sha256": "c2209f3549a95ffda81f35cae4ee27d0aad47d87c901333c60052d6c68e648b8"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/plugin-mutcd-current-dev-captures.json",
-          "sha256": "d21020fb5a42fd74cf76e0fe00a3f1dc36676e1fe82b2e0e3165c4f5ad481425"
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png.theme-proof.json",
+          "sha256": "c2209f3549a95ffda81f35cae4ee27d0aad47d87c901333c60052d6c68e648b8"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/plugins-sidebar-currentdev-dark-web.png",
-          "sha256": "ec2f1cfba31a97990f4e9e946673409efccc78313f3c1a571e70e6f73e4704d1",
+          "path": "src/assets/screenshots/plugins-sidebar-v1-4-dark-web.png",
+          "sha256": "0cecb92c9760503ef9fc30b6103e74a4ccdd271bab02fcec7b799d1656043f3a",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png",
@@ -861,10 +860,10 @@
         },
         {
           "path": "public/guides/introducing-polypdf-plugins.png",
-          "sha256": "ec2f1cfba31a97990f4e9e946673409efccc78313f3c1a571e70e6f73e4704d1",
+          "sha256": "0cecb92c9760503ef9fc30b6103e74a4ccdd271bab02fcec7b799d1656043f3a",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/plugins-sidebar-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/plugins-sidebar-v1-4-dark-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -875,34 +874,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png",
-          "sha256": "db343f4fcd16f8dbba40575d6ce446f02f5895e60e170c16476b064fa5e6d69b",
+          "sha256": "741f9c4717954d23dfb8fec6ca1c4701eca4578b71a92f733d863bfcf76a4b2a",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png.capture-proof.json",
-          "sha256": "fd970e46e0eed0787ec0f5ddaadfb0955ae025eec66eaebc4ea52210f149320f"
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png.theme-proof.json",
+          "sha256": "6f8f8b7a64d8bedff255467b5d1776546edd4aafcee20da4a4cb3493ae708aa6"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/plugin-mutcd-current-dev-captures.json",
-          "sha256": "d21020fb5a42fd74cf76e0fe00a3f1dc36676e1fe82b2e0e3165c4f5ad481425"
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png.theme-proof.json",
+          "sha256": "6f8f8b7a64d8bedff255467b5d1776546edd4aafcee20da4a4cb3493ae708aa6"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/plugins-aisc-w24x55-generator-currentdev-dark-web.png",
-          "sha256": "7993ab509bc9ff864dcb3a3c29e5bc8b4c72759f61155ded61fbf030ea71ad82",
+          "path": "src/assets/screenshots/plugins-aisc-w24x55-generator-v1-4-dark-web.png",
+          "sha256": "6bb1c09da208b8513b9763841704e717508b48ba14449b255e3ecd07cd6a7926",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png",
@@ -916,34 +915,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png",
-          "sha256": "9b9feb4ffca97314dabde4343b4cdace1b3df66856ab59251888391d1ad57c72",
+          "sha256": "4d5412e69eb7efd255e425498c4f70c38c0c12d57593c5e10818b13259220aed",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png.capture-proof.json",
-          "sha256": "4dbca5da4636957d6a88c846a957b52fdcf57d2823cc6fec273c30ec538ef0f4"
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png.theme-proof.json",
+          "sha256": "28f9911f04c73fcd9bc22086021d6229d0ade8eaba1523edd41787becbc736dd"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/plugin-mutcd-current-dev-captures.json",
-          "sha256": "d21020fb5a42fd74cf76e0fe00a3f1dc36676e1fe82b2e0e3165c4f5ad481425"
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png.theme-proof.json",
+          "sha256": "28f9911f04c73fcd9bc22086021d6229d0ade8eaba1523edd41787becbc736dd"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/plugins-aisc-w24x55-result-currentdev-dark-web.png",
-          "sha256": "8a12630a39a12412f3dc1f93ec7dff2eed2b7156e22040a1a4abcd0f69a479c7",
+          "path": "src/assets/screenshots/plugins-aisc-w24x55-result-v1-4-dark-web.png",
+          "sha256": "b0548fdf5a08cc0d892f3265039e055ab5370fd6360cdf37b1c439d9fc503452",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png",
@@ -957,34 +956,34 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png",
-          "sha256": "d5625064cf14a5e39e8a2fcd1eba551b79a0155b789336acc13e49061c13df21",
+          "sha256": "c64091121822adc74d386b1516932e4199f41ce0f1b3737e8a0514d575487bff",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png.capture-proof.json",
-          "sha256": "6bca21e7e78a7607a0cf31e32f9171c6c100dcf6fcdbfb9cdfecd3ca3c57435c"
+          "path": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png.theme-proof.json",
+          "sha256": "0c9b0399fdea8dda2f7fff9cd77f26100251019b215acbfe5f14981be5c91edd"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/plugin-mutcd-current-dev-captures.json",
-          "sha256": "d21020fb5a42fd74cf76e0fe00a3f1dc36676e1fe82b2e0e3165c4f5ad481425"
+          "path": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png.theme-proof.json",
+          "sha256": "0c9b0399fdea8dda2f7fff9cd77f26100251019b215acbfe5f14981be5c91edd"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "dark",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/mutcd-r1-1-stop-currentdev-dark-web.png",
-          "sha256": "3507eb750ce5ed44bda4d86ad89356b7243626daa440627075bb8de4c755eec4",
+          "path": "src/assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png",
+          "sha256": "6fabbe32af1d1866fa9a6372e57e8ec9645f8287f0d498bbc9073872d9f61180",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png",
@@ -997,46 +996,46 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/signature-valid-certificate-dark.png",
-          "sha256": "953adffc410748912609963737559751f223b3a61db0a241bb41af8067f89135",
+          "path": "assets-source/blog-image-validation/captures/signature-valid-certificate-light.png",
+          "sha256": "30877f2418c4e207a01c861f22b7ff424147471cfddfcd1b565f02c44037701c",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/signature-valid-certificate-dark.png.theme-proof.json",
-          "sha256": "5d188ca5d2736aeb88f54361b748736ea7ae8c1863fe4b29023c96f2b220a62c"
+          "path": "assets-source/blog-image-validation/captures/signature-valid-certificate-light.png.theme-proof.json",
+          "sha256": "329eb511e8a1b2c2f8035522855c6c55b97aa69e8a27bdc3d6d81b0813a72a6f"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/signature-valid-certificate-light.png.theme-proof.json",
+          "sha256": "329eb511e8a1b2c2f8035522855c6c55b97aa69e8a27bdc3d6d81b0813a72a6f"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/signature-valid-certificate-currentdev-dark-web.png",
-          "sha256": "0d647561355065d8573c5b183e7908bf8432e7821dd0064ca149ad2f52986d42",
+          "path": "src/assets/screenshots/signature-valid-certificate-v1-4-light-web.png",
+          "sha256": "b1ddc7aea6054a580971cad7a66e573b87849163b01eaaa87f2f1b77a03083e1",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/signature-valid-certificate-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-valid-certificate-light.png",
           "transform": "exact-50-percent"
         },
         {
           "path": "public/guides/digital-signature-vs-visual-signature-vs-seal.png",
-          "sha256": "0d647561355065d8573c5b183e7908bf8432e7821dd0064ca149ad2f52986d42",
+          "sha256": "b1ddc7aea6054a580971cad7a66e573b87849163b01eaaa87f2f1b77a03083e1",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/signature-valid-certificate-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/signature-valid-certificate-v1-4-light-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -1046,38 +1045,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/signature-certificate-technical-dark.png",
-          "sha256": "e0574d474b36db8367c0f1743128411d71cf6efefbcb882d6e25f0f861cc9774",
+          "path": "assets-source/blog-image-validation/captures/signature-certificate-technical-light.png",
+          "sha256": "59aae6c5a289c29dfd72eacd5e6e065d36dbcdc230cf2d73d1281bdc05802a0e",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/signature-certificate-technical-dark.png.theme-proof.json",
-          "sha256": "bad4c9f178b8a1b7c3e59080f4dba3f1ab5d9d832fabc36bee323e864ac74c69"
+          "path": "assets-source/blog-image-validation/captures/signature-certificate-technical-light.png.theme-proof.json",
+          "sha256": "ba0bb2a5256f9c2b815a774866b8aed9cfef8e038d5fd757dde8751c0302574b"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/signature-certificate-technical-light.png.theme-proof.json",
+          "sha256": "ba0bb2a5256f9c2b815a774866b8aed9cfef8e038d5fd757dde8751c0302574b"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/signature-certificate-technical-currentdev-dark-web.png",
-          "sha256": "2c3adaaef2065eae5121fd70a7790a1c3c5cea39c73e0df1e29a779033dcc6af",
+          "path": "src/assets/screenshots/signature-certificate-technical-v1-4-light-web.png",
+          "sha256": "1fa6428c1e5adb9b21213772fe6faff2585e5d91e3e7bdc6ac875fe5b04b4866",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/signature-certificate-technical-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-certificate-technical-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1087,38 +1086,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/signature-visual-chooser-dark.png",
-          "sha256": "7a9302be2e86c7d364787f15557cc8270960a41285f8c8260a0895eb55125c38",
+          "path": "assets-source/blog-image-validation/captures/signature-visual-chooser-light.png",
+          "sha256": "6eaf1a95df72d26ba2623eee2d75642d063fd2a2c525b23c2a44081053c35eca",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/signature-visual-chooser-dark.png.theme-proof.json",
-          "sha256": "638bcfe4c47c3aeb7811969fd8e5d9008f6222685ee5aaec96ffba250e417a8b"
+          "path": "assets-source/blog-image-validation/captures/signature-visual-chooser-light.png.theme-proof.json",
+          "sha256": "f8fee432185c6d7a4e0ae4bd329de35b234fbd28b9a5fa52b84e0613d2c4fa3c"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/signature-visual-chooser-light.png.theme-proof.json",
+          "sha256": "f8fee432185c6d7a4e0ae4bd329de35b234fbd28b9a5fa52b84e0613d2c4fa3c"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/signature-visual-chooser-currentdev-dark-web.png",
-          "sha256": "3faadbc85accbbebf35ba97f7a6ef716b0c8cbd1ab5107ebf17b3ee4850eb3ab",
+          "path": "src/assets/screenshots/signature-visual-chooser-v1-4-light-web.png",
+          "sha256": "17691607bfb72af41d9b35d56b5c98dd8089482a750aea5bf562ba6a8636a12e",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/signature-visual-chooser-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-visual-chooser-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1128,38 +1127,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/signature-visual-styles-dark.png",
-          "sha256": "a777ef4835d8558614783aa81acf907229bdc81d6c4330ef9bb802e3a593a265",
+          "path": "assets-source/blog-image-validation/captures/signature-visual-styles-light.png",
+          "sha256": "6eaf1a95df72d26ba2623eee2d75642d063fd2a2c525b23c2a44081053c35eca",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/signature-visual-styles-dark.png.theme-proof.json",
-          "sha256": "1b483251f7b30de5082418977fa6df237fe74da1aa17e8b3d4a94e49b6ede6c7"
+          "path": "assets-source/blog-image-validation/captures/signature-visual-styles-light.png.theme-proof.json",
+          "sha256": "c98d342ea4d961739dd95fc1353a59b480854e373cc755dc9040b126ab0b9a58"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/signature-visual-styles-light.png.theme-proof.json",
+          "sha256": "c98d342ea4d961739dd95fc1353a59b480854e373cc755dc9040b126ab0b9a58"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/signature-visual-styles-currentdev-dark-web.png",
-          "sha256": "af1cacc791943c8ff7178f0fffebf130e5cab6a98e4ee5a2d528e49d40ad143a",
+          "path": "src/assets/screenshots/signature-visual-styles-v1-4-light-web.png",
+          "sha256": "17691607bfb72af41d9b35d56b5c98dd8089482a750aea5bf562ba6a8636a12e",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/signature-visual-styles-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-visual-styles-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1169,38 +1168,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-dark.png",
-          "sha256": "7d868a3748f7c2d9fe053efd8119e0ec33fe72f7bc3ff5a754399a9e4afe909e",
+          "path": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-light.png",
+          "sha256": "2aa89afb84ad92fd0bfe054065c92dca7e991a40854634a3fe9a4783a9d70137",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-dark.png.theme-proof.json",
-          "sha256": "f416888aa46ca0cb9f3cbf2bc165a2bcc7fc9029b75f59d0ae191a3aa50f1758"
+          "path": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-light.png.theme-proof.json",
+          "sha256": "1322ae64c4ea918c549c1360fefd515806d6ca1bb7dbff889a915eff82b0a91c"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-light.png.theme-proof.json",
+          "sha256": "1322ae64c4ea918c549c1360fefd515806d6ca1bb7dbff889a915eff82b0a91c"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/signature-seal-builder-warning-currentdev-dark-web.png",
-          "sha256": "a3ff44188c4547b8e964bc212aa47c9a375a50921f48cc53aabd6518fc8b84aa",
+          "path": "src/assets/screenshots/signature-seal-builder-warning-v1-4-light-web.png",
+          "sha256": "370283dacb62087a555c9dc4d4b1e29c26d0225221bd41598dca1436f70227f4",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1210,38 +1209,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/signature-seal-inserted-dark.png",
-          "sha256": "588aaa1ec44c0c01264d339b7441887f02d433a0387218ee8f01b40b4e22e575",
+          "path": "assets-source/blog-image-validation/captures/signature-seal-inserted-light.png",
+          "sha256": "b1f2890988613b81d46604e5b8d038805ce46ef90b4bacb2dd191e4b2ae0085f",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/signature-seal-inserted-dark.png.theme-proof.json",
-          "sha256": "b59236a938be0fe45bba6d467e5204f6436597ee409bbc1c48a0c2da2732b5f7"
+          "path": "assets-source/blog-image-validation/captures/signature-seal-inserted-light.png.theme-proof.json",
+          "sha256": "6ea02c45b3f5caa9ff15c143353a29fcb4dc0ccb1bdc0314d4219f0caa461148"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/signature-seal-inserted-light.png.theme-proof.json",
+          "sha256": "6ea02c45b3f5caa9ff15c143353a29fcb4dc0ccb1bdc0314d4219f0caa461148"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/signature-seal-inserted-currentdev-dark-web.png",
-          "sha256": "f2c12a0d90e2793b3089f181501981831f5bf5aad504547076fbaf6c018c9664",
+          "path": "src/assets/screenshots/signature-seal-inserted-v1-4-light-web.png",
+          "sha256": "b1bac781e05375ab02bc497cac0c262f64c21f6a30aadea3cff6b00392c61eda",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/signature-seal-inserted-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-seal-inserted-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1251,46 +1250,46 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-dark.png",
-          "sha256": "958ca8de299a8d6275ceda9a2b729e692c5f21b71d89d253ecc4b866203d3aec",
+          "path": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-light.png",
+          "sha256": "ad8b8cbb10e4d3bf399951963c6c9c2fb0cde87940483aed710341d560cb9b19",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-dark.png.theme-proof.json",
-          "sha256": "70369fa21d999fa47edfaa0ed73f33293bcb01d3460d8612703c7909b040a9ac"
+          "path": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-light.png.theme-proof.json",
+          "sha256": "5660d5e317d7568cc08c72cb53e74573ec6b5e22329eb201acbab5c99e8b4598"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-light.png.theme-proof.json",
+          "sha256": "5660d5e317d7568cc08c72cb53e74573ec6b5e22329eb201acbab5c99e8b4598"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/redaction-reopened-search-no-matches-currentdev-dark-web.png",
-          "sha256": "63fa912b6f7b0d8ccc1f641638d8945cd49a36aada9d41ab19e77c152e4edd88",
+          "path": "src/assets/screenshots/redaction-reopened-search-no-matches-v1-4-light-web.png",
+          "sha256": "2dc88e556ad531a8407b039975f11ebf1db0b371ca697158d2feb9b665dd2453",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-light.png",
           "transform": "exact-50-percent"
         },
         {
           "path": "public/guides/redact-and-sanitize-pdf.png",
-          "sha256": "63fa912b6f7b0d8ccc1f641638d8945cd49a36aada9d41ab19e77c152e4edd88",
+          "sha256": "2dc88e556ad531a8407b039975f11ebf1db0b371ca697158d2feb9b665dd2453",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "src/assets/screenshots/redaction-reopened-search-no-matches-currentdev-dark-web.png",
+          "derivedFrom": "src/assets/screenshots/redaction-reopened-search-no-matches-v1-4-light-web.png",
           "transform": "byte-identical"
         }
       ]
@@ -1300,38 +1299,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/redaction-lab-before-dark.png",
-          "sha256": "40ceaed1040687c5d3bbad0d8e5ff0badad246b95a023919d3053f7265ee6a93",
+          "path": "assets-source/blog-image-validation/captures/redaction-lab-before-light.png",
+          "sha256": "ed1cbf47314c00def53fcd260ab7ba30f9cdafc97001a1dc64589900ee8cfba2",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/redaction-lab-before-dark.png.theme-proof.json",
-          "sha256": "4a84f4ae632d44b9e092c4afc95e1171eafee11a09e897da8ae748b5cc184180"
+          "path": "assets-source/blog-image-validation/captures/redaction-lab-before-light.png.theme-proof.json",
+          "sha256": "75151974a0ce3042893a24e58cd90312abee800ae80e97fd5af20b695cad9faa"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/redaction-lab-before-light.png.theme-proof.json",
+          "sha256": "75151974a0ce3042893a24e58cd90312abee800ae80e97fd5af20b695cad9faa"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/redaction-lab-before-currentdev-dark-web.png",
-          "sha256": "a054ce04af7385163f1d19ad498f4c596fc14a2a50007a2cd8f5c950262f11bd",
+          "path": "src/assets/screenshots/redaction-lab-before-v1-4-light-web.png",
+          "sha256": "a736d477b3743677ad4c4a2774ac8c48447a793e52fc867f1fee6a37dacf3515",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-lab-before-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-lab-before-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1341,38 +1340,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/redaction-marked-text-dark.png",
-          "sha256": "96067b0185d993a3440fdabe8cc341b535d36e19525ef265071273e350c24d6e",
+          "path": "assets-source/blog-image-validation/captures/redaction-marked-text-light.png",
+          "sha256": "ac482f27dfd1dcc200186b78abbcf68e46eb813d75bf4c1108a040d4d0d0e063",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/redaction-marked-text-dark.png.theme-proof.json",
-          "sha256": "51f9e1feb390f898e2eb7565c82eb9d23428133c45570e9718ff4f9bb1282cd6"
+          "path": "assets-source/blog-image-validation/captures/redaction-marked-text-light.png.theme-proof.json",
+          "sha256": "67249e6230561a491216f69143687ad8ab06bff19277bd0f6bcf351b2a2a9b7c"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/redaction-marked-text-light.png.theme-proof.json",
+          "sha256": "67249e6230561a491216f69143687ad8ab06bff19277bd0f6bcf351b2a2a9b7c"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/redaction-marked-text-currentdev-dark-web.png",
-          "sha256": "082feb95b53a13792e3ae42582965794998c0af630e772861956ca7b909897d1",
+          "path": "src/assets/screenshots/redaction-marked-text-v1-4-light-web.png",
+          "sha256": "4d2dab39ed14bf52e07e5bcdfb9eabe8531a63107a70da778df034c3533d1e51",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-marked-text-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-marked-text-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1382,38 +1381,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-dark.png",
-          "sha256": "85d27f772c464b5385618b587dfb8a8945fc6417c69f27ab291a0952c6f87558",
+          "path": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-light.png",
+          "sha256": "0d769d3c4e50258f2cfbedc75380919fa2be18163fa2e5f77b961aa6552f6d36",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-dark.png.theme-proof.json",
-          "sha256": "31093d915ea1e3d46d1c38a665b9d6bcfdb9e33832bd54bf84004500fdde4276"
+          "path": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-light.png.theme-proof.json",
+          "sha256": "f2192bf640b6d0058c15f93fb45c7270ad1940ce9ae96ce4de74a4bdfe021796"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-light.png.theme-proof.json",
+          "sha256": "f2192bf640b6d0058c15f93fb45c7270ad1940ce9ae96ce4de74a4bdfe021796"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/redaction-apply-confirmation-currentdev-dark-web.png",
-          "sha256": "d264935759740f89f6ea652497569aae6c05bf770bf1fef076a6f9f318fbae3a",
+          "path": "src/assets/screenshots/redaction-apply-confirmation-v1-4-light-web.png",
+          "sha256": "a96bae21503309ece9e03fe56c5b6487bc9a194ffe38f66642ccc39891c86024",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1423,38 +1422,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/redaction-applied-result-dark.png",
-          "sha256": "ceb32ad616bbc377e03895e4710761da4f7a995823c9b024635bdf8dba43f84b",
+          "path": "assets-source/blog-image-validation/captures/redaction-applied-result-light.png",
+          "sha256": "4c9b35470e4d20488725b8505f1f3ca2dc03218855e3e75e5054de2d5fd516d4",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/redaction-applied-result-dark.png.theme-proof.json",
-          "sha256": "a2523cc8acf04e974f580db24f0458be7fd10fa62f2d4caf7de55346496edfb0"
+          "path": "assets-source/blog-image-validation/captures/redaction-applied-result-light.png.theme-proof.json",
+          "sha256": "03e0b270a68ec77e076dfb04347c2d3c7e92ff56de73ae810c6d72bcb0f767cc"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/redaction-applied-result-light.png.theme-proof.json",
+          "sha256": "03e0b270a68ec77e076dfb04347c2d3c7e92ff56de73ae810c6d72bcb0f767cc"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/redaction-applied-result-currentdev-dark-web.png",
-          "sha256": "d807ba4d5f7c53ae9f813dab8a5b4b440229d59670f1b8a00910dc674b0a673c",
+          "path": "src/assets/screenshots/redaction-applied-result-v1-4-light-web.png",
+          "sha256": "9d9e31eeabf2c0751567cba1f8fd13cc36dc9b100bdc2c0430cda74b995e5eef",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-applied-result-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-applied-result-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1464,38 +1463,38 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/sanitize-options-dark.png",
-          "sha256": "5737a7fa0a759ac88e2003c5942dbc4ad37de1ad59717f4080c67fa37df82171",
+          "path": "assets-source/blog-image-validation/captures/sanitize-options-light.png",
+          "sha256": "47a4da99bf072916834d13fe63ebe5d16c2686302b1139721c847cb07e3ad0a1",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/sanitize-options-dark.png.theme-proof.json",
-          "sha256": "12386507a98a5f5db3359ce1ba4430ac37d5f45c3c72669caf042255438bc6d6"
+          "path": "assets-source/blog-image-validation/captures/sanitize-options-light.png.theme-proof.json",
+          "sha256": "7f94fc86a689c9197e1ac0ab81bb22b4ddef16cc4b690a50914cd0da5c91d631"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/sanitize-options-light.png.theme-proof.json",
+          "sha256": "7f94fc86a689c9197e1ac0ab81bb22b4ddef16cc4b690a50914cd0da5c91d631"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/sanitize-options-currentdev-dark-web.png",
-          "sha256": "44dc6141b84016d080984d38e6e42cc4d08e12a4da34f0b1bc7b47c04bd4b7ca",
+          "path": "src/assets/screenshots/sanitize-options-v1-4-light-web.png",
+          "sha256": "06ea56039c70c8dcf54d9ca977a00c031964ed481d2c5b699ae16a9ac8174fa1",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/sanitize-options-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/sanitize-options-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1505,38 +1504,161 @@
       "publicationStatus": "publication-approved",
       "source": {
         "raw": {
-          "path": "assets-source/blog-image-validation/captures/sanitize-result-dark.png",
-          "sha256": "95b7b9ec7d6fd8d4f8766c466a36b0fcf4585f74ff79ff75e476ebd84881ce5e",
+          "path": "assets-source/blog-image-validation/captures/sanitize-result-light.png",
+          "sha256": "6ad279d153774f89d79e4dfd014f1ff414764182c9f0cc915003856722786e52",
           "width": 3420,
           "height": 2146
         },
         "proof": {
-          "path": "assets-source/blog-image-validation/captures/sanitize-result-dark.png.theme-proof.json",
-          "sha256": "3a785fb8abaf0bad49ef56980b66634a901e26a20b462e3e8408c977b8f9057c"
+          "path": "assets-source/blog-image-validation/captures/sanitize-result-light.png.theme-proof.json",
+          "sha256": "92fc8b15831da337d4541f8ee03ef976645ab2439e1fb37ef2e56012fe9d3d41"
         },
         "report": {
-          "path": "assets-source/blog-image-validation/manifests/signature-redaction-current-dev-captures.json",
-          "sha256": "479b681a72945e1ce93ba49bb03faad8585fdf5d3a2def08df6513b3b693d29a"
+          "path": "assets-source/blog-image-validation/captures/sanitize-result-light.png.theme-proof.json",
+          "sha256": "92fc8b15831da337d4541f8ee03ef976645ab2439e1fb37ef2e56012fe9d3d41"
         },
         "fingerprint": {
-          "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
-          "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       },
       "assertions": {
-        "darkMode": true,
+        "theme": "light",
         "nativeMaximized": true,
         "viewportEmulation": false,
-        "fullStyleBarVisible": true,
+        "styleToolbarStateValidated": true,
         "pageOnlyCrop": false
       },
       "outputs": [
         {
-          "path": "src/assets/screenshots/sanitize-result-currentdev-dark-web.png",
-          "sha256": "b35712a2bd9c4d9784fd1e7afd3ac4878b96ac5b0d6c803bc82f7bf38eea7a1d",
+          "path": "src/assets/screenshots/sanitize-result-v1-4-light-web.png",
+          "sha256": "2b4040d3547afe9dc0c5d00a6c5b8016df8311270976b5b57d47f470a4d95f0a",
           "width": 1710,
           "height": 1073,
-          "derivedFrom": "assets-source/blog-image-validation/captures/sanitize-result-dark.png",
+          "derivedFrom": "assets-source/blog-image-validation/captures/sanitize-result-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "pdf-maps",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/pdf-maps-dark.png",
+          "sha256": "47d4a03d09010ee0e2da6e8d8210bc3423f625b8a6a0ddb90504c2c4c68cb058",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/pdf-maps-dark.png.theme-proof.json",
+          "sha256": "1bcb8bce13c88cb2a8280a8ff60f89a2b567a61504ddb56d673774cf5a6c26de"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/pdf-maps-dark.png.theme-proof.json",
+          "sha256": "1bcb8bce13c88cb2a8280a8ff60f89a2b567a61504ddb56d673774cf5a6c26de"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/pdf-maps-v1-4-dark-web.png",
+          "sha256": "519f56ccbdb5ecd30772ab7b61ca00cb15aa6a8f061baa3e1fc0d64ac40149ae",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/pdf-maps-dark.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "auto-area",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png",
+          "sha256": "aaffc1ef0f2aed6846d5ea254d97a17010c430a42d626f94c6f0744a67c0e282",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png.theme-proof.json",
+          "sha256": "4bcc90837635337b85b804fe6551ac2ed3b47e9f38f8b57b752b089edf8e3d24"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png.theme-proof.json",
+          "sha256": "4bcc90837635337b85b804fe6551ac2ed3b47e9f38f8b57b752b089edf8e3d24"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/auto-area-v1-4-dark-web.png",
+          "sha256": "6efa70fb2ad2e8511ea86e2c1e71b22bdbb08df89cdcbb990ecba08033ed27f7",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "custom-shortcuts",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/custom-shortcuts-settings-light.png",
+          "sha256": "c900adc8f00a9adc73d542c37431b0df9ed3ab420174e4b729da4984998678ea",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/custom-shortcuts-settings-light.png.theme-proof.json",
+          "sha256": "81ca9bbe1b06746eef9a6162effd594f5f3e23db3023398bf562c2d76d9c49f3"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/custom-shortcuts-settings-light.png.theme-proof.json",
+          "sha256": "81ca9bbe1b06746eef9a6162effd594f5f3e23db3023398bf562c2d76d9c49f3"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/custom-shortcuts-v1-4-light-web.png",
+          "sha256": "f5056adcd33c717f9f1ea2518e55c8826b84e096b640ebd42a4026369a37f444",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/custom-shortcuts-settings-light.png",
           "transform": "exact-50-percent"
         }
       ]
@@ -1548,13 +1670,13 @@
       "publicationStatus": "publication-approved",
       "output": {
         "path": "public/og-image.png",
-        "sha256": "0c147747a5df0d7c1ab144868543365b53c3aed186599c80fdef8288118717e7",
+        "sha256": "34fcf31b40797883a9aed2a37b2e5c0c5713064521ccc12538c63f226712490e",
         "width": 1200,
         "height": 630
       },
       "template": {
         "path": "assets-source/blog-image-validation/og-image.html",
-        "sha256": "5fd5b8a59b9b67c038df77f41018cd322e859aa06550dfe9f2f349292c5ab4dc"
+        "sha256": "8037a13791f817bca65c02c52e7e36b1b22b93f845e9a867d587a8cd5760aef8"
       },
       "dependencies": [
         {
@@ -1562,8 +1684,8 @@
           "sha256": "f089bcd201dc9390b8b1fa049e77b7e80438acf9730cda15ca6b4f7288b04b8f"
         },
         {
-          "path": "src/assets/screenshots/takeoff-currentdev-dark-web.png",
-          "sha256": "ab6ccce902b55b48c7b348df5ac551bcc8d77639a247c530e139853674395c4d"
+          "path": "src/assets/screenshots/takeoff-v1-4-dark-web.png",
+          "sha256": "db8d6f0c5488ded19ecc31f7c8bdaf6fec4210756569b2121359a4554b4d61ad"
         }
       ]
     }

@@ -1,5 +1,5 @@
-import symbolSearchReviewImage from '../../assets/screenshots/symbol-search-review-currentdev-dark-web.png';
-import committedCountImage from '../../assets/screenshots/count-committed-currentdev-dark-web.png';
+import symbolSearchReviewImage from '../../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
+import committedCountImage from '../../assets/screenshots/count-committed-v1-4-dark-web.png';
 
 const committedCountCaption =
   'A second sample sheet, after its count was committed: twelve Supply diffuser markers on the plan and a worksheet total of 12, with the legend copy of the symbol left out. The markers are one linked Count series, so the page and the worksheet report the same number.';
@@ -9,7 +9,7 @@ const countPdfSymbolsGuide = {
   title: 'How to Count Symbols in a PDF Drawing',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
@@ -22,14 +22,14 @@ const countPdfSymbolsGuide = {
     'Symbol Search can turn one boxed example into a reviewable set of count candidates. The useful result comes from pairing that automation with a deliberate human check before anything is added to the PDF.',
   quickAnswer:
     'Choose Symbol Search, set the pages and matching options, then drag a close box around one clean example. PolyPDF highlights candidate matches without changing the document. Include or exclude each candidate, then choose Count to create one linked Count series. Treat the result as assisted counting: legends, schedules, similar symbols, and low-quality scans can all need manual correction.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: symbolSearchReviewImage,
     alt: 'PolyPDF dark-mode Symbol Search review showing five matched symbols, five selected candidates, and a Count 5 action',
     caption:
-      'Symbol Search in PolyPDF 1.3.4, paused at the review step after the matcher returned “5 matches — 5 selected”. Nothing reaches the document until you press Count, so this is the moment to include or exclude each candidate.',
+      'Symbol Search in PolyPDF 1.4.0, paused at the review step after the matcher returned “5 matches — 5 selected”. Nothing reaches the document until you press Count, so this is the moment to include or exclude each candidate.',
     width: 1710,
     height: 1073,
     provenance:
@@ -220,11 +220,11 @@ const countPdfSymbolsGuide = {
   ],
   sources: [
     {
-      label: 'PolyPDF 1.3.4 (build 16) in-app guide: Symbol Search + Auto-Count',
+      label: 'PolyPDF 1.4.0 (build 17) in-app guide: Symbol Search + Auto-Count',
       note: 'UI steps, on-device matching behavior, review controls, and the Free-tier limits.'
     },
     {
-      label: 'Screenshots in this guide: PolyPDF 1.3.4 on our demo plan',
+      label: 'Screenshots in this guide: PolyPDF 1.4.0 on our demo plan',
       note: 'The search returned five matches, and Count committed five sequential markers in one linked series. The second screenshot shows a committed 12-marker series beside its worksheet total.'
     }
   ],

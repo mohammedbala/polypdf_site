@@ -1,7 +1,7 @@
-import issuedFinalScreenshot from '../../assets/screenshots/shot-issued-final-currentdev-dark-web.png';
-import headersFootersScreenshot from '../../assets/screenshots/shot-issued-headers-currentdev-dark-web.png';
-import batesScreenshot from '../../assets/screenshots/shot-issued-bates-currentdev-dark-web.png';
-import preflightScreenshot from '../../assets/screenshots/shot-issued-preflight-currentdev-dark-web.png';
+import issuedFinalScreenshot from '../../assets/screenshots/shot-issued-final-v1-4-light-web.png';
+import headersFootersScreenshot from '../../assets/screenshots/shot-issued-headers-v1-4-light-web.png';
+import batesScreenshot from '../../assets/screenshots/shot-issued-bates-v1-4-light-web.png';
+import preflightScreenshot from '../../assets/screenshots/shot-issued-preflight-v1-4-light-web.png';
 
 const captureProvenance = '';
 
@@ -10,7 +10,7 @@ const post = {
   title: 'How to Prepare an Issued PDF Set',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '10 min read',
   tag: 'Document Production',
@@ -22,9 +22,9 @@ const post = {
   lede:
     'An issued set should tell a recipient what each page is, which issue it belongs to, and whether the file survived production intact. That takes a controlled sequence, not one large button press.',
   quickAnswer:
-    'To prepare an issued PDF set, preserve the source files, define a manifest and naming rule, distinguish navigation page labels from visible Bates identifiers, then add headers, footers, watermarks, and Bates numbers to each working document. PolyPDF 1.3.4 does not expose a cross-file Batch Process, so continue any Bates sequence by recording the last number you confirmed and setting the next document’s start value manually. Run Accessibility & Preflight, inspect every output in a recipient-style viewer, and sign only after page-content changes are finished.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+    'To prepare an issued PDF set, preserve the source files, define a manifest and naming rule, distinguish navigation page labels from visible Bates identifiers, then add headers, footers, watermarks, and Bates numbers to each working document. PolyPDF 1.4.0 does not expose a cross-file Batch Process, so continue any Bates sequence by recording the last number you confirmed and setting the next document’s start value manually. Run Accessibility & Preflight, inspect every output in a recipient-style viewer, and sign only after page-content changes are finished.',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: issuedFinalScreenshot,
@@ -131,7 +131,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'PolyPDF 1.3.4 does not expose a cross-file Batch Process, so plan the issue one file at a time. Apply Bates numbering and any text watermark to a single working document, save a new output, check it, and only then calculate the starting number for the next file.'
+            'PolyPDF 1.4.0 does not expose a cross-file Batch Process, so plan the issue one file at a time. Apply Bates numbering and any text watermark to a single working document, save a new output, check it, and only then calculate the starting number for the next file.'
         },
         {
           kind: 'figure',
@@ -165,7 +165,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'There is no cross-file Batch Process in PolyPDF 1.3.4. If you need unattended multi-file production, run it through an organization-approved external workflow.'
+            'There is no cross-file Batch Process in PolyPDF 1.4.0. If you need unattended multi-file production, run it through an organization-approved external workflow.'
         }
       ]
     },
@@ -226,9 +226,9 @@ const post = {
         'A page label is navigation metadata a viewer can display, such as A-101. A Bates number is a visible sequential identifier applied for controlled tracking. One does not automatically replace the other.'
     },
     {
-      question: 'Can PolyPDF 1.3.4 process the whole issued set as a cross-file batch?',
+      question: 'Can PolyPDF 1.4.0 process the whole issued set as a cross-file batch?',
       answer:
-        'No user-facing Batch Process is exposed in build 16. Apply headers, footers, Bates numbers, and watermarks to each document, save separate outputs, and verify the sequence against the manifest.'
+        'No user-facing Batch Process is exposed in build 17. Apply headers, footers, Bates numbers, and watermarks to each document, save separate outputs, and verify the sequence against the manifest.'
     },
     {
       question: 'How do I continue Bates numbering across several PDF files?',
@@ -252,8 +252,8 @@ const post = {
       url: 'https://www.loc.gov/preservation/digital/formats/fdd/fdd000474.shtml'
     },
     {
-      label: 'PolyPDF 1.3.4 document-production behavior',
-      note: 'Headers, footers, Bates numbering, text watermarks, and the 10-check Accessibility & Preflight screen are described as they behave in PolyPDF 1.3.4. A cross-file Batch Process is not exposed.'
+      label: 'PolyPDF 1.4.0 document-production behavior',
+      note: 'Headers, footers, Bates numbering, text watermarks, and the 10-check Accessibility & Preflight screen are described as they behave in PolyPDF 1.4.0. A cross-file Batch Process is not exposed.'
     }
   ],
   cta: {

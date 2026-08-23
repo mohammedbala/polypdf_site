@@ -15,6 +15,7 @@ const action = argv[0] ?? "inspect";
 const port = Number(valueAfter(argv, "--port") ?? 9460);
 const appRoot = resolve(valueAfter(argv, "--app-root") ?? "/private/tmp/polypdf-blog-captures-PCzoem/src/polypdf");
 const query = valueAfter(argv, "--query") ?? "AKRON";
+const theme = valueAfter(argv, "--theme") ?? "light";
 const timeoutMs = Number(valueAfter(argv, "--timeout-ms") ?? 180_000);
 const requireFromApp = createRequire(join(appRoot, "package.json"));
 const WebSocket = requireFromApp("ws");
@@ -125,11 +126,11 @@ async function dismissTelemetryIfPresent(evalJs) {
 }
 
 async function startOcr(evalJs) {
-  await evalJs(`window.polyPDFAutomation.menuCommand({ type: 'appearance', mode: 'dark' }); true`);
+  await evalJs(`window.polyPDFAutomation.menuCommand({ type: 'appearance', mode: ${JSON.stringify(theme)} }); true`);
   await waitFor(
     evalJs,
-    `document.documentElement.dataset.theme === 'dark' && document.body.classList.contains('appearance-dark')`,
-    "dark theme",
+    `document.documentElement.dataset.theme === ${JSON.stringify(theme)}`,
+    `${theme} theme`,
     10_000
   );
   await dismissTelemetryIfPresent(evalJs);
@@ -168,8 +169,8 @@ async function closeAndSave(evalJs) {
 }
 
 async function searchOutput(evalJs) {
-  await evalJs(`window.polyPDFAutomation.menuCommand({ type: 'appearance', mode: 'dark' }); true`);
-  await waitFor(evalJs, `document.documentElement.dataset.theme === 'dark'`, "dark theme", 10_000);
+  await evalJs(`window.polyPDFAutomation.menuCommand({ type: 'appearance', mode: ${JSON.stringify(theme)} }); true`);
+  await waitFor(evalJs, `document.documentElement.dataset.theme === ${JSON.stringify(theme)}`, `${theme} theme`, 10_000);
   await dismissTelemetryIfPresent(evalJs);
   await evalJs(`window.polyPDFAutomation.menuCommand({ type: 'panel', panel: 'search' }); true`);
   await waitFor(evalJs, `document.querySelector('.search-box input[type="search"]')`, "text search panel", 10_000);
@@ -199,8 +200,8 @@ async function searchOutput(evalJs) {
 }
 
 async function searchNoMatch(evalJs) {
-  await evalJs(`window.polyPDFAutomation.menuCommand({ type: 'appearance', mode: 'dark' }); true`);
-  await waitFor(evalJs, `document.documentElement.dataset.theme === 'dark'`, "dark theme", 10_000);
+  await evalJs(`window.polyPDFAutomation.menuCommand({ type: 'appearance', mode: ${JSON.stringify(theme)} }); true`);
+  await waitFor(evalJs, `document.documentElement.dataset.theme === ${JSON.stringify(theme)}`, `${theme} theme`, 10_000);
   await dismissTelemetryIfPresent(evalJs);
   await evalJs(`window.polyPDFAutomation.menuCommand({ type: 'panel', panel: 'search' }); true`);
   await waitFor(evalJs, `document.querySelector('.search-box input[type="search"]')`, "text search panel", 10_000);

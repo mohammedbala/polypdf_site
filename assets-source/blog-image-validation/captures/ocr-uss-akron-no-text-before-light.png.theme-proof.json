@@ -1,0 +1,84 @@
+{
+  "capturedAt": "2026-08-23T13:38:29.086Z",
+  "release": {
+    "version": "1.4.0",
+    "build": "17",
+    "theme": "light"
+  },
+  "source": {
+    "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+    "workingTreeDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "facts": {
+    "version": "1.4.0",
+    "build": "17",
+    "appAppearance": "light",
+    "datasetTheme": "light",
+    "bodyDark": false,
+    "prefersDark": false,
+    "chromeBase": "#f7f7f4",
+    "chromeElevated": "#fdfdfc",
+    "panelBase": "",
+    "devicePixelRatio": 2,
+    "innerWidth": 1710,
+    "innerHeight": 1073,
+    "styleToolbar": {
+      "exists": true,
+      "visible": true,
+      "hasOverflowClass": false,
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "sectionCount": 0
+    },
+    "documentName": "polypdf-14-ocr-working.pdf",
+    "dialogId": ""
+  },
+  "windowProof": {
+    "before": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "after": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "maximizeInvoked": false,
+    "controlResult": null,
+    "fillsWorkArea": true,
+    "passes": true
+  },
+  "pixelProof": {
+    "theme": "light",
+    "width": 3420,
+    "height": 2146,
+    "darkHits": 1876,
+    "lightHits": 2106688,
+    "darkRatio": 0.0002556095115078781,
+    "lightRatio": 0.28704130627905583,
+    "topDarkHits": 0,
+    "topLightHits": 575940,
+    "topDarkRatio": 0,
+    "expectedWidth": 3420,
+    "expectedHeight": 2146,
+    "passes": true
+  }
+}

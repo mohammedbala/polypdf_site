@@ -1,9 +1,9 @@
-import certificatePanelScreenshot from '../../assets/screenshots/signature-valid-certificate-currentdev-dark-web.png';
-import certificateTechnicalScreenshot from '../../assets/screenshots/signature-certificate-technical-currentdev-dark-web.png';
-import visualSignatureChooserScreenshot from '../../assets/screenshots/signature-visual-chooser-currentdev-dark-web.png';
-import visualSignatureStylesScreenshot from '../../assets/screenshots/signature-visual-styles-currentdev-dark-web.png';
-import sealBuilderWarningScreenshot from '../../assets/screenshots/signature-seal-builder-warning-currentdev-dark-web.png';
-import sealInsertedScreenshot from '../../assets/screenshots/signature-seal-inserted-currentdev-dark-web.png';
+import certificatePanelScreenshot from '../../assets/screenshots/signature-valid-certificate-v1-4-light-web.png';
+import certificateTechnicalScreenshot from '../../assets/screenshots/signature-certificate-technical-v1-4-light-web.png';
+import visualSignatureChooserScreenshot from '../../assets/screenshots/signature-visual-chooser-v1-4-light-web.png';
+import visualSignatureStylesScreenshot from '../../assets/screenshots/signature-visual-styles-v1-4-light-web.png';
+import sealBuilderWarningScreenshot from '../../assets/screenshots/signature-seal-builder-warning-v1-4-light-web.png';
+import sealInsertedScreenshot from '../../assets/screenshots/signature-seal-inserted-v1-4-light-web.png';
 
 
 
@@ -12,7 +12,7 @@ const post = {
   title: 'Digital vs Visual PDF Signatures vs Professional Seals',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '11 min read',
   tag: 'Signatures & Seals',
@@ -25,8 +25,8 @@ const post = {
     'A signature appearance, a cryptographic signature, and a professional seal can look related on a drawing, but they answer different questions. Confusing them can leave a polished page with no verifiable integrity—or a valid signature attached to an untrusted identity.',
   quickAnswer:
     'A certificate-backed PDF signature uses a Digital ID and CMS data to sign defined byte ranges, so a recipient can tell whether those bytes changed after signing. A visual signature only draws an appearance on the page. A Professional Seal Maker graphic is artwork: it carries no cryptographic signature, and PolyPDF does not verify license status or board compliance. In the example below, the reopened file reports Valid With Changes because its byte ranges and CMS signature are valid and the later update is permitted by DocMDP level 3.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0',
   platforms: 'macOS and Windows',
   heroImage: {
     src: certificatePanelScreenshot,
@@ -272,7 +272,7 @@ const post = {
       url: 'https://www.polypdf.com/blog/introducing-polypdf-plugins/'
     },
     {
-      label: 'PolyPDF: signatures, visual signatures, and Professional Seal Maker in 1.3.4',
+      label: 'PolyPDF: signatures, visual signatures, and Professional Seal Maker in 1.4.0',
       note: 'The certificate used in this guide’s example is self-signed, and it carries no timestamp, long-term validation, or revocation information.'
     }
   ],

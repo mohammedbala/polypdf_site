@@ -1,13 +1,13 @@
-import calibratedVerificationScreenshot from '../../assets/screenshots/calibration-verified-second-span-currentdev-dark-web.png';
-import knownDistanceDialogScreenshot from '../../assets/screenshots/calibration-known-distance-dialog-currentdev-dark-web.png';
-import uncalibratedScreenshot from '../../assets/screenshots/calibration-uncalibrated-currentdev-dark-web.png';
+import calibratedVerificationScreenshot from '../../assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png';
+import knownDistanceDialogScreenshot from '../../assets/screenshots/calibration-known-distance-dialog-v1-4-dark-web.png';
+import uncalibratedScreenshot from '../../assets/screenshots/calibration-uncalibrated-v1-4-dark-web.png';
 
 const post = {
   slug: 'calibrate-pdf-drawing-scale',
   title: 'How to Calibrate a PDF Drawing Scale',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '8 min read',
   tag: 'Measure & Takeoff',
@@ -20,8 +20,8 @@ const post = {
     'A trustworthy takeoff starts with one page-specific scale and an independent check. PolyPDF lets you apply the scale printed in a title block or draw over a known dimension when the sheet does not state one.',
   quickAnswer:
     'To calibrate a PDF drawing, open the page in PolyPDF, choose Measurements › Scale, and either apply the scale notation printed on the sheet or choose Calibrate by Drawing Line. For line calibration, snap the two endpoints to a known span, enter its real-world length, and then measure a different labeled span. Do not begin takeoff until that second value agrees within the tolerance your work requires.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: calibratedVerificationScreenshot,
@@ -166,7 +166,7 @@ const post = {
             'Check a second span far from the calibration line, and check both horizontal and vertical references when the file is a scan.',
             'If one direction agrees and the other does not, do not average the error into a single scale. Obtain a better source or limit the work to a documented local region and state the limitation.',
             'Do not use the displayed zoom percentage as drawing scale. Zoom changes the on-screen size, not the PDF-space geometry used by measurement.',
-            'Do not mix values from calibrated and uncalibrated pages. In PolyPDF 1.3.4, an uncalibrated page reports physical PDF points or square points rather than inventing a real-world scale.'
+            'Do not mix values from calibrated and uncalibrated pages. In PolyPDF 1.4.0, an uncalibrated page reports physical PDF points or square points rather than inventing a real-world scale.'
           ]
         }
       ]

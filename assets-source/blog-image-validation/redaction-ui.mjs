@@ -13,6 +13,7 @@ const action = argv[0] ?? "inspect";
 const port = Number(valueAfter("--port", "9482"));
 const appRoot = valueAfter("--app-root", "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf");
 const query = valueAfter("--query", "CASE-ORCHID-742");
+const excludeAlternateSymbolCandidates = argv.includes("--exclude-alternates");
 const requireFromApp = createRequire(join(appRoot, "package.json"));
 const WebSocket = requireFromApp("ws");
 const sleep = (ms) => new Promise((resolveSleep) => setTimeout(resolveSleep, ms));
@@ -253,6 +254,57 @@ async function main() {
       empty: Boolean(document.querySelector('.search-results.empty')),
       resultCount: document.querySelectorAll('.search-result').length
     }))()`);
+  } else if (action === "symbol-search-review") {
+    const geometry = await evaluate(`(() => {
+      const page = document.querySelector('.page-shell[data-page-number="1"], .page-shell');
+      const button = document.querySelector('[data-toolbar-id="visual-search"]');
+      if (!(page instanceof HTMLElement) || !(button instanceof HTMLElement)) {
+        throw new Error('Symbol Search page or toolbar control is unavailable.');
+      }
+      button.click();
+      const rect = page.getBoundingClientRect();
+      const point = (x, y) => ({ x: rect.left + (x / 612) * rect.width, y: rect.top + (y / 792) * rect.height });
+      return { start: point(88, 88), end: point(152, 152), page: { x: rect.x, y: rect.y, width: rect.width, height: rect.height } };
+    })()`);
+    await sleep(350);
+    await cdp("Input.dispatchMouseEvent", { type: "mouseMoved", x: geometry.start.x, y: geometry.start.y });
+    await cdp("Input.dispatchMouseEvent", { type: "mousePressed", x: geometry.start.x, y: geometry.start.y, button: "left", buttons: 1, clickCount: 1 });
+    for (let step = 1; step <= 14; step += 1) {
+      const progress = step / 14;
+      await cdp("Input.dispatchMouseEvent", {
+        type: "mouseMoved",
+        x: geometry.start.x + (geometry.end.x - geometry.start.x) * progress,
+        y: geometry.start.y + (geometry.end.y - geometry.start.y) * progress,
+        button: "left",
+        buttons: 1
+      });
+    }
+    await cdp("Input.dispatchMouseEvent", { type: "mouseReleased", x: geometry.end.x, y: geometry.end.y, button: "left", buttons: 0, clickCount: 1 });
+    const started = Date.now();
+    for (;;) {
+      const state = await evaluate(`(() => ({
+        summary: document.querySelector('.visual-search-summary')?.textContent?.replace(/\\s+/g, ' ').trim() ?? '',
+        countAction: document.querySelector('.visual-search-primary')?.textContent?.trim() ?? '',
+        input: document.querySelector('.visual-search-input') instanceof HTMLInputElement,
+        candidates: document.querySelectorAll('.visual-search-candidate').length
+      }))()`);
+      if (state.countAction && state.input) {
+        result = await evaluate(`(() => {
+          const input = document.querySelector('.visual-search-input');
+          if (!(input instanceof HTMLInputElement)) throw new Error('Symbol Search subject field is unavailable.');
+          input.value = 'Test Symbol';
+          input.dispatchEvent(new Event('input', { bubbles: true }));
+          if (${JSON.stringify(excludeAlternateSymbolCandidates)}) {
+            const candidates = [...document.querySelectorAll('.visual-search-candidate')];
+            candidates.filter((_, index) => index % 2 === 0).forEach((candidate) => candidate.click());
+          }
+          return { geometry: ${JSON.stringify(geometry)}, summary: document.querySelector('.visual-search-summary')?.textContent?.replace(/\\s+/g, ' ').trim() ?? '', countAction: document.querySelector('.visual-search-primary')?.textContent?.trim() ?? '', candidates: document.querySelectorAll('.visual-search-candidate').length };
+        })()`);
+        break;
+      }
+      if (Date.now() - started > 120000) throw new Error(`Symbol Search did not reach review: ${JSON.stringify(state)}`);
+      await sleep(150);
+    }
   } else {
     throw new Error(`Unknown redaction action: ${action}`);
   }

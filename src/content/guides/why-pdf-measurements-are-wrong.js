@@ -1,4 +1,4 @@
-import screenshot from '../../assets/screenshots/wrong-scale-currentdev-dark-web.png';
+import screenshot from '../../assets/screenshots/wrong-scale-v1-4-dark-web.png';
 
 const screenshotCaption =
   'A line drawn over the printed 20′-0″ reference reads 360.00 PDF points, while Measurements › Scale and the footer both report that no scale is set. Until the page is calibrated, PolyPDF reports PDF points instead of real-world units.';
@@ -8,7 +8,7 @@ const post = {
   title: 'Why PDF Measurements Are Wrong (and How to Fix Them)',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Measure & Takeoff',
@@ -21,8 +21,8 @@ const post = {
     'A wrong PDF measurement is usually traceable to the scale, the selected geometry, or the source file. Fixing the cause is safer than applying a correction factor to the final quantities.',
   quickAnswer:
     'If a PDF measurement is wrong, first confirm that the current page has the correct real-world scale and units. Then remeasure a long labeled dimension with snapped endpoints. If that works but a detail does not, check for a different scale inside that detail. If horizontal and vertical reference dimensions disagree by different percentages, the scan is probably nonuniformly distorted and one calibration cannot make the whole page accurate.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
@@ -84,7 +84,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'In PolyPDF 1.3.4, a page with no real-world calibration reports lengths in PDF points and areas in square points. It does not silently invent a plausible drawing scale. Use the Scale view for the current page: apply a trustworthy printed ratio, or choose Calibrate by Drawing Line and enter the real length represented by the captured span.'
+            'In PolyPDF 1.4.0, a page with no real-world calibration reports lengths in PDF points and areas in square points. It does not silently invent a plausible drawing scale. Use the Scale view for the current page: apply a trustworthy printed ratio, or choose Calibrate by Drawing Line and enter the real length represented by the captured span.'
         },
         {
           kind: 'note',

@@ -222,10 +222,10 @@ async function fixtureRepository(options = {}) {
       sha256: raw.sha256
     },
     assertions: {
-      darkMode: true,
+      theme: options.theme ?? 'dark',
       nativeMaximized: true,
       viewportEmulation: false,
-      fullStyleBarVisible: true,
+      styleToolbarStateValidated: true,
       pageOnlyCrop: false
     }
   };
@@ -259,10 +259,10 @@ async function fixtureRepository(options = {}) {
           }
         },
         assertions: {
-          darkMode: true,
+          theme: options.theme ?? 'dark',
           nativeMaximized: true,
           viewportEmulation: false,
-          fullStyleBarVisible: true,
+          styleToolbarStateValidated: true,
           pageOnlyCrop: false
         },
         outputs: [
@@ -351,6 +351,18 @@ test('complete dark evidence passes and inventories CSS, JSON, public, template,
     publicGuide.references.some((reference) => reference.startsWith('public/feed.xml')),
     true
   );
+});
+
+test('complete light evidence passes the workflow-scoped app chrome gate', async () => {
+  const fixture = await fixtureRepository({
+    theme: 'light',
+    chrome: [247, 247, 244],
+    body: [253, 253, 252]
+  });
+  const report = await verifyScreenshotEvidence({ root: fixture.root });
+
+  assert.equal(report.ok, true, JSON.stringify(report.violations, null, 2));
+  assert.equal(report.summary.violationCount, 0);
 });
 
 test('a solid-dark square with a currentdev-dark filename cannot pass as a maximized capture', async () => {

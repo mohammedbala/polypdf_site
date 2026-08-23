@@ -38,7 +38,7 @@ const TEXT_EXTENSIONS = new Set([
   '.txt',
   '.xml'
 ]);
-const DARK_TOKENS = ['#26282b', '#313437', '#2a2d30', '#202225', '#46484b'].map(hexRgb);
+const DARK_TOKENS = ['#1e1e1e', '#242424', '#2c2c2c', '#26282b', '#313437', '#2a2d30', '#202225', '#46484b'].map(hexRgb);
 const LIGHT_TOKENS = ['#f7f7f4', '#fdfdfc', '#f1f0ec', '#7b7c7a', '#f1f1ed'].map(hexRgb);
 const SHA256_PATTERN = /^[a-f0-9]{64}$/;
 const COMMIT_PATTERN = /^[a-f0-9]{40}$/;
@@ -47,6 +47,7 @@ const TRANSFORMS = new Set(['byte-identical', 'exact-50-percent']);
 const STRUCTURE_GATE = Object.freeze({
   minimumQuantizedColors: 32,
   minimumLuminanceStandardDeviation: 25,
+  minimumLightLuminanceStandardDeviation: 18,
   minimumEdgeRatio: 0.01
 });
 const EXACT_HALF_GATE = Object.freeze({
@@ -75,10 +76,9 @@ const PRODUCT_DIFF_FIELD_NAMES = new Set([
   'workingTreeProductDiffSha256'
 ]);
 const ASSERTION_CONTRACT = Object.freeze({
-  darkMode: true,
   nativeMaximized: true,
   viewportEmulation: false,
-  fullStyleBarVisible: true,
+  styleToolbarStateValidated: true,
   pageOnlyCrop: false
 });
 
@@ -506,9 +506,12 @@ export function inspectScreenshotPng(buffer) {
     luminanceStandardDeviation,
     edgeRatio,
     structurePass,
-    appChromePass: darkRatio >= 0.02
+    darkAppChromePass: darkRatio >= 0.02
       && topDarkRatio >= 0.25
       && topDarkTokenHits > topLightTokenHits * 10,
+    lightAppChromePass: lightRatio >= 0.02
+      && topLightRatio >= 0.25
+      && topLightTokenHits > topDarkTokenHits * 10,
     darkCompositePass: lowLuminanceRatio >= 0.35
       && lowLuminanceHits > highLuminanceHits
   };
@@ -691,7 +694,8 @@ async function validatePngBinding({
   recordId,
   cache,
   violations,
-  raw
+  raw,
+  theme
 }) {
   const registryLabel = 'Evidence record ' + recordId + ' ' + label;
   if (!binding || typeof binding !== 'object') {
@@ -768,19 +772,30 @@ async function validatePngBinding({
       { recordId }
     );
   }
-  if (!inspection.metrics.appChromePass) {
+  const appChromePass = theme === 'light'
+    ? inspection.metrics.lightAppChromePass
+    : inspection.metrics.darkAppChromePass;
+  if (!appChromePass) {
     addViolation(
       violations,
-      raw ? 'evidence-raw-dark-chrome' : 'dark-top-chrome-gate',
+      raw ? 'evidence-raw-' + theme + '-chrome' : theme + '-top-chrome-gate',
       repoPath(root, file),
-      'Dark app-chrome pixels failed: whole dark tokens '
-        + percent(inspection.metrics.darkRatio) + ', top dark tokens '
+      theme + ' app-chrome pixels failed: whole dark tokens '
+        + percent(inspection.metrics.darkRatio) + ', whole light tokens '
+        + percent(inspection.metrics.lightRatio) + ', top dark tokens '
         + percent(inspection.metrics.topDarkRatio) + ', top light tokens '
         + percent(inspection.metrics.topLightRatio) + '.',
       { recordId }
     );
   }
-  if (!inspection.metrics.structurePass) {
+  const structurePass = inspection.metrics.quantizedColorCount >= STRUCTURE_GATE.minimumQuantizedColors
+    && inspection.metrics.luminanceStandardDeviation >= (
+      theme === 'light'
+        ? STRUCTURE_GATE.minimumLightLuminanceStandardDeviation
+        : STRUCTURE_GATE.minimumLuminanceStandardDeviation
+    )
+    && inspection.metrics.edgeRatio >= STRUCTURE_GATE.minimumEdgeRatio;
+  if (!structurePass) {
     addViolation(
       violations,
       raw ? 'evidence-raw-structure' : 'evidence-final-structure',
@@ -989,6 +1004,15 @@ function validateSupportingEvidenceMetadata({
 }
 
 function validateAssertions(record, registryPath, violations) {
+  if (!['dark', 'light'].includes(record.assertions?.theme)) {
+    addViolation(
+      violations,
+      'evidence-theme-invalid',
+      registryPath,
+      'Evidence record ' + record.id + ' must assert theme=dark or theme=light.',
+      { recordId: record.id }
+    );
+  }
   for (const [key, required] of Object.entries(ASSERTION_CONTRACT)) {
     if (record.assertions?.[key] !== required) {
       addViolation(
@@ -1168,7 +1192,8 @@ async function validateEvidenceRecord({
     recordId: record.id,
     cache,
     violations,
-    raw: true
+    raw: true,
+    theme: record.assertions?.theme
   });
   const proof = await validateFileBinding({
     root,
@@ -1259,7 +1284,8 @@ async function validateEvidenceRecord({
       recordId: record.id,
       cache,
       violations,
-      raw: false
+      raw: false,
+      theme: record.assertions?.theme
     });
   }
 
@@ -1573,13 +1599,18 @@ export async function verifyScreenshotEvidence(options = {}) {
       const inspection = await cachedFileInspection(asset.file, cache, true);
       result.sha256 = inspection.sha256;
       result.metrics = inspection.metrics;
-      if (!isOg && !inspection.metrics.appChromePass) {
+      const theme = owner?.record?.assertions?.theme ?? 'dark';
+      const appChromePass = theme === 'light'
+        ? inspection.metrics.lightAppChromePass
+        : inspection.metrics.darkAppChromePass;
+      if (!isOg && !appChromePass) {
         addViolation(
           violations,
-          'dark-top-chrome-gate',
+          theme + '-top-chrome-gate',
           path,
-          'Dark app-chrome pixels failed: whole dark tokens '
-            + percent(inspection.metrics.darkRatio) + ', top dark tokens '
+          theme + ' app-chrome pixels failed: whole dark tokens '
+            + percent(inspection.metrics.darkRatio) + ', whole light tokens '
+            + percent(inspection.metrics.lightRatio) + ', top dark tokens '
             + percent(inspection.metrics.topDarkRatio) + ', top light tokens '
             + percent(inspection.metrics.topLightRatio) + '.',
           { references: asset.references }

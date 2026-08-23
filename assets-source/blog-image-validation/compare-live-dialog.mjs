@@ -132,7 +132,7 @@ async function main() {
       process.stdout.write(`${JSON.stringify({ action, before, after: await facts(session.evalJs) }, null, 2)}\n`);
       return;
     }
-    if (before.version !== "1.3.4" || before.build !== "16" || before.appearance !== "dark" || before.theme !== "dark") {
+    if (before.version !== "1.4.0" || before.build !== "17" || before.appearance !== "dark" || before.theme !== "dark") {
       throw new Error(`Wrong app identity or theme: ${JSON.stringify(before)}`);
     }
     if (action === "open-picker") {

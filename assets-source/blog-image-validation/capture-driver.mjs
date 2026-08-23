@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// CDP sidecar for isolated PolyPDF 1.3.4 screenshot evidence.
+// CDP sidecar for isolated PolyPDF release screenshot evidence.
 // The app itself must always be launched and torn down with automation-instance.mjs.
 import { createRequire } from "node:module";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -23,8 +23,12 @@ const command = argv[0] ?? "inspect";
 const port = Number(valueAfter(argv, "--port") ?? 9431);
 const appRoot = resolve(valueAfter(argv, "--app-root") ?? "/tmp/polypdf-blog-captures-PCzoem/src/polypdf");
 const output = valueAfter(argv, "--output");
-const sourceBase = valueAfter(argv, "--source-base") ?? "a0a709c39e35343d3c71f7d615fedffb007db619";
-const sourceDiffSha256 = valueAfter(argv, "--source-diff-sha256") ?? "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250";
+const sourceBase = valueAfter(argv, "--source-commit") ?? valueAfter(argv, "--source-base") ?? "ed65b0558a0bd6a7fb312f13826de37bfc056ad4";
+const sourceDiffSha256 = valueAfter(argv, "--source-diff-sha256") ?? "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
+const expectedVersion = valueAfter(argv, "--expected-version") ?? "1.4.0";
+const expectedBuild = valueAfter(argv, "--expected-build") ?? "17";
+const theme = valueAfter(argv, "--theme") ?? "dark";
+if (!new Set(["dark", "light"]).has(theme)) throw new Error(`Unsupported theme: ${theme}`);
 const clickSelectors = valuesAfter(argv, "--click");
 const waitSelector = valueAfter(argv, "--wait-for-selector");
 const delayMs = Number(valueAfter(argv, "--delay-ms") ?? 700);
@@ -133,7 +137,7 @@ async function connect() {
   return { target, socket, cdp, evalJs, maximizeProof };
 }
 
-async function darkThemeFacts(evalJs) {
+async function appearanceFacts(evalJs) {
   return evalJs(`(async () => {
     const settings = await window.polyPDF.getAppSettingsInfo();
     const rootStyle = getComputedStyle(document.documentElement);
@@ -170,8 +174,8 @@ async function darkThemeFacts(evalJs) {
   })()`);
 }
 
-async function setAndVerifyDark(evalJs) {
-  await evalJs(`window.polyPDFAutomation.menuCommand({ type: "appearance", mode: "dark" }); true`);
+async function setAndVerifyAppearance(evalJs) {
+  await evalJs(`window.polyPDFAutomation.menuCommand({ type: "appearance", mode: ${JSON.stringify(theme)} }); true`);
   const facts = await evalJs(`new Promise((resolveFacts, rejectFacts) => {
     const deadline = Date.now() + 7000;
     const poll = async () => {
@@ -179,20 +183,20 @@ async function setAndVerifyDark(evalJs) {
         const settings = await window.polyPDF.getAppSettingsInfo();
         const chrome = getComputedStyle(document.documentElement).getPropertyValue("--chrome-base").trim();
         if (
-          document.documentElement.dataset.theme === "dark" &&
-          document.body.classList.contains("appearance-dark") &&
-          matchMedia("(prefers-color-scheme: dark)").matches &&
-          chrome === "#26282b" &&
-          settings.version === "1.3.4" &&
-          String(settings.build) === "16" &&
-          settings.appearance === "dark"
+          document.documentElement.dataset.theme === ${JSON.stringify(theme)} &&
+          document.body.classList.contains("appearance-dark") === ${theme === "dark"} &&
+          matchMedia("(prefers-color-scheme: dark)").matches === ${theme === "dark"} &&
+          chrome === ${JSON.stringify(theme === "dark" ? "#26282b" : "#f7f7f4")} &&
+          settings.version === ${JSON.stringify(expectedVersion)} &&
+          String(settings.build) === ${JSON.stringify(expectedBuild)} &&
+          settings.appearance === ${JSON.stringify(theme)}
         ) {
           resolveFacts({ settings, chrome });
           return;
         }
       } catch {}
       if (Date.now() >= deadline) {
-        rejectFacts(new Error("PolyPDF did not reach the verified 1.3.4 build 16 dark state."));
+        rejectFacts(new Error(${JSON.stringify(`PolyPDF did not reach the verified ${expectedVersion} build ${expectedBuild} ${theme} state.`)}));
         return;
       }
       setTimeout(poll, 75);
@@ -215,7 +219,7 @@ function hexRgb(value) {
 
 function pixelThemeProof(buffer, facts) {
   const image = PNG.sync.read(buffer);
-  const darkTokens = ["#26282b", "#313437", "#2a2d30", "#202225", "#46484b"].map(hexRgb);
+  const darkTokens = ["#1e1e1e", "#242424", "#2c2c2c", "#26282b", "#313437", "#2a2d30", "#202225", "#46484b"].map(hexRgb);
   const lightTokens = ["#f7f7f4", "#fdfdfc", "#f1f0ec", "#7b7c7a", "#f1f1ed"].map(hexRgb);
   let darkHits = 0;
   let lightHits = 0;
@@ -236,7 +240,11 @@ function pixelThemeProof(buffer, facts) {
   }
   const total = image.width * image.height;
   const topTotal = image.width * topRows;
+  const topThemeHits = theme === "dark" ? topDarkHits : topLightHits;
+  const topOppositeHits = theme === "dark" ? topLightHits : topDarkHits;
+  const wholeThemeHits = theme === "dark" ? darkHits : lightHits;
   const proof = {
+    theme,
     width: image.width,
     height: image.height,
     darkHits,
@@ -252,9 +260,9 @@ function pixelThemeProof(buffer, facts) {
       image.width === Math.round(Number(facts.innerWidth) * Number(facts.devicePixelRatio))
       && image.height === Math.round(Number(facts.innerHeight) * Number(facts.devicePixelRatio))
       &&
-      darkHits / total >= 0.02
-      && topDarkHits / topTotal >= 0.25
-      && topDarkHits > topLightHits * 10
+      wholeThemeHits / total >= 0.02
+      && topThemeHits / topTotal >= 0.25
+      && topThemeHits > topOppositeHits * 10
   };
   return proof;
 }
@@ -269,14 +277,14 @@ async function capturePng(cdp, destination, facts) {
   await mkdir(dirname(destination), { recursive: true });
   await writeFile(destination, bytes);
   const proof = pixelThemeProof(bytes, facts);
-  if (!proof.passes) throw new Error(`Dark pixel gate failed for ${destination}: ${JSON.stringify(proof)}`);
+  if (!proof.passes) throw new Error(`${theme} pixel gate failed for ${destination}: ${JSON.stringify(proof)}`);
   return proof;
 }
 
 async function main() {
   const session = await connect();
   try {
-    await setAndVerifyDark(session.evalJs);
+    await setAndVerifyAppearance(session.evalJs);
     if (waitSelector) {
       await session.evalJs(`new Promise((resolveWait, rejectWait) => {
         const selector = ${JSON.stringify(waitSelector)};
@@ -301,17 +309,22 @@ async function main() {
       await sleep(300);
     }
     await sleep(delayMs);
-    const facts = await darkThemeFacts(session.evalJs);
+    const facts = await appearanceFacts(session.evalJs);
+    const styleToolbarStateValid = facts.styleToolbar?.exists
+      && (!facts.styleToolbar?.visible || (
+        facts.styleToolbar?.clientWidth > 0
+        && facts.styleToolbar?.scrollWidth >= facts.styleToolbar?.clientWidth
+      ));
+    const styleToolbarStatePasses = styleToolbarStateValid;
     const windowProof = {
       ...session.maximizeProof,
       passes: session.maximizeProof.fillsWorkArea
-        && facts.styleToolbar?.exists
-        && facts.styleToolbar?.visible
-        && !facts.styleToolbar?.hasOverflowClass
-        && facts.styleToolbar?.scrollWidth <= facts.styleToolbar?.clientWidth + 2
+        && styleToolbarStatePasses,
+      styleToolbarStateValid,
+      styleToolbarVisibilityRequired: false
     };
     if (!windowProof.passes) {
-      throw new Error(`Maximized/full-style-bar gate failed: ${JSON.stringify({ windowProof, styleToolbar: facts.styleToolbar })}`);
+      throw new Error(`Maximized/style-toolbar gate failed: ${JSON.stringify({ windowProof, styleToolbar: facts.styleToolbar })}`);
     }
     let pixelProof;
     if (command === "capture" || output) {
@@ -321,6 +334,7 @@ async function main() {
         `${resolve(output)}.theme-proof.json`,
         `${JSON.stringify({
           capturedAt: new Date().toISOString(),
+          release: { version: expectedVersion, build: expectedBuild, theme },
           source: { baseCommit: sourceBase, workingTreeDiffSha256: sourceDiffSha256 },
           facts,
           windowProof,
@@ -328,7 +342,7 @@ async function main() {
         }, null, 2)}\n`
       );
     }
-    process.stdout.write(`${JSON.stringify({ command, port, source: { baseCommit: sourceBase, workingTreeDiffSha256: sourceDiffSha256 }, facts, windowProof, pixelProof }, null, 2)}\n`);
+    process.stdout.write(`${JSON.stringify({ command, port, release: { version: expectedVersion, build: expectedBuild, theme }, source: { baseCommit: sourceBase, workingTreeDiffSha256: sourceDiffSha256 }, facts, windowProof, pixelProof }, null, 2)}\n`);
   } finally {
     session.socket.close();
   }

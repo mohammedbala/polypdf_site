@@ -1,8 +1,8 @@
 (async () => {
-  const root = document.querySelector('[data-dialog-id="pluginGenerator"]');
+  const root = document.querySelector('[data-dialog-id="pluginGenerator"], .plugin-sidebar-editor');
   if (!(root instanceof HTMLElement)) throw new Error("AISC generator is not open.");
   const before = window.polyPDFAutomation.annotations();
-  const button = root.querySelector("[data-dialog-confirm]");
+  const button = root.querySelector("[data-dialog-confirm], .plugin-sidebar-editor-confirm");
   if (!(button instanceof HTMLButtonElement) || button.disabled) throw new Error("Enabled AISC Insert button was not found.");
   button.click();
   const annotations = await new Promise((resolve, reject) => {
@@ -12,7 +12,7 @@
       const generated = current.find(
         (annotation) => annotation.pluginProvenance?.pluginId === "com.polypdf.steel-sections"
       );
-      if (!document.querySelector('[data-dialog-id="pluginGenerator"]') && current.length === before.length + 1 && generated) {
+      if (!document.querySelector('[data-dialog-id="pluginGenerator"], .plugin-sidebar-editor') && current.length === before.length + 1 && generated) {
         resolve(current);
         return;
       }

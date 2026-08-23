@@ -12,6 +12,7 @@ import {
   htmlRoutes,
   routeMetadata,
   runPostDeploySmoke,
+  siteRelease,
   shareImageRoutes
 } from '../scripts/post-deploy-smoke.mjs';
 import {
@@ -47,7 +48,10 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
       const title = metadata.title.replaceAll('&', '&amp;');
       const description = metadata.description.replaceAll('&', '&amp;');
       const canonicalURL = `http://${request.headers.host}${routePath === '/' ? '/' : `${routePath}/`}`;
-      const imageURL = new URL(metadata.image || '/og-image.png?v=20260819-currentdev', 'https://www.polypdf.com/').href;
+      const imageURL = new URL(
+        metadata.image || `/og-image.png?v=${siteRelease.screenshotCacheToken}`,
+        'https://www.polypdf.com/'
+      ).href;
       const imageAlt = (metadata.imageAlt
         || 'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription')
         .replaceAll('&', '&amp;')
@@ -137,6 +141,11 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
           updates: 'all_1.x',
           activationLimit: expectedOffer.activationLimit,
           platforms: ['macOS', 'Windows']
+        },
+        founder: {
+          available: true,
+          maximumFulfilledLicenses: 100,
+          endsAt: null
         }
       }));
       return;
@@ -154,7 +163,15 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
         'Future major versions may be optional paid upgrades',
         '/api/checkout/conversion?session_id=',
         'polypdf.ga4.purchase.v1.',
+        'polypdf.openai-ads.order-created.v1.',
         'AW-449436603/xb7JCMbVseMcELu3p9YB',
+        'https://bzrcdn.openai.com/sdk/oaiq.min.js',
+        'order_created',
+        'buy_page_view',
+        'checkout_click',
+        'checkout_session_created',
+        'checkout_cancelled',
+        'checkout_error',
         'purchase'
       ].join(';'));
       return;

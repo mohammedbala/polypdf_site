@@ -1,14 +1,14 @@
-import screenshot from '../../assets/screenshots/area-cutouts-depth-currentdev-dark-web.png';
+import screenshot from '../../assets/screenshots/area-cutouts-depth-v1-4-dark-web.png';
 
 const screenshotCaption =
-  'PolyPDF 1.3.4 with one curved area boundary, two cutouts subtracted from it, a 28,793.49 sq ft net area, a 1′-6″ depth, and the 43,190.23 cu ft volume that depth produces. The turquoise geometry is an example takeoff traced over a public-domain survey sheet.';
+  'PolyPDF 1.4.0 with one curved area boundary, two cutouts subtracted from it, a 28,793.49 sq ft net area, a 1′-6″ depth, and the 43,190.23 cu ft volume that depth produces. The turquoise geometry is an example takeoff traced over a public-domain survey sheet.';
 
 const post = {
   slug: 'measure-pdf-area-cutouts-depth',
   title: 'How to Measure PDF Area with Cutouts and Depth',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Measure & Takeoff',
@@ -18,11 +18,11 @@ const post = {
   metaDescription:
     'Measure net area in a PDF, subtract multiple cutouts, add a real-world depth for volume, and understand what hatch scale changes in PolyPDF.',
   lede:
-    'Net-area takeoff is more useful when the annotation records the outer boundary, each excluded opening, and any depth used for volume. PolyPDF 1.3.4 keeps those inputs on one selectable measurement.',
+    'Net-area takeoff is more useful when the annotation records the outer boundary, each excluded opening, and any depth used for volume. PolyPDF 1.4.0 keeps those inputs on one selectable measurement.',
   quickAnswer:
     'To measure net PDF area in PolyPDF, calibrate the current page, choose Area, trace and close the outer boundary, then select the measurement. In the Area Cutouts controls, choose Add Cutout and trace each opening fully inside the boundary. PolyPDF subtracts those cutout polygons from the outer area. If you enter a positive real-world Depth, the result changes from area to volume. Hatch pattern and hatch scale change appearance only, not the measured quantity.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
@@ -92,7 +92,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'For a straight path, the area follows the polygon formed by the vertices. When the area path is set to Curved, PolyPDF 1.3.4 uses the displayed smoothed boundary in its area calculation rather than measuring only the straight chords between control points. Use the mode that matches the actual edge, not the one that merely looks cleaner.'
+            'For a straight path, the area follows the polygon formed by the vertices. When the area path is set to Curved, PolyPDF 1.4.0 uses the displayed smoothed boundary in its area calculation rather than measuring only the straight chords between control points. Use the mode that matches the actual edge, not the one that merely looks cleaner.'
         },
         {
           kind: 'note',
@@ -244,7 +244,7 @@ const post = {
     {
       question: 'Can I add more than one cutout to a PDF area measurement?',
       answer:
-        'Yes. PolyPDF 1.3.4 stores multiple cutout polygons on one area measurement and subtracts each from the outer area.'
+        'Yes. PolyPDF 1.4.0 stores multiple cutout polygons on one area measurement and subtracts each from the outer area.'
     },
     {
       question: 'What does Depth do to an area measurement?',

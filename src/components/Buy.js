@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
@@ -23,6 +23,8 @@ import {
 } from '../lib/commercialOffer';
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
 import { captureAttribution, checkoutAttribution } from '../lib/attribution';
+import { trackEvent } from '../lib/analytics';
+import siteRelease from '../lib/siteRelease.json';
 
 const proFeatures = [
   'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
@@ -56,12 +58,12 @@ const IN_APP_CONTEXT = {
   }
 };
 
-const trackEvent = (name, properties = {}) => {
-  if (window.plausible) {
-    window.plausible(name, { props: properties });
-  }
-  if (window.gtag) {
-    window.gtag('event', name, properties);
+export const isSecureStripeCheckoutUrl = (value) => {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'https:' && url.hostname === 'checkout.stripe.com';
+  } catch {
+    return false;
   }
 };
 
@@ -69,6 +71,8 @@ const Buy = ({ forceInApp = false }) => {
   const [searchParams] = useSearchParams();
   const [checkoutStatus, setCheckoutStatus] = useState('ready');
   const [checkoutError, setCheckoutError] = useState('');
+  const [showStickyCheckout, setShowStickyCheckout] = useState(false);
+  const checkoutCtaRef = useRef(null);
   const offer = useCommercialOffer();
 
   const source = searchParams.get('source') || '';
@@ -76,18 +80,49 @@ const Buy = ({ forceInApp = false }) => {
     forceInApp || searchParams.get('utm_source') === 'desktop_app' || IN_APP_SOURCES.has(source);
   const context = IN_APP_CONTEXT[source] || IN_APP_CONTEXT.license_window;
   const cancelled = searchParams.get('checkout') === 'cancelled';
+  const pageVariant = cameFromApp ? 'in_app' : 'cold';
+  const funnelProperties = {
+    source: source || (cameFromApp ? 'desktop_app' : 'buy_page'),
+    page_variant: pageVariant,
+    platform: primaryPlatform.key,
+    offer_id: commercialOffer.id,
+    app_version: siteRelease.version
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    captureAttribution();
-  }, []);
+    const attribution = captureAttribution();
+    const properties = {
+      source: attribution.source || (cameFromApp ? source || 'desktop_app' : 'buy_page'),
+      page_variant: pageVariant,
+      platform: primaryPlatform.key,
+      offer_id: commercialOffer.id,
+      app_version: siteRelease.version
+    };
+    trackEvent('buy_page_view', properties);
+    if (cancelled) trackEvent('checkout_cancelled', properties);
+  }, [cameFromApp, cancelled, pageVariant, source]);
+
+  useEffect(() => {
+    const target = checkoutCtaRef.current;
+    if (!target || !offer.founderAvailable || typeof IntersectionObserver !== 'function') return undefined;
+    const observer = new IntersectionObserver(([entry]) => {
+      setShowStickyCheckout(!entry.isIntersecting);
+    }, { threshold: 0.35 });
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [offer.founderAvailable]);
 
   const handleBuyClick = async (event) => {
     event.preventDefault();
+    if (checkoutStatus === 'loading') return;
     const attribution = checkoutAttribution();
-    trackEvent('buy_click', { provider: 'stripe', source: attribution.source });
+    const properties = { ...funnelProperties, source: attribution.source, provider: 'stripe' };
+    trackEvent('buy_click', properties);
+    trackEvent('checkout_click', properties);
     setCheckoutError('');
     setCheckoutStatus('loading');
+    setShowStickyCheckout(false);
 
     try {
       const response = await fetch('/api/checkout/session', {
@@ -99,19 +134,25 @@ const Buy = ({ forceInApp = false }) => {
         body: JSON.stringify({ attribution })
       });
       const payload = await response.json().catch(() => ({}));
-      if (!response.ok || !payload.url) {
-        if (payload.error === 'founder_offer_ended') {
-          throw new Error('founder_offer_ended');
-        }
+      if (!response.ok || !isSecureStripeCheckoutUrl(payload.url)) {
         throw new Error(payload.error || 'checkout_unavailable');
       }
-      trackEvent('checkout_started', { provider: 'stripe', source: attribution.source });
+      trackEvent('checkout_session_created', properties);
+      trackEvent('checkout_started', properties);
       window.location.assign(payload.url);
     } catch (error) {
       setCheckoutStatus('ready');
+      const soldOut = error instanceof Error && [
+        'founder_offer_sold_out',
+        'founder_offer_ended'
+      ].includes(error.message);
+      trackEvent('checkout_error', {
+        ...properties,
+        reason: soldOut ? 'sold_out' : 'unavailable'
+      });
       setCheckoutError(
-        error instanceof Error && error.message === 'founder_offer_ended'
-          ? 'The founder offer has ended. Checkout is temporarily closed while the next offer is prepared.'
+        soldOut
+          ? 'Founder offer complete. All 100 licenses have been claimed, so checkout is closed.'
           : 'Checkout could not load. Please refresh this page or contact support@polypdf.com.'
       );
     }
@@ -170,26 +211,27 @@ const Buy = ({ forceInApp = false }) => {
               <div className="plan-pill plan-pill-dark">Founder's License</div>
               <h2>{commercialOffer.name}</h2>
               <p className="plan-price">$49.99</p>
-              <ul className="plan-list">
+              {offer.founderAvailable ? (
+                <a
+                  ref={checkoutCtaRef}
+                  href="/buy/"
+                  className="primary-btn full-width"
+                  onClick={handleBuyClick}
+                  aria-disabled={checkoutStatus === 'loading'}
+                >
+                  <FaInfinity /> {checkoutStatus === 'loading' ? 'Opening Stripe checkout…' : 'Checkout with Stripe — $49.99'}
+                </a>
+              ) : (
+                <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
+              )}
+              {checkoutError && <p className="plan-note checkout-error">{checkoutError}</p>}
+              <ul className="plan-list buy-plan-list">
                 {proFeatures.map((feature) => (
                   <li key={feature}>
                     <FaCheckCircle /> {feature}
                   </li>
                 ))}
               </ul>
-              {offer.founderAvailable ? (
-                <a
-                  href="/buy/"
-                  className="primary-btn full-width"
-                  onClick={handleBuyClick}
-                  aria-disabled={checkoutStatus === 'loading'}
-                >
-                  <FaInfinity /> {checkoutStatus === 'loading' ? 'Loading Secure Checkout...' : 'Continue to Secure Checkout'}
-                </a>
-              ) : (
-                <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
-              )}
-              {checkoutError && <p className="plan-note checkout-error">{checkoutError}</p>}
 
               {/* The three questions asked at the button, answered at the button. */}
               <ul className="buy-assurances">
@@ -228,14 +270,14 @@ const Buy = ({ forceInApp = false }) => {
                     <li>The free app includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count.</li>
                     <li>Pro removes the measurement limit on both Mac and Windows.</li>
                   </ul>
-                  <div className="buy-actions">
+                  <div className="buy-actions buy-actions-quiet">
                     <a
                       href={primaryPlatform.url}
-                      className="secondary-btn full-width"
+                      className="buy-download-link"
                       download
                       onClick={() => trackEvent('download_click', { source: 'buy_page', platform: primaryPlatform.key })}
                     >
-                      <HiOutlineCloudDownload /> Download free first for {primaryPlatform.name}
+                      <HiOutlineCloudDownload /> Prefer to test it first? Download free for {primaryPlatform.name}
                     </a>
                   </div>
                 </>
@@ -293,6 +335,14 @@ const Buy = ({ forceInApp = false }) => {
           </div>
         </div>
       </motion.main>
+
+      {showStickyCheckout && offer.founderAvailable && checkoutStatus !== 'loading' && (
+        <div className="buy-sticky-checkout" role="region" aria-label="Checkout">
+          <button type="button" className="primary-btn" onClick={handleBuyClick}>
+            <FaLock /> Checkout with Stripe — $49.99
+          </button>
+        </div>
+      )}
 
     </div>
   );

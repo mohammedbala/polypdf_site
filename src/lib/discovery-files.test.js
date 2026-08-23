@@ -2,8 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import routeMetadata from './route-metadata.json';
 import { blogPosts, blogPostPath } from './blogPosts';
+import siteRelease from './siteRelease.json';
 
-const screenshotImageVersion = '20260819';
+const screenshotImageVersion = siteRelease.screenshotCacheToken;
 
 const readPublic = (name) => fs.readFileSync(path.join(process.cwd(), 'public', name), 'utf8');
 
@@ -56,6 +57,7 @@ test('ordinary feed discovery and the crawler allowlist remain advertised', () =
   expect(robots).toContain('User-agent: OAI-SearchBot');
   expect(robots).toContain('User-agent: ChatGPT-User');
   expect(robots).toContain('Sitemap: https://www.polypdf.com/sitemap.xml');
+  expect(index).toContain(`/og-image.png?v=${siteRelease.screenshotCacheToken}`);
 });
 
 test('llms.txt carries the reviewed redaction and sanitation limitations', () => {

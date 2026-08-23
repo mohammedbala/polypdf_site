@@ -389,15 +389,15 @@ async function setAndVerifyDark(evalJs) {
     evalJs,
     `(async () => {
       const settings = await window.polyPDF.getAppSettingsInfo();
-      return settings.version === "1.3.4"
-        && String(settings.build) === "16"
+      return settings.version === "1.4.0"
+        && String(settings.build) === "17"
         && settings.appearance === "dark"
         && document.documentElement.dataset.theme === "dark"
         && document.body.classList.contains("appearance-dark")
         && matchMedia("(prefers-color-scheme: dark)").matches
         && getComputedStyle(document.documentElement).getPropertyValue("--chrome-base").trim() === "#26282b";
     })()`,
-    "verified PolyPDF 1.3.4 build 16 dark mode"
+    "verified PolyPDF 1.4.0 build 17 dark mode"
   );
 }
 
@@ -577,7 +577,7 @@ function hexRgb(value) {
 
 function pixelThemeProof(buffer, facts) {
   const image = PNG.sync.read(buffer);
-  const darkTokens = ["#26282b", "#313437", "#2a2d30", "#202225", "#46484b"].map(hexRgb);
+  const darkTokens = ["#1e1e1e", "#242424", "#2c2c2c", "#26282b", "#313437", "#2a2d30", "#202225", "#46484b"].map(hexRgb);
   const lightTokens = ["#f7f7f4", "#fdfdfc", "#f1f0ec", "#7b7c7a", "#f1f1ed"].map(hexRgb);
   let darkHits = 0;
   let lightHits = 0;
@@ -722,8 +722,8 @@ async function main() {
     rendererUrl: session.target.url,
     fixturePath,
     fixtureSha256,
-    appVersion: "1.3.4",
-    appBuild: "16"
+    appVersion: "1.4.0",
+    appBuild: "17"
   };
   const report = {
     generatedAt: new Date().toISOString(),
@@ -786,7 +786,8 @@ async function main() {
     await waitFor(session.evalJs, `document.querySelector('[data-dialog-id] [data-dialog-confirm]:not(:disabled)')`, "valid known distance");
     await sleep(350);
     const dialogFacts = await uiFacts(session.evalJs);
-    if (!dialogFacts.dialogText.includes("360") || dialogFacts.dialogInputValue !== "20") {
+    const capturedPoints = Number(/Captured ([0-9.]+) PDF points/.exec(dialogFacts.dialogText)?.[1]);
+    if (!Number.isFinite(capturedPoints) || Math.abs(capturedPoints - 360) > 0.01 || dialogFacts.dialogInputValue !== "20") {
       throw new Error(`Calibration dialog did not show the real 360-point / 20-foot state: ${JSON.stringify(dialogFacts)}`);
     }
     report.stages.dialog = await capture(session, "calibration-known-distance-dialog-dark.png", {
@@ -799,7 +800,11 @@ async function main() {
     await waitFor(session.evalJs, `!document.querySelector('[data-dialog-id]')`, "calibration confirmation");
     await waitFor(
       session.evalJs,
-      `document.querySelector('.page-scale-status.calibrated')?.textContent?.includes('18')`,
+      `(() => {
+        const text = document.querySelector('.page-scale-status.calibrated')?.textContent ?? '';
+        const value = Number(/([0-9.]+)\\s*PDF pt per ft/.exec(text)?.[1]);
+        return Number.isFinite(value) && Math.abs(value - 18) <= 0.001;
+      })()`,
       "18 PDF pt/ft calibrated card"
     );
 
@@ -818,7 +823,14 @@ async function main() {
     await sleep(700);
     const afterFacts = await uiFacts(session.evalJs);
     const verification = afterFacts.annotations[0];
-    if (!afterFacts.pageScaleText.includes("Calibrated") || !afterFacts.pageScaleText.includes("18")) {
+    const calibratedScaleValue = Number(
+      /([0-9.]+)\s*PDF pt per ft/.exec(afterFacts.pageScaleText)?.[1]
+    );
+    if (
+      !afterFacts.pageScaleText.includes("Calibrated")
+      || !Number.isFinite(calibratedScaleValue)
+      || Math.abs(calibratedScaleValue - 18) > 0.001
+    ) {
       throw new Error(`Final Page Scale card is not calibrated at 18 PDF pt/ft: ${afterFacts.pageScaleText}`);
     }
     const verificationPoints = Array.isArray(verification?.points) ? verification.points : [];
@@ -831,7 +843,7 @@ async function main() {
     if (
       verification?.tool !== "linearDimension"
       || Math.abs(verificationPointLength - 216) > 0.001
-      || Number(verification?.scale?.pointsPerUnitAtCreation) !== 18
+      || Math.abs(Number(verification?.scale?.pointsPerUnitAtCreation) - 18) > 0.001
       || afterFacts.selectedAnnotationId !== verification?.id
       || !afterFacts.styleToolbarSectionIds.includes("measure")
       || !afterFacts.renderedMeasurementLabels.some((label) => label.includes("12'-0\""))

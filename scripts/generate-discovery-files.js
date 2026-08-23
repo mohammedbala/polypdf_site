@@ -19,8 +19,10 @@ const routeMetadataPath = path.join(srcDirectory, 'lib', 'route-metadata.json');
 const sitemapPath = path.join(root, 'public', 'sitemap.xml');
 const llmsPath = path.join(root, 'public', 'llms.txt');
 const feedPath = path.join(root, 'public', 'feed.xml');
+const indexTemplatePath = path.join(root, 'public', 'index.html');
+const siteRelease = require(path.join(srcDirectory, 'lib', 'siteRelease.json'));
 const ORIGIN = 'https://www.polypdf.com';
-const SCREENSHOT_IMAGE_VERSION = '20260819';
+const SCREENSHOT_IMAGE_VERSION = siteRelease.screenshotCacheToken;
 const DEFAULT_IMAGE = `/og-image.png?v=${SCREENSHOT_IMAGE_VERSION}`;
 const DEFAULT_IMAGE_ALT =
   'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription';
@@ -282,7 +284,7 @@ const buildLlmsText = () => {
     '',
     'Key facts:',
     '',
-    '- Current release: PolyPDF 1.3.4 (build 16) for macOS and Windows; /versions reads the live update feeds.',
+    `- Current release: PolyPDF ${siteRelease.version} (build ${siteRelease.build}) for macOS and Windows; /versions reads the live update feeds.`,
     `- Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. ${commercialOffer.name} removes the hand-created measurement cap for ${commercialOffer.price} once and activates up to 3 computers in any Mac/Windows mix; /buy has the current terms.`,
     '- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.',
     '- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
@@ -328,8 +330,20 @@ const buildLlmsText = () => {
   ].join('\n');
 };
 
+const syncIndexShareImageToken = () => {
+  const current = fs.readFileSync(indexTemplatePath, 'utf8');
+  const next = current.replace(
+    /\/og-image\.png\?v=[^"']+/g,
+    `/og-image.png?v=${SCREENSHOT_IMAGE_VERSION}`
+  );
+  assert(next !== current || current.includes(`/og-image.png?v=${SCREENSHOT_IMAGE_VERSION}`),
+    'public/index.html is missing the default Open Graph image');
+  fs.writeFileSync(indexTemplatePath, next);
+};
+
 const writeDiscoveryFiles = () => {
   validatePosts();
+  syncIndexShareImageToken();
   const metadata = buildRouteMetadata();
   fs.writeFileSync(routeMetadataPath, `${JSON.stringify(metadata, null, 2)}\n`);
   fs.writeFileSync(sitemapPath, buildSitemap(metadata));
@@ -348,5 +362,6 @@ module.exports = {
   buildFeed,
   buildSitemap,
   validatePosts,
+  syncIndexShareImageToken,
   writeDiscoveryFiles
 };

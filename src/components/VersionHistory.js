@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+import shortcutsShot from '../assets/screenshots/custom-shortcuts-v1-4-light-web.png';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
 // electron-updater's latest.yml on Windows — so a release publishes itself here with no edit.
@@ -91,6 +92,18 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.4.0 (17)': [
+    'PDF Maps places styled maps on plans and keeps them editable as live geographic viewports.',
+    'Auto Area finds enclosed rooms; area cutouts resize, and optional helper dimensions support direct numeric entry.',
+    'Custom Shortcuts lets you review, reassign, clear, and reset commands from Settings.',
+    'Split-view zoom, snapping controls, plugin editing, toolbars, Settings, palettes, document controls, and drawing reliability were refined.'
+  ],
+  'Windows 1.4.0 (17)': [
+    'PDF Maps places styled maps on plans and keeps them editable as live geographic viewports.',
+    'Auto Area finds enclosed rooms; area cutouts resize, and optional helper dimensions support direct numeric entry.',
+    'Custom Shortcuts lets you review, reassign, clear, and reset commands from Settings.',
+    'Split-view zoom, snapping controls, plugin editing, toolbars, Settings, palettes, document controls, and drawing reliability were refined.'
+  ],
   'macOS 1.3.4 (16)': [
     'Fit Height joins Fit Page and Fit Width, with viewport alignment that no longer reserves a scrollbar gutter.',
     'Command-click inserts a vertex and Command-Shift-click removes one on areas, polylines, and Workspace edges.',
@@ -144,6 +157,8 @@ const proseKey = (release) => `${release.platform} ${release.version} (${release
 // Rendered only while the feeds are still loading, or if one cannot be reached, so the page is never
 // empty. Anything the feeds return replaces it.
 const FALLBACK_RELEASES = [
+  { platform: 'macOS', version: '1.4.0', build: 17, date: 'August 23, 2026', notes: '/downloads/PolyPDFMac-v1.4.0-17.html' },
+  { platform: 'Windows', version: '1.4.0', build: 17, date: 'August 23, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.0-17.html' },
   { platform: 'macOS', version: '1.3.4', build: 16, date: 'August 17, 2026', notes: '/downloads/PolyPDFMac-v1.3.4-16.html' },
   { platform: 'Windows', version: '1.3.4', build: 16, date: 'August 17, 2026', notes: '/downloads/windows/PolyPDFWin-v1.3.4-16.html' },
   { platform: 'macOS', version: '1.3.2', build: 14, date: 'August 10, 2026', notes: '/downloads/PolyPDFMac-v1.3.2-14.html' },
@@ -252,6 +267,19 @@ const VersionHistory = () => {
               for.{feedFailed && ' The live update feed could not be reached, so this list may be behind.'}
             </p>
           </div>
+
+          <figure className="release-highlight-image">
+            <div className="shot-plate">
+              <img
+                src={shortcutsShot}
+                alt="PolyPDF 1.4 Settings showing the light-theme Custom Shortcuts editor"
+                width="1710"
+                height="1073"
+                loading="eager"
+              />
+            </div>
+            <figcaption><strong>New in 1.4:</strong> review, reassign, clear, and reset keyboard shortcuts from Settings.</figcaption>
+          </figure>
 
           <div className="legal-sections">
             {releases.map((release, index) => {

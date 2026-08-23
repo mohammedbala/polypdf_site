@@ -24,12 +24,13 @@ const routeMetadata = req('lib/route-metadata.json');
 const { landingPages } = req('lib/landingPages.js');
 const { blogPosts, blogPostPath } = req('lib/blogPosts.js');
 const { DOWNLOADS } = req('lib/platform.js');
+const siteRelease = req('lib/siteRelease.json');
 
 const ORIGIN = 'https://www.polypdf.com';
 const ORG_ID = `${ORIGIN}/#organization`;
 const WEBSITE_ID = `${ORIGIN}/#website`;
 const APP_ID = `${ORIGIN}/#software`;
-const SOCIAL_IMAGE = `${ORIGIN}/og-image.png?v=20260819`;
+const SOCIAL_IMAGE = `${ORIGIN}/og-image.png?v=${siteRelease.screenshotCacheToken}`;
 
 const absolute = (route) => {
   if (route === '/') return `${ORIGIN}/`;

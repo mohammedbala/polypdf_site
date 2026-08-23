@@ -1,4 +1,4 @@
-import screenshot from '../../assets/screenshots/takeoff-currentdev-dark-web.png';
+import screenshot from '../../assets/screenshots/takeoff-v1-4-dark-web.png';
 
 const screenshotCaption =
   'A small takeoff on a sample plan, with Measurements › Records and the Markup Table open beside it: 14 records covering one 540.00 sq ft area, one 30.00 ft partition length, and 12 Supply diffuser counts. Each record keeps its own subject, status, unit, and formula, so a reviewer can trace a total back to the rows that produced it.';
@@ -8,7 +8,7 @@ const post = {
   title: 'PDF Takeoff Worked Example: Scale, Area, Length, and Count',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '10 min read',
   tag: 'Measure & Takeoff',
@@ -21,8 +21,8 @@ const post = {
     'This worked example follows one small takeoff end to end: calibrate the page, trace an area and a length, count a repeated symbol, review the worksheet, export. The same sequence applies to your own drawing once you have verified its scale.',
   quickAnswer:
     'A reliable PDF takeoff follows this order: confirm the sheet and revision, calibrate the current page, verify a second known dimension, trace area and length quantities, review any repeated-symbol candidates, inspect the Takeoff Worksheet, then export CSV or a PDF summary. The plan used here is plotted at 1/4 inch = 1 foot, or 18 PDF points per foot, and it carries 540.00 sq ft of floor finish, 30.00 ft of partition length, and 12 committed Supply diffuser counts across 14 records.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,

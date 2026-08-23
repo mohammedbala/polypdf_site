@@ -192,9 +192,17 @@ async function main() {
       button.click();
       return { opened: true, text };
     })()`);
+  } else if (action === "open-plugins") {
+    result = await evaluate(`(() => {
+      const button = document.querySelector('.rail-button[data-panel="plugins"]');
+      if (!(button instanceof HTMLElement)) throw new Error("Plugins rail button was not found.");
+      button.click();
+      return { opened: true };
+    })()`);
+    await sleep(900);
   } else if (action === "fill-seal-test") {
     result = await evaluate(`(() => {
-      const root = document.querySelector('[data-dialog-id="pluginGenerator"]');
+      const root = document.querySelector('[data-dialog-id="pluginGenerator"], .plugin-sidebar-editor');
       if (!(root instanceof HTMLElement)) throw new Error("Professional Seal dialog is not open.");
       const setValue = (selector, value) => {
         const control = root.querySelector(selector);
@@ -210,7 +218,7 @@ async function main() {
       setValue("#plugin-field-discipline", "civil");
       setValue("#plugin-field-city", "DEMO");
       setValue("#plugin-field-sealScale", ${JSON.stringify(requestedSealScale)});
-      root.querySelector(".app-dialog-body")?.scrollTo({ top: 0, behavior: "instant" });
+      (root.querySelector(".app-dialog-body, .plugin-sidebar-editor-body") ?? root).scrollTo?.({ top: 0, behavior: "instant" });
       return {
         filled: true,
         warningPresent: /graphic, not a cryptographic signature/i.test(root.textContent ?? ""),
@@ -219,9 +227,9 @@ async function main() {
     })()`);
   } else if (action === "insert-seal-test") {
     result = await evaluate(`(() => {
-      const root = document.querySelector('[data-dialog-id="pluginGenerator"]');
+      const root = document.querySelector('[data-dialog-id="pluginGenerator"], .plugin-sidebar-editor');
       if (!(root instanceof HTMLElement)) throw new Error("Professional Seal dialog is not open.");
-      const button = root.querySelector("[data-dialog-confirm]");
+      const button = root.querySelector("[data-dialog-confirm], .plugin-sidebar-editor-confirm");
       if (!(button instanceof HTMLButtonElement)) throw new Error("Professional Seal Insert button was not found.");
       button.click();
       return { requested: true };

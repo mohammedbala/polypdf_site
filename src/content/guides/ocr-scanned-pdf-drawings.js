@@ -1,6 +1,6 @@
-import ocrCompleteScreenshot from '../../assets/screenshots/ocr-uss-akron-complete-currentdev-dark-web.png';
-import ocrNoTextBeforeScreenshot from '../../assets/screenshots/ocr-uss-akron-no-text-before-currentdev-dark-web.png';
-import ocrSearchHitScreenshot from '../../assets/screenshots/ocr-uss-akron-search-hit-currentdev-dark-web.png';
+import ocrCompleteScreenshot from '../../assets/screenshots/ocr-uss-akron-complete-v1-4-light-web.png';
+import ocrNoTextBeforeScreenshot from '../../assets/screenshots/ocr-uss-akron-no-text-before-v1-4-light-web.png';
+import ocrSearchHitScreenshot from '../../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png';
 
 const sourceProvenance =
   'The scan is a public-domain NACA report on the U.S.S. Akron from NASA’s technical reports server.';
@@ -20,7 +20,7 @@ const post = {
   title: 'How to OCR Scanned PDF Drawings',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '8 min read',
   tag: 'Search & OCR',
@@ -32,9 +32,9 @@ const post = {
   lede:
     'OCR can turn a flat scan into a document you can search, but it does not turn uncertain pixels into authoritative text. The useful workflow is recognition, targeted testing, and manual verification of anything consequential.',
   quickAnswer:
-    'To OCR a scanned PDF drawing in PolyPDF, save a working copy, choose Document › OCR, and let the whole-document recognition run finish. PolyPDF uses local operating-system OCR and adds a best-effort searchable layer where supported. In version 1.3.4, embedded searchable text is limited to Latin, Greek, and Cyrillic scripts, language availability depends on the computer’s OS and language packs, and there is no accuracy guarantee. Reopen the saved PDF, search representative terms, and visually verify critical dimensions, notes, and identifiers.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4',
+    'To OCR a scanned PDF drawing in PolyPDF, save a working copy, choose Document › OCR, and let the whole-document recognition run finish. PolyPDF uses local operating-system OCR and adds a best-effort searchable layer where supported. In version 1.4.0, embedded searchable text is limited to Latin, Greek, and Cyrillic scripts, language availability depends on the computer’s OS and language packs, and there is no accuracy guarantee. Reopen the saved PDF, search representative terms, and visually verify critical dimensions, notes, and identifiers.',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0',
   platforms: 'macOS and Windows',
   heroImage: {
     src: ocrSearchHitScreenshot,
@@ -97,7 +97,7 @@ const post = {
           items: [
             'Duplicate the source PDF or use Save As so the original scan remains untouched.',
             'Close unrelated large documents if the scan is long or image-heavy, then open the working copy.',
-            'Choose Document › OCR. In PolyPDF 1.3.4, OCR starts for the current document; there is no page-range or language picker in this dialog.',
+            'Choose Document › OCR. In PolyPDF 1.4.0, OCR starts for the current document; there is no page-range or language picker in this dialog.',
             'Keep the dialog open to watch progress, or close it if you want the run to continue in the background. Choose Cancel OCR when you need to stop; a cancelled run discards its result.',
             'Wait for the completion message before judging search. Large scans and construction sets can take time.',
             'Save the recognized document under a distinct filename, close it, and reopen that saved file.',
@@ -122,7 +122,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'Recognition availability comes from the operating system and its installed language support, so the languages offered by one Mac or Windows computer may differ from another. PolyPDF’s embedded searchable layer in version 1.3.4 is limited to Latin, Greek, and Cyrillic scripts. The operating system may recognize text in additional scripts, but PolyPDF does not promise to embed those characters as a searchable layer in the PDF.'
+            'Recognition availability comes from the operating system and its installed language support, so the languages offered by one Mac or Windows computer may differ from another. PolyPDF’s embedded searchable layer in version 1.4.0 is limited to Latin, Greek, and Cyrillic scripts. The operating system may recognize text in additional scripts, but PolyPDF does not promise to embed those characters as a searchable layer in the PDF.'
         },
         {
           kind: 'ul',
@@ -211,12 +211,12 @@ const post = {
     {
       question: 'Which scripts can PolyPDF embed as searchable PDF text?',
       answer:
-        'In PolyPDF 1.3.4, the embedded searchable layer is limited to Latin, Greek, and Cyrillic scripts. Platform recognition may cover more scripts, but that does not mean PolyPDF can embed all of them in the PDF.'
+        'In PolyPDF 1.4.0, the embedded searchable layer is limited to Latin, Greek, and Cyrillic scripts. Platform recognition may cover more scripts, but that does not mean PolyPDF can embed all of them in the PDF.'
     },
     {
       question: 'Can I choose a page range or OCR language?',
       answer:
-        'Not in the version 1.3.4 OCR dialog. It starts a whole-document run and relies on platform recognition capabilities rather than exposing page-range and language controls.'
+        'Not in the version 1.4.0 OCR dialog. It starts a whole-document run and relies on platform recognition capabilities rather than exposing page-range and language controls.'
     },
     {
       question: 'Does OCR make a scanned PDF accessible?',
@@ -244,7 +244,7 @@ const post = {
       url: 'https://learn.microsoft.com/en-us/uwp/api/windows.media.ocr'
     },
     {
-      label: 'PolyPDF: OCR in 1.3.4',
+      label: 'PolyPDF: OCR in 1.4.0',
       note:
         'The embedded searchable layer covers Latin, Greek, and Cyrillic scripts, and language availability depends on the computer’s operating system and its installed language support.'
     }

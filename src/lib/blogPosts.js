@@ -1,7 +1,7 @@
-import aiscGeneratorScreenshot from '../assets/screenshots/plugins-aisc-w24x55-generator-currentdev-dark-web.png';
-import aiscResultScreenshot from '../assets/screenshots/plugins-aisc-w24x55-result-currentdev-dark-web.png';
-import mutcdStopScreenshot from '../assets/screenshots/mutcd-r1-1-stop-currentdev-dark-web.png';
-import pluginSidebarScreenshot from '../assets/screenshots/plugins-sidebar-currentdev-dark-web.png';
+import aiscGeneratorScreenshot from '../assets/screenshots/plugins-aisc-w24x55-generator-v1-4-dark-web.png';
+import aiscResultScreenshot from '../assets/screenshots/plugins-aisc-w24x55-result-v1-4-dark-web.png';
+import mutcdStopScreenshot from '../assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png';
+import pluginSidebarScreenshot from '../assets/screenshots/plugins-sidebar-v1-4-dark-web.png';
 import { guidePosts } from '../content/guides';
 
 // Blog posts are plain data so a new entry is one object, not a new React component.
@@ -25,7 +25,7 @@ import { guidePosts } from '../content/guides';
 const post = (entry) => Object.freeze(entry);
 
 const pluginSidebarCaption =
-  'The Plugins sidebar in PolyPDF 1.3.4, listing the three generators that come with the app: AISC Steel Sections, PDF Maps, and Professional Seal Maker. The page behind it is a blank sample sheet, and the Polygon tool is selected so its Line, Fill, and Hatch style controls stay visible.';
+  'The Plugins sidebar in PolyPDF 1.4.0, listing the three generators that come with the app: AISC Steel Sections, PDF Maps, and Professional Seal Maker. The page behind it is a blank sample sheet, and the Polygon tool is selected so its Line, Fill, and Hatch style controls stay visible.';
 
 const productPosts = Object.freeze([
   post({
@@ -33,7 +33,7 @@ const productPosts = Object.freeze([
     title: 'Introducing PolyPDF Plugins',
     date: '2026-08-07',
     dateLabel: 'August 7, 2026',
-    dateModified: '2026-08-19',
+    dateModified: '2026-08-23',
     author: 'The PolyPDF team',
     readingTime: '9 min read',
     tag: 'Product',
@@ -50,11 +50,11 @@ const productPosts = Object.freeze([
       'PDF map plugin'
     ],
     lede:
-      'Plugins add content generators without executing downloaded plugin JavaScript. This article walks through the interface and the three generators that come with PolyPDF 1.3.4.',
+      'Plugins add content generators without executing downloaded plugin JavaScript. This article walks through the interface and the three generators that come with PolyPDF 1.4.0.',
     quickAnswer:
       'PolyPDF plugins are declarative packages rather than executable-code extensions. PolyPDF renders their forms and runs a fixed host-owned generator against bounded data or sanitized artwork. Three generators come with the app and are enabled on first run: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic from a jurisdiction template, and PDF Maps places a map image for an address or place name.',
-    lastVerified: '2026-08-19',
-    productVersion: 'PolyPDF 1.3.4 (build 16)',
+    lastVerified: '2026-08-23',
+    productVersion: 'PolyPDF 1.4.0 (build 17)',
     platforms: 'macOS and Windows',
     heroImage: {
       src: pluginSidebarScreenshot,

@@ -1,5 +1,5 @@
 (async () => {
-  await window.polyPDFAutomation.menuCommand({ type: "appearance", mode: "dark" });
+  await window.polyPDFAutomation.menuCommand({ type: "appearance", mode: "light" });
   await window.polyPDFAutomation.menuCommand({ type: "documentDialog", dialog: "batesNumbering" });
   const root = await new Promise((resolve, reject) => {
     const deadline = Date.now() + 8000;

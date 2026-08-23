@@ -159,16 +159,16 @@ body {
 }
 
 .hero {
-  padding: 130px 0 80px;
-  min-height: 100vh;
+  padding: 128px 0 64px;
+  min-height: auto;
   display: flex;
   align-items: center;
 }
 
 .hero-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
 }
 
@@ -191,7 +191,7 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 5vw, 4.4rem);
+  font-size: clamp(2.6rem, 4.4vw, 4rem);
   line-height: 1.05;
   margin-bottom: 1.25rem;
   color: var(--primary-black);
@@ -219,7 +219,7 @@ body {
 
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, minmax(120px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -281,6 +281,31 @@ body {
   color: var(--accent);
   font-size: 1.25rem;
   flex-shrink: 0;
+}
+
+.hero-product-shot {
+  min-width: 0;
+  margin: 0;
+}
+
+.hero-product-shot .shot-plate {
+  border: 1px solid rgba(23, 21, 16, 0.12);
+  border-radius: 20px;
+  background: #1c1f20;
+  box-shadow: 0 28px 70px rgba(13, 110, 118, 0.14), 0 12px 30px rgba(23, 21, 16, 0.16);
+}
+
+.hero-product-shot figcaption {
+  margin-top: 0.85rem;
+  color: var(--gray-600);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.pricing-early {
+  padding-top: 76px;
+  border-top: 1px solid var(--gray-200);
 }
 
 .benefits,
@@ -353,6 +378,16 @@ body {
 .pricing-card-pro li,
 .pricing-card-pro .plan-note {
   color: var(--primary-white);
+}
+
+.pricing-card-pro .plan-list li {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.pricing-card-pro .primary-btn {
+  background: var(--primary-white);
+  color: #0b1416 !important;
+  border-color: var(--primary-white);
 }
 
 .plan-pill {
@@ -783,6 +818,10 @@ body {
   margin-bottom: 0;
 }
 
+.buy-plan-list {
+  margin-top: 1.4rem;
+}
+
 .buy-summary .section-header {
   margin-bottom: 1rem;
 }
@@ -791,9 +830,41 @@ body {
   margin-top: 1.5rem;
 }
 
+.buy-actions-quiet {
+  text-align: center;
+}
+
+.buy-download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-700);
+  font-weight: 650;
+  text-underline-offset: 0.22em;
+}
+
+.buy-download-link:hover {
+  color: var(--primary-black);
+}
+
+.buy-sticky-checkout {
+  display: none;
+}
+
 .legal-sections {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.release-highlight-image {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.release-highlight-image figcaption {
+  margin-top: 0.85rem;
+  color: var(--gray-600);
+  text-align: center;
 }
 
 .legal-section {
@@ -1165,6 +1236,18 @@ body {
   gap: 0.45rem;
 }
 
+.dl-primary-row {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.dl-primary-row > .primary-btn,
+.dl-primary-row > .secondary-btn {
+  min-height: 54px;
+}
+
 .dl-meta {
   display: inline-flex;
   align-items: center;
@@ -1254,7 +1337,10 @@ body {
 .primary-btn:focus-visible,
 .secondary-btn:focus-visible,
 .dl-alt:focus-visible,
-.nav-links a:focus-visible {
+.nav-links a:focus-visible,
+.logo:focus-visible,
+.back-link:focus-visible,
+.mobile-menu-toggle:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
   border-radius: 6px;
@@ -1286,6 +1372,12 @@ body {
     align-items: stretch;
   }
   .dl-cta .primary-btn {
+    width: 100%;
+  }
+  .dl-primary-row,
+  .dl-primary-row > .primary-btn,
+  .dl-primary-row > .secondary-btn,
+  .dl-primary-row > .dl-both {
     width: 100%;
   }
   .dl-meta {
@@ -2578,6 +2670,28 @@ body {
 }
 
 @media (max-width: 640px) {
+  .buy-sticky-checkout {
+    position: fixed;
+    z-index: 1200;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+    background: rgba(250, 249, 244, 0.96);
+    border-top: 1px solid var(--gray-200);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 -12px 32px rgba(23, 21, 16, 0.12);
+  }
+
+  .buy-sticky-checkout .primary-btn {
+    width: 100%;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 750;
+  }
+
   .dl-terms {
     padding-left: 0;
     text-align: center;

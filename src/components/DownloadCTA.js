@@ -63,7 +63,7 @@ const WhileItInstalls = ({ platformKey, tone }) => (
 // line under it, and the other platform one click away. On phones and unknown platforms it offers
 // BOTH desktop builds instead of pushing a 228 MB DMG at a device that cannot run it. `source`
 // feeds the download_click analytics event so the funnel can tell which section converts.
-const DownloadCTA = ({ source, size = '', onDownload, tone = '' }) => {
+const DownloadCTA = ({ source, size = '', onDownload, tone = '', adjacentAction = null }) => {
   const [started, setStarted] = useState(null);
 
   const click = (platform) => {
@@ -75,12 +75,15 @@ const DownloadCTA = ({ source, size = '', onDownload, tone = '' }) => {
   if (!platformKnown) {
     return (
       <div className="dl-cta">
-        <div className="dl-both">
-          {[DOWNLOADS.mac, DOWNLOADS.windows].map((platform) => (
-            <a key={platform.key} href={platform.url} className={`primary-btn ${size}`.trim()} download onClick={() => click(platform)}>
-              <PlatformIcon platform={platform} /> Download for {platform.name}
-            </a>
-          ))}
+        <div className="dl-primary-row">
+          <div className="dl-both">
+            {[DOWNLOADS.mac, DOWNLOADS.windows].map((platform) => (
+              <a key={platform.key} href={platform.url} className={`primary-btn ${size}`.trim()} download onClick={() => click(platform)}>
+                <PlatformIcon platform={platform} /> Download for {platform.name}
+              </a>
+            ))}
+          </div>
+          {adjacentAction}
         </div>
         <p className="dl-meta">PolyPDF runs on Mac and Windows desktops — pick the download for the machine you work on.</p>
         <p className="dl-terms">{FREE_TIER_LIMIT_TEXT}</p>
@@ -91,14 +94,17 @@ const DownloadCTA = ({ source, size = '', onDownload, tone = '' }) => {
 
   return (
     <div className="dl-cta">
-      <a
-        href={primaryPlatform.url}
-        className={`primary-btn ${size}`.trim()}
-        download
-        onClick={() => click(primaryPlatform)}
-      >
-        <HiOutlineCloudDownload /> Download free for {primaryPlatform.name}
-      </a>
+      <div className="dl-primary-row">
+        <a
+          href={primaryPlatform.url}
+          className={`primary-btn ${size}`.trim()}
+          download
+          onClick={() => click(primaryPlatform)}
+        >
+          <HiOutlineCloudDownload /> Download free for {primaryPlatform.name}
+        </a>
+        {adjacentAction}
+      </div>
       <p className="dl-meta">
         {primaryPlatform.requirements}
         <span className="dl-meta-sep" aria-hidden="true">·</span>

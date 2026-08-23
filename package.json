@@ -17,6 +17,7 @@
     "build": "node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
     "test": "react-scripts test",
     "test:screenshot-evidence": "node --test test/verify-screenshot-evidence.test.mjs",
+    "refresh:screenshots": "node scripts/refresh-screenshot-inventory.mjs",
     "test:post-deploy": "node --test test/post-deploy-smoke.test.mjs",
     "verify:screenshots": "node scripts/verify-screenshot-evidence.mjs",
     "smoke:production": "node scripts/post-deploy-smoke.mjs",

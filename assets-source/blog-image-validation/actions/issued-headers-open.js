@@ -23,7 +23,7 @@
   };
   setValue('[data-hf-field="header-left"]', "ISSUE 02 — REVIEW SET");
   setValue('[data-hf-field="header-center"]', "POLYPDF EVIDENCE LAB");
-  setValue('[data-hf-field="header-right"]', "2026-08-19");
+  setValue('[data-hf-field="header-right"]', "2026-08-23");
   setValue('[data-hf-field="footer-left"]', "FOR REVIEW — NOT FOR CONSTRUCTION");
   setValue('[data-hf-field="footer-center"]', "{label} · {page}");
   setValue('[data-hf-field="footer-right"]', "CONTROLLED COPY");

@@ -1,11 +1,11 @@
-import compareEditableCloudsImage from '../../assets/screenshots/compare-editable-clouds-currentdev-dark-web.png';
+import compareEditableCloudsImage from '../../assets/screenshots/compare-editable-clouds-v1-4-dark-web.png';
 
 const comparePdfDrawingRevisionsGuide = {
   slug: 'compare-pdf-drawing-revisions',
   title: 'How to Compare PDF Drawing Revisions',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-19',
+  dateModified: '2026-08-23',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
@@ -18,14 +18,14 @@ const comparePdfDrawingRevisionsGuide = {
     'A visual diff can make a revision review faster, but only when the two files are actually comparable and every highlighted region is checked in drawing context.',
   quickAnswer:
     'Open the baseline PDF, choose Document > Compare Documents, select the revised PDF, and run Compare. PolyPDF opens a new comparison document and normally marks detected regions with editable violet revision clouds. First confirm sheet identity, page order, size, rotation, scale, and alignment. If a fallback warning says the marks are page content, they are not editable.',
-  lastVerified: '2026-08-19',
-  productVersion: 'PolyPDF 1.3.4 (build 16)',
+  lastVerified: '2026-08-23',
+  productVersion: 'PolyPDF 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: compareEditableCloudsImage,
     alt: 'Dark-mode PolyPDF comparison result with four violet revision clouds, one selected cloud, full cloud style controls, and four visible Markup Table rows',
     caption:
-      'PolyPDF 1.3.4 after comparing two revisions of a sample drawing: four violet revision clouds mark the regions that differ. One cloud is selected with its Line, Cloud, and Fill controls open, and every cloud has a matching row in the Markup Table.',
+      'PolyPDF 1.4.0 after comparing two revisions of a sample drawing: four violet revision clouds mark the regions that differ. One cloud is selected with its Line, Cloud, and Fill controls open, and every cloud has a matching row in the Markup Table.',
     width: 1710,
     height: 1073
   },
@@ -219,7 +219,7 @@ const comparePdfDrawingRevisionsGuide = {
   ],
   sources: [
     {
-      label: 'PolyPDF 1.3.4: Compare Documents and its in-app guidance',
+      label: 'PolyPDF 1.4.0: Compare Documents and its in-app guidance',
       note: 'The Compare Documents workflow, its two output paths, and the completion status described in this guide.'
     },
     {
