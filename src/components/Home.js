@@ -1,4 +1,4 @@
-import React, { memo, useEffect, useState } from 'react';
+import React, { memo, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -31,9 +31,10 @@ import shotPdfMaps from '../assets/screenshots/pdf-maps-v1-4-dark-web.png';
 import shotAutoArea from '../assets/screenshots/auto-area-v1-4-dark-web.png';
 
 // Screenshots of the shipping PolyPDF app, shown full-frame.
-const screenshots = [
+export const homeScreenshots = [
   {
     image: shotSymbolSearch,
+    motion: 'symbol-search',
     title: 'Review Symbol Search matches before counting',
     alt: 'PolyPDF Symbol Search showing five matches, all five selected, on a sample drawing',
     caption: 'Box a representative symbol, inspect the candidates, and commit only the matches you accept. Here the search returns 5 matches, all 5 selected, with Count 5 ready.',
@@ -42,6 +43,7 @@ const screenshots = [
   },
   {
     image: shotTakeoff,
+    motion: 'takeoff-records',
     title: 'Measured quantities stay tied to the sheet',
     alt: 'PolyPDF takeoff worksheet showing 14 items beside a sample plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
     caption: 'The Records view keeps measured quantities beside the drawing they came from. This takeoff shows 14 items: a 540 sq ft area, a 30 ft length, and 12 supply-diffuser counts, with matching rows in the Markup Table.',
@@ -58,6 +60,7 @@ const screenshots = [
   },
   {
     image: shotCalibration,
+    motion: 'calibration-check',
     title: 'Calibrate, then verify a second span',
     alt: 'PolyPDF Page Scale panel showing a calibrated quarter-inch equals one-foot scale and a second 12-foot verification measurement',
     caption: 'The Page Scale panel confirms 1/4 inch = 1 foot, or 18 PDF points per foot. A second known span reads 12 feet, which confirms the calibration before you start taking off quantities.',
@@ -74,6 +77,7 @@ const screenshots = [
   },
   {
     image: shotAiscPlugin,
+    motion: 'aisc-insert',
     title: 'Plugin output stays editable on the PDF',
     alt: 'PolyPDF Plugins sidebar beside a selected W24×55 steel section placed on the drawing',
     caption: 'The AISC Steel Sections plugin places a W24×55 profile on the sheet as an editable vector you can move and resize. It draws the section outline — it does not run capacity or design checks.',
@@ -227,39 +231,179 @@ const HeroProductBoard = memo(() => (
 
 HeroProductBoard.displayName = 'HeroProductBoard';
 
-const ProductShotMedia = ({ shot }) => (
-  <div className={`product-shot-media${shot.motion ? ` has-${shot.motion}-motion` : ''}`}>
-    <img src={shot.image} alt={shot.alt} loading="lazy" width={shot.width} height={shot.height} />
-    {shot.motion === 'pdf-maps' && (
+export const ShowcaseMotionLayer = memo(({ motionType }) => {
+  if (motionType === 'symbol-search') {
+    return (
+      <svg className="shot-motion-layer shot-motion-symbol-search" viewBox="0 0 1710 1073" aria-hidden="true">
+        {[
+          [831, 221], [1006, 221], [1181, 221], [831, 397], [1006, 397]
+        ].map(([x, y], index) => (
+          <g key={`${x}-${y}`} className="symbol-match-glint" style={{ '--motion-index': index }}>
+            <path d={`M${x - 10} ${y}H${x + 10}M${x} ${y - 10}V${y + 10}`} />
+            <circle cx={x} cy={y} r="16" />
+          </g>
+        ))}
+        <circle className="symbol-count-ripple" cx="117" cy="343" r="27" />
+      </svg>
+    );
+  }
+
+  if (motionType === 'takeoff-records') {
+    return (
+      <svg className="shot-motion-layer shot-motion-takeoff" viewBox="0 0 1710 1073" aria-hidden="true">
+        <g className="takeoff-pair-glow" style={{ '--motion-index': 0 }}>
+          <ellipse cx="962" cy="558" rx="80" ry="28" />
+          <rect x="204" y="420" width="79" height="39" rx="9" />
+        </g>
+        <g className="takeoff-pair-glow" style={{ '--motion-index': 1 }}>
+          <ellipse cx="962" cy="851" rx="76" ry="25" />
+          <rect x="212" y="510" width="71" height="39" rx="9" />
+        </g>
+        <g className="takeoff-pair-glow" style={{ '--motion-index': 2 }}>
+          <ellipse cx="681" cy="425" rx="78" ry="30" />
+          <rect x="216" y="594" width="67" height="39" rx="9" />
+        </g>
+      </svg>
+    );
+  }
+
+  if (motionType === 'calibration-check') {
+    return (
+      <svg className="shot-motion-layer shot-motion-calibration" viewBox="0 0 1710 1073" aria-hidden="true">
+        <circle className="calibration-endpoint calibration-endpoint-start" cx="594" cy="401" r="18" />
+        <circle className="calibration-endpoint calibration-endpoint-end" cx="594" cy="727" r="18" />
+        <circle className="calibration-status-ring" cx="83" cy="267" r="24" />
+        <path className="calibration-cursor" d="M574 374L606 397L591 401L584 417Z" />
+      </svg>
+    );
+  }
+
+  if (motionType === 'aisc-insert') {
+    return (
+      <svg className="shot-motion-layer shot-motion-aisc" viewBox="0 0 1710 1073" aria-hidden="true">
+        {[
+          [581, 464], [615, 464], [649, 464], [581, 570],
+          [649, 570], [581, 674], [615, 674], [649, 674]
+        ].map(([x, y], index) => (
+          <circle
+            key={`${x}-${y}`}
+            className="plugin-handle-glint"
+            cx={x}
+            cy={y}
+            r="16"
+            style={{ '--motion-index': index }}
+          />
+        ))}
+      </svg>
+    );
+  }
+
+  if (motionType === 'pdf-maps') {
+    return (
       <svg className="shot-motion-layer shot-motion-map" viewBox="0 0 1710 1073" aria-hidden="true">
-        <path className="map-route-trace" d="M118 330C129 313 145 301 166 298C187 295 207 307 222 326" />
-        <g className="map-location-pulse">
-          <circle className="map-location-ring map-location-ring-outer" cx="166" cy="298" r="26" />
-          <circle className="map-location-ring map-location-ring-inner" cx="166" cy="298" r="12" />
-          <path className="map-location-pin" d="M166 276c-10.7 0-19 8.1-19 18.5 0 14.2 19 31.5 19 31.5s19-17.3 19-31.5c0-10.4-8.3-18.5-19-18.5Zm0 25.8a7.4 7.4 0 1 1 0-14.8 7.4 7.4 0 0 1 0 14.8Z" />
-        </g>
-      </svg>
-    )}
-    {shot.motion === 'auto-area' && (
-      <svg className="shot-motion-layer shot-motion-auto-area" viewBox="0 0 1710 1073" aria-hidden="true">
-        <path
-          className="auto-area-trace"
-          d="M560 503C591 454 684 416 826 415L983 415C1086 420 1148 455 1178 507C1208 558 1188 622 1138 670L984 590L691 644L584 681C550 628 547 552 560 503Z"
+        <defs>
+          <linearGradient id="map-preview-sheen-gradient" x1="0" x2="1">
+            <stop offset="0" stopColor="#73d9cf" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#fbf8f1" stopOpacity="0.66" />
+            <stop offset="1" stopColor="#73d9cf" stopOpacity="0" />
+          </linearGradient>
+          <clipPath id="map-preview-clip">
+            <rect x="97" y="238" width="145" height="145" rx="8" />
+          </clipPath>
+        </defs>
+        <circle className="map-tour-focus" cx="169" cy="488" r="24" />
+        <rect
+          className="map-preview-sheen"
+          x="38"
+          y="230"
+          width="70"
+          height="160"
+          fill="url(#map-preview-sheen-gradient)"
+          clipPath="url(#map-preview-clip)"
         />
-        <path className="auto-area-cutout auto-area-cutout-one" d="M817 518L884 518L884 578L817 578Z" />
-        <path className="auto-area-cutout auto-area-cutout-two" d="M974 518L1047 518L1047 578L974 578Z" />
-        <g className="auto-area-node-set">
-          <circle cx="560" cy="503" r="7" />
-          <circle cx="826" cy="415" r="7" />
-          <circle cx="1178" cy="507" r="7" />
-          <circle cx="1138" cy="670" r="7" />
-          <circle cx="691" cy="644" r="7" />
-          <circle cx="584" cy="681" r="7" />
-        </g>
       </svg>
-    )}
-  </div>
-);
+    );
+  }
+
+  if (motionType === 'auto-area') {
+    return (
+      <svg className="shot-motion-layer shot-motion-auto-area" viewBox="0 0 1710 1073" aria-hidden="true">
+        <defs>
+          <linearGradient id="auto-area-detection-sheen" x1="0" x2="1">
+            <stop offset="0" stopColor="#73d9cf" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#fbf8f1" stopOpacity="0.58" />
+            <stop offset="1" stopColor="#73d9cf" stopOpacity="0" />
+          </linearGradient>
+          <mask id="auto-area-region-mask">
+            <rect width="1710" height="1073" fill="black" />
+            <path fill="white" d="M560 502L685 459L827 439L980 414L1138 473Q1190 515 1190 550Q1193 596 1137 630L980 590L839 614L692 644L584 681Z" />
+            <path fill="black" d="M817 518L884 518L884 578L817 578Z" />
+            <path fill="black" d="M974 518L1047 518L1047 578L974 578Z" />
+          </mask>
+        </defs>
+        <rect
+          className="auto-area-detection-sweep"
+          x="260"
+          y="380"
+          width="300"
+          height="360"
+          fill="url(#auto-area-detection-sheen)"
+          mask="url(#auto-area-region-mask)"
+        />
+        {[
+          [560, 502], [980, 414], [1190, 550], [1137, 630], [692, 644], [584, 681]
+        ].map(([cx, cy], index) => (
+          <circle
+            key={`${cx}-${cy}`}
+            className="auto-area-node-pulse"
+            cx={cx}
+            cy={cy}
+            r="16"
+            style={{ '--motion-index': index }}
+          />
+        ))}
+      </svg>
+    );
+  }
+
+  return null;
+});
+
+ShowcaseMotionLayer.displayName = 'ShowcaseMotionLayer';
+
+const ProductShotMedia = memo(({ shot }) => {
+  const mediaRef = useRef(null);
+  const [motionActive, setMotionActive] = useState(false);
+
+  useEffect(() => {
+    if (!shot.motion || typeof IntersectionObserver === 'undefined') return undefined;
+
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) return undefined;
+
+    const media = mediaRef.current;
+    if (!media) return undefined;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setMotionActive(entry.isIntersecting && entry.intersectionRatio >= 0.2);
+    }, { threshold: [0, 0.2, 0.65] });
+
+    observer.observe(media);
+    return () => observer.disconnect();
+  }, [shot.motion]);
+
+  return (
+    <div
+      ref={mediaRef}
+      className={`product-shot-media${shot.motion ? ` has-${shot.motion}-motion` : ''}${motionActive ? ' is-motion-active' : ''}`}
+    >
+      <img src={shot.image} alt={shot.alt} loading="lazy" width={shot.width} height={shot.height} />
+      {shot.motion && <ShowcaseMotionLayer motionType={shot.motion} />}
+    </div>
+  );
+});
+
+ProductShotMedia.displayName = 'ProductShotMedia';
 
 const PricingSection = ({ offer, onDownload }) => (
   <section className="pricing pricing-early" id="pricing">
@@ -516,12 +660,13 @@ const Home = () => {
           >
             <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Shipping UI, eight workflows</span>
             <h2>See PolyPDF at work</h2>
-            <p>Eight workflows in PolyPDF 1.4, shown in the shipping app — screenshots, not mockups.</p>
+            <p>Eight workflows in PolyPDF 1.4, shown with real shipping screenshots and restrained motion cues — never invented UI.</p>
           </motion.div>
 
           {/* Lead shot gets the full-width stage; the rest alternate text/image so the section
               reads as a story instead of a stack of identical cards. */}
           <motion.figure
+            id={`${homeScreenshots[0].motion}-demo`}
             className="showcase-hero"
             initial={{ opacity: 0, y: 36, scale: 0.985 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -530,16 +675,16 @@ const Home = () => {
           >
             <span className="paper-tape showcase-tape" aria-hidden="true" />
             <div className="shot-plate">
-              <ProductShotMedia shot={screenshots[0]} />
+              <ProductShotMedia shot={homeScreenshots[0]} />
             </div>
             <figcaption>
-              <h3>{screenshots[0].title}</h3>
-              <p>{screenshots[0].caption}</p>
+              <h3>{homeScreenshots[0].title}</h3>
+              <p>{homeScreenshots[0].caption}</p>
             </figcaption>
           </motion.figure>
 
           <div className="showcase-rows">
-            {screenshots.slice(1).map((shot, index) => (
+            {homeScreenshots.slice(1).map((shot, index) => (
               <motion.figure
                 key={shot.title}
                 id={shot.motion ? `${shot.motion}-demo` : undefined}

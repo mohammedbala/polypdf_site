@@ -36,7 +36,7 @@
       "treatment": "none"
     }
   ],
-  "shot_brief": "The viewer first sees the real, stable PolyPDF takeoff workspace with the complete shipping toolbar and the drawing already centered at a useful fit. A real cursor glides toward the upper-left room corner; in the final approach it bends subtly into the exact endpoint, which answers with a compact cyan snap target and one blue acquisition ring. The cursor clicks, pulls a clean dimension preview horizontally across the top wall, and magnetically settles onto the matching upper-right endpoint. Extension lines resolve, the dimension line firms up, and a readable 30'-0\" label appears at center. The finished measurement holds for a full second, then only the localized overlays fade to return to an untouched base frame for a seamless website loop. The single dominant motion idea is magnetic endpoint acquisition becoming a precise dimension.",
+  "shot_brief": "The viewer first sees the real, stable PolyPDF takeoff workspace with the complete shipping toolbar and the drawing already centered at a useful fit. The already-selected dimension is cleanly removed from the captured base before frame zero. A real cursor glides toward the lower-left room corner; in the final approach it bends subtly into the exact endpoint, which answers with a compact cyan snap target and one blue acquisition ring. The cursor clicks, pulls one clean dimension preview horizontally across the lower wall, and magnetically settles onto the matching lower-right endpoint. Extension lines resolve, the dimension line firms up, and a readable 30'-0\" label appears at center. The finished single measurement holds for a full second, then only the localized motion overlays fade for a seamless website loop. The single dominant motion idea is magnetic endpoint acquisition becoming one precise dimension.",
   "block": "simulated-cursor",
   "customize": {
     "registry_components": [
@@ -81,21 +81,21 @@
       "crop": "none",
       "transform": "none",
       "animate": false,
-      "rule": "Keep every pixel of the approved shipping screenshot untouched; never dim, zoom, pan, blur, recolor, or cover the toolbar."
+      "rule": "Keep the approved shipping screenshot untouched except for the localized removal of its selected bottom dimension; never dim, zoom, pan, blur, recolor, or cover the toolbar or document content."
     },
     "geometry": {
       "first_endpoint": {
         "x": 553,
-        "y": 329
+        "y": 817
       },
       "second_endpoint": {
         "x": 1369,
-        "y": 329
+        "y": 817
       },
-      "dimension_y": 282,
+      "dimension_y": 866,
       "dimension_center": {
         "x": 961,
-        "y": 282
+        "y": 866
       },
       "dimension_text": "30'-0\"",
       "dimension_text_style": {
@@ -111,22 +111,22 @@
       "extension_lines": [
         {
           "x1": 553,
-          "y1": 329,
+          "y1": 817,
           "x2": 553,
-          "y2": 282
+          "y2": 866
         },
         {
           "x1": 1369,
-          "y1": 329,
+          "y1": 817,
           "x2": 1369,
-          "y2": 282
+          "y2": 866
         }
       ],
       "dimension_line": {
         "x1": 553,
-        "y1": 282,
+        "y1": 866,
         "x2": 1369,
-        "y2": 282
+        "y2": 866
       },
       "endpoint_caps": {
         "length_px": 12,
@@ -146,51 +146,51 @@
       "dominant_motif": "magnetic endpoint acquisition",
       "cursor_start": {
         "x": 472,
-        "y": 236
+        "y": 724
       },
       "cursor_pre_snap_1": {
         "x": 536,
-        "y": 313
+        "y": 801
       },
       "cursor_pre_snap_2": {
         "x": 1349,
-        "y": 315
+        "y": 803
       },
       "timeline": [
         {
           "start_s": 0,
           "end_s": 0.25,
-          "action": "Clean untouched base frame; cursor and every overlay hidden",
+          "action": "Clean release base frame with the selected source dimension removed; cursor and animated overlays hidden",
           "ease": "none"
         },
         {
           "start_s": 0.25,
           "end_s": 0.86,
-          "action": "Fade cursor in over 0.12s and glide from (472,236) to pre-snap point (536,313)",
+          "action": "Fade cursor in over 0.12s and glide from (472,724) to pre-snap point (536,801)",
           "ease": "power2.inOut"
         },
         {
           "start_s": 0.86,
           "end_s": 1.08,
-          "action": "Magnetically bend the final 23px into endpoint (553,329); sweep the cyan target on, fire one blue acquisition ring, and resolve the first click at 1.02s",
+          "action": "Magnetically bend the final 23px into endpoint (553,817); sweep the cyan target on, fire one blue acquisition ring, and resolve the first click at 1.02s",
           "ease": "power3.out"
         },
         {
           "start_s": 1.08,
           "end_s": 1.32,
-          "action": "Trace the left extension line from (553,329) to (553,282); keep the first endpoint target visible at 70% opacity",
+          "action": "Trace the left extension line from (553,817) to (553,866); keep the first endpoint target visible at 70% opacity",
           "ease": "power2.out"
         },
         {
           "start_s": 1.18,
           "end_s": 3.08,
-          "action": "Drag the cursor horizontally toward pre-snap point (1349,315). The dimension rail grows from x=553 at y=282 and its temporary right extension remains attached to the cursor x-position, ending at the underlying wall edge y=329",
+          "action": "Drag the cursor horizontally toward pre-snap point (1349,803). The dimension rail grows from x=553 at y=866 and its temporary right extension remains attached to the cursor x-position, ending at the underlying wall edge y=817",
           "ease": "power1.inOut"
         },
         {
           "start_s": 3.08,
           "end_s": 3.32,
-          "action": "Magnetically settle the cursor into endpoint (1369,329); sweep on the second cyan target and fire the second blue acquisition ring/click at 3.24s",
+          "action": "Magnetically settle the cursor into endpoint (1369,817); sweep on the second cyan target and fire the second blue acquisition ring/click at 3.24s",
           "ease": "power3.out"
         },
         {
@@ -214,7 +214,7 @@
         {
           "start_s": 5.05,
           "end_s": 5.2,
-          "action": "Clean untouched base frame identical to frame zero for a seamless loop",
+          "action": "Clean release base frame identical to frame zero for a seamless loop",
           "ease": "none"
         }
       ],

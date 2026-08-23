@@ -65,6 +65,15 @@
         pointer-events: none;
       }
 
+      .polypdf-source-cleanup {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 1710px;
+        height: 1073px;
+        pointer-events: none;
+      }
+
       .polypdf-localized-overlays {
         pointer-events: none;
         will-change: opacity;
@@ -190,6 +199,75 @@
             aria-hidden="true"
             draggable="false"
           />
+          <svg
+            class="polypdf-source-cleanup"
+            viewBox="0 0 1710 1073"
+            width="1710"
+            height="1073"
+            aria-hidden="true"
+            data-layout-ignore
+          >
+            <defs>
+              <clipPath id="polypdf-clean-selection-top">
+                <rect x="512" y="775" width="902" height="8" />
+              </clipPath>
+              <clipPath id="polypdf-clean-left-handle">
+                <rect x="547" y="810" width="13" height="11" />
+              </clipPath>
+              <clipPath id="polypdf-clean-right-handle">
+                <rect x="1362" y="810" width="8" height="11" />
+              </clipPath>
+              <clipPath id="polypdf-clean-selection-bottom">
+                <rect x="511" y="913" width="904" height="9" />
+              </clipPath>
+            </defs>
+
+            <!-- Reuse clean, phase-matched pixels from the same release capture. -->
+            <image
+              href="assets/takeoff-v1-4-dark-web.png"
+              x="0"
+              y="12"
+              width="1710"
+              height="1073"
+              clip-path="url(#polypdf-clean-selection-top)"
+            />
+            <image
+              href="assets/takeoff-v1-4-dark-web.png"
+              x="-12"
+              y="0"
+              width="1710"
+              height="1073"
+              clip-path="url(#polypdf-clean-left-handle)"
+            />
+            <image
+              href="assets/takeoff-v1-4-dark-web.png"
+              x="12"
+              y="0"
+              width="1710"
+              height="1073"
+              clip-path="url(#polypdf-clean-right-handle)"
+            />
+            <image
+              href="assets/takeoff-v1-4-dark-web.png"
+              x="0"
+              y="-10"
+              width="1710"
+              height="1073"
+              clip-path="url(#polypdf-clean-selection-bottom)"
+            />
+
+            <!-- Remove the selected source dimension and its selection box. -->
+            <rect x="511" y="783" width="8" height="38" fill="#ffffff" />
+            <rect x="1370" y="810" width="7" height="11" fill="#ffffff" />
+            <rect x="1407" y="783" width="8" height="38" fill="#ffffff" />
+            <rect x="511" y="821" width="904" height="89" fill="#ffffff" />
+
+            <!-- Restore the two room edges hidden beneath the source selection handles. -->
+            <path d="M 553 810 L 553 820" fill="none" stroke="#60c4b3" stroke-width="3" />
+            <path d="M 1369 810 L 1369 820" fill="none" stroke="#60c4b3" stroke-width="3" />
+            <path d="M 553 820 L 1369 820" fill="none" stroke="#464c52" stroke-width="2" />
+            <path d="M 451 911 L 1575 911" fill="none" stroke="#1a2129" stroke-width="2" />
+          </svg>
         </div>
 
         <div id="polypdf-localized-overlays" class="polypdf-localized-overlays">
@@ -204,13 +282,13 @@
               <polygon
                 id="polypdf-snap-target-1"
                 class="polypdf-snap-target"
-                points="553,321 561,329 553,337 545,329"
+                points="553,809 561,817 553,825 545,817"
               />
               <circle
                 id="polypdf-acquisition-ring-1"
                 class="polypdf-acquisition-ring"
                 cx="553"
-                cy="329"
+                cy="817"
                 r="8"
               />
             </g>
@@ -219,13 +297,13 @@
               <polygon
                 id="polypdf-snap-target-2"
                 class="polypdf-snap-target"
-                points="1369,321 1377,329 1369,337 1361,329"
+                points="1369,809 1377,817 1369,825 1361,817"
               />
               <circle
                 id="polypdf-acquisition-ring-2"
                 class="polypdf-acquisition-ring"
                 cx="1369"
-                cy="329"
+                cy="817"
                 r="8"
               />
             </g>
@@ -234,29 +312,29 @@
             <path
               id="polypdf-left-extension-preview"
               class="polypdf-preview-stroke polypdf-trace"
-              d="M 553 329 L 553 282"
+              d="M 553 817 L 553 866"
             />
             <path
               id="polypdf-dimension-preview"
               class="polypdf-preview-stroke polypdf-trace"
-              d="M 553 282 L 1369 282"
+              d="M 553 866 L 1369 866"
             />
             <g id="polypdf-temporary-right-guide" opacity="0">
               <path
                 class="polypdf-preview-stroke"
-                d="M 553 282 L 553 329"
+                d="M 553 866 L 553 817"
               />
             </g>
 
             <g id="polypdf-final-geometry">
-              <path class="polypdf-final-stroke" d="M 553 329 L 553 282" />
-              <path class="polypdf-final-stroke" d="M 1369 329 L 1369 282" />
-              <path class="polypdf-final-stroke" d="M 553 282 L 1369 282" />
-              <path class="polypdf-final-stroke" d="M 553 276 L 553 288" />
-              <path class="polypdf-final-stroke" d="M 1369 276 L 1369 288" />
+              <path class="polypdf-final-stroke" d="M 553 817 L 553 866" />
+              <path class="polypdf-final-stroke" d="M 1369 817 L 1369 866" />
+              <path class="polypdf-final-stroke" d="M 553 866 L 1369 866" />
+              <path class="polypdf-final-stroke" d="M 553 860 L 553 872" />
+              <path class="polypdf-final-stroke" d="M 1369 860 L 1369 872" />
             </g>
 
-            <text id="polypdf-dimension-label" x="961" y="289">30'-0&quot;</text>
+            <text id="polypdf-dimension-label" x="961" y="858">30'-0&quot;</text>
           </svg>
 
           <div id="polypdf-cursor" class="hf-simulated-cursor" aria-hidden="true">
@@ -293,43 +371,61 @@
 
         var tl = gsap.timeline({ paused: true });
 
-        /* 0.00–0.25: the approved source screenshot remains completely untouched. */
+        /* 0.00–0.25: the cleaned release frame remains motionless and overlay-free. */
         tl.fromTo(
           cursor,
-          { x: 472, y: 236, autoAlpha: 0 },
-          { x: 472, y: 236, autoAlpha: 1, duration: 0.12, ease: "power2.out" },
+          { x: 472, y: 724, autoAlpha: 0 },
+          { x: 472, y: 724, autoAlpha: 1, duration: 0.12, ease: "power2.out" },
           0.25,
         );
-        tl.to(cursor, { x: 507, y: 274, duration: 0.31, ease: "power2.inOut" }, 0.37);
-        tl.to(cursor, { x: 536, y: 313, duration: 0.18, ease: "power2.inOut" }, 0.68);
+        tl.fromTo(
+          cursor,
+          { x: 472, y: 724 },
+          { x: 507, y: 762, duration: 0.31, ease: "power2.inOut", immediateRender: false },
+          0.37,
+        );
+        tl.fromTo(
+          cursor,
+          { x: 507, y: 762 },
+          { x: 536, y: 801, duration: 0.18, ease: "power2.inOut", immediateRender: false },
+          0.68,
+        );
 
         /* First magnetic acquisition: 0.86–1.08. */
         tl.fromTo(
           snapTarget1,
-          { autoAlpha: 0, scale: 0.45, transformOrigin: "553px 329px" },
+          { autoAlpha: 0, scale: 0.45, transformOrigin: "553px 817px" },
           {
             autoAlpha: 1,
             scale: 1,
             duration: 0.12,
             ease: "power3.out",
-            transformOrigin: "553px 329px",
+            transformOrigin: "553px 817px",
           },
           0.86,
         );
-        tl.to(
+        tl.fromTo(
           cursor,
-          { x: 553, y: 329, duration: 0.22, ease: "power3.out", overwrite: "auto" },
+          { x: 536, y: 801 },
+          {
+            x: 553,
+            y: 817,
+            duration: 0.22,
+            ease: "power3.out",
+            overwrite: "auto",
+            immediateRender: false,
+          },
           0.86,
         );
         tl.fromTo(
           acquisitionRing1,
-          { autoAlpha: 0.86, scale: 0.42, transformOrigin: "553px 329px" },
+          { autoAlpha: 0.86, scale: 0.42, transformOrigin: "553px 817px" },
           {
             autoAlpha: 0,
             scale: 2.375,
             duration: 0.22,
             ease: "power2.out",
-            transformOrigin: "553px 329px",
+            transformOrigin: "553px 817px",
           },
           1.02,
         );
@@ -366,33 +462,53 @@
           { x: 796, autoAlpha: 0.72, duration: 1.9, ease: "power1.inOut" },
           1.18,
         );
-        tl.to(cursor, { x: 914, y: 296, duration: 0.92, ease: "power1.inOut" }, 1.18);
-        tl.to(cursor, { x: 1349, y: 315, duration: 0.98, ease: "power1.inOut" }, 2.1);
+        tl.fromTo(
+          cursor,
+          { x: 553, y: 817 },
+          { x: 914, y: 850, duration: 0.92, ease: "power1.inOut", immediateRender: false },
+          1.18,
+        );
+        tl.fromTo(
+          cursor,
+          { x: 914, y: 850 },
+          { x: 1349, y: 803, duration: 0.98, ease: "power1.inOut", immediateRender: false },
+          2.1,
+        );
 
         /* Second magnetic acquisition: 3.08–3.32. */
         tl.fromTo(
           snapTarget2,
-          { autoAlpha: 0, scale: 0.45, transformOrigin: "1369px 329px" },
+          { autoAlpha: 0, scale: 0.45, transformOrigin: "1369px 817px" },
           {
             autoAlpha: 1,
             scale: 1,
             duration: 0.12,
             ease: "power3.out",
-            transformOrigin: "1369px 329px",
+            transformOrigin: "1369px 817px",
           },
           3.08,
         );
-        tl.to(cursor, { x: 1369, y: 329, duration: 0.24, ease: "power3.out" }, 3.08);
-        tl.to(temporaryRightGuide, { x: 816, duration: 0.24, ease: "power3.out" }, 3.08);
+        tl.fromTo(
+          cursor,
+          { x: 1349, y: 803 },
+          { x: 1369, y: 817, duration: 0.24, ease: "power3.out", immediateRender: false },
+          3.08,
+        );
+        tl.fromTo(
+          temporaryRightGuide,
+          { x: 796 },
+          { x: 816, duration: 0.24, ease: "power3.out", immediateRender: false },
+          3.08,
+        );
         tl.fromTo(
           acquisitionRing2,
-          { autoAlpha: 0.86, scale: 0.42, transformOrigin: "1369px 329px" },
+          { autoAlpha: 0.86, scale: 0.42, transformOrigin: "1369px 817px" },
           {
             autoAlpha: 0,
             scale: 2.375,
             duration: 0.22,
             ease: "power2.out",
-            transformOrigin: "1369px 329px",
+            transformOrigin: "1369px 817px",
           },
           3.24,
         );
@@ -412,13 +528,13 @@
         );
         tl.fromTo(
           dimensionLabel,
-          { autoAlpha: 0, scale: 0.96, transformOrigin: "961px 282px" },
+          { autoAlpha: 0, scale: 0.96, transformOrigin: "961px 866px" },
           {
             autoAlpha: 1,
             scale: 1,
             duration: 0.36,
             ease: "power2.out",
-            transformOrigin: "961px 282px",
+            transformOrigin: "961px 866px",
           },
           3.32,
         );

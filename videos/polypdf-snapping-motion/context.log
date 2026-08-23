@@ -1,1 +1,4 @@
 2026-08-23 source: supplied local PolyPDF 1.4 product screenshot frozen into assets/; no external search or generated imagery used.
+2026-08-23 correction: the release source frame contained a selected bottom dimension and selection bbox; clean them before frame zero, then animate exactly one replacement dimension at endpoints (553,817) and (1369,817) with rail y=866.
+2026-08-23 verification: decoded GIF opening/reset contain zero dimension-blue pixels in both bottom and top audit zones; the resolved frame contains 2,222 bottom-zone pixels in bbox [551,815,1370,872] and zero top-zone pixels. Opening and reset decode byte-identically.
+2026-08-23 render: HyperFrames 0.8.10 GIF render needs HYPERFRAMES_FFMPEG_PATH/HYPERFRAMES_FFPROBE_PATH. This machine's binaries are under /usr/local/bin; if the CLI version probe times out, use a temporary fast-probe wrapper that delegates all non-version work to those binaries.

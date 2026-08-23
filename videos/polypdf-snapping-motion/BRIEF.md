@@ -12,8 +12,8 @@ length: 5.2s
 ## Intent
 
 Turn the homepage hero from a static product screenshot into a short, quiet
-demonstration of PolyPDF's dimension workflow: approach a drawing endpoint,
-show the snap lock, draw the measurement across the plan, and resolve the
+demonstration of PolyPDF's dimension workflow: approach the lower-left drawing endpoint,
+show the snap lock, draw the measurement across the plan's lower edge, and resolve the
 dimension visibly. It should feel like the real shipping app, with a playful
 but restrained layer of motion graphics rather than a synthetic mockup.
 
@@ -32,5 +32,6 @@ but restrained layer of motion graphics rather than a synthetic mockup.
 ## Notes
 
 - Preserve the complete shipping toolbar and the centered, full-page document.
+- Remove the already-selected source dimension before frame zero so the motion resolves to exactly one measurement.
 - No camera shake, fake application chrome, tutorial modal, or noisy captions.
 - Keep file weight appropriate for an eager homepage hero.
