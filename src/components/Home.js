@@ -36,6 +36,7 @@ export const homeScreenshots = [
   {
     image: shotSymbolSearch,
     motion: 'symbol-search',
+    category: 'Count',
     title: 'Review Symbol Search matches before counting',
     alt: 'PolyPDF Symbol Search showing five matches, all five selected, on a sample drawing',
     caption: 'Box a representative symbol, inspect the candidates, and commit only the matches you accept. Here the search returns 5 matches, all 5 selected, with Count 5 ready.',
@@ -45,6 +46,7 @@ export const homeScreenshots = [
   {
     image: shotTakeoff,
     motion: 'takeoff-records',
+    category: 'Takeoff',
     title: 'Measured quantities stay tied to the sheet',
     alt: 'PolyPDF takeoff worksheet showing 14 items beside a sample plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
     caption: 'The Records view keeps measured quantities beside the drawing they came from. This takeoff shows 14 items: a 540 sq ft area, a 30 ft length, and 12 supply-diffuser counts, with matching rows in the Markup Table.',
@@ -53,6 +55,7 @@ export const homeScreenshots = [
   },
   {
     image: shotMarkup,
+    category: 'Review',
     title: 'Reviews and RFIs, straight on the sheet',
     alt: 'PolyPDF showing an RFI callout, a revision cloud, and a green rectangle with three matching rows in the Markup Table',
     caption: 'A rounded RFI callout, an In Progress revision cloud, and a Completed verification rectangle remain connected to three matching table rows and their review comments.',
@@ -62,6 +65,7 @@ export const homeScreenshots = [
   {
     image: shotCalibration,
     motion: 'calibration-check',
+    category: 'Scale',
     title: 'Calibrate, then verify a second span',
     alt: 'PolyPDF Page Scale panel showing a calibrated quarter-inch equals one-foot scale and a second 12-foot verification measurement',
     caption: 'The Page Scale panel confirms 1/4 inch = 1 foot, or 18 PDF points per foot. A second known span reads 12 feet, which confirms the calibration before you start taking off quantities.',
@@ -70,6 +74,7 @@ export const homeScreenshots = [
   },
   {
     image: shotMutcdStop,
+    category: 'Standards',
     title: 'Built-in MUTCD sign toolsets',
     alt: 'PolyPDF built-in MUTCD Regulatory toolset open beside a selected R1-1 STOP sign on a sample sheet',
     caption: 'The built-in MUTCD Regulatory reference chest is open with an R1-1 STOP sign placed and selected on the sheet. Standard signs drop straight onto the drawing, then move and resize like any other markup.',
@@ -79,6 +84,7 @@ export const homeScreenshots = [
   {
     image: shotAiscPlugin,
     motion: 'aisc-insert',
+    category: 'Plugins',
     title: 'Plugin output stays editable on the PDF',
     alt: 'PolyPDF Plugins sidebar beside a selected W24×55 steel section placed on the drawing',
     caption: 'The AISC Steel Sections plugin places a W24×55 profile on the sheet as an editable vector you can move and resize. It draws the section outline — it does not run capacity or design checks.',
@@ -88,6 +94,7 @@ export const homeScreenshots = [
   {
     image: shotPdfMaps,
     motion: 'pdf-maps',
+    category: 'Maps',
     title: 'Frame map context before it reaches the sheet',
     alt: 'PolyPDF 1.4 PDF Maps generator previewing New York with street zoom and the Liberty base map selected',
     caption: 'Search for a location, choose the zoom and base-map treatment, and inspect the preview before insertion. PDF Maps keeps that setup beside the drawing so you can place the result without switching apps.',
@@ -97,6 +104,7 @@ export const homeScreenshots = [
   {
     image: shotAutoArea,
     motion: 'auto-area',
+    category: 'Auto Area',
     title: 'Detect enclosed rooms with Auto Area',
     alt: 'PolyPDF 1.4 Auto Area showing an enclosed room area with a resized cutout and helper dimensions',
     caption: 'Auto Area follows enclosed plan linework, while resizable cutouts remove openings from the measured total. Optional helper dimensions make exact adjustments visible while you work.',
@@ -128,18 +136,68 @@ const proFeatures = [
   'Secure Stripe checkout with license delivery by email'
 ];
 
-const benefits = [
+export const featureComparison = [
   {
-    title: 'Measure PDF drawings with confidence',
-    description: 'Set the scale once and take distance, area, and angle measurements directly on the PDFs your team already uses.'
+    feature: 'Open and review PDF drawings',
+    detail: 'Native desktop workspace on macOS and Windows',
+    free: 'Included',
+    pro: 'Included'
   },
   {
-    title: 'Mark up reviews without tool switching',
-    description: 'Add callouts, highlights, shapes, and notes so site issues, design comments, and decisions are easier to communicate.'
+    feature: 'Markup and review tools',
+    detail: 'Callouts, notes, highlights, shapes, comments, and Markup Table',
+    free: 'Included',
+    pro: 'Included'
   },
   {
-    title: 'Buy only after it proves itself',
-    description: 'The free download — Mac or Windows — lets you test PolyPDF on live work before you unlock unlimited hand-created measurements.'
+    feature: 'Page-scale calibration',
+    detail: 'Set drawing scale and verify it against a second known span',
+    free: 'Included',
+    pro: 'Included'
+  },
+  {
+    feature: 'Symbol Search auto-count',
+    detail: 'Review candidate matches before committing a count',
+    free: 'Uncapped',
+    pro: 'Uncapped'
+  },
+  {
+    feature: 'Hand-created measurements',
+    detail: 'Distance, area, perimeter, angle, count, and dimension tools',
+    free: '3 per document',
+    pro: 'Unlimited',
+    emphasis: true
+  },
+  {
+    feature: 'Auto Area and cutouts',
+    detail: 'Detect enclosed regions and subtract openings with helper dimensions',
+    free: '3-measurement cap applies',
+    pro: 'Unlimited'
+  },
+  {
+    feature: 'Takeoff records',
+    detail: 'Keep measured quantities tied to their drawing and table rows',
+    free: 'Included within cap',
+    pro: 'Unlimited'
+  },
+  {
+    feature: 'PDF Maps',
+    detail: 'Preview location, zoom, and base-map treatment before insertion',
+    free: 'Available',
+    pro: 'Available'
+  },
+  {
+    feature: 'MUTCD toolsets and plugin output',
+    detail: 'Place standard signs and editable plugin-generated vectors',
+    free: 'Available',
+    pro: 'Available'
+  },
+  {
+    feature: 'Activation and price',
+    detail: 'Use the same app before and after upgrading',
+    free: '$0 · no activation',
+    pro: '$49.99 once · 3 computers',
+    emphasis: true
   }
 ];
 
@@ -406,6 +464,103 @@ const ProductShotMedia = memo(({ shot }) => {
 
 ProductShotMedia.displayName = 'ProductShotMedia';
 
+export const FeatureMatrix = () => (
+  <section className="feature-matrix-section" id="features">
+    <div className="container">
+      <motion.div
+        className="section-header feature-matrix-header"
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <span className="section-kicker"><SquaresFour aria-hidden="true" weight="bold" /> Full feature matrix</span>
+        <h2>Nearly everything is free. Pro removes one working limit.</h2>
+        <p>Use the complete review workspace before you pay. Upgrade only when three hand-created measurements per document no longer cover the job.</p>
+      </motion.div>
+
+      <div className="feature-table-shell">
+        <table className="feature-table">
+          <caption className="sr-only">Comparison of PolyPDF Free and PolyPDF Pro features</caption>
+          <thead>
+            <tr>
+              <th scope="col">Capability</th>
+              <th scope="col"><span>Free</span><strong>$0</strong></th>
+              <th scope="col" className="feature-table-pro"><span>Pro Founder</span><strong>$49.99 once</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            {featureComparison.map((row) => (
+              <tr key={row.feature} className={row.emphasis ? 'feature-row-emphasis' : undefined}>
+                <th scope="row">
+                  <strong>{row.feature}</strong>
+                  <span>{row.detail}</span>
+                </th>
+                <td><span className="feature-status"><CheckCircle aria-hidden="true" weight="fill" /> {row.free}</span></td>
+                <td className="feature-table-pro"><span className="feature-status"><CheckCircle aria-hidden="true" weight="fill" /> {row.pro}</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="feature-matrix-summary">
+        <p><strong>The paid unlock is simple:</strong> remove the three-measurement cap across every document and activate Pro on up to three Mac or Windows computers.</p>
+        <Link
+          to={buyPath('website_feature_matrix')}
+          className="secondary-btn feature-matrix-buy"
+          aria-label={`Remove the measurement cap — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
+        >
+          <Infinity aria-hidden="true" weight="bold" /> Remove the cap · {commercialOffer.price}
+        </Link>
+      </div>
+    </div>
+  </section>
+);
+
+export const WorkflowGrid = () => (
+  <section className="showcase showcase-compact" id="workflows">
+    <div className="container">
+      <motion.div
+        className="section-header workflow-grid-header"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Shipping UI · eight workflows</span>
+        <h2>Eight real workflows. One compact tour.</h2>
+        <p>Every frame comes from PolyPDF 1.4. Scan the complete set here, then open the app and try the same tools on your own drawings.</p>
+      </motion.div>
+
+      <p className="workflow-scroll-hint">Swipe to scan all eight workflows</p>
+      <div className="workflow-grid" tabIndex="0" role="region" aria-label="PolyPDF workflow screenshots">
+        {homeScreenshots.map((shot, index) => (
+          <motion.figure
+            key={shot.title}
+            id={shot.motion ? `${shot.motion}-demo` : undefined}
+            className="workflow-card"
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.52, delay: (index % 2) * 0.07, ease: [0.21, 0.65, 0.32, 1] }}
+          >
+            <div className="shot-plate workflow-shot">
+              <ProductShotMedia shot={shot} />
+            </div>
+            <figcaption>
+              <div className="workflow-meta">
+                <span className="showcase-index">{String(index + 1).padStart(2, '0')}</span>
+                <span className="workflow-category">{shot.category}</span>
+              </div>
+              <h3>{shot.title}</h3>
+              <p>{shot.caption}</p>
+            </figcaption>
+          </motion.figure>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
 const PricingSection = ({ offer, onDownload }) => (
   <section className="pricing pricing-early" id="pricing">
     <div className="container">
@@ -529,9 +684,9 @@ const Home = () => {
 
           <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
-            <a href="#faq" onClick={closeMobileMenu}>FAQ</a>
+            <a href="#features" onClick={closeMobileMenu}>Features</a>
+            <a href="#workflows" onClick={closeMobileMenu}>Workflows</a>
             <Link to="/blog/" onClick={closeMobileMenu}>Guides</Link>
-            <Link to="/feature-requests/" onClick={closeMobileMenu}>Requests</Link>
             <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
             <Link to={buyPath('website_nav')} className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
             <a href={primaryPlatform.url} className="nav-download" download onClick={() => handleDownloadClick('nav')}>
@@ -628,102 +783,9 @@ const Home = () => {
 
       <PricingSection offer={offer} onDownload={handleDownloadClick} />
 
-      <section className="benefits">
-        <div className="container">
-          <motion.div
-            className="section-header benefits-header"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Made for real drawing work</span>
-            <h2>What PolyPDF helps you do faster</h2>
-            <p>Designed for architects, engineers, contractors, estimators, and reviewers working from PDF drawings.</p>
-          </motion.div>
+      <FeatureMatrix />
 
-          <div className="benefits-board">
-            {benefits.map((benefit, index) => (
-              <motion.article
-                key={benefit.title}
-                className={`benefit-note benefit-note-${index + 1}`}
-                initial={{ opacity: 0, y: 18 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-              >
-                <span className="paper-tape benefit-tape" aria-hidden="true" />
-                <span className="benefit-index">0{index + 1}</span>
-                <h3>{benefit.title}</h3>
-                <p>{benefit.description}</p>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="showcase">
-        <div className="container">
-          <motion.div
-            className="section-header benefits-header"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Shipping UI, eight workflows</span>
-            <h2>See PolyPDF at work</h2>
-            <p>Eight workflows in PolyPDF 1.4, shown with real shipping screenshots and restrained motion cues — never invented UI.</p>
-          </motion.div>
-
-          {/* Lead shot gets the full-width stage; the rest alternate text/image so the section
-              reads as a story instead of a stack of identical cards. */}
-          <motion.figure
-            id={`${homeScreenshots[0].motion}-demo`}
-            className="showcase-hero"
-            initial={{ opacity: 0, y: 36, scale: 0.985 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
-          >
-            <span className="paper-tape showcase-tape" aria-hidden="true" />
-            <div className="shot-plate">
-              <ProductShotMedia shot={homeScreenshots[0]} />
-            </div>
-            <figcaption>
-              <h3>{homeScreenshots[0].title}</h3>
-              <p>{homeScreenshots[0].caption}</p>
-            </figcaption>
-          </motion.figure>
-
-          <div className="showcase-rows">
-            {homeScreenshots.slice(1).map((shot, index) => (
-              <motion.figure
-                key={shot.title}
-                id={shot.motion ? `${shot.motion}-demo` : undefined}
-                className={`showcase-row ${index % 2 === 0 ? '' : 'flip'}`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.6, ease: [0.21, 0.65, 0.32, 1] }}
-              >
-                <figcaption className="showcase-text">
-                  <span className="showcase-index">0{index + 2}</span>
-                  <h3>{shot.title}</h3>
-                  <p>{shot.caption}</p>
-                </figcaption>
-                <motion.div
-                  className="shot-plate showcase-paper"
-                  initial={{ opacity: 0, x: index % 2 === 0 ? 28 : -28 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: '-60px' }}
-                  transition={{ duration: 0.65, delay: 0.08, ease: [0.21, 0.65, 0.32, 1] }}
-                >
-                  <ProductShotMedia shot={shot} />
-                </motion.div>
-              </motion.figure>
-            ))}
-          </div>
-        </div>
-      </section>
+      <WorkflowGrid />
 
       <section className="benefits mac-native-review">
         <div className="container">

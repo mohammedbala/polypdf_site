@@ -4,6 +4,18 @@
   box-sizing: border-box;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 :root {
   --primary-black: #171a19;
   --primary-white: #fffdf8;
@@ -1557,111 +1569,9 @@ body {
   border-left-color: rgba(255, 255, 255, 0.7);
 }
 
-/* ------------------------------------------------------------------------- */
-/* Showcase — the real-app screenshots, staged like product shots instead of
-   pasted images: gradient backdrops in the brand palette, a framed window
-   with layered shadow, and a gentle lift on hover. Entry animation comes
-   from framer-motion in Home.js.                                            */
-
-.showcase {
-  padding: 96px 0 40px;
-}
-
-.shot-stage {
-  border-radius: 24px;
-  padding: clamp(18px, 3.4vw, 44px);
-  overflow: hidden;
-  position: relative;
-}
-
-.stage-accent {
-  background:
-    radial-gradient(120% 90% at 12% 0%, rgba(14, 138, 104, 0.14), transparent 55%),
-    linear-gradient(150deg, #eef6f1 0%, #f6f6f2 60%, #f1f2ec 100%);
-}
-
-.stage-paper {
-  background:
-    radial-gradient(110% 80% at 88% 8%, rgba(143, 137, 120, 0.16), transparent 55%),
-    linear-gradient(150deg, #f6f4ee 0%, #f2f1ec 100%);
-}
-
-.shot-stage img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  border: 1px solid rgba(23, 21, 16, 0.08);
-  box-shadow:
-    0 1px 2px rgba(23, 21, 16, 0.06),
-    0 12px 28px rgba(23, 21, 16, 0.10),
-    0 32px 64px rgba(23, 21, 16, 0.10);
-  transition: transform 0.45s cubic-bezier(0.21, 0.65, 0.32, 1), box-shadow 0.45s ease;
-}
-
-.shot-stage:hover img {
-  transform: translateY(-4px) scale(1.008);
-  box-shadow:
-    0 2px 4px rgba(23, 21, 16, 0.07),
-    0 18px 38px rgba(23, 21, 16, 0.13),
-    0 44px 80px rgba(23, 21, 16, 0.12);
-}
-
-.showcase-hero {
-  margin: 0 0 72px;
-}
-
-.showcase-hero figcaption {
-  max-width: 62ch;
-  margin: 22px auto 0;
-  text-align: center;
-}
-
-.showcase-hero figcaption h3 {
-  font-size: 1.35rem;
-  margin-bottom: 6px;
-  letter-spacing: -0.01em;
-}
-
-.showcase-hero figcaption p,
-.showcase-text p {
-  color: var(--gray-600);
-  font-size: 0.98rem;
-  line-height: 1.6;
-  text-wrap: pretty;
-}
-
-.showcase-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 72px;
-}
-
-/* The row images slide in from a horizontal offset. On a phone that offset is wider than the
-   margin beside them, so mid-animation it pushed the document ~8px wide and the whole page could
-   be scrolled sideways. Clip (not hidden) contains it without creating a scroll container. */
+/* The workflow motion is clipped to its rounded section so no overlay can widen the page. */
 .showcase {
   overflow-x: clip;
-}
-
-.showcase-row {
-  display: grid;
-  grid-template-columns: minmax(240px, 5fr) 12fr;
-  gap: clamp(24px, 4vw, 56px);
-  align-items: center;
-  margin: 0;
-}
-
-.showcase-row.flip {
-  grid-template-columns: 12fr minmax(240px, 5fr);
-}
-
-.showcase-row.flip .showcase-text {
-  order: 2;
-}
-
-.showcase-row.flip .shot-stage {
-  order: 1;
 }
 
 .showcase-index {
@@ -1675,113 +1585,6 @@ body {
   border-radius: 6px;
   padding: 4px 8px;
   margin-bottom: 12px;
-}
-
-.showcase-text h3 {
-  font-size: 1.3rem;
-  letter-spacing: -0.01em;
-  margin-bottom: 10px;
-  text-wrap: balance;
-}
-
-@media (max-width: 900px) {
-  .showcase-row,
-  .showcase-row.flip {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .showcase-row.flip .showcase-text {
-    order: 1;
-  }
-  .showcase-row.flip .shot-stage {
-    order: 2;
-  }
-  .showcase-rows {
-    gap: 56px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .shot-stage img {
-    transition: none;
-  }
-  .shot-stage:hover img {
-    transform: none;
-  }
-}
-
-/* Dark app captures: a light stage would fight them, so the stages go deep and the frame gains a
-   macOS-style title bar (the captures are renderer-only, so the real traffic lights are absent). */
-.stage-accent {
-  background:
-    radial-gradient(120% 90% at 12% 0%, rgba(14, 138, 104, 0.22), transparent 55%),
-    linear-gradient(150deg, #1d211f 0%, #191b1a 55%, #141615 100%);
-}
-
-.stage-paper {
-  background:
-    radial-gradient(110% 80% at 88% 8%, rgba(120, 130, 128, 0.20), transparent 55%),
-    linear-gradient(150deg, #1b1d1c 0%, #131514 100%);
-}
-
-.shot-frame {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.28),
-    0 16px 34px rgba(0, 0, 0, 0.30),
-    0 40px 76px rgba(0, 0, 0, 0.26);
-  transition: transform 0.45s cubic-bezier(0.21, 0.65, 0.32, 1), box-shadow 0.45s ease;
-}
-
-.shot-stage:hover .shot-frame {
-  transform: translateY(-4px) scale(1.006);
-  box-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.3),
-    0 22px 44px rgba(0, 0, 0, 0.34),
-    0 54px 96px rgba(0, 0, 0, 0.3);
-}
-
-.shot-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 14px;
-  background: #2b2f31;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.shot-titlebar span {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  display: block;
-}
-
-.shot-titlebar span:nth-child(1) { background: #ec6a5e; }
-.shot-titlebar span:nth-child(2) { background: #f4bf4f; }
-.shot-titlebar span:nth-child(3) { background: #61c454; }
-
-.shot-frame img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  transition: none;
-}
-
-.shot-stage:hover img {
-  transform: none;
-  box-shadow: none;
-}
-
-.showcase-source {
-  display: block;
-  margin-top: 6px;
-  font-size: 0.82rem;
-  color: var(--gray-500);
 }
 
 
@@ -2022,20 +1825,18 @@ body {
   animation-play-state: running;
 }
 
-.showcase-row:hover .shot-plate,
-.showcase-hero:hover .shot-plate {
-  transform: translateY(-4px);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .shot-motion-layer {
     display: none;
   }
 
   .shot-plate,
-  .showcase-row:hover .shot-plate,
-  .showcase-hero:hover .shot-plate {
+  .workflow-shot {
     transition: none;
+    transform: none;
+  }
+
+  .workflow-card:hover .workflow-shot {
     transform: none;
   }
 }
@@ -2791,11 +2592,8 @@ body {
    perpetual-licence rights, the founder deadline, the refund line, "your key is delivered by
    email" — in --gray-500, which measures 3.49:1 on white and 3.25:1 on --gray-100 against the
    4.5:1 body-text floor. The page was whispering exactly the sentences that answer "is this
-   safe?". --gray-600 measures 6.18:1 and 5.76:1 on the same two backgrounds.
-   The screenshot source captions were the only other --gray-500 text on the site and failed the
-   same way, at 0.82rem. */
-.plan-note,
-.showcase-source {
+   safe?". --gray-600 measures 6.18:1 and 5.76:1 on the same two backgrounds. */
+.plan-note {
   color: var(--gray-600);
 }
 
@@ -3972,14 +3770,14 @@ h3 {
 }
 
 .Home .pricing-early {
-  padding: 112px 0 128px;
+  padding: 84px 0 96px;
   border: 0;
   background: transparent;
 }
 
 .Home .section-header {
   max-width: 920px;
-  margin: 0 0 clamp(2.5rem, 5vw, 4.4rem);
+  margin: 0 0 clamp(2rem, 3.5vw, 3rem);
   text-align: left;
 }
 
@@ -4145,154 +3943,273 @@ h3 {
   margin-top: 1.25rem;
 }
 
-.Home .benefits {
-  padding: 118px 0 140px;
+.feature-matrix-section {
+  scroll-margin-top: 88px;
+  padding: clamp(4.5rem, 7vw, 6.2rem) 0;
+  border-top: 1.5px solid var(--gray-900);
+  border-bottom: 1.5px solid var(--gray-900);
   background: var(--paper);
+}
+
+.Home .feature-matrix-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(310px, 1.15fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+  max-width: none;
+  margin-bottom: 2.4rem;
+}
+
+.Home .feature-matrix-header .section-kicker {
+  grid-column: 1 / -1;
+  margin-bottom: -0.7rem;
+}
+
+.Home .feature-matrix-header h2,
+.Home .feature-matrix-header p {
+  margin: 0;
+}
+
+.feature-table-shell {
+  overflow-x: auto;
   border-top: 1.5px solid var(--gray-900);
   border-bottom: 1.5px solid var(--gray-900);
 }
 
-.benefits-board {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 1.5rem;
+.feature-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  color: var(--gray-800);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  table-layout: fixed;
 }
 
-.benefit-note {
-  position: relative;
-  min-height: 230px;
-  padding: clamp(1.7rem, 3vw, 2.6rem);
-  border: 1.5px solid var(--gray-900);
-  border-radius: 12px;
-  background: var(--primary-white);
-  box-shadow: 8px 9px 0 var(--paper-shadow);
-}
-
-.benefit-note-1 {
-  grid-column: 1 / 8;
-  transform: rotate(-0.7deg);
-}
-
-.benefit-note-2 {
-  grid-column: 8 / 13;
-  margin-top: 3.4rem;
-  background: var(--accent-soft);
-  transform: rotate(1.1deg);
-}
-
-.benefit-note-3 {
-  grid-column: 3 / 11;
-  margin-top: 0.4rem;
-  transform: rotate(-0.35deg);
-}
-
-.benefit-tape {
-  top: -12px;
-  right: 17%;
-}
-
-.benefit-note-2 .benefit-tape {
-  right: auto;
-  left: 13%;
-  transform: rotate(3deg);
-}
-
-.benefit-index {
-  display: inline-block;
-  margin-bottom: 2.5rem;
-  color: var(--accent);
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-}
-
-.benefit-note h3 {
-  max-width: 18ch;
-  margin-bottom: 0.65rem;
-  font-size: clamp(1.45rem, 2.5vw, 2.15rem);
-  line-height: 1.1;
-}
-
-.benefit-note p {
-  max-width: 52ch;
-  color: var(--gray-600);
-  line-height: 1.62;
-}
-
-.Home .showcase {
-  margin: clamp(1.2rem, 3vw, 2.2rem);
-  padding: clamp(6rem, 10vw, 9rem) 0;
-  border: 1.5px solid rgba(23, 107, 113, 0.32);
-  border-radius: 76px 18px 76px 18px;
-  background: var(--accent-soft);
-}
-
-.Home .showcase-hero {
-  position: relative;
-  max-width: 1080px;
-  margin: 0 auto 98px;
-  padding: clamp(0.75rem, 1.8vw, 1.25rem) clamp(0.75rem, 1.8vw, 1.25rem) 1.5rem;
-  border: 1.5px solid var(--gray-900);
-  border-radius: 12px;
-  background: var(--paper);
-  box-shadow: 13px 14px 0 rgba(23, 107, 113, 0.2);
-}
-
-.showcase-tape {
-  top: -13px;
-  left: 12%;
-  transform: rotate(-2deg);
-}
-
-.Home .showcase-hero figcaption {
-  max-width: 65ch;
-  margin: 1.5rem 0 0;
+.feature-table th,
+.feature-table td {
+  padding: 0.9rem clamp(0.8rem, 2vw, 1.4rem);
+  border-bottom: 1px solid var(--gray-300);
   text-align: left;
+  vertical-align: middle;
 }
 
-.Home .showcase-hero figcaption h3,
-.Home .showcase-text h3 {
-  font-size: clamp(1.35rem, 2.4vw, 2rem);
-  line-height: 1.15;
+.feature-table tr:last-child th,
+.feature-table tr:last-child td {
+  border-bottom: 0;
 }
 
-.Home .showcase-rows {
-  gap: clamp(5rem, 10vw, 9rem);
+.feature-table thead th {
+  height: 72px;
+  color: var(--gray-700);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
 }
 
-.Home .showcase-row,
-.Home .showcase-row.flip {
-  scroll-margin-top: 112px;
-  grid-template-columns: minmax(230px, 0.65fr) minmax(0, 1.35fr);
-  gap: clamp(2rem, 5vw, 5rem);
-  padding-top: clamp(2.2rem, 4vw, 3.5rem);
-  border-top: 1.5px solid rgba(41, 39, 32, 0.28);
+.feature-table thead th:first-child,
+.feature-table tbody th {
+  width: 52%;
 }
 
-.Home .showcase-row.flip {
-  grid-template-columns: minmax(0, 1.35fr) minmax(230px, 0.65fr);
+.feature-table thead th:not(:first-child) {
+  width: 24%;
 }
 
-.Home .showcase-index {
-  border: 1px solid rgba(23, 107, 113, 0.2);
-  border-radius: 6px;
-  background: rgba(251, 248, 241, 0.78);
+.feature-table thead th span,
+.feature-table thead th strong {
+  display: block;
 }
 
-.Home .showcase-text p,
-.Home .showcase-hero figcaption p {
+.feature-table thead th strong {
+  margin-top: 0.18rem;
+  color: var(--gray-900);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.93rem;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.feature-table tbody th strong,
+.feature-table tbody th span {
+  display: block;
+}
+
+.feature-table tbody th strong {
+  color: var(--gray-900);
+  font-size: 0.94rem;
+}
+
+.feature-table tbody th span {
+  margin-top: 0.2rem;
   color: var(--gray-600);
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 
-.showcase-paper {
+.feature-table-pro {
+  background: rgba(23, 107, 113, 0.075);
+  box-shadow: inset 1px 0 rgba(23, 107, 113, 0.16), inset -1px 0 rgba(23, 107, 113, 0.16);
+}
+
+.feature-status {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.42rem;
+  font-weight: 720;
+}
+
+.feature-status svg {
+  flex: 0 0 auto;
+  margin-top: 0.08rem;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.feature-row-emphasis {
+  background: var(--accent-soft);
+}
+
+.feature-row-emphasis .feature-table-pro {
+  background: rgba(23, 107, 113, 0.14);
+}
+
+.feature-matrix-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.35rem 0 0;
+}
+
+.feature-matrix-summary p {
+  max-width: 78ch;
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.feature-matrix-summary p strong {
+  color: var(--gray-900);
+}
+
+.feature-matrix-buy {
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+.Home .showcase-compact {
+  scroll-margin-top: 88px;
+  margin: clamp(0.8rem, 2vw, 1.4rem);
+  padding: clamp(4.5rem, 7vw, 6.4rem) 0;
+  border: 1.5px solid rgba(23, 107, 113, 0.32);
+  border-radius: 46px 14px 46px 14px;
+  background: var(--accent-soft);
+}
+
+.Home .workflow-grid-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+  max-width: none;
+  margin-bottom: 2.5rem;
+}
+
+.Home .workflow-grid-header .section-kicker {
+  grid-column: 1 / -1;
+  margin-bottom: -0.7rem;
+}
+
+.Home .workflow-grid-header h2,
+.Home .workflow-grid-header p {
+  margin: 0;
+}
+
+.workflow-scroll-hint {
+  display: none;
+}
+
+.workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1.5px solid rgba(41, 39, 32, 0.3);
+  border-left: 1.5px solid rgba(41, 39, 32, 0.3);
+  outline: none;
+}
+
+.workflow-grid:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+
+.workflow-card {
+  min-width: 0;
+  margin: 0;
+  padding: clamp(0.85rem, 1.8vw, 1.25rem);
+  border-right: 1.5px solid rgba(41, 39, 32, 0.3);
+  border-bottom: 1.5px solid rgba(41, 39, 32, 0.3);
+}
+
+.workflow-shot {
+  overflow: hidden;
   border: 1.5px solid var(--gray-900);
-  border-radius: 12px;
-  box-shadow: 9px 10px 0 rgba(23, 107, 113, 0.2), var(--shadow-md);
+  border-radius: 8px;
+  background: #1e2120;
+  box-shadow: 5px 6px 0 rgba(23, 107, 113, 0.18);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.workflow-card:hover .workflow-shot {
+  box-shadow: 3px 4px 0 rgba(23, 107, 113, 0.18);
+  transform: translateY(2px);
+}
+
+.workflow-card figcaption {
+  padding: 1rem 0.2rem 0.35rem;
+}
+
+.workflow-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.65rem;
+}
+
+.Home .workflow-meta .showcase-index {
+  margin: 0;
+  border: 1px solid rgba(23, 107, 113, 0.2);
+  border-radius: 5px;
+  background: rgba(251, 248, 241, 0.78);
+  font-size: 0.68rem;
+}
+
+.workflow-category {
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 820;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+}
+
+.workflow-card h3 {
+  max-width: 30ch;
+  margin-bottom: 0.45rem;
+  color: var(--gray-900);
+  font-size: clamp(1.08rem, 1.6vw, 1.35rem);
+  line-height: 1.18;
+}
+
+.workflow-card figcaption p {
+  max-width: 68ch;
+  color: var(--gray-600);
+  font-size: 0.82rem;
+  line-height: 1.48;
 }
 
 .Home .mac-native-review {
-  padding: 132px 0;
+  padding: 88px 0;
   border: 0;
   background: var(--gray-100);
 }
@@ -4306,7 +4223,7 @@ h3 {
   grid-template-columns: 70px minmax(220px, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(1.2rem, 3vw, 3.5rem);
   align-items: baseline;
-  padding: clamp(1.7rem, 3.5vw, 2.8rem) 0;
+  padding: clamp(1.25rem, 2.4vw, 1.9rem) 0;
   border-bottom: 1.5px solid var(--gray-900);
 }
 
@@ -4330,7 +4247,7 @@ h3 {
 }
 
 .Home .how-it-works {
-  padding: 120px 0 142px;
+  padding: 88px 0 98px;
   background: var(--paper);
   border-top: 1.5px solid var(--gray-900);
 }
@@ -4343,8 +4260,8 @@ h3 {
 }
 
 .step-path-item {
-  min-height: 290px;
-  padding: clamp(1.5rem, 3vw, 2.4rem);
+  min-height: 230px;
+  padding: clamp(1.3rem, 2.3vw, 1.9rem);
   border-right: 1.5px solid var(--gray-900);
 }
 
@@ -4366,7 +4283,7 @@ h3 {
 
 .step-path-item h3 {
   max-width: 16ch;
-  margin: 4.5rem 0 0.7rem;
+  margin: 3.1rem 0 0.6rem;
   font-size: clamp(1.3rem, 2.4vw, 1.9rem);
   line-height: 1.15;
 }
@@ -4377,7 +4294,7 @@ h3 {
 }
 
 .Home .faq {
-  padding: 126px 0 146px;
+  padding: 88px 0 98px;
   background: var(--gray-100);
 }
 
@@ -4675,21 +4592,6 @@ h3 {
     transform: none;
   }
 
-  .benefits-board {
-    grid-template-columns: 1fr;
-  }
-
-  .benefit-note-1,
-  .benefit-note-2,
-  .benefit-note-3 {
-    grid-column: 1;
-    margin-top: 0;
-  }
-
-  .benefit-note-1 { transform: rotate(-0.35deg); }
-  .benefit-note-2 { transform: rotate(0.5deg); }
-  .benefit-note-3 { transform: rotate(-0.2deg); }
-
   .buy .buy-summary {
     margin-top: 0;
     transform: none;
@@ -4701,11 +4603,6 @@ h3 {
 }
 
 @media (max-width: 900px) {
-  .Home .showcase-row,
-  .Home .showcase-row.flip {
-    grid-template-columns: 1fr;
-  }
-
   .platform-ledger-row {
     grid-template-columns: 54px minmax(0, 0.8fr) minmax(0, 1.2fr);
   }
@@ -4798,8 +4695,90 @@ h3 {
   .Home .mac-native-review,
   .Home .how-it-works,
   .Home .faq {
-    padding-top: 88px;
-    padding-bottom: 98px;
+    padding-top: 68px;
+    padding-bottom: 76px;
+  }
+
+  .feature-matrix-section {
+    padding: 68px 0 72px;
+  }
+
+  .Home .feature-matrix-header,
+  .Home .workflow-grid-header {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .Home .feature-matrix-header .section-kicker,
+  .Home .workflow-grid-header .section-kicker {
+    grid-column: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .feature-table-shell {
+    overflow-x: visible;
+  }
+
+  .feature-table {
+    min-width: 0;
+    font-size: 0.72rem;
+  }
+
+  .feature-table th,
+  .feature-table td {
+    padding: 0.72rem 0.4rem;
+  }
+
+  .feature-table thead th {
+    height: 64px;
+    font-size: 0.6rem;
+    letter-spacing: 0.045em;
+  }
+
+  .feature-table thead th:first-child,
+  .feature-table tbody th {
+    width: 48%;
+  }
+
+  .feature-table thead th:not(:first-child) {
+    width: 26%;
+  }
+
+  .feature-table thead th strong {
+    font-size: 0.7rem;
+  }
+
+  .feature-table tbody th strong {
+    font-size: 0.78rem;
+    line-height: 1.28;
+  }
+
+  .feature-table tbody th span {
+    font-size: 0.66rem;
+    line-height: 1.3;
+  }
+
+  .feature-status {
+    display: grid;
+    grid-template-columns: 0.8rem minmax(0, 1fr);
+    gap: 0.24rem;
+    align-items: start;
+    overflow-wrap: anywhere;
+  }
+
+  .feature-status svg {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .feature-matrix-summary {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-matrix-buy {
+    width: 100%;
   }
 
   .Home .pricing-card,
@@ -4815,13 +4794,50 @@ h3 {
 
   .Home .showcase {
     margin: 0.65rem;
-    padding: 84px 0;
+    padding: 66px 0 70px;
     border-radius: 38px 10px 38px 10px;
   }
 
-  .Home .showcase-hero {
-    margin-bottom: 74px;
-    box-shadow: 7px 8px 0 rgba(23, 107, 113, 0.2);
+  .workflow-grid {
+    display: flex;
+    overflow-x: auto;
+    margin-right: -20px;
+    padding-right: 20px;
+    border-left: 1.5px solid rgba(41, 39, 32, 0.3);
+    scroll-padding-left: 0;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) rgba(23, 107, 113, 0.12);
+  }
+
+  .workflow-scroll-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: -0.4rem 0 1rem;
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 820;
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+  }
+
+  .workflow-scroll-hint::after {
+    content: '';
+    width: 52px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .workflow-card {
+    flex: 0 0 min(86vw, 330px);
+    padding: 0.8rem;
+    scroll-snap-align: start;
+  }
+
+  .workflow-card figcaption {
+    padding-top: 0.85rem;
   }
 
   .platform-ledger-row {
