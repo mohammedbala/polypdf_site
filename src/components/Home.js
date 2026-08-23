@@ -103,9 +103,9 @@ export const homeScreenshots = [
     framing: 'focus',
     focus: 'pdf-maps',
     category: 'Maps',
-    title: 'Frame map context before it reaches the sheet',
+    title: 'Place ready-to-use maps on the PDF',
     alt: 'PolyPDF 1.4 PDF Maps generator previewing New York with street zoom and the Liberty base map selected',
-    caption: 'Search a location, set the zoom and map treatment, and inspect the real preview before placing it on the PDF.',
+    caption: 'Search a location, tune the zoom and base map, preview it, then insert the map directly onto the PDF.',
     width: 1710,
     height: 1073
   },
@@ -362,24 +362,24 @@ export const ShowcaseMotionLayer = memo(({ motionType }) => {
     return (
       <svg className="shot-motion-layer shot-motion-map" viewBox="0 0 1710 1073" aria-hidden="true">
         <defs>
-          <linearGradient id="map-preview-sheen-gradient" x1="0" x2="1">
-            <stop offset="0" stopColor="#73d9cf" stopOpacity="0" />
-            <stop offset="0.5" stopColor="#fbf8f1" stopOpacity="0.66" />
-            <stop offset="1" stopColor="#73d9cf" stopOpacity="0" />
-          </linearGradient>
-          <clipPath id="map-preview-clip">
+          <clipPath id="map-placement-source-clip">
             <rect x="97" y="238" width="145" height="145" rx="8" />
           </clipPath>
         </defs>
-        <circle className="map-tour-focus" cx="169" cy="488" r="24" />
-        <rect
-          className="map-preview-sheen"
-          x="38"
-          y="230"
-          width="70"
-          height="160"
-          fill="url(#map-preview-sheen-gradient)"
-          clipPath="url(#map-preview-clip)"
+        <image
+          className="map-placement-tile"
+          href={shotPdfMaps}
+          x="0"
+          y="0"
+          width="1710"
+          height="1073"
+          preserveAspectRatio="none"
+          clipPath="url(#map-placement-source-clip)"
+        />
+        <circle className="map-insert-click" cx="263" cy="1017" r="16" />
+        <path
+          className="map-insert-cursor"
+          d="M0 0V34L8.5 25.5L16 43L24 39.5L16.5 22H30Z"
         />
       </svg>
     );

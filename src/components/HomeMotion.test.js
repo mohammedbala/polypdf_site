@@ -19,7 +19,7 @@ test('adds motion only where it can clarify real screenshot state', () => {
   ]);
 });
 
-test('motion overlays do not redraw baked dimensions, map routes, or Auto Area boundaries', () => {
+test('motion overlays do not redraw baked dimensions, fictional map routes, or Auto Area boundaries', () => {
   const markup = [
     'symbol-search',
     'takeoff-records',
@@ -35,7 +35,11 @@ test('motion overlays do not redraw baked dimensions, map routes, or Auto Area b
   expect(markup).not.toContain('auto-area-trace');
   expect(markup).not.toContain('auto-area-cutout');
   expect(markup).not.toContain('placement-route');
-  expect(markup).toContain('map-tour-focus');
+  expect(markup).toContain('map-placement-source-clip');
+  expect(markup).toContain('map-placement-tile');
+  expect(markup).toContain('map-insert-click');
+  expect(markup).toContain('map-insert-cursor');
+  expect(markup).toContain('x="97" y="238" width="145" height="145"');
   expect(markup).toContain('auto-area-region-mask');
 });
 

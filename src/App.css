@@ -1638,7 +1638,7 @@ body {
 .calibration-endpoint,
 .calibration-status-ring,
 .plugin-handle-glint,
-.map-tour-focus,
+.map-insert-click,
 .auto-area-node-pulse {
   transform-box: fill-box;
   transform-origin: center;
@@ -1716,18 +1716,32 @@ body {
   animation-delay: calc(var(--motion-index) * 0.16s);
 }
 
-.map-tour-focus {
-  fill: rgba(115, 217, 207, 0.1);
+.map-placement-tile {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: polypdf-map-place 6.8s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
+}
+
+.map-insert-click {
+  fill: rgba(115, 217, 207, 0.14);
   stroke: #73d9cf;
   stroke-width: 3;
   opacity: 0;
-  filter: drop-shadow(0 1px 3px rgba(18, 91, 97, 0.34));
-  animation: polypdf-map-tour 6.6s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
+  animation: polypdf-map-insert-click 6.8s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
 }
 
-.map-preview-sheen {
+.map-insert-cursor {
+  fill: #fbf8f1;
+  stroke: #242424;
+  stroke-width: 2.5;
+  stroke-linejoin: round;
   opacity: 0;
-  animation: polypdf-map-preview 6.6s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.34));
+  transform-box: view-box;
+  transform-origin: 0 0;
+  animation: polypdf-map-insert-cursor 6.8s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
 }
 
 .auto-area-detection-sweep {
@@ -1787,21 +1801,26 @@ body {
   42%, 100% { opacity: 0; transform: scale(1.5); }
 }
 
-@keyframes polypdf-map-tour {
-  0%, 7% { opacity: 0; transform: translate3d(0, 0, 0) scale(0.7); }
-  13%, 23% { opacity: 0.94; transform: translate3d(0, 0, 0) scale(1); }
-  30%, 39% { opacity: 0.94; transform: translate3d(4px, 96px, 0) scale(0.88); }
-  46%, 55% { opacity: 0.94; transform: translate3d(-21px, 157px, 0) scale(0.9); }
-  62%, 71% { opacity: 0.94; transform: translate3d(-57px, 275px, 0) scale(0.94); }
-  79%, 91% { opacity: 0.94; transform: translate3d(0, -179px, 0) scale(1.15); }
-  100% { opacity: 0; transform: translate3d(0, -179px, 0) scale(1.25); }
+@keyframes polypdf-map-place {
+  0%, 24% { opacity: 0; transform: translate3d(0, 0, 0) scale(1); }
+  28% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+  35% { opacity: 1; transform: translate3d(0, -8px, 0) scale(1.03); }
+  58%, 86% { opacity: 1; transform: translate3d(1100px, 75px, 0) scale(1.56); }
+  94%, 100% { opacity: 0; transform: translate3d(1100px, 75px, 0) scale(1.56); }
 }
 
-@keyframes polypdf-map-preview {
-  0%, 76% { opacity: 0; transform: translate3d(0, 0, 0); }
-  83% { opacity: 0.8; transform: translate3d(20px, 0, 0); }
-  94% { opacity: 0.8; transform: translate3d(180px, 0, 0); }
-  100% { opacity: 0; transform: translate3d(180px, 0, 0); }
+@keyframes polypdf-map-insert-click {
+  0%, 17% { opacity: 0; transform: scale(0.5); }
+  23% { opacity: 0.96; transform: scale(1); }
+  34%, 100% { opacity: 0; transform: scale(1.75); }
+}
+
+@keyframes polypdf-map-insert-cursor {
+  0%, 7% { opacity: 0; transform: translate3d(226px, 955px, 0) scale(0.72); }
+  12% { opacity: 1; transform: translate3d(226px, 955px, 0) scale(0.72); }
+  22% { opacity: 1; transform: translate3d(255px, 1007px, 0) scale(0.72); }
+  25% { opacity: 1; transform: translate3d(255px, 1007px, 0) scale(0.62); }
+  31%, 100% { opacity: 0; transform: translate3d(255px, 1007px, 0) scale(0.72); }
 }
 
 @keyframes polypdf-auto-area-sweep {
@@ -1827,6 +1846,21 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .shot-motion-layer {
+    display: none;
+  }
+
+  .shot-motion-layer.shot-motion-map {
+    display: block;
+  }
+
+  .shot-motion-map .map-placement-tile {
+    animation: none;
+    opacity: 1;
+    transform: translate3d(1100px, 75px, 0) scale(1.56);
+  }
+
+  .shot-motion-map .map-insert-click,
+  .shot-motion-map .map-insert-cursor {
     display: none;
   }
 
@@ -4205,8 +4239,8 @@ h3 {
 }
 
 .workflow-card.focus-pdf-maps {
-  --shot-scale: 1.22;
-  --shot-origin: 0% 26%;
+  --shot-scale: 1.08;
+  --shot-origin: 0% 50%;
 }
 
 .workflow-card.focus-auto-area {
