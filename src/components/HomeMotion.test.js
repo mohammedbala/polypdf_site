@@ -11,11 +11,11 @@ test('adds motion only where it can clarify real screenshot state', () => {
     'symbol-search',
     'takeoff-records',
     'static',
-    'calibration-check',
     'static',
     'aisc-insert',
     'pdf-maps',
-    'auto-area'
+    'auto-area',
+    'static'
   ]);
 });
 

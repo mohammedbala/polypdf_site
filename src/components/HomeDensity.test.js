@@ -2,8 +2,8 @@ import React, { act } from 'react';
 import { createRoot } from 'react-dom/client';
 import { MemoryRouter } from 'react-router-dom';
 import {
-  FeatureMatrix,
-  featureComparison,
+  FeatureIndex,
+  featureFamilies,
   homeScreenshots,
   WorkflowGrid
 } from './Home';
@@ -40,16 +40,22 @@ afterEach(() => {
   delete window.IntersectionObserver;
 });
 
-test('renders a semantic Free versus Pro feature matrix', async () => {
-  const view = await renderComponent(<FeatureMatrix />);
+test('renders a semantic overall capability index without pricing-tier columns', async () => {
+  const view = await renderComponent(<FeatureIndex />);
   const table = view.container.querySelector('table');
 
   expect(table).not.toBeNull();
   expect(table.querySelectorAll('thead th')).toHaveLength(3);
-  expect(table.querySelectorAll('tbody tr')).toHaveLength(featureComparison.length);
-  expect(table.textContent).toContain('3 per document');
-  expect(table.textContent).toContain('Unlimited');
-  expect(table.textContent).toContain('$49.99 once');
+  expect(table.querySelectorAll('tbody tr')).toHaveLength(featureFamilies.length);
+  expect(Array.from(table.querySelectorAll('thead th')).map((cell) => cell.textContent)).toEqual([
+    'Workflow',
+    'Included tools',
+    'What it gives you'
+  ]);
+  expect(table.textContent).toContain('Measure & takeoff');
+  expect(table.textContent).toContain('OCR');
+  expect(table.textContent).toContain('custom keyboard shortcuts');
+  expect(table.textContent).not.toContain('$49.99');
   view.unmount();
 });
 
@@ -60,6 +66,10 @@ test('places all eight shipping workflows in one compact grid', async () => {
   expect(grid).not.toBeNull();
   expect(grid.querySelectorAll('.workflow-card')).toHaveLength(8);
   expect(grid.querySelectorAll('img[loading="lazy"]')).toHaveLength(8);
+  expect(grid.querySelectorAll('.workflow-card.theme-light')).toHaveLength(3);
+  expect(grid.querySelectorAll('.workflow-card.theme-dark')).toHaveLength(5);
+  expect(grid.querySelectorAll('.workflow-card.is-focus')).toHaveLength(7);
+  expect(grid.querySelectorAll('.workflow-card.is-context')).toHaveLength(1);
   expect(homeScreenshots).toHaveLength(8);
   view.unmount();
 });
