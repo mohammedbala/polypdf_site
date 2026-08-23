@@ -29,6 +29,7 @@ import { captureAttribution, checkoutAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
 import siteRelease from '../lib/siteRelease.json';
 import MagneticLink from './MagneticLink';
+import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 
 const proFeatures = [
   'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
@@ -50,7 +51,7 @@ const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_co
 const IN_APP_CONTEXT = {
   free_measurement_limit: {
     kicker: 'You have used the 3 free measurements in this document',
-    lede: 'The free app caps hand-created measurements at 3 per document. Everything else you were doing — markup, calibration, review, Symbol Search auto-count — stays free and uncapped. Pro removes that one cap, for good, for $49.99 once.'
+    lede: 'The free app caps hand-created measurements at 3 per document. Everything else you were doing — markup, calibration, review, Symbol Search auto-count — stays free and uncapped. Pro removes that one cap for good at the $49.99 Founder price, backed by a 14-day money-back guarantee.'
   },
   visual_search_auto_count: {
     kicker: 'Symbol Search auto-count is free and uncapped',
@@ -58,7 +59,7 @@ const IN_APP_CONTEXT = {
   },
   license_window: {
     kicker: 'Upgrade to PolyPDF Pro',
-    lede: 'Unlimited hand-created measurements on every document, on up to 3 computers, for $49.99 once. No subscription, no renewal.'
+    lede: 'Unlimited hand-created measurements on every document, on up to 3 computers, at the $49.99 Founder price instead of the planned $99 standard price. No subscription, no renewal, and a 14-day money-back guarantee.'
   }
 };
 
@@ -199,7 +200,7 @@ const Buy = ({ forceInApp = false }) => {
             <p>
               {cameFromApp
                 ? context.lede
-                : 'Unlock unlimited hand-created measurements for a one-time $49.99. Keep the free markup and review workflow, remove the measurement cap, and use your license on up to 3 computers — Mac or Windows.'}
+                : 'Unlock unlimited hand-created measurements at the $49.99 Founder price instead of the planned $99 standard price. Keep the free markup and review workflow, use Pro on up to 3 computers, and try it risk-free with a 14-day money-back guarantee.'}
             </p>
             {cancelled && (
               <p className="buy-cancelled">
@@ -218,7 +219,7 @@ const Buy = ({ forceInApp = false }) => {
               <span className="paper-tape pricing-card-tape" aria-hidden="true" />
               <div className="plan-pill plan-pill-dark">Founder's License</div>
               <h2>{commercialOffer.name}</h2>
-              <p className="plan-price">$49.99</p>
+              <OfferPrice />
               {offer.founderAvailable ? (
                 <MagneticLink
                   ref={checkoutCtaRef}
@@ -226,13 +227,20 @@ const Buy = ({ forceInApp = false }) => {
                   className="primary-btn full-width"
                   onClick={handleBuyClick}
                   aria-disabled={checkoutStatus === 'loading'}
+                  aria-label={checkoutStatus === 'loading'
+                    ? 'Opening Stripe checkout'
+                    : `Checkout with Stripe — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
                 >
-                  <Infinity aria-hidden="true" weight="bold" /> {checkoutStatus === 'loading' ? 'Opening Stripe checkout…' : 'Checkout with Stripe — $49.99'}
+                  <Infinity aria-hidden="true" weight="bold" />
+                  {checkoutStatus === 'loading'
+                    ? 'Opening Stripe checkout…'
+                    : <OfferButtonLabel action="Checkout with Stripe" />}
                 </MagneticLink>
               ) : (
                 <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
               )}
               {checkoutError && <p className="plan-note checkout-error">{checkoutError}</p>}
+              {offer.founderAvailable && <OfferGuarantee compact inverse />}
               <ul className="plan-list buy-plan-list">
                 {proFeatures.map((feature) => (
                   <li key={feature}>
@@ -311,8 +319,8 @@ const Buy = ({ forceInApp = false }) => {
                 <h2>Refund policy</h2>
               </div>
               <ul className="section-content">
-                <li>Purchases are processed by Stripe and follow PolyPDF's refund policy.</li>
-                <li>Unless required by law, transactions are generally non-refundable; discretionary refund requests may be reviewed within 14 days.</li>
+                <li>Direct website purchases are processed by Stripe and include PolyPDF's 14-day money-back guarantee.</li>
+                <li>Request a refund within 14 days of payment and PolyPDF will return the amount paid to the original payment method where possible.</li>
                 <li>Refunded Pro licenses may be deactivated after the refund is completed.</li>
                 <li><Link to="/refund/">Read the refund policy</Link> for request steps and legal rights.</li>
               </ul>
@@ -347,8 +355,13 @@ const Buy = ({ forceInApp = false }) => {
 
       {showStickyCheckout && offer.founderAvailable && checkoutStatus !== 'loading' && (
         <div className="buy-sticky-checkout" role="region" aria-label="Checkout">
-          <button type="button" className="primary-btn" onClick={handleBuyClick}>
-            <LockKey aria-hidden="true" weight="bold" /> Checkout with Stripe — $49.99
+          <button
+            type="button"
+            className="primary-btn offer-cta"
+            onClick={handleBuyClick}
+            aria-label={`Checkout with Stripe — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
+          >
+            <LockKey aria-hidden="true" weight="bold" /> <OfferButtonLabel action="Checkout with Stripe" />
           </button>
         </div>
       )}

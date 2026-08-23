@@ -5,7 +5,7 @@
 Key facts:
 
 - Current release: PolyPDF 1.4.0 (build 17) for macOS and Windows; /versions reads the live update feeds.
-- Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. PolyPDF Pro Founder's License removes the hand-created measurement cap for $49.99 once and activates up to 3 computers in any Mac/Windows mix; /buy has the current terms.
+- Free download: the Free edition includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count. PolyPDF Pro Founder's License removes the hand-created measurement cap at the $49.99 Founder price instead of the planned $99 standard price, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
 - The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.
 - Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, count, and dimension tools, plus a worksheet that exports CSV or PDF.

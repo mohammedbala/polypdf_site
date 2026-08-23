@@ -28,7 +28,7 @@ const sections = [
     content: [
       'The desktop app (macOS and Windows) may be offered as a free download with limited free measurement usage before purchase is required for additional measurement workflows.',
       'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
-      `The current direct offer includes free markup and review tools, 3 hand-created measurements per document, uncapped Visual Search auto-count, and an optional ${commercialOffer.price} Founder's License.`
+      `The current direct offer includes free markup and review tools, 3 hand-created measurements per document, uncapped Visual Search auto-count, and an optional ${commercialOffer.price} Founder's License instead of the planned ${commercialOffer.referencePrice} standard price. Direct website purchases include a 14-day money-back guarantee.`
     ]
   },
   {
@@ -74,7 +74,7 @@ const Terms = () => {
           <div className="legal-hero">
             <h1>Terms of Use</h1>
             <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
-            <p className="last-updated">Last updated: July 30, 2026</p>
+            <p className="last-updated">Last updated: August 23, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -111,9 +111,9 @@ const Terms = () => {
           <section className="legal-section">
             <h2>Refunds</h2>
             <ul className="section-content">
-              <li>Direct purchases are processed by Stripe and are subject to PolyPDF's refund policy.</li>
-              <li>Unless required by applicable law, transactions are generally non-refundable and non-exchangeable.</li>
-              <li>PolyPDF may review discretionary refund requests submitted within 14 days of the transaction date, but a request in that period does not guarantee a refund.</li>
+              <li>Direct website purchases processed by Stripe include a 14-day money-back guarantee under PolyPDF's refund policy.</li>
+              <li>Submit the request within 14 calendar days of the transaction date to receive a refund of the amount paid for the license to the original payment method where possible.</li>
+              <li>The guarantee does not cover fraud, duplicate refund claims, chargeback abuse, or other manipulative behavior. Statutory rights that cannot be waived continue to apply.</li>
               <li>Refunded direct licenses may be suspended or revoked after the refund is completed.</li>
               <li>See the <Link to="/refund/">Refund Policy</Link> for request steps and purchase-channel details.</li>
             </ul>

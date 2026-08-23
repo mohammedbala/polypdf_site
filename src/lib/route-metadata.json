@@ -1,17 +1,17 @@
 {
   "/": {
     "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
-    "description": "Measure and mark up PDF drawings on Mac and Windows. Get PolyPDF free, test it on real plans, then unlock unlimited hand-created measurements for $49.99.",
+    "description": "Measure and mark up PDF drawings on Mac and Windows. Start free, then unlock unlimited measurements for $49.99 with a 14-day money-back guarantee.",
     "robots": "index, follow"
   },
   "/buy": {
     "title": "Buy PolyPDF Pro Once | Unlimited PDF Measurements",
-    "description": "Unlock unlimited hand-created PDF measurements on up to three Mac or Windows computers with a one-time $49.99 PolyPDF Pro Founder's License.",
+    "description": "Unlock unlimited PDF measurements on three Mac or Windows computers for $49.99 (planned standard price $99), with a 14-day money-back guarantee.",
     "robots": "index, follow"
   },
   "/upgrade": {
     "title": "Upgrade to PolyPDF Pro | Unlimited Measurements",
-    "description": "Remove the 3-measurements-per-document cap for a one-time $49.99. Secure Stripe checkout, license key by email, activation in about a minute.",
+    "description": "Remove the 3-measurement limit for $49.99 with a 14-day money-back guarantee. Secure Stripe checkout, license delivery by email, and fast activation.",
     "robots": "noindex, follow"
   },
   "/build-a-plugin": {

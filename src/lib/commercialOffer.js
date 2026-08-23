@@ -3,8 +3,11 @@ export const commercialOffer = Object.freeze({
   name: "PolyPDF Pro Founder's License",
   checkoutLineItemName: "PolyPDF Pro Founder's License — Perpetual 1.x",
   price: '$49.99',
+  referencePrice: '$99',
+  savings: '$49.01',
   activationLimit: 3,
-  termsVersion: '2026-07-30',
+  moneyBackGuaranteeDays: 14,
+  termsVersion: '2026-08-23',
   founderMaximumLicenses: 100
 });
 
@@ -16,13 +19,16 @@ export const founderLimitText = founderLimitTextFor();
 export const founderRightsText =
   'Use PolyPDF 1.x forever on up to 3 Mac or Windows computers. Every PolyPDF 1.x update is included. Future major versions may be optional paid upgrades.';
 
-// One refund sentence, used at every buy button.
-//
-// It used to be summarised three ways at three strengths — softest next to the money ("Refund
-// requests follow PolyPDF's policy"), strictest on /refund. A buyer who read both experienced the
-// second as a walk-back. This is the short form of the real policy, no softer than the real policy.
+export const founderSavingsText =
+  `Save ${commercialOffer.savings} against the planned ${commercialOffer.referencePrice} standard price.`;
+
+export const moneyBackGuaranteeText =
+  `${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee`;
+
+// One refund sentence, used at every buy button. It intentionally matches the direct-purchase
+// guarantee on /refund and /terms so the reassurance beside payment is never walked back later.
 export const refundSummaryText =
-  'Generally non-refundable. Discretionary requests are reviewed within 14 days, and your statutory rights always apply.';
+  `${moneyBackGuaranteeText} for direct website purchases. Request it within ${commercialOffer.moneyBackGuaranteeDays} days of payment; your statutory rights also apply.`;
 
 // Delivery is genuinely fast — the licence email is sent inline in the Stripe webhook, before it
 // returns (Website/license-api/src/server.js). It is deliberately not called guaranteed: a failed

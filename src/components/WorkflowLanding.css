@@ -389,6 +389,27 @@
   letter-spacing: 0.06em;
 }
 
+.workflow-offer-price .offer-price {
+  display: grid;
+  margin-block: 0.7rem 0.9rem;
+}
+
+.workflow-offer-price .offer-price-reference,
+.workflow-offer-price .offer-price-current,
+.workflow-offer-price .offer-price-savings {
+  display: inline-flex;
+}
+
+.workflow-offer-price .offer-price-current strong {
+  margin: 0;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+}
+
+.workflow-offer-price .offer-price-current span,
+.workflow-offer-price .offer-price-reference span {
+  display: inline;
+}
+
 .workflow-offer h2 {
   font-size: clamp(1.8rem, 3vw, 3rem);
   line-height: 1.08;

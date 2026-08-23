@@ -5,6 +5,7 @@ import { FaArrowRight, FaCheck, FaInfinity } from 'react-icons/fa';
 import { HiOutlineCloudDownload } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
+import { OfferGuarantee, OfferPrice } from './OfferPrice';
 import { buyPath, canonicalPagePath, captureAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
 import { commercialOffer, founderRightsText } from '../lib/commercialOffer';
@@ -154,12 +155,13 @@ const WorkflowLanding = ({ page }) => {
           <div className="container workflow-offer-grid">
             <div className="workflow-offer-price">
               <span>PolyPDF Pro Founder’s License</span>
-              <strong>{commercialOffer.price}</strong>
+              <OfferPrice compact />
               <small>one time · no subscription</small>
             </div>
             <div className="workflow-offer-copy">
               <h2>Try the full workflow free. Pay only to remove the hand-created measurement cap.</h2>
               <p>{founderRightsText}</p>
+              <OfferGuarantee compact />
               <p className="workflow-offer-limit">{offer.founderLimitText}</p>
             </div>
             <div className="workflow-offer-actions">

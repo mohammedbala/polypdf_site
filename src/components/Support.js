@@ -37,8 +37,8 @@ const sections = [
     icon: <FaReceipt />,
     title: 'Refunds and billing',
     content: [
-      'Direct purchases are subject to PolyPDF\'s refund policy, including any non-waivable consumer rights.',
-      'Unless required by law, transactions are generally non-refundable; PolyPDF may review discretionary refund requests submitted within 14 days.',
+      'Direct website purchases processed by Stripe include PolyPDF\'s 14-day money-back guarantee, in addition to any non-waivable consumer rights.',
+      'Request a refund within 14 calendar days of payment and PolyPDF will return the amount paid for the license to the original payment method where possible.',
       'For billing questions, use the links in your Stripe receipt or contact PolyPDF support.',
       'Refunded licenses are deactivated after the refund is completed.'
     ]
@@ -74,7 +74,7 @@ const Support = () => {
           <div className="legal-hero">
             <h1>Support</h1>
             <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
-            <p className="last-updated">Last updated: July 30, 2026</p>
+            <p className="last-updated">Last updated: August 23, 2026</p>
           </div>
 
           <div className="legal-intro">

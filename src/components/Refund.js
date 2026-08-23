@@ -15,11 +15,11 @@ import parrotIcon from '../assets/polypdf_icon.png';
 const sections = [
   {
     icon: <FaUndo />,
-    title: 'PolyPDF refund policy applies',
+    title: '14-day money-back guarantee',
     content: [
-      'Direct PolyPDF purchases — Mac or Windows — made through the website are processed by Stripe, and refund eligibility is governed by this policy.',
-      'Unless required by applicable law, transactions are generally non-refundable and non-exchangeable.',
-      'PolyPDF may review discretionary refund requests submitted within 14 days of the transaction date, but submitting a request in that period does not guarantee a refund.'
+      'Direct PolyPDF purchases — Mac or Windows — made through the website and processed by Stripe include a 14-day money-back guarantee.',
+      'Submit your request within 14 calendar days of the transaction date and PolyPDF will refund the amount paid for the license to the original payment method where possible.',
+      'You do not need to prove a defect or explain why PolyPDF was not a fit. Feedback is welcome, but it is not required to receive the guarantee.'
     ]
   },
   {
@@ -27,8 +27,8 @@ const sections = [
     title: 'How to request a refund',
     content: [
       'Contact PolyPDF support from the email address used at checkout and include your Stripe receipt or order details.',
-      'Include your app version, your OS (macOS or Windows), license key suffix, and a short description of the issue.',
-      'If you experience a persistent technical issue or material product defect, contact PolyPDF support first so we can try to resolve it.'
+      'Include your license key suffix when possible so PolyPDF can match the purchase quickly.',
+      'PolyPDF will confirm the request and process an eligible refund through Stripe. You may also include your app version, OS, and feedback if you would like help before refunding.'
     ]
   },
   {
@@ -37,7 +37,7 @@ const sections = [
     content: [
       'Access to a refunded product ceases under this policy.',
       'Refunded PolyPDF Pro licenses may be deactivated after the refund is approved or completed.',
-      'Refunds will not be issued where there is evidence of fraud, refund abuse, or other manipulative behavior.'
+      'The guarantee does not cover fraudulent purchases, duplicate refund claims, chargeback abuse, or other manipulative behavior. Requests made after 14 days are generally not refundable unless required by law or approved by PolyPDF.'
     ]
   }
 ];
@@ -71,7 +71,7 @@ const Refund = () => {
           <div className="legal-hero">
             <h1>Refund Policy</h1>
             <p className="legal-subtitle">Refunds for direct PolyPDF purchases</p>
-            <p className="last-updated">Last updated: July 30, 2026</p>
+            <p className="last-updated">Last updated: August 23, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -111,10 +111,10 @@ const Refund = () => {
               <h2>Statutory rights and timing</h2>
             </div>
             <ul className="section-content">
-              <li>Nothing in this policy limits refund or withdrawal rights that cannot be waived under applicable law.</li>
+              <li>The voluntary 14-day money-back guarantee is separate from, and in addition to, refund or withdrawal rights that cannot be waived under applicable law.</li>
               <li>Local law may provide statutory withdrawal or cancellation periods for certain consumers.</li>
-              <li>For digital content, statutory withdrawal rights may not apply after the product has started to be downloaded, streamed, used, or otherwise made available when the buyer consented to access before the withdrawal period ended.</li>
-              <li>If eligible, refunds are processed to the original payment method where possible.</li>
+              <li>Using or activating PolyPDF during the guarantee period does not remove the voluntary 14-day guarantee for a direct website purchase.</li>
+              <li>Refunds are processed to the original payment method where possible. The bank or card issuer controls how long the credit takes to appear after Stripe processes it.</li>
             </ul>
           </section>
 

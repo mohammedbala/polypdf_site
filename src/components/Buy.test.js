@@ -61,8 +61,24 @@ test('removes the free-download detour for measurement-limit traffic', async () 
     endsAt: null,
     maximumFulfilledLicenses: 100
   });
-  expect(view.container.textContent).toContain('Checkout with Stripe — $49.99');
+  expect(view.container.querySelector('[aria-label^="Checkout with Stripe — $49.99"]')).not.toBeNull();
   expect(view.container.textContent).not.toContain('Prefer to test it first?');
+  view.unmount();
+});
+
+test('shows an explicit price anchor and the real money-back guarantee beside checkout', async () => {
+  const view = await renderBuy('/buy/', {
+    available: true,
+    reason: null,
+    endsAt: null,
+    maximumFulfilledLicenses: 100
+  });
+  expect(view.container.querySelector('.offer-price-reference del')?.textContent).toBe('$99');
+  expect(view.container.querySelector('.offer-price-current strong')?.textContent).toBe('$49.99');
+  expect(view.container.querySelector('.offer-price-savings')?.textContent).toBe('Save $49.01');
+  expect(view.container.querySelector('.offer-guarantee')?.textContent).toContain(
+    '14-day money-back guarantee'
+  );
   view.unmount();
 });
 
@@ -76,6 +92,6 @@ test('disables checkout with an honest complete state at the fulfilled cap', asy
   expect(view.container.textContent).toContain(
     'Founder offer complete. All 100 licenses have been claimed, so checkout is closed.'
   );
-  expect(view.container.textContent).not.toContain('Checkout with Stripe — $49.99');
+  expect(view.container.querySelector('[aria-label^="Checkout with Stripe — $49.99"]')).toBeNull();
   view.unmount();
 });

@@ -16,6 +16,7 @@ import {
 } from '@phosphor-icons/react';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
+import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 import { buyPath, captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
@@ -184,8 +185,8 @@ export const homeFaqs = [
     answer: 'Open PolyPDF and choose Upgrade to PolyPDF Pro — it is in the PolyPDF menu on Mac (Command-Shift-L) and the Help menu on Windows (Ctrl-Shift-L). Paste the key from your email, which looks like PPM-XXXX-XXXX-XXXX, and click Activate. There is no restart and no reinstall, and the drawing you have open keeps everything already on it.'
   },
   {
-    question: 'How do refunds work?',
-    answer: 'Purchases are handled through Stripe and PolyPDF support. Refund requests are reviewed under the refund policy, which also covers your statutory rights.'
+    question: 'Is there a money-back guarantee?',
+    answer: 'Yes. Direct website purchases include a 14-day money-back guarantee. Request a refund within 14 days of payment and PolyPDF will return the amount paid to the original payment method where possible. The refund policy also preserves any statutory rights you have.'
   }
 ];
 
@@ -416,7 +417,7 @@ const PricingSection = ({ offer, onDownload }) => (
       >
         <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Pick your lane</span>
         <h2>Try the real app free. Pay once when you need unlimited measurements.</h2>
-        <p>Markup, review, calibration, and Symbol Search auto-count stay free. Pro removes the fourth-measurement wall for $49.99 once.</p>
+        <p>Markup, review, calibration, and Symbol Search auto-count stay free. Pro removes the fourth-measurement wall at the $49.99 Founder price — saving $49.01 against the planned $99 standard price — with a 14-day money-back guarantee.</p>
       </motion.div>
 
       <div className="pricing-grid">
@@ -452,7 +453,7 @@ const PricingSection = ({ offer, onDownload }) => (
           <span className="paper-tape pricing-card-tape" aria-hidden="true" />
           <div className="plan-pill plan-pill-dark">Founder's License</div>
           <h3>Unlock unlimited hand-created measurements</h3>
-          <p className="plan-price">$49.99</p>
+          <OfferPrice />
           <ul className="plan-list">
             {proFeatures.map((feature) => (
               <li key={feature}>
@@ -461,12 +462,17 @@ const PricingSection = ({ offer, onDownload }) => (
             ))}
           </ul>
           {offer.founderAvailable ? (
-            <Link to={buyPath('website_pricing')} className="primary-btn full-width">
-              <Infinity aria-hidden="true" weight="bold" /> Buy once — $49.99
+            <Link
+              to={buyPath('website_pricing')}
+              className="primary-btn full-width offer-cta"
+              aria-label={`Buy once — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
+            >
+              <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
             </Link>
           ) : (
             <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
           )}
+          {offer.founderAvailable && <OfferGuarantee compact inverse />}
           <p className="plan-note">{founderRightsText} {offer.founderLimitText}</p>
           <p className="plan-note">Secure Stripe checkout, license key emailed on payment. {refundSummaryText}</p>
         </motion.article>
@@ -566,9 +572,8 @@ const Home = () => {
             </h1>
 
             <p className="hero-subtitle">
-              Calibrate scale, measure precisely, and mark up the drawings you already receive —
-              built for architects, engineers, contractors, and estimators. Free on Mac and Windows;
-              unlimited hand-created measurements are a one-time $49.99.
+              Calibrate, measure, and mark up the drawings you already receive. Start free on Mac
+              or Windows, then unlock unlimited hand-created measurements at the $49.99 Founder price.
             </p>
 
             <div className="hero-cta">
@@ -576,13 +581,18 @@ const Home = () => {
                 source="hero"
                 onDownload={closeMobileMenu}
                 adjacentAction={(
-                  <Link to={buyPath('website_hero')} className="secondary-btn hero-buy">
-                    <Infinity aria-hidden="true" weight="bold" /> Buy once — $49.99
+                  <Link
+                    to={buyPath('website_hero')}
+                    className="secondary-btn hero-buy offer-cta"
+                    aria-label={`Buy once — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
+                  >
+                    <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
                   </Link>
                 )}
               />
             </div>
 
+            <OfferGuarantee compact />
             <p className="hero-note">Signed, notarized builds. Start free on your own drawings — upgrade only when you need unlimited hand-created measurements.</p>
           </motion.div>
 
@@ -596,8 +606,9 @@ const Home = () => {
             transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.24 }}
           >
             <div className="stat">
+              <span className="stat-reference"><del>$99</del> planned</span>
               <strong>$49.99</strong>
-              <p>One payment, no renewal</p>
+              <p>Founder price · one payment</p>
             </div>
             <div className="stat">
               <strong>3</strong>
@@ -823,13 +834,18 @@ const Home = () => {
           >
             <span className="cta-sketch" aria-hidden="true" />
             <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
-            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited hand-created measurements for $49.99 only when you want to remove the cap.</p>
+            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited hand-created measurements at the $49.99 Founder price instead of the planned $99 standard price.</p>
             <div className="cta-download-row">
               <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
-              <Link to={buyPath('website_bottom_cta')} className="secondary-btn cta-mac-btn">
-                <Infinity aria-hidden="true" weight="bold" /> Buy Once for $49.99
+              <Link
+                to={buyPath('website_bottom_cta')}
+                className="secondary-btn cta-mac-btn offer-cta"
+                aria-label={`Buy once — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
+              >
+                <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
               </Link>
             </div>
+            <OfferGuarantee compact inverse />
             <div className="trust-indicators">
               <div className="indicator">
                 <ShieldCheck aria-hidden="true" weight="bold" />
