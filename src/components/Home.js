@@ -22,6 +22,7 @@ import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/co
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
 import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
 import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
+import shotTakeoffSnapping from '../assets/screenshots/takeoff-snapping-v1-4.gif';
 import shotMarkup from '../assets/screenshots/markup-v1-4-dark-web.png';
 import shotCalibration from '../assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png';
 import shotMutcdStop from '../assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png';
@@ -81,6 +82,7 @@ const screenshots = [
   },
   {
     image: shotPdfMaps,
+    motion: 'pdf-maps',
     title: 'Frame map context before it reaches the sheet',
     alt: 'PolyPDF 1.4 PDF Maps generator previewing New York with street zoom and the Liberty base map selected',
     caption: 'Search for a location, choose the zoom and base-map treatment, and inspect the preview before insertion. PDF Maps keeps that setup beside the drawing so you can place the result without switching apps.',
@@ -89,6 +91,7 @@ const screenshots = [
   },
   {
     image: shotAutoArea,
+    motion: 'auto-area',
     title: 'Detect enclosed rooms with Auto Area',
     alt: 'PolyPDF 1.4 Auto Area showing an enclosed room area with a resized cutout and helper dimensions',
     caption: 'Auto Area follows enclosed plan linework, while resizable cutouts remove openings from the measured total. Optional helper dimensions make exact adjustments visible while you work.',
@@ -186,6 +189,7 @@ export const homeFaqs = [
 // making the full homepage re-render. The screenshot remains the exact shipping PolyPDF 1.4 UI.
 const HeroProductBoard = memo(() => (
   <motion.figure
+    id="product-demo"
     className="hero-product-shot playful-product-board"
     initial={{ opacity: 0, scale: 0.94, rotate: 1.5 }}
     animate={{ opacity: 1, scale: 1, rotate: 0.6 }}
@@ -197,28 +201,65 @@ const HeroProductBoard = memo(() => (
     </svg>
     <span className="paper-tape hero-paper-tape" aria-hidden="true" />
     <div className="shot-plate">
-      <img
-        src={shotTakeoff}
-        alt="PolyPDF 1.4 showing measured quantities beside a takeoff drawing"
-        width="1710"
-        height="1073"
-        loading="eager"
-        fetchPriority="high"
-      />
+      <picture>
+        <source media="(prefers-reduced-motion: reduce)" srcSet={shotTakeoff} />
+        <img
+          src={shotTakeoffSnapping}
+          alt="PolyPDF 1.4 drawing a 30 foot dimension that snaps precisely between two plan endpoints"
+          width="1710"
+          height="1073"
+          loading="eager"
+          fetchPriority="high"
+        />
+      </picture>
     </div>
     <div className="hero-sticker hero-sticker-records">
       <SquaresFour aria-hidden="true" weight="bold" />
-      <span><strong>14</strong> takeoff records</span>
+      <span><strong>Snap lock</strong> on drawing endpoints</span>
     </div>
     <div className="hero-sticker hero-sticker-area">
       <Ruler aria-hidden="true" weight="bold" />
-      <span><strong>540 sq ft</strong> tied to the sheet</span>
+      <span><strong>30′-0″</strong> live dimension</span>
     </div>
-    <figcaption><strong>PolyPDF 1.4</strong> · Real product UI, not a mockup.</figcaption>
+    <figcaption><strong>PolyPDF 1.4</strong> · Real product UI showing endpoint snapping.</figcaption>
   </motion.figure>
 ));
 
 HeroProductBoard.displayName = 'HeroProductBoard';
+
+const ProductShotMedia = ({ shot }) => (
+  <div className={`product-shot-media${shot.motion ? ` has-${shot.motion}-motion` : ''}`}>
+    <img src={shot.image} alt={shot.alt} loading="lazy" width={shot.width} height={shot.height} />
+    {shot.motion === 'pdf-maps' && (
+      <svg className="shot-motion-layer shot-motion-map" viewBox="0 0 1710 1073" aria-hidden="true">
+        <path className="map-route-trace" d="M118 330C129 313 145 301 166 298C187 295 207 307 222 326" />
+        <g className="map-location-pulse">
+          <circle className="map-location-ring map-location-ring-outer" cx="166" cy="298" r="26" />
+          <circle className="map-location-ring map-location-ring-inner" cx="166" cy="298" r="12" />
+          <path className="map-location-pin" d="M166 276c-10.7 0-19 8.1-19 18.5 0 14.2 19 31.5 19 31.5s19-17.3 19-31.5c0-10.4-8.3-18.5-19-18.5Zm0 25.8a7.4 7.4 0 1 1 0-14.8 7.4 7.4 0 0 1 0 14.8Z" />
+        </g>
+      </svg>
+    )}
+    {shot.motion === 'auto-area' && (
+      <svg className="shot-motion-layer shot-motion-auto-area" viewBox="0 0 1710 1073" aria-hidden="true">
+        <path
+          className="auto-area-trace"
+          d="M560 503C591 454 684 416 826 415L983 415C1086 420 1148 455 1178 507C1208 558 1188 622 1138 670L984 590L691 644L584 681C550 628 547 552 560 503Z"
+        />
+        <path className="auto-area-cutout auto-area-cutout-one" d="M817 518L884 518L884 578L817 578Z" />
+        <path className="auto-area-cutout auto-area-cutout-two" d="M974 518L1047 518L1047 578L974 578Z" />
+        <g className="auto-area-node-set">
+          <circle cx="560" cy="503" r="7" />
+          <circle cx="826" cy="415" r="7" />
+          <circle cx="1178" cy="507" r="7" />
+          <circle cx="1138" cy="670" r="7" />
+          <circle cx="691" cy="644" r="7" />
+          <circle cx="584" cy="681" r="7" />
+        </g>
+      </svg>
+    )}
+  </div>
+);
 
 const PricingSection = ({ offer, onDownload }) => (
   <section className="pricing pricing-early" id="pricing">
@@ -489,7 +530,7 @@ const Home = () => {
           >
             <span className="paper-tape showcase-tape" aria-hidden="true" />
             <div className="shot-plate">
-              <img src={screenshots[0].image} alt={screenshots[0].alt} loading="lazy" width={screenshots[0].width} height={screenshots[0].height} />
+              <ProductShotMedia shot={screenshots[0]} />
             </div>
             <figcaption>
               <h3>{screenshots[0].title}</h3>
@@ -501,6 +542,7 @@ const Home = () => {
             {screenshots.slice(1).map((shot, index) => (
               <motion.figure
                 key={shot.title}
+                id={shot.motion ? `${shot.motion}-demo` : undefined}
                 className={`showcase-row ${index % 2 === 0 ? '' : 'flip'}`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -519,7 +561,7 @@ const Home = () => {
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.65, delay: 0.08, ease: [0.21, 0.65, 0.32, 1] }}
                 >
-                  <img src={shot.image} alt={shot.alt} loading="lazy" width={shot.width} height={shot.height} />
+                  <ProductShotMedia shot={shot} />
                 </motion.div>
               </motion.figure>
             ))}

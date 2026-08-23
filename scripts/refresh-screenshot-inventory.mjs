@@ -169,6 +169,9 @@ for (const item of inventory) {
       nativeMaximized: true,
       viewportEmulation: false,
       styleToolbarStateValidated: true,
+      ...(proof.windowProof?.preparation?.passes === true
+        ? { productFrameValidated: true }
+        : {}),
       pageOnlyCrop: false
     },
     outputs

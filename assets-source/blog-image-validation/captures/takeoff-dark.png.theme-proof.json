@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-23T13:27:02.494Z",
+  "capturedAt": "2026-08-23T16:53:40.130Z",
   "release": {
     "version": "1.4.0",
     "build": "17",
@@ -31,17 +31,29 @@
       "scrollLeft": 0,
       "sectionCount": 4
     },
+    "annotationToolbar": {
+      "exists": true,
+      "visible": true,
+      "buttonCount": 41,
+      "visibleIconCount": 41,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "width": 1710,
+        "height": 44
+      }
+    },
     "documentName": "takeoff-demo.pdf",
     "dialogId": ""
   },
   "windowProof": {
     "before": {
-      "outerWidth": 1710,
-      "outerHeight": 1073,
-      "innerWidth": 1710,
-      "innerHeight": 1073,
-      "screenX": 0,
-      "screenY": 34,
+      "outerWidth": 1440,
+      "outerHeight": 960,
+      "innerWidth": 1440,
+      "innerHeight": 960,
+      "screenX": 215,
+      "screenY": 40,
       "availWidth": 1710,
       "availHeight": 1073,
       "screenWidth": 1710,
@@ -61,22 +73,135 @@
       "screenHeight": 1107,
       "devicePixelRatio": 2
     },
-    "maximizeInvoked": false,
-    "controlResult": null,
+    "maximizeInvoked": true,
     "fillsWorkArea": true,
-    "passes": true
+    "passes": true,
+    "styleToolbarStateValid": true,
+    "styleToolbarVisibilityRequired": false,
+    "annotationToolbarStatePasses": true,
+    "preparation": {
+      "passes": true,
+      "bodyClasses": "is-select-mode has-document appearance-dark",
+      "toolbarRect": {
+        "left": 0,
+        "top": 0,
+        "right": 1710,
+        "bottom": 44,
+        "width": 1710,
+        "height": 44
+      },
+      "toolbarMainRect": {
+        "left": 84,
+        "top": 6.5,
+        "right": 1613.3671875,
+        "bottom": 36.5,
+        "width": 1529.3671875,
+        "height": 30
+      },
+      "toolbarButtonCount": 41,
+      "visibleToolbarIconCount": 41,
+      "styleToolbarRect": {
+        "left": 0,
+        "top": 44,
+        "right": 1710,
+        "bottom": 80,
+        "width": 1710,
+        "height": 36
+      },
+      "styleToolbarOverflow": {
+        "clientWidth": 1657,
+        "scrollWidth": 1657,
+        "scrollLeft": 0,
+        "overflowing": false
+      },
+      "scrollerRect": {
+        "left": 316,
+        "top": 118,
+        "right": 1710,
+        "bottom": 1041,
+        "width": 1394,
+        "height": 923
+      },
+      "pageRect": {
+        "left": 415.76470947265625,
+        "top": 118,
+        "right": 1610.2334594726562,
+        "bottom": 1041,
+        "width": 1194.46875,
+        "height": 923
+      },
+      "pageCenterDelta": {
+        "x": 0.00091552734375,
+        "y": 0
+      },
+      "pageFullyVisible": true,
+      "pageCoverage": 0.8568642395982783,
+      "canvases": [
+        {
+          "className": "pdf-page-canvas pdf-page-coarse-canvas",
+          "width": 482,
+          "height": 372,
+          "cssWidth": 1194.46875,
+          "cssHeight": 923
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 1027,
+          "height": 1027,
+          "cssWidth": 513.5,
+          "cssHeight": 513.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 1030,
+          "height": 1027,
+          "cssWidth": 515.0000610351562,
+          "cssHeight": 513.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 344,
+          "height": 1027,
+          "cssWidth": 172,
+          "cssHeight": 513.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 1027,
+          "height": 825,
+          "cssWidth": 513.5,
+          "cssHeight": 412.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 1030,
+          "height": 825,
+          "cssWidth": 515.0000610351562,
+          "cssHeight": 412.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 344,
+          "height": 825,
+          "cssWidth": 172,
+          "cssHeight": 412.5
+        }
+      ],
+      "canvasIsSharp": true,
+      "documentName": "takeoff-demo.pdf"
+    }
   },
   "pixelProof": {
     "theme": "dark",
     "width": 3420,
     "height": 2146,
-    "darkHits": 2679103,
-    "lightHits": 1608182,
-    "darkRatio": 0.36503422660409957,
-    "lightRatio": 0.21911866494443627,
-    "topDarkHits": 594393,
-    "topLightHits": 78,
-    "topDarkRatio": 0.9655506822612085,
+    "darkHits": 2081108,
+    "lightHits": 2465543,
+    "darkRatio": 0.2835559697628663,
+    "lightRatio": 0.33593616302327733,
+    "topDarkHits": 584479,
+    "topLightHits": 112,
+    "topDarkRatio": 0.9494460688758934,
     "expectedWidth": 3420,
     "expectedHeight": 2146,
     "passes": true

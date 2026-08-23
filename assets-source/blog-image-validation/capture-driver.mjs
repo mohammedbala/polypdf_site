@@ -23,6 +23,7 @@ const command = argv[0] ?? "inspect";
 const port = Number(valueAfter(argv, "--port") ?? 9431);
 const appRoot = resolve(valueAfter(argv, "--app-root") ?? "/tmp/polypdf-blog-captures-PCzoem/src/polypdf");
 const output = valueAfter(argv, "--output");
+const prepareScript = valueAfter(argv, "--prepare-script");
 const sourceBase = valueAfter(argv, "--source-commit") ?? valueAfter(argv, "--source-base") ?? "ed65b0558a0bd6a7fb312f13826de37bfc056ad4";
 const sourceDiffSha256 = valueAfter(argv, "--source-diff-sha256") ?? "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
 const expectedVersion = valueAfter(argv, "--expected-version") ?? "1.4.0";
@@ -168,6 +169,24 @@ async function appearanceFacts(evalJs) {
           sectionCount: track?.querySelectorAll("[data-style-section]").length ?? 0
         };
       })(),
+      annotationToolbar: (() => {
+        const toolbar = document.querySelector("#annotation-toolbar");
+        const main = toolbar?.querySelector(".toolbar-main-actions");
+        const rect = toolbar?.getBoundingClientRect();
+        const buttons = [...(main?.querySelectorAll(".toolbar-button") ?? [])];
+        const visibleIcons = buttons.flatMap((button) => [...button.querySelectorAll("svg")]).filter((icon) => {
+          const iconRect = icon.getBoundingClientRect();
+          const style = getComputedStyle(icon);
+          return iconRect.width >= 12 && iconRect.height >= 12 && style.display !== "none" && style.visibility !== "hidden" && Number(style.opacity) > 0;
+        });
+        return {
+          exists: Boolean(toolbar),
+          visible: Boolean(rect && rect.width > 0 && rect.height >= 40),
+          buttonCount: buttons.length,
+          visibleIconCount: visibleIcons.length,
+          rect: rect ? { left: rect.left, top: rect.top, width: rect.width, height: rect.height } : null
+        };
+      })(),
       documentName: document.querySelector(".primary-tab-strip [data-document-tab-id].active .tab-label")?.textContent?.trim() ?? "",
       dialogId: document.querySelector("[data-dialog-id]")?.getAttribute("data-dialog-id") ?? ""
     };
@@ -309,7 +328,14 @@ async function main() {
       await sleep(300);
     }
     await sleep(delayMs);
+    const preparation = prepareScript
+      ? await session.evalJs(await readFile(resolve(prepareScript), "utf8"))
+      : undefined;
     const facts = await appearanceFacts(session.evalJs);
+    const annotationToolbarStatePasses = facts.annotationToolbar?.exists
+      && facts.annotationToolbar?.visible
+      && facts.annotationToolbar?.buttonCount >= 30
+      && facts.annotationToolbar?.visibleIconCount >= 30;
     const styleToolbarStateValid = facts.styleToolbar?.exists
       && (!facts.styleToolbar?.visible || (
         facts.styleToolbar?.clientWidth > 0
@@ -319,9 +345,13 @@ async function main() {
     const windowProof = {
       ...session.maximizeProof,
       passes: session.maximizeProof.fillsWorkArea
-        && styleToolbarStatePasses,
+        && styleToolbarStatePasses
+        && annotationToolbarStatePasses
+        && (prepareScript ? preparation?.passes === true : true),
       styleToolbarStateValid,
-      styleToolbarVisibilityRequired: false
+      styleToolbarVisibilityRequired: false,
+      annotationToolbarStatePasses,
+      preparation
     };
     if (!windowProof.passes) {
       throw new Error(`Maximized/style-toolbar gate failed: ${JSON.stringify({ windowProof, styleToolbar: facts.styleToolbar })}`);
@@ -342,7 +372,7 @@ async function main() {
         }, null, 2)}\n`
       );
     }
-    process.stdout.write(`${JSON.stringify({ command, port, release: { version: expectedVersion, build: expectedBuild, theme }, source: { baseCommit: sourceBase, workingTreeDiffSha256: sourceDiffSha256 }, facts, windowProof, pixelProof }, null, 2)}\n`);
+    process.stdout.write(`${JSON.stringify({ command, port, release: { version: expectedVersion, build: expectedBuild, theme }, source: { baseCommit: sourceBase, workingTreeDiffSha256: sourceDiffSha256 }, facts, windowProof, preparation, pixelProof }, null, 2)}\n`);
   } finally {
     session.socket.close();
   }

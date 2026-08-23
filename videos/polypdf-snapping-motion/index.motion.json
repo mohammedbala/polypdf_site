@@ -1,0 +1,11 @@
+{
+  "duration": 5.2,
+  "assertions": [
+    { "kind": "appearsBy", "selector": "#polypdf-cursor", "bySec": 0.5 },
+    { "kind": "appearsBy", "selector": "#polypdf-final-geometry", "bySec": 3.68 },
+    { "kind": "before", "a": "#polypdf-cursor", "b": "#polypdf-final-geometry" },
+    { "kind": "staysInFrame", "selector": "#polypdf-cursor" },
+    { "kind": "staysInFrame", "selector": "#polypdf-final-geometry" },
+    { "kind": "keepsMoving", "withinSelector": ".polypdf-localized-overlays", "maxStaticSec": 1.5 }
+  ]
+}

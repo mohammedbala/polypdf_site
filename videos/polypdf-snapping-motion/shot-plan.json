@@ -1,0 +1,294 @@
+{
+  "category": "webpage",
+  "duration_s": 5.2,
+  "fps": 30,
+  "canvas": {
+    "w": 1710,
+    "h": 1073,
+    "aspect": "1710:1073"
+  },
+  "style": "Quiet, premium product motion built directly on the real PolyPDF 1.4 shipping UI. Preserve the complete dark toolbar and centered full-page drawing. Use one dominant motion idea: the cursor is magnetically acquired by real drawing endpoints, then the snapped geometry grows into a resolved dimension. Snap feedback is crisp and restrained—small cyan target, brief blue acquisition ring, precise guide line, no camera motion, tutorial modal, or synthetic app chrome. End on an unhurried proof-of-result hold before the seamless loop reset.",
+  "palette": [
+    "#151515",
+    "#2A2A2A",
+    "#F7F8F8",
+    "#68E0D3",
+    "#6F9FF5",
+    "#FFFFFF"
+  ],
+  "font": "Inter",
+  "beats": [
+    0.25,
+    0.86,
+    1.08,
+    3.08,
+    3.32,
+    3.68,
+    4.65,
+    5.05
+  ],
+  "export": "mp4",
+  "asset_needs": [
+    {
+      "role": "hero-ui",
+      "kind": "web",
+      "source": "assets/takeoff-v1-4-dark-web.png",
+      "treatment": "none"
+    }
+  ],
+  "shot_brief": "The viewer first sees the real, stable PolyPDF takeoff workspace with the complete shipping toolbar and the drawing already centered at a useful fit. A real cursor glides toward the upper-left room corner; in the final approach it bends subtly into the exact endpoint, which answers with a compact cyan snap target and one blue acquisition ring. The cursor clicks, pulls a clean dimension preview horizontally across the top wall, and magnetically settles onto the matching upper-right endpoint. Extension lines resolve, the dimension line firms up, and a readable 30'-0\" label appears at center. The finished measurement holds for a full second, then only the localized overlays fade to return to an untouched base frame for a seamless website loop. The single dominant motion idea is magnetic endpoint acquisition becoming a precise dimension.",
+  "block": "simulated-cursor",
+  "customize": {
+    "registry_components": [
+      {
+        "id": "simulated-cursor",
+        "purpose": "Shipping-style pointer movement plus the restrained click/acquisition pulses at both endpoints",
+        "settings": {
+          "cursor_type": "arrow",
+          "size_px": {
+            "w": 28,
+            "h": 36
+          },
+          "fill": "#FFFFFF",
+          "outline": "#151515",
+          "outline_px": 2,
+          "shadow": "0 2px 6px rgba(0,0,0,0.32)",
+          "click_pulse_color": "#6F9FF5",
+          "click_pulse_max_diameter_px": 38,
+          "click_pulse_duration_s": 0.22
+        }
+      },
+      {
+        "id": "svg-stroke-trace",
+        "purpose": "Draw the dimension preview, extension lines, final dimension rail, and endpoint caps without rasterizing the source UI",
+        "settings": {
+          "stroke": "#6F9FF5",
+          "preview_stroke": "rgba(111,159,245,0.72)",
+          "stroke_width_px": 3,
+          "linecap": "round",
+          "linejoin": "round",
+          "draw_ease": "none"
+        }
+      }
+    ],
+    "base_layer": {
+      "asset": "assets/takeoff-v1-4-dark-web.png",
+      "x": 0,
+      "y": 0,
+      "w": 1710,
+      "h": 1073,
+      "fit": "exact",
+      "crop": "none",
+      "transform": "none",
+      "animate": false,
+      "rule": "Keep every pixel of the approved shipping screenshot untouched; never dim, zoom, pan, blur, recolor, or cover the toolbar."
+    },
+    "geometry": {
+      "first_endpoint": {
+        "x": 553,
+        "y": 329
+      },
+      "second_endpoint": {
+        "x": 1369,
+        "y": 329
+      },
+      "dimension_y": 282,
+      "dimension_center": {
+        "x": 961,
+        "y": 282
+      },
+      "dimension_text": "30'-0\"",
+      "dimension_text_style": {
+        "font_family": "Inter",
+        "font_size_px": 20,
+        "font_weight": 700,
+        "fill": "#6F9FF5",
+        "stroke": "rgba(255,255,255,0.96)",
+        "stroke_width_px": 5,
+        "paint_order": "stroke fill",
+        "anchor": "middle"
+      },
+      "extension_lines": [
+        {
+          "x1": 553,
+          "y1": 329,
+          "x2": 553,
+          "y2": 282
+        },
+        {
+          "x1": 1369,
+          "y1": 329,
+          "x2": 1369,
+          "y2": 282
+        }
+      ],
+      "dimension_line": {
+        "x1": 553,
+        "y1": 282,
+        "x2": 1369,
+        "y2": 282
+      },
+      "endpoint_caps": {
+        "length_px": 12,
+        "stroke_width_px": 3
+      },
+      "snap_target": {
+        "shape": "diamond",
+        "size_px": 16,
+        "stroke": "#68E0D3",
+        "stroke_width_px": 2,
+        "fill": "rgba(104,224,211,0.12)",
+        "ring_color": "#6F9FF5",
+        "ring_max_diameter_px": 38
+      }
+    },
+    "motion": {
+      "dominant_motif": "magnetic endpoint acquisition",
+      "cursor_start": {
+        "x": 472,
+        "y": 236
+      },
+      "cursor_pre_snap_1": {
+        "x": 536,
+        "y": 313
+      },
+      "cursor_pre_snap_2": {
+        "x": 1349,
+        "y": 315
+      },
+      "timeline": [
+        {
+          "start_s": 0,
+          "end_s": 0.25,
+          "action": "Clean untouched base frame; cursor and every overlay hidden",
+          "ease": "none"
+        },
+        {
+          "start_s": 0.25,
+          "end_s": 0.86,
+          "action": "Fade cursor in over 0.12s and glide from (472,236) to pre-snap point (536,313)",
+          "ease": "power2.inOut"
+        },
+        {
+          "start_s": 0.86,
+          "end_s": 1.08,
+          "action": "Magnetically bend the final 23px into endpoint (553,329); sweep the cyan target on, fire one blue acquisition ring, and resolve the first click at 1.02s",
+          "ease": "power3.out"
+        },
+        {
+          "start_s": 1.08,
+          "end_s": 1.32,
+          "action": "Trace the left extension line from (553,329) to (553,282); keep the first endpoint target visible at 70% opacity",
+          "ease": "power2.out"
+        },
+        {
+          "start_s": 1.18,
+          "end_s": 3.08,
+          "action": "Drag the cursor horizontally toward pre-snap point (1349,315). The dimension rail grows from x=553 at y=282 and its temporary right extension remains attached to the cursor x-position, ending at the underlying wall edge y=329",
+          "ease": "power1.inOut"
+        },
+        {
+          "start_s": 3.08,
+          "end_s": 3.32,
+          "action": "Magnetically settle the cursor into endpoint (1369,329); sweep on the second cyan target and fire the second blue acquisition ring/click at 3.24s",
+          "ease": "power3.out"
+        },
+        {
+          "start_s": 3.32,
+          "end_s": 3.68,
+          "action": "Replace the temporary guide with the exact right extension, endpoint caps, and solid dimension rail. Reveal the 30'-0\" label with fade_in plus scale_grow from 0.96 to 1.00; cursor fades to 35% after resolution",
+          "ease": "power2.out"
+        },
+        {
+          "start_s": 3.68,
+          "end_s": 4.65,
+          "action": "Hold the fully resolved measurement perfectly still and readable; no breathing scale, camera movement, or repeated pulse",
+          "ease": "none"
+        },
+        {
+          "start_s": 4.65,
+          "end_s": 5.05,
+          "action": "Fade only cursor, snap targets, dimension label, and SVG measurement overlay to zero opacity in one localized reset",
+          "ease": "power2.in"
+        },
+        {
+          "start_s": 5.05,
+          "end_s": 5.2,
+          "action": "Clean untouched base frame identical to frame zero for a seamless loop",
+          "ease": "none"
+        }
+      ],
+      "rules": [
+        "Use translate/opacity/stroke-dashoffset only; all motion must remain deterministic and seek-safe.",
+        "Snap targets must sweep or scale on at acquisition time and never be pre-applied.",
+        "Cursor travels on a shallow two-point curve into each endpoint; no straight-line teleport and no overshoot past drawing geometry.",
+        "Keep every overlay above the white drawing canvas and below any non-overlapping application chrome; never obscure primary toolbar controls.",
+        "No camera shake, viewport zoom, scroll, synthetic window frame, tooltip, modal, caption, or full-frame transition."
+      ]
+    },
+    "website_gif": {
+      "master": {
+        "format": "mp4",
+        "w": 1710,
+        "h": 1073,
+        "fps": 30,
+        "duration_s": 5.2
+      },
+      "deliverable": {
+        "format": "gif",
+        "w": 1710,
+        "h": 1073,
+        "fps": 15,
+        "loop": 0,
+        "max_colors": 160,
+        "palette_stats_mode": "diff",
+        "palette_dither": "bayer",
+        "bayer_scale": 5,
+        "diff_mode": "rectangle",
+        "optimize": "gifsicle -O3",
+        "target_max_bytes": 7500000
+      },
+      "constraints": [
+        "Preserve the exact 1710x1073 canvas and pixel alignment; do not downscale the approved UI base.",
+        "Use delta rectangles and restrict all changing pixels to the cursor/dimension region so the eager hero GIF remains compact.",
+        "Do not animate, crossfade, or re-encode the whole base screenshot between frames.",
+        "Frame zero and the final clean frame must be visually identical.",
+        "Keep the approved PNG as the reduced-motion fallback and poster.",
+        "If the optimized GIF exceeds 7.5 MB, reduce GIF fps to 12 before reducing palette colors; never reduce the canvas dimensions or crop the toolbar."
+      ]
+    }
+  },
+  "content": {
+    "url": "local://polypdf-1.4/takeoff-demo",
+    "capture": "assets/takeoff-v1-4-dark-web.png",
+    "highlights": [
+      {
+        "region": {
+          "x": 518,
+          "y": 294,
+          "w": 70,
+          "h": 70
+        },
+        "label": "First drawing endpoint: magnetic snap acquire"
+      },
+      {
+        "region": {
+          "x": 1334,
+          "y": 294,
+          "w": 70,
+          "h": 70
+        },
+        "label": "Second drawing endpoint: magnetic snap resolve"
+      },
+      {
+        "region": {
+          "x": 553,
+          "y": 250,
+          "w": 816,
+          "h": 114
+        },
+        "label": "Dimension guide, extension lines, and resolved 30'-0\" label"
+      }
+    ]
+  }
+}

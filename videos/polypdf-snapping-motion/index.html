@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1710, height=1073" />
+    <title>PolyPDF precise snapping dimension demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      :root {
+        --polypdf-ink: #151515;
+        --polypdf-surface: #2a2a2a;
+        --polypdf-paper: #f7f8f8;
+        --polypdf-snap: #68e0d3;
+        --polypdf-dimension: #6894e5;
+        --polypdf-white: #ffffff;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1710px;
+        height: 1073px;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      #polypdf-snapping-stage {
+        position: relative;
+        width: 1710px;
+        height: 1073px;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      #polypdf-snapping-clip,
+      .polypdf-frame-fill,
+      .polypdf-localized-overlays {
+        position: absolute;
+        inset: 0;
+        width: 1710px;
+        height: 1073px;
+      }
+
+      .polypdf-frame-fill {
+        overflow: hidden;
+        background: var(--polypdf-ink);
+      }
+
+      .polypdf-base-frame {
+        display: block;
+        width: 1710px;
+        height: 1073px;
+        object-fit: fill;
+        object-position: 0 0;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .polypdf-localized-overlays {
+        pointer-events: none;
+        will-change: opacity;
+      }
+
+      .polypdf-dimension-svg {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 1710px;
+        height: 1073px;
+        overflow: visible;
+        shape-rendering: geometricPrecision;
+      }
+
+      .polypdf-preview-stroke,
+      .polypdf-final-stroke {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .polypdf-preview-stroke {
+        stroke: rgba(111, 159, 245, 0.72);
+        stroke-width: 3px;
+      }
+
+      .polypdf-final-stroke {
+        stroke: var(--polypdf-dimension);
+        stroke-width: 3px;
+      }
+
+      .polypdf-trace,
+      .polypdf-snap-target,
+      .polypdf-acquisition-ring,
+      #polypdf-final-geometry,
+      #polypdf-dimension-label {
+        opacity: 0;
+      }
+
+      .polypdf-snap-target {
+        fill: rgba(104, 224, 211, 0.12);
+        stroke: var(--polypdf-snap);
+        stroke-width: 2px;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .polypdf-acquisition-ring {
+        fill: none;
+        stroke: var(--polypdf-dimension);
+        stroke-width: 2px;
+        vector-effect: non-scaling-stroke;
+      }
+
+      #polypdf-dimension-label {
+        fill: var(--polypdf-dimension);
+        stroke: rgba(255, 255, 255, 0.96);
+        stroke-width: 5px;
+        paint-order: stroke fill;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        text-anchor: middle;
+      }
+
+      /* Adapted from the registry simulated-cursor component. */
+      .hf-simulated-cursor {
+        position: absolute;
+        left: -3px;
+        top: -3px;
+        display: block;
+        width: 28px;
+        height: 36px;
+        opacity: 0;
+        pointer-events: none;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.32));
+        will-change: transform, opacity;
+      }
+
+      .hf-simulated-cursor svg {
+        display: block;
+        width: 28px;
+        height: 36px;
+        overflow: visible;
+      }
+
+      .hf-simulated-cursor path {
+        fill: var(--polypdf-white);
+        stroke: var(--polypdf-ink);
+        stroke-width: 2px;
+        stroke-linejoin: round;
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="polypdf-snapping-stage"
+      data-composition-id="polypdf-snapping-motion"
+      data-start="0"
+      data-duration="5.2"
+      data-fps="30"
+      data-width="1710"
+      data-height="1073"
+      aria-label="PolyPDF drawing dimension snapping demonstration"
+    >
+      <div
+        id="polypdf-snapping-clip"
+        class="clip"
+        data-start="0"
+        data-duration="5.2"
+        data-track-index="0"
+      >
+        <div class="polypdf-frame-fill">
+          <img
+            class="polypdf-base-frame"
+            src="assets/takeoff-v1-4-dark-web.png"
+            width="1710"
+            height="1073"
+            alt=""
+            aria-hidden="true"
+            draggable="false"
+          />
+        </div>
+
+        <div id="polypdf-localized-overlays" class="polypdf-localized-overlays">
+          <svg
+            class="polypdf-dimension-svg"
+            viewBox="0 0 1710 1073"
+            width="1710"
+            height="1073"
+            aria-hidden="true"
+          >
+            <g id="polypdf-first-snap">
+              <polygon
+                id="polypdf-snap-target-1"
+                class="polypdf-snap-target"
+                points="553,321 561,329 553,337 545,329"
+              />
+              <circle
+                id="polypdf-acquisition-ring-1"
+                class="polypdf-acquisition-ring"
+                cx="553"
+                cy="329"
+                r="8"
+              />
+            </g>
+
+            <g id="polypdf-second-snap">
+              <polygon
+                id="polypdf-snap-target-2"
+                class="polypdf-snap-target"
+                points="1369,321 1377,329 1369,337 1361,329"
+              />
+              <circle
+                id="polypdf-acquisition-ring-2"
+                class="polypdf-acquisition-ring"
+                cx="1369"
+                cy="329"
+                r="8"
+              />
+            </g>
+
+            <!-- Adapted from the registry svg-stroke-trace primitive. -->
+            <path
+              id="polypdf-left-extension-preview"
+              class="polypdf-preview-stroke polypdf-trace"
+              d="M 553 329 L 553 282"
+            />
+            <path
+              id="polypdf-dimension-preview"
+              class="polypdf-preview-stroke polypdf-trace"
+              d="M 553 282 L 1369 282"
+            />
+            <g id="polypdf-temporary-right-guide" opacity="0">
+              <path
+                class="polypdf-preview-stroke"
+                d="M 553 282 L 553 329"
+              />
+            </g>
+
+            <g id="polypdf-final-geometry">
+              <path class="polypdf-final-stroke" d="M 553 329 L 553 282" />
+              <path class="polypdf-final-stroke" d="M 1369 329 L 1369 282" />
+              <path class="polypdf-final-stroke" d="M 553 282 L 1369 282" />
+              <path class="polypdf-final-stroke" d="M 553 276 L 553 288" />
+              <path class="polypdf-final-stroke" d="M 1369 276 L 1369 288" />
+            </g>
+
+            <text id="polypdf-dimension-label" x="961" y="289">30'-0&quot;</text>
+          </svg>
+
+          <div id="polypdf-cursor" class="hf-simulated-cursor" aria-hidden="true">
+            <svg viewBox="0 0 28 36" width="28" height="36">
+              <path d="M 3 2.5 L 24 18 L 14.5 20.2 L 10 31 L 3 2.5 Z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var cursor = document.getElementById("polypdf-cursor");
+        var overlays = document.getElementById("polypdf-localized-overlays");
+        var leftExtension = document.getElementById("polypdf-left-extension-preview");
+        var dimensionPreview = document.getElementById("polypdf-dimension-preview");
+        var temporaryRightGuide = document.getElementById("polypdf-temporary-right-guide");
+        var snapTarget1 = document.getElementById("polypdf-snap-target-1");
+        var snapTarget2 = document.getElementById("polypdf-snap-target-2");
+        var acquisitionRing1 = document.getElementById("polypdf-acquisition-ring-1");
+        var acquisitionRing2 = document.getElementById("polypdf-acquisition-ring-2");
+        var finalGeometry = document.getElementById("polypdf-final-geometry");
+        var dimensionLabel = document.getElementById("polypdf-dimension-label");
+
+        var tracedPaths = [leftExtension, dimensionPreview];
+        for (var i = 0; i < tracedPaths.length; i += 1) {
+          var pathLength = tracedPaths[i].getTotalLength();
+          tracedPaths[i].style.strokeDasharray = pathLength + " " + pathLength;
+          tracedPaths[i].style.strokeDashoffset = String(pathLength);
+        }
+
+        var tl = gsap.timeline({ paused: true });
+
+        /* 0.00–0.25: the approved source screenshot remains completely untouched. */
+        tl.fromTo(
+          cursor,
+          { x: 472, y: 236, autoAlpha: 0 },
+          { x: 472, y: 236, autoAlpha: 1, duration: 0.12, ease: "power2.out" },
+          0.25,
+        );
+        tl.to(cursor, { x: 507, y: 274, duration: 0.31, ease: "power2.inOut" }, 0.37);
+        tl.to(cursor, { x: 536, y: 313, duration: 0.18, ease: "power2.inOut" }, 0.68);
+
+        /* First magnetic acquisition: 0.86–1.08. */
+        tl.fromTo(
+          snapTarget1,
+          { autoAlpha: 0, scale: 0.45, transformOrigin: "553px 329px" },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            duration: 0.12,
+            ease: "power3.out",
+            transformOrigin: "553px 329px",
+          },
+          0.86,
+        );
+        tl.to(
+          cursor,
+          { x: 553, y: 329, duration: 0.22, ease: "power3.out", overwrite: "auto" },
+          0.86,
+        );
+        tl.fromTo(
+          acquisitionRing1,
+          { autoAlpha: 0.86, scale: 0.42, transformOrigin: "553px 329px" },
+          {
+            autoAlpha: 0,
+            scale: 2.375,
+            duration: 0.22,
+            ease: "power2.out",
+            transformOrigin: "553px 329px",
+          },
+          1.02,
+        );
+        tl.to(snapTarget1, { opacity: 0.7, duration: 0.12, ease: "power2.out" }, 1.02);
+
+        /* Draw the first extension exactly from the acquired endpoint. */
+        tl.fromTo(
+          leftExtension,
+          { autoAlpha: 0, strokeDashoffset: leftExtension.getTotalLength() },
+          {
+            autoAlpha: 1,
+            strokeDashoffset: 0,
+            duration: 0.24,
+            ease: "power2.out",
+          },
+          1.08,
+        );
+
+        /* 1.18–3.08: the preview rail and guide stay attached to the drag. */
+        tl.fromTo(
+          dimensionPreview,
+          { autoAlpha: 0, strokeDashoffset: dimensionPreview.getTotalLength() },
+          {
+            autoAlpha: 1,
+            strokeDashoffset: 0,
+            duration: 1.9,
+            ease: "power1.inOut",
+          },
+          1.18,
+        );
+        tl.fromTo(
+          temporaryRightGuide,
+          { x: 0, autoAlpha: 0 },
+          { x: 796, autoAlpha: 0.72, duration: 1.9, ease: "power1.inOut" },
+          1.18,
+        );
+        tl.to(cursor, { x: 914, y: 296, duration: 0.92, ease: "power1.inOut" }, 1.18);
+        tl.to(cursor, { x: 1349, y: 315, duration: 0.98, ease: "power1.inOut" }, 2.1);
+
+        /* Second magnetic acquisition: 3.08–3.32. */
+        tl.fromTo(
+          snapTarget2,
+          { autoAlpha: 0, scale: 0.45, transformOrigin: "1369px 329px" },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            duration: 0.12,
+            ease: "power3.out",
+            transformOrigin: "1369px 329px",
+          },
+          3.08,
+        );
+        tl.to(cursor, { x: 1369, y: 329, duration: 0.24, ease: "power3.out" }, 3.08);
+        tl.to(temporaryRightGuide, { x: 816, duration: 0.24, ease: "power3.out" }, 3.08);
+        tl.fromTo(
+          acquisitionRing2,
+          { autoAlpha: 0.86, scale: 0.42, transformOrigin: "1369px 329px" },
+          {
+            autoAlpha: 0,
+            scale: 2.375,
+            duration: 0.22,
+            ease: "power2.out",
+            transformOrigin: "1369px 329px",
+          },
+          3.24,
+        );
+        tl.to(snapTarget2, { opacity: 0.7, duration: 0.12, ease: "power2.out" }, 3.24);
+
+        /* 3.32–3.68: replace the temporary guide with resolved geometry. */
+        tl.to(
+          [leftExtension, dimensionPreview, temporaryRightGuide],
+          { autoAlpha: 0, duration: 0.16, ease: "power2.out" },
+          3.32,
+        );
+        tl.fromTo(
+          finalGeometry,
+          { autoAlpha: 0 },
+          { autoAlpha: 1, duration: 0.22, ease: "power2.out" },
+          3.32,
+        );
+        tl.fromTo(
+          dimensionLabel,
+          { autoAlpha: 0, scale: 0.96, transformOrigin: "961px 282px" },
+          {
+            autoAlpha: 1,
+            scale: 1,
+            duration: 0.36,
+            ease: "power2.out",
+            transformOrigin: "961px 282px",
+          },
+          3.32,
+        );
+        tl.to(cursor, { opacity: 0.35, duration: 0.36, ease: "power2.out" }, 3.32);
+
+        /* 3.68–4.65 is a motionless proof hold. Reset is localized. */
+        tl.fromTo(
+          overlays,
+          { opacity: 1 },
+          { opacity: 0, duration: 0.4, ease: "power2.in" },
+          4.65,
+        );
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["polypdf-snapping-motion"] = tl;
+      })();
+    </script>
+  </body>
+</html>

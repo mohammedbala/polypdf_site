@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-08-23T14:00:41.332Z",
+  "capturedAt": "2026-08-23T16:52:46.167Z",
   "release": {
     "version": "1.4.0",
     "build": "17",
@@ -30,6 +30,18 @@
       "scrollWidth": 1996,
       "scrollLeft": 0,
       "sectionCount": 7
+    },
+    "annotationToolbar": {
+      "exists": true,
+      "visible": true,
+      "buttonCount": 41,
+      "visibleIconCount": 41,
+      "rect": {
+        "left": 0,
+        "top": 0,
+        "width": 1710,
+        "height": 44
+      }
     },
     "documentName": "hals-piedmont-way-sheet-2.pdf",
     "dialogId": ""
@@ -66,19 +78,131 @@
     "fillsWorkArea": true,
     "passes": true,
     "styleToolbarStateValid": true,
-    "styleToolbarVisibilityRequired": false
+    "styleToolbarVisibilityRequired": false,
+    "annotationToolbarStatePasses": true,
+    "preparation": {
+      "passes": true,
+      "bodyClasses": "is-select-mode has-document appearance-dark",
+      "toolbarRect": {
+        "left": 0,
+        "top": 0,
+        "right": 1710,
+        "bottom": 44,
+        "width": 1710,
+        "height": 44
+      },
+      "toolbarMainRect": {
+        "left": 84,
+        "top": 6.5,
+        "right": 1613.3671875,
+        "bottom": 36.5,
+        "width": 1529.3671875,
+        "height": 30
+      },
+      "toolbarButtonCount": 41,
+      "visibleToolbarIconCount": 41,
+      "styleToolbarRect": {
+        "left": 0,
+        "top": 44,
+        "right": 1710,
+        "bottom": 80,
+        "width": 1710,
+        "height": 36
+      },
+      "styleToolbarOverflow": {
+        "clientWidth": 1601,
+        "scrollWidth": 1996,
+        "scrollLeft": 0,
+        "overflowing": true
+      },
+      "scrollerRect": {
+        "left": 316,
+        "top": 118,
+        "right": 1710,
+        "bottom": 1041,
+        "width": 1394,
+        "height": 923
+      },
+      "pageRect": {
+        "left": 320.75,
+        "top": 118,
+        "right": 1705.25,
+        "bottom": 1041,
+        "width": 1384.5,
+        "height": 923
+      },
+      "pageCenterDelta": {
+        "x": 0,
+        "y": 0
+      },
+      "pageFullyVisible": true,
+      "pageCoverage": 0.9931850789096126,
+      "canvases": [
+        {
+          "className": "pdf-page-canvas pdf-page-coarse-canvas",
+          "width": 519,
+          "height": 346,
+          "cssWidth": 1384.5,
+          "cssHeight": 923
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 1027,
+          "height": 1027,
+          "cssWidth": 513.5,
+          "cssHeight": 513.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 1030,
+          "height": 1027,
+          "cssWidth": 515,
+          "cssHeight": 513.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 724,
+          "height": 1027,
+          "cssWidth": 362,
+          "cssHeight": 513.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 1027,
+          "height": 825,
+          "cssWidth": 513.5,
+          "cssHeight": 412.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 1030,
+          "height": 825,
+          "cssWidth": 515,
+          "cssHeight": 412.5
+        },
+        {
+          "className": "pdf-page-canvas pdf-page-tile-canvas",
+          "width": 724,
+          "height": 825,
+          "cssWidth": 362,
+          "cssHeight": 412.5
+        }
+      ],
+      "canvasIsSharp": true,
+      "documentName": "hals-piedmont-way-sheet-2.pdf"
+    }
   },
   "pixelProof": {
     "theme": "dark",
     "width": 3420,
     "height": 2146,
-    "darkHits": 1638542,
-    "lightHits": 2882138,
-    "darkRatio": 0.2232552879558324,
-    "lightRatio": 0.39269823362382345,
-    "topDarkHits": 588324,
-    "topLightHits": 141,
-    "topDarkRatio": 0.9556920077972709,
+    "darkHits": 1802611,
+    "lightHits": 4347631,
+    "darkRatio": 0.2456100837679785,
+    "lightRatio": 0.5923751791719124,
+    "topDarkHits": 576961,
+    "topLightHits": 176,
+    "topDarkRatio": 0.9372335932423652,
     "expectedWidth": 3420,
     "expectedHeight": 2146,
     "passes": true

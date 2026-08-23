@@ -1043,6 +1043,33 @@ function validateFingerprint(record, registryPath, violations) {
   return fingerprint;
 }
 
+function validateProductFrameEvidence(record, proof, registryPath, violations) {
+  if (record.assertions?.productFrameValidated !== true) return;
+  const preparation = proof?.json?.windowProof?.preparation;
+  const delta = preparation?.pageCenterDelta;
+  const passes = preparation?.passes === true
+    && proof?.json?.windowProof?.annotationToolbarStatePasses === true
+    && !String(preparation?.bodyClasses ?? '').split(/\s+/).includes('visual-capture')
+    && !String(preparation?.bodyClasses ?? '').split(/\s+/).includes('visual-window-capture')
+    && Number(preparation?.toolbarButtonCount) >= 30
+    && Number(preparation?.visibleToolbarIconCount) >= 30
+    && preparation?.pageFullyVisible === true
+    && Number(delta?.x) <= 4
+    && Number(delta?.y) <= 4
+    && Number(preparation?.pageCoverage) >= 0.36
+    && preparation?.canvasIsSharp === true;
+  if (!passes) {
+    addViolation(
+      violations,
+      'evidence-product-frame-invalid',
+      proof?.binding?.path ?? registryPath,
+      'Evidence record ' + record.id
+        + ' asserts a product-quality frame but does not prove populated shipping chrome, Fit Page centering, full-page visibility, and Retina tiles.',
+      { recordId: record.id }
+    );
+  }
+}
+
 async function validateOutputTransform({
   root,
   record,
@@ -1211,6 +1238,7 @@ async function validateEvidenceRecord({
     cache,
     violations
   });
+  validateProductFrameEvidence(record, proof, registryPath, violations);
 
   const rawPath = raw?.file ?? resolveRegistryPath(root, record.source?.raw?.path);
   if (rawPath && validateHashValue(record.source?.raw?.sha256) && fingerprint) {

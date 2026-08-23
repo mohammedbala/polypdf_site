@@ -161,6 +161,9 @@
         "styleToolbarStateValidated": {
           "const": true
         },
+        "productFrameValidated": {
+          "const": true
+        },
         "pageOnlyCrop": {
           "const": false
         }

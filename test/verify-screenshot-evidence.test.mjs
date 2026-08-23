@@ -365,6 +365,22 @@ test('complete light evidence passes the workflow-scoped app chrome gate', async
   assert.equal(report.summary.violationCount, 0);
 });
 
+test('product-quality frames require populated shipping chrome, centered Fit Page, and Retina tiles', async () => {
+  const fixture = await fixtureRepository();
+  const registry = JSON.parse(await readFile(fixture.paths.registryPath, 'utf8'));
+  registry.records[0].assertions.productFrameValidated = true;
+  await writeJson(fixture.paths.registryPath, registry);
+
+  const report = await verifyScreenshotEvidence({ root: fixture.root });
+
+  assert.equal(report.ok, false);
+  assert.equal(
+    violationCodes(report, fixture.paths.proofPath)
+      .includes('evidence-product-frame-invalid'),
+    true
+  );
+});
+
 test('a solid-dark square with a currentdev-dark filename cannot pass as a maximized capture', async () => {
   const fixture = await fixtureRepository({
     screenshotName: 'square-currentdev-dark.png',
