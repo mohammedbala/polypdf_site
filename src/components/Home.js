@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { memo, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  FaBars,
-  FaBolt,
-  FaCheckCircle,
-  FaInfinity,
-  FaLock,
-  FaTimes
-} from 'react-icons/fa';
-import {
-  HiOutlineCloudDownload,
-  HiOutlineShieldCheck
-} from 'react-icons/hi';
+  CheckCircle,
+  DownloadSimple,
+  Infinity,
+  Lightning,
+  List,
+  LockKey,
+  Ruler,
+  ShieldCheck,
+  Sparkle,
+  SquaresFour,
+  X
+} from '@phosphor-icons/react';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
 import { buyPath, captureAttribution } from '../lib/attribution';
@@ -181,6 +182,44 @@ export const homeFaqs = [
   }
 ];
 
+// Continuous flourishes stay inside this memoized leaf so the product page can feel alive without
+// making the full homepage re-render. The screenshot remains the exact shipping PolyPDF 1.4 UI.
+const HeroProductBoard = memo(() => (
+  <motion.figure
+    className="hero-product-shot playful-product-board"
+    initial={{ opacity: 0, scale: 0.94, rotate: 1.5 }}
+    animate={{ opacity: 1, scale: 1, rotate: 0.6 }}
+    transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.12 }}
+  >
+    <svg className="hero-sketch-line" viewBox="0 0 230 120" aria-hidden="true">
+      <path d="M4 106C48 24 123 20 222 8" />
+      <path d="M211 1L224 8L214 19" />
+    </svg>
+    <span className="paper-tape hero-paper-tape" aria-hidden="true" />
+    <div className="shot-plate">
+      <img
+        src={shotTakeoff}
+        alt="PolyPDF 1.4 showing measured quantities beside a takeoff drawing"
+        width="1710"
+        height="1073"
+        loading="eager"
+        fetchPriority="high"
+      />
+    </div>
+    <div className="hero-sticker hero-sticker-records">
+      <SquaresFour aria-hidden="true" weight="bold" />
+      <span><strong>14</strong> takeoff records</span>
+    </div>
+    <div className="hero-sticker hero-sticker-area">
+      <Ruler aria-hidden="true" weight="bold" />
+      <span><strong>540 sq ft</strong> tied to the sheet</span>
+    </div>
+    <figcaption><strong>PolyPDF 1.4</strong> · Real product UI, not a mockup.</figcaption>
+  </motion.figure>
+));
+
+HeroProductBoard.displayName = 'HeroProductBoard';
+
 const PricingSection = ({ offer, onDownload }) => (
   <section className="pricing pricing-early" id="pricing">
     <div className="container">
@@ -190,6 +229,7 @@ const PricingSection = ({ offer, onDownload }) => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
+        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Pick your lane</span>
         <h2>Try the real app free. Pay once when you need unlimited measurements.</h2>
         <p>Markup, review, calibration, and Symbol Search auto-count stay free. Pro removes the fourth-measurement wall for $49.99 once.</p>
       </motion.div>
@@ -201,18 +241,19 @@ const PricingSection = ({ offer, onDownload }) => (
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
+          <span className="paper-tape pricing-card-tape" aria-hidden="true" />
           <div className="plan-pill">Free</div>
           <h3>Use PolyPDF on real drawings</h3>
           <p className="plan-price">$0</p>
           <ul className="plan-list">
             {freeFeatures.map((feature) => (
               <li key={feature}>
-                <FaCheckCircle /> {feature}
+                <CheckCircle aria-hidden="true" weight="bold" /> {feature}
               </li>
             ))}
           </ul>
           <a href={primaryPlatform.url} className="secondary-btn full-width" download onClick={() => onDownload('pricing_free')}>
-            <HiOutlineCloudDownload /> Download free for {primaryPlatform.name}
+            <DownloadSimple aria-hidden="true" weight="bold" /> Download free for {primaryPlatform.name}
           </a>
         </motion.article>
 
@@ -223,19 +264,20 @@ const PricingSection = ({ offer, onDownload }) => (
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
+          <span className="paper-tape pricing-card-tape" aria-hidden="true" />
           <div className="plan-pill plan-pill-dark">Founder's License</div>
           <h3>Unlock unlimited hand-created measurements</h3>
           <p className="plan-price">$49.99</p>
           <ul className="plan-list">
             {proFeatures.map((feature) => (
               <li key={feature}>
-                <FaBolt /> {feature}
+                <Lightning aria-hidden="true" weight="bold" /> {feature}
               </li>
             ))}
           </ul>
           {offer.founderAvailable ? (
             <Link to={buyPath('website_pricing')} className="primary-btn full-width">
-              <FaInfinity /> Buy once — $49.99
+              <Infinity aria-hidden="true" weight="bold" /> Buy once — $49.99
             </Link>
           ) : (
             <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
@@ -302,7 +344,7 @@ const Home = () => {
             <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
             <Link to={buyPath('website_nav')} className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
             <a href={primaryPlatform.url} className="nav-download" download onClick={() => handleDownloadClick('nav')}>
-              <HiOutlineCloudDownload /> Download Free
+              <DownloadSimple aria-hidden="true" weight="bold" /> Download Free
             </a>
           </div>
 
@@ -314,7 +356,9 @@ const Home = () => {
             aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen((open) => !open)}
           >
-            {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+            {mobileMenuOpen
+              ? <X aria-hidden="true" weight="bold" />
+              : <List aria-hidden="true" weight="bold" />}
           </button>
         </nav>
       </motion.header>
@@ -329,10 +373,12 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="hero-badge">
-              <FaLock /> Drawing review and takeoff · Mac &amp; Windows
+              <LockKey aria-hidden="true" weight="bold" /> Drawing review and takeoff · Mac &amp; Windows
             </div>
 
-            <h1>Measure and mark up PDF drawings without another subscription.</h1>
+            <h1>
+              Measure. Mark up. <span className="hero-highlight">Skip the subscription.</span>
+            </h1>
 
             <p className="hero-subtitle">
               Calibrate scale, measure precisely, and mark up the drawings you already receive —
@@ -346,52 +392,41 @@ const Home = () => {
                 onDownload={closeMobileMenu}
                 adjacentAction={(
                   <Link to={buyPath('website_hero')} className="secondary-btn hero-buy">
-                    <FaInfinity /> Buy once — $49.99
+                    <Infinity aria-hidden="true" weight="bold" /> Buy once — $49.99
                   </Link>
                 )}
               />
             </div>
 
             <p className="hero-note">Signed, notarized builds. Start free on your own drawings — upgrade only when you need unlimited hand-created measurements.</p>
-
-            <div className="hero-stats compact-stats">
-              <div className="stat">
-                <strong>$49.99</strong>
-                <p>One payment, no renewal</p>
-              </div>
-              <div className="stat">
-                <strong>3</strong>
-                <p>Computers per license</p>
-              </div>
-              <div className="stat">
-                <strong>Mac + PC</strong>
-                <p>Use either platform in any mix</p>
-              </div>
-              <div className="stat">
-                <strong>1.x</strong>
-                <p>Every public update included</p>
-              </div>
-            </div>
           </motion.div>
 
-          <motion.figure
-            className="hero-product-shot"
-            initial={{ opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.15 }}
+          <HeroProductBoard />
+
+          <motion.div
+            className="hero-stats compact-stats"
+            aria-label="Founder license facts"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.24 }}
           >
-            <div className="shot-plate">
-              <img
-                src={shotTakeoff}
-                alt="PolyPDF 1.4 showing measured quantities beside a takeoff drawing"
-                width="1710"
-                height="1073"
-                loading="eager"
-                fetchPriority="high"
-              />
+            <div className="stat">
+              <strong>$49.99</strong>
+              <p>One payment, no renewal</p>
             </div>
-            <figcaption><strong>PolyPDF 1.4</strong> · Measurements and counts stay tied to the sheet.</figcaption>
-          </motion.figure>
+            <div className="stat">
+              <strong>3</strong>
+              <p>Computers per license</p>
+            </div>
+            <div className="stat">
+              <strong>Mac + PC</strong>
+              <p>Use either platform in any mix</p>
+            </div>
+            <div className="stat">
+              <strong>1.x</strong>
+              <p>Every public update included</p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -405,20 +440,23 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
+            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Made for real drawing work</span>
             <h2>What PolyPDF helps you do faster</h2>
             <p>Designed for architects, engineers, contractors, estimators, and reviewers working from PDF drawings.</p>
           </motion.div>
 
-          <div className="benefits-grid">
+          <div className="benefits-board">
             {benefits.map((benefit, index) => (
               <motion.article
                 key={benefit.title}
-                className="benefit-card"
+                className={`benefit-note benefit-note-${index + 1}`}
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
               >
+                <span className="paper-tape benefit-tape" aria-hidden="true" />
+                <span className="benefit-index">0{index + 1}</span>
                 <h3>{benefit.title}</h3>
                 <p>{benefit.description}</p>
               </motion.article>
@@ -435,6 +473,7 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
+            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Shipping UI, eight workflows</span>
             <h2>See PolyPDF at work</h2>
             <p>Eight workflows in PolyPDF 1.4, shown in the shipping app — screenshots, not mockups.</p>
           </motion.div>
@@ -448,6 +487,7 @@ const Home = () => {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.7, ease: [0.21, 0.65, 0.32, 1] }}
           >
+            <span className="paper-tape showcase-tape" aria-hidden="true" />
             <div className="shot-plate">
               <img src={screenshots[0].image} alt={screenshots[0].alt} loading="lazy" width={screenshots[0].width} height={screenshots[0].height} />
             </div>
@@ -473,7 +513,7 @@ const Home = () => {
                   <p>{shot.caption}</p>
                 </figcaption>
                 <motion.div
-                  className="shot-plate"
+                  className="shot-plate showcase-paper"
                   initial={{ opacity: 0, x: index % 2 === 0 ? 28 : -28 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
@@ -495,6 +535,7 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
+            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> One engine, two desktops</span>
             <h2>Desktop software for Mac and Windows.</h2>
             <p>
               PolyPDF runs the same engine as a desktop app on macOS and Windows, focused on everyday review, markup,
@@ -502,16 +543,19 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="benefits-grid">
-            <motion.article className="benefit-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="platform-ledger">
+            <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <span>01</span>
               <h3>One app, both platforms</h3>
               <p>The Mac DMG and the signed Windows installer ship the same engine at the same version — open drawings directly, no VM or browser-only workaround on either side.</p>
             </motion.article>
-            <motion.article className="benefit-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }}>
+            <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }}>
+              <span>02</span>
               <h3>AEC takeoff basics</h3>
               <p>Distance, area, perimeter, angle, count, and dimension tools are built around the PDFs architects, contractors, and estimators already exchange.</p>
             </motion.article>
-            <motion.article className="benefit-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}>
+            <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}>
+              <span>03</span>
               <h3>No annual seat timer</h3>
               <p>Try real documents for free, then unlock unlimited hand-created measurements with one direct license that covers up to 3 computers.</p>
             </motion.article>
@@ -527,15 +571,16 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
+            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Three honest steps</span>
             <h2>Try it on your workflow before you buy.</h2>
             <p>Download free, test it on your own drawings, and pay once only if you want unlimited hand-created measurements.</p>
           </motion.div>
 
-          <div className="step-grid">
+          <div className="step-path">
             {steps.map((step, index) => (
               <motion.article
                 key={step.title}
-                className="step-card"
+                className="step-path-item"
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -558,6 +603,7 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
+            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Before you download</span>
             <h2>FAQ</h2>
             <p>Short answers to the buying questions that usually block a download.</p>
           </motion.div>
@@ -588,25 +634,26 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
+            <span className="cta-sketch" aria-hidden="true" />
             <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
             <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited hand-created measurements for $49.99 only when you want to remove the cap.</p>
             <div className="cta-download-row">
               <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
               <Link to={buyPath('website_bottom_cta')} className="secondary-btn cta-mac-btn">
-                <FaInfinity /> Buy Once for $49.99
+                <Infinity aria-hidden="true" weight="bold" /> Buy Once for $49.99
               </Link>
             </div>
             <div className="trust-indicators">
               <div className="indicator">
-                <HiOutlineShieldCheck />
+                <ShieldCheck aria-hidden="true" weight="bold" />
                 <span>Signed builds — notarized on Mac, Authenticode on Windows</span>
               </div>
               <div className="indicator">
-                <FaCheckCircle />
+                <CheckCircle aria-hidden="true" weight="bold" />
                 <span>Up to 3 computers per license</span>
               </div>
               <div className="indicator">
-                <FaLock />
+                <LockKey aria-hidden="true" weight="bold" />
                 <span>Secure Stripe checkout</span>
               </div>
             </div>

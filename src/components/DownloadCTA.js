@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { HiOutlineCloudDownload } from 'react-icons/hi';
-import { FaApple, FaWindows } from 'react-icons/fa';
+import {
+  AppleLogo,
+  DownloadSimple,
+  WindowsLogo
+} from '@phosphor-icons/react';
 import { DOWNLOADS, primaryPlatform, otherPlatform, platformKnown } from '../lib/platform';
+import MagneticLink from './MagneticLink';
 
 const trackEvent = (name, properties = {}) => {
   if (window.plausible) {
@@ -12,7 +16,11 @@ const trackEvent = (name, properties = {}) => {
   }
 };
 
-const PlatformIcon = ({ platform }) => (platform.key === 'mac' ? <FaApple /> : <FaWindows />);
+const PlatformIcon = ({ platform }) => (
+  platform.key === 'mac'
+    ? <AppleLogo aria-hidden="true" weight="bold" />
+    : <WindowsLogo aria-hidden="true" weight="bold" />
+);
 
 // The free tier's one limit, stated at the control that commits to it.
 //
@@ -78,9 +86,9 @@ const DownloadCTA = ({ source, size = '', onDownload, tone = '', adjacentAction 
         <div className="dl-primary-row">
           <div className="dl-both">
             {[DOWNLOADS.mac, DOWNLOADS.windows].map((platform) => (
-              <a key={platform.key} href={platform.url} className={`primary-btn ${size}`.trim()} download onClick={() => click(platform)}>
+              <MagneticLink key={platform.key} href={platform.url} className={`primary-btn ${size}`.trim()} download onClick={() => click(platform)}>
                 <PlatformIcon platform={platform} /> Download for {platform.name}
-              </a>
+              </MagneticLink>
             ))}
           </div>
           {adjacentAction}
@@ -95,14 +103,14 @@ const DownloadCTA = ({ source, size = '', onDownload, tone = '', adjacentAction 
   return (
     <div className="dl-cta">
       <div className="dl-primary-row">
-        <a
+        <MagneticLink
           href={primaryPlatform.url}
           className={`primary-btn ${size}`.trim()}
           download
           onClick={() => click(primaryPlatform)}
         >
-          <HiOutlineCloudDownload /> Download free for {primaryPlatform.name}
-        </a>
+          <DownloadSimple aria-hidden="true" weight="bold" /> Download free for {primaryPlatform.name}
+        </MagneticLink>
         {adjacentAction}
       </div>
       <p className="dl-meta">

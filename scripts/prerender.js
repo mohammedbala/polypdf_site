@@ -91,7 +91,8 @@ require.extensions['.css'] = (module_) => {
 const MOTION_PROPS = new Set([
   'initial', 'animate', 'exit', 'transition', 'variants', 'whileHover', 'whileTap',
   'whileFocus', 'whileDrag', 'whileInView', 'viewport', 'layout', 'layoutId',
-  'onViewportEnter', 'onViewportLeave', 'drag', 'dragConstraints', 'dragElastic'
+  'onViewportEnter', 'onViewportLeave', 'drag', 'dragConstraints', 'dragElastic',
+  'style'
 ]);
 
 const buildMotionStub = () => {
@@ -114,14 +115,63 @@ const buildMotionStub = () => {
     motion: new Proxy({}, { get: (_target, tag) => staticComponent(tag) }),
     AnimatePresence: ({ children }) => children,
     MotionConfig: ({ children }) => children,
-    useReducedMotion: () => true
+    useReducedMotion: () => true,
+    useMotionValue: (value) => ({ get: () => value, set: () => undefined }),
+    useSpring: (value) => value,
+    useTransform: (value) => value
   };
 };
 
 const motionStub = buildMotionStub();
+const buildIconStub = () => {
+  const React = require('react');
+  const componentCache = new Map();
+  const iconComponent = (name) => {
+    if (!componentCache.has(name)) {
+      const Icon = React.forwardRef((props, ref) => {
+        const {
+          alt,
+          color = 'currentColor',
+          mirrored,
+          size = '1em',
+          weight,
+          ...svgProps
+        } = props;
+        return React.createElement(
+          'svg',
+          {
+            ...svgProps,
+            ref,
+            width: size,
+            height: size,
+            fill: 'none',
+            stroke: color,
+            strokeWidth: 18,
+            strokeLinecap: 'round',
+            strokeLinejoin: 'round',
+            viewBox: '0 0 256 256',
+            focusable: 'false'
+          },
+          alt ? React.createElement('title', null, alt) : null,
+          React.createElement('path', { d: 'M52 128h152M128 52v152' })
+        );
+      });
+      Icon.displayName = `${String(name)}PrerenderIcon`;
+      componentCache.set(name, Icon);
+    }
+    return componentCache.get(name);
+  };
+  return new Proxy(
+    { __esModule: true },
+    { get: (target, property) => (property in target ? target[property] : iconComponent(property)) }
+  );
+};
+
+const phosphorStub = buildIconStub();
 const originalLoad = Module._load;
 Module._load = function patchedLoad(request, parent, isMain) {
   if (request === 'framer-motion') return motionStub;
+  if (request === '@phosphor-icons/react') return phosphorStub;
   return originalLoad.call(this, request, parent, isMain);
 };
 

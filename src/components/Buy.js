@@ -2,16 +2,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  FaArrowLeft,
-  FaBolt,
-  FaCheckCircle,
-  FaEnvelope,
-  FaInfinity,
-  FaLock,
-  FaReceipt,
-  FaUndo
-} from 'react-icons/fa';
-import { HiOutlineCloudDownload, HiOutlineDesktopComputer, HiOutlineShieldCheck } from 'react-icons/hi';
+  ArrowCounterClockwise,
+  ArrowLeft,
+  CheckCircle,
+  Desktop,
+  DownloadSimple,
+  EnvelopeSimple,
+  Infinity,
+  Lightning,
+  LockKey,
+  Receipt,
+  ShieldCheck,
+  Sparkle
+} from '@phosphor-icons/react';
 import parrotIcon from '../assets/polypdf_icon.png';
 import ActivationSteps from './ActivationSteps';
 import { primaryPlatform } from '../lib/platform';
@@ -25,6 +28,7 @@ import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffe
 import { captureAttribution, checkoutAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
 import siteRelease from '../lib/siteRelease.json';
+import MagneticLink from './MagneticLink';
 
 const proFeatures = [
   'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
@@ -167,7 +171,7 @@ const Buy = ({ forceInApp = false }) => {
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">
-            <FaArrowLeft /> Back to Home
+            <ArrowLeft aria-hidden="true" weight="bold" /> Back to Home
           </Link>
         </nav>
       </header>
@@ -181,9 +185,12 @@ const Buy = ({ forceInApp = false }) => {
         <div className="container">
           <div className="buy-hero">
             <div className="hero-badge">
-              {cameFromApp ? <HiOutlineDesktopComputer /> : <FaLock />}{' '}
+              {cameFromApp
+                ? <Desktop aria-hidden="true" weight="bold" />
+                : <LockKey aria-hidden="true" weight="bold" />}{' '}
               {cameFromApp ? context.kicker : 'Secure checkout · one license for Mac & Windows'}
             </div>
+            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> One clear checkout</span>
             <h1>
               {cameFromApp
                 ? 'Keep measuring. One payment, no subscription.'
@@ -208,19 +215,20 @@ const Buy = ({ forceInApp = false }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.08 }}
             >
+              <span className="paper-tape pricing-card-tape" aria-hidden="true" />
               <div className="plan-pill plan-pill-dark">Founder's License</div>
               <h2>{commercialOffer.name}</h2>
               <p className="plan-price">$49.99</p>
               {offer.founderAvailable ? (
-                <a
+                <MagneticLink
                   ref={checkoutCtaRef}
                   href="/buy/"
                   className="primary-btn full-width"
                   onClick={handleBuyClick}
                   aria-disabled={checkoutStatus === 'loading'}
                 >
-                  <FaInfinity /> {checkoutStatus === 'loading' ? 'Opening Stripe checkout…' : 'Checkout with Stripe — $49.99'}
-                </a>
+                  <Infinity aria-hidden="true" weight="bold" /> {checkoutStatus === 'loading' ? 'Opening Stripe checkout…' : 'Checkout with Stripe — $49.99'}
+                </MagneticLink>
               ) : (
                 <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
               )}
@@ -228,16 +236,16 @@ const Buy = ({ forceInApp = false }) => {
               <ul className="plan-list buy-plan-list">
                 {proFeatures.map((feature) => (
                   <li key={feature}>
-                    <FaCheckCircle /> {feature}
+                    <CheckCircle aria-hidden="true" weight="bold" /> {feature}
                   </li>
                 ))}
               </ul>
 
               {/* The three questions asked at the button, answered at the button. */}
               <ul className="buy-assurances">
-                <li><HiOutlineShieldCheck /> Secure Stripe checkout. PolyPDF never sees your card details.</li>
-                <li><FaEnvelope /> {licenseDeliveryText}</li>
-                <li><FaUndo /> {refundSummaryText} <Link to="/refund/">Read the policy</Link>.</li>
+                <li><ShieldCheck aria-hidden="true" weight="bold" /> Secure Stripe checkout. PolyPDF never sees your card details.</li>
+                <li><EnvelopeSimple aria-hidden="true" weight="bold" /> {licenseDeliveryText}</li>
+                <li><ArrowCounterClockwise aria-hidden="true" weight="bold" /> {refundSummaryText} <Link to="/refund/">Read the policy</Link>.</li>
               </ul>
 
               <p className="plan-note">{founderRightsText}</p>
@@ -250,8 +258,9 @@ const Buy = ({ forceInApp = false }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.14 }}
             >
+              <span className="paper-tape buy-summary-tape" aria-hidden="true" />
               <div className="section-header">
-                <div className="section-icon"><FaBolt /></div>
+                <div className="section-icon"><Lightning aria-hidden="true" weight="bold" /></div>
                 <h2>{cameFromApp ? 'After you pay' : 'Before you buy'}</h2>
               </div>
 
@@ -277,7 +286,7 @@ const Buy = ({ forceInApp = false }) => {
                       download
                       onClick={() => trackEvent('download_click', { source: 'buy_page', platform: primaryPlatform.key })}
                     >
-                      <HiOutlineCloudDownload /> Prefer to test it first? Download free for {primaryPlatform.name}
+                      <DownloadSimple aria-hidden="true" weight="bold" /> Prefer to test it first? Download free for {primaryPlatform.name}
                     </a>
                   </div>
                 </>
@@ -289,7 +298,7 @@ const Buy = ({ forceInApp = false }) => {
             {!cameFromApp && (
               <section className="legal-section">
                 <div className="section-header">
-                  <div className="section-icon"><FaReceipt /></div>
+                  <div className="section-icon"><Receipt aria-hidden="true" weight="bold" /></div>
                   <h2>What happens after checkout</h2>
                 </div>
                 <ActivationSteps heading={null} />
@@ -298,7 +307,7 @@ const Buy = ({ forceInApp = false }) => {
 
             <section className="legal-section">
               <div className="section-header">
-                <div className="section-icon"><FaUndo /></div>
+                <div className="section-icon"><ArrowCounterClockwise aria-hidden="true" weight="bold" /></div>
                 <h2>Refund policy</h2>
               </div>
               <ul className="section-content">
@@ -311,7 +320,7 @@ const Buy = ({ forceInApp = false }) => {
 
             <section className="legal-section">
               <div className="section-header">
-                <div className="section-icon"><HiOutlineShieldCheck /></div>
+                <div className="section-icon"><ShieldCheck aria-hidden="true" weight="bold" /></div>
                 <h2>Private by design</h2>
               </div>
               <ul className="section-content">
@@ -322,13 +331,13 @@ const Buy = ({ forceInApp = false }) => {
 
             <section className="legal-section">
               <div className="section-header">
-                <div className="section-icon"><FaEnvelope /></div>
+                <div className="section-icon"><EnvelopeSimple aria-hidden="true" weight="bold" /></div>
                 <h2>Need help?</h2>
               </div>
               <p>Purchase, billing, and license questions can be sent to:</p>
               <div className="contact-info">
                 <a href="mailto:support@polypdf.com" className="contact-link">
-                  <FaEnvelope /> support@polypdf.com
+                  <EnvelopeSimple aria-hidden="true" weight="bold" /> support@polypdf.com
                 </a>
               </div>
             </section>
@@ -339,7 +348,7 @@ const Buy = ({ forceInApp = false }) => {
       {showStickyCheckout && offer.founderAvailable && checkoutStatus !== 'loading' && (
         <div className="buy-sticky-checkout" role="region" aria-label="Checkout">
           <button type="button" className="primary-btn" onClick={handleBuyClick}>
-            <FaLock /> Checkout with Stripe — $49.99
+            <LockKey aria-hidden="true" weight="bold" /> Checkout with Stripe — $49.99
           </button>
         </div>
       )}
