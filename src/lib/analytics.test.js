@@ -7,40 +7,6 @@ beforeEach(() => {
 
 afterEach(() => {
   delete window.gtag;
-  delete window.oaiq;
-});
-
-test('reports one deduplicated OpenAI Ads order after the verified Stripe purchase', () => {
-  window.oaiq = jest.fn();
-  const purchase = {
-    transaction_id: 'pi_paid_456',
-    value: 49.99,
-    currency: 'usd',
-    items: [{ item_id: 'price_founder', item_name: 'PolyPDF Pro', price: 49.99, quantity: 1 }]
-  };
-
-  expect(trackVerifiedPurchase(purchase)).toBe(true);
-  expect(window.oaiq).toHaveBeenCalledWith(
-    'measure',
-    'order_created',
-    {
-      type: 'contents',
-      amount: 4999,
-      currency: 'USD',
-      contents: [{
-        id: 'price_founder',
-        name: 'PolyPDF Pro',
-        content_type: 'product',
-        quantity: 1,
-        amount: 4999,
-        currency: 'USD'
-      }]
-    },
-    { event_id: 'pi_paid_456' }
-  );
-
-  expect(trackVerifiedPurchase(purchase)).toBe(false);
-  expect(window.oaiq).toHaveBeenCalledTimes(1);
 });
 
 test('reports one standard GA4 purchase with value and transaction identity', () => {

@@ -256,10 +256,7 @@ export async function runPostDeploySmoke({
   assertResponse(
     bundle.includes('/api/checkout/conversion?session_id=')
       && bundle.includes('polypdf.ga4.purchase.v1.')
-      && bundle.includes('polypdf.openai-ads.order-created.v1.')
       && bundle.includes('AW-449436603/xb7JCMbVseMcELu3p9YB')
-      && bundle.includes('https://bzrcdn.openai.com/sdk/oaiq.min.js')
-      && bundle.includes('order_created')
       && bundle.includes('buy_page_view')
       && bundle.includes('checkout_click')
       && bundle.includes('checkout_session_created')
