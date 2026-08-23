@@ -117,8 +117,8 @@ export const homeScreenshots = [
     focus: 'auto-area',
     category: 'Auto Area',
     title: 'Detect enclosed rooms with Auto Area',
-    alt: 'PolyPDF 1.4 Auto Area showing an enclosed room area with a resized cutout and helper dimensions',
-    caption: 'Follow enclosed plan linework, subtract openings with resizable cutouts, and keep exact helper dimensions visible.',
+    alt: 'PolyPDF 1.4 Auto Area previewing the detected Assembly room boundary at 135 square feet with a Space to capture room hint',
+    caption: 'Choose Area, hover inside an enclosed room, and press Space to capture the detected boundary as a measured area.',
     width: 1710,
     height: 1073
   },
@@ -390,28 +390,26 @@ export const ShowcaseMotionLayer = memo(({ motionType }) => {
       <svg className="shot-motion-layer shot-motion-auto-area" viewBox="0 0 1710 1073" aria-hidden="true">
         <defs>
           <linearGradient id="auto-area-detection-sheen" x1="0" x2="1">
-            <stop offset="0" stopColor="#73d9cf" stopOpacity="0" />
+            <stop offset="0" stopColor="#70b7ff" stopOpacity="0" />
             <stop offset="0.5" stopColor="#fbf8f1" stopOpacity="0.58" />
-            <stop offset="1" stopColor="#73d9cf" stopOpacity="0" />
+            <stop offset="1" stopColor="#70b7ff" stopOpacity="0" />
           </linearGradient>
           <mask id="auto-area-region-mask">
             <rect width="1710" height="1073" fill="black" />
-            <path fill="white" d="M560 502L685 459L827 439L980 414L1138 473Q1190 515 1190 550Q1193 596 1137 630L980 590L839 614L692 644L584 681Z" />
-            <path fill="black" d="M817 518L884 518L884 578L817 578Z" />
-            <path fill="black" d="M974 518L1047 518L1047 578L974 578Z" />
+            <path fill="white" d="M412 328H820V574H412Z" />
           </mask>
         </defs>
         <rect
           className="auto-area-detection-sweep"
-          x="260"
-          y="380"
-          width="300"
-          height="360"
+          x="300"
+          y="328"
+          width="160"
+          height="246"
           fill="url(#auto-area-detection-sheen)"
           mask="url(#auto-area-region-mask)"
         />
         {[
-          [560, 502], [980, 414], [1190, 550], [1137, 630], [692, 644], [584, 681]
+          [412, 328], [820, 328], [820, 574], [412, 574]
         ].map(([cx, cy], index) => (
           <circle
             key={`${cx}-${cy}`}

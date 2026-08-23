@@ -1588,17 +1588,17 @@
       "source": {
         "raw": {
           "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png",
-          "sha256": "e7ca07fb788e86e496fbf44794d320a8d39880b9fdf04ac175989438209df4bb",
+          "sha256": "4243b9d29076d96c801fe953ae7a33db1b24338fb3b8fe04880aa35b6e97ac1b",
           "width": 3420,
           "height": 2146
         },
         "proof": {
           "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png.theme-proof.json",
-          "sha256": "a5e842b2dced57dde1dbc809efbc21955fe09891442ccf70d32d11f36f64da0f"
+          "sha256": "9ce093a89a8626e3736012e21392eaca87443762e02dc0a495383be838eff22c"
         },
         "report": {
           "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png.theme-proof.json",
-          "sha256": "a5e842b2dced57dde1dbc809efbc21955fe09891442ccf70d32d11f36f64da0f"
+          "sha256": "9ce093a89a8626e3736012e21392eaca87443762e02dc0a495383be838eff22c"
         },
         "fingerprint": {
           "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
@@ -1616,7 +1616,7 @@
       "outputs": [
         {
           "path": "src/assets/screenshots/auto-area-v1-4-dark-web.png",
-          "sha256": "591e9a8c80c85c3a4039b36dda9a9237e7c8592c9f763e7dae4957cce567705f",
+          "sha256": "716dfacfa33059d418ae6c5e1f48cd8e1227d082c2c4f19363e400d50c338574",
           "width": 1710,
           "height": 1073,
           "derivedFrom": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png",

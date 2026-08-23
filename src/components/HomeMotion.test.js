@@ -41,6 +41,8 @@ test('motion overlays do not redraw baked dimensions, fictional map routes, or A
   expect(markup).toContain('map-insert-cursor');
   expect(markup).toContain('x="97" y="238" width="145" height="145"');
   expect(markup).toContain('auto-area-region-mask');
+  expect(markup).toContain('M412 328H820V574H412Z');
+  expect(markup).toContain('cx="412" cy="328"');
 });
 
 test('unknown motion types remain safely static', () => {

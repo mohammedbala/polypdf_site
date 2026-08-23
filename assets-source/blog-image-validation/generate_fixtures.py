@@ -214,6 +214,65 @@ def generate_takeoff(path: Path) -> None:
     c.save()
 
 
+def generate_auto_area(path: Path) -> None:
+    width, height = landscape(letter)
+    c = canvas.Canvas(str(path), pagesize=(width, height), pageCompression=1)
+    sheet_frame(
+        c,
+        width,
+        height,
+        sheet="A-104",
+        title="Auto Area - Enclosed Room Detection Study",
+        revision="A",
+        scale="1/4\" = 1'-0\"",
+    )
+    x0, y0 = 92, 148
+    building_w, building_h = 540, 324
+    c.setStrokeColor(INK)
+    c.setLineWidth(4)
+    c.rect(x0, y0, building_w, building_h, fill=0, stroke=1)
+    c.setLineWidth(2)
+    c.line(x0 + 270, y0, x0 + 270, y0 + building_h)
+    c.line(x0, y0 + 162, x0 + building_w, y0 + 162)
+    door(c, x0 + 240, y0 + 162, 30)
+    door(c, x0 + 390, y0 + 162, 30)
+
+    def corner_label(x: float, y: float, name: str, number: str) -> None:
+        c.setFillColor(INK)
+        c.setFont("Helvetica-Bold", 9)
+        c.drawString(x, y, name)
+        c.setFont("Helvetica", 7)
+        c.drawString(x, y - 11, number)
+
+    corner_label(x0 + 18, y0 + 294, "ASSEMBLY", "101")
+    corner_label(x0 + 288, y0 + 294, "WORKROOM", "102")
+    corner_label(x0 + 18, y0 + 132, "STORAGE", "103")
+    corner_label(x0 + 288, y0 + 132, "SERVICE", "104")
+    dimension(c, x0, y0, x0 + building_w, y0, "30'-0\"", offset=-30)
+    dimension(c, x0, y0, x0, y0 + building_h, "18'-0\"", offset=-34)
+
+    c.setFillColor(LIGHT)
+    c.roundRect(654, 266, 102, 206, 8, fill=1, stroke=0)
+    c.setFillColor(INK)
+    c.setFont("Helvetica-Bold", 10)
+    c.drawString(666, 448, "AUTO AREA")
+    c.setFont("Helvetica", 8)
+    c.drawString(666, 420, "Choose Area")
+    c.drawString(666, 397, "Hover in room")
+    c.drawString(666, 374, "Press Space")
+    c.setStrokeColor(BLUE)
+    c.setLineWidth(1.2)
+    c.roundRect(666, 318, 76, 31, 5, fill=0, stroke=1)
+    c.setFillColor(BLUE)
+    c.setFont("Helvetica-Bold", 8)
+    c.drawCentredString(704, 330, "BOUNDARY")
+    c.setFillColor(MUTED)
+    c.setFont("Helvetica-Oblique", 7)
+    c.drawString(666, 291, "Fictional plan for")
+    c.drawString(666, 280, "feature demonstration")
+    c.save()
+
+
 def generate_symbol_count(path: Path) -> None:
     width, height = landscape(letter)
     c = canvas.Canvas(str(path), pagesize=(width, height), pageCompression=1)
@@ -650,6 +709,7 @@ def main() -> None:
     outputs = {
         "measurement-diagnostics.pdf": generate_measurement_diagnostics,
         "takeoff-demo.pdf": generate_takeoff,
+        "auto-area-demo.pdf": generate_auto_area,
         "symbol-count-demo.pdf": generate_symbol_count,
         "markup-coordination-demo.pdf": generate_markup,
         "form-inspection-checklist.pdf": generate_form,

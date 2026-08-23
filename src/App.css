@@ -1750,8 +1750,8 @@ body {
 }
 
 .auto-area-node-pulse {
-  fill: rgba(251, 248, 241, 0.12);
-  stroke: #fbf8f1;
+  fill: rgba(112, 183, 255, 0.12);
+  stroke: #70b7ff;
   stroke-width: 2.5;
   opacity: 0;
   animation: polypdf-auto-area-node 6.8s ease-out infinite;
@@ -1825,9 +1825,9 @@ body {
 
 @keyframes polypdf-auto-area-sweep {
   0%, 12% { opacity: 0; transform: translate3d(-120px, 0, 0); }
-  20% { opacity: 0.86; transform: translate3d(-40px, 0, 0); }
-  62%, 72% { opacity: 0.86; transform: translate3d(760px, 0, 0); }
-  84%, 100% { opacity: 0; transform: translate3d(820px, 0, 0); }
+  20% { opacity: 0.78; transform: translate3d(-36px, 0, 0); }
+  62%, 72% { opacity: 0.78; transform: translate3d(610px, 0, 0); }
+  84%, 100% { opacity: 0; transform: translate3d(670px, 0, 0); }
 }
 
 @keyframes polypdf-auto-area-node {
@@ -4245,7 +4245,7 @@ h3 {
 
 .workflow-card.focus-auto-area {
   --shot-scale: 1.15;
-  --shot-origin: 18% 48%;
+  --shot-origin: 55% 48%;
 }
 
 .workflow-card.focus-sanitize {

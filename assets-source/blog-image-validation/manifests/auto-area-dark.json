@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "states": [
+    {
+      "id": "auto-area-room-detection-dark",
+      "fixturePath": "../fixtures/auto-area-demo.pdf",
+      "currentPage": 1,
+      "zoomMode": "fitPage",
+      "windowSize": { "width": 1440, "height": 960 },
+      "sidebarPanel": "measurements",
+      "selectedTool": "select",
+      "markupTable": false,
+      "settleMs": 600000,
+      "annotations": []
+    }
+  ]
+}
