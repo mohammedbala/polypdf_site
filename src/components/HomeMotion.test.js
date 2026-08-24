@@ -12,20 +12,18 @@ test('adds motion only where it can clarify real screenshot state', () => {
     'takeoff-records',
     'static',
     'static',
-    'aisc-insert',
+    'static',
     'pdf-maps',
     'auto-area',
     'static'
   ]);
 });
 
-test('motion overlays use real map and MUTCD pixels without fictional routes or redrawn geometry', () => {
+test('motion overlays avoid fictional routes and leave the full-map workflow to its verified GIF', () => {
   const markup = [
     'symbol-search',
     'takeoff-records',
     'calibration-check',
-    'aisc-insert',
-    'pdf-maps',
     'auto-area'
   ].map(renderMotion).join('\n');
 
@@ -35,22 +33,19 @@ test('motion overlays use real map and MUTCD pixels without fictional routes or 
   expect(markup).not.toContain('auto-area-trace');
   expect(markup).not.toContain('auto-area-cutout');
   expect(markup).not.toContain('placement-route');
-  expect(markup).toContain('map-placement-source-clip');
-  expect(markup).toContain('map-placement-tile');
-  expect(markup).toContain('map-insert-click');
-  expect(markup).toContain('map-insert-cursor');
-  expect(markup).toContain('map-resize-frame');
-  expect(markup).toContain('map-resize-cursor');
-  expect(markup).toContain('map-mutcd-stop-clip');
-  expect(markup).toContain('map-mutcd-yield-clip');
-  expect(markup).toContain('map-mutcd-stop');
-  expect(markup).toContain('map-mutcd-yield');
-  expect(markup).toContain('map-sign-cursor');
-  expect(markup).toContain('x="97" y="238" width="145" height="145"');
-  expect(markup).toContain('x="620" y="170" width="780" height="780"');
+  expect(renderMotion('pdf-maps')).toBe('');
   expect(markup).toContain('auto-area-region-mask');
   expect(markup).toContain('M412 328H820V574H412Z');
   expect(markup).toContain('cx="412" cy="328"');
+});
+
+test('the map workflow uses a poster plus viewport-activated animation and homepage copy contains no steel showcase', () => {
+  const mapShot = homeScreenshots.find(({ motion }) => motion === 'pdf-maps');
+
+  expect(mapShot.image).toBeTruthy();
+  expect(mapShot.animatedImage).toBeTruthy();
+  expect(mapShot.framing).toBe('focus');
+  expect(JSON.stringify(homeScreenshots).toLowerCase()).not.toContain('steel');
 });
 
 test('unknown motion types remain safely static', () => {

@@ -39,7 +39,7 @@ import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 const proFeatures = [
   'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
   'Symbol Search automatic counting and every installed plugin workflow',
-  'PDF Maps, AISC Steel Sections, and Professional Seal Maker included',
+  'PDF Maps, Professional Seal Maker, and packages you install yourself',
   `${commercialOffer.price} once with no subscription renewal`,
   'Use your license on up to 3 computers — Mac or Windows, in any mix',
   'Secure Stripe checkout with license delivery by email',
@@ -66,7 +66,7 @@ const IN_APP_CONTEXT = {
   },
   plugins: {
     kicker: 'Plugins are available with PolyPDF Pro',
-    lede: 'Pro unlocks installed plugin workflows for PDF Maps, AISC steel sections, professional seals, and packages you install yourself. The same license also removes the 3-measurement cap and unlocks Symbol Search.'
+    lede: 'Pro unlocks installed plugin workflows for PDF Maps, professional seals, and packages you install yourself. The same license also removes the 3-measurement cap and unlocks Symbol Search.'
   },
   license_window: {
     kicker: 'Upgrade to PolyPDF Pro',

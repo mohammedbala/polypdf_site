@@ -1669,9 +1669,6 @@ body {
 .symbol-count-ripple,
 .calibration-endpoint,
 .calibration-status-ring,
-.plugin-handle-glint,
-.map-insert-click,
-.map-sign-click,
 .auto-area-node-pulse {
   transform-box: fill-box;
   transform-origin: center;
@@ -1740,107 +1737,6 @@ body {
   animation: polypdf-calibration-cursor 6.4s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
 }
 
-.plugin-handle-glint {
-  fill: rgba(115, 217, 207, 0.12);
-  stroke: #73d9cf;
-  stroke-width: 2.5;
-  opacity: 0;
-  animation: polypdf-plugin-handle 5.4s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
-  animation-delay: calc(var(--motion-index) * 0.16s);
-}
-
-.map-placement-tile {
-  transform-box: view-box;
-  transform-origin: 0 0;
-  opacity: 0;
-  will-change: transform, opacity;
-  animation: polypdf-map-place 9.6s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
-}
-
-.map-insert-click {
-  fill: rgba(115, 217, 207, 0.14);
-  stroke: #73d9cf;
-  stroke-width: 3;
-  opacity: 0;
-  animation: polypdf-map-insert-click 9.6s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
-}
-
-.map-insert-cursor,
-.map-resize-cursor,
-.map-sign-cursor {
-  fill: #fbf8f1;
-  stroke: #242424;
-  stroke-width: 2.5;
-  stroke-linejoin: round;
-  opacity: 0;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.34));
-  transform-box: view-box;
-  transform-origin: 0 0;
-}
-
-.map-insert-cursor {
-  animation: polypdf-map-insert-cursor 9.6s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
-}
-
-.map-resize-frame {
-  transform-box: view-box;
-  transform-origin: 0 0;
-  opacity: 0;
-  will-change: transform, opacity;
-  animation: polypdf-map-resize-frame 9.6s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
-}
-
-.map-resize-outline {
-  fill: none;
-  stroke: #73d9cf;
-  stroke-width: 3;
-  stroke-dasharray: 12 8;
-}
-
-.map-resize-handle {
-  fill: #fbf8f1;
-  stroke: #176b71;
-  stroke-width: 3;
-}
-
-.map-resize-cursor {
-  animation: polypdf-map-resize-cursor 9.6s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
-}
-
-.map-mutcd-sign {
-  transform-box: view-box;
-  transform-origin: 0 0;
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-.map-mutcd-stop {
-  animation: polypdf-map-stop-sign 9.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-}
-
-.map-mutcd-yield {
-  animation: polypdf-map-yield-sign 9.6s cubic-bezier(0.16, 1, 0.3, 1) infinite;
-}
-
-.map-sign-click {
-  fill: rgba(115, 217, 207, 0.12);
-  stroke: #73d9cf;
-  stroke-width: 3;
-  opacity: 0;
-}
-
-.map-sign-click-stop {
-  animation: polypdf-map-stop-click 9.6s ease-out infinite;
-}
-
-.map-sign-click-yield {
-  animation: polypdf-map-yield-click 9.6s ease-out infinite;
-}
-
-.map-sign-cursor {
-  animation: polypdf-map-sign-cursor 9.6s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
-}
-
 .auto-area-detection-sweep {
   opacity: 0;
   animation: polypdf-auto-area-sweep 6.8s cubic-bezier(0.21, 0.65, 0.32, 1) infinite;
@@ -1892,84 +1788,6 @@ body {
   68%, 100% { opacity: 0; transform: translate3d(0, 326px, 0); }
 }
 
-@keyframes polypdf-plugin-handle {
-  0%, 12% { opacity: 0; transform: scale(0.45); }
-  20%, 31% { opacity: 0.95; transform: scale(1); }
-  42%, 100% { opacity: 0; transform: scale(1.5); }
-}
-
-@keyframes polypdf-map-place {
-  0%, 18% { opacity: 0; transform: translate3d(0, 0, 0) scale(1); }
-  21% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
-  34%, 43% { opacity: 1; transform: translate3d(1064px, 11px, 0) scale(1.76); }
-  60%, 92% { opacity: 1; transform: translate3d(98px, -1110px, 0) scale(5.38); }
-  98%, 100% { opacity: 0; transform: translate3d(98px, -1110px, 0) scale(5.38); }
-}
-
-@keyframes polypdf-map-insert-click {
-  0%, 13% { opacity: 0; transform: scale(0.5); }
-  17% { opacity: 0.96; transform: scale(1); }
-  24%, 100% { opacity: 0; transform: scale(1.75); }
-}
-
-@keyframes polypdf-map-insert-cursor {
-  0%, 6% { opacity: 0; transform: translate3d(226px, 955px, 0) scale(0.72); }
-  10% { opacity: 1; transform: translate3d(226px, 955px, 0) scale(0.72); }
-  16% { opacity: 1; transform: translate3d(255px, 1007px, 0) scale(0.72); }
-  18% { opacity: 1; transform: translate3d(255px, 1007px, 0) scale(0.62); }
-  23%, 100% { opacity: 0; transform: translate3d(255px, 1007px, 0) scale(0.72); }
-}
-
-@keyframes polypdf-map-resize-frame {
-  0%, 32% { opacity: 0; transform: translate3d(1032px, 374px, 0) scale(0.327); }
-  36%, 43% { opacity: 1; transform: translate3d(1032px, 374px, 0) scale(0.327); }
-  60%, 64% { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
-  69%, 100% { opacity: 0; transform: translate3d(0, 0, 0) scale(1); }
-}
-
-@keyframes polypdf-map-resize-cursor {
-  0%, 38% { opacity: 0; transform: translate3d(1485px, 678px, 0) scale(0.72); }
-  42% { opacity: 1; transform: translate3d(1485px, 678px, 0) scale(0.72); }
-  46% { opacity: 1; transform: translate3d(1485px, 678px, 0) scale(0.62); }
-  60% { opacity: 1; transform: translate3d(1394px, 943px, 0) scale(0.72); }
-  65%, 100% { opacity: 0; transform: translate3d(1394px, 943px, 0) scale(0.72); }
-}
-
-@keyframes polypdf-map-stop-sign {
-  0%, 65% { opacity: 0; transform: translate3d(-264px, 32px, 0) scale(0.7) rotate(-7deg); }
-  70% { opacity: 1; transform: translate3d(-162px, 22px, 0) scale(0.98) rotate(2deg); }
-  74%, 92% { opacity: 1; transform: translate3d(-149px, 21px, 0) scale(0.96) rotate(0deg); }
-  98%, 100% { opacity: 0; transform: translate3d(-149px, 21px, 0) scale(0.96) rotate(0deg); }
-}
-
-@keyframes polypdf-map-yield-sign {
-  0%, 73% { opacity: 0; transform: translate3d(948px, 250px, 0) scale(1.9) rotate(7deg); }
-  78% { opacity: 1; transform: translate3d(732px, -109px, 0) scale(3.4) rotate(-2deg); }
-  82%, 92% { opacity: 1; transform: translate3d(761px, -61px, 0) scale(3.2) rotate(0deg); }
-  98%, 100% { opacity: 0; transform: translate3d(761px, -61px, 0) scale(3.2) rotate(0deg); }
-}
-
-@keyframes polypdf-map-stop-click {
-  0%, 65% { opacity: 0; transform: scale(0.45); }
-  69% { opacity: 0.95; transform: scale(1); }
-  74%, 100% { opacity: 0; transform: scale(1.8); }
-}
-
-@keyframes polypdf-map-yield-click {
-  0%, 74% { opacity: 0; transform: scale(0.45); }
-  78% { opacity: 0.95; transform: scale(1); }
-  83%, 100% { opacity: 0; transform: scale(1.8); }
-}
-
-@keyframes polypdf-map-sign-cursor {
-  0%, 63% { opacity: 0; transform: translate3d(780px, 530px, 0) scale(0.72); }
-  66% { opacity: 1; transform: translate3d(780px, 530px, 0) scale(0.72); }
-  69% { opacity: 1; transform: translate3d(804px, 600px, 0) scale(0.62); }
-  73% { opacity: 1; transform: translate3d(910px, 625px, 0) scale(0.72); }
-  77% { opacity: 1; transform: translate3d(1215px, 694px, 0) scale(0.62); }
-  82%, 100% { opacity: 0; transform: translate3d(1215px, 694px, 0) scale(0.72); }
-}
-
 @keyframes polypdf-auto-area-sweep {
   0%, 12% { opacity: 0; transform: translate3d(-120px, 0, 0); }
   20% { opacity: 0.78; transform: translate3d(-36px, 0, 0); }
@@ -1994,37 +1812,6 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .shot-motion-layer {
     display: none;
-  }
-
-  .shot-motion-layer.shot-motion-map {
-    display: block;
-  }
-
-  .shot-motion-map .map-placement-tile {
-    animation: none;
-    opacity: 1;
-    transform: translate3d(98px, -1110px, 0) scale(5.38);
-  }
-
-  .shot-motion-map .map-insert-click,
-  .shot-motion-map .map-insert-cursor,
-  .shot-motion-map .map-resize-frame,
-  .shot-motion-map .map-resize-cursor,
-  .shot-motion-map .map-sign-click,
-  .shot-motion-map .map-sign-cursor {
-    display: none;
-  }
-
-  .shot-motion-map .map-mutcd-stop {
-    animation: none;
-    opacity: 1;
-    transform: translate3d(-149px, 21px, 0) scale(0.96);
-  }
-
-  .shot-motion-map .map-mutcd-yield {
-    animation: none;
-    opacity: 1;
-    transform: translate3d(761px, -61px, 0) scale(3.2);
   }
 
   .shot-plate,
@@ -4396,14 +4183,14 @@ h3 {
   --shot-origin: 50% 12%;
 }
 
-.workflow-card.focus-aisc {
-  --shot-scale: 1.18;
-  --shot-origin: 0% 38%;
+.workflow-card.focus-compare {
+  --shot-scale: 1.08;
+  --shot-origin: 50% 47%;
 }
 
 .workflow-card.focus-pdf-maps {
-  --shot-scale: 1.08;
-  --shot-origin: 0% 50%;
+  --shot-scale: 1.04;
+  --shot-origin: 50% 50%;
 }
 
 .workflow-card.focus-auto-area {

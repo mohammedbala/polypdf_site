@@ -1,0 +1,12 @@
+{
+  "duration": 8.6,
+  "maxStaticSec": 1.35,
+  "assertions": [
+    {"kind": "appearsBy", "selector": "#map-frame", "bySec": 1.3},
+    {"kind": "before", "a": "#map-frame", "b": "#stop-sign"},
+    {"kind": "before", "a": "#stop-sign", "b": "#yield-sign"},
+    {"kind": "staysInFrame", "selector": "#map-frame"},
+    {"kind": "staysInFrame", "selector": "#workflow-cursor"},
+    {"kind": "keepsMoving", "withinSelector": "#map-workflow-clip"}
+  ]
+}

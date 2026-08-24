@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1710, height=1073">
+    <title>PolyPDF full map plan workflow</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 1710px;
+        height: 1073px;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        background: #151515;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      #map-workflow-stage,
+      #map-workflow-clip,
+      .base-frame,
+      .motion-layer {
+        position: absolute;
+        inset: 0;
+        width: 1710px;
+        height: 1073px;
+      }
+
+      #map-workflow-stage {
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .base-frame {
+        display: block;
+        object-fit: fill;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .plan-sheet {
+        position: absolute;
+        left: 452px;
+        top: 153px;
+        width: 1123px;
+        height: 853px;
+        overflow: hidden;
+        background: #fff;
+        border: 2px solid #2c3944;
+        color: #1f2933;
+      }
+
+      .plan-sheet::before {
+        position: absolute;
+        inset: 18px 18px 114px;
+        border: 1px solid #a8b2ba;
+        content: "";
+      }
+
+      .sheet-kicker {
+        position: absolute;
+        left: 38px;
+        top: 31px;
+        z-index: 3;
+        padding: 7px 11px 6px;
+        border: 1px solid rgba(31, 41, 51, 0.34);
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.93);
+        font-size: 12px;
+        font-weight: 750;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+      }
+
+      .map-frame {
+        position: absolute;
+        left: 25px;
+        top: 17px;
+        z-index: 2;
+        width: 1070px;
+        height: 704px;
+        overflow: visible;
+        opacity: 0;
+        transform-origin: 0 0;
+        will-change: transform, opacity;
+      }
+
+      .map-viewport {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background: #e9eef3;
+        border: 3px solid #6f9ff5;
+        box-shadow: 0 10px 28px rgba(21, 28, 34, 0.18);
+      }
+
+      .map-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .north-arrow {
+        position: absolute;
+        right: 24px;
+        top: 24px;
+        display: grid;
+        width: 46px;
+        height: 62px;
+        place-items: start center;
+        padding-top: 7px;
+        border: 1px solid rgba(20, 32, 41, 0.65);
+        background: rgba(255, 255, 255, 0.9);
+        color: #17232b;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .north-arrow::after {
+        position: absolute;
+        left: 15px;
+        top: 25px;
+        width: 0;
+        height: 0;
+        border-right: 8px solid transparent;
+        border-bottom: 23px solid #17232b;
+        border-left: 8px solid transparent;
+        content: "";
+      }
+
+      .map-scale {
+        position: absolute;
+        left: 25px;
+        bottom: 25px;
+        width: 174px;
+        padding: 7px 10px 6px;
+        border: 1px solid rgba(20, 32, 41, 0.65);
+        background: rgba(255, 255, 255, 0.92);
+        color: #17232b;
+        font-size: 11px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .map-scale::before {
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin-bottom: 5px;
+        background: linear-gradient(90deg, #17232b 0 25%, #fff 25% 50%, #17232b 50% 75%, #fff 75%);
+        border: 1px solid #17232b;
+        content: "";
+      }
+
+      .resize-handle {
+        position: absolute;
+        z-index: 5;
+        width: 15px;
+        height: 15px;
+        border: 2px solid #6f9ff5;
+        border-radius: 2px;
+        background: #fff;
+      }
+
+      .handle-tl { left: -7px; top: -7px; }
+      .handle-tr { right: -7px; top: -7px; }
+      .handle-bl { left: -7px; bottom: -7px; }
+      .handle-br { right: -7px; bottom: -7px; }
+      .handle-tm { left: calc(50% - 7px); top: -7px; }
+      .handle-bm { left: calc(50% - 7px); bottom: -7px; }
+      .handle-ml { left: -7px; top: calc(50% - 7px); }
+      .handle-mr { right: -7px; top: calc(50% - 7px); }
+
+      .title-block {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 17px;
+        display: grid;
+        grid-template-columns: 1.55fr 0.75fr 0.42fr;
+        height: 96px;
+        border: 1px solid #2c3944;
+        background: #fff;
+      }
+
+      .title-block > div {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        justify-content: center;
+        padding: 12px 16px;
+      }
+
+      .title-block > div + div {
+        border-left: 1px solid #2c3944;
+      }
+
+      .title-block strong {
+        font-size: 17px;
+        line-height: 1.1;
+        letter-spacing: 0.01em;
+      }
+
+      .title-block span {
+        margin-top: 7px;
+        color: #53606a;
+        font-size: 12px;
+        line-height: 1.25;
+      }
+
+      .title-block .sheet-number {
+        align-items: center;
+        font-size: 25px;
+        font-weight: 800;
+      }
+
+      .mutcd-panel {
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        display: block;
+        width: 1710px;
+        height: 1073px;
+        opacity: 0;
+        clip-path: polygon(0 80px, 314px 80px, 314px 1041px, 0 1041px);
+        object-fit: fill;
+        pointer-events: none;
+      }
+
+      .placed-sign {
+        position: absolute;
+        z-index: 8;
+        opacity: 0;
+        transform-origin: 50% 50%;
+        will-change: transform, opacity;
+      }
+
+      #stop-sign {
+        left: 670px;
+        top: 335px;
+        width: 76px;
+        height: 76px;
+      }
+
+      #yield-sign {
+        left: 324px;
+        top: 520px;
+        width: 78px;
+        height: 70px;
+      }
+
+      .placed-sign img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .sign-selection {
+        position: absolute;
+        inset: -8px;
+        opacity: 0;
+        border: 2px dashed #6f9ff5;
+      }
+
+      .sign-selection::before,
+      .sign-selection::after {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #6f9ff5;
+        background: #fff;
+        content: "";
+      }
+
+      .sign-selection::before { left: -6px; top: -6px; }
+      .sign-selection::after { right: -6px; bottom: -6px; }
+
+      .cursor {
+        position: absolute;
+        left: -3px;
+        top: -3px;
+        z-index: 20;
+        width: 30px;
+        height: 38px;
+        opacity: 0;
+        pointer-events: none;
+        filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.34));
+        will-change: transform, opacity;
+      }
+
+      .cursor svg {
+        display: block;
+        width: 30px;
+        height: 38px;
+        overflow: visible;
+      }
+
+      .cursor path {
+        fill: #fff;
+        stroke: #151515;
+        stroke-width: 1.8px;
+        stroke-linejoin: round;
+        vector-effect: non-scaling-stroke;
+      }
+
+      .cursor-ripple {
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        width: 24px;
+        height: 24px;
+        opacity: 0;
+        border: 2px solid #6f9ff5;
+        border-radius: 999px;
+        transform: scale(0.25);
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-iob9" id="map-workflow-stage" data-composition-id="polypdf-map-workflow" data-start="0" data-duration="8.6" data-fps="30" data-width="1710" data-height="1073" aria-label="PolyPDF inserts and resizes a full map plan, then adds MUTCD traffic signs">
+      <div data-hf-id="hf-qlwb" id="map-workflow-clip" class="clip" data-start="0" data-duration="8.6" data-track-index="0">
+        <img data-hf-id="hf-xzny" class="base-frame" src="assets/polypdf-pdf-maps-ui.png" width="1710" height="1073" alt="" aria-hidden="true" draggable="false">
+
+        <div data-hf-id="hf-l250" class="motion-layer" data-layout-allow-overlap="">
+          <section data-hf-id="hf-uhvq" class="plan-sheet" aria-label="Traffic control map plan document">
+            <div data-hf-id="hf-hmlo" class="sheet-kicker">Illustrative map plan</div>
+
+            <div data-hf-id="hf-9loi" id="map-frame" class="map-frame">
+              <div data-hf-id="hf-0xsl" class="map-viewport">
+                <img data-hf-id="hf-ihyl" class="map-image" src="assets/new-york-map-full.png" width="1280" height="840" alt="">
+                <div data-hf-id="hf-e7xd" class="north-arrow">N</div>
+                <div data-hf-id="hf-asnu" class="map-scale">0&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;500 ft</div>
+              </div>
+              <i data-hf-id="hf-yen0" class="resize-handle handle-tl"></i>
+              <i data-hf-id="hf-5fm2" class="resize-handle handle-tr"></i>
+              <i data-hf-id="hf-yari" class="resize-handle handle-bl"></i>
+              <i data-hf-id="hf-xacd" id="resize-handle" class="resize-handle handle-br"></i>
+              <i data-hf-id="hf-z6at" class="resize-handle handle-tm"></i>
+              <i data-hf-id="hf-28vj" class="resize-handle handle-bm"></i>
+              <i data-hf-id="hf-2ikv" class="resize-handle handle-ml"></i>
+              <i data-hf-id="hf-fsr5" class="resize-handle handle-mr"></i>
+
+              <div data-hf-id="hf-mqw1" id="stop-sign" class="placed-sign">
+                <img data-hf-id="hf-3m9i" src="assets/r1-1.svg" width="1296" height="1296" alt="">
+                <span data-hf-id="hf-mzun" class="sign-selection"></span>
+              </div>
+              <div data-hf-id="hf-fcea" id="yield-sign" class="placed-sign">
+                <img data-hf-id="hf-kiba" src="assets/r1-2.svg" width="1139" height="1015" alt="">
+                <span data-hf-id="hf-k6pr" class="sign-selection"></span>
+              </div>
+            </div>
+
+            <footer data-hf-id="hf-2fl0" class="title-block">
+              <div data-hf-id="hf-yeow">
+                <strong data-hf-id="hf-xhcd">TRAFFIC CONTROL PLAN · LOWER MANHATTAN</strong>
+                <span data-hf-id="hf-hv3x">PDF Maps base · MUTCD R1-1 Stop and R1-2 Yield symbols</span>
+              </div>
+              <div data-hf-id="hf-y7yw">
+                <strong data-hf-id="hf-cu12">PLAN VIEW</strong>
+                <span data-hf-id="hf-xc5e">SCALE: MAP&#160;&#160;·&#160;&#160;REV: 1</span>
+              </div>
+              <div data-hf-id="hf-hux0" class="sheet-number">TC-01</div>
+            </footer>
+          </section>
+
+          <img data-hf-id="hf-p39q" id="mutcd-panel" class="mutcd-panel" src="assets/polypdf-mutcd-tools-ui.png" width="1710" height="1073" alt="" aria-hidden="true" draggable="false">
+
+          <div data-hf-id="hf-db09" id="workflow-cursor" class="cursor" aria-hidden="true">
+            <span data-hf-id="hf-bfpa" class="cursor-ripple"></span>
+            <svg data-hf-id="hf-y9f5" viewBox="0 0 24 24">
+              <path data-hf-id="hf-5lwp" d="M3 2.8 20.6 14 12.8 15.5 9 22 3 2.8Z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var tl = gsap.timeline({ paused: true });
+        gsap.set("#workflow-cursor", { x: 212, y: 904, opacity: 0, transformOrigin: "8px 8px" });
+        gsap.set("#map-frame", { x: 176, y: 122, scale: 0.58, opacity: 0, transformOrigin: "0 0" });
+        gsap.set("#stop-sign", { x: -1082, y: -284, scale: 0.54, opacity: 0 });
+        gsap.set("#yield-sign", { x: -673, y: -468, scale: 0.5, opacity: 0 });
+        gsap.set(".sign-selection", { opacity: 0 });
+
+        tl.to("#workflow-cursor", { opacity: 1, duration: 0.12, ease: "none" }, 0.25);
+        tl.to("#workflow-cursor", { x: 266, y: 1015, duration: 0.5, ease: "power2.inOut" }, 0.3);
+        tl.to("#workflow-cursor", { scale: 0.88, duration: 0.08, ease: "none" }, 0.8);
+        tl.to("#workflow-cursor", { scale: 1, duration: 0.12, ease: "back.out(2)" }, 0.88);
+        tl.fromTo(".cursor-ripple", { opacity: 0.85, scale: 0.25 }, { opacity: 0, scale: 2.1, duration: 0.34, ease: "power2.out", immediateRender: false }, 0.82);
+
+        tl.fromTo("#map-frame", { x: 176, y: 122, scale: 0.54, opacity: 0 }, { x: 176, y: 122, scale: 0.58, opacity: 1, duration: 0.32, ease: "back.out(1.7)", immediateRender: false }, 1.08);
+        tl.to("#workflow-cursor", { x: 1272, y: 700, duration: 0.62, ease: "power2.inOut" }, 1.16);
+        tl.to("#workflow-cursor", { scale: 0.88, duration: 0.08, ease: "none" }, 1.7);
+        tl.to("#workflow-cursor", { x: 1547, y: 873, scale: 0.88, duration: 1.48, ease: "power2.inOut" }, 1.78);
+        tl.to("#map-frame", { x: 0, y: 0, scale: 1, duration: 1.48, ease: "power2.inOut" }, 1.78);
+        tl.to("#workflow-cursor", { scale: 1, duration: 0.16, ease: "back.out(2)" }, 3.26);
+        tl.fromTo(".cursor-ripple", { opacity: 0.8, scale: 0.25 }, { opacity: 0, scale: 2.1, duration: 0.34, ease: "power2.out", immediateRender: false }, 3.23);
+        tl.to(".resize-handle", { opacity: 0, duration: 0.24, ease: "power2.out" }, 3.38);
+        tl.to(".map-viewport", { borderColor: "rgba(44,57,68,0.34)", boxShadow: "0 3px 10px rgba(21,28,34,0.12)", duration: 0.24, ease: "power2.out" }, 3.38);
+
+        tl.to("#mutcd-panel", { opacity: 1, duration: 0.28, ease: "power2.inOut" }, 3.48);
+        tl.to("#workflow-cursor", { x: 82, y: 239, duration: 0.58, ease: "power2.inOut" }, 3.54);
+        tl.to("#workflow-cursor", { scale: 0.88, duration: 0.08, ease: "none" }, 4.12);
+        tl.set("#stop-sign", { opacity: 0.82 }, 4.16);
+        tl.to("#workflow-cursor", { x: 1147, y: 518, scale: 0.88, duration: 0.88, ease: "power2.inOut" }, 4.2);
+        tl.to("#stop-sign", { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.88, ease: "power2.inOut" }, 4.2);
+        tl.to("#workflow-cursor", { scale: 1, duration: 0.14, ease: "back.out(2)" }, 5.08);
+        tl.fromTo("#stop-sign .sign-selection", { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "none", immediateRender: false }, 5.08);
+        tl.fromTo(".cursor-ripple", { opacity: 0.8, scale: 0.25 }, { opacity: 0, scale: 2.1, duration: 0.34, ease: "power2.out", immediateRender: false }, 5.04);
+
+        tl.to("#workflow-cursor", { x: 144, y: 239, duration: 0.46, ease: "power2.inOut" }, 5.26);
+        tl.to("#workflow-cursor", { scale: 0.88, duration: 0.08, ease: "none" }, 5.7);
+        tl.set("#yield-sign", { opacity: 0.82 }, 5.74);
+        tl.to("#workflow-cursor", { x: 802, y: 707, scale: 0.88, duration: 0.81, ease: "power2.inOut" }, 5.78);
+        tl.to("#yield-sign", { x: 0, y: 0, scale: 1, opacity: 1, duration: 0.81, ease: "power2.inOut" }, 5.78);
+        tl.to("#workflow-cursor", { scale: 1, duration: 0.14, ease: "back.out(2)" }, 6.6);
+        tl.to("#stop-sign .sign-selection", { opacity: 0, duration: 0.16, ease: "none" }, 6.52);
+        tl.fromTo("#yield-sign .sign-selection", { opacity: 0 }, { opacity: 1, duration: 0.12, ease: "none", immediateRender: false }, 6.6);
+        tl.fromTo(".cursor-ripple", { opacity: 0.8, scale: 0.25 }, { opacity: 0, scale: 2.1, duration: 0.34, ease: "power2.out", immediateRender: false }, 6.56);
+        tl.to("#yield-sign .sign-selection", { opacity: 0, duration: 0.18, ease: "none" }, 6.88);
+        tl.to("#workflow-cursor", { x: 1510, y: 930, opacity: 0.28, duration: 0.46, ease: "power2.out" }, 6.78);
+
+        tl.to({}, { duration: 0.95 }, 7.24);
+        tl.to(["#map-frame", "#mutcd-panel", "#stop-sign", "#yield-sign", "#workflow-cursor"], { opacity: 0, duration: 0.28, ease: "power2.in" }, 8.15);
+        tl.to({}, { duration: 0.17 }, 8.43);
+
+        window.__timelines = window.__timelines || {};
+        window.__timelines["polypdf-map-workflow"] = tl;
+      })();
+    </script>
+  </body>
+</html>

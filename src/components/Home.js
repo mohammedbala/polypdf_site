@@ -26,13 +26,13 @@ import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffe
 import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
 import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
 import shotTakeoffSnapping from '../assets/screenshots/takeoff-snapping-v1-4.gif';
-import shotAiscPlugin from '../assets/screenshots/plugins-aisc-w24x55-result-v1-4-dark-web.png';
-import shotPdfMaps from '../assets/screenshots/pdf-maps-v1-4-dark-web.png';
-import shotMutcd from '../assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png';
+import shotCompare from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web.png';
 import shotAutoArea from '../assets/screenshots/auto-area-v1-4-dark-web.png';
 import shotOcrSearch from '../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png';
 import shotCustomShortcuts from '../assets/screenshots/custom-shortcuts-v1-4-light-web.png';
 import shotSanitize from '../assets/screenshots/sanitize-options-v1-4-light-web.png';
+import shotPdfMapsMotion from '../assets/motion/pdf-map-plan-v1-4.gif';
+import shotPdfMapsPoster from '../assets/motion/pdf-map-plan-v1-4-poster.png';
 
 // Every source is a full-frame capture of the shipping PolyPDF 1.4 app. Focused cards crop only
 // at presentation time so the important controls read clearly without manufacturing replacement UI.
@@ -88,21 +88,20 @@ export const homeScreenshots = [
     height: 1073
   },
   {
-    image: shotAiscPlugin,
-    motion: 'aisc-insert',
+    image: shotCompare,
     theme: 'dark',
     framing: 'focus',
-    focus: 'aisc',
-    category: 'Plugins',
-    access: 'Pro',
-    title: 'Plugin output stays editable on the PDF',
-    alt: 'PolyPDF Plugins sidebar beside a selected W24×55 steel section placed on the drawing',
-    caption: 'The AISC plugin places a W24×55 section as an editable vector you can move and resize on the drawing.',
+    focus: 'compare',
+    category: 'Compare',
+    title: 'Turn drawing changes into review-ready markups',
+    alt: 'PolyPDF Compare Documents showing four editable purple revision clouds and their matching Markup Table records',
+    caption: 'Compare two revisions, inspect the detected changes as editable clouds, and track every result in the Markup Table.',
     width: 1710,
     height: 1073
   },
   {
-    image: shotPdfMaps,
+    image: shotPdfMapsPoster,
+    animatedImage: shotPdfMapsMotion,
     motion: 'pdf-maps',
     theme: 'dark',
     framing: 'focus',
@@ -160,7 +159,7 @@ const freeFeatures = [
 
 const proFeatures = [
   'Unlock unlimited hand-created measurements across all of your documents',
-  'Use Symbol Search auto-count and installed plugins, including PDF Maps, AISC sections, and Professional Seal Maker',
+  'Use Symbol Search auto-count and installed plugins, including PDF Maps and Professional Seal Maker',
   `Pay ${commercialOffer.price} once for PolyPDF 1.x on up to 3 computers — Mac or Windows`,
   'Keep PolyPDF 1.x forever, with every public 1.x update included',
   'Secure Stripe checkout with license delivery by email'
@@ -236,7 +235,7 @@ export const homeFaqs = [
   },
   {
     question: 'What does the $49.99 license unlock?',
-    answer: `The Founder's License removes the hand-created measurement limit and unlocks Symbol Search plus installed plugins such as PDF Maps, AISC Steel Sections, and Professional Seal Maker. ${founderRightsText}`
+    answer: `The Founder's License removes the hand-created measurement limit and unlocks Symbol Search plus installed plugins such as PDF Maps and Professional Seal Maker. ${founderRightsText}`
   },
   {
     question: 'Is this a subscription?',
@@ -345,97 +344,6 @@ export const ShowcaseMotionLayer = memo(({ motionType }) => {
     );
   }
 
-  if (motionType === 'aisc-insert') {
-    return (
-      <svg className="shot-motion-layer shot-motion-aisc" viewBox="0 0 1710 1073" aria-hidden="true">
-        {[
-          [581, 464], [615, 464], [649, 464], [581, 570],
-          [649, 570], [581, 674], [615, 674], [649, 674]
-        ].map(([x, y], index) => (
-          <circle
-            key={`${x}-${y}`}
-            className="plugin-handle-glint"
-            cx={x}
-            cy={y}
-            r="16"
-            style={{ '--motion-index': index }}
-          />
-        ))}
-      </svg>
-    );
-  }
-
-  if (motionType === 'pdf-maps') {
-    return (
-      <svg className="shot-motion-layer shot-motion-map" viewBox="0 0 1710 1073" aria-hidden="true">
-        <defs>
-          <clipPath id="map-placement-source-clip">
-            <rect x="97" y="238" width="145" height="145" rx="8" />
-          </clipPath>
-          <clipPath id="map-mutcd-stop-clip">
-            <path d="M983 578H1041L1064 601V661L1041 684H983L960 661V601Z" />
-          </clipPath>
-          <clipPath id="map-mutcd-yield-clip">
-            <path d="M128 222H160L144 256Z" />
-          </clipPath>
-        </defs>
-        <image
-          className="map-placement-tile"
-          href={shotPdfMaps}
-          x="0"
-          y="0"
-          width="1710"
-          height="1073"
-          preserveAspectRatio="none"
-          clipPath="url(#map-placement-source-clip)"
-        />
-        <g className="map-resize-frame">
-          <rect className="map-resize-outline" x="620" y="170" width="780" height="780" rx="7" />
-          {[
-            [620, 170], [1400, 170], [620, 950], [1400, 950]
-          ].map(([cx, cy]) => (
-            <circle key={`${cx}-${cy}`} className="map-resize-handle" cx={cx} cy={cy} r="7" />
-          ))}
-        </g>
-        <circle className="map-insert-click" cx="263" cy="1017" r="16" />
-        <path
-          className="map-insert-cursor"
-          d="M0 0V34L8.5 25.5L16 43L24 39.5L16.5 22H30Z"
-        />
-        <path
-          className="map-resize-cursor"
-          d="M0 0V34L8.5 25.5L16 43L24 39.5L16.5 22H30Z"
-        />
-        <image
-          className="map-mutcd-sign map-mutcd-stop"
-          href={shotMutcd}
-          x="0"
-          y="0"
-          width="1710"
-          height="1073"
-          preserveAspectRatio="none"
-          clipPath="url(#map-mutcd-stop-clip)"
-        />
-        <image
-          className="map-mutcd-sign map-mutcd-yield"
-          href={shotMutcd}
-          x="0"
-          y="0"
-          width="1710"
-          height="1073"
-          preserveAspectRatio="none"
-          clipPath="url(#map-mutcd-yield-clip)"
-        />
-        <circle className="map-sign-click map-sign-click-stop" cx="811" cy="610" r="18" />
-        <circle className="map-sign-click map-sign-click-yield" cx="1222" cy="704" r="18" />
-        <path
-          className="map-sign-cursor"
-          d="M0 0V34L8.5 25.5L16 43L24 39.5L16.5 22H30Z"
-        />
-      </svg>
-    );
-  }
-
   if (motionType === 'auto-area') {
     return (
       <svg className="shot-motion-layer shot-motion-auto-area" viewBox="0 0 1710 1073" aria-hidden="true">
@@ -506,8 +414,14 @@ const ProductShotMedia = memo(({ shot }) => {
       ref={mediaRef}
       className={`product-shot-media${shot.motion ? ` has-${shot.motion}-motion` : ''}${motionActive ? ' is-motion-active' : ''}`}
     >
-      <img src={shot.image} alt={shot.alt} loading="lazy" width={shot.width} height={shot.height} />
-      {shot.motion && <ShowcaseMotionLayer motionType={shot.motion} />}
+      <img
+        src={shot.animatedImage && motionActive ? shot.animatedImage : shot.image}
+        alt={shot.alt}
+        loading="lazy"
+        width={shot.width}
+        height={shot.height}
+      />
+      {shot.motion && !shot.animatedImage && <ShowcaseMotionLayer motionType={shot.motion} />}
     </div>
   );
 });
