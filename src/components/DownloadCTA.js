@@ -22,14 +22,14 @@ const PlatformIcon = ({ platform }) => (
     : <WindowsLogo aria-hidden="true" weight="bold" />
 );
 
-// The free tier's one limit, stated at the control that commits to it.
+// The Free/Pro boundary, stated at the control that commits to the download.
 //
 // It was already on the page — in the stat tiles, the pricing card, the FAQ and /buy — but never
 // beside a Download button. A cap read before downloading is a fair deal; the same cap met after
 // twenty minutes of work on a real drawing feels like bait. Same fact, different feeling, and the
 // difference is 200 pixels.
 export const FREE_TIER_LIMIT_TEXT =
-  'Free with no trial timer. Hand-created measurements are capped at 3 per document.';
+  'Free with no trial timer: markup, review, calibration, and 3 hand-created measurements per document. Symbol Search and plugins require Pro.';
 
 // What to do while the file lands. This is the moment most download funnels leak — the visitor has
 // committed, the browser is quiet, and nothing tells them the next step (or warns Windows users
@@ -61,8 +61,8 @@ const WhileItInstalls = ({ platformKey, tone }) => (
       ))}
     </ol>
     <p className="dl-next-foot">
-      Everything above is free, for as long as you want it. The one cap is 3 hand-created
-      measurements per document; PolyPDF Pro removes it for $49.99 once, on up to 3 computers.
+      Everything above is free, for as long as you want it. PolyPDF Pro removes the 3-measurement
+      cap and unlocks Symbol Search plus plugins for $49.99 once, on up to 3 computers.
     </p>
   </div>
 );

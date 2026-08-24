@@ -1,22 +1,22 @@
 {
   "/": {
     "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
-    "description": "Measure and mark up PDF drawings on Mac and Windows. Start free, then unlock unlimited measurements for $49.99 with a 14-day money-back guarantee.",
+    "description": "Measure and mark up PDFs on Mac and Windows. Start free, then unlock unlimited measurements, Symbol Search, and plugins for $49.99 once.",
     "robots": "index, follow"
   },
   "/buy": {
-    "title": "Buy PolyPDF Pro Once | Unlimited PDF Measurements",
-    "description": "Unlock unlimited PDF measurements on three Mac or Windows computers for $49.99 (planned standard price $99), with a 14-day money-back guarantee.",
+    "title": "Buy PolyPDF Pro Once | Measurements, Search & Plugins",
+    "description": "Unlock unlimited measurements, Symbol Search, and plugins on three Mac or Windows computers for $49.99 once, with a 14-day guarantee.",
     "robots": "index, follow"
   },
   "/upgrade": {
-    "title": "Upgrade to PolyPDF Pro | Unlimited Measurements",
-    "description": "Remove the 3-measurement limit for $49.99 with a 14-day money-back guarantee. Secure Stripe checkout, license delivery by email, and fast activation.",
+    "title": "Upgrade to PolyPDF Pro | Unlock Every Pro Workflow",
+    "description": "Remove the measurement cap and unlock Symbol Search plus plugins for $49.99 once. Includes secure Stripe checkout and a 14-day guarantee.",
     "robots": "noindex, follow"
   },
   "/build-a-plugin": {
     "title": "Build a PolyPDF Plugin | Developer Guide",
-    "description": "Add your own stamps and symbols to PolyPDF. Plugins are signed data and artwork with no executable code — write one with Node and a drawing tool.",
+    "description": "Build signed, no-code PolyPDF plugin packages with Node and a drawing tool. Installing and running plugin workflows requires PolyPDF Pro.",
     "robots": "index, follow"
   },
   "/account": {
@@ -71,7 +71,7 @@
   },
   "/blog/count-pdf-symbols": {
     "title": "How to Count Symbols in a PDF Drawing | PolyPDF",
-    "description": "Count repeated symbols in a PDF drawing with PolyPDF Symbol Search, including setup, candidate review, false-positive checks, and takeoff QA.",
+    "description": "Count repeated symbols with PolyPDF Pro Symbol Search, including setup, candidate review, false-positive checks, and takeoff QA.",
     "robots": "index, follow",
     "type": "article",
     "image": "/guides/count-pdf-symbols.png?v=1.4.0-17",
@@ -151,7 +151,7 @@
   },
   "/blog/introducing-polypdf-plugins": {
     "title": "PolyPDF Plugins: How They Work",
-    "description": "How PolyPDF plugins handle declarative packages, permissions, sideload consent, and the steel-section, seal, and map generators that come with the app.",
+    "description": "How PolyPDF Pro plugins handle declarative packages, permissions, sideload consent, and the steel-section, seal, and map generators included with the app.",
     "robots": "index, follow",
     "type": "article",
     "image": "/guides/introducing-polypdf-plugins.png?v=1.4.0-17",
@@ -211,7 +211,7 @@
   },
   "/visual-search-pdf-count": {
     "title": "Visual Search PDF Symbol Count | PolyPDF",
-    "description": "Capture one drawing symbol, find visual matches across the PDF, review candidates, and commit an auditable numbered count series.",
+    "description": "Use PolyPDF Pro to capture one drawing symbol, find visual matches, review candidates, and commit an auditable numbered count series.",
     "robots": "index, follow"
   },
   "/compare-pdf-drawings": {

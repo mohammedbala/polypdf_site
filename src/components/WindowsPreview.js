@@ -58,7 +58,7 @@ const sections = [
     content: [
       'Windows 10 or 11, 64-bit (x64).',
       'About 500 MB of free disk space.',
-      'Same free tier as Mac: full markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count.'
+      'Same free tier as Mac: markup, review, calibration, and up to 3 hand-created measurements per document. Symbol Search and plugin workflows require PolyPDF Pro.'
     ]
   }
 ];

@@ -56,8 +56,8 @@ const ActivationSteps = ({ heading = 'Activating takes about a minute' }) => (
         <span className="activation-step-index" aria-hidden="true">3</span>
         <div>
           <strong>Paste the key and click Activate.</strong> No restart, no reinstall. The
-          measurement cap lifts as soon as the key is accepted, and the drawing you had open keeps
-          every measurement and markup already on it.
+          measurement cap lifts and Symbol Search plus plugins unlock as soon as the key is accepted.
+          The drawing you had open keeps every measurement and markup already on it.
         </div>
       </li>
     </ol>

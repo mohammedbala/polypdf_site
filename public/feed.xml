@@ -6,7 +6,7 @@
     <atom:link href="https://www.polypdf.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Practical guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Aug 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 24 Aug 2026 12:00:00 GMT</lastBuildDate>
     <item>
       <title>How to Calibrate a PDF Drawing Scale</title>
       <link>https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/</link>
@@ -48,7 +48,7 @@
       <link>https://www.polypdf.com/blog/count-pdf-symbols/</link>
       <guid isPermaLink="true">https://www.polypdf.com/blog/count-pdf-symbols/</guid>
       <pubDate>Wed, 19 Aug 2026 12:00:00 GMT</pubDate>
-      <description>Use PolyPDF Symbol Search to find repeated plan symbols, review every candidate, and commit the accepted matches as one linked Count series.</description>
+      <description>Use PolyPDF Pro Symbol Search to find repeated plan symbols, review every candidate, and commit the accepted matches as one linked Count series.</description>
       <category>Review &amp; Markup</category>
       <enclosure url="https://www.polypdf.com/guides/count-pdf-symbols.png?v=1.4.0-17" length="84859" type="image/png" />
     </item>
@@ -120,7 +120,7 @@
       <link>https://www.polypdf.com/blog/introducing-polypdf-plugins/</link>
       <guid isPermaLink="true">https://www.polypdf.com/blog/introducing-polypdf-plugins/</guid>
       <pubDate>Fri, 07 Aug 2026 12:00:00 GMT</pubDate>
-      <description>How PolyPDF plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.</description>
+      <description>How PolyPDF Pro plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.</description>
       <category>Product</category>
       <enclosure url="https://www.polypdf.com/guides/introducing-polypdf-plugins.png?v=1.4.0-17" length="171176" type="image/png" />
     </item>

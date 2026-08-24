@@ -4458,6 +4458,20 @@ h3 {
   text-transform: uppercase;
 }
 
+.workflow-access {
+  padding: 0.16rem 0.42rem;
+  border: 1px solid rgba(23, 107, 113, 0.28);
+  border-radius: 999px;
+  background: rgba(23, 107, 113, 0.09);
+  color: #155f64;
+  font-size: 0.61rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .workflow-view-mode {
   margin-left: auto;
   color: var(--gray-600);

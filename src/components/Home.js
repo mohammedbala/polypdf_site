@@ -21,6 +21,7 @@ import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 import { captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
+import siteRelease from '../lib/siteRelease.json';
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
 import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
 import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
@@ -43,6 +44,7 @@ export const homeScreenshots = [
     framing: 'focus',
     focus: 'symbol-search',
     category: 'Count',
+    access: 'Pro',
     title: 'Review Symbol Search matches before counting',
     alt: 'PolyPDF Symbol Search showing five matches, all five selected, on a sample drawing',
     caption: 'Box one symbol, inspect the candidates, and commit only the matches you accept. Five reviewed matches are ready here.',
@@ -92,6 +94,7 @@ export const homeScreenshots = [
     framing: 'focus',
     focus: 'aisc',
     category: 'Plugins',
+    access: 'Pro',
     title: 'Plugin output stays editable on the PDF',
     alt: 'PolyPDF Plugins sidebar beside a selected W24×55 steel section placed on the drawing',
     caption: 'The AISC plugin places a W24×55 section as an editable vector you can move and resize on the drawing.',
@@ -105,6 +108,7 @@ export const homeScreenshots = [
     framing: 'focus',
     focus: 'pdf-maps',
     category: 'Maps',
+    access: 'Pro',
     title: 'Build a signed map sheet in one workflow',
     alt: 'PolyPDF 1.4 placing a full New York map, resizing it on the PDF, then adding built-in MUTCD Stop and Yield signs',
     caption: 'Place a real map, drag it to the size the sheet needs, then layer built-in MUTCD regulatory signs directly over it.',
@@ -150,12 +154,13 @@ const trackEvent = (name, properties = {}) => {
 const freeFeatures = [
   'Download the full app free — Mac or Windows — and start with the real product',
   'Open PDF drawings, calibrate scale, and use markup tools with no trial countdown',
-  'Verify fit on your own plans with up to 3 hand-placed measurements per document, plus uncapped Symbol Search auto-counts',
+  'Verify fit on your own plans with up to 3 hand-created measurements per document',
   'Decide after real use, not from a watered-down demo'
 ];
 
 const proFeatures = [
   'Unlock unlimited hand-created measurements across all of your documents',
+  'Use Symbol Search auto-count and installed plugins, including PDF Maps, AISC sections, and Professional Seal Maker',
   `Pay ${commercialOffer.price} once for PolyPDF 1.x on up to 3 computers — Mac or Windows`,
   'Keep PolyPDF 1.x forever, with every public 1.x update included',
   'Secure Stripe checkout with license delivery by email'
@@ -215,7 +220,7 @@ const steps = [
   },
   {
     title: 'Unlock unlimited when ready',
-    description: `If PolyPDF saves you time, buy the ${commercialOffer.price} Founder's License and keep using PolyPDF 1.x without a yearly fee.`
+    description: `If PolyPDF saves you time, buy the ${commercialOffer.price} Founder's License to remove the measurement cap and unlock Symbol Search plus plugins without a yearly fee.`
   }
 ];
 
@@ -223,7 +228,7 @@ const steps = [
 export const homeFaqs = [
   {
     question: 'What can I do before I pay?',
-    answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use the markup tools, place up to 3 hand-created measurements in every open document, and use uncapped Symbol Search auto-count. That gives you a real-world test before you buy.'
+    answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use markup and review tools, and place up to 3 hand-created measurements in every document. Symbol Search and plugin workflows unlock with Pro.'
   },
   {
     question: 'Does one license cover both Mac and Windows?',
@@ -231,7 +236,7 @@ export const homeFaqs = [
   },
   {
     question: 'What does the $49.99 license unlock?',
-    answer: `The Founder's License removes the hand-created measurement limit. ${founderRightsText}`
+    answer: `The Founder's License removes the hand-created measurement limit and unlocks Symbol Search plus installed plugins such as PDF Maps, AISC Steel Sections, and Professional Seal Maker. ${founderRightsText}`
   },
   {
     question: 'Is this a subscription?',
@@ -239,7 +244,7 @@ export const homeFaqs = [
   },
   {
     question: 'What happens after I buy?',
-    answer: 'Checkout is handled securely by Stripe. Your license key is delivered by email, and you paste it into the app once — on Mac or Windows — to unlock unlimited hand-created measurements.'
+    answer: 'Checkout is handled securely by Stripe. Your license key is delivered by email, and you paste it into the app once — on Mac or Windows — to unlock unlimited measurements, Symbol Search, and installed plugins.'
   },
   {
     question: 'How do I activate the license key?',
@@ -599,6 +604,7 @@ export const WorkflowGrid = () => (
               <div className="workflow-meta">
                 <span className="showcase-index">{String(index + 1).padStart(2, '0')}</span>
                 <span className="workflow-category">{shot.category}</span>
+                {shot.access && <span className="workflow-access">{shot.access} workflow</span>}
                 <span className="workflow-view-mode">
                   {shot.theme === 'light' ? 'Light' : 'Dark'} UI · {shot.framing === 'focus' ? 'Feature focus' : 'Full window'}
                 </span>
@@ -623,8 +629,8 @@ const PricingSection = ({ offer, onDownload }) => (
         viewport={{ once: true }}
       >
         <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Pick your lane</span>
-        <h2>Try the real app free. Pay once when you need unlimited measurements.</h2>
-        <p>Markup, review, calibration, and Symbol Search auto-count stay free. Pro removes the fourth-measurement wall at the $49.99 Founder price — saving $49.01 against the planned $99 standard price — with a 14-day money-back guarantee.</p>
+        <h2>Try the real app free. Pay once to unlock every Pro workflow.</h2>
+        <p>Markup, review, calibration, and three hand-created measurements per document stay free. Pro removes the measurement cap and unlocks Symbol Search plus plugins at the $49.99 Founder price — saving $49.01 against the planned $99 standard price — with a 14-day money-back guarantee.</p>
       </motion.div>
 
       <div className="pricing-grid">
@@ -659,7 +665,7 @@ const PricingSection = ({ offer, onDownload }) => (
         >
           <span className="paper-tape pricing-card-tape" aria-hidden="true" />
           <div className="plan-pill plan-pill-dark">Founder's License</div>
-          <h3>Unlock unlimited hand-created measurements</h3>
+          <h3>Unlock unlimited measurements, Symbol Search, and plugins</h3>
           <OfferPrice />
           <ul className="plan-list">
             {proFeatures.map((feature) => (
@@ -779,7 +785,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="hero-badge">
-              <LockKey aria-hidden="true" weight="bold" /> Drawing review and takeoff · Mac &amp; Windows
+              <LockKey aria-hidden="true" weight="bold" /> PolyPDF {siteRelease.version} · Mac &amp; Windows
             </div>
 
             <h1>
@@ -788,7 +794,7 @@ const Home = () => {
 
             <p className="hero-subtitle">
               Calibrate, measure, and mark up the drawings you already receive. Start free on Mac
-              or Windows, then unlock unlimited hand-created measurements at the $49.99 Founder price.
+              or Windows, then unlock unlimited measurements, Symbol Search, and plugins at the $49.99 Founder price.
             </p>
 
             <div className="hero-cta">
@@ -809,7 +815,7 @@ const Home = () => {
             </div>
 
             <OfferGuarantee compact />
-            <p className="hero-note">Signed, notarized builds. Start free on your own drawings — upgrade only when you need unlimited hand-created measurements.</p>
+            <p className="hero-note">Signed, notarized builds. Start free on your own drawings — upgrade when you need unlimited measurements, Symbol Search, or plugins.</p>
           </motion.div>
 
           <HeroProductBoard />
@@ -878,7 +884,7 @@ const Home = () => {
             <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}>
               <span>03</span>
               <h3>No annual seat timer</h3>
-              <p>Try real documents for free, then unlock unlimited hand-created measurements with one direct license that covers up to 3 computers.</p>
+              <p>Try real documents for free, then unlock unlimited measurements, Symbol Search, and plugins with one direct license that covers up to 3 computers.</p>
             </motion.article>
           </div>
         </div>
@@ -894,7 +900,7 @@ const Home = () => {
           >
             <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Three honest steps</span>
             <h2>Try it on your workflow before you buy.</h2>
-            <p>Download free, test it on your own drawings, and pay once only if you want unlimited hand-created measurements.</p>
+            <p>Download free, test it on your own drawings, and pay once only if you want the complete Pro workflow.</p>
           </motion.div>
 
           <div className="step-path">
@@ -957,7 +963,7 @@ const Home = () => {
           >
             <span className="cta-sketch" aria-hidden="true" />
             <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
-            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited hand-created measurements at the $49.99 Founder price instead of the planned $99 standard price.</p>
+            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited measurements, Symbol Search, and plugins at the $49.99 Founder price instead of the planned $99 standard price.</p>
             <div className="cta-download-row">
               <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
               <DirectCheckoutLink

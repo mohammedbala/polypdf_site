@@ -66,3 +66,11 @@ test('llms.txt carries the reviewed redaction and sanitation limitations', () =>
   expect(llms).toContain('can miss some direct attachments and nested actions');
   expect(llms).not.toContain('Redaction permanently removes supported text');
 });
+
+test('llms.txt reflects the current release and 1.4.1 Pro boundary', () => {
+  const llms = readPublic('llms.txt');
+  expect(llms).toContain(`Current release: PolyPDF ${siteRelease.version} (build ${siteRelease.build})`);
+  expect(llms).toContain('Symbol Search auto-count (Pro)');
+  expect(llms).toContain('Pro plugins included with the app');
+  expect(llms).not.toMatch(/Symbol Search[^\n]*(?:free and uncapped|uncapped in (?:the )?Free)/i);
+});

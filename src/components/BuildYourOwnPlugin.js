@@ -98,14 +98,15 @@ const BuildYourOwnPlugin = () => {
             <p className="legal-subtitle">
               Add your office’s symbols to PolyPDF. No code, no marketplace, no approval queue.
             </p>
-            <p className="last-updated">Requires PolyPDF 1.3.1 or newer</p>
+            <p className="last-updated">Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+</p>
           </div>
 
           <div className="legal-intro">
             <p>
               If your team stamps the same north arrow, revision triangle or room tag onto every
               sheet, you can package that set yourself and hand it to your colleagues as a single
-              file. It takes a text editor, a drawing tool, and Node.
+              file. It takes a text editor, a drawing tool, and Node. Building a package is free;
+              installing, running, and editing plugin content in the current app requires PolyPDF Pro.
             </p>
           </div>
 

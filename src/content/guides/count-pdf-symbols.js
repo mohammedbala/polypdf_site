@@ -9,21 +9,21 @@ const countPdfSymbolsGuide = {
   title: 'How to Count Symbols in a PDF Drawing',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-23',
+  dateModified: '2026-08-24',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
   excerpt:
-    'Use PolyPDF Symbol Search to find repeated plan symbols, review every candidate, and commit the accepted matches as one linked Count series.',
+    'Use PolyPDF Pro Symbol Search to find repeated plan symbols, review every candidate, and commit the accepted matches as one linked Count series.',
   metaTitle: 'How to Count Symbols in a PDF Drawing | PolyPDF',
   metaDescription:
-    'Count repeated symbols in a PDF drawing with PolyPDF Symbol Search, including setup, candidate review, false-positive checks, and takeoff QA.',
+    'Count repeated symbols with PolyPDF Pro Symbol Search, including setup, candidate review, false-positive checks, and takeoff QA.',
   lede:
     'Symbol Search can turn one boxed example into a reviewable set of count candidates. The useful result comes from pairing that automation with a deliberate human check before anything is added to the PDF.',
   quickAnswer:
     'Choose Symbol Search, set the pages and matching options, then drag a close box around one clean example. PolyPDF highlights candidate matches without changing the document. Include or exclude each candidate, then choose Count to create one linked Count series. Treat the result as assisted counting: legends, schedules, similar symbols, and low-quality scans can all need manual correction.',
-  lastVerified: '2026-08-23',
-  productVersion: 'PolyPDF 1.4.0 (build 17)',
+  lastVerified: '2026-08-24',
+  productVersion: 'PolyPDF 1.4.1 (build 18); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: symbolSearchReviewImage,
@@ -182,7 +182,7 @@ const countPdfSymbolsGuide = {
         {
           kind: 'p',
           text:
-            'Symbol Search auto-count is uncapped in the Free app as well as in the paid license. That exemption applies to the candidates committed by Symbol Search. The Free app separately limits hand-created measurements to three per document, so a manual Count workflow and an auto-count workflow do not have the same entitlement rule.'
+            'Symbol Search is a PolyPDF Pro workflow in version 1.4.1. Once Pro access admits a search, the accepted candidates can be committed as one linked Count series without a separate per-search count cap. The Free app separately supports up to three hand-created measurements per document.'
         },
         {
           kind: 'p',
@@ -204,9 +204,9 @@ const countPdfSymbolsGuide = {
         'No. PolyPDF proposes visual matches, but a person must decide whether each match belongs in the requested scope. Legends and similar graphics are common reasons to exclude a candidate.'
     },
     {
-      question: 'Can the free version auto-count more than three symbols?',
+      question: 'Can the free version run Symbol Search?',
       answer:
-        'Yes. Symbol Search auto-count is uncapped in Free. The separate three-measurement limit applies to hand-created measurements in a document.'
+        'No. Symbol Search requires PolyPDF Pro in version 1.4.1. Free still includes markup, review, calibration, and up to three hand-created measurements per document.'
     },
     {
       question: 'Why did Symbol Search miss or over-count symbols?',
@@ -221,7 +221,7 @@ const countPdfSymbolsGuide = {
   sources: [
     {
       label: 'PolyPDF 1.4.0 (build 17) in-app guide: Symbol Search + Auto-Count',
-      note: 'UI steps, on-device matching behavior, review controls, and the Free-tier limits.'
+      note: 'UI steps, on-device matching behavior, and review controls. PolyPDF 1.4.1 changed access to require Pro without changing the captured search interface.'
     },
     {
       label: 'Screenshots in this guide: PolyPDF 1.4.0 on our demo plan',
@@ -231,10 +231,10 @@ const countPdfSymbolsGuide = {
   cta: {
     title: 'Review a symbol count on your own drawing',
     body:
-      'Download PolyPDF for macOS or Windows, open your own drawing, and use Symbol Search without an account. Auto-count remains uncapped in the Free app; verify every candidate against the scope before using the total.',
+      'Download PolyPDF for macOS or Windows, activate Pro, and run Symbol Search on your own drawing. Verify every candidate against the scope before using the total.',
     downloadSource: 'blog_count_pdf_symbols',
     buySource: 'website_blog_count_pdf_symbols',
-    buyLabel: 'See license options'
+    buyLabel: 'Unlock Symbol Search'
   }
 };
 

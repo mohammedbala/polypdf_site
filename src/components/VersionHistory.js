@@ -92,6 +92,18 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.4.1 (18)': [
+    'Symbol Search and plugin workflows now guide Free users consistently to the PolyPDF Pro upgrade screen.',
+    'Pro access is enforced across both the visible interface and the underlying document services.',
+    'License changes safely close in-progress Pro workflows and return the document to Select with Thumbnails open.',
+    'Saved Free workspaces no longer reopen directly into Symbol Search or a paid plugin surface, and the 100-license Founder offer now has a clear sold-out state.'
+  ],
+  'Windows 1.4.1 (18)': [
+    'Symbol Search and plugin workflows now guide Free users consistently to the PolyPDF Pro upgrade screen.',
+    'Pro access is enforced across both the visible interface and the underlying document services.',
+    'License changes safely close in-progress Pro workflows and return the document to Select with Thumbnails open.',
+    'Saved Free workspaces no longer reopen directly into Symbol Search or a paid plugin surface, and the 100-license Founder offer now has a clear sold-out state.'
+  ],
   'macOS 1.4.0 (17)': [
     'PDF Maps places styled maps on plans and keeps them editable as live geographic viewports.',
     'Auto Area finds enclosed rooms; area cutouts resize, and optional helper dimensions support direct numeric entry.',
@@ -157,6 +169,8 @@ const proseKey = (release) => `${release.platform} ${release.version} (${release
 // Rendered only while the feeds are still loading, or if one cannot be reached, so the page is never
 // empty. Anything the feeds return replaces it.
 const FALLBACK_RELEASES = [
+  { platform: 'macOS', version: '1.4.1', build: 18, date: 'August 23, 2026', notes: '/downloads/PolyPDFMac-v1.4.1-18.html' },
+  { platform: 'Windows', version: '1.4.1', build: 18, date: 'August 24, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.1-18.html' },
   { platform: 'macOS', version: '1.4.0', build: 17, date: 'August 23, 2026', notes: '/downloads/PolyPDFMac-v1.4.0-17.html' },
   { platform: 'Windows', version: '1.4.0', build: 17, date: 'August 23, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.0-17.html' },
   { platform: 'macOS', version: '1.3.4', build: 16, date: 'August 17, 2026', notes: '/downloads/PolyPDFMac-v1.3.4-16.html' },
@@ -278,7 +292,7 @@ const VersionHistory = () => {
                 loading="eager"
               />
             </div>
-            <figcaption><strong>New in 1.4:</strong> review, reassign, clear, and reset keyboard shortcuts from Settings.</figcaption>
+            <figcaption><strong>Introduced in 1.4.0:</strong> review, reassign, clear, and reset keyboard shortcuts from Settings. PolyPDF 1.4.1 keeps this interface and tightens Pro access around Symbol Search and plugins.</figcaption>
           </figure>
 
           <div className="legal-sections">

@@ -83,12 +83,13 @@ const softwareApplication = (description) => ({
   name: 'PolyPDF',
   description,
   url: `${ORIGIN}/`,
+  softwareVersion: siteRelease.version,
   applicationCategory: 'BusinessApplication',
   operatingSystem: `${DOWNLOADS.mac.requirements.replace(/ · /g, ', ')}; ${DOWNLOADS.windows.requirements.replace(/ · /g, ', ')}`,
   downloadUrl: [`${ORIGIN}${DOWNLOADS.mac.url}`, `${ORIGIN}${DOWNLOADS.windows.url}`],
   featureList: FEATURE_LIST,
   publisher: { '@id': ORG_ID },
-  // The paid Founder offer can close by date or count, so static JSON-LD deliberately omits it.
+  // The paid Founder offer can close by count, so static JSON-LD deliberately omits it.
   // /buy and /api/commercial-offer are the live sources of truth. Free remains always available.
   offers: {
     '@type': 'Offer',
@@ -98,7 +99,7 @@ const softwareApplication = (description) => ({
     url: `${ORIGIN}/`,
     availability: 'https://schema.org/InStock',
     description:
-      'Free download for Mac and Windows with markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count.'
+      'Free download for Mac and Windows with markup, review, calibration, and up to 3 hand-created measurements per document. Symbol Search and plugin workflows require PolyPDF Pro.'
   }
 });
 

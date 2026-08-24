@@ -33,15 +33,15 @@ const productPosts = Object.freeze([
     title: 'Introducing PolyPDF Plugins',
     date: '2026-08-07',
     dateLabel: 'August 7, 2026',
-    dateModified: '2026-08-23',
+    dateModified: '2026-08-24',
     author: 'The PolyPDF team',
     readingTime: '9 min read',
     tag: 'Product',
     excerpt:
-      'How PolyPDF plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.',
+      'How PolyPDF Pro plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.',
     metaTitle: 'PolyPDF Plugins: How They Work',
     metaDescription:
-      'How PolyPDF plugins handle declarative packages, permissions, sideload consent, and the steel-section, seal, and map generators that come with the app.',
+      'How PolyPDF Pro plugins handle declarative packages, permissions, sideload consent, and the steel-section, seal, and map generators included with the app.',
     keywords: [
       'PolyPDF plugins',
       'signed PDF plugin packages',
@@ -50,11 +50,11 @@ const productPosts = Object.freeze([
       'PDF map plugin'
     ],
     lede:
-      'Plugins add content generators without executing downloaded plugin JavaScript. This article walks through the interface and the three generators that come with PolyPDF 1.4.0.',
+      'Plugins add content generators without executing downloaded plugin JavaScript. This article walks through the interface and the three generators included with PolyPDF Pro.',
     quickAnswer:
-      'PolyPDF plugins are declarative packages rather than executable-code extensions. PolyPDF renders their forms and runs a fixed host-owned generator against bounded data or sanitized artwork. Three generators come with the app and are enabled on first run: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic from a jurisdiction template, and PDF Maps places a map image for an address or place name.',
-    lastVerified: '2026-08-23',
-    productVersion: 'PolyPDF 1.4.0 (build 17)',
+      'PolyPDF plugins are Pro workflows built from declarative packages rather than executable-code extensions. PolyPDF renders their forms and runs a fixed host-owned generator against bounded data or sanitized artwork. Three generators come with the app and are enabled on first run: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic from a jurisdiction template, and PDF Maps places a map image for an address or place name.',
+    lastVerified: '2026-08-24',
+    productVersion: 'PolyPDF 1.4.1 (build 18); screenshots from 1.4.0 (build 17)',
     platforms: 'macOS and Windows',
     heroImage: {
       src: pluginSidebarScreenshot,
@@ -77,6 +77,11 @@ const productPosts = Object.freeze([
             kind: 'p',
             text:
               'That local-first shape sets the constraints for anything we add. Plugins were designed inside it: packages carry signed data and artwork, not downloaded executable code or a subscription service.'
+          },
+          {
+            kind: 'note',
+            text:
+              'Current access: installing, running, and editing plugin content requires PolyPDF Pro in version 1.4.1. Content already placed on a PDF remains ordinary document content.'
           }
         ]
       },
@@ -308,6 +313,11 @@ const productPosts = Object.freeze([
       }
     ],
     faqs: [
+      {
+        question: 'Do PolyPDF plugins require Pro?',
+        answer:
+          'Yes. Installing, running, and editing plugin content requires PolyPDF Pro in version 1.4.1. The three first-party plugin packages still ship with the app, and previously inserted content stays in the document.'
+      },
       {
         question: 'Do PolyPDF plugins run downloaded code?',
         answer:

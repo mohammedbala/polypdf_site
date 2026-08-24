@@ -154,7 +154,7 @@ export const landingPages = Object.freeze({
     eyebrow: 'Symbol Search (formerly Visual Search)',
     title: 'Find one drawing symbol, then count matching instances across the PDF.',
     lede: 'Capture a symbol from the sheet, let PolyPDF find visual matches, review the results, and commit the accepted set as a count series.',
-    qualifier: 'Symbol Search auto-count is uncapped in both PolyPDF Free and Pro, so you can test it on one of your own symbol-heavy drawings before buying anything.',
+    qualifier: 'Symbol Search is a PolyPDF Pro workflow. Capture one example, review every candidate, and commit the accepted matches as one linked Count series.',
     image: shotSymbolSearch,
     imageWidth: 1710,
     imageHeight: 1073,
@@ -179,12 +179,12 @@ export const landingPages = Object.freeze({
       'Keeps candidate matches reviewable and adjustable before the count is committed.',
       'Creates numbered count markers that can be audited against the sheet.',
       'Feeds accepted counts into the same worksheet as lengths and areas.',
-      'Remains uncapped in the free app as well as Pro.'
+      'Included with PolyPDF Pro, with no separate per-search count cap.'
     ],
     faq: [
       ['Is Symbol Search the same as OCR?', 'No. OCR looks for text. Symbol Search looks for regions that resemble the symbol example you capture from the drawing.'],
       ['Will it find every symbol perfectly?', 'Not on every drawing. Match quality depends on the source PDF, symbol consistency, rotation, scan quality, and the capture selection. Review the candidates before committing a count.'],
-      ['Is Symbol Search limited in the free version?', 'No. Symbol Search auto-count is uncapped in both Free and Pro. The Pro upgrade removes the separate limit on hand-created measurements.']
+      ['Is Symbol Search included in the free version?', 'No. In PolyPDF 1.4.1, Symbol Search is a Pro workflow. The same Pro license also removes the limit on hand-created measurements and unlocks installed plugins.']
     ],
     related: [
       ['/blog/count-pdf-symbols', 'Count symbols with Symbol Search'],

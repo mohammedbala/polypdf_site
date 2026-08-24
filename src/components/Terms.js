@@ -28,7 +28,7 @@ const sections = [
     content: [
       'The desktop app (macOS and Windows) may be offered as a free download with limited free measurement usage before purchase is required for additional measurement workflows.',
       'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
-      `The current direct offer includes free markup and review tools, 3 hand-created measurements per document, uncapped Visual Search auto-count, and an optional ${commercialOffer.price} Founder's License instead of the planned ${commercialOffer.referencePrice} standard price. Direct website purchases include a 14-day money-back guarantee.`
+      `The current direct offer includes free markup, review, calibration, and 3 hand-created measurements per document. The optional ${commercialOffer.price} Founder's License, instead of the planned ${commercialOffer.referencePrice} standard price, removes that cap and unlocks Symbol Search plus plugin workflows. Direct website purchases include a 14-day money-back guarantee.`
     ]
   },
   {
@@ -74,7 +74,7 @@ const Terms = () => {
           <div className="legal-hero">
             <h1>Terms of Use</h1>
             <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
-            <p className="last-updated">Last updated: August 23, 2026</p>
+            <p className="last-updated">Last updated: August 24, 2026</p>
           </div>
 
           <div className="legal-intro">

@@ -162,7 +162,7 @@ const WorkflowLanding = ({ page }) => {
               <small>one time · no subscription</small>
             </div>
             <div className="workflow-offer-copy">
-              <h2>Try the full workflow free. Pay only to remove the hand-created measurement cap.</h2>
+              <h2>Start with the free app. Pay once to unlock every Pro workflow.</h2>
               <p>{founderRightsText}</p>
               <OfferGuarantee compact />
               <p className="workflow-offer-limit">{offer.founderLimitText}</p>

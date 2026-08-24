@@ -79,3 +79,13 @@ test('normalizes the trailing slash added by the production web server', () => {
   expect(normalizeRoutePath('/pdf-takeoff-software')).toBe('/pdf-takeoff-software');
   expect(normalizeRoutePath('/pdf-takeoff-software/')).toBe('/pdf-takeoff-software');
 });
+
+test('separates the current app release from the verified screenshot release', () => {
+  expect(siteRelease).toMatchObject({
+    version: '1.4.1',
+    build: '18',
+    screenshotVersion: '1.4.0',
+    screenshotBuild: '17',
+    screenshotCacheToken: '1.4.0-17'
+  });
+});

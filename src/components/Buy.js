@@ -38,6 +38,8 @@ import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 
 const proFeatures = [
   'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
+  'Symbol Search automatic counting and every installed plugin workflow',
+  'PDF Maps, AISC Steel Sections, and Professional Seal Maker included',
   `${commercialOffer.price} once with no subscription renewal`,
   'Use your license on up to 3 computers — Mac or Windows, in any mix',
   'Secure Stripe checkout with license delivery by email',
@@ -49,22 +51,26 @@ const proFeatures = [
 // traffic the business gets — they installed PolyPDF, used it on real drawings, and hit a wall —
 // and until now they landed on a page whose second panel told them to download the app they had
 // open behind the browser. Reading the parameter that was already in the URL fixes that.
-const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_count', 'license_window']);
+const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_count', 'plugins', 'license_window']);
 
 // Why they clicked, when the app told us. Named plainly — the visitor already knows what happened;
 // pretending otherwise is what makes a paywall page feel like a sales page.
 const IN_APP_CONTEXT = {
   free_measurement_limit: {
     kicker: 'You have used the 3 free measurements in this document',
-    lede: 'The free app caps hand-created measurements at 3 per document. Everything else you were doing — markup, calibration, review, Symbol Search auto-count — stays free and uncapped. Pro removes that one cap for good at the $49.99 Founder price, backed by a 14-day money-back guarantee.'
+    lede: 'The free app includes markup, calibration, review, and 3 hand-created measurements per document. Pro removes that cap and also unlocks Symbol Search plus plugins for good at the $49.99 Founder price, backed by a 14-day money-back guarantee.'
   },
   visual_search_auto_count: {
-    kicker: 'Symbol Search auto-count is free and uncapped',
-    lede: 'You do not need Pro to find, review, or commit a Symbol Search count series. Pro is only needed after you reach the separate 3-per-document limit for hand-created measurements.'
+    kicker: 'Symbol Search is a PolyPDF Pro workflow',
+    lede: 'Pro unlocks the complete Symbol Search workflow: capture one example, review matching candidates, and commit the accepted set as one linked Count series. The same license also removes the 3-measurement cap and unlocks installed plugins.'
+  },
+  plugins: {
+    kicker: 'Plugins are available with PolyPDF Pro',
+    lede: 'Pro unlocks installed plugin workflows for PDF Maps, AISC steel sections, professional seals, and packages you install yourself. The same license also removes the 3-measurement cap and unlocks Symbol Search.'
   },
   license_window: {
     kicker: 'Upgrade to PolyPDF Pro',
-    lede: 'Unlimited hand-created measurements on every document, on up to 3 computers, at the $49.99 Founder price instead of the planned $99 standard price. No subscription, no renewal, and a 14-day money-back guarantee.'
+    lede: 'Unlock unlimited hand-created measurements, Symbol Search, and installed plugins on up to 3 computers at the $49.99 Founder price instead of the planned $99 standard price. No subscription, no renewal, and a 14-day money-back guarantee.'
   }
 };
 
@@ -181,13 +187,13 @@ const Buy = ({ forceInApp = false }) => {
             <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> One clear checkout</span>
             <h1>
               {cameFromApp
-                ? 'Keep measuring. One payment, no subscription.'
-                : 'Buy PolyPDF Pro once. Measure without a subscription.'}
+                ? 'Unlock the workflow. One payment, no subscription.'
+                : 'Buy PolyPDF Pro once. Unlock every Pro workflow.'}
             </h1>
             <p>
               {cameFromApp
                 ? context.lede
-                : 'Unlock unlimited hand-created measurements at the $49.99 Founder price instead of the planned $99 standard price. Keep the free markup and review workflow, use Pro on up to 3 computers, and try it risk-free with a 14-day money-back guarantee.'}
+                : 'Unlock unlimited hand-created measurements, Symbol Search, and installed plugins at the $49.99 Founder price instead of the planned $99 standard price. Use Pro on up to 3 computers and try it risk-free with a 14-day money-back guarantee.'}
             </p>
             {cancelled && (
               <p className="buy-cancelled">
@@ -271,8 +277,8 @@ const Buy = ({ forceInApp = false }) => {
                 <>
                   <ul className="section-content">
                     <li>Download PolyPDF free first if you want to test it on real drawings.</li>
-                    <li>The free app includes markup and review tools, up to 3 hand-created measurements per document, and uncapped Symbol Search auto-count.</li>
-                    <li>Pro removes the measurement limit on both Mac and Windows.</li>
+                    <li>The free app includes markup, review, calibration, and up to 3 hand-created measurements per document.</li>
+                    <li>Pro removes the measurement limit and unlocks Symbol Search plus installed plugins on both Mac and Windows.</li>
                   </ul>
                   <div className="buy-actions buy-actions-quiet">
                     <a

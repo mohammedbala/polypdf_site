@@ -8,16 +8,16 @@ test('derives the Windows release-notes link from the signed installer name', as
   jest.spyOn(global, 'fetch').mockResolvedValue({
     ok: true,
     text: async () => [
-      'version: 1.4.0',
-      'path: PolyPDFSetup-v1.4.0-17.exe',
-      'releaseDate: 2026-08-23T12:20:38.000Z'
+      'version: 1.4.1',
+      'path: PolyPDFSetup-v1.4.1-18.exe',
+      'releaseDate: 2026-08-24T03:36:37.413Z'
     ].join('\n')
   });
 
   await expect(fetchWindowsRelease()).resolves.toMatchObject({
     platform: 'Windows',
-    version: '1.4.0',
-    build: 17,
-    notes: '/downloads/windows/PolyPDFWin-v1.4.0-17.html'
+    version: '1.4.1',
+    build: 18,
+    notes: '/downloads/windows/PolyPDFWin-v1.4.1-18.html'
   });
 });

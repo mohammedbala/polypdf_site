@@ -33,6 +33,8 @@ test('static application schema advertises Free but not a closable paid offer', 
   expect(JSON.stringify(application.offers)).not.toContain('49.99');
   expect(JSON.stringify(application.featureList)).not.toContain('permanently removes');
   expect(JSON.stringify(application.featureList)).toContain('documented limits');
+  expect(application.softwareVersion).toBe(siteRelease.version);
+  expect(application.offers.description).toContain('Symbol Search and plugin workflows require PolyPDF Pro');
 });
 
 test('BlogPosting schema uses each post evidence image and reviewed dates', () => {
