@@ -108,9 +108,9 @@ export const homeScreenshots = [
     focus: 'pdf-maps',
     category: 'Maps',
     access: 'Pro',
-    title: 'Build a signed map sheet in one workflow',
-    alt: 'PolyPDF 1.4 placing a full New York map, resizing it on the PDF, then adding built-in MUTCD Stop and Yield signs',
-    caption: 'Place a real map, drag it to the size the sheet needs, then layer built-in MUTCD regulatory signs directly over it.',
+    title: 'Turn a building-level map into plan-ready linework',
+    alt: 'PolyPDF placing a building-level Murray Street map, converting it from Liberty cartography to CAD Linework, then adding MUTCD Stop and Yield signs',
+    caption: 'Place a real building-scale map, resize it to the sheet, switch it to CAD Linework, then add built-in MUTCD signs at the intersections.',
     width: 1710,
     height: 1073
   },

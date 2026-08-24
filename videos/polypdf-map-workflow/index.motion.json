@@ -1,5 +1,5 @@
 {
-  "duration": 8.6,
+  "duration": 9.2,
   "maxStaticSec": 1.35,
   "assertions": [
     {"kind": "appearsBy", "selector": "#map-frame", "bySec": 1.3},

@@ -1,23 +1,24 @@
 {
   "category": "webpage",
-  "duration_s": 8.6,
+  "duration_s": 9.2,
   "fps": 30,
   "canvas": {
     "w": 1710,
     "h": 1073,
     "aspect": "1710:1073"
   },
-  "style": "Truthful product motion on the real PolyPDF 1.4 dark interface. Keep every pixel of the shipping app chrome still and crisp. Replace only the demonstration sheet content: insert a high-resolution map rendered by PolyPDF's shipping OpenFreeMap renderer, resize it proportionally to a full map plan, then place the app's real built-in R1-1 Stop and R1-2 Yield vectors. No steel-section content, synthetic application controls, route plotting, camera motion, or decorative overlays.",
+  "style": "Truthful product motion on the real PolyPDF dark interface. Keep every pixel of the shipping app chrome still and crisp. Replace only the demonstration sheet content: insert a building-level map rendered by PolyPDF's shipping OpenFreeMap renderer, resize it proportionally, click the real CAD Linework base-map control, reveal the exact same camera through PolyPDF's shipping linework renderer, then place the app's real built-in R1-1 Stop and R1-2 Yield vectors. No steel-section content, synthetic application controls, route plotting, camera motion, or decorative overlays.",
   "palette": ["#151515", "#2a2a2a", "#ffffff", "#6f9ff5", "#bf311a", "#22313c"],
   "font": "Inter",
-  "beats": [0.25, 0.88, 1.18, 1.72, 3.25, 3.62, 5.1, 6.45, 7.45, 8.15, 8.6],
+  "beats": [0.25, 0.88, 1.18, 1.7, 2.96, 3.66, 4.5, 5.2, 6.64, 7.98, 8.82, 9.2],
   "export": "gif",
-  "shot_brief": "A clean bordered plan sheet is already centered at full size in the real PolyPDF app. The cursor clicks the real PDF Maps Insert control. A sharp New York map lands at a compact size with PolyPDF selection chrome, then the cursor drags its lower-right handle until the map fills the sheet. The real Tools sidebar replaces the plugin panel, exposing MUTCD Regulatory. The cursor drags the real Stop and Yield artwork from that toolset onto two intersections. Selection chrome clears and the full traffic-control map plan holds before a localized loop reset.",
+  "shot_brief": "A clean bordered plan sheet is already centered at full size in the real PolyPDF app. The cursor clicks the real PDF Maps Insert control. A sharp building-level Liberty map lands at a compact size with PolyPDF selection chrome, then the cursor drags its lower-right handle until the map fills the sheet. The cursor clicks the real CAD Linework control and the same camera resolves from normal cartography into PolyPDF's authored plan-style linework. The real Tools sidebar then exposes MUTCD Regulatory, and the cursor drags the real Stop and Yield artwork onto two visible street intersections. Selection chrome clears and the complete site traffic-control plan holds before a localized loop reset.",
   "rules": ["cursor-click-ripple", "cursor-drag", "control-target-sync"],
   "asset_needs": [
     {"role": "shipping-ui", "kind": "image", "source": "assets/polypdf-pdf-maps-ui.png", "treatment": "none"},
     {"role": "shipping-tools-panel", "kind": "image", "source": "assets/polypdf-mutcd-tools-ui.png", "treatment": "left-panel-only crop"},
-    {"role": "map", "kind": "image", "source": "assets/new-york-map-full.png", "treatment": "none"},
+    {"role": "normal-building-map", "kind": "image", "source": "assets/building-map-liberty.png", "treatment": "none"},
+    {"role": "linework-building-map", "kind": "image", "source": "assets/building-map-linework.png", "treatment": "none"},
     {"role": "stop-sign", "kind": "svg", "source": "assets/r1-1.svg", "treatment": "none"},
     {"role": "yield-sign", "kind": "svg", "source": "assets/r1-2.svg", "treatment": "none"}
   ],
@@ -25,10 +26,10 @@
     "format": "gif",
     "w": 1710,
     "h": 1073,
-    "fps": 15,
-    "duration_s": 8.6,
+    "fps": 10,
+    "duration_s": 9.2,
     "loop": 0,
-    "poster_time_s": 7.45,
+    "poster_time_s": 8.2,
     "target_max_bytes": 7500000
   }
 }

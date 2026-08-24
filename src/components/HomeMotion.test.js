@@ -45,6 +45,9 @@ test('the map workflow uses a poster plus viewport-activated animation and homep
   expect(mapShot.image).toBeTruthy();
   expect(mapShot.animatedImage).toBeTruthy();
   expect(mapShot.framing).toBe('focus');
+  expect(mapShot.title).toMatch(/building-level map.*linework/i);
+  expect(mapShot.alt).toMatch(/Liberty cartography.*CAD Linework/i);
+  expect(mapShot.caption).toMatch(/building-scale map.*MUTCD signs.*intersections/i);
   expect(JSON.stringify(homeScreenshots).toLowerCase()).not.toContain('steel');
 });
 
