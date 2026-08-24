@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import parrotIcon from '../assets/polypdf_icon.png';
+import DirectCheckoutLink from './DirectCheckoutLink';
 import { buyPath, canonicalPagePath } from '../lib/attribution';
 import { DOWNLOADS } from '../lib/platform';
 import { landingPages } from '../lib/landingPages';
@@ -19,7 +20,11 @@ export const footerLinkGroups = Object.freeze([
   Object.freeze({
     label: 'Product',
     links: Object.freeze([
-      Object.freeze({ to: buyPath('website_footer'), label: 'Buy PolyPDF Pro' }),
+      Object.freeze({
+        to: buyPath('website_footer'),
+        label: 'Buy PolyPDF Pro',
+        checkoutSource: 'website_footer'
+      }),
       Object.freeze({ to: '/windows', label: 'PolyPDF for Windows' }),
       Object.freeze({ to: '/versions', label: 'Version history' }),
       Object.freeze({ to: '/blog', label: 'Guides & reference' }),
@@ -75,7 +80,18 @@ const SiteFooter = () => (
             <h2 id={`footer-${group.label.toLowerCase().replaceAll(/[^a-z]+/g, '-')}`}>{group.label}</h2>
             <ul>
               {group.links.map((link) => (
-                <li key={link.to}><Link to={canonicalPagePath(link.to)}>{link.label}</Link></li>
+                <li key={link.to}>
+                  {link.checkoutSource ? (
+                    <DirectCheckoutLink
+                      source={link.checkoutSource}
+                      pageVariant="footer"
+                    >
+                      {link.label}
+                    </DirectCheckoutLink>
+                  ) : (
+                    <Link to={canonicalPagePath(link.to)}>{link.label}</Link>
+                  )}
+                </li>
               ))}
             </ul>
           </section>

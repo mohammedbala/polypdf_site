@@ -27,6 +27,11 @@ import {
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
 import { captureAttribution, checkoutAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
+import {
+  checkoutErrorCode,
+  createStripeCheckoutSession,
+  isSecureStripeCheckoutUrl
+} from '../lib/checkout';
 import siteRelease from '../lib/siteRelease.json';
 import MagneticLink from './MagneticLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
@@ -63,14 +68,7 @@ const IN_APP_CONTEXT = {
   }
 };
 
-export const isSecureStripeCheckoutUrl = (value) => {
-  try {
-    const url = new URL(value);
-    return url.protocol === 'https:' && url.hostname === 'checkout.stripe.com';
-  } catch {
-    return false;
-  }
-};
+export { isSecureStripeCheckoutUrl };
 
 const Buy = ({ forceInApp = false }) => {
   const [searchParams] = useSearchParams();
@@ -130,27 +128,16 @@ const Buy = ({ forceInApp = false }) => {
     setShowStickyCheckout(false);
 
     try {
-      const response = await fetch('/api/checkout/session', {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ attribution })
-      });
-      const payload = await response.json().catch(() => ({}));
-      if (!response.ok || !isSecureStripeCheckoutUrl(payload.url)) {
-        throw new Error(payload.error || 'checkout_unavailable');
-      }
+      const checkoutUrl = await createStripeCheckoutSession(attribution);
       trackEvent('checkout_session_created', properties);
       trackEvent('checkout_started', properties);
-      window.location.assign(payload.url);
+      window.location.assign(checkoutUrl);
     } catch (error) {
       setCheckoutStatus('ready');
-      const soldOut = error instanceof Error && [
+      const soldOut = [
         'founder_offer_sold_out',
         'founder_offer_ended'
-      ].includes(error.message);
+      ].includes(checkoutErrorCode(error));
       trackEvent('checkout_error', {
         ...properties,
         reason: soldOut ? 'sold_out' : 'unavailable'

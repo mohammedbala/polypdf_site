@@ -5,8 +5,9 @@ import { FaArrowRight, FaCheck, FaInfinity } from 'react-icons/fa';
 import { HiOutlineCloudDownload } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
+import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferGuarantee, OfferPrice } from './OfferPrice';
-import { buyPath, canonicalPagePath, captureAttribution } from '../lib/attribution';
+import { canonicalPagePath, captureAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
 import { commercialOffer, founderRightsText } from '../lib/commercialOffer';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
@@ -43,13 +44,14 @@ const WorkflowLanding = ({ page }) => {
             <a href="#how-it-works">Workflow</a>
             <Link to="/support/">Support</Link>
           </div>
-          <Link
+          <DirectCheckoutLink
             className="workflow-nav-buy"
-            to={buyPath(`${page.source}_nav`)}
+            source={`${page.source}_nav`}
+            pageVariant="workflow_nav"
             onClick={() => trackCta('buy_click')}
           >
             Buy once · {commercialOffer.price}
-          </Link>
+          </DirectCheckoutLink>
         </nav>
       </header>
 
@@ -67,13 +69,14 @@ const WorkflowLanding = ({ page }) => {
                   size="large"
                   onDownload={() => trackCta('download_click')}
                 />
-                <Link
+                <DirectCheckoutLink
                   className="secondary-btn workflow-buy-cta"
-                  to={buyPath(`${page.source}_hero`)}
+                  source={`${page.source}_hero`}
+                  pageVariant="workflow_hero"
                   onClick={() => trackCta('buy_click')}
                 >
                   <FaInfinity /> Unlock unlimited · {commercialOffer.price}
-                </Link>
+                </DirectCheckoutLink>
               </div>
             </div>
 
@@ -165,13 +168,14 @@ const WorkflowLanding = ({ page }) => {
               <p className="workflow-offer-limit">{offer.founderLimitText}</p>
             </div>
             <div className="workflow-offer-actions">
-              <Link
+              <DirectCheckoutLink
                 className="primary-btn large"
-                to={buyPath(`${page.source}_offer`)}
+                source={`${page.source}_offer`}
+                pageVariant="workflow_offer"
                 onClick={() => trackCta('buy_click')}
               >
                 Buy the Founder’s License <FaArrowRight />
-              </Link>
+              </DirectCheckoutLink>
               <a
                 href="#workflow-main"
                 className="workflow-text-link"

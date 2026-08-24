@@ -3,6 +3,7 @@ import {
   canonicalPagePath,
   captureAttribution,
   checkoutAttribution,
+  checkoutAttributionForSource,
   normalizeAttribution
 } from './attribution';
 
@@ -37,6 +38,16 @@ test('keeps first-party attribution for checkout and falls back safely', () => {
     utm_source: 'website',
     utm_medium: 'owned',
     utm_campaign: 'founder_launch'
+  });
+});
+
+test('direct checkout replaces the placement source without losing acquisition UTMs', () => {
+  captureAttribution('?source=landing_entry&utm_source=newsletter&utm_medium=email&utm_campaign=august');
+  expect(checkoutAttributionForSource('website_pricing')).toEqual({
+    source: 'website_pricing',
+    utm_source: 'newsletter',
+    utm_medium: 'email',
+    utm_campaign: 'august'
   });
 });
 

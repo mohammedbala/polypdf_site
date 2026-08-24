@@ -16,8 +16,9 @@ import {
 } from '@phosphor-icons/react';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DownloadCTA from './DownloadCTA';
+import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
-import { buyPath, captureAttribution } from '../lib/attribution';
+import { captureAttribution } from '../lib/attribution';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
@@ -26,6 +27,7 @@ import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
 import shotTakeoffSnapping from '../assets/screenshots/takeoff-snapping-v1-4.gif';
 import shotAiscPlugin from '../assets/screenshots/plugins-aisc-w24x55-result-v1-4-dark-web.png';
 import shotPdfMaps from '../assets/screenshots/pdf-maps-v1-4-dark-web.png';
+import shotMutcd from '../assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png';
 import shotAutoArea from '../assets/screenshots/auto-area-v1-4-dark-web.png';
 import shotOcrSearch from '../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png';
 import shotCustomShortcuts from '../assets/screenshots/custom-shortcuts-v1-4-light-web.png';
@@ -103,9 +105,9 @@ export const homeScreenshots = [
     framing: 'focus',
     focus: 'pdf-maps',
     category: 'Maps',
-    title: 'Place ready-to-use maps on the PDF',
-    alt: 'PolyPDF 1.4 PDF Maps generator previewing New York with street zoom and the Liberty base map selected',
-    caption: 'Search a location, tune the zoom and base map, preview it, then insert the map directly onto the PDF.',
+    title: 'Build a signed map sheet in one workflow',
+    alt: 'PolyPDF 1.4 placing a full New York map, resizing it on the PDF, then adding built-in MUTCD Stop and Yield signs',
+    caption: 'Place a real map, drag it to the size the sheet needs, then layer built-in MUTCD regulatory signs directly over it.',
     width: 1710,
     height: 1073
   },
@@ -365,6 +367,12 @@ export const ShowcaseMotionLayer = memo(({ motionType }) => {
           <clipPath id="map-placement-source-clip">
             <rect x="97" y="238" width="145" height="145" rx="8" />
           </clipPath>
+          <clipPath id="map-mutcd-stop-clip">
+            <path d="M983 578H1041L1064 601V661L1041 684H983L960 661V601Z" />
+          </clipPath>
+          <clipPath id="map-mutcd-yield-clip">
+            <path d="M128 222H160L144 256Z" />
+          </clipPath>
         </defs>
         <image
           className="map-placement-tile"
@@ -376,9 +384,47 @@ export const ShowcaseMotionLayer = memo(({ motionType }) => {
           preserveAspectRatio="none"
           clipPath="url(#map-placement-source-clip)"
         />
+        <g className="map-resize-frame">
+          <rect className="map-resize-outline" x="620" y="170" width="780" height="780" rx="7" />
+          {[
+            [620, 170], [1400, 170], [620, 950], [1400, 950]
+          ].map(([cx, cy]) => (
+            <circle key={`${cx}-${cy}`} className="map-resize-handle" cx={cx} cy={cy} r="7" />
+          ))}
+        </g>
         <circle className="map-insert-click" cx="263" cy="1017" r="16" />
         <path
           className="map-insert-cursor"
+          d="M0 0V34L8.5 25.5L16 43L24 39.5L16.5 22H30Z"
+        />
+        <path
+          className="map-resize-cursor"
+          d="M0 0V34L8.5 25.5L16 43L24 39.5L16.5 22H30Z"
+        />
+        <image
+          className="map-mutcd-sign map-mutcd-stop"
+          href={shotMutcd}
+          x="0"
+          y="0"
+          width="1710"
+          height="1073"
+          preserveAspectRatio="none"
+          clipPath="url(#map-mutcd-stop-clip)"
+        />
+        <image
+          className="map-mutcd-sign map-mutcd-yield"
+          href={shotMutcd}
+          x="0"
+          y="0"
+          width="1710"
+          height="1073"
+          preserveAspectRatio="none"
+          clipPath="url(#map-mutcd-yield-clip)"
+        />
+        <circle className="map-sign-click map-sign-click-stop" cx="811" cy="610" r="18" />
+        <circle className="map-sign-click map-sign-click-yield" cx="1222" cy="704" r="18" />
+        <path
+          className="map-sign-cursor"
           d="M0 0V34L8.5 25.5L16 43L24 39.5L16.5 22H30Z"
         />
       </svg>
@@ -623,13 +669,14 @@ const PricingSection = ({ offer, onDownload }) => (
             ))}
           </ul>
           {offer.founderAvailable ? (
-            <Link
-              to={buyPath('website_pricing')}
+            <DirectCheckoutLink
+              source="website_pricing"
+              pageVariant="home_pricing"
               className="primary-btn full-width offer-cta"
               aria-label={`Buy once — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
             >
               <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
-            </Link>
+            </DirectCheckoutLink>
           ) : (
             <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
           )}
@@ -694,7 +741,14 @@ const Home = () => {
             <a href="#workflows" onClick={closeMobileMenu}>Workflows</a>
             <Link to="/blog/" onClick={closeMobileMenu}>Guides</Link>
             <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
-            <Link to={buyPath('website_nav')} className="nav-buy" onClick={closeMobileMenu}>Buy Once</Link>
+            <DirectCheckoutLink
+              source="website_nav"
+              pageVariant="home_nav"
+              className="nav-buy"
+              onClick={closeMobileMenu}
+            >
+              Buy Once
+            </DirectCheckoutLink>
             <a href={primaryPlatform.url} className="nav-download" download onClick={() => handleDownloadClick('nav')}>
               <DownloadSimple aria-hidden="true" weight="bold" /> Download Free
             </a>
@@ -742,13 +796,14 @@ const Home = () => {
                 source="hero"
                 onDownload={closeMobileMenu}
                 adjacentAction={(
-                  <Link
-                    to={buyPath('website_hero')}
+                  <DirectCheckoutLink
+                    source="website_hero"
+                    pageVariant="home_hero"
                     className="secondary-btn hero-buy offer-cta"
                     aria-label={`Buy once — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
                   >
                     <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
-                  </Link>
+                  </DirectCheckoutLink>
                 )}
               />
             </div>
@@ -905,13 +960,14 @@ const Home = () => {
             <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited hand-created measurements at the $49.99 Founder price instead of the planned $99 standard price.</p>
             <div className="cta-download-row">
               <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
-              <Link
-                to={buyPath('website_bottom_cta')}
+              <DirectCheckoutLink
+                source="website_bottom_cta"
+                pageVariant="home_bottom"
                 className="secondary-btn cta-mac-btn offer-cta"
                 aria-label={`Buy once — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
               >
                 <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
-              </Link>
+              </DirectCheckoutLink>
             </div>
             <OfferGuarantee compact inverse />
             <div className="trust-indicators">

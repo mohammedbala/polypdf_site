@@ -19,7 +19,7 @@ test('adds motion only where it can clarify real screenshot state', () => {
   ]);
 });
 
-test('motion overlays do not redraw baked dimensions, fictional map routes, or Auto Area boundaries', () => {
+test('motion overlays use real map and MUTCD pixels without fictional routes or redrawn geometry', () => {
   const markup = [
     'symbol-search',
     'takeoff-records',
@@ -39,7 +39,15 @@ test('motion overlays do not redraw baked dimensions, fictional map routes, or A
   expect(markup).toContain('map-placement-tile');
   expect(markup).toContain('map-insert-click');
   expect(markup).toContain('map-insert-cursor');
+  expect(markup).toContain('map-resize-frame');
+  expect(markup).toContain('map-resize-cursor');
+  expect(markup).toContain('map-mutcd-stop-clip');
+  expect(markup).toContain('map-mutcd-yield-clip');
+  expect(markup).toContain('map-mutcd-stop');
+  expect(markup).toContain('map-mutcd-yield');
+  expect(markup).toContain('map-sign-cursor');
   expect(markup).toContain('x="97" y="238" width="145" height="145"');
+  expect(markup).toContain('x="620" y="170" width="780" height="780"');
   expect(markup).toContain('auto-area-region-mask');
   expect(markup).toContain('M412 328H820V574H412Z');
   expect(markup).toContain('cx="412" cy="328"');

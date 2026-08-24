@@ -66,6 +66,15 @@ export const checkoutAttribution = (search = window.location.search) => {
   };
 };
 
+// Direct purchase controls do not navigate through /buy first, so carry their placement source
+// into the same stored attribution envelope before the Checkout Session is created. A source-only
+// update intentionally preserves the original campaign UTMs captured on arrival.
+export const checkoutAttributionForSource = (source) => {
+  captureAttribution(window.location.search);
+  const normalizedSource = normalizeValue(source);
+  return checkoutAttribution(normalizedSource ? `?source=${encodeURIComponent(normalizedSource)}` : '');
+};
+
 export const canonicalPagePath = (value) => {
   if (typeof value !== 'string' || value === '/' || !value.startsWith('/')) return value;
   const [, pathname = value, suffix = ''] = value.match(/^([^?#]*)(.*)$/) || [];
