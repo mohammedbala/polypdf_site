@@ -49,7 +49,7 @@ Key facts:
 
 ## Product notes
 
-- [How to Use PolyPDF Collaboration (Beta)](https://www.polypdf.com/blog/how-to-use-polypdf-collaboration-beta/): PolyPDF Collaboration keeps the PDF on your company share while approved Mac and Windows users exchange live markups, cursors, offline edits, and signed history through a customer-owned host.
+- [Set Up PolyPDF Collaboration Beta](https://www.polypdf.com/blog/how-to-use-polypdf-collaboration-beta/): PolyPDF Collaboration keeps the PDF on your company share while approved Mac and Windows users exchange live markups, cursors, offline edits, and signed history through a customer-owned host.
 - [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins/): How PolyPDF Pro plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.
 
 ## Support and policies

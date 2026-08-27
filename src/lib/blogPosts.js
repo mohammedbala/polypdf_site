@@ -32,7 +32,7 @@ const pluginSidebarCaption =
 const productPosts = Object.freeze([
   post({
     slug: 'how-to-use-polypdf-collaboration-beta',
-    title: 'How to Use PolyPDF Collaboration (Beta)',
+    title: 'Set Up PolyPDF Collaboration Beta',
     date: '2026-08-27',
     dateLabel: 'August 27, 2026',
     dateModified: '2026-08-27',
