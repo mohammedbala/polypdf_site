@@ -1664,6 +1664,55 @@
           "transform": "exact-50-percent"
         }
       ]
+    },
+    {
+      "id": "collaboration-beta-live",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/collaboration-beta-settings-dark.png",
+          "sha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e",
+          "width": 1224,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/collaboration-beta-settings-dark.png.theme-proof.json",
+          "sha256": "ca348225fa952cca28baed32f1c617b613d690bab90d7e0f2a7544f1bfeebff9"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/collaboration-beta-e2e-report.json",
+          "sha256": "1cf7555361654f542f86d8bc40f9e51d5f9083e59e77b069b220de2523f50347"
+        },
+        "fingerprint": {
+          "baseCommit": "179f0e1640e03fe94383bb81f26d0724d0c518d7",
+          "workingTreeProductDiffSha256": "4fe85022ee3cdc29f12a4d1b6e07a8716887e49200d34fadc614686422924069"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/collaboration-beta-live-v1-4-3-web.png",
+          "sha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e",
+          "width": 1224,
+          "height": 768,
+          "derivedFrom": "assets-source/blog-image-validation/captures/collaboration-beta-settings-dark.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/how-to-use-polypdf-collaboration-beta.png",
+          "sha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e",
+          "width": 1224,
+          "height": 768,
+          "derivedFrom": "src/assets/screenshots/collaboration-beta-live-v1-4-3-web.png",
+          "transform": "byte-identical"
+        }
+      ]
     }
   ],
   "ogComposites": [

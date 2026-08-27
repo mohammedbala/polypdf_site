@@ -2,6 +2,7 @@ import aiscGeneratorScreenshot from '../assets/screenshots/plugins-aisc-w24x55-g
 import aiscResultScreenshot from '../assets/screenshots/plugins-aisc-w24x55-result-v1-4-dark-web.png';
 import mutcdStopScreenshot from '../assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png';
 import pluginSidebarScreenshot from '../assets/screenshots/plugins-sidebar-v1-4-dark-web.png';
+import collaborationBetaScreenshot from '../assets/screenshots/collaboration-beta-live-v1-4-3-web.png';
 import { guidePosts } from '../content/guides';
 
 // Blog posts are plain data so a new entry is one object, not a new React component.
@@ -19,6 +20,7 @@ import { guidePosts } from '../content/guides';
 //   { kind: 'figure', src, alt, caption }  a captioned product screenshot
 //   { kind: 'table',  headers, rows }      an accessible comparison/reference table
 //   { kind: 'formula', label, formula }    a worked calculation with an explanation
+//   { kind: 'link', href, label, text? }   a resource link with optional supporting copy
 //
 // `icon` names map to react-icons in BlogPost.js. Add the name there before using a new one.
 
@@ -28,6 +30,278 @@ const pluginSidebarCaption =
   'The Plugins sidebar in PolyPDF 1.4.0, listing the three generators that come with the app: AISC Steel Sections, PDF Maps, and Professional Seal Maker. The page behind it is a blank sample sheet, and the Polygon tool is selected so its Line, Fill, and Hatch style controls stay visible.';
 
 const productPosts = Object.freeze([
+  post({
+    slug: 'how-to-use-polypdf-collaboration-beta',
+    title: 'How to Use PolyPDF Collaboration (Beta)',
+    date: '2026-08-27',
+    dateLabel: 'August 27, 2026',
+    dateModified: '2026-08-27',
+    author: 'The PolyPDF team',
+    readingTime: '9 min read',
+    tag: 'Beta guide',
+    excerpt:
+      'PolyPDF Collaboration keeps the PDF on your company share while approved Mac and Windows users exchange live markups, cursors, offline edits, and signed history through a customer-owned host.',
+    metaTitle: 'How to Use PolyPDF Collaboration Beta',
+    metaDescription:
+      'Set up PolyPDF Collaboration Beta on a company file share, approve Mac and Windows users, sync markups, resolve conflicts, and restore signed history.',
+    keywords: [
+      'PDF collaboration on company server',
+      'self-hosted PDF collaboration',
+      'shared PDF markup Mac Windows',
+      'PolyPDF Collaboration Beta'
+    ],
+    lede:
+      'Collaboration Beta lets approved Mac and Windows users work in the same shared PDF without uploading the drawing to a PolyPDF cloud account. This guide covers the company host, first connection, daily workflow, and beta safeguards.',
+    quickAnswer:
+      'Install the customer-owned Collaboration Host on your private network, mount the same company PDF share on each computer, and give employees the nonsecret company connection file. The first Owner enrolls with a single-use invitation and approves later devices as Owner, Editor, or Viewer. Approved users open the same PDF to exchange live cursors and markup transactions; short offline interruptions queue encrypted changes for ordered replay.',
+    lastVerified: '2026-08-27',
+    productVersion: 'PolyPDF 1.4.3 (build 20) Collaboration Beta',
+    platforms: 'macOS and Windows clients; Windows Server 2022 host',
+    heroImage: {
+      src: collaborationBetaScreenshot,
+      alt: 'PolyPDF Collaboration Beta settings over a sample drawing, with company connection, mounted share, signed history, and conflict center sections',
+      caption:
+        'The Collaboration Beta setup in PolyPDF 1.4.3: connect a device to the customer-owned host, mount the company share, review signed history, and resolve offline conflicts.',
+      width: 1224,
+      height: 768
+    },
+    sections: [
+      {
+        icon: 'shield',
+        title: 'What customer-owned collaboration means',
+        body: [
+          {
+            kind: 'p',
+            text:
+              'The PDF stays on the file share your company already controls. Each employee opens that shared file through their normal mounted path — for example, /Volumes/Projects on a Mac or Z:\\Projects on Windows. A small Collaboration Host on your network approves devices, orders markup changes, signs history, and coordinates saves.'
+          },
+          {
+            kind: 'p',
+            text:
+              'PolyPDF does not host the drawing or require a PolyPDF cloud account. The host stores collaboration records in a protected hidden folder beside the company share. Ordinary users should have normal PDF access but must not be able to modify that hidden collaboration folder directly.'
+          },
+          {
+            kind: 'note',
+            text:
+              'This is a beta. Start with a pilot folder and backed-up copies of real project PDFs. Keep the Collaboration Host on a private company network or VPN; do not expose its port directly to the public internet.'
+          }
+        ]
+      },
+      {
+        icon: 'plug',
+        title: '1. Have an administrator install the company host',
+        body: [
+          {
+            kind: 'p',
+            text:
+              'The normal beta path is the Windows Server installer. It creates the host identity and pinned TLS certificate, registers an automatic Windows service, applies local-share permissions, and produces the two files used to enroll employees.'
+          },
+          {
+            kind: 'link',
+            href: '/downloads/collaboration/PolyPDF-Collaboration-Host-Setup.exe',
+            label: 'Download the Windows Server Collaboration Host (Beta)',
+            text: 'Run it as an administrator on Windows Server 2022.'
+          },
+          { kind: 'sub', text: 'The installer produces two different files' },
+          {
+            kind: 'ul',
+            items: [
+              'PolyPDF-company-connection.json is safe to distribute to employees. It identifies the host and pins its certificate and signing key.',
+              'PolyPDF-owner-bootstrap.invitation.json is secret and single-use. Give it only to the person who will enroll the first Owner, then delete it after that Owner connects.'
+            ]
+          },
+          {
+            kind: 'link',
+            href: 'mailto:support@polypdf.com?subject=PolyPDF%20Collaboration%20Beta%20%E2%80%94%20Linux%20host',
+            label: 'Ask about the Ubuntu / Docker host',
+            text: 'Linux host packaging is available for managed beta pilots.'
+          }
+        ]
+      },
+      {
+        icon: 'steps',
+        title: '2. Connect the first Owner',
+        body: [
+          {
+            kind: 'ol',
+            items: [
+              'Install PolyPDF 1.4.3 or newer on the Owner’s Mac or Windows computer and mount the company PDF share.',
+              'Open a PDF, then click Collaboration off in the title bar.',
+              'Turn on Enable collaboration and enter the Owner’s display name.',
+              'Open PolyPDF-company-connection.json in a text editor and paste its full JSON into Company connection file.',
+              'Enter the local mounted-share path in Mounted company share. Paths can differ by computer as long as they point to the same share.',
+              'From the private Owner invitation, paste only the bootstrapToken value into Single-use Owner invitation.',
+              'Choose Test host. When the connection succeeds, choose Save and connect.'
+            ]
+          },
+          {
+            kind: 'note',
+            text:
+              'The first Owner invitation is a recovery-sensitive credential. Do not email it to the whole team, store it beside the public connection file, or reuse it for later employees.'
+          }
+        ]
+      },
+      {
+        icon: 'steps',
+        title: '3. Add Editors and Viewers',
+        body: [
+          {
+            kind: 'p',
+            text:
+              'Every additional user follows the same connection steps but leaves the Owner invitation blank. Their status changes to Approval pending. The Owner opens the Collaboration panel, finds the request under Members, and approves the device as an Owner, Editor, or Viewer.'
+          },
+          {
+            kind: 'ul',
+            items: [
+              'Owner: approves or revokes devices, restores signed history, and handles externally replaced PDFs.',
+              'Editor: adds and changes shared markups and participates in controlled saves.',
+              'Viewer: joins the room and sees live activity without publishing markup changes.'
+            ]
+          },
+          {
+            kind: 'p',
+            text:
+              'Approval belongs to that device key, not just a typed name. If a laptop is lost or leaves the company, an Owner can revoke it from Members and the host disconnects it.'
+          }
+        ]
+      },
+      {
+        icon: 'document',
+        title: '4. Open the same PDF and work normally',
+        body: [
+          {
+            kind: 'figure',
+            src: collaborationBetaScreenshot,
+            alt: 'PolyPDF Owner and Editor clients showing synchronized review markups and remote cursors',
+            caption:
+              'Both clients opened the same share-relative PDF. Independent markups synchronized, and each client identifies the other person’s authenticated cursor.',
+            width: 1710,
+            height: 962
+          },
+          {
+            kind: 'p',
+            text:
+              'When approved users open the same PDF from the configured share, the title-bar status changes from Collaboration ready to Live · 2 (or the current participant count). Remote pointers appear over the page with each person’s name, and accepted markup changes arrive without passing the PDF file back and forth.'
+          },
+          {
+            kind: 'p',
+            text:
+              'Collaboration covers the review workspace: annotations, layers, spaces, scale regions, measurement settings, custom fields, and Markups-list state. Forms, signatures, attachments, page structure, and underlying PDF content remain outside the live collaboration record.'
+          }
+        ]
+      },
+      {
+        icon: 'sparkle',
+        title: '5. Keep working through a network interruption',
+        body: [
+          {
+            kind: 'p',
+            text:
+              'If the VPN or host connection drops, the status changes to Offline and shows how many encrypted changes are queued on that computer. Continue marking up the drawing. After the connection returns, PolyPDF authenticates again and submits the queued transactions in order.'
+          },
+          {
+            kind: 'note',
+            text:
+              'Offline support protects short interruptions; it is not a substitute for backups or a long-lived disconnected branch. Reconnect and confirm the queue reaches zero before closing out a review session.'
+          }
+        ]
+      },
+      {
+        icon: 'compare',
+        title: '6. Resolve a same-markup conflict',
+        body: [
+          {
+            kind: 'p',
+            text:
+              'Independent markups merge normally. A conflict is raised only when two offline branches changed the same markup version. Click the conflict count in the title bar and open Conflict Center. For each conflict, choose Use server version or Create mine as a copy.'
+          },
+          {
+            kind: 'p',
+            text:
+              'Create mine as a copy preserves the local work as a separate markup instead of silently overwriting someone else. PolyPDF does not guess which same-object edit was intended.'
+          }
+        ]
+      },
+      {
+        icon: 'document',
+        title: '7. Save the shared PDF',
+        body: [
+          {
+            kind: 'p',
+            text:
+              'Live markup history and the PDF bytes are separate until someone saves. When an approved user chooses Save, the host grants one exclusive save lease, brings that client to the latest accepted state, and records the sequence embedded in the PDF. A second simultaneous save waits or is refused instead of racing the same file.'
+          },
+          {
+            kind: 'p',
+            text:
+              'Save As creates a new file and detaches the original collaboration room. Opening that new shared file creates its own collaboration identity and history.'
+          }
+        ]
+      },
+      {
+        icon: 'shield',
+        title: '8. Use signed history and handle outside changes',
+        body: [
+          {
+            kind: 'p',
+            text:
+              'The Collaboration panel lists accepted transactions with sequence number, author, time, and a host signature. An Owner can restore an earlier sequence. Restore is recorded as a new compensating transaction, so later history is not erased or rewritten.'
+          },
+          {
+            kind: 'p',
+            text:
+              'If another program replaces the shared PDF outside a controlled PolyPDF save, the room pauses instead of applying history to bytes it no longer recognizes. An Owner must inspect the file and either acknowledge the outside change or relink the room to the correct share-relative PDF.'
+          }
+        ]
+      },
+      {
+        icon: 'sparkle',
+        title: 'What we need from beta teams',
+        body: [
+          {
+            kind: 'p',
+            text:
+              'Tell us about confusing enrollment steps, VPN and sleep/wake behavior, conflicts that do not explain themselves, and file-server environments that are difficult to configure. Include the operating systems, host platform, and exact status message — never send a confidential drawing unless your organization has approved it.'
+          },
+          {
+            kind: 'link',
+            href: 'mailto:support@polypdf.com?subject=PolyPDF%20Collaboration%20Beta%20feedback',
+            label: 'Send Collaboration Beta feedback',
+            text: 'Email support@polypdf.com.'
+          }
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: 'Does PolyPDF upload collaboration PDFs to the cloud?',
+        answer:
+          'No. The PDF stays on the customer’s mounted company share. A customer-owned host on the private network authenticates devices, signs transaction history, coordinates saves, and stores collaboration records.'
+      },
+      {
+        question: 'Can Mac and Windows users collaborate on the same PDF?',
+        answer:
+          'Yes. Each computer may use a different local mount path, but both paths must resolve to the same configured company share and share-relative PDF.'
+      },
+      {
+        question: 'What happens when two people edit the same markup offline?',
+        answer:
+          'PolyPDF opens Conflict Center and asks the user to keep the server version or preserve the local edit as a separate copied markup. It does not silently choose a winner.'
+      }
+    ],
+    relatedSlugs: [
+      'pdf-markup-table-rfi-punch-list',
+      'prepare-issued-pdf-set'
+    ],
+    cta: {
+      body:
+        'Install the latest PolyPDF update on each client, then pilot Collaboration Beta on a private company network with backed-up project files.',
+      primaryHref: 'https://www.polypdf.com/downloads/collaboration/PolyPDF-Collaboration-Host-Setup.exe',
+      primaryLabel: 'Download the beta host',
+      secondaryHref: 'mailto:support@polypdf.com?subject=PolyPDF%20Collaboration%20Beta',
+      secondaryLabel: 'Contact support'
+    }
+  }),
   post({
     slug: 'introducing-polypdf-plugins',
     title: 'Introducing PolyPDF Plugins',

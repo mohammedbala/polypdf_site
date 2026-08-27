@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "protocolVersion": 2,
+  "hostUrl": "https://127.0.0.1:62268",
+  "sharedDocument": "C:\\dev\\polypdf-collab-v2-20260824\\polypdf\\.tmp\\collaboration-simulation\\Company Share\\Shared Project Set.pdf",
+  "ownerBootstrap": "approved",
+  "employeeEnrollment": "approved-editor",
+  "concurrentIndependentEdits": true,
+  "vpnReconnectAndOrderedReplay": true,
+  "restoreCompensatingTransaction": true,
+  "controlledSaveAndDiskReopen": true,
+  "reopenedAnnotationCount": 1,
+  "remoteCursorLabel": "Alice Owner",
+  "historyRows": 4,
+  "screenshots": {
+    "alice": "C:\\dev\\polypdf-collab-v2-20260824\\polypdf\\.tmp\\collaboration-simulation\\alice-live-document.png",
+    "bob": "C:\\dev\\polypdf-collab-v2-20260824\\polypdf\\.tmp\\collaboration-simulation\\bob-reopened-history-and-cursor.png",
+    "authenticatedCursor": "C:\\dev\\polypdf-collab-v2-20260824\\polypdf\\.tmp\\collaboration-simulation\\bob-authenticated-live-cursor.png"
+  },
+  "completedAt": "2026-08-24T16:08:14.668Z"
+}

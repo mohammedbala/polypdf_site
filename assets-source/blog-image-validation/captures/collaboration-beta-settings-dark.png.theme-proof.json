@@ -1,0 +1,38 @@
+{
+  "capturedAt": "2026-08-26T23:50:00-07:00",
+  "release": {
+    "version": "1.4.3",
+    "build": "20",
+    "theme": "dark",
+    "featureStatus": "beta"
+  },
+  "source": {
+    "baseCommit": "179f0e1640e03fe94383bb81f26d0724d0c518d7",
+    "workingTreeDiffSha256": "4fe85022ee3cdc29f12a4d1b6e07a8716887e49200d34fadc614686422924069",
+    "rawPath": "collaboration-beta-settings-dark.png",
+    "rawSha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e"
+  },
+  "facts": {
+    "captureKind": "native macOS PolyPDF development capture",
+    "clientCount": 1,
+    "platforms": [
+      "macOS"
+    ],
+    "visibleFeatures": [
+      "company connection onboarding",
+      "mounted company share",
+      "signed history and restore",
+      "offline conflict center"
+    ],
+    "nativeMaximized": true,
+    "viewportEmulation": false,
+    "styleToolbarStateValidated": true,
+    "pageOnlyCrop": false
+  },
+  "pixelProof": {
+    "theme": "dark",
+    "width": 1224,
+    "height": 768,
+    "passes": true
+  }
+}

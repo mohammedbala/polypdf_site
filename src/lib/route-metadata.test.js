@@ -82,10 +82,10 @@ test('normalizes the trailing slash added by the production web server', () => {
 
 test('separates the current app release from the verified screenshot release', () => {
   expect(siteRelease).toMatchObject({
-    version: '1.4.1',
-    build: '18',
-    screenshotVersion: '1.4.0',
-    screenshotBuild: '17',
-    screenshotCacheToken: '1.4.0-17'
+    version: '1.4.3',
+    build: '20',
+    screenshotVersion: '1.4.3',
+    screenshotBuild: '20',
+    screenshotCacheToken: '1.4.3-20'
   });
 });

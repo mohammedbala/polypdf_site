@@ -92,7 +92,7 @@ const xmlEscape = (value) => String(value)
 
 const validatePosts = () => {
   assert(guidePosts.length === 12, `Expected exactly 12 guides, found ${guidePosts.length}`);
-  assert(blogPosts.length === 13, `Expected 12 guides plus one product post, found ${blogPosts.length}`);
+  assert(blogPosts.length === 14, `Expected 12 guides plus two product posts, found ${blogPosts.length}`);
 
   const fields = [
     ['slug', (value) => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)],
@@ -272,7 +272,10 @@ const buildFeed = () => {
 const markdownLink = (label, route) => `- [${label}](${absolute(route)})`;
 
 const buildLlmsText = () => {
-  const pluginPost = blogPosts.find(({ slug }) => slug === 'introducing-polypdf-plugins');
+  const guideSlugs = new Set(guidePosts.map(({ slug }) => slug));
+  const productLines = blogPosts
+    .filter(({ slug }) => !guideSlugs.has(slug))
+    .map((entry) => `${markdownLink(entry.title, blogPostPath(entry.slug))}: ${entry.excerpt}`);
   const guideLines = guidePosts.map((entry) =>
     `${markdownLink(entry.title, blogPostPath(entry.slug))}: ${entry.excerpt}`
   );
@@ -290,6 +293,7 @@ const buildLlmsText = () => {
     '- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
     '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, count, and dimension tools, plus a worksheet that exports CSV or PDF.',
     '- Symbol Search auto-count (Pro): capture one drawing symbol, review candidate matches, and commit an auditable numbered count series.',
+    '- Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.',
     '- Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.',
     '- Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.',
     '- Pro plugins included with the app: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic, and PDF Maps places a map image for an address or place name. AISC Steel Sections performs no capacity or design checks, and a seal graphic is drafting artwork rather than a cryptographic digital signature: PolyPDF does not check licensure or board compliance.',
@@ -317,7 +321,7 @@ const buildLlmsText = () => {
     '',
     '## Product notes',
     '',
-    `${markdownLink(pluginPost.title, blogPostPath(pluginPost.slug))}: ${pluginPost.excerpt}`,
+    ...productLines,
     '',
     '## Support and policies',
     '',

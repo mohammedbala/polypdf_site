@@ -4,12 +4,13 @@
 
 Key facts:
 
-- Current release: PolyPDF 1.4.1 (build 18) for macOS and Windows; /versions reads the live update feeds.
+- Current release: PolyPDF 1.4.3 (build 20) for macOS and Windows; /versions reads the live update feeds.
 - Free download: the Free edition includes markup, review, calibration, and up to 3 hand-created measurements per document. PolyPDF Pro Founder's License removes the measurement cap and unlocks Symbol Search plus installed plugins at the $49.99 Founder price instead of the planned $99 standard price, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
 - The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.
 - Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, count, and dimension tools, plus a worksheet that exports CSV or PDF.
 - Symbol Search auto-count (Pro): capture one drawing symbol, review candidate matches, and commit an auditable numbered count series.
+- Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.
 - Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.
 - Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.
 - Pro plugins included with the app: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic, and PDF Maps places a map image for an address or place name. AISC Steel Sections performs no capacity or design checks, and a seal graphic is drafting artwork rather than a cryptographic digital signature: PolyPDF does not check licensure or board compliance.
@@ -48,6 +49,7 @@ Key facts:
 
 ## Product notes
 
+- [How to Use PolyPDF Collaboration (Beta)](https://www.polypdf.com/blog/how-to-use-polypdf-collaboration-beta/): PolyPDF Collaboration keeps the PDF on your company share while approved Mac and Windows users exchange live markups, cursors, offline edits, and signed history through a customer-owned host.
 - [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins/): How PolyPDF Pro plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.
 
 ## Support and policies

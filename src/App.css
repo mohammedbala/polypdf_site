@@ -2157,6 +2157,33 @@ body {
   font-size: 0.98rem;
 }
 
+.blog-resource {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-width: 70ch;
+  margin-top: 1.2rem;
+  color: var(--gray-700);
+}
+
+.blog-resource-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0.72rem 1rem;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.blog-resource-link:hover {
+  background: var(--accent-soft);
+}
+
 .blog-steps {
   counter-reset: blog-step;
   list-style: none;
@@ -2454,7 +2481,8 @@ body {
 .blog-card-title a:focus-visible,
 .blog-read-link:focus-visible,
 .blog-related-link:focus-visible,
-.blog-sources a:focus-visible {
+.blog-sources a:focus-visible,
+.blog-resource-link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }

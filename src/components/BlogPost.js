@@ -242,6 +242,13 @@ const renderBlock = (block, index) => {
       );
     case 'note':
       return <p key={key} className="blog-note">{block.text}</p>;
+    case 'link':
+      return (
+        <p key={key} className="blog-resource">
+          {block.text && <span>{block.text}</span>}
+          <a href={block.href} className="blog-resource-link">{block.label}</a>
+        </p>
+      );
     case 'figure':
       return renderFigure(block, key);
     case 'table':
@@ -292,7 +299,7 @@ const sourceDetails = (source) => {
 };
 
 const CtaLink = ({ className, href, children }) => {
-  if (/^https?:\/\//.test(href || '')) {
+  if (/^[a-z][a-z0-9+.-]*:/i.test(href || '')) {
     return <a className={className} href={href}>{children}</a>;
   }
 

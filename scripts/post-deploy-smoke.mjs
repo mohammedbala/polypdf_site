@@ -31,7 +31,8 @@ export const discoveryRoutes = ['/robots.txt', '/sitemap.xml', '/llms.txt', '/fe
 
 export const downloadRoutes = [
   '/downloads/PolyPDFMac.dmg',
-  '/downloads/windows/PolyPDFSetup.exe'
+  '/downloads/windows/PolyPDFSetup.exe',
+  '/downloads/collaboration/PolyPDF-Collaboration-Host-Setup.exe'
 ];
 
 export const canonicalFooterRoutes = [
