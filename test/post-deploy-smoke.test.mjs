@@ -7,6 +7,7 @@ import {
   canonicalFooterRoutes,
   discoveryRoutes,
   downloadRoutes,
+  escapeWorkflowCommand,
   expectedOffer,
   guideImageRoutes,
   htmlRoutes,
@@ -339,4 +340,11 @@ test('a deliberately broken trust route fails the deploy smoke', async () => {
       /\/terms returned HTTP 500/
     );
   });
+});
+
+test('escapes exact smoke failures for GitHub workflow annotations', () => {
+  assert.equal(
+    escapeWorkflowCommand('bad 100%\nsecond line\r'),
+    'bad 100%25%0Asecond line%0D'
+  );
 });

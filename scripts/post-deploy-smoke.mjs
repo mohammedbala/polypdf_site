@@ -399,6 +399,11 @@ function assertResponse(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+export const escapeWorkflowCommand = (value) => String(value)
+  .replaceAll('%', '%25')
+  .replaceAll('\r', '%0D')
+  .replaceAll('\n', '%0A');
+
 function argumentValue(flag) {
   const index = process.argv.indexOf(flag);
   return index >= 0 ? process.argv[index + 1] : null;
@@ -416,7 +421,11 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
       console.log(`post-deploy smoke passed (${results.length} checks)`);
     })
     .catch((error) => {
-      console.error(`post-deploy smoke failed: ${error instanceof Error ? error.message : String(error)}`);
+      const message = error instanceof Error ? error.message : String(error);
+      console.error(`post-deploy smoke failed: ${message}`);
+      if (process.env.GITHUB_ACTIONS === 'true') {
+        console.error(`::error title=PolyPDF production smoke failed::${escapeWorkflowCommand(message)}`);
+      }
       process.exit(1);
     });
 }
