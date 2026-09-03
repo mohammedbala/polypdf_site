@@ -71,5 +71,9 @@ test('places all eight shipping workflows in one compact grid', async () => {
   expect(grid.querySelectorAll('.workflow-card.is-focus')).toHaveLength(7);
   expect(grid.querySelectorAll('.workflow-card.is-context')).toHaveLength(1);
   expect(homeScreenshots).toHaveLength(8);
+  expect(homeScreenshots.every((shot) => shot.imageSrcSet.includes('768w'))).toBe(true);
+  expect(homeScreenshots.every((shot) => shot.imageSrcSet.includes('1536w'))).toBe(true);
+  expect(homeScreenshots.filter((shot) => shot.video)).toHaveLength(1);
+  expect(homeScreenshots.find((shot) => shot.video)?.video).toMatch(/\.mp4$/);
   view.unmount();
 });

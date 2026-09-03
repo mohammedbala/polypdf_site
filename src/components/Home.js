@@ -24,26 +24,41 @@ import { usePlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
 import siteRelease from '../lib/siteRelease.json';
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
-import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
-import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-640.webp';
+import shotSymbolSearch768 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-768.webp';
+import shotSymbolSearch1536 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-1536.webp';
+import shotTakeoffHeroPoster from '../assets/screenshots/takeoff-v1-4-dark-640.webp';
+import shotTakeoff768 from '../assets/screenshots/takeoff-v1-4-dark-web-768.webp';
+import shotTakeoff1536 from '../assets/screenshots/takeoff-v1-4-dark-web-1536.webp';
 import shotTakeoffSnapping from '../assets/motion/takeoff-snapping-v1-4-1024.mp4';
-import shotCompare from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web.png';
-import shotAutoArea from '../assets/screenshots/auto-area-v1-4-dark-web.png';
-import shotOcrSearch from '../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png';
-import shotCustomShortcuts from '../assets/screenshots/custom-shortcuts-v1-4-light-web.png';
-import shotSanitize from '../assets/screenshots/sanitize-options-v1-4-light-web.png';
-import shotPdfMapsMotion from '../assets/motion/pdf-map-plan-v1-4.gif';
-import shotPdfMapsPoster from '../assets/motion/pdf-map-plan-v1-4-poster.png';
+import shotCompare768 from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web-768.webp';
+import shotCompare1536 from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web-1536.webp';
+import shotAutoArea768 from '../assets/screenshots/auto-area-v1-4-dark-web-768.webp';
+import shotAutoArea1536 from '../assets/screenshots/auto-area-v1-4-dark-web-1536.webp';
+import shotOcrSearch768 from '../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web-768.webp';
+import shotOcrSearch1536 from '../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web-1536.webp';
+import shotCustomShortcuts768 from '../assets/screenshots/custom-shortcuts-v1-4-light-web-768.webp';
+import shotCustomShortcuts1536 from '../assets/screenshots/custom-shortcuts-v1-4-light-web-1536.webp';
+import shotSanitize768 from '../assets/screenshots/sanitize-options-v1-4-light-web-768.webp';
+import shotSanitize1536 from '../assets/screenshots/sanitize-options-v1-4-light-web-1536.webp';
+import shotPdfMapsMotion from '../assets/motion/pdf-map-plan-v1-4-1024.mp4';
+import shotPdfMapsPoster768 from '../assets/motion/pdf-map-plan-v1-4-poster-768.webp';
+import shotPdfMapsPoster1536 from '../assets/motion/pdf-map-plan-v1-4-poster-1536.webp';
 import shotRevisionPackage768 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-768.webp';
 import shotRevisionPackage1536 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-1536.webp';
 
 const releaseSeries = siteRelease.version.split('.').slice(0, 2).join('.');
+const homeWorkflowImageSizes = '(max-width: 760px) calc(100vw - 56px), (max-width: 1120px) calc(50vw - 64px), 590px';
+const responsiveWorkflowShot = (small, large) => ({
+  image: small,
+  imageSrcSet: `${small} 768w, ${large} 1536w`,
+  imageSizes: homeWorkflowImageSizes
+});
 
 // Every source is a full-frame capture of the shipping PolyPDF 1.4 series. Focused cards crop only
 // at presentation time so the important controls read clearly without manufacturing replacement UI.
 export const homeScreenshots = [
   {
-    image: shotSymbolSearch,
+    ...responsiveWorkflowShot(shotSymbolSearch768, shotSymbolSearch1536),
     motion: 'symbol-search',
     theme: 'dark',
     framing: 'focus',
@@ -57,7 +72,7 @@ export const homeScreenshots = [
     height: 1073
   },
   {
-    image: shotTakeoff,
+    ...responsiveWorkflowShot(shotTakeoff768, shotTakeoff1536),
     motion: 'takeoff-records',
     theme: 'dark',
     framing: 'context',
@@ -69,7 +84,7 @@ export const homeScreenshots = [
     height: 1073
   },
   {
-    image: shotOcrSearch,
+    ...responsiveWorkflowShot(shotOcrSearch768, shotOcrSearch1536),
     theme: 'light',
     framing: 'focus',
     focus: 'ocr-search',
@@ -81,7 +96,7 @@ export const homeScreenshots = [
     height: 1073
   },
   {
-    image: shotCustomShortcuts,
+    ...responsiveWorkflowShot(shotCustomShortcuts768, shotCustomShortcuts1536),
     theme: 'light',
     framing: 'focus',
     focus: 'shortcuts',
@@ -93,7 +108,7 @@ export const homeScreenshots = [
     height: 1073
   },
   {
-    image: shotCompare,
+    ...responsiveWorkflowShot(shotCompare768, shotCompare1536),
     theme: 'dark',
     framing: 'focus',
     focus: 'compare',
@@ -105,8 +120,8 @@ export const homeScreenshots = [
     height: 1073
   },
   {
-    image: shotPdfMapsPoster,
-    animatedImage: shotPdfMapsMotion,
+    ...responsiveWorkflowShot(shotPdfMapsPoster768, shotPdfMapsPoster1536),
+    video: shotPdfMapsMotion,
     motion: 'pdf-maps',
     theme: 'dark',
     framing: 'focus',
@@ -120,7 +135,7 @@ export const homeScreenshots = [
     height: 1073
   },
   {
-    image: shotAutoArea,
+    ...responsiveWorkflowShot(shotAutoArea768, shotAutoArea1536),
     motion: 'auto-area',
     theme: 'dark',
     framing: 'focus',
@@ -133,7 +148,7 @@ export const homeScreenshots = [
     height: 1073
   },
   {
-    image: shotSanitize,
+    ...responsiveWorkflowShot(shotSanitize768, shotSanitize1536),
     theme: 'light',
     framing: 'focus',
     focus: 'sanitize',
@@ -301,7 +316,7 @@ const HeroProductBoard = memo(() => (
         muted
         playsInline
         preload="metadata"
-        poster={shotTakeoff}
+        poster={shotTakeoffHeroPoster}
         aria-label="PolyPDF 1.4 drawing a 30 foot dimension that snaps precisely between two plan endpoints"
       >
         <source
@@ -501,14 +516,32 @@ const ProductShotMedia = memo(({ shot }) => {
       ref={mediaRef}
       className={`product-shot-media${shot.motion ? ` has-${shot.motion}-motion` : ''}${motionActive ? ' is-motion-active' : ''}`}
     >
-      <img
-        src={shot.animatedImage && motionActive ? shot.animatedImage : shot.image}
-        alt={shot.alt}
-        loading="lazy"
-        width={shot.width}
-        height={shot.height}
-      />
-      {shot.motion && !shot.animatedImage && <ShowcaseMotionLayer motionType={shot.motion} />}
+      {shot.video && motionActive ? (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster={shot.image}
+          aria-label={shot.alt}
+          width={shot.width}
+          height={shot.height}
+        >
+          <source src={shot.video} type="video/mp4" />
+        </video>
+      ) : (
+        <img
+          src={shot.image}
+          srcSet={shot.imageSrcSet}
+          sizes={shot.imageSizes}
+          alt={shot.alt}
+          loading="lazy"
+          width={shot.width}
+          height={shot.height}
+        />
+      )}
+      {shot.motion && !shot.video && <ShowcaseMotionLayer motionType={shot.motion} />}
     </div>
   );
 });

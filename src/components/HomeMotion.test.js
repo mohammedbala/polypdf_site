@@ -19,7 +19,7 @@ test('adds motion only where it can clarify real screenshot state', () => {
   ]);
 });
 
-test('motion overlays avoid fictional routes and leave the full-map workflow to its verified GIF', () => {
+test('motion overlays avoid fictional routes and leave the full-map workflow to its verified capture', () => {
   const markup = [
     'symbol-search',
     'takeoff-records',
@@ -39,11 +39,11 @@ test('motion overlays avoid fictional routes and leave the full-map workflow to 
   expect(markup).toContain('cx="412" cy="328"');
 });
 
-test('the map workflow uses a poster plus viewport-activated animation and homepage copy contains no steel showcase', () => {
+test('the map workflow uses a poster plus viewport-activated video and homepage copy contains no steel showcase', () => {
   const mapShot = homeScreenshots.find(({ motion }) => motion === 'pdf-maps');
 
   expect(mapShot.image).toBeTruthy();
-  expect(mapShot.animatedImage).toBeTruthy();
+  expect(mapShot.video).toMatch(/\.mp4$/);
   expect(mapShot.framing).toBe('focus');
   expect(mapShot.title).toMatch(/building-level map.*linework/i);
   expect(mapShot.alt).toMatch(/Liberty cartography.*CAD Linework/i);
