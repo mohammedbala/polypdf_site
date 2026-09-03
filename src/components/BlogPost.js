@@ -20,7 +20,7 @@ import {
   FaTable
 } from 'react-icons/fa';
 import { HiOutlineSparkles } from 'react-icons/hi';
-import parrotIcon from '../assets/polypdf_icon.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
 import DownloadCTA from './DownloadCTA';
 import { buyPath, canonicalPagePath } from '../lib/attribution';
 import { blogPostBySlug, blogPostPath } from '../lib/blogPosts';
@@ -340,7 +340,7 @@ const BlogPost = () => {
       <header className="legal-header">
         <nav className="nav container" aria-label="Article navigation">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="" width="1024" height="1024" />
+            <img src={parrotIcon} alt="" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/blog/" className="back-link">

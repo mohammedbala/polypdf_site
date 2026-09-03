@@ -1706,7 +1706,8 @@ body {
   transition: transform 0.45s cubic-bezier(0.21, 0.65, 0.32, 1);
 }
 
-.shot-plate img {
+.shot-plate img,
+.shot-plate video {
   display: block;
   width: 100%;
   height: auto;

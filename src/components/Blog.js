@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router';
 import { motion, useReducedMotion } from 'framer-motion';
 import { FaArrowLeft, FaArrowRight, FaRegClock } from 'react-icons/fa';
-import parrotIcon from '../assets/polypdf_icon.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
 import { blogPostPath, blogPosts } from '../lib/blogPosts';
 import { canonicalPagePath } from '../lib/attribution';
 import { normalizeBlogImage, ResponsiveBlogImage } from './BlogPost';
@@ -57,7 +57,7 @@ const Blog = () => {
       <header className="legal-header">
         <nav className="nav container" aria-label="Blog navigation">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="" width="1024" height="1024" />
+            <img src={parrotIcon} alt="" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">

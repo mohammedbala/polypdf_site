@@ -10,7 +10,7 @@ import {
   FaLock,
   FaRegClock
 } from 'react-icons/fa';
-import parrotIcon from '../assets/polypdf_icon.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
 
 export const FEATURE_REQUEST_EMAIL_URL =
   'mailto:support@polypdf.com?subject=PolyPDF%20feature%20request&body=Platform%20(macOS%20or%20Windows)%3A%0A%0AWorkflow%20I%27m%20trying%20to%20improve%3A%0A%0AWhat%20would%20make%20it%20easier%3A%0A%0ACurrent%20workaround%3A%0A';
@@ -52,7 +52,7 @@ const FeatureRequests = () => {
       <header className="legal-header">
         <nav className="nav container">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="PolyPDF" width="1024" height="1024" />
+            <img src={parrotIcon} alt="PolyPDF" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">

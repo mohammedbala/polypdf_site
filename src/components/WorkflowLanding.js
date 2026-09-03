@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router';
 import { FaArrowRight, FaCheck, FaInfinity } from 'react-icons/fa';
 import { HiOutlineCloudDownload } from 'react-icons/hi';
-import parrotIcon from '../assets/polypdf_icon.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
 import DownloadCTA from './DownloadCTA';
 import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferGuarantee, OfferPrice } from './OfferPrice';
@@ -35,7 +35,7 @@ const WorkflowLanding = ({ page }) => {
       <header className="workflow-header">
         <nav className="workflow-nav container" aria-label="Main navigation">
           <Link className="workflow-logo" to="/" aria-label="PolyPDF home">
-            <img src={parrotIcon} alt="" width="1024" height="1024" />
+            <img src={parrotIcon} alt="" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
           <div className="workflow-nav-links">
@@ -84,6 +84,8 @@ const WorkflowLanding = ({ page }) => {
               </div>
               <img
                 src={page.image}
+                srcSet={page.imageSrcSet}
+                sizes={page.imageSizes}
                 alt={page.imageAlt}
                 width={page.imageWidth || 2280}
                 height={page.imageHeight || 1515}

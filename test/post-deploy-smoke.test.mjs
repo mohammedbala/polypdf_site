@@ -285,6 +285,18 @@ test('derives the HTML smoke surface from the route metadata registry', () => {
   assert.deepEqual(htmlRoutes, Object.keys(routeMetadata));
 });
 
+test('queues analytics immediately without putting the Google client on the critical path', () => {
+  const template = fs.readFileSync(new URL('../public/index.html', import.meta.url), 'utf8');
+  assert.match(template, /function gtag\(\)\{dataLayer\.push\(arguments\);\}/);
+  assert.match(template, /gtag\('config', 'G-533RWNRCFP'/);
+  assert.match(template, /window\.setTimeout\(loadGoogleTag, 7000\)/);
+  assert.match(template, /\['pointerdown', 'keydown', 'touchstart'\]/);
+  assert.doesNotMatch(
+    template,
+    /<script[^>]+src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-533RWNRCFP"/
+  );
+});
+
 test('reconciles the atomic root, stable image cache, and analytics CSP idempotently', () => {
   const legacy = `server {
     listen 443 ssl;

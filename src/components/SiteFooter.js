@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import parrotIcon from '../assets/polypdf_icon.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
 import DirectCheckoutLink from './DirectCheckoutLink';
 import { buyPath, canonicalPagePath } from '../lib/attribution';
 import { DOWNLOADS } from '../lib/platform';
@@ -57,7 +57,7 @@ const SiteFooter = () => (
     <div className="container site-footer-shell">
       <div className="site-footer-intro">
         <Link className="site-footer-logo" to="/" aria-label="PolyPDF home">
-          <img src={parrotIcon} alt="" loading="lazy" width="1024" height="1024" />
+          <img src={parrotIcon} alt="" loading="lazy" width="96" height="96" />
           <span>PolyPDF</span>
         </Link>
         <p>Measure, count, compare, manage revisions, and mark up PDF drawings on Mac and Windows—without a yearly bill.</p>

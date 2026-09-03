@@ -1,11 +1,23 @@
-import shotCalibration from '../assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png';
-import shotMarkup from '../assets/screenshots/markup-v1-4-dark-web.png';
-import shotRevisionCompare from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web.png';
-import shotRevisionPackage from '../assets/screenshots/revision-package-changes-impact-v1-5-dark.png';
-import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
-import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
+import shotCalibration768 from '../assets/screenshots/calibration-verified-second-span-v1-4-dark-web-768.webp';
+import shotCalibration1536 from '../assets/screenshots/calibration-verified-second-span-v1-4-dark-web-1536.webp';
+import shotMarkup768 from '../assets/screenshots/markup-v1-4-dark-web-768.webp';
+import shotMarkup1536 from '../assets/screenshots/markup-v1-4-dark-web-1536.webp';
+import shotRevisionCompare768 from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web-768.webp';
+import shotRevisionCompare1536 from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web-1536.webp';
+import shotRevisionPackage768 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-768.webp';
+import shotRevisionPackage1536 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-1536.webp';
+import shotSymbolSearch768 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-768.webp';
+import shotSymbolSearch1536 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-1536.webp';
+import shotTakeoff768 from '../assets/screenshots/takeoff-v1-4-dark-web-768.webp';
+import shotTakeoff1536 from '../assets/screenshots/takeoff-v1-4-dark-web-1536.webp';
 
 const landingPage = (page) => Object.freeze(page);
+const workflowImageSizes = '(max-width: 760px) calc(100vw - 40px), (max-width: 1120px) calc(100vw - 80px), 660px';
+const responsiveScreenshot = (small, large) => ({
+  image: small,
+  imageSrcSet: `${small} 768w, ${large} 1536w`,
+  imageSizes: workflowImageSizes
+});
 
 export const landingPages = Object.freeze({
   revisionPackages: landingPage({
@@ -15,7 +27,7 @@ export const landingPages = Object.freeze({
     title: 'Carry review work forward when the next drawing issue arrives.',
     lede: 'Import a new issue, reconcile every sheet, carry reviewed work forward, inspect changes and quantity impact, review references, and publish one current package with a revision report.',
     qualifier: 'Revision Packages are portable project files for controlled drawing updates. Original PDFs remain unchanged; PolyPDF preserves verified source copies inside the package workflow.',
-    image: shotRevisionPackage,
+    ...responsiveScreenshot(shotRevisionPackage768, shotRevisionPackage1536),
     imageWidth: 3078,
     imageHeight: 1932,
     imageAlt: 'PolyPDF 1.5 showing a Revision Package sidebar and Change Review dialog with a changed A-101 sheet, two differences, one changed quantity group, and a 150 dollar cost impact',
@@ -65,7 +77,7 @@ export const landingPages = Object.freeze({
     title: 'Turn scaled PDF drawings into an organized takeoff worksheet.',
     lede: 'Calibrate a sheet once, measure lengths, areas, perimeters, angles, radii, diameters, and counts, then keep the results beside the drawing and export them to CSV or PDF.',
     qualifier: 'Built for estimators and contractors who receive PDFs—not perfect CAD files—and need a direct path from drawing to quantity record.',
-    image: shotTakeoff,
+    ...responsiveScreenshot(shotTakeoff768, shotTakeoff1536),
     imageWidth: 1710,
     imageHeight: 1073,
     imageAlt: 'PolyPDF takeoff worksheet showing 14 items beside a sample plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
@@ -112,7 +124,7 @@ export const landingPages = Object.freeze({
     title: 'Measure a PDF on Mac without redrawing it in CAD.',
     lede: 'Open the plan, set its scale, and pull real distances, areas, perimeters, angles, radii, diameters, and counts directly from the PDF in a desktop app for macOS.',
     qualifier: 'Start with the free Mac download and validate scale accuracy on a drawing you already know. Upgrade only when you need more than 3 hand-created measurements in a document.',
-    image: shotCalibration,
+    ...responsiveScreenshot(shotCalibration768, shotCalibration1536),
     imageWidth: 1710,
     imageHeight: 1073,
     imageAlt: 'PolyPDF for Mac showing a calibrated quarter-inch equals one-foot page scale and a second known span measured as 12 feet',
@@ -159,7 +171,7 @@ export const landingPages = Object.freeze({
     title: 'Mark up construction PDFs so every comment stays tied to the sheet.',
     lede: 'Add callouts, text, highlights, shapes, stamps, and revision clouds directly to plan sets, then use the Markup Table to track what has been flagged.',
     qualifier: 'A local desktop workflow for design review, RFIs, field observations, punch notes, and drawing handoff on Mac or Windows.',
-    image: shotMarkup,
+    ...responsiveScreenshot(shotMarkup768, shotMarkup1536),
     imageWidth: 1710,
     imageHeight: 1073,
     imageAlt: 'PolyPDF showing an open RFI callout, an in-progress revision cloud, and a completed green rectangle with three matching Markup Table rows',
@@ -206,7 +218,7 @@ export const landingPages = Object.freeze({
     title: 'Find one drawing symbol, then count matching instances across the PDF.',
     lede: 'Capture a symbol from the sheet, let PolyPDF find visual matches, review the results, and commit the accepted set as a count series.',
     qualifier: 'Symbol Search is a PolyPDF Pro workflow. Capture one example, review every candidate, and commit the accepted matches as one linked Count series.',
-    image: shotSymbolSearch,
+    ...responsiveScreenshot(shotSymbolSearch768, shotSymbolSearch1536),
     imageWidth: 1710,
     imageHeight: 1073,
     imageAlt: 'PolyPDF Symbol Search review showing five matches, all five selected, with five candidate boxes and Count 5 ready',
@@ -253,7 +265,7 @@ export const landingPages = Object.freeze({
     title: 'Compare PDF drawings and make revision changes easier to inspect.',
     lede: 'Bring drawing versions into one desktop review workflow, inspect their differences, and mark the areas that need a decision, RFI, or handoff note.',
     qualifier: 'Built for the review that follows an addendum or revised issue: compare the two sheets, then record the decision, RFI, or coordination note on the drawing.',
-    image: shotRevisionCompare,
+    ...responsiveScreenshot(shotRevisionCompare768, shotRevisionCompare1536),
     imageWidth: 1710,
     imageHeight: 1073,
     imageAlt: 'PolyPDF comparison result showing four editable purple revision clouds and four matching rows in the Markup Table',

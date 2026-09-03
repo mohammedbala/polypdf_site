@@ -12,7 +12,7 @@ import {
   FaReceipt,
   FaSignOutAlt
 } from 'react-icons/fa';
-import parrotIcon from '../assets/polypdf_icon.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
 import ActivationSteps from './ActivationSteps';
 import { DownloadBoth } from './DownloadCTA';
 import { usePlatform } from '../lib/platform';
@@ -214,7 +214,7 @@ const Account = () => {
       <header className="legal-header">
         <nav className="nav container">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="PolyPDF" width="1024" height="1024" />
+            <img src={parrotIcon} alt="PolyPDF" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">

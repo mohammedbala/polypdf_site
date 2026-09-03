@@ -1,4 +1,4 @@
-import { landingPageRoutes } from './landingPages';
+import { landingPages, landingPageRoutes } from './landingPages';
 import routeMetadata from './route-metadata.json';
 
 test('defines six substantial, uniquely attributed workflow landing pages', () => {
@@ -33,4 +33,12 @@ test('defines six substantial, uniquely attributed workflow landing pages', () =
       expect(routeMetadata[path]?.robots).toBe('index, follow');
     });
   });
+});
+
+test('serves the Revision Package product capture responsively', () => {
+  const page = landingPages.revisionPackages;
+  expect(page.image).toMatch(/768\.webp$/);
+  expect(page.imageSrcSet).toContain('768w');
+  expect(page.imageSrcSet).toContain('1536w');
+  expect(page.imageSizes).toContain('100vw');
 });

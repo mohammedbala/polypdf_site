@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
-import parrotIcon from '../assets/polypdf_icon.png';
-import revisionPackageShot from '../assets/screenshots/revision-package-changes-impact-v1-5-dark.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
+import revisionPackageShot768 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-768.webp';
+import revisionPackageShot1536 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-1536.webp';
 import siteRelease from '../lib/siteRelease.json';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
@@ -304,7 +305,7 @@ const VersionHistory = () => {
       <header className="legal-header">
         <nav className="nav container">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="PolyPDF" width="1024" height="1024" />
+            <img src={parrotIcon} alt="PolyPDF" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">
@@ -342,7 +343,9 @@ const VersionHistory = () => {
           <figure className="release-highlight-image">
             <div className="shot-plate">
               <img
-                src={revisionPackageShot}
+                src={revisionPackageShot768}
+                srcSet={`${revisionPackageShot768} 768w, ${revisionPackageShot1536} 1536w`}
+                sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1120px) calc(100vw - 80px), 980px"
                 alt="PolyPDF 1.5 Revision Package Change Review showing drawing differences and quantity or cost impact"
                 width="3078"
                 height="1932"

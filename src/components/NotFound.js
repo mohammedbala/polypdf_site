@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router';
 import { ArrowLeft, Compass } from '@phosphor-icons/react';
-import parrotIcon from '../assets/polypdf_icon.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
 
 const NotFound = () => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const NotFound = () => {
       <header className="legal-header">
         <nav className="nav container" aria-label="Main navigation">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="" width="1024" height="1024" />
+            <img src={parrotIcon} alt="" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">

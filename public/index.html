@@ -47,9 +47,10 @@
     <link rel="alternate" type="application/rss+xml" title="PolyPDF Guides and Product Notes" href="https://www.polypdf.com/feed.xml" />
     <link rel="canonical" href="https://www.polypdf.com/" />
 
-    <!-- Google tag (gtag.js). The public measurement ID is intentionally client-side; purchase
-         events are emitted only after the PolyPDF API confirms Stripe's signed webhook. -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-533RWNRCFP"></script>
+    <!-- Google tag (gtag.js). Keep the queue available immediately, but load Google's 180 KB
+         client only after the first interaction or a short grace period so it cannot delay the
+         product page's first useful paint. Purchase events are emitted only after the PolyPDF API
+         confirms Stripe's signed webhook. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -58,6 +59,37 @@
         allow_google_signals: false,
         allow_ad_personalization_signals: false
       });
+
+      (function scheduleGoogleTag() {
+        var source = 'https://www.googletagmanager.com/gtag/js?id=G-533RWNRCFP';
+        var interactionEvents = ['pointerdown', 'keydown', 'touchstart'];
+        var loaded = false;
+        var timer;
+
+        function loadGoogleTag() {
+          if (loaded) return;
+          loaded = true;
+          window.clearTimeout(timer);
+          interactionEvents.forEach(function removeInteractionListener(eventName) {
+            window.removeEventListener(eventName, loadGoogleTag);
+          });
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = source;
+          script.dataset.polypdfAnalytics = 'true';
+          document.head.appendChild(script);
+        }
+
+        function armGoogleTag() {
+          interactionEvents.forEach(function addInteractionListener(eventName) {
+            window.addEventListener(eventName, loadGoogleTag, { once: true, passive: true });
+          });
+          timer = window.setTimeout(loadGoogleTag, 7000);
+        }
+
+        if (document.readyState === 'complete') armGoogleTag();
+        else window.addEventListener('load', armGoogleTag, { once: true });
+      }());
     </script>
 
     <!-- JSON-LD structured data is injected per route at build time by scripts/prerender.js,

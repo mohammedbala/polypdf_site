@@ -15,7 +15,7 @@ import {
   SquaresFour,
   X
 } from '@phosphor-icons/react';
-import parrotIcon from '../assets/polypdf_icon.png';
+import parrotIcon from '../assets/polypdf_icon-96.png';
 import DownloadCTA from './DownloadCTA';
 import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
@@ -25,8 +25,8 @@ import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/co
 import siteRelease from '../lib/siteRelease.json';
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
 import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
-import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
-import shotTakeoffSnapping from '../assets/screenshots/takeoff-snapping-v1-4.gif';
+import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-640.webp';
+import shotTakeoffSnapping from '../assets/motion/takeoff-snapping-v1-4-1024.mp4';
 import shotCompare from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web.png';
 import shotAutoArea from '../assets/screenshots/auto-area-v1-4-dark-web.png';
 import shotOcrSearch from '../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png';
@@ -34,7 +34,8 @@ import shotCustomShortcuts from '../assets/screenshots/custom-shortcuts-v1-4-lig
 import shotSanitize from '../assets/screenshots/sanitize-options-v1-4-light-web.png';
 import shotPdfMapsMotion from '../assets/motion/pdf-map-plan-v1-4.gif';
 import shotPdfMapsPoster from '../assets/motion/pdf-map-plan-v1-4-poster.png';
-import shotRevisionPackage from '../assets/screenshots/revision-package-changes-impact-v1-5-dark.png';
+import shotRevisionPackage768 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-768.webp';
+import shotRevisionPackage1536 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-1536.webp';
 
 const releaseSeries = siteRelease.version.split('.').slice(0, 2).join('.');
 
@@ -294,17 +295,21 @@ const HeroProductBoard = memo(() => (
     </svg>
     <span className="paper-tape hero-paper-tape" aria-hidden="true" />
     <div className="shot-plate">
-      <picture>
-        <source media="(prefers-reduced-motion: reduce)" srcSet={shotTakeoff} />
-        <img
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster={shotTakeoff}
+        aria-label="PolyPDF 1.4 drawing a 30 foot dimension that snaps precisely between two plan endpoints"
+      >
+        <source
           src={shotTakeoffSnapping}
-          alt="PolyPDF 1.4 drawing a 30 foot dimension that snaps precisely between two plan endpoints"
-          width="1710"
-          height="1073"
-          loading="eager"
-          fetchPriority="high"
+          type="video/mp4"
+          media="(prefers-reduced-motion: no-preference)"
         />
-      </picture>
+      </video>
     </div>
     <div className="hero-sticker hero-sticker-records">
       <SquaresFour aria-hidden="true" weight="bold" />
@@ -362,7 +367,9 @@ const RevisionPackageSpotlight = () => (
           {`Authentic ${siteRelease.version} build ${siteRelease.build} interface`}
         </div>
         <img
-          src={shotRevisionPackage}
+          src={shotRevisionPackage768}
+          srcSet={`${shotRevisionPackage768} 768w, ${shotRevisionPackage1536} 1536w`}
+          sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1120px) calc(100vw - 80px), 620px"
           alt={`PolyPDF ${releaseSeries} Revision Package Change Review showing a changed A-101 sheet, two differences, one changed quantity group, and a 150 dollar cost impact`}
           width="3078"
           height="1932"
@@ -731,7 +738,7 @@ const Home = () => {
       >
         <nav className="nav container">
           <Link to="/" className="logo" onClick={closeMobileMenu}>
-            <img src={parrotIcon} alt="PolyPDF logo" width="1024" height="1024" />
+            <img src={parrotIcon} alt="PolyPDF logo" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
 
