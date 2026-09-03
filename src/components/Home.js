@@ -358,7 +358,8 @@ const RevisionPackageSpotlight = () => (
 
       <figure className="revision-release-visual">
         <div className="revision-release-window-label">
-          <span aria-hidden="true" /> Authentic {siteRelease.version} build {siteRelease.build} interface
+          <span aria-hidden="true" />
+          {`Authentic ${siteRelease.version} build ${siteRelease.build} interface`}
         </div>
         <img
           src={shotRevisionPackage}
