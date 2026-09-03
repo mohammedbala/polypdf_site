@@ -1,5 +1,5 @@
 import React from 'react';
-import { primaryPlatform } from '../lib/platform';
+import { usePlatform } from '../lib/platform';
 
 // What happens between paying and measuring — the part of the funnel the site never described.
 //
@@ -23,45 +23,49 @@ const MENU_PATHS = {
 
 // Detected platform first, the other one still visible — people buy on one machine and activate on
 // another, and the licence covers three.
-const orderedMenuPaths = () =>
-  primaryPlatform.key === 'windows'
+const orderedMenuPaths = (platformKey) =>
+  platformKey === 'windows'
     ? [MENU_PATHS.windows, MENU_PATHS.mac]
     : [MENU_PATHS.mac, MENU_PATHS.windows];
 
-const ActivationSteps = ({ heading = 'Activating takes about a minute' }) => (
-  <div className="activation-steps">
-    {heading && <p className="activation-heading">{heading}</p>}
-    <ol className="activation-list">
-      <li>
-        <span className="activation-step-index" aria-hidden="true">1</span>
-        <div>
-          <strong>Check your email for the key.</strong> It is sent as soon as Stripe confirms the
-          payment and looks like <code className="license-mask">{LICENSE_KEY_MASK}</code>.
-        </div>
-      </li>
-      <li>
-        <span className="activation-step-index" aria-hidden="true">2</span>
-        <div>
-          <strong>Open the upgrade window in PolyPDF.</strong>
-          <span className="activation-paths">
-            {orderedMenuPaths().map((entry) => (
-              <span className="activation-path" key={entry.label}>
-                {entry.label}: <code>{entry.path}</code> <span className="activation-shortcut">{entry.shortcut}</span>
-              </span>
-            ))}
-          </span>
-        </div>
-      </li>
-      <li>
-        <span className="activation-step-index" aria-hidden="true">3</span>
-        <div>
-          <strong>Paste the key and click Activate.</strong> No restart, no reinstall. The
-          measurement cap lifts and Symbol Search plus plugins unlock as soon as the key is accepted.
-          The drawing you had open keeps every measurement and markup already on it.
-        </div>
-      </li>
-    </ol>
-  </div>
-);
+const ActivationSteps = ({ heading = 'Activating takes about a minute' }) => {
+  const { primaryPlatform } = usePlatform();
+
+  return (
+    <div className="activation-steps">
+      {heading && <p className="activation-heading">{heading}</p>}
+      <ol className="activation-list">
+        <li>
+          <span className="activation-step-index" aria-hidden="true">1</span>
+          <div>
+            <strong>Check your email for the key.</strong> It is sent as soon as Stripe confirms the
+            payment and looks like <code className="license-mask">{LICENSE_KEY_MASK}</code>.
+          </div>
+        </li>
+        <li>
+          <span className="activation-step-index" aria-hidden="true">2</span>
+          <div>
+            <strong>Open the upgrade window in PolyPDF.</strong>
+            <span className="activation-paths">
+              {orderedMenuPaths(primaryPlatform.key).map((entry) => (
+                <span className="activation-path" key={entry.label}>
+                  {entry.label}: <code>{entry.path}</code> <span className="activation-shortcut">{entry.shortcut}</span>
+                </span>
+              ))}
+            </span>
+          </div>
+        </li>
+        <li>
+          <span className="activation-step-index" aria-hidden="true">3</span>
+          <div>
+            <strong>Paste the key and click Activate.</strong> No restart, no reinstall. The
+            measurement cap lifts and Symbol Search plus plugins unlock as soon as the key is accepted.
+            The drawing you had open keeps every measurement and markup already on it.
+          </div>
+        </li>
+      </ol>
+    </div>
+  );
+};
 
 export default ActivationSteps;

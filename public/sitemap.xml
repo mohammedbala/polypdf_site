@@ -3,13 +3,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.polypdf.com/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/buy/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -21,13 +21,13 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -49,7 +49,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -60,7 +60,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/pdf-takeoff-worked-example/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -71,7 +71,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/count-pdf-symbols/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -82,7 +82,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/compare-pdf-drawing-revisions/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -104,7 +104,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/create-fillable-pdf-form/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -115,7 +115,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/ocr-scanned-pdf-drawings/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -126,7 +126,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -137,7 +137,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/redact-and-sanitize-pdf/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -148,7 +148,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/prepare-issued-pdf-set/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -159,7 +159,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/how-to-use-polypdf-collaboration-beta/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -170,7 +170,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/introducing-polypdf-plugins/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -181,13 +181,13 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/privacy/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/refund/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -199,55 +199,61 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/support/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/windows/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/terms/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/versions/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.polypdf.com/revision-packages/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.polypdf.com/pdf-takeoff-software/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/measure-pdf-on-mac/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/construction-pdf-markup/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/visual-search-pdf-count/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/compare-pdf-drawings/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

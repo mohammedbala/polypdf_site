@@ -1,17 +1,17 @@
 {
   "/": {
     "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
-    "description": "Measure and mark up PDFs on Mac and Windows. Start free, then unlock unlimited measurements, Symbol Search, and plugins for $49.99 once.",
+    "description": "Measure, mark up, compare, and manage PDF drawing revisions on Mac and Windows. Start free; unlock every Pro workflow for $49.99 once.",
     "robots": "index, follow"
   },
   "/buy": {
     "title": "Buy PolyPDF Pro Once | Measurements, Search & Plugins",
-    "description": "Unlock unlimited measurements, Symbol Search, and plugins on three Mac or Windows computers for $49.99 once, with a 14-day guarantee.",
+    "description": "Unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates on three Mac or Windows computers for $49.99 once.",
     "robots": "index, follow"
   },
   "/upgrade": {
     "title": "Upgrade to PolyPDF Pro | Unlock Every Pro Workflow",
-    "description": "Remove the measurement cap and unlock Symbol Search plus plugins for $49.99 once. Includes secure Stripe checkout and a 14-day guarantee.",
+    "description": "Unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates for $49.99 once, with a 14-day guarantee.",
     "robots": "noindex, follow"
   },
   "/build-a-plugin": {
@@ -26,7 +26,7 @@
   },
   "/blog": {
     "title": "PolyPDF Guides | PDF Measurement, Takeoff & Markup",
-    "description": "Practical guides for PDF calibration, takeoff, symbol counting, markup, revisions, forms, OCR, signatures, redaction, and issued sets.",
+    "description": "Practical guides for PDF calibration, takeoff, symbol counting, markup, revision packages, forms, OCR, signatures, and issued sets.",
     "robots": "index, follow"
   },
   "/blog/calibrate-pdf-drawing-scale": {
@@ -111,7 +111,7 @@
   },
   "/blog/ocr-scanned-pdf-drawings": {
     "title": "OCR Scanned PDF Drawings: Practical Guide | PolyPDF",
-    "description": "Run local, best-effort OCR on scanned PDF drawings in PolyPDF, understand script limits, and verify searchable text before relying on the result.",
+    "description": "Run local AEC OCR on scanned PDF drawings, verify searchable text, and export best-effort schedules and tables to an Excel workbook.",
     "robots": "index, follow",
     "type": "article",
     "image": "/guides/ocr-scanned-pdf-drawings.png?v=1.4.3-20",
@@ -131,7 +131,7 @@
   },
   "/blog/redact-and-sanitize-pdf": {
     "title": "Redact and Sanitize a PDF: PolyPDF Limits",
-    "description": "Learn what PolyPDF 1.4.0 redaction and sanitation can remove, what can survive, and how to verify a saved PDF before deciding whether it is safe to share.",
+    "description": "Learn what PolyPDF redaction and sanitation can remove, what can survive, and how to verify a saved PDF before deciding whether it is safe to share.",
     "robots": "index, follow",
     "type": "article",
     "image": "/guides/redact-and-sanitize-pdf.png?v=1.4.3-20",
@@ -191,7 +191,7 @@
   },
   "/windows": {
     "title": "PolyPDF for Windows | PDF Measurement and Markup",
-    "description": "Download PolyPDF for Windows to calibrate, measure, count, and mark up PDF drawings without a recurring subscription.",
+    "description": "Download PolyPDF 1.5 for Windows to measure, mark up, compare, and manage PDF drawing revisions without a recurring subscription.",
     "robots": "index, follow"
   },
   "/terms": {
@@ -201,7 +201,12 @@
   },
   "/versions": {
     "title": "PolyPDF Version History | Release Notes",
-    "description": "Review PolyPDF release notes, product improvements, fixes, and current Mac and Windows version information.",
+    "description": "Review PolyPDF 1.5 Revision Packages, earlier feature releases, reliability fixes, and current Mac and Windows version information.",
+    "robots": "index, follow"
+  },
+  "/revision-packages": {
+    "title": "Revision Package Workflow for PDF Drawings | PolyPDF",
+    "description": "Import drawing issues, reconcile sheets, carry review work forward, inspect changes and impact, review references, and publish a current PDF package.",
     "robots": "index, follow"
   },
   "/pdf-takeoff-software": {

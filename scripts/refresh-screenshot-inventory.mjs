@@ -187,6 +187,15 @@ for (const item of inventory) {
   await stat(resolve(root, 'src/assets/screenshots', item.outputName));
 }
 
+// Some release screenshots come from a separately validated product journey and do not share
+// this script's fixed 3420x2146 capture geometry. Keep those manually registered records intact
+// when refreshing the older standardized screenshot set; verify-screenshot-evidence still checks
+// every preserved source, proof, report, and output hash before a build can pass.
+const refreshableIds = new Set(inventory.map(({ id }) => id));
+for (const record of previous.records) {
+  if (!refreshableIds.has(record.id)) records.push(record);
+}
+
 const registry = {
   schemaVersion: 1,
   records,

@@ -23,8 +23,7 @@ const replace = (html, expression, replacement) => {
   return html.replace(expression, replacement);
 };
 
-for (const [route, entry] of Object.entries(metadata)) {
-  const url = `${origin}${route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`}`;
+const renderMetadata = (entry, url) => {
   const title = escapeHTML(entry.title);
   const description = escapeHTML(entry.description);
   const type = escapeHTML(entry.type || 'website');
@@ -53,9 +52,26 @@ for (const [route, entry] of Object.entries(metadata)) {
   html = replace(html, /<meta name="twitter:image:alt" content=".*?"\s*\/?>/, `<meta name="twitter:image:alt" content="${imageAlt}" />`);
   html = replace(html, /<link rel="canonical" href=".*?"\s*\/?>/, `<link rel="canonical" href="${url}" />`);
 
+  return html;
+};
+
+for (const [route, entry] of Object.entries(metadata)) {
+  const url = `${origin}${route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`}`;
+  const html = renderMetadata(entry, url);
+
   const outputDirectory = route === '/' ? buildDirectory : path.join(buildDirectory, route.slice(1));
   fs.mkdirSync(outputDirectory, { recursive: true });
   fs.writeFileSync(path.join(outputDirectory, 'index.html'), html);
 }
 
-console.log(`Generated server-readable metadata for ${Object.keys(metadata).length} routes.`);
+const notFoundMetadata = {
+  title: 'Page Not Found | PolyPDF',
+  description: 'The PolyPDF page you requested could not be found.',
+  robots: 'noindex, nofollow'
+};
+fs.writeFileSync(
+  path.join(buildDirectory, '404.html'),
+  renderMetadata(notFoundMetadata, `${origin}/404/`)
+);
+
+console.log(`Generated server-readable metadata for ${Object.keys(metadata).length} routes and the 404 page.`);

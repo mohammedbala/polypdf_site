@@ -20,11 +20,15 @@ export const OfferPrice = ({ className = '', compact = false }) => (
 );
 
 export const OfferButtonLabel = ({ action = 'Buy once' }) => (
-  <span className="offer-button-label" aria-hidden="true">
+  <span className="offer-button-label">
     <span>{action}</span>
     <span className="offer-button-prices">
-      <del>{commercialOffer.referencePrice}</del>
-      <strong>{commercialOffer.price}</strong>
+      <del aria-hidden="true">{commercialOffer.referencePrice}</del>
+      <strong aria-hidden="true">{commercialOffer.price}</strong>
+      <span className="sr-only">
+        {commercialOffer.referencePrice} {commercialOffer.price}. Planned standard price{' '}
+        {commercialOffer.referencePrice}; Founder price {commercialOffer.price}.
+      </span>
     </span>
   </span>
 );

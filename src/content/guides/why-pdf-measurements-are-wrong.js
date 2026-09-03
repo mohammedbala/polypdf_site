@@ -8,7 +8,7 @@ const post = {
   title: 'Why PDF Measurements Are Wrong (and How to Fix Them)',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-24',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Measure & Takeoff',
@@ -21,8 +21,8 @@ const post = {
     'A wrong PDF measurement is usually traceable to the scale, the selected geometry, or the source file. Fixing the cause is safer than applying a correction factor to the final quantities.',
   quickAnswer:
     'If a PDF measurement is wrong, first confirm that the current page has the correct real-world scale and units. Then remeasure a long labeled dimension with snapped endpoints. If that works but a detail does not, check for a different scale inside that detail. If horizontal and vertical reference dimensions disagree by different percentages, the scan is probably nonuniformly distorted and one calibration cannot make the whole page accurate.',
-  lastVerified: '2026-08-24',
-  productVersion: 'PolyPDF 1.4.1 (build 18); screenshots from 1.4.0 (build 17)',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
@@ -211,7 +211,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'Free includes up to three hand-created measurements per document, which is enough to run a calibration check plus two independent reference checks. Symbol Search is a separate PolyPDF Pro workflow in version 1.4.1.'
+            'Free includes up to three hand-created measurements per document, which is enough to run a calibration check plus two independent reference checks. Symbol Search is a separate PolyPDF Pro workflow in the current release.'
         }
       ]
     }

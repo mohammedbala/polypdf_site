@@ -4,7 +4,7 @@ import {
   DownloadSimple,
   WindowsLogo
 } from '@phosphor-icons/react';
-import { DOWNLOADS, primaryPlatform, otherPlatform, platformKnown } from '../lib/platform';
+import { DOWNLOADS, usePlatform } from '../lib/platform';
 import MagneticLink from './MagneticLink';
 
 const trackEvent = (name, properties = {}) => {
@@ -29,7 +29,7 @@ const PlatformIcon = ({ platform }) => (
 // twenty minutes of work on a real drawing feels like bait. Same fact, different feeling, and the
 // difference is 200 pixels.
 export const FREE_TIER_LIMIT_TEXT =
-  'Free with no trial timer: markup, review, calibration, and 3 hand-created measurements per document. Symbol Search and plugins require Pro.';
+  'Free with no trial timer: markup, review, calibration, 3 hand-created measurements per document, and Revision Package viewing. Symbol Search, plugins, and Revision Package changes or publishing require Pro.';
 
 // What to do while the file lands. This is the moment most download funnels leak — the visitor has
 // committed, the browser is quiet, and nothing tells them the next step (or warns Windows users
@@ -62,7 +62,8 @@ const WhileItInstalls = ({ platformKey, tone }) => (
     </ol>
     <p className="dl-next-foot">
       Everything above is free, for as long as you want it. PolyPDF Pro removes the 3-measurement
-      cap and unlocks Symbol Search plus plugins for $49.99 once, on up to 3 computers.
+      cap and unlocks Symbol Search, plugins, and Revision Package changes and publishing for
+      $49.99 once, on up to 3 computers.
     </p>
   </div>
 );
@@ -73,6 +74,7 @@ const WhileItInstalls = ({ platformKey, tone }) => (
 // feeds the download_click analytics event so the funnel can tell which section converts.
 const DownloadCTA = ({ source, size = '', onDownload, tone = '', adjacentAction = null }) => {
   const [started, setStarted] = useState(null);
+  const { primaryPlatform, otherPlatform, platformKnown } = usePlatform();
 
   const click = (platform) => {
     trackEvent('download_click', { source, platform: platform.key });

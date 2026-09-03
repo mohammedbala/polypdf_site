@@ -8,7 +8,7 @@ const post = {
   title: 'PDF Takeoff Worked Example: Scale, Area, Length, and Count',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-24',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '10 min read',
   tag: 'Measure & Takeoff',
@@ -21,8 +21,8 @@ const post = {
     'This worked example follows one small takeoff end to end: calibrate the page, trace an area and a length, count a repeated symbol, review the worksheet, export. The same sequence applies to your own drawing once you have verified its scale.',
   quickAnswer:
     'A reliable PDF takeoff follows this order: confirm the sheet and revision, calibrate the current page, verify a second known dimension, trace area and length quantities, review any repeated-symbol candidates, inspect the Takeoff Worksheet, then export CSV or a PDF summary. The plan used here is plotted at 1/4 inch = 1 foot, or 18 PDF points per foot, and it carries 540.00 sq ft of floor finish, 30.00 ft of partition length, and 12 committed Supply diffuser counts across 14 records.',
-  lastVerified: '2026-08-24',
-  productVersion: 'PolyPDF 1.4.1 (build 18); screenshots from 1.4.0 (build 17)',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
@@ -145,7 +145,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'Free includes calibration and up to three hand-created measurements per document. Symbol Search requires PolyPDF Pro in version 1.4.1 and is separate from that manual-measurement allowance.'
+            'Free includes calibration and up to three hand-created measurements per document. Symbol Search requires PolyPDF Pro in the current release and is separate from that manual-measurement allowance.'
         }
       ]
     },

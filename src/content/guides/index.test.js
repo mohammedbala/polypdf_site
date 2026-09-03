@@ -52,7 +52,7 @@ test('high-risk product limits stay explicit in the public guides', () => {
   expect(redaction).toContain('the black area is never the check');
   expect(redaction).toContain('direct FileAttachment annotation and its embedded payload survived');
   expect(redaction).toContain('new PolyPDF /Producer and /ModDate');
-  expect(issuedSet).toContain('does not expose a cross-file Batch Process');
+  expect(issuedSet).toContain('No user-facing cross-file Batch Process is exposed in build 22');
   expect(issuedSet).toContain('10 automated checks');
   expect(takeoff).toContain('12 committed Supply diffuser counts');
   expect(takeoff).toContain('depends on your drawing, its calibration, and the boundary you choose to trace');

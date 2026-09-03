@@ -54,6 +54,30 @@ body {
   overflow-x: hidden;
 }
 
+.site-skip-link {
+  position: fixed;
+  z-index: 3000;
+  top: 12px;
+  left: 12px;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gray-900);
+  border-radius: 8px;
+  background: var(--primary-white);
+  color: var(--gray-900);
+  font-weight: 750;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.18s ease;
+}
+
+.site-skip-link:focus {
+  transform: translateY(0);
+}
+
+#site-content:focus {
+  outline: none;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -844,7 +868,7 @@ body {
   margin-top: clamp(3rem, 6vw, 5rem);
   padding-top: 1.4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.58);
   font-size: 0.8rem;
 }
 
@@ -938,6 +962,58 @@ body {
   padding-left: 1rem;
   border-left: 2px solid var(--accent);
   font-size: 1.08rem;
+}
+
+.not-found-content {
+  min-height: calc(100vh - 250px);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.not-found-content > .container {
+  max-width: 760px;
+}
+
+.not-found-mark {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 1.4rem;
+  border: 1.5px solid var(--gray-900);
+  border-radius: 18px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: rotate(-2deg);
+}
+
+.not-found-mark svg {
+  width: 38px;
+  height: 38px;
+}
+
+.not-found-content h1 {
+  max-width: 16ch;
+  margin: 0 auto 1.2rem;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.not-found-content h1 + p {
+  max-width: 62ch;
+  margin: 0 auto;
+  color: var(--gray-600);
+  font-size: 1.08rem;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
 }
 
 .buy-hero {
@@ -3955,6 +4031,123 @@ h3 {
   margin-top: 1.25rem;
 }
 
+.revision-release {
+  scroll-margin-top: 88px;
+  padding: clamp(5rem, 8vw, 8rem) 0;
+  border-top: 1.5px solid var(--gray-900);
+  border-bottom: 1.5px solid var(--gray-900);
+  background: #eef4f3;
+}
+
+.revision-release-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(480px, 1.1fr);
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+  align-items: center;
+}
+
+.revision-release-copy h2 {
+  max-width: 13ch;
+  margin-bottom: 1.4rem;
+  font-size: clamp(2.65rem, 4.8vw, 4.8rem);
+  font-weight: 780;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.revision-release-copy > p {
+  max-width: 56ch;
+  color: var(--gray-600);
+  font-size: 1.05rem;
+}
+
+.revision-release-steps {
+  list-style: none;
+  margin: 2rem 0;
+  border-top: 1.5px solid var(--gray-900);
+}
+
+.revision-release-steps li {
+  display: grid;
+  grid-template-columns: 42px 112px minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: baseline;
+  padding: 0.82rem 0;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.revision-release-steps li > span {
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.revision-release-steps strong {
+  color: var(--gray-900);
+  font-size: 0.9rem;
+}
+
+.revision-release-steps p {
+  color: var(--gray-600);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+.revision-release-link {
+  min-height: 52px;
+}
+
+.revision-release-access {
+  margin-top: 1rem;
+  font-size: 0.82rem !important;
+  line-height: 1.5;
+}
+
+.revision-release-visual {
+  min-width: 0;
+  margin: 0;
+}
+
+.revision-release-window-label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0 0 0.75rem 0.35rem;
+  color: var(--gray-600);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.revision-release-window-label span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(23, 107, 113, 0.12);
+}
+
+.revision-release-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1.5px solid var(--gray-900);
+  border-radius: 12px;
+  box-shadow: 9px 10px 0 #bfd3d3;
+}
+
+.revision-release-visual figcaption {
+  max-width: 68ch;
+  margin: 1.15rem 0.35rem 0;
+  color: var(--gray-600);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
 .feature-index-section {
   scroll-margin-top: 88px;
   padding: clamp(4.5rem, 7vw, 6.2rem) 0;
@@ -4654,6 +4847,15 @@ h3 {
     max-width: 840px;
   }
 
+  .revision-release-shell {
+    grid-template-columns: 1fr;
+    max-width: 900px;
+  }
+
+  .revision-release-copy h2 {
+    max-width: 14ch;
+  }
+
   .Home .hero-content {
     max-width: 730px;
   }
@@ -4738,6 +4940,35 @@ h3 {
   .Home .hero {
     min-height: auto;
     padding: 128px 0 78px;
+  }
+
+  .revision-release {
+    padding: 72px 0 78px;
+  }
+
+  .revision-release-shell {
+    gap: 3rem;
+  }
+
+  .revision-release-copy h2 {
+    font-size: clamp(2.7rem, 12vw, 3.8rem);
+  }
+
+  .revision-release-steps li {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 0.55rem 0.75rem;
+  }
+
+  .revision-release-steps p {
+    grid-column: 2;
+  }
+
+  .revision-release-link {
+    width: 100%;
+  }
+
+  .revision-release-visual img {
+    box-shadow: 6px 7px 0 #bfd3d3;
   }
 
   .Home .hero-layout {
@@ -5002,6 +5233,20 @@ h3 {
   .buy .buy-detail-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Let the browser defer layout and paint for long, below-the-fold homepage sections. The
+   intrinsic fallback keeps scroll geometry stable until each section approaches the viewport. */
+.Home .revision-release,
+.Home .pricing,
+.Home .feature-index-section,
+.Home .showcase,
+.Home .benefits,
+.Home .how-it-works,
+.Home .faq,
+.Home .cta-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }
 
 @media (max-width: 430px) {

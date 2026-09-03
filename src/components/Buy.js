@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   ArrowCounterClockwise,
@@ -17,7 +17,7 @@ import {
 } from '@phosphor-icons/react';
 import parrotIcon from '../assets/polypdf_icon.png';
 import ActivationSteps from './ActivationSteps';
-import { primaryPlatform } from '../lib/platform';
+import { detectPlatform, usePlatform } from '../lib/platform';
 import {
   commercialOffer,
   founderRightsText,
@@ -37,9 +37,10 @@ import MagneticLink from './MagneticLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 
 const proFeatures = [
-  'Unlimited distance, area, perimeter, angle, count, and dimension measurements',
+  'Unlimited distance, area, perimeter, angle, radius, diameter, count, and dimension measurements',
   'Symbol Search automatic counting and every installed plugin workflow',
   'PDF Maps, Professional Seal Maker, and packages you install yourself',
+  'Create, update, reconcile, and publish portable Revision Packages',
   `${commercialOffer.price} once with no subscription renewal`,
   'Use your license on up to 3 computers — Mac or Windows, in any mix',
   'Secure Stripe checkout with license delivery by email',
@@ -58,19 +59,19 @@ const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_co
 const IN_APP_CONTEXT = {
   free_measurement_limit: {
     kicker: 'You have used the 3 free measurements in this document',
-    lede: 'The free app includes markup, calibration, review, and 3 hand-created measurements per document. Pro removes that cap and also unlocks Symbol Search plus plugins for good at the $49.99 Founder price, backed by a 14-day money-back guarantee.'
+    lede: 'The free app includes markup, calibration, review, 3 hand-created measurements per document, and Revision Package viewing. Pro removes that cap and unlocks Symbol Search, plugins, and Revision Package changes and publishing for good at the $49.99 Founder price, backed by a 14-day money-back guarantee.'
   },
   visual_search_auto_count: {
     kicker: 'Symbol Search is a PolyPDF Pro workflow',
-    lede: 'Pro unlocks the complete Symbol Search workflow: capture one example, review matching candidates, and commit the accepted set as one linked Count series. The same license also removes the 3-measurement cap and unlocks installed plugins.'
+    lede: 'Pro unlocks the complete Symbol Search workflow: capture one example, review matching candidates, and commit the accepted set as one linked Count series. The same license also removes the 3-measurement cap and unlocks installed plugins plus Revision Package changes and publishing.'
   },
   plugins: {
     kicker: 'Plugins are available with PolyPDF Pro',
-    lede: 'Pro unlocks installed plugin workflows for PDF Maps, professional seals, and packages you install yourself. The same license also removes the 3-measurement cap and unlocks Symbol Search.'
+    lede: 'Pro unlocks installed plugin workflows for PDF Maps, professional seals, and packages you install yourself. The same license also removes the 3-measurement cap and unlocks Symbol Search plus Revision Package changes and publishing.'
   },
   license_window: {
     kicker: 'Upgrade to PolyPDF Pro',
-    lede: 'Unlock unlimited hand-created measurements, Symbol Search, and installed plugins on up to 3 computers at the $49.99 Founder price instead of the planned $99 standard price. No subscription, no renewal, and a 14-day money-back guarantee.'
+    lede: 'Unlock unlimited hand-created measurements, Symbol Search, installed plugins, and Revision Package changes and publishing on up to 3 computers at the $49.99 Founder price instead of the planned $99 standard price. No subscription, no renewal, and a 14-day money-back guarantee.'
   }
 };
 
@@ -83,6 +84,8 @@ const Buy = ({ forceInApp = false }) => {
   const [showStickyCheckout, setShowStickyCheckout] = useState(false);
   const checkoutCtaRef = useRef(null);
   const offer = useCommercialOffer();
+  const { primaryPlatform } = usePlatform();
+  const detectedPlatformKey = detectPlatform() || 'mac';
 
   const source = searchParams.get('source') || '';
   const cameFromApp =
@@ -93,7 +96,7 @@ const Buy = ({ forceInApp = false }) => {
   const funnelProperties = {
     source: source || (cameFromApp ? 'desktop_app' : 'buy_page'),
     page_variant: pageVariant,
-    platform: primaryPlatform.key,
+    platform: detectedPlatformKey,
     offer_id: commercialOffer.id,
     app_version: siteRelease.version
   };
@@ -104,13 +107,13 @@ const Buy = ({ forceInApp = false }) => {
     const properties = {
       source: attribution.source || (cameFromApp ? source || 'desktop_app' : 'buy_page'),
       page_variant: pageVariant,
-      platform: primaryPlatform.key,
+      platform: detectedPlatformKey,
       offer_id: commercialOffer.id,
       app_version: siteRelease.version
     };
     trackEvent('buy_page_view', properties);
     if (cancelled) trackEvent('checkout_cancelled', properties);
-  }, [cameFromApp, cancelled, pageVariant, source]);
+  }, [cameFromApp, cancelled, detectedPlatformKey, pageVariant, source]);
 
   useEffect(() => {
     const target = checkoutCtaRef.current;
@@ -193,7 +196,7 @@ const Buy = ({ forceInApp = false }) => {
             <p>
               {cameFromApp
                 ? context.lede
-                : 'Unlock unlimited hand-created measurements, Symbol Search, and installed plugins at the $49.99 Founder price instead of the planned $99 standard price. Use Pro on up to 3 computers and try it risk-free with a 14-day money-back guarantee.'}
+                : 'Unlock unlimited hand-created measurements, Symbol Search, installed plugins, and Revision Package changes and publishing at the $49.99 Founder price instead of the planned $99 standard price. Use Pro on up to 3 computers with a 14-day money-back guarantee.'}
             </p>
             {cancelled && (
               <p className="buy-cancelled">
@@ -220,9 +223,6 @@ const Buy = ({ forceInApp = false }) => {
                   className="primary-btn full-width"
                   onClick={handleBuyClick}
                   aria-disabled={checkoutStatus === 'loading'}
-                  aria-label={checkoutStatus === 'loading'
-                    ? 'Opening Stripe checkout'
-                    : `Checkout with Stripe — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
                 >
                   <Infinity aria-hidden="true" weight="bold" />
                   {checkoutStatus === 'loading'
@@ -277,8 +277,8 @@ const Buy = ({ forceInApp = false }) => {
                 <>
                   <ul className="section-content">
                     <li>Download PolyPDF free first if you want to test it on real drawings.</li>
-                    <li>The free app includes markup, review, calibration, and up to 3 hand-created measurements per document.</li>
-                    <li>Pro removes the measurement limit and unlocks Symbol Search plus installed plugins on both Mac and Windows.</li>
+                    <li>The free app includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation.</li>
+                    <li>Pro removes the measurement limit and unlocks Symbol Search, installed plugins, and Revision Package creation, updates, and publishing on both Mac and Windows.</li>
                   </ul>
                   <div className="buy-actions buy-actions-quiet">
                     <a
@@ -352,7 +352,6 @@ const Buy = ({ forceInApp = false }) => {
             type="button"
             className="primary-btn offer-cta"
             onClick={handleBuyClick}
-            aria-label={`Checkout with Stripe — ${commercialOffer.price}. Planned standard price ${commercialOffer.referencePrice}.`}
           >
             <LockKey aria-hidden="true" weight="bold" /> <OfferButtonLabel action="Checkout with Stripe" />
           </button>

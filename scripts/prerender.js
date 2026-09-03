@@ -11,11 +11,10 @@
  *
  * Constraints honored here:
  * - No new dependencies. The Babel transform reuses react-scripts' own babel-preset-react-app,
- *   and rendering uses the installed react-dom/server + react-router-dom/server.
+ *   and rendering uses the installed react-dom/server + React Router StaticRouter.
  * - Node 18 compatible (the production droplet builds with Node 18).
- * - The client entry keeps createRoot().render() rather than hydrateRoot(): the download CTA is
- *   platform-sniffed and would mismatch the platform-neutral server markup, so a clean re-render
- *   is deliberate. Crawlers read the static markup; browsers replace it with identical-looking UI.
+ * - The client hydrates this markup in place. Platform-specific download controls defer OS
+ *   detection until after hydration so the first server and browser renders remain identical.
  */
 
 'use strict';
@@ -65,6 +64,13 @@ require.extensions['.js'] = (module_, filename) => {
 // each imported asset to the hashed file the finished build actually contains, so prerendered
 // <img src> attributes are real, fetchable URLs.
 const mediaFiles = fs.existsSync(mediaDirectory) ? fs.readdirSync(mediaDirectory) : [];
+const primaryFontFile = mediaFiles.find((file) =>
+  /^outfit-latin-wght-normal\.[a-f0-9]+\.woff2$/.test(file)
+);
+if (!primaryFontFile) {
+  throw new Error(`Prerender could not find the primary Outfit font in ${mediaDirectory}`);
+}
+const primaryFontPreload = `<link rel="preload" href="/static/media/${primaryFontFile}" as="font" type="font/woff2" crossorigin="anonymous">`;
 const assetUrl = (filename) => {
   const parsed = path.parse(filename);
   const match = mediaFiles.find(
@@ -123,65 +129,26 @@ const buildMotionStub = () => {
 };
 
 const motionStub = buildMotionStub();
-const buildIconStub = () => {
-  const React = require('react');
-  const componentCache = new Map();
-  const iconComponent = (name) => {
-    if (!componentCache.has(name)) {
-      const Icon = React.forwardRef((props, ref) => {
-        const {
-          alt,
-          color = 'currentColor',
-          mirrored,
-          size = '1em',
-          weight,
-          ...svgProps
-        } = props;
-        return React.createElement(
-          'svg',
-          {
-            ...svgProps,
-            ref,
-            width: size,
-            height: size,
-            fill: 'none',
-            stroke: color,
-            strokeWidth: 18,
-            strokeLinecap: 'round',
-            strokeLinejoin: 'round',
-            viewBox: '0 0 256 256',
-            focusable: 'false'
-          },
-          alt ? React.createElement('title', null, alt) : null,
-          React.createElement('path', { d: 'M52 128h152M128 52v152' })
-        );
-      });
-      Icon.displayName = `${String(name)}PrerenderIcon`;
-      componentCache.set(name, Icon);
-    }
-    return componentCache.get(name);
-  };
-  return new Proxy(
-    { __esModule: true },
-    { get: (target, property) => (property in target ? target[property] : iconComponent(property)) }
-  );
-};
-
-const phosphorStub = buildIconStub();
 const originalLoad = Module._load;
-Module._load = function patchedLoad(request, parent, isMain) {
-  if (request === 'framer-motion') return motionStub;
-  if (request === '@phosphor-icons/react') return phosphorStub;
-  return originalLoad.call(this, request, parent, isMain);
-};
 
 // ---------------------------------------------------------------------------
 // 2. Render every route.
 // ---------------------------------------------------------------------------
 
+async function prerenderAllRoutes() {
+  // Phosphor's CommonJS export is empty under modern Node because the package is ESM-first. Load
+  // its real ESM namespace once, then hand that namespace to Babel-transformed source imports so
+  // the prerender and hydrated browser tree contain the exact same SVG structure.
+  const phosphorIcons = await import('@phosphor-icons/react');
+  Module._load = function patchedLoad(request, parent, isMain) {
+    if (request === 'framer-motion') return motionStub;
+    if (request === '@phosphor-icons/react') return phosphorIcons;
+    return originalLoad.call(this, request, parent, isMain);
+  };
+
 const React = require('react');
 const { renderToString } = require('react-dom/server');
-const { StaticRouter } = require('react-router-dom/server');
+const { StaticRouter } = require('react-router');
 const AppRoutes = require(path.join(srcDirectory, 'AppRoutes.js')).default;
 const routeMetadata = require(path.join(srcDirectory, 'lib', 'route-metadata.json'));
 const { buildStructuredData } = require('./structured-data.js');
@@ -210,6 +177,8 @@ for (const route of Object.keys(routeMetadata)) {
   // build/index.html, which may include an earlier run's markup and JSON-LD).
   let html = fs.readFileSync(htmlPath, 'utf8');
   html = html.replace(/<script type="application\/ld\+json">.*?<\/script>/gs, '');
+  html = html.replace(/<link rel="preload" href="\/static\/media\/outfit-latin-wght-normal\.[^"]+" as="font" type="font\/woff2" crossorigin="anonymous">/g, '');
+  html = html.replace('</head>', `${primaryFontPreload}</head>`);
   html = html.replace(/<div id="root">[\s\S]*<\/div>(?=\s*<\/body>)/, EMPTY_ROOT);
   if (!html.includes(EMPTY_ROOT)) {
     throw new Error(`${htmlPath} does not contain the app shell to fill.`);
@@ -228,9 +197,37 @@ for (const route of Object.keys(routeMetadata)) {
   rendered += 1;
 }
 
+const notFoundHtmlPath = path.join(buildDirectory, '404.html');
+if (!fs.existsSync(notFoundHtmlPath)) {
+  throw new Error(`Expected ${notFoundHtmlPath} to exist — run generate-route-metadata.mjs before prerender.`);
+}
+const notFoundMarkup = renderToString(
+  React.createElement(
+    StaticRouter,
+    { location: '/__polypdf-not-found__' },
+    React.createElement(AppRoutes)
+  )
+);
+let notFoundHtml = fs.readFileSync(notFoundHtmlPath, 'utf8');
+notFoundHtml = notFoundHtml.replace(/<script type="application\/ld\+json">.*?<\/script>/gs, '');
+notFoundHtml = notFoundHtml.replace(/<link rel="preload" href="\/static\/media\/outfit-latin-wght-normal\.[^"]+" as="font" type="font\/woff2" crossorigin="anonymous">/g, '');
+notFoundHtml = notFoundHtml.replace('</head>', `${primaryFontPreload}</head>`);
+notFoundHtml = notFoundHtml.replace(/<div id="root">[\s\S]*<\/div>(?=\s*<\/body>)/, EMPTY_ROOT);
+if (!notFoundHtml.includes(EMPTY_ROOT)) {
+  throw new Error(`${notFoundHtmlPath} does not contain the app shell to fill.`);
+}
+notFoundHtml = notFoundHtml.replace(EMPTY_ROOT, `<div id="root">${notFoundMarkup}</div>`);
+fs.writeFileSync(notFoundHtmlPath, notFoundHtml);
+
 // Escape "<" so "</script>" can never terminate the JSON-LD block early.
 function serializeJsonLd(entry) {
   return JSON.stringify(entry).replace(/</g, '\\u003c');
 }
 
-console.log(`Prerendered ${rendered} routes with static body content and structured data.`);
+console.log(`Prerendered ${rendered} routes plus the static 404 page.`);
+}
+
+prerenderAllRoutes().catch((error) => {
+  console.error(error?.stack || error);
+  process.exitCode = 1;
+});

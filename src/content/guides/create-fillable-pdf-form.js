@@ -5,7 +5,7 @@ const createFillablePdfFormGuide = {
   title: 'How to Create a Fillable PDF Form',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-23',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '10 min read',
   tag: 'Forms',
@@ -18,8 +18,8 @@ const createFillablePdfFormGuide = {
     'A reliable fillable PDF is more than boxes over a page. Its fields need stable names, useful tooltips, sensible tab order, compatible behavior, and a saved-file test in the viewers recipients will use.',
   quickAnswer:
     'For an unsigned, unrestricted PDF, open Forms and place Text, Multiline Text, Checkbox, Radio, Combo Box, or List Box fields. Give each a unique name, tooltip, options, flags, and tab order, then test a saved copy in PolyPDF and another target viewer. PolyPDF authors AcroForms; signed or secured PDFs block authoring, and dynamic XFA is preserved but not filled as an ordinary AcroForm.',
-  lastVerified: '2026-08-23',
-  productVersion: 'PolyPDF 1.4.0 (build 17)',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshot from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: formsBuilderImage,
@@ -207,7 +207,7 @@ const createFillablePdfFormGuide = {
   ],
   sources: [
     {
-      label: 'PolyPDF 1.4.0 (build 17) Forms panel, form-authoring model, and in-app guidance',
+      label: 'PolyPDF 1.5.0 (build 22) Forms panel, form-authoring model, and in-app guidance',
       note: 'Covers the field types, naming rules, authoring limits, read-only behavior, and XFA handling described above.'
     },
     {

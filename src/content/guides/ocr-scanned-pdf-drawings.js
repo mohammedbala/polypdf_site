@@ -20,7 +20,7 @@ const post = {
   title: 'How to OCR Scanned PDF Drawings',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-23',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '8 min read',
   tag: 'Search & OCR',
@@ -28,13 +28,13 @@ const post = {
     'Add a best-effort searchable text layer to scanned PDF drawings, then test search results and verify every value that could affect field or estimating work.',
   metaTitle: 'OCR Scanned PDF Drawings: Practical Guide | PolyPDF',
   metaDescription:
-    'Run local, best-effort OCR on scanned PDF drawings in PolyPDF, understand script limits, and verify searchable text before relying on the result.',
+    'Run local AEC OCR on scanned PDF drawings, verify searchable text, and export best-effort schedules and tables to an Excel workbook.',
   lede:
     'OCR can turn a flat scan into a document you can search, but it does not turn uncertain pixels into authoritative text. The useful workflow is recognition, targeted testing, and manual verification of anything consequential.',
   quickAnswer:
-    'To OCR a scanned PDF drawing in PolyPDF, save a working copy, choose Document › OCR, and let the whole-document recognition run finish. PolyPDF uses local operating-system OCR and adds a best-effort searchable layer where supported. In version 1.4.0, embedded searchable text is limited to Latin, Greek, and Cyrillic scripts, language availability depends on the computer’s OS and language packs, and there is no accuracy guarantee. Reopen the saved PDF, search representative terms, and visually verify critical dimensions, notes, and identifiers.',
-  lastVerified: '2026-08-23',
-  productVersion: 'PolyPDF 1.4.0',
+    'To OCR a scanned PDF drawing in PolyPDF 1.5, save a working copy, choose Document › OCR, and let the whole-document recognition run finish. PolyPDF uses local OCR, adds a best-effort searchable layer where supported, and analyzes AEC structure such as schedules, title blocks, drawing labels, and dimensions. Export recognized tables from File › Export › Excel Workbook (Tables + Text)… while that OCR session is still open. Reopen the saved PDF, search representative terms, and visually verify every critical value.',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: ocrSearchHitScreenshot,
@@ -97,7 +97,7 @@ const post = {
           items: [
             'Duplicate the source PDF or use Save As so the original scan remains untouched.',
             'Close unrelated large documents if the scan is long or image-heavy, then open the working copy.',
-            'Choose Document › OCR. In PolyPDF 1.4.0, OCR starts for the current document; there is no page-range or language picker in this dialog.',
+            'Choose Document › OCR. OCR starts for the current document; the current dialog does not offer a page-range or language picker.',
             'Keep the dialog open to watch progress, or close it if you want the run to continue in the background. Choose Cancel OCR when you need to stop; a cancelled run discards its result.',
             'Wait for the completion message before judging search. Large scans and construction sets can take time.',
             'Save the recognized document under a distinct filename, close it, and reopen that saved file.',
@@ -116,13 +116,49 @@ const post = {
       ]
     },
     {
+      icon: 'table',
+      title: 'Review AEC structure and export tables before closing the session',
+      body: [
+        {
+          kind: 'p',
+          text:
+            'Since PolyPDF 1.4.4, OCR also builds a current-session model of likely schedules, title-block fields, drawing and detail labels, dimensions, regions, rows, and cells. This is useful for review and spreadsheet handoff, but it is still inferred from page pixels and selectable text—not an authoritative schedule database.'
+        },
+        {
+          kind: 'table',
+          caption: 'What survives and what needs an explicit export',
+          headers: ['Result', 'Where it lives', 'What to do'],
+          rows: [
+            ['Searchable text layer', 'Saved into the PDF where supported', 'Save, close, reopen, and search representative terms'],
+            ['Recognized AEC tables and fields', 'Current open-document OCR session', 'Review the rows and cells, then export before closing or structurally reloading the document'],
+            ['Excel workbook', 'A separate .xlsx file you choose', 'Open it in a spreadsheet app and compare consequential cells with the drawing']
+          ]
+        },
+        {
+          kind: 'ol',
+          items: [
+            'Finish the OCR run and inspect the recognized table names, headings, rows, and dimensions.',
+            'Choose File › Export › Excel Workbook (Tables + Text)… while the recognized document session remains open.',
+            'Save the workbook under a name tied to the source drawing and issue.',
+            'Open the workbook and compare critical quantities, dimensions, tags, and schedule cells with the visible PDF.',
+            'Treat merged cells, faint rules, handwriting, rotated labels, and dense linework as high-risk review areas.'
+          ]
+        },
+        {
+          kind: 'note',
+          text:
+            'The structured table model is session data. Saving and reopening preserves the searchable PDF layer, but you should not assume the inferred table model will still be available unless you run OCR again. Export the workbook before closing the session.'
+        }
+      ]
+    },
+    {
       icon: 'document',
       title: 'Understand the language and script boundary',
       body: [
         {
           kind: 'p',
           text:
-            'Recognition availability comes from the operating system and its installed language support, so the languages offered by one Mac or Windows computer may differ from another. PolyPDF’s embedded searchable layer in version 1.4.0 is limited to Latin, Greek, and Cyrillic scripts. The operating system may recognize text in additional scripts, but PolyPDF does not promise to embed those characters as a searchable layer in the PDF.'
+            'Recognition availability comes from the operating system and its installed language support, so the languages offered by one Mac or Windows computer may differ from another. PolyPDF’s current embedded searchable layer is limited to Latin, Greek, and Cyrillic scripts. The operating system may recognize text in additional scripts, but PolyPDF does not promise to embed those characters as a searchable layer in the PDF.'
         },
         {
           kind: 'ul',
@@ -211,12 +247,17 @@ const post = {
     {
       question: 'Which scripts can PolyPDF embed as searchable PDF text?',
       answer:
-        'In PolyPDF 1.4.0, the embedded searchable layer is limited to Latin, Greek, and Cyrillic scripts. Platform recognition may cover more scripts, but that does not mean PolyPDF can embed all of them in the PDF.'
+        'In the current release, the embedded searchable layer is limited to Latin, Greek, and Cyrillic scripts. Platform recognition may cover more scripts, but that does not mean PolyPDF can embed all of them in the PDF.'
     },
     {
       question: 'Can I choose a page range or OCR language?',
       answer:
-        'Not in the version 1.4.0 OCR dialog. It starts a whole-document run and relies on platform recognition capabilities rather than exposing page-range and language controls.'
+        'Not in the current OCR dialog. It starts a whole-document run and relies on platform recognition capabilities rather than exposing page-range and language controls.'
+    },
+    {
+      question: 'Can PolyPDF export an OCR schedule to Excel?',
+      answer:
+        'Yes. After OCR builds its current-session AEC structure, choose File › Export › Excel Workbook (Tables + Text)…. Review the resulting rows and cells against the drawing; OCR and table reconstruction are best effort.'
     },
     {
       question: 'Does OCR make a scanned PDF accessible?',
@@ -244,9 +285,9 @@ const post = {
       url: 'https://learn.microsoft.com/en-us/uwp/api/windows.media.ocr'
     },
     {
-      label: 'PolyPDF: OCR in 1.4.0',
+      label: 'PolyPDF 1.5: local AEC OCR and table export',
       note:
-        'The embedded searchable layer covers Latin, Greek, and Cyrillic scripts, and language availability depends on the computer’s operating system and its installed language support.'
+        'AEC structure and Excel export were introduced in 1.4.4. The embedded searchable layer covers Latin, Greek, and Cyrillic scripts, and language availability depends on the computer’s operating system and installed support.'
     }
   ],
   cta: {

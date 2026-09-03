@@ -7,7 +7,7 @@ const post = {
   title: 'How to Calibrate a PDF Drawing Scale',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-24',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '8 min read',
   tag: 'Measure & Takeoff',
@@ -20,8 +20,8 @@ const post = {
     'A trustworthy takeoff starts with one page-specific scale and an independent check. PolyPDF lets you apply the scale printed in a title block or draw over a known dimension when the sheet does not state one.',
   quickAnswer:
     'To calibrate a PDF drawing, open the page in PolyPDF, choose Measurements › Scale, and either apply the scale notation printed on the sheet or choose Calibrate by Drawing Line. For line calibration, snap the two endpoints to a known span, enter its real-world length, and then measure a different labeled span. Do not begin takeoff until that second value agrees within the tolerance your work requires.',
-  lastVerified: '2026-08-24',
-  productVersion: 'PolyPDF 1.4.1 (build 18); screenshots from 1.4.0 (build 17)',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: calibratedVerificationScreenshot,
@@ -190,7 +190,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'The free edition includes calibration and up to three hand-created measurements per document. Symbol Search is a separate PolyPDF Pro workflow in version 1.4.1.'
+            'The free edition includes calibration and up to three hand-created measurements per document. Symbol Search is a separate PolyPDF Pro workflow in the current release.'
         }
       ]
     }

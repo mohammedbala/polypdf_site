@@ -1,18 +1,69 @@
 import shotCalibration from '../assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png';
 import shotMarkup from '../assets/screenshots/markup-v1-4-dark-web.png';
 import shotRevisionCompare from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web.png';
+import shotRevisionPackage from '../assets/screenshots/revision-package-changes-impact-v1-5-dark.png';
 import shotSymbolSearch from '../assets/screenshots/symbol-search-review-v1-4-dark-web.png';
 import shotTakeoff from '../assets/screenshots/takeoff-v1-4-dark-web.png';
 
 const landingPage = (page) => Object.freeze(page);
 
 export const landingPages = Object.freeze({
+  revisionPackages: landingPage({
+    path: '/revision-packages',
+    source: 'landing_revision_packages',
+    eyebrow: 'New in PolyPDF 1.5',
+    title: 'Carry review work forward when the next drawing issue arrives.',
+    lede: 'Import a new issue, reconcile every sheet, carry reviewed work forward, inspect changes and quantity impact, review references, and publish one current package with a revision report.',
+    qualifier: 'Revision Packages are portable project files for controlled drawing updates. Original PDFs remain unchanged; PolyPDF preserves verified source copies inside the package workflow.',
+    image: shotRevisionPackage,
+    imageWidth: 3078,
+    imageHeight: 1932,
+    imageAlt: 'PolyPDF 1.5 showing a Revision Package sidebar and Change Review dialog with a changed A-101 sheet, two differences, one changed quantity group, and a 150 dollar cost impact',
+    audience: 'For project teams receiving addenda, bulletins, permit revisions, and other drawing issues that must be reconciled against an established review record.',
+    proofPoints: [
+      ['Portable record', 'Sources + revision history'],
+      ['Reviewed carryover', 'Markups, scales, Spaces, links'],
+      ['Controlled output', 'Current package + report']
+    ],
+    problemTitle: 'A new issue should not erase the work already invested in the old one.',
+    problemCopy: 'A visual comparison can show that two pages differ, but an issue-wide update also has to identify each sheet, decide what replaces what, carry forward approved review work, resolve references, and publish an auditable current set. Revision Packages keep those decisions in one portable project instead of scattering them across filenames and hand-maintained notes.',
+    workflow: [
+      ['Import the new issue', 'Choose the revised PDF files or folder and record the issue label, date, and whether it is a partial update or a full reissue. PolyPDF preserves verified source copies; it does not rewrite the originals.'],
+      ['Recognize and reconcile sheets', 'Review proposed sheet identities and replacement targets. You—not a revision code—decide which sheets replace, add, match manually, skip, or retire.'],
+      ['Carry review work forward', 'For reviewed replacements, bring forward markups, page scales, Spaces, and manual links, then confirm alignment where the old and new sheet geometry differs.'],
+      ['Review changes, quantities, and references', 'Inspect each current sheet against its superseded revision, review detected differences and available quantity or cost impact, and verify references before publication.'],
+      ['Publish the current package', 'Create the current drawing package and revision report from the same reviewed state, with optional per-sheet change PDFs when the review requires them.']
+    ],
+    outcomeTitle: 'One reviewed path from incoming issue to current drawing package.',
+    outcomes: [
+      'Keeps source files, revision history, sheet links, and publication records together in a portable .polyset project.',
+      'Supports partial updates and full reissues without treating revision codes as automatic approval.',
+      'Carries forward reviewed markups, scales, Spaces, and manual links only when you approve the replacement.',
+      'Surfaces drawing changes alongside measured quantity and priced-estimate impact when that project data exists.',
+      'Publishes a current package and revision report from one reviewed revision state.'
+    ],
+    faq: [
+      ['What is a Revision Package?', 'It is a portable PolyPDF project that keeps drawing sources, sheet identities, revision history, carried review work, reference decisions, and publication records together across drawing issues.'],
+      ['Does PolyPDF change my original PDFs?', 'No. The workflow preserves verified source copies and leaves the original PDFs unchanged. Published outputs are created separately from the reviewed package state.'],
+      ['Which Revision Package actions require Pro?', 'Free users can open, view, and navigate a Revision Package. Creating or changing package state, importing updates, reconciling sheets, and publishing require PolyPDF Pro.'],
+      ['How is this different from Compare Documents?', 'Compare Documents is a focused two-PDF visual comparison. Revision Packages coordinate an issue-wide process: sheet identity, replacement decisions, reviewed carryover, change and impact review, references, and publication.'],
+      ['Can recipients use the published PDFs without PolyPDF?', 'Yes. The published current package and revision report are normal PDF outputs. The .polyset project is the portable PolyPDF record used to continue the revision workflow.']
+    ],
+    related: [
+      ['/compare-pdf-drawings', 'Compare two PDF drawings'],
+      ['/blog/compare-pdf-drawing-revisions', 'Drawing revision review guide'],
+      ['/blog/prepare-issued-pdf-set', 'Prepare an issued PDF set'],
+      ['/construction-pdf-markup', 'Construction PDF markup'],
+      ['/pdf-takeoff-software', 'PDF takeoff software'],
+      ['/support', 'Get PolyPDF support']
+    ]
+  }),
   pdfTakeoffSoftware: landingPage({
     path: '/pdf-takeoff-software',
     source: 'landing_pdf_takeoff',
     eyebrow: 'PDF takeoff for Mac and Windows',
     title: 'Turn scaled PDF drawings into an organized takeoff worksheet.',
-    lede: 'Calibrate a sheet once, measure lengths, areas, perimeters, angles, and counts, then keep the results beside the drawing and export them to CSV or PDF.',
+    lede: 'Calibrate a sheet once, measure lengths, areas, perimeters, angles, radii, diameters, and counts, then keep the results beside the drawing and export them to CSV or PDF.',
     qualifier: 'Built for estimators and contractors who receive PDFs—not perfect CAD files—and need a direct path from drawing to quantity record.',
     image: shotTakeoff,
     imageWidth: 1710,
@@ -21,7 +72,7 @@ export const landingPages = Object.freeze({
     audience: 'For preconstruction, estimating, and trade workflows that need quantities from architectural or engineering PDF sheets.',
     proofPoints: [
       ['Calibrate once', 'Preset or custom scale'],
-      ['Measure directly', 'Length, area, count, angle'],
+      ['Measure directly', 'Length, area, radius, count'],
       ['Hand off cleanly', 'CSV and PDF export']
     ],
     problemTitle: 'Keep the quantity and its drawing context together.',
@@ -41,7 +92,7 @@ export const landingPages = Object.freeze({
       'Lets you verify the workflow free before unlocking unlimited hand-created measurements.'
     ],
     faq: [
-      ['What measurements can PolyPDF create?', 'PolyPDF supports distance, area, perimeter, angle, dimension, and count workflows on calibrated PDF drawings.'],
+      ['What measurements can PolyPDF create?', 'PolyPDF supports distance, area, perimeter, angle, radius, diameter, dimension, and count workflows on calibrated PDF drawings.'],
       ['Can I export takeoff results?', 'Yes. The takeoff worksheet can be exported to CSV for downstream calculations or PDF for a readable record.'],
       ['Do I need the original CAD file?', 'No. PolyPDF works from the PDF drawing. You calibrate the page using its stated scale or a known distance.']
     ],
@@ -59,7 +110,7 @@ export const landingPages = Object.freeze({
     source: 'landing_measure_pdf_mac',
     eyebrow: 'Measure drawings on macOS',
     title: 'Measure a PDF on Mac without redrawing it in CAD.',
-    lede: 'Open the plan, set its scale, and pull real distances, areas, perimeters, angles, and counts directly from the PDF in a desktop app for macOS.',
+    lede: 'Open the plan, set its scale, and pull real distances, areas, perimeters, angles, radii, diameters, and counts directly from the PDF in a desktop app for macOS.',
     qualifier: 'Start with the free Mac download and validate scale accuracy on a drawing you already know. Upgrade only when you need more than 3 hand-created measurements in a document.',
     image: shotCalibration,
     imageWidth: 1710,
@@ -184,7 +235,7 @@ export const landingPages = Object.freeze({
     faq: [
       ['Is Symbol Search the same as OCR?', 'No. OCR looks for text. Symbol Search looks for regions that resemble the symbol example you capture from the drawing.'],
       ['Will it find every symbol perfectly?', 'Not on every drawing. Match quality depends on the source PDF, symbol consistency, rotation, scan quality, and the capture selection. Review the candidates before committing a count.'],
-      ['Is Symbol Search included in the free version?', 'No. In PolyPDF 1.4.1, Symbol Search is a Pro workflow. The same Pro license also removes the limit on hand-created measurements and unlocks installed plugins.']
+      ['Is Symbol Search included in the free version?', 'No. Symbol Search is a Pro workflow in the current PolyPDF release. The same Pro license also removes the limit on hand-created measurements, unlocks installed plugins, and enables Revision Package updates and publishing.']
     ],
     related: [
       ['/blog/count-pdf-symbols', 'Count symbols with Symbol Search'],
@@ -231,9 +282,11 @@ export const landingPages = Object.freeze({
     faq: [
       ['What should I check before comparing two drawings?', 'Confirm the sheet identity, revision, orientation, page size, and scale. A shifted scan or differently cropped sheet can create visual differences that are not design changes.'],
       ['Does comparison replace a formal revision review?', 'No. It helps focus attention, but the issued revision record and a qualified reviewer remain authoritative. Every detected difference still needs context.'],
-      ['Can I mark up the differences afterward?', 'Yes. Use revision clouds, callouts, text, shapes, and stamps to record what the team needs to review or act on.']
+      ['Can I mark up the differences afterward?', 'Yes. Use revision clouds, callouts, text, shapes, and stamps to record what the team needs to review or act on.'],
+      ['Should I use Compare Documents or a Revision Package?', 'Use Compare Documents for a focused visual diff between two PDFs. Use a Revision Package when a complete drawing issue needs sheet reconciliation, carried review work, change and impact review, references, and controlled publication.']
     ],
     related: [
+      ['/revision-packages', 'Manage a complete drawing issue'],
       ['/blog/compare-pdf-drawing-revisions', 'Drawing revision review guide'],
       ['/blog/pdf-markup-table-rfi-punch-list', 'Turn findings into a review register'],
       ['/blog/prepare-issued-pdf-set', 'Prepare an issued PDF set'],

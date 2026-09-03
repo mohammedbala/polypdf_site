@@ -155,21 +155,22 @@ const buildRouteMetadata = () => {
 };
 
 const STATIC_LASTMOD = Object.freeze({
-  '/': '2026-08-23',
-  '/buy': '2026-08-23',
+  '/': '2026-09-03',
+  '/buy': '2026-09-03',
   '/build-a-plugin': '2026-08-18',
-  '/privacy': '2026-08-18',
-  '/refund': '2026-08-23',
+  '/privacy': '2026-09-03',
+  '/refund': '2026-09-03',
   '/feature-requests': '2026-08-18',
-  '/support': '2026-08-23',
-  '/windows': '2026-08-18',
-  '/terms': '2026-08-23',
-  '/versions': '2026-08-18',
-  '/pdf-takeoff-software': '2026-08-19',
-  '/measure-pdf-on-mac': '2026-08-19',
-  '/construction-pdf-markup': '2026-08-19',
-  '/visual-search-pdf-count': '2026-08-19',
-  '/compare-pdf-drawings': '2026-08-19'
+  '/support': '2026-09-03',
+  '/windows': '2026-09-03',
+  '/terms': '2026-09-03',
+  '/versions': '2026-09-03',
+  '/revision-packages': '2026-09-03',
+  '/pdf-takeoff-software': '2026-09-03',
+  '/measure-pdf-on-mac': '2026-09-03',
+  '/construction-pdf-markup': '2026-09-03',
+  '/visual-search-pdf-count': '2026-09-03',
+  '/compare-pdf-drawings': '2026-09-03'
 });
 
 const sitemapSettings = (route) => {
@@ -178,7 +179,8 @@ const sitemapSettings = (route) => {
   if (route === '/blog') return { changefreq: 'weekly', priority: '0.8' };
   if (route.startsWith('/blog/')) return { changefreq: 'monthly', priority: '0.8' };
   if (route.startsWith('/pdf-') || route.startsWith('/measure-') || route.startsWith('/construction-')
-      || route.startsWith('/visual-search-') || route.startsWith('/compare-')) {
+      || route.startsWith('/visual-search-') || route.startsWith('/compare-')
+      || route.startsWith('/revision-')) {
     return { changefreq: 'monthly', priority: '0.9' };
   }
   return { changefreq: 'monthly', priority: '0.7' };
@@ -288,11 +290,14 @@ const buildLlmsText = () => {
     'Key facts:',
     '',
     `- Current release: PolyPDF ${siteRelease.version} (build ${siteRelease.build}) for macOS and Windows; /versions reads the live update feeds.`,
-    `- Free download: the Free edition includes markup, review, calibration, and up to 3 hand-created measurements per document. ${commercialOffer.name} removes the measurement cap and unlocks Symbol Search plus installed plugins at the ${commercialOffer.price} Founder price instead of the planned ${commercialOffer.referencePrice} standard price, activates up to 3 computers in any Mac/Windows mix, and includes a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee for direct website purchases; /buy has the current terms.`,
+    `- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. ${commercialOffer.name} removes the measurement cap and unlocks Symbol Search, installed plugins, and Revision Package creation, changes, and publishing at the ${commercialOffer.price} Founder price instead of the planned ${commercialOffer.referencePrice} standard price, activates up to 3 computers in any Mac/Windows mix, and includes a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee for direct website purchases; /buy has the current terms.`,
     '- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.',
     '- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
-    '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, count, and dimension tools, plus a worksheet that exports CSV or PDF.',
+    '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.',
     '- Symbol Search auto-count (Pro): capture one drawing symbol, review candidate matches, and commit an auditable numbered count series.',
+    '- Revision Packages (view and navigation in Free; changes and publication in Pro): import a drawing issue, reconcile sheets, carry reviewed work forward, inspect changes and available quantity or cost impact, review references, and publish a current package with a revision report.',
+    '- Local AEC OCR: recover searchable text and current-session structure for schedules, title blocks, drawing labels, dimensions, and spreadsheet-ready tables. Recognition remains best-effort and requires review.',
+    '- Tool Chest: built-in Doors, Windows, Fire Protection, and MUTCD sets, plus BTX, SVG, and DXF import.',
     '- Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.',
     '- Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.',
     '- Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.',
@@ -314,6 +319,7 @@ const buildLlmsText = () => {
     '## Workflow pages',
     '',
     `${markdownLink('PDF takeoff software', '/pdf-takeoff-software')}: calibrate, measure, organize, and export takeoff records`,
+    `${markdownLink('Revision Packages', '/revision-packages')}: reconcile drawing issues, carry reviewed work forward, review impact and references, and publish a current package`,
     `${markdownLink('Measure a PDF on Mac', '/measure-pdf-on-mac')}: calibrated drawing measurement on macOS`,
     `${markdownLink('Construction PDF markup', '/construction-pdf-markup')}: markups and review-list workflow`,
     `${markdownLink('Symbol Search PDF counting', '/visual-search-pdf-count')}: capture, review, and commit repeated-symbol matches`,

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -13,6 +13,7 @@ import {
   FaTerminal
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+import siteRelease from '../lib/siteRelease.json';
 
 // Reuses the .legal-page shell (like Support and the blog) so the page inherits the site's card
 // treatment, type scale and scroll animation. The two code blocks carry inline styles rather than
@@ -98,7 +99,10 @@ const BuildYourOwnPlugin = () => {
             <p className="legal-subtitle">
               Add your office’s symbols to PolyPDF. No code, no marketplace, no approval queue.
             </p>
-            <p className="last-updated">Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+</p>
+            <p className="last-updated">
+              Current app: PolyPDF {siteRelease.version} (build {siteRelease.build}) · Package format:
+              PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+
+            </p>
           </div>
 
           <div className="legal-intro">

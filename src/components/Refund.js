@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -71,13 +71,13 @@ const Refund = () => {
           <div className="legal-hero">
             <h1>Refund Policy</h1>
             <p className="legal-subtitle">Refunds for direct PolyPDF purchases</p>
-            <p className="last-updated">Last updated: August 24, 2026</p>
+            <p className="last-updated">Last updated: September 3, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
               PolyPDF is designed so you can download the app free — on Mac or Windows — and test it on your own
-              documents, and only purchase Pro when you want unlimited measurements, Symbol Search, or plugins. This policy
+              documents, and only purchase Pro when you want unlimited measurements, Symbol Search, plugins, or Revision Package changes and publishing. This policy
               explains refund handling for direct purchases processed by Stripe.
             </p>
           </div>

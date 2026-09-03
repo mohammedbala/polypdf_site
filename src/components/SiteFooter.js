@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import parrotIcon from '../assets/polypdf_icon.png';
 import DirectCheckoutLink from './DirectCheckoutLink';
 import { buyPath, canonicalPagePath } from '../lib/attribution';
@@ -10,6 +10,7 @@ export const footerLinkGroups = Object.freeze([
   Object.freeze({
     label: 'Workflows',
     links: Object.freeze([
+      Object.freeze({ to: landingPages.revisionPackages.path, label: 'Revision Packages' }),
       Object.freeze({ to: landingPages.pdfTakeoffSoftware.path, label: 'PDF takeoff software' }),
       Object.freeze({ to: landingPages.measurePdfOnMac.path, label: 'Measure a PDF on Mac' }),
       Object.freeze({ to: landingPages.constructionPdfMarkup.path, label: 'Construction PDF markup' }),
@@ -59,7 +60,7 @@ const SiteFooter = () => (
           <img src={parrotIcon} alt="" loading="lazy" width="1024" height="1024" />
           <span>PolyPDF</span>
         </Link>
-        <p>Measure, count, compare, and mark up PDF drawings on Mac and Windows—without a yearly bill.</p>
+        <p>Measure, count, compare, manage revisions, and mark up PDF drawings on Mac and Windows—without a yearly bill.</p>
         <div className="site-footer-downloads" aria-label="PolyPDF downloads">
           {Object.values(DOWNLOADS).map((platform) => (
             <a

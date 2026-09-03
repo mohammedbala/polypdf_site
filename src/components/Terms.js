@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -26,9 +26,9 @@ const sections = [
     icon: <FaHandshake />,
     title: 'Free and paid access',
     content: [
-      'The desktop app (macOS and Windows) may be offered as a free download with limited free measurement usage before purchase is required for additional measurement workflows.',
+      'The desktop app for macOS and Windows may be offered as a free download with limited measurement usage and view-only access to some project workflows before Pro is required.',
       'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
-      `The current direct offer includes free markup, review, calibration, and 3 hand-created measurements per document. The optional ${commercialOffer.price} Founder's License, instead of the planned ${commercialOffer.referencePrice} standard price, removes that cap and unlocks Symbol Search plus plugin workflows. Direct website purchases include a 14-day money-back guarantee.`
+      `The current direct offer includes free markup, review, calibration, 3 hand-created measurements per document, and Revision Package viewing and navigation. The optional ${commercialOffer.price} Founder's License, instead of the planned ${commercialOffer.referencePrice} standard price, removes that cap and unlocks Symbol Search, plugin workflows, and Revision Package creation, changes, and publishing. Direct website purchases include a 14-day money-back guarantee.`
     ]
   },
   {
@@ -74,7 +74,7 @@ const Terms = () => {
           <div className="legal-hero">
             <h1>Terms of Use</h1>
             <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
-            <p className="last-updated">Last updated: August 24, 2026</p>
+            <p className="last-updated">Commercial terms version: July 30, 2026 · Product-access description reviewed September 3, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -138,6 +138,7 @@ const Terms = () => {
             <ul className="section-content">
               <li>You must not use PolyPDF for illegal, fraudulent, or abusive activity.</li>
               <li>You remain responsible for the documents and data you process with the app.</li>
+              <li>You are responsible for confirming sheet identity, revision status, carried review work, references, detected changes, quantities, costs, and published outputs before relying on a Revision Package as a project record.</li>
               <li>You must respect the intellectual property rights of others when using the app.</li>
             </ul>
           </section>
@@ -146,6 +147,8 @@ const Terms = () => {
             <h2>Disclaimers and limitation of liability</h2>
             <ul className="section-content">
               <li>PolyPDF is provided on an “as is” and “as available” basis.</li>
+              <li>OCR, sheet recognition, visual comparison, quantity or cost impact, reference review, preflight, and other automated results are assistive and require qualified human review.</li>
+              <li>Collaboration is a beta workflow that depends on a customer-managed host and file share; availability, network continuity, and organizational access controls remain the customer’s responsibility.</li>
               <li>To the maximum extent allowed by law, PolyPDF disclaims implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.</li>
               <li>To the maximum extent allowed by law, PolyPDF is not liable for indirect, incidental, special, consequential, or punitive damages.</li>
               <li>If liability cannot be excluded, PolyPDF’s total liability is limited to the amount you paid for the applicable purchase.</li>

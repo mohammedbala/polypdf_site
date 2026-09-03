@@ -1,3 +1,5 @@
+import { useSyncExternalStore } from 'react';
+
 // Platform detection + the one place download facts live. Every download button on the site goes
 // through this module so the primary CTA always offers the visitor's own OS (the VS Code / Cursor
 // pattern) and the other platform stays one click away — never platform copy hardcoded per page.
@@ -19,8 +21,9 @@ export const DOWNLOADS = {
   }
 };
 
-// 'mac' | 'windows' | null (null = unknown: mobile, Linux, bots). Checked once at module load —
-// a platform does not change mid-session.
+// 'mac' | 'windows' | null (null = unknown: mobile, Linux, bots). Checked once at module load for
+// event-time helpers. Rendered controls use `usePlatform` below so their first client render stays
+// identical to the platform-neutral prerender; detection is applied immediately after hydration.
 export function detectPlatform() {
   if (typeof navigator === 'undefined') return null;
   const uaData = navigator.userAgentData;
@@ -39,3 +42,21 @@ const detected = detectPlatform();
 export const primaryPlatform = DOWNLOADS[detected ?? 'mac'];
 export const otherPlatform = primaryPlatform.key === 'mac' ? DOWNLOADS.windows : DOWNLOADS.mac;
 export const platformKnown = detected !== null;
+
+const subscribeToStablePlatform = () => () => {};
+const serverPlatformSnapshot = () => null;
+
+export function usePlatform() {
+  const detectedKey = useSyncExternalStore(
+    subscribeToStablePlatform,
+    detectPlatform,
+    serverPlatformSnapshot
+  );
+
+  const detectedPlatform = DOWNLOADS[detectedKey ?? 'mac'];
+  return {
+    primaryPlatform: detectedPlatform,
+    otherPlatform: detectedPlatform.key === 'mac' ? DOWNLOADS.windows : DOWNLOADS.mac,
+    platformKnown: detectedKey !== null
+  };
+}

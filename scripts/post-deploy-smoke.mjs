@@ -35,7 +35,13 @@ export const downloadRoutes = [
   '/downloads/collaboration/PolyPDF-Collaboration-Host-Setup.exe'
 ];
 
+export const releaseFeedRoutes = [
+  '/downloads/polypdfmac-appcast.xml',
+  '/downloads/windows/latest.yml'
+];
+
 export const canonicalFooterRoutes = [
+  '/revision-packages/',
   '/pdf-takeoff-software/',
   '/measure-pdf-on-mac/',
   '/construction-pdf-markup/',
@@ -43,9 +49,12 @@ export const canonicalFooterRoutes = [
   '/compare-pdf-drawings/'
 ];
 
+export const notFoundSmokeRoute = '/__polypdf-deploy-smoke-not-found__';
+
 export const expectedOffer = Object.freeze({
   id: 'polypdf_pro_founder_1x_2026',
   checkoutLineItemName: "PolyPDF Pro Founder's License — Perpetual 1.x",
+  termsVersion: '2026-07-30',
   price: 49.99,
   activationLimit: 3
 });
@@ -151,8 +160,25 @@ export async function runPostDeploySmoke({
     for (const footerRoute of canonicalFooterRoutes) {
       assertResponse(body.includes(`href="${footerRoute}"`), `${route} footer is missing ${footerRoute}`);
     }
+    if (route === '/') {
+      assertResponse(
+        body.includes(`Authentic ${siteRelease.version} build ${siteRelease.build} interface`)
+          && body.includes('Revision Packages'),
+        `homepage does not advertise PolyPDF ${siteRelease.version} build ${siteRelease.build} and Revision Packages`
+      );
+    }
     results.push({ route, status: response.status });
   }
+
+  const notFoundResponse = await fetchImpl(`${base}${notFoundSmokeRoute}`, { headers: smokeHeaders });
+  const notFoundBody = await notFoundResponse.text();
+  assertResponse(notFoundResponse.status === 404, `${notFoundSmokeRoute} returned HTTP ${notFoundResponse.status} instead of 404`);
+  assertResponse(/text\/html/i.test(notFoundResponse.headers.get('content-type') || ''), `${notFoundSmokeRoute} did not return HTML`);
+  assertResponse(notFoundBody.includes('<title>Page Not Found | PolyPDF</title>'), `${notFoundSmokeRoute} did not return the not-found title`);
+  assertResponse(notFoundBody.includes('<meta name="robots" content="noindex, nofollow"'), `${notFoundSmokeRoute} did not return a noindex policy`);
+  assertResponse(notFoundBody.includes('This page is not part of the current PolyPDF site.'), `${notFoundSmokeRoute} did not return the visible not-found page`);
+  assertResponse(!notFoundBody.includes('<div id="root"></div>'), `${notFoundSmokeRoute} returned an empty app shell`);
+  results.push({ route: notFoundSmokeRoute, status: notFoundResponse.status });
 
   for (const route of shareImageRoutes) {
     const response = await fetchImpl(`${base}${route}`, { headers: smokeHeaders });
@@ -218,6 +244,10 @@ export async function runPostDeploySmoke({
   assertResponse(offerResponse.ok, `/api/commercial-offer returned HTTP ${offerResponse.status}`);
   assertResponse(offer?.id === expectedOffer.id, '/api/commercial-offer returned the wrong offer ID');
   assertResponse(
+    offer?.termsVersion === expectedOffer.termsVersion,
+    '/api/commercial-offer returned a terms version that differs from the website'
+  );
+  assertResponse(
     offer?.checkoutLineItemName === expectedOffer.checkoutLineItemName,
     '/api/commercial-offer returned the wrong checkout line-item name'
   );
@@ -267,6 +297,37 @@ export async function runPostDeploySmoke({
     'deployed site bundle does not contain verified purchase conversion tracking'
   );
   results.push({ route: mainBundlePath, status: bundleResponse.status });
+
+  const appcastResponse = await fetchImpl(`${base}${releaseFeedRoutes[0]}?smoke=${Date.now()}`, {
+    headers: smokeHeaders
+  });
+  const appcast = await appcastResponse.text();
+  const firstAppcastItem = appcast.match(/<item>[\s\S]*?<\/item>/)?.[0] || '';
+  const macVersion = firstAppcastItem.match(/<sparkle:shortVersionString>([^<]+)<\/sparkle:shortVersionString>/)?.[1];
+  const macBuild = firstAppcastItem.match(/<sparkle:version>([^<]+)<\/sparkle:version>/)?.[1];
+  assertResponse(appcastResponse.ok, `${releaseFeedRoutes[0]} returned HTTP ${appcastResponse.status}`);
+  assertResponse(
+    macVersion === siteRelease.version && macBuild === String(siteRelease.build),
+    `macOS update feed is ${macVersion || 'unknown'} build ${macBuild || 'unknown'}, but the website advertises ${siteRelease.version} build ${siteRelease.build}`
+  );
+  results.push({ route: releaseFeedRoutes[0], status: appcastResponse.status });
+
+  const windowsFeedResponse = await fetchImpl(`${base}${releaseFeedRoutes[1]}?smoke=${Date.now()}`, {
+    headers: smokeHeaders
+  });
+  const windowsFeed = await windowsFeedResponse.text();
+  const windowsVersion = windowsFeed.match(/^version:\s*['"]?([^'"\s]+)['"]?\s*$/m)?.[1];
+  const installerIdentity = windowsFeed.match(/^path:\s*['"]?PolyPDFSetup-v([^-'"\s]+)-(\d+)\.exe['"]?\s*$/m);
+  const windowsInstallerVersion = installerIdentity?.[1];
+  const windowsBuild = installerIdentity?.[2];
+  assertResponse(windowsFeedResponse.ok, `${releaseFeedRoutes[1]} returned HTTP ${windowsFeedResponse.status}`);
+  assertResponse(
+    windowsVersion === siteRelease.version
+      && windowsInstallerVersion === siteRelease.version
+      && windowsBuild === String(siteRelease.build),
+    `Windows update feed is ${windowsVersion || 'unknown'} build ${windowsBuild || 'unknown'}, but the website advertises ${siteRelease.version} build ${siteRelease.build}`
+  );
+  results.push({ route: releaseFeedRoutes[1], status: windowsFeedResponse.status });
 
   for (const route of downloadRoutes) {
     const response = await fetchImpl(`${base}${route}`, {

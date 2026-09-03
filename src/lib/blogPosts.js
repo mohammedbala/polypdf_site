@@ -35,7 +35,7 @@ const productPosts = Object.freeze([
     title: 'Set Up PolyPDF Collaboration Beta',
     date: '2026-08-27',
     dateLabel: 'August 27, 2026',
-    dateModified: '2026-08-27',
+    dateModified: '2026-09-03',
     author: 'The PolyPDF team',
     readingTime: '9 min read',
     tag: 'Beta guide',
@@ -54,8 +54,8 @@ const productPosts = Object.freeze([
       'Collaboration Beta lets approved Mac and Windows users work in the same shared PDF without uploading the drawing to a PolyPDF cloud account. This guide covers the company host, first connection, daily workflow, and beta safeguards.',
     quickAnswer:
       'Install the customer-owned Collaboration Host on your private network, mount the same company PDF share on each computer, and give employees the nonsecret company connection file. The first Owner enrolls with a single-use invitation and approves later devices as Owner, Editor, or Viewer. Approved users open the same PDF to exchange live cursors and markup transactions; short offline interruptions queue encrypted changes for ordered replay.',
-    lastVerified: '2026-08-27',
-    productVersion: 'PolyPDF 1.4.3 (build 20) Collaboration Beta',
+    lastVerified: '2026-09-03',
+    productVersion: 'PolyPDF 1.5.0 (build 22) Collaboration Beta; screenshot from 1.4.3 (build 20)',
     platforms: 'macOS and Windows clients; Windows Server 2022 host',
     heroImage: {
       src: collaborationBetaScreenshot,
@@ -125,7 +125,7 @@ const productPosts = Object.freeze([
           {
             kind: 'ol',
             items: [
-              'Install PolyPDF 1.4.3 or newer on the Owner’s Mac or Windows computer and mount the company PDF share.',
+              'Install the current PolyPDF release on the Owner’s Mac or Windows computer and mount the company PDF share.',
               'Open a PDF, then click Collaboration off in the title bar.',
               'Turn on Enable collaboration and enter the Owner’s display name.',
               'Open PolyPDF-company-connection.json in a text editor and paste its full JSON into Company connection file.',
@@ -307,7 +307,7 @@ const productPosts = Object.freeze([
     title: 'Introducing PolyPDF Plugins',
     date: '2026-08-07',
     dateLabel: 'August 7, 2026',
-    dateModified: '2026-08-24',
+    dateModified: '2026-09-03',
     author: 'The PolyPDF team',
     readingTime: '9 min read',
     tag: 'Product',
@@ -327,8 +327,8 @@ const productPosts = Object.freeze([
       'Plugins add content generators without executing downloaded plugin JavaScript. This article walks through the interface and the three generators included with PolyPDF Pro.',
     quickAnswer:
       'PolyPDF plugins are Pro workflows built from declarative packages rather than executable-code extensions. PolyPDF renders their forms and runs a fixed host-owned generator against bounded data or sanitized artwork. Three generators come with the app and are enabled on first run: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic from a jurisdiction template, and PDF Maps places a map image for an address or place name.',
-    lastVerified: '2026-08-24',
-    productVersion: 'PolyPDF 1.4.1 (build 18); screenshots from 1.4.0 (build 17)',
+    lastVerified: '2026-09-03',
+    productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
     platforms: 'macOS and Windows',
     heroImage: {
       src: pluginSidebarScreenshot,
@@ -355,7 +355,7 @@ const productPosts = Object.freeze([
           {
             kind: 'note',
             text:
-              'Current access: installing, running, and editing plugin content requires PolyPDF Pro in version 1.4.1. Content already placed on a PDF remains ordinary document content.'
+              'Current access: installing, running, and editing plugin content requires PolyPDF Pro. Content already placed on a PDF remains ordinary document content.'
           }
         ]
       },
@@ -590,7 +590,7 @@ const productPosts = Object.freeze([
       {
         question: 'Do PolyPDF plugins require Pro?',
         answer:
-          'Yes. Installing, running, and editing plugin content requires PolyPDF Pro in version 1.4.1. The three first-party plugin packages still ship with the app, and previously inserted content stays in the document.'
+          'Yes. Installing, running, and editing plugin content requires PolyPDF Pro in the current release. The three first-party plugin packages still ship with the app, and previously inserted content stays in the document.'
       },
       {
         question: 'Do PolyPDF plugins run downloaded code?',

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router';
 import routeMetadata from '../lib/route-metadata.json';
 import siteRelease from '../lib/siteRelease.json';
 
@@ -7,6 +7,11 @@ const SITE_ORIGIN = 'https://www.polypdf.com';
 const SOCIAL_IMAGE = `${SITE_ORIGIN}/og-image.png?v=${siteRelease.screenshotCacheToken}`;
 const SOCIAL_IMAGE_ALT =
   'PolyPDF — measure and mark up PDF drawings on Mac and Windows, no subscription';
+const NOT_FOUND_METADATA = Object.freeze({
+  title: 'Page Not Found | PolyPDF',
+  description: 'The PolyPDF page you requested could not be found.',
+  robots: 'noindex, nofollow'
+});
 
 const setMeta = (selector, attribute, value) => {
   const element = document.head.querySelector(selector);
@@ -15,14 +20,19 @@ const setMeta = (selector, attribute, value) => {
 
 export const normalizeRoutePath = (pathname) => pathname.replace(/\/+$/, '') || '/';
 
+export const resolveRouteMetadata = (pathname) => {
+  const normalizedPathname = normalizeRoutePath(pathname);
+  return {
+    route: routeMetadata[normalizedPathname] || NOT_FOUND_METADATA,
+    url: `${SITE_ORIGIN}${normalizedPathname === '/' ? '/' : `${normalizedPathname}/`}`
+  };
+};
+
 const RouteMetadata = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const normalizedPathname = normalizeRoutePath(pathname);
-    const route = routeMetadata[normalizedPathname] || routeMetadata['/'];
-    const canonicalPath = routeMetadata[normalizedPathname] ? normalizedPathname : '/';
-    const url = `${SITE_ORIGIN}${canonicalPath === '/' ? '/' : `${canonicalPath}/`}`;
+    const { route, url } = resolveRouteMetadata(pathname);
     const image = route.image
       ? new URL(route.image, `${SITE_ORIGIN}/`).href
       : SOCIAL_IMAGE;

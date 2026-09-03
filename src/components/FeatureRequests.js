@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -141,14 +141,14 @@ const FeatureRequests = () => {
 
         <section className="feature-request-evidence container" aria-labelledby="recently-shipped-title">
           <div className="feature-request-shipped-copy">
-            <span className="feature-request-label">Recently shipped</span>
-            <h2 id="recently-shipped-title">Customer requests made the 1.3.4 update.</h2>
+            <span className="feature-request-label">Shipped request examples</span>
+            <h2 id="recently-shipped-title">These customer requests became product features.</h2>
             <p>
               These came in as customer requests and shipped in 1.3.4. They are on both Mac and
               Windows today, and the cloud line type is still on the list.
             </p>
             <Link to="/versions/" className="feature-request-text-link">
-              Read the 1.3.4 release notes <FaArrowRight />
+              Browse the complete version history <FaArrowRight />
             </Link>
           </div>
           <ul className="feature-request-shipped-list">

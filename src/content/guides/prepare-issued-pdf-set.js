@@ -10,7 +10,7 @@ const post = {
   title: 'How to Prepare an Issued PDF Set',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-23',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '10 min read',
   tag: 'Document Production',
@@ -22,9 +22,9 @@ const post = {
   lede:
     'An issued set should tell a recipient what each page is, which issue it belongs to, and whether the file survived production intact. That takes a controlled sequence, not one large button press.',
   quickAnswer:
-    'To prepare an issued PDF set, preserve the source files, define a manifest and naming rule, distinguish navigation page labels from visible Bates identifiers, then add headers, footers, watermarks, and Bates numbers to each working document. PolyPDF 1.4.0 does not expose a cross-file Batch Process, so continue any Bates sequence by recording the last number you confirmed and setting the next document’s start value manually. Run Accessibility & Preflight, inspect every output in a recipient-style viewer, and sign only after page-content changes are finished.',
-  lastVerified: '2026-08-23',
-  productVersion: 'PolyPDF 1.4.0 (build 17)',
+    'To prepare an issued PDF set, preserve the sources, define a manifest and naming rule, and use a Revision Package when the issue replaces an already reviewed drawing set. For final page content, distinguish navigation labels from visible Bates identifiers, then add headers, footers, watermarks, and Bates numbers to each working document. PolyPDF 1.5 does not expose a cross-file Batch Process, so continue a Bates sequence by recording the last number you confirmed and setting the next document’s start value manually. Run Accessibility & Preflight, inspect every output in a recipient-style viewer, and sign only after page-content changes are finished.',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: issuedFinalScreenshot,
@@ -65,6 +65,39 @@ const post = {
           kind: 'note',
           text:
             'A backup is part of the workflow, not a recovery plan added after something goes wrong. Whole-document operations can affect every selected page.'
+        }
+      ]
+    },
+    {
+      icon: 'compare',
+      title: 'Use a Revision Package when the issue replaces reviewed drawings',
+      body: [
+        {
+          kind: 'p',
+          text:
+            'PolyPDF 1.5 adds Revision Packages for the issue-management work that comes before final page stamping. Import the new issue, review recognized sheet identities, decide what replaces or adds, carry approved markups and scale data forward, inspect changes and available quantity or cost impact, verify references, and publish a current package with a revision report.'
+        },
+        {
+          kind: 'ol',
+          items: [
+            'Create or open the .polyset Revision Package that owns the reviewed baseline.',
+            'Import the new issue and record its label, date, and whether it is a partial update or full reissue.',
+            'Reconcile every proposed sheet replacement; do not let a revision code make the decision for you.',
+            'Review carried work, alignment, changes, available impact, and references.',
+            'Publish the current package and revision report from the reviewed state.',
+            'If your issue standard also requires Bates numbers, headers, footers, or watermarks, create those as controlled downstream outputs and verify them before signing.'
+          ]
+        },
+        {
+          kind: 'note',
+          text:
+            'Revision Packages manage sheet identity, history, carryover, changes, impact, references, and publication. They do not replace the per-document controls described below for headers, footers, Bates numbering, watermarks, preflight, or certificate signing.'
+        },
+        {
+          kind: 'link',
+          text: 'See the complete five-step workflow: ',
+          href: '/revision-packages/',
+          label: 'Revision Packages in PolyPDF 1.5'
         }
       ]
     },
@@ -131,7 +164,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'PolyPDF 1.4.0 does not expose a cross-file Batch Process, so plan the issue one file at a time. Apply Bates numbering and any text watermark to a single working document, save a new output, check it, and only then calculate the starting number for the next file.'
+            'The current PolyPDF release does not expose a cross-file Batch Process, so plan this final page-content work one file at a time. Apply Bates numbering and any text watermark to a single working document, save a new output, check it, and only then calculate the starting number for the next file.'
         },
         {
           kind: 'figure',
@@ -165,7 +198,7 @@ const post = {
         {
           kind: 'note',
           text:
-            'There is no cross-file Batch Process in PolyPDF 1.4.0. If you need unattended multi-file production, run it through an organization-approved external workflow.'
+            'PolyPDF 1.5 does not expose a user-facing cross-file Batch Process. Revision Packages coordinate drawing issues, but they do not batch-apply Bates numbers or watermarks across unrelated PDFs. If you need unattended multi-file page production, use an organization-approved external workflow.'
         }
       ]
     },
@@ -226,9 +259,9 @@ const post = {
         'A page label is navigation metadata a viewer can display, such as A-101. A Bates number is a visible sequential identifier applied for controlled tracking. One does not automatically replace the other.'
     },
     {
-      question: 'Can PolyPDF 1.4.0 process the whole issued set as a cross-file batch?',
+      question: 'Can PolyPDF 1.5 apply Bates numbers and watermarks to a whole folder at once?',
       answer:
-        'No user-facing Batch Process is exposed in build 17. Apply headers, footers, Bates numbers, and watermarks to each document, save separate outputs, and verify the sequence against the manifest.'
+        'No user-facing cross-file Batch Process is exposed in build 22. Apply headers, footers, Bates numbers, and watermarks to each document, save separate outputs, and verify the sequence against the manifest. Revision Packages are for reconciling and publishing drawing issues, not folder-wide page stamping.'
     },
     {
       question: 'How do I continue Bates numbering across several PDF files?',
@@ -252,8 +285,8 @@ const post = {
       url: 'https://www.loc.gov/preservation/digital/formats/fdd/fdd000474.shtml'
     },
     {
-      label: 'PolyPDF 1.4.0 document-production behavior',
-      note: 'Headers, footers, Bates numbering, text watermarks, and the 10-check Accessibility & Preflight screen are described as they behave in PolyPDF 1.4.0. A cross-file Batch Process is not exposed.'
+      label: 'PolyPDF 1.5 document-production and Revision Package behavior',
+      note: 'Headers, footers, Bates numbering, text watermarks, and the 10-check Accessibility & Preflight screen remain per-document operations. Revision Packages add issue reconciliation, carryover, change and impact review, reference review, and controlled publication. A cross-file Batch Process is not exposed.'
     }
   ],
   cta: {

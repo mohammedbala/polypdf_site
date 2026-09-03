@@ -5,7 +5,7 @@ const pdfMarkupTableGuide = {
   title: 'Use a PDF Markup Table for RFI and Punch-List Review',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-23',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
@@ -18,8 +18,8 @@ const pdfMarkupTableGuide = {
     'A cloud on a plan explains where an issue is. A disciplined markup row explains what it is, who must review it, and what can be handed to the system that owns the formal record.',
   quickAnswer:
     'Create one markup per issue, give it a stable subject, put the actionable question or observation in Comments, and assign a review status. Open the Markup Table to select and reveal rows, sort or filter the register, and update statuses. Detailed exports contain all markup rows; summary exports use the visible filtered scope. PolyPDF does not create or attach a formal RFI, submittal, or punch record.',
-  lastVerified: '2026-08-23',
-  productVersion: 'PolyPDF 1.4.0 (build 17)',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshot from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: markupReviewImage,
@@ -227,7 +227,7 @@ const pdfMarkupTableGuide = {
   ],
   sources: [
     {
-      label: 'PolyPDF 1.4.0 (build 17) Markup Table implementation and in-app guidance',
+      label: 'PolyPDF 1.5.0 (build 22) Markups List implementation and in-app guidance',
       note: 'Covers the row fields, status vocabulary, filtering, selection, and export formats described above.'
     },
     {

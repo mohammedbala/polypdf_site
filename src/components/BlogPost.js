@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router';
 import { motion, useReducedMotion } from 'framer-motion';
 import {
   FaArrowLeft,

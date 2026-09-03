@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { FaArrowRight, FaCheck, FaInfinity } from 'react-icons/fa';
 import { HiOutlineCloudDownload } from 'react-icons/hi';
 import parrotIcon from '../assets/polypdf_icon.png';
@@ -32,8 +32,6 @@ const WorkflowLanding = ({ page }) => {
 
   return (
     <div className="workflow-landing">
-      <a className="workflow-skip-link" href="#workflow-main">Skip to content</a>
-
       <header className="workflow-header">
         <nav className="workflow-nav container" aria-label="Main navigation">
           <Link className="workflow-logo" to="/" aria-label="PolyPDF home">
@@ -75,7 +73,7 @@ const WorkflowLanding = ({ page }) => {
                   pageVariant="workflow_hero"
                   onClick={() => trackCta('buy_click')}
                 >
-                  <FaInfinity /> Unlock unlimited · {commercialOffer.price}
+                  <FaInfinity /> Unlock PolyPDF Pro · {commercialOffer.price}
                 </DirectCheckoutLink>
               </div>
             </div>

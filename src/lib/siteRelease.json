@@ -1,6 +1,7 @@
 {
-  "version": "1.4.3",
-  "build": "20",
+  "version": "1.5.0",
+  "build": "22",
+  "releaseDate": "2026-09-03",
   "screenshotVersion": "1.4.3",
   "screenshotBuild": "20",
   "screenshotCacheToken": "1.4.3-20"

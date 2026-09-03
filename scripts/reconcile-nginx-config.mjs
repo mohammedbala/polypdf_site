@@ -53,6 +53,7 @@ export const REQUIRED_CSP_SOURCES = Object.freeze({
 });
 
 const CACHE_MARKER = '# polypdf-managed-stable-screenshot-cache';
+const NOT_FOUND_MARKER = '# polypdf-managed-static-404';
 
 const addCspSources = (policy, required) => {
   const directives = policy.split(';').map((part) => part.trim()).filter(Boolean);
@@ -81,6 +82,18 @@ const stableImageLocations = (indent) => [
   `${indent}    try_files $uri =404;`,
   `${indent}}`,
   ''
+].join('\n');
+
+const staticNotFoundLocations = (indent) => [
+  `${indent}${NOT_FOUND_MARKER}`,
+  `${indent}error_page 404 /404.html;`,
+  `${indent}location = /404.html {`,
+  `${indent}    internal;`,
+  `${indent}}`,
+  '',
+  `${indent}location / {`,
+  `${indent}    try_files $uri $uri/ =404;`,
+  `${indent}}`
 ].join('\n');
 
 export const reconcileNginxConfig = (input) => {
@@ -117,11 +130,23 @@ export const reconcileNginxConfig = (input) => {
     output = output.replace(match[0], `${stableImageLocations(match[1])}${match[0]}`);
   }
 
+  if (!output.includes(NOT_FOUND_MARKER)) {
+    const spaFallbackPattern = /^([ \t]*)location\s+\/\s*\{\s*try_files\s+\$uri\s+\$uri\/\s+\/index\.html;\s*\}/m;
+    const fallbackMatches = [...output.matchAll(new RegExp(spaFallbackPattern.source, 'gm'))];
+    if (fallbackMatches.length !== 1) {
+      throw new Error(`Expected one SPA HTML fallback, found ${fallbackMatches.length}`);
+    }
+    output = output.replace(spaFallbackPattern, (_match, indent) => staticNotFoundLocations(indent));
+  }
+
   for (const expression of [
     /location\s+=\s+\/og-image\.png\s*\{[^}]*max-age=0[^}]*must-revalidate[^}]*\}/s,
-    /location\s+\^~\s+\/guides\/\s*\{[^}]*max-age=0[^}]*must-revalidate[^}]*\}/s
+    /location\s+\^~\s+\/guides\/\s*\{[^}]*max-age=0[^}]*must-revalidate[^}]*\}/s,
+    /error_page\s+404\s+\/404\.html;/,
+    /location\s+=\s+\/404\.html\s*\{[^}]*internal;[^}]*\}/s,
+    /location\s+\/\s*\{[^}]*try_files\s+\$uri\s+\$uri\/\s+=404;[^}]*\}/s
   ]) {
-    if (!expression.test(output)) throw new Error('Stable screenshot cache rule is not revalidatable');
+    if (!expression.test(output)) throw new Error('Managed Nginx route or cache rule is missing');
   }
 
   for (const [directive, sources] of Object.entries(REQUIRED_CSP_SOURCES)) {

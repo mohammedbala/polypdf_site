@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -10,6 +10,7 @@ import {
   FaCheckCircle
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
+import siteRelease from '../lib/siteRelease.json';
 
 import { fetchWindowsRelease } from './VersionHistory';
 
@@ -38,8 +39,8 @@ const sections = [
     icon: <FaShieldAlt />,
     title: 'Signed for Windows',
     content: [
-      'The installer and the app are code-signed by Euclidean Software, LLC, so Windows can verify who published them.',
-      'A brand-new release can still trigger a SmartScreen notice while it builds reputation with Microsoft. Click "More info", then "Run anyway".',
+      'The installer and the app are code-signed by Euclidean Software LLC, so Windows can verify who published them.',
+      'A new release can still trigger a SmartScreen notice while it builds reputation with Microsoft. Before continuing, choose "More info" and confirm the publisher is Euclidean Software LLC; do not run an installer that shows an unknown or different publisher.',
       'As on Mac, your PDFs and measurements stay on your device.'
     ]
   },
@@ -58,13 +59,18 @@ const sections = [
     content: [
       'Windows 10 or 11, 64-bit (x64).',
       'About 500 MB of free disk space.',
-      'Same free tier as Mac: markup, review, calibration, and up to 3 hand-created measurements per document. Symbol Search and plugin workflows require PolyPDF Pro.'
+      'Same free tier as Mac: markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing. Symbol Search, plugin workflows, and Revision Package changes or publishing require PolyPDF Pro.'
     ]
   }
 ];
 
 const WindowsPreview = () => {
-  const [release, setRelease] = useState(null);
+  const [release, setRelease] = useState({
+    platform: 'Windows',
+    version: siteRelease.version,
+    build: Number(siteRelease.build),
+    date: ''
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -112,8 +118,8 @@ const WindowsPreview = () => {
           <div className="legal-intro">
             <p>
               PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review
-              app as on the Mac — open sheets, mark up review comments, calibrate scale, and measure — and it
-              keeps itself up to date automatically.
+              app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and
+              carry reviewed work forward with Revision Packages — and it keeps itself up to date automatically.
             </p>
             <div className="cta-download-row" style={{ marginTop: '1.5rem' }}>
               <a href={windowsInstallerURL} className="primary-btn large" download onClick={() => trackEvent('download_click', { source: 'windows_page', platform: 'windows' })}>

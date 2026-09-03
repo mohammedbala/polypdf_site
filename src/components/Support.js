@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -12,8 +12,18 @@ import {
 import parrotIcon from '../assets/polypdf_icon.png';
 import ActivationSteps from './ActivationSteps';
 import { founderRightsText, licenseDeliveryText } from '../lib/commercialOffer';
+import siteRelease from '../lib/siteRelease.json';
 
 const sections = [
+  {
+    icon: <FaLifeRing />,
+    title: 'Revision Package help',
+    content: [
+      'For a Revision Package issue, include the stage you were in: import, reconciliation, changes and impact, references, or publication.',
+      'Include the issue label, affected sheet number, and the exact message shown. Do not email confidential drawings unless support asks for a safe reproduction.',
+      'Free users can view and navigate an existing Revision Package. Creating or changing package state and publishing require PolyPDF Pro.'
+    ]
+  },
   {
     icon: <FaEnvelope />,
     title: 'Contact',
@@ -40,7 +50,7 @@ const sections = [
       'Direct website purchases processed by Stripe include PolyPDF\'s 14-day money-back guarantee, in addition to any non-waivable consumer rights.',
       'Request a refund within 14 calendar days of payment and PolyPDF will return the amount paid for the license to the original payment method where possible.',
       'For billing questions, use the links in your Stripe receipt or contact PolyPDF support.',
-      'Refunded licenses are deactivated after the refund is completed.'
+      'Refunded licenses may be deactivated after the refund is completed.'
     ]
   }
 ];
@@ -74,13 +84,14 @@ const Support = () => {
           <div className="legal-hero">
             <h1>Support</h1>
             <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
-            <p className="last-updated">Last updated: August 23, 2026</p>
+            <p className="last-updated">Last updated: September 3, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
-              Use this page for support contact details and purchase-channel guidance.
-              If you are writing in, include your app version (shown in the About window on both platforms) and Stripe receipt details when relevant.
+              Get help with installation, product workflows, purchases, and license activation.
+              The current public release is PolyPDF {siteRelease.version} (build {siteRelease.build}) on Mac and Windows.
+              When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.
             </p>
           </div>
 

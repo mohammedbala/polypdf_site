@@ -1666,6 +1666,47 @@
       ]
     },
     {
+      "id": "revision-package-changes-impact-v1-5",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/revision-package-changes-impact-v1-5-dark.png",
+          "sha256": "be9573c9a0494f5c255aa5cb99ed85b2926f204993753fb2b15057eddb3873e0",
+          "width": 3078,
+          "height": 1932
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/revision-package-changes-impact-v1-5-dark.png.theme-proof.json",
+          "sha256": "3e07a406f0270ef28b0adb2063cb20d9992933498afe2eec27661ce45712a543"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/revision-package-changes-impact-v1-5-dark.journey-report.json",
+          "sha256": "025ad7ec918ab306d34948af9bee85325e371f14a746e6db3b72e2ef48920924"
+        },
+        "fingerprint": {
+          "baseCommit": "c3e448a2a2e87ac6c04aabca363a14a017aa6741",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/revision-package-changes-impact-v1-5-dark.png",
+          "sha256": "be9573c9a0494f5c255aa5cb99ed85b2926f204993753fb2b15057eddb3873e0",
+          "width": 3078,
+          "height": 1932,
+          "derivedFrom": "assets-source/blog-image-validation/captures/revision-package-changes-impact-v1-5-dark.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
       "id": "collaboration-beta-live",
       "publicationStatus": "publication-approved",
       "source": {

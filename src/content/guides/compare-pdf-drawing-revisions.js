@@ -5,7 +5,7 @@ const comparePdfDrawingRevisionsGuide = {
   title: 'How to Compare PDF Drawing Revisions',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-23',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
@@ -17,9 +17,9 @@ const comparePdfDrawingRevisionsGuide = {
   lede:
     'A visual diff can make a revision review faster, but only when the two files are actually comparable and every highlighted region is checked in drawing context.',
   quickAnswer:
-    'Open the baseline PDF, choose Document > Compare Documents, select the revised PDF, and run Compare. PolyPDF opens a new comparison document and normally marks detected regions with editable violet revision clouds. First confirm sheet identity, page order, size, rotation, scale, and alignment. If a fallback warning says the marks are page content, they are not editable.',
-  lastVerified: '2026-08-23',
-  productVersion: 'PolyPDF 1.4.0 (build 17)',
+    'For a focused visual diff, open the baseline PDF, choose Document > Compare Documents, select the revised PDF, and run Compare. PolyPDF opens a new comparison document and normally marks detected regions with editable violet revision clouds. First confirm sheet identity, page order, size, rotation, scale, and alignment. If a fallback warning says the marks are page content, they are not editable. For a complete drawing issue with sheet reconciliation, carried review work, impact review, references, and publication history, use a Revision Package instead.',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshot from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: compareEditableCloudsImage,
@@ -85,6 +85,40 @@ const comparePdfDrawingRevisionsGuide = {
           kind: 'p',
           text:
             'The default output is a copy of Document A with detected regions added. Unchanged pages are left as they were. Because the output opens as a new unsaved document, Save prompts for a location; closing it does not silently replace either source file.'
+        }
+      ]
+    },
+    {
+      icon: 'document',
+      title: 'Choose Compare Documents or a Revision Package',
+      body: [
+        {
+          kind: 'table',
+          caption: 'The two revision workflows solve different jobs',
+          headers: ['Workflow', 'Use it when', 'What you receive'],
+          rows: [
+            [
+              'Compare Documents',
+              'You need a focused visual difference check between one baseline PDF and one revised PDF.',
+              'A separate comparison PDF with editable revision clouds when the normal comparison path succeeds.'
+            ],
+            [
+              'Revision Package',
+              'A new drawing issue must be matched to an existing reviewed set and moved through a controlled package workflow.',
+              'Reconciled sheet identity, carried review work, change and available quantity or cost impact review, references, publication records, and a revision report.'
+            ]
+          ]
+        },
+        {
+          kind: 'p',
+          text:
+            'Compare Documents is the smaller tool: it answers where two rendered PDFs differ. A Revision Package coordinates an issue across its sheet set and keeps a portable history without changing the original source PDFs.'
+        },
+        {
+          kind: 'link',
+          href: '/revision-packages/',
+          label: 'See the Revision Package workflow',
+          text: 'Use the five-step 1.5 process for import, reconciliation, carried review work, impact review, references, and publication.'
         }
       ]
     },
@@ -208,6 +242,11 @@ const comparePdfDrawingRevisionsGuide = {
         'Normally yes: the raster comparison writes editable revision-cloud markups. If a coarse fallback is used, the completion status warns that the marks are part of the page and not editable.'
     },
     {
+      question: 'When should I use a Revision Package instead?',
+      answer:
+        'Use a Revision Package when you are replacing a reviewed drawing issue and need to reconcile sheet identity, carry review work forward, inspect changes and available impacts, review references, and publish a controlled current package. Use Compare Documents for a focused visual diff between two PDFs.'
+    },
+    {
       question: 'Why is nearly the whole page marked as changed?',
       answer:
         'First check page identity, order, size, crop, rotation, scale, alignment, and scan skew. A geometric or plotting mismatch can create widespread pixel differences even when the design is largely unchanged.'
@@ -219,8 +258,8 @@ const comparePdfDrawingRevisionsGuide = {
   ],
   sources: [
     {
-      label: 'PolyPDF 1.4.0: Compare Documents and its in-app guidance',
-      note: 'The Compare Documents workflow, its two output paths, and the completion status described in this guide.'
+      label: 'PolyPDF 1.5.0: Compare Documents, Revision Packages, and in-app guidance',
+      note: 'The current distinction between a focused two-document comparison and the issue-wide Revision Package workflow, plus the comparison output paths and completion status described in this guide.'
     },
     {
       label: 'Sample revision pair used for the walkthrough',

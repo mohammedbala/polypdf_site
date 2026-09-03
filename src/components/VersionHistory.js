@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';
-import shortcutsShot from '../assets/screenshots/custom-shortcuts-v1-4-light-web.png';
+import revisionPackageShot from '../assets/screenshots/revision-package-changes-impact-v1-5-dark.png';
+import siteRelease from '../lib/siteRelease.json';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
 // electron-updater's latest.yml on Windows — so a release publishes itself here with no edit.
@@ -92,6 +93,54 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.5.0 (22)': [
+    'Revision Packages add a guided path for importing a new drawing issue, reconciling sheets, carrying reviewed work forward, reviewing changes and quantity or cost impact, checking references, and publishing a current package with a revision report.',
+    'Portable .polyset projects keep verified source copies, revision history, sheet links, and publication records together while leaving the original PDFs unchanged.',
+    'Dialogs and sidebars were audited for clearer actions, reliable keyboard behavior, readable layouts, long content, narrow panels, and smaller windows.',
+    'PDF rendering, annotation movement, page operations, saving, signatures, and update checks include additional reliability safeguards.'
+  ],
+  'Windows 1.5.0 (22)': [
+    'Revision Packages add a guided path for importing a new drawing issue, reconciling sheets, carrying reviewed work forward, reviewing changes and quantity or cost impact, checking references, and publishing a current package with a revision report.',
+    'Portable .polyset projects keep verified source copies, revision history, sheet links, and publication records together while leaving the original PDFs unchanged.',
+    'Dialogs and sidebars were audited for clearer actions, reliable keyboard behavior, readable layouts, long content, narrow panels, and smaller windows.',
+    'PDF rendering, annotation movement, page operations, saving, signatures, and update checks include additional reliability safeguards.'
+  ],
+  'macOS 1.4.4 (21)': [
+    'AEC OCR can recover structured schedules, title-block details, drawing labels, and dimensions from plan sheets, with local table-model inference and spreadsheet-ready table output.',
+    'Tool Chest adds built-in Doors, Windows, and Fire Protection sets, plus BTX, SVG, and DXF toolset import.',
+    'Measurements add Radius and Diameter tools, path and circular suggestions, movable labels and leaders, precision controls, helper dimensions, and keyboard nudging.',
+    'Edit PDF fonts, Markups List count series, toolset export and drag-and-drop, collaboration setup, plugin discovery, and PDF rendering reliability were refined.'
+  ],
+  'Windows 1.4.4 (21)': [
+    'AEC OCR can recover structured schedules, title-block details, drawing labels, and dimensions from plan sheets, with local table-model inference and spreadsheet-ready table output.',
+    'Tool Chest adds built-in Doors, Windows, and Fire Protection sets, plus BTX, SVG, and DXF toolset import.',
+    'Measurements add Radius and Diameter tools, path and circular suggestions, movable labels and leaders, precision controls, helper dimensions, and keyboard nudging.',
+    'Edit PDF fonts, Markups List count series, toolset export and drag-and-drop, collaboration setup, plugin discovery, and PDF rendering reliability were refined.'
+  ],
+  'macOS 1.4.3 (20)': [
+    'Collaboration Beta lets approved Mac and Windows users exchange live markups, cursors, presence, and ordered offline edits through a customer-owned host while the PDF stays on the mounted company share.',
+    'Owners can approve devices as Owner, Editor, or Viewer, resolve offline conflicts, restore signed history, and safeguard controlled saves and externally replaced PDFs.',
+    'Annotation text adds a shared cross-platform font catalogue while retaining installed-font discovery on macOS and preserving saved defaults.',
+    'Visual signatures add selectable ink colors, preserve their exported appearance, remain editable when visual-only, and undo as one operation.'
+  ],
+  'Windows 1.4.3 (20)': [
+    'Collaboration Beta lets approved Mac and Windows users exchange live markups, cursors, presence, and ordered offline edits through a customer-owned host while the PDF stays on the mounted company share.',
+    'Owners can approve devices as Owner, Editor, or Viewer, resolve offline conflicts, restore signed history, and safeguard controlled saves and externally replaced PDFs.',
+    'Annotation text adds a shared cross-platform font catalogue while retaining installed-font discovery on macOS and preserving saved defaults.',
+    'Visual signatures add selectable ink colors, preserve their exported appearance, remain editable when visual-only, and undo as one operation.'
+  ],
+  'macOS 1.4.2 (19)': [
+    'Symbol Search has a clearer sample-selection and review workflow, with more reliable unique-label and count-series handling.',
+    'Estimate and takeoff views improve columns, filtering, totals, navigation, and PDF summary output.',
+    'Bundled Maps, Steel Sections, and Seal Maker plugins remain discoverable on Free; inserting plugin content prompts for Pro.',
+    'Split panes, map resizing, Edit PDF content handling, Save All, text selection, area measurements, and Markup Table presentation received fixes.'
+  ],
+  'Windows 1.4.2 (19)': [
+    'Symbol Search has a clearer sample-selection and review workflow, with more reliable unique-label and count-series handling.',
+    'Estimate and takeoff views improve columns, filtering, totals, navigation, and PDF summary output.',
+    'Bundled Maps, Steel Sections, and Seal Maker plugins remain discoverable on Free; inserting plugin content prompts for Pro.',
+    'Split panes, map resizing, Edit PDF content handling, Save All, text selection, area measurements, and Markup Table presentation received fixes.'
+  ],
   'macOS 1.4.1 (18)': [
     'Symbol Search and plugin workflows now guide Free users consistently to the PolyPDF Pro upgrade screen.',
     'Pro access is enforced across both the visible interface and the underlying document services.',
@@ -169,6 +218,14 @@ const proseKey = (release) => `${release.platform} ${release.version} (${release
 // Rendered only while the feeds are still loading, or if one cannot be reached, so the page is never
 // empty. Anything the feeds return replaces it.
 const FALLBACK_RELEASES = [
+  { platform: 'macOS', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html` },
+  { platform: 'Windows', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html` },
+  { platform: 'Windows', version: '1.4.4', build: 21, date: 'August 30, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.4-21.html' },
+  { platform: 'macOS', version: '1.4.4', build: 21, date: 'August 29, 2026', notes: '/downloads/PolyPDFMac-v1.4.4-21.html' },
+  { platform: 'macOS', version: '1.4.3', build: 20, date: 'August 27, 2026', notes: '/downloads/PolyPDFMac-v1.4.3-20.html' },
+  { platform: 'Windows', version: '1.4.3', build: 20, date: 'August 27, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.3-20.html' },
+  { platform: 'macOS', version: '1.4.2', build: 19, date: 'August 26, 2026', notes: '/downloads/PolyPDFMac-v1.4.2-19.html' },
+  { platform: 'Windows', version: '1.4.2', build: 19, date: 'August 26, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.2-19.html' },
   { platform: 'macOS', version: '1.4.1', build: 18, date: 'August 23, 2026', notes: '/downloads/PolyPDFMac-v1.4.1-18.html' },
   { platform: 'Windows', version: '1.4.1', build: 18, date: 'August 24, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.1-18.html' },
   { platform: 'macOS', version: '1.4.0', build: 17, date: 'August 23, 2026', notes: '/downloads/PolyPDFMac-v1.4.0-17.html' },
@@ -285,14 +342,14 @@ const VersionHistory = () => {
           <figure className="release-highlight-image">
             <div className="shot-plate">
               <img
-                src={shortcutsShot}
-                alt="PolyPDF 1.4 Settings showing the light-theme Custom Shortcuts editor"
-                width="1710"
-                height="1073"
+                src={revisionPackageShot}
+                alt="PolyPDF 1.5 Revision Package Change Review showing drawing differences and quantity or cost impact"
+                width="3078"
+                height="1932"
                 loading="eager"
               />
             </div>
-            <figcaption><strong>Introduced in 1.4.0:</strong> review, reassign, clear, and reset keyboard shortcuts from Settings. PolyPDF 1.4.1 keeps this interface and tightens Pro access around Symbol Search and plugins.</figcaption>
+            <figcaption><strong>New in 1.5:</strong> Revision Packages guide a drawing issue from import and sheet reconciliation through change, impact, reference, and publication review.</figcaption>
           </figure>
 
           <div className="legal-sections">

@@ -8,7 +8,7 @@ const post = {
   title: 'How to Measure PDF Area with Cutouts and Depth',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-24',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Measure & Takeoff',
@@ -21,8 +21,8 @@ const post = {
     'Net-area takeoff is more useful when the annotation records the outer boundary, each excluded opening, and any depth used for volume. PolyPDF 1.4.0 keeps those inputs on one selectable measurement.',
   quickAnswer:
     'To measure net PDF area in PolyPDF, calibrate the current page, choose Area, trace and close the outer boundary, then select the measurement. In the Area Cutouts controls, choose Add Cutout and trace each opening fully inside the boundary. PolyPDF subtracts those cutout polygons from the outer area. If you enter a positive real-world Depth, the result changes from area to volume. Hatch pattern and hatch scale change appearance only, not the measured quantity.',
-  lastVerified: '2026-08-24',
-  productVersion: 'PolyPDF 1.4.1 (build 18); screenshots from 1.4.0 (build 17)',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: screenshot,
@@ -229,7 +229,7 @@ const post = {
             'Calibration converts PDF geometry; it cannot repair nonuniform scan distortion, perspective, or a warped original.',
             'A net-area total is only as defensible as its source revision, boundary convention, scale verification, and cutout review.',
             'CSV or PDF export preserves the calculated records, not the reasoning behind an undocumented scope decision.',
-            'The free edition allows up to three hand-created measurements per document. Symbol Search is a separate PolyPDF Pro workflow in version 1.4.1.'
+            'The free edition allows up to three hand-created measurements per document. Symbol Search is a separate PolyPDF Pro workflow in the current release.'
           ]
         },
         {

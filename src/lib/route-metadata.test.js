@@ -1,6 +1,6 @@
 import routeMetadata from './route-metadata.json';
 import { blogPosts, blogPostPath } from './blogPosts';
-import { normalizeRoutePath } from '../components/RouteMetadata';
+import { normalizeRoutePath, resolveRouteMetadata } from '../components/RouteMetadata';
 import siteRelease from './siteRelease.json';
 
 const expectedRoutes = [
@@ -18,6 +18,7 @@ const expectedRoutes = [
   '/windows',
   '/terms',
   '/versions',
+  '/revision-packages',
   '/pdf-takeoff-software',
   '/measure-pdf-on-mac',
   '/construction-pdf-markup',
@@ -80,12 +81,27 @@ test('normalizes the trailing slash added by the production web server', () => {
   expect(normalizeRoutePath('/pdf-takeoff-software/')).toBe('/pdf-takeoff-software');
 });
 
+test('unknown URLs receive a truthful noindex 404 identity instead of home-page metadata', () => {
+  expect(resolveRouteMetadata('/missing-page')).toEqual({
+    route: {
+      title: 'Page Not Found | PolyPDF',
+      description: 'The PolyPDF page you requested could not be found.',
+      robots: 'noindex, nofollow'
+    },
+    url: 'https://www.polypdf.com/missing-page/'
+  });
+});
+
 test('separates the current app release from the verified screenshot release', () => {
   expect(siteRelease).toMatchObject({
-    version: '1.4.3',
-    build: '20',
+    version: '1.5.0',
+    build: '22',
+    releaseDate: '2026-09-03',
     screenshotVersion: '1.4.3',
     screenshotBuild: '20',
     screenshotCacheToken: '1.4.3-20'
   });
+  const releaseSeries = siteRelease.version.split('.').slice(0, 2).join('.');
+  expect(routeMetadata['/windows'].description).toContain(`PolyPDF ${releaseSeries}`);
+  expect(routeMetadata['/versions'].description).toContain(`PolyPDF ${releaseSeries}`);
 });

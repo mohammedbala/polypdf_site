@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -15,7 +15,7 @@ import {
 import parrotIcon from '../assets/polypdf_icon.png';
 import ActivationSteps from './ActivationSteps';
 import { DownloadBoth } from './DownloadCTA';
-import { primaryPlatform } from '../lib/platform';
+import { usePlatform } from '../lib/platform';
 import { licenseDeliveryText, licensePolicyLabel } from '../lib/commercialOffer';
 import { trackVerifiedPurchase } from '../lib/analytics';
 
@@ -65,6 +65,7 @@ const Account = () => {
   const [requestStatus, setRequestStatus] = useState('idle');
   const [requestMessage, setRequestMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const { primaryPlatform } = usePlatform();
 
   const justPurchased = searchParams.get('checkout') === 'success';
   const checkoutSessionID = searchParams.get('session_id');

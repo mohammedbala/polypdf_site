@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion, useReducedMotion } from 'framer-motion';
 import { FaArrowLeft, FaArrowRight, FaRegClock } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon.png';

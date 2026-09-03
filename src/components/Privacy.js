@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { motion } from 'framer-motion';
 import {
   FaArrowLeft,
@@ -20,6 +20,8 @@ const sections = [
       'Google Analytics and Google Ads measure website visits, acquisition sources, and completed purchases. A completed-purchase event contains a Stripe transaction identifier, order value, currency, and product name, but not your email address, license key, document name, or document content.',
       'When you purchase or activate a direct license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
       'The desktop app sends diagnostics only when you explicitly opt in. This may include a compact redacted error report and fixed product milestones such as opening the sample drawing, setting page scale, making a first measurement, or exporting results. Milestones contain no free-text field; diagnostics do not intentionally include PDF contents or filenames.',
+      'AEC OCR, structured table recognition, measurement, and Revision Package analysis run locally. Revision Packages copy source evidence into the project location you choose and write published outputs there; PolyPDF does not upload that project to a PolyPDF cloud service.',
+      'Collaboration Beta exchanges approved review data through the customer-owned host and mounted company share configured by the organization. PolyPDF does not host the drawing room for that workflow.',
       'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose.'
     ]
   },
@@ -74,7 +76,7 @@ const Privacy = () => {
           <div className="legal-hero">
             <h1>Privacy Policy</h1>
             <p className="legal-subtitle">How PolyPDF handles website and direct-download data</p>
-            <p className="last-updated">Last updated: August 23, 2026</p>
+            <p className="last-updated">Last updated: September 3, 2026</p>
           </div>
 
           <div className="legal-intro">

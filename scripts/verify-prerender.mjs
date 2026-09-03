@@ -54,6 +54,7 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
   assert(html.includes(`<meta name="twitter:image:alt" content="${imageAlt}"`), `${route}: twitter:image:alt is wrong`);
   assert((body.match(/data-site-footer="true"/g) || []).length === 1, `${route}: canonical footer is missing or duplicated`);
   for (const footerPath of [
+    '/revision-packages/',
     '/pdf-takeoff-software/',
     '/measure-pdf-on-mac/',
     '/construction-pdf-markup/',
@@ -102,6 +103,18 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
       }
     }
   }
+}
+
+const notFoundPath = path.join(buildDirectory, '404.html');
+assert(fs.existsSync(notFoundPath), '404.html: static not-found page is missing');
+if (fs.existsSync(notFoundPath)) {
+  const notFoundHtml = fs.readFileSync(notFoundPath, 'utf8');
+  assert(notFoundHtml.includes('<title>Page Not Found | PolyPDF</title>'), '404.html: title is wrong');
+  assert(notFoundHtml.includes('<meta name="robots" content="noindex, nofollow"'), '404.html: robots policy is wrong');
+  assert(notFoundHtml.includes('This page is not part of the current PolyPDF site.'), '404.html: visible not-found message is missing');
+  assert(!notFoundHtml.includes('<div id="root"></div>'), '404.html: #root is empty');
+  assert((notFoundHtml.match(/data-site-footer="true"/g) || []).length === 1, '404.html: canonical footer is missing or duplicated');
+  assert(!notFoundHtml.includes('<script type="application/ld+json">'), '404.html: noindex page should not emit JSON-LD');
 }
 
 for (const discoveryFile of ['sitemap.xml', 'llms.txt', 'feed.xml', 'robots.txt']) {

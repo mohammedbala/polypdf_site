@@ -9,7 +9,7 @@ const countPdfSymbolsGuide = {
   title: 'How to Count Symbols in a PDF Drawing',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-24',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
@@ -22,8 +22,8 @@ const countPdfSymbolsGuide = {
     'Symbol Search can turn one boxed example into a reviewable set of count candidates. The useful result comes from pairing that automation with a deliberate human check before anything is added to the PDF.',
   quickAnswer:
     'Choose Symbol Search, set the pages and matching options, then drag a close box around one clean example. PolyPDF highlights candidate matches without changing the document. Include or exclude each candidate, then choose Count to create one linked Count series. Treat the result as assisted counting: legends, schedules, similar symbols, and low-quality scans can all need manual correction.',
-  lastVerified: '2026-08-24',
-  productVersion: 'PolyPDF 1.4.1 (build 18); screenshots from 1.4.0 (build 17)',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: symbolSearchReviewImage,
@@ -182,7 +182,7 @@ const countPdfSymbolsGuide = {
         {
           kind: 'p',
           text:
-            'Symbol Search is a PolyPDF Pro workflow in version 1.4.1. Once Pro access admits a search, the accepted candidates can be committed as one linked Count series without a separate per-search count cap. The Free app separately supports up to three hand-created measurements per document.'
+            'Symbol Search is a PolyPDF Pro workflow in the current release. Once Pro access admits a search, the accepted candidates can be committed as one linked Count series without a separate per-search count cap. The Free app separately supports up to three hand-created measurements per document.'
         },
         {
           kind: 'p',
@@ -206,7 +206,7 @@ const countPdfSymbolsGuide = {
     {
       question: 'Can the free version run Symbol Search?',
       answer:
-        'No. Symbol Search requires PolyPDF Pro in version 1.4.1. Free still includes markup, review, calibration, and up to three hand-created measurements per document.'
+        'No. Symbol Search requires PolyPDF Pro in the current release. Free still includes markup, review, calibration, and up to three hand-created measurements per document.'
     },
     {
       question: 'Why did Symbol Search miss or over-count symbols?',

@@ -7,7 +7,7 @@ export const commercialOffer = Object.freeze({
   savings: '$49.01',
   activationLimit: 3,
   moneyBackGuaranteeDays: 14,
-  termsVersion: '2026-08-23',
+  termsVersion: '2026-07-30',
   founderMaximumLicenses: 100
 });
 

@@ -42,6 +42,7 @@ const organization = () => ({
   '@type': 'Organization',
   '@id': ORG_ID,
   name: 'PolyPDF',
+  legalName: 'Euclidean Software LLC',
   url: `${ORIGIN}/`,
   logo: { '@type': 'ImageObject', url: `${ORIGIN}/logo512.png` },
   email: 'support@polypdf.com',
@@ -63,17 +64,19 @@ const website = () => ({
 // Feature phrasing mirrors the product's own claims — reviewed for accuracy, never expanded here.
 const FEATURE_LIST = [
   'PDF markup and annotation: callouts, revision clouds, highlights, shapes, stamps',
-  'Measurement calibration with distance, area, perimeter, angle, and count tools',
-  'Takeoff worksheets with CSV and PDF export',
+  'Measurement calibration with distance, area, perimeter, angle, radius, diameter, count, and dimension tools',
+  'Takeoff worksheets with Excel, CSV, and PDF export',
   'Symbol Search (formerly Visual Search): capture one drawing symbol and auto-count matching instances',
+  'Portable Revision Packages for issue import, sheet reconciliation, reviewed carryover, change and impact review, references, and publication',
   'Compare documents with revision clouds on detected differences',
   'Form filling and a drag-and-drop form builder',
   'Digital signatures (CMS/PKCS#7) and visual signatures',
-  'OCR for scanned drawings',
+  'Local AEC OCR for searchable text, structured schedules, title blocks, drawing labels, dimensions, and spreadsheet-ready tables',
   'Bates numbering, headers and footers, and watermarks',
   'Redaction for supported searchable text, with documented limits for vector, outlined, image, and nested content',
   'Automatic sheet hyperlinking for NCS sheet numbers',
   'Save markups as SVG, PNG, JPEG, or DXF',
+  'Tool Chest libraries with built-in Doors, Windows, Fire Protection, and MUTCD sets plus BTX, SVG, and DXF import',
   'Declarative plugin platform with permission checks and host-owned generators'
 ];
 
@@ -99,7 +102,7 @@ const softwareApplication = (description) => ({
     url: `${ORIGIN}/`,
     availability: 'https://schema.org/InStock',
     description:
-      'Free download for Mac and Windows with markup, review, calibration, and up to 3 hand-created measurements per document. Symbol Search and plugin workflows require PolyPDF Pro.'
+      'Free download for Mac and Windows with markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing. Symbol Search, plugins, and Revision Package changes or publishing require PolyPDF Pro.'
   }
 });
 

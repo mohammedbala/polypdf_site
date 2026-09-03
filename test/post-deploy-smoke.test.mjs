@@ -10,6 +10,8 @@ import {
   expectedOffer,
   guideImageRoutes,
   htmlRoutes,
+  notFoundSmokeRoute,
+  releaseFeedRoutes,
   routeMetadata,
   runPostDeploySmoke,
   siteRelease,
@@ -24,7 +26,12 @@ const testCsp = Object.entries(REQUIRED_CSP_SOURCES)
   .map(([directive, sources]) => `${directive} 'self' ${sources.join(' ')}`)
   .join('; ');
 
-async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {}, run) {
+async function withFakeSite({
+  brokenRoute = null,
+  htmlFallbackRoute = null,
+  releaseVersion = siteRelease.version,
+  releaseBuild = siteRelease.build
+} = {}, run) {
   const server = createServer((request, response) => {
     const requestURL = new URL(request.url, 'http://127.0.0.1');
     const path = requestURL.pathname;
@@ -32,6 +39,18 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
     if (routePath === brokenRoute) {
       response.writeHead(500, { 'Content-Type': 'text/plain' });
       response.end('broken');
+      return;
+    }
+    if (path === notFoundSmokeRoute) {
+      response.writeHead(404, {
+        'Content-Type': 'text/html; charset=utf-8',
+        'Content-Security-Policy': testCsp
+      });
+      response.end(
+        '<!doctype html><title>Page Not Found | PolyPDF</title>'
+        + '<meta name="robots" content="noindex, nofollow" />'
+        + '<div id="root"><main><h1>This page is not part of the current PolyPDF site.</h1></main></div>'
+      );
       return;
     }
     // Reproduces nginx's `try_files $uri $uri/ /index.html`: a 200 carrying the app shell.
@@ -81,6 +100,9 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
         + '<script>gtag("config","G-533RWNRCFP",{})</script>'
         + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script>'
         + `<div id="root"><h1>${title}</h1><p>Prerendered body content for ${routePath}</p>`
+        + (routePath === '/'
+          ? `<p>Authentic ${siteRelease.version} build ${siteRelease.build} interface</p><p>Revision Packages</p>`
+          : '')
         + '<footer data-site-footer="true">'
         + canonicalFooterRoutes.map((route) => `<a href="${route}">${route}</a>`).join('')
         + '</footer></div>'
@@ -134,6 +156,7 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end(JSON.stringify({
         id: expectedOffer.id,
+        termsVersion: expectedOffer.termsVersion,
         checkoutLineItemName: expectedOffer.checkoutLineItemName,
         price: expectedOffer.price,
         license: {
@@ -171,6 +194,24 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
         'checkout_error',
         'purchase'
       ].join(';'));
+      return;
+    }
+    if (path === releaseFeedRoutes[0]) {
+      response.writeHead(200, { 'Content-Type': 'application/xml' });
+      response.end(
+        '<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"><channel><item>'
+        + `<sparkle:version>${releaseBuild}</sparkle:version>`
+        + `<sparkle:shortVersionString>${releaseVersion}</sparkle:shortVersionString>`
+        + '</item></channel></rss>'
+      );
+      return;
+    }
+    if (path === releaseFeedRoutes[1]) {
+      response.writeHead(200, { 'Content-Type': 'text/yaml' });
+      response.end([
+        `version: ${releaseVersion}`,
+        `path: PolyPDFSetup-v${releaseVersion}-${releaseBuild}.exe`
+      ].join('\n'));
       return;
     }
     if (downloadRoutes.includes(path)) {
@@ -220,12 +261,21 @@ async function withFakeSite({ brokenRoute = null, htmlFallbackRoute = null } = {
 test('passes only when every route, artifact, health check, and checkout pass', async () => {
   await withFakeSite({}, async (baseURL) => {
     const results = await runPostDeploySmoke({ baseURL });
-    // +6 = /api/healthz, /api/commercial-offer, the main bundle, the plugin packer,
-    // conversion verification, and checkout.
+    // +7 = the real 404, /api/healthz, /api/commercial-offer, the main bundle, the plugin packer,
+    // conversion verification, and checkout. Release feeds are counted separately.
     assert.equal(
       results.length,
       htmlRoutes.length + shareImageRoutes.length + discoveryRoutes.length
-        + downloadRoutes.length + 6
+        + releaseFeedRoutes.length + downloadRoutes.length + 7
+    );
+  });
+});
+
+test('fails when either desktop update feed drifts from the website release identity', async () => {
+  await withFakeSite({ releaseVersion: '9.9.9', releaseBuild: 999 }, async (baseURL) => {
+    await assert.rejects(
+      runPostDeploySmoke({ baseURL, requireCheckout: false }),
+      /update feed is 9\.9\.9 build 999, but the website advertises/
     );
   });
 });
@@ -239,6 +289,9 @@ test('reconciles the atomic root, stable image cache, and analytics CSP idempote
     listen 443 ssl;
     server_name www.polypdf.com;
     root /var/www/polypdf-site/build;
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
     location ~* \\.(js|css|png|jpg)$ {
         expires 1y;
         add_header Cache-Control "public, immutable";
@@ -249,6 +302,10 @@ test('reconciles the atomic root, stable image cache, and analytics CSP idempote
   assert.match(reconciled, /root \/var\/www\/polypdf-site\/current;/);
   assert.match(reconciled, /location = \/og-image\.png/);
   assert.match(reconciled, /location \^~ \/guides\//);
+  assert.match(reconciled, /error_page 404 \/404\.html;/);
+  assert.match(reconciled, /location = \/404\.html\s*\{\s*internal;/);
+  assert.match(reconciled, /try_files \$uri \$uri\/ =404;/);
+  assert.doesNotMatch(reconciled, /try_files \$uri \$uri\/ \/index\.html;/);
   assert.match(reconciled, /script-src[^;]*https:\/\/www\.googletagmanager\.com/);
   assert.match(reconciled, /script-src[^;]*https:\/\/www\.googleadservices\.com/);
   assert.match(reconciled, /script-src[^;]*https:\/\/pagead2\.googlesyndication\.com/);

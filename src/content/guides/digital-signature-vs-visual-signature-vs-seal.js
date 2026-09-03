@@ -12,7 +12,7 @@ const post = {
   title: 'Digital vs Visual PDF Signatures vs Professional Seals',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-08-23',
+  dateModified: '2026-09-03',
   author: 'The PolyPDF team',
   readingTime: '11 min read',
   tag: 'Signatures & Seals',
@@ -25,8 +25,8 @@ const post = {
     'A signature appearance, a cryptographic signature, and a professional seal can look related on a drawing, but they answer different questions. Confusing them can leave a polished page with no verifiable integrity—or a valid signature attached to an untrusted identity.',
   quickAnswer:
     'A certificate-backed PDF signature uses a Digital ID and CMS data to sign defined byte ranges, so a recipient can tell whether those bytes changed after signing. A visual signature only draws an appearance on the page. A Professional Seal Maker graphic is artwork: it carries no cryptographic signature, and PolyPDF does not verify license status or board compliance. In the example below, the reopened file reports Valid With Changes because its byte ranges and CMS signature are valid and the later update is permitted by DocMDP level 3.',
-  lastVerified: '2026-08-23',
-  productVersion: 'PolyPDF 1.4.0',
+  lastVerified: '2026-09-03',
+  productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
   heroImage: {
     src: certificatePanelScreenshot,
@@ -114,7 +114,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'Visual mode can place a saved signature, a standard style, or a drawn mark. That may suit an internal approval or a process where another system records identity and consent. It does not create a CMS signature and cannot tell a later viewer whether page bytes changed.'
+            'Visual mode can place a saved signature, a standard style, or a drawn mark, and the current release lets you choose its color. The placement is one undoable edit. That may suit an internal approval or a process where another system records identity and consent. It does not create a CMS signature and cannot tell a later viewer whether page bytes changed.'
         },
         {
           kind: 'figure',
@@ -272,7 +272,7 @@ const post = {
       url: 'https://www.polypdf.com/blog/introducing-polypdf-plugins/'
     },
     {
-      label: 'PolyPDF: signatures, visual signatures, and Professional Seal Maker in 1.4.0',
+      label: 'PolyPDF 1.5.0: signatures, color-aware visual signatures, and Professional Seal Maker',
       note: 'The certificate used in this guide’s example is self-signed, and it carries no timestamp, long-term validation, or revocation information.'
     }
   ],
