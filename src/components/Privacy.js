@@ -18,18 +18,19 @@ const sections = [
       'When you browse the website, we may receive basic technical information such as IP address, browser type, and page requests from our hosting and security providers.',
       'The website stores short campaign codes such as source and UTM parameters for up to 30 days so a checkout can be attributed to the page or app placement that led to it. These codes do not contain document names or document content.',
       'Google Analytics and Google Ads measure website visits, acquisition sources, and completed purchases. A completed-purchase event contains a Stripe transaction identifier, order value, currency, and product name, but not your email address, license key, document name, or document content.',
+      'The Try Now browser preview reads the PDF you choose and creates markups within your browser. PolyPDF does not upload the chosen PDF, its filename, or its markup content to our servers. Content-free events may record that a local file was opened, calibrated, or exported, together with a broad page-count or markup-count bucket.',
       'When you purchase or activate a direct license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
       'The desktop app sends diagnostics only when you explicitly opt in. This may include a compact redacted error report and fixed product milestones such as opening the sample drawing, setting page scale, making a first measurement, or exporting results. Milestones contain no free-text field; diagnostics do not intentionally include PDF contents or filenames.',
       'AEC OCR, structured table recognition, measurement, and Revision Package analysis run locally. Revision Packages copy source evidence into the project location you choose and write published outputs there; PolyPDF does not upload that project to a PolyPDF cloud service.',
       'Collaboration Beta exchanges approved review data through the customer-owned host and mounted company share configured by the organization. PolyPDF does not host the drawing room for that workflow.',
-      'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose.'
+      'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose. Closing or refreshing Try Now clears its unsaved in-browser session.'
     ]
   },
   {
     icon: <FaLock />,
     title: 'How we use information',
     content: [
-      'Provide downloads, license reactivation, license activation, updates, order lookup, and customer support.',
+      'Provide the Try Now browser preview, downloads, license reactivation, license activation, updates, order lookup, and customer support.',
       'Protect the service against fraud, abuse, and failed or duplicated activations.',
       'Measure whether advertising and website pages lead to completed purchases, without using that data for ad personalization.',
       'Understand crashes, app version adoption, and content-free activation milestones needed to improve the first-use experience.'
@@ -82,7 +83,7 @@ const Privacy = () => {
           <div className="legal-intro">
             <p>
               This Privacy Policy explains what information PolyPDF collects, how it is used,
-              and how it is shared when you use the website, buy a direct license, or use the app.
+              and how it is shared when you use the website or Try Now preview, buy a direct license, or use the app.
             </p>
           </div>
 
@@ -115,6 +116,7 @@ const Privacy = () => {
               <li>License records are retained while needed to provide a perpetual license, prevent fraud, handle refunds, and meet legal obligations. Financial records are retained for applicable tax and accounting obligations.</li>
               <li>Diagnostic error reports and opt-in activation milestones stored by PolyPDF are deleted after 90 days. Expired PolyPDF magic links and account sessions are removed automatically.</li>
               <li>Website campaign attribution codes are stored in your browser for up to 30 days and may be cleared at any time through your browser settings.</li>
+              <li>Try Now does not create a server-side copy of your PDF or markups. Its working session remains in browser memory until you replace the document, refresh, or close the page.</li>
               <li>Google Analytics and Google Ads may store browser identifiers used to attribute a visit and a completed purchase. You can clear or block these identifiers through your browser settings.</li>
               <li>Web-server and provider logs are retained for operational and security purposes under the applicable host or processor retention schedule.</li>
             </ul>

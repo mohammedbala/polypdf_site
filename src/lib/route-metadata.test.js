@@ -6,6 +6,7 @@ import siteRelease from './siteRelease.json';
 const expectedRoutes = [
   '/',
   '/buy',
+  '/try',
   '/upgrade',
   '/build-a-plugin',
   '/account',

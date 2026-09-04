@@ -21,6 +21,7 @@ export const footerLinkGroups = Object.freeze([
   Object.freeze({
     label: 'Product',
     links: Object.freeze([
+      Object.freeze({ to: '/try', label: 'Try PolyPDF in browser' }),
       Object.freeze({
         to: buyPath('website_footer'),
         label: 'Buy PolyPDF Pro',
@@ -60,7 +61,7 @@ const SiteFooter = () => (
           <img src={parrotIcon} alt="" loading="lazy" width="96" height="96" />
           <span>PolyPDF</span>
         </Link>
-        <p>Measure, count, compare, manage revisions, and mark up PDF drawings on Mac and Windows—without a yearly bill.</p>
+        <p>Try PDF measurement and markup in your browser, then continue on Mac or Windows—without a yearly bill.</p>
         <div className="site-footer-downloads" aria-label="PolyPDF downloads">
           {Object.values(DOWNLOADS).map((platform) => (
             <a
@@ -102,7 +103,7 @@ const SiteFooter = () => (
 
     <div className="container site-footer-bottom">
       <p>&copy; 2026 Euclidean Software LLC. All rights reserved.</p>
-      <p>PolyPDF is desktop software for macOS and Windows.</p>
+      <p>PolyPDF offers a focused browser preview and a full desktop workflow for macOS and Windows.</p>
     </div>
   </footer>
 );

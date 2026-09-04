@@ -1,8 +1,13 @@
 {
   "/": {
     "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
-    "description": "Measure, mark up, compare, and manage PDF drawing revisions on Mac and Windows. Start free; unlock every Pro workflow for $49.99 once.",
+    "description": "Try PDF measurement and markup in your browser, then use the full Mac or Windows app. Unlock every Pro workflow for $49.99 once.",
     "robots": "index, follow"
+  },
+  "/try": {
+    "title": "Try PolyPDF in Your Browser | Local PDF Measurement",
+    "description": "Open a sample or local PDF, calibrate scale, add measurements and markups, and download the visible result without uploading your drawing.",
+    "robots": "noindex, follow"
   },
   "/buy": {
     "title": "Buy PolyPDF Pro Once | Measurements, Search & Plugins",
