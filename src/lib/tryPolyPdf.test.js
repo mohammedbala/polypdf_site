@@ -13,6 +13,11 @@ import {
 } from './tryPolyPdf';
 import { PDFDocument } from 'pdf-lib';
 
+test('keeps PDF.js compatible with the production Node 18 build', () => {
+  const pdfJsPackage = require('pdfjs-dist/package.json');
+  expect(pdfJsPackage.engines.node).toContain('18');
+});
+
 test('maps points through a rotated PDF viewport without losing coordinates', () => {
   const transform = [0, 0.5, 0.5, 0, 10, 20];
   const source = { x: 144, y: 72 };

@@ -130,6 +130,8 @@ const buildMotionStub = () => {
 
 const motionStub = buildMotionStub();
 const originalLoad = Module._load;
+const babelEsmHelperSegment = `${path.sep}@babel${path.sep}runtime${path.sep}helpers${path.sep}esm${path.sep}`;
+const babelCommonJsHelperSegment = `${path.sep}@babel${path.sep}runtime${path.sep}helpers${path.sep}`;
 
 // ---------------------------------------------------------------------------
 // 2. Render every route.
@@ -143,6 +145,17 @@ async function prerenderAllRoutes() {
   Module._load = function patchedLoad(request, parent, isMain) {
     if (request === 'framer-motion') return motionStub;
     if (request === '@phosphor-icons/react') return phosphorIcons;
+    // Babel rewrites a browser-only dynamic import to use its ESM interop helper. Node 18 cannot
+    // require that helper while prerendering, even though the import itself is never executed on
+    // the server. Its CommonJS twin is API-identical and keeps the production prerender portable.
+    if (typeof request === 'string' && request.includes(babelEsmHelperSegment)) {
+      return originalLoad.call(
+        this,
+        request.replace(babelEsmHelperSegment, babelCommonJsHelperSegment),
+        parent,
+        isMain
+      );
+    }
     return originalLoad.call(this, request, parent, isMain);
   };
 
