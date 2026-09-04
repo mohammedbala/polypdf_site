@@ -171,11 +171,11 @@ const trackEvent = (name, properties = {}) => {
 };
 
 const freeFeatures = [
-  'Try the core measuring and markup workflow in your browser, with no upload or account',
-  'Download the full app free — Mac or Windows — for the complete workspace',
+  'Download the full app free — Mac or Windows — and start with the real product',
   'Open PDF drawings, calibrate scale, and use markup tools with no trial countdown',
   'Verify fit on your own plans with up to 3 hand-created measurements per document',
-  'Open, view, and navigate portable Revision Packages'
+  'Open, view, and navigate portable Revision Packages',
+  'Decide after real use, not from a watered-down demo'
 ];
 
 const proFeatures = [
@@ -229,24 +229,24 @@ export const featureFamilies = [
     outcome: 'Fit PolyPDF to the way your team already works'
   },
   {
-    family: 'Browser & desktop',
-    tools: 'Try Now · macOS · Windows · local PDF work · Excel, CSV, and PDF export',
-    outcome: 'Start instantly, then move into the complete native workflow'
+    family: 'Desktop workflow',
+    tools: 'macOS · Windows · local core PDF work · Excel, CSV, and PDF export',
+    outcome: 'Work in a native app and hand off familiar file formats'
   }
 ];
 
 const steps = [
   {
-    title: 'Try it in your browser',
-    description: 'Open the sample instantly or choose a local PDF. Your drawing stays on your device and no account is required.'
+    title: 'Download the app free',
+    description: 'Grab the Mac DMG or the signed Windows installer and open the full product, not a time-limited trial.'
   },
   {
-    title: 'Measure a real drawing',
-    description: 'Calibrate scale, place up to 3 hand-created measurements, add markups, and download the visible result.'
+    title: 'Test it on a real drawing',
+    description: 'Calibrate scale and place up to 3 hand-created measurements in each document to confirm it fits your workflow.'
   },
   {
-    title: 'Continue on desktop',
-    description: `Download the full app free for OCR, forms, comparison, editable markups, and Revision Packages. If PolyPDF saves you time, the ${commercialOffer.price} Founder's License removes the measurement cap and unlocks Symbol Search plus plugins.`
+    title: 'Unlock unlimited when ready',
+    description: `If PolyPDF saves you time, buy the ${commercialOffer.price} Founder's License to remove the measurement cap and unlock Symbol Search, plugins, and Revision Package updates without a yearly fee.`
   }
 ];
 
@@ -254,7 +254,7 @@ const steps = [
 export const homeFaqs = [
   {
     question: 'What is PolyPDF?',
-    answer: 'PolyPDF is a local-first PDF drawing app for Mac and Windows, with a focused browser preview for trying measurement and markup before downloading. The desktop app combines calibrated takeoff, Symbol Search, OCR, forms, signatures, document preparation, and revision management in one workspace.'
+    answer: 'PolyPDF is a desktop PDF drawing app for Mac and Windows. It combines markup, calibrated measurement and takeoff, Symbol Search, local AEC OCR, forms, signatures, document preparation, and revision management in one workspace.'
   },
   {
     question: `What is new in PolyPDF ${releaseSeries}?`,
@@ -262,7 +262,7 @@ export const homeFaqs = [
   },
   {
     question: 'What can I do before I pay?',
-    answer: 'You can try PolyPDF in your browser or download the free Mac or Windows app, open your own PDFs, calibrate scale, use markup and review tools, place up to 3 hand-created measurements in every document, and view or navigate Revision Packages. Symbol Search, plugins, and Revision Package changes or publishing unlock with Pro.'
+    answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use markup and review tools, place up to 3 hand-created measurements in every document, and view or navigate Revision Packages. Symbol Search, plugins, and Revision Package changes or publishing unlock with Pro.'
   },
   {
     question: 'Does one license cover both Mac and Windows?',
@@ -778,7 +778,7 @@ const Home = () => {
           <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
             <a href="#features" onClick={closeMobileMenu}>Features</a>
-            <Link to="/try/" className="nav-try" onClick={closeMobileMenu}>Try Now</Link>
+            <a href="#revision-packages" onClick={closeMobileMenu}>What’s new</a>
             <Link to="/blog/" onClick={closeMobileMenu}>Guides</Link>
             <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
             <DirectCheckoutLink
@@ -825,14 +825,11 @@ const Home = () => {
             </h1>
 
             <p className="hero-subtitle">
-              Open a sample or your own PDF right in the browser. Calibrate, measure, mark up, and
-              download the result—then continue in the full Mac or Windows app when you need more.
+              Calibrate, measure, mark up, compare, and carry review into the next drawing issue.
+              Start free on Mac or Windows, then unlock every Pro workflow at the $49.99 Founder price.
             </p>
 
             <div className="hero-cta">
-              <Link to="/try/" className="primary-btn hero-try" onClick={() => trackEvent('try_now_click', { source: 'hero' })}>
-                <Lightning aria-hidden="true" weight="fill" /> Try Now in Browser
-              </Link>
               <DownloadCTA
                 source="hero"
                 onDownload={closeMobileMenu}
@@ -849,7 +846,7 @@ const Home = () => {
             </div>
 
             <OfferGuarantee compact />
-            <p className="hero-note">The browser preview processes your PDF on this device—no upload and no account. The full app is Apple-notarized on Mac and Authenticode-signed on Windows.</p>
+            <p className="hero-note">Apple-notarized on Mac and Authenticode-signed on Windows. Upgrade when you need unlimited measurements, Symbol Search, plugins, or Revision Package changes and publishing.</p>
           </motion.div>
 
           <HeroProductBoard />
@@ -898,19 +895,19 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Browser preview, full desktop app</span>
-            <h2>Try the core workflow before you install.</h2>
+            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> One engine, two desktops</span>
+            <h2>Desktop software for Mac and Windows.</h2>
             <p>
-              Start with a private, local browser session for everyday markup and measurement, then move to the Mac or
-              Windows app for the complete document, takeoff, and collaboration workflow.
+              PolyPDF runs the same engine as a desktop app on macOS and Windows, focused on everyday review, markup,
+              calibration, and takeoff workflows construction PDFs demand.
             </p>
           </motion.div>
 
           <div className="platform-ledger">
             <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <span>01</span>
-              <h3>Zero-install first look</h3>
-              <p>The browser preview opens a sample immediately and can work with a local PDF without uploading it or asking you to create an account.</p>
+              <h3>One app, both platforms</h3>
+              <p>The Mac DMG and the signed Windows installer ship the same engine at the same version — open drawings directly, no VM or browser-only workaround on either side.</p>
             </motion.article>
             <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }}>
               <span>02</span>
@@ -934,9 +931,9 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Three steps</span>
+            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Three honest steps</span>
             <h2>Try it on your workflow before you buy.</h2>
-            <p>Start in the browser, continue in the free desktop app, and pay once only if you want the complete Pro workflow.</p>
+            <p>Download free, test it on your own drawings, and pay once only if you want the complete Pro workflow.</p>
           </motion.div>
 
           <div className="step-path">
@@ -999,11 +996,8 @@ const Home = () => {
           >
             <span className="cta-sketch" aria-hidden="true" />
             <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
-            <p>Try the core workflow in your browser, download the full app on Mac or Windows, and unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates at the $49.99 Founder price instead of the planned $99 standard price.</p>
+            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates at the $49.99 Founder price instead of the planned $99 standard price.</p>
             <div className="cta-download-row">
-              <Link to="/try/" className="primary-btn large cta-try" onClick={() => trackEvent('try_now_click', { source: 'bottom_cta' })}>
-                <Lightning aria-hidden="true" weight="fill" /> Try Now in Browser
-              </Link>
               <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
               <DirectCheckoutLink
                 source="website_bottom_cta"

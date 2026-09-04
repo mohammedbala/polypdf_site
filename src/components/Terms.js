@@ -17,8 +17,8 @@ const sections = [
     title: 'Scope',
     content: [
       'PolyPDF is operated by Euclidean Software LLC.',
-      'These terms apply to the PolyPDF website, the Try Now browser preview, the direct desktop downloads (macOS and Windows), and related support, licensing, and update services.',
-      'By using Try Now, downloading, installing, purchasing, or using PolyPDF, you agree to these terms.',
+      'These terms apply to the PolyPDF website, the direct desktop downloads (macOS and Windows), and related support, licensing, and update services.',
+      'By downloading, installing, purchasing, or using PolyPDF, you agree to these terms.',
       'If you do not agree, do not use the service or install the app.'
     ]
   },
@@ -26,7 +26,6 @@ const sections = [
     icon: <FaHandshake />,
     title: 'Free and paid access',
     content: [
-      'Try Now is a limited browser preview for opening a local PDF, calibrating scale, adding basic measurements and markups, and downloading a visible marked-up copy. It does not include every desktop feature, and its downloaded marks are added to page content rather than saved as editable PolyPDF markups.',
       'The desktop app for macOS and Windows may be offered as a free download with limited measurement usage and view-only access to some project workflows before Pro is required.',
       'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
       `The current direct offer includes free markup, review, calibration, 3 hand-created measurements per document, and Revision Package viewing and navigation. The optional ${commercialOffer.price} Founder's License, instead of the planned ${commercialOffer.referencePrice} standard price, removes that cap and unlocks Symbol Search, plugin workflows, and Revision Package creation, changes, and publishing. Direct website purchases include a 14-day money-back guarantee.`
@@ -74,14 +73,14 @@ const Terms = () => {
         <div className="container">
           <div className="legal-hero">
             <h1>Terms of Use</h1>
-            <p className="legal-subtitle">Terms for the PolyPDF website, browser preview, and direct desktop downloads</p>
+            <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
             <p className="last-updated">Commercial terms version: July 30, 2026 · Product-access description reviewed September 3, 2026</p>
           </div>
 
           <div className="legal-intro">
             <p>
               These Terms of Use are between you and Euclidean Software LLC, and govern your use
-              of PolyPDF, including the PolyPDF website, the Try Now browser preview, the direct-download desktop applications for macOS and Windows,
+              of PolyPDF, including the PolyPDF website, the direct-download desktop applications for macOS and Windows,
               and related purchasing, licensing, support, and update services.
             </p>
           </div>

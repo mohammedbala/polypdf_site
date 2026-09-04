@@ -16,7 +16,6 @@ import Support from './components/Support';
 import SiteFooter from './components/SiteFooter';
 import WindowsPreview from './components/WindowsPreview';
 import Terms from './components/Terms';
-import TryPolyPDF from './components/TryPolyPDF';
 import VersionHistory from './components/VersionHistory';
 import WorkflowLanding from './components/WorkflowLanding';
 import { landingPages } from './lib/landingPages';
@@ -35,7 +34,6 @@ const AppRoutes = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/buy" element={<Buy />} />
-            <Route path="/try" element={<TryPolyPDF />} />
             {/* The app's upgrade dialog opens /buy with source=/utm_source= set, and Buy detects that
                 on its own — so every already-installed copy gets the in-app view without an app
                 release. /upgrade is the stable short URL for support replies and for a future build to

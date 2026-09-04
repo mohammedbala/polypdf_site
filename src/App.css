@@ -3540,11 +3540,6 @@ h3 {
   background: var(--accent-soft);
 }
 
-.Home .nav-links .nav-try {
-  color: var(--primary-white);
-  background: var(--accent);
-}
-
 .Home .nav-links .nav-download {
   padding-inline: 1rem;
   color: var(--primary-white);
@@ -3695,14 +3690,6 @@ h3 {
 
 .Home .hero-cta {
   margin-bottom: 1rem;
-}
-
-.Home .hero-try {
-  min-height: 54px;
-  margin-bottom: 0.7rem;
-  border-color: var(--accent);
-  background: var(--accent);
-  color: var(--primary-white);
 }
 
 .Home .dl-primary-row {
@@ -4667,12 +4654,6 @@ h3 {
 .Home .cta-section .primary-btn {
   border-color: var(--gray-900);
   box-shadow: 4px 4px 0 rgba(23, 26, 25, 0.42);
-}
-
-.Home .cta-section .cta-try {
-  border-color: var(--primary-white);
-  background: var(--primary-white);
-  color: var(--gray-900);
 }
 
 .Home .cta-section .secondary-btn {
