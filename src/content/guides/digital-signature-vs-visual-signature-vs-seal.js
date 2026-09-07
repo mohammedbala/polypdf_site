@@ -12,7 +12,7 @@ const post = {
   title: 'Digital vs Visual PDF Signatures vs Professional Seals',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-03',
+  dateModified: '2026-09-07',
   author: 'The PolyPDF team',
   readingTime: '11 min read',
   tag: 'Signatures & Seals',
@@ -45,6 +45,11 @@ const post = {
     'electronic seal drawing workflow'
   ],
   sections: [
+    { icon: 'check', title: 'Saved appearances in 1.5.1', body: [
+      { kind: 'p', text: 'Version 1.5.1 improves signature and stamp appearance preservation when saving and reopening PDFs, including files edited in other PDF applications. Inspect the saved appearance and the signature validation result separately; a visible mark does not establish cryptographic validity.' },
+      { kind: 'p', text: 'A visual mark placed at an unsigned signature field remains visual artwork. The field can still be reported as unsigned by a verifier. A later certificate signature is a separate action; it must not inherit a false claim of validity from the earlier artwork.' },
+      { kind: 'link', label: 'Create an interactive review stamp', href: '/blog/create-interactive-pdf-stamps/' }
+    ] },
     {
       icon: 'table',
       title: 'Three marks, three different claims',

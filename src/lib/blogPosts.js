@@ -3,6 +3,7 @@ import aiscResultScreenshot from '../assets/screenshots/plugins-aisc-w24x55-resu
 import mutcdStopScreenshot from '../assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png';
 import pluginSidebarScreenshot from '../assets/screenshots/plugins-sidebar-v1-4-dark-web.png';
 import collaborationBetaScreenshot from '../assets/screenshots/collaboration-beta-live-v1-4-3-web.png';
+import release151 from '../content/releases/polypdf-1-5-1';
 import { guidePosts } from '../content/guides';
 
 // Blog posts are plain data so a new entry is one object, not a new React component.
@@ -24,7 +25,7 @@ import { guidePosts } from '../content/guides';
 //
 // `icon` names map to react-icons in BlogPost.js. Add the name there before using a new one.
 
-const post = (entry) => Object.freeze(entry);
+const post = (entry) => Object.freeze({ ...entry, releaseReviewed: '2026-09-07', releaseReviewVersion: '1.5.1 (build 23)' });
 
 const pluginSidebarCaption =
   'The Plugins sidebar in PolyPDF 1.4.0, listing the three generators that come with the app: AISC Steel Sections, PDF Maps, and Professional Seal Maker. The page behind it is a blank sample sheet, and the Polygon tool is selected so its Line, Fill, and Hatch style controls stay visible.';
@@ -644,6 +645,7 @@ const productPosts = Object.freeze([
 ]);
 
 export const blogPosts = Object.freeze([
+  post(release151),
   ...guidePosts.map(post),
   ...productPosts
 ]);

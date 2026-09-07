@@ -23,7 +23,7 @@ export const landingPages = Object.freeze({
   revisionPackages: landingPage({
     path: '/revision-packages',
     source: 'landing_revision_packages',
-    eyebrow: 'New in PolyPDF 1.5',
+    eyebrow: 'Revision Packages · introduced in PolyPDF 1.5',
     title: 'Carry review work forward when the next drawing issue arrives.',
     lede: 'Import a new issue, reconcile every sheet, carry reviewed work forward, inspect changes and quantity impact, review references, and publish one current package with a revision report.',
     qualifier: 'Revision Packages are portable project files for controlled drawing updates. Original PDFs remain unchanged; PolyPDF preserves verified source copies inside the package workflow.',
@@ -90,7 +90,7 @@ export const landingPages = Object.freeze({
     problemTitle: 'Keep the quantity and its drawing context together.',
     problemCopy: 'A takeoff is easier to audit when every result still points back to the sheet it came from. PolyPDF places measurements on the drawing while the worksheet tracks subject, quantity, units, and totals in one desktop workspace.',
     workflow: [
-      ['Confirm the page scale', 'Choose a common architectural or engineering preset, or calibrate against a known distance. Use imperial or metric units to match the source sheet.'],
+      ['Confirm the page scale', 'Choose a common architectural or engineering preset, or calibrate against a known distance. Use imperial or metric units to match the source sheet. New metric dimensions default to millimetres; existing document formats are preserved.'],
       ['Create measurement subjects', 'Organize results by the material, assembly, or scope you are quantifying so repeated measurements land in a consistent worksheet row.'],
       ['Measure and count on the sheet', 'Place distance, area, perimeter, angle, and count annotations directly on the drawing while PolyPDF updates the worksheet.'],
       ['Export for pricing or review', 'Send the worksheet to CSV for estimating calculations or PDF for a readable project record.']
@@ -169,7 +169,7 @@ export const landingPages = Object.freeze({
     source: 'landing_construction_markup',
     eyebrow: 'Construction drawing review',
     title: 'Mark up construction PDFs so every comment stays tied to the sheet.',
-    lede: 'Add callouts, text, highlights, shapes, stamps, and revision clouds directly to plan sets, then use the Markup Table to track what has been flagged.',
+    lede: 'Add callouts, text, highlights, shapes, interactive review stamps, and revision clouds directly to plan sets, then use the Markup Table to track what has been flagged.',
     qualifier: 'A local desktop workflow for design review, RFIs, field observations, punch notes, and drawing handoff on Mac or Windows.',
     ...responsiveScreenshot(shotMarkup768, shotMarkup1536),
     imageWidth: 1710,
@@ -198,13 +198,14 @@ export const landingPages = Object.freeze({
       'Measurement tools remain available when a review question also needs a quantity.'
     ],
     faq: [
-      ['What construction markups does PolyPDF support?', 'The current app includes text, callouts, highlights, shapes, freehand drawing, stamps, revision clouds, and measurement annotations.'],
+      ['What construction markups does PolyPDF support?', 'The current app includes text, callouts, highlights, shapes, freehand drawing, stamps, revision clouds, and measurement annotations. In 1.5.1 you can build interactive stamps on a blank canvas, prompt for placement values, and optionally save the template to a toolset.'],
       ['Can I use PolyPDF for RFIs or punch notes?', 'You can place RFI and punch-related comments directly on the relevant sheet and save the marked PDF. PolyPDF is the drawing workspace; your project’s formal routing and approval process can remain unchanged.'],
       ['Can recipients read the marked PDF without PolyPDF?', 'PolyPDF can save and export PDF output for normal document handoff. As with any PDF workflow, verify the exported file in the recipient’s viewer when interoperability is critical.']
     ],
     related: [
       ['/blog/pdf-markup-table-rfi-punch-list', 'Build an RFI or punch register'],
       ['/blog/compare-pdf-drawing-revisions', 'Review drawing revisions'],
+      ['/blog/create-interactive-pdf-stamps', 'Create an interactive review stamp'],
       ['/blog/digital-signature-vs-visual-signature-vs-seal', 'Signature and seal reference'],
       ['/compare-pdf-drawings', 'Compare drawing revisions'],
       ['/measure-pdf-on-mac', 'Measure PDF drawings on Mac'],

@@ -5,7 +5,7 @@ const comparePdfDrawingRevisionsGuide = {
   title: 'How to Compare PDF Drawing Revisions',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-03',
+  dateModified: '2026-09-07',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
@@ -38,6 +38,9 @@ const comparePdfDrawingRevisionsGuide = {
     'compare two PDF files'
   ],
   sections: [
+    { icon: 'document', title: 'Review navigation and layers in 1.5.1', body: [
+      { kind: 'p', text: 'Version 1.5.1 improves PDF layer visibility, bookmarks, and thumbnail navigation. Confirm the intended layer state and sheet identity when reviewing a revision. Presentation Mode is useful for walking through one PDF; use Compare Documents or a Revision Package when you need an actual comparison or issue history.' }
+    ] },
     {
       icon: 'shield',
       title: 'Confirm that the two PDFs are comparable',

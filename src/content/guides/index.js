@@ -1,3 +1,4 @@
+import createInteractivePdfStamps from './create-interactive-pdf-stamps';
 import calibratePdfDrawingScale from './calibrate-pdf-drawing-scale';
 import comparePdfDrawingRevisions from './compare-pdf-drawing-revisions';
 import countPdfSymbols from './count-pdf-symbols';
@@ -14,6 +15,7 @@ import whyPdfMeasurementsAreWrong from './why-pdf-measurements-are-wrong';
 // Keep the editorial set explicit. The build and tests treat this registry as the one source of
 // truth for guide routes, discovery files, structured data, related-guide links, and the blog list.
 export const guidePosts = Object.freeze([
+  createInteractivePdfStamps,
   calibratePdfDrawingScale,
   whyPdfMeasurementsAreWrong,
   measurePdfAreaCutoutsDepth,

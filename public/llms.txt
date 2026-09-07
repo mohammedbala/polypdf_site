@@ -4,7 +4,7 @@
 
 Key facts:
 
-- Current release: PolyPDF 1.5.0 (build 22) for macOS and Windows; /versions reads the live update feeds.
+- Current release: PolyPDF 1.5.1 (build 23) for macOS and Windows; /versions reads the live update feeds.
 - Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. PolyPDF Pro Founder's License removes the measurement cap and unlocks Symbol Search, installed plugins, and Revision Package creation, changes, and publishing at the $49.99 Founder price instead of the planned $99 standard price, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
 - The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.
@@ -12,9 +12,11 @@ Key facts:
 - Symbol Search auto-count (Pro): capture one drawing symbol, review candidate matches, and commit an auditable numbered count series.
 - Revision Packages (view and navigation in Free; changes and publication in Pro): import a drawing issue, reconcile sheets, carry reviewed work forward, inspect changes and available quantity or cost impact, review references, and publish a current package with a revision report.
 - Local AEC OCR: recover searchable text and current-session structure for schedules, title blocks, drawing labels, dimensions, and spreadsheet-ready tables. Recognition remains best-effort and requires review.
-- Tool Chest: built-in Doors, Windows, Fire Protection, and MUTCD sets, plus BTX, SVG, and DXF import.
+- Tool Chest: built-in Architectural, Landscape, Doors, Windows, Fire Protection, and MUTCD sets, plus BTX, SVG, and DXF import.
 - Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.
-- Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.
+- Markup and review: callouts, text, highlights, shapes, freehand, interactive stamps, revision clouds, the Markup Table, and drawing-revision comparison. In 1.5.1, new interactive stamps start on a blank canvas; Add to toolset is optional and unchecked by default.
+- Presentation Mode: open a PDF, choose View > Presentation Mode, use arrow keys for pages and Escape to exit.
+- New metric dimensions default to millimetres. Explicit formats in existing documents are preserved; metric area and volume remain in square and cubic metres.
 - Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.
 - Pro plugins included with the app: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic, and PDF Maps places a map image for an address or place name. AISC Steel Sections performs no capacity or design checks, and a seal graphic is drafting artwork rather than a cryptographic digital signature: PolyPDF does not check licensure or board compliance.
 - Redaction can remove text mapped to supported PDF text-show operators, but it is not fail-closed for every content type: vector or outlined content and some nested images can remain under a black fill. Sanitize Document cleans selected structures but can miss some direct attachments and nested actions. Independently inspect sensitive output and use an approved specialist workflow when complete removal matters.
@@ -29,6 +31,7 @@ Key facts:
 
 ## Practical guides
 
+- [Create Interactive PDF Review Stamps](https://www.polypdf.com/blog/create-interactive-pdf-stamps/): Build a review stamp from a blank canvas, arrange its fields, ask for details when placing it, and choose whether to save it for reuse.
 - [How to Calibrate a PDF Drawing Scale](https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/): Set an accurate PDF drawing scale from a printed ratio or a known dimension, then check it against a second reference before starting takeoff.
 - [Why PDF Measurements Are Wrong (and How to Fix Them)](https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/): Diagnose bad PDF dimensions by checking page scale, units, endpoints, detail regions, and scan distortion in a deliberate order.
 - [How to Measure PDF Area with Cutouts and Depth](https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/): Trace a net PDF area, subtract multiple interior openings, optionally convert it to volume with depth, and keep hatch styling separate from the math.
@@ -53,6 +56,7 @@ Key facts:
 
 ## Product notes
 
+- [PolyPDF 1.5.1: Interactive Stamps and Clearer Drawing Review](https://www.polypdf.com/blog/polypdf-1-5-1/): Build interactive stamps, explore expanded symbol libraries, and present PDFs. Version 1.5.1 also improves navigation, saved appearances, and responsiveness.
 - [Set Up PolyPDF Collaboration Beta](https://www.polypdf.com/blog/how-to-use-polypdf-collaboration-beta/): PolyPDF Collaboration keeps the PDF on your company share while approved Mac and Windows users exchange live markups, cursors, offline edits, and signed history through a customer-owned host.
 - [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins/): How PolyPDF Pro plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.
 

@@ -1754,6 +1754,227 @@
           "transform": "byte-identical"
         }
       ]
+    },
+    {
+      "id": "release-151-stamp-blank",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/stamp-blank.png",
+          "sha256": "f281cb881cc5c11e83b9c62c862bb90e50ae7a3b76bef4a320f9f7ace1a23219",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/stamp-blank.proof.json",
+          "sha256": "69651fb18ccaed26da2ae124922425cbb36e9149e53921867af224831bb3039d"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/stamp-blank.report.json",
+          "sha256": "e55f1d15d4b14f53b946a6a23e8d2bc2652a133ea96e68d0f54be0124b71a4b7"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/stamp-blank-v1-5-1.png",
+          "sha256": "f281cb881cc5c11e83b9c62c862bb90e50ae7a3b76bef4a320f9f7ace1a23219",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/stamp-blank.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-stamp-builder",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/stamp-builder.png",
+          "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/stamp-builder.proof.json",
+          "sha256": "ebfb2ceb1695dde04065f754fe9ddf38a8c56ad3b15e171994e2a018d3b4f88d"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/stamp-builder.report.json",
+          "sha256": "496812a5fbf6db85106e7b5d0f8c02cc49035995d062c4afda27dc97a45954b8"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/stamp-builder-v1-5-1.png",
+          "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/stamp-builder.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/create-interactive-pdf-stamps.png",
+          "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "src/assets/screenshots/stamp-builder-v1-5-1.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/polypdf-1-5-1.png",
+          "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "src/assets/screenshots/stamp-builder-v1-5-1.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-stamp-prompt",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/stamp-prompt.png",
+          "sha256": "bfe8fdc15fe529d7fd42c5d489a66cd97d385dd7ce870b1e910a09b6cd4fdbbb",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/stamp-prompt.proof.json",
+          "sha256": "ba61d527c3ad2c0c8d88c3e105b1f90efcc3db5beb6b7332bca519c488acc71f"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/stamp-prompt.report.json",
+          "sha256": "c55fddd23b5e52e14d46f646984c7608f75e6c3be9edcd2bbce39c25813621a4"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/stamp-prompt-v1-5-1.png",
+          "sha256": "bfe8fdc15fe529d7fd42c5d489a66cd97d385dd7ce870b1e910a09b6cd4fdbbb",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/stamp-prompt.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-stamp-placed",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/stamp-placed.png",
+          "sha256": "2b54b77d920ab43dd807477a65c560b4a665a7bc84f12e2ef2bc29dd3346c907",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/stamp-placed.proof.json",
+          "sha256": "0dbc6fe6ec9ab148ebfa826547918ba89e6abf1f4e77004af21feb2e13d92db9"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/stamp-placed.report.json",
+          "sha256": "7edf07ef38fc936f24ae010da8f8bba325d5b7ed43f3f63c64d3fb3b682ab06c"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/stamp-placed-v1-5-1.png",
+          "sha256": "2b54b77d920ab43dd807477a65c560b4a665a7bc84f12e2ef2bc29dd3346c907",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/stamp-placed.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-architectural-tools",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/architectural-tools.png",
+          "sha256": "53e5e7e13f2aa2b4e7fc8e65c584659e001f978ea08ba9a846a5d3bcaa632319",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/architectural-tools.proof.json",
+          "sha256": "733663df062171a7739481a1b15fd34aca10aafc32964093d23991a97b24b1c3"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/architectural-tools.report.json",
+          "sha256": "3af0c0c6e2693f0f1467a11260bed4e12b218703676c93a1c56ce47af8a734f7"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/architectural-tools-v1-5-1.png",
+          "sha256": "53e5e7e13f2aa2b4e7fc8e65c584659e001f978ea08ba9a846a5d3bcaa632319",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/architectural-tools.png",
+          "transform": "byte-identical"
+        }
+      ]
     }
   ],
   "ogComposites": [

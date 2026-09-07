@@ -16,6 +16,10 @@ export const FEATURE_REQUEST_EMAIL_URL =
   'mailto:support@polypdf.com?subject=PolyPDF%20feature%20request&body=Platform%20(macOS%20or%20Windows)%3A%0A%0AWorkflow%20I%27m%20trying%20to%20improve%3A%0A%0AWhat%20would%20make%20it%20easier%3A%0A%0ACurrent%20workaround%3A%0A';
 
 const shippedRequests = [
+  'Interactive stamps built on a blank canvas, with optional toolset saving',
+  'Presentation Mode for focused PDF review',
+  'Expanded Architectural, Landscape, Windows, and Fire Protection libraries',
+  'Millimetre defaults for new metric dimensions',
   'Measurement depth for linear and area takeoffs',
   'Area cutouts for openings and exclusions',
   'Add or remove vertices on areas and paths',

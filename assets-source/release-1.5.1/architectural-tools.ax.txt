@@ -1,0 +1,352 @@
+Local checkout path abbreviated; UI values unchanged.
+Window: "PolyPDF", App: PolyPDF.
+0 standard window PolyPDF, Secondary Actions: Raise
+	1 container PolyPDF
+		2 container
+			3 HTML content PolyPDF, URL: file://<desktop-checkout>/polypdf/.tmp/sparkle-private-1.5.1-23/install/PolyPDF.app/Contents/Resources/app.asar/dist/renderer/index.html
+				4 container
+					5 tab group Open documents
+						6 tab (selected) PolyPDF Quick Start.pdf Close tab, Help: PolyPDF Quick Start.pdf - Edited, Value: 1
+						7 button Open another PDF
+					8 container Annotation toolbar
+						9 button Undo (⌘Z)
+						10 button (disabled) Redo (⇧⌘Z)
+						11 button New PDF (⌘N)
+						12 button Open (⌘O)
+						13 button Save (⌘S)
+						14 button Print (⌘P)
+						15 button Email PDF (⇧⌘E)
+						16 button Rotate Left
+						17 button Rotate Right
+						18 button Cut (⌘X)
+						19 button Copy (⌘C)
+						20 button Paste (⌘V)
+						21 button Format Painter (F)
+						22 button Delete (⌫)
+						23 button Hyperlink (I)
+						24 button Flatten
+						25 button Snapshot (⌃G)
+						26 button Redact
+						27 button Rectangle (R)
+						28 button Circle (O)
+						29 button Arc (⇧O)
+						30 button Cloud (C)
+						31 button Arrow (A)
+						32 button Line (L)
+						33 button Polyline (Y)
+						34 button Polygon (P)
+						35 button Pen (N)
+						36 button Highlight (H)
+						37 button Text (T)
+						38 button Callout (Q)
+						39 button Dimension (D)
+						40 button Stamp (K): Approved
+						41 pop up button Choose Stamp: Approved
+						42 button Image Stamp
+						43 button Linear Dimension (⇧L)
+						44 button Area (⇧A)
+						45 button Perimeter (⇧E)
+						46 button Diameter
+						47 button Radius
+						48 button Path Length (⇧Y)
+						49 button Angle (⇧Q)
+						50 button Count (⇧K)
+						51 button Symbol Search
+						52 button Measurement Settings
+						53 button Upgrade to PolyPDF Pro
+					54 container Style toolbar
+						55 text BORDER:
+						56 button Border Color
+						57 button ⌄, Help: Border Type: Solid
+						58 container Border Width
+							59 text 0 pt
+							60 button Increase Border Width
+							61 button Decrease Border Width
+						62 text IMAGE:
+						63 button 100% ⌄, Help: Stamp Opacity: 100%
+							64 text 100%
+							65 text ⌄
+						66 button Normal ⌄, Help: Recolor: Normal
+							67 text Normal
+							68 text ⌄
+					69 container Sidebar
+						70 button Thumbnails
+						71 button Search
+						72 button Bookmarks
+						73 button Forms
+						74 button Signatures
+						75 button Measurements
+						76 button Scale Regions
+						77 button Workspaces
+						78 button Layers
+						79 button Attachments
+						80 button Tools
+						81 button Plugins
+						82 button Inspector
+						83 pop up button Settings
+					84 container
+						85 text Tools
+						86 button Close sidebar
+						87 heading Tools, Value: 3
+							88 text Tools
+						89 button Add to Tools
+						90 text Reusable annotation templates and image assets are saved here. Drag a saved tool onto a toolset below to organize it.
+						91 button New Toolset
+						92 toggle button Description: Switch to list view, Value: 0
+						93 button Import Toolset
+						94 pop up button Export Toolset
+						95 text Search tools
+						96 search text field (settable) Description: Search tools, Placeholder: Search tools and signs
+						97 container
+							98 button Collapse Interactive Stamps
+								99 text Interactive Stamps
+								100 text 1 tool
+							101 button Description: Place Drawing Review, Help: Drag this tool onto another toolset to move it.
+								102 image Drawing Review
+						103 container
+							104 button Collapse Architectural
+								105 text Architectural
+								106 text Built-in
+							107 button Description: Place Smoke Barrier Line, Help: Place Smoke Barrier Line.
+								108 image
+								109 image
+								110 text S
+							111 button Description: Place Break, Round, Help: Place Break, Round.
+								112 image
+								113 image
+								114 image
+								115 image
+								116 image
+								117 image
+							118 button Description: Place Break, Straight, Help: Place Break, Straight.
+								119 image
+								120 image
+								121 image
+								122 image
+							123 button Description: Place Detail Indicator, Help: Place Detail Indicator.
+								124 image
+								125 image
+								126 image
+								127 image
+								128 image
+								129 image
+								130 image
+								131 image
+								132 image
+								133 image
+								134 image
+								135 image
+								136 image
+								137 image
+								138 image
+								139 image
+								140 text D2
+								141 text A-512
+							142 button Description: Place Detail Indicator (Box), Help: Place Detail Indicator (Box).
+								143 image
+								144 image
+								145 image
+								146 image
+								147 image
+								148 image
+								149 image
+								150 image
+								151 image
+								152 image
+								153 image
+								154 image
+								155 image
+								156 image
+								157 image
+								158 image
+								159 image
+								160 image
+								161 image
+								162 image
+								163 image
+								164 image
+								165 image
+								166 image
+								167 image
+								168 image
+								169 text D2
+								170 text A-512
+							171 button Description: Place Detail Indicator, Small, Help: Place Detail Indicator, Small.
+								172 image
+								173 image
+								174 image
+								175 image
+								176 image
+								177 text D2
+								178 text A-512
+							179 button Description: Place Dimension Line, Help: Place Dimension Line.
+								180 image
+								181 image
+								182 image
+								183 image
+								184 image
+								185 image
+							186 button Description: Place Door / Borrowed Light Identifier, Help: Place Door / Borrowed Light Identifier.
+								187 image
+								188 image
+								189 image
+								190 image
+								191 image
+								192 image
+								193 image
+								194 image
+								195 image
+								196 text 8
+							197 button Description: Place Drawing Block Title, Help: Place Drawing Block Title.
+								198 image
+								199 image
+								200 image
+								201 image
+								202 image
+								203 image
+								204 image
+								205 image
+								206 image
+								207 image
+								208 image
+								209 image
+								210 image
+								211 image
+								212 text C4
+								213 text DRAWING
+								214 text BLOCK
+								215 text TITLE
+								216 text 1
+								217 text 1/2"
+								218 text =
+								219 text 1'-0"
+								220 text 1'
+								221 text 1/2'
+								222 text 0
+								223 text 1
+								224 text 1/2'
+							225 button Description: Place Elevation Indicator, Exterior, Help: Place Elevation Indicator, Exterior.
+								226 image
+								227 image
+								228 image
+								229 image
+								230 image
+								231 text A4
+								232 text A-201
+							233 button Description: Place Elevation Indicator, Interior, Multiple, Help: Place Elevation Indicator, Interior, Multiple.
+								234 image
+								235 image
+								236 text A
+								237 text C
+								238 text A2
+								239 text A-202
+								240 text B
+								241 text D
+							242 button Description: Place Elevation Indicator, Interior, Single, Help: Place Elevation Indicator, Interior, Single.
+								243 image
+								244 image
+								245 image
+								246 image
+								247 image
+								248 text A2
+								249 text A-202
+							250 button Description: Place Building Section Indicator, Help: Place Building Section Indicator.
+								251 image
+								252 image
+								253 image
+								254 image
+								255 image
+								256 image
+								257 image
+								258 image
+								259 text A4
+								260 text A-201
+						261 button Expand Doors
+							262 text Doors
+							263 text Built-in
+						264 button Expand Windows
+							265 text Windows
+							266 text Built-in
+						267 button Expand Landscape
+							268 text Landscape
+							269 text Built-in
+						270 button Expand Fire Protection
+							271 text Fire Protection
+							272 text Built-in
+						273 button Expand Plumbing
+							274 text Plumbing
+							275 text Built-in
+						276 button Expand Electrical
+							277 text Electrical
+							278 text Built-in
+						279 button Expand HVAC
+							280 text HVAC
+							281 text Built-in
+						282 button Expand Welding
+							283 text Welding
+							284 text Built-in
+						285 button Expand MUTCD Regulatory
+							286 text MUTCD Regulatory
+							287 text Built-in
+						288 button Expand MUTCD Warning
+							289 text MUTCD Warning
+							290 text Built-in
+						291 button Expand MUTCD Temporary Traffic Control
+							292 text MUTCD Temporary Traffic Control
+							293 text Built-in
+						294 button Expand MUTCD School
+							295 text MUTCD School
+							296 text Built-in
+						297 splitter Resize sidebar
+					298 container
+						299 image
+						300 image
+						301 image
+						302 image
+						303 image
+						304 image
+						305 button Drawing Review
+							306 image Drawing Review
+					307 container Viewer status and navigation
+						308 button Show Markup Table
+						309 button Split Vertical (⌃2)
+						310 button Split Horizontal (⌃H)
+						311 button Single Page (⌃4)
+						312 button Continuous Scroll (⌃5)
+						313 button Side-by-Side (⌃6)
+						314 button Text Selection
+						315 button Current Tool
+						316 text Placed Drawing Review.
+						317 button (disabled) First Page (⌘Home)
+						318 button (disabled) Previous Page (PgUp)
+						319 text field (settable) Description: Go to page, Value: 1
+						320 text /1
+						321 button (disabled) Next Page (PgDn)
+						322 button (disabled) Last Page (⌘End)
+						323 toggle button Description: Snapping Off — click to enable Markup and Content; right-click for options, Value: 0
+						324 toggle button Description: Guidelines Off — click to show, Value: 0
+						325 toggle button Description: Helper Dimensions Off — click to enable Auto and Annotation; right-click for options, Value: 0
+						326 button Fit Width (⌃0)
+						327 button Fit Height (⌃1)
+						328 button Fit Page (⌃9)
+						329 button Zoom
+						330 button Zoom Out (⌘-)
+						331 button Zoom In (⌘=)
+						332 text 24.0" x 18.0"
+						333 button Help: Page 1 has no drawing scale, so measurements read in PDF points. Click to set one., Description: Drawing scale: Not scaled. Page 1 has no drawing scale, so measurements read in PDF points. Click to set one.
+							334 text SCALE
+							335 text Not scaled
+	336 close button
+	337 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	338 minimize button
+339 menu bar
+	340 PolyPDF
+	341 File
+	342 Edit​
+	343 View
+	344 Document
+	345 Tools
+	346 Window
+	347 Help
+
+The focused UI element is 104 button Collapse Architectural

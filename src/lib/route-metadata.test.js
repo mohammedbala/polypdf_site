@@ -70,7 +70,7 @@ test('gives every blog post its own crawlable metadata, matching the post', () =
 test('uses each real post screenshot for article share cards', () => {
   blogPosts.forEach((entry) => {
     const route = routeMetadata[blogPostPath(entry.slug)];
-    expect(route.image).toBe(`/guides/${entry.slug}.png?v=${siteRelease.screenshotCacheToken}`);
+    expect(route.image).toBe(`/guides/${entry.slug}.png?v=${entry.imageCacheToken || siteRelease.screenshotCacheToken}`);
     expect(route.imageAlt).toBe(entry.heroImage.alt);
     expect(route.imageWidth).toBe(entry.heroImage.width);
     expect(route.imageHeight).toBe(entry.heroImage.height);
@@ -96,9 +96,9 @@ test('unknown URLs receive a truthful noindex 404 identity instead of home-page 
 
 test('separates the current app release from the verified screenshot release', () => {
   expect(siteRelease).toMatchObject({
-    version: '1.5.0',
-    build: '22',
-    releaseDate: '2026-09-03',
+    version: '1.5.1',
+    build: '23',
+    releaseDate: '2026-09-07',
     screenshotVersion: '1.4.3',
     screenshotBuild: '20',
     screenshotCacheToken: '1.4.3-20'

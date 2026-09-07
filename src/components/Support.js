@@ -16,6 +16,25 @@ import siteRelease from '../lib/siteRelease.json';
 
 const sections = [
   {
+    icon: <FaDownload />,
+    title: 'Update to 1.5.1',
+    content: [
+      'Save your work. On Mac, choose Help > Check for Updates and follow the prompt. On Windows, the update downloads in the background and installs when you quit.',
+      'After relaunch, About should show version 1.5.1, build 23. Your existing PolyPDF 1.x Pro license continues to apply.',
+      'If an update is unavailable, use the current Mac or Windows download on this site. Mac requires macOS 14 or later on Apple silicon or Intel; Windows requires Windows 10 or 11, x64.'
+    ]
+  },
+  {
+    icon: <FaLifeRing />,
+    title: 'Stamps, presentation, and metric dimensions',
+    content: [
+      'Open the arrow beside Stamp > Create Interactive Stamp… to start with a blank canvas. Add to toolset is optional and unchecked by default.',
+      'For a placed interactive stamp, use Properties to change its values. A visual stamp does not create a certificate signature.',
+      'Open a PDF and choose View > Presentation Mode. Use arrow keys to change pages and Escape to return to the workspace.',
+      'New metric dimensions default to millimetres. Existing document formats are preserved; check Measurements > Formatting and verify the page scale when a displayed value is unexpected.'
+    ]
+  },
+  {
     icon: <FaLifeRing />,
     title: 'Revision Package help',
     content: [
@@ -84,7 +103,7 @@ const Support = () => {
           <div className="legal-hero">
             <h1>Support</h1>
             <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
-            <p className="last-updated">Last updated: September 3, 2026</p>
+            <p className="last-updated">Last updated: September 7, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -94,6 +113,8 @@ const Support = () => {
               When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.
             </p>
           </div>
+
+          <p><Link to="/blog/polypdf-1-5-1/">What changed in 1.5.1</Link> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link> · <Link to="/blog/">All guides</Link></p>
 
           <div className="legal-sections">
             {sections.map((section, index) => (

@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.polypdf.com/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,13 +21,35 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.polypdf.com/blog/polypdf-1-5-1/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/polypdf-1-5-1.png?v=1.5.1-23</image:loc>
+      <image:title>PolyPDF 1.5.1 stamp canvas with REVIEWED heading, reviewer, date, and optional toolset saving</image:title>
+      <image:caption>Build a stamp from an empty canvas, arrange its fields, and choose which values to ask for at placement. This capture is from the signed 1.5.1 Mac app using fictional sample details.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/create-interactive-pdf-stamps/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/create-interactive-pdf-stamps.png?v=1.5.1-23</image:loc>
+      <image:title>PolyPDF 1.5.1 interactive stamp builder showing a REVIEWED heading, Morgan Lee reviewer, automatic date, and checked Add to toolset option</image:title>
+      <image:caption>The actual 1.5.1 builder with a 300 × 180 pt canvas and three fields. REVIEWED is fixed, Reviewer is prompted, and Review date uses Current date. Morgan Lee is fictional sample data.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -38,7 +60,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -49,7 +71,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -60,7 +82,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/pdf-takeoff-worked-example/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -82,7 +104,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -93,7 +115,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/compare-pdf-drawing-revisions/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -104,7 +126,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/create-fillable-pdf-form/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -126,7 +148,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -148,7 +170,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/prepare-issued-pdf-set/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -193,19 +215,19 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/feature-requests/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/support/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/windows/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -217,31 +239,31 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/versions/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/revision-packages/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/pdf-takeoff-software/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/measure-pdf-on-mac/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/construction-pdf-markup/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

@@ -77,8 +77,8 @@ const Blog = () => {
             <p className="blog-eyebrow">PolyPDF guides &amp; reference</p>
             <h1 ref={headingRef} tabIndex="-1">Practical answers for working with PDF drawings</h1>
             <p className="legal-subtitle">
-              Step-by-step measurement, takeoff, markup, comparison, forms, and document-safety
-              workflows—each one illustrated with screenshots from the app.
+              Guides for PolyPDF 1.5.1: interactive stamps, measurement, takeoff, markup, comparison,
+              forms, signatures, and document preparation, illustrated with real app captures.
             </p>
           </motion.header>
 

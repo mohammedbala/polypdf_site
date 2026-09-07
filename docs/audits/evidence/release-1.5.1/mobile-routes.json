@@ -1,0 +1,341 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "routes": [
+    {
+      "path": "/",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Measure. Mark up. Skip the subscription."
+      ],
+      "overflow": false,
+      "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription"
+    },
+    {
+      "path": "/buy",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Buy PolyPDF Pro once. Unlock every Pro workflow."
+      ],
+      "overflow": false,
+      "title": "Buy PolyPDF Pro Once | Measurements, Search & Plugins"
+    },
+    {
+      "path": "/upgrade",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Unlock the workflow. One payment, no subscription."
+      ],
+      "overflow": false,
+      "title": "Upgrade to PolyPDF Pro | Unlock Every Pro Workflow"
+    },
+    {
+      "path": "/build-a-plugin",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Build your own plugin"
+      ],
+      "overflow": false,
+      "title": "Build a PolyPDF Plugin | Developer Guide"
+    },
+    {
+      "path": "/account",
+      "brokenLoadedImages": [],
+      "h1": [
+        "PolyPDF Account"
+      ],
+      "overflow": false,
+      "title": "PolyPDF Account | Manage Your License"
+    },
+    {
+      "path": "/blog",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Practical answers for working with PDF drawings"
+      ],
+      "overflow": false,
+      "title": "PolyPDF Guides | PDF Measurement, Takeoff & Markup"
+    },
+    {
+      "path": "/blog/polypdf-1-5-1",
+      "brokenLoadedImages": [],
+      "h1": [
+        "PolyPDF 1.5.1: Interactive Stamps and Clearer Drawing Review"
+      ],
+      "overflow": false,
+      "title": "PolyPDF 1.5.1: Stamps, Symbols & Presentation Mode"
+    },
+    {
+      "path": "/blog/create-interactive-pdf-stamps",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Create Interactive PDF Review Stamps"
+      ],
+      "overflow": false,
+      "title": "Create Interactive PDF Review Stamps | PolyPDF"
+    },
+    {
+      "path": "/blog/calibrate-pdf-drawing-scale",
+      "brokenLoadedImages": [],
+      "h1": [
+        "How to Calibrate a PDF Drawing Scale"
+      ],
+      "overflow": false,
+      "title": "How to Calibrate a PDF Drawing Scale | PolyPDF"
+    },
+    {
+      "path": "/blog/why-pdf-measurements-are-wrong",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Why PDF Measurements Are Wrong (and How to Fix Them)"
+      ],
+      "overflow": false,
+      "title": "Why PDF Measurements Are Wrong | PolyPDF Guide"
+    },
+    {
+      "path": "/blog/measure-pdf-area-cutouts-depth",
+      "brokenLoadedImages": [],
+      "h1": [
+        "How to Measure PDF Area with Cutouts and Depth"
+      ],
+      "overflow": false,
+      "title": "Measure PDF Area, Cutouts, and Volume | PolyPDF"
+    },
+    {
+      "path": "/blog/pdf-takeoff-worked-example",
+      "brokenLoadedImages": [],
+      "h1": [
+        "PDF Takeoff Worked Example: Scale, Area, Length, and Count"
+      ],
+      "overflow": false,
+      "title": "PDF Takeoff Worked Example | PolyPDF Guide"
+    },
+    {
+      "path": "/blog/count-pdf-symbols",
+      "brokenLoadedImages": [],
+      "h1": [
+        "How to Count Symbols in a PDF Drawing"
+      ],
+      "overflow": false,
+      "title": "How to Count Symbols in a PDF Drawing | PolyPDF"
+    },
+    {
+      "path": "/blog/pdf-markup-table-rfi-punch-list",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Use a PDF Markup Table for RFI and Punch-List Review"
+      ],
+      "overflow": false,
+      "title": "PDF Markup Table for RFI and Punch Lists | PolyPDF"
+    },
+    {
+      "path": "/blog/compare-pdf-drawing-revisions",
+      "brokenLoadedImages": [],
+      "h1": [
+        "How to Compare PDF Drawing Revisions"
+      ],
+      "overflow": false,
+      "title": "How to Compare PDF Drawing Revisions | PolyPDF"
+    },
+    {
+      "path": "/blog/create-fillable-pdf-form",
+      "brokenLoadedImages": [],
+      "h1": [
+        "How to Create a Fillable PDF Form"
+      ],
+      "overflow": false,
+      "title": "How to Create a Fillable PDF Form | PolyPDF"
+    },
+    {
+      "path": "/blog/ocr-scanned-pdf-drawings",
+      "brokenLoadedImages": [],
+      "h1": [
+        "How to OCR Scanned PDF Drawings"
+      ],
+      "overflow": false,
+      "title": "OCR Scanned PDF Drawings: Practical Guide | PolyPDF"
+    },
+    {
+      "path": "/blog/digital-signature-vs-visual-signature-vs-seal",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Digital vs Visual PDF Signatures vs Professional Seals"
+      ],
+      "overflow": false,
+      "title": "Digital vs Visual PDF Signatures and Seals | PolyPDF"
+    },
+    {
+      "path": "/blog/redact-and-sanitize-pdf",
+      "brokenLoadedImages": [],
+      "h1": [
+        "How to Redact and Sanitize a PDF: Limits to Know"
+      ],
+      "overflow": false,
+      "title": "Redact and Sanitize a PDF: PolyPDF Limits"
+    },
+    {
+      "path": "/blog/prepare-issued-pdf-set",
+      "brokenLoadedImages": [],
+      "h1": [
+        "How to Prepare an Issued PDF Set"
+      ],
+      "overflow": false,
+      "title": "How to Prepare an Issued PDF Set | PolyPDF"
+    },
+    {
+      "path": "/blog/how-to-use-polypdf-collaboration-beta",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Set Up PolyPDF Collaboration Beta"
+      ],
+      "overflow": false,
+      "title": "How to Use PolyPDF Collaboration Beta"
+    },
+    {
+      "path": "/blog/introducing-polypdf-plugins",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Introducing PolyPDF Plugins"
+      ],
+      "overflow": false,
+      "title": "PolyPDF Plugins: How They Work"
+    },
+    {
+      "path": "/privacy",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Privacy Policy"
+      ],
+      "overflow": false,
+      "title": "Privacy Policy | PolyPDF"
+    },
+    {
+      "path": "/refund",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Refund Policy"
+      ],
+      "overflow": false,
+      "title": "Refund Policy | PolyPDF"
+    },
+    {
+      "path": "/feature-requests",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Help shape the next PolyPDF update."
+      ],
+      "overflow": false,
+      "title": "PolyPDF Feature Requests | Suggest Product Ideas"
+    },
+    {
+      "path": "/support",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Support"
+      ],
+      "overflow": false,
+      "title": "PolyPDF Support | Help With PDF Measurement and Licensing"
+    },
+    {
+      "path": "/windows",
+      "brokenLoadedImages": [],
+      "h1": [
+        "PolyPDF for Windows"
+      ],
+      "overflow": false,
+      "title": "PolyPDF for Windows | PDF Measurement and Markup"
+    },
+    {
+      "path": "/terms",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Terms of Use"
+      ],
+      "overflow": false,
+      "title": "Terms of Use | PolyPDF"
+    },
+    {
+      "path": "/versions",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Version History"
+      ],
+      "overflow": false,
+      "title": "PolyPDF Version History | Release Notes"
+    },
+    {
+      "path": "/revision-packages",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Carry review work forward when the next drawing issue arrives."
+      ],
+      "overflow": false,
+      "title": "Revision Package Workflow for PDF Drawings | PolyPDF"
+    },
+    {
+      "path": "/pdf-takeoff-software",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Turn scaled PDF drawings into an organized takeoff worksheet."
+      ],
+      "overflow": false,
+      "title": "PDF Takeoff Software for Mac & Windows | PolyPDF"
+    },
+    {
+      "path": "/measure-pdf-on-mac",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Measure a PDF on Mac without redrawing it in CAD."
+      ],
+      "overflow": false,
+      "title": "Measure a PDF on Mac | PolyPDF Drawing Tools"
+    },
+    {
+      "path": "/construction-pdf-markup",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Mark up construction PDFs so every comment stays tied to the sheet."
+      ],
+      "overflow": false,
+      "title": "Construction PDF Markup Software | PolyPDF"
+    },
+    {
+      "path": "/visual-search-pdf-count",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Find one drawing symbol, then count matching instances across the PDF."
+      ],
+      "overflow": false,
+      "title": "Visual Search PDF Symbol Count | PolyPDF"
+    },
+    {
+      "path": "/compare-pdf-drawings",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Compare PDF drawings and make revision changes easier to inspect."
+      ],
+      "overflow": false,
+      "title": "Compare PDF Drawings & Revisions | PolyPDF"
+    },
+    {
+      "path": "/cookies",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Cookie Policy"
+      ],
+      "overflow": false,
+      "title": "Cookie Policy | PolyPDF"
+    },
+    {
+      "path": "/accessibility",
+      "brokenLoadedImages": [],
+      "h1": [
+        "Accessibility"
+      ],
+      "overflow": false,
+      "title": "Accessibility | PolyPDF"
+    }
+  ]
+}

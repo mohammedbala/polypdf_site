@@ -77,7 +77,7 @@ const absolute = (route) => {
   if (/\.[a-z0-9]+(?:\?|$)/i.test(route)) return `${ORIGIN}${route}`;
   return `${ORIGIN}${route.replace(/\/+$/, '')}/`;
 };
-const postImagePath = (entry) => `/guides/${entry.slug}.png?v=${SCREENSHOT_IMAGE_VERSION}`;
+const postImagePath = (entry) => `/guides/${entry.slug}.png?v=${entry.imageCacheToken || SCREENSHOT_IMAGE_VERSION}`;
 const publicFileForUrl = (urlPath) => path.join(
   root,
   'public',
@@ -91,8 +91,8 @@ const xmlEscape = (value) => String(value)
   .replaceAll("'", '&apos;');
 
 const validatePosts = () => {
-  assert(guidePosts.length === 12, `Expected exactly 12 guides, found ${guidePosts.length}`);
-  assert(blogPosts.length === 14, `Expected 12 guides plus two product posts, found ${blogPosts.length}`);
+  assert(guidePosts.length === 13, `Expected exactly 13 guides, found ${guidePosts.length}`);
+  assert(blogPosts.length === 16, `Expected 13 guides plus three product posts, found ${blogPosts.length}`);
 
   const fields = [
     ['slug', (value) => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)],
@@ -155,20 +155,20 @@ const buildRouteMetadata = () => {
 };
 
 const STATIC_LASTMOD = Object.freeze({
-  '/': '2026-09-03',
+  '/': '2026-09-07',
   '/buy': '2026-09-03',
   '/build-a-plugin': '2026-08-18',
   '/privacy': '2026-09-03',
   '/refund': '2026-09-03',
-  '/feature-requests': '2026-08-18',
-  '/support': '2026-09-03',
-  '/windows': '2026-09-03',
+  '/feature-requests': '2026-09-07',
+  '/support': '2026-09-07',
+  '/windows': '2026-09-07',
   '/terms': '2026-09-03',
-  '/versions': '2026-09-03',
-  '/revision-packages': '2026-09-03',
-  '/pdf-takeoff-software': '2026-09-03',
-  '/measure-pdf-on-mac': '2026-09-03',
-  '/construction-pdf-markup': '2026-09-03',
+  '/versions': '2026-09-07',
+  '/revision-packages': '2026-09-07',
+  '/pdf-takeoff-software': '2026-09-07',
+  '/measure-pdf-on-mac': '2026-09-07',
+  '/construction-pdf-markup': '2026-09-07',
   '/visual-search-pdf-count': '2026-09-03',
   '/compare-pdf-drawings': '2026-09-03'
 });
@@ -297,9 +297,11 @@ const buildLlmsText = () => {
     '- Symbol Search auto-count (Pro): capture one drawing symbol, review candidate matches, and commit an auditable numbered count series.',
     '- Revision Packages (view and navigation in Free; changes and publication in Pro): import a drawing issue, reconcile sheets, carry reviewed work forward, inspect changes and available quantity or cost impact, review references, and publish a current package with a revision report.',
     '- Local AEC OCR: recover searchable text and current-session structure for schedules, title blocks, drawing labels, dimensions, and spreadsheet-ready tables. Recognition remains best-effort and requires review.',
-    '- Tool Chest: built-in Doors, Windows, Fire Protection, and MUTCD sets, plus BTX, SVG, and DXF import.',
+    '- Tool Chest: built-in Architectural, Landscape, Doors, Windows, Fire Protection, and MUTCD sets, plus BTX, SVG, and DXF import.',
     '- Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.',
-    '- Markup and review: callouts, text, highlights, shapes, freehand, stamps, revision clouds, the Markup Table, and drawing-revision comparison.',
+    '- Markup and review: callouts, text, highlights, shapes, freehand, interactive stamps, revision clouds, the Markup Table, and drawing-revision comparison. In 1.5.1, new interactive stamps start on a blank canvas; Add to toolset is optional and unchecked by default.',
+    '- Presentation Mode: open a PDF, choose View > Presentation Mode, use arrow keys for pages and Escape to exit.',
+    '- New metric dimensions default to millimetres. Explicit formats in existing documents are preserved; metric area and volume remain in square and cubic metres.',
     '- Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.',
     '- Pro plugins included with the app: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic, and PDF Maps places a map image for an address or place name. AISC Steel Sections performs no capacity or design checks, and a seal graphic is drafting artwork rather than a cryptographic digital signature: PolyPDF does not check licensure or board compliance.',
     '- Redaction can remove text mapped to supported PDF text-show operators, but it is not fail-closed for every content type: vector or outlined content and some nested images can remain under a black fill. Sanitize Document cleans selected structures but can miss some direct attachments and nested actions. Independently inspect sensitive output and use an approved specialist workflow when complete removal matters.',

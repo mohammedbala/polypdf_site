@@ -5,7 +5,7 @@ const createFillablePdfFormGuide = {
   title: 'How to Create a Fillable PDF Form',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-03',
+  dateModified: '2026-09-07',
   author: 'The PolyPDF team',
   readingTime: '10 min read',
   tag: 'Forms',
@@ -40,6 +40,10 @@ const createFillablePdfFormGuide = {
     'fillable PDF on Windows'
   ],
   sections: [
+    { icon: 'seal', title: 'A form or an interactive stamp?', body: [
+      { kind: 'p', text: 'Use AcroForm fields when recipients should fill in the PDF itself. Use the interactive stamp builder in 1.5.1 for a reusable review mark whose values are entered when it is placed. The saved stamp is an annotation appearance; it does not add fillable AcroForm fields or execute imported stamp JavaScript.' },
+      { kind: 'link', label: 'Build an interactive review stamp', href: '/blog/create-interactive-pdf-stamps/' }
+    ] },
     {
       icon: 'document',
       title: 'Start with a compatible PDF and a field plan',

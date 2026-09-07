@@ -25,6 +25,8 @@ import { captureAttribution } from '../lib/attribution';
 import { usePlatform } from '../lib/platform';
 import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
 import siteRelease from '../lib/siteRelease.json';
+import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
+import { releaseAnswer } from '../lib/releaseHighlights';
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
 import shotSymbolSearch768 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-768.webp';
 import shotSymbolSearch1536 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-1536.webp';
@@ -194,7 +196,7 @@ export const featureFamilies = [
   },
   {
     family: 'Markup & coordination',
-    tools: 'Callouts · notes · highlights · shapes · comments · Markup Table',
+    tools: 'Interactive stamps · callouts · notes · highlights · comments · Markup Table',
     outcome: 'RFIs, review status, and discussion directly on the PDF'
   },
   {
@@ -214,7 +216,7 @@ export const featureFamilies = [
   },
   {
     family: 'Libraries & standards',
-    tools: 'Doors · Windows · Fire Protection · MUTCD · BTX, SVG, and DXF import',
+    tools: 'Architectural · Landscape · Doors · Windows · Fire Protection · MUTCD · BTX, SVG, DXF import',
     outcome: 'Place consistent project and standards content quickly'
   },
   {
@@ -224,7 +226,7 @@ export const featureFamilies = [
   },
   {
     family: 'Desktop workflow',
-    tools: 'macOS · Windows · local core PDF work · Excel, CSV, and PDF export',
+    tools: 'macOS · Windows · Presentation Mode · local PDF work · Excel, CSV, PDF export',
     outcome: 'Work in a native app and hand off familiar file formats'
   }
 ];
@@ -251,8 +253,8 @@ export const homeFaqs = [
     answer: 'PolyPDF is a desktop PDF drawing app for Mac and Windows. It combines markup, calibrated measurement and takeoff, Symbol Search, local AEC OCR, forms, signatures, document preparation, and revision management in one workspace.'
   },
   {
-    question: `What is new in PolyPDF ${releaseSeries}?`,
-    answer: `Version ${releaseSeries} adds portable Revision Packages. Import a new drawing issue, reconcile its sheets, carry reviewed work forward, inspect changes and available quantity or cost impact, review references, and publish a current package with a revision report.`
+    question: `What is new in PolyPDF ${siteRelease.version}?`,
+    answer: releaseAnswer
   },
   {
     question: 'What can I do before I pay?',
@@ -346,11 +348,32 @@ const revisionPackageSteps = [
   ['05', 'Publish', 'Create the current package and revision report together.']
 ];
 
+const LatestReleaseSpotlight = () => (
+  <section className="revision-release latest-release" id="latest-release" aria-labelledby="latest-release-title">
+    <div className="container revision-release-shell">
+      <div className="revision-release-copy">
+        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> New in PolyPDF {siteRelease.version} · Mac &amp; Windows</span>
+        <h2 id="latest-release-title">Create your own review stamps.</h2>
+        <p>Start from a blank canvas, arrange your fields, and choose fixed text, automatic values, or a prompt. Save the stamp to a toolset when you want to use it again.</p>
+        <p>Version 1.5.1 also brings expanded symbol libraries, Presentation Mode, millimetre defaults for new metric dimensions, and improvements to navigation and saved appearances.</p>
+        <Link className="secondary-btn revision-release-link" to="/blog/create-interactive-pdf-stamps/">Create your first interactive stamp <ArrowRight aria-hidden="true" weight="bold" /></Link>
+        <p className="revision-release-access"><Link to="/blog/polypdf-1-5-1/">See everything in 1.5.1</Link></p>
+      </div>
+      <figure className="revision-release-visual">
+        <a href={stampBuilderImage} aria-label="Open the full-size PolyPDF 1.5.1 stamp builder screenshot">
+          <img src={stampBuilderImage} alt="PolyPDF 1.5.1 stamp builder with a REVIEWED heading, reviewer, automatic date, and optional toolset saving" width="1233" height="768" loading="lazy" />
+        </a>
+        <figcaption>Actual 1.5.1 Mac interface with fictional sample details. The same stamp workflow ships on Windows.</figcaption>
+      </figure>
+    </div>
+  </section>
+);
+
 const RevisionPackageSpotlight = () => (
   <section className="revision-release" id="revision-packages" aria-labelledby="revision-release-title">
     <div className="container revision-release-shell">
       <div className="revision-release-copy">
-        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> New in PolyPDF {releaseSeries}</span>
+        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Revision Packages · introduced in {releaseSeries}</span>
         <h2 id="revision-release-title">Take the review with you into the next drawing issue.</h2>
         <p>
           Revision Packages keep source files, sheet history, carried review work, reference
@@ -377,7 +400,7 @@ const RevisionPackageSpotlight = () => (
       <figure className="revision-release-visual">
         <div className="revision-release-window-label">
           <span aria-hidden="true" />
-          {`Authentic ${siteRelease.version} build ${siteRelease.build} interface`}
+          Authentic 1.5.0 build 22 interface
         </div>
         <img
           src={shotRevisionPackage768}
@@ -781,7 +804,7 @@ const Home = () => {
           <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
             <a href="#features" onClick={closeMobileMenu}>Features</a>
-            <a href="#revision-packages" onClick={closeMobileMenu}>What’s new</a>
+            <a href="#latest-release" onClick={closeMobileMenu}>What’s new</a>
             <Link to="/blog/" onClick={closeMobileMenu}>Guides</Link>
             <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
             <DirectCheckoutLink
@@ -882,6 +905,7 @@ const Home = () => {
         </div>
       </section>
 
+      <LatestReleaseSpotlight />
       <RevisionPackageSpotlight />
 
       <PricingSection offer={offer} onDownload={handleDownloadClick} primaryPlatform={primaryPlatform} />

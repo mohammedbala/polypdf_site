@@ -1,0 +1,138 @@
+Local checkout path abbreviated; UI values unchanged.
+Window: "PolyPDF", App: PolyPDF.
+0 standard window PolyPDF, Secondary Actions: Raise
+	1 container PolyPDF
+		2 container
+			3 HTML content PolyPDF, URL: file://<desktop-checkout>/polypdf/.tmp/sparkle-private-1.5.1-23/install/PolyPDF.app/Contents/Resources/app.asar/dist/renderer/index.html
+				4 container
+					5 tab group Open documents
+						6 tab (selected) PolyPDF Quick Start.pdf Close tab, Help: PolyPDF Quick Start.pdf - Edited, Value: 1
+						7 button Open another PDF
+					8 container Annotation toolbar
+						9 button Undo (⌘Z)
+						10 button (disabled) Redo (⇧⌘Z)
+						11 button New PDF (⌘N)
+						12 button Open (⌘O)
+						13 button Save (⌘S)
+						14 button Print (⌘P)
+						15 button Email PDF (⇧⌘E)
+						16 button Rotate Left
+						17 button Rotate Right
+						18 button Cut (⌘X)
+						19 button Copy (⌘C)
+						20 button Paste (⌘V)
+						21 button Format Painter (F)
+						22 button Delete (⌫)
+						23 button Hyperlink (I)
+						24 button Flatten
+						25 button Snapshot (⌃G)
+						26 button Redact
+						27 button Rectangle (R)
+						28 button Circle (O)
+						29 button Arc (⇧O)
+						30 button Cloud (C)
+						31 button Arrow (A)
+						32 button Line (L)
+						33 button Polyline (Y)
+						34 button Polygon (P)
+						35 button Pen (N)
+						36 button Highlight (H)
+						37 button Text (T)
+						38 button Callout (Q)
+						39 button Dimension (D)
+						40 button Stamp (K): Approved
+						41 pop up button Choose Stamp: Approved
+						42 button Image Stamp
+						43 button Linear Dimension (⇧L)
+						44 button Area (⇧A)
+						45 button Perimeter (⇧E)
+						46 button Diameter
+						47 button Radius
+						48 button Path Length (⇧Y)
+						49 button Angle (⇧Q)
+						50 button Count (⇧K)
+						51 button Symbol Search
+						52 button Measurement Settings
+						53 button Upgrade to PolyPDF Pro
+					54 container Style toolbar
+						55 text BORDER:
+						56 button Border Color
+						57 button ⌄, Help: Border Type: Solid
+						58 container Border Width
+							59 text 0 pt
+							60 button Increase Border Width
+							61 button Decrease Border Width
+						62 text IMAGE:
+						63 button 100% ⌄, Help: Stamp Opacity: 100%
+							64 text 100%
+							65 text ⌄
+						66 button Normal ⌄, Help: Recolor: Normal
+							67 text Normal
+							68 text ⌄
+					69 container Sidebar
+						70 button Thumbnails
+						71 button Search
+						72 button Bookmarks
+						73 button Forms
+						74 button Signatures
+						75 button Measurements
+						76 button Scale Regions
+						77 button Workspaces
+						78 button Layers
+						79 button Attachments
+						80 button Tools
+						81 button Plugins
+						82 button Inspector
+						83 pop up button Settings
+					84 container
+						85 image
+						86 image
+						87 image
+						88 image
+						89 image
+						90 image
+						91 button Drawing Review
+							92 image Drawing Review
+					93 container Viewer status and navigation
+						94 button Show Markup Table
+						95 button Split Vertical (⌃2)
+						96 button Split Horizontal (⌃H)
+						97 button Single Page (⌃4)
+						98 button Continuous Scroll (⌃5)
+						99 button Side-by-Side (⌃6)
+						100 button Text Selection
+						101 button Current Tool
+						102 text Placed Drawing Review.
+						103 button (disabled) First Page (⌘Home)
+						104 button (disabled) Previous Page (PgUp)
+						105 text field (settable) Description: Go to page, Value: 1
+						106 text /1
+						107 button (disabled) Next Page (PgDn)
+						108 button (disabled) Last Page (⌘End)
+						109 toggle button Description: Snapping Off — click to enable Markup and Content; right-click for options, Value: 0
+						110 toggle button Description: Guidelines Off — click to show, Value: 0
+						111 toggle button Description: Helper Dimensions Off — click to enable Auto and Annotation; right-click for options, Value: 0
+						112 button Fit Width (⌃0)
+						113 button Fit Height (⌃1)
+						114 button Fit Page (⌃9)
+						115 button Zoom
+						116 button Zoom Out (⌘-)
+						117 button Zoom In (⌘=)
+						118 text 24.0" x 18.0"
+						119 button Help: Page 1 has no drawing scale, so measurements read in PDF points. Click to set one., Description: Drawing scale: Not scaled. Page 1 has no drawing scale, so measurements read in PDF points. Click to set one.
+							120 text SCALE
+							121 text Not scaled
+	122 close button
+	123 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	124 minimize button
+125 menu bar
+	126 PolyPDF
+	127 File
+	128 Edit​
+	129 View
+	130 Document
+	131 Tools
+	132 Window
+	133 Help
+
+The focused UI element is 3 HTML content PolyPDF, URL: file://<desktop-checkout>/polypdf/.tmp/sparkle-private-1.5.1-23/install/PolyPDF.app/Contents/Resources/app.asar/dist/renderer/index.html

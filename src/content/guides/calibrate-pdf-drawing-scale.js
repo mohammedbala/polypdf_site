@@ -7,7 +7,7 @@ const post = {
   title: 'How to Calibrate a PDF Drawing Scale',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-03',
+  dateModified: '2026-09-07',
   author: 'The PolyPDF team',
   readingTime: '8 min read',
   tag: 'Measure & Takeoff',
@@ -40,6 +40,7 @@ const post = {
     'construction drawing scale'
   ],
   sections: [
+    { icon: 'ruler', title: 'Metric dimensions in 1.5.1', body: [{ kind: 'p', text: "In PolyPDF 1.5.1, new metric dimensions default to millimetres. Existing documents retain their explicit display formats, and metric area and volume remain in square and cubic metres. Changing the displayed unit does not establish the page scale: verify a known dimension after any scale or unit change." }] },
     {
       icon: 'ruler',
       title: 'Pick the right calibration path',

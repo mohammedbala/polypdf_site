@@ -8,7 +8,7 @@ const post = {
   title: 'How to Measure PDF Area with Cutouts and Depth',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-03',
+  dateModified: '2026-09-07',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Measure & Takeoff',
@@ -41,6 +41,7 @@ const post = {
     'PDF hatch scale'
   ],
   sections: [
+    { icon: 'ruler', title: 'Metric dimensions in 1.5.1', body: [{ kind: 'p', text: "In PolyPDF 1.5.1, new metric dimensions default to millimetres. Existing documents retain their explicit display formats, and metric area and volume remain in square and cubic metres. Changing the displayed unit does not establish the page scale: verify a known dimension after any scale or unit change." }] },
     {
       icon: 'ruler',
       title: 'Calibrate first, then define what “area” means',
@@ -169,7 +170,7 @@ const post = {
         {
           kind: 'p',
           text:
-            'A selected area measurement exposes a Depth field. Enter a positive real-world length in the current measurement format—for example, 4 inches, 0.1 metres, or 1 foot 6 inches. PolyPDF multiplies the net area by that depth and changes the worksheet quantity kind from Area to Volume. Clear the field to return to an area quantity.'
+            'A selected area measurement exposes a Depth field. Enter a positive real-world length in the current measurement format—for example, 4 inches, 100 millimetres, or 1 foot 6 inches. Confirm the active input unit before typing a bare number. PolyPDF multiplies the net area by that depth and changes the worksheet quantity kind from Area to Volume. Clear the field to return to an area quantity.'
         },
         {
           kind: 'formula',

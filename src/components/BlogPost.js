@@ -376,9 +376,15 @@ const BlogPost = () => {
 
               {(entry.lastVerified || entry.productVersion || platforms) && (
                 <dl className="blog-verification" aria-label="Guide verification details">
+                  {entry.releaseReviewed && (
+                    <div>
+                      <dt>Release review</dt>
+                      <dd>Aligned with PolyPDF {entry.releaseReviewVersion} on <time dateTime={entry.releaseReviewed}>{dateLabel(entry.releaseReviewed)}</time>.{!String(entry.productVersion).startsWith('PolyPDF 1.5.1') && ' Earlier walkthroughs and screenshots retain their versions below.'}</dd>
+                    </div>
+                  )}
                   {entry.lastVerified && (
                     <div>
-                      <dt>Last verified</dt>
+                      <dt>Walkthrough verified</dt>
                       <dd><time dateTime={lastVerifiedMachineDate}>{dateLabel(entry.lastVerified)}</time></dd>
                     </div>
                   )}

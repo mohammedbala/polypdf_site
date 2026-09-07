@@ -63,7 +63,8 @@ const website = () => ({
 
 // Feature phrasing mirrors the product's own claims — reviewed for accuracy, never expanded here.
 const FEATURE_LIST = [
-  'PDF markup and annotation: callouts, revision clouds, highlights, shapes, stamps',
+  'PDF markup and annotation: callouts, revision clouds, highlights, shapes, interactive stamps built on a blank canvas with optional toolset saving',
+  'Presentation Mode for focused PDF viewing and page navigation',
   'Measurement calibration with distance, area, perimeter, angle, radius, diameter, count, and dimension tools',
   'Takeoff worksheets with Excel, CSV, and PDF export',
   'Symbol Search (formerly Visual Search): capture one drawing symbol and auto-count matching instances',
@@ -76,7 +77,7 @@ const FEATURE_LIST = [
   'Redaction for supported searchable text, with documented limits for vector, outlined, image, and nested content',
   'Automatic sheet hyperlinking for NCS sheet numbers',
   'Save markups as SVG, PNG, JPEG, or DXF',
-  'Tool Chest libraries with built-in Doors, Windows, Fire Protection, and MUTCD sets plus BTX, SVG, and DXF import',
+  'Tool Chest libraries with built-in Architectural, Landscape, Doors, Windows, Fire Protection, and MUTCD sets plus BTX, SVG, and DXF import',
   'Declarative plugin platform with permission checks and host-owned generators'
 ];
 

@@ -2,8 +2,8 @@ import { guidePosts } from './index';
 
 const valuesAreUnique = (values) => new Set(values.map((value) => value.toLowerCase())).size === values.length;
 
-test('publishes one deliberate set of exactly twelve distinct guides', () => {
-  expect(guidePosts).toHaveLength(12);
+test('publishes one deliberate set of exactly thirteen distinct guides', () => {
+  expect(guidePosts).toHaveLength(13);
   expect(valuesAreUnique(guidePosts.map(({ slug }) => slug))).toBe(true);
   expect(valuesAreUnique(guidePosts.map(({ title }) => title))).toBe(true);
   // The first keyword is the guide's primary search/answer intent rather than a hidden second list.
@@ -52,7 +52,7 @@ test('high-risk product limits stay explicit in the public guides', () => {
   expect(redaction).toContain('the black area is never the check');
   expect(redaction).toContain('direct FileAttachment annotation and its embedded payload survived');
   expect(redaction).toContain('new PolyPDF /Producer and /ModDate');
-  expect(issuedSet).toContain('No user-facing cross-file Batch Process is exposed in build 22');
+  expect(issuedSet).toContain('No user-facing cross-file Batch Process is exposed in build 23');
   expect(issuedSet).toContain('10 automated checks');
   expect(takeoff).toContain('12 committed Supply diffuser counts');
   expect(takeoff).toContain('depends on your drawing, its calibration, and the boundary you choose to trace');

@@ -37,7 +37,7 @@ test('the image sitemap and RSS expose one truthful public screenshot for every 
 
   blogPosts.forEach((entry) => {
     const publicPath = path.join(process.cwd(), 'public', 'guides', `${entry.slug}.png`);
-    const imageUrl = `https://www.polypdf.com/guides/${entry.slug}.png?v=${screenshotImageVersion}`;
+    const imageUrl = `https://www.polypdf.com/guides/${entry.slug}.png?v=${entry.imageCacheToken || screenshotImageVersion}`;
     expect(sitemap).toContain(
       `<image:loc>${imageUrl}</image:loc>`
     );

@@ -6,7 +6,25 @@
     <atom:link href="https://www.polypdf.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Practical guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>PolyPDF 1.5.1: Interactive Stamps and Clearer Drawing Review</title>
+      <link>https://www.polypdf.com/blog/polypdf-1-5-1/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/polypdf-1-5-1/</guid>
+      <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Build interactive stamps, explore expanded symbol libraries, and present PDFs. Version 1.5.1 also improves navigation, saved appearances, and responsiveness.</description>
+      <category>Release</category>
+      <enclosure url="https://www.polypdf.com/guides/polypdf-1-5-1.png?v=1.5.1-23" length="256312" type="image/png" />
+    </item>
+    <item>
+      <title>Create Interactive PDF Review Stamps</title>
+      <link>https://www.polypdf.com/blog/create-interactive-pdf-stamps/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/create-interactive-pdf-stamps/</guid>
+      <pubDate>Mon, 07 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Build a review stamp from a blank canvas, arrange its fields, ask for details when placing it, and choose whether to save it for reuse.</description>
+      <category>Markup &amp; Review</category>
+      <enclosure url="https://www.polypdf.com/guides/create-interactive-pdf-stamps.png?v=1.5.1-23" length="256312" type="image/png" />
+    </item>
     <item>
       <title>How to Calibrate a PDF Drawing Scale</title>
       <link>https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/</link>

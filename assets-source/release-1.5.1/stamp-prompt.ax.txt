@@ -1,0 +1,39 @@
+Local checkout path abbreviated; UI values unchanged.
+Window: "PolyPDF", App: PolyPDF.
+0 standard window PolyPDF, Secondary Actions: Raise
+	1 container PolyPDF
+		2 container
+			3 HTML content PolyPDF, URL: file://<desktop-checkout>/polypdf/.tmp/sparkle-private-1.5.1-23/install/PolyPDF.app/Contents/Resources/app.asar/dist/renderer/index.html
+				4 container Drawing Review
+					5 heading Drawing Review, Value: 2
+						6 text Drawing Review
+					7 container
+						8 text Enter the details for this placement. Automatic values are refreshed each time.
+						9 image Stamp preview
+						10 text Review status
+						11 text field (disabled) Review status, Value: REVIEWED
+						12 text Reviewer *
+						13 text field (settable) Reviewer *, Value: Morgan Lee
+						14 text Review date
+						15 text field (disabled) Review date, Value: 9/7/2026
+					16 container
+						17 button Cancel
+						18 button Place Stamp
+	19 close button
+	20 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	21 minimize button
+22 menu bar
+	23 PolyPDF
+	24 File
+	25 Edit​
+	26 View
+	27 Document
+	28 Tools
+	29 Window
+	30 Help
+
+Selected text: ```
+Morgan Lee
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).
