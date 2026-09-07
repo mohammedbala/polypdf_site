@@ -1,158 +1,52 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
-import { motion } from 'framer-motion';
-import {
-  FaArrowLeft,
-  FaEnvelope,
-  FaLock,
-  FaShieldAlt,
-  FaUserShield
-} from 'react-icons/fa';
-import parrotIcon from '../assets/polypdf_icon-96.png';
+import LegalPage from './LegalPage';
+import { openCookieSettings } from '../lib/consent';
 
-const sections = [
-  {
-    icon: <FaShieldAlt />,
-    title: 'Information we collect',
-    content: [
-      'When you browse the website, we may receive basic technical information such as IP address, browser type, and page requests from our hosting and security providers.',
-      'The website stores short campaign codes such as source and UTM parameters for up to 30 days so a checkout can be attributed to the page or app placement that led to it. These codes do not contain document names or document content.',
-      'Google Analytics and Google Ads measure website visits, acquisition sources, and completed purchases. A completed-purchase event contains a Stripe transaction identifier, order value, currency, and product name, but not your email address, license key, document name, or document content.',
-      'When you purchase or activate a direct license, we may receive your email address, order identifiers, license status, app version, activation timestamps, and device or instance identifiers needed to manage the license.',
-      'The desktop app sends diagnostics only when you explicitly opt in. This may include a compact redacted error report and fixed product milestones such as opening the sample drawing, setting page scale, making a first measurement, or exporting results. Milestones contain no free-text field; diagnostics do not intentionally include PDF contents or filenames.',
-      'AEC OCR, structured table recognition, measurement, and Revision Package analysis run locally. Revision Packages copy source evidence into the project location you choose and write published outputs there; PolyPDF does not upload that project to a PolyPDF cloud service.',
-      'Collaboration Beta exchanges approved review data through the customer-owned host and mounted company share configured by the organization. PolyPDF does not host the drawing room for that workflow.',
-      'PolyPDF is designed so that your PDF documents and measurement content stay on your device unless you explicitly export, share, or sync them through a service you choose.'
-    ]
-  },
-  {
-    icon: <FaLock />,
-    title: 'How we use information',
-    content: [
-      'Provide downloads, license reactivation, license activation, updates, order lookup, and customer support.',
-      'Protect the service against fraud, abuse, and failed or duplicated activations.',
-      'Measure whether advertising and website pages lead to completed purchases, without using that data for ad personalization.',
-      'Understand crashes, app version adoption, and content-free activation milestones needed to improve the first-use experience.'
-    ]
-  },
-  {
-    icon: <FaUserShield />,
-    title: 'Sharing and processors',
-    content: [
-      'Payments for direct purchases are processed by Stripe.',
-      'Transactional license emails may be sent through Resend or another email provider.',
-      'Infrastructure providers such as our web host, CDN, update host, analytics or crash tools, and payment tools may process data on our behalf to deliver the service.',
-      'We do not sell your personal information.'
-    ]
-  }
-];
-
-const Privacy = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  return (
-    <div className="legal-page privacy">
-      <header className="legal-header">
-        <nav className="nav container">
-          <Link to="/" className="logo">
-            <img src={parrotIcon} alt="PolyPDF" width="96" height="96" />
-            <span>PolyPDF</span>
-          </Link>
-          <Link to="/" className="back-link">
-            <FaArrowLeft /> Back to Home
-          </Link>
-        </nav>
-      </header>
-
-      <motion.main
-        className="legal-content"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="container">
-          <div className="legal-hero">
-            <h1>Privacy Policy</h1>
-            <p className="legal-subtitle">How PolyPDF handles website and direct-download data</p>
-            <p className="last-updated">Last updated: September 3, 2026</p>
-          </div>
-
-          <div className="legal-intro">
-            <p>
-              This Privacy Policy explains what information PolyPDF collects, how it is used,
-              and how it is shared when you use the website, buy a direct license, or use the app.
-            </p>
-          </div>
-
-          <div className="legal-sections">
-            {sections.map((section, index) => (
-              <motion.section
-                key={section.title}
-                className="legal-section"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
-              >
-                <div className="section-header">
-                  <div className="section-icon">{section.icon}</div>
-                  <h2>{section.title}</h2>
-                </div>
-                <ul className="section-content">
-                  {section.content.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </motion.section>
-            ))}
-          </div>
-
-          <section className="legal-section">
-            <h2>Retention</h2>
-            <ul className="section-content">
-              <li>License records are retained while needed to provide a perpetual license, prevent fraud, handle refunds, and meet legal obligations. Financial records are retained for applicable tax and accounting obligations.</li>
-              <li>Diagnostic error reports and opt-in activation milestones stored by PolyPDF are deleted after 90 days. Expired PolyPDF magic links and account sessions are removed automatically.</li>
-              <li>Website campaign attribution codes are stored in your browser for up to 30 days and may be cleared at any time through your browser settings.</li>
-              <li>Google Analytics and Google Ads may store browser identifiers used to attribute a visit and a completed purchase. You can clear or block these identifiers through your browser settings.</li>
-              <li>Web-server and provider logs are retained for operational and security purposes under the applicable host or processor retention schedule.</li>
-            </ul>
-          </section>
-
-          <section className="legal-section">
-            <h2>Your choices</h2>
-            <ul className="section-content">
-              <li>You can choose not to purchase Pro and continue using the free tier within its limits where available.</li>
-              <li>You can keep diagnostic sharing off; it is off by default and can be changed in app settings.</li>
-              <li>You can request deletion of support or account-related records where deletion is legally permitted and operationally possible.</li>
-              <li>You can stop using the app at any time by uninstalling it and deactivating the license on that computer if needed.</li>
-            </ul>
-          </section>
-
-          <section className="legal-section">
-            <h2>Third-party terms</h2>
-            <p>
-              Payment, order management, license email, analytics, and infrastructure functions
-              may be subject to the privacy terms of the provider handling that function, including
-              Stripe, Resend, analytics providers, crash-reporting providers, and our hosting providers.
-            </p>
-          </section>
-
-          <section className="legal-section">
-            <h2>Contact</h2>
-            <p>If you have questions about this policy, contact:</p>
-            <div className="contact-info">
-              <a href="mailto:support@polypdf.com" className="contact-link">
-                <FaEnvelope /> support@polypdf.com
-              </a>
-            </div>
-          </section>
-        </div>
-      </motion.main>
-
-    </div>
-  );
-};
-
-export default Privacy;
+export default function Privacy() {
+  return <LegalPage title="Privacy Policy" subtitle="Your information, the services we use, and your choices">
+    <section className="legal-section"><h2>Who is responsible</h2>
+      <p>Euclidean Software LLC operates PolyPDF and is responsible for the personal information described here. Contact <a href="mailto:support@polypdf.com?subject=Privacy%20request">support@polypdf.com</a> with a privacy question or request. This policy covers polypdf.com, direct purchases, licensing, support, and the desktop app. An employer or organisation operating a collaboration host is responsible for its own handling of shared project data.</p>
+    </section>
+    <section className="legal-section"><h2>Information we receive and why</h2><ul className="section-content">
+      <li><strong>Website access:</strong> our host receives IP addresses, browser information, requested URLs and request times to deliver pages and downloads, keep services secure and diagnose failures. Avoid putting personal or confidential information into URLs.</li>
+      <li><strong>Purchases and licensing:</strong> you and Stripe provide checkout email, billing or tax information where applicable, payment status, receipts and order identifiers. We use these to fulfil orders, deliver license keys, provide account access, process refunds and keep required financial records. Stripe handles payment credentials; the website does not collect your full card details.</li>
+      <li><strong>Activation and updates:</strong> the app contacts licensing and update services with information such as app version, license status, activation timestamps and a random device identifier or its derived hash. These checks manage activation limits, prevent abuse and provide updates. They are separate from optional diagnostics.</li>
+      <li><strong>Support and feature requests:</strong> we receive your email, correspondence and any files you choose to send. We use them to answer your request and investigate the issue. Please start with a description and avoid sending full license keys, confidential drawings or other people's personal information.</li>
+      <li><strong>Optional website measurement:</strong> only with your choice, Google Analytics measures visits and interactions and Google Ads measures advertising results. Verified purchase events include an order identifier, value, currency and product, without your email, license key, PDF names or PDF content. Campaign source and UTM codes are stored only with advertising-measurement consent. We do not enable advertising personalization or Google signals in the website tag.</li>
+      <li><strong>Optional desktop diagnostics:</strong> sharing is off by default and controlled in app settings. Reports can include app and operating-system information, a pseudonymous device identifier, redacted errors and fixed first-use milestones. Redaction aims to remove paths and filenames; do not include sensitive information in reports or support messages.</li>
+    </ul><p>Information is received from you, your browser or app, and the payment, email and infrastructure providers involved in the service you request. Purchase and activation information is needed to provide a paid license; declining optional tracking does not prevent downloads, purchases or account use.</p></section>
+    <section className="legal-section"><h2>Your documents and connected features</h2>
+      <p>Core PDF viewing, measurement, markup and editing run locally. The app can keep recovery snapshots, save backups, preferences and recent-file records on your computer. These can contain document data and depend on your computer's access controls and backups; uninstalling the app may leave its support files behind.</p>
+      <p>Documents may leave your device when you choose to share, export or use a connected workflow. Collaboration uses a customer-managed host and file share. PDF Maps may send map-area or search requests to the chosen map service. Optional timestamping sends a document digest to a timestamp provider. Email, storage, plugins and other services you choose have their own data practices. Review your organisation's policies before using them with confidential work.</p>
+    </section>
+    <section className="legal-section"><h2>Legal bases where UK or European data protection law applies</h2><ul className="section-content">
+      <li><strong>Contract:</strong> processing necessary to take the steps you request before a purchase, fulfil it, provide licensing and account access, and deliver related support.</li>
+      <li><strong>Legitimate interests:</strong> securing and maintaining our services, preventing fraud or abuse, and responding to enquiries, subject to your rights and interests.</li>
+      <li><strong>Legal obligations:</strong> tax and accounting records, legally required disclosures and applicable consumer rights.</li>
+      <li><strong>Consent:</strong> optional website analytics, advertising measurement and optional desktop diagnostics. Consent can be withdrawn for future collection without affecting processing that was lawful before withdrawal.</li>
+    </ul></section>
+    <section className="legal-section"><h2>Providers and international processing</h2>
+      <p>Providers receive information needed for their role. They include <a href="https://stripe.com/privacy">Stripe</a> for payments, fraud prevention and receipts; <a href="https://resend.com/legal/privacy-policy">Resend</a> for transactional email; <a href="https://www.digitalocean.com/legal/privacy-policy">DigitalOcean</a> for hosting; and, when enabled, <a href="https://policies.google.com/privacy">Google</a> for website and advertising measurement. Support email and update delivery also involve email and infrastructure providers. Payment providers may act independently for their own fraud-prevention and legal obligations.</p>
+      <p>These providers may process information in the United States and other countries, whose laws may differ from your own. Their published policies describe their processing locations and transfer arrangements. Contact us to request details of the providers and transfer safeguards relevant to your information. We may also disclose information when required by law or necessary to establish or defend legal claims.</p>
+    </section>
+    <section className="legal-section"><h2>Retention</h2><ul className="section-content">
+      <li>License and activation records are retained while needed to service the perpetual license, manage activations, resolve disputes and prevent fraud. Financial and transaction records are kept as required by applicable tax and accounting law.</li>
+      <li>PolyPDF-hosted diagnostic errors and opt-in activation milestones expire after 90 days. Expired account magic links and sessions are removed automatically. Sign-in links expire after one hour; an account session lasts up to 30 days or until sign-out.</li>
+      <li>Cookie choices are remembered for 180 days. Consented campaign codes and local purchase-deduplication records have a 30-day validity period. Expired local records are removed when the site next checks them; clearing your browser's site data removes them sooner.</li>
+      <li>Support correspondence is kept as needed to resolve and follow up on your request, maintain the relevant service history and address legal claims. Operational logs and provider records follow their service and security retention schedules. Contact us about a particular record or a deletion request.</li>
+    </ul><p>The <Link to="/cookies/">Cookie Policy</Link> describes browser storage separately. Revoking tracking does not automatically erase information already received by providers; contact us for a data-rights request.</p></section>
+    <section className="legal-section"><h2>Your rights and privacy choices</h2>
+      <p>Depending on your location and the law that applies, you may request access, a copy, correction, deletion or portability of your personal information, restriction of processing, or object to processing based on legitimate interests. You can withdraw optional consent. We may need proportionate verification before responding and may retain information where a legal obligation or another lawful exception applies. We explain a refusal and any available appeal process.</p>
+      <p>Email <a href="mailto:support@polypdf.com?subject=Privacy%20request">support@polypdf.com</a> with your request and the email used for the relevant interaction. Do not send a password, full license key or identity document in the first message. An authorised agent may contact us on your behalf; we may verify their authority. We respond within applicable legal time limits and do not deny access to ordinary website features because you exercise a privacy right.</p>
+      <p>We do not sell personal information for money. Advertising disclosures can nevertheless count as a “sale” or “sharing” under some privacy laws. Our advertising measurement is off until you allow it. Use <button type="button" className="cookie-settings-button" onClick={openCookieSettings}>Cookie settings / Do not sell or share</button> to refuse or withdraw it. This site honours Global Privacy Control and Do Not Track by keeping all optional website tracking off in that browser. Choices apply to this browser; make the choice on each browser you use.</p>
+      <p>You may complain to your local data protection authority. UK visitors can contact the <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner's Office</a>; EEA visitors can contact their national supervisory authority. You do not have to contact us first.</p>
+    </section>
+    <section className="legal-section"><h2>Children and automated decisions</h2>
+      <p>PolyPDF is intended for professional and general desktop document work, not directed at children under 13. We do not knowingly collect personal information from children under 13. Contact us if you believe a child has provided it. We use automated payment and activation checks to enforce license and security rules; contact support if a check incorrectly blocks your purchase or license.</p>
+    </section>
+    <section className="legal-section"><h2>Changes to this notice</h2>
+      <p>We update the date when this notice changes. A new optional tracking purpose requires a new choice before it is enabled. Material changes will be brought to your attention as required by applicable law.</p>
+    </section>
+  </LegalPage>;
+}

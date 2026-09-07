@@ -1,6 +1,10 @@
 import React from 'react';
-import { MotionConfig } from 'framer-motion';
+import { SiteMotionProvider } from './components/SiteMotion';
+import CheckoutReviewProvider from './components/CheckoutReview';
 import { Route, Routes } from 'react-router';
+import Cookies from './components/Cookies';
+import Accessibility from './components/Accessibility';
+import CookieConsent from './components/CookieConsent';
 import Account from './components/Account';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
@@ -28,8 +32,10 @@ const AppRoutes = () => {
   return (
     <div className="App">
       <RouteMetadata />
-      <MotionConfig reducedMotion="user">
+      <SiteMotionProvider>
+      <CheckoutReviewProvider>
         <a className="site-skip-link" href="#site-content">Skip to content</a>
+        <CookieConsent />
         <div id="site-content" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -43,6 +49,8 @@ const AppRoutes = () => {
             <Route path="/build-a-plugin" element={<BuildYourOwnPlugin />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/cookies" element={<Cookies />} />
+            <Route path="/accessibility" element={<Accessibility />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/refund" element={<Refund />} />
             <Route path="/feature-requests" element={<FeatureRequests />} />
@@ -60,7 +68,8 @@ const AppRoutes = () => {
           </Routes>
         </div>
         <SiteFooter />
-      </MotionConfig>
+      </CheckoutReviewProvider>
+      </SiteMotionProvider>
     </div>
   );
 };

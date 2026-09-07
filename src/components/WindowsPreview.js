@@ -1,3 +1,4 @@
+import { trackEvent } from '../lib/analytics';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
@@ -14,14 +15,6 @@ import siteRelease from '../lib/siteRelease.json';
 
 import { fetchWindowsRelease } from './VersionHistory';
 
-const trackEvent = (name, properties = {}) => {
-  if (window.plausible) {
-    window.plausible(name, { props: properties });
-  }
-  if (window.gtag) {
-    window.gtag('event', name, properties);
-  }
-};
 
 const windowsInstallerURL = '/downloads/windows/PolyPDFSetup.exe';
 

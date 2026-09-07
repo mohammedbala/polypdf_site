@@ -1,3 +1,5 @@
+import { useSiteMotion } from './SiteMotion';
+import { trackEvent } from '../lib/analytics';
 import React, { memo, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
@@ -161,14 +163,6 @@ export const homeScreenshots = [
   }
 ];
 
-const trackEvent = (name, properties = {}) => {
-  if (window.plausible) {
-    window.plausible(name, { props: properties });
-  }
-  if (window.gtag) {
-    window.gtag('event', name, properties);
-  }
-};
 
 const freeFeatures = [
   'Download the full app free — Mac or Windows — and start with the real product',
@@ -296,7 +290,9 @@ export const homeFaqs = [
 
 // Continuous flourishes stay inside this memoized leaf so the product page can feel alive without
 // making the full homepage re-render. The screenshot remains the exact shipping PolyPDF 1.4 UI.
-const HeroProductBoard = memo(() => (
+const HeroProductBoard = memo(() => {
+  const { motionOff } = useSiteMotion();
+  return (
   <motion.figure
     id="product-demo"
     className="hero-product-shot playful-product-board"
@@ -310,7 +306,8 @@ const HeroProductBoard = memo(() => (
     </svg>
     <span className="paper-tape hero-paper-tape" aria-hidden="true" />
     <div className="shot-plate">
-      <video
+      {motionOff ? <img src={shotTakeoffHeroPoster} alt="PolyPDF drawing a 30 foot dimension between plan endpoints" /> : <video
+        controls
         autoPlay
         loop
         muted
@@ -324,7 +321,7 @@ const HeroProductBoard = memo(() => (
           type="video/mp4"
           media="(prefers-reduced-motion: no-preference)"
         />
-      </video>
+      </video>}
     </div>
     <div className="hero-sticker hero-sticker-records">
       <SquaresFour aria-hidden="true" weight="bold" />
@@ -336,7 +333,8 @@ const HeroProductBoard = memo(() => (
     </div>
     <figcaption><strong>PolyPDF {siteRelease.screenshotVersion}</strong> product screenshot showing endpoint snapping.</figcaption>
   </motion.figure>
-));
+);
+});
 
 HeroProductBoard.displayName = 'HeroProductBoard';
 
@@ -491,11 +489,15 @@ export const ShowcaseMotionLayer = memo(({ motionType }) => {
 ShowcaseMotionLayer.displayName = 'ShowcaseMotionLayer';
 
 const ProductShotMedia = memo(({ shot }) => {
+  const { motionOff } = useSiteMotion();
   const mediaRef = useRef(null);
   const [motionActive, setMotionActive] = useState(false);
 
   useEffect(() => {
-    if (!shot.motion || typeof IntersectionObserver === 'undefined') return undefined;
+    if (!shot.motion || motionOff || typeof IntersectionObserver === 'undefined') {
+      setMotionActive(false);
+      return undefined;
+    }
 
     const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
     if (reducedMotion) return undefined;
@@ -509,15 +511,16 @@ const ProductShotMedia = memo(({ shot }) => {
 
     observer.observe(media);
     return () => observer.disconnect();
-  }, [shot.motion]);
+  }, [shot.motion, motionOff]);
 
   return (
     <div
       ref={mediaRef}
       className={`product-shot-media${shot.motion ? ` has-${shot.motion}-motion` : ''}${motionActive ? ' is-motion-active' : ''}`}
     >
-      {shot.video && motionActive ? (
+      {shot.video && motionActive && !motionOff ? (
         <video
+          controls
           autoPlay
           loop
           muted
@@ -541,7 +544,7 @@ const ProductShotMedia = memo(({ shot }) => {
           height={shot.height}
         />
       )}
-      {shot.motion && !shot.video && <ShowcaseMotionLayer motionType={shot.motion} />}
+      {shot.motion && !shot.video && !motionOff && <ShowcaseMotionLayer motionType={shot.motion} />}
     </div>
   );
 });

@@ -1,3 +1,4 @@
+import { saveConsent } from './consent';
 import {
   buyPath,
   canonicalPagePath,
@@ -9,6 +10,7 @@ import {
 
 beforeEach(() => {
   window.localStorage.clear();
+  saveConsent({ marketing: true });
 });
 
 test('normalizes only allow-listed, content-free campaign values', () => {
@@ -33,6 +35,7 @@ test('keeps first-party attribution for checkout and falls back safely', () => {
   });
 
   window.localStorage.clear();
+  saveConsent({ marketing: true });
   expect(checkoutAttribution('')).toEqual({
     source: 'buy_page',
     utm_source: 'website',

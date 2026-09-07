@@ -71,7 +71,7 @@ const Refund = () => {
           <div className="legal-hero">
             <h1>Refund Policy</h1>
             <p className="legal-subtitle">Refunds for direct PolyPDF purchases</p>
-            <p className="last-updated">Last updated: September 3, 2026</p>
+            <p className="last-updated">Last updated: September 6, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -113,7 +113,7 @@ const Refund = () => {
             <ul className="section-content">
               <li>The voluntary 14-day money-back guarantee is separate from, and in addition to, refund or withdrawal rights that cannot be waived under applicable law.</li>
               <li>Local law may provide statutory withdrawal or cancellation periods for certain consumers.</li>
-              <li>Using or activating PolyPDF during the guarantee period does not remove the voluntary 14-day guarantee for a direct website purchase.</li>
+              <li>Using, downloading or activating PolyPDF does not remove the voluntary 14-day guarantee. We do not treat those actions alone as a waiver of any statutory withdrawal or cancellation right.</li>
               <li>Refunds are processed to the original payment method where possible. The bank or card issuer controls how long the credit takes to appear after Stripe processes it.</li>
             </ul>
           </section>
@@ -127,7 +127,7 @@ const Refund = () => {
               <li>This policy applies to direct PolyPDF website purchases processed by Stripe.</li>
               <li>Purchases made through another storefront or platform must be refunded through that storefront or platform's own refund process.</li>
               <li>Business buyers seeking a sales-tax correction should contact PolyPDF support with the receipt and any required exemption details where permitted by law.</li>
-              <li>Contact PolyPDF support before raising a chargeback or payment dispute; access to the relevant product may be suspended while a dispute is reviewed.</li>
+              <li>Please contact support if you need help with a payment. This does not require you to give up or delay any statutory remedy, payment-provider complaint or card dispute right.</li>
             </ul>
           </section>
 

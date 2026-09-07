@@ -1,3 +1,4 @@
+import { useCheckoutReview } from './CheckoutReview';
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { motion } from 'framer-motion';
@@ -79,6 +80,7 @@ export { isSecureStripeCheckoutUrl };
 
 const Buy = ({ forceInApp = false }) => {
   const [searchParams] = useSearchParams();
+  const reviewCheckout = useCheckoutReview();
   const [checkoutStatus, setCheckoutStatus] = useState('ready');
   const [checkoutError, setCheckoutError] = useState('');
   const [showStickyCheckout, setShowStickyCheckout] = useState(false);
@@ -137,7 +139,12 @@ const Buy = ({ forceInApp = false }) => {
     setShowStickyCheckout(false);
 
     try {
-      const checkoutUrl = await createStripeCheckoutSession(attribution);
+      const agreement = await reviewCheckout();
+      if (!agreement) {
+        setCheckoutStatus('ready');
+        return;
+      }
+      const checkoutUrl = await createStripeCheckoutSession(attribution, undefined, agreement);
       trackEvent('checkout_session_created', properties);
       trackEvent('checkout_started', properties);
       window.location.assign(checkoutUrl);
@@ -232,7 +239,7 @@ const Buy = ({ forceInApp = false }) => {
               ) : (
                 <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
               )}
-              {checkoutError && <p className="plan-note checkout-error">{checkoutError}</p>}
+              {checkoutError && <p className="plan-note checkout-error" role="alert">{checkoutError}</p>}
               {offer.founderAvailable && <OfferGuarantee compact inverse />}
               <ul className="plan-list buy-plan-list">
                 {proFeatures.map((feature) => (

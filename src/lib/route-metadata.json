@@ -233,5 +233,15 @@
     "title": "Compare PDF Drawings & Revisions | PolyPDF",
     "description": "Compare PDF drawing revisions, inspect meaningful differences, and add clouds or callouts for coordination, pricing, and review handoff.",
     "robots": "index, follow"
+  },
+  "/cookies": {
+    "title": "Cookie Policy | PolyPDF",
+    "description": "Choose optional cookies, learn what PolyPDF stores, and manage analytics and advertising measurement.",
+    "robots": "index, follow"
+  },
+  "/accessibility": {
+    "title": "Accessibility | PolyPDF",
+    "description": "Accessibility features, known limitations and help using the PolyPDF website.",
+    "robots": "index, follow"
   }
 }

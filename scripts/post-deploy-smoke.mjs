@@ -46,7 +46,9 @@ export const canonicalFooterRoutes = [
   '/measure-pdf-on-mac/',
   '/construction-pdf-markup/',
   '/visual-search-pdf-count/',
-  '/compare-pdf-drawings/'
+  '/compare-pdf-drawings/',
+  '/cookies/',
+  '/accessibility/'
 ];
 
 export const notFoundSmokeRoute = '/__polypdf-deploy-smoke-not-found__';
@@ -153,9 +155,10 @@ export async function runPostDeploySmoke({
       `${route} did not return exactly one canonical footer`
     );
     assertResponse(
-      body.includes('https://www.googletagmanager.com/gtag/js?id=G-533RWNRCFP')
-        && body.includes('gtag("config","G-533RWNRCFP"'),
-      `${route} did not contain the approved Google tag`
+      !/<script[^>]+src=["'][^"']*(?:googletagmanager|google-analytics|doubleclick)/i.test(body)
+        && !/gtag\(["']config["']/.test(body)
+        && body.includes('Cookie settings / Do not sell or share'),
+      `${route} contains tracking before consent or is missing cookie settings`
     );
     for (const footerRoute of canonicalFooterRoutes) {
       assertResponse(body.includes(`href="${footerRoute}"`), `${route} footer is missing ${footerRoute}`);
@@ -286,8 +289,9 @@ export async function runPostDeploySmoke({
   );
   assertResponse(
     bundle.includes('/api/checkout/conversion?session_id=')
-      && bundle.includes('polypdf.ga4.purchase.v1.')
-      && bundle.includes('AW-449436603/xb7JCMbVseMcELu3p9YB')
+      && bundle.includes('polypdf.ga4.purchase.v2.')
+      && bundle.includes('AW-449436603')
+      && bundle.includes('/xb7JCMbVseMcELu3p9YB')
       && bundle.includes('buy_page_view')
       && bundle.includes('checkout_click')
       && bundle.includes('checkout_session_created')

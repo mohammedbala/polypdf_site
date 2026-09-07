@@ -1,3 +1,4 @@
+import { CONSENT_CHANGED, hasConsent } from '../lib/consent';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { motion } from 'framer-motion';
@@ -17,16 +18,8 @@ import ActivationSteps from './ActivationSteps';
 import { DownloadBoth } from './DownloadCTA';
 import { usePlatform } from '../lib/platform';
 import { licenseDeliveryText, licensePolicyLabel } from '../lib/commercialOffer';
-import { trackVerifiedPurchase } from '../lib/analytics';
+import { trackVerifiedPurchase, trackEvent } from '../lib/analytics';
 
-const trackEvent = (name, properties = {}) => {
-  if (window.plausible) {
-    window.plausible(name, { props: properties });
-  }
-  if (window.gtag) {
-    window.gtag('event', name, properties);
-  }
-};
 
 
 const currencyFormatter = (amount, currency) => {
@@ -105,12 +98,13 @@ const Account = () => {
       return undefined;
     }
 
-    const controller = new AbortController();
+    let controller = new AbortController();
     let retryTimer;
     let attempts = 0;
     const maxAttempts = 12;
 
     const loadVerifiedPurchase = async () => {
+      if (!hasConsent('analytics') && !hasConsent('marketing')) return;
       attempts += 1;
       try {
         const response = await fetch(
@@ -139,8 +133,17 @@ const Account = () => {
       }
     };
 
-    loadVerifiedPurchase();
+    const refresh = () => {
+      controller.abort();
+      window.clearTimeout(retryTimer);
+      controller = new AbortController();
+      attempts = 0;
+      loadVerifiedPurchase();
+    };
+    refresh();
+    window.addEventListener(CONSENT_CHANGED, refresh);
     return () => {
+      window.removeEventListener(CONSENT_CHANGED, refresh);
       controller.abort();
       window.clearTimeout(retryTimer);
     };
@@ -381,7 +384,7 @@ const Account = () => {
                 )}
               </div>
 
-              <form className="account-form" onSubmit={requestMagicLink}>
+              <form className="account-form" onSubmit={requestMagicLink} aria-busy={requestStatus === 'loading'}>
                 <label htmlFor="account-email">Checkout email</label>
                 <input
                   id="account-email"
@@ -390,14 +393,18 @@ const Account = () => {
                   onChange={(event) => setEmail(event.target.value)}
                   placeholder="you@example.com"
                   autoComplete="email"
+                  required
+                  aria-describedby="account-privacy account-error"
+                  aria-invalid={Boolean(errorMessage)}
                 />
                 <button type="submit" className="primary-btn" disabled={requestStatus === 'loading'}>
                   <FaEnvelope /> {requestStatus === 'loading' ? 'Sending Link...' : 'Send Sign-In Link'}
                 </button>
+                <p className="account-privacy" id="account-privacy">We use your email to send a sign-in link and find your purchases. <Link to="/privacy/">How we handle your information</Link>.</p>
               </form>
 
-              {requestMessage && <p className="account-message success">{requestMessage}</p>}
-              {errorMessage && <p className="account-message error">{errorMessage}</p>}
+              <p className="account-message success" role="status">{requestMessage}</p>
+              <p id="account-error" className="account-message error" role="alert">{errorMessage}</p>
             </section>
           )}
         </div>

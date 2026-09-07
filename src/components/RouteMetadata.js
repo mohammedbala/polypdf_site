@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router';
 import routeMetadata from '../lib/route-metadata.json';
 import siteRelease from '../lib/siteRelease.json';
@@ -30,6 +30,7 @@ export const resolveRouteMetadata = (pathname) => {
 
 const RouteMetadata = () => {
   const { pathname } = useLocation();
+  const previousPath = useRef(pathname);
 
   useEffect(() => {
     const { route, url } = resolveRouteMetadata(pathname);
@@ -58,6 +59,12 @@ const RouteMetadata = () => {
 
     const canonical = document.head.querySelector('link[rel="canonical"]');
     if (canonical) canonical.setAttribute('href', url);
+    if (previousPath.current !== pathname) {
+      const heading = document.querySelector('#site-content h1');
+      if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: true }); }
+      window.scrollTo(0, 0);
+      previousPath.current = pathname;
+    }
   }, [pathname]);
 
   return null;

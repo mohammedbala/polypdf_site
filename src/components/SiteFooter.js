@@ -1,4 +1,7 @@
+import { SiteMotionButton } from './SiteMotion';
+import { trackEvent } from '../lib/analytics';
 import React from 'react';
+import { openCookieSettings } from '../lib/consent';
 import { Link } from 'react-router';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import DirectCheckoutLink from './DirectCheckoutLink';
@@ -40,7 +43,9 @@ export const footerLinkGroups = Object.freeze([
       Object.freeze({ to: '/account', label: 'License account' }),
       Object.freeze({ to: '/refund', label: 'Refund policy' }),
       Object.freeze({ to: '/terms', label: 'Terms of use' }),
-      Object.freeze({ to: '/privacy', label: 'Privacy policy' })
+      Object.freeze({ to: '/privacy', label: 'Privacy policy' }),
+      Object.freeze({ to: '/cookies', label: 'Cookie policy' }),
+      Object.freeze({ to: '/accessibility', label: 'Accessibility' })
     ])
   })
 ]);
@@ -48,8 +53,7 @@ export const footerLinkGroups = Object.freeze([
 const trackDownload = (platform) => {
   if (typeof window === 'undefined') return;
   const properties = { source: 'website_footer', platform: platform.key };
-  if (window.plausible) window.plausible('download_click', { props: properties });
-  if (window.gtag) window.gtag('event', 'download_click', properties);
+  trackEvent('download_click', properties);
 };
 
 const SiteFooter = () => (
@@ -103,6 +107,8 @@ const SiteFooter = () => (
     <div className="container site-footer-bottom">
       <p>&copy; 2026 Euclidean Software LLC. All rights reserved.</p>
       <p>PolyPDF is desktop software for macOS and Windows.</p>
+      <button type="button" className="cookie-settings-button" onClick={openCookieSettings}>Cookie settings / Do not sell or share</button>
+      <SiteMotionButton />
     </div>
   </footer>
 );

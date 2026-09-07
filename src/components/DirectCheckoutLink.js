@@ -1,3 +1,4 @@
+import { useCheckoutReview } from './CheckoutReview';
 import React, { forwardRef, useState } from 'react';
 import { buyPath, checkoutAttributionForSource } from '../lib/attribution';
 import { checkoutErrorCode, createStripeCheckoutSession } from '../lib/checkout';
@@ -18,6 +19,7 @@ const DirectCheckoutLink = forwardRef(({
   redirect = (url) => window.location.assign(url),
   ...linkProps
 }, ref) => {
+  const reviewCheckout = useCheckoutReview();
   const [status, setStatus] = useState('ready');
   const [checkoutError, setCheckoutError] = useState(null);
 
@@ -42,7 +44,12 @@ const DirectCheckoutLink = forwardRef(({
     setCheckoutError(null);
 
     try {
-      const checkoutUrl = await createStripeCheckoutSession(attribution);
+      const agreement = await reviewCheckout();
+      if (!agreement) {
+        setStatus('ready');
+        return;
+      }
+      const checkoutUrl = await createStripeCheckoutSession(attribution, undefined, agreement);
       trackEvent('checkout_session_created', properties);
       trackEvent('checkout_started', properties);
       redirect(checkoutUrl);

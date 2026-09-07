@@ -97,8 +97,7 @@ async function withFakeSite({
         + `<meta name="twitter:image:alt" content="${imageAlt}" />`
         + '<link rel="alternate" type="application/rss+xml" title="PolyPDF Guides and Product Notes" href="https://www.polypdf.com/feed.xml" />'
         + `<link rel="canonical" href="${canonicalURL}" />`
-        + '<script async src="https://www.googletagmanager.com/gtag/js?id=G-533RWNRCFP"></script>'
-        + '<script>gtag("config","G-533RWNRCFP",{})</script>'
+        + '<button>Cookie settings / Do not sell or share</button>'
         + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script>'
         + `<div id="root"><h1>${title}</h1><p>Prerendered body content for ${routePath}</p>`
         + (routePath === '/'
@@ -186,7 +185,7 @@ async function withFakeSite({
         'Every PolyPDF 1.x update is included',
         'Future major versions may be optional paid upgrades',
         '/api/checkout/conversion?session_id=',
-        'polypdf.ga4.purchase.v1.',
+        'polypdf.ga4.purchase.v2.',
         'AW-449436603/xb7JCMbVseMcELu3p9YB',
         'buy_page_view',
         'checkout_click',
@@ -285,16 +284,10 @@ test('derives the HTML smoke surface from the route metadata registry', () => {
   assert.deepEqual(htmlRoutes, Object.keys(routeMetadata));
 });
 
-test('queues analytics immediately without putting the Google client on the critical path', () => {
+test('keeps all tracking out of the prerendered HTML until an explicit choice', () => {
   const template = fs.readFileSync(new URL('../public/index.html', import.meta.url), 'utf8');
-  assert.match(template, /function gtag\(\)\{dataLayer\.push\(arguments\);\}/);
-  assert.match(template, /gtag\('config', 'G-533RWNRCFP'/);
-  assert.match(template, /window\.setTimeout\(loadGoogleTag, 7000\)/);
-  assert.match(template, /\['pointerdown', 'keydown', 'touchstart'\]/);
-  assert.doesNotMatch(
-    template,
-    /<script[^>]+src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-533RWNRCFP"/
-  );
+  assert.doesNotMatch(template, /gtag\(|googletagmanager|google-analytics|doubleclick|loadGoogleTag/);
+  assert.match(template, /Optional tracking is loaded by CookieConsent/);
 });
 
 test('reconciles the atomic root, stable image cache, and analytics CSP idempotently', () => {

@@ -1,3 +1,5 @@
+import { hasConsent } from './consent';
+
 const STORAGE_KEY = 'polypdf.attribution.v1';
 const MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
 const KEYS = ['source', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
@@ -37,6 +39,7 @@ const readStored = () => {
 };
 
 export const captureAttribution = (search = window.location.search) => {
+  if (!hasConsent('marketing')) return {};
   const incoming = attributionFromSearch(search);
   const stored = readStored();
   if (Object.keys(incoming).length > 0) {
@@ -56,6 +59,7 @@ export const captureAttribution = (search = window.location.search) => {
 };
 
 export const checkoutAttribution = (search = window.location.search) => {
+  if (!hasConsent('marketing')) return {};
   const attribution = captureAttribution(search);
   return {
     source: attribution.source || 'buy_page',

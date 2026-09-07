@@ -1,3 +1,4 @@
+import { trackEvent } from '../lib/analytics';
 import React, { useState } from 'react';
 import {
   AppleLogo,
@@ -7,14 +8,6 @@ import {
 import { DOWNLOADS, usePlatform } from '../lib/platform';
 import MagneticLink from './MagneticLink';
 
-const trackEvent = (name, properties = {}) => {
-  if (window.plausible) {
-    window.plausible(name, { props: properties });
-  }
-  if (window.gtag) {
-    window.gtag('event', name, properties);
-  }
-};
 
 const PlatformIcon = ({ platform }) => (
   platform.key === 'mac'

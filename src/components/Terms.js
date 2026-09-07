@@ -74,7 +74,7 @@ const Terms = () => {
           <div className="legal-hero">
             <h1>Terms of Use</h1>
             <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
-            <p className="last-updated">Commercial terms version: July 30, 2026 · Product-access description reviewed September 3, 2026</p>
+            <p className="last-updated">Commercial terms version: July 30, 2026 · Website terms reviewed September 6, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -151,8 +151,20 @@ const Terms = () => {
               <li>Collaboration is a beta workflow that depends on a customer-managed host and file share; availability, network continuity, and organizational access controls remain the customer’s responsibility.</li>
               <li>To the maximum extent allowed by law, PolyPDF disclaims implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.</li>
               <li>To the maximum extent allowed by law, PolyPDF is not liable for indirect, incidental, special, consequential, or punitive damages.</li>
-              <li>If liability cannot be excluded, PolyPDF’s total liability is limited to the amount you paid for the applicable purchase.</li>
+              <li>Subject to the non-excludable rights below and only to the extent permitted by applicable law, PolyPDF’s total liability under these terms is limited to the amount you paid for the applicable purchase.</li>
             </ul>
+          </section>
+
+          <section className="legal-section">
+            <h2>Consumer rights and professional responsibility</h2>
+            <p>Nothing in these terms excludes or limits rights, warranties, remedies or liabilities that applicable law does not allow to be excluded or limited. This includes liability for fraud or fraudulent misrepresentation, death or personal injury caused by negligence where applicable, and mandatory consumer protections for digital content. Any limitation above applies only where lawful.</p>
+            <p>PolyPDF assists document work; it does not provide architectural, engineering, surveying, legal or other professional advice. Verify scale, measurements, quantities, revisions, signatures, redaction and exported results before relying on them. You retain ownership of your documents and responsibility for authorised use and backups.</p>
+          </section>
+          <section className="legal-section">
+            <h2>Website purchases, privacy and changes</h2>
+            <p>Before continuing to payment, review the offer, these terms and the <Link to="/refund/">Refund Policy</Link>. The final amount and applicable taxes appear in Stripe checkout before payment. Your payment confirmation and license email record the purchase. Website cookie choices are separate from acceptance of purchase terms.</p>
+            <p>Our <Link to="/privacy/">Privacy Policy</Link> explains data handling. The <Link to="/cookies/">Cookie Policy</Link> explains optional tracking, and our <Link to="/accessibility/">Accessibility page</Link> provides help if you cannot use the site.</p>
+            <p>Website terms may change prospectively, with notice where required. A later update does not reduce the perpetual license grant, included updates, refund rights or other rights already acquired with your purchase. If a provision is unenforceable, the remaining provisions apply to the extent permitted by law.</p>
           </section>
 
           <section className="legal-section">
