@@ -363,7 +363,7 @@ const LatestReleaseSpotlight = () => (
         <a href={stampBuilderImage} aria-label="Open the full-size PolyPDF 1.5.1 stamp builder screenshot">
           <img src={stampBuilderImage} alt="PolyPDF 1.5.1 stamp builder with a REVIEWED heading, reviewer, automatic date, and optional toolset saving" width="1233" height="768" loading="lazy" />
         </a>
-        <figcaption>Actual 1.5.1 Mac interface with fictional sample details. The same stamp workflow ships on Windows.</figcaption>
+        <figcaption>Authentic 1.5.1 build 23 interface on Mac, with fictional sample details. The same stamp workflow ships on Windows.</figcaption>
       </figure>
     </div>
   </section>

@@ -53,3 +53,7 @@ Original screenshots were returned as JPEG by the capture adapter. Originals are
 - No real payment, customer contact or production license change was performed during the content audit. Production deployment retains its existing expiring synthetic checkout smoke and rollback behavior.
 
 Detailed route evidence: `docs/audits/evidence/release-1.5.1/`. Publication uses the normal GitHub Actions deployment with activation checks, production smoke tests and automatic rollback on failure.
+
+## Deployment caption correction
+
+The first production attempt (`d2ef164`, workflow `34149737719`) completed its build but the production smoke check rejected the homepage caption because it lacked the expected current build identity. The workflow successfully restored the previous release before any checkout smoke ran. The new capture caption now explicitly states its authentic 1.5.1 build 23 identity; the historical Revision Package caption remains 1.5.0 build 22. The production guard was retained unchanged.
