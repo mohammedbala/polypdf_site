@@ -1,7 +1,14 @@
-.cookie-banner { position: relative; z-index: 1001; background: #f3f0e8; border-bottom: 2px solid #625c52; color: #171a19; padding: 24px 0; }
-.cookie-banner-inner { display: grid; gap: 16px; }
-.cookie-banner h2 { font-size: 1.2rem; }
-.cookie-banner p { max-width: 86ch; font-size: 1rem; }
+html { scroll-padding-bottom: calc(var(--cookie-bar-height, 0px) + 16px); }
+.App { padding-bottom: var(--cookie-bar-height, 0px); }
+.cookie-banner { position: fixed; inset: auto 0 0; z-index: 1001; max-height: 50dvh; overflow-y: auto; background: #f8f7f3; border-top: 1px solid #d1c9bb; color: #413d36; padding: 6px 0 calc(6px + env(safe-area-inset-bottom, 0px)); }
+.cookie-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.cookie-banner .cookie-banner-copy { flex: 1; min-width: 0; margin: 0; font-size: .875rem; line-height: 1.45; }
+.cookie-banner-actions { display: flex; flex: 0 0 auto; gap: 8px; }
+.cookie-banner-actions button { min-height: 44px; padding: 8px 12px; border: 1px solid #aea697; border-radius: 5px; background: transparent; color: #413d36; font: inherit; font-size: .875rem; font-weight: 500; line-height: 1.4; cursor: pointer; }
+.cookie-banner-actions button:hover { background: #eeebe4; }
+.cookie-banner-actions button:disabled { opacity: .65; cursor: default; }
+.cookie-banner-actions .cookie-banner-settings { border-color: transparent; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 860px) { .cookie-banner-inner { flex-direction: column; align-items: stretch; gap: 4px; } .cookie-banner-actions { justify-content: flex-end; } }
 .privacy-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
 .privacy-actions button, .cookie-settings-button { font: inherit; font-weight: 600; cursor: pointer; }
 .privacy-actions button { min-height: 44px; padding: 10px 16px; border: 2px solid #625c52; border-radius: 8px; background: #fffdf8; color: #171a19; }
@@ -34,4 +41,3 @@
 
 .site-motion-paused *, .site-motion-paused *::before, .site-motion-paused *::after { animation-play-state: paused !important; transition-duration: .01ms !important; }
 .privacy-dialog ul { padding-left: 24px; }
-.cookie-banner ~ #site-content .header { position: static; }

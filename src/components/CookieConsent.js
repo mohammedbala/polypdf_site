@@ -16,6 +16,7 @@ export default function CookieConsent() {
   const [analytics, setAnalytics] = useState(false);
   const [marketing, setMarketing] = useState(false);
   const dialog = useRef(null);
+  const banner = useRef(null);
   const signal = ready && privacySignalEnabled();
 
   useEffect(() => {
@@ -58,6 +59,23 @@ export default function CookieConsent() {
     if (!open && dialog.current.open) dialog.current.close();
   }, [open]);
 
+  useEffect(() => {
+    if (!ready || choice || !banner.current) return;
+    const element = banner.current;
+    const updateHeight = () => document.documentElement.style.setProperty(
+      '--cookie-bar-height', `${Math.ceil(element.getBoundingClientRect().height)}px`
+    );
+    updateHeight();
+    const observer = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(updateHeight);
+    observer?.observe(element);
+    window.addEventListener('resize', updateHeight);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener('resize', updateHeight);
+      document.documentElement.style.removeProperty('--cookie-bar-height');
+    };
+  }, [ready, choice]);
+
   const save = (next) => {
     setOpen(false);
     saveConsent(next);
@@ -67,19 +85,17 @@ export default function CookieConsent() {
     setMarketing(choice?.marketing || false);
     setOpen(true);
   };
-  const buttons = <>
-    <button type="button" onClick={() => save({})}>Reject optional cookies</button>
-    <button type="button" onClick={() => save({ analytics: true, marketing: true })} disabled={signal}>Accept optional cookies</button>
+  const buttons = (compact = false) => <>
+    <button type="button" aria-label="Reject optional cookies" onClick={() => save({})}>{compact ? 'Reject' : 'Reject optional cookies'}</button>
+    <button type="button" aria-label="Accept optional cookies" onClick={() => save({ analytics: true, marketing: true })} disabled={signal}>{compact ? 'Accept' : 'Accept optional cookies'}</button>
   </>;
   return <>
-    {ready && !choice && <aside className="cookie-banner" aria-label="Cookie choices">
+    {ready && !choice && <aside className="cookie-banner" ref={banner} aria-label="Cookie choices">
       <div className="container cookie-banner-inner">
-        <div>
-          <h2>Your cookie choices</h2>
-          <p>With your permission, Google Analytics measures visits and Google Ads measures advertising results. Optional cookies and campaign storage stay off until you choose. Downloads and purchases work either way. <Link to="/cookies/">Cookie details</Link> · <Link to="/privacy/">Privacy policy</Link></p>
-          {signal && <p>Your browser privacy signal is on. We keep all optional tracking off.</p>}
-        </div>
-        <div className="privacy-actions">{buttons}<button type="button" onClick={show}>Choose cookies</button></div>
+        <p className="cookie-banner-copy">{signal
+          ? 'Your browser privacy signal keeps optional tracking off.'
+          : 'Google cookies measure visits and ad results, only with your permission.'}{' '}<Link to="/cookies/" aria-label="Cookie details">Details</Link></p>
+        <div className="cookie-banner-actions">{buttons(true)}<button type="button" className="cookie-banner-settings" aria-label="Cookie settings" onClick={show}>Settings</button></div>
       </div>
     </aside>}
     <dialog className="privacy-dialog" ref={dialog} aria-labelledby="cookie-settings-title" onCancel={() => setOpen(false)} onClose={() => setOpen(false)}>
@@ -90,7 +106,7 @@ export default function CookieConsent() {
       <label className="privacy-option"><input type="checkbox" checked={analytics && !signal} disabled={signal} onChange={(event) => setAnalytics(event.target.checked)} /><span><strong>Analytics</strong>Google Analytics receives browser and visit information and, after a verified payment, order ID, value, currency and product. No email address or license key is included.</span></label>
       <label className="privacy-option"><input type="checkbox" checked={marketing && !signal} disabled={signal} onChange={(event) => setMarketing(event.target.checked)} /><span><strong>Advertising measurement</strong>Google Ads receives browser and verified order information to measure advertising results. PolyPDF also remembers campaign codes for 30 days. Ad personalization is disabled.</span></label>
       <p><Link to="/cookies/" onClick={() => setOpen(false)}>Cookie details and durations</Link> · <Link to="/privacy/" onClick={() => setOpen(false)}>Privacy policy and your rights</Link></p>
-      <div className="privacy-actions">{buttons}<button type="button" onClick={() => save({ analytics, marketing })}>Save choices</button><button type="button" onClick={() => setOpen(false)}>Close without saving</button></div>
+      <div className="privacy-actions">{buttons()}<button type="button" onClick={() => save({ analytics, marketing })}>Save choices</button><button type="button" onClick={() => setOpen(false)}>Close without saving</button></div>
       <p className="privacy-small">Changing a previously allowed category to off reloads this page to stop already loaded tracking. If browser storage is blocked, your choice lasts for this page only.</p>
     </dialog>
   </>;

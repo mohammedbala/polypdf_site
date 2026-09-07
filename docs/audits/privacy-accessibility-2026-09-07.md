@@ -4,6 +4,10 @@ Scope: polypdf.com and its checkout initiation. Based on production site commit 
 
 This work reduces identified risks. It is not legal advice, a WCAG conformance certificate, or a guarantee against a claim.
 
+## Compact footer follow-up
+
+At the owner's request, the first cookie notice now appears as a subtle fixed bottom bar with one short sentence, a details link and compact Reject, Accept and Settings controls. The full explanation and independent choices remain in the existing settings dialog. The bar measures 57 pixels tall at desktop width and about 102 pixels at a 320-pixel viewport, with 44-pixel button targets and no horizontal overflow. Its measured height reserves space at the page end and sets the scroll inset; dismissing it removes that space. Consent behavior is unchanged. The 11 focused cookie/accessibility checks and the full 35-route production build pass.
+
 ## What changed
 
 - Removed the unconditional Google queue/loader from the HTML template. The site now requires a current, explicit choice before analytics or advertising tracking starts. Analytics and advertising are independently selectable; neither defaults on.
