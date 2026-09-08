@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router';
 import routeMetadata from '../lib/route-metadata.json';
 import siteRelease from '../lib/siteRelease.json';
+import { languageAlternates } from '../lib/internationalRoutes';
 
 const SITE_ORIGIN = 'https://www.polypdf.com';
 const SOCIAL_IMAGE = `${SITE_ORIGIN}/og-image.png?v=${siteRelease.screenshotCacheToken}`;
@@ -39,6 +40,16 @@ const RouteMetadata = () => {
       : SOCIAL_IMAGE;
     const imageAlt = route.imageAlt || SOCIAL_IMAGE_ALT;
 
+    document.documentElement.lang = 'en';
+    document.documentElement.dir = 'ltr';
+    document.head.querySelectorAll('link[hreflang]').forEach((link) => link.remove());
+    languageAlternates(pathname).forEach((alternate) => {
+      const link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = alternate.language;
+      link.href = `${SITE_ORIGIN}${alternate.path}`;
+      document.head.appendChild(link);
+    });
     document.title = route.title;
     setMeta('meta[name="title"]', 'content', route.title);
     setMeta('meta[name="description"]', 'content', route.description);

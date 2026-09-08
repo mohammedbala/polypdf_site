@@ -16,6 +16,7 @@ import NotFound from './components/NotFound';
 import Privacy from './components/Privacy';
 import Refund from './components/Refund';
 import RouteMetadata from './components/RouteMetadata';
+import LanguageSelector from './components/LanguageSelector';
 import Support from './components/Support';
 import SiteFooter from './components/SiteFooter';
 import WindowsPreview from './components/WindowsPreview';
@@ -36,6 +37,7 @@ const AppRoutes = () => {
       <CheckoutReviewProvider>
         <a className="site-skip-link" href="#site-content">Skip to content</a>
         <CookieConsent />
+        <div className="site-language-bar"><div className="container"><LanguageSelector /></div></div>
         <div id="site-content" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Home />} />

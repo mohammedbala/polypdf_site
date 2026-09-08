@@ -135,6 +135,9 @@ jobs:
       - name: Verify every revenue and trust route
         run: node scripts/post-deploy-smoke.mjs --base-url https://www.polypdf.com
 
+      - name: Verify all localized content and discovery files
+        run: npm ci --include=dev --ignore-scripts && npm run smoke:international
+
       - name: Clear deployment activation marker
         if: success()
         continue-on-error: true

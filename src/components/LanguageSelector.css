@@ -1,0 +1,35 @@
+.language-selector{position:relative;margin:0;color:#173d3b;font:inherit}
+.language-selector summary{cursor:pointer;min-height:44px;display:flex;align-items:center;gap:12px;font-weight:600;padding:8px 12px;border:1px solid #bac9c5;border-radius:8px;background:#f8faf8}
+.language-selector summary::after{content:'⌄';margin-inline-start:auto}
+.language-options{display:flex;flex-wrap:wrap;gap:8px;padding:12px 0}
+.language-options a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border:1px solid #bac9c5;border-radius:6px;color:#173d3b;background:#fff;text-decoration:none;font-size:15px}
+.language-options a:hover,.language-options a[aria-current=page]{background:#d8ede4}
+.language-options a:focus-visible,.language-selector summary:focus-visible{outline:3px solid #067468;outline-offset:3px}
+.site-language-bar{border-bottom:1px solid #d8e2dc;background:#fafcf9;padding:8px 0}
+.site-language-bar .container{display:flex;justify-content:flex-end}
+.site-language-bar .language-selector{max-width:100%;width:fit-content}
+.localized-page{font-family:Outfit,Arial,'Noto Sans',sans-serif;overflow-wrap:anywhere}
+.localized-page[lang=ar]{font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+.localized-page[lang=hi]{font-family:'Nirmala UI',Mangal,Arial,sans-serif;line-height:1.8}
+.localized-page[lang=ja],.localized-page[lang=zh-CN]{font-family:'Hiragino Sans','Yu Gothic','Microsoft YaHei',Arial,sans-serif;line-height:1.85;word-break:normal}
+.localized-page h1,.localized-page h2,.localized-page h3{letter-spacing:normal;overflow-wrap:anywhere}
+.localized-page :is(.workflow-hero-copy,.workflow-hero-visual,.workflow-offer-copy,.workflow-nav-links,.site-footer-group,.section-header){min-width:0}
+.localized-page :is(.workflow-nav,.nav,.dl-both,.dl-primary-row,.workflow-cta-row){flex-wrap:wrap}
+.localized-page :is(.primary-btn,.secondary-btn,.workflow-nav-buy){height:auto;white-space:normal;text-align:center}
+.localized-page .blog-table-scroll{max-width:100%;overflow-x:auto}
+.localized-page pre,.localized-page code{direction:ltr;unicode-bidi:isolate}
+.localized-page pre{max-width:100%;overflow:auto;white-space:pre}
+.localized-page[dir=rtl] :is(.legal-content,.section-content,.workflow-hero-copy,.workflow-offer-copy,.blog-quick-answer,.site-footer){text-align:start}
+.localized-page[dir=rtl] :is(ul,ol){padding-inline-start:1.6em;padding-inline-end:0}
+.translation-note{max-width:1100px;margin:20px auto;padding:16px 20px;border-inline-start:3px solid #67958b;background:#f0f5ef;font-size:14px;line-height:1.65;color:#304840}
+.translation-note a{color:inherit;text-decoration:underline}
+.international-hub{max-width:1100px;margin:0 auto;padding:56px 24px 80px}
+.international-hub h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.15;max-width:1000px;margin:16px 0 24px}
+.international-hub h2{font-size:1.8rem;margin:36px 0 16px}
+.international-hub p{font-size:1.1rem;line-height:1.75;max-width:850px}
+.international-hub .hub-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;list-style:none;padding:0}
+.international-hub .hub-links a{display:block;height:100%;padding:20px;border:1px solid #c9d8d0;border-radius:10px;background:#f7faf6;text-decoration:none;color:#183e36}
+.international-hub .hub-links span{display:block;margin-top:10px;font-size:.95rem;line-height:1.6;color:#405e56}
+@media(max-width:700px){.international-hub .hub-links{grid-template-columns:1fr}.site-language-bar .container{justify-content:stretch}.site-language-bar .language-selector{width:100%}.localized-page .workflow-nav{gap:12px}.localized-page .workflow-nav-links{gap:12px}.localized-page .workflow-nav-buy{margin:0}.translation-note{margin:16px 20px}.localized-page .dl-both{flex-direction:column;width:100%}.localized-page .dl-both a{max-width:100%;width:100%;box-sizing:border-box}.localized-page .nav .back-link{font-size:14px}}
+.localized-page[dir=rtl] .blog-post .legal-section>.blog-figure{left:auto;right:50%;transform:translateX(50%)}
+.localized-page[dir=rtl] .blog-quick-answer{border-left:0;border-right:4px solid #416d67}
