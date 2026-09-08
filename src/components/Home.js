@@ -352,12 +352,12 @@ const LatestReleaseSpotlight = () => (
   <section className="revision-release latest-release" id="latest-release" aria-labelledby="latest-release-title">
     <div className="container revision-release-shell">
       <div className="revision-release-copy">
-        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> New in PolyPDF {siteRelease.version} · Mac &amp; Windows</span>
+        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Available now: PolyPDF {siteRelease.version} · Mac &amp; Windows</span>
         <h2 id="latest-release-title">Create your own review stamps.</h2>
         <p>Start from a blank canvas, arrange your fields, and choose fixed text, automatic values, or a prompt. Save the stamp to a toolset when you want to use it again.</p>
-        <p>Version 1.5.1 also brings expanded symbol libraries, Presentation Mode, millimetre defaults for new metric dimensions, and improvements to navigation and saved appearances.</p>
+        <p>{`PolyPDF ${siteRelease.version} (build ${siteRelease.build}) improves stamp field alignment, reusable stamp folders, saved stamp answers, settings scrolling, and document stability.`}</p>
         <Link className="secondary-btn revision-release-link" to="/blog/create-interactive-pdf-stamps/">Create your first interactive stamp <ArrowRight aria-hidden="true" weight="bold" /></Link>
-        <p className="revision-release-access"><Link to="/blog/polypdf-1-5-1/">See everything in 1.5.1</Link></p>
+        <p className="revision-release-access"><a href="/downloads/PolyPDFMac-v1.5.2-24.html">Read the 1.5.2 release notes</a> · <Link to="/blog/polypdf-1-5-1/">Features introduced in 1.5.1</Link></p>
       </div>
       <figure className="revision-release-visual">
         <a href={stampBuilderImage} aria-label="Open the full-size PolyPDF 1.5.1 stamp builder screenshot">

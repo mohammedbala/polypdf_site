@@ -105,6 +105,13 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
   }
 }
 
+// Current release and historical screenshot capture are independent facts.
+const homeHtml = fs.readFileSync(path.join(buildDirectory, 'index.html'), 'utf8');
+assert(homeHtml.includes(`PolyPDF ${siteRelease.version} (build ${siteRelease.build})`),
+  'homepage: current release version/build is missing');
+assert(homeHtml.includes(`Authentic ${siteRelease.featuredCaptureVersion} build ${siteRelease.featuredCaptureBuild} interface`),
+  'homepage: authentic featured capture identity is missing');
+
 const notFoundPath = path.join(buildDirectory, '404.html');
 assert(fs.existsSync(notFoundPath), '404.html: static not-found page is missing');
 if (fs.existsSync(notFoundPath)) {

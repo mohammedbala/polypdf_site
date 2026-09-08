@@ -1,8 +1,10 @@
 {
-  "version": "1.5.1",
-  "build": "23",
-  "releaseDate": "2026-09-07",
+  "version": "1.5.2",
+  "build": "24",
+  "releaseDate": "2026-09-08",
   "screenshotVersion": "1.4.3",
   "screenshotBuild": "20",
-  "screenshotCacheToken": "1.4.3-20"
+  "screenshotCacheToken": "1.4.3-20",
+  "featuredCaptureVersion": "1.5.1",
+  "featuredCaptureBuild": "23"
 }

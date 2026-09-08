@@ -155,16 +155,16 @@ const buildRouteMetadata = () => {
 };
 
 const STATIC_LASTMOD = Object.freeze({
-  '/': '2026-09-07',
+  '/': '2026-09-08',
   '/buy': '2026-09-03',
   '/build-a-plugin': '2026-08-18',
   '/privacy': '2026-09-03',
   '/refund': '2026-09-03',
   '/feature-requests': '2026-09-07',
   '/support': '2026-09-07',
-  '/windows': '2026-09-07',
+  '/windows': '2026-09-08',
   '/terms': '2026-09-03',
-  '/versions': '2026-09-07',
+  '/versions': '2026-09-08',
   '/revision-packages': '2026-09-07',
   '/pdf-takeoff-software': '2026-09-07',
   '/measure-pdf-on-mac': '2026-09-07',

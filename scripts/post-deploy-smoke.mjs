@@ -165,7 +165,8 @@ export async function runPostDeploySmoke({
     }
     if (route === '/') {
       assertResponse(
-        body.includes(`Authentic ${siteRelease.version} build ${siteRelease.build} interface`)
+        body.includes(`Authentic ${siteRelease.featuredCaptureVersion} build ${siteRelease.featuredCaptureBuild} interface`)
+          && body.includes(`PolyPDF ${siteRelease.version} (build ${siteRelease.build})`)
           && body.includes('Revision Packages'),
         `homepage does not advertise PolyPDF ${siteRelease.version} build ${siteRelease.build} and Revision Packages`
       );

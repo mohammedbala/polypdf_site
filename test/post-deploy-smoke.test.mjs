@@ -101,7 +101,7 @@ async function withFakeSite({
         + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script>'
         + `<div id="root"><h1>${title}</h1><p>Prerendered body content for ${routePath}</p>`
         + (routePath === '/'
-          ? `<p>Authentic ${siteRelease.version} build ${siteRelease.build} interface</p><p>Revision Packages</p>`
+          ? `<p>Authentic ${siteRelease.featuredCaptureVersion} build ${siteRelease.featuredCaptureBuild} interface</p><p>PolyPDF ${siteRelease.version} (build ${siteRelease.build})</p><p>Revision Packages</p>`
           : '')
         + '<footer data-site-footer="true">'
         + canonicalFooterRoutes.map((route) => `<a href="${route}">${route}</a>`).join('')

@@ -52,3 +52,14 @@ language editions. They do not establish indexing, rankings, AI citations, nativ
 certification or customer acquisition. Continue editorial improvements using actual language
 queries and customer feedback; new English copy must receive new translations before it can
 pass a deployment build.
+
+## Deployment baseline correction
+
+The first production workflow correctly rejected a pre-existing release mismatch: both live
+updater feeds already served 1.5.2 build 24 while the website source still advertised 1.5.1
+build 23. Workflow 34240056201 restored the previous website automatically. Current metadata,
+release prose, static version-history fallbacks and discovery references now follow the public
+Mac and Windows 1.5.2 notes. The 1.5.1 blog post, guide verification dates and authentic 1.5.1
+screenshots keep their historical identities. The smoke guard now checks current release and
+featured screenshot version/build independently, and the same check runs before deployment.
+After correction, all 66 website tests, 8 deployment tests and 6 international tests passed again.

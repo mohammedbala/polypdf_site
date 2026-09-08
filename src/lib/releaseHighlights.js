@@ -6,4 +6,10 @@ export const releaseHighlights = Object.freeze([
   'Startup, zoom, annotation interactions, and memory use across open documents are improved. Dialogs and footer controls are clearer, and new metric dimensions default to millimetres.'
 ]);
 
-export const releaseAnswer = 'PolyPDF 1.5.1 adds a blank-canvas interactive stamp builder, expanded architectural and landscape symbol libraries, and Presentation Mode. It also improves layers, bookmarks, thumbnails, saved signature and stamp appearances, startup, memory use, and zoom. New metric dimensions default to millimetres. Revision Packages introduced in 1.5 remain available.';
+export const release152Highlights = Object.freeze([
+  'Interactive stamps gain compact field controls, alignment guides, improved field rendering, portrait layouts, and clearer toolset thumbnails.',
+  'Double-click a placed interactive stamp to update its answers. Configure a custom stamp folder for reusable PDF, image, and portable PolyPDF stamps.',
+  'Settings scrolling is smoother, and a PDF engine crash when closing one document and opening another has been fixed.'
+]);
+
+export const releaseAnswer = 'PolyPDF 1.5.2 improves interactive stamps with alignment guides, compact field controls, better field rendering, and reusable stamp folders. Double-click a placed stamp to edit its answers. It also fixes abrupt settings scrolling and an intermittent PDF engine crash when closing one document and opening another.';
