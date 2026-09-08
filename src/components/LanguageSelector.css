@@ -33,3 +33,9 @@
 @media(max-width:700px){.international-hub .hub-links{grid-template-columns:1fr}.site-language-bar .container{justify-content:stretch}.site-language-bar .language-selector{width:100%}.localized-page .workflow-nav{gap:12px}.localized-page .workflow-nav-links{gap:12px}.localized-page .workflow-nav-buy{margin:0}.translation-note{margin:16px 20px}.localized-page .dl-both{flex-direction:column;width:100%}.localized-page .dl-both a{max-width:100%;width:100%;box-sizing:border-box}.localized-page .nav .back-link{font-size:14px}}
 .localized-page[dir=rtl] .blog-post .legal-section>.blog-figure{left:auto;right:50%;transform:translateX(50%)}
 .localized-page[dir=rtl] .blog-quick-answer{border-left:0;border-right:4px solid #416d67}
+/* The English home has a fixed navigation bar; keep its language control below it. */
+.home-language-bar{position:absolute;top:82px;right:20px;z-index:999;width:210px;max-width:calc(100% - 40px);padding:0;border:0;background:transparent}
+.home-language-bar .container{padding:0;width:auto}
+.home-language-bar .language-selector{width:100%}
+.home-language-bar .language-options{position:absolute;top:100%;right:0;width:min(340px,calc(100vw - 40px));padding:12px;background:#fafcf9;border:1px solid #bac9c5;border-radius:8px;box-sizing:border-box}
+@media(max-width:760px){.home-language-bar~#site-content .Home .hero{padding-top:150px}}

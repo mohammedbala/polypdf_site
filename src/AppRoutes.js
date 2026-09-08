@@ -1,7 +1,7 @@
 import React from 'react';
 import { SiteMotionProvider } from './components/SiteMotion';
 import CheckoutReviewProvider from './components/CheckoutReview';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useLocation } from 'react-router';
 import Cookies from './components/Cookies';
 import Accessibility from './components/Accessibility';
 import CookieConsent from './components/CookieConsent';
@@ -30,6 +30,7 @@ import './App.css';
 // - src/App.js wraps it in BrowserRouter for the real site, and
 // - scripts/prerender.js wraps it in StaticRouter to write each route's static HTML at build time.
 const AppRoutes = () => {
+  const { pathname } = useLocation();
   return (
     <div className="App">
       <RouteMetadata />
@@ -37,7 +38,7 @@ const AppRoutes = () => {
       <CheckoutReviewProvider>
         <a className="site-skip-link" href="#site-content">Skip to content</a>
         <CookieConsent />
-        <div className="site-language-bar"><div className="container"><LanguageSelector /></div></div>
+        <div className={`site-language-bar${pathname === '/' ? ' home-language-bar' : ''}`}><div className="container"><LanguageSelector /></div></div>
         <div id="site-content" tabIndex={-1}>
           <Routes>
             <Route path="/" element={<Home />} />

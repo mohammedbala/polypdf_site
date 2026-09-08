@@ -63,3 +63,10 @@ Mac and Windows 1.5.2 notes. The 1.5.1 blog post, guide verification dates and a
 screenshots keep their historical identities. The smoke guard now checks current release and
 featured screenshot version/build independently, and the same check runs before deployment.
 After correction, all 66 website tests, 8 deployment tests and 6 international tests passed again.
+
+## Homepage language access
+
+The English homepage language control sits below its fixed navigation. The final build and
+all 66 website tests passed after this placement change. In-app browser checks at 320px and
+1280px confirmed an unobstructed language control, no horizontal overflow, and navigation
+from the English homepage to the Spanish homepage.
