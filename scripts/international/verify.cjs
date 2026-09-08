@@ -64,6 +64,10 @@ for (const e of manifest.routes) {
     const schema=JSON.parse(script.textContent);
     assert.equal(schema['@context'],'https://schema.org');
     assert.notEqual(schema['@type'],'FAQPage');
+    if(schema['@type']==='SoftwareApplication') {
+      assert.equal(schema.name,'PolyPDF',prefix+'application identity');
+      assert.equal(schema.inLanguage,undefined,prefix+'no implied desktop UI translation');
+    }
     if(schema['@type']==='BlogPosting') {
       assert.equal(schema.url,c.ORIGIN+e.route,prefix+'article URL');
       assert.equal(schema.inLanguage,e.language,prefix+'article language');
