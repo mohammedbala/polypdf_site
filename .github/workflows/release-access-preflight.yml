@@ -30,5 +30,10 @@ jobs:
             done
             systemctl is-active polypdf-license-api
             node --version
+            du -sh /root/.npm /var/cache/apt/archives /var/log/journal /var/www/polypdf-site/releases /var/www/polypdf-downloads /opt/polypdf-license-api 2>/dev/null || true
+            for directory in /var/www/polypdf-site/releases/*; do
+              test -d "$directory" && du -sh "$directory"
+            done
+            readlink /var/www/polypdf-site/current
             df -h /var/www/polypdf-downloads /opt/polypdf-license-api
           REMOTE
