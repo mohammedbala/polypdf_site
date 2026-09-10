@@ -1,0 +1,36 @@
+name: Release access preflight
+on:
+  push:
+    branches: [codex/release-access-preflight]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Verify existing deployment access without changing production
+        env:
+          DEPLOY_HOST: ${{ secrets.DROPLET_HOST }}
+          DEPLOY_USER: ${{ secrets.DROPLET_USER }}
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
+          ssh -o BatchMode=yes "$DEPLOY_USER@$DEPLOY_HOST" 'bash -euo pipefail' <<'REMOTE'
+            printf 'Deployment account UID: '; id -u
+            for directory in /var/www/polypdf-downloads /var/www/polypdf-downloads/windows /opt/polypdf-license-api; do
+              if test -d "$directory" && test -w "$directory"; then
+                printf 'Writable release location: %s
+' "$directory"
+              else
+                printf 'Unavailable release location: %s
+' "$directory"
+              fi
+            done
+            systemctl is-active polypdf-license-api
+            node --version
+            df -h /var/www/polypdf-downloads /opt/polypdf-license-api
+          REMOTE
