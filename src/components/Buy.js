@@ -59,6 +59,18 @@ const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_co
 // Why they clicked, when the app told us. Named plainly — the visitor already knows what happened;
 // pretending otherwise is what makes a paywall page feel like a sales page.
 const IN_APP_CONTEXT = {
+  pdf_editing: {
+    kicker: 'PDF content editing requires PolyPDF Pro',
+    lede: `Edit existing PDF text and images with PolyPDF Pro for ${commercialOffer.price} once. The same license unlocks toolsets, overlays, and every other Pro workflow on up to 3 Mac or Windows computers.`
+  },
+  toolsets: {
+    kicker: 'Place preset tools with PolyPDF Pro',
+    lede: `Browse every preset in the free app. Pro unlocks placement from preset and custom toolsets, plus PDF content editing and overlays, for ${commercialOffer.price} once on up to 3 Mac or Windows computers.`
+  },
+  overlay: {
+    kicker: 'Compare PDF revisions with PolyPDF Pro',
+    lede: `Compare revisions with colored PDF overlays for ${commercialOffer.price} once. The same Pro license unlocks PDF content editing, preset and custom toolsets, and every other Pro workflow on up to 3 Mac or Windows computers.`
+  },
   free_measurement_limit: {
     kicker: 'You have used the 3 free measurements in this document',
     lede: 'The free app includes markup, calibration, review, 3 hand-created measurements per document, and Revision Package viewing. Pro removes that cap and unlocks Symbol Search, plugins, and Revision Package changes and publishing for good for $74.95 once, backed by a 14-day money-back guarantee.'

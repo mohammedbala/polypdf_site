@@ -97,3 +97,16 @@ test('disables checkout when the standard offer is unavailable', async () => {
   expect(view.container.querySelector('.buy-plan a.primary-btn')).toBeNull();
   view.unmount();
 });
+
+test.each([
+  ['pdf_editing', 'PDF content editing requires PolyPDF Pro'],
+  ['toolsets', 'Place preset tools with PolyPDF Pro'],
+  ['overlay', 'Compare PDF revisions with PolyPDF Pro']
+])('explains the requested workflow for %s upgrade traffic', async (source, message) => {
+  const view = await renderBuy(`/buy/?source=${source}&utm_source=desktop_app`, { available: true });
+  expect(view.container.querySelector('.buy-hero .hero-badge')?.textContent).toContain(message);
+  expect(view.container.querySelector('.buy-hero > p')?.textContent).toContain('$74.95 once');
+  expect(view.container.querySelector('.buy-plan a.primary-btn')?.textContent).toContain('Checkout with Stripe');
+  expect(view.container.textContent).not.toContain('Prefer to test it first?');
+  view.unmount();
+});
