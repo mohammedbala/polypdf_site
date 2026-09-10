@@ -54,10 +54,10 @@ export const canonicalFooterRoutes = [
 export const notFoundSmokeRoute = '/__polypdf-deploy-smoke-not-found__';
 
 export const expectedOffer = Object.freeze({
-  id: 'polypdf_pro_founder_1x_2026',
-  checkoutLineItemName: "PolyPDF Pro Founder's License — Perpetual 1.x",
-  termsVersion: '2026-07-30',
-  price: 49.99,
+  id: 'polypdf_pro_1x_2026',
+  checkoutLineItemName: "PolyPDF Pro — Perpetual 1.x",
+  termsVersion: '2026-09-09',
+  price: 74.95,
   activationLimit: 3
 });
 
@@ -257,9 +257,9 @@ export async function runPostDeploySmoke({
   );
   assertResponse(offer?.price === expectedOffer.price, '/api/commercial-offer returned the wrong price');
   assertResponse(
-    offer?.founder?.endsAt == null
-      && offer?.founder?.maximumFulfilledLicenses === 100,
-    '/api/commercial-offer did not expose the count-only Founder cap'
+    offer?.kind === 'standard' && offer?.available === true
+      && offer?.founder?.available === false,
+    '/api/commercial-offer did not expose the standard offer and closed Founder offer'
   );
   assertResponse(
     offer?.license?.majorVersions === '1.x'
@@ -279,10 +279,10 @@ export async function runPostDeploySmoke({
   const bundle = await bundleResponse.text();
   assertResponse(bundleResponse.ok, `main site bundle returned HTTP ${bundleResponse.status}`);
   assertResponse(
-    bundle.includes("PolyPDF Pro Founder's License")
+    bundle.includes("PolyPDF Pro")
       && bundle.includes('Every PolyPDF 1.x update is included')
       && bundle.includes('Future major versions may be optional paid upgrades'),
-    'deployed site bundle does not contain the canonical Founder License rights'
+    'deployed site bundle does not contain the canonical Pro license rights'
   );
   assertResponse(
     !bundle.includes('github.com/mohammedbala/polypdf-feedback'),

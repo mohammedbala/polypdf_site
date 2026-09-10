@@ -56,7 +56,7 @@ const WhileItInstalls = ({ platformKey, tone }) => (
     <p className="dl-next-foot">
       Everything above is free, for as long as you want it. PolyPDF Pro removes the 3-measurement
       cap and unlocks Symbol Search, plugins, and Revision Package changes and publishing for
-      $49.99 once, on up to 3 computers.
+      $74.95 once, on up to 3 computers.
     </p>
   </div>
 );

@@ -25,7 +25,7 @@ test('requires an unchecked terms agreement before creating any Stripe session',
   await act(async()=>container.querySelector('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));
   expect(createStripeCheckoutSession).toHaveBeenCalledTimes(1);
   expect(createStripeCheckoutSession.mock.calls[0][0]).toEqual({});
-  expect(createStripeCheckoutSession.mock.calls[0][2]).toEqual({accepted:true,version:'2026-09-06'});
+  expect(createStripeCheckoutSession.mock.calls[0][2]).toEqual({accepted:true,version:'2026-09-09'});
   expect(redirect).toHaveBeenCalledWith('https://checkout.stripe.com/c/pay/cs_test_direct');
   act(()=>root.unmount()); container.remove();
 });

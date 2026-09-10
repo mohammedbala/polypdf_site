@@ -65,7 +65,7 @@ export const checkoutAttribution = (search = window.location.search) => {
     source: attribution.source || 'buy_page',
     utm_source: attribution.utm_source || 'website',
     utm_medium: attribution.utm_medium || 'owned',
-    utm_campaign: attribution.utm_campaign || 'founder_launch',
+    utm_campaign: attribution.utm_campaign || 'pro_1x',
     ...attribution
   };
 };

@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import ActivationSteps from './ActivationSteps';
-import { founderRightsText, licenseDeliveryText } from '../lib/commercialOffer';
+import { licenseRightsText, licenseDeliveryText } from '../lib/commercialOffer';
 import siteRelease from '../lib/siteRelease.json';
 
 const sections = [
@@ -58,7 +58,7 @@ const sections = [
     content: [
       'PolyPDF for macOS and Windows is sold and downloaded directly from PolyPDF.com.',
       'Direct purchases are processed through Stripe and unlocked with a PolyPDF license key sent by email.',
-      founderRightsText,
+      licenseRightsText,
       'If you need help with activation, deactivation, or refund requests, contact support@polypdf.com.'
     ]
   },

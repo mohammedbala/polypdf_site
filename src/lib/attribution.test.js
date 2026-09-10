@@ -40,7 +40,7 @@ test('keeps first-party attribution for checkout and falls back safely', () => {
     source: 'buy_page',
     utm_source: 'website',
     utm_medium: 'owned',
-    utm_campaign: 'founder_launch'
+    utm_campaign: 'pro_1x'
   });
 });
 

@@ -21,7 +21,7 @@ import ActivationSteps from './ActivationSteps';
 import { detectPlatform, usePlatform } from '../lib/platform';
 import {
   commercialOffer,
-  founderRightsText,
+  licenseRightsText,
   licenseDeliveryText,
   refundSummaryText
 } from '../lib/commercialOffer';
@@ -38,6 +38,7 @@ import MagneticLink from './MagneticLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 
 const proFeatures = [
+  'PDF content editing, every preset and custom toolset, and PDF overlays',
   'Unlimited distance, area, perimeter, angle, radius, diameter, count, and dimension measurements',
   'Symbol Search automatic counting and every installed plugin workflow',
   'PDF Maps, Professional Seal Maker, and packages you install yourself',
@@ -53,14 +54,14 @@ const proFeatures = [
 // traffic the business gets — they installed PolyPDF, used it on real drawings, and hit a wall —
 // and until now they landed on a page whose second panel told them to download the app they had
 // open behind the browser. Reading the parameter that was already in the URL fixes that.
-const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_count', 'plugins', 'license_window']);
+const IN_APP_SOURCES = new Set(['free_measurement_limit', 'visual_search_auto_count', 'plugins', 'pdf_editing', 'toolsets', 'overlay', 'license_window']);
 
 // Why they clicked, when the app told us. Named plainly — the visitor already knows what happened;
 // pretending otherwise is what makes a paywall page feel like a sales page.
 const IN_APP_CONTEXT = {
   free_measurement_limit: {
     kicker: 'You have used the 3 free measurements in this document',
-    lede: 'The free app includes markup, calibration, review, 3 hand-created measurements per document, and Revision Package viewing. Pro removes that cap and unlocks Symbol Search, plugins, and Revision Package changes and publishing for good at the $49.99 Founder price, backed by a 14-day money-back guarantee.'
+    lede: 'The free app includes markup, calibration, review, 3 hand-created measurements per document, and Revision Package viewing. Pro removes that cap and unlocks Symbol Search, plugins, and Revision Package changes and publishing for good for $74.95 once, backed by a 14-day money-back guarantee.'
   },
   visual_search_auto_count: {
     kicker: 'Symbol Search is a PolyPDF Pro workflow',
@@ -72,7 +73,7 @@ const IN_APP_CONTEXT = {
   },
   license_window: {
     kicker: 'Upgrade to PolyPDF Pro',
-    lede: 'Unlock unlimited hand-created measurements, Symbol Search, installed plugins, and Revision Package changes and publishing on up to 3 computers at the $49.99 Founder price instead of the planned $99 standard price. No subscription, no renewal, and a 14-day money-back guarantee.'
+    lede: 'Unlock unlimited hand-created measurements, Symbol Search, installed plugins, and Revision Package changes and publishing on up to 3 computers for $74.95 once. No subscription, no renewal, and a 14-day money-back guarantee.'
   }
 };
 
@@ -119,13 +120,13 @@ const Buy = ({ forceInApp = false }) => {
 
   useEffect(() => {
     const target = checkoutCtaRef.current;
-    if (!target || !offer.founderAvailable || typeof IntersectionObserver !== 'function') return undefined;
+    if (!target || !offer.available || typeof IntersectionObserver !== 'function') return undefined;
     const observer = new IntersectionObserver(([entry]) => {
       setShowStickyCheckout(!entry.isIntersecting);
     }, { threshold: 0.35 });
     observer.observe(target);
     return () => observer.disconnect();
-  }, [offer.founderAvailable]);
+  }, [offer.available]);
 
   const handleBuyClick = async (event) => {
     event.preventDefault();
@@ -160,7 +161,7 @@ const Buy = ({ forceInApp = false }) => {
       });
       setCheckoutError(
         soldOut
-          ? 'Founder offer complete. All 100 licenses have been claimed, so checkout is closed.'
+          ? 'Founder offer complete. Refresh this page to view the current Pro offer.'
           : 'Checkout could not load. Please refresh this page or contact support@polypdf.com.'
       );
     }
@@ -203,7 +204,7 @@ const Buy = ({ forceInApp = false }) => {
             <p>
               {cameFromApp
                 ? context.lede
-                : 'Unlock unlimited hand-created measurements, Symbol Search, installed plugins, and Revision Package changes and publishing at the $49.99 Founder price instead of the planned $99 standard price. Use Pro on up to 3 computers with a 14-day money-back guarantee.'}
+                : 'Unlock unlimited hand-created measurements, Symbol Search, installed plugins, and Revision Package changes and publishing for $74.95 once. Use Pro on up to 3 computers with a 14-day money-back guarantee.'}
             </p>
             {cancelled && (
               <p className="buy-cancelled">
@@ -220,10 +221,10 @@ const Buy = ({ forceInApp = false }) => {
               transition={{ delay: 0.08 }}
             >
               <span className="paper-tape pricing-card-tape" aria-hidden="true" />
-              <div className="plan-pill plan-pill-dark">Founder's License</div>
+              <div className="plan-pill plan-pill-dark">Pro license</div>
               <h2>{commercialOffer.name}</h2>
               <OfferPrice />
-              {offer.founderAvailable ? (
+              {offer.available ? (
                 <MagneticLink
                   ref={checkoutCtaRef}
                   href="/buy/"
@@ -240,7 +241,7 @@ const Buy = ({ forceInApp = false }) => {
                 <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
               )}
               {checkoutError && <p className="plan-note checkout-error" role="alert">{checkoutError}</p>}
-              {offer.founderAvailable && <OfferGuarantee compact inverse />}
+              {offer.available && <OfferGuarantee compact inverse />}
               <ul className="plan-list buy-plan-list">
                 {proFeatures.map((feature) => (
                   <li key={feature}>
@@ -256,8 +257,7 @@ const Buy = ({ forceInApp = false }) => {
                 <li><ArrowCounterClockwise aria-hidden="true" weight="bold" /> {refundSummaryText} <Link to="/refund/">Read the policy</Link>.</li>
               </ul>
 
-              <p className="plan-note">{founderRightsText}</p>
-              <p className="plan-note">{offer.founderLimitText}</p>
+              <p className="plan-note">{licenseRightsText}</p>
             </motion.section>
 
             <motion.section
@@ -353,7 +353,7 @@ const Buy = ({ forceInApp = false }) => {
         </div>
       </motion.main>
 
-      {showStickyCheckout && offer.founderAvailable && checkoutStatus !== 'loading' && (
+      {showStickyCheckout && offer.available && checkoutStatus !== 'loading' && (
         <div className="buy-sticky-checkout" role="region" aria-label="Checkout">
           <button
             type="button"

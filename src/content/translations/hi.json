@@ -223,7 +223,7 @@
     "Built-in symbol libraries are available through Tools. They are separate from Symbol Search, which finds matching instances already on a drawing, and from plugins that generate content.": "टूल्स के माध्यम से अंतर्निहित प्रतीक लाइब्रेरी उपलब्ध हैं। वे सिंबल सर्च से अलग हैं, जो ड्राइंग पर पहले से ही मेल खाने वाले उदाहरण ढूंढता है, और सामग्री उत्पन्न करने वाले प्लगइन्स से अलग है।",
     "Bundled and catalog-delivered packages use an Ed25519 signature over a SHA-256 digest covering every file, plus a separate SHA-256 check on each file.": "बंडल और कैटलॉग-डिलीवर किए गए पैकेज प्रत्येक फ़ाइल को कवर करने वाले SHA-256 डाइजेस्ट पर एक Ed25519 हस्ताक्षर का उपयोग करते हैं, साथ ही प्रत्येक फ़ाइल पर एक अलग SHA-256 चेक का उपयोग करते हैं।",
     "Buy PolyPDF Pro": "PolyPDF प्रो खरीदें",
-    "Buy once · $49.99": "एक बार खरीदें · $49.99",
+    "Buy once · $74.95": "एक बार खरीदें · $74.95",
     "Buy the Founder’s License": "संस्थापक का लाइसेंस खरीदें",
     "By The PolyPDF team": "PolyPDF टीम द्वारा",
     "CSV and PDF export": "सीएसवी और पीडीएफ निर्यात",
@@ -1713,7 +1713,7 @@
     "Uninstalling a plugin does not touch content it already generated — that content is part of your document, not part of the plugin.": "किसी प्लगइन को अनइंस्टॉल करने से वह पहले से जेनरेट की गई सामग्री को प्रभावित नहीं करता है - वह सामग्री आपके दस्तावेज़ का हिस्सा है, प्लगइन का हिस्सा नहीं।",
     "Unit": "इकाई",
     "Units": "इकाइयाँ",
-    "Unlock PolyPDF Pro · $49.99": "PolyPDF प्रो अनलॉक करें · $49.99",
+    "Unlock PolyPDF Pro · $74.95": "PolyPDF प्रो अनलॉक करें · $74.95",
     "Unlock Symbol Search": "अनलॉक प्रतीक खोज",
     "Update to 1.5.1": "1.5.1 पर अद्यतन करें",
     "Updates itself": "खुद को अपडेट करता है",
@@ -2045,7 +2045,13 @@
     "Current app: PolyPDF 1.5.2 (build 24) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "वर्तमान ऐप: PolyPDF 1.5.2 (बिल्ड 24) · पैकेज प्रारूप: PolyPDF 1.3.1+ · प्लगइन्स को स्थापित करने और चलाने के लिए 1.4.1+ में PolyPDF प्रो की आवश्यकता होती है",
     "Current version 1.5.2 (build 24).": "वर्तमान संस्करण 1.5.2 (बिल्ड 24)।",
     "Download PolyPDF 1.5.2 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.": "विंडोज़ 10 और 11, x64 के लिए PolyPDF 1.5.2 डाउनलोड करें। पीडीएफ माप, एनोटेशन, पुन: प्रयोज्य स्टैम्प फ़ोल्डर, बेहतर इंटरैक्टिव स्टैम्प और आसान सेटिंग्स।",
-    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.2 (build 24) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.5.2 (बिल्ड 24) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।"
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.2 (build 24) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.5.2 (बिल्ड 24) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।",
+    "Buy the Pro license": "Pro लाइसेंस खरीदें",
+    "USD · one payment": "USD · एक बार भुगतान",
+    "Current app: PolyPDF 1.5.3 (build 25) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "वर्तमान ऐप: PolyPDF 1.5.3 (बिल्ड 25) · पैकेज प्रारूप: PolyPDF 1.3.1+ · प्लगइन्स को स्थापित करने और चलाने के लिए 1.4.1+ में PolyPDF प्रो की आवश्यकता होती है",
+    "Current version 1.5.3 (build 25).": "वर्तमान संस्करण 1.5.3 (बिल्ड 25)।",
+    "Download PolyPDF 1.5.3 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.": "विंडोज़ 10 और 11, x64 के लिए PolyPDF 1.5.3 डाउनलोड करें। पीडीएफ माप, एनोटेशन, पुन: प्रयोज्य स्टैम्प फ़ोल्डर, बेहतर इंटरैक्टिव स्टैम्प और आसान सेटिंग्स।",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.3 (build 25) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.5.3 (बिल्ड 25) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।"
   },
   "sourceHash": "6d2a68665774bc3a7e55964dade8d0909e62853ceaead910564ed66742ba6e44",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review."

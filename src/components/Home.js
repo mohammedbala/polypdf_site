@@ -23,7 +23,7 @@ import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 import { captureAttribution } from '../lib/attribution';
 import { usePlatform } from '../lib/platform';
-import { commercialOffer, founderRightsText, refundSummaryText } from '../lib/commercialOffer';
+import { commercialOffer, licenseRightsText, refundSummaryText } from '../lib/commercialOffer';
 import siteRelease from '../lib/siteRelease.json';
 import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
 import { releaseAnswer } from '../lib/releaseHighlights';
@@ -171,10 +171,11 @@ const freeFeatures = [
   'Open PDF drawings, calibrate scale, and use markup tools with no trial countdown',
   'Verify fit on your own plans with up to 3 hand-created measurements per document',
   'Open, view, and navigate portable Revision Packages',
-  'Decide after real use, not from a watered-down demo'
+  'Browse every preset tool; upgrade to Pro to use toolsets, PDF content editing, and overlay'
 ];
 
 const proFeatures = [
+  'Edit PDF content, use every preset and custom toolset, and overlay drawing sheets',
   'Unlock unlimited hand-created measurements across all of your documents',
   'Use Symbol Search auto-count and installed plugins, including PDF Maps and Professional Seal Maker',
   'Create, update, reconcile, and publish portable Revision Packages',
@@ -242,7 +243,7 @@ const steps = [
   },
   {
     title: 'Unlock unlimited when ready',
-    description: `If PolyPDF saves you time, buy the ${commercialOffer.price} Founder's License to remove the measurement cap and unlock Symbol Search, plugins, and Revision Package updates without a yearly fee.`
+    description: `If PolyPDF saves you time, buy the ${commercialOffer.price} Pro license to remove the measurement cap and unlock Symbol Search, plugins, and Revision Package updates without a yearly fee.`
   }
 ];
 
@@ -265,12 +266,12 @@ export const homeFaqs = [
     answer: 'Yes. A license activates PolyPDF on up to 3 computers in any mix — three Macs, three Windows PCs, or any combination.'
   },
   {
-    question: 'What does the $49.99 license unlock?',
-    answer: `The Founder's License removes the hand-created measurement limit and unlocks Symbol Search, installed plugins such as PDF Maps and Professional Seal Maker, and Revision Package creation, updates, and publishing. ${founderRightsText}`
+    question: 'What does the $74.95 license unlock?',
+    answer: `The Pro license removes the hand-created measurement limit and unlocks Symbol Search, installed plugins such as PDF Maps and Professional Seal Maker, and Revision Package creation, updates, and publishing. ${licenseRightsText}`
   },
   {
     question: 'Is this a subscription?',
-    answer: `No. The PolyPDF Pro Founder's License is ${commercialOffer.price} once. There is no annual renewal, recurring maintenance bill, or subscription timer.`
+    answer: `No. The PolyPDF Pro is ${commercialOffer.price} once. There is no annual renewal, recurring maintenance bill, or subscription timer.`
   },
   {
     question: 'What happens after I buy?',
@@ -355,9 +356,9 @@ const LatestReleaseSpotlight = () => (
         <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Available now: PolyPDF {siteRelease.version} · Mac &amp; Windows</span>
         <h2 id="latest-release-title">Create your own review stamps.</h2>
         <p>Start from a blank canvas, arrange your fields, and choose fixed text, automatic values, or a prompt. Save the stamp to a toolset when you want to use it again.</p>
-        <p>{`PolyPDF ${siteRelease.version} (build ${siteRelease.build}) improves stamp field alignment, reusable stamp folders, saved stamp answers, settings scrolling, and document stability.`}</p>
+        <p>{`PolyPDF ${siteRelease.version} (build ${siteRelease.build}) adds Marquee Zoom, perimeter label controls, and 49 editable Interior Design symbols.`}</p>
         <Link className="secondary-btn revision-release-link" to="/blog/create-interactive-pdf-stamps/">Create your first interactive stamp <ArrowRight aria-hidden="true" weight="bold" /></Link>
-        <p className="revision-release-access"><a href="/downloads/PolyPDFMac-v1.5.2-24.html">Read the 1.5.2 release notes</a> · <Link to="/blog/polypdf-1-5-1/">Features introduced in 1.5.1</Link></p>
+        <p className="revision-release-access"><a href={`/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html`}>{`Read the ${siteRelease.version} release notes`}</a> · <Link to="/blog/polypdf-1-5-1/">Features introduced in 1.5.1</Link></p>
       </div>
       <figure className="revision-release-visual">
         <a href={stampBuilderImage} aria-label="Open the full-size PolyPDF 1.5.1 stamp builder screenshot">
@@ -690,7 +691,7 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
       >
         <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Pick your lane</span>
         <h2>Try the real app free. Pay once to unlock every Pro workflow.</h2>
-        <p>Markup, review, calibration, three hand-created measurements per document, and Revision Package viewing stay free. Pro removes the measurement cap and unlocks Symbol Search, plugins, and Revision Package changes and publishing at the $49.99 Founder price — saving $49.01 against the planned $99 standard price — with a 14-day money-back guarantee.</p>
+        <p>Markup, review, calibration, three hand-created measurements per document, and Revision Package viewing stay free. Pro removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, plugins, and Revision Package changes and publishing for $74.95 once, with a 14-day money-back guarantee.</p>
       </motion.div>
 
       <div className="pricing-grid">
@@ -724,8 +725,8 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
           transition={{ delay: 0.1 }}
         >
           <span className="paper-tape pricing-card-tape" aria-hidden="true" />
-          <div className="plan-pill plan-pill-dark">Founder's License</div>
-          <h3>Unlock every Pro measurement, search, plugin, and revision workflow</h3>
+          <div className="plan-pill plan-pill-dark">Pro license</div>
+          <h3>Unlock PDF editing, toolsets, overlay, and every Pro workflow</h3>
           <OfferPrice />
           <ul className="plan-list">
             {proFeatures.map((feature) => (
@@ -734,7 +735,7 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
               </li>
             ))}
           </ul>
-          {offer.founderAvailable ? (
+          {offer.available ? (
             <DirectCheckoutLink
               source="website_pricing"
               pageVariant="home_pricing"
@@ -745,8 +746,8 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
           ) : (
             <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
           )}
-          {offer.founderAvailable && <OfferGuarantee compact inverse />}
-          <p className="plan-note">{founderRightsText} {offer.founderLimitText}</p>
+          {offer.available && <OfferGuarantee compact inverse />}
+          <p className="plan-note">{licenseRightsText}</p>
           <p className="plan-note">Secure Stripe checkout, license key emailed on payment. {refundSummaryText}</p>
         </motion.article>
       </div>
@@ -852,7 +853,7 @@ const Home = () => {
 
             <p className="hero-subtitle">
               Calibrate, measure, mark up, compare, and carry review into the next drawing issue.
-              Start free on Mac or Windows, then unlock every Pro workflow at the $49.99 Founder price.
+              Start free on Mac or Windows, then unlock every Pro workflow for $74.95 once.
             </p>
 
             <div className="hero-cta">
@@ -879,15 +880,15 @@ const Home = () => {
 
           <motion.div
             className="hero-stats compact-stats"
-            aria-label="Founder license facts"
+            aria-label="Pro license facts"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.24 }}
           >
             <div className="stat">
               <span className="stat-reference"><del>$99</del> planned</span>
-              <strong>$49.99</strong>
-              <p>Founder price · one payment</p>
+              <strong>$74.95</strong>
+              <p>One payment · no subscription</p>
             </div>
             <div className="stat">
               <strong>3</strong>
@@ -1023,7 +1024,7 @@ const Home = () => {
           >
             <span className="cta-sketch" aria-hidden="true" />
             <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
-            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates at the $49.99 Founder price instead of the planned $99 standard price.</p>
+            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates for $74.95 once.</p>
             <div className="cta-download-row">
               <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
               <DirectCheckoutLink

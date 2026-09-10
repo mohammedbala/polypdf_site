@@ -9,14 +9,12 @@ import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferGuarantee, OfferPrice } from './OfferPrice';
 import { canonicalPagePath, captureAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
-import { commercialOffer, founderRightsText } from '../lib/commercialOffer';
-import { useCommercialOffer } from '../lib/useCommercialOffer';
+import { commercialOffer, licenseRightsText } from '../lib/commercialOffer';
 import './WorkflowLanding.css';
 
 export const CURRENT_INTERFACE_LABEL = 'PolyPDF for Mac and Windows';
 
 const WorkflowLanding = ({ page }) => {
-  const offer = useCommercialOffer();
 
   useEffect(() => {
     captureAttribution();
@@ -157,15 +155,14 @@ const WorkflowLanding = ({ page }) => {
         <section className="workflow-offer" id="pricing">
           <div className="container workflow-offer-grid">
             <div className="workflow-offer-price">
-              <span>PolyPDF Pro Founder’s License</span>
+              <span>PolyPDF Pro</span>
               <OfferPrice compact />
               <small>one time · no subscription</small>
             </div>
             <div className="workflow-offer-copy">
               <h2>Start with the free app. Pay once to unlock every Pro workflow.</h2>
-              <p>{founderRightsText}</p>
+              <p>{licenseRightsText}</p>
               <OfferGuarantee compact />
-              <p className="workflow-offer-limit">{offer.founderLimitText}</p>
             </div>
             <div className="workflow-offer-actions">
               <DirectCheckoutLink
@@ -174,7 +171,7 @@ const WorkflowLanding = ({ page }) => {
                 pageVariant="workflow_offer"
                 onClick={() => trackCta('buy_click')}
               >
-                Buy the Founder’s License <FaArrowRight />
+                Buy the Pro license <FaArrowRight />
               </DirectCheckoutLink>
               <a
                 href="#workflow-main"

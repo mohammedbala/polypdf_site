@@ -9,7 +9,7 @@ import {
   FaLock
 } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon-96.png';
-import { commercialOffer, founderLimitText } from '../lib/commercialOffer';
+import { commercialOffer } from '../lib/commercialOffer';
 
 const sections = [
   {
@@ -28,7 +28,7 @@ const sections = [
     content: [
       'The desktop app for macOS and Windows may be offered as a free download with limited measurement usage and view-only access to some project workflows before Pro is required.',
       'PolyPDF Pro is intended to be sold as a one-time purchase rather than a recurring subscription.',
-      `The current direct offer includes free markup, review, calibration, 3 hand-created measurements per document, and Revision Package viewing and navigation. The optional ${commercialOffer.price} Founder's License, instead of the planned ${commercialOffer.referencePrice} standard price, removes that cap and unlocks Symbol Search, plugin workflows, and Revision Package creation, changes, and publishing. Direct website purchases include a 14-day money-back guarantee.`
+      `The current direct offer includes free markup, review, calibration, 3 hand-created measurements per document, and Revision Package viewing and navigation. The optional ${commercialOffer.price} Pro license removes that cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, plugin workflows, and Revision Package creation, changes, and publishing. Direct website purchases include a 14-day money-back guarantee.`
     ]
   },
   {
@@ -36,7 +36,7 @@ const sections = [
     title: 'Direct purchases and license use',
     content: [
       'The current direct purchase flow is processed through Stripe and unlocked with a PolyPDF license key.',
-      'A new Founder purchase grants a personal, non-transferable license to use PolyPDF 1.x perpetually on up to 3 computers (macOS or Windows), including every public PolyPDF 1.x update.',
+      'A new Pro purchase grants a personal, non-transferable license to use PolyPDF 1.x perpetually on up to 3 computers (macOS or Windows), including every public PolyPDF 1.x update.',
       'Future major versions may be offered as optional paid upgrades. A purchased PolyPDF 1.x license continues to work.',
       'Purchases made before the July 30, 2026 policy cutoff are grandfathered for perpetual Pro use and all future public PolyPDF app updates.',
       'You may not resell, sublicense, share, or distribute your license key.',
@@ -74,7 +74,7 @@ const Terms = () => {
           <div className="legal-hero">
             <h1>Terms of Use</h1>
             <p className="legal-subtitle">Terms for the PolyPDF website and direct desktop downloads</p>
-            <p className="last-updated">Commercial terms version: July 30, 2026 · Website terms reviewed September 6, 2026</p>
+            <p className="last-updated">Commercial terms version: September 9, 2026 · Website terms reviewed September 9, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -127,7 +127,7 @@ const Terms = () => {
             <ul className="section-content">
               <li>The desktop app may include in-app update delivery (Sparkle on macOS, electron-updater on Windows).</li>
               <li>Founder licenses include every public PolyPDF 1.x update. Grandfathered legacy purchases include all future public PolyPDF app updates.</li>
-              <li>{founderLimitText}</li>
+              <li>The Founder offer has ended. Existing Founder licenses retain their perpetual 1.x use and included 1.x updates.</li>
               <li>Future features, future OS compatibility, and continued operation of online services are not guaranteed.</li>
               <li>If PolyPDF stops operating, already-downloaded software may keep working to the extent technically possible, but ongoing online services, new downloads, and reactivation are not guaranteed.</li>
             </ul>

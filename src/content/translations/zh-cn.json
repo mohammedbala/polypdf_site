@@ -223,7 +223,7 @@
     "Built-in symbol libraries are available through Tools. They are separate from Symbol Search, which finds matching instances already on a drawing, and from plugins that generate content.": "内置符号库可通过工具获得。它们与符号搜索（查找绘图上已有的匹配实例）和生成内容的插件是分开的。",
     "Bundled and catalog-delivered packages use an Ed25519 signature over a SHA-256 digest covering every file, plus a separate SHA-256 check on each file.": "捆绑和目录交付的软件包使用覆盖每个文件的 SHA-256 摘要上的 Ed25519 签名，并对每个文件进行单独的 SHA-256 检查。",
     "Buy PolyPDF Pro": "购买 PolyPDF Pro",
-    "Buy once · $49.99": "购买一次 · $49.99",
+    "Buy once · $74.95": "购买一次 · $74.95",
     "Buy the Founder’s License": "购买创始人的许可证",
     "By The PolyPDF team": "由 PolyPDF 团队提供",
     "CSV and PDF export": "CSV 和 PDF 导出",
@@ -1713,7 +1713,7 @@
     "Uninstalling a plugin does not touch content it already generated — that content is part of your document, not part of the plugin.": "卸载插件不会影响它已经生成的内容 - 该内容是文档的一部分，而不是插件的一部分。",
     "Unit": "单位",
     "Units": "单位",
-    "Unlock PolyPDF Pro · $49.99": "解锁 PolyPDF Pro · 49.99 美元",
+    "Unlock PolyPDF Pro · $74.95": "解锁 PolyPDF Pro · 74.95 美元",
     "Unlock Symbol Search": "解锁符号搜索",
     "Update to 1.5.1": "更新至1.5.1",
     "Updates itself": "自行更新",
@@ -2045,7 +2045,13 @@
     "Current app: PolyPDF 1.5.2 (build 24) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "当前应用程序：PolyPDF 1.5.2 (build 24) · 软件包格式：PolyPDF 1.3.1+ · 安装和运行插件需要 PolyPDF Pro 1.4.1+",
     "Current version 1.5.2 (build 24).": "当前版本 1.5.2（内部版本 24）。",
     "Download PolyPDF 1.5.2 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.": "下载适用于 Windows 10 和 11 x64 的 PolyPDF 1.5.2。 PDF 测量、注释、可重复使用的图章文件夹、改进的交互式图章和更流畅的设置。",
-    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.2 (build 24) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.5.2（版本 24）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。"
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.2 (build 24) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.5.2（版本 24）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。",
+    "Buy the Pro license": "购买 Pro 许可证",
+    "USD · one payment": "美元 · 一次性付款",
+    "Current app: PolyPDF 1.5.3 (build 25) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "当前应用程序：PolyPDF 1.5.3 (build 25) · 软件包格式：PolyPDF 1.3.1+ · 安装和运行插件需要 PolyPDF Pro 1.4.1+",
+    "Current version 1.5.3 (build 25).": "当前版本 1.5.3（内部版本 25）。",
+    "Download PolyPDF 1.5.3 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.": "下载适用于 Windows 10 和 11 x64 的 PolyPDF 1.5.3。 PDF 测量、注释、可重复使用的图章文件夹、改进的交互式图章和更流畅的设置。",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.3 (build 25) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.5.3（版本 25）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。"
   },
   "sourceHash": "6d2a68665774bc3a7e55964dade8d0909e62853ceaead910564ed66742ba6e44",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review."

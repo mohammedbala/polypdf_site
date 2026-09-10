@@ -156,6 +156,7 @@ async function withFakeSite({
       response.writeHead(200, { 'Content-Type': 'application/json' });
       response.end(JSON.stringify({
         id: expectedOffer.id,
+        kind: "standard", available: true,
         termsVersion: expectedOffer.termsVersion,
         checkoutLineItemName: expectedOffer.checkoutLineItemName,
         price: expectedOffer.price,
@@ -166,7 +167,7 @@ async function withFakeSite({
           platforms: ['macOS', 'Windows']
         },
         founder: {
-          available: true,
+          available: false,
           maximumFulfilledLicenses: 100,
           endsAt: null
         }

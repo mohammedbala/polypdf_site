@@ -60,7 +60,7 @@ const DirectCheckoutLink = forwardRef(({
       setCheckoutError(soldOut
         ? {
           title: 'Founder offer complete.',
-          message: 'All 100 Founder licenses have been claimed, so checkout is closed.'
+          message: 'Refresh this page to view the current Pro offer.'
         }
         : {
           title: 'Checkout did not open.',

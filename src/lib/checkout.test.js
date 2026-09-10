@@ -1,5 +1,5 @@
 import { saveConsent } from './consent';
-const termsAcceptance = { accepted: true, version: '2026-09-06' };
+const termsAcceptance = { accepted: true, version: '2026-09-09' };
 beforeEach(() => { window.localStorage.clear(); saveConsent({ marketing: true }); });
 import { createStripeCheckoutSession, isSecureStripeCheckoutUrl } from './checkout';
 
@@ -41,7 +41,7 @@ test('fails closed when the server returns a non-Stripe URL', async () => {
 
 test('does not create checkout without explicit current terms acceptance', async () => {
   const fetchImpl = jest.fn();
-  for (const agreement of [undefined, { accepted: false, version: '2026-09-06' }, { accepted: true, version: 'old' }]) {
+  for (const agreement of [undefined, { accepted: false, version: '2026-09-09' }, { accepted: true, version: 'old' }]) {
     await expect(createStripeCheckoutSession({}, fetchImpl, agreement)).rejects.toThrow('terms_acceptance_required');
   }
   expect(fetchImpl).not.toHaveBeenCalled();

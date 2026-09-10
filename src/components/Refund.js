@@ -77,7 +77,7 @@ const Refund = () => {
           <div className="legal-intro">
             <p>
               PolyPDF is designed so you can download the app free — on Mac or Windows — and test it on your own
-              documents, and only purchase Pro when you want unlimited measurements, Symbol Search, plugins, or Revision Package changes and publishing. This policy
+              documents, and only purchase Pro when you want PDF content editing, toolsets, overlay, unlimited measurements, Symbol Search, plugins, or Revision Package changes and publishing. This policy
               explains refund handling for direct purchases processed by Stripe.
             </p>
           </div>

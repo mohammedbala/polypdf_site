@@ -15,7 +15,7 @@ export const checkoutErrorCode = (error) => (
 );
 
 export const createStripeCheckoutSession = async (attribution, fetchImpl = window.fetch.bind(window), termsAcceptance) => {
-  if (termsAcceptance?.accepted !== true || termsAcceptance.version !== '2026-09-06') {
+  if (termsAcceptance?.accepted !== true || termsAcceptance.version !== '2026-09-09') {
     throw new Error('terms_acceptance_required');
   }
   const response = await fetchImpl('/api/checkout/session', {

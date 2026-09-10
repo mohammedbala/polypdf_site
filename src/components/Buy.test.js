@@ -17,7 +17,7 @@ const renderBuy = async (url, founder) => {
   window.IntersectionObserver = TestIntersectionObserver;
   global.fetch = jest.fn().mockResolvedValue({
     ok: true,
-    json: async () => ({ founder })
+    json: async () => ({ id: "polypdf_pro_1x_2026", kind: "standard", available: founder.available, price: 74.95, currency: "USD", founder: { available: false, reason: "ended" } })
   });
   await act(async () => {
     root.render(
@@ -73,16 +73,18 @@ test('shows an explicit price anchor and the real money-back guarantee beside ch
     endsAt: null,
     maximumFulfilledLicenses: 100
   });
-  expect(view.container.querySelector('.offer-price-reference del')?.textContent).toBe('$99');
-  expect(view.container.querySelector('.offer-price-current strong')?.textContent).toBe('$49.99');
-  expect(view.container.querySelector('.offer-price-savings')?.textContent).toBe('Save $49.01');
+  expect(view.container.querySelector('.offer-price-reference')).toBeNull();
+  expect(view.container.querySelector('.offer-price-current strong')?.textContent).toBe('$74.95');
+  expect(view.container.querySelector('.offer-price-savings')).toBeNull();
+  expect(view.container.textContent).not.toContain('Founder price');
+  expect(view.container.textContent).toContain('PDF content editing');
   expect(view.container.querySelector('.offer-guarantee')?.textContent).toContain(
     '14-day money-back guarantee'
   );
   view.unmount();
 });
 
-test('disables checkout with an honest complete state at the fulfilled cap', async () => {
+test('disables checkout when the standard offer is unavailable', async () => {
   const view = await renderBuy('/buy/', {
     available: false,
     reason: 'sold_out',
@@ -90,7 +92,7 @@ test('disables checkout with an honest complete state at the fulfilled cap', asy
     maximumFulfilledLicenses: 100
   });
   expect(view.container.textContent).toContain(
-    'Founder offer complete. All 100 licenses have been claimed, so checkout is closed.'
+    'Checkout is temporarily unavailable. Please refresh or contact support@polypdf.com.'
   );
   expect(view.container.querySelector('.buy-plan a.primary-btn')).toBeNull();
   view.unmount();

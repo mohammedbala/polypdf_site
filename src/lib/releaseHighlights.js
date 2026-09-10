@@ -12,4 +12,10 @@ export const release152Highlights = Object.freeze([
   'Settings scrolling is smoother, and a PDF engine crash when closing one document and opening another has been fixed.'
 ]);
 
-export const releaseAnswer = 'PolyPDF 1.5.2 improves interactive stamps with alignment guides, compact field controls, better field rendering, and reusable stamp folders. Double-click a placed stamp to edit its answers. It also fixes abrupt settings scrolling and an intermittent PDF engine crash when closing one document and opening another.';
+export const release153Highlights = Object.freeze([
+  'Marquee Zoom, perimeter segment label controls, and 49 editable Interior Design symbols improve drawing review.',
+  'PDF content editing, toolsets, and overlay now require Pro. Free users can browse every preset and upgrade when choosing a tool.',
+  'PolyPDF Pro is $74.95 USD once. Existing paid licenses retain their purchased rights.'
+]);
+
+export const releaseAnswer = 'PolyPDF 1.5.3 adds Marquee Zoom, perimeter segment label controls, and 49 editable Interior Design symbols. PDF content editing, toolsets, and overlay require Pro. The standard Pro license is $74.95 USD once; existing paid licenses keep their purchased rights.';

@@ -1,26 +1,15 @@
 export const commercialOffer = Object.freeze({
-  id: 'polypdf_pro_founder_1x_2026',
-  name: "PolyPDF Pro Founder's License",
-  checkoutLineItemName: "PolyPDF Pro Founder's License — Perpetual 1.x",
-  price: '$49.99',
-  referencePrice: '$99',
-  savings: '$49.01',
+  id: 'polypdf_pro_1x_2026',
+  name: "PolyPDF Pro",
+  checkoutLineItemName: "PolyPDF Pro — Perpetual 1.x",
+  price: '$74.95',
   activationLimit: 3,
   moneyBackGuaranteeDays: 14,
-  termsVersion: '2026-07-30',
-  founderMaximumLicenses: 100
+  termsVersion: '2026-09-09'
 });
 
-export const founderLimitTextFor = () =>
-  `The Founder offer is limited to the first ${commercialOffer.founderMaximumLicenses} fulfilled licenses.`;
-
-export const founderLimitText = founderLimitTextFor();
-
-export const founderRightsText =
+export const licenseRightsText =
   'Use PolyPDF 1.x forever on up to 3 Mac or Windows computers. Every PolyPDF 1.x update is included. Future major versions may be optional paid upgrades.';
-
-export const founderSavingsText =
-  `Save ${commercialOffer.savings} against the planned ${commercialOffer.referencePrice} standard price.`;
 
 export const moneyBackGuaranteeText =
   `${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee`;

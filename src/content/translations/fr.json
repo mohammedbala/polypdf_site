@@ -223,7 +223,7 @@
     "Built-in symbol libraries are available through Tools. They are separate from Symbol Search, which finds matching instances already on a drawing, and from plugins that generate content.": "Les bibliothèques de symboles intégrées sont disponibles via Outils. Ils sont distincts de la recherche de symboles, qui trouve des instances correspondantes déjà sur un dessin, et des plugins qui génèrent du contenu.",
     "Bundled and catalog-delivered packages use an Ed25519 signature over a SHA-256 digest covering every file, plus a separate SHA-256 check on each file.": "Les packages groupés et fournis par catalogue utilisent une signature Ed25519 sur un résumé SHA-256 couvrant chaque fichier, ainsi qu'une vérification SHA-256 distincte sur chaque fichier.",
     "Buy PolyPDF Pro": "Acheter PolyPDF Pro",
-    "Buy once · $49.99": "Acheter une fois · 49,99 $",
+    "Buy once · $74.95": "Acheter une fois · 74,95 $",
     "Buy the Founder’s License": "Acheter la licence de fondateur",
     "By The PolyPDF team": "Par l'équipe PolyPDF",
     "CSV and PDF export": "Exportation CSV et PDF",
@@ -1713,7 +1713,7 @@
     "Uninstalling a plugin does not touch content it already generated — that content is part of your document, not part of the plugin.": "La désinstallation d'un plugin ne touche pas le contenu qu'il a déjà généré : ce contenu fait partie de votre document, pas du plugin.",
     "Unit": "Unité",
     "Units": "Unités",
-    "Unlock PolyPDF Pro · $49.99": "Débloquez PolyPDF Pro · 49,99 $",
+    "Unlock PolyPDF Pro · $74.95": "Débloquez PolyPDF Pro · 74,95 $",
     "Unlock Symbol Search": "Déverrouiller la recherche de symboles",
     "Update to 1.5.1": "Mise à jour vers 1.5.1",
     "Updates itself": "Se met à jour",
@@ -2045,7 +2045,13 @@
     "Current app: PolyPDF 1.5.2 (build 24) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Application actuelle : PolyPDF 1.5.2 (build 24) · Format du package : PolyPDF 1.3.1+ · L'installation et l'exécution des plugins nécessitent PolyPDF Pro dans la version 1.4.1+",
     "Current version 1.5.2 (build 24).": "Version actuelle 1.5.2 (build 24).",
     "Download PolyPDF 1.5.2 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.": "Téléchargez PolyPDF 1.5.2 pour Windows 10 et 11, x64. Mesure PDF, annotation, dossiers de tampons réutilisables, tampons interactifs améliorés et paramètres plus fluides.",
-    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.2 (build 24) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenez de l'aide pour l'installation, les flux de travail des produits, les achats et l'activation des licences. La version publique actuelle est PolyPDF 1.5.2 (build 24) sur Mac et Windows. Lorsque vous écrivez, incluez la version affichée dans À propos, votre système d'exploitation et les détails du reçu Stripe, le cas échéant."
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.2 (build 24) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenez de l'aide pour l'installation, les flux de travail des produits, les achats et l'activation des licences. La version publique actuelle est PolyPDF 1.5.2 (build 24) sur Mac et Windows. Lorsque vous écrivez, incluez la version affichée dans À propos, votre système d'exploitation et les détails du reçu Stripe, le cas échéant.",
+    "Buy the Pro license": "Acheter la licence Pro",
+    "USD · one payment": "USD · paiement unique",
+    "Current app: PolyPDF 1.5.3 (build 25) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Application actuelle : PolyPDF 1.5.3 (build 25) · Format du package : PolyPDF 1.3.1+ · L'installation et l'exécution des plugins nécessitent PolyPDF Pro dans la version 1.4.1+",
+    "Current version 1.5.3 (build 25).": "Version actuelle 1.5.3 (build 25).",
+    "Download PolyPDF 1.5.3 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.": "Téléchargez PolyPDF 1.5.3 pour Windows 10 et 11, x64. Mesure PDF, annotation, dossiers de tampons réutilisables, tampons interactifs améliorés et paramètres plus fluides.",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.3 (build 25) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenez de l'aide pour l'installation, les flux de travail des produits, les achats et l'activation des licences. La version publique actuelle est PolyPDF 1.5.3 (build 25) sur Mac et Windows. Lorsque vous écrivez, incluez la version affichée dans À propos, votre système d'exploitation et les détails du reçu Stripe, le cas échéant."
   },
   "sourceHash": "6d2a68665774bc3a7e55964dade8d0909e62853ceaead910564ed66742ba6e44",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review."

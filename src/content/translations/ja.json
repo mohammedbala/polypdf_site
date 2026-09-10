@@ -223,7 +223,7 @@
     "Built-in symbol libraries are available through Tools. They are separate from Symbol Search, which finds matching instances already on a drawing, and from plugins that generate content.": "組み込みのシンボル ライブラリは、ツールから利用できます。これらは、図面上に既に存在する一致するインスタンスを検索するシンボル検索や、コンテンツを生成するプラグインとは別のものです。",
     "Bundled and catalog-delivered packages use an Ed25519 signature over a SHA-256 digest covering every file, plus a separate SHA-256 check on each file.": "バンドルおよびカタログ配信パッケージでは、すべてのファイルをカバーする SHA-256 ダイジェスト上に Ed25519 署名が使用され、さらに各ファイルに対して個別の SHA-256 チェックが使用されます。",
     "Buy PolyPDF Pro": "PolyPDF Pro を購入する",
-    "Buy once · $49.99": "一度購入 · $49.99",
+    "Buy once · $74.95": "一度購入 · $74.95",
     "Buy the Founder’s License": "ファウンダーライセンスを購入する",
     "By The PolyPDF team": "PolyPDF チームによる",
     "CSV and PDF export": "CSV および PDF のエクスポート",
@@ -1713,7 +1713,7 @@
     "Uninstalling a plugin does not touch content it already generated — that content is part of your document, not part of the plugin.": "プラグインをアンインストールしても、すでに生成されたコンテンツには影響しません。そのコンテンツはドキュメントの一部であり、プラグインの一部ではありません。",
     "Unit": "ユニット",
     "Units": "単位",
-    "Unlock PolyPDF Pro · $49.99": "PolyPDF Pro のロックを解除する · $49.99",
+    "Unlock PolyPDF Pro · $74.95": "PolyPDF Pro のロックを解除する · $74.95",
     "Unlock Symbol Search": "シンボル検索のロックを解除する",
     "Update to 1.5.1": "1.5.1へのアップデート",
     "Updates itself": "自体を更新します",
@@ -2045,7 +2045,13 @@
     "Current app: PolyPDF 1.5.2 (build 24) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "現在のアプリ: PolyPDF 1.5.2 (ビルド 24) · パッケージ形式: PolyPDF 1.3.1+ · プラグインのインストールと実行には、1.4.1+ の PolyPDF Pro が必要です",
     "Current version 1.5.2 (build 24).": "現在のバージョン 1.5.2 (ビルド 24)。",
     "Download PolyPDF 1.5.2 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.": "Windows 10 および 11、x64 用の PolyPDF 1.5.2 をダウンロードします。 PDF の測定、注釈、再利用可能なスタンプ フォルダー、改善されたインタラクティブ スタンプ、およびよりスムーズな設定。",
-    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.2 (build 24) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "インストール、製品のワークフロー、購入、ライセンスのアクティベーションに関するサポートが受けられます。現在のパブリック リリースは、Mac および Windows 上の PolyPDF 1.5.2 (ビルド 24) です。記入する際は、「バージョン情報」に表示されているバージョン、オペレーティング システム、および該当する場合は Stripe の領収書の詳細を含めてください。"
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.2 (build 24) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "インストール、製品のワークフロー、購入、ライセンスのアクティベーションに関するサポートが受けられます。現在のパブリック リリースは、Mac および Windows 上の PolyPDF 1.5.2 (ビルド 24) です。記入する際は、「バージョン情報」に表示されているバージョン、オペレーティング システム、および該当する場合は Stripe の領収書の詳細を含めてください。",
+    "Buy the Pro license": "Pro ライセンスを購入",
+    "USD · one payment": "米ドル · 1回払い",
+    "Current app: PolyPDF 1.5.3 (build 25) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "現在のアプリ: PolyPDF 1.5.3 (ビルド 25) · パッケージ形式: PolyPDF 1.3.1+ · プラグインのインストールと実行には、1.4.1+ の PolyPDF Pro が必要です",
+    "Current version 1.5.3 (build 25).": "現在のバージョン 1.5.3 (ビルド 25)。",
+    "Download PolyPDF 1.5.3 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.": "Windows 10 および 11、x64 用の PolyPDF 1.5.3 をダウンロードします。 PDF の測定、注釈、再利用可能なスタンプ フォルダー、改善されたインタラクティブ スタンプ、およびよりスムーズな設定。",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.3 (build 25) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "インストール、製品のワークフロー、購入、ライセンスのアクティベーションに関するサポートが受けられます。現在のパブリック リリースは、Mac および Windows 上の PolyPDF 1.5.3 (ビルド 25) です。記入する際は、「バージョン情報」に表示されているバージョン、オペレーティング システム、および該当する場合は Stripe の領収書の詳細を含めてください。"
   },
   "sourceHash": "6d2a68665774bc3a7e55964dade8d0909e62853ceaead910564ed66742ba6e44",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review."
