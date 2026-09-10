@@ -1,18 +1,21 @@
-name: Release access preflight
+name: Release host cache maintenance
 on:
   push:
     branches: [codex/release-access-preflight]
 permissions:
   contents: read
+concurrency:
+  group: deploy-polypdf-site
+  cancel-in-progress: false
 jobs:
-  inspect:
+  maintenance:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Verify existing deployment access without changing production
+      - name: Remove regenerable old site builds while retaining active and rollback releases
         env:
           DEPLOY_HOST: ${{ secrets.DROPLET_HOST }}
           DEPLOY_USER: ${{ secrets.DROPLET_USER }}
@@ -20,20 +23,35 @@ jobs:
           mkdir -p ~/.ssh
           ssh-keyscan -H "$DEPLOY_HOST" >> ~/.ssh/known_hosts
           ssh -o BatchMode=yes "$DEPLOY_USER@$DEPLOY_HOST" 'bash -euo pipefail' <<'REMOTE'
-            printf 'Deployment account UID: '; id -u
-            for directory in /var/www/polypdf-downloads /var/www/polypdf-downloads/windows /opt/polypdf-license-api; do
-              if test -d "$directory" && test -w "$directory"; then
-                echo "Writable release location: $directory"
-              else
-                echo "Unavailable release location: $directory"
-              fi
-            done
-            systemctl is-active polypdf-license-api
-            node --version
-            du -sh /root/.npm /var/cache/apt/archives /var/log/journal /var/www/polypdf-site/releases /var/www/polypdf-downloads /opt/polypdf-license-api 2>/dev/null || true
-            for directory in /var/www/polypdf-site/releases/*; do
-              test -d "$directory" && du -sh "$directory"
-            done
-            readlink /var/www/polypdf-site/current
-            df -h /var/www/polypdf-downloads /opt/polypdf-license-api
+          set -euo pipefail
+          python3 - <<'CLEANUP'
+          import datetime,json,os,re,shutil,subprocess
+          from pathlib import Path
+          site=Path('/var/www/polypdf-site'); releases=site/'releases'; current=(site/'current').resolve(strict=True)
+          assert current.parent==releases and current.is_dir()
+          free_before=shutil.disk_usage(site).free
+          candidates=[p for p in releases.iterdir() if p.is_dir() and not p.is_symlink() and re.fullmatch('[0-9a-f]{40}',p.name)]
+          keep={current,*sorted(candidates,key=lambda p:p.stat().st_mtime,reverse=True)[:5]}
+          previous_file=site/'.deploy-previous-target'
+          if previous_file.is_file():
+              previous=(site/previous_file.read_text().strip()).resolve()
+              if previous.parent==releases:keep.add(previous)
+          manifest={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'kept':[str(p) for p in sorted(keep)],'removed':[],'freeBefore':free_before}
+          backup=Path('/var/backups/polypdf');backup.mkdir(mode=0o700,parents=True,exist_ok=True)
+          report=backup/'release-153-generated-site-cleanup.json'
+          for p in candidates:
+              if p in keep:continue
+              known=subprocess.run(['git','-C',str(site),'cat-file','-e',p.name+'^{commit}'],capture_output=True).returncode==0
+              if not known:continue
+              manifest['removed'].append(str(p));report.write_text(json.dumps(manifest,indent=2))
+              shutil.rmtree(p)
+          assert (site/'current').resolve(strict=True)==current
+          manifest['freeAfter']=shutil.disk_usage(site).free;report.write_text(json.dumps(manifest,indent=2))
+          print(json.dumps({'removedGeneratedSiteBuilds':len(manifest['removed']),'retainedBuilds':len(keep),'bytesReclaimed':manifest['freeAfter']-free_before,'freeBytes':manifest['freeAfter'],'manifest':str(report)}))
+          CLEANUP
+          npm cache clean --force
+          systemctl is-active polypdf-license-api
+          curl -fsS https://www.polypdf.com/api/healthz >/dev/null
+          curl -fsS https://www.polypdf.com/ >/dev/null
+          df -h /var/www/polypdf-downloads
           REMOTE
