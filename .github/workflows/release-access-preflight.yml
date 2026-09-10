@@ -23,11 +23,9 @@ jobs:
             printf 'Deployment account UID: '; id -u
             for directory in /var/www/polypdf-downloads /var/www/polypdf-downloads/windows /opt/polypdf-license-api; do
               if test -d "$directory" && test -w "$directory"; then
-                printf 'Writable release location: %s
-' "$directory"
+                echo "Writable release location: $directory"
               else
-                printf 'Unavailable release location: %s
-' "$directory"
+                echo "Unavailable release location: $directory"
               fi
             done
             systemctl is-active polypdf-license-api
