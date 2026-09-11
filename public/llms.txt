@@ -4,8 +4,9 @@
 
 Key facts:
 
-- Current release: PolyPDF 1.5.3 (build 25) for macOS and Windows; /versions reads the live update feeds.
-- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. PolyPDF Pro removes the measurement cap and unlocks Symbol Search, installed plugins, and Revision Package creation, changes, and publishing at the $74.95 Founder price instead of the planned undefined standard price, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
+- Current release: PolyPDF 1.5.4 (build 26) for macOS and Windows; /versions reads the live update feeds.
+- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. PolyPDF Pro removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for $74.95 USD once, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
+- New in 1.5.4: highlight blending and filled highlight shapes; separate arc radius and sweep handles; aligned, movable area cutouts; improved estimate scrolling; updated Windows file-opening checks; and in-document playback for supported Doom and OfficeKart PDFs.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
 - The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.
 - Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.
@@ -56,6 +57,7 @@ Key facts:
 
 ## Product notes
 
+- [PolyPDF 1.5.4: Better Highlights, Arcs, and Area Cutouts](https://www.polypdf.com/blog/polypdf-1-5-4/): Highlight shapes, separate arc radius and sweep controls, movable area cutouts, estimate scrolling, and a Windows file-opening patch arrive in 1.5.4.
 - [PolyPDF 1.5.1: Interactive Stamps and Clearer Drawing Review](https://www.polypdf.com/blog/polypdf-1-5-1/): Build interactive stamps, explore expanded symbol libraries, and present PDFs. Version 1.5.1 also improves navigation, saved appearances, and responsiveness.
 - [Set Up PolyPDF Collaboration Beta](https://www.polypdf.com/blog/how-to-use-polypdf-collaboration-beta/): PolyPDF Collaboration keeps the PDF on your company share while approved Mac and Windows users exchange live markups, cursors, offline edits, and signed history through a customer-owned host.
 - [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins/): How PolyPDF Pro plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.

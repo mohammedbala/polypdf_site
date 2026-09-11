@@ -112,8 +112,9 @@ const WindowsPreview = () => {
             <p>
               PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review
               app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and
-              carry reviewed work forward with Revision Packages. Version 1.5.1 adds interactive stamp
-              creation, expanded symbol libraries, and Presentation Mode, with the same workflows on both platforms.
+              carry reviewed work forward with Revision Packages. Version 1.5.4 improves highlights,
+              arc controls, area cutouts, and estimate scrolling. Windows file-opening checks also
+              remove an unnecessary file operation before reading local or shared-drive PDFs.
             </p>
             <div className="cta-download-row" style={{ marginTop: '1.5rem' }}>
               <a href={windowsInstallerURL} className="primary-btn large" download onClick={() => trackEvent('download_click', { source: 'windows_page', platform: 'windows' })}>
@@ -130,6 +131,7 @@ const WindowsPreview = () => {
               )}
               <Link to="/versions/">See what changed in every release</Link>.
             </p>
+            <p><Link to="/blog/polypdf-1-5-4/">Explore the 1.5.4 update</Link> · <Link to="/support/">Help with opening a shared-drive PDF</Link></p>
           </div>
 
           <div className="legal-sections">

@@ -4,6 +4,7 @@ const path = require('path');
 const { JSDOM } = require('jsdom');
 const root = path.resolve(__dirname, '../..');
 const metadata = require('../../src/lib/route-metadata.json');
+const siteRelease = require('../../src/lib/siteRelease.json');
 const locales = require('../../src/lib/locales.json');
 const englishOnly = require('../../src/lib/englishOnlyRoutes.json');
 const ORIGIN = 'https://www.polypdf.com';
@@ -76,12 +77,13 @@ function alternatives(route) {
 function hubHTML() {
   const list = (selected) => `<ul class="hub-links">${selected.map((route)=>`<li><a href="${routePath(route)}"><strong>${esc(metadata[route].title.replace(/ \| PolyPDF(?: Guide)?$/,''))}</strong><span>${esc(metadata[route].description)}</span></a></li>`).join('')}</ul>`;
   return `<header class="legal-header"><nav class="nav container" aria-label="Main navigation"><a href="/" class="logo">PolyPDF</a><a href="/blog/" class="back-link">All guides</a></nav></header><main class="international-hub" id="site-content">
-<p>PDF tools for construction teams</p><h1>Measure and review construction drawings in PDF</h1>
+<p>PolyPDF ${siteRelease.version} (build ${siteRelease.build}) · Mac &amp; Windows</p><p>PDF tools for construction teams</p><h1>Measure and review construction drawings in PDF</h1>
 <p>PolyPDF helps estimators, contractors, architects, and engineers calibrate drawing scale, measure quantities, count symbols, compare revisions, and coordinate PDF markups on Mac and Windows.</p>
 <div class="blog-quick-answer"><h2>How do you take quantities from a PDF plan?</h2><p>Calibrate the drawing using a known dimension, verify a second dimension, then measure lengths and net areas and count repeated symbols. Keep the drawing revision, measurement units, and exclusions with the result. Export the reviewed takeoff to CSV or PDF.</p></div>
 <div id="download" class="dl-both"><a class="primary-btn" href="/downloads/PolyPDFMac.dmg" download>Download for macOS</a><a class="primary-btn" href="/downloads/windows/PolyPDFSetup.exe" download>Download for Windows</a></div>
 <p>macOS 14 or newer, Apple silicon and Intel; Windows 10 or 11, 64-bit. Start free with markup, review, calibration, and up to 3 hand-created measurements per document. Unlimited measurements, Symbol Search, plugins, and Revision Package changes or publishing require Pro.</p>
 <p><a href="/buy/?source=international_hub">View current Pro pricing and license terms</a></p>
+<h2>What is new in PolyPDF ${siteRelease.version}?</h2><p>Highlights keep drawing details visible, arc handles separate radius from sweep, area cutouts can be moved and resized, and estimates scroll more reliably. Windows file-opening checks remove an unnecessary file operation.</p><p><a href="/blog/polypdf-1-5-4/">Explore the 1.5.4 update</a></p>
 <h2>Using metric construction drawings</h2><p>Choose the units shown on the drawing and calibrate from a known dimension. For a 1:100 drawing, 10 mm on the correctly sized page represents 1 m on site. A 5 m by 4 m rectangle has an area of 20 m²; subtract a 1 m² opening to obtain 19 m² net. At a depth of 0.15 m, that net area corresponds to 2.85 m³. Check a second known dimension before using any quantity in an estimate.</p>
 <p>Do not mix paper dimensions with site dimensions, metres with millimetres, or net quantities with waste allowances. Original guide screenshots may use feet and inches; preserve those units when following the example. Confirm project specifications and local measurement rules separately.</p>
 <h2>Construction workflows</h2>${list(routes.filter((r)=>['/pdf-takeoff-software','/measure-pdf-on-mac','/construction-pdf-markup','/visual-search-pdf-count','/compare-pdf-drawings','/revision-packages'].includes(r)))}

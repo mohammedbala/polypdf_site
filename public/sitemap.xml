@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.polypdf.com/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,15 +15,26 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/build-a-plugin/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/polypdf-1-5-4/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/polypdf-1-5-4.png?v=1.4.0-17</image:loc>
+      <image:title>PolyPDF 1.4.0 example of a measured area with two cutouts and a depth value on a survey drawing</image:title>
+      <image:caption>Area measurements keep excluded openings and optional depth with the drawing. This historical 1.4.0 screenshot illustrates the existing workflow; version 1.5.4 improves cutout movement and resize handles.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/polypdf-1-5-1/</loc>
@@ -71,7 +82,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -82,7 +93,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/pdf-takeoff-worked-example/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -104,7 +115,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -221,13 +232,13 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/support/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/windows/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -239,7 +250,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/versions/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -263,7 +274,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/construction-pdf-markup/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

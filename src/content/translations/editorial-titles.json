@@ -27,7 +27,8 @@
     "/measure-pdf-on-mac": "Cómo medir un plano PDF en Mac | PolyPDF",
     "/construction-pdf-markup": "Anotar planos PDF de construcción | PolyPDF",
     "/visual-search-pdf-count": "Búsqueda visual y conteo de símbolos PDF | PolyPDF",
-    "/compare-pdf-drawings": "Comparar planos PDF y sus revisiones | PolyPDF"
+    "/compare-pdf-drawings": "Comparar planos PDF y sus revisiones | PolyPDF",
+    "/blog/polypdf-1-5-4": "PolyPDF 1.5.4: resaltados, arcos y recortes de área"
   },
   "pt-br": {
     "/": "Medir plantas PDF e levantar quantitativos | PolyPDF",
@@ -57,7 +58,8 @@
     "/measure-pdf-on-mac": "Como medir plantas PDF no Mac | PolyPDF",
     "/construction-pdf-markup": "Anotar plantas PDF de construção | PolyPDF",
     "/visual-search-pdf-count": "Busca visual e contagem de símbolos PDF | PolyPDF",
-    "/compare-pdf-drawings": "Comparar plantas PDF e revisões | PolyPDF"
+    "/compare-pdf-drawings": "Comparar plantas PDF e revisões | PolyPDF",
+    "/blog/polypdf-1-5-4": "PolyPDF 1.5.4: destaques, arcos e recortes de área"
   },
   "de": {
     "/": "PDF-Baupläne messen und Mengen ermitteln | PolyPDF",
@@ -87,7 +89,8 @@
     "/measure-pdf-on-mac": "PDF-Baupläne auf dem Mac messen | PolyPDF",
     "/construction-pdf-markup": "PDF-Baupläne kommentieren und prüfen | PolyPDF",
     "/visual-search-pdf-count": "Visuelle Suche: Symbole in PDFs zählen | PolyPDF",
-    "/compare-pdf-drawings": "PDF-Baupläne und Revisionen vergleichen | PolyPDF"
+    "/compare-pdf-drawings": "PDF-Baupläne und Revisionen vergleichen | PolyPDF",
+    "/blog/polypdf-1-5-4": "PolyPDF 1.5.4: Hervorhebungen, Bögen und Aussparungen"
   },
   "fr": {
     "/": "Mesurer des plans PDF et réaliser des métrés | PolyPDF",
@@ -117,7 +120,8 @@
     "/measure-pdf-on-mac": "Mesurer un plan PDF sur Mac | PolyPDF",
     "/construction-pdf-markup": "Annoter les plans PDF de construction | PolyPDF",
     "/visual-search-pdf-count": "Recherche visuelle et comptage de symboles PDF",
-    "/compare-pdf-drawings": "Comparer les plans PDF et leurs révisions | PolyPDF"
+    "/compare-pdf-drawings": "Comparer les plans PDF et leurs révisions | PolyPDF",
+    "/blog/polypdf-1-5-4": "PolyPDF 1.5.4 : surlignage, arcs et découpes de surface"
   },
   "ar": {
     "/": "قياس مخططات PDF وحصر كميات البناء | PolyPDF",
@@ -147,7 +151,8 @@
     "/measure-pdf-on-mac": "قياس مخططات PDF على ماك | PolyPDF",
     "/construction-pdf-markup": "التعليق على مخططات البناء بصيغة PDF | PolyPDF",
     "/visual-search-pdf-count": "البحث المرئي وعد الرموز في PDF | PolyPDF",
-    "/compare-pdf-drawings": "مقارنة مخططات PDF ومراجعاتها | PolyPDF"
+    "/compare-pdf-drawings": "مقارنة مخططات PDF ومراجعاتها | PolyPDF",
+    "/blog/polypdf-1-5-4": "PolyPDF 1.5.4: التظليل والأقواس وفتحات المساحات"
   },
   "hi": {
     "/": "PDF निर्माण ड्राइंग का माप और मात्रा आकलन | PolyPDF",
@@ -177,7 +182,8 @@
     "/measure-pdf-on-mac": "Mac पर PDF ड्राइंग कैसे मापें | PolyPDF",
     "/construction-pdf-markup": "निर्माण PDF ड्राइंग पर टिप्पणियाँ जोड़ें | PolyPDF",
     "/visual-search-pdf-count": "PDF में दृश्य खोज और प्रतीकों की गिनती | PolyPDF",
-    "/compare-pdf-drawings": "PDF ड्राइंग और संशोधनों की तुलना करें | PolyPDF"
+    "/compare-pdf-drawings": "PDF ड्राइंग और संशोधनों की तुलना करें | PolyPDF",
+    "/blog/polypdf-1-5-4": "PolyPDF 1.5.4: हाइलाइट, चाप और क्षेत्र के कटआउट"
   },
   "zh-cn": {
     "/": "PDF施工图测量与工程量统计指南 | PolyPDF",
@@ -207,7 +213,8 @@
     "/measure-pdf-on-mac": "如何在Mac上测量PDF图纸 | PolyPDF",
     "/construction-pdf-markup": "为PDF施工图添加批注 | PolyPDF",
     "/visual-search-pdf-count": "PDF视觉搜索与符号计数 | PolyPDF",
-    "/compare-pdf-drawings": "比较PDF图纸及其修订版本 | PolyPDF"
+    "/compare-pdf-drawings": "比较PDF图纸及其修订版本 | PolyPDF",
+    "/blog/polypdf-1-5-4": "PolyPDF 1.5.4：高亮、圆弧与面积扣除区域"
   },
   "ja": {
     "/": "PDF図面の測定と数量拾いガイド | PolyPDF",
@@ -237,6 +244,7 @@
     "/measure-pdf-on-mac": "MacでPDF図面を測定する方法 | PolyPDF",
     "/construction-pdf-markup": "PDF施工図に注釈を付ける | PolyPDF",
     "/visual-search-pdf-count": "PDFの画像検索と記号カウント | PolyPDF",
-    "/compare-pdf-drawings": "PDF図面と改訂版を比較 | PolyPDF"
+    "/compare-pdf-drawings": "PDF図面と改訂版を比較 | PolyPDF",
+    "/blog/polypdf-1-5-4": "PolyPDF 1.5.4：ハイライト・円弧・面積の除外領域"
   }
 }

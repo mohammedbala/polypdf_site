@@ -92,7 +92,7 @@ const xmlEscape = (value) => String(value)
 
 const validatePosts = () => {
   assert(guidePosts.length === 13, `Expected exactly 13 guides, found ${guidePosts.length}`);
-  assert(blogPosts.length === 16, `Expected 13 guides plus three product posts, found ${blogPosts.length}`);
+  assert(blogPosts.length === 17, `Expected 13 guides plus four product posts, found ${blogPosts.length}`);
 
   const fields = [
     ['slug', (value) => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)],
@@ -155,20 +155,20 @@ const buildRouteMetadata = () => {
 };
 
 const STATIC_LASTMOD = Object.freeze({
-  '/': '2026-09-08',
+  '/': '2026-09-11',
   '/buy': '2026-09-03',
-  '/build-a-plugin': '2026-08-18',
+  '/build-a-plugin': '2026-09-11',
   '/privacy': '2026-09-03',
   '/refund': '2026-09-03',
   '/feature-requests': '2026-09-07',
-  '/support': '2026-09-07',
-  '/windows': '2026-09-08',
+  '/support': '2026-09-11',
+  '/windows': '2026-09-11',
   '/terms': '2026-09-03',
-  '/versions': '2026-09-08',
+  '/versions': '2026-09-11',
   '/revision-packages': '2026-09-07',
   '/pdf-takeoff-software': '2026-09-07',
   '/measure-pdf-on-mac': '2026-09-07',
-  '/construction-pdf-markup': '2026-09-07',
+  '/construction-pdf-markup': '2026-09-11',
   '/visual-search-pdf-count': '2026-09-03',
   '/compare-pdf-drawings': '2026-09-03'
 });
@@ -290,7 +290,8 @@ const buildLlmsText = () => {
     'Key facts:',
     '',
     `- Current release: PolyPDF ${siteRelease.version} (build ${siteRelease.build}) for macOS and Windows; /versions reads the live update feeds.`,
-    `- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. ${commercialOffer.name} removes the measurement cap and unlocks Symbol Search, installed plugins, and Revision Package creation, changes, and publishing at the ${commercialOffer.price} Founder price instead of the planned ${commercialOffer.referencePrice} standard price, activates up to 3 computers in any Mac/Windows mix, and includes a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee for direct website purchases; /buy has the current terms.`,
+    `- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. ${commercialOffer.name} removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for ${commercialOffer.price} USD once, activates up to 3 computers in any Mac/Windows mix, and includes a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee for direct website purchases; /buy has the current terms.`,
+    '- New in 1.5.4: highlight blending and filled highlight shapes; separate arc radius and sweep handles; aligned, movable area cutouts; improved estimate scrolling; updated Windows file-opening checks; and in-document playback for supported Doom and OfficeKart PDFs.',
     '- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.',
     '- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
     '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.',

@@ -18,4 +18,14 @@ export const release153Highlights = Object.freeze([
   'PolyPDF Pro is $74.95 USD once. Existing paid licenses retain their purchased rights.'
 ]);
 
-export const releaseAnswer = 'PolyPDF 1.5.3 adds Marquee Zoom, perimeter segment label controls, and 49 editable Interior Design symbols. PDF content editing, toolsets, and overlay require Pro. The standard Pro license is $74.95 USD once; existing paid licenses keep their purchased rights.';
+export const release154Highlights = Object.freeze([
+  'Highlights blend with the drawing so text and linework remain visible. Use Highlight beside Fill to turn a filled annotation into a highlight shape.',
+  'Arc handles drag continuously: the middle handle controls radius and the end handles control sweep. Helpers show radius during radius or corner adjustments and arc length during sweep adjustments.',
+  'Area cutout resize handles align with their selection frame. Drag inside a cutout to reposition it.',
+  'The estimate workspace scrolls vertically and horizontally, retaining its scroll position when editing.',
+  'Supported Doom and OfficeKart PDFs play directly in the document view, with improved controls and playback.'
+]);
+
+export const release154WindowsFix = 'Windows file-opening checks no longer perform an unnecessary rename before reading a PDF, including files on shared network drives.';
+
+export const releaseAnswer = 'PolyPDF 1.5.4 (build 26) improves highlight blending, adds a Highlight control for filled shapes, separates arc radius and sweep handles, aligns and moves area cutouts, and fixes estimate scrolling. Windows file-opening checks remove an unnecessary file operation. Supported Doom and OfficeKart PDFs also gain improved in-document playback. The update is available for Mac and Windows and is included with existing PolyPDF 1.x licenses.';

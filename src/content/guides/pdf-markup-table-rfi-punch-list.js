@@ -5,7 +5,9 @@ const pdfMarkupTableGuide = {
   title: 'Use a PDF Markup Table for RFI and Punch-List Review',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-07',
+  dateModified: '2026-09-11',
+  releaseReviewed: '2026-09-11',
+  releaseReviewVersion: '1.5.4 (build 26)',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
@@ -40,6 +42,7 @@ const pdfMarkupTableGuide = {
     'markup status tracking'
   ],
   sections: [
+    {"icon": "document", "title": "Highlight a review area without hiding its details", "body": [{"kind": "p", "text": "In PolyPDF 1.5.4, highlights blend with the drawing so text and linework remain readable. Select a filled annotation and use Highlight beside Fill in the style toolbar to turn the shape into a highlight. Add a callout or comment to record what the highlighted region needs."}]},
     { icon: 'seal', title: 'Use a repeatable review stamp in 1.5.1', body: [
       { kind: 'p', text: 'The interactive stamp builder lets you prepare a fixed review heading with prompted reviewer or status fields and an automatic date. Save the template to a toolset if you will reuse it, then complete the values for each placement. A stamp records visible review information; it does not replace the Markup Table discussion or a certificate signature.' },
       { kind: 'link', label: 'Follow the interactive stamp walkthrough', href: '/blog/create-interactive-pdf-stamps/' }

@@ -193,6 +193,7 @@ export const landingPages = Object.freeze({
     outcomes: [
       'Callouts connect a readable note to an exact point on the sheet.',
       'Revision clouds make changed or questioned regions visible at a glance.',
+      'Highlights keep underlying text and linework visible; filled annotations can become highlight shapes from the style toolbar.',
       'Text sizing can be adjusted for on-screen and printed readability.',
       'The Markup Table keeps annotations discoverable across a busy page.',
       'Measurement tools remain available when a review question also needs a quantity.'

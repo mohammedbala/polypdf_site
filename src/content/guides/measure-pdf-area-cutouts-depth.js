@@ -8,7 +8,9 @@ const post = {
   title: 'How to Measure PDF Area with Cutouts and Depth',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-07',
+  dateModified: '2026-09-11',
+  releaseReviewed: '2026-09-11',
+  releaseReviewVersion: '1.5.4 (build 26)',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Measure & Takeoff',
@@ -41,6 +43,7 @@ const post = {
     'PDF hatch scale'
   ],
   sections: [
+    {"icon": "ruler", "title": "Move and resize area cutouts in 1.5.4", "body": [{"kind": "p", "text": "Select an area cutout and drag inside it to move the opening. Resize handles now align with the selection frame. Keep each cutout inside the intended boundary, avoid overlapping openings, and review the net area after making a change."}, {"kind": "p", "text": "Arc controls also have separate roles: the middle handle changes radius, while end handles change sweep. Helper dimensions show radius for middle and corner adjustments, and arc length for sweep adjustments."}]},
     { icon: 'ruler', title: 'Metric dimensions in 1.5.1', body: [{ kind: 'p', text: "In PolyPDF 1.5.1, new metric dimensions default to millimetres. Existing documents retain their explicit display formats, and metric area and volume remain in square and cubic metres. Changing the displayed unit does not establish the page scale: verify a known dimension after any scale or unit change." }] },
     {
       icon: 'ruler',

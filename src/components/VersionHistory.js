@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
-import { releaseHighlights, release152Highlights, release153Highlights } from '../lib/releaseHighlights';
+import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix } from '../lib/releaseHighlights';
 import siteRelease from '../lib/siteRelease.json';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
@@ -94,6 +94,8 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.5.4 (26)': release154Highlights,
+  'Windows 1.5.4 (26)': [...release154Highlights, release154WindowsFix],
   'macOS 1.5.3 (25)': release153Highlights,
   'Windows 1.5.3 (25)': release153Highlights,
   'macOS 1.5.2 (24)': release152Highlights,
@@ -340,8 +342,9 @@ const VersionHistory = () => {
               PolyPDF updates itself. On Mac, choose Help &gt; Check for Updates in the app, or accept the
               update prompt when it appears. On Windows, an update downloads in the background and installs
               when you quit. Save your work before installing. Your existing PolyPDF 1.x Pro license
-              continues to apply; both 1.5.0 to 1.5.1 update paths were verified.
+              continues to apply.
             </p>
+            <p><Link to="/blog/polypdf-1-5-4/">Read the 1.5.4 release overview</Link> for highlight shapes, arc controls, area cutouts, estimate scrolling, and the Windows file-opening patch.</p>
             <p className="last-updated">
               Versions read as version (build); the number in parentheses is the build number support asks
               for.{feedFailed && ' The live update feed could not be reached, so this list may be behind.'}

@@ -8,7 +8,9 @@ const post = {
   title: 'PDF Takeoff Worked Example: Scale, Area, Length, and Count',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-07',
+  dateModified: '2026-09-11',
+  releaseReviewed: '2026-09-11',
+  releaseReviewVersion: '1.5.4 (build 26)',
   author: 'The PolyPDF team',
   readingTime: '10 min read',
   tag: 'Measure & Takeoff',
@@ -41,6 +43,7 @@ const post = {
     'export takeoff CSV'
   ],
   sections: [
+    {"icon": "table", "title": "Scroll through estimates in 1.5.4", "body": [{"kind": "p", "text": "The estimate workspace now scrolls vertically through rows and horizontally across columns, retaining its position while you edit values. Area cutouts also have aligned resize handles and can be moved by dragging inside the opening; review the resulting net quantity after changing its geometry."}]},
     { icon: 'ruler', title: 'Metric dimensions in 1.5.1', body: [{ kind: 'p', text: "In PolyPDF 1.5.1, new metric dimensions default to millimetres. Existing documents retain their explicit display formats, and metric area and volume remain in square and cubic metres. Changing the displayed unit does not establish the page scale: verify a known dimension after any scale or unit change." }] },
     {
       icon: 'document',

@@ -6,7 +6,16 @@
     <atom:link href="https://www.polypdf.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Practical guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>PolyPDF 1.5.4: Better Highlights, Arcs, and Area Cutouts</title>
+      <link>https://www.polypdf.com/blog/polypdf-1-5-4/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/polypdf-1-5-4/</guid>
+      <pubDate>Fri, 11 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Highlight shapes, separate arc radius and sweep controls, movable area cutouts, estimate scrolling, and a Windows file-opening patch arrive in 1.5.4.</description>
+      <category>Release</category>
+      <enclosure url="https://www.polypdf.com/guides/polypdf-1-5-4.png?v=1.4.0-17" length="568756" type="image/png" />
+    </item>
     <item>
       <title>PolyPDF 1.5.1: Interactive Stamps and Clearer Drawing Review</title>
       <link>https://www.polypdf.com/blog/polypdf-1-5-1/</link>

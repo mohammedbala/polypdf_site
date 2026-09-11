@@ -1,7 +1,7 @@
 {
   "/": {
     "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
-    "description": "Measure, mark up, compare, stamp, and present PDF drawings on Mac and Windows. PolyPDF 1.5.3 is available now. Start free; Pro is one payment.",
+    "description": "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.5.4 adds better highlights, arc controls, and movable cutouts. Start free; Pro is one payment.",
     "robots": "index, follow"
   },
   "/buy": {
@@ -26,8 +26,18 @@
   },
   "/blog": {
     "title": "PolyPDF Guides | PDF Measurement, Takeoff & Markup",
-    "description": "Guides for PolyPDF 1.5.1: interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, signatures, and issued PDF sets.",
+    "description": "Guides for PolyPDF 1.5.4: highlights, arcs, area cutouts, interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, and signatures.",
     "robots": "index, follow"
+  },
+  "/blog/polypdf-1-5-4": {
+    "title": "PolyPDF 1.5.4: Highlights, Arcs & Cutouts",
+    "description": "PolyPDF 1.5.4 for Mac and Windows improves highlights, arc handles, area cutouts, estimate scrolling, shared-drive opening checks, and interactive PDFs.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/polypdf-1-5-4.png?v=1.4.0-17",
+    "imageAlt": "PolyPDF 1.4.0 example of a measured area with two cutouts and a depth value on a survey drawing",
+    "imageWidth": 1710,
+    "imageHeight": 1073
   },
   "/blog/polypdf-1-5-1": {
     "title": "PolyPDF 1.5.1: Stamps, Symbols & Presentation Mode",
@@ -211,7 +221,7 @@
   },
   "/windows": {
     "title": "PolyPDF for Windows | PDF Measurement and Markup",
-    "description": "Download PolyPDF 1.5.3 for Windows 10 and 11, x64. PDF measurement, markup, reusable stamp folders, improved interactive stamps, and smoother settings.",
+    "description": "Download PolyPDF 1.5.4 for Windows 10 and 11, x64. Improved highlights, arc controls, cutouts, estimate scrolling, and shared-drive opening checks.",
     "robots": "index, follow"
   },
   "/terms": {
@@ -221,7 +231,7 @@
   },
   "/versions": {
     "title": "PolyPDF Version History | Release Notes",
-    "description": "PolyPDF 1.5.3 release history for Mac and Windows: improved interactive stamps, reusable stamp folders, settings scrolling, and document stability.",
+    "description": "PolyPDF 1.5.4 release history for Mac and Windows: highlight shapes, arc handles, movable area cutouts, estimate scrolling, and Windows file-opening fixes.",
     "robots": "index, follow"
   },
   "/revision-packages": {

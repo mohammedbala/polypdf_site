@@ -354,11 +354,11 @@ const LatestReleaseSpotlight = () => (
     <div className="container revision-release-shell">
       <div className="revision-release-copy">
         <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Available now: PolyPDF {siteRelease.version} · Mac &amp; Windows</span>
-        <h2 id="latest-release-title">Create your own review stamps.</h2>
-        <p>Start from a blank canvas, arrange your fields, and choose fixed text, automatic values, or a prompt. Save the stamp to a toolset when you want to use it again.</p>
-        <p>{`PolyPDF ${siteRelease.version} (build ${siteRelease.build}) adds Marquee Zoom, perimeter label controls, and 49 editable Interior Design symbols.`}</p>
-        <Link className="secondary-btn revision-release-link" to="/blog/create-interactive-pdf-stamps/">Create your first interactive stamp <ArrowRight aria-hidden="true" weight="bold" /></Link>
-        <p className="revision-release-access"><a href={`/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html`}>{`Read the ${siteRelease.version} release notes`}</a> · <Link to="/blog/polypdf-1-5-1/">Features introduced in 1.5.1</Link></p>
+        <h2 id="latest-release-title">More precise markup and measurement.</h2>
+        <p>Keep drawing details visible through highlights. Adjust arc radius and sweep independently, move area cutouts, and scroll smoothly through estimates.</p>
+        <p>Version {siteRelease.version} (build {siteRelease.build}) also updates Windows file-opening checks and improves playback in supported interactive PDFs.</p>
+        <Link className="secondary-btn revision-release-link" to="/blog/polypdf-1-5-4/">Explore the 1.5.4 update <ArrowRight aria-hidden="true" weight="bold" /></Link>
+        <p className="revision-release-access"><a href={`/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html`}>Mac release notes</a> · <a href={`/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html`}>Windows release notes</a> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link></p>
       </div>
       <figure className="revision-release-visual">
         <a href={stampBuilderImage} aria-label="Open the full-size PolyPDF 1.5.1 stamp builder screenshot">

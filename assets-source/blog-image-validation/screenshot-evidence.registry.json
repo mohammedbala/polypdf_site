@@ -334,6 +334,14 @@
           "height": 1073,
           "derivedFrom": "src/assets/screenshots/area-cutouts-depth-v1-4-dark-web.png",
           "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/polypdf-1-5-4.png",
+          "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/area-cutouts-depth-v1-4-dark-web.png",
+          "transform": "byte-identical"
         }
       ]
     },

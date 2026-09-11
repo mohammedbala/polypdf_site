@@ -64,6 +64,7 @@ const website = () => ({
 // Feature phrasing mirrors the product's own claims — reviewed for accuracy, never expanded here.
 const FEATURE_LIST = [
   'PDF markup and annotation: callouts, revision clouds, highlights, shapes, interactive stamps built on a blank canvas with optional toolset saving',
+  'Highlight blending and filled highlight shapes, separate arc radius and sweep controls, movable area cutouts, and improved estimate scrolling',
   'Presentation Mode for focused PDF viewing and page navigation',
   'Measurement calibration with distance, area, perimeter, angle, radius, diameter, count, and dimension tools',
   'Takeoff worksheets with Excel, CSV, and PDF export',

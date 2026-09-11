@@ -17,11 +17,30 @@ import siteRelease from '../lib/siteRelease.json';
 const sections = [
   {
     icon: <FaDownload />,
-    title: 'Update to 1.5.1',
+    title: `Update to ${siteRelease.version}`,
     content: [
-      'Save your work. On Mac, choose Help > Check for Updates and follow the prompt. On Windows, the update downloads in the background and installs when you quit.',
-      'After relaunch, About should show version 1.5.1, build 23. Your existing PolyPDF 1.x Pro license continues to apply.',
+      'Save your work, choose Help > Check for Updates, and follow the prompt. On Windows, a downloaded update installs when you quit. Close and reopen the app to finish updating.',
+      `After relaunch, About should show version ${siteRelease.version}, build ${siteRelease.build}. Your existing PolyPDF 1.x Pro license continues to apply.`,
       'If an update is unavailable, use the current Mac or Windows download on this site. Mac requires macOS 14 or later on Apple silicon or Intel; Windows requires Windows 10 or 11, x64.'
+    ]
+  },
+  {
+    icon: <FaLifeRing />,
+    title: 'Highlights, arcs, cutouts, and estimate scrolling',
+    content: [
+      'Select a filled annotation and use Highlight beside Fill in the style toolbar to blend its color with the drawing underneath.',
+      'For an arc, drag the middle handle to change radius or an end handle to change sweep. Helper dimensions show radius for middle and corner handles, and arc length for sweep handles.',
+      'Select an area cutout to resize it with handles aligned to its selection frame, or drag inside it to move the opening. Check the net area after changing a cutout.',
+      'The estimate workspace supports vertical and horizontal scrolling and keeps its position when you edit a value.'
+    ]
+  },
+  {
+    icon: <FaLifeRing />,
+    title: 'Trouble opening a PDF on a Windows shared drive',
+    content: [
+      'Version 1.5.4 removes an unnecessary file operation from the Windows checks performed before opening a PDF. Update first, then retry using a copy of the affected file.',
+      'If the error continues, use Help > Report to Support immediately afterwards. Include the time, exact error message, and whether you opened the file by double-clicking or through File > Open.',
+      'Tell us whether the file is still visible in File Explorer and opens in another PDF reader, whether a local copy opens, what hosts the shared drive (Windows Server or NAS), and whether you use a VPN.'
     ]
   },
   {
@@ -103,7 +122,7 @@ const Support = () => {
           <div className="legal-hero">
             <h1>Support</h1>
             <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
-            <p className="last-updated">Last updated: September 7, 2026</p>
+            <p className="last-updated">Last updated: September 11, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -114,7 +133,7 @@ const Support = () => {
             </p>
           </div>
 
-          <p><Link to="/blog/polypdf-1-5-1/">What changed in 1.5.1</Link> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link> · <Link to="/blog/">All guides</Link></p>
+          <p><Link to="/blog/polypdf-1-5-4/">What changed in 1.5.4</Link> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link> · <Link to="/blog/">All guides</Link></p>
 
           <div className="legal-sections">
             {sections.map((section, index) => (
