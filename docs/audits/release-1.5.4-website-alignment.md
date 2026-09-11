@@ -33,3 +33,11 @@ The optional translation endpoint returned HTTP 429 without importing any new st
 Publish the verified local static build using the existing deployment identity and atomic `current` symlink. This follows the local-build publication lane used for 1.5.3, preserves the exact previous release for rollback, and avoids a competing hosted build. The source commit uses `[skip ci]`; publication still verifies every transferred file against its SHA-256 manifest and runs the existing public website and international smoke checks. No app installers, update feeds, license API, prices, credentials or nginx configuration need changing.
 
 Final publication receipts and live verification results are retained in this task's `.tmp/release-1.5.4/` and the companion publication record.
+
+## Published result
+
+Published at 14:55 UTC on September 11, 2026 from website commit `584a99c75fcd00f6ace90fc9b613c0778b4d6b55`, pushed to `master`. All 391 staged files matched the local manifest before the atomic switch. The previous `7480fbc` website remains intact for rollback.
+
+Live production smoke passed 72 checks, including current Mac/Windows updater feeds and download endpoints, route metadata, image hashes, commercial offer and the existing unpaid checkout check. International production smoke passed all 232 pages and 16 discovery files. The published release article was verified in the in-app browser. Compact receipts are in `docs/audits/evidence/release-1.5.4/`.
+
+The local GitHub HTTPS credential had expired; the existing GitHub SSH identity successfully pushed the exact source commit. No credentials or access settings were changed.
