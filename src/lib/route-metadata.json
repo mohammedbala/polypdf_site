@@ -1,7 +1,7 @@
 {
   "/": {
     "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
-    "description": "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.5.4 adds better highlights, arc controls, and movable cutouts. Start free; Pro is one payment.",
+    "description": "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.5.5 adds customizable zoom controls and snapshot fixes. Start free; Pro is one payment.",
     "robots": "index, follow"
   },
   "/buy": {
@@ -26,8 +26,18 @@
   },
   "/blog": {
     "title": "PolyPDF Guides | PDF Measurement, Takeoff & Markup",
-    "description": "Guides for PolyPDF 1.5.4: highlights, arcs, area cutouts, interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, and signatures.",
+    "description": "Guides for PolyPDF 1.5.5: zoom controls, snapshots, interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, and signatures.",
     "robots": "index, follow"
+  },
+  "/blog/polypdf-1-5-5": {
+    "title": "PolyPDF 1.5.5: Zoom Controls and Snapshot Fixes",
+    "description": "PolyPDF 1.5.5 for Mac and Windows adds customizable wheel and drag zoom, Shift panning, and fixes for snapshot sizing and saved orientation.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/polypdf-1-5-5.png?v=1.4.0-17",
+    "imageAlt": "PolyPDF 1.4.0 example of a measured area with two cutouts and a depth value on a survey drawing",
+    "imageWidth": 1710,
+    "imageHeight": 1073
   },
   "/blog/polypdf-1-5-4": {
     "title": "PolyPDF 1.5.4: Highlights, Arcs & Cutouts",
@@ -221,7 +231,7 @@
   },
   "/windows": {
     "title": "PolyPDF for Windows | PDF Measurement and Markup",
-    "description": "Download PolyPDF 1.5.4 for Windows 10 and 11, x64. Improved highlights, arc controls, cutouts, estimate scrolling, and shared-drive opening checks.",
+    "description": "Download PolyPDF 1.5.5 for Windows 10 and 11, x64. Customizable wheel and drag zoom, Shift panning, and snapshot fixes.",
     "robots": "index, follow"
   },
   "/terms": {
@@ -231,7 +241,7 @@
   },
   "/versions": {
     "title": "PolyPDF Version History | Release Notes",
-    "description": "PolyPDF 1.5.4 release history for Mac and Windows: highlight shapes, arc handles, movable area cutouts, estimate scrolling, and Windows file-opening fixes.",
+    "description": "PolyPDF 1.5.5 release history for Mac and Windows: customizable wheel and drag zoom, layout preferences, Shift panning, and snapshot fixes.",
     "robots": "index, follow"
   },
   "/revision-packages": {

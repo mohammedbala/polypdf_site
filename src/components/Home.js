@@ -354,10 +354,10 @@ const LatestReleaseSpotlight = () => (
     <div className="container revision-release-shell">
       <div className="revision-release-copy">
         <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Available now: PolyPDF {siteRelease.version} · Mac &amp; Windows</span>
-        <h2 id="latest-release-title">More precise markup and measurement.</h2>
-        <p>Keep drawing details visible through highlights. Adjust arc radius and sweep independently, move area cutouts, and scroll smoothly through estimates.</p>
-        <p>Version {siteRelease.version} (build {siteRelease.build}) also updates Windows file-opening checks and improves playback in supported interactive PDFs.</p>
-        <Link className="secondary-btn revision-release-link" to="/blog/polypdf-1-5-4/">Explore the 1.5.4 update <ArrowRight aria-hidden="true" weight="bold" /></Link>
+        <h2 id="latest-release-title">Zoom your way. Share snapshots as intended.</h2>
+        <p>Zoom with the wheel in Single page view and scroll through multipage layouts. Set each layout to suit how you work.</p>
+        <p>Version {siteRelease.version} (build {siteRelease.build}) adds anchored drag zoom and Shift panning, and fixes snapshot proportions and saved orientation.</p>
+        <Link className="secondary-btn revision-release-link" to="/blog/polypdf-1-5-5/">Explore the 1.5.5 update <ArrowRight aria-hidden="true" weight="bold" /></Link>
         <p className="revision-release-access"><a href={`/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html`}>Mac release notes</a> · <a href={`/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html`}>Windows release notes</a> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link></p>
       </div>
       <figure className="revision-release-visual">

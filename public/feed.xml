@@ -6,7 +6,16 @@
     <atom:link href="https://www.polypdf.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Practical guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <item>
+      <title>PolyPDF 1.5.5: Zoom Controls and Snapshot Fixes</title>
+      <link>https://www.polypdf.com/blog/polypdf-1-5-5/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/polypdf-1-5-5/</guid>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 GMT</pubDate>
+      <description>Set zoom controls for each page layout, pan with Shift, and paste snapshots with the right proportions and saved orientation.</description>
+      <category>Release</category>
+      <enclosure url="https://www.polypdf.com/guides/polypdf-1-5-5.png?v=1.4.0-17" length="568756" type="image/png" />
+    </item>
     <item>
       <title>PolyPDF 1.5.4: Better Highlights, Arcs, and Area Cutouts</title>
       <link>https://www.polypdf.com/blog/polypdf-1-5-4/</link>

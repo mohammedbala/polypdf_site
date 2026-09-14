@@ -5,6 +5,7 @@ import pluginSidebarScreenshot from '../assets/screenshots/plugins-sidebar-v1-4-
 import collaborationBetaScreenshot from '../assets/screenshots/collaboration-beta-live-v1-4-3-web.png';
 import release151 from '../content/releases/polypdf-1-5-1';
 import release154 from '../content/releases/polypdf-1-5-4';
+import release155 from '../content/releases/polypdf-1-5-5';
 import { guidePosts } from '../content/guides';
 
 // Blog posts are plain data so a new entry is one object, not a new React component.
@@ -646,6 +647,7 @@ const productPosts = Object.freeze([
 ]);
 
 export const blogPosts = Object.freeze([
+  Object.freeze(release155),
   Object.freeze(release154),
   post(release151),
   ...guidePosts.map(post),

@@ -26,6 +26,16 @@ const sections = [
   },
   {
     icon: <FaLifeRing />,
+    title: 'Wheel zoom, panning, and snapshots',
+    content: [
+      "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.",
+      "Double-click and drag to zoom around the point you choose. When the wheel is set to scroll in Single page view, scrolling past a page edge advances to the next or previous page, with protection against accidental trackpad momentum.",
+      "Hold Shift and drag with the left mouse button to pan. Hold Shift while scrolling the wheel to pan horizontally.",
+      "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers."
+]
+  },
+  {
+    icon: <FaLifeRing />,
     title: 'Highlights, arcs, cutouts, and estimate scrolling',
     content: [
       'Select a filled annotation and use Highlight beside Fill in the style toolbar to blend its color with the drawing underneath.',
@@ -122,7 +132,7 @@ const Support = () => {
           <div className="legal-hero">
             <h1>Support</h1>
             <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
-            <p className="last-updated">Last updated: September 11, 2026</p>
+            <p className="last-updated">Last updated: September 13, 2026</p>
           </div>
 
           <div className="legal-intro">
@@ -133,7 +143,7 @@ const Support = () => {
             </p>
           </div>
 
-          <p><Link to="/blog/polypdf-1-5-4/">What changed in 1.5.4</Link> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link> · <Link to="/blog/">All guides</Link></p>
+          <p><Link to="/blog/polypdf-1-5-5/">What changed in 1.5.5</Link> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link> · <Link to="/blog/">All guides</Link></p>
 
           <div className="legal-sections">
             {sections.map((section, index) => (

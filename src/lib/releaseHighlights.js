@@ -28,4 +28,11 @@ export const release154Highlights = Object.freeze([
 
 export const release154WindowsFix = 'Windows file-opening checks no longer perform an unnecessary rename before reading a PDF, including files on shared network drives.';
 
-export const releaseAnswer = 'PolyPDF 1.5.4 (build 26) improves highlight blending, adds a Highlight control for filled shapes, separates arc radius and sweep handles, aligns and moves area cutouts, and fixes estimate scrolling. Windows file-opening checks remove an unnecessary file operation. Supported Doom and OfficeKart PDFs also gain improved in-document playback. The update is available for Mac and Windows and is included with existing PolyPDF 1.x licenses.';
+export const release155Highlights = Object.freeze([
+  "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.",
+  "Double-click and drag to zoom around the point you choose. When the wheel is set to scroll in Single page view, scrolling past a page edge advances to the next or previous page, with protection against accidental trackpad momentum.",
+  "Hold Shift and drag with the left mouse button to pan. Hold Shift while scrolling the wheel to pan horizontally.",
+  "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers."
+]);
+
+export const releaseAnswer = "PolyPDF 1.5.5 (build 27) brings separate zoom preferences for single-page and multipage layouts, anchored double-click-drag zoom, page-edge scrolling, Shift panning, and fixes for snapshot sizing and saved orientation. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.";
