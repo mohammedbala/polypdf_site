@@ -18,3 +18,9 @@ Validation:
 - In-app browser review: homepage release spotlight and linked full release article; Arabic article visually checked with right-to-left text.
 
 Publication follows the established static deployment lane: exact source commit, full SHA-256 file manifest, staged upload using the previous release as a hardlink source, then an atomic current-symlink switch. The previous website is retained for rollback. Public smoke checks and compact publication receipts are recorded in the companion evidence directory. App downloads, update feeds, licensing services, credentials and server configuration are unchanged by this website deployment.
+
+## Published result
+
+Published at 2026-09-14 01:29 UTC (September 13 in New York) from website source `e73d23543a7c31228c842eb3db618befdd51c550`, pushed to master. All 401 staged files matched the SHA-256 manifest before the atomic switch. The previous `584a99c75fcd00f6ace90fc9b613c0778b4d6b55` website remains intact for rollback.
+
+Production smoke passed 74 checks, including page metadata, image hashes, live app feeds/downloads and the existing self-expiring unpaid checkout probe. International production smoke passed all 240 pages and 16 localized discovery files. The published release article was also read back in the in-app browser. Compact evidence is in `docs/audits/evidence/release-1.5.5/`; the complete manifest and transfer logs remain in `.tmp/release-1.5.5/`.

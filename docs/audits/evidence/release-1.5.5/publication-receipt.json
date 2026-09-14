@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-14T01:29:38.769371+00:00",
+  "sourceCommit": "e73d23543a7c31228c842eb3db618befdd51c550",
+  "version": "1.5.5",
+  "build": "27",
+  "verifiedFiles": 401,
+  "previousWebsite": "/var/www/polypdf-site/releases/584a99c75fcd00f6ace90fc9b613c0778b4d6b55",
+  "candidateWebsite": "/var/www/polypdf-site/releases/e73d23543a7c31228c842eb3db618befdd51c550",
+  "published": true
+}

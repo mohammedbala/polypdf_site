@@ -1,0 +1,5 @@
+
+> polypdf-landing@1.0.0 smoke:international
+> node scripts/international/smoke.mjs
+
+International production smoke passed: 240 pages and 16 localized discovery files.
