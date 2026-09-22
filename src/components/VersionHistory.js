@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
-import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights } from '../lib/releaseHighlights';
+import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, releaseAnswer } from '../lib/releaseHighlights';
 import siteRelease from '../lib/siteRelease.json';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
@@ -94,6 +94,8 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.5.6 (28)': release156Highlights,
+  'Windows 1.5.6 (28)': release156Highlights,
   'macOS 1.5.5 (27)': release155Highlights,
   'Windows 1.5.5 (27)': release155Highlights,
   'macOS 1.5.4 (26)': release154Highlights,
@@ -231,6 +233,8 @@ const proseKey = (release) => `${release.platform} ${release.version} (${release
 const FALLBACK_RELEASES = [
   { platform: 'macOS', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html` },
   { platform: 'Windows', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html` },
+  { platform: 'macOS', version: '1.5.5', build: 27, date: 'September 13, 2026', notes: '/downloads/PolyPDFMac-v1.5.5-27.html' },
+  { platform: 'Windows', version: '1.5.5', build: 27, date: 'September 13, 2026', notes: '/downloads/windows/PolyPDFWin-v1.5.5-27.html' },
   { platform: 'macOS', version: '1.5.0', build: 22, date: 'September 3, 2026', notes: '/downloads/PolyPDFMac-v1.5.0-22.html' },
   { platform: 'Windows', version: '1.5.0', build: 22, date: 'September 3, 2026', notes: '/downloads/windows/PolyPDFWin-v1.5.0-22.html' },
   { platform: 'Windows', version: '1.4.4', build: 21, date: 'August 30, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.4-21.html' },
@@ -346,7 +350,7 @@ const VersionHistory = () => {
               when you quit. Save your work before installing. Your existing PolyPDF 1.x Pro license
               continues to apply.
             </p>
-            <p><Link to="/blog/polypdf-1-5-5/">Read the 1.5.5 release overview</Link> for wheel zoom, layout preferences, Shift panning, and snapshot fixes.</p>
+            <p>{releaseAnswer}</p>
             <p className="last-updated">
               Versions read as version (build); the number in parentheses is the build number support asks
               for.{feedFailed && ' The live update feed could not be reached, so this list may be behind.'}

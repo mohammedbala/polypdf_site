@@ -2182,14 +2182,34 @@
     "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Single page दृश्य में Command दबाए बिना माउस व्हील से ज़ूम करें। बहु-पेज दृश्य में डिफ़ॉल्ट रूप से स्क्रॉल होता है। Settings > View में हर लेआउट के लिए व्हील और डबल-क्लिक-ड्रैग ज़ूम अलग-अलग सेट करें, या नीचे की पट्टी में पेज लेआउट बटनों पर राइट-क्लिक करें।",
     "PolyPDF displaying review markups and notes on a sample construction drawing": "PolyPDF में एक नमूना निर्माण ड्रॉइंग पर समीक्षा चिह्न और नोट्स दिखाई दे रहे हैं",
     "PolyPDF measuring a sample construction plan and showing quantities in its takeoff worksheet": "PolyPDF में एक नमूना निर्माण प्लान की माप और उसकी मात्रा गणना शीट में मात्राएँ दिखाई दे रही हैं",
-    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDF में एक नमूना निर्माण ड्रॉइंग के दो संशोधन रंगीन PDF ओवरले के रूप में साथ दिखाई दे रहे हैं"
+    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDF में एक नमूना निर्माण ड्रॉइंग के दो संशोधन रंगीन PDF ओवरले के रूप में साथ दिखाई दे रहे हैं",
+    "After relaunch, About should show version 1.5.6, build 28. Your existing PolyPDF 1.x Pro license continues to apply.": "पुन: लॉन्च के बाद, अबाउट को संस्करण 1.5.6, बिल्ड 28 दिखाना चाहिए। आपका मौजूदा PolyPDF 1.एक्स प्रो लाइसेंस लागू होता रहेगा।",
+    "Current app: PolyPDF 1.5.6 (build 28) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "वर्तमान ऐप: PolyPDF 1.5.6 (बिल्ड 28) · पैकेज प्रारूप: PolyPDF 1.3.1+ · प्लगइन्स को स्थापित करने और चलाने के लिए 1.4.1+ में PolyPDF प्रो की आवश्यकता होती है",
+    "Current version 1.5.6 (build 28).": "वर्तमान संस्करण 1.5.6 (बिल्ड 28)।",
+    "Download PolyPDF 1.5.6 for Windows 10 and 11, x64. Sharper PDF overlays when zooming and reliable crops on rotated pages.": "Windows 10 और 11, x64 के लिए PolyPDF 1.5.6 डाउनलोड करें। ज़ूम करते समय अधिक स्पष्ट PDF ओवरले और घुमाए गए पृष्ठों पर विश्वसनीय क्रॉप।",
+    "Explore the 1.5.6 update": "1.5.6 अपडेट जानें",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.6 (build 28) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.5.6 (बिल्ड 28) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।",
+    "Guides for PolyPDF 1.5.6: overlays, zoom controls, snapshots, interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, and signatures.": "PolyPDF 1.5.6 की गाइड: ओवरले, ज़ूम नियंत्रण, स्नैपशॉट, इंटरैक्टिव स्टैम्प, कैलिब्रेशन, मात्रा आकलन, टिप्पणियाँ, संशोधन, फ़ॉर्म, OCR और हस्ताक्षर।",
+    "Guides for PolyPDF 1.5.6: overlays, zoom controls, snapshots, interactive stamps, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "PolyPDF 1.5.6 की गाइड: ओवरले, ज़ूम नियंत्रण, स्नैपशॉट, इंटरैक्टिव स्टैम्प, मात्रा आकलन, तुलना, फ़ॉर्म, हस्ताक्षर और दस्तावेज़ तैयार करना, वास्तविक ऐप स्क्रीनशॉट के साथ।",
+    "Overlay crops stay aligned on rotated pages, including after saving and reopening the PDF.": "ओवरले के क्रॉप घुमाए गए पृष्ठों पर सही जगह बने रहते हैं, PDF को सहेजने और दोबारा खोलने के बाद भी।",
+    "PDF overlays redraw from their source PDF as you zoom, keeping vector text and linework sharp.": "ज़ूम करते समय PDF ओवरले को उनके मूल PDF से दोबारा रेंडर किया जाता है, जिससे वेक्टर टेक्स्ट और रेखाएँ स्पष्ट रहती हैं।",
+    "PolyPDF 1.5.6 (build 28) improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages, including after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.": "PolyPDF 1.5.6 (बिल्ड 28) ज़ूम करते समय PDF ओवरले की स्पष्टता सुधारता है और घुमाए गए पृष्ठों पर उनके क्रॉप को सही जगह रखता है, सहेजने और दोबारा खोलने के बाद भी। यह Mac और Windows के लिए उपलब्ध है और मौजूदा PolyPDF 1.x लाइसेंस में शामिल है।",
+    "PolyPDF 1.5.6 (build 28) · Mac & Windows": "PolyPDF 1.5.6 (बिल्ड 28) · Mac और Windows",
+    "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.6 improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages.": "PolyPDF Windows 10 और 11 के लिए डिजिटल हस्ताक्षर वाले इंस्टॉलर के रूप में उपलब्ध है। यह Mac वाला ही ड्रॉइंग समीक्षा ऐप है: शीट मापें और टिप्पणियाँ जोड़ें, स्थानीय AEC OCR चलाएँ, संशोधनों की तुलना करें और Revision Packages के साथ समीक्षा किए गए काम को आगे ले जाएँ। संस्करण 1.5.6 ज़ूम करते समय PDF ओवरले की स्पष्टता सुधारता है और घुमाए गए पृष्ठों पर उनके क्रॉप को सही जगह रखता है।",
+    "Update to 1.5.6": "1.5.6 पर अद्यतन करें",
+    "What changed in 1.5.6": "1.5.6 में क्या बदला",
+    "What is new in PolyPDF 1.5.6?": "PolyPDF 1.5.6 में नया क्या है?"
   },
-  "sourceHash": "31f094c8ed4091ca743e3c0b708b0514c45f1e191b74d5e667cd49db26580bc1",
+  "sourceHash": "1f641abd24474df140a27324e022822f1b45a1ec5f4ef2fa754c13b5be0d264e",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
   "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
   "conversionTranslation": {
     "date": "2026-09-22",
     "method": "AI-assisted translation of three new real-UI workflow image descriptions; not independently reviewed by a native speaker."
+  },
+  "release156Translation": {
+    "date": "2026-09-22",
+    "method": "AI-assisted translation of current overlay-fix copy and version-only updates to existing translations; historical strings retained. Not independently reviewed by a native speaker."
   }
 }

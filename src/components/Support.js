@@ -143,7 +143,7 @@ const Support = () => {
             </p>
           </div>
 
-          <p><Link to="/blog/polypdf-1-5-5/">What changed in 1.5.5</Link> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link> · <Link to="/blog/">All guides</Link></p>
+          <p><Link to="/versions/">What changed in {siteRelease.version}</Link> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link> · <Link to="/blog/">All guides</Link></p>
 
           <div className="legal-sections">
             {sections.map((section, index) => (

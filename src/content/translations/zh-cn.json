@@ -2182,14 +2182,34 @@
     "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "在 Single page 视图中，无需按住 Command 即可用鼠标滚轮缩放。多页视图默认使用滚轮滚动。在 Settings > View 中为每种布局分别自定义滚轮缩放和双击拖动缩放，也可以右键点击底部栏中的页面布局按钮。",
     "PolyPDF displaying review markups and notes on a sample construction drawing": "PolyPDF 在示例施工图上显示审阅标记和注释",
     "PolyPDF measuring a sample construction plan and showing quantities in its takeoff worksheet": "PolyPDF 测量示例施工图，并在工程量统计表中显示数量",
-    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDF 将示例施工图的两个修订版本显示为彩色 PDF 叠加图"
+    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDF 将示例施工图的两个修订版本显示为彩色 PDF 叠加图",
+    "After relaunch, About should show version 1.5.6, build 28. Your existing PolyPDF 1.x Pro license continues to apply.": "重新启动后，“关于”应显示版本 1.5.6，版本 28。您现有的 PolyPDF 1.x Pro 许可证继续适用。",
+    "Current app: PolyPDF 1.5.6 (build 28) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "当前应用程序：PolyPDF 1.5.6 (build 28) · 软件包格式：PolyPDF 1.3.1+ · 安装和运行插件需要 PolyPDF Pro 1.4.1+",
+    "Current version 1.5.6 (build 28).": "当前版本 1.5.6（内部版本 28）。",
+    "Download PolyPDF 1.5.6 for Windows 10 and 11, x64. Sharper PDF overlays when zooming and reliable crops on rotated pages.": "下载适用于 Windows 10 和 11（x64）的 PolyPDF 1.5.6。缩放时 PDF 叠加更清晰，旋转页面上的裁剪位置更可靠。",
+    "Explore the 1.5.6 update": "了解 1.5.6 更新",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.6 (build 28) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.5.6（版本 28）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。",
+    "Guides for PolyPDF 1.5.6: overlays, zoom controls, snapshots, interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, and signatures.": "PolyPDF 1.5.6 指南：叠加、缩放控制、快照、交互式图章、校准、工程量统计、批注、修订、表单、OCR 和签名。",
+    "Guides for PolyPDF 1.5.6: overlays, zoom controls, snapshots, interactive stamps, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "PolyPDF 1.5.6 指南：叠加、缩放控制、快照、交互式图章、工程量统计、比较、表单、签名和文档准备，配有真实应用截图。",
+    "Overlay crops stay aligned on rotated pages, including after saving and reopening the PDF.": "叠加内容的裁剪区域在旋转页面上保持对齐，保存并重新打开 PDF 后也能保持。",
+    "PDF overlays redraw from their source PDF as you zoom, keeping vector text and linework sharp.": "缩放时，PDF 叠加会从源 PDF 重新绘制，使矢量文字和线条保持清晰。",
+    "PolyPDF 1.5.6 (build 28) improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages, including after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.": "PolyPDF 1.5.6（构建 28）改善了缩放时 PDF 叠加的清晰度，并使旋转页面上的叠加裁剪区域保持对齐，保存并重新打开后也能保持。此版本适用于 Mac 和 Windows，包含在现有 PolyPDF 1.x 许可证中。",
+    "PolyPDF 1.5.6 (build 28) · Mac & Windows": "PolyPDF 1.5.6（内部版本 28）· Mac 和 Windows",
+    "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.6 improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages.": "PolyPDF 为 Windows 10 和 11 提供已签名的安装程序。它与 Mac 版使用相同的图纸审阅应用：测量和批注图纸、运行本地 AEC OCR、比较修订，并通过 Revision Packages 延续已审阅的工作。1.5.6 版本改善了缩放时 PDF 叠加的清晰度，并使旋转页面上的叠加裁剪区域保持对齐。",
+    "Update to 1.5.6": "更新至1.5.6",
+    "What changed in 1.5.6": "1.5.6 中发生了什么变化",
+    "What is new in PolyPDF 1.5.6?": "PolyPDF 1.5.6 有哪些新功能？"
   },
-  "sourceHash": "31f094c8ed4091ca743e3c0b708b0514c45f1e191b74d5e667cd49db26580bc1",
+  "sourceHash": "1f641abd24474df140a27324e022822f1b45a1ec5f4ef2fa754c13b5be0d264e",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
   "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
   "conversionTranslation": {
     "date": "2026-09-22",
     "method": "AI-assisted translation of three new real-UI workflow image descriptions; not independently reviewed by a native speaker."
+  },
+  "release156Translation": {
+    "date": "2026-09-22",
+    "method": "AI-assisted translation of current overlay-fix copy and version-only updates to existing translations; historical strings retained. Not independently reviewed by a native speaker."
   }
 }

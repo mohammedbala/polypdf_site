@@ -35,4 +35,9 @@ export const release155Highlights = Object.freeze([
   "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers."
 ]);
 
-export const releaseAnswer = "PolyPDF 1.5.5 (build 27) brings separate zoom preferences for single-page and multipage layouts, anchored double-click-drag zoom, page-edge scrolling, Shift panning, and fixes for snapshot sizing and saved orientation. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.";
+export const release156Highlights = Object.freeze([
+  'PDF overlays redraw from their source PDF as you zoom, keeping vector text and linework sharp.',
+  'Overlay crops stay aligned on rotated pages, including after saving and reopening the PDF.'
+]);
+
+export const releaseAnswer = "PolyPDF 1.5.6 (build 28) improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages, including after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.";

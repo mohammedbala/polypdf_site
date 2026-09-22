@@ -2182,14 +2182,34 @@
     "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Single page 表示では、Command を押さずにマウスホイールでズームできます。複数ページ表示では、既定でスクロールします。Settings > View でレイアウトごとにホイールズームとダブルクリック・ドラッグズームを個別に設定するか、下部バーのページレイアウトボタンを右クリックしてください。",
     "PolyPDF displaying review markups and notes on a sample construction drawing": "PolyPDFでサンプルの建築図面にレビュー用のマークアップと注記を表示",
     "PolyPDF measuring a sample construction plan and showing quantities in its takeoff worksheet": "PolyPDFでサンプルの建築図面を測定し、数量集計シートに数量を表示",
-    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDFでサンプルの建築図面の2つの改訂版を色分けしたPDFオーバーレイとして重ねて表示"
+    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDFでサンプルの建築図面の2つの改訂版を色分けしたPDFオーバーレイとして重ねて表示",
+    "After relaunch, About should show version 1.5.6, build 28. Your existing PolyPDF 1.x Pro license continues to apply.": "再起動後、About にはバージョン 1.5.6、ビルド 28 が表示されます。既存の PolyPDF 1.x Pro ライセンスは引き続き適用されます。",
+    "Current app: PolyPDF 1.5.6 (build 28) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "現在のアプリ: PolyPDF 1.5.6 (ビルド 28) · パッケージ形式: PolyPDF 1.3.1+ · プラグインのインストールと実行には、1.4.1+ の PolyPDF Pro が必要です",
+    "Current version 1.5.6 (build 28).": "現在のバージョン 1.5.6 (ビルド 28)。",
+    "Download PolyPDF 1.5.6 for Windows 10 and 11, x64. Sharper PDF overlays when zooming and reliable crops on rotated pages.": "Windows 10・11（x64）向けPolyPDF 1.5.6をダウンロード。ズーム時のPDFオーバーレイがより鮮明になり、回転したページでも切り抜きが正しく配置されます。",
+    "Explore the 1.5.6 update": "1.5.6の更新内容を見る",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.6 (build 28) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "インストール、製品のワークフロー、購入、ライセンスのアクティベーションに関するサポートが受けられます。現在のパブリック リリースは、Mac および Windows 上の PolyPDF 1.5.6 (ビルド 28) です。記入する際は、「バージョン情報」に表示されているバージョン、オペレーティング システム、および該当する場合は Stripe の領収書の詳細を含めてください。",
+    "Guides for PolyPDF 1.5.6: overlays, zoom controls, snapshots, interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, and signatures.": "PolyPDF 1.5.6のガイド：オーバーレイ、ズーム操作、スナップショット、インタラクティブスタンプ、縮尺の校正、数量拾い、注釈、改訂、フォーム、OCR、署名。",
+    "Guides for PolyPDF 1.5.6: overlays, zoom controls, snapshots, interactive stamps, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "PolyPDF 1.5.6のガイド：オーバーレイ、ズーム操作、スナップショット、インタラクティブスタンプ、数量拾い、比較、フォーム、署名、文書の準備を、実際のアプリ画面で解説します。",
+    "Overlay crops stay aligned on rotated pages, including after saving and reopening the PDF.": "オーバーレイの切り抜きは、回転したページでも正しい位置を保ちます。PDFを保存して開き直した後も位置が維持されます。",
+    "PDF overlays redraw from their source PDF as you zoom, keeping vector text and linework sharp.": "PDFオーバーレイはズーム時に元のPDFから再描画され、ベクトルの文字や線を鮮明に保ちます。",
+    "PolyPDF 1.5.6 (build 28) improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages, including after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.": "PolyPDF 1.5.6（ビルド28）はズーム時のPDFオーバーレイの鮮明さを改善し、回転したページでの切り抜き位置を、保存して開き直した後も維持します。MacとWindowsで利用でき、既存のPolyPDF 1.xライセンスに含まれます。",
+    "PolyPDF 1.5.6 (build 28) · Mac & Windows": "PolyPDF 1.5.6（ビルド26）· MacとWindows",
+    "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.6 improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages.": "PolyPDFはWindows 10・11向けに署名済みインストーラーで提供されます。Mac版と同じ図面レビューアプリで、図面の計測と注釈、ローカルのAEC OCR、改訂の比較、Revision Packagesによるレビュー済み作業の引き継ぎに対応します。バージョン1.5.6はズーム時のPDFオーバーレイの鮮明さを改善し、回転したページでも切り抜きの位置を正しく保ちます。",
+    "Update to 1.5.6": "1.5.6へのアップデート",
+    "What changed in 1.5.6": "1.5.6での変更点",
+    "What is new in PolyPDF 1.5.6?": "PolyPDF 1.5.6の新機能は？"
   },
-  "sourceHash": "31f094c8ed4091ca743e3c0b708b0514c45f1e191b74d5e667cd49db26580bc1",
+  "sourceHash": "1f641abd24474df140a27324e022822f1b45a1ec5f4ef2fa754c13b5be0d264e",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
   "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
   "conversionTranslation": {
     "date": "2026-09-22",
     "method": "AI-assisted translation of three new real-UI workflow image descriptions; not independently reviewed by a native speaker."
+  },
+  "release156Translation": {
+    "date": "2026-09-22",
+    "method": "AI-assisted translation of current overlay-fix copy and version-only updates to existing translations; historical strings retained. Not independently reviewed by a native speaker."
   }
 }

@@ -1,7 +1,7 @@
 {
   "/": {
     "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
-    "description": "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.5.5 adds customizable zoom controls and snapshot fixes. Start free; Pro is one payment.",
+    "description": "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.5.6 improves PDF overlay clarity when zooming. Start free; Pro is one payment.",
     "robots": "index, follow"
   },
   "/buy": {
@@ -26,7 +26,7 @@
   },
   "/blog": {
     "title": "PolyPDF Guides | PDF Measurement, Takeoff & Markup",
-    "description": "Guides for PolyPDF 1.5.5: zoom controls, snapshots, interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, and signatures.",
+    "description": "Guides for PolyPDF 1.5.6: overlays, zoom controls, snapshots, interactive stamps, calibration, takeoff, markup, revisions, forms, OCR, and signatures.",
     "robots": "index, follow"
   },
   "/blog/polypdf-1-5-5": {
@@ -231,7 +231,7 @@
   },
   "/windows": {
     "title": "PolyPDF for Windows | PDF Measurement and Markup",
-    "description": "Download PolyPDF 1.5.5 for Windows 10 and 11, x64. Customizable wheel and drag zoom, Shift panning, and snapshot fixes.",
+    "description": "Download PolyPDF 1.5.6 for Windows 10 and 11, x64. Sharper PDF overlays when zooming and reliable crops on rotated pages.",
     "robots": "index, follow"
   },
   "/terms": {
@@ -241,7 +241,7 @@
   },
   "/versions": {
     "title": "PolyPDF Version History | Release Notes",
-    "description": "PolyPDF 1.5.5 release history for Mac and Windows: customizable wheel and drag zoom, layout preferences, Shift panning, and snapshot fixes.",
+    "description": "PolyPDF 1.5.6 release history for Mac and Windows: sharper PDF overlays when zooming and reliable crops on rotated pages.",
     "robots": "index, follow"
   },
   "/revision-packages": {
