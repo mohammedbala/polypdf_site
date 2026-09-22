@@ -19,7 +19,7 @@
     "test": "react-scripts test",
     "test:screenshot-evidence": "node --test test/verify-screenshot-evidence.test.mjs",
     "refresh:screenshots": "node scripts/refresh-screenshot-inventory.mjs",
-    "test:post-deploy": "node --test test/post-deploy-smoke.test.mjs",
+    "test:post-deploy": "node --test test/post-deploy-smoke.test.mjs test/workflow-demo-evidence.test.mjs",
     "verify:screenshots": "node scripts/verify-screenshot-evidence.mjs",
     "smoke:production": "node scripts/post-deploy-smoke.mjs",
     "eject": "react-scripts eject",

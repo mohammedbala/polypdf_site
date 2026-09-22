@@ -65,7 +65,7 @@ const WhileItInstalls = ({ platformKey, tone }) => (
 // line under it, and the other platform one click away. On phones and unknown platforms it offers
 // BOTH desktop builds instead of pushing a 228 MB DMG at a device that cannot run it. `source`
 // feeds the download_click analytics event so the funnel can tell which section converts.
-const DownloadCTA = ({ source, size = '', onDownload, tone = '', adjacentAction = null }) => {
+const DownloadCTA = ({ source, size = '', onDownload, tone = '', adjacentAction = null, compact = false }) => {
   const [started, setStarted] = useState(null);
   const { primaryPlatform, otherPlatform, platformKnown } = usePlatform();
 
@@ -89,7 +89,7 @@ const DownloadCTA = ({ source, size = '', onDownload, tone = '', adjacentAction 
           {adjacentAction}
         </div>
         <p className="dl-meta">PolyPDF runs on Mac and Windows desktops — pick the download for the machine you work on.</p>
-        <p className="dl-terms">{FREE_TIER_LIMIT_TEXT}</p>
+        <p className="dl-terms">{compact ? <>Free markup and review, plus 3 measurements per document. <a href="#pricing">Compare Free and Pro</a>.</> : FREE_TIER_LIMIT_TEXT}</p>
         {started && <WhileItInstalls platformKey={started} tone={tone} />}
       </div>
     );
@@ -115,7 +115,7 @@ const DownloadCTA = ({ source, size = '', onDownload, tone = '', adjacentAction 
           <PlatformIcon platform={otherPlatform} /> Also on {otherPlatform.name}
         </a>
       </p>
-      <p className="dl-terms">{FREE_TIER_LIMIT_TEXT}</p>
+      <p className="dl-terms">{compact ? <>Free markup and review, plus 3 measurements per document. <a href="#pricing">Compare Free and Pro</a>.</> : FREE_TIER_LIMIT_TEXT}</p>
       {started && <WhileItInstalls platformKey={started} tone={tone} />}
     </div>
   );

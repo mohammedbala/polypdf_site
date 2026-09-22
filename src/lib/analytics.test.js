@@ -36,3 +36,14 @@ test('rejects malformed events and excludes form, query and arbitrary item data'
   expect(window.gtag).not.toHaveBeenCalled();
   window.history.replaceState({}, '', '/');
 });
+
+test('attributes current and historical purchases to their verified price without guessing an offer', () => {
+  saveConsent({ analytics: true });
+  trackVerifiedPurchase({ transaction_id: 'pi_standard', value: 74.95, currency: 'USD', items: [{ item_id: 'price_current123', item_name: 'PolyPDF Pro' }] });
+  expect(window.gtag.mock.calls[0][2].items).toEqual([{ item_id: 'price_current123', item_name: 'PolyPDF Pro', price: 74.95, quantity: 1 }]);
+  trackVerifiedPurchase({ ...purchase, items: [{ item_id: 'price_legacy123', item_name: "PolyPDF Pro Founder's License" }] });
+  expect(window.gtag.mock.calls[1][2].items[0].item_id).toBe('price_legacy123');
+  expect(window.gtag.mock.calls[1][2].items[0].item_name).toBe("PolyPDF Pro Founder's License");
+  trackVerifiedPurchase({ ...purchase, transaction_id: 'pi_no_items' });
+  expect(window.gtag.mock.calls[2][2].items[0].item_id).toBe('polypdf_pro');
+});

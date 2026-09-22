@@ -42,6 +42,18 @@ async function withFakeSite({
       response.end('broken');
       return;
     }
+    if (path.startsWith('/images/workflows/') || path.startsWith('/samples/conversion/')) {
+      if (path === htmlFallbackRoute) {
+        response.writeHead(200, { 'Content-Type': 'text/html' });
+        response.end('<!doctype html><div id="root"></div>');
+        return;
+      }
+      const extension = path.split('.').at(-1);
+      const mime = { json: 'application/json', gif: 'image/gif', webp: 'image/webp', webm: 'video/webm', mp4: 'video/mp4', pdf: 'application/pdf' }[extension];
+      response.writeHead(200, { 'Content-Type': mime });
+      response.end(fs.readFileSync(new URL(`../public${path}`, import.meta.url)));
+      return;
+    }
     if (path === notFoundSmokeRoute) {
       response.writeHead(404, {
         'Content-Type': 'text/html; charset=utf-8',
@@ -101,7 +113,10 @@ async function withFakeSite({
         + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script>'
         + `<div id="root"><h1>${title}</h1><p>Prerendered body content for ${routePath}</p>`
         + (routePath === '/'
-          ? `<p>Authentic ${siteRelease.featuredCaptureVersion} build ${siteRelease.featuredCaptureBuild} interface</p><p>PolyPDF ${siteRelease.version} (build ${siteRelease.build})</p><p>Revision Packages</p>`
+          ? `<section data-workflow-capture-manifest="/images/workflows/manifest.json"><p>Actual PolyPDF interface</p>`
+            + ['takeoff', 'compare', 'review'].map((id) => `<img src="/images/workflows/${id}.webp"><a href="/images/workflows/${id}.gif">GIF</a><a href="/images/workflows/${id}.mp4">Video</a>`).join('')
+            + '<a href="/samples/conversion/northline-studio-rev-a.pdf">Sample A</a><a href="/samples/conversion/northline-studio-rev-b.pdf">Sample B</a></section>'
+            + `<p>PolyPDF ${siteRelease.version} (build ${siteRelease.build})</p><p>Revision Packages</p>`
           : '')
         + '<footer data-site-footer="true">'
         + canonicalFooterRoutes.map((route) => `<a href="${route}">${route}</a>`).join('')
@@ -263,12 +278,19 @@ test('passes only when every route, artifact, health check, and checkout pass', 
   await withFakeSite({}, async (baseURL) => {
     const results = await runPostDeploySmoke({ baseURL });
     // +7 = the real 404, /api/healthz, /api/commercial-offer, the main bundle, the plugin packer,
-    // conversion verification, and checkout. Release feeds are counted separately.
+    // conversion verification, and checkout. +15 verifies the workflow manifest, twelve media
+    // outputs, and two sample PDFs. Release feeds are counted separately.
     assert.equal(
       results.length,
       htmlRoutes.length + shareImageRoutes.length + discoveryRoutes.length
-        + releaseFeedRoutes.length + downloadRoutes.length + 7
+        + releaseFeedRoutes.length + downloadRoutes.length + 7 + 15
     );
+  });
+});
+
+test('rejects a workflow GIF served as the SPA HTML fallback', async () => {
+  await withFakeSite({ htmlFallbackRoute: '/images/workflows/takeoff.gif' }, async (baseURL) => {
+    await assert.rejects(runPostDeploySmoke({ baseURL }), /takeoff\.gif returned the wrong content type/);
   });
 });
 

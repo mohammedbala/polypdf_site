@@ -4,14 +4,15 @@ import { ADS_ID, GA_ID, safePageContext } from './tracking';
 // Keep events content-free even if a future caller passes form or URL data by mistake.
 const SAFE_PROPERTIES = new Set(['source', 'platform', 'page_variant', 'offer_id', 'app_version', 'provider', 'reason', 'feature', 'section', 'target', 'position']);
 export const trackEvent = (name, properties = {}) => {
-  if (!hasConsent('analytics') || typeof window.gtag !== 'function') return;
-  if (!/^[a-z][a-z0-9_]{0,60}$/.test(name)) return;
+  if (!hasConsent('analytics') || typeof window.gtag !== 'function') return false;
+  if (!/^[a-z][a-z0-9_]{0,60}$/.test(name)) return false;
   const safe = {};
   for (const [key, value] of Object.entries(properties)) {
     if (SAFE_PROPERTIES.has(key) && (typeof value === 'number' ||
         (typeof value === 'string' && /^[a-z0-9._~-]{1,100}$/i.test(value)))) safe[key] = value;
   }
   window.gtag('event', name, { ...safe, ...safePageContext(), send_to: GA_ID });
+  return true;
 };
 
 const DEDUPE_AGE = 30 * 24 * 60 * 60 * 1000;
@@ -20,9 +21,16 @@ const normalizedPurchase = (purchase) => {
   const value = Number(purchase?.value);
   const currency = typeof purchase?.currency === 'string' ? purchase.currency.trim().toUpperCase() : '';
   if (!/^[a-z0-9_-]{1,255}$/i.test(transactionID) || !Number.isFinite(value) || value < 0 || !/^[A-Z]{3}$/.test(currency)) return null;
+  // Use only the first-party payment record's Stripe price identity. Never label all current
+  // purchases as the retired Founder offer, or forward arbitrary item strings to analytics.
+  const verifiedItem = purchase?.items?.[0];
+  const priceID = typeof verifiedItem?.item_id === 'string' && /^price_[a-z0-9]{1,80}$/i.test(verifiedItem.item_id)
+    ? verifiedItem.item_id : 'polypdf_pro';
+  const itemName = verifiedItem?.item_name === "PolyPDF Pro Founder's License"
+    ? "PolyPDF Pro Founder's License" : 'PolyPDF Pro';
   return {
     transaction_id: transactionID, value, currency,
-    items: [{ item_id: 'polypdf_pro_founder_1x_2026', item_name: 'PolyPDF Pro', price: value, quantity: 1 }]
+    items: [{ item_id: priceID, item_name: itemName, price: value, quantity: 1 }]
   };
 };
 

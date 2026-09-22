@@ -8,6 +8,7 @@ import DirectCheckoutLink from './DirectCheckoutLink';
 import { buyPath, canonicalPagePath } from '../lib/attribution';
 import { DOWNLOADS } from '../lib/platform';
 import { landingPages } from '../lib/landingPages';
+import { useCommercialOffer } from '../lib/useCommercialOffer';
 
 export const footerLinkGroups = Object.freeze([
   Object.freeze({
@@ -56,7 +57,9 @@ const trackDownload = (platform) => {
   trackEvent('download_click', properties);
 };
 
-const SiteFooter = () => (
+const SiteFooter = () => {
+  const offer = useCommercialOffer();
+  return (
   <footer className="site-footer" data-site-footer>
     <div className="container site-footer-shell">
       <div className="site-footer-intro">
@@ -88,6 +91,7 @@ const SiteFooter = () => (
                 <li key={link.to}>
                   {link.checkoutSource ? (
                     <DirectCheckoutLink
+                      offer={offer}
                       source={link.checkoutSource}
                       pageVariant="footer"
                     >
@@ -111,6 +115,7 @@ const SiteFooter = () => (
       <SiteMotionButton />
     </div>
   </footer>
-);
+  );
+};
 
 export default SiteFooter;

@@ -6,6 +6,7 @@ import { trackEvent } from '../lib/analytics';
 import { primaryPlatform } from '../lib/platform';
 import { commercialOffer } from '../lib/commercialOffer';
 import siteRelease from '../lib/siteRelease.json';
+import { closedOfferMessage } from '../lib/useCommercialOffer';
 
 const SOLD_OUT_CODES = new Set(['founder_offer_sold_out', 'founder_offer_ended']);
 
@@ -15,6 +16,7 @@ const DirectCheckoutLink = forwardRef(({
   className,
   children,
   loadingLabel = 'Opening secure checkout…',
+  offer,
   onClick,
   redirect = (url) => window.location.assign(url),
   ...linkProps
@@ -26,6 +28,10 @@ const DirectCheckoutLink = forwardRef(({
   const openCheckout = async (event) => {
     event.preventDefault();
     if (status === 'loading') return;
+    if (offer?.available === false) {
+      setCheckoutError({ title: 'Checkout unavailable.', message: closedOfferMessage() });
+      return;
+    }
     onClick?.(event);
 
     const attribution = checkoutAttributionForSource(source);
@@ -82,9 +88,9 @@ const DirectCheckoutLink = forwardRef(({
         className={className}
         onClick={openCheckout}
         aria-busy={status === 'loading'}
-        aria-disabled={status === 'loading'}
+        aria-disabled={status === 'loading' || offer?.available === false}
       >
-        {status === 'loading' ? loadingLabel : children}
+        {status === 'loading' ? loadingLabel : offer?.available === false ? 'Checkout unavailable' : children}
       </a>
       {checkoutError && (
         <div className="checkout-toast" role="alert">

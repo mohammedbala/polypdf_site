@@ -1,0 +1,214 @@
+/* The shared presentation layer for every route, including static translations.
+   Keep screenshots in their original colors: these are evidence of the product. */
+:root {
+  color-scheme: light;
+  --primary-black: #111;
+  --primary-white: #fff;
+  --gray-100: #f7f7f7;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-700: #404040;
+  --gray-800: #262626;
+  --gray-900: #171717;
+  --accent: #171717;
+  --accent-soft: #f0f0f0;
+  --paper: #fff;
+  --paper-shadow: #e5e5e5;
+  --shadow-sm: 0 1px 3px rgb(0 0 0 / 5%);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 6%);
+  --shadow-lg: 0 16px 48px rgb(0 0 0 / 8%);
+}
+
+body, .Home, .legal-page, .legal-page.buy, .workflow-landing {
+  background: var(--primary-white);
+}
+
+::selection { color: #fff; background: #333; }
+:where(a) { color: inherit; text-underline-offset: .2em; }
+:is(button, input, select, textarea) { accent-color: var(--primary-black); }
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--primary-black);
+  outline-offset: 4px;
+}
+:is(.pricing-card-pro, .cta-section, .site-footer, .request-ledger) :focus-visible {
+  outline-color: #fff;
+}
+
+:is(.logo, .workflow-logo, .site-footer-logo) img { filter: grayscale(1); }
+.Home .logo img { transform: none; }
+.Home::before, .Home .hero::after, .hero-highlight::after,
+.paper-tape, .hero-sketch-line, .cta-sketch { display: none; }
+
+.Home .header .nav, .buy .legal-header .nav {
+  max-width: 1240px;
+  margin-top: 0;
+  padding: 1rem 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  backdrop-filter: none;
+}
+.Home .header, .Home .header.scrolled, .buy .legal-header,
+.legal-header, .workflow-header {
+  background: rgb(255 255 255 / 97%);
+  border-bottom: 1px solid var(--gray-200);
+  backdrop-filter: blur(12px);
+}
+.Home .header { pointer-events: auto; }
+.nav.container, .Home .header .nav, .buy .legal-header .nav { padding-inline: 20px; }
+.Home .nav-links .nav-buy { color: #fff; background: #111; }
+.Home .nav-links .nav-buy:hover { background: #333; color: #fff; }
+.Home .nav-links .nav-download {
+  color: #111 !important;
+  background: #fff;
+  border: 1px solid var(--gray-300);
+  box-shadow: none;
+}
+.nav-buy, .nav-download, .primary-btn, .secondary-btn, .workflow-nav-buy {
+  border-radius: 6px;
+  box-shadow: none;
+}
+.primary-btn:hover, .nav-buy:hover, .nav-download:hover,
+.secondary-btn:hover { box-shadow: none; transform: translateY(-1px); }
+.primary-btn:active, .secondary-btn:active { transform: translateY(1px); }
+.secondary-btn { background: #fff; }
+
+.Home .hero {
+  min-height: auto;
+  padding-top: 154px;
+  padding-bottom: 48px;
+}
+.Home .hero-layout {
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(2rem, 4vw, 4rem);
+}
+.Home .hero h1 {
+  max-width: 14ch;
+  font-size: clamp(3rem, 4.6vw, 4.3rem);
+  line-height: 1.02;
+}
+.hero-highlight { color: inherit; }
+.Home .hero-badge, .buy .hero-badge {
+  transform: none;
+  border: 0;
+  background: var(--gray-100);
+  color: var(--gray-700);
+  border-radius: 4px;
+}
+.Home .hero-buy.offer-cta {
+  color: #fff;
+  background: #111;
+  border-color: #111;
+  box-shadow: none;
+}
+.Home .hero-buy.offer-cta:hover { background: #333; box-shadow: none; }
+.playful-product-board {
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  background: #f7f7f7;
+  box-shadow: var(--shadow-lg);
+  padding: 12px;
+}
+.playful-product-board .shot-plate { border: 0; border-radius: 5px; box-shadow: none; }
+.hero-sticker { display: none; }
+.Home .hero-stats {
+  transform: none;
+  border: 0;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  border-radius: 0;
+  box-shadow: none;
+  background: #fff;
+  margin-top: 1.5rem;
+}
+.Home .stat { border-right: 1px solid var(--gray-200); }
+
+.Home .pricing-early { padding: 72px 0; background: var(--gray-100); }
+.Home .pricing-grid { align-items: stretch; }
+.Home .pricing-card, .buy .pricing-card,
+.Home .pricing-card:first-child, .Home .pricing-card-pro,
+.buy .pricing-card-pro {
+  transform: none;
+  margin-top: 0;
+  border-radius: 10px;
+  box-shadow: none;
+  border: 1px solid var(--gray-300);
+}
+.Home .pricing-card-pro, .buy .pricing-card-pro {
+  background: #171717;
+  border-color: #171717;
+}
+.Home .pricing-card-pro .primary-btn, .buy .pricing-card-pro .primary-btn,
+.Home .pricing-card-pro .primary-btn:hover, .buy .pricing-card-pro .primary-btn:hover {
+  box-shadow: none;
+  border-color: #fff;
+}
+.Home .plan-list, .buy .plan-list { border-top-style: solid; }
+.Home .plan-list li, .buy .plan-list li { border-bottom-style: solid; }
+.Home .cta-section {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+  border-radius: 0;
+  background: #171717;
+}
+.Home .cta-section .primary-btn { box-shadow: none; }
+.Home .revision-release, .workflow-hero { background: #fff; }
+.revision-release-visual img, .workflow-hero-visual img,
+.workflow-shot, .workflow-card.theme-light .workflow-shot,
+.workflow-card:hover .workflow-shot, .workflow-card.theme-light:hover .workflow-shot {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+}
+.workflow-card { border-color: var(--gray-200); }
+.workflow-capture-label span { box-shadow: none; }
+.workflow-offer { background: var(--gray-100); }
+.workflow-landing { --workflow-paper: #fff; }
+.site-language-bar { background: #fff; border-color: var(--gray-200); }
+.language-selector summary, .language-options a {
+  color: var(--gray-700);
+  background: #fff;
+  border-color: var(--gray-200);
+  border-radius: 5px;
+}
+.language-options a:hover, .language-options a[aria-current=page] { background: #eee; }
+.home-language-bar { top: 84px; }
+.home-language-bar .language-options { background: #fff; border-color: var(--gray-200); }
+.cookie-banner { background: #fff; border-color: var(--gray-300); }
+.request-ledger, .not-found-mark { transform: none; box-shadow: none; }
+
+/* In-page links must clear sticky navigation on every public route. */
+:where(section[id], main[id]) { scroll-margin-top: 96px; }
+
+@media (max-width: 980px) {
+  .Home .hero-layout { grid-template-columns: 1fr; }
+  .Home .hero-content { max-width: 740px; }
+  .Home .hero h1 { max-width: 18ch; }
+  .Home .hero-stats { grid-column: auto; }
+}
+@media (max-width: 760px) {
+  .Home .hero { padding-top: 148px; }
+  .Home .hero h1 { font-size: clamp(2.7rem, 9.5vw, 3.7rem); }
+  .Home .header .nav, .buy .legal-header .nav { padding: .8rem 20px; }
+  .Home .nav-links { background: #fff; border: 1px solid var(--gray-200); }
+  .Home .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .Home .stat { min-height: 90px; padding: 1rem; }
+  .Home .stat:nth-child(2) { border-right: 0; }
+  .Home .stat:nth-child(-n+2) { border-bottom: 1px solid var(--gray-200); }
+  .Home .pricing-grid { grid-template-columns: 1fr; }
+  .Home .section-header h2 { max-width: 22ch; }
+  .Home .cta-section { padding-inline: 0; }
+  .home-language-bar { top: 76px; }
+  .workflow-hero h1 { font-size: clamp(2.3rem, 9.5vw, 3.1rem); line-height: 1.06; }
+}
+@media (max-width: 640px) {
+  .buy-sticky-checkout { bottom: var(--cookie-bar-height, 0px); }
+  .buy .legal-content { padding-top: 2rem; }
+  .buy .buy-hero { margin-top: 0; }
+}

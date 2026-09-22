@@ -6,6 +6,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { verifyWorkflowFiles, verifyWorkflowHomeMarkup } from './workflow-demo-evidence.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const buildDirectory = path.resolve(root, process.env.BUILD_PATH || 'build');
@@ -109,8 +110,12 @@ for (const [route, metadata] of Object.entries(routeMetadata)) {
 const homeHtml = fs.readFileSync(path.join(buildDirectory, 'index.html'), 'utf8');
 assert(homeHtml.includes(`PolyPDF ${siteRelease.version} (build ${siteRelease.build})`),
   'homepage: current release version/build is missing');
-assert(homeHtml.includes(`Authentic ${siteRelease.featuredCaptureVersion} build ${siteRelease.featuredCaptureBuild} interface`),
-  'homepage: authentic featured capture identity is missing');
+try {
+  verifyWorkflowHomeMarkup(homeHtml);
+  verifyWorkflowFiles(buildDirectory);
+} catch (error) {
+  failures.push(error.message);
+}
 
 const notFoundPath = path.join(buildDirectory, '404.html');
 assert(fs.existsSync(notFoundPath), '404.html: static not-found page is missing');

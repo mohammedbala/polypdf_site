@@ -4,9 +4,11 @@ import { MemoryRouter } from 'react-router';
 import Buy, { isSecureStripeCheckoutUrl } from './Buy';
 
 class TestIntersectionObserver {
-  observe() {}
+  constructor(callback) { this.callback = callback; TestIntersectionObserver.instances.push(this); }
+  observe(target) { this.target = target; }
   disconnect() {}
 }
+TestIntersectionObserver.instances = [];
 
 const renderBuy = async (url, founder) => {
   globalThis.IS_REACT_ACT_ENVIRONMENT = true;
@@ -44,6 +46,7 @@ afterEach(() => {
   delete global.fetch;
   delete window.IntersectionObserver;
   window.localStorage.clear();
+  TestIntersectionObserver.instances = [];
 });
 
 test('accepts only secure Stripe-hosted checkout URLs', () => {
@@ -95,6 +98,20 @@ test('disables checkout when the standard offer is unavailable', async () => {
     'Checkout is temporarily unavailable. Please refresh or contact support@polypdf.com.'
   );
   expect(view.container.querySelector('.buy-plan a.primary-btn')).toBeNull();
+  view.unmount();
+});
+
+test('keeps the offscreen checkout shortcut available after purchase review is cancelled', async () => {
+  const view = await renderBuy('/buy/', { available: true });
+  const observer = TestIntersectionObserver.instances.find((entry) => entry.target?.matches('.buy-plan .primary-btn'));
+  await act(async () => observer.callback([{ isIntersecting: false }]));
+  const shortcut = view.container.querySelector('.buy-sticky-checkout button');
+  expect(shortcut).not.toBeNull();
+  // Without a review provider the purchase review resolves null; this is the same cancellation
+  // result used by the live provider and must never strand an offscreen buyer.
+  await act(async () => shortcut.click());
+  expect(view.container.querySelector('.buy-sticky-checkout button')).not.toBeNull();
+  expect(view.container.querySelector('.buy-plan .primary-btn').getAttribute('aria-busy')).toBe('false');
   view.unmount();
 });
 

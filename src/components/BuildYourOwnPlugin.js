@@ -23,7 +23,7 @@ const codeBlockStyle = {
   padding: '1rem 1.15rem',
   borderRadius: '10px',
   background: 'var(--gray-900)',
-  color: '#f4f2ec',
+  color: '#f5f5f5',
   fontSize: '0.86rem',
   lineHeight: 1.7,
   overflowX: 'auto',

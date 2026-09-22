@@ -2179,10 +2179,17 @@
     "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers.": "回転角度が異なるページ間で貼り付けても、スナップショットのサイズと比率が維持されます。保存したスナップショット画像は、ほかの PDF ビューアーで開いても向きを維持します。",
     "Wheel zoom, panning, and snapshots": "ホイールズーム、パン、スナップショット",
     "Zoom controls for each page layout": "ページレイアウトごとのズーム操作",
-    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Single page 表示では、Command を押さずにマウスホイールでズームできます。複数ページ表示では、既定でスクロールします。Settings > View でレイアウトごとにホイールズームとダブルクリック・ドラッグズームを個別に設定するか、下部バーのページレイアウトボタンを右クリックしてください。"
+    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Single page 表示では、Command を押さずにマウスホイールでズームできます。複数ページ表示では、既定でスクロールします。Settings > View でレイアウトごとにホイールズームとダブルクリック・ドラッグズームを個別に設定するか、下部バーのページレイアウトボタンを右クリックしてください。",
+    "PolyPDF displaying review markups and notes on a sample construction drawing": "PolyPDFでサンプルの建築図面にレビュー用のマークアップと注記を表示",
+    "PolyPDF measuring a sample construction plan and showing quantities in its takeoff worksheet": "PolyPDFでサンプルの建築図面を測定し、数量集計シートに数量を表示",
+    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDFでサンプルの建築図面の2つの改訂版を色分けしたPDFオーバーレイとして重ねて表示"
   },
   "sourceHash": "31f094c8ed4091ca743e3c0b708b0514c45f1e191b74d5e667cd49db26580bc1",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
-  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review."
+  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
+  "conversionTranslation": {
+    "date": "2026-09-22",
+    "method": "AI-assisted translation of three new real-UI workflow image descriptions; not independently reviewed by a native speaker."
+  }
 }

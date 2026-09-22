@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "capture": {
+    "version": "1.5.4",
+    "build": "26",
+    "date": "2026-09-22",
+    "mode": "development",
+    "sourceRevision": "47a3312eb6efb345a6a5b6690848764fb0a2d3af",
+    "sourceDirtyDiffSha256": "3542077a9acd755966ca2f94695a895e0462b382fcc8408fdf5d2406bba2cc4c",
+    "sourceDirtyDiffScope": [
+      "polypdf/apps",
+      "polypdf/packages",
+      "polypdf/scripts",
+      "polypdf/package.json"
+    ],
+    "sourceUntrackedFiles": [
+      {
+        "path": "polypdf/apps/desktop/src/renderer/dialogs/review-request-dialog.ts",
+        "sha256": "370ce8a95842ae8823f95d78acde53d47de37a6640d4cfc8f49c3aca7ed84a2c"
+      },
+      {
+        "path": "polypdf/apps/desktop/src/renderer/styles/26-review-request.css",
+        "sha256": "9dcd5a7d6631c4258f6f5dedae8ac134ff979454372e684bda9440daa9e62f33"
+      },
+      {
+        "path": "polypdf/packages/core/src/review-request.ts",
+        "sha256": "e34717b2fe5a7d327b6c7e764d2b69197684d81aca7046a73d6fc704a4ae1552"
+      }
+    ],
+    "rendererSha256": "5d1491d2106eae3bbfd468b91fc291665fb05bec657d024b674c25ae0e9cf5f2",
+    "rendererEntry": "polypdf/dist/renderer/app.js",
+    "rendererHtmlSha256": "c697fcb0d3382abced131b517434952f8ac092e84ac486739492544065a89a68",
+    "rendererCssSha256": "fb2751eb3551fbcd8a6322d562187109e3ad738238b550049d742d1e1efdf4ed",
+    "rendererUrl": "file:///Users/mohammedbala/Projects/polypdfmac/polypdf/dist/renderer/index.html",
+    "appBundle": "/Users/mohammedbala/Projects/polypdfmac/node_modules/electron/dist/Electron.app",
+    "profiles": [
+      "isolated community development profile for full product workflow access"
+    ],
+    "method": "Screenshots of real Electron UI actions through production menu commands, pointer input and dialog controls; edited into captioned loops. Native file-picker result supplied by the documented unpackaged automation harness. No application UI fabricated.",
+    "buildCommand": "npm run build",
+    "captureViewport": {
+      "width": 1280,
+      "height": 800,
+      "deviceScaleFactor": 2
+    },
+    "framework": "HyperFrames 0.8.60",
+    "audio": "silent"
+  },
+  "demos": [
+    {
+      "id": "takeoff",
+      "label": "Measure and take off",
+      "outcome": "Calibrated the known 48 ft span with content snapping, traced the Project Room and recorded 216.00 sq ft in the Takeoff Worksheet.",
+      "width": 1280,
+      "height": 800,
+      "duration": 12,
+      "fps": 24,
+      "outputs": [
+        {
+          "path": "/images/workflows/takeoff.gif",
+          "sha256": "459777d097ae45cc2728dd9bf63730a43077b8d01f8e5adab2ce4d1219a64af6",
+          "bytes": 4826864
+        },
+        {
+          "path": "/images/workflows/takeoff.webm",
+          "sha256": "f3295f8cb1b622863e8dfb9405352afe71313950fb399abe67abb7201e3627f0",
+          "bytes": 951721
+        },
+        {
+          "path": "/images/workflows/takeoff.mp4",
+          "sha256": "4bc2900cb19e1f891c293fb84474f96eb7b34d326935e559f800447c2453c4ac",
+          "bytes": 976161
+        },
+        {
+          "path": "/images/workflows/takeoff.webp",
+          "sha256": "427eb6269069f1f969210cec2b0223d7dc29b7db43f6e4dd901456ce606dc034",
+          "bytes": 34276
+        }
+      ],
+      "samples": [
+        {
+          "path": "/samples/conversion/northline-studio-rev-a.pdf",
+          "sha256": "4d666ff24720f4a1bde24288e78ff19b1f4fe160f216a3ffeda314c669404bb5",
+          "bytes": 7687,
+          "source": "output/pdf/site-conversion/Northline-Studio-A101-Rev-A.pdf"
+        }
+      ],
+      "sourceCompositionSha256": "a408aec9d63fc66bb4e77fb45318f5b9ad42b9ca10decb872a90bd6ae2473b5e"
+    },
+    {
+      "id": "compare",
+      "label": "Compare drawing revisions",
+      "outcome": "Used Overlay Pages to place Revision B over Revision A at 65% opacity with dark drawing lines replaced by blue, exposing the moved meeting-room partition and door.",
+      "width": 1280,
+      "height": 800,
+      "duration": 12,
+      "fps": 24,
+      "outputs": [
+        {
+          "path": "/images/workflows/compare.gif",
+          "sha256": "7c66bc64725a8ca5b83af26808cb5c4781da71063d390bb05cbaf7b2e0f76d5b",
+          "bytes": 3693078
+        },
+        {
+          "path": "/images/workflows/compare.webm",
+          "sha256": "54c85ecd1997662963724f1da8fe727f4ddb6e113b516bf0015e2e2ce274811e",
+          "bytes": 609714
+        },
+        {
+          "path": "/images/workflows/compare.mp4",
+          "sha256": "5db3291be323bb6723af86644cd25c8ddd0be28612172e14a8f0eb48a866f370",
+          "bytes": 625810
+        },
+        {
+          "path": "/images/workflows/compare.webp",
+          "sha256": "b0804aed94b798e6dc39f6138cf92c82c1b66c9cbc6cf01b9f69ac949ecef68c",
+          "bytes": 47920
+        }
+      ],
+      "samples": [
+        {
+          "path": "/samples/conversion/northline-studio-rev-a.pdf",
+          "sha256": "4d666ff24720f4a1bde24288e78ff19b1f4fe160f216a3ffeda314c669404bb5",
+          "bytes": 7687,
+          "source": "output/pdf/site-conversion/Northline-Studio-A101-Rev-A.pdf"
+        },
+        {
+          "path": "/samples/conversion/northline-studio-rev-b.pdf",
+          "sha256": "977bc9e61dc567b212a6dea6f5d284a894680beacbb3c8d75e324e3684f94405",
+          "bytes": 8049,
+          "source": "output/pdf/site-conversion/Northline-Studio-A101-Rev-B.pdf"
+        }
+      ],
+      "sourceCompositionSha256": "7b6ad27a0916fdd07ebde0123d292a60beeaa3ee04f812a24c39a4eb8e5f8e7f"
+    },
+    {
+      "id": "review",
+      "label": "Review and mark up",
+      "outcome": "Created a revision cloud and callout reading “Confirm door clearance.”, then showed both entries in the Markup Table.",
+      "width": 1280,
+      "height": 800,
+      "duration": 12,
+      "fps": 24,
+      "outputs": [
+        {
+          "path": "/images/workflows/review.gif",
+          "sha256": "6d9269d62fe609389fb01afa8ccf3b8be7cfab6e8fdff3c1702b0e47515d6cef",
+          "bytes": 2903453
+        },
+        {
+          "path": "/images/workflows/review.webm",
+          "sha256": "80ab606adf91a0b81615a72cf56e57f184aac7498791cbabc3b141619b3221b5",
+          "bytes": 631668
+        },
+        {
+          "path": "/images/workflows/review.mp4",
+          "sha256": "94961a1ec2b6fa247a1ac07a031dbd32e38b839cfe2153c6e562efb7b2194c3e",
+          "bytes": 620764
+        },
+        {
+          "path": "/images/workflows/review.webp",
+          "sha256": "b3208c8d45264cb9105810471eecfa2bb9e6f42709d8bf2d41d1b548084e0cc9",
+          "bytes": 43642
+        }
+      ],
+      "samples": [
+        {
+          "path": "/samples/conversion/northline-studio-rev-a.pdf",
+          "sha256": "4d666ff24720f4a1bde24288e78ff19b1f4fe160f216a3ffeda314c669404bb5",
+          "bytes": 7687,
+          "source": "output/pdf/site-conversion/Northline-Studio-A101-Rev-A.pdf"
+        }
+      ],
+      "sourceCompositionSha256": "94ddd4f10c971b20369a1bf811de32244c2c0913337943598fe5a3f4fe85f244"
+    }
+  ]
+}

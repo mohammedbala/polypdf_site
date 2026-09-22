@@ -2179,10 +2179,17 @@
     "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers.": "As capturas mantêm o tamanho e as proporções ao serem coladas entre páginas com rotações diferentes. O conteúdo das capturas salvas também preserva a orientação ao abrir o PDF em outros visualizadores.",
     "Wheel zoom, panning, and snapshots": "Zoom com roda, deslocamento e capturas",
     "Zoom controls for each page layout": "Controles de zoom para cada layout de página",
-    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Use a roda do mouse para ampliar na visualização Single page sem segurar Command. As visualizações de várias páginas rolam por padrão. Personalize o zoom com roda e com clique duplo e arraste separadamente para cada layout em Settings > View, ou clique com o botão direito nos botões de layout de página na barra inferior."
+    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Use a roda do mouse para ampliar na visualização Single page sem segurar Command. As visualizações de várias páginas rolam por padrão. Personalize o zoom com roda e com clique duplo e arraste separadamente para cada layout em Settings > View, ou clique com o botão direito nos botões de layout de página na barra inferior.",
+    "PolyPDF displaying review markups and notes on a sample construction drawing": "PolyPDF exibindo marcações de revisão e notas em um desenho de construção de exemplo",
+    "PolyPDF measuring a sample construction plan and showing quantities in its takeoff worksheet": "PolyPDF medindo uma planta de construção de exemplo e mostrando as quantidades na planilha de levantamento",
+    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDF exibindo duas revisões de um desenho de construção de exemplo como sobreposições de PDF coloridas"
   },
   "sourceHash": "31f094c8ed4091ca743e3c0b708b0514c45f1e191b74d5e667cd49db26580bc1",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
-  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review."
+  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
+  "conversionTranslation": {
+    "date": "2026-09-22",
+    "method": "AI-assisted translation of three new real-UI workflow image descriptions; not independently reviewed by a native speaker."
+  }
 }

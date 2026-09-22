@@ -2179,10 +2179,17 @@
     "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers.": "अलग-अलग घुमाए गए पेजों के बीच पेस्ट करने पर स्नैपशॉट का आकार और अनुपात बना रहता है। सहेजा गया स्नैपशॉट चित्र दूसरे PDF व्यूअर में खोलने पर भी अपनी दिशा बनाए रखता है।",
     "Wheel zoom, panning, and snapshots": "व्हील ज़ूम, पैन करना और स्नैपशॉट",
     "Zoom controls for each page layout": "हर पेज लेआउट के लिए ज़ूम नियंत्रण",
-    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Single page दृश्य में Command दबाए बिना माउस व्हील से ज़ूम करें। बहु-पेज दृश्य में डिफ़ॉल्ट रूप से स्क्रॉल होता है। Settings > View में हर लेआउट के लिए व्हील और डबल-क्लिक-ड्रैग ज़ूम अलग-अलग सेट करें, या नीचे की पट्टी में पेज लेआउट बटनों पर राइट-क्लिक करें।"
+    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Single page दृश्य में Command दबाए बिना माउस व्हील से ज़ूम करें। बहु-पेज दृश्य में डिफ़ॉल्ट रूप से स्क्रॉल होता है। Settings > View में हर लेआउट के लिए व्हील और डबल-क्लिक-ड्रैग ज़ूम अलग-अलग सेट करें, या नीचे की पट्टी में पेज लेआउट बटनों पर राइट-क्लिक करें।",
+    "PolyPDF displaying review markups and notes on a sample construction drawing": "PolyPDF में एक नमूना निर्माण ड्रॉइंग पर समीक्षा चिह्न और नोट्स दिखाई दे रहे हैं",
+    "PolyPDF measuring a sample construction plan and showing quantities in its takeoff worksheet": "PolyPDF में एक नमूना निर्माण प्लान की माप और उसकी मात्रा गणना शीट में मात्राएँ दिखाई दे रही हैं",
+    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDF में एक नमूना निर्माण ड्रॉइंग के दो संशोधन रंगीन PDF ओवरले के रूप में साथ दिखाई दे रहे हैं"
   },
   "sourceHash": "31f094c8ed4091ca743e3c0b708b0514c45f1e191b74d5e667cd49db26580bc1",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
-  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review."
+  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
+  "conversionTranslation": {
+    "date": "2026-09-22",
+    "method": "AI-assisted translation of three new real-UI workflow image descriptions; not independently reviewed by a native speaker."
+  }
 }

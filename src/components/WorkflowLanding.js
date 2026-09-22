@@ -10,11 +10,21 @@ import { OfferGuarantee, OfferPrice } from './OfferPrice';
 import { canonicalPagePath, captureAttribution } from '../lib/attribution';
 import { trackEvent } from '../lib/analytics';
 import { commercialOffer, licenseRightsText } from '../lib/commercialOffer';
+import { WorkflowDemoMedia, workflowDemos } from './WorkflowDemos';
+import { useCommercialOffer } from '../lib/useCommercialOffer';
 import './WorkflowLanding.css';
 
 export const CURRENT_INTERFACE_LABEL = 'PolyPDF for Mac and Windows';
 
 const WorkflowLanding = ({ page }) => {
+  const offer = useCommercialOffer();
+  const demoId = {
+    '/pdf-takeoff-software': 'takeoff',
+    '/measure-pdf-on-mac': 'takeoff',
+    '/construction-pdf-markup': 'review',
+    '/compare-pdf-drawings': 'compare'
+  }[page.path];
+  const demo = workflowDemos.find((item) => item.id === demoId);
 
   useEffect(() => {
     captureAttribution();
@@ -41,6 +51,7 @@ const WorkflowLanding = ({ page }) => {
             <Link to="/support/">Support</Link>
           </div>
           <DirectCheckoutLink
+            offer={offer}
             className="workflow-nav-buy"
             source={`${page.source}_nav`}
             pageVariant="workflow_nav"
@@ -66,6 +77,7 @@ const WorkflowLanding = ({ page }) => {
                   onDownload={() => trackCta('download_click')}
                 />
                 <DirectCheckoutLink
+                  offer={offer}
                   className="secondary-btn workflow-buy-cta"
                   source={`${page.source}_hero`}
                   pageVariant="workflow_hero"
@@ -80,7 +92,7 @@ const WorkflowLanding = ({ page }) => {
               <div className="workflow-capture-label">
                 <span aria-hidden="true" /> {CURRENT_INTERFACE_LABEL}
               </div>
-              <img
+              {demo ? <WorkflowDemoMedia key={demo.id} demo={demo} source={page.source} eager /> : <img
                 src={page.image}
                 srcSet={page.imageSrcSet}
                 sizes={page.imageSizes}
@@ -89,7 +101,7 @@ const WorkflowLanding = ({ page }) => {
                 height={page.imageHeight || 1515}
                 loading="eager"
                 fetchPriority="high"
-              />
+              />}
               <figcaption>{page.audience}</figcaption>
             </figure>
           </div>
@@ -166,6 +178,7 @@ const WorkflowLanding = ({ page }) => {
             </div>
             <div className="workflow-offer-actions">
               <DirectCheckoutLink
+                offer={offer}
                 className="primary-btn large"
                 source={`${page.source}_offer`}
                 pageVariant="workflow_offer"

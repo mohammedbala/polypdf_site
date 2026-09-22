@@ -2179,10 +2179,17 @@
     "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers.": "Schnappschüsse behalten beim Einfügen zwischen unterschiedlich gedrehten Seiten ihre Größe und Proportionen. Gespeicherte Schnappschussgrafiken behalten auch beim Öffnen in anderen PDF-Programmen ihre Ausrichtung.",
     "Wheel zoom, panning, and snapshots": "Mausrad-Zoom, Verschieben und Schnappschüsse",
     "Zoom controls for each page layout": "Zoomsteuerung für jedes Seitenlayout",
-    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Zoomen Sie in der Ansicht Single page mit dem Mausrad, ohne Command gedrückt zu halten. Mehrseitenansichten scrollen standardmäßig. Passen Sie Mausrad-Zoom und Zoom per Doppelklick und Ziehen für jedes Layout getrennt unter Settings > View an, oder klicken Sie mit der rechten Maustaste auf die Seitenlayout-Schaltflächen in der unteren Leiste."
+    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "Zoomen Sie in der Ansicht Single page mit dem Mausrad, ohne Command gedrückt zu halten. Mehrseitenansichten scrollen standardmäßig. Passen Sie Mausrad-Zoom und Zoom per Doppelklick und Ziehen für jedes Layout getrennt unter Settings > View an, oder klicken Sie mit der rechten Maustaste auf die Seitenlayout-Schaltflächen in der unteren Leiste.",
+    "PolyPDF displaying review markups and notes on a sample construction drawing": "PolyPDF zeigt Prüfmarkierungen und Notizen auf einer beispielhaften Bauzeichnung",
+    "PolyPDF measuring a sample construction plan and showing quantities in its takeoff worksheet": "PolyPDF vermisst einen beispielhaften Bauplan und zeigt Mengen im Aufmaßblatt an",
+    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "PolyPDF zeigt zwei Revisionen einer beispielhaften Bauzeichnung als farbige PDF-Überlagerungen"
   },
   "sourceHash": "31f094c8ed4091ca743e3c0b708b0514c45f1e191b74d5e667cd49db26580bc1",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
-  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review."
+  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
+  "conversionTranslation": {
+    "date": "2026-09-22",
+    "method": "AI-assisted translation of three new real-UI workflow image descriptions; not independently reviewed by a native speaker."
+  }
 }

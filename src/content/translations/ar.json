@@ -2179,10 +2179,17 @@
     "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers.": "تحتفظ اللقطات بحجمها ونسبها عند لصقها بين صفحات ذات زوايا دوران مختلفة. كما يحتفظ محتوى اللقطات المحفوظ باتجاهه عند فتحه في برامج عرض PDF أخرى.",
     "Wheel zoom, panning, and snapshots": "التكبير بالعجلة والتحريك واللقطات",
     "Zoom controls for each page layout": "عناصر التحكم بالتكبير لكل تخطيط صفحات",
-    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "كبّر بعجلة الفأرة في عرض Single page دون الضغط على Command. تعمل العجلة للتمرير افتراضيًا في عروض الصفحات المتعددة. خصّص التكبير بالعجلة وبالنقر المزدوج والسحب لكل تخطيط على حدة في Settings > View، أو انقر بزر الفأرة الأيمن على أزرار تخطيط الصفحات في الشريط السفلي."
+    "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.": "كبّر بعجلة الفأرة في عرض Single page دون الضغط على Command. تعمل العجلة للتمرير افتراضيًا في عروض الصفحات المتعددة. خصّص التكبير بالعجلة وبالنقر المزدوج والسحب لكل تخطيط على حدة في Settings > View، أو انقر بزر الفأرة الأيمن على أزرار تخطيط الصفحات في الشريط السفلي.",
+    "PolyPDF displaying review markups and notes on a sample construction drawing": "يعرض PolyPDF علامات المراجعة والملاحظات على رسم إنشائي نموذجي",
+    "PolyPDF measuring a sample construction plan and showing quantities in its takeoff worksheet": "يقيس PolyPDF مخططًا إنشائيًا نموذجيًا ويعرض الكميات في ورقة حصر الكميات",
+    "PolyPDF showing two sample construction drawing revisions together as colored PDF overlays": "يعرض PolyPDF إصدارين من رسم إنشائي نموذجي معًا باستخدام تراكبات PDF ملونة"
   },
   "sourceHash": "31f094c8ed4091ca743e3c0b708b0514c45f1e191b74d5e667cd49db26580bc1",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
-  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review."
+  "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
+  "conversionTranslation": {
+    "date": "2026-09-22",
+    "method": "AI-assisted translation of three new real-UI workflow image descriptions; not independently reviewed by a native speaker."
+  }
 }

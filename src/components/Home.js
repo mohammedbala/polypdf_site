@@ -11,7 +11,6 @@ import {
   Lightning,
   List,
   LockKey,
-  Ruler,
   ShieldCheck,
   Sparkle,
   SquaresFour,
@@ -21,19 +20,18 @@ import parrotIcon from '../assets/polypdf_icon-96.png';
 import DownloadCTA from './DownloadCTA';
 import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
+import WorkflowDemos, { workflowDemos, WorkflowDemoMedia } from './WorkflowDemos';
+import PlanComparison from './PlanComparison';
 import { captureAttribution } from '../lib/attribution';
 import { usePlatform } from '../lib/platform';
 import { commercialOffer, licenseRightsText, refundSummaryText } from '../lib/commercialOffer';
 import siteRelease from '../lib/siteRelease.json';
-import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
 import { releaseAnswer } from '../lib/releaseHighlights';
 import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
 import shotSymbolSearch768 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-768.webp';
 import shotSymbolSearch1536 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-1536.webp';
-import shotTakeoffHeroPoster from '../assets/screenshots/takeoff-v1-4-dark-640.webp';
 import shotTakeoff768 from '../assets/screenshots/takeoff-v1-4-dark-web-768.webp';
 import shotTakeoff1536 from '../assets/screenshots/takeoff-v1-4-dark-web-1536.webp';
-import shotTakeoffSnapping from '../assets/motion/takeoff-snapping-v1-4-1024.mp4';
 import shotCompare768 from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web-768.webp';
 import shotCompare1536 from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web-1536.webp';
 import shotAutoArea768 from '../assets/screenshots/auto-area-v1-4-dark-web-768.webp';
@@ -47,8 +45,6 @@ import shotSanitize1536 from '../assets/screenshots/sanitize-options-v1-4-light-
 import shotPdfMapsMotion from '../assets/motion/pdf-map-plan-v1-4-1024.mp4';
 import shotPdfMapsPoster768 from '../assets/motion/pdf-map-plan-v1-4-poster-768.webp';
 import shotPdfMapsPoster1536 from '../assets/motion/pdf-map-plan-v1-4-poster-1536.webp';
-import shotRevisionPackage768 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-768.webp';
-import shotRevisionPackage1536 from '../assets/screenshots/revision-package-changes-impact-v1-5-dark-1536.webp';
 
 const releaseSeries = siteRelease.version.split('.').slice(0, 2).join('.');
 const homeWorkflowImageSizes = '(max-width: 760px) calc(100vw - 56px), (max-width: 1120px) calc(50vw - 64px), 590px';
@@ -167,21 +163,20 @@ export const homeScreenshots = [
 
 
 const freeFeatures = [
-  'Download the full app free — Mac or Windows — and start with the real product',
-  'Open PDF drawings, calibrate scale, and use markup tools with no trial countdown',
-  'Verify fit on your own plans with up to 3 hand-created measurements per document',
+  'Open your PDFs on Mac or Windows, with no trial timer',
+  'Mark up, review, and calibrate the drawing scale',
+  'Try up to 3 hand-created measurements per document',
   'Open, view, and navigate portable Revision Packages',
   'Browse every preset tool; upgrade to Pro to use toolsets, PDF content editing, and overlay'
 ];
 
 const proFeatures = [
-  'Edit PDF content, use every preset and custom toolset, and overlay drawing sheets',
-  'Unlock unlimited hand-created measurements across all of your documents',
-  'Use Symbol Search auto-count and installed plugins, including PDF Maps and Professional Seal Maker',
-  'Create, update, reconcile, and publish portable Revision Packages',
-  `Pay ${commercialOffer.price} once for PolyPDF 1.x on up to 3 computers — Mac or Windows`,
-  'Keep PolyPDF 1.x forever, with every public 1.x update included',
-  'Secure Stripe checkout with license delivery by email'
+  'Unlimited hand-created measurements and Symbol Search auto-count',
+  'PDF content editing, preset and custom toolsets, and colored overlays',
+  'Installed plugins, including PDF Maps and Professional Seal Maker',
+  'Revision Package creation, updates, and publishing',
+  'Up to 3 Mac or Windows computers, in any mix',
+  'Every public PolyPDF 1.x update included'
 ];
 
 export const featureFamilies = [
@@ -259,7 +254,7 @@ export const homeFaqs = [
   },
   {
     question: 'What can I do before I pay?',
-    answer: 'You can download the app free on Mac or Windows, open your own PDFs, calibrate scale, use markup and review tools, place up to 3 hand-created measurements in every document, and view or navigate Revision Packages. Symbol Search, plugins, and Revision Package changes or publishing unlock with Pro.'
+    answer: 'Download PolyPDF free on Mac or Windows. Open your PDFs, calibrate scale, mark up and review drawings, place up to 3 hand-created measurements in each document, and view Revision Packages. PDF content editing, toolset placement, colored overlays, Symbol Search, installed plugins, and Revision Package creation and publishing require Pro.'
   },
   {
     question: 'Does one license cover both Mac and Windows?',
@@ -267,11 +262,11 @@ export const homeFaqs = [
   },
   {
     question: 'What does the $74.95 license unlock?',
-    answer: `The Pro license removes the hand-created measurement limit and unlocks Symbol Search, installed plugins such as PDF Maps and Professional Seal Maker, and Revision Package creation, updates, and publishing. ${licenseRightsText}`
+    answer: `The Pro license removes the hand-created measurement limit and unlocks PDF content editing, preset and custom toolsets, colored overlays, Symbol Search, installed plugins such as PDF Maps and Professional Seal Maker, and Revision Package creation, updates, and publishing. ${licenseRightsText}`
   },
   {
     question: 'Is this a subscription?',
-    answer: `No. The PolyPDF Pro is ${commercialOffer.price} once. There is no annual renewal, recurring maintenance bill, or subscription timer.`
+    answer: `No. PolyPDF Pro is ${commercialOffer.price} once. There is no annual renewal, recurring maintenance bill, or subscription timer.`
   },
   {
     question: 'What happens after I buy?',
@@ -291,134 +286,14 @@ export const homeFaqs = [
   }
 ];
 
-// Continuous flourishes stay inside this memoized leaf so the product page can feel alive without
-// making the full homepage re-render. The screenshot remains the exact shipping PolyPDF 1.4 UI.
-const HeroProductBoard = memo(() => {
-  const { motionOff } = useSiteMotion();
-  return (
-  <motion.figure
-    id="product-demo"
-    className="hero-product-shot playful-product-board"
-    initial={{ opacity: 0, scale: 0.94, rotate: 1.5 }}
-    animate={{ opacity: 1, scale: 1, rotate: 0.6 }}
-    transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.12 }}
-  >
-    <svg className="hero-sketch-line" viewBox="0 0 230 120" aria-hidden="true">
-      <path d="M4 106C48 24 123 20 222 8" />
-      <path d="M211 1L224 8L214 19" />
-    </svg>
-    <span className="paper-tape hero-paper-tape" aria-hidden="true" />
-    <div className="shot-plate">
-      {motionOff ? <img src={shotTakeoffHeroPoster} alt="PolyPDF drawing a 30 foot dimension between plan endpoints" /> : <video
-        controls
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        poster={shotTakeoffHeroPoster}
-        aria-label="PolyPDF 1.4 drawing a 30 foot dimension that snaps precisely between two plan endpoints"
-      >
-        <source
-          src={shotTakeoffSnapping}
-          type="video/mp4"
-          media="(prefers-reduced-motion: no-preference)"
-        />
-      </video>}
-    </div>
-    <div className="hero-sticker hero-sticker-records">
-      <SquaresFour aria-hidden="true" weight="bold" />
-      <span><strong>Snap lock</strong> on drawing endpoints</span>
-    </div>
-    <div className="hero-sticker hero-sticker-area">
-      <Ruler aria-hidden="true" weight="bold" />
-      <span><strong>30′-0″</strong> live dimension</span>
-    </div>
-    <figcaption><strong>PolyPDF {siteRelease.screenshotVersion}</strong> product screenshot showing endpoint snapping.</figcaption>
-  </motion.figure>
-);
-});
-
-HeroProductBoard.displayName = 'HeroProductBoard';
-
-const revisionPackageSteps = [
-  ['01', 'Import', 'Add the next issue without changing the original PDFs.'],
-  ['02', 'Reconcile', 'Confirm which sheets replace, add, match, skip, or retire.'],
-  ['03', 'Review impact', 'Inspect changes and available quantity or cost impact.'],
-  ['04', 'Check references', 'Verify links against the reviewed current revisions.'],
-  ['05', 'Publish', 'Create the current package and revision report together.']
-];
-
-const LatestReleaseSpotlight = () => (
-  <section className="revision-release latest-release" id="latest-release" aria-labelledby="latest-release-title">
-    <div className="container revision-release-shell">
-      <div className="revision-release-copy">
-        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Available now: PolyPDF {siteRelease.version} · Mac &amp; Windows</span>
-        <h2 id="latest-release-title">Zoom your way. Share snapshots as intended.</h2>
-        <p>Zoom with the wheel in Single page view and scroll through multipage layouts. Set each layout to suit how you work.</p>
-        <p>Version {siteRelease.version} (build {siteRelease.build}) adds anchored drag zoom and Shift panning, and fixes snapshot proportions and saved orientation.</p>
-        <Link className="secondary-btn revision-release-link" to="/blog/polypdf-1-5-5/">Explore the 1.5.5 update <ArrowRight aria-hidden="true" weight="bold" /></Link>
-        <p className="revision-release-access"><a href={`/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html`}>Mac release notes</a> · <a href={`/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html`}>Windows release notes</a> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link></p>
-      </div>
-      <figure className="revision-release-visual">
-        <a href={stampBuilderImage} aria-label="Open the full-size PolyPDF 1.5.1 stamp builder screenshot">
-          <img src={stampBuilderImage} alt="PolyPDF 1.5.1 stamp builder with a REVIEWED heading, reviewer, automatic date, and optional toolset saving" width="1233" height="768" loading="lazy" />
-        </a>
-        <figcaption>Authentic 1.5.1 build 23 interface on Mac, with fictional sample details. The same stamp workflow ships on Windows.</figcaption>
-      </figure>
-    </div>
-  </section>
-);
-
-const RevisionPackageSpotlight = () => (
-  <section className="revision-release" id="revision-packages" aria-labelledby="revision-release-title">
-    <div className="container revision-release-shell">
-      <div className="revision-release-copy">
-        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Revision Packages · introduced in {releaseSeries}</span>
-        <h2 id="revision-release-title">Take the review with you into the next drawing issue.</h2>
-        <p>
-          Revision Packages keep source files, sheet history, carried review work, reference
-          decisions, and publication records in one portable project.
-        </p>
-        <ol className="revision-release-steps">
-          {revisionPackageSteps.map(([number, title, description]) => (
-            <li key={number}>
-              <span>{number}</span>
-              <strong>{title}</strong>
-              <p>{description}</p>
-            </li>
-          ))}
-        </ol>
-        <Link className="secondary-btn revision-release-link" to="/revision-packages/">
-          See the complete Revision Package workflow <ArrowRight aria-hidden="true" weight="bold" />
-        </Link>
-        <p className="revision-release-access">
-          Viewing and navigation are included in Free. Creating, updating, and publishing a
-          Revision Package require PolyPDF Pro.
-        </p>
-      </div>
-
-      <figure className="revision-release-visual">
-        <div className="revision-release-window-label">
-          <span aria-hidden="true" />
-          Authentic 1.5.0 build 22 interface
-        </div>
-        <img
-          src={shotRevisionPackage768}
-          srcSet={`${shotRevisionPackage768} 768w, ${shotRevisionPackage1536} 1536w`}
-          sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1120px) calc(100vw - 80px), 620px"
-          alt={`PolyPDF ${releaseSeries} Revision Package Change Review showing a changed A-101 sheet, two differences, one changed quantity group, and a 150 dollar cost impact`}
-          width="3078"
-          height="1932"
-          loading="lazy"
-        />
-        <figcaption>
-          Change Review keeps the active sheet, its superseded baseline, detected differences,
-          and available quantity or cost impact in the same reviewed step.
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+const HeroProductBoard = () => (
+  <figure id="product-demo" className="hero-current-demo">
+    <WorkflowDemoMedia demo={workflowDemos[0]} source="home_hero" eager />
+    <figcaption>
+      <span>Actual PolyPDF interface · sample construction drawing</span>
+      <a href="#workflows" onClick={() => trackEvent('workflow_section_click', { source: 'home_hero' })}>Watch the workflows <ArrowRight aria-hidden="true" /></a>
+    </figcaption>
+  </figure>
 );
 
 export const ShowcaseMotionLayer = memo(({ motionType }) => {
@@ -473,9 +348,9 @@ export const ShowcaseMotionLayer = memo(({ motionType }) => {
       <svg className="shot-motion-layer shot-motion-auto-area" viewBox="0 0 1710 1073" aria-hidden="true">
         <defs>
           <linearGradient id="auto-area-detection-sheen" x1="0" x2="1">
-            <stop offset="0" stopColor="#70b7ff" stopOpacity="0" />
-            <stop offset="0.5" stopColor="#fbf8f1" stopOpacity="0.58" />
-            <stop offset="1" stopColor="#70b7ff" stopOpacity="0" />
+            <stop offset="0" stopColor="#b5b5b5" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#ffffff" stopOpacity="0.58" />
+            <stop offset="1" stopColor="#b5b5b5" stopOpacity="0" />
           </linearGradient>
           <mask id="auto-area-region-mask">
             <rect width="1710" height="1073" fill="black" />
@@ -623,7 +498,7 @@ export const FeatureIndex = () => (
       </div>
 
       <div className="feature-index-summary">
-        <p><strong>Everything stays in one native desktop workspace:</strong> move from scale check to quantities, review, and final document preparation without shrinking the PDF into a browser widget.</p>
+        <p><strong>Keep the work in one desktop workspace:</strong> move from scale calibration to quantities, drawing review, and final document preparation.</p>
         <a href="#workflows" className="secondary-btn feature-index-action">
           <Sparkle aria-hidden="true" weight="bold" /> See authentic product UI
         </a>
@@ -681,7 +556,7 @@ export const WorkflowGrid = () => (
 );
 
 const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
-  <section className="pricing pricing-early" id="pricing">
+  <section className="pricing pricing-early" id="pricing" data-conversion-section="pricing">
     <div className="container">
       <motion.div
         className="section-header"
@@ -689,9 +564,9 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
-        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Pick your lane</span>
-        <h2>Try the real app free. Pay once to unlock every Pro workflow.</h2>
-        <p>Markup, review, calibration, three hand-created measurements per document, and Revision Package viewing stay free. Pro removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, plugins, and Revision Package changes and publishing for $74.95 once, with a 14-day money-back guarantee.</p>
+        <span className="section-kicker">One app. A clear upgrade.</span>
+        <h2>Start free. Go Pro for $74.95 once.</h2>
+        <p>Use your own drawings before you decide. When you need the full toolkit, one Pro license covers up to 3 Mac or Windows computers.</p>
       </motion.div>
 
       <div className="pricing-grid">
@@ -703,7 +578,7 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
         >
           <span className="paper-tape pricing-card-tape" aria-hidden="true" />
           <div className="plan-pill">Free</div>
-          <h3>Use PolyPDF on real drawings</h3>
+          <h3>Make sure it fits your work.</h3>
           <p className="plan-price">$0</p>
           <ul className="plan-list">
             {freeFeatures.map((feature) => (
@@ -726,7 +601,7 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
         >
           <span className="paper-tape pricing-card-tape" aria-hidden="true" />
           <div className="plan-pill plan-pill-dark">Pro license</div>
-          <h3>Unlock PDF editing, toolsets, overlay, and every Pro workflow</h3>
+          <h3>The complete drawing toolkit.</h3>
           <OfferPrice />
           <ul className="plan-list">
             {proFeatures.map((feature) => (
@@ -737,6 +612,7 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
           </ul>
           {offer.available ? (
             <DirectCheckoutLink
+              offer={offer}
               source="website_pricing"
               pageVariant="home_pricing"
               className="primary-btn full-width offer-cta"
@@ -751,6 +627,7 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
           <p className="plan-note">Secure Stripe checkout, license key emailed on payment. {refundSummaryText}</p>
         </motion.article>
       </div>
+      <PlanComparison />
     </div>
   </section>
 );
@@ -769,6 +646,20 @@ const Home = () => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver !== 'function') return undefined;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        if (trackEvent('purchase_section_view', { source: 'home', section: entry.target.dataset.conversionSection })) {
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('[data-conversion-section]').forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
   }, []);
 
   const closeMobileMenu = () => {
@@ -804,11 +695,12 @@ const Home = () => {
 
           <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
+            <a href="#workflows" onClick={closeMobileMenu}>See it in action</a>
             <a href="#features" onClick={closeMobileMenu}>Features</a>
-            <a href="#latest-release" onClick={closeMobileMenu}>What’s new</a>
             <Link to="/blog/" onClick={closeMobileMenu}>Guides</Link>
             <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
             <DirectCheckoutLink
+              offer={offer}
               source="website_nav"
               pageVariant="home_nav"
               className="nav-buy"
@@ -848,32 +740,33 @@ const Home = () => {
             </div>
 
             <h1>
-              Measure. Mark up. <span className="hero-highlight">Skip the subscription.</span>
+              Take off quantities. Review drawings. <span className="hero-highlight">Pay once.</span>
             </h1>
 
             <p className="hero-subtitle">
-              Calibrate, measure, mark up, compare, and carry review into the next drawing issue.
-              Start free on Mac or Windows, then unlock every Pro workflow for $74.95 once.
+              PDF measurement, markup, and revision review for construction teams on Mac and Windows. Your drawings, one desktop workspace.
             </p>
 
-            <div className="hero-cta">
+            <div className="hero-cta conversion-hero-cta">
               <DownloadCTA
                 source="hero"
+                compact
                 onDownload={closeMobileMenu}
                 adjacentAction={(
                   <DirectCheckoutLink
+              offer={offer}
                     source="website_hero"
                     pageVariant="home_hero"
-                    className="secondary-btn hero-buy offer-cta"
+                    className="primary-btn hero-buy offer-cta"
                   >
-                    <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
+                    <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel action="Get Pro" />
                   </DirectCheckoutLink>
                 )}
               />
             </div>
 
             <OfferGuarantee compact />
-            <p className="hero-note">Apple-notarized on Mac and Authenticode-signed on Windows. Upgrade when you need unlimited measurements, Symbol Search, plugins, or Revision Package changes and publishing.</p>
+            <p className="hero-note">No subscription. Up to 3 computers. Every 1.x update included.</p>
           </motion.div>
 
           <HeroProductBoard />
@@ -886,7 +779,6 @@ const Home = () => {
             transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.24 }}
           >
             <div className="stat">
-              <span className="stat-reference"><del>$99</del> planned</span>
               <strong>$74.95</strong>
               <p>One payment · no subscription</p>
             </div>
@@ -906,50 +798,18 @@ const Home = () => {
         </div>
       </section>
 
-      <LatestReleaseSpotlight />
-      <RevisionPackageSpotlight />
+      <WorkflowDemos />
 
       <PricingSection offer={offer} onDownload={handleDownloadClick} primaryPlatform={primaryPlatform} />
 
       <FeatureIndex />
 
-      <WorkflowGrid />
-
-      <section className="benefits mac-native-review">
+      <div className="home-release-link" id="latest-release">
         <div className="container">
-          <motion.div
-            className="section-header benefits-header"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> One engine, two desktops</span>
-            <h2>Desktop software for Mac and Windows.</h2>
-            <p>
-              PolyPDF runs the same engine as a desktop app on macOS and Windows, focused on everyday review, markup,
-              calibration, and takeoff workflows construction PDFs demand.
-            </p>
-          </motion.div>
-
-          <div className="platform-ledger">
-            <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-              <span>01</span>
-              <h3>One app, both platforms</h3>
-              <p>The Mac DMG and the signed Windows installer ship the same engine at the same version — open drawings directly, no VM or browser-only workaround on either side.</p>
-            </motion.article>
-            <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.08 }}>
-              <span>02</span>
-              <h3>AEC takeoff basics</h3>
-              <p>Distance, area, perimeter, angle, radius, diameter, count, and dimension tools are built around the PDFs architects, contractors, and estimators already exchange.</p>
-            </motion.article>
-            <motion.article className="platform-ledger-row" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.16 }}>
-              <span>03</span>
-              <h3>No annual seat timer</h3>
-              <p>Try real documents for free, then unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates with one direct license that covers up to 3 computers.</p>
-            </motion.article>
-          </div>
+          <span>PolyPDF {siteRelease.version} (build {siteRelease.build}) is available for Mac and Windows.</span>
+          <Link to="/blog/polypdf-1-5-5/">Read what’s new <ArrowRight aria-hidden="true" /></Link>
         </div>
-      </section>
+      </div>
 
       <section className="how-it-works">
         <div className="container">
@@ -959,7 +819,7 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Three honest steps</span>
+            <span className="section-kicker">Try it on your next drawing</span>
             <h2>Try it on your workflow before you buy.</h2>
             <p>Download free, test it on your own drawings, and pay once only if you want the complete Pro workflow.</p>
           </motion.div>
@@ -991,9 +851,9 @@ const Home = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
           >
-            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Before you download</span>
-            <h2>FAQ</h2>
-            <p>Short answers to the buying questions that usually block a download.</p>
+            <span className="section-kicker">Before you decide</span>
+            <h2>A few things worth knowing.</h2>
+            <p>What you get, how the license works, and what happens after checkout.</p>
           </motion.div>
 
           <div className="faq-grid">
@@ -1023,11 +883,12 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <span className="cta-sketch" aria-hidden="true" />
-            <h2>Start free. Upgrade only if PolyPDF earns it.</h2>
-            <p>Download the app on Mac or Windows, test it on your own drawings, and unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates for $74.95 once.</p>
+            <h2>Put your next drawing to work.</h2>
+            <p>Try PolyPDF free on your own plans, or unlock the complete Pro toolkit for $74.95 once. One license, up to 3 computers, no subscription.</p>
             <div className="cta-download-row">
               <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
               <DirectCheckoutLink
+              offer={offer}
                 source="website_bottom_cta"
                 pageVariant="home_bottom"
                 className="secondary-btn cta-mac-btn offer-cta"

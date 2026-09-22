@@ -39,3 +39,24 @@ test('Escape cancels review without payment, acceptance or cookie consent', asyn
   expect(window.localStorage.length).toBe(0);
   act(()=>root.unmount());container.remove();
 });
+
+test('an unavailable live offer cannot open review or create checkout, and recovers when available', async () => {
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  const root = createRoot(container);
+  const render = (available) => <CheckoutReviewProvider><DirectCheckoutLink source="website_hero" offer={{ loaded: true, available }}>Buy Pro</DirectCheckoutLink></CheckoutReviewProvider>;
+  await act(async () => root.render(render(false)));
+  const link = container.querySelector('a');
+  expect(link.getAttribute('aria-disabled')).toBe('true');
+  expect(link.textContent).toBe('Checkout unavailable');
+  await act(async () => link.click());
+  expect(container.querySelector('dialog').open).toBe(false);
+  expect(createStripeCheckoutSession).not.toHaveBeenCalled();
+  expect(container.querySelector('[role="alert"]').textContent).toContain('support@polypdf.com');
+  await act(async () => root.render(render(true)));
+  await act(async () => container.querySelector('a').click());
+  expect(container.querySelector('dialog').open).toBe(true);
+  expect(container.querySelector('[role="alert"]')).toBeNull();
+  act(() => root.unmount());
+  container.remove();
+});

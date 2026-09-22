@@ -13,8 +13,7 @@ import {
   Lightning,
   LockKey,
   Receipt,
-  ShieldCheck,
-  Sparkle
+  ShieldCheck
 } from '@phosphor-icons/react';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import ActivationSteps from './ActivationSteps';
@@ -36,17 +35,15 @@ import {
 import siteRelease from '../lib/siteRelease.json';
 import MagneticLink from './MagneticLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
+import PlanComparison from './PlanComparison';
 
 const proFeatures = [
-  'PDF content editing, every preset and custom toolset, and PDF overlays',
-  'Unlimited distance, area, perimeter, angle, radius, diameter, count, and dimension measurements',
-  'Symbol Search automatic counting and every installed plugin workflow',
-  'PDF Maps, Professional Seal Maker, and packages you install yourself',
-  'Create, update, reconcile, and publish portable Revision Packages',
-  `${commercialOffer.price} once with no subscription renewal`,
-  'Use your license on up to 3 computers — Mac or Windows, in any mix',
-  'Secure Stripe checkout with license delivery by email',
-  'Every PolyPDF 1.x update is included'
+  'Unlimited measurements, with quantities tied to your drawings',
+  'PDF content editing, preset and custom toolsets, and colored overlays',
+  'Symbol Search automatic counting',
+  'Installed plugins, including PDF Maps and Professional Seal Maker',
+  'Create, update, reconcile, and publish Revision Packages',
+  'Every public PolyPDF 1.x update included'
 ];
 
 // The desktop app opens this page with source= and utm_source= already set
@@ -140,20 +137,20 @@ const Buy = ({ forceInApp = false }) => {
     return () => observer.disconnect();
   }, [offer.available]);
 
-  const handleBuyClick = async (event) => {
+  const handleBuyClick = async (event, position = 'main') => {
     event.preventDefault();
     if (checkoutStatus === 'loading') return;
     const attribution = checkoutAttribution();
-    const properties = { ...funnelProperties, source: attribution.source, provider: 'stripe' };
+    const properties = { ...funnelProperties, source: attribution.source, provider: 'stripe', position };
     trackEvent('buy_click', properties);
     trackEvent('checkout_click', properties);
     setCheckoutError('');
     setCheckoutStatus('loading');
-    setShowStickyCheckout(false);
 
     try {
       const agreement = await reviewCheckout();
       if (!agreement) {
+        trackEvent('checkout_review_cancelled', properties);
         setCheckoutStatus('ready');
         return;
       }
@@ -207,16 +204,16 @@ const Buy = ({ forceInApp = false }) => {
                 : <LockKey aria-hidden="true" weight="bold" />}{' '}
               {cameFromApp ? context.kicker : 'Secure checkout · one license for Mac & Windows'}
             </div>
-            <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> One clear checkout</span>
+            <span className="section-kicker">PolyPDF Pro</span>
             <h1>
               {cameFromApp
-                ? 'Unlock the workflow. One payment, no subscription.'
-                : 'Buy PolyPDF Pro once. Unlock every Pro workflow.'}
+                ? 'Keep working. Unlock Pro once.'
+                : 'Your full drawing toolkit. One payment.'}
             </h1>
             <p>
               {cameFromApp
                 ? context.lede
-                : 'Unlock unlimited hand-created measurements, Symbol Search, installed plugins, and Revision Package changes and publishing for $74.95 once. Use Pro on up to 3 computers with a 14-day money-back guarantee.'}
+                : 'Measure without limits, edit PDF content, use toolsets and overlays, and manage drawing revisions. Get PolyPDF Pro for $74.95 once on up to 3 Mac or Windows computers.'}
             </p>
             {cancelled && (
               <p className="buy-cancelled">
@@ -236,6 +233,7 @@ const Buy = ({ forceInApp = false }) => {
               <div className="plan-pill plan-pill-dark">Pro license</div>
               <h2>{commercialOffer.name}</h2>
               <OfferPrice />
+              <p className="buy-tax-note">Applicable taxes and your final total appear in Stripe before you pay.</p>
               {offer.available ? (
                 <MagneticLink
                   ref={checkoutCtaRef}
@@ -243,6 +241,7 @@ const Buy = ({ forceInApp = false }) => {
                   className="primary-btn full-width"
                   onClick={handleBuyClick}
                   aria-disabled={checkoutStatus === 'loading'}
+                  aria-busy={checkoutStatus === 'loading'}
                 >
                   <Infinity aria-hidden="true" weight="bold" />
                   {checkoutStatus === 'loading'
@@ -254,6 +253,11 @@ const Buy = ({ forceInApp = false }) => {
               )}
               {checkoutError && <p className="plan-note checkout-error" role="alert">{checkoutError}</p>}
               {offer.available && <OfferGuarantee compact inverse />}
+              <dl className="buy-facts">
+                <div><dt>Computers</dt><dd>Up to 3</dd></div>
+                <div><dt>Subscription</dt><dd>None</dd></div>
+                <div><dt>Updates included</dt><dd>All 1.x</dd></div>
+              </dl>
               <ul className="plan-list buy-plan-list">
                 {proFeatures.map((feature) => (
                   <li key={feature}>
@@ -281,7 +285,7 @@ const Buy = ({ forceInApp = false }) => {
               <span className="paper-tape buy-summary-tape" aria-hidden="true" />
               <div className="section-header">
                 <div className="section-icon"><Lightning aria-hidden="true" weight="bold" /></div>
-                <h2>{cameFromApp ? 'After you pay' : 'Before you buy'}</h2>
+                <h2>{cameFromApp ? 'After you pay' : 'Built for the full drawing workflow'}</h2>
               </div>
 
               {cameFromApp ? (
@@ -294,11 +298,12 @@ const Buy = ({ forceInApp = false }) => {
                 </>
               ) : (
                 <>
-                  <ul className="section-content">
-                    <li>Download PolyPDF free first if you want to test it on real drawings.</li>
-                    <li>The free app includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation.</li>
-                    <li>Pro removes the measurement limit and unlocks Symbol Search, installed plugins, and Revision Package creation, updates, and publishing on both Mac and Windows.</li>
+                  <ul className="section-content buy-decision-copy">
+                    <li><strong>Take off a complete set.</strong> Keep measuring after the 3 free hand-created measurements in each document.</li>
+                    <li><strong>Work through revisions.</strong> Use colored overlays, edit PDF content, and create or publish Revision Packages.</li>
+                    <li><strong>Reuse your tools.</strong> Place preset and custom toolsets, count with Symbol Search, and run installed plugins.</li>
                   </ul>
+                  <p className="buy-aside">The free app keeps markup, review, calibration, and Revision Package viewing available with no trial timer.</p>
                   <div className="buy-actions buy-actions-quiet">
                     <a
                       href={primaryPlatform.url}
@@ -313,6 +318,8 @@ const Buy = ({ forceInApp = false }) => {
               )}
             </motion.section>
           </div>
+
+          {!cameFromApp && <PlanComparison />}
 
           <div className="buy-detail-grid">
             {!cameFromApp && (
@@ -370,7 +377,7 @@ const Buy = ({ forceInApp = false }) => {
           <button
             type="button"
             className="primary-btn offer-cta"
-            onClick={handleBuyClick}
+            onClick={(event) => handleBuyClick(event, 'sticky')}
           >
             <LockKey aria-hidden="true" weight="bold" /> <OfferButtonLabel action="Checkout with Stripe" />
           </button>

@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { REQUIRED_CSP_SOURCES } from './reconcile-nginx-config.mjs';
+import { workflowManifestPath, verifyWorkflowFiles, verifyWorkflowResource, verifyWorkflowHomeMarkup } from './workflow-demo-evidence.mjs';
 
 const projectRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 export const routeMetadata = JSON.parse(
@@ -164,14 +165,32 @@ export async function runPostDeploySmoke({
       assertResponse(body.includes(`href="${footerRoute}"`), `${route} footer is missing ${footerRoute}`);
     }
     if (route === '/') {
+      verifyWorkflowHomeMarkup(body);
       assertResponse(
-        body.includes(`Authentic ${siteRelease.featuredCaptureVersion} build ${siteRelease.featuredCaptureBuild} interface`)
-          && body.includes(`PolyPDF ${siteRelease.version} (build ${siteRelease.build})`)
+        body.includes(`PolyPDF ${siteRelease.version} (build ${siteRelease.build})`)
           && body.includes('Revision Packages'),
         `homepage does not advertise PolyPDF ${siteRelease.version} build ${siteRelease.build} and Revision Packages`
       );
     }
     results.push({ route, status: response.status });
+  }
+
+  // A valid 200 HTML response cannot stand in for a GIF, video, poster, or sample PDF. Compare
+  // deployed bytes with the locally verified capture manifest so a stale asset cannot pass.
+  const expectedWorkflows = verifyWorkflowFiles(path.join(projectRoot, 'public'));
+  const workflowManifestResponse = await fetchImpl(`${base}${workflowManifestPath}`, { headers: smokeHeaders });
+  assertResponse(workflowManifestResponse.ok, `${workflowManifestPath} returned HTTP ${workflowManifestResponse.status}`);
+  assertResponse(/application\/json/i.test(workflowManifestResponse.headers.get('content-type') || ''), `${workflowManifestPath} did not return JSON`);
+  const liveManifest = await workflowManifestResponse.json();
+  assertResponse(JSON.stringify(liveManifest) === JSON.stringify(expectedWorkflows.manifest), 'deployed workflow capture manifest does not match this release');
+  results.push({ route: workflowManifestPath, status: workflowManifestResponse.status });
+  for (const resource of expectedWorkflows.resources) {
+    const response = await fetchImpl(`${base}${resource.path}`, { headers: smokeHeaders });
+    assertResponse(response.ok, `${resource.path} returned HTTP ${response.status}`);
+    const expectedMime = { '.gif': 'image/gif', '.webp': 'image/webp', '.mp4': 'video/mp4', '.webm': 'video/webm', '.pdf': 'application/pdf' }[path.extname(resource.path)];
+    assertResponse((response.headers.get('content-type') || '').split(';')[0] === expectedMime, `${resource.path} returned the wrong content type`);
+    verifyWorkflowResource(Buffer.from(await response.arrayBuffer()), resource);
+    results.push({ route: resource.path, status: response.status });
   }
 
   const notFoundResponse = await fetchImpl(`${base}${notFoundSmokeRoute}`, { headers: smokeHeaders });

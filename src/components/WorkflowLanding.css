@@ -1,9 +1,9 @@
 .workflow-landing {
   --workflow-ink: var(--gray-900);
-  --workflow-paper: #faf9f4;
+  --workflow-paper: #fafafa;
   --workflow-green: var(--accent);
   --workflow-muted: var(--gray-600);
-  background: linear-gradient(180deg, #faf9f4 0%, #ffffff 28%, #f7f7f5 100%);
+  background: linear-gradient(180deg, #fafafa 0%, #ffffff 28%, #fafafa 100%);
   color: var(--workflow-ink);
   min-height: 100vh;
 }
@@ -23,7 +23,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 249, 244, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--gray-200);
 }
@@ -79,7 +79,7 @@
 
 .workflow-hero {
   padding: clamp(3.5rem, 7vw, 6rem) 0 0;
-  background: linear-gradient(180deg, var(--workflow-paper) 0%, #f7f7f5 100%);
+  background: linear-gradient(180deg, var(--workflow-paper) 0%, #fafafa 100%);
   border-bottom: 1px solid var(--gray-200);
 }
 
@@ -164,7 +164,7 @@
   height: 8px;
   background: var(--workflow-green);
   border-radius: 50%;
-  box-shadow: 0 0 0 5px rgba(13, 110, 118, 0.12);
+  box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.12);
 }
 
 .workflow-hero-visual img {
@@ -320,14 +320,14 @@
 
 .workflow-outcomes ul {
   list-style: none;
-  border-top: 1px solid rgba(16, 17, 15, 0.18);
+  border-top: 1px solid rgba(0, 0, 0, 0.18);
 }
 
 .workflow-outcomes li {
   display: flex;
   gap: 1rem;
   padding: 1.25rem 0;
-  border-bottom: 1px solid rgba(16, 17, 15, 0.18);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
   line-height: 1.55;
 }
 
@@ -339,8 +339,8 @@
 
 .workflow-offer {
   background: var(--accent-soft);
-  border-top: 1px solid rgba(13, 110, 118, 0.16);
-  border-bottom: 1px solid rgba(13, 110, 118, 0.16);
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
 }
 
 .workflow-offer-grid {
@@ -436,11 +436,11 @@
 }
 
 .workflow-faq-list {
-  border-top: 1px solid rgba(16, 17, 15, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .workflow-faq details {
-  border-bottom: 1px solid rgba(16, 17, 15, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .workflow-faq summary {
@@ -484,8 +484,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 1rem;
-  border-top: 1px solid rgba(16, 17, 15, 0.2);
-  border-bottom: 1px solid rgba(16, 17, 15, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .workflow-related-links a {
@@ -496,7 +496,7 @@
   color: var(--workflow-ink);
   text-decoration: none;
   font-weight: 800;
-  border-right: 1px solid rgba(16, 17, 15, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   transition: background 0.2s ease, color 0.2s ease;
 }
 
@@ -592,7 +592,7 @@
   .workflow-proof-point:first-child {
     padding: 1.1rem 0;
     border-right: 0;
-    border-bottom: 1px solid rgba(16, 17, 15, 0.16);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
   }
 
   .workflow-context-grid div > p {
@@ -620,7 +620,7 @@
   .workflow-related-links a:first-child {
     padding: 1.1rem 0;
     border-right: 0;
-    border-bottom: 1px solid rgba(16, 17, 15, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 
   .workflow-related-links a:last-child {

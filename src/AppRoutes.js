@@ -25,6 +25,7 @@ import VersionHistory from './components/VersionHistory';
 import WorkflowLanding from './components/WorkflowLanding';
 import { landingPages } from './lib/landingPages';
 import './App.css';
+import './Monochrome.css';
 
 // Everything inside the router lives here so the same tree can be rendered two ways:
 // - src/App.js wraps it in BrowserRouter for the real site, and
