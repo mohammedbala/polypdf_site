@@ -2198,7 +2198,22 @@
     "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.6 improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages.": "PolyPDF 为 Windows 10 和 11 提供已签名的安装程序。它与 Mac 版使用相同的图纸审阅应用：测量和批注图纸、运行本地 AEC OCR、比较修订，并通过 Revision Packages 延续已审阅的工作。1.5.6 版本改善了缩放时 PDF 叠加的清晰度，并使旋转页面上的叠加裁剪区域保持对齐。",
     "Update to 1.5.6": "更新至1.5.6",
     "What changed in 1.5.6": "1.5.6 中发生了什么变化",
-    "What is new in PolyPDF 1.5.6?": "PolyPDF 1.5.6 有哪些新功能？"
+    "What is new in PolyPDF 1.5.6?": "PolyPDF 1.5.6 有哪些新功能？",
+    "After relaunch, About should show version 1.5.7, build 29. Your existing PolyPDF 1.x Pro license continues to apply.": "重新启动后，“关于”应显示版本 1.5.7，版本 28。您现有的 PolyPDF 1.x Pro 许可证继续适用。",
+    "Current app: PolyPDF 1.5.7 (build 29) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "当前应用程序：PolyPDF 1.5.7 (build 29) · 软件包格式：PolyPDF 1.3.1+ · 安装和运行插件需要 PolyPDF Pro 1.4.1+",
+    "Current version 1.5.7 (build 29).": "当前版本 1.5.7（内部版本 28）。",
+    "Download PolyPDF 1.5.7 for Windows 10 and 11, x64. Rotate grouped symbols and mirror supported images or annotations.": "下载适用于 Windows 10 和 11（x64）的 PolyPDF 1.5.7。旋转成组符号，并镜像受支持的图像或批注。",
+    "Explore the 1.5.7 update": "了解 1.5.7 更新",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.7 (build 29) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.5.7（版本 28）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。",
+    "Guides for PolyPDF 1.5.7: grouped symbols, mirroring, overlays, zoom controls, snapshots, calibration, takeoff, markup, revisions, forms, OCR, and signatures.": "PolyPDF 1.5.7 指南：成组符号、镜像、叠加、缩放控制、快照、比例校准、工程量统计、标注、修订、表单、OCR 和签名。",
+    "Guides for PolyPDF 1.5.7: grouped symbols, mirroring, overlays, zoom controls, snapshots, calibration, takeoff, markup, revisions, forms, OCR, signatures.": "PolyPDF 1.5.7 指南：成组符号、镜像、叠加、缩放控制、快照、比例校准、工程量统计、标注、修订、表单、OCR 和签名。",
+    "Guides for PolyPDF 1.5.7: grouped symbols, mirroring, overlays, zoom controls, snapshots, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "PolyPDF 1.5.7 指南：成组符号、镜像、叠加、缩放控制、快照、工程量统计、比较、表单、签名和文档准备，并配有真实应用截图。",
+    "PolyPDF 1.5.7 (build 29) adds whole-symbol rotation and horizontal or vertical mirroring for supported images and annotations. These edits remain intact after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.": "PolyPDF 1.5.7（内部版本 29）支持旋转整个成组符号，以及水平或垂直镜像受支持的图像和批注。这些编辑在保存并重新打开 PDF 后仍会保留。该版本适用于 Mac 和 Windows，且包含在现有 PolyPDF 1.x 许可证中。",
+    "PolyPDF 1.5.7 (build 29) · Mac & Windows": "PolyPDF 1.5.7（内部版本 28）· Mac 和 Windows",
+    "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.7 lets you rotate complete grouped symbols and mirror supported images or annotations horizontally or vertically.": "PolyPDF 以经过签名的安装程序提供给 Windows 10 和 11 用户。它与 Mac 版是同一款图纸审阅应用：可测量和标注图纸、运行本地 AEC OCR、比较修订，并通过修订包延续已审阅的工作。1.5.7 版支持旋转整个成组符号，以及水平或垂直镜像受支持的图像和批注。",
+    "Update to 1.5.7": "更新至1.5.7",
+    "What changed in 1.5.7": "1.5.7 中发生了什么变化",
+    "What is new in PolyPDF 1.5.7?": "PolyPDF 1.5.7 有哪些新功能？"
   },
   "sourceHash": "1f641abd24474df140a27324e022822f1b45a1ec5f4ef2fa754c13b5be0d264e",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2211,5 +2226,6 @@
   "release156Translation": {
     "date": "2026-09-22",
     "method": "AI-assisted translation of current overlay-fix copy and version-only updates to existing translations; historical strings retained. Not independently reviewed by a native speaker."
-  }
+  },
+  "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review."
 }

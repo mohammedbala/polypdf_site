@@ -40,4 +40,10 @@ export const release156Highlights = Object.freeze([
   'Overlay crops stay aligned on rotated pages, including after saving and reopening the PDF.'
 ]);
 
-export const releaseAnswer = "PolyPDF 1.5.6 (build 28) improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages, including after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.";
+export const release157Highlights = Object.freeze([
+  'Rotate a complete grouped symbol from its rotation handle while keeping every part editable.',
+  'Mirror supported images and annotations horizontally or vertically from the context menu or keyboard shortcuts.',
+  'Mirrored artwork and grouped symbols retain their appearance after saving and reopening a PDF.'
+]);
+
+export const releaseAnswer = "PolyPDF 1.5.7 (build 29) adds whole-symbol rotation and horizontal or vertical mirroring for supported images and annotations. These edits remain intact after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.";

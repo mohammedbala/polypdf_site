@@ -2198,7 +2198,22 @@
     "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.6 improves PDF overlay clarity when zooming and keeps overlay crops aligned on rotated pages.": "O PolyPDF está disponível para Windows 10 e 11 com um instalador assinado. É o mesmo aplicativo de revisão de desenhos do Mac: meça e anote folhas, execute OCR AEC local, compare revisões e leve o trabalho revisado adiante com Revision Packages. A versão 1.5.6 melhora a nitidez das sobreposições de PDF ao ampliar e mantém seus recortes alinhados em páginas giradas.",
     "Update to 1.5.6": "Atualizar para 1.5.6",
     "What changed in 1.5.6": "O que mudou em 1.5.6",
-    "What is new in PolyPDF 1.5.6?": "O que há de novo no PolyPDF 1.5.6?"
+    "What is new in PolyPDF 1.5.6?": "O que há de novo no PolyPDF 1.5.6?",
+    "After relaunch, About should show version 1.5.7, build 29. Your existing PolyPDF 1.x Pro license continues to apply.": "Após o relançamento, Sobre deve mostrar a versão 1.5.7, build 29. Sua licença existente do PolyPDF 1.x Pro continua em vigor.",
+    "Current app: PolyPDF 1.5.7 (build 29) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Aplicativo atual: PolyPDF 1.5.7 (build 29) · Formato do pacote: PolyPDF 1.3.1+ · A instalação e execução de plug-ins requer PolyPDF Pro em 1.4.1+",
+    "Current version 1.5.7 (build 29).": "Versão atual 1.5.7 (compilação 28).",
+    "Download PolyPDF 1.5.7 for Windows 10 and 11, x64. Rotate grouped symbols and mirror supported images or annotations.": "Baixe o PolyPDF 1.5.7 para Windows 10 e 11, x64. Gire símbolos agrupados e espelhe imagens ou anotações compatíveis.",
+    "Explore the 1.5.7 update": "Conheça a atualização 1.5.7",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.7 (build 29) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenha ajuda com instalação, fluxos de trabalho de produtos, compras e ativação de licença. A versão pública atual é PolyPDF 1.5.7 (build 29) no Mac e Windows. Ao escrever, inclua a versão mostrada em Sobre, seu sistema operacional e os detalhes do recibo do Stripe, quando relevante.",
+    "Guides for PolyPDF 1.5.7: grouped symbols, mirroring, overlays, zoom controls, snapshots, calibration, takeoff, markup, revisions, forms, OCR, and signatures.": "Guias do PolyPDF 1.5.7: símbolos agrupados, espelhamento, sobreposições, controles de zoom, capturas, calibração, quantitativos, marcações, revisões, formulários, OCR e assinaturas.",
+    "Guides for PolyPDF 1.5.7: grouped symbols, mirroring, overlays, zoom controls, snapshots, calibration, takeoff, markup, revisions, forms, OCR, signatures.": "Guias do PolyPDF 1.5.7: símbolos agrupados, espelhamento, sobreposições, controles de zoom, capturas, calibração, quantitativos, marcações, revisões, formulários, OCR e assinaturas.",
+    "Guides for PolyPDF 1.5.7: grouped symbols, mirroring, overlays, zoom controls, snapshots, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "Guias do PolyPDF 1.5.7: símbolos agrupados, espelhamento, sobreposições, controles de zoom, capturas, quantitativos, comparação, formulários, assinaturas e preparação de documentos, com capturas reais do aplicativo.",
+    "PolyPDF 1.5.7 (build 29) adds whole-symbol rotation and horizontal or vertical mirroring for supported images and annotations. These edits remain intact after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.": "O PolyPDF 1.5.7 (compilação 29) permite girar um símbolo agrupado inteiro e espelhar horizontal ou verticalmente imagens e anotações compatíveis. Essas alterações permanecem após salvar e reabrir o PDF. Está disponível para Mac e Windows e incluído nas licenças PolyPDF 1.x existentes.",
+    "PolyPDF 1.5.7 (build 29) · Mac & Windows": "PolyPDF 1.5.7 (build 29) · Mac e Windows",
+    "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.7 lets you rotate complete grouped symbols and mirror supported images or annotations horizontally or vertically.": "O PolyPDF é distribuído para Windows 10 e 11 por meio de um instalador assinado. É o mesmo aplicativo de revisão de desenhos do Mac: meça e marque pranchas, execute OCR AEC local, compare revisões e leve o trabalho revisado adiante com Pacotes de Revisão. A versão 1.5.7 permite girar símbolos agrupados inteiros e espelhar horizontal ou verticalmente imagens e anotações compatíveis.",
+    "Update to 1.5.7": "Atualizar para 1.5.7",
+    "What changed in 1.5.7": "O que mudou em 1.5.7",
+    "What is new in PolyPDF 1.5.7?": "O que há de novo no PolyPDF 1.5.7?"
   },
   "sourceHash": "1f641abd24474df140a27324e022822f1b45a1ec5f4ef2fa754c13b5be0d264e",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2211,5 +2226,6 @@
   "release156Translation": {
     "date": "2026-09-22",
     "method": "AI-assisted translation of current overlay-fix copy and version-only updates to existing translations; historical strings retained. Not independently reviewed by a native speaker."
-  }
+  },
+  "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review."
 }
