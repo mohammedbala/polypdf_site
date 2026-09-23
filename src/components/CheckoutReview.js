@@ -32,7 +32,7 @@ export default function CheckoutReviewProvider({ children }) {
   return <Context.Provider value={review}>{children}
     <dialog ref={dialog} className="privacy-dialog" aria-labelledby="checkout-review-title" onCancel={() => finish(null)}>
       <h2 id="checkout-review-title">Review your purchase</h2>
-      <p><strong>PolyPDF Pro — {commercialOffer.price} USD once.</strong> Applicable taxes and the final total appear in Stripe before you pay. No subscription.</p>
+      <p><strong>PolyPDF Pro — {commercialOffer.price} USD regular price once.</strong> Verified .edu email addresses receive 50% off. Applicable taxes and the exact discounted total appear in Stripe before you pay. No subscription.</p>
       <ul><li>Perpetual use of PolyPDF 1.x on up to 3 Mac or Windows computers.</li><li>Every public 1.x update included; future major upgrades are optional.</li><li>14-day money-back guarantee for direct purchases.</li><li>License delivery by email after successful payment.</li></ul>
       <p>Seller: Euclidean Software LLC · <a href="mailto:support@polypdf.com">support@polypdf.com</a></p>
       <form onSubmit={(event) => { event.preventDefault(); if (accepted) finish({ accepted: true, version: WEBSITE_TERMS_VERSION }); }}>

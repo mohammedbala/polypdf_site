@@ -4745,6 +4745,66 @@ h3 {
   line-height: 1.65;
 }
 
+.buy-student-offer {
+  margin-top: 2rem;
+  padding: 1.3rem;
+  border: 1.5px solid var(--gray-900);
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 5px 6px 0 var(--paper-shadow);
+}
+
+.buy-student-offer h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  letter-spacing: -0.025em;
+}
+
+.buy-student-offer p {
+  margin: 0.4rem 0 0.8rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.buy-student-offer label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+}
+
+.buy-student-form-row {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.buy-student-form-row input {
+  min-width: 0;
+  flex: 1;
+  padding: 0.7rem 0.8rem;
+  border: 1.5px solid var(--gray-600);
+  border-radius: 7px;
+  font: inherit;
+}
+
+.buy-student-form-row button {
+  padding: 0.7rem 0.85rem;
+  border: 0;
+  border-radius: 7px;
+  background: var(--gray-900);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.buy-student-form-row button:disabled { opacity: 0.65; cursor: wait; }
+.buy-student-form-row :focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.buy-student-ready { margin: 0.5rem 0 0.8rem; font-weight: 700; }
+
+@media (max-width: 520px) {
+  .buy-student-form-row { flex-direction: column; }
+}
+
 .buy .buy-cancelled {
   margin-top: 1rem;
   border: 1.5px solid var(--gray-900);

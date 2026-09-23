@@ -18,6 +18,7 @@ test('requires an unchecked terms agreement before creating any Stripe session',
   await act(async()=>root.render(<CheckoutReviewProvider><DirectCheckoutLink source="website_hero" redirect={redirect}>Buy once</DirectCheckoutLink></CheckoutReviewProvider>));
   await act(async()=>container.querySelector('a').click());
   expect(container.querySelector('dialog').open).toBe(true);
+  expect(container.querySelector('dialog').textContent).toContain('Verified .edu email addresses receive 50% off');
   expect(container.querySelector('input').checked).toBe(false);
   expect(container.querySelector('button[type="submit"]').disabled).toBe(true);
   expect(createStripeCheckoutSession).not.toHaveBeenCalled();

@@ -2,18 +2,18 @@ import React from 'react';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { commercialOffer, moneyBackGuaranteeText } from '../lib/commercialOffer';
 
-export const OfferPrice = ({ className = '', compact = false }) => (
+export const OfferPrice = ({ className = '', compact = false, regularPrice = false }) => (
   <div className={`offer-price${compact ? ' offer-price-compact' : ''}${className ? ` ${className}` : ''}`}>
     <span className="offer-price-current">
       <strong>{commercialOffer.price}</strong>
-      <span>USD · one payment</span>
+      <span>USD · {regularPrice ? 'regular price' : 'one payment'}</span>
     </span>
   </div>
 );
-export const OfferButtonLabel = ({ action = 'Buy once' }) => (
+export const OfferButtonLabel = ({ action = 'Buy once', discountPercent }) => (
   <span className="offer-button-label">
     <span>{action}</span>
-    <span className="offer-button-prices"><strong>{commercialOffer.price}</strong></span>
+    <span className="offer-button-prices"><strong>{discountPercent ? `${discountPercent}% off` : commercialOffer.price}</strong></span>
   </span>
 );
 

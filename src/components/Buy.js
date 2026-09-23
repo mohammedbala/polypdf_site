@@ -36,6 +36,7 @@ import siteRelease from '../lib/siteRelease.json';
 import MagneticLink from './MagneticLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
 import PlanComparison from './PlanComparison';
+import { isEduEmail, loadStudentEligibility, requestStudentVerification } from '../lib/studentOffer';
 
 const proFeatures = [
   'Unlimited measurements, with quantities tied to your drawings',
@@ -94,6 +95,10 @@ const Buy = ({ forceInApp = false }) => {
   const [checkoutStatus, setCheckoutStatus] = useState('ready');
   const [checkoutError, setCheckoutError] = useState('');
   const [showStickyCheckout, setShowStickyCheckout] = useState(false);
+  const [studentEmail, setStudentEmail] = useState('');
+  const [studentEligible, setStudentEligible] = useState(false);
+  const [studentOfferAvailable, setStudentOfferAvailable] = useState(null);
+  const [studentRequestStatus, setStudentRequestStatus] = useState('idle');
   const checkoutCtaRef = useRef(null);
   const offer = useCommercialOffer();
   const { primaryPlatform } = usePlatform();
@@ -112,6 +117,17 @@ const Buy = ({ forceInApp = false }) => {
     offer_id: commercialOffer.id,
     app_version: siteRelease.version
   };
+
+  useEffect(() => {
+    let cancelled = false;
+    loadStudentEligibility().then(({ eligible, available }) => {
+      if (!cancelled) {
+        setStudentEligible(eligible);
+        setStudentOfferAvailable(available);
+      }
+    }).catch(() => { if (!cancelled) setStudentOfferAvailable(false); });
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -176,6 +192,21 @@ const Buy = ({ forceInApp = false }) => {
     }
   };
 
+  const handleStudentVerification = async (event) => {
+    event.preventDefault();
+    if (!isEduEmail(studentEmail)) {
+      setStudentRequestStatus('invalid');
+      return;
+    }
+    setStudentRequestStatus('sending');
+    try {
+      await requestStudentVerification(studentEmail);
+      setStudentRequestStatus('sent');
+    } catch {
+      setStudentRequestStatus('failed');
+    }
+  };
+
   return (
     <div className="legal-page buy">
       <header className="legal-header">
@@ -211,15 +242,45 @@ const Buy = ({ forceInApp = false }) => {
                 : 'Your full drawing toolkit. One payment.'}
             </h1>
             <p>
-              {cameFromApp
-                ? context.lede
-                : 'Measure without limits, edit PDF content, use toolsets and overlays, and manage drawing revisions. Get PolyPDF Pro for $74.95 once on up to 3 Mac or Windows computers.'}
+              {studentOfferAvailable && studentEligible
+                ? 'Measure without limits, edit PDF content, use toolsets and overlays, and manage drawing revisions. Your verified .edu email gets 50% off the regular $74.95 Pro price for use on up to 3 Mac or Windows computers.'
+                : cameFromApp
+                  ? context.lede
+                  : 'Measure without limits, edit PDF content, use toolsets and overlays, and manage drawing revisions. Get PolyPDF Pro for $74.95 once on up to 3 Mac or Windows computers.'}
             </p>
             {cancelled && (
               <p className="buy-cancelled">
                 Checkout was cancelled and nothing was charged. The free app keeps working exactly as it did.
               </p>
             )}
+            <section className="buy-student-offer" aria-labelledby="buy-student-title">
+              <h2 id="buy-student-title">Student price: 50% off</h2>
+              {studentOfferAvailable === null ? (
+                <p role="status">Checking student pricing…</p>
+              ) : !studentOfferAvailable ? (
+                <p role="status">Student verification is temporarily unavailable. Please check back soon or contact support@polypdf.com.</p>
+              ) : studentEligible ? (
+                <p role="status">Your .edu email is verified. Your discount will be applied in Stripe before you pay.</p>
+              ) : (
+                <>
+                  <p>Have a .edu email? Verify it to get 50% off the regular Pro price.</p>
+                  <form onSubmit={handleStudentVerification}>
+                    <label htmlFor="buy-student-email">School email</label>
+                    <div className="buy-student-form-row">
+                      <input id="buy-student-email" type="email" autoComplete="email" required
+                        value={studentEmail} onChange={(event) => setStudentEmail(event.target.value)}
+                        placeholder="you@school.edu" />
+                      <button type="submit" disabled={studentRequestStatus === 'sending'}>
+                        {studentRequestStatus === 'sending' ? 'Sending…' : 'Verify .edu email'}
+                      </button>
+                    </div>
+                  </form>
+                  {studentRequestStatus === 'sent' && <p role="status">Check your school inbox for a sign-in link. Confirm it to return here with the discount ready.</p>}
+                  {studentRequestStatus === 'invalid' && <p role="alert">Enter an email ending in .edu.</p>}
+                  {studentRequestStatus === 'failed' && <p role="alert">We could not send the link. Please try again or contact support@polypdf.com.</p>}
+                </>
+              )}
+            </section>
           </div>
 
           <div className="buy-grid">
@@ -232,7 +293,8 @@ const Buy = ({ forceInApp = false }) => {
               <span className="paper-tape pricing-card-tape" aria-hidden="true" />
               <div className="plan-pill plan-pill-dark">Pro license</div>
               <h2>{commercialOffer.name}</h2>
-              <OfferPrice />
+              <OfferPrice regularPrice={studentOfferAvailable && studentEligible} />
+              {studentOfferAvailable && studentEligible && <p className="buy-student-ready">Verified .edu student discount: 50% off at checkout.</p>}
               <p className="buy-tax-note">Applicable taxes and your final total appear in Stripe before you pay.</p>
               {offer.available ? (
                 <MagneticLink
@@ -246,7 +308,8 @@ const Buy = ({ forceInApp = false }) => {
                   <Infinity aria-hidden="true" weight="bold" />
                   {checkoutStatus === 'loading'
                     ? 'Opening Stripe checkout…'
-                    : <OfferButtonLabel action="Checkout with Stripe" />}
+                    : <OfferButtonLabel action="Checkout with Stripe"
+                        discountPercent={studentOfferAvailable && studentEligible ? 50 : undefined} />}
                 </MagneticLink>
               ) : (
                 <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
@@ -379,7 +442,8 @@ const Buy = ({ forceInApp = false }) => {
             className="primary-btn offer-cta"
             onClick={(event) => handleBuyClick(event, 'sticky')}
           >
-            <LockKey aria-hidden="true" weight="bold" /> <OfferButtonLabel action="Checkout with Stripe" />
+            <LockKey aria-hidden="true" weight="bold" /> <OfferButtonLabel action="Checkout with Stripe"
+              discountPercent={studentOfferAvailable && studentEligible ? 50 : undefined} />
           </button>
         </div>
       )}

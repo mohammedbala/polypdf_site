@@ -10,17 +10,18 @@ class TestIntersectionObserver {
 }
 TestIntersectionObserver.instances = [];
 
-const renderBuy = async (url, founder) => {
+const renderBuy = async (url, founder, { studentEligible = false, studentOfferAvailable = true } = {}) => {
   globalThis.IS_REACT_ACT_ENVIRONMENT = true;
   const container = document.createElement('div');
   document.body.appendChild(container);
   const root = createRoot(container);
   window.scrollTo = jest.fn();
   window.IntersectionObserver = TestIntersectionObserver;
-  global.fetch = jest.fn().mockResolvedValue({
+  global.fetch = jest.fn().mockImplementation(async (path) => ({
     ok: true,
-    json: async () => ({ id: "polypdf_pro_1x_2026", kind: "standard", available: founder.available, price: 74.95, currency: "USD", founder: { available: false, reason: "ended" } })
-  });
+    json: async () => String(path).includes('/api/student/eligibility') ? { eligible: studentEligible, available: studentOfferAvailable }
+      : { id: "polypdf_pro_1x_2026", kind: "standard", available: founder.available, price: 74.95, currency: "USD", founder: { available: false, reason: "ended" } }
+  }));
   await act(async () => {
     root.render(
       <MemoryRouter
@@ -84,6 +85,30 @@ test('shows an explicit price anchor and the real money-back guarantee beside ch
   expect(view.container.querySelector('.offer-guarantee')?.textContent).toContain(
     '14-day money-back guarantee'
   );
+  view.unmount();
+});
+
+test('offers .edu verification and shows the discount only after verified sign-in', async () => {
+  const standard = await renderBuy('/buy/', { available: true });
+  expect(standard.container.textContent).toContain('Student price: 50% off');
+  expect(standard.container.querySelector('#buy-student-email')).not.toBeNull();
+  expect(standard.container.querySelector('.buy-student-ready')).toBeNull();
+  standard.unmount();
+
+  const verified = await renderBuy('/buy/?student=verified', { available: true }, { studentEligible: true });
+  expect(verified.container.querySelector('.buy-student-ready')?.textContent).toContain('50% off');
+  expect(verified.container.querySelector('.buy-plan .offer-button-label')?.textContent).toContain('50% off');
+  expect(verified.container.querySelector('.buy-plan .offer-price-current')?.textContent).toContain('regular price');
+  expect(verified.container.querySelector('.buy-hero > p')?.textContent).toContain('50% off the regular $74.95');
+  expect(verified.container.querySelector('#buy-student-email')).toBeNull();
+  expect(verified.container.textContent).toContain('Your .edu email is verified');
+  verified.unmount();
+});
+
+test('does not offer school verification before the API coupon is configured', async () => {
+  const view = await renderBuy('/buy/', { available: true }, { studentOfferAvailable: false });
+  expect(view.container.querySelector('#buy-student-email')).toBeNull();
+  expect(view.container.textContent).toContain('temporarily unavailable');
   view.unmount();
 });
 
