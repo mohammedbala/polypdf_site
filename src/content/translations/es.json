@@ -2213,9 +2213,25 @@
     "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.7 lets you rotate complete grouped symbols and mirror supported images or annotations horizontally or vertically.": "PolyPDF se distribuye para Windows 10 y 11 mediante un instalador firmado. Es la misma aplicación de revisión de planos que en Mac: mide y anota hojas, ejecuta OCR local para AEC, compara revisiones y conserva el trabajo revisado con los Paquetes de revisión. La versión 1.5.7 permite girar símbolos agrupados completos y reflejar horizontal o verticalmente imágenes y anotaciones compatibles.",
     "Update to 1.5.7": "Actualizar a 1.5.7",
     "What changed in 1.5.7": "¿Qué cambió en 1.5.7?",
-    "What is new in PolyPDF 1.5.7?": "¿Qué novedades incluye PolyPDF 1.5.7?"
+    "What is new in PolyPDF 1.5.7?": "¿Qué novedades incluye PolyPDF 1.5.7?",
+    "After relaunch, About should show version 1.5.8, build 30. Your existing PolyPDF 1.x Pro license continues to apply.": "Después del reinicio, Acerca de debería mostrar la versión 1.5.8, compilación 30. Su licencia PolyPDF 1.x Pro existente continúa aplicándose.",
+    "Autosize Text Box fits text boxes and callouts to their contents. PDF markup exchange and saving are more reliable.": "Autosize Text Box ajusta los cuadros de texto y las llamadas a su contenido. El intercambio y guardado de anotaciones PDF son más fiables.",
+    "Current app: PolyPDF 1.5.8 (build 30) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Aplicación actual: PolyPDF 1.5.8 (compilación 30) · Formato del paquete: PolyPDF 1.3.1+ · La instalación y ejecución de complementos requiere PolyPDF Pro en 1.4.1+",
+    "Current version 1.5.8 (build 30).": "Versión actual 1.5.8 (compilación 30).",
+    "Download PolyPDF 1.5.8 for Windows 10 and 11, x64. Markups stay upright on rotated sheets, and text boxes can resize to fit.": "Descargue PolyPDF 1.5.8 para Windows 10 y 11, x64. Las anotaciones permanecen derechas en hojas giradas y los cuadros de texto se ajustan al contenido.",
+    "Explore the 1.5.8 update": "Descubra la actualización 1.5.8",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.8 (build 30) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenga ayuda con la instalación, los flujos de trabajo del producto, las compras y la activación de licencias. La versión pública actual es PolyPDF 1.5.8 (compilación 30) en Mac y Windows. Cuando escriba, incluya la versión que se muestra en Acerca de, su sistema operativo y los detalles del recibo de Stripe cuando sea relevante.",
+    "Guides for PolyPDF 1.5.8: rotated sheets, text boxes, grouped symbols, mirroring, overlays, calibration, takeoff, markup, revisions, forms, OCR.": "Guías de PolyPDF 1.5.8: hojas giradas, cuadros de texto, símbolos agrupados, reflejo, superposiciones, calibración, mediciones, anotaciones, revisiones, formularios y OCR.",
+    "Guides for PolyPDF 1.5.8: rotated-sheet markups, text boxes, grouped symbols, mirroring, overlays, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "Guías de PolyPDF 1.5.8: anotaciones en hojas giradas, cuadros de texto, símbolos agrupados, reflejo, superposiciones, mediciones, comparación, formularios, firmas y preparación de documentos, con capturas reales de la aplicación.",
+    "Markups on rotated drawing sheets now appear upright and in place.": "Las anotaciones en planos girados ahora aparecen derechas y en su lugar.",
+    "PolyPDF 1.5.8 (build 30) keeps markups upright on rotated sheets, adds Autosize Text Box, and improves PDF markup exchange and saving. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.": "PolyPDF 1.5.8 (compilación 30) mantiene derechas las anotaciones en hojas giradas, añade Autosize Text Box y mejora el intercambio y guardado de anotaciones PDF. Está disponible para Mac y Windows y se incluye en las licencias existentes de PolyPDF 1.x.",
+    "PolyPDF 1.5.8 (build 30) · Mac & Windows": "PolyPDF 1.5.8 (compilación 30) · Mac y Windows",
+    "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.8 keeps markups upright on rotated sheets and adds Autosize Text Box for text boxes and callouts.": "PolyPDF se distribuye para Windows 10 y 11 como instalador firmado. Es la misma aplicación de revisión de planos que en Mac: mida y anote hojas, ejecute OCR AEC local, compare revisiones y continúe el trabajo revisado con Paquetes de revisión. La versión 1.5.8 mantiene derechas las anotaciones en hojas giradas y añade Autosize Text Box para cuadros de texto y llamadas.",
+    "Update to 1.5.8": "Actualizar a 1.5.8",
+    "What changed in 1.5.8": "¿Qué cambió en 1.5.8?",
+    "What is new in PolyPDF 1.5.8?": "¿Qué novedades incluye PolyPDF 1.5.8?"
   },
-  "sourceHash": "1f641abd24474df140a27324e022822f1b45a1ec5f4ef2fa754c13b5be0d264e",
+  "sourceHash": "8425f1ffd774a5e55ba7ee81ffc5755504c2449a83ca0fdd0bc6ddbdada77e07",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
   "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
@@ -2227,5 +2243,6 @@
     "date": "2026-09-22",
     "method": "AI-assisted translation of current overlay-fix copy and version-only updates to existing translations; historical strings retained. Not independently reviewed by a native speaker."
   },
-  "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review."
+  "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review.",
+  "release158Translation": "Release text translated with AI assistance; prior editorial content retained. Not certified native-speaker review."
 }

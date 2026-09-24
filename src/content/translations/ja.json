@@ -2213,9 +2213,25 @@
     "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.7 lets you rotate complete grouped symbols and mirror supported images or annotations horizontally or vertically.": "PolyPDF は Windows 10／11 向けに署名済みインストーラーで提供されます。Mac 版と同じ図面レビューアプリで、図面の計測と注釈、ローカル AEC OCR、改訂の比較、Revision Package によるレビュー済み作業の引き継ぎができます。バージョン 1.5.7 では、グループ化したシンボル全体を回転し、対応する画像や注釈を水平または垂直に反転できます。",
     "Update to 1.5.7": "1.5.7へのアップデート",
     "What changed in 1.5.7": "1.5.7での変更点",
-    "What is new in PolyPDF 1.5.7?": "PolyPDF 1.5.7の新機能は？"
+    "What is new in PolyPDF 1.5.7?": "PolyPDF 1.5.7の新機能は？",
+    "After relaunch, About should show version 1.5.8, build 30. Your existing PolyPDF 1.x Pro license continues to apply.": "再起動後、About にはバージョン 1.5.8、ビルド 30 が表示されます。既存の PolyPDF 1.x Pro ライセンスは引き続き適用されます。",
+    "Autosize Text Box fits text boxes and callouts to their contents. PDF markup exchange and saving are more reliable.": "Autosize Text Box はテキストボックスと吹き出しを内容に合わせて調整します。PDF 注釈の受け渡しと保存もより確実になりました。",
+    "Current app: PolyPDF 1.5.8 (build 30) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "現在のアプリ: PolyPDF 1.5.8 (ビルド 30) · パッケージ形式: PolyPDF 1.3.1+ · プラグインのインストールと実行には、1.4.1+ の PolyPDF Pro が必要です",
+    "Current version 1.5.8 (build 30).": "現在のバージョン 1.5.8 (ビルド 30)。",
+    "Download PolyPDF 1.5.8 for Windows 10 and 11, x64. Markups stay upright on rotated sheets, and text boxes can resize to fit.": "Windows 10／11（x64）向け PolyPDF 1.5.8 をダウンロード。回転したシートでも注釈が正しい向きで表示され、テキストボックスは内容に合わせて広がります。",
+    "Explore the 1.5.8 update": "1.5.8の更新内容を見る",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.5.8 (build 30) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "インストール、製品のワークフロー、購入、ライセンスのアクティベーションに関するサポートが受けられます。現在のパブリック リリースは、Mac および Windows 上の PolyPDF 1.5.8 (ビルド 30) です。記入する際は、「バージョン情報」に表示されているバージョン、オペレーティング システム、および該当する場合は Stripe の領収書の詳細を含めてください。",
+    "Guides for PolyPDF 1.5.8: rotated sheets, text boxes, grouped symbols, mirroring, overlays, calibration, takeoff, markup, revisions, forms, OCR.": "PolyPDF 1.5.8 ガイド：回転したシート、テキストボックス、グループ化したシンボル、反転、オーバーレイ、縮尺設定、数量拾い、注釈、改訂、フォーム、OCR。",
+    "Guides for PolyPDF 1.5.8: rotated-sheet markups, text boxes, grouped symbols, mirroring, overlays, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "PolyPDF 1.5.8 ガイド：回転したシートの注釈、テキストボックス、グループ化したシンボル、反転、オーバーレイ、数量拾い、比較、フォーム、署名、文書の準備。実際のアプリ画面で説明します。",
+    "Markups on rotated drawing sheets now appear upright and in place.": "回転した図面シートの注釈が、正しい向きと位置で表示されるようになりました。",
+    "PolyPDF 1.5.8 (build 30) keeps markups upright on rotated sheets, adds Autosize Text Box, and improves PDF markup exchange and saving. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.": "PolyPDF 1.5.8（ビルド 30）では、回転したシートの注釈が正しい向きで表示され、Autosize Text Box が追加されました。PDF 注釈の受け渡しと保存も改善されています。Mac と Windows で利用でき、既存の PolyPDF 1.x ライセンスに含まれます。",
+    "PolyPDF 1.5.8 (build 30) · Mac & Windows": "PolyPDF 1.5.8（ビルド30）· MacとWindows",
+    "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.8 keeps markups upright on rotated sheets and adds Autosize Text Box for text boxes and callouts.": "PolyPDF は Windows 10／11 向けに署名済みインストーラーで提供しています。Mac と同じ図面レビューアプリで、シートの計測と注釈、ローカル AEC OCR、改訂の比較、改訂パッケージによるレビュー済み作業の引き継ぎができます。バージョン 1.5.8 では、回転したシートの注釈が正しい向きで表示され、テキストボックスと吹き出し向けの Autosize Text Box が追加されました。",
+    "Update to 1.5.8": "1.5.8へのアップデート",
+    "What changed in 1.5.8": "1.5.8での変更点",
+    "What is new in PolyPDF 1.5.8?": "PolyPDF 1.5.8の新機能は？"
   },
-  "sourceHash": "1f641abd24474df140a27324e022822f1b45a1ec5f4ef2fa754c13b5be0d264e",
+  "sourceHash": "8425f1ffd774a5e55ba7ee81ffc5755504c2449a83ca0fdd0bc6ddbdada77e07",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
   "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
@@ -2227,5 +2243,6 @@
     "date": "2026-09-22",
     "method": "AI-assisted translation of current overlay-fix copy and version-only updates to existing translations; historical strings retained. Not independently reviewed by a native speaker."
   },
-  "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review."
+  "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review.",
+  "release158Translation": "Release text translated with AI assistance; prior editorial content retained. Not certified native-speaker review."
 }

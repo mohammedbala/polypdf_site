@@ -291,7 +291,7 @@ const buildLlmsText = () => {
     '',
     `- Current release: PolyPDF ${siteRelease.version} (build ${siteRelease.build}) for macOS and Windows; /versions reads the live update feeds.`,
     `- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. ${commercialOffer.name} removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for ${commercialOffer.price} USD once, activates up to 3 computers in any Mac/Windows mix, and includes a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee for direct website purchases; /buy has the current terms.`,
-    '- New in 1.5.7: rotate complete grouped symbols and mirror supported images or annotations horizontally or vertically. These edits survive saving and reopening.',
+    '- New in 1.5.8: markups on rotated drawing sheets stay upright and in place. Autosize Text Box fits text boxes and callouts to their contents; PDF markup exchange and saving are more reliable.',
     '- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.',
     '- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, diagnostics when opted in, and customer support.',
     '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.',

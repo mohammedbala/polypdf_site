@@ -46,4 +46,11 @@ export const release157Highlights = Object.freeze([
   'Mirrored artwork and grouped symbols retain their appearance after saving and reopening a PDF.'
 ]);
 
-export const releaseAnswer = "PolyPDF 1.5.7 (build 29) adds whole-symbol rotation and horizontal or vertical mirroring for supported images and annotations. These edits remain intact after saving and reopening. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.";
+export const release158Highlights = Object.freeze([
+  'Markups on rotated drawing sheets now appear upright and in the right place.',
+  'Autosize Text Box fits a text box or callout to its contents. Use the context menu, Alt+Z, or the style-toolbar button; typing more text also grows the box.',
+  'Improved exchange with other PDF review apps for callouts, clouds, arrows, measurements, statuses, layers, locks, and custom columns.',
+  'Fixed underline and strikeout edits that could fail to save after reopening, and statuses that could be lost on save.'
+]);
+
+export const releaseAnswer = "PolyPDF 1.5.8 (build 30) keeps markups upright on rotated sheets, adds Autosize Text Box, and improves PDF markup exchange and saving. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.";
