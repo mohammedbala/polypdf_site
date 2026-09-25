@@ -1,0 +1,6 @@
+{
+  "schema": 1,
+  "available": false,
+  "desktopMinimumVersion": "1.6.0",
+  "manager": { "version": "1.0.0", "url": null, "sha256": null }
+}

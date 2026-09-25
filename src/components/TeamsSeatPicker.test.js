@@ -2,16 +2,16 @@ import React, { act } from 'react';
 import { createRoot } from 'react-dom/client';
 import TeamsSeatPicker, { estimateTeamPurchase } from './TeamsSeatPicker';
 
-test.each([[1, 2498], [24, 59952], [25, 56200], [99, 222552], [100, 199800]])(
+test.each([[3, 7494], [24, 59952], [25, 56200], [99, 222552], [100, 199800]])(
   '%i purchased users display the approved total of %i cents', (quantity, total) => {
     expect(estimateTeamPurchase(quantity).total).toBe(total);
   }
 );
 test('add-on pricing uses the resulting pool and charges only new seats', () => {
-  expect(estimateTeamPurchase(1, 24)).toEqual({ quantity: 1, unitAmount: 2248, total: 2248, resultingSeats: 25 });
+  expect(estimateTeamPurchase(3, 22)).toEqual({ quantity: 3, unitAmount: 2248, total: 6744, resultingSeats: 25 });
   expect(estimateTeamPurchase(5, 95)).toEqual({ quantity: 5, unitAmount: 1998, total: 9990, resultingSeats: 100 });
 });
-test.each(['', 0, -1, 1.5, 10001, NaN])('invalid quantity %s has no displayed purchase estimate', quantity => {
+test.each(['', 0, 1, 2, -1, 1.5, 10001, NaN])('invalid quantity %s has no displayed purchase estimate', quantity => {
   expect(estimateTeamPurchase(quantity)).toBeNull();
 });
 test('the accessible picker supports exact quantities larger than its initial range', () => {
@@ -21,6 +21,8 @@ test('the accessible picker supports exact quantities larger than its initial ra
   const onChange = jest.fn();
   act(() => root.render(<TeamsSeatPicker quantity={500} onChange={onChange} />));
   expect(container.querySelector('input[type=range]').max).toBe('500');
+  expect(container.querySelector('input[type=range]').min).toBe('3');
+  expect(container.querySelector('input[type=number]').min).toBe('3');
   expect(container.querySelector('input[type=number]').value).toBe('500');
   expect(container.textContent).toContain('$9,990.00');
   act(() => container.querySelectorAll('button')[1].click());
