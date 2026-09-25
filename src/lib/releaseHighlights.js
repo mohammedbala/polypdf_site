@@ -53,4 +53,10 @@ export const release158Highlights = Object.freeze([
   'Fixed underline and strikeout edits that could fail to save after reopening, and statuses that could be lost on save.'
 ]);
 
-export const releaseAnswer = "PolyPDF 1.5.8 (build 30) keeps markups upright on rotated sheets, adds Autosize Text Box, and improves PDF markup exchange and saving. It is available for Mac and Windows and included with existing PolyPDF 1.x licenses.";
+export const release160Highlights = Object.freeze([
+  'Connect to a company-hosted PolyPDF License Manager with a connection file or HTTPS address. Sign in with Microsoft Entra or use a locally administered invitation when your firm enables it.',
+  'See your assigned employee, computer, connection status, and offline access deadline. Personal licenses remain separate and continue to work.',
+  'Hatch patterns, aligned text annotations, and zooming on large architectural drawings are more reliable.'
+]);
+
+export const releaseAnswer = "PolyPDF 1.6.0 (build 31) adds company-hosted licensing for firms using Microsoft Entra or local invitations, while keeping personal licenses separate. It also improves PDF editing and large-drawing zoom. Available for Mac and Windows; existing PolyPDF 1.x licenses still apply.";
