@@ -6,6 +6,8 @@ import Cookies from './components/Cookies';
 import Accessibility from './components/Accessibility';
 import CookieConsent from './components/CookieConsent';
 import Account from './components/Account';
+import Teams from './components/Teams';
+import TeamsSetup from './components/TeamsSetup';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
 import BuildYourOwnPlugin from './components/BuildYourOwnPlugin';
@@ -50,6 +52,8 @@ const AppRoutes = () => {
                 point at directly; it renders the same view unconditionally. */}
             <Route path="/upgrade" element={<Buy forceInApp />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/teams" element={<Teams />} />
+            <Route path="/teams/setup" element={<TeamsSetup />} />
             <Route path="/build-a-plugin" element={<BuildYourOwnPlugin />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

@@ -9,6 +9,8 @@ const expectedRoutes = [
   '/upgrade',
   '/build-a-plugin',
   '/account',
+  '/teams',
+  '/teams/setup',
   '/blog',
   ...blogPosts.map((entry) => blogPostPath(entry.slug)),
   '/privacy',

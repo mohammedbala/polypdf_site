@@ -283,5 +283,15 @@
     "title": "Accessibility | PolyPDF",
     "description": "Accessibility features, known limitations and help using the PolyPDF website.",
     "robots": "index, follow"
+  },
+  "/teams": {
+    "title": "PolyPDF Teams | Company SSO and License Management",
+    "description": "Company-hosted license management and Microsoft Entra ID sign-in for PolyPDF. One-time pricing per named user.",
+    "robots": "noindex, follow"
+  },
+  "/teams/setup": {
+    "title": "Set up PolyPDF Teams | Administrator Guide",
+    "description": "Install and operate your company-hosted PolyPDF license manager with trusted HTTPS, Microsoft Entra sign-in, local seats and protected backups.",
+    "robots": "noindex, follow"
   }
 }
