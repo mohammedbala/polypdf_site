@@ -293,5 +293,11 @@
     "title": "Set up PolyPDF Teams | Administrator Guide",
     "description": "Install and operate your company-hosted PolyPDF license manager with trusted HTTPS, Microsoft Entra sign-in, local seats and protected backups.",
     "robots": "noindex, follow"
+  },
+  "/teams/guide": {
+    "title": "PolyPDF Teams Setup Guide | Install, Assign & Sign In",
+    "description": "Set up the PolyPDF License Manager, connect Microsoft Entra, assign team seats and help employees sign in. Includes troubleshooting and server maintenance.",
+    "robots": "index, follow",
+    "dateModified": "2026-09-25"
   }
 }

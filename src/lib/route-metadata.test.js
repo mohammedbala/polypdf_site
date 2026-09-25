@@ -11,6 +11,7 @@ const expectedRoutes = [
   '/account',
   '/teams',
   '/teams/setup',
+  '/teams/guide',
   '/blog',
   ...blogPosts.map((entry) => blogPostPath(entry.slug)),
   '/privacy',

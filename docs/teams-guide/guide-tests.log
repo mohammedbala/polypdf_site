@@ -1,0 +1,21 @@
+
+> polypdf-landing@1.0.0 test
+> react-scripts test --watchAll=false --runInBand --runTestsByPath src/components/TeamsGuide.test.js
+
+PASS src/components/TeamsGuide.test.js
+  ✓ customer guide has navigable steps and never exposes unavailable installers or historical validation content (131 ms)
+  ✓ employee instructions copy without a private hostname and provide a manual fallback (55 ms)
+  ✓ printing includes collapsed recovery instructions and restores disclosure state (45 ms)
+  ✓ download failure is recoverable and a qualified release exposes its matching hash (15 ms)
+  ✓ download metadata fails closed for invalid or unqualified release {"available":false} (2 ms)
+  ✓ download metadata fails closed for invalid or unqualified release {"schema":2} (1 ms)
+  ✓ download metadata fails closed for invalid or unqualified release {"manager":{"url":"https://attacker.example/manager.exe"}} (1 ms)
+  ✓ download metadata fails closed for invalid or unqualified release {"manager":{"sha256":null}} (1 ms)
+  ✓ download metadata fails closed for invalid or unqualified release {"manager":{"url":"https://www.polypdf.com/downloads/manager.exe?redirect=external"}} (2 ms)
+  ✓ guide controls and content satisfy automated accessibility checks (609 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       10 passed, 10 total
+Snapshots:   0 total
+Time:        2.506 s, estimated 3 s
+Ran all test suites within paths "src/components/TeamsGuide.test.js".

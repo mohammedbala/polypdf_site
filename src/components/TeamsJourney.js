@@ -58,12 +58,32 @@ export function EnrollmentCode({ enrollment, connected }) {
   if (connected) return <p role="status">Your company manager is connected. Continue in the manager to assign people and download employee instructions.</p>;
   return <div className="teams-code"><label>Single-use enrollment code<input readOnly value={seconds ? enrollment.code : ''} autoComplete="off" /></label><p>{seconds ? `Expires in ${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}. Paste this into Service health in your company manager.` : 'This code expired. Generate a new code for the same manager public key.'}</p><button disabled={!seconds} onClick={async () => { try { await navigator.clipboard.writeText(enrollment.code); setMessage('Enrollment code copied.'); } catch { setMessage('Select the code above and copy it manually.'); } }}>Copy enrollment code</button><p role="status">{message}</p><p>Treat this code as private. Generating another code invalidates the earlier one.</p></div>;
 }
-export function ManagerDownload() {
-  const [release, setRelease] = useState();
-  useEffect(() => { let active = true; fetch('/teams-release.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null).then(data => { if (active) setRelease(data); }).catch(() => {}); return () => { active = false; }; }, []);
+export function qualifiedManagerDownload(release) {
   const manager = release?.manager;
-  let url;
-  try { const candidate = new URL(manager?.url); if (candidate.origin === 'https://www.polypdf.com' && candidate.pathname.startsWith('/downloads/') && !candidate.username && !candidate.password) url = candidate.href; } catch { /* No qualified artifact yet. */ }
-  const available = release?.available === true && url && /^[a-f0-9]{64}$/i.test(manager?.sha256 || '') && /^\d+\.\d+\.\d+$/.test(manager?.version || '');
-  return available ? <div className="teams-download"><h3>License Manager {manager.version}</h3><p>Signed installer for Windows Server 2022 and 2025 x64.</p><a className="teams-setup-link" href={url}>Download Windows license manager</a><p>SHA-256: <code>{manager.sha256}</code></p></div> : <p>The signed manager installer will appear here after release qualification. Purchasing remains limited until the complete release checks pass.</p>;
+  try {
+    const url = new URL(manager?.url);
+    if (release?.schema !== 1 || release?.available !== true || url.origin !== 'https://www.polypdf.com' ||
+      !url.pathname.startsWith('/downloads/') || !url.pathname.endsWith('.exe') || url.username || url.password || url.search || url.hash ||
+      !/^[a-f0-9]{64}$/i.test(manager?.sha256 || '') || !/^\d+\.\d+\.\d+$/.test(manager?.version || '')) return null;
+    return { ...manager, url: url.href };
+  } catch { return null; }
+}
+export function ManagerDownload() {
+  const [state, setState] = useState({ status: 'loading' });
+  const [attempt, setAttempt] = useState(0);
+  useEffect(() => {
+    const controller = new AbortController();
+    let active = true;
+    setState({ status: 'loading' });
+    fetch('/teams-release.json', { cache: 'no-store', signal: controller.signal })
+      .then(response => { if (!response.ok) throw new Error('download_status_unavailable'); return response.json(); })
+      .then(release => { if (active) setState({ status: 'loaded', manager: qualifiedManagerDownload(release) }); })
+      .catch(error => { if (active && error.name !== 'AbortError') setState({ status: 'error' }); });
+    return () => { active = false; controller.abort(); };
+  }, [attempt]);
+  if (state.status === 'loading') return <p role="status">Checking License Manager downloads…</p>;
+  if (state.status === 'error') return <div><p role="status">We couldn’t check downloads. Check your connection and try again.</p><button type="button" onClick={() => setAttempt(value => value + 1)}>Retry downloads</button></div>;
+  const manager = state.manager;
+  if (!manager) return <p>License Manager downloads are not available yet. <a href="/support">Contact PolyPDF support</a> for availability.</p>;
+  return <div className="teams-download"><h3>License Manager {manager.version}</h3><p>Signed installer for Windows Server 2022 and 2025 x64.</p><a className="teams-setup-link" href={manager.url}>Download Windows license manager</a><p>SHA-256: <code>{manager.sha256}</code></p></div>;
 }

@@ -33,7 +33,8 @@ export const footerLinkGroups = Object.freeze([
       Object.freeze({ to: '/windows', label: 'PolyPDF for Windows' }),
       Object.freeze({ to: '/versions', label: 'Version history' }),
       Object.freeze({ to: '/blog', label: 'Guides & reference' }),
-      Object.freeze({ to: '/build-a-plugin', label: 'Build a plugin' })
+      Object.freeze({ to: '/build-a-plugin', label: 'Build a plugin' }),
+      Object.freeze({ to: '/teams/guide', label: 'Teams setup guide' })
     ])
   }),
   Object.freeze({

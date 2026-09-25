@@ -2229,7 +2229,8 @@
     "PolyPDF ships for Windows 10 and 11 as a signed installer. It is the same drawing-review app as on the Mac — measure and mark up sheets, run local AEC OCR, compare revisions, and carry reviewed work forward with Revision Packages. Version 1.5.8 keeps markups upright on rotated sheets and adds Autosize Text Box for text boxes and callouts.": "PolyPDF は Windows 10／11 向けに署名済みインストーラーで提供しています。Mac と同じ図面レビューアプリで、シートの計測と注釈、ローカル AEC OCR、改訂の比較、改訂パッケージによるレビュー済み作業の引き継ぎができます。バージョン 1.5.8 では、回転したシートの注釈が正しい向きで表示され、テキストボックスと吹き出し向けの Autosize Text Box が追加されました。",
     "Update to 1.5.8": "1.5.8へのアップデート",
     "What changed in 1.5.8": "1.5.8での変更点",
-    "What is new in PolyPDF 1.5.8?": "PolyPDF 1.5.8の新機能は？"
+    "What is new in PolyPDF 1.5.8?": "PolyPDF 1.5.8の新機能は？",
+    "Teams setup guide": "Teams セットアップガイド"
   },
   "sourceHash": "8425f1ffd774a5e55ba7ee81ffc5755504c2449a83ca0fdd0bc6ddbdada77e07",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

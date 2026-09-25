@@ -196,7 +196,7 @@ const buildSitemap = (metadata) => {
     .filter(([, entry]) => !entry.robots.includes('noindex'))
     .map(([route]) => {
       const post = postByRoute.get(route);
-      const lastmod = post?.dateModified || post?.date
+      const lastmod = metadata[route]?.dateModified || post?.dateModified || post?.date
         || (route === '/blog' ? latestPostDate : STATIC_LASTMOD[route])
         || '2026-08-18';
       return { route, lastmod, ...sitemapSettings(route) };

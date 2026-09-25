@@ -8,6 +8,7 @@ import CookieConsent from './components/CookieConsent';
 import Account from './components/Account';
 import Teams from './components/Teams';
 import TeamsSetup from './components/TeamsSetup';
+import TeamsGuide from './components/TeamsGuide';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
 import BuildYourOwnPlugin from './components/BuildYourOwnPlugin';
@@ -54,6 +55,7 @@ const AppRoutes = () => {
             <Route path="/account" element={<Account />} />
             <Route path="/teams" element={<Teams />} />
             <Route path="/teams/setup" element={<TeamsSetup />} />
+            <Route path="/teams/guide" element={<TeamsGuide />} />
             <Route path="/build-a-plugin" element={<BuildYourOwnPlugin />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
