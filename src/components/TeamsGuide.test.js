@@ -20,6 +20,8 @@ test('customer guide has navigable steps and never exposes unavailable installer
   expect(container.textContent).toContain('at least 3 users');
   expect(container.textContent).toContain('they do not create PolyPDF accounts');
   expect(container.textContent).toContain('Microsoft’s cloud');
+  for (const text of ['Local invitations', 'Back up now', 'Restore backup', 'Install renewed certificate', '24 hours', 'ten-minute', 'Windows administrator']) expect(container.textContent).toContain(text);
+  expect(container.textContent).not.toContain('administrator PowerShell window');
   expect(container.textContent).toContain('License Manager downloads are not available yet');
   expect(container.querySelector('a[href$=".exe"]')).toBeNull();
   expect(container.textContent).not.toMatch(/historical|synthetic|localhost|validation diary|worktree|September 22/i);
