@@ -697,6 +697,7 @@ const Home = () => {
             <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
             <a href="#workflows" onClick={closeMobileMenu}>See it in action</a>
             <a href="#features" onClick={closeMobileMenu}>Features</a>
+            <Link to="/teams" onClick={closeMobileMenu} translate="no">Teams</Link>
             <Link to="/blog/" onClick={closeMobileMenu}>Guides</Link>
             <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
             <DirectCheckoutLink
@@ -807,7 +808,7 @@ const Home = () => {
       <div className="home-release-link" id="latest-release">
         <div className="container">
           <span>PolyPDF {siteRelease.version} (build {siteRelease.build}) is available for Mac and Windows.</span>
-          <Link to="/blog/polypdf-1-5-5/">Read what’s new <ArrowRight aria-hidden="true" /></Link>
+          <Link to="/versions/">Read what’s new <ArrowRight aria-hidden="true" /></Link>
         </div>
       </div>
 
