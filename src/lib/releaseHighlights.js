@@ -59,4 +59,11 @@ export const release160Highlights = Object.freeze([
   'Hatch patterns, aligned text annotations, and zooming on large architectural drawings are more reliable.'
 ]);
 
-export const releaseAnswer = "PolyPDF 1.6.0 (build 31) adds company-hosted licensing for firms using Microsoft Entra or local invitations, while keeping personal licenses separate. It also improves PDF editing and large-drawing zoom. Available for Mac and Windows; existing PolyPDF 1.x licenses still apply.";
+export const release161Highlights = Object.freeze([
+  'Draw with a CAD-style command line: type exact points and distances, use Ortho or Polar tracking, and snap to drawing geometry.',
+  'A PolyPDF Teams seat now also grants access to a paired company Collaboration Host after company sign-in. Approved computers can share live markups and presence on PDFs stored on the company share.',
+  'The License Manager and Collaboration Host pair with a one-time code. Company collaboration access is checked continuously; standalone hosts retain their invitation permissions.',
+  'Steel sections, seal making, and map insertion have short command words with useful typed options. Saving and PDF compatibility fixes continue across Mac and Windows.'
+]);
+
+export const releaseAnswer = "PolyPDF 1.6.1 (build 32) adds precise CAD-style drawing commands and connects Teams licensing to a company-hosted Collaboration Host. Firms continue to keep their documents and employee administration on their own infrastructure. Available for Mac and Windows; existing PolyPDF 1.x licenses still apply.";
