@@ -66,4 +66,9 @@ export const release161Highlights = Object.freeze([
   'Steel sections, seal making, and map insertion have short command words with useful typed options. Saving and PDF compatibility fixes continue across Mac and Windows.'
 ]);
 
-export const releaseAnswer = "PolyPDF 1.6.1 (build 32) adds precise CAD-style drawing commands and connects Teams licensing to a company-hosted Collaboration Host. Firms continue to keep their documents and employee administration on their own infrastructure. Available for Mac and Windows; existing PolyPDF 1.x licenses still apply.";
+export const release162Highlights = Object.freeze([
+  'Personal Pro license activation is easier to find: the license-key field is visible at the top of the Upgrade dialog, even when a company connection has been configured.',
+  'Existing personal licenses and company sign-in remain separate. Entering a personal key does not replace company settings or reduce existing personal-license rights.'
+]);
+
+export const releaseAnswer = "PolyPDF 1.6.2 (build 34) makes personal Pro activation easier to find. Existing PolyPDF 1.x licenses still work on Mac and Windows.";

@@ -42,7 +42,7 @@ export default function TeamsGuide() {
       <Chapter id="overview" number="OVERVIEW" title="A desktop console for IT. A simple sign-in for everyone.">
         <p>License Manager is a Windows desktop app backed by a service on your company server. Open it from the Start menu to manage people, seats and computers. Closing the window leaves licensing running.</p>
         <ol className="team-guide-flow" aria-label="Company setup sequence">{['Prepare server', 'Install manager', 'Connect purchase', 'Assign people', 'Share instructions'].map((label, index) => <li key={label}><span>{String(index + 1).padStart(2, '0')}</span>{label}</li>)}</ol>
-        <p className="team-guide-note">This guide covers License Manager 1.0.1 and PolyPDF 1.6.1. The License Manager belongs on the server; employees install PolyPDF on their own Mac or Windows computer.</p>
+        <p className="team-guide-note">This guide covers License Manager 1.0.1 and PolyPDF 1.6.2. The License Manager belongs on the server; employees install PolyPDF on their own Mac or Windows computer.</p>
         <p>One Teams seat covers one named employee on one active computer. An administrator does not need a seat just to manage the company. Personal licenses remain separate and keep their existing rights.</p>
       </Chapter>
       <Chapter id="purchase" number="01 / BILLING OWNER" title="Choose your seats.">

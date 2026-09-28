@@ -24,7 +24,7 @@ test('customer guide has navigable steps and never exposes unavailable installer
   expect(container.textContent).not.toContain('administrator PowerShell window');
   expect(container.textContent).toContain('License Manager downloads are not available yet');
   expect(Array.from(container.querySelectorAll('a[href$=".exe"]')).map(link => link.getAttribute('href'))).toEqual(['/downloads/collaboration/PolyPDF-Collaboration-Host-Setup.exe']);
-  for (const text of ['License Manager 1.0.1', 'PolyPDF 1.6.1', 'Create setup code', 'Check connectivity', 'Connect with company sign-in']) expect(container.textContent).toContain(text);
+  for (const text of ['License Manager 1.0.1', 'PolyPDF 1.6.2', 'Create setup code', 'Check connectivity', 'Connect with company sign-in']) expect(container.textContent).toContain(text);
   expect(container.textContent).not.toMatch(/historical|synthetic|localhost|validation diary|worktree|September 22/i);
 });
 test('employee instructions copy without a private hostname and provide a manual fallback', async () => {
