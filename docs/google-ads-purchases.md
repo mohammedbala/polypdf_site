@@ -56,3 +56,51 @@ from Google Ads; Stripe's payment records remain the sales source of truth.
 Do not interpret an unverified/new-action status as evidence of a real sale, or
 send fabricated paid orders to clear it. Reconcile real paid orders and Google
 Ads after reporting has processed them.
+
+## Rollout record — September 28, 2026
+
+- Published website source: `df81c3226e4b3ec87cc4c21988f524e58d241af1`.
+  The static deployment helper verified all 419 published files. The complete
+  production smoke passed 92 checks, including the new conversion destination,
+  checkout API, marketing routes, and download endpoints. No real payment or
+  fabricated live purchase conversion was made.
+- Automated validation: 40 focused application tests in six suites, 13
+  post-deploy smoke fixture tests, and 10 deployment-helper tests passed; the
+  full site build and localized-page validation passed.
+- Google Search campaign `24143077419` was enabled at the user-approved existing
+  USD 30/day average budget. Its status selector showed Enabled and Eligible.
+  Newly edited ads/assets can remain under review while the campaign is enabled.
+- Maximize clicks remains the bidding strategy; its CPC cap was reduced from
+  USD 3.50 to USD 2.50. Search partners and Display Network remain off.
+- Mobile phones and tablets each have a verified campaign bid adjustment of
+  -100%; computers remain eligible. United States and Canada remain targeted.
+  The additional location-presence settings did not load, so they were not
+  changed or represented as verified. Account auto-tagging was already enabled.
+- Both responsive search ads now disclose the current USD 74.95 one-time price,
+  with the price description pinned to position 1. Their final URLs point to
+  `/pdf-takeoff-software/` and `/measure-pdf-on-mac/`, with campaign UTMs.
+  Six PolyPDF campaign sitelinks and four campaign callouts were added.
+- Eighteen campaign negative keywords were added: broad negatives `free`,
+  `jobs`, `tutorial`, `crack`, `training`, `cracked`, `tutorials`, `salary`,
+  `earthwork`, `earthworks`, `torrent`, `rsmeans`; phrase negatives `rs means`,
+  `how to`, `pdf size`, `bluebeam revu 21 download`,
+  `bluebeam change measurement units`, and `pdf dimension checker`.
+- Two Google-AI-created, account-level sitelinks, `Contact Us` and
+  `Stamp Requirements`, were paused because they belonged to LicenseStamps and
+  appeared among PolyPDF's inherited assets. Google rejected adding these
+  automatic assets to a specific campaign. Their account-level pause also
+  removes their eligibility for other campaigns; it does not pause or alter
+  LicenseStamps campaign bids, budget, ads, or conversion goals. Existing
+  generic automatic callouts were left enabled.
+- LinkedIn ad set `899354034` in account `558037257` was paused and the success
+  message and Paused status were verified.
+
+This is a newly instrumented acquisition test, not evidence of profitable
+customer acquisition. Reconcile paid Stripe orders with this dedicated action,
+inspect search terms and cost per paid purchase, and avoid raising the budget
+based only on clicks or the Google optimization score. A real attributed paid
+purchase is still needed to verify the full live attribution path.
+
+The documentation-only source-sync commit intentionally skips the legacy
+push-to-master server build: the exact application code above has already been
+built, deployed atomically, and verified through the static deployment helper.
