@@ -1,5 +1,5 @@
 import { hasConsent } from './consent';
-import { ADS_ID, GA_ID, safePageContext } from './tracking';
+import { ADS_PURCHASE_DESTINATION, GA_ID, safeAdsPageContext, safePageContext } from './tracking';
 
 // Keep events content-free even if a future caller passes form or URL data by mistake.
 const SAFE_PROPERTIES = new Set(['source', 'platform', 'page_variant', 'offer_id', 'app_version', 'provider', 'reason', 'feature', 'section', 'target', 'position']);
@@ -17,10 +17,11 @@ export const trackEvent = (name, properties = {}) => {
 
 const DEDUPE_AGE = 30 * 24 * 60 * 60 * 1000;
 const normalizedPurchase = (purchase) => {
+  if (purchase?.status !== 'paid' || typeof purchase.value !== 'number') return null;
   const transactionID = typeof purchase?.transaction_id === 'string' ? purchase.transaction_id.trim() : '';
   const value = Number(purchase?.value);
   const currency = typeof purchase?.currency === 'string' ? purchase.currency.trim().toUpperCase() : '';
-  if (!/^[a-z0-9_-]{1,255}$/i.test(transactionID) || !Number.isFinite(value) || value < 0 || !/^[A-Z]{3}$/.test(currency)) return null;
+  if (!/^[a-z0-9_-]{1,255}$/i.test(transactionID) || !Number.isFinite(value) || value <= 0 || !/^[A-Z]{3}$/.test(currency)) return null;
   // Use only the first-party payment record's Stripe price identity. Never label all current
   // purchases as the retired Founder offer, or forward arbitrary item strings to analytics.
   const verifiedItem = purchase?.items?.[0];
@@ -56,15 +57,15 @@ export const trackVerifiedPurchase = (purchase) => {
   if (!normalized) return false;
   let sent = false;
   const providers = [
-    { category: 'analytics', prefix: 'polypdf.ga4.purchase.v2.', event: 'purchase', destination: GA_ID },
-    { category: 'marketing', prefix: 'polypdf.ads.purchase.v1.', event: 'conversion', destination: `${ADS_ID}/xb7JCMbVseMcELu3p9YB` }
+    { category: 'analytics', prefix: 'polypdf.ga4.purchase.v2.', event: 'purchase', destination: GA_ID, context: safePageContext },
+    { category: 'marketing', prefix: 'polypdf.ads.purchase.v2.', event: 'conversion', destination: ADS_PURCHASE_DESTINATION, context: safeAdsPageContext }
   ];
   for (const provider of providers) {
     if (!hasConsent(provider.category)) continue;
     const key = provider.prefix + normalized.transaction_id;
     if (alreadySent(key)) continue;
     window.gtag('event', provider.event, {
-      ...normalized, ...safePageContext(), send_to: provider.destination
+      ...normalized, ...provider.context(), send_to: provider.destination
     });
     rememberSent(key);
     sent = true;

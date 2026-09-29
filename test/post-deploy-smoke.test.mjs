@@ -202,7 +202,7 @@ async function withFakeSite({
         'Future major versions may be optional paid upgrades',
         '/api/checkout/conversion?session_id=',
         'polypdf.ga4.purchase.v2.',
-        'AW-449436603/xb7JCMbVseMcELu3p9YB',
+        'AW-449436603/SnB-CKSb6okdELu3p9YB',
         'buy_page_view',
         'checkout_click',
         'checkout_session_created',
