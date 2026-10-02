@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
-import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, releaseAnswer } from '../lib/releaseHighlights';
+import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, release164Highlights, releaseAnswer } from '../lib/releaseHighlights';
 import siteRelease from '../lib/siteRelease.json';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
@@ -94,6 +94,8 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.6.4 (36)': release164Highlights,
+  'Windows 1.6.4 (36)': release164Highlights,
   'macOS 1.6.2 (34)': release162Highlights,
   'Windows 1.6.2 (34)': release162Highlights,
   'macOS 1.6.1 (32)': release161Highlights,

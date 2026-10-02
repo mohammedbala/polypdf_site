@@ -71,4 +71,10 @@ export const release162Highlights = Object.freeze([
   'Existing personal licenses and company sign-in remain separate. Entering a personal key does not replace company settings or reduce existing personal-license rights.'
 ]);
 
-export const releaseAnswer = "PolyPDF 1.6.2 (build 34) makes personal Pro activation easier to find. Existing PolyPDF 1.x licenses still work on Mac and Windows.";
+export const release164Highlights = Object.freeze([
+  "Choose whether PDFs reopen at startup, and open a PDF's containing folder from File or its tab menu.",
+  "Markup tools return to Select after use by default. Turn on Keep markup and drawing tools active after use in Settings to repeat markups. Small rectangles keep their starting corner.",
+  "Manage Digital IDs, public certificate trust, certification and timestamps with clearer signing and document-security guidance."
+]);
+
+export const releaseAnswer = "PolyPDF 1.6.4 (build 36) adds startup and markup-tool preferences, fixes small rectangle drawing, and improves Digital ID and document-security workflows. Existing PolyPDF 1.x licenses still work on Mac and Windows.";
