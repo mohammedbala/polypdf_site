@@ -4,7 +4,7 @@
 
 Key facts:
 
-- Current release: PolyPDF 1.6.2 (build 34) for macOS and Windows; /versions reads the live update feeds.
+- Current release: PolyPDF 1.6.4 (build 36) for macOS and Windows; /versions reads the live update feeds.
 - Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. PolyPDF Pro removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for $74.95 USD once, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
 - New in 1.5.8: markups on rotated drawing sheets stay upright and in place. Autosize Text Box fits text boxes and callouts to their contents; PDF markup exchange and saving are more reliable.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
