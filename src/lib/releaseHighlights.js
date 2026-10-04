@@ -77,4 +77,6 @@ export const release164Highlights = Object.freeze([
   "Manage Digital IDs, public certificate trust, certification and timestamps with clearer signing and document-security guidance."
 ]);
 
-export const releaseAnswer = "PolyPDF 1.6.4 (build 36) adds startup and markup-tool preferences, fixes small rectangle drawing, and improves Digital ID and document-security workflows. Existing PolyPDF 1.x licenses still work on Mac and Windows.";
+export const releaseAnswer = "PolyPDF 1.6.5 (build 37) adds optional usage statistics, off by default and separate from error diagnostics. You can choose or clear your main-use answer. Shared statistics exclude document contents, names, paths, license keys and account identifiers. Existing PolyPDF 1.x licenses still work on Mac and Windows.";
+
+export const release165Highlights = Object.freeze([releaseAnswer]);
