@@ -77,6 +77,10 @@ export const release164Highlights = Object.freeze([
   "Manage Digital IDs, public certificate trust, certification and timestamps with clearer signing and document-security guidance."
 ]);
 
-export const releaseAnswer = "PolyPDF 1.6.5 (build 37) adds optional usage statistics, off by default and separate from error diagnostics. You can choose or clear your main-use answer. Shared statistics exclude document contents, names, paths, license keys and account identifiers. Existing PolyPDF 1.x licenses still work on Mac and Windows.";
+const release165Answer = "PolyPDF 1.6.5 (build 37) adds optional usage statistics, off by default and separate from error diagnostics. You can choose or clear your main-use answer. Shared statistics exclude document contents, names, paths, license keys and account identifiers. Existing PolyPDF 1.x licenses still work on Mac and Windows.";
 
-export const release165Highlights = Object.freeze([releaseAnswer]);
+export const release165Highlights = Object.freeze([release165Answer]);
+
+export const releaseAnswer = "PolyPDF 1.6.6 (build 38) preserves imported circles and captioned lines, saves opaque measurement masks, and improves snapping and rotated Note editing. Save captures the latest annotation text. Address lookup shows the matched address, and missing PDFs no longer interrupt startup with a recovery dialog.";
+
+export const release166Highlights = Object.freeze([releaseAnswer]);

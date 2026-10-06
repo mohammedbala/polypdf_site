@@ -1,7 +1,7 @@
 {
-  "version": "1.6.5",
-  "build": "37",
-  "releaseDate": "2026-10-04",
+  "version": "1.6.6",
+  "build": "38",
+  "releaseDate": "2026-10-05",
   "screenshotVersion": "1.4.3",
   "screenshotBuild": "20",
   "screenshotCacheToken": "1.4.3-20",
