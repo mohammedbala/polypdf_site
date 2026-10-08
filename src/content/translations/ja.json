@@ -2332,7 +2332,8 @@
     "What changed in 1.6.7": "1.6.7での変更点",
     "What is new in PolyPDF 1.6.7?": "PolyPDF 1.6.7 の新機能は何ですか?",
     "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.7 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "Mac と Windows で PDF を測定し、注釈を付けられます。PolyPDF 1.6.7 には CAD スタイルの作図コマンドと企業がホストする共同作業機能が含まれています。無料で始められます。",
-    "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.": "PolyPDF 1.6.7（ビルド39）では、読み込んだマークアップを移動またはグループ化した後、繰り返し保存すると発生するエラーを修正しました。読み込んだ円弧は、保存して再度開いた後も編集できます。ダイアログの入力欄とボタンが枠内に収まり、小さなウィンドウや拡大表示でも適切な余白を保ちます。"
+    "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.": "PolyPDF 1.6.7（ビルド39）では、読み込んだマークアップを移動またはグループ化した後、繰り返し保存すると発生するエラーを修正しました。読み込んだ円弧は、保存して再度開いた後も編集できます。ダイアログの入力欄とボタンが枠内に収まり、小さなウィンドウや拡大表示でも適切な余白を保ちます。",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.7 (build 39) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "インストール、製品のワークフロー、購入、ライセンスのアクティベーションに関するサポートが受けられます。現在のパブリック リリースは、Mac および Windows 上の PolyPDF 1.6.7 (ビルド 39) です。記入する際は、「バージョン情報」に表示されているバージョン、オペレーティング システム、および該当する場合は Stripe の領収書の詳細を含めてください。"
   },
   "sourceHash": "a06e67bb98bff3d5c248194174ae810adfd9073c7282073c45f7d47708a7934d",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

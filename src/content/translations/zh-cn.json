@@ -2332,7 +2332,8 @@
     "What changed in 1.6.7": "1.6.7 中发生了什么变化",
     "What is new in PolyPDF 1.6.7?": "PolyPDF 1.6.7 有哪些新增功能？",
     "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.7 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "在 Mac 和 Windows 上测量和标注文档。PolyPDF 1.6.7 包含 CAD 风格的绘图命令和由公司托管的协作功能。免费开始使用。",
-    "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.": "PolyPDF 1.6.7（构建39）修复了移动或分组导入的标注后重复保存时出现的错误。导入的圆弧在保存并重新打开后仍可编辑。对话框中的输入框和按钮保持在面板范围内，并改善了小窗口和放大界面下的间距。"
+    "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.": "PolyPDF 1.6.7（构建39）修复了移动或分组导入的标注后重复保存时出现的错误。导入的圆弧在保存并重新打开后仍可编辑。对话框中的输入框和按钮保持在面板范围内，并改善了小窗口和放大界面下的间距。",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.7 (build 39) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.6.7（版本 39）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。"
   },
   "sourceHash": "a06e67bb98bff3d5c248194174ae810adfd9073c7282073c45f7d47708a7934d",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
