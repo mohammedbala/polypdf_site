@@ -2318,7 +2318,21 @@
     "What changed in 1.6.6": "1.6.6での変更点",
     "What is new in PolyPDF 1.6.6?": "PolyPDF 1.6.6 の新機能は何ですか?",
     "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.6 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "Mac と Windows で PDF を測定し、注釈を付けられます。PolyPDF 1.6.6 には CAD スタイルの作図コマンドと企業がホストする共同作業機能が含まれています。無料で始められます。",
-    "PolyPDF 1.6.6 (build 38) preserves imported circles and captioned lines, saves opaque measurement masks, and improves snapping and rotated Note editing. Save captures the latest annotation text. Address lookup shows the matched address, and missing PDFs no longer interrupt startup with a recovery dialog.": "PolyPDF 1.6.6 (ビルド 38) は、インポートされた円とキャプション付きの線を保持し、不透明な測定マスクを保存し、スナップと回転ノート編集を改善します。保存すると、最新の注釈テキストがキャプチャされます。アドレス検索で一致したアドレスが表示され、PDF が見つからなくても回復ダイアログが表示されて起動が中断されることがなくなりました。"
+    "PolyPDF 1.6.6 (build 38) preserves imported circles and captioned lines, saves opaque measurement masks, and improves snapping and rotated Note editing. Save captures the latest annotation text. Address lookup shows the matched address, and missing PDFs no longer interrupt startup with a recovery dialog.": "PolyPDF 1.6.6 (ビルド 38) は、インポートされた円とキャプション付きの線を保持し、不透明な測定マスクを保存し、スナップと回転ノート編集を改善します。保存すると、最新の注釈テキストがキャプチャされます。アドレス検索で一致したアドレスが表示され、PDF が見つからなくても回復ダイアログが表示されて起動が中断されることがなくなりました。",
+    "After relaunch, About should show version 1.6.7, build 39. Your existing PolyPDF 1.x Pro license continues to apply.": "再起動後、About にはバージョン 1.6.7、ビルド 39 が表示されます。既存の PolyPDF 1.x Pro ライセンスは引き続き適用されます。",
+    "Current app: PolyPDF 1.6.7 (build 39) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "現在のアプリ: PolyPDF 1.6.7 (ビルド 39) · パッケージ形式: PolyPDF 1.3.1+ · プラグインのインストールと実行には、1.4.1+ の PolyPDF Pro が必要です",
+    "Current version 1.6.7 (build 39).": "現在のバージョン 1.6.7 (ビルド 39)。",
+    "Download PolyPDF 1.6.7 for Windows 10 and 11, x64. CAD-style drawing commands and company-hosted collaboration are included.": "Windows 10 および 11、x64 用の PolyPDF 1.6.7 をダウンロードします。 CAD スタイルの描画コマンドと企業ホストのコラボレーションが含まれています。",
+    "Explore the 1.6.7 update": "1.6.7 アップデートを確認する",
+    "Guides for PolyPDF 1.6.7: CAD-style drawing commands, rotated sheets, measurement, markup, revisions, forms, and OCR.": "PolyPDF 1.6.7 のガイド: CAD スタイルの描画コマンド、回転シート、測定、注釈、改訂、フォーム、OCR。",
+    "Guides for PolyPDF 1.6.7: rotated-sheet markups, text boxes, grouped symbols, mirroring, overlays, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "PolyPDF 1.6.7 のガイド: 回転シートの注釈、テキスト ボックス、グループ化されたシンボル、ミラーリング、オーバーレイ、施工量の測定、比較、フォーム、署名、ドキュメントの準備について、実際のアプリのキャプチャを使用して説明します。",
+    "PolyPDF 1.6.7 (build 39) makes personal Pro activation easier to find. Existing PolyPDF 1.x licenses still work on Mac and Windows.": "PolyPDF 1.6.7（ビルド 39）では、個人用 Pro ライセンスの有効化が見つけやすくなりました。既存の PolyPDF 1.x ライセンスは Mac と Windows で引き続き利用できます。",
+    "PolyPDF 1.6.7 (build 39) · Mac & Windows": "PolyPDF 1.6.7 (ビルド 39) · Mac および Windows",
+    "Update to 1.6.7": "1.6.7にアップデート",
+    "What changed in 1.6.7": "1.6.7での変更点",
+    "What is new in PolyPDF 1.6.7?": "PolyPDF 1.6.7 の新機能は何ですか?",
+    "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.7 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "Mac と Windows で PDF を測定し、注釈を付けられます。PolyPDF 1.6.7 には CAD スタイルの作図コマンドと企業がホストする共同作業機能が含まれています。無料で始められます。",
+    "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.": "PolyPDF 1.6.7（ビルド39）では、読み込んだマークアップを移動またはグループ化した後、繰り返し保存すると発生するエラーを修正しました。読み込んだ円弧は、保存して再度開いた後も編集できます。ダイアログの入力欄とボタンが枠内に収まり、小さなウィンドウや拡大表示でも適切な余白を保ちます。"
   },
   "sourceHash": "a06e67bb98bff3d5c248194174ae810adfd9073c7282073c45f7d47708a7934d",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2334,5 +2348,6 @@
   },
   "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review.",
   "release158Translation": "Release text translated with AI assistance; prior editorial content retained. Not certified native-speaker review.",
-  "releaseEditorialNote": "1.6.5 release additions translated editorially; earlier catalog entries retained."
+  "releaseEditorialNote": "1.6.5 release additions translated editorially; earlier catalog entries retained.",
+  "release167TranslationProvider": "OpenAI"
 }

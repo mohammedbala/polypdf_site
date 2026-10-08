@@ -81,6 +81,10 @@ const release165Answer = "PolyPDF 1.6.5 (build 37) adds optional usage statistic
 
 export const release165Highlights = Object.freeze([release165Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.6 (build 38) preserves imported circles and captioned lines, saves opaque measurement masks, and improves snapping and rotated Note editing. Save captures the latest annotation text. Address lookup shows the matched address, and missing PDFs no longer interrupt startup with a recovery dialog.";
+const release166Answer = "PolyPDF 1.6.6 (build 38) preserves imported circles and captioned lines, saves opaque measurement masks, and improves snapping and rotated Note editing. Save captures the latest annotation text. Address lookup shows the matched address, and missing PDFs no longer interrupt startup with a recovery dialog.";
 
-export const release166Highlights = Object.freeze([releaseAnswer]);
+export const release166Highlights = Object.freeze([release166Answer]);
+
+export const releaseAnswer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.";
+
+export const release167Highlights = Object.freeze([releaseAnswer]);

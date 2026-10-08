@@ -2318,7 +2318,21 @@
     "What changed in 1.6.6": "Ce qui a changé dans la version 1.6.6",
     "What is new in PolyPDF 1.6.6?": "Quoi de neuf dans PolyPDF 1.6.6 ?",
     "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.6 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "Mesurez et annotez des PDF sur Mac et Windows. PolyPDF 1.6.6 comprend des commandes de dessin de type CAO et une collaboration hébergée par l’entreprise. Commencez gratuitement.",
-    "PolyPDF 1.6.6 (build 38) preserves imported circles and captioned lines, saves opaque measurement masks, and improves snapping and rotated Note editing. Save captures the latest annotation text. Address lookup shows the matched address, and missing PDFs no longer interrupt startup with a recovery dialog.": "PolyPDF 1.6.6 (build 38) préserve les cercles importés et les lignes légendées, enregistre les masques de mesure opaques et améliore l'accrochage et l'édition de notes pivotées. Enregistrer capture le dernier texte d'annotation. La recherche d'adresse affiche l'adresse correspondante et les PDF manquants n'interrompent plus le démarrage avec une boîte de dialogue de récupération."
+    "PolyPDF 1.6.6 (build 38) preserves imported circles and captioned lines, saves opaque measurement masks, and improves snapping and rotated Note editing. Save captures the latest annotation text. Address lookup shows the matched address, and missing PDFs no longer interrupt startup with a recovery dialog.": "PolyPDF 1.6.6 (build 38) préserve les cercles importés et les lignes légendées, enregistre les masques de mesure opaques et améliore l'accrochage et l'édition de notes pivotées. Enregistrer capture le dernier texte d'annotation. La recherche d'adresse affiche l'adresse correspondante et les PDF manquants n'interrompent plus le démarrage avec une boîte de dialogue de récupération.",
+    "After relaunch, About should show version 1.6.7, build 39. Your existing PolyPDF 1.x Pro license continues to apply.": "Après la relance, À propos devrait afficher la version 1.6.7, build 39. Votre licence PolyPDF 1.x Pro existante continue de s'appliquer.",
+    "Current app: PolyPDF 1.6.7 (build 39) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Application actuelle : PolyPDF 1.6.7 (build 39) · Format du package : PolyPDF 1.3.1+ · L'installation et l'exécution des plugins nécessitent PolyPDF Pro dans la version 1.4.1+",
+    "Current version 1.6.7 (build 39).": "Version actuelle 1.6.7 (build 39).",
+    "Download PolyPDF 1.6.7 for Windows 10 and 11, x64. CAD-style drawing commands and company-hosted collaboration are included.": "Téléchargez PolyPDF 1.6.7 pour Windows 10 et 11, x64. Des commandes de dessin de style CAO et une collaboration hébergée par l'entreprise sont incluses.",
+    "Explore the 1.6.7 update": "Explorez la mise à jour 1.6.7",
+    "Guides for PolyPDF 1.6.7: CAD-style drawing commands, rotated sheets, measurement, markup, revisions, forms, and OCR.": "Guides pour PolyPDF 1.6.7 : commandes de dessin de style CAO, feuilles pivotées, mesures, annotations, révisions, formulaires et OCR.",
+    "Guides for PolyPDF 1.6.7: rotated-sheet markups, text boxes, grouped symbols, mirroring, overlays, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "Guides pour PolyPDF 1.6.7 : annotations de feuilles pivotées, zones de texte, symboles groupés, mise en miroir, superpositions, mesure de la quantité de construction, comparaison, formulaires, signatures et préparation de documents, illustrés de captures d'application réelles.",
+    "PolyPDF 1.6.7 (build 39) makes personal Pro activation easier to find. Existing PolyPDF 1.x licenses still work on Mac and Windows.": "PolyPDF 1.6.7 (version 39) facilite l’accès à l’activation Pro personnelle. Les licences PolyPDF 1.x existantes fonctionnent toujours sur Mac et Windows.",
+    "PolyPDF 1.6.7 (build 39) · Mac & Windows": "PolyPDF 1.6.7 (version 39) · Mac et Windows",
+    "Update to 1.6.7": "Mise à jour vers 1.6.7",
+    "What changed in 1.6.7": "Ce qui a changé dans la version 1.6.7",
+    "What is new in PolyPDF 1.6.7?": "Quoi de neuf dans PolyPDF 1.6.7 ?",
+    "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.7 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "Mesurez et annotez des PDF sur Mac et Windows. PolyPDF 1.6.7 comprend des commandes de dessin de type CAO et une collaboration hébergée par l’entreprise. Commencez gratuitement.",
+    "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.": "PolyPDF 1.6.7 (build 39) corrige les erreurs lors des enregistrements répétés après le déplacement ou le regroupement d’annotations importées. Les arcs importés restent modifiables après l’enregistrement et la réouverture. Les champs et boutons restent dans les limites des boîtes de dialogue, avec un meilleur espacement dans les petites fenêtres et à une échelle d’interface agrandie."
   },
   "sourceHash": "a06e67bb98bff3d5c248194174ae810adfd9073c7282073c45f7d47708a7934d",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2334,5 +2348,6 @@
   },
   "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review.",
   "release158Translation": "Release text translated with AI assistance; prior editorial content retained. Not certified native-speaker review.",
-  "releaseEditorialNote": "1.6.5 release additions translated editorially; earlier catalog entries retained."
+  "releaseEditorialNote": "1.6.5 release additions translated editorially; earlier catalog entries retained.",
+  "release167TranslationProvider": "OpenAI"
 }
