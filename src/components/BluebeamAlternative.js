@@ -41,6 +41,7 @@ const BluebeamAlternative = () => (
           <p>We added a review box and a text note in PolyPDF 1.6.6 (build 38), saved the PDF, closed it, and reopened it. The saved annotations also rendered in an independent PDF viewer engine. Checked October 15, 2026.</p>
           <a className="workflow-text-link" href="/samples/conversion/northline-studio-reviewed.pdf" download onClick={() => trackEvent('sample_download', { source: 'landing_bluebeam_mac', feature: 'saved_handoff' })}>Download the saved review PDF</a>
           <p className="mac-comparison-note">The sample is a demonstration drawing, not for construction. A successful sample check does not establish compatibility for every PDF, markup, signature, form, or Studio workflow.</p>
+          <p>Use the <a href="/bluebeam-alternative/#handoff-checklist">Bluebeam migration checklist and blank CSV worksheet</a> to record your own scale, quantity, markup and recipient checks before switching.</p>
           <p>For a complete quantity example, <Link to="/blog/pdf-takeoff-worked-example/">follow the worked takeoff guide</Link>. It shows the source scale, a 540 sq ft area, a 30 ft run, and 12 reviewed counts. Those quantities belong to that guide’s sample, not the Northline drawing above.</p>
         </div>
       </div>

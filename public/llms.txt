@@ -61,8 +61,8 @@ Key facts:
 - [PDF Measuring Tool for Mac & Windows](https://www.polypdf.com/pdf-measuring-tool/): Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.
 - [Electrical Takeoff Software for Mac & Windows](https://www.polypdf.com/electrical-takeoff-software/): Count fixtures, measure drawn routes, and export electrical quantities from PDFs. Review sample files and try PolyPDF on Mac or Windows.
 - [Flooring Takeoff Software for Mac & Windows](https://www.polypdf.com/flooring-takeoff-software/): Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.
-- [Bluebeam Alternative for Mac & Windows](https://www.polypdf.com/bluebeam-alternative/): Compare PolyPDF and Bluebeam for takeoff, PDF markup, exports, licensing, and collaboration. Check the limits before you switch.
-- [Construction PDF Samples & Quantity Worksheets](https://www.polypdf.com/samples/): Download synthetic construction drawings, reference quantities, and a saved markup sample. Practice calibration, takeoff, and review without an email gate.
+- [Bluebeam Alternative for Mac & Windows](https://www.polypdf.com/bluebeam-alternative/): Compare PolyPDF and Bluebeam for takeoff, markup and licensing. Use the migration checklist to test PDF handoff, quantities and Studio requirements.
+- [Construction PDF Samples & Quantity Worksheets](https://www.polypdf.com/samples/): Download construction practice PDFs, reference quantities, verified Mac takeoff exports and a handoff checklist. No account or email required.
 - [Construction Quantity Calculators](https://www.polypdf.com/tools/): Use the free flooring waste calculator to turn measured room areas into ordering quantities, whole packs, and material costs.
 - [Flooring Waste Calculator: Area, Packs & Cost](https://www.polypdf.com/tools/flooring-waste-calculator/): Calculate flooring area with waste, round to whole packs, and estimate material cost. Add multiple rooms, switch units, and export your worksheet.
 

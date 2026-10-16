@@ -344,13 +344,13 @@
   },
   "/bluebeam-alternative": {
     "title": "Bluebeam Alternative for Mac & Windows | PolyPDF",
-    "description": "Compare PolyPDF and Bluebeam for takeoff, PDF markup, exports, licensing, and collaboration. Check the limits before you switch.",
+    "description": "Compare PolyPDF and Bluebeam for takeoff, markup and licensing. Use the migration checklist to test PDF handoff, quantities and Studio requirements.",
     "robots": "index, follow",
     "dateModified": "2026-10-16"
   },
   "/samples": {
     "title": "Construction PDF Samples & Quantity Worksheets | PolyPDF",
-    "description": "Download synthetic construction drawings, reference quantities, and a saved markup sample. Practice calibration, takeoff, and review without an email gate.",
+    "description": "Download construction practice PDFs, reference quantities, verified Mac takeoff exports and a handoff checklist. No account or email required.",
     "robots": "index, follow",
     "dateModified": "2026-10-16"
   },

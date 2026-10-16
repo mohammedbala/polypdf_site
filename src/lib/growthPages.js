@@ -13,8 +13,8 @@ export const growthMetadata = {
  '/pdf-measuring-tool': ['PDF Measuring Tool for Mac & Windows | PolyPDF','Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.'],
  '/electrical-takeoff-software':['Electrical Takeoff Software for Mac & Windows | PolyPDF','Count fixtures, measure drawn routes, and export electrical quantities from PDFs. Review sample files and try PolyPDF on Mac or Windows.'],
  '/flooring-takeoff-software':['Flooring Takeoff Software for Mac & Windows | PolyPDF','Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.'],
- '/bluebeam-alternative':['Bluebeam Alternative for Mac & Windows | PolyPDF','Compare PolyPDF and Bluebeam for takeoff, PDF markup, exports, licensing, and collaboration. Check the limits before you switch.'],
- '/samples':['Construction PDF Samples & Quantity Worksheets | PolyPDF','Download synthetic construction drawings, reference quantities, and a saved markup sample. Practice calibration, takeoff, and review without an email gate.'],
+ '/bluebeam-alternative':['Bluebeam Alternative for Mac & Windows | PolyPDF','Compare PolyPDF and Bluebeam for takeoff, markup and licensing. Use the migration checklist to test PDF handoff, quantities and Studio requirements.'],
+ '/samples':['Construction PDF Samples & Quantity Worksheets | PolyPDF','Download construction practice PDFs, reference quantities, verified Mac takeoff exports and a handoff checklist. No account or email required.'],
  '/tools':['Construction Quantity Calculators | PolyPDF','Use the free flooring waste calculator to turn measured room areas into ordering quantities, whole packs, and material costs.'],
  '/tools/flooring-waste-calculator':['Flooring Waste Calculator: Area, Packs & Cost | PolyPDF','Calculate flooring area with waste, round to whole packs, and estimate material cost. Add multiple rooms, switch units, and export your worksheet.']
 };
