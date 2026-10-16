@@ -85,6 +85,10 @@ const release166Answer = "PolyPDF 1.6.6 (build 38) preserves imported circles an
 
 export const release166Highlights = Object.freeze([release166Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.";
+const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.";
 
-export const release167Highlights = Object.freeze([releaseAnswer]);
+export const release167Highlights = Object.freeze([release167Answer]);
+
+export const releaseAnswer = "PolyPDF 1.6.13 (build 74) preserves imported markups when combining PDFs, restores search highlights for phrases with spaces or line separators, and reduces repeated thumbnail rendering.";
+
+export const release1613Highlights = Object.freeze([releaseAnswer]);

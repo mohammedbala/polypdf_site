@@ -2342,7 +2342,21 @@
     "PolyPDF 1.5.5 (build 27) adds customizable wheel and drag zoom, Shift panning, and fixes for snapshot proportions and saved orientation on Mac and Windows.": "PolyPDF 1.5.5 (build 27) ajoute le zoom personnalisable à la molette et par glissement, le déplacement avec Shift et des corrections de proportions et d’orientation des captures sur Mac et Windows.",
     "Compare PolyPDF and Bluebeam on Mac": "Comparer PolyPDF et Bluebeam sur Mac",
     "Current release and updates": "Version actuelle et mises à jour",
-    "See the version history for current Mac and Windows releases, fixes, and update instructions.": "Consultez l’historique pour les versions actuelles sur Mac et Windows, les correctifs et les instructions de mise à jour."
+    "See the version history for current Mac and Windows releases, fixes, and update instructions.": "Consultez l’historique pour les versions actuelles sur Mac et Windows, les correctifs et les instructions de mise à jour.",
+    "After relaunch, About should show version 1.6.13, build 74. Your existing PolyPDF 1.x Pro license continues to apply.": "Après la relance, À propos devrait afficher la version 1.6.13, build 74. Votre licence PolyPDF 1.x Pro existante continue de s'appliquer.",
+    "Current app: PolyPDF 1.6.13 (build 74) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Application actuelle : PolyPDF 1.6.13 (build 74) · Format du package : PolyPDF 1.3.1+ · L'installation et l'exécution des plugins nécessitent PolyPDF Pro dans la version 1.4.1+",
+    "Current version 1.6.13 (build 74).": "Version actuelle 1.6.13 (build 74).",
+    "Download PolyPDF 1.6.13 for Windows 10 and 11, x64. CAD-style drawing commands and company-hosted collaboration are included.": "Téléchargez PolyPDF 1.6.13 pour Windows 10 et 11, x64. Des commandes de dessin de style CAO et une collaboration hébergée par l'entreprise sont incluses.",
+    "Explore the 1.6.13 update": "Explorez la mise à jour 1.6.13",
+    "Guides for PolyPDF 1.6.13: CAD-style drawing commands, rotated sheets, measurement, markup, revisions, forms, and OCR.": "Guides pour PolyPDF 1.6.13 : commandes de dessin de style CAO, feuilles pivotées, mesures, annotations, révisions, formulaires et OCR.",
+    "Guides for PolyPDF 1.6.13: rotated-sheet markups, text boxes, grouped symbols, mirroring, overlays, takeoff, comparison, forms, signatures, and document preparation, illustrated with real app captures.": "Guides pour PolyPDF 1.6.13 : annotations de feuilles pivotées, zones de texte, symboles groupés, mise en miroir, superpositions, mesure de la quantité de construction, comparaison, formulaires, signatures et préparation de documents, illustrés de captures d'application réelles.",
+    "PolyPDF 1.6.13 (build 74) · Mac & Windows": "PolyPDF 1.6.13 (version 74) · Mac et Windows",
+    "Update to 1.6.13": "Mise à jour vers 1.6.13",
+    "What changed in 1.6.13": "Ce qui a changé dans la version 1.6.13",
+    "What is new in PolyPDF 1.6.13?": "Quoi de neuf dans PolyPDF 1.6.13 ?",
+    "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.13 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "Mesurez et annotez des PDF sur Mac et Windows. PolyPDF 1.6.13 comprend des commandes de dessin de type CAO et une collaboration hébergée par l’entreprise. Commencez gratuitement.",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.13 (build 74) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenez de l'aide pour l'installation, les flux de travail des produits, les achats et l'activation des licences. La version publique actuelle est PolyPDF 1.6.13 (build 74) sur Mac et Windows. Lorsque vous écrivez, incluez la version affichée dans À propos, votre système d'exploitation et les détails du reçu Stripe, le cas échéant.",
+    "PolyPDF 1.6.13 (build 74) preserves imported markups when combining PDFs, restores search highlights for phrases with spaces or line separators, and reduces repeated thumbnail rendering.": "PolyPDF 1.6.13 (build 74) conserve les annotations importées lors de la fusion de PDF, rétablit le surlignage des recherches contenant des espaces ou des sauts de ligne et réduit le rendu répété des vignettes."
   },
   "sourceHash": "a06e67bb98bff3d5c248194174ae810adfd9073c7282073c45f7d47708a7934d",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2360,5 +2374,5 @@
   "release158Translation": "Release text translated with AI assistance; prior editorial content retained. Not certified native-speaker review.",
   "releaseEditorialNote": "1.6.5 release additions translated editorially; earlier catalog entries retained.",
   "release167TranslationProvider": "OpenAI",
-  "seoAuditEditorialReview": "October 15, 2026: evergreen metadata, historical 1.5.5 summary, Mac comparison link, and release-history navigation. AI-assisted translations; no independent native-speaker review."
+  "seoAuditEditorialReview": "2026-10-15: AI-assisted editorial fixes for metadata, historical release answers, comparison links, and current release labels checked against public 1.6.13 build 74 feeds. No independent native-speaker review."
 }
