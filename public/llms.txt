@@ -63,7 +63,8 @@ Key facts:
 - [Flooring Takeoff Software for Mac & Windows](https://www.polypdf.com/flooring-takeoff-software/): Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.
 - [Bluebeam Alternative for Mac & Windows](https://www.polypdf.com/bluebeam-alternative/): Compare PolyPDF and Bluebeam for takeoff, markup and licensing. Use the migration checklist to test PDF handoff, quantities and Studio requirements.
 - [Construction PDF Samples & Quantity Worksheets](https://www.polypdf.com/samples/): Download construction practice PDFs, reference quantities, verified Mac takeoff exports and a handoff checklist. No account or email required.
-- [Construction Quantity Calculators](https://www.polypdf.com/tools/): Use the free flooring waste calculator to turn measured room areas into ordering quantities, whole packs, and material costs.
+- [PDF Scale Checker & Construction Calculators](https://www.polypdf.com/tools/): Check PDF scale accuracy against known dimensions, then calculate flooring waste and whole packs. Free tools with CSV records; no account required.
+- [PDF Scale Accuracy Checker: Free Reference Check](https://www.polypdf.com/tools/pdf-scale-checker/): Check horizontal and vertical PDF measurement errors against your project tolerance. Compare known dimensions and download a CSV record. Free, no upload.
 - [Flooring Waste Calculator: Area, Packs & Cost](https://www.polypdf.com/tools/flooring-waste-calculator/): Calculate flooring area with waste, round to whole packs, and estimate material cost. Add multiple rooms, switch units, and export your worksheet.
 
 ## Product notes

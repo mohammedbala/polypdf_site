@@ -59,6 +59,13 @@
       "h1": "pass"
     },
     {
+      "route": "/tools/pdf-scale-checker",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
       "route": "/blog/quantity-takeoff",
       "staticAccessibilityViolations": 0,
       "links": "pass",

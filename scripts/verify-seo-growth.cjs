@@ -5,7 +5,7 @@ const assert = require('assert/strict');
 const { JSDOM } = require('jsdom');
 const axe = require('axe-core');
 const build = path.resolve(process.env.BUILD_PATH || 'build');
-const routes = ['/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/blog/quantity-takeoff'];
+const routes = ['/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff'];
 (async () => {
  const results = [];
  for (const route of routes) {

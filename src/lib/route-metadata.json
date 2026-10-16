@@ -355,8 +355,8 @@
     "dateModified": "2026-10-16"
   },
   "/tools": {
-    "title": "Construction Quantity Calculators | PolyPDF",
-    "description": "Use the free flooring waste calculator to turn measured room areas into ordering quantities, whole packs, and material costs.",
+    "title": "PDF Scale Checker & Construction Calculators | PolyPDF",
+    "description": "Check PDF scale accuracy against known dimensions, then calculate flooring waste and whole packs. Free tools with CSV records; no account required.",
     "robots": "index, follow",
     "dateModified": "2026-10-16"
   },
@@ -369,6 +369,12 @@
   "/product-facts": {
     "title": "PolyPDF Product Facts: Platforms, Free & Pro, Limits",
     "description": "Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/tools/pdf-scale-checker": {
+    "title": "PDF Scale Accuracy Checker: Free Reference Check | PolyPDF",
+    "description": "Check horizontal and vertical PDF measurement errors against your project tolerance. Compare known dimensions and download a CSV record. Free, no upload.",
     "robots": "index, follow",
     "dateModified": "2026-10-16"
   }

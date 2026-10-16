@@ -48,3 +48,13 @@ AEO means making the site useful and understandable as a source for answer engin
 - Validation: full production build; 19 relevant tests across four suites; the nine-route SEO/accessibility audit; desktop 1280 px and mobile 390 px checks with no horizontal overflow; direct-anchor and keyboard navigation; actual browser download with exact-byte and seven-row content verification. The static accessibility audit excludes contrast.
 
 This follow-up adds no routes or claims of current-version or Windows test coverage. Publication retains the immutable static-release inventory, hash, predecessor and rollback checks, followed by production smoke verification.
+
+## PDF scale verification tool
+
+- Added `/tools/pdf-scale-checker/`, an English-only reference checker. It compares known horizontal and vertical dimensions with calibrated PDF readings, calculates signed percentage errors, and tests each separately against the user's entered tolerance. No project tolerance is selected by default.
+- The worked example uses 20 ft / 20.2 ft and 12 ft / 12 ft with an illustrative 0.5% tolerance. A failed direction is not averaged into a passing result. Copy explains that two passing references do not certify a whole drawing or diagnose scan distortion.
+- Unit changes convert all entered lengths. Editing, converting, loading an example or clearing removes the previous result. CSV export records the inputs, errors, tolerance and limited scope. The values stay in the browser; existing consent-gated events send only the tool's fixed source and feature labels.
+- Linked the checker from the PDF measurement answer, related links, tools and samples. Added prerendered content, canonical metadata, sitemap and discovery entries. The tool links back to the existing calibration and troubleshooting guides. Existing localized pages retain their scope.
+- Validation: 44 tests in six suites cover calculation boundaries, opposite error signs, invalid/extreme values, unit conversion, CSV values, form validation/focus, result invalidation, metadata and analytics. Full build validates 53 English routes plus 404 and 240 localized pages. The ten-route static SEO/accessibility audit excludes contrast. Actual browser checks cover narrow layout, keyboard calculation, input validation, unit conversion and a downloaded CSV whose values and limited-scope notes were independently parsed.
+
+The checker compares entered readings; it does not upload, measure or repair PDFs. No new desktop-app verification, ranking or conversion claim is made.
