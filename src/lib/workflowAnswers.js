@@ -35,7 +35,7 @@ export const workflowAnswers = {
   '/construction-pdf-markup': {
     question: 'How do you make construction PDF markups useful to the next reviewer?',
     answer: 'Anchor each markup to the correct sheet and revision, describe the issue, and identify the action or clarification needed. PolyPDF supports notes, callouts, shapes, highlights, and revision clouds. Save and reopen a representative file, then test it in the recipient’s viewer before standardizing the handoff. The supplied review sample demonstrates a specific saved output, not universal viewer compatibility.',
-    href: '/samples/', label: 'Inspect the saved review sample'
+    href: '/construction-pdf-markup/#review-handoff', label: 'Check the review handoff and saved sample'
   },
   '/compare-pdf-drawings': {
     question: 'How do you compare two revisions of a PDF drawing?',

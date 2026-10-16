@@ -16,6 +16,7 @@ import GrowthNav from './GrowthNav';
 import GrowthEvidence from './GrowthEvidence';
 import WorkflowAnswer from './WorkflowAnswer';
 import TakeoffEvaluation from './TakeoffEvaluation';
+import MarkupEvaluation from './MarkupEvaluation';
 
 export const CURRENT_INTERFACE_LABEL = 'PolyPDF for Mac and Windows';
 
@@ -70,6 +71,7 @@ const WorkflowLanding = ({ page, children }) => {
                 </DirectCheckoutLink>
               </div>
               {page.path === '/pdf-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Takeoff decisions"><a href="#free-vs-pro">Compare Free and Pro</a><a href="#try-a-takeoff">Try the practice takeoff</a></nav>}
+              {page.path === '/construction-pdf-markup' && <nav className="takeoff-jump-links" aria-label="Markup decisions"><a href="#markup-free-vs-pro">Compare Free and Pro</a><a href="#review-handoff">Check the review handoff</a></nav>}
             </div>
 
             <figure className="workflow-hero-visual">
@@ -114,7 +116,8 @@ const WorkflowLanding = ({ page, children }) => {
 
         {children}
         {!children && page.path === '/pdf-takeoff-software' && <TakeoffEvaluation />}
-        {!children && ['/measure-pdf-on-mac','/construction-pdf-markup','/compare-pdf-drawings'].includes(page.path) && <GrowthEvidence kind={page.path === '/compare-pdf-drawings' ? 'compare' : page.path === '/construction-pdf-markup' ? 'review' : 'takeoff'} /> }
+        {!children && page.path === '/construction-pdf-markup' && <MarkupEvaluation />}
+        {!children && ['/measure-pdf-on-mac','/compare-pdf-drawings'].includes(page.path) && <GrowthEvidence kind={page.path === '/compare-pdf-drawings' ? 'compare' : 'takeoff'} /> }
 
         <section className="workflow-steps" id="how-it-works">
           <div className="container">
