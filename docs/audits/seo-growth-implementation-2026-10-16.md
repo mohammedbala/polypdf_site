@@ -39,3 +39,12 @@ Research, keyword estimates, commercial strategy and unsent outreach drafts are 
 - Local SSH upload spooling avoids the interrupted streaming-pipe transfers observed during publication, while preserving all remote inventory, predecessor, disk-space, hash, activation, and rollback gates.
 
 AEO means making the site useful and understandable as a source for answer engines. No current AI visibility uplift or ranking improvement has been measured. Research and any paid tracking decisions remain in the private OpenSEO project.
+
+## Migration checklist follow-up
+
+- The general Bluebeam comparison now answers what to test before switching, with seven checks covering calibration, quantities, editable markups, exports, document controls and recipient acceptance. It retains the Studio limitation and Free measurement cap.
+- A blank CSV worksheet is generated from the same source as the visible checklist. Every check starts as `Not tested`; evidence and reviewer fields are blank. It is a project worksheet, not a compatibility certification.
+- The Mac comparison and sample library link to the stable checklist anchor. Comparison and sample descriptions now name the new resource. Downloads use the existing consent-gated sample event.
+- Validation: full production build; 19 relevant tests across four suites; the nine-route SEO/accessibility audit; desktop 1280 px and mobile 390 px checks with no horizontal overflow; direct-anchor and keyboard navigation; actual browser download with exact-byte and seven-row content verification. The static accessibility audit excludes contrast.
+
+This follow-up adds no routes or claims of current-version or Windows test coverage. Publication retains the immutable static-release inventory, hash, predecessor and rollback checks, followed by production smoke verification.

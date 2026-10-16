@@ -60,6 +60,7 @@ const { blogPosts, blogPostPath } = require(path.join(srcDirectory, 'lib', 'blog
 const { growthMetadata } = require(path.join(srcDirectory, 'lib', 'growthPages.js'));
 const { workflowAnswers } = require(path.join(srcDirectory, 'lib', 'workflowAnswers.js'));
 const { commercialOffer } = require(path.join(srcDirectory, 'lib', 'commercialOffer.js'));
+const handoffChecklist = require(path.join(srcDirectory, 'lib', 'handoffChecklist.json'));
 
 const assert = (condition, message) => {
   if (!condition) throw new Error(message);
@@ -370,6 +371,13 @@ const syncIndexShareImageToken = () => {
 const writeDiscoveryFiles = () => {
   validatePosts();
   syncIndexShareImageToken();
+  const checklistRows = [
+    ['Section', 'Check', 'How to test', 'What to record', 'Status', 'Evidence / discrepancy', 'Reviewer / date'],
+    ['Instructions', 'Project-specific test worksheet', 'Keep the original file. Use Pass, Fail or Not applicable with a reason. Not tested is not a pass.', 'Source: https://www.polypdf.com/bluebeam-alternative/#handoff-checklist', '', '', ''],
+    ...handoffChecklist.checks.map((check, index) => [String(index + 1), check.title, check.test, check.record, 'Not tested', '', ''])
+  ];
+  const csv = checklistRows.map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(',')).join('\r\n') + '\r\n';
+  fs.writeFileSync(path.join(root, 'public/samples/conversion/bluebeam-migration-checklist.csv'), '\uFEFF' + csv);
   const metadata = buildRouteMetadata();
   fs.writeFileSync(routeMetadataPath, `${JSON.stringify(metadata, null, 2)}\n`);
   fs.writeFileSync(sitemapPath, buildSitemap(metadata));
