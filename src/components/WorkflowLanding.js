@@ -16,9 +16,9 @@ import './WorkflowLanding.css';
 
 export const CURRENT_INTERFACE_LABEL = 'PolyPDF for Mac and Windows';
 
-const WorkflowLanding = ({ page }) => {
+const WorkflowLanding = ({ page, children }) => {
   const offer = useCommercialOffer();
-  const demoId = {
+  const demoId = page.demoId || {
     '/pdf-takeoff-software': 'takeoff',
     '/measure-pdf-on-mac': 'takeoff',
     '/construction-pdf-markup': 'review',
@@ -125,6 +125,8 @@ const WorkflowLanding = ({ page }) => {
             </div>
           </div>
         </section>
+
+        {children}
 
         <section className="workflow-steps" id="how-it-works">
           <div className="container">

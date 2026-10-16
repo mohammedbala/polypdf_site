@@ -1,0 +1,88 @@
+{
+  "retrievedOn": "2026-10-15",
+  "status": "ok",
+  "source": {
+    "provider": "google_analytics_admin",
+    "propertyId": "properties/559292415",
+    "propertyDisplayName": "PolyPDF — polypdf.com"
+  },
+  "summary": {
+    "dataStreamCount": 1,
+    "webStreamCount": 1,
+    "keyEventCount": 2,
+    "customDimensionCount": 3,
+    "customMetricCount": 0,
+    "issueCount": 2
+  },
+  "issues": [
+    "enhanced_measurement_disabled",
+    "site_search_measurement_disabled"
+  ],
+  "webStreams": [
+    {
+      "streamId": "16139315609",
+      "displayName": "PolyPDF website",
+      "measurementId": "G-GB6LW050TM",
+      "defaultUri": "https://www.polypdf.com",
+      "createTime": "2026-10-16T02:15:18.042Z",
+      "updateTime": "2026-10-16T02:15:18.042Z",
+      "enhancedMeasurement": {
+        "streamEnabled": false,
+        "scrollsEnabled": true,
+        "outboundClicksEnabled": true,
+        "siteSearchEnabled": true,
+        "videoEngagementEnabled": true,
+        "fileDownloadsEnabled": true,
+        "pageChangesEnabled": true,
+        "formInteractionsEnabled": true,
+        "searchQueryParameter": "q,s,search,query,keyword",
+        "uriQueryParameter": ""
+      }
+    }
+  ],
+  "otherStreams": [],
+  "keyEvents": [
+    {
+      "eventName": "purchase",
+      "createTime": "2026-10-16T02:15:18.042810Z",
+      "countingMethod": "ONCE_PER_EVENT"
+    },
+    {
+      "eventName": "download_click",
+      "createTime": "2026-10-16T02:19:53.099577Z",
+      "deletable": true,
+      "custom": true,
+      "countingMethod": "ONCE_PER_SESSION"
+    }
+  ],
+  "customDefinitions": {
+    "dimensions": [
+      {
+        "parameterName": "page_variant",
+        "displayName": "Page variant",
+        "description": "Page placement variant for PolyPDF checkout actions.",
+        "scope": "EVENT",
+        "disallowAdsPersonalization": false
+      },
+      {
+        "parameterName": "source",
+        "displayName": "CTA source",
+        "description": "Placement source for PolyPDF download and checkout actions.",
+        "scope": "EVENT",
+        "disallowAdsPersonalization": false
+      },
+      {
+        "parameterName": "platform",
+        "displayName": "Download platform",
+        "description": "Mac or Windows desktop download selected on the website.",
+        "scope": "EVENT",
+        "disallowAdsPersonalization": false
+      }
+    ],
+    "metrics": []
+  },
+  "meta": {
+    "projectId": "9534cbef-1f99-45e8-afaa-d1393e629d0b"
+  },
+  "interpretation": "The two disabled-measurement diagnostics are expected. The site deliberately uses explicit consent-aware, sanitized page, download, demo, checkout, and verified purchase events. No default monetary value is set on download_click."
+}

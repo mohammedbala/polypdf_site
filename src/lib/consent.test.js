@@ -46,7 +46,7 @@ test('loads no provider before consent, separates destinations, and unloads on w
   syncTracking({reload});
   expect(document.getElementById('polypdf-google-tag')).toBeNull();
   saveConsent({analytics:true}); syncTracking({reload});
-  expect(document.getElementById('polypdf-google-tag').src).toContain('id=G-533RWNRCFP');
+  expect(document.getElementById('polypdf-google-tag').src).toContain('id=G-GB6LW050TM');
   const queue=window.dataLayer.map((entry)=>Array.from(entry));
   expect(queue[0]).toEqual(['consent','default', expect.objectContaining({analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied'})]);
   expect(queue.some((entry)=>entry[0]==='config'&&entry[1]==='AW-449436603')).toBe(false);

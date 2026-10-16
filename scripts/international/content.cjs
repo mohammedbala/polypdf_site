@@ -83,7 +83,7 @@ function hubHTML() {
 <div id="download" class="dl-both"><a class="primary-btn" href="/downloads/PolyPDFMac.dmg" download>Download for macOS</a><a class="primary-btn" href="/downloads/windows/PolyPDFSetup.exe" download>Download for Windows</a></div>
 <p>macOS 14 or newer, Apple silicon and Intel; Windows 10 or 11, 64-bit. Start free with markup, review, calibration, and up to 3 hand-created measurements per document. Unlimited measurements, Symbol Search, plugins, and Revision Package changes or publishing require Pro.</p>
 <p><a href="/buy/?source=international_hub">View current Pro pricing and license terms</a></p>
-<h2>What is new in PolyPDF ${siteRelease.version}?</h2><p>Markups on rotated drawing sheets now appear upright and in place.</p><p>Autosize Text Box fits text boxes and callouts to their contents. PDF markup exchange and saving are more reliable.</p><p><a href="/versions/">Explore the ${siteRelease.version} update</a></p>
+<h2>Current release and updates</h2><p>See the version history for current Mac and Windows releases, fixes, and update instructions.</p><p><a href="/versions/">Explore the ${siteRelease.version} update</a></p>
 <h2>Using metric construction drawings</h2><p>Choose the units shown on the drawing and calibrate from a known dimension. For a 1:100 drawing, 10 mm on the correctly sized page represents 1 m on site. A 5 m by 4 m rectangle has an area of 20 m²; subtract a 1 m² opening to obtain 19 m² net. At a depth of 0.15 m, that net area corresponds to 2.85 m³. Check a second known dimension before using any quantity in an estimate.</p>
 <p>Do not mix paper dimensions with site dimensions, metres with millimetres, or net quantities with waste allowances. Original guide screenshots may use feet and inches; preserve those units when following the example. Confirm project specifications and local measurement rules separately.</p>
 <h2>Construction workflows</h2>${list(routes.filter((r)=>['/pdf-takeoff-software','/measure-pdf-on-mac','/construction-pdf-markup','/visual-search-pdf-count','/compare-pdf-drawings','/revision-packages'].includes(r)))}
@@ -93,7 +93,7 @@ function hubHTML() {
 }
 const hubMetadata = {
   title: 'PDF Measurement & Construction Takeoff Guides | PolyPDF',
-  description: 'Measure construction PDFs, calculate quantities, compare drawing revisions, and review markups. Localized PolyPDF guides for estimators, contractors, architects, and engineers.',
+  description: 'Measure construction PDFs, calculate quantities, compare drawing revisions, and review markups. Practical PolyPDF guides for construction teams.',
   robots: 'index, follow',
 };
 function sourcePage(build, route) {
