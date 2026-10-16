@@ -174,7 +174,7 @@ const STATIC_LASTMOD = Object.freeze({
   '/refund': '2026-09-03',
   '/feature-requests': '2026-09-07',
   '/support': siteRelease.releaseDate,
-  '/windows': '2026-10-15',
+  '/windows': '2026-10-16',
   '/terms': '2026-09-03',
   '/versions': '2026-10-15',
   '/revision-packages': '2026-09-07',
