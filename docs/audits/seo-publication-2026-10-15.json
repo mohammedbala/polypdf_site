@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-15",
+  "authorization": "User explicitly approved website publication and creation of the free Analytics account/property with Google Analytics and Data Processing Terms.",
+  "initialPublication": {
+    "phase": "published",
+    "sourceCommit": "e087d3ae38006d88248480662d652a069b5e6cff",
+    "previousWebsite": "/var/www/polypdf-site/releases/5ec15f58ae484f7f52c7b3752bcf8ca0db4a8614",
+    "candidateWebsite": "/var/www/polypdf-site/releases/e087d3ae38006d88248480662d652a069b5e6cff",
+    "published": true,
+    "startedAt": "2026-10-16T02:07:12Z",
+    "verifiedFiles": 421
+  },
+  "initialSmokeFinding": "Prior website release label 1.6.7/build 39 disagreed with the already-public Mac and Windows feeds 1.6.13/build 74. Fixed before final completion.",
+  "finalPublication": {
+    "phase": "published",
+    "sourceCommit": "09b8913318d2c2a54778e65747a50fc387737c6c",
+    "previousWebsite": "/var/www/polypdf-site/releases/e087d3ae38006d88248480662d652a069b5e6cff",
+    "candidateWebsite": "/var/www/polypdf-site/releases/09b8913318d2c2a54778e65747a50fc387737c6c",
+    "published": true,
+    "startedAt": "2026-10-16T02:22:05Z",
+    "verifiedFiles": 421
+  },
+  "releaseAlignment": {
+    "version": "1.6.13",
+    "build": "74",
+    "releaseDate": "2026-10-15",
+    "sources": [
+      "https://www.polypdf.com/downloads/polypdfmac-appcast.xml",
+      "https://www.polypdf.com/downloads/windows/latest.yml",
+      "https://www.polypdf.com/downloads/PolyPDFMac-v1.6.13-74.html",
+      "https://www.polypdf.com/downloads/windows/PolyPDFWin-v1.6.13-74.html"
+    ],
+    "historical167SummaryPreserved": true,
+    "savedHandoffTestVersionUnchanged": "1.6.6 build38"
+  },
+  "validation": {
+    "jestTests": 139,
+    "suites": 28,
+    "staticFilesHashVerified": 421,
+    "productionSmokeChecks": 91,
+    "checkoutSmokeSkipped": true,
+    "localizedPages": 240,
+    "localizedDiscoveryFiles": 16,
+    "consentBefore": {
+      "googleScripts": []
+    },
+    "consentAnalyticsOnly": {
+      "tag": "https://www.googletagmanager.com/gtag/js?id=G-GB6LW050TM"
+    },
+    "consentAfterReject": {
+      "googleScripts": []
+    },
+    "realtime": {
+      "activeUsers": 1,
+      "pageTitle": "Bluebeam Alternative for Mac | PolyPDF Takeoff & Markup",
+      "observedEvents": [
+        "first_visit",
+        "page_view",
+        "session_start",
+        "workflow_demo_watched"
+      ],
+      "testDownloadOrPurchase": false
+    }
+  },
+  "analytics": {
+    "accountId": "412279203",
+    "propertyId": "559292415",
+    "streamId": "16139315609",
+    "measurementId": "G-GB6LW050TM",
+    "streamUrl": "https://www.polypdf.com",
+    "timeZone": "America/New_York",
+    "currency": "USD",
+    "optionalAccountDataSharing": false,
+    "enhancedMeasurement": false,
+    "keyEvents": [
+      {
+        "name": "purchase",
+        "counting": "ONCE_PER_EVENT"
+      },
+      {
+        "name": "download_click",
+        "counting": "ONCE_PER_SESSION",
+        "defaultMonetaryValue": null
+      }
+    ],
+    "customDimensions": {
+      "source": "CTA source",
+      "page_variant": "Page variant",
+      "platform": "Download platform"
+    },
+    "openSeoConnected": true,
+    "historicalData": "None before setup; OpenSEO successfully read the previous complete day with no rows.",
+    "coverage": "Existing consent-aware English React site, including the new comparison and purchase flow. The 240 localized static pages intentionally run no tracking scripts."
+  }
+}
