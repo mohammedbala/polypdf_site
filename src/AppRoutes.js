@@ -27,6 +27,7 @@ import Terms from './components/Terms';
 import VersionHistory from './components/VersionHistory';
 import WorkflowLanding from './components/WorkflowLanding';
 import BluebeamAlternative from './components/BluebeamAlternative';
+import { GrowthLanding, SamplesPage, ToolsPage, CalculatorPage } from './components/GrowthPages';
 import { landingPages } from './lib/landingPages';
 import './App.css';
 import './Monochrome.css';
@@ -69,6 +70,13 @@ const AppRoutes = () => {
             <Route path="/windows" element={<WindowsPreview />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/versions" element={<VersionHistory />} />
+            <Route path="/pdf-measuring-tool" element={<GrowthLanding kind="measurement" />} />
+            <Route path="/electrical-takeoff-software" element={<GrowthLanding kind="electrical" />} />
+            <Route path="/flooring-takeoff-software" element={<GrowthLanding kind="flooring" />} />
+            <Route path="/bluebeam-alternative" element={<GrowthLanding kind="comparison" />} />
+            <Route path="/samples" element={<SamplesPage />} />
+            <Route path="/tools" element={<ToolsPage />} />
+            <Route path="/tools/flooring-waste-calculator" element={<CalculatorPage />} />
             <Route path="/bluebeam-alternative-for-mac" element={<BluebeamAlternative />} />
             <Route path={landingPages.revisionPackages.path} element={<WorkflowLanding page={landingPages.revisionPackages} />} />
             <Route path={landingPages.pdfTakeoffSoftware.path} element={<WorkflowLanding page={landingPages.pdfTakeoffSoftware} />} />

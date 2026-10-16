@@ -44,8 +44,10 @@ for (const e of manifest.routes) {
   assert.equal(d.querySelectorAll('h1').length,1,prefix+'single H1');
   assert(d.querySelector('[data-site-footer]').textContent.includes('Euclidean Software LLC'),prefix+'publisher identity');
   assert(d.querySelector('h1').textContent.trim().length>0,prefix+'translated H1');
-  assert.equal(d.querySelectorAll('script:not([type="application/ld+json"])').length,0,prefix+'no English hydration/trackers');
-  assert.equal(d.querySelectorAll('button,input,form,select').length,0,prefix+'no inert React controls');
+  assert.equal(d.querySelectorAll('script:not([type="application/ld+json"])').length,1,prefix+'one consent-gated enhancement');
+  assert.match(d.querySelector('script[src]')?.getAttribute('src'),/^\/static\/js\/localized-tracking\.[a-f0-9]{8}\.js$/,prefix+'no English app hydration');
+  assert(d.querySelector('[data-local-consent] dialog'),prefix+'localized cookie settings');
+  assert.equal([...d.querySelectorAll('button,input,form,select')].filter(el=>!el.closest('[data-local-consent]')).length,0,prefix+'no inert React controls');
   assert(!/ZXQ|QXZ|\[X\d{4}X\]/i.test(html),prefix+'no translation tokens');
   assert(!/noindex/.test(d.querySelector('meta[name=robots]').content),prefix+'indexable');
   assert(locations.includes(c.ORIGIN+e.route),prefix+'sitemap');

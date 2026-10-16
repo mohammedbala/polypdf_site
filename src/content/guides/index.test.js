@@ -2,8 +2,8 @@ import { guidePosts } from './index';
 
 const valuesAreUnique = (values) => new Set(values.map((value) => value.toLowerCase())).size === values.length;
 
-test('publishes one deliberate set of exactly thirteen distinct guides', () => {
-  expect(guidePosts).toHaveLength(13);
+test('publishes one deliberate set of exactly fourteen distinct guides', () => {
+  expect(guidePosts).toHaveLength(14);
   expect(valuesAreUnique(guidePosts.map(({ slug }) => slug))).toBe(true);
   expect(valuesAreUnique(guidePosts.map(({ title }) => title))).toBe(true);
   // The first keyword is the guide's primary search/answer intent rather than a hidden second list.

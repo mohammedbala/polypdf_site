@@ -1,0 +1,11 @@
+Item,Reference quantity,Unit,Calculation or scope
+Room 1 gross,240,sq ft,20 x 12
+Room 1 shaft exclusion,-12,sq ft,4 x 3 subtracted
+Room 1 net,228,sq ft,"240 - 12; subtotal, do not sum twice"
+Room 2 net,180,sq ft,15 x 12
+Total net,408,sq ft,228 + 180; total
+Waste example,40.8,sq ft,10% of 408
+Required with waste,448.8,sq ft,408 x 1.10
+Whole packs,23,packs,ceil(448.8 / 20)
+Purchased area,460,sq ft,23 x 20
+Surplus beyond allowance,11.2,sq ft,460 - 448.8

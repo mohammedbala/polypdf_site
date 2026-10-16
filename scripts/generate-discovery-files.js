@@ -57,6 +57,7 @@ for (const extension of ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']) {
 
 const { guidePosts } = require(path.join(srcDirectory, 'content', 'guides', 'index.js'));
 const { blogPosts, blogPostPath } = require(path.join(srcDirectory, 'lib', 'blogPosts.js'));
+const { growthMetadata } = require(path.join(srcDirectory, 'lib', 'growthPages.js'));
 const { commercialOffer } = require(path.join(srcDirectory, 'lib', 'commercialOffer.js'));
 
 const assert = (condition, message) => {
@@ -91,8 +92,8 @@ const xmlEscape = (value) => String(value)
   .replaceAll("'", '&apos;');
 
 const validatePosts = () => {
-  assert(guidePosts.length === 13, `Expected exactly 13 guides, found ${guidePosts.length}`);
-  assert(blogPosts.length === 18, `Expected 13 guides plus five product posts, found ${blogPosts.length}`);
+  assert(guidePosts.length === 14, `Expected exactly 14 guides, found ${guidePosts.length}`);
+  assert(blogPosts.length === 19, `Expected 14 guides plus five product posts, found ${blogPosts.length}`);
 
   const fields = [
     ['slug', (value) => /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)],
@@ -147,6 +148,11 @@ const buildRouteMetadata = () => {
     }
   }
 
+  for (const [route, [title, description]] of Object.entries(growthMetadata)) next[route] = {title, description, robots: 'index, follow', dateModified: '2026-10-16'};
+  next['/'].title = 'Construction PDF Takeoff & Markup Software | PolyPDF';
+  next['/pdf-takeoff-software'].title = 'Construction Takeoff Software for Mac & Windows | PolyPDF';
+  next['/construction-pdf-markup'].title = 'PDF Markup Software for Construction | PolyPDF';
+  for (const route of ['/', '/pdf-takeoff-software', '/construction-pdf-markup']) next[route].dateModified = '2026-10-16';
   assert(next['/blog'], 'route-metadata.json must define the /blog index before generation');
   for (const post of blogPosts) {
     assert(next[blogPostPath(post.slug)], `Missing generated route for ${post.slug}`);
@@ -330,6 +336,8 @@ const buildLlmsText = () => {
     `${markdownLink('Construction PDF markup', '/construction-pdf-markup')}: markups and review-list workflow`,
     `${markdownLink('Symbol Search PDF counting', '/visual-search-pdf-count')}: capture, review, and commit repeated-symbol matches`,
     `${markdownLink('Compare PDF drawings', '/compare-pdf-drawings')}: inspect revision differences and create review markups`,
+    '',
+    ...Object.entries(growthMetadata).map(([route, [title, description]]) => `${markdownLink(title.replace(' | PolyPDF', ''), route)}: ${description}`),
     '',
     '## Product notes',
     '',

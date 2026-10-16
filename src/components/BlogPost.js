@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { Link, Navigate, useParams } from 'react-router';
 import { motion, useReducedMotion } from 'framer-motion';
 import {
-  FaArrowLeft,
   FaCheckCircle,
   FaColumns,
   FaExclamationTriangle,
@@ -20,8 +19,9 @@ import {
   FaTable
 } from 'react-icons/fa';
 import { HiOutlineSparkles } from 'react-icons/hi';
-import parrotIcon from '../assets/polypdf_icon-96.png';
 import DownloadCTA from './DownloadCTA';
+import GrowthNav from './GrowthNav';
+import { SampleLink } from './GrowthEvidence';
 import { buyPath, canonicalPagePath } from '../lib/attribution';
 import { blogPostBySlug, blogPostPath } from '../lib/blogPosts';
 
@@ -337,17 +337,7 @@ const BlogPost = () => {
 
   return (
     <div className="legal-page blog-post">
-      <header className="legal-header">
-        <nav className="nav container" aria-label="Article navigation">
-          <Link to="/" className="logo">
-            <img src={parrotIcon} alt="" width="96" height="96" />
-            <span>PolyPDF</span>
-          </Link>
-          <Link to="/blog/" className="back-link">
-            <FaArrowLeft aria-hidden="true" /> All guides
-          </Link>
-        </nav>
-      </header>
+      <GrowthNav />
 
       <main className="legal-content">
         <div className="container">
@@ -404,6 +394,7 @@ const BlogPost = () => {
               )}
             </header>
 
+            {['quantity-takeoff','pdf-takeoff-worked-example','calibrate-pdf-drawing-scale'].includes(entry.slug) && <section className="growth-file-panel"><h2>Practice with a checked source</h2><p><Link to="/samples/">Download the practice drawings and reference quantities</Link>. Keep the sheet revision and units with your results.</p><SampleLink href="/samples/conversion/northline-studio-rev-a.pdf" source="guide_practice">Northline source PDF</SampleLink></section>}
             <div className="legal-sections">
               {(entry.sections || []).map((section, index) => (
                 <motion.section

@@ -28,3 +28,10 @@ test('rejects malformed click identifiers and stops forwarding them when consent
   saveConsent({});
   expect(safeAdsPageContext().page_location).toBe('http://localhost/');
 });
+
+test('localized pages retain a sanitized canonical path while unknown translations do not', () => {
+  window.history.replaceState({}, '', '/es/pdf-takeoff-software/?email=private@example.com#secret');
+  expect(safePageContext().page_location).toBe('http://localhost/es/pdf-takeoff-software/');
+  window.history.replaceState({}, '', '/es/tools/flooring-waste-calculator/?private=1');
+  expect(safePageContext().page_location).toBe('http://localhost/404/');
+});

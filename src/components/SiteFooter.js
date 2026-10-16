@@ -19,7 +19,10 @@ export const footerLinkGroups = Object.freeze([
       Object.freeze({ to: landingPages.measurePdfOnMac.path, label: 'Measure a PDF on Mac' }),
       Object.freeze({ to: landingPages.constructionPdfMarkup.path, label: 'Construction PDF markup' }),
       Object.freeze({ to: landingPages.visualSearchPdfCount.path, label: 'PDF symbol counting' }),
-      Object.freeze({ to: landingPages.comparePdfDrawings.path, label: 'Compare PDF drawings' })
+      Object.freeze({ to: landingPages.comparePdfDrawings.path, label: 'Compare PDF drawings' }),
+      Object.freeze({ to: '/pdf-measuring-tool', label: 'PDF measuring tool' }),
+      Object.freeze({ to: '/electrical-takeoff-software', label: 'Electrical takeoff' }),
+      Object.freeze({ to: '/flooring-takeoff-software', label: 'Flooring takeoff' })
     ])
   }),
   Object.freeze({
@@ -34,7 +37,10 @@ export const footerLinkGroups = Object.freeze([
       Object.freeze({ to: '/versions', label: 'Version history' }),
       Object.freeze({ to: '/blog', label: 'Guides & reference' }),
       Object.freeze({ to: '/build-a-plugin', label: 'Build a plugin' }),
-      Object.freeze({ to: '/teams/guide', label: 'Teams setup guide' })
+      Object.freeze({ to: '/teams/guide', label: 'Teams setup guide' }),
+      Object.freeze({ to: '/bluebeam-alternative', label: 'Compare with Bluebeam' }),
+      Object.freeze({ to: '/samples', label: 'Sample files' }),
+      Object.freeze({ to: '/tools', label: 'Calculators' })
     ])
   }),
   Object.freeze({

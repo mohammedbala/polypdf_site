@@ -102,8 +102,7 @@ function sourcePage(build, route) {
   const content = route === '/' ? hubHTML() : d.querySelector('#site-content').innerHTML;
   const footer = d.querySelector('[data-site-footer]')?.cloneNode(true);
   if (!footer) throw new Error(`Missing footer: ${route}`);
-  // These control English app preferences. The localized reading pages use native HTML and
-  // run no tracking or app scripts; do not leave inert controls behind.
+  // English React controls are replaced by the translated progressive consent UI.
   footer.querySelectorAll('button').forEach((n)=>n.remove());
   const body = `<div class="App"><a class="site-skip-link" href="#${route === '/' ? 'site-content' : 'localized-content'}">Skip to content</a><div data-language-slot></div><div id="localized-content" tabindex="-1">${content}</div><aside class="translation-note">${notice} <a href="${routePath(route)}" data-english-original>Read the English edition</a></aside>${footer.outerHTML}</div>`;
   const bodyDom = new JSDOM(body);

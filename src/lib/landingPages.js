@@ -74,7 +74,7 @@ export const landingPages = Object.freeze({
     path: '/pdf-takeoff-software',
     source: 'landing_pdf_takeoff',
     eyebrow: 'PDF takeoff for Mac and Windows',
-    title: 'Turn scaled PDF drawings into an organized takeoff worksheet.',
+    title: 'Construction takeoff software for Mac and Windows.',
     lede: 'Calibrate a sheet once, measure lengths, areas, perimeters, angles, radii, diameters, and counts, then keep the results beside the drawing and export them to CSV or PDF.',
     qualifier: 'Built for estimators and contractors who receive PDFs—not perfect CAD files—and need a direct path from drawing to quantity record.',
     ...responsiveScreenshot(shotTakeoff768, shotTakeoff1536),
@@ -109,6 +109,10 @@ export const landingPages = Object.freeze({
       ['Do I need the original CAD file?', 'No. PolyPDF works from the PDF drawing. You calibrate the page using its stated scale or a known distance.']
     ],
     related: [
+      ['/pdf-measuring-tool', 'Measure PDFs on Mac and Windows'],
+      ['/electrical-takeoff-software', 'Electrical quantities'],
+      ['/flooring-takeoff-software', 'Flooring areas and exclusions'],
+      ['/bluebeam-alternative', 'Compare with Bluebeam'],
       ['/bluebeam-alternative-for-mac', 'Compare PolyPDF and Bluebeam on Mac'],
       ['/blog/pdf-takeoff-worked-example', 'PDF takeoff worked example'],
       ['/blog/calibrate-pdf-drawing-scale', 'Calibrate a drawing scale'],
@@ -157,6 +161,10 @@ export const landingPages = Object.freeze({
       ['Does PolyPDF upload my plans?', 'The desktop app processes PDF content locally. Your files stay on your computer unless you choose to export or share them; activation, update checks, and optional support services are separate from document processing.']
     ],
     related: [
+      ['/pdf-measuring-tool', 'Measure PDFs on Mac and Windows'],
+      ['/electrical-takeoff-software', 'Electrical quantities'],
+      ['/flooring-takeoff-software', 'Flooring areas and exclusions'],
+      ['/bluebeam-alternative', 'Compare with Bluebeam'],
       ['/bluebeam-alternative-for-mac', 'Compare PolyPDF and Bluebeam on Mac'],
       ['/blog/calibrate-pdf-drawing-scale', 'Calibrate a drawing scale'],
       ['/blog/why-pdf-measurements-are-wrong', 'Troubleshoot a wrong measurement'],

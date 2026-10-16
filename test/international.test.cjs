@@ -29,7 +29,8 @@ test('symmetric hreflang includes self, English and x-default without fabricated
  assert.equal(alternates[0].href,alternates.at(-1).href);assert(!alternates.some(a=>a.language==='ar-SA'));
 });
 test('all article routes are eligible; private, legal and transaction routes are not',()=>{
- for(const [route,metadata] of Object.entries(c.metadata))if(metadata.type==='article')assert(c.routes.includes(route));
+ const englishOnly = require('../src/lib/englishOnlyRoutes.json');
+ for(const [route,metadata] of Object.entries(c.metadata))if(metadata.type==='article')assert.equal(c.routes.includes(route),!englishOnly.includes(route));
  for(const route of ['/account','/buy','/privacy','/versions','/upgrade'])assert(!c.routes.includes(route));
 });
 test('schema translates human text but preserves author identities, dates and asset URLs',()=>{

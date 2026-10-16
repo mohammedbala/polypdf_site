@@ -1,0 +1,62 @@
+{
+  "verifiedAt": "2026-10-16",
+  "app": "PolyPDF",
+  "version": "1.6.6",
+  "build": "38",
+  "platform": "macOS",
+  "license": "Free",
+  "flooring": {
+    "areasSqFt": [
+      228,
+      180
+    ],
+    "totalSqFt": 408,
+    "savedAndReopened": true,
+    "boundary": "Room 1 traced around the edge-connected exclusion; no interior cutout used"
+  },
+  "electrical": {
+    "routeFeet": 42,
+    "savedAndReopened": true,
+    "fixtureCountsVerifiedInApp": false,
+    "limitation": "12-fixture count exceeds the Free three-measurement limit"
+  },
+  "windowsVerified": false,
+  "files": [
+    {
+      "file": "flooring-mac-measured.pdf",
+      "sha256": "f936315d2ec9b70982fc1abadac548bcbe486a6d40a2269459597dfad642d4e9",
+      "rawExportSha256": "f936315d2ec9b70982fc1abadac548bcbe486a6d40a2269459597dfad642d4e9",
+      "transform": "byte-identical app output"
+    },
+    {
+      "file": "flooring-mac-worksheet.csv",
+      "sha256": "e52b000d55966b3fd7f8665040bc3d322eba92410cf8304f015cd4efc2c71148",
+      "rawExportSha256": "e52b000d55966b3fd7f8665040bc3d322eba92410cf8304f015cd4efc2c71148",
+      "transform": "byte-identical app output"
+    },
+    {
+      "file": "flooring-mac-summary.pdf",
+      "sha256": "33399cc159b03951946eac9fef47c2503b5cb1dab58ac29c61a0be021d4c49af",
+      "rawExportSha256": "efebf028908a03484d0b9a2deba6ba77f5a9f43097d26458f995b2add8e80911",
+      "transform": "source link changed from local file path to public sample URL"
+    },
+    {
+      "file": "electrical-mac-route.pdf",
+      "sha256": "f9f81c0e14db143ec79113f7de6477031d92b10bb433ef2d913179b0d8c2e130",
+      "rawExportSha256": "f9f81c0e14db143ec79113f7de6477031d92b10bb433ef2d913179b0d8c2e130",
+      "transform": "byte-identical app output"
+    },
+    {
+      "file": "electrical-mac-route.csv",
+      "sha256": "541d78cb97f847e500a83ffd55301590db385253926709d5515856f67c43a3ce",
+      "rawExportSha256": "541d78cb97f847e500a83ffd55301590db385253926709d5515856f67c43a3ce",
+      "transform": "byte-identical app output"
+    },
+    {
+      "file": "electrical-mac-route-summary.pdf",
+      "sha256": "fdbeede5184b862b3ec85588e447e0987b7f37f239f342b18a00a309f4c452b0",
+      "rawExportSha256": "dd6194dc48111d97fc68c9b3795feda341f8a90c8ec7696dd647f702475d1e0e",
+      "transform": "source link changed from local file path to public sample URL"
+    }
+  ]
+}
