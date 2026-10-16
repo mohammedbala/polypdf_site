@@ -68,3 +68,14 @@ The checker compares entered readings; it does not upload, measure or repair PDF
 - Validation: full production build, 29 relevant Jest tests in six suites, seven international tests and three consent tests; 53 English routes plus 404 and 240 localized pages. Expanded the static SEO/accessibility audit to 12 routes, with contrast excluded. Browser checks used measured widths 354 and 1163 CSS pixels, verified direct section links, mobile keyboard table scrolling, purchase navigation, Spanish content and Arabic RTL. The real browser-downloaded CSV matches the existing sample bytes and 408 sq ft total.
 
 The live commercial-offer API confirmed the displayed price, 1.x rights and three activations during verification. Website publication follows the existing immutable-release and complete public-hash gates. No checkout session or app release is part of this change.
+
+## Windows evaluation and purchase guidance
+
+- Preserved the Windows page URL, search title, main heading, signed installer link and live release feed. Replaced the old release-specific introduction with platform and drawing-workflow guidance; x64 requirements and the three-measurement Free limit appear beside the download.
+- Added direct answers about measuring a PDF, choosing Free or Pro, and local processing. The measurement steps require calibration and independent reference checks, with links to the calibration guide, scale checker and practice takeoff.
+- Reused the shared feature comparison, personal Pro price, 1.x license rights and refund terms. The purchase-page link has a Windows-specific placement source. Organization-managed licensing remains distinct.
+- Kept the sample evidence explicit: existing exports were verified on Mac 1.6.6 build 38 and do not establish Windows or current-release parity. No new desktop-app verification is claimed.
+- Updated all eight translation catalogs and the sitemap modification date. Reviewed measurement, Free limits, sample provenance and refund wording. The static SEO/accessibility audit now includes the Windows page; it caught a redundant logo description, which was corrected.
+- Validation: full production build, 24 relevant Jest tests, seven international tests and three consent tests; 53 English routes plus 404 and 240 localized pages. The 13-route static SEO/accessibility audit excludes contrast. Browser checks at measured widths 390 and 1280 CSS pixels cover horizontal overflow, section anchors, keyboard table scrolling, the attributed purchase path, Spanish content and Arabic RTL.
+
+Publication uses the existing immutable-release, inventory, hash and rollback gates. App installers and update feeds remain outside this website change. Search, AI-citation and conversion improvements require later measurement.
