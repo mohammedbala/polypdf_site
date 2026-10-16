@@ -109,6 +109,7 @@ export const landingPages = Object.freeze({
       ['Do I need the original CAD file?', 'No. PolyPDF works from the PDF drawing. You calibrate the page using its stated scale or a known distance.']
     ],
     related: [
+      ['/bluebeam-alternative-for-mac', 'Compare PolyPDF and Bluebeam on Mac'],
       ['/blog/pdf-takeoff-worked-example', 'PDF takeoff worked example'],
       ['/blog/calibrate-pdf-drawing-scale', 'Calibrate a drawing scale'],
       ['/blog/measure-pdf-area-cutouts-depth', 'Measure net area and cutouts'],
@@ -156,6 +157,7 @@ export const landingPages = Object.freeze({
       ['Does PolyPDF upload my plans?', 'The desktop app processes PDF content locally. Your files stay on your computer unless you choose to export or share them; activation, update checks, and optional support services are separate from document processing.']
     ],
     related: [
+      ['/bluebeam-alternative-for-mac', 'Compare PolyPDF and Bluebeam on Mac'],
       ['/blog/calibrate-pdf-drawing-scale', 'Calibrate a drawing scale'],
       ['/blog/why-pdf-measurements-are-wrong', 'Troubleshoot a wrong measurement'],
       ['/blog/ocr-scanned-pdf-drawings', 'OCR a scanned drawing'],

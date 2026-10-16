@@ -1,0 +1,81 @@
+.mac-comparison,
+.mac-comparison-handoff {
+  padding: 80px 0;
+  border-top: 1px solid var(--gray-200);
+}
+
+.mac-comparison .workflow-section-heading > p:last-child {
+  grid-column: 2;
+  max-width: 720px;
+  margin: 0;
+  color: var(--workflow-muted);
+  line-height: 1.75;
+}
+
+.mac-comparison-table {
+  overflow-x: auto;
+  margin: 36px 0 24px;
+}
+
+.mac-comparison-table:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.mac-comparison-table table {
+  width: 100%;
+  min-width: 660px;
+  border-collapse: collapse;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.mac-comparison-table caption {
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 16px;
+}
+
+.mac-comparison-table th,
+.mac-comparison-table td {
+  padding: 20px 24px 20px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.mac-comparison-table th {
+  width: 24%;
+  font-weight: 600;
+}
+
+.mac-comparison-table td {
+  width: 38%;
+}
+
+.mac-comparison-source,
+.mac-comparison-note {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--workflow-muted);
+}
+
+.mac-comparison-handoff .workflow-text-link {
+  display: inline-flex;
+  margin: 20px 0;
+}
+
+.mac-comparison-handoff p + p {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .mac-comparison .workflow-section-heading > p:last-child {
+    grid-column: 1;
+  }
+
+  .mac-comparison,
+  .mac-comparison-handoff {
+    padding: 52px 0;
+  }
+}

@@ -1,16 +1,16 @@
 import release154 from './polypdf-1-5-4';
-import { release155Highlights, releaseAnswer } from '../../lib/releaseHighlights';
+import { release155Highlights } from '../../lib/releaseHighlights';
 
 const release155 = {
   slug: 'polypdf-1-5-5',
   title: 'PolyPDF 1.5.5: Zoom Controls and Snapshot Fixes',
-  date: '2026-09-13', dateLabel: 'September 13, 2026', dateModified: '2026-09-13',
+  date: '2026-09-13', dateLabel: 'September 13, 2026', dateModified: '2026-10-15',
   author: 'The PolyPDF team', readingTime: '2 min read', tag: 'Release',
   excerpt: 'Set zoom controls for each page layout, pan with Shift, and paste snapshots with the right proportions and saved orientation.',
   metaTitle: 'PolyPDF 1.5.5: Zoom Controls and Snapshot Fixes',
   metaDescription: 'PolyPDF 1.5.5 for Mac and Windows adds customizable wheel and drag zoom, Shift panning, and fixes for snapshot sizing and saved orientation.',
   keywords: ['PolyPDF 1.5.5', 'PDF wheel zoom', 'PDF snapshot fixes'],
-  quickAnswer: releaseAnswer,
+  quickAnswer: 'PolyPDF 1.5.5 (build 27) adds customizable wheel and drag zoom, Shift panning, and fixes for snapshot proportions and saved orientation on Mac and Windows.',
   lede: 'Set zoom controls for each page layout, pan with Shift, and paste snapshots with the right proportions and saved orientation.',
   imageCacheToken: '1.4.0-17',
   heroImage: { ...release154.heroImage, caption: 'Historical PolyPDF 1.4.0 interface showing a drawing-review workspace. The screenshot does not show the new 1.5.5 controls.' },

@@ -2,7 +2,7 @@ import metadata from './route-metadata.json';
 import locales from './locales.json';
 import englishOnly from './englishOnlyRoutes.json';
 
-// Commerce, account, policies and live release feeds retain their English application.
+// Commerce, account, policies, live release feeds and the reviewed Mac comparison retain their English application.
 // Every guide, blog post, workflow and evergreen help page is included automatically.
 export const englishOnlyRoutes = englishOnly;
 export const localizedRoutes = Object.keys(metadata).filter((route) => !englishOnlyRoutes.includes(route) && !metadata[route].robots.includes('noindex'));

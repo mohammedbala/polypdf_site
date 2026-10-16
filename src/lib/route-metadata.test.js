@@ -28,7 +28,8 @@ const expectedRoutes = [
   '/measure-pdf-on-mac',
   '/construction-pdf-markup',
   '/visual-search-pdf-count',
-  '/compare-pdf-drawings'
+  '/compare-pdf-drawings',
+  '/bluebeam-alternative-for-mac'
 ];
 
 test('defines unique, server-renderable metadata for every public route', () => {
@@ -108,7 +109,7 @@ test('separates the current app release from the verified screenshot release', (
     screenshotBuild: '20',
     screenshotCacheToken: '1.4.3-20'
   });
-  const releaseSeries = siteRelease.version.split('.').slice(0, 2).join('.');
-  expect(routeMetadata['/windows'].description).toContain(`PolyPDF ${releaseSeries}`);
-  expect(routeMetadata['/versions'].description).toContain(`PolyPDF ${releaseSeries}`);
+  for (const route of ['/', '/blog', '/windows', '/versions']) {
+    expect(routeMetadata[route].description).not.toMatch(/PolyPDF \d+\.\d+\.\d+/);
+  }
 });

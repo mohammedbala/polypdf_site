@@ -26,6 +26,7 @@ import WindowsPreview from './components/WindowsPreview';
 import Terms from './components/Terms';
 import VersionHistory from './components/VersionHistory';
 import WorkflowLanding from './components/WorkflowLanding';
+import BluebeamAlternative from './components/BluebeamAlternative';
 import { landingPages } from './lib/landingPages';
 import './App.css';
 import './Monochrome.css';
@@ -68,6 +69,7 @@ const AppRoutes = () => {
             <Route path="/windows" element={<WindowsPreview />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/versions" element={<VersionHistory />} />
+            <Route path="/bluebeam-alternative-for-mac" element={<BluebeamAlternative />} />
             <Route path={landingPages.revisionPackages.path} element={<WorkflowLanding page={landingPages.revisionPackages} />} />
             <Route path={landingPages.pdfTakeoffSoftware.path} element={<WorkflowLanding page={landingPages.pdfTakeoffSoftware} />} />
             <Route path={landingPages.measurePdfOnMac.path} element={<WorkflowLanding page={landingPages.measurePdfOnMac} />} />

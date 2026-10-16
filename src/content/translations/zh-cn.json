@@ -2333,7 +2333,16 @@
     "What is new in PolyPDF 1.6.7?": "PolyPDF 1.6.7 有哪些新增功能？",
     "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.7 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "在 Mac 和 Windows 上测量和标注文档。PolyPDF 1.6.7 包含 CAD 风格的绘图命令和由公司托管的协作功能。免费开始使用。",
     "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.": "PolyPDF 1.6.7（构建39）修复了移动或分组导入的标注后重复保存时出现的错误。导入的圆弧在保存并重新打开后仍可编辑。对话框中的输入框和按钮保持在面板范围内，并改善了小窗口和放大界面下的间距。",
-    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.7 (build 39) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.6.7（版本 39）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。"
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.7 (build 39) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.6.7（版本 39）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。",
+    "Measure PDF drawings, count symbols, compare revisions, and review markups on Mac and Windows. Start free; unlock PolyPDF Pro with one payment.": "在 Mac 和 Windows 上测量 PDF 图纸、统计符号、比较修订并审阅批注。免费开始，一次付款解锁 PolyPDF Pro。",
+    "Practical guides to PDF measurement, takeoff, markup, revision review, forms, and OCR in PolyPDF for Mac and Windows.": "PolyPDF 的 PDF 测量、工程量统计、批注、修订、表单和 OCR 实用指南，适用于 Mac 和 Windows。",
+    "Download PolyPDF for Windows 10 and 11. Measure PDF drawings, review markups, and compare revisions. Start free with no trial timer.": "下载适用于 Windows 10 和 11 的 PolyPDF。测量 PDF 图纸、审阅批注并比较修订。免费开始，无试用期限。",
+    "Read PolyPDF release notes for Mac and Windows, including current versions, fixes, and the update history for your desktop app.": "查看 PolyPDF 在 Mac 和 Windows 上的当前版本、修复记录和更新说明。",
+    "Measure construction PDFs, calculate quantities, compare drawing revisions, and review markups. Practical PolyPDF guides for construction teams.": "测量 PDF 图纸、计算工程量、比较修订并审阅批注。面向建筑团队的 PolyPDF 实用指南。",
+    "PolyPDF 1.5.5 (build 27) adds customizable wheel and drag zoom, Shift panning, and fixes for snapshot proportions and saved orientation on Mac and Windows.": "PolyPDF 1.5.5（内部版本 27）增加了可自定义的滚轮和拖动缩放、Shift 平移，并修复了 Mac 和 Windows 上快照的比例及保存后的方向。",
+    "Compare PolyPDF and Bluebeam on Mac": "比较 Mac 上的 PolyPDF 和 Bluebeam",
+    "Current release and updates": "当前版本和更新",
+    "See the version history for current Mac and Windows releases, fixes, and update instructions.": "查看版本历史，了解 Mac 和 Windows 的当前版本、修复内容和更新方法。"
   },
   "sourceHash": "a06e67bb98bff3d5c248194174ae810adfd9073c7282073c45f7d47708a7934d",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2350,5 +2359,6 @@
   "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review.",
   "release158Translation": "Release text translated with AI assistance; prior editorial content retained. Not certified native-speaker review.",
   "releaseEditorialNote": "1.6.5 release additions translated editorially; earlier catalog entries retained.",
-  "release167TranslationProvider": "OpenAI"
+  "release167TranslationProvider": "OpenAI",
+  "seoAuditEditorialReview": "October 15, 2026: evergreen metadata, historical 1.5.5 summary, Mac comparison link, and release-history navigation. AI-assisted translations; no independent native-speaker review."
 }

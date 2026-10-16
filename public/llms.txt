@@ -29,6 +29,7 @@ Key facts:
 - [PolyPDF for Windows](https://www.polypdf.com/windows/): system requirements and Windows download
 - [Buy PolyPDF Pro](https://www.polypdf.com/buy/): one-time license terms, Stripe checkout, and license delivery
 - [Version history](https://www.polypdf.com/versions/): live Mac and Windows release feeds
+- [Bluebeam alternative for Mac](https://www.polypdf.com/bluebeam-alternative-for-mac/): a dated comparison of local PDF takeoff and markup, Bluebeam’s current Mac access routes, licensing, and collaboration limits
 
 ## Practical guides
 

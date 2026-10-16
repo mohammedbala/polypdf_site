@@ -2333,7 +2333,16 @@
     "What is new in PolyPDF 1.6.7?": "PolyPDF 1.6.7 में नया क्या है?",
     "Measure and mark up PDFs on Mac and Windows. PolyPDF 1.6.7 includes CAD-style drawing commands and company-hosted collaboration. Start free.": "Mac और Windows पर PDF मापें और उन पर टिप्पणियाँ जोड़ें। PolyPDF 1.6.7 में CAD-शैली के ड्रॉइंग कमांड और कंपनी द्वारा होस्ट किया गया सहयोग शामिल है। मुफ़्त में शुरू करें।",
     "PolyPDF 1.6.7 (build 39) fixes repeated Save errors after moving or grouping imported markups. Imported arcs stay editable after saving and reopening. Dialog fields and buttons fit within their panels, with improved spacing on smaller windows and enlarged interface scales.": "PolyPDF 1.6.7 (बिल्ड 39) आयात किए गए मार्कअप को खिसकाने या समूह में रखने के बाद बार-बार सहेजने पर आने वाली त्रुटियों को ठीक करता है। आयात किए गए चाप सहेजने और दोबारा खोलने के बाद भी संपादित किए जा सकते हैं। संवाद बॉक्स के फ़ील्ड और बटन अपनी सीमाओं के भीतर रहते हैं, और छोटी विंडो तथा बड़े इंटरफ़ेस स्केल पर उनके बीच बेहतर जगह रहती है।",
-    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.7 (build 39) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.6.7 (बिल्ड 39) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।"
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.7 (build 39) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.6.7 (बिल्ड 39) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।",
+    "Measure PDF drawings, count symbols, compare revisions, and review markups on Mac and Windows. Start free; unlock PolyPDF Pro with one payment.": "Mac और Windows पर PDF योजनाएँ मापें, प्रतीक गिनें और संशोधन जाँचें। मुफ़्त शुरू करें; एक भुगतान से PolyPDF Pro अनलॉक करें।",
+    "Practical guides to PDF measurement, takeoff, markup, revision review, forms, and OCR in PolyPDF for Mac and Windows.": "Mac और Windows के लिए PolyPDF में PDF मापन, मात्रा आकलन, टिप्पणियों, संशोधनों, फ़ॉर्म और OCR की व्यावहारिक गाइड।",
+    "Download PolyPDF for Windows 10 and 11. Measure PDF drawings, review markups, and compare revisions. Start free with no trial timer.": "Windows 10 और 11 के लिए PolyPDF डाउनलोड करें। PDF योजनाएँ मापें और संशोधन जाँचें। बिना समय सीमा के मुफ़्त शुरू करें।",
+    "Read PolyPDF release notes for Mac and Windows, including current versions, fixes, and the update history for your desktop app.": "Mac और Windows के लिए PolyPDF के वर्तमान संस्करण, सुधार और अपडेट निर्देश पढ़ें।",
+    "Measure construction PDFs, calculate quantities, compare drawing revisions, and review markups. Practical PolyPDF guides for construction teams.": "PDF योजनाएँ मापें, मात्राएँ निकालें और संशोधन जाँचें। निर्माण टीमों के लिए PolyPDF की व्यावहारिक गाइड।",
+    "PolyPDF 1.5.5 (build 27) adds customizable wheel and drag zoom, Shift panning, and fixes for snapshot proportions and saved orientation on Mac and Windows.": "PolyPDF 1.5.5 (बिल्ड 27) में कस्टम व्हील और ड्रैग ज़ूम, Shift से पैनिंग और Mac तथा Windows पर स्नैपशॉट अनुपात व सहेजे गए ओरिएंटेशन के सुधार हैं।",
+    "Compare PolyPDF and Bluebeam on Mac": "Mac पर PolyPDF और Bluebeam की तुलना करें",
+    "Current release and updates": "वर्तमान संस्करण और अपडेट",
+    "See the version history for current Mac and Windows releases, fixes, and update instructions.": "Mac और Windows के वर्तमान संस्करणों, सुधारों और अपडेट निर्देशों के लिए संस्करण इतिहास देखें।"
   },
   "sourceHash": "a06e67bb98bff3d5c248194174ae810adfd9073c7282073c45f7d47708a7934d",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2350,5 +2359,6 @@
   "release157Translation": "AI-assisted translation of new editing copy; historical entries retained. No independent native-speaker review.",
   "release158Translation": "Release text translated with AI assistance; prior editorial content retained. Not certified native-speaker review.",
   "releaseEditorialNote": "1.6.5 release additions translated editorially; earlier catalog entries retained.",
-  "release167TranslationProvider": "OpenAI"
+  "release167TranslationProvider": "OpenAI",
+  "seoAuditEditorialReview": "October 15, 2026: evergreen metadata, historical 1.5.5 summary, Mac comparison link, and release-history navigation. AI-assisted translations; no independent native-speaker review."
 }
