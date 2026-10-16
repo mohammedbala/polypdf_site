@@ -16,7 +16,7 @@ test('separates analytics and advertising consent and deduplicates each provider
   saveConsent({ analytics: true });
   expect(trackVerifiedPurchase(purchase)).toBe(true);
   expect(window.gtag).toHaveBeenCalledTimes(1);
-  expect(window.gtag).toHaveBeenLastCalledWith('event', 'purchase', expect.objectContaining({ transaction_id: 'pi_paid_123', currency: 'USD', send_to: 'G-533RWNRCFP' }));
+  expect(window.gtag).toHaveBeenLastCalledWith('event', 'purchase', expect.objectContaining({ transaction_id: 'pi_paid_123', currency: 'USD', send_to: 'G-GB6LW050TM' }));
   saveConsent({ analytics: true, marketing: true });
   expect(trackVerifiedPurchase(purchase)).toBe(true);
   expect(window.gtag).toHaveBeenCalledTimes(2);

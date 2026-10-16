@@ -1,7 +1,7 @@
 import routeMetadata from './route-metadata.json';
 import { clearOptionalStorage, hasConsent, readConsent } from './consent';
 
-export const GA_ID = 'G-533RWNRCFP';
+export const GA_ID = 'G-GB6LW050TM';
 export const ADS_ID = 'AW-449436603';
 // Dedicated PolyPDF action, used only by the PolyPDF paid-purchases campaign goal.
 export const ADS_PURCHASE_DESTINATION = `${ADS_ID}/SnB-CKSb6okdELu3p9YB`;
