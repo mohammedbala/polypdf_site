@@ -1,5 +1,7 @@
 import { useSiteMotion } from './SiteMotion';
 import { trackEvent } from '../lib/analytics';
+import GrowthNav from './GrowthNav';
+import GrowthEvidence, { WorkflowEntrances } from './GrowthEvidence';
 import React, { memo, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
@@ -9,14 +11,11 @@ import {
   DownloadSimple,
   Infinity,
   Lightning,
-  List,
   LockKey,
   ShieldCheck,
   Sparkle,
   SquaresFour,
-  X
 } from '@phosphor-icons/react';
-import parrotIcon from '../assets/polypdf_icon-96.png';
 import DownloadCTA from './DownloadCTA';
 import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
@@ -633,19 +632,11 @@ const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
 );
 
 const Home = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const offer = useCommercialOffer();
   const { primaryPlatform } = usePlatform();
 
   useEffect(() => {
     captureAttribution();
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -662,72 +653,13 @@ const Home = () => {
     return () => observer.disconnect();
   }, []);
 
-  const closeMobileMenu = () => {
-    setMobileMenuOpen(false);
-  };
-
-  useEffect(() => {
-    const closeOnEscape = (event) => {
-      if (event.key === 'Escape') setMobileMenuOpen(false);
-    };
-    document.addEventListener('keydown', closeOnEscape);
-    return () => document.removeEventListener('keydown', closeOnEscape);
-  }, []);
-
   const handleDownloadClick = (source) => {
     trackEvent('download_click', { source, platform: primaryPlatform.key });
-    closeMobileMenu();
   };
 
   return (
     <div className="Home">
-      <motion.header
-        className={`header ${scrolled ? 'scrolled' : ''}`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <nav className="nav container">
-          <Link to="/" className="logo" onClick={closeMobileMenu}>
-            <img src={parrotIcon} alt="PolyPDF logo" width="96" height="96" />
-            <span>PolyPDF</span>
-          </Link>
-
-          <div id="primary-navigation" className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
-            <a href="#pricing" onClick={closeMobileMenu}>Pricing</a>
-            <a href="#workflows" onClick={closeMobileMenu}>See it in action</a>
-            <a href="#features" onClick={closeMobileMenu}>Features</a>
-            <Link to="/teams" onClick={closeMobileMenu} translate="no">Teams</Link>
-            <Link to="/blog/" onClick={closeMobileMenu}>Guides</Link>
-            <Link to="/support/" onClick={closeMobileMenu}>Support</Link>
-            <DirectCheckoutLink
-              offer={offer}
-              source="website_nav"
-              pageVariant="home_nav"
-              className="nav-buy"
-              onClick={closeMobileMenu}
-            >
-              Buy Once
-            </DirectCheckoutLink>
-            <a href={primaryPlatform.url} className="nav-download" download onClick={() => handleDownloadClick('nav')}>
-              <DownloadSimple aria-hidden="true" weight="bold" /> Download Free
-            </a>
-          </div>
-
-          <button
-            type="button"
-            className="mobile-menu-toggle"
-            aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            aria-controls="primary-navigation"
-            aria-expanded={mobileMenuOpen}
-            onClick={() => setMobileMenuOpen((open) => !open)}
-          >
-            {mobileMenuOpen
-              ? <X aria-hidden="true" weight="bold" />
-              : <List aria-hidden="true" weight="bold" />}
-          </button>
-        </nav>
-      </motion.header>
+      <GrowthNav />
 
       <main>
       <section className="hero">
@@ -741,18 +673,17 @@ const Home = () => {
             </div>
 
             <h1>
-              Take off quantities. Review drawings. <span className="hero-highlight">Pay once.</span>
+              Measure, take off, and review construction PDFs on <span className="hero-highlight">Mac and Windows.</span>
             </h1>
 
             <p className="hero-subtitle">
               PDF measurement, markup, and revision review for construction teams on Mac and Windows. Your drawings, one desktop workspace.
             </p>
 
-            <div className="hero-cta conversion-hero-cta">
+            <div className="hero-cta conversion-hero-cta" id="download">
               <DownloadCTA
                 source="hero"
                 compact
-                onDownload={closeMobileMenu}
                 adjacentAction={(
                   <DirectCheckoutLink
               offer={offer}
@@ -798,6 +729,8 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+      <WorkflowEntrances />
+      <GrowthEvidence />
 
       <WorkflowDemos />
 

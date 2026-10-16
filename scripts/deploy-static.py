@@ -18,6 +18,7 @@ import signal
 import subprocess
 import sys
 import tarfile
+import tempfile
 import time
 import urllib.parse
 import urllib.request
@@ -300,10 +301,11 @@ def run_local(args):
     (evidence / "manifest.json").write_bytes(payload)
     print(json.dumps({"reuseFiles": len(reuse), "uploadFiles": len(changed), "requiredStageBytes": required,
                       "minimumFreeBytes": manifest["minimumFreeBytes"]}), flush=True)
-    process = subprocess.Popen(ssh_command(args, "stage"), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    upload_error = None
-    try:
-        with tarfile.open(fileobj=process.stdin, mode="w|") as archive:
+    # Spool only on the local machine. A seekable stdin avoids interrupted pipe
+    # uploads observed on macOS SSH; remote staging remains a streaming reader.
+    # communicate() inside run() also drains stdout/stderr together.
+    with tempfile.TemporaryFile() as upload:
+        with tarfile.open(fileobj=upload, mode="w") as archive:
             info = tarfile.TarInfo("deploy-manifest.json"); info.size = len(payload)
             archive.addfile(info, io.BytesIO(payload))
             for name in changed:
@@ -311,17 +313,11 @@ def run_local(args):
                 require(path.is_file() and not path.is_symlink() and digest(path) == files[name]["sha256"],
                         f"Build changed while uploading: {name}")
                 archive.add(path, arcname=name, recursive=False)
-    except Exception as error:
-        upload_error = error
-    finally:
-        try:
-            process.stdin.close()
-        except BrokenPipeError:
-            pass
-    output, error = process.stdout.read(), process.stderr.read()
-    require(process.wait() == 0, error.decode().strip() or "Remote staging failed")
-    if upload_error:
-        raise upload_error
+        clean_source(repo, args.source_sha)
+        upload.seek(0)
+        process = subprocess.run(ssh_command(args, "stage"), stdin=upload, capture_output=True)
+    output, error = process.stdout, process.stderr
+    require(process.returncode == 0, error.decode().strip() or "Remote staging failed")
     (evidence / "stage-receipt.json").write_bytes(output)
     print(output.decode().strip())
 

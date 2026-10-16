@@ -11,84 +11,126 @@
 # resources. /account is kept out of indexes via its noindex meta robots tag, not here.
 
 User-agent: *
-Allow: /
 Disallow: /api/
 Disallow: /admin/
+Allow: /
 
 # --- AI / answer-engine crawlers: explicitly welcome ---------------------------------------------
 # Listed by name so a future tightening of the wildcard policy cannot silently lock them out.
 
 # OpenAI: training (GPTBot), search index (OAI-SearchBot), on-demand user fetches (ChatGPT-User)
 User-agent: GPTBot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: OAI-SearchBot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: ChatGPT-User
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # Anthropic: training (ClaudeBot), search (Claude-SearchBot), user fetches (Claude-User)
 User-agent: ClaudeBot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: Claude-SearchBot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: Claude-User
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # Perplexity: index (PerplexityBot), user fetches (Perplexity-User)
 User-agent: PerplexityBot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: Perplexity-User
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # Google: Google-Extended governs Gemini/AI training use (AI Overviews uses regular Googlebot)
 User-agent: Google-Extended
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # Apple Intelligence training opt-in
 User-agent: Applebot-Extended
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # Meta AI training
 User-agent: meta-externalagent
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # Amazon (Alexa/Rufus answers)
 User-agent: Amazonbot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # Common Crawl feeds many open training corpora
 User-agent: CCBot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # --- Traditional search & social preview crawlers ------------------------------------------------
 
 User-agent: Googlebot-Image
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: Bingbot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: DuckDuckBot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: Applebot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: facebookexternalhit
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: Twitterbot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: LinkedInBot
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 User-agent: WhatsApp
+Disallow: /api/
+Disallow: /admin/
 Allow: /
 
 # --- SEO-tool scrapers: blocked (no marketing value, real crawl load) ----------------------------

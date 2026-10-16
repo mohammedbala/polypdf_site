@@ -6,7 +6,7 @@
     <atom:link href="https://www.polypdf.com/feed.xml" rel="self" type="application/rss+xml" />
     <description>Practical guides for measuring, reviewing, securing, and preparing PDF drawings with PolyPDF.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2026 12:00:00 GMT</lastBuildDate>
     <item>
       <title>PolyPDF 1.5.5: Zoom Controls and Snapshot Fixes</title>
       <link>https://www.polypdf.com/blog/polypdf-1-5-5/</link>
@@ -33,6 +33,15 @@
       <description>Build interactive stamps, explore expanded symbol libraries, and present PDFs. Version 1.5.1 also improves navigation, saved appearances, and responsiveness.</description>
       <category>Release</category>
       <enclosure url="https://www.polypdf.com/guides/polypdf-1-5-1.png?v=1.5.1-23" length="256312" type="image/png" />
+    </item>
+    <item>
+      <title>What Is a Quantity Takeoff? From Drawing to Checked Quantities</title>
+      <link>https://www.polypdf.com/blog/quantity-takeoff/</link>
+      <guid isPermaLink="true">https://www.polypdf.com/blog/quantity-takeoff/</guid>
+      <pubDate>Fri, 16 Oct 2026 12:00:00 GMT</pubDate>
+      <description>Separate measured quantities from waste and pricing. Follow a practical area, length, and count workflow with downloadable practice files.</description>
+      <category>Measure &amp; Takeoff</category>
+      <enclosure url="https://www.polypdf.com/guides/quantity-takeoff.png?v=1.4.3-20" length="848746" type="image/png" />
     </item>
     <item>
       <title>Create Interactive PDF Review Stamps</title>

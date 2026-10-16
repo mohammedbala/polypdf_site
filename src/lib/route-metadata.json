@@ -1,8 +1,9 @@
 {
   "/": {
-    "title": "PolyPDF | PDF Drawing Measurement & Markup — No Subscription",
+    "title": "Construction PDF Takeoff & Markup Software | PolyPDF",
     "description": "Measure PDF drawings, count symbols, compare revisions, and review markups on Mac and Windows. Start free; unlock PolyPDF Pro with one payment.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
   },
   "/buy": {
     "title": "Buy PolyPDF Pro Once | Measurements, Search & Plugins",
@@ -58,6 +59,16 @@
     "imageAlt": "PolyPDF 1.5.1 stamp canvas with REVIEWED heading, reviewer, date, and optional toolset saving",
     "imageWidth": 1233,
     "imageHeight": 768
+  },
+  "/blog/quantity-takeoff": {
+    "title": "Quantity Takeoff: Process, Examples & Checks | PolyPDF",
+    "description": "Learn how quantity takeoff turns drawings into checked areas, lengths, and counts. Separate waste and pricing, and practice with downloadable PDFs.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/quantity-takeoff.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF dark-mode takeoff with a 540 square foot area, 30 foot length, 12 count markers, Records panel, and Markup Table",
+    "imageWidth": 1710,
+    "imageHeight": 1073
   },
   "/blog/create-interactive-pdf-stamps": {
     "title": "Create Interactive PDF Review Stamps | PolyPDF",
@@ -250,19 +261,22 @@
     "robots": "index, follow"
   },
   "/pdf-takeoff-software": {
-    "title": "PDF Takeoff Software for Mac & Windows | PolyPDF",
+    "title": "Construction Takeoff Software for Mac & Windows | PolyPDF",
     "description": "Calibrate PDF drawings, measure lengths and areas, count symbols, organize a takeoff worksheet, and export results to CSV or PDF.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
   },
   "/measure-pdf-on-mac": {
     "title": "Measure a PDF on Mac | PolyPDF Drawing Tools",
     "description": "Measure PDF drawings on Mac with calibrated distance, area, perimeter, angle, and count tools in a local-first desktop app. Start free.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
   },
   "/construction-pdf-markup": {
-    "title": "Construction PDF Markup Software | PolyPDF",
+    "title": "PDF Markup Software for Construction | PolyPDF",
     "description": "Mark up construction PDFs with callouts, highlights, stamps, shapes, and revision clouds, then keep every comment tied to the sheet.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
   },
   "/visual-search-pdf-count": {
     "title": "Visual Search PDF Symbol Count | PolyPDF",
@@ -272,7 +286,8 @@
   "/compare-pdf-drawings": {
     "title": "Compare PDF Drawings & Revisions | PolyPDF",
     "description": "Compare PDF drawing revisions, inspect meaningful differences, and add clouds or callouts for coordination, pricing, and review handoff.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
   },
   "/cookies": {
     "title": "Cookie Policy | PolyPDF",
@@ -308,5 +323,53 @@
     "imageAlt": "PolyPDF measuring a sample construction plan with quantities in the takeoff worksheet",
     "imageWidth": 1280,
     "imageHeight": 800
+  },
+  "/pdf-measuring-tool": {
+    "title": "PDF Measuring Tool for Mac & Windows | PolyPDF",
+    "description": "Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/electrical-takeoff-software": {
+    "title": "Electrical Takeoff Software for Mac & Windows | PolyPDF",
+    "description": "Count fixtures, measure drawn routes, and export electrical quantities from PDFs. Review sample files and try PolyPDF on Mac or Windows.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/flooring-takeoff-software": {
+    "title": "Flooring Takeoff Software for Mac & Windows | PolyPDF",
+    "description": "Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/bluebeam-alternative": {
+    "title": "Bluebeam Alternative for Mac & Windows | PolyPDF",
+    "description": "Compare PolyPDF and Bluebeam for takeoff, PDF markup, exports, licensing, and collaboration. Check the limits before you switch.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/samples": {
+    "title": "Construction PDF Samples & Quantity Worksheets | PolyPDF",
+    "description": "Download synthetic construction drawings, reference quantities, and a saved markup sample. Practice calibration, takeoff, and review without an email gate.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/tools": {
+    "title": "Construction Quantity Calculators | PolyPDF",
+    "description": "Use the free flooring waste calculator to turn measured room areas into ordering quantities, whole packs, and material costs.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/tools/flooring-waste-calculator": {
+    "title": "Flooring Waste Calculator: Area, Packs & Cost | PolyPDF",
+    "description": "Calculate flooring area with waste, round to whole packs, and estimate material cost. Add multiple rooms, switch units, and export your worksheet.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/product-facts": {
+    "title": "PolyPDF Product Facts: Platforms, Free & Pro, Limits",
+    "description": "Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
   }
 }

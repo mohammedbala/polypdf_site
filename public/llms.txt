@@ -33,6 +33,7 @@ Key facts:
 
 ## Practical guides
 
+- [What Is a Quantity Takeoff? From Drawing to Checked Quantities](https://www.polypdf.com/blog/quantity-takeoff/): Separate measured quantities from waste and pricing. Follow a practical area, length, and count workflow with downloadable practice files.
 - [Create Interactive PDF Review Stamps](https://www.polypdf.com/blog/create-interactive-pdf-stamps/): Build a review stamp from a blank canvas, arrange its fields, ask for details when placing it, and choose whether to save it for reuse.
 - [How to Calibrate a PDF Drawing Scale](https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/): Set an accurate PDF drawing scale from a printed ratio or a known dimension, then check it against a second reference before starting takeoff.
 - [Why PDF Measurements Are Wrong (and How to Fix Them)](https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/): Diagnose bad PDF dimensions by checking page scale, units, endpoints, detail regions, and scan distortion in a deliberate order.
@@ -55,6 +56,15 @@ Key facts:
 - [Construction PDF markup](https://www.polypdf.com/construction-pdf-markup/): markups and review-list workflow
 - [Symbol Search PDF counting](https://www.polypdf.com/visual-search-pdf-count/): capture, review, and commit repeated-symbol matches
 - [Compare PDF drawings](https://www.polypdf.com/compare-pdf-drawings/): inspect revision differences and create review markups
+
+- [PolyPDF Product Facts: Platforms, Free & Pro, Limits](https://www.polypdf.com/product-facts/): Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.
+- [PDF Measuring Tool for Mac & Windows](https://www.polypdf.com/pdf-measuring-tool/): Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.
+- [Electrical Takeoff Software for Mac & Windows](https://www.polypdf.com/electrical-takeoff-software/): Count fixtures, measure drawn routes, and export electrical quantities from PDFs. Review sample files and try PolyPDF on Mac or Windows.
+- [Flooring Takeoff Software for Mac & Windows](https://www.polypdf.com/flooring-takeoff-software/): Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.
+- [Bluebeam Alternative for Mac & Windows](https://www.polypdf.com/bluebeam-alternative/): Compare PolyPDF and Bluebeam for takeoff, PDF markup, exports, licensing, and collaboration. Check the limits before you switch.
+- [Construction PDF Samples & Quantity Worksheets](https://www.polypdf.com/samples/): Download synthetic construction drawings, reference quantities, and a saved markup sample. Practice calibration, takeoff, and review without an email gate.
+- [Construction Quantity Calculators](https://www.polypdf.com/tools/): Use the free flooring waste calculator to turn measured room areas into ordering quantities, whole packs, and material costs.
+- [Flooring Waste Calculator: Area, Packs & Cost](https://www.polypdf.com/tools/flooring-waste-calculator/): Calculate flooring area with waste, round to whole packs, and estimate material cost. Add multiple rooms, switch units, and export your worksheet.
 
 ## Product notes
 

@@ -22,7 +22,8 @@ export async function internationalSmoke(base=ORIGIN) {
       assert(html.includes(`<link rel="canonical" href="${ORIGIN+entry.route}">`),`${entry.route}: canonical`);
       for(const alternate of alternatives(entry.source)) assert(html.includes(`hreflang="${alternate.language}" href="${alternate.href}"`),`${entry.route}: ${alternate.language} alternative`);
       assert.equal((html.match(/<h1[\s>]/g)||[]).length,1,`${entry.route}: H1`);
-      assert(!/<script[^>]+src=/.test(html),`${entry.route}: English hydration bundle`);
+      assert.equal((html.match(/<script[^>]+src=/g)||[]).length,1,`${entry.route}: one enhancement bundle`);
+      assert(/src="\/static\/js\/localized-tracking\.[a-f0-9]{8}\.js"/.test(html),`${entry.route}: consent enhancement`);
       if(entry.type==='article')assert(html.includes('"inLanguage":"'+entry.language+'"'),`${entry.route}: schema language`);
       checked++;
     }

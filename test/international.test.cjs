@@ -29,10 +29,19 @@ test('symmetric hreflang includes self, English and x-default without fabricated
  assert.equal(alternates[0].href,alternates.at(-1).href);assert(!alternates.some(a=>a.language==='ar-SA'));
 });
 test('all article routes are eligible; private, legal and transaction routes are not',()=>{
- for(const [route,metadata] of Object.entries(c.metadata))if(metadata.type==='article')assert(c.routes.includes(route));
+ const englishOnly = require('../src/lib/englishOnlyRoutes.json');
+ for(const [route,metadata] of Object.entries(c.metadata))if(metadata.type==='article')assert.equal(c.routes.includes(route),!englishOnly.includes(route));
  for(const route of ['/account','/buy','/privacy','/versions','/upgrade'])assert(!c.routes.includes(route));
 });
 test('schema translates human text but preserves author identities, dates and asset URLs',()=>{
  const result=c.mapSchema({'@type':'BlogPosting',headline:'Title',datePublished:'2026-09-07',url:'https://www.polypdf.com/blog/',author:{'@type':'Organization',name:'PolyPDF',url:'https://www.polypdf.com/'},image:{url:'https://www.polypdf.com/guides/image.png',caption:'Caption'},inLanguage:'en'},s=>'Translated '+s,c.locales[0]);
  assert.equal(result.headline,'Translated Title');assert.equal(result.datePublished,'2026-09-07');assert.equal(result.author.url,'https://www.polypdf.com/');assert.equal(result.image.url,'https://www.polypdf.com/guides/image.png');assert.equal(result.inLanguage,'es');
+});
+test('localized page identities change language without splitting the shared product identity',()=>{
+ const page=c.mapSchema({'@type':'WebPage','@id':'https://www.polypdf.com/pdf-takeoff-software/#webpage',url:'https://www.polypdf.com/pdf-takeoff-software/',about:{'@id':'https://www.polypdf.com/#software'},publisher:{'@id':'https://www.polypdf.com/#organization'},isPartOf:{'@id':'https://www.polypdf.com/#website'}},s=>s,c.locales[0]);
+ assert.equal(page['@id'],page.url+'#webpage');
+ assert.equal(page.url,'https://www.polypdf.com/es/pdf-takeoff-software/');
+ assert.equal(page.about['@id'],'https://www.polypdf.com/#software');
+ assert.equal(page.publisher['@id'],'https://www.polypdf.com/#organization');
+ assert.equal(page.isPartOf['@id'],'https://www.polypdf.com/#website');
 });

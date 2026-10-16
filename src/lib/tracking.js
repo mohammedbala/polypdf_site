@@ -1,3 +1,5 @@
+import locales from './locales.json';
+import englishOnlyRoutes from './englishOnlyRoutes.json';
 import routeMetadata from './route-metadata.json';
 import { clearOptionalStorage, hasConsent, readConsent } from './consent';
 
@@ -13,7 +15,10 @@ export function safePageContext() {
   let referrer = '';
   try { referrer = new URL(document.referrer).origin + '/'; } catch { /* No referrer. */ }
   const path = window.location.pathname.replace(/\/+$/, '') || '/';
-  const safePath = routeMetadata[path] ? (path === '/' ? '/' : `${path}/`) : '/404/';
+  const locale = locales.find(entry => path === `/${entry.id}` || path.startsWith(`/${entry.id}/`));
+  const englishPath = locale ? path.slice(locale.id.length + 1) || '/' : path;
+  const knownLocalized = locale && routeMetadata[englishPath] && !englishOnlyRoutes.includes(englishPath);
+  const safePath = (routeMetadata[path] || knownLocalized) ? (path === '/' ? '/' : `${path}/`) : '/404/';
   return {
     page_location: window.location.origin + safePath,
     page_referrer: referrer,

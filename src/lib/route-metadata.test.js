@@ -23,13 +23,15 @@ const expectedRoutes = [
   '/windows',
   '/terms',
   '/versions',
+  '/product-facts',
   '/revision-packages',
   '/pdf-takeoff-software',
   '/measure-pdf-on-mac',
   '/construction-pdf-markup',
   '/visual-search-pdf-count',
   '/compare-pdf-drawings',
-  '/bluebeam-alternative-for-mac'
+  '/bluebeam-alternative-for-mac',
+  '/bluebeam-alternative', '/pdf-measuring-tool', '/electrical-takeoff-software', '/flooring-takeoff-software', '/samples', '/tools', '/tools/flooring-waste-calculator'
 ];
 
 test('defines unique, server-renderable metadata for every public route', () => {

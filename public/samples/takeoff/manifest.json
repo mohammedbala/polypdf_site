@@ -1,0 +1,17 @@
+{
+  "kind": "synthetic-practice-reference",
+  "appExport": false,
+  "scalePdfPointsPerFoot": 9,
+  "flooringNetSqFt": 408,
+  "electricalTypeA": 8,
+  "electricalTypeB": 4,
+  "electricalDrawnRouteFt": 42,
+  "files": {
+    "electrical-practice.pdf": "1d52452d647250ceddafce98178ebb5e99ee9dc776c83a83322ae7a8947fda9c",
+    "electrical-reference.csv": "43454bb6d09d735ecf7f27401bd5cbe1a55f160a5e21ec3711232447fabffd01",
+    "electrical-reference.pdf": "d320f636dd42b817d204377c0a8bba2984088e1a51370f00946513b3eb692822",
+    "flooring-practice.pdf": "55358ba8b583c98f0442f411b011791a8bb6b4adfa79b148db86c44ac931a71b",
+    "flooring-reference.csv": "83023dd21f449af55ace548567b6ac499c7eaaff5d396952d05eb8b95a9aeb58",
+    "flooring-reference.pdf": "97193559fd51884246a6463f86984bcd343f17c1071dde482027f3ce538ebb3e"
+  }
+}

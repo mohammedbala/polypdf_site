@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.polypdf.com/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/blog/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -56,6 +56,17 @@
       <image:loc>https://www.polypdf.com/guides/polypdf-1-5-1.png?v=1.5.1-23</image:loc>
       <image:title>PolyPDF 1.5.1 stamp canvas with REVIEWED heading, reviewer, date, and optional toolset saving</image:title>
       <image:caption>Build a stamp from an empty canvas, arrange its fields, and choose which values to ask for at placement. This capture is from the signed 1.5.1 Mac app using fictional sample details.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/blog/quantity-takeoff/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.polypdf.com/guides/quantity-takeoff.png?v=1.4.3-20</image:loc>
+      <image:title>PolyPDF dark-mode takeoff with a 540 square foot area, 30 foot length, 12 count markers, Records panel, and Markup Table</image:title>
+      <image:caption>A small takeoff on a sample plan, with Measurements › Records and the Markup Table open beside it: 14 records covering one 540.00 sq ft area, one 30.00 ft partition length, and 12 Supply diffuser counts. Each record keeps its own subject, status, unit, and formula, so a reviewer can trace a total back to the rows that produced it.</image:caption>
     </image:image>
   </url>
   <url>
@@ -273,19 +284,19 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/pdf-takeoff-software/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/measure-pdf-on-mac/</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.polypdf.com/construction-pdf-markup/</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -297,7 +308,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/compare-pdf-drawings/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -322,6 +333,54 @@
   <url>
     <loc>https://www.polypdf.com/bluebeam-alternative-for-mac/</loc>
     <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/pdf-measuring-tool/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/electrical-takeoff-software/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/flooring-takeoff-software/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/bluebeam-alternative/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/samples/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/tools/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/tools/flooring-waste-calculator/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/product-facts/</loc>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

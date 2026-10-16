@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router';
 import { FaArrowRight, FaCheck, FaInfinity } from 'react-icons/fa';
 import { HiOutlineCloudDownload } from 'react-icons/hi';
-import parrotIcon from '../assets/polypdf_icon-96.png';
 import DownloadCTA from './DownloadCTA';
 import DirectCheckoutLink from './DirectCheckoutLink';
 import { OfferGuarantee, OfferPrice } from './OfferPrice';
@@ -13,6 +12,9 @@ import { commercialOffer, licenseRightsText } from '../lib/commercialOffer';
 import { WorkflowDemoMedia, workflowDemos } from './WorkflowDemos';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
 import './WorkflowLanding.css';
+import GrowthNav from './GrowthNav';
+import GrowthEvidence from './GrowthEvidence';
+import WorkflowAnswer from './WorkflowAnswer';
 
 export const CURRENT_INTERFACE_LABEL = 'PolyPDF for Mac and Windows';
 
@@ -28,7 +30,7 @@ const WorkflowLanding = ({ page, children }) => {
 
   useEffect(() => {
     captureAttribution();
-    window.scrollTo(0, 0);
+    if (!window.location.hash) window.scrollTo(0, 0);
   }, [page.path]);
 
   const trackCta = (action) => {
@@ -40,27 +42,7 @@ const WorkflowLanding = ({ page, children }) => {
 
   return (
     <div className="workflow-landing">
-      <header className="workflow-header">
-        <nav className="workflow-nav container" aria-label="Main navigation">
-          <Link className="workflow-logo" to="/" aria-label="PolyPDF home">
-            <img src={parrotIcon} alt="" width="96" height="96" />
-            <span>PolyPDF</span>
-          </Link>
-          <div className="workflow-nav-links">
-            <a href="#how-it-works">Workflow</a>
-            <Link to="/support/">Support</Link>
-          </div>
-          <DirectCheckoutLink
-            offer={offer}
-            className="workflow-nav-buy"
-            source={`${page.source}_nav`}
-            pageVariant="workflow_nav"
-            onClick={() => trackCta('buy_click')}
-          >
-            Buy once · {commercialOffer.price}
-          </DirectCheckoutLink>
-        </nav>
-      </header>
+      <GrowthNav />
 
       <main id="workflow-main">
         <section className="workflow-hero">
@@ -116,6 +98,8 @@ const WorkflowLanding = ({ page, children }) => {
           </div>
         </section>
 
+        <WorkflowAnswer path={page.path} />
+
         <section className="workflow-context">
           <div className="container workflow-context-grid">
             <p className="workflow-section-index">01 / WHY</p>
@@ -127,6 +111,7 @@ const WorkflowLanding = ({ page, children }) => {
         </section>
 
         {children}
+        {!children && ['/pdf-takeoff-software','/measure-pdf-on-mac','/construction-pdf-markup','/compare-pdf-drawings'].includes(page.path) && <GrowthEvidence kind={page.path === '/compare-pdf-drawings' ? 'compare' : page.path === '/construction-pdf-markup' ? 'review' : 'takeoff'} /> }
 
         <section className="workflow-steps" id="how-it-works">
           <div className="container">
