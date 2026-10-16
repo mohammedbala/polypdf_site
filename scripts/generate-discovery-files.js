@@ -154,6 +154,7 @@ const buildRouteMetadata = () => {
   for (const route of Object.keys(workflowAnswers)) next[route].dateModified = '2026-10-16';
   next['/'].title = 'Construction PDF Takeoff & Markup Software | PolyPDF';
   next['/pdf-takeoff-software'].title = 'Construction Takeoff Software for Mac & Windows | PolyPDF';
+  next['/pdf-takeoff-software'].description = 'Compare Free and Pro PDF takeoff for Mac and Windows. Try 3 measurements per document, inspect sample exports, and review one-time Pro licensing.';
   next['/construction-pdf-markup'].title = 'PDF Markup Software for Construction | PolyPDF';
   for (const route of ['/', '/pdf-takeoff-software', '/construction-pdf-markup']) next[route].dateModified = '2026-10-16';
   assert(next['/blog'], 'route-metadata.json must define the /blog index before generation');

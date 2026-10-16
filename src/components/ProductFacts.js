@@ -23,6 +23,7 @@ export default function ProductFacts() {
       <h2 id="free-and-pro">Is PolyPDF free, and what does Pro include?</h2>
       <p>PolyPDF Free includes PDF markup, review, calibration, up to <strong>3 hand-created measurements per document</strong>, and Revision Package viewing and navigation. It is a useful way to evaluate a representative drawing before buying.</p>
       <p>Pro removes the hand-created measurement cap and unlocks Pro workflows including Symbol Search, PDF content editing, toolsets, overlay, installed plugins, and Revision Package creation, changes, and publication. Free is not an unrestricted takeoff or Symbol Search edition.</p>
+      <p><Link to="/pdf-takeoff-software/#free-vs-pro">Compare Free and Pro workflows</Link>, then <Link to="/pdf-takeoff-software/#try-a-takeoff">try the three-measurement practice takeoff</Link> before choosing a license.</p>
       <dl className="product-facts-list">
         <div><dt>Personal Pro price</dt><dd>{commercialOffer.price} USD, one payment. <Link to="/buy/">Review current pricing, taxes, and checkout terms</Link>.</dd></div>
         <div><dt>License rights</dt><dd>{licenseRightsText}</dd></div>

@@ -4,8 +4,9 @@ const path = require('path');
 const assert = require('assert/strict');
 const { JSDOM } = require('jsdom');
 const axe = require('axe-core');
+const englishOnly = require('../src/lib/englishOnlyRoutes.json');
 const build = path.resolve(process.env.BUILD_PATH || 'build');
-const routes = ['/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff'];
+const routes = ['/pdf-takeoff-software','/measure-pdf-on-mac','/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff'];
 (async () => {
  const results = [];
  for (const route of routes) {
@@ -14,7 +15,8 @@ const routes = ['/product-facts','/pdf-measuring-tool','/electrical-takeoff-soft
   assert.equal(d.querySelectorAll('h1').length,1,route+' single H1');
   assert.equal(d.querySelector('link[rel=canonical]').href,'https://www.polypdf.com'+route+'/',route+' canonical');
   assert(!d.querySelector('meta[name=robots]').content.includes('noindex'),route+' indexable');
-  assert(!d.querySelector('link[hreflang]'),route+' English-only until localization');
+  if (englishOnly.includes(route)) assert(!d.querySelector('link[hreflang]'),route+' English-only until localization');
+  else assert(d.querySelector('link[hreflang="en"]'),route+' localized language alternatives');
   const ids=[...d.querySelectorAll('[id]')].map(el=>el.id);
   assert.equal(ids.length,new Set(ids).size,route+' unique IDs');
   for(const a of d.querySelectorAll('a[href]')) {
