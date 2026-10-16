@@ -269,7 +269,8 @@
   "/measure-pdf-on-mac": {
     "title": "Measure a PDF on Mac | PolyPDF Drawing Tools",
     "description": "Measure PDF drawings on Mac with calibrated distance, area, perimeter, angle, and count tools in a local-first desktop app. Start free.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
   },
   "/construction-pdf-markup": {
     "title": "PDF Markup Software for Construction | PolyPDF",
@@ -285,7 +286,8 @@
   "/compare-pdf-drawings": {
     "title": "Compare PDF Drawings & Revisions | PolyPDF",
     "description": "Compare PDF drawing revisions, inspect meaningful differences, and add clouds or callouts for coordination, pricing, and review handoff.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
   },
   "/cookies": {
     "title": "Cookie Policy | PolyPDF",
@@ -361,6 +363,12 @@
   "/tools/flooring-waste-calculator": {
     "title": "Flooring Waste Calculator: Area, Packs & Cost | PolyPDF",
     "description": "Calculate flooring area with waste, round to whole packs, and estimate material cost. Add multiple rooms, switch units, and export your worksheet.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/product-facts": {
+    "title": "PolyPDF Product Facts: Platforms, Free & Pro, Limits",
+    "description": "Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.",
     "robots": "index, follow",
     "dateModified": "2026-10-16"
   }

@@ -57,6 +57,7 @@ Key facts:
 - [Symbol Search PDF counting](https://www.polypdf.com/visual-search-pdf-count/): capture, review, and commit repeated-symbol matches
 - [Compare PDF drawings](https://www.polypdf.com/compare-pdf-drawings/): inspect revision differences and create review markups
 
+- [PolyPDF Product Facts: Platforms, Free & Pro, Limits](https://www.polypdf.com/product-facts/): Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.
 - [PDF Measuring Tool for Mac & Windows](https://www.polypdf.com/pdf-measuring-tool/): Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.
 - [Electrical Takeoff Software for Mac & Windows](https://www.polypdf.com/electrical-takeoff-software/): Count fixtures, measure drawn routes, and export electrical quantities from PDFs. Review sample files and try PolyPDF on Mac or Windows.
 - [Flooring Takeoff Software for Mac & Windows](https://www.polypdf.com/flooring-takeoff-software/): Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.

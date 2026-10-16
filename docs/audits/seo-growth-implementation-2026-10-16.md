@@ -1,6 +1,6 @@
 # Website growth revamp — October 16, 2026
 
-Unpublished implementation candidate based on `c7f8ce0cf343236ab378c89019abcb5dec68ddf5`. Website changes only; installers, app versions, and update feeds are unchanged.
+SEO revamp published October 16, 2026 from `60653d1ac37f2195e31ad538d4dde8fc42a73ca4`; all 447 public resource hashes matched. This record also covers the AEO follow-up. Website changes only; installers, app versions, and update feeds are unchanged.
 
 ## Changes
 
@@ -13,18 +13,29 @@ Unpublished implementation candidate based on `c7f8ce0cf343236ab378c89019abcb5de
 
 ## Validation
 
-- 156 Jest tests across 29 suites.
-- Nine international and consent integration tests; 13 deployment and workflow-evidence tests.
-- Production build validates 51 English routes plus 404, structured data, and 240 localized pages.
-- Eight-route audit checks internal links, canonicals, one H1, duplicate IDs, English-only scope, and axe rules in JSDOM. Contrast is excluded; this is not a WCAG conformance claim.
+- 157 Jest tests across 29 suites.
+- Ten international and consent integration tests; ten deployment fixture tests; two crawler-policy tests. The earlier three workflow-evidence tests also passed.
+- Production build validates 52 English routes plus 404, structured data, and 240 localized pages.
+- Nine-route audit checks internal links, canonicals, one H1, duplicate IDs, English-only scope, and axe rules in JSDOM. Contrast is excluded; this is not a WCAG conformance claim.
 - Local HTTP smoke covers 240 localized pages and 16 discovery files.
 - Browser checks at 390 px: no overflow and one H1 on the homepage and eight new routes; calculator output, conversion, errors, CSV download, navigation keyboard behavior, Spanish consent and Arabic RTL.
 - Real Mac tests in installed PolyPDF 1.6.6 build 38: flooring 228 + 180 = 408 sq ft; electrical route 30 + 12 = 42 ft. CSV/PDF exports succeeded, saved PDFs reopened with matching values, and output geometry was independently checked. Screenshots are under `seo-growth-preview/`.
 
-## Remaining release checks
+## Evidence limits and publication
 
 The complete electrical fixture count requires Pro activation: Free mode stopped after three hand-created measurements. The Windows QA session is disconnected and reconnecting requires credentials. Current-version electrical/flooring recordings and Windows export parity remain pending. Do not describe the older Mac evidence as current-version or cross-platform certification.
 
-The user requested one major release. Keep this candidate unpublished until the remaining evidence scope is resolved and an explicit production website release is requested. After publication, verify served artifacts, new routes, sample MIME types, cookies, commercial offers, discovery files, installer/feed continuity, and rollback readiness. No checkout session was created during these checks.
+Website publication was authorized with the disclosed sample evidence scope. The deployment verifies every public resource hash and retains the previous immutable release for rollback. Follow-up smoke checks cover routes, canonical URLs, samples, consent, commercial offers, discovery files, and installer/feed continuity; checkout-session creation is excluded.
 
 Research, keyword estimates, commercial strategy and unsent outreach drafts are maintained in the private OpenSEO report, outside this public repository. No ranking or conversion improvement is claimed before measurement.
+
+## AEO follow-up
+
+- Eight workflow pages now provide a concise visible answer, a stable answer anchor, and a relevant next-step link. Direct fragment links are preserved after font loading.
+- `/product-facts/` consolidates platforms, Free and Pro boundaries, license rights, local processing, network exceptions, exports, collaboration compatibility, and version-labeled verification evidence. It is linked from navigation, footer, sitemap, and the existing reference file.
+- Structured data ties workflow and reference pages to the same software and publisher. Translated page identities use their translated URLs while product identities remain shared. No invented ratings, FAQ rich-result claims, or special AI-schema claims are added.
+- Named search and AI crawler groups preserve public access and now repeat the wildcard API/admin exclusions. Robots rules are crawl guidance, not access control.
+- The OpenSEO-issued IndexNow key is hosted at the public site root for changed-page notifications. A notification is not proof of indexing; Google does not use IndexNow.
+- Local SSH upload spooling avoids the interrupted streaming-pipe transfers observed during publication, while preserving all remote inventory, predecessor, disk-space, hash, activation, and rollback gates.
+
+AEO means making the site useful and understandable as a source for answer engines. No current AI visibility uplift or ranking improvement has been measured. Research and any paid tracking decisions remain in the private OpenSEO project.

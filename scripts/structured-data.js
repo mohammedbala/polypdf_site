@@ -22,6 +22,7 @@ const req = (relative) => require(path.join(srcDirectory, relative));
 
 const routeMetadata = req('lib/route-metadata.json');
 const { landingPages } = req('lib/landingPages.js');
+const { growthPages } = req('lib/growthPages.js');
 const { blogPosts, blogPostPath } = req('lib/blogPosts.js');
 const { DOWNLOADS } = req('lib/platform.js');
 const siteRelease = req('lib/siteRelease.json');
@@ -122,10 +123,13 @@ const breadcrumbs = (trail) => ({
 
 const webPage = (route) => ({
   '@type': 'WebPage',
+  '@id': `${absolute(route)}#webpage`,
   url: absolute(route),
   name: routeMetadata[route].title,
   description: routeMetadata[route].description,
-  isPartOf: { '@id': WEBSITE_ID }
+  isPartOf: { '@id': WEBSITE_ID },
+  publisher: { '@id': ORG_ID },
+  inLanguage: 'en-US'
 });
 
 const blogPosting = (entry) => {
@@ -139,7 +143,7 @@ const blogPosting = (entry) => {
     description: entry.metaDescription,
     datePublished: entry.date,
     dateModified: entry.dateModified || entry.date,
-    author: { '@type': 'Organization', name: 'PolyPDF', url: `${ORIGIN}/` },
+    author: organization(),
     publisher: organization(),
     image: {
       '@type': 'ImageObject',
@@ -191,7 +195,14 @@ const buildStructuredData = (route) => {
   }
 
   if (route === '/buy' || route === '/windows') {
-    return wrap([breadcrumbs([['/'], [route]]), softwareApplication(metadata.description)]);
+    return wrap([breadcrumbs([['/'], [route]]), organization(), softwareApplication(metadata.description)]);
+  }
+
+  if (route === '/product-facts') {
+    return wrap([
+      breadcrumbs([['/'], [route]]), organization(), softwareApplication(routeMetadata['/'].description),
+      { ...webPage(route), mainEntity: { '@id': APP_ID }, about: { '@id': APP_ID }, dateModified: metadata.dateModified }
+    ]);
   }
 
   if (route === '/blog') {
@@ -203,11 +214,12 @@ const buildStructuredData = (route) => {
     return wrap([breadcrumbs([['/'], ['/blog'], [route, post.title]]), blogPosting(post)]);
   }
 
-  const isWorkflowPage = Object.values(landingPages).some((page) => page.path === route);
+  const isWorkflowPage = [...Object.values(landingPages), ...Object.values(growthPages)].some((page) => page.path === route)
+    || route === '/bluebeam-alternative-for-mac';
   if (isWorkflowPage) {
     return wrap([
       breadcrumbs([['/'], [route]]),
-      webPage(route)
+      { ...webPage(route), about: { '@id': APP_ID } }
     ]);
   }
 

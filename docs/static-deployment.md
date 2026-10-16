@@ -21,6 +21,9 @@ checks all bundled assets, and hashes the full local output. A read-only invento
 of the current server release determines which content can be reused. Identical
 bytes are hardlinked even when their filenames or timestamps changed. Only new
 bytes are streamed over SSH; no second tar archive is stored on the server.
+The changed-file archive is spooled into a temporary file on the local machine
+before SSH starts, then removed automatically. This avoids interrupted pipe
+uploads observed with macOS SSH and drains both output streams together.
 
 The candidate release is `/var/www/polypdf-site/releases/<source-sha>`. The helper
 checks new-byte allocation, directories and manifest overhead **plus a 16 MiB

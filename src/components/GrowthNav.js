@@ -5,7 +5,7 @@ import './Growth.css';
 const groups = [
   ['Product', [['/pdf-takeoff-software/', 'Takeoff'], ['/pdf-measuring-tool/', 'Measurement'], ['/construction-pdf-markup/', 'Markup'], ['/compare-pdf-drawings/', 'Drawing comparison'], ['/bluebeam-alternative/', 'Compare with Bluebeam']]],
   ['Solutions', [['/electrical-takeoff-software/', 'Electrical'], ['/flooring-takeoff-software/', 'Flooring'], ['/measure-pdf-on-mac/', 'For Mac'], ['/windows/', 'For Windows']]],
-  ['Resources', [['/blog/', 'Guides'], ['/samples/', 'Sample files'], ['/tools/', 'Calculators'], ['/teams/', 'Teams']]]
+  ['Resources', [['/blog/', 'Guides'], ['/samples/', 'Sample files'], ['/tools/', 'Calculators'], ['/product-facts/', 'Product facts'], ['/teams/', 'Teams']]]
 ];
 export default function GrowthNav() {
   const { pathname } = useLocation();

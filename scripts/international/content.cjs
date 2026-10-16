@@ -28,7 +28,8 @@ function mapSchema(value, translate, locale, parentKey = '') {
   if (typeof value !== 'string') return value;
   if (parentKey === 'inLanguage') return locale?.language || value;
   if (humanSchemaKeys.has(parentKey)) return translate(value);
-  if (locale && ['url','item','mainEntityOfPage'].includes(parentKey) && value.startsWith(ORIGIN)) {
+  // Page IDs follow their localized URL; the publisher, website and product identities stay shared.
+  if (locale && (['url','item','mainEntityOfPage'].includes(parentKey) || (parentKey === '@id' && value.endsWith('#webpage'))) && value.startsWith(ORIGIN)) {
     const url = new URL(value); const route = url.pathname.replace(/\/+$/, '') || '/';
     if (routes.includes(route)) return `${ORIGIN}${localizedPath(locale.id, route)}${url.hash}`;
   }

@@ -37,3 +37,11 @@ test('schema translates human text but preserves author identities, dates and as
  const result=c.mapSchema({'@type':'BlogPosting',headline:'Title',datePublished:'2026-09-07',url:'https://www.polypdf.com/blog/',author:{'@type':'Organization',name:'PolyPDF',url:'https://www.polypdf.com/'},image:{url:'https://www.polypdf.com/guides/image.png',caption:'Caption'},inLanguage:'en'},s=>'Translated '+s,c.locales[0]);
  assert.equal(result.headline,'Translated Title');assert.equal(result.datePublished,'2026-09-07');assert.equal(result.author.url,'https://www.polypdf.com/');assert.equal(result.image.url,'https://www.polypdf.com/guides/image.png');assert.equal(result.inLanguage,'es');
 });
+test('localized page identities change language without splitting the shared product identity',()=>{
+ const page=c.mapSchema({'@type':'WebPage','@id':'https://www.polypdf.com/pdf-takeoff-software/#webpage',url:'https://www.polypdf.com/pdf-takeoff-software/',about:{'@id':'https://www.polypdf.com/#software'},publisher:{'@id':'https://www.polypdf.com/#organization'},isPartOf:{'@id':'https://www.polypdf.com/#website'}},s=>s,c.locales[0]);
+ assert.equal(page['@id'],page.url+'#webpage');
+ assert.equal(page.url,'https://www.polypdf.com/es/pdf-takeoff-software/');
+ assert.equal(page.about['@id'],'https://www.polypdf.com/#software');
+ assert.equal(page.publisher['@id'],'https://www.polypdf.com/#organization');
+ assert.equal(page.isPartOf['@id'],'https://www.polypdf.com/#website');
+});

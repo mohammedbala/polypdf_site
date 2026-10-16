@@ -14,6 +14,7 @@ import { useCommercialOffer } from '../lib/useCommercialOffer';
 import './WorkflowLanding.css';
 import GrowthNav from './GrowthNav';
 import GrowthEvidence from './GrowthEvidence';
+import WorkflowAnswer from './WorkflowAnswer';
 
 export const CURRENT_INTERFACE_LABEL = 'PolyPDF for Mac and Windows';
 
@@ -29,7 +30,7 @@ const WorkflowLanding = ({ page, children }) => {
 
   useEffect(() => {
     captureAttribution();
-    window.scrollTo(0, 0);
+    if (!window.location.hash) window.scrollTo(0, 0);
   }, [page.path]);
 
   const trackCta = (action) => {
@@ -96,6 +97,8 @@ const WorkflowLanding = ({ page, children }) => {
             ))}
           </div>
         </section>
+
+        <WorkflowAnswer path={page.path} />
 
         <section className="workflow-context">
           <div className="container workflow-context-grid">

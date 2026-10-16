@@ -23,6 +23,7 @@ const expectedRoutes = [
   '/windows',
   '/terms',
   '/versions',
+  '/product-facts',
   '/revision-packages',
   '/pdf-takeoff-software',
   '/measure-pdf-on-mac',

@@ -58,6 +58,7 @@ for (const extension of ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']) {
 const { guidePosts } = require(path.join(srcDirectory, 'content', 'guides', 'index.js'));
 const { blogPosts, blogPostPath } = require(path.join(srcDirectory, 'lib', 'blogPosts.js'));
 const { growthMetadata } = require(path.join(srcDirectory, 'lib', 'growthPages.js'));
+const { workflowAnswers } = require(path.join(srcDirectory, 'lib', 'workflowAnswers.js'));
 const { commercialOffer } = require(path.join(srcDirectory, 'lib', 'commercialOffer.js'));
 
 const assert = (condition, message) => {
@@ -149,6 +150,7 @@ const buildRouteMetadata = () => {
   }
 
   for (const [route, [title, description]] of Object.entries(growthMetadata)) next[route] = {title, description, robots: 'index, follow', dateModified: '2026-10-16'};
+  for (const route of Object.keys(workflowAnswers)) next[route].dateModified = '2026-10-16';
   next['/'].title = 'Construction PDF Takeoff & Markup Software | PolyPDF';
   next['/pdf-takeoff-software'].title = 'Construction Takeoff Software for Mac & Windows | PolyPDF';
   next['/construction-pdf-markup'].title = 'PDF Markup Software for Construction | PolyPDF';

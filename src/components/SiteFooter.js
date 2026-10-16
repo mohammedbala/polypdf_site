@@ -47,6 +47,7 @@ export const footerLinkGroups = Object.freeze([
     label: 'Help & company',
     links: Object.freeze([
       Object.freeze({ to: '/support', label: 'Support' }),
+      Object.freeze({ to: '/product-facts', label: 'Product facts' }),
       Object.freeze({ to: '/feature-requests', label: 'Feature requests' }),
       Object.freeze({ to: '/account', label: 'License account' }),
       Object.freeze({ to: '/refund', label: 'Refund policy' }),
