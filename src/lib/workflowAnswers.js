@@ -1,3 +1,5 @@
+import { commercialOffer } from './commercialOffer';
+
 // Visible editorial answers. Each belongs to the page that explains and demonstrates it.
 export const workflowAnswers = {
   '/pdf-measuring-tool': {
@@ -7,8 +9,8 @@ export const workflowAnswers = {
   },
   '/pdf-takeoff-software': {
     question: 'Is there free construction takeoff software for Mac and Windows?',
-    answer: 'PolyPDF has a Free desktop edition for Mac and Windows with calibration and up to 3 hand-created measurements per document, plus markup and review. Pro removes that measurement cap and adds Symbol Search and other Pro workflows. Use the free edition to check your own drawing scale and file handoff before deciding whether the paid workflow fits your project.',
-    href: '/product-facts/#free-and-pro', label: 'Check Free and Pro limits'
+    answer: `PolyPDF Free for Mac and Windows includes calibration, markup, review, and up to 3 hand-created measurements per document, with no trial timer. Personal Pro costs ${commercialOffer.price} USD once for PolyPDF 1.x on up to ${commercialOffer.activationLimit} computers. It removes the measurement cap and unlocks Symbol Search and other Pro workflows. Future major upgrades may be paid. Test your drawing and required handoff before buying.`,
+    href: '/pdf-takeoff-software/#free-vs-pro', label: 'Compare Free, Pro, and license terms'
   },
   '/measure-pdf-on-mac': {
     question: 'Can you measure construction PDFs on a Mac?',

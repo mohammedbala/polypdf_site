@@ -3,6 +3,20 @@
   "scope": "Static build checks; JSDOM axe excludes color contrast. Does not establish WCAG conformance or field performance.",
   "results": [
     {
+      "route": "/pdf-takeoff-software",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
+      "route": "/measure-pdf-on-mac",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
       "route": "/product-facts",
       "staticAccessibilityViolations": 0,
       "links": "pass",

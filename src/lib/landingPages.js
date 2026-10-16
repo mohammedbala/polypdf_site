@@ -10,6 +10,7 @@ import shotSymbolSearch768 from '../assets/screenshots/symbol-search-review-v1-4
 import shotSymbolSearch1536 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-1536.webp';
 import shotTakeoff768 from '../assets/screenshots/takeoff-v1-4-dark-web-768.webp';
 import shotTakeoff1536 from '../assets/screenshots/takeoff-v1-4-dark-web-1536.webp';
+import { commercialOffer, licenseRightsText } from './commercialOffer';
 
 const landingPage = (page) => Object.freeze(page);
 const workflowImageSizes = '(max-width: 760px) calc(100vw - 40px), (max-width: 1120px) calc(100vw - 80px), 660px';
@@ -106,7 +107,9 @@ export const landingPages = Object.freeze({
     faq: [
       ['What measurements can PolyPDF create?', 'PolyPDF supports distance, area, perimeter, angle, radius, diameter, dimension, and count workflows on calibrated PDF drawings.'],
       ['Can I export takeoff results?', 'Yes. The takeoff worksheet can be exported to CSV for downstream calculations or PDF for a readable record.'],
-      ['Do I need the original CAD file?', 'No. PolyPDF works from the PDF drawing. You calibrate the page using its stated scale or a known distance.']
+      ['Do I need the original CAD file?', 'No. PolyPDF works from the PDF drawing. You calibrate the page using its stated scale or a known distance.'],
+      ['Is PolyPDF takeoff free?', 'PolyPDF Free has no trial timer and includes calibration, markup, review, and up to 3 hand-created measurements per document. Pro removes that measurement cap and unlocks Symbol Search and other Pro workflows.'],
+      ['How much does a PolyPDF Pro license cost?', `The personal Pro license costs ${commercialOffer.price} USD in one payment, with applicable taxes shown at checkout. ${licenseRightsText} Direct website purchases have a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee. Organization-managed seats have separate team licensing.`]
     ],
     related: [
       ['/pdf-measuring-tool', 'Measure PDFs on Mac and Windows'],
@@ -153,10 +156,10 @@ export const landingPages = Object.freeze({
       'Supports common architectural and engineering scales plus custom calibration.',
       'Shows measurement labels directly on the sheet for visual verification.',
       'Keeps related quantities organized in the Measurements panel.',
-      'Includes the complete measurement workflow in the free download for evaluation.'
+      'Lets you evaluate calibration and up to 3 hand-created measurements per document in the free download.'
     ],
     faq: [
-      ['How do I know a PDF measurement is accurate?', 'Start by calibrating against the stated sheet scale or a known printed dimension. Then measure that known distance again as a check before using the page for quantities.'],
+      ['How do I know a PDF measurement is accurate?', 'Calibrate against a reliable printed dimension, then check a different known span before using the page for quantities. Check both directions when scan distortion is possible and verify each page or detail with a different scale separately.'],
       ['Can PolyPDF measure scanned drawings?', 'You can measure a raster or scanned drawing when it has a reliable scale or known reference distance. The source image quality and the accuracy of that reference still matter.'],
       ['Does PolyPDF upload my plans?', 'The desktop app processes PDF content locally. Your files stay on your computer unless you choose to export or share them; activation, update checks, and optional support services are separate from document processing.']
     ],
