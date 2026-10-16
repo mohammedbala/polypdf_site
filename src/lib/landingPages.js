@@ -212,6 +212,8 @@ export const landingPages = Object.freeze({
       'Measurement tools remain available when a review question also needs a quantity.'
     ],
     faq: [
+      ['Is construction PDF markup free in PolyPDF?', 'Yes. PolyPDF Free includes markup, review, and scale calibration with no trial timer. You can create up to 3 hand-created measurements per document. Pro adds unlimited measurements, PDF content editing, toolset placement, Symbol Search, and other advanced workflows.'],
+      ['What should I send with a reviewed construction PDF?', 'Send the marked PDF with its sheet and revision identified, plus the register needed by the receiving process. Clear filters for a full register, or document the filtered scope for a focused review. Reopen the files and reconcile their issue counts before distribution.'],
       ['What construction markups does PolyPDF support?', 'The current app includes text, callouts, highlights, shapes, freehand drawing, stamps, revision clouds, and measurement annotations. In 1.5.1 you can build interactive stamps on a blank canvas, prompt for placement values, and optionally save the template to a toolset.'],
       ['Can I use PolyPDF for RFIs or punch notes?', 'You can place RFI and punch-related comments directly on the relevant sheet and save the marked PDF. PolyPDF is the drawing workspace; your project’s formal routing and approval process can remain unchanged.'],
       ['Can recipients read the marked PDF without PolyPDF?', 'PolyPDF can save and export PDF output for normal document handoff. As with any PDF workflow, verify the exported file in the recipient’s viewer when interoperability is critical.']

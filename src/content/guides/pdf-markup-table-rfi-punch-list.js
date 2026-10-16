@@ -5,7 +5,7 @@ const pdfMarkupTableGuide = {
   title: 'Use a PDF Markup Table for RFI and Punch-List Review',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-11',
+  dateModified: '2026-10-16',
   releaseReviewed: '2026-09-11',
   releaseReviewVersion: '1.5.4 (build 26)',
   author: 'The PolyPDF team',
@@ -19,7 +19,7 @@ const pdfMarkupTableGuide = {
   lede:
     'A cloud on a plan explains where an issue is. A disciplined markup row explains what it is, who must review it, and what can be handed to the system that owns the formal record.',
   quickAnswer:
-    'Create one markup per issue, give it a stable subject, put the actionable question or observation in Comments, and assign a review status. Open the Markup Table to select and reveal rows, sort or filter the register, and update statuses. Detailed exports contain all markup rows; summary exports use the visible filtered scope. PolyPDF does not create or attach a formal RFI, submittal, or punch record.',
+    'Create one markup per issue, give it a stable subject, put the actionable question or observation in Comments, and assign a review status. Open the Markup Table to select and reveal rows, sort or filter the register, and update statuses. Clear filters for a full register, or document the filters for a focused review. Check exported rows and summary counts against the intended scope. PolyPDF does not create or attach a formal RFI, submittal, or punch record.',
   lastVerified: '2026-09-03',
   productVersion: 'PolyPDF 1.5.0 (build 22); screenshot from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
@@ -119,7 +119,7 @@ const pdfMarkupTableGuide = {
             'Open the Markup Table from the footer control, Window > Panels > Markup Table, or the sidebar context menu.',
             'Select a row to reveal its associated page markup. Use the Status control in the row to apply the agreed review state.',
             'Sort a column by its heading. Use the funnel controls on supported columns to keep only the values relevant to the current review.',
-            'Review the visible rows against the page, then choose a full-detail export or a filtered summary for the receiving workflow.'
+            'Review the visible rows against the page, choose a detailed export or summary, and verify the exported scope for the receiving workflow.'
           ]
         },
         {
@@ -151,7 +151,7 @@ const pdfMarkupTableGuide = {
         {
           kind: 'note',
           text:
-            'A filtered count is only the visible subset. Summary exports record that scope, but detailed CSV, JSON, and copied-text exports still include every markup. Compare visible and total counts before distributing either output.'
+            'A filtered count is only the visible subset. Do not assume a detailed export contains hidden rows. Clear filters when the recipient needs the full register; otherwise record the active filters and compare exported rows or summary counts with the intended scope.'
         }
       ]
     },
@@ -169,7 +169,7 @@ const pdfMarkupTableGuide = {
           caption: 'Choose an export based on the receiving task',
           headers: ['Output', 'Good fit', 'Important check'],
           rows: [
-            ['Detailed CSV', 'Import, spreadsheet reconciliation, or a formal register', 'It includes all markups, not only filtered rows.'],
+            ['Detailed CSV', 'Import, spreadsheet reconciliation, or a formal register', 'Clear filters for a full register; verify the exported row count.'],
             ['Summary CSV', 'Counts by status, page, subject, workspace, or custom value', 'It summarizes the current visible scope.'],
             ['Summary PDF', 'Human-readable review attachment', 'Inspect the rendered pages before issue.'],
             ['JSON or copied text', 'Structured handoff or quick communication', 'The receiving system still owns validation and record creation.']
@@ -214,7 +214,7 @@ const pdfMarkupTableGuide = {
     {
       question: 'Do Markup Table filters apply to every export?',
       answer:
-        'No. Summary CSV and summary PDF use the visible filtered scope. Detailed CSV, JSON, and copied text include every markup row. Check visible and total counts before distribution.'
+        'Do not assume an export includes hidden rows. Clear filters for a full register. If you need a focused report, record the filters and compare exported rows or summary counts against the visible and total markup counts before distribution.'
     },
     {
       question: 'Which markup statuses are available?',

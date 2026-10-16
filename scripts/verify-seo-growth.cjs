@@ -6,7 +6,7 @@ const { JSDOM } = require('jsdom');
 const axe = require('axe-core');
 const englishOnly = require('../src/lib/englishOnlyRoutes.json');
 const build = path.resolve(process.env.BUILD_PATH || 'build');
-const routes = ['/windows','/pdf-takeoff-software','/measure-pdf-on-mac','/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff'];
+const routes = ['/construction-pdf-markup','/windows','/pdf-takeoff-software','/measure-pdf-on-mac','/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff'];
 (async () => {
  const results = [];
  for (const route of routes) {
