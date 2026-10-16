@@ -31,7 +31,7 @@ const expectedRoutes = [
   '/visual-search-pdf-count',
   '/compare-pdf-drawings',
   '/bluebeam-alternative-for-mac',
-  '/bluebeam-alternative', '/pdf-measuring-tool', '/electrical-takeoff-software', '/flooring-takeoff-software', '/samples', '/tools', '/tools/flooring-waste-calculator'
+  '/bluebeam-alternative', '/pdf-measuring-tool', '/electrical-takeoff-software', '/flooring-takeoff-software', '/samples', '/tools', '/tools/flooring-waste-calculator', '/tools/pdf-scale-checker'
 ];
 
 test('defines unique, server-renderable metadata for every public route', () => {

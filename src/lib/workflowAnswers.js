@@ -3,7 +3,7 @@ export const workflowAnswers = {
   '/pdf-measuring-tool': {
     question: 'How do you measure a scaled PDF drawing?',
     answer: 'Open the PDF in a measuring tool, calibrate against a known dimension, and verify a second span before measuring. In PolyPDF, trace distances or area boundaries and review the units and quantities in the takeoff worksheet. Check each page or detail with a different scale separately. A single calibration cannot correct a scan that is stretched differently in two directions.',
-    href: '/blog/calibrate-pdf-drawing-scale/', label: 'Follow the calibration walkthrough'
+    href: '/tools/pdf-scale-checker/', label: 'Check your reference measurements'
   },
   '/pdf-takeoff-software': {
     question: 'Is there free construction takeoff software for Mac and Windows?',
