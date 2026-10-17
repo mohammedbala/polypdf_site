@@ -1,4 +1,6 @@
 import React from 'react';
+import SampleDrawingNote from './SampleDrawingNote';
+import './ConstructionLibrary.css';
 import { Link } from 'react-router';
 import DownloadCTA from './DownloadCTA';
 import { SampleLink } from './GrowthEvidence';
@@ -28,6 +30,7 @@ export default function AreaPractice() {
     </tbody></table></div>
     <p>The 228 sq ft result already excludes the 12 sq ft corner. Do not subtract it again. The reference CSV includes gross, deduction, subtotal, waste, and total rows for explanation; summing its entire quantity column is incorrect.</p>
     <h3>Inspect the saved Mac result</h3>
+    <SampleDrawingNote />
     <ul className="calibration-practice-files">
       <li><SampleLink href="/samples/takeoff/flooring-mac-measured.pdf" source="guide_net_area_practice" feature="historical_mac_output">Saved Mac measurements · PDF</SampleLink></li>
       <li><SampleLink href="/samples/takeoff/flooring-mac-worksheet.csv" source="guide_net_area_practice" feature="historical_mac_export">Mac worksheet export · CSV</SampleLink></li>

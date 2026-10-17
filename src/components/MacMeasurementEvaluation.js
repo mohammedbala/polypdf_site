@@ -1,3 +1,5 @@
+import SampleDrawingNote from './SampleDrawingNote';
+import './ConstructionLibrary.css';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router';
 import DownloadCTA from './DownloadCTA';
@@ -60,6 +62,7 @@ export default function MacMeasurementEvaluation() {
             <li><SampleLink href="/samples/takeoff/flooring-mac-worksheet.csv" source="mac_measurement_practice" feature="worksheet_export">Mac worksheet export · CSV</SampleLink></li>
           </ul>
           <p>No account or email is required for these files.</p>
+          <SampleDrawingNote />
           <p className="takeoff-small">The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity. The three-measurement sequence above is an evaluation guide, not a separately verified app test.</p>
           <p><Link to="/samples/">See all samples and verification details →</Link></p>
           <p><Link to="/blog/why-pdf-measurements-are-wrong/">Troubleshoot a measurement that does not match →</Link></p>

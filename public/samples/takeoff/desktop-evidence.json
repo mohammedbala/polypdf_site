@@ -24,9 +24,9 @@
   "files": [
     {
       "file": "flooring-mac-measured.pdf",
-      "sha256": "f936315d2ec9b70982fc1abadac548bcbe486a6d40a2269459597dfad642d4e9",
+      "sha256": "3f990a66a30332a38d56ee8e71c464ea558dc985ff09c4de829d36a349585e73",
       "rawExportSha256": "f936315d2ec9b70982fc1abadac548bcbe486a6d40a2269459597dfad642d4e9",
-      "transform": "byte-identical app output"
+      "transform": "Replaced page content/resources with October 17 construction-style drawing. Page boxes, annotation objects and measurement metadata retained; not a new desktop export."
     },
     {
       "file": "flooring-mac-worksheet.csv",
@@ -42,9 +42,9 @@
     },
     {
       "file": "electrical-mac-route.pdf",
-      "sha256": "f9f81c0e14db143ec79113f7de6477031d92b10bb433ef2d913179b0d8c2e130",
+      "sha256": "680386d2adc5fda1a99ff929dac5c4900170f820021aa41c178b2acab677b4f1",
       "rawExportSha256": "f9f81c0e14db143ec79113f7de6477031d92b10bb433ef2d913179b0d8c2e130",
-      "transform": "byte-identical app output"
+      "transform": "Replaced page content/resources with October 17 construction-style drawing. Page boxes, annotation objects and measurement metadata retained; not a new desktop export."
     },
     {
       "file": "electrical-mac-route.csv",
@@ -58,5 +58,7 @@
       "rawExportSha256": "dd6194dc48111d97fc68c9b3795feda341f8a90c8ec7696dd647f702475d1e0e",
       "transform": "source link changed from local file path to public sample URL"
     }
-  ]
+  ],
+  "drawingPresentationUpdatedAt": "2026-10-17",
+  "republishedDerivativesReopenedInApp": false
 }

@@ -1,3 +1,5 @@
+import SampleDrawingNote from './SampleDrawingNote';
+import './ConstructionLibrary.css';
 import React, { useEffect } from 'react';
 import { Link } from 'react-router';
 import DownloadCTA from './DownloadCTA';
@@ -62,6 +64,7 @@ export default function SymbolCountEvaluation() {
           </div>
           <div className="takeoff-practice-files">
             <figure className="symbol-count-preview"><img src="/samples/takeoff/electrical-practice-preview.png" width="1100" height="850" loading="lazy" alt="E-101 source drawing with eight circle-with-cross Type A fixtures, four square Type B fixtures, and a separate route." /><figcaption>Source PDF preview, not a screenshot of automatic counting.</figcaption></figure>
+            <SampleDrawingNote electrical />
             <h3>Download the reference files.</h3>
             <ul>
               <li><SampleLink href="/samples/takeoff/electrical-practice.pdf" source="symbol_count_evaluation" feature="practice_drawing">E-101 electrical practice drawing · PDF</SampleLink></li>
