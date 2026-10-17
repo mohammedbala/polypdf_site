@@ -1,4 +1,6 @@
 import React from 'react';
+import SampleDrawingNote from './SampleDrawingNote';
+import './ConstructionLibrary.css';
 import { Link } from 'react-router';
 import DownloadCTA from './DownloadCTA';
 import { SampleLink } from './GrowthEvidence';
@@ -28,6 +30,7 @@ export default function CalibrationPractice() {
     <p>Compare both span readings with your project’s tolerance before tracing the area. If they disagree, recheck the endpoints, units, and calibration. Do not average the errors into one scale.</p>
     <p><Link to="/tools/pdf-scale-checker/">Check your two reference errors</Link>. Enter your own readings and tolerance; the checker compares numbers and does not measure or certify a PDF.</p>
     <p>For the third measurement, trace Room 1 around its edge-connected 4 ft × 3 ft exclusion: (20 × 12) − (4 × 3) = 228 sq ft. Keep the two length checks separate from the area total, then save a copy and reopen it.</p>
+    <SampleDrawingNote />
     <p className="calibration-practice-evidence">Reference dimensions come from the source geometry. Existing Mac outputs verify Room 1 at 228 sq ft and Room 2 at 180 sq ft in PolyPDF 1.6.6 build 38. This three-measurement exercise is guidance, not a new app test; current-release and Windows parity remain unverified.</p>
     <p><Link to="/pdf-takeoff-software/#try-a-takeoff">See the full 408 sq ft takeoff and saved Mac outputs</Link>.</p>
     <h3>Try it on your Mac or Windows PC</h3>

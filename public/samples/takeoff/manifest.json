@@ -1,17 +1,72 @@
 {
   "kind": "synthetic-practice-reference",
+  "updatedAt": "2026-10-17",
   "appExport": false,
   "scalePdfPointsPerFoot": 9,
   "flooringNetSqFt": 408,
   "electricalTypeA": 8,
   "electricalTypeB": 4,
   "electricalDrawnRouteFt": 42,
+  "flooringNetVertices": [
+    [
+      90,
+      290
+    ],
+    [
+      270,
+      290
+    ],
+    [
+      270,
+      371
+    ],
+    [
+      234,
+      371
+    ],
+    [
+      234,
+      398
+    ],
+    [
+      90,
+      398
+    ]
+  ],
+  "electricalRouteVertices": [
+    [
+      100,
+      300
+    ],
+    [
+      370,
+      300
+    ],
+    [
+      370,
+      408
+    ]
+  ],
   "files": {
-    "electrical-practice.pdf": "1d52452d647250ceddafce98178ebb5e99ee9dc776c83a83322ae7a8947fda9c",
+    "electrical-practice.pdf": "d53f079157b616068075e88c0a75dc5e1bde8604e9923c00f343ddd28ab53878",
     "electrical-reference.csv": "43454bb6d09d735ecf7f27401bd5cbe1a55f160a5e21ec3711232447fabffd01",
-    "electrical-reference.pdf": "d320f636dd42b817d204377c0a8bba2984088e1a51370f00946513b3eb692822",
-    "flooring-practice.pdf": "55358ba8b583c98f0442f411b011791a8bb6b4adfa79b148db86c44ac931a71b",
+    "electrical-reference.pdf": "d7fe95bec384896bd1ca806194c93a7854cd1b3d3078b772cf01831039f5f491",
+    "flooring-practice.pdf": "bdc4bcff4a834d479ff3feac5325198f8653a2f971cc15273f86494b39c848da",
     "flooring-reference.csv": "83023dd21f449af55ace548567b6ac499c7eaaff5d396952d05eb8b95a9aeb58",
-    "flooring-reference.pdf": "97193559fd51884246a6463f86984bcd343f17c1071dde482027f3ce538ebb3e"
-  }
+    "flooring-reference.pdf": "f644daf6722e34f343ecb4df7583b4b244f31375ffb922f5f32ebe3375352265"
+  },
+  "republishedMeasuredExamples": [
+    {
+      "file": "flooring-mac-measured.pdf",
+      "originalSha256": "f936315d2ec9b70982fc1abadac548bcbe486a6d40a2269459597dfad642d4e9",
+      "sha256": "3f990a66a30332a38d56ee8e71c464ea558dc985ff09c4de829d36a349585e73",
+      "transform": "Replaced page content/resources with October 17 construction-style drawing. Page boxes, annotation objects and measurement metadata retained; not a new desktop export."
+    },
+    {
+      "file": "electrical-mac-route.pdf",
+      "originalSha256": "f9f81c0e14db143ec79113f7de6477031d92b10bb433ef2d913179b0d8c2e130",
+      "sha256": "680386d2adc5fda1a99ff929dac5c4900170f820021aa41c178b2acab677b4f1",
+      "transform": "Replaced page content/resources with October 17 construction-style drawing. Page boxes, annotation objects and measurement metadata retained; not a new desktop export."
+    }
+  ]
 }
