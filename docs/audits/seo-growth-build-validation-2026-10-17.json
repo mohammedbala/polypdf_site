@@ -155,6 +155,27 @@
       "links": "pass",
       "canonical": "pass",
       "h1": "pass"
+    },
+    {
+      "route": "/blog/compare-pdf-drawing-revisions",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
+      "route": "/blog/pdf-markup-table-rfi-punch-list",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
+      "route": "/blog/ocr-scanned-pdf-drawings",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
     }
   ]
 }

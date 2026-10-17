@@ -20,7 +20,7 @@ const post = {
   title: 'How to OCR Scanned PDF Drawings',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-03',
+  dateModified: '2026-10-17',
   author: 'The PolyPDF team',
   readingTime: '8 min read',
   tag: 'Search & OCR',
