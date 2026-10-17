@@ -284,8 +284,8 @@
     "robots": "index, follow"
   },
   "/compare-pdf-drawings": {
-    "title": "Compare PDF Drawings & Revisions | PolyPDF",
-    "description": "Compare PDF drawing revisions, inspect meaningful differences, and add clouds or callouts for coordination, pricing, and review handoff.",
+    "title": "Compare PDF Drawings on Mac & Windows | PolyPDF",
+    "description": "Compare PDF drawings on Mac and Windows. Try a free comparison, inspect a sample A/B pair, and choose colored overlays or Revision Packages with Pro.",
     "robots": "index, follow",
     "dateModified": "2026-10-16"
   },
