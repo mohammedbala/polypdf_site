@@ -20,6 +20,7 @@ import {
 } from 'react-icons/fa';
 import { HiOutlineSparkles } from 'react-icons/hi';
 import DownloadCTA from './DownloadCTA';
+import FormPractice from './FormPractice';
 import GrowthNav from './GrowthNav';
 import { SampleLink } from './GrowthEvidence';
 import { buyPath, canonicalPagePath } from '../lib/attribution';
@@ -313,8 +314,16 @@ const BlogPost = () => {
   const headingRef = useRef(null);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    headingRef.current?.focus({ preventScroll: true });
+    let active = true;
+    if (window.location.hash) {
+      Promise.resolve(document.fonts?.ready).then(() => {
+        if (active) document.getElementById(window.location.hash.slice(1))?.scrollIntoView();
+      });
+    } else {
+      window.scrollTo(0, 0);
+      headingRef.current?.focus({ preventScroll: true });
+    }
+    return () => { active = false; };
   }, [slug]);
 
   // An unknown slug is a wrong URL, not an error state worth a page of its own.
@@ -360,6 +369,7 @@ const BlogPost = () => {
               </div>
               <h1 id="blog-article-title" ref={headingRef} tabIndex="-1">{entry.title}</h1>
               <QuickAnswer value={entry.quickAnswer} />
+              {entry.slug === 'create-fillable-pdf-form' && <p><a href="#practice-form">Download a fillable practice form</a></p>}
               {heroImage && renderFigure(heroImage, 'hero-image', true)}
               {entry.lede && <p className="legal-subtitle blog-lede">{entry.lede}</p>}
               {entry.author && <p className="blog-byline">By {entry.author}</p>}
@@ -395,6 +405,7 @@ const BlogPost = () => {
             </header>
 
             {['quantity-takeoff','pdf-takeoff-worked-example','calibrate-pdf-drawing-scale'].includes(entry.slug) && <section className="growth-file-panel"><h2>Practice with a checked source</h2><p><Link to="/samples/">Download the practice drawings and reference quantities</Link>. Keep the sheet revision and units with your results.</p><SampleLink href="/samples/conversion/northline-studio-rev-a.pdf" source="guide_practice">Northline source PDF</SampleLink></section>}
+            {entry.slug === 'create-fillable-pdf-form' && <FormPractice />}
             <div className="legal-sections">
               {(entry.sections || []).map((section, index) => (
                 <motion.section
