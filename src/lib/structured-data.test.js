@@ -12,7 +12,7 @@ test('product facts and workflow pages identify the same software and publisher'
   const publisher = facts.find((entry) => entry['@type'] === 'Organization');
   expect(page.mainEntity['@id']).toBe(app['@id']);
   expect(page.publisher['@id']).toBe(publisher['@id']);
-  expect(page.dateModified).toBe('2026-10-16');
+  expect(page.dateModified).toBe('2026-10-17');
   for (const route of ['/pdf-measuring-tool', '/pdf-takeoff-software', '/flooring-takeoff-software', '/bluebeam-alternative']) {
     const workflow = buildStructuredData(route).find((entry) => entry['@type'] === 'WebPage');
     expect(workflow.about['@id']).toBe(app['@id']);
