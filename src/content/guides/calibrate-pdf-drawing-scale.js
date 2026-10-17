@@ -7,7 +7,7 @@ const post = {
   title: 'How to Calibrate a PDF Drawing Scale',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-07',
+  dateModified: '2026-10-17',
   author: 'The PolyPDF team',
   readingTime: '8 min read',
   tag: 'Measure & Takeoff',
@@ -15,7 +15,7 @@ const post = {
     'Set an accurate PDF drawing scale from a printed ratio or a known dimension, then check it against a second reference before starting takeoff.',
   metaTitle: 'How to Calibrate a PDF Drawing Scale | PolyPDF',
   metaDescription:
-    'Calibrate a PDF drawing from a known dimension, verify the scale on a second span, and avoid common takeoff errors in PolyPDF on Mac or Windows.',
+    'Calibrate PDF drawing scale from a known dimension. Download a practice plan, check two reference spans, and try a net-area measurement in PolyPDF.',
   lede:
     'A trustworthy takeoff starts with one page-specific scale and an independent check. PolyPDF lets you apply the scale printed in a title block or draw over a known dimension when the sheet does not state one.',
   quickAnswer:

@@ -113,6 +113,27 @@
       "links": "pass",
       "canonical": "pass",
       "h1": "pass"
+    },
+    {
+      "route": "/blog/calibrate-pdf-drawing-scale",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
+      "route": "/blog/why-pdf-measurements-are-wrong",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
+      "route": "/blog/pdf-takeoff-worked-example",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
     }
   ]
 }

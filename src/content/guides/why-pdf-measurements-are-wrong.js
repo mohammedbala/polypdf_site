@@ -8,7 +8,7 @@ const post = {
   title: 'Why PDF Measurements Are Wrong (and How to Fix Them)',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-07',
+  dateModified: '2026-10-17',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Measure & Takeoff',
