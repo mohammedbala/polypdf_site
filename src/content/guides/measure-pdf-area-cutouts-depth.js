@@ -8,7 +8,7 @@ const post = {
   title: 'How to Measure PDF Area with Cutouts and Depth',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-11',
+  dateModified: '2026-10-17',
   releaseReviewed: '2026-09-11',
   releaseReviewVersion: '1.5.4 (build 26)',
   author: 'The PolyPDF team',
@@ -18,11 +18,11 @@ const post = {
     'Trace a net PDF area, subtract multiple interior openings, optionally convert it to volume with depth, and keep hatch styling separate from the math.',
   metaTitle: 'Measure PDF Area, Cutouts, and Volume | PolyPDF',
   metaDescription:
-    'Measure net area in a PDF, subtract multiple cutouts, add a real-world depth for volume, and understand what hatch scale changes in PolyPDF.',
+    'Measure net PDF area, distinguish interior cutouts from edge exclusions, and check a 408 sq ft practice result against saved PDF and CSV outputs.',
   lede:
     'Net-area takeoff is more useful when the annotation records the outer boundary, each excluded opening, and any depth used for volume. PolyPDF 1.4.0 keeps those inputs on one selectable measurement.',
   quickAnswer:
-    'To measure net PDF area in PolyPDF, calibrate the current page, choose Area, trace and close the outer boundary, then select the measurement. In the Area Cutouts controls, choose Add Cutout and trace each opening fully inside the boundary. PolyPDF subtracts those cutout polygons from the outer area. If you enter a positive real-world Depth, the result changes from area to volume. Hatch pattern and hatch scale change appearance only, not the measured quantity.',
+    'To measure net PDF area in PolyPDF, calibrate the page and verify a known dimension. Trace a closed area, then use Add Cutout for openings wholly inside its boundary. For an exclusion touching the outer edge, trace the net outline around it instead; do not subtract the same opening twice. Review the area, units, and formula before exporting. A positive real-world Depth changes area to volume; hatch styling does not change the quantity.',
   lastVerified: '2026-09-03',
   productVersion: 'PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)',
   platforms: 'macOS and Windows',
@@ -245,6 +245,10 @@ const post = {
     }
   ],
   faqs: [
+    {
+      question: 'How do I exclude a notch that touches the outer boundary?',
+      answer: 'Trace the net area outline around an edge-connected exclusion. Reserve Add Cutout for openings wholly inside the boundary. In the F-101 practice sheet, the 4 ft by 3 ft corner exclusion is already omitted from the 228 sq ft Room 1 outline; do not subtract it again.'
+    },
     {
       question: 'Can I add more than one cutout to a PDF area measurement?',
       answer:

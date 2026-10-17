@@ -148,6 +148,13 @@
       "links": "pass",
       "canonical": "pass",
       "h1": "pass"
+    },
+    {
+      "route": "/blog/measure-pdf-area-cutouts-depth",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
     }
   ]
 }
