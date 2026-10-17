@@ -16,7 +16,7 @@ test('defines six substantial, uniquely attributed workflow landing pages', () =
     expect(page.workflow.length).toBeLessThanOrEqual(5);
     expect(page.outcomes.length).toBeGreaterThanOrEqual(5);
     expect(page.faq.length).toBeGreaterThanOrEqual(3);
-    expect(page.faq.length).toBeLessThanOrEqual(5);
+    expect(new Set(page.faq.map(([question]) => question)).size).toBe(page.faq.length);
     expect(page.related.length).toBeGreaterThanOrEqual(6);
     expect(page).not.toHaveProperty('mediaSlug');
     expect(page.imageWidth).toBeGreaterThanOrEqual(1200);
