@@ -57,7 +57,7 @@ for lang,t in copy.items():
  c.linkURL('https://'+t['link'],(40,50,500,65),relative=0)
  c.showPage();c.save()
 with (args.output/'construction-review-field-map.csv').open('w',newline='') as f:
- w=csv.writer(f);w.writerow(['Language','Field name','Field type','Visible label']);w.writerows(field_rows)
+ w=csv.writer(f,lineterminator='\n');w.writerow(['Language','Field name','Field type','Visible label']);w.writerows(field_rows)
 manifest={'created':'2026-10-17','kind':'original practice templates, not app-generated outputs','fieldsPerPdf':10,'languages':['en','fr'],'files':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(args.output.glob('*')) if p.suffix in ['.pdf','.csv']}}
 (args.output/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
 print(json.dumps(manifest,indent=2))
