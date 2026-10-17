@@ -82,7 +82,7 @@
   },
   "/blog/calibrate-pdf-drawing-scale": {
     "title": "How to Calibrate a PDF Drawing Scale | PolyPDF",
-    "description": "Calibrate a PDF drawing from a known dimension, verify the scale on a second span, and avoid common takeoff errors in PolyPDF on Mac or Windows.",
+    "description": "Calibrate PDF drawing scale from a known dimension. Download a practice plan, check two reference spans, and try a net-area measurement in PolyPDF.",
     "robots": "index, follow",
     "type": "article",
     "image": "/guides/calibrate-pdf-drawing-scale.png?v=1.4.3-20",

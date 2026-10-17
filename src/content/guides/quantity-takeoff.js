@@ -1,7 +1,7 @@
 import screenshot from '../../assets/screenshots/takeoff-v1-4-dark-web.png';
 import worked from './pdf-takeoff-worked-example';
 const post = {
- slug:'quantity-takeoff',title:'What Is a Quantity Takeoff? From Drawing to Checked Quantities',date:'2026-10-16',dateLabel:'October 16, 2026',dateModified:'2026-10-16',author:'The PolyPDF team',readingTime:'8 min read',tag:'Measure & Takeoff',
+ slug:'quantity-takeoff',title:'What Is a Quantity Takeoff? From Drawing to Checked Quantities',date:'2026-10-16',dateLabel:'October 16, 2026',dateModified:'2026-10-17',author:'The PolyPDF team',readingTime:'8 min read',tag:'Measure & Takeoff',
  excerpt:'Separate measured quantities from waste and pricing. Follow a practical area, length, and count workflow with downloadable practice files.',
  metaTitle:'Quantity Takeoff: Process, Examples & Checks | PolyPDF',
  metaDescription:'Learn how quantity takeoff turns drawings into checked areas, lengths, and counts. Separate waste and pricing, and practice with downloadable PDFs.',
