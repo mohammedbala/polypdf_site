@@ -102,7 +102,7 @@
   },
   "/blog/measure-pdf-area-cutouts-depth": {
     "title": "Measure PDF Area, Cutouts, and Volume | PolyPDF",
-    "description": "Measure net area in a PDF, subtract multiple cutouts, add a real-world depth for volume, and understand what hatch scale changes in PolyPDF.",
+    "description": "Measure net PDF area, distinguish interior cutouts from edge exclusions, and check a 408 sq ft practice result against saved PDF and CSV outputs.",
     "robots": "index, follow",
     "type": "article",
     "image": "/guides/measure-pdf-area-cutouts-depth.png?v=1.4.3-20",
