@@ -309,6 +309,9 @@ export const landingPages = Object.freeze({
       'Works on Mac and Windows for mixed-platform project teams.'
     ],
     faq: [
+      ['Is PDF drawing comparison free in PolyPDF?', 'Compare Documents is available in Free and Pro on Mac and Windows. Free also includes markup and review. Colored overlays require Pro, as do creating, updating, and publishing Revision Packages. Free can view and navigate existing Revision Packages.'],
+      ['How is a PDF comparison different from an overlay?', 'Compare Documents detects rendered differences and creates a separate comparison PDF, normally with editable revision clouds. Overlay Pages superimposes page snapshots for visual inspection with color and opacity controls; it does not automatically list detected changes.'],
+      ['Why does nearly the whole drawing look changed?', 'Check page identity and order, crop, rotation, plot scale, and alignment. Shifted or stretched scans can create widespread visual differences. Resolve those mismatches before treating detected regions as design changes.'],
       ['What should I check before comparing two drawings?', 'Confirm the sheet identity, revision, orientation, page size, and scale. A shifted scan or differently cropped sheet can create visual differences that are not design changes.'],
       ['Does comparison replace a formal revision review?', 'No. It helps focus attention, but the issued revision record and a qualified reviewer remain authoritative. Every detected difference still needs context.'],
       ['Can I mark up the differences afterward?', 'Yes. Use revision clouds, callouts, text, shapes, and stamps to record what the team needs to review or act on.'],

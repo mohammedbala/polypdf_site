@@ -40,6 +40,6 @@ export const workflowAnswers = {
   '/compare-pdf-drawings': {
     question: 'How do you compare two revisions of a PDF drawing?',
     answer: 'Confirm that the PDFs represent the same sheet, check revision identifiers, and align their position and scale before comparing. Review detected differences against the actual drawing and record relevant changes with markups or revision clouds. PolyPDF supports drawing comparison, but differences can also come from shifted pages or changed rendering. A comparison does not establish that every design change has been found.',
-    href: '/samples/', label: 'Review the drawing-comparison example'
+    href: '/compare-pdf-drawings/#try-drawing-comparison', label: 'Try the drawing pair and check the source changes'
   }
 };

@@ -5,7 +5,7 @@ const comparePdfDrawingRevisionsGuide = {
   title: 'How to Compare PDF Drawing Revisions',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-07',
+  dateModified: '2026-10-16',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',
@@ -96,6 +96,15 @@ const comparePdfDrawingRevisionsGuide = {
       title: 'Choose Compare Documents or a Revision Package',
       body: [
         {
+          kind: 'p',
+          text: 'Compare Documents is available in Free and Pro. Colored Overlay Pages requires Pro and superimposes page snapshots for visual inspection rather than automatically listing changes. Free can view and navigate existing Revision Packages; creating, updating, or publishing a package requires Pro.'
+        },
+        {
+          kind: 'link',
+          href: '/compare-pdf-drawings/#comparison-options',
+          label: 'Compare the workflows and edition requirements'
+        },
+        {
           kind: 'table',
           caption: 'The two revision workflows solve different jobs',
           headers: ['Workflow', 'Use it when', 'What you receive'],
@@ -133,6 +142,15 @@ const comparePdfDrawingRevisionsGuide = {
           kind: 'p',
           text:
             'The example above compares a sample drawing against a revision containing four changes. Compare returned a one-page result carrying four editable revision clouds, and reopening that saved file in PolyPDF showed the same four clouds as selectable markups with four matching rows in the Markup Table.'
+        },
+        {
+          kind: 'p',
+          text: 'For your own practice, the separate Northline A/B downloads contain three authored source changes: a meeting-room partition and seating update, a moved doorway, and a Material Library conversion. They are not the four-cloud fixture shown above and do not establish an expected detected-cloud count.'
+        },
+        {
+          kind: 'link',
+          href: '/compare-pdf-drawings/#try-drawing-comparison',
+          label: 'Download the Northline practice pair and inspect the changes'
         },
         {
           kind: 'note',
