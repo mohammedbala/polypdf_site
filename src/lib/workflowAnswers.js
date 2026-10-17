@@ -15,7 +15,7 @@ export const workflowAnswers = {
   '/measure-pdf-on-mac': {
     question: 'Can you measure construction PDFs on a Mac?',
     answer: 'Yes. PolyPDF is a desktop PDF measuring app for macOS 14 or newer, on Apple silicon and Intel Macs. Open the drawing, calibrate a known dimension, verify a second span, and then measure lengths or areas. The Free edition supports up to 3 hand-created measurements per document. Use the reviewed worksheet quantities for the next estimating step.',
-    href: '/pdf-measuring-tool/', label: 'See the PDF measurement workflow'
+    href: '/measure-pdf-on-mac/#try-mac-measurement', label: 'Try the Mac measurement sample'
   },
   '/electrical-takeoff-software': {
     question: 'What does electrical takeoff software measure?',

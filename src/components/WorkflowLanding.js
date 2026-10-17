@@ -13,7 +13,7 @@ import { WorkflowDemoMedia, workflowDemos } from './WorkflowDemos';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
 import './WorkflowLanding.css';
 import GrowthNav from './GrowthNav';
-import GrowthEvidence from './GrowthEvidence';
+import MacMeasurementEvaluation from './MacMeasurementEvaluation';
 import WorkflowAnswer from './WorkflowAnswer';
 import TakeoffEvaluation from './TakeoffEvaluation';
 import MarkupEvaluation from './MarkupEvaluation';
@@ -71,6 +71,7 @@ const WorkflowLanding = ({ page, children }) => {
                   <FaInfinity /> Unlock PolyPDF Pro · {commercialOffer.price}
                 </DirectCheckoutLink>
               </div>
+              {page.path === '/measure-pdf-on-mac' && <nav className="takeoff-jump-links" aria-label="Mac measurement decisions"><a href="#preview-and-scale">Preview and drawing scale</a><a href="#try-mac-measurement">Try the Mac measurement sample</a></nav>}
               {page.path === '/pdf-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Takeoff decisions"><a href="#free-vs-pro">Compare Free and Pro</a><a href="#try-a-takeoff">Try the practice takeoff</a></nav>}
               {page.path === '/construction-pdf-markup' && <nav className="takeoff-jump-links" aria-label="Markup decisions"><a href="#markup-free-vs-pro">Compare Free and Pro</a><a href="#review-handoff">Check the review handoff</a></nav>}
               {page.path === '/compare-pdf-drawings' && <nav className="takeoff-jump-links" aria-label="Comparison decisions"><a href="#comparison-options">Compare the revision workflows</a><a href="#try-drawing-comparison">Try the drawing pair</a></nav>}
@@ -120,7 +121,7 @@ const WorkflowLanding = ({ page, children }) => {
         {!children && page.path === '/pdf-takeoff-software' && <TakeoffEvaluation />}
         {!children && page.path === '/construction-pdf-markup' && <MarkupEvaluation />}
         {!children && page.path === '/compare-pdf-drawings' && <ComparisonEvaluation />}
-        {!children && page.path === '/measure-pdf-on-mac' && <GrowthEvidence kind="takeoff" />}
+        {!children && page.path === '/measure-pdf-on-mac' && <MacMeasurementEvaluation />}
 
         <section className="workflow-steps" id="how-it-works">
           <div className="container">

@@ -32,6 +32,6 @@ const routes = ['/compare-pdf-drawings','/construction-pdf-markup','/windows','/
   dom.window.close();
  }
  fs.mkdirSync('docs/audits',{recursive:true});
- fs.writeFileSync('docs/audits/seo-growth-build-validation-2026-10-16.json',JSON.stringify({date:'2026-10-16',scope:'Static build checks; JSDOM axe excludes color contrast. Does not establish WCAG conformance or field performance.',results},null,2)+'\n');
+ fs.writeFileSync('docs/audits/seo-growth-build-validation-2026-10-17.json',JSON.stringify({date:'2026-10-17',scope:'Static build checks; JSDOM axe excludes color contrast. Does not establish WCAG conformance or field performance.',results},null,2)+'\n');
  console.log('SEO growth build checks passed: '+routes.length+' routes, internal links, unique IDs, static accessibility, canonicals and language scope.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
