@@ -152,7 +152,7 @@
   },
   "/blog/create-fillable-pdf-form": {
     "title": "How to Create a Fillable PDF Form | PolyPDF",
-    "description": "Create a fillable AcroForm PDF in PolyPDF with text, checkbox, radio, combo, and list fields, plus testing and compatibility checks.",
+    "description": "Create a fillable PDF form in PolyPDF. Download English and French practice forms, add AcroForm fields, and check saved values before sharing.",
     "robots": "index, follow",
     "type": "article",
     "image": "/guides/create-fillable-pdf-form.png?v=1.4.3-20",

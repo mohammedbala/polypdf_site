@@ -106,6 +106,13 @@
       "links": "pass",
       "canonical": "pass",
       "h1": "pass"
+    },
+    {
+      "route": "/blog/create-fillable-pdf-form",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
     }
   ]
 }

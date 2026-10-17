@@ -1,0 +1,21 @@
+Language,Field name,Field type,Visible label
+en,project,text,Project / location
+en,visit_date,text,Visit date (YYYY-MM-DD)
+en,reviewer,text,Reviewed by
+en,drawing_revision,text,Drawing / revision reference
+en,trade,combo box,Scope
+en,review_status,radio group,Review status
+en,drawing_checked,checkbox,Drawing revision recorded
+en,photos_referenced,checkbox,Photo references listed
+en,action_assigned,checkbox,Action owner assigned
+en,observation,multiline text,"Observation, action owner, and next step"
+fr,project,text,Projet / lieu
+fr,visit_date,text,Date de visite (AAAA-MM-JJ)
+fr,reviewer,text,Revu par
+fr,drawing_revision,text,Plan / référence de révision
+fr,trade,combo box,Lot
+fr,review_status,radio group,État du suivi
+fr,drawing_checked,checkbox,Révision du plan notée
+fr,photos_referenced,checkbox,Références des photos listées
+fr,action_assigned,checkbox,Responsable de l’action désigné
+fr,observation,multiline text,"Observation, responsable et prochaine action"

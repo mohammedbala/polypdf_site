@@ -5,7 +5,7 @@ const createFillablePdfFormGuide = {
   title: 'How to Create a Fillable PDF Form',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-09-07',
+  dateModified: '2026-10-17',
   author: 'The PolyPDF team',
   readingTime: '10 min read',
   tag: 'Forms',
@@ -13,7 +13,7 @@ const createFillablePdfFormGuide = {
     'Add standard AcroForm fields to a compatible PDF, set names and tab order, test the saved copy, and recognize signed, secured, and XFA limits.',
   metaTitle: 'How to Create a Fillable PDF Form | PolyPDF',
   metaDescription:
-    'Create a fillable AcroForm PDF in PolyPDF with text, checkbox, radio, combo, and list fields, plus testing and compatibility checks.',
+    'Create a fillable PDF form in PolyPDF. Download English and French practice forms, add AcroForm fields, and check saved values before sharing.',
   lede:
     'A reliable fillable PDF is more than boxes over a page. Its fields need stable names, useful tooltips, sensible tab order, compatible behavior, and a saved-file test in the viewers recipients will use.',
   quickAnswer:
