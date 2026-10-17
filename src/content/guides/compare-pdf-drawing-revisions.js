@@ -5,7 +5,7 @@ const comparePdfDrawingRevisionsGuide = {
   title: 'How to Compare PDF Drawing Revisions',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-10-16',
+  dateModified: '2026-10-17',
   author: 'The PolyPDF team',
   readingTime: '9 min read',
   tag: 'Review & Markup',

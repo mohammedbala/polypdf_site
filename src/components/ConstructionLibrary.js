@@ -1,5 +1,5 @@
 import React from 'react';
-import { SampleLink } from './GrowthEvidence';
+import SampleLink from './SampleLink';
 import './ConstructionLibrary.css';
 const drawings = [
   ['01-Civil-Site-and-Grading','Civil site and grading','C101 · C501','Site layout, grading, parking, drainage, pavement and curb details.'],
@@ -21,7 +21,8 @@ export default function ConstructionLibrary() {
   <h2 id="construction-library-heading">One project. Twelve PDFs. Twenty-four construction sheets.</h2>
   <p>Explore the fictional Willow Creek Community Center through coordinated architectural, structural, civil, MEP, and finish drawings. Every PDF contains two bookmarked ARCH D sheets (36 × 24 inches), with drawing numbers, schedules, legends, dimensions, and details.</p>
   <div className="construction-library-downloads"><SampleLink href="/samples/construction/polypdf-construction-demo-library.zip" source="construction_library" feature="complete_library">Download all 24 sheets · ZIP</SampleLink><a href="/samples/construction/DEMO-GUIDE.html">View the drawing guide and reference quantities →</a></div>
-  <p className="construction-library-note">These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Their quantities differ from the separate F-101 and E-101 practice exercises below.</p>
+  <p className="construction-library-note">These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Use the sheet-specific examples below. The earlier F-101 and E-101 exercises use different drawings and quantities.</p>
+  <p><a href="#construction-example-takeoff">Measurement</a> · <a href="#construction-example-flooring">Flooring</a> · <a href="#construction-example-electrical">Electrical</a> · <a href="#construction-example-compare">Revision comparison</a> · <a href="#construction-example-review">Coordination review</a> · <a href="#construction-example-ocr">OCR</a></p>
   <ul className="construction-library-grid">{drawings.map(([file,title,sheets,description])=><li key={file}>
     <SampleLink href={`/samples/construction/${file}.pdf`} source="construction_library" feature={file}><img src={`/samples/construction/previews/${file}--page-01.png`} alt={`${title}: first sheet preview`} width="1440" height="960" loading="lazy"/><span>{title} · PDF</span></SampleLink>
     <p className="construction-library-sheets">{sheets} · 2 sheets</p><p>{description}</p>

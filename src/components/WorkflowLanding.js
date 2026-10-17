@@ -13,6 +13,8 @@ import { WorkflowDemoMedia, workflowDemos } from './WorkflowDemos';
 import { useCommercialOffer } from '../lib/useCommercialOffer';
 import './WorkflowLanding.css';
 import GrowthNav from './GrowthNav';
+import ConstructionExample from './ConstructionExample';
+import { constructionExampleForPath } from '../lib/constructionExamples';
 import MacMeasurementEvaluation from './MacMeasurementEvaluation';
 import WorkflowAnswer from './WorkflowAnswer';
 import TakeoffEvaluation from './TakeoffEvaluation';
@@ -72,11 +74,11 @@ const WorkflowLanding = ({ page, children }) => {
                   <FaInfinity /> Unlock PolyPDF Pro · {commercialOffer.price}
                 </DirectCheckoutLink>
               </div>
-              {page.path === '/measure-pdf-on-mac' && <nav className="takeoff-jump-links" aria-label="Mac measurement decisions"><a href="#preview-and-scale">Preview and drawing scale</a><a href="#try-mac-measurement">Try the Mac measurement sample</a></nav>}
-              {page.path === '/pdf-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Takeoff decisions"><a href="#free-vs-pro">Compare Free and Pro</a><a href="#try-a-takeoff">Try the practice takeoff</a></nav>}
-              {page.path === '/construction-pdf-markup' && <nav className="takeoff-jump-links" aria-label="Markup decisions"><a href="#markup-free-vs-pro">Compare Free and Pro</a><a href="#review-handoff">Check the review handoff</a></nav>}
-              {page.path === '/visual-search-pdf-count' && <nav className="takeoff-jump-links" aria-label="Symbol counting decisions"><a href="#counting-options">Choose Free or Pro for counting</a><a href="#check-symbol-count">Check the fixture-count exercise</a></nav>}
-              {page.path === '/compare-pdf-drawings' && <nav className="takeoff-jump-links" aria-label="Comparison decisions"><a href="#comparison-options">Compare the revision workflows</a><a href="#try-drawing-comparison">Try the drawing pair</a></nav>}
+              {page.path === '/measure-pdf-on-mac' && <nav className="takeoff-jump-links" aria-label="Mac measurement decisions"><a href="#preview-and-scale">Preview and drawing scale</a><a href="#construction-example-takeoff">Try the Mac measurement sample</a></nav>}
+              {page.path === '/pdf-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Takeoff decisions"><a href="#free-vs-pro">Compare Free and Pro</a><a href="#construction-example-takeoff">Try the practice takeoff</a></nav>}
+              {page.path === '/construction-pdf-markup' && <nav className="takeoff-jump-links" aria-label="Markup decisions"><a href="#markup-free-vs-pro">Compare Free and Pro</a><a href="#construction-example-review">Check the review handoff</a></nav>}
+              {page.path === '/visual-search-pdf-count' && <nav className="takeoff-jump-links" aria-label="Symbol counting decisions"><a href="#counting-options">Choose Free or Pro for counting</a><a href="#construction-example-electrical">Check the fixture-count exercise</a></nav>}
+              {page.path === '/compare-pdf-drawings' && <nav className="takeoff-jump-links" aria-label="Comparison decisions"><a href="#comparison-options">Compare the revision workflows</a><a href="#construction-example-compare">Try the drawing pair</a></nav>}
             </div>
 
             <figure className="workflow-hero-visual">
@@ -119,6 +121,7 @@ const WorkflowLanding = ({ page, children }) => {
           </div>
         </section>
 
+        {!children && constructionExampleForPath[page.path] && <ConstructionExample kind={constructionExampleForPath[page.path]} context="workflow" />}
         {children}
         {!children && page.path === '/pdf-takeoff-software' && <TakeoffEvaluation />}
         {!children && page.path === '/construction-pdf-markup' && <MarkupEvaluation />}

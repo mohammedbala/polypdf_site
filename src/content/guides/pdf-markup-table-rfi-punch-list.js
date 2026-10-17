@@ -5,7 +5,7 @@ const pdfMarkupTableGuide = {
   title: 'Use a PDF Markup Table for RFI and Punch-List Review',
   date: '2026-08-19',
   dateLabel: 'August 19, 2026',
-  dateModified: '2026-10-16',
+  dateModified: '2026-10-17',
   releaseReviewed: '2026-09-11',
   releaseReviewVersion: '1.5.4 (build 26)',
   author: 'The PolyPDF team',
