@@ -2,6 +2,11 @@ import { commercialOffer } from './commercialOffer';
 
 // Visible editorial answers. Each belongs to the page that explains and demonstrates it.
 export const workflowAnswers = {
+  '/visual-search-pdf-count': {
+    question: 'How do you count repeated symbols in a construction PDF?',
+    answer: 'In PolyPDF Pro on Mac or Windows, capture one clean symbol, search the selected pages, review every candidate, and commit accepted matches as a linked Count series. Check the drawing scope and keep different fixture types in separate worksheet subjects. Symbol Search matches graphics, not text characters. Free opens drawings for review but does not run Symbol Search.',
+    href: '/visual-search-pdf-count/#check-symbol-count', label: 'Check the fixture-count exercise'
+  },
   '/pdf-measuring-tool': {
     question: 'How do you measure a scaled PDF drawing?',
     answer: 'Open the PDF in a measuring tool, calibrate against a known dimension, and verify a second span before measuring. In PolyPDF, trace distances or area boundaries and review the units and quantities in the takeoff worksheet. Check each page or detail with a different scale separately. A single calibration cannot correct a scan that is stretched differently in two directions.',

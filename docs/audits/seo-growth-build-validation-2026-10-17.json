@@ -134,6 +134,20 @@
       "links": "pass",
       "canonical": "pass",
       "h1": "pass"
+    },
+    {
+      "route": "/visual-search-pdf-count",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
+      "route": "/blog/count-pdf-symbols",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
     }
   ]
 }

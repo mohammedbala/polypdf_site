@@ -280,8 +280,9 @@
   },
   "/visual-search-pdf-count": {
     "title": "Visual Search PDF Symbol Count | PolyPDF",
-    "description": "Use PolyPDF Pro to capture one drawing symbol, find visual matches, review candidates, and commit an auditable numbered count series.",
-    "robots": "index, follow"
+    "description": "Count drawing symbols with PolyPDF Pro on Mac and Windows. Inspect a practice PDF, review fixture candidates, and check quantities before exporting.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-17"
   },
   "/compare-pdf-drawings": {
     "title": "Compare PDF Drawings on Mac & Windows | PolyPDF",

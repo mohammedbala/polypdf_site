@@ -406,6 +406,7 @@ const BlogPost = () => {
             </header>
 
             {entry.slug === 'calibrate-pdf-drawing-scale' && <CalibrationPractice />}
+            {entry.slug === 'count-pdf-symbols' && <section className="growth-file-panel"><h2>Practice a count with known reference quantities</h2><p>The separate E-101 drawing contains 8 Type A fixtures and 4 Type B fixtures. Its source counts are reference quantities, not verified automatic results; the screenshots in this guide use different demo sheets. The Symbol Search exercise requires Pro.</p><Link to="/visual-search-pdf-count/#check-symbol-count">Get the drawing and review the fixture counts →</Link></section>}
             {['quantity-takeoff','pdf-takeoff-worked-example','why-pdf-measurements-are-wrong'].includes(entry.slug) && <section className="growth-file-panel"><h2>Try calibration on the practice drawing</h2><p>The separate F-101 exercise provides labeled dimensions, reference quantities, and two independent scale checks before a net-area measurement. Its drawing and scale differ from the historical screenshots in this guide.</p><Link to="/blog/calibrate-pdf-drawing-scale/#practice-calibration">Get the drawing and follow the three-measurement exercise</Link></section>}
             {entry.slug === 'create-fillable-pdf-form' && <FormPractice />}
             <div className="legal-sections">
