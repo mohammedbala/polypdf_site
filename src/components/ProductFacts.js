@@ -4,11 +4,12 @@ import { ResourceLayout } from './GrowthPages';
 import { DOWNLOADS } from '../lib/platform';
 import { commercialOffer, licenseRightsText } from '../lib/commercialOffer';
 import siteRelease from '../lib/siteRelease.json';
+import EvaluationKit from './EvaluationKit';
 
 export default function ProductFacts() {
-  return <ResourceLayout eyebrow="Product reference · Reviewed October 16, 2026" title="PolyPDF: product facts and limits" intro="PolyPDF is desktop PDF measurement, takeoff, markup, and drawing-review software for construction professionals on Mac and Windows. Published by Euclidean Software LLC.">
+  return <ResourceLayout eyebrow="Product reference · Reviewed October 17, 2026" title="PolyPDF: product facts and limits" intro="PolyPDF is desktop PDF measurement, takeoff, markup, and drawing-review software for construction professionals on Mac and Windows. Published by Euclidean Software LLC.">
     <nav className="product-facts-contents" aria-label="On this page">
-      <a href="#platforms">Platforms</a><a href="#free-and-pro">Free and Pro</a><a href="#workflows">Workflows</a><a href="#local-processing">Local processing</a><a href="#compatibility">Compatibility</a><a href="#evidence">Examples and verification</a>
+      <a href="#platforms">Platforms</a><a href="#free-and-pro">Free and Pro</a><a href="#workflows">Workflows</a><a href="#local-processing">Local processing</a><a href="#compatibility">Compatibility</a><a href="#evidence">Examples and verification</a><a href="#evaluation-kit">Evaluation kit</a>
     </nav>
     <section className="product-facts-section" aria-labelledby="platforms">
       <h2 id="platforms">Which platforms does PolyPDF support?</h2>
@@ -55,7 +56,8 @@ export default function ProductFacts() {
       <h2 id="evidence">Which examples have been verified?</h2>
       <p>The <Link to="/samples/">sample library</Link> contains synthetic drawings and independently calculated reference quantities. Separate Mac app exports demonstrate <strong>408 sq ft of flooring</strong> and a <strong>42 ft electrical route</strong>, exported and reopened in PolyPDF 1.6.6 build 38. Electrical fixture counts remain reference quantities.</p>
       <p>These samples identify the app version and platform used. They do not establish Windows verification, current-release parity, or complete cross-viewer compatibility. Product demonstrations retain their own version labels. <a href="/samples/takeoff/README.md">Read the takeoff sample provenance</a>.</p>
-      <p>This reference was reviewed by the PolyPDF publisher on <time dateTime="2026-10-16">October 16, 2026</time> against the published product, licensing, privacy, release, and sample records linked above. For a correction or a question about your workflow, <a href="mailto:support@polypdf.com">contact support@polypdf.com</a>.</p>
+      <p>This reference was reviewed by the PolyPDF publisher on <time dateTime="2026-10-17">October 17, 2026</time> against the published product, licensing, privacy, release, and sample records linked above. For a correction or a question about your workflow, <a href="mailto:support@polypdf.com">contact support@polypdf.com</a>.</p>
     </section>
+    <EvaluationKit/>
   </ResourceLayout>;
 }

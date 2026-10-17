@@ -1,0 +1,4 @@
+.evaluation-kit > h3 { font-size: 21px; line-height: 1.35; margin: 30px 0 16px; }
+.evaluation-kit > ol { max-width: 72ch; padding-left: 1.5em; margin: 0 0 24px; color: #4d5747; }
+.evaluation-kit > ol > li { padding-left: .3em; margin-bottom: 14px; line-height: 1.7; }
+.evaluation-kit .dl-cta { margin-top: 28px; }
