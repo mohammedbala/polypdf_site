@@ -1,0 +1,10 @@
+{
+  "source": "/samples/takeoff/electrical-practice.pdf",
+  "sourceSha256": "1d52452d647250ceddafce98178ebb5e99ee9dc776c83a83322ae7a8947fda9c",
+  "preview": "/samples/takeoff/electrical-practice-preview.png",
+  "previewSha256": "68364e804c58a7830891c4673dc026dacf797b07a3db18bd833557d3a8056a27",
+  "method": "Complete source-page pdftoppm render; not an app screenshot. Source PDF has eight circles (32 cubic segments) with crosses and four 16x16-point fixture squares; checked against the rendered page and reference CSV.",
+  "typeAReferenceCount": 8,
+  "typeBReferenceCount": 4,
+  "scope": "Reference geometry only. No new Symbol Search runtime output or automatic count accuracy claim."
+}

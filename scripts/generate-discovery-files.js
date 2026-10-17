@@ -151,7 +151,7 @@ const buildRouteMetadata = () => {
   }
 
   for (const [route, [title, description]] of Object.entries(growthMetadata)) next[route] = {title, description, robots: 'index, follow', dateModified: '2026-10-16'};
-  for (const route of Object.keys(workflowAnswers)) next[route].dateModified = '2026-10-16';
+  for (const route of Object.keys(workflowAnswers)) next[route].dateModified = route === '/visual-search-pdf-count' ? '2026-10-17' : '2026-10-16';
   next['/'].title = 'Construction PDF Takeoff & Markup Software | PolyPDF';
   next['/pdf-takeoff-software'].title = 'Construction Takeoff Software for Mac & Windows | PolyPDF';
   next['/pdf-takeoff-software'].description = 'Compare Free and Pro PDF takeoff for Mac and Windows. Try 3 measurements per document, inspect sample exports, and review one-time Pro licensing.';
@@ -181,7 +181,7 @@ const STATIC_LASTMOD = Object.freeze({
   '/pdf-takeoff-software': '2026-10-15',
   '/measure-pdf-on-mac': '2026-10-15',
   '/construction-pdf-markup': '2026-09-13',
-  '/visual-search-pdf-count': '2026-09-03',
+  '/visual-search-pdf-count': '2026-10-17',
   '/compare-pdf-drawings': '2026-09-03'
 });
 
