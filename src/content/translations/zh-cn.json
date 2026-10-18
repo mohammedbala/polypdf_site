@@ -2815,7 +2815,8 @@
     "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.": "本练习测量建筑总占地面积，不计算铺装净面积，也不扣除墙体。两次长度校验加一次面积测量，共使用三次手动测量。",
     "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.": "分别追踪铺有瓷砖的房间 107 和 108 的尺寸边界区域：每个房间 288 平方英尺，或总共 576 平方英尺。",
     "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "使用 X102 将每个位置与其问题、专业、状态和要求的回复对应起来。在副本上添加自己的审阅标注。",
-    "Work with the construction drawing set": "使用施工图集"
+    "Work with the construction drawing set": "使用施工图集",
+    "Inspect the saved Mac example and its tested local build →": "查看 Mac 上保存的示例及测试所用的本地构建版本 →"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

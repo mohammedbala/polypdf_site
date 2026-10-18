@@ -2815,7 +2815,8 @@
     "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.": "यह भवन के बाहरी क्षेत्रफल का अभ्यास है। इसमें शुद्ध फ़र्श क्षेत्रफल नहीं मापा जाता और दीवारें नहीं घटाई जातीं। दो लंबाई-जाँच और एक क्षेत्रफल माप कुल तीन मैन्युअल माप हैं।",
     "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.": "टाइल वाले कमरे 107 और 108 के लिए अलग-अलग आयाम-सीमा क्षेत्र का पता लगाएं: प्रत्येक 288 वर्ग फुट, या एक साथ 576 वर्ग फुट।",
     "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "X102 से हर स्थान को उसकी समस्या, निर्माण विशेषज्ञता, स्थिति और माँगे गए उत्तर से मिलाएँ। कॉपी पर अपनी समीक्षा टिप्पणियाँ जोड़ें।",
-    "Work with the construction drawing set": "निर्माण ड्राइंग सेट के साथ काम करें"
+    "Work with the construction drawing set": "निर्माण ड्राइंग सेट के साथ काम करें",
+    "Inspect the saved Mac example and its tested local build →": "Mac पर सहेजा गया उदाहरण और परीक्षण में इस्तेमाल किया गया लोकल बिल्ड देखें →"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

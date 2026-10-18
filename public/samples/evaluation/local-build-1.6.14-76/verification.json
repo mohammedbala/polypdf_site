@@ -1,0 +1,68 @@
+{
+  "title": "Willow Creek A101 saved measurement example",
+  "testedOn": "2026-10-17",
+  "timezone": "America/New_York",
+  "testedBy": "PolyPDF publisher",
+  "app": {
+    "version": "1.6.14",
+    "build": 76,
+    "distribution": "local development build",
+    "identitySource": "About PolyPDF desktop dialog",
+    "platform": "macOS 26.4.1",
+    "edition": "Free"
+  },
+  "drawing": {
+    "project": "Willow Creek Community Pavilion — fictional training project",
+    "sheet": "A101",
+    "revision": "A",
+    "pdfPages": 2,
+    "pageSizeInches": [
+      36,
+      24
+    ],
+    "printedScale": "1/4 in = 1 ft",
+    "referenceWidthFt": 96,
+    "referenceDepthFt": 60,
+    "referenceGrossAreaSqFt": 5760
+  },
+  "history": "Measurements were created in the desktop app in 1.6.13 build 74, then saved and retested in local 1.6.14 build 76. These files preserve the actual app output bytes. No new measurements were created in build 76.",
+  "checks": [
+    {
+      "name": "Open the previously saved drawing under Metric, then switch to Imperial",
+      "result": "PASS",
+      "values": "29260.80 mm / 18288.00 mm / 535.12 m²; then 96 ft / 60 ft / 5760 sq ft"
+    },
+    {
+      "name": "Save in build 76, close, reopen under Metric, then switch to Imperial",
+      "result": "PASS",
+      "values": "96 ft / 60 ft / 5760 sq ft"
+    },
+    {
+      "name": "Inspect saved PDF annotations and geometry",
+      "result": "PASS",
+      "values": "Two lengths and one area; saved values and geometry match drawing references"
+    },
+    {
+      "name": "Export the worksheet as CSV",
+      "result": "PASS",
+      "values": "Area: 1 measurement / 5760 sq ft. Length: 2 measurements / 156 ft (96 + 60), not a perimeter."
+    }
+  ],
+  "scope": "A publisher-run test of this architectural example on this local Mac build. It does not qualify the public installer, Windows, Pro workflows, every drawing, or other PDF viewers. The evaluation kit checklist remains blank for your own tests. The area label overlaps printed drawing text at the center; numeric annotations and the CSV were checked separately.",
+  "files": [
+    {
+      "file": "willow-creek-a101-measured.pdf",
+      "role": "Saved construction drawing with two length measurements and one area measurement",
+      "bytes": 140172,
+      "sha256": "6e8d00bc5647db8b753fe2a95af2da58d9fb79ab7ef2538296f4e7a8a1324e4f",
+      "modifiedAfterAppSaveOrExport": false
+    },
+    {
+      "file": "willow-creek-a101-takeoff.csv",
+      "role": "Takeoff worksheet exported through the desktop app",
+      "bytes": 319,
+      "sha256": "f808a1720545693e917fd97346fc4fd3df2f99205952e96d150fe925b848a4e9",
+      "modifiedAfterAppSaveOrExport": false
+    }
+  ]
+}
