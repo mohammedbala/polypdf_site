@@ -78,6 +78,7 @@ const WorkflowLanding = ({ page, children }) => {
               {page.path === '/pdf-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Takeoff decisions"><a href="#free-vs-pro">Compare Free and Pro</a><a href="#construction-example-takeoff">Try the practice takeoff</a></nav>}
               {page.path === '/construction-pdf-markup' && <nav className="takeoff-jump-links" aria-label="Markup decisions"><a href="#markup-free-vs-pro">Compare Free and Pro</a><a href="#construction-example-review">Check the review handoff</a></nav>}
               {page.path === '/visual-search-pdf-count' && <nav className="takeoff-jump-links" aria-label="Symbol counting decisions"><a href="#counting-options">Choose Free or Pro for counting</a><a href="#construction-example-electrical">Check the fixture-count exercise</a></nav>}
+              {page.path === '/electrical-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Electrical takeoff decisions"><a href="#electrical-options">Choose Free or Pro</a><a href="#electrical-count-check">Check fixtures and receptacles</a></nav>}
               {page.path === '/compare-pdf-drawings' && <nav className="takeoff-jump-links" aria-label="Comparison decisions"><a href="#comparison-options">Compare the revision workflows</a><a href="#construction-example-compare">Try the drawing pair</a></nav>}
             </div>
 

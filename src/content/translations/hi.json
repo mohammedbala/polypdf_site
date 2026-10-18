@@ -2817,7 +2817,8 @@
     "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "X102 से हर स्थान को उसकी समस्या, निर्माण विशेषज्ञता, स्थिति और माँगे गए उत्तर से मिलाएँ। कॉपी पर अपनी समीक्षा टिप्पणियाँ जोड़ें।",
     "Work with the construction drawing set": "निर्माण ड्राइंग सेट के साथ काम करें",
     "Inspect the saved Mac example and its tested local build →": "Mac पर सहेजा गया उदाहरण और परीक्षण में इस्तेमाल किया गया लोकल बिल्ड देखें →",
-    "Move checked quantities into the free Excel takeoff template →": "जाँची गई मात्राएँ मुफ़्त Excel टेकऑफ़ टेम्पलेट में भरें →"
+    "Move checked quantities into the free Excel takeoff template →": "जाँची गई मात्राएँ मुफ़्त Excel टेकऑफ़ टेम्पलेट में भरें →",
+    "Reconcile fixtures and receptacles with the electrical review sheet →": "इलेक्ट्रिकल समीक्षा शीट से लाइट फ़िक्स्चर और सॉकेट की संख्या जाँचें →"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

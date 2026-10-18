@@ -2817,7 +2817,8 @@
     "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "استخدم X102 لربط كل موقع بمشكلته وتخصصه وحالته والرد المطلوب. أضف ملاحظات المراجعة الخاصة بك على نسخة.",
     "Work with the construction drawing set": "العمل مع مجموعة رسم البناء",
     "Inspect the saved Mac example and its tested local build →": "اطّلع على المثال المحفوظ على Mac ونسخة التطبيق المحلية التي اختُبرت ←",
-    "Move checked quantities into the free Excel takeoff template →": "انقل الكميات التي تحققت منها إلى قالب حصر الكميات المجاني في Excel ←"
+    "Move checked quantities into the free Excel takeoff template →": "انقل الكميات التي تحققت منها إلى قالب حصر الكميات المجاني في Excel ←",
+    "Reconcile fixtures and receptacles with the electrical review sheet →": "طابق أعداد وحدات الإنارة والمآخذ باستخدام ورقة المراجعة الكهربائية ←"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

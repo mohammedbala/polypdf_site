@@ -333,9 +333,9 @@
   },
   "/electrical-takeoff-software": {
     "title": "Electrical Takeoff Software for Mac & Windows | PolyPDF",
-    "description": "Count fixtures, measure drawn routes, and export electrical quantities from PDFs. Review sample files and try PolyPDF on Mac or Windows.",
+    "description": "Review electrical fixture counts and route lengths on Mac or Windows. Try the E101 sample, compare Free and Pro, and export quantities for estimating.",
     "robots": "index, follow",
-    "dateModified": "2026-10-16"
+    "dateModified": "2026-10-17"
   },
   "/flooring-takeoff-software": {
     "title": "Flooring Takeoff Software for Mac & Windows | PolyPDF",

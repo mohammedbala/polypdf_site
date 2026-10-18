@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "python3 scripts/generate-evaluation-kit.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs && NODE_ENV=production node scripts/build-localized-tracking.cjs && node scripts/international/build.cjs && node scripts/international/verify.cjs",
+    "build": "python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs && NODE_ENV=production node scripts/build-localized-tracking.cjs && node scripts/international/build.cjs && node scripts/international/verify.cjs",
     "test": "react-scripts test",
     "test:screenshot-evidence": "node --test test/verify-screenshot-evidence.test.mjs",
     "refresh:screenshots": "node scripts/refresh-screenshot-inventory.mjs",
@@ -23,7 +23,7 @@
     "verify:screenshots": "node scripts/verify-screenshot-evidence.mjs",
     "smoke:production": "node scripts/post-deploy-smoke.mjs",
     "eject": "react-scripts eject",
-    "build:english": "python3 scripts/generate-evaluation-kit.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
+    "build:english": "python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
     "translations:extract": "npm run build:english && node scripts/international/build.cjs --extract",
     "test:international": "node --test test/international.test.cjs",
     "verify:international": "node scripts/international/verify.cjs",
