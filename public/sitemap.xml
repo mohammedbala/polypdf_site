@@ -368,7 +368,7 @@
   </url>
   <url>
     <loc>https://www.polypdf.com/tools/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -387,6 +387,12 @@
   <url>
     <loc>https://www.polypdf.com/tools/pdf-scale-checker/</loc>
     <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.polypdf.com/tools/construction-takeoff-spreadsheet/</loc>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

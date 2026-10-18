@@ -157,7 +157,7 @@ const buildRouteMetadata = () => {
   next['/pdf-takeoff-software'].description = 'Compare Free and Pro PDF takeoff for Mac and Windows. Try 3 measurements per document, inspect sample exports, and review one-time Pro licensing.';
   next['/construction-pdf-markup'].title = 'PDF Markup Software for Construction | PolyPDF';
   for (const route of ['/', '/pdf-takeoff-software', '/construction-pdf-markup']) next[route].dateModified = '2026-10-16';
-  for (const route of ['/product-facts', '/samples']) next[route].dateModified = '2026-10-17';
+  for (const route of ['/product-facts', '/samples', '/tools', '/tools/construction-takeoff-spreadsheet']) next[route].dateModified = '2026-10-17';
   assert(next['/blog'], 'route-metadata.json must define the /blog index before generation');
   for (const post of blogPosts) {
     assert(next[blogPostPath(post.slug)], `Missing generated route for ${post.slug}`);
