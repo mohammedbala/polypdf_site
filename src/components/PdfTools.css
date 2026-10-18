@@ -843,6 +843,10 @@
   padding: 40px 0;
   border-bottom: 1px solid var(--pdf-line);
 }
+.pdf-automation ol {
+  padding-inline-start: 1.5rem;
+  margin: 16px 0;
+}
 .pdf-automation li {
   margin-bottom: 14px;
   line-height: 1.7;
