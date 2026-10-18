@@ -37,7 +37,8 @@ body, .Home, .legal-page, .legal-page.buy, .workflow-landing {
   outline-color: #fff;
 }
 
-:is(.logo, .workflow-logo, .site-footer-logo) img { filter: grayscale(1); }
+:is(.logo, .workflow-logo) img { filter: grayscale(1); }
+.site-footer-logo img { filter: brightness(0) invert(1); }
 .Home .logo img { transform: none; }
 .Home::before, .Home .hero::after, .hero-highlight::after,
 .paper-tape, .hero-sketch-line, .cta-sketch { display: none; }
@@ -79,7 +80,7 @@ body, .Home, .legal-page, .legal-page.buy, .workflow-landing {
 
 .Home .hero {
   min-height: auto;
-  padding-top: 154px;
+  padding-top: 56px;
   padding-bottom: 48px;
 }
 .Home .hero-layout {
@@ -178,8 +179,6 @@ body, .Home, .legal-page, .legal-page.buy, .workflow-landing {
   border-radius: 5px;
 }
 .language-options a:hover, .language-options a[aria-current=page] { background: #eee; }
-.home-language-bar { top: 84px; }
-.home-language-bar .language-options { background: #fff; border-color: var(--gray-200); }
 .cookie-banner { background: #fff; border-color: var(--gray-300); }
 .request-ledger, .not-found-mark { transform: none; box-shadow: none; }
 
@@ -193,8 +192,8 @@ body, .Home, .legal-page, .legal-page.buy, .workflow-landing {
   .Home .hero-stats { grid-column: auto; }
 }
 @media (max-width: 760px) {
-  .Home .hero { padding-top: 148px; }
-  .Home .hero h1 { font-size: clamp(2.7rem, 9.5vw, 3.7rem); }
+  .Home .hero { padding-top: 32px; }
+  .Home .hero h1 { font-size: clamp(2.15rem, 9.5vw, 3.7rem); }
   .Home .header .nav, .buy .legal-header .nav { padding: .8rem 20px; }
   .Home .nav-links { background: #fff; border: 1px solid var(--gray-200); }
   .Home .hero-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -204,7 +203,6 @@ body, .Home, .legal-page, .legal-page.buy, .workflow-landing {
   .Home .pricing-grid { grid-template-columns: 1fr; }
   .Home .section-header h2 { max-width: 22ch; }
   .Home .cta-section { padding-inline: 0; }
-  .home-language-bar { top: 76px; }
   .workflow-hero h1 { font-size: clamp(2.3rem, 9.5vw, 3.1rem); line-height: 1.06; }
 }
 @media (max-width: 640px) {

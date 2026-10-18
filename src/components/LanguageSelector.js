@@ -9,7 +9,7 @@ export default function LanguageSelector() {
   const source = normalizePath(pathname);
   const route = localizedRoutes.includes(source) ? source : '/';
   return (
-    <details className="language-selector">
+    <details className="language-selector" onKeyDown={e => { if (e.key === 'Escape') { e.currentTarget.open = false; e.currentTarget.querySelector('summary').focus(); } }}>
       <summary>Languages · English</summary>
       <nav aria-label="Choose a language" className="language-options">
         <a href={route === '/' ? '/' : `${route}/`} hrefLang="en" lang="en" aria-current="page">English</a>
