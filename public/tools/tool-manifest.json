@@ -928,7 +928,7 @@
               "dpi": {
                 "type": "string",
                 "description": "Resolution (DPI)",
-                "default": "150",
+                "default": "100",
                 "enum": [
                   "72",
                   "100",
@@ -1009,7 +1009,7 @@
               "dpi": {
                 "type": "string",
                 "description": "Resolution (DPI)",
-                "default": "150",
+                "default": "100",
                 "enum": [
                   "72",
                   "100",
@@ -1083,7 +1083,7 @@
               "dpi": {
                 "type": "string",
                 "description": "Resolution (DPI)",
-                "default": "150",
+                "default": "100",
                 "enum": [
                   "72",
                   "100",

@@ -411,3 +411,17 @@ test("flattening removes all widgets while preserving visible field values", asy
         "/Widget",
       );
 });
+
+test("image export defaults accept the real 36 x 24 inch architectural sample", async () => {
+  const bytes = new Uint8Array(await fs.readFile("public/samples/construction/02-Architectural-Revision-A.pdf"));
+  for (const id of ["pdf-to-jpg", "pdf-to-png", "pdf-to-webp"]) {
+    const tool = catalog.find((t) => t.id === id);
+    const defaults = Object.fromEntries(tool.fields.map((f) => [f.key, f.default]));
+    const adapter = await nodeAdapter();
+    try {
+      const result = await runTool(tool, [{name: "architectural-sample.pdf", bytes}], defaults, adapter);
+      assert.equal(result.outputs.length, 2);
+      assert.ok(result.outputs.every((f) => f.bytes.length > 1000));
+    } finally { await adapter.dispose(); }
+  }
+});

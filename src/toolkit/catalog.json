@@ -512,7 +512,7 @@
         "key": "dpi",
         "label": "Resolution (DPI)",
         "type": "select",
-        "default": "150",
+        "default": "100",
         "options": [
           "72",
           "100",
@@ -566,7 +566,7 @@
         "key": "dpi",
         "label": "Resolution (DPI)",
         "type": "select",
-        "default": "150",
+        "default": "100",
         "options": [
           "72",
           "100",
@@ -612,7 +612,7 @@
         "key": "dpi",
         "label": "Resolution (DPI)",
         "type": "select",
-        "default": "150",
+        "default": "100",
         "options": [
           "72",
           "100",
@@ -646,7 +646,7 @@
     "name": "PDF to text",
     "category": "Convert",
     "summary": "Extract selectable text with page boundaries intact.",
-    "answer": "Extract a PDF\u2019s existing text layer to a UTF-8 text file. Page markers help you trace each section back to its source.",
+    "answer": "Extract a PDF’s existing text layer to a UTF-8 text file. Page markers help you trace each section back to its source.",
     "steps": [
       "Choose your source files.",
       "Choose the pages to extract.",
@@ -1194,7 +1194,7 @@
       "Enter the margin width.",
       "Run the tool, review the result, and download your copy."
     ],
-    "limitation": "The page size increases. Print at actual size to retain the artwork\u2019s original scale.",
+    "limitation": "The page size increases. Print at actual size to retain the artwork’s original scale.",
     "fields": [
       {
         "key": "margin",
@@ -1439,7 +1439,7 @@
     "name": "Edit PDF metadata",
     "category": "Inspect",
     "summary": "Set the document title, author, subject, and keywords.",
-    "answer": "Edit a PDF\u2019s standard document information fields locally. Replace the title, author, subject, and keywords, then save a copy.",
+    "answer": "Edit a PDF’s standard document information fields locally. Replace the title, author, subject, and keywords, then save a copy.",
     "steps": [
       "Choose your source files.",
       "Enter the standard metadata values you want to keep.",
