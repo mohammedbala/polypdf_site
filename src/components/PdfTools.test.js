@@ -1,8 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { act } from "react-dom/test-utils";
-import { MemoryRouter } from "react-router";
-import { PdfToolsHub } from "./PdfTools";
+import { MemoryRouter, Routes, Route } from "react-router";
+import { PdfToolsHub, PdfToolPage } from "./PdfTools";
 import catalog from "../toolkit/catalog.json";
 let node, root;
 beforeEach(() => {
@@ -47,4 +47,33 @@ test("category filters narrow the tools and return to all results", () => {
   expect(node.querySelector('[aria-pressed="true"]').textContent).toBe("Forms");
   act(() => buttons[0].click());
   expect(node.querySelectorAll(".pdf-tool-card")).toHaveLength(36);
+});
+
+test("WebMCP describes fill values and cleans up registered tools", () => {
+  const registered = [];
+  const unregisterTool = jest.fn();
+  Object.defineProperty(navigator, "modelContext", { configurable: true, value: {
+    registerTool: (tool) => registered.push(tool), unregisterTool,
+  }});
+  act(() => root.render(<MemoryRouter initialEntries={["/tools/fill-pdf-form/"]}>
+    <Routes><Route path="/tools/:toolId/" element={<PdfToolPage />} /></Routes>
+  </MemoryRouter>));
+  expect(registered.map((t) => t.name)).toEqual(["polypdf_list_files", "polypdf_fill_pdf_form"]);
+  const schema = registered[1].inputSchema.properties.options;
+  expect(schema.additionalProperties).toBe(false);
+  expect(schema.properties.values.additionalProperties.anyOf.map((x) => x.type)).toEqual(["string", "boolean", "array"]);
+  act(() => root.render(<div />));
+  expect(unregisterTool.mock.calls.map(([name]) => name)).toEqual(["polypdf_list_files", "polypdf_fill_pdf_form"]);
+  delete navigator.modelContext;
+});
+test("partial WebMCP registration is cleaned up on failure", () => {
+  const unregisterTool = jest.fn();
+  Object.defineProperty(navigator, "modelContext", { configurable: true, value: {
+    registerTool: (tool) => { if (tool.name !== "polypdf_list_files") throw new Error("unsupported"); }, unregisterTool,
+  }});
+  act(() => root.render(<MemoryRouter initialEntries={["/tools/merge-pdf/"]}>
+    <Routes><Route path="/tools/:toolId/" element={<PdfToolPage />} /></Routes>
+  </MemoryRouter>));
+  expect(unregisterTool).toHaveBeenCalledWith("polypdf_list_files");
+  delete navigator.modelContext;
 });

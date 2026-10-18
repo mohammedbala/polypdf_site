@@ -429,6 +429,7 @@ function Workspace({ tool }) {
     [page, setPage] = useState(0),
     [drag, setDrag] = useState(false);
   const input = useRef(),
+    resultHeading = useRef(),
     generation = useRef(0),
     latest = useRef();
   const first = files[0],
@@ -454,6 +455,9 @@ function Workspace({ tool }) {
     },
     [],
   );
+  useEffect(() => {
+    if (result) resultHeading.current?.focus();
+  }, [result]);
   async function addFiles(list) {
     if (busy) return;
     setError("");
@@ -607,15 +611,35 @@ function Workspace({ tool }) {
                   : f.type === "checkbox"
                     ? "boolean"
                     : "string",
-              description: f.label,
+              description: [f.label, f.help].filter(Boolean).join(". "),
               default: f.default,
               ...(f.options ? { enum: f.options } : {}),
+              ...(f.min !== undefined
+                ? { minimum: f.min, maximum: f.max }
+                : {}),
+              ...(f.maxLength ? { maxLength: f.maxLength } : {}),
             },
           ]),
         ),
-        additionalProperties: tool.id === "fill-pdf-form",
+        additionalProperties: false,
       },
     };
+    if (tool.id === "fill-pdf-form")
+      properties.options.properties.values = {
+        type: "object",
+        description:
+          "Exact field names mapped to text, boolean, or listed choice values. Use polypdf_list_files to inspect fields.",
+        additionalProperties: {
+          anyOf: [
+            { type: "string", maxLength: 10000 },
+            { type: "boolean" },
+            { type: "array", items: { type: "string" } },
+          ],
+        },
+      };
+    const registered = [];
+    const cleanup = () =>
+      registered.forEach((id) => context.unregisterTool?.(id));
     try {
       context.registerTool({
         name: "polypdf_list_files",
@@ -624,14 +648,16 @@ function Workspace({ tool }) {
         inputSchema: { type: "object", properties: {} },
         execute: async () =>
           JSON.stringify(
-            latest.current.files.map(({ id, name, kind, pageCount }) => ({
+            latest.current.files.map(({ id, name, kind, pageCount, info }) => ({
               id,
               name,
               kind,
               pageCount,
+              fields: info?.fields,
             })),
           ),
       });
+      registered.push("polypdf_list_files");
       context.registerTool({
         name,
         description: tool.answer + " " + tool.limitation,
@@ -642,13 +668,12 @@ function Workspace({ tool }) {
         },
         execute: async (args) => JSON.stringify(await latest.current.run(args)),
       });
+      registered.push(name);
     } catch {
+      cleanup();
       return undefined;
     }
-    return () => {
-      context.unregisterTool?.(name);
-      context.unregisterTool?.("polypdf_list_files");
-    };
+    return cleanup;
   }, [tool]);
   const preview =
     result?.outputs.find(
@@ -975,7 +1000,9 @@ function Workspace({ tool }) {
           <section className="pdf-result" aria-label="Finished result">
             <div>
               <Check size={24} />
-              <h2>Your result is ready</h2>
+              <h2 ref={resultHeading} tabIndex={-1}>
+                Your result is ready
+              </h2>
             </div>
             <p>
               {result.outputs.length}{" "}
@@ -1092,9 +1119,7 @@ export function PdfToolPage() {
         <Workspace key={tool.id} tool={tool} />
         <section className="pdf-tool-guide">
           <div>
-            <h2>
-              How to {tool.name.charAt(0).toLowerCase() + tool.name.slice(1)}
-            </h2>
+            <h2>How to use {tool.name}</h2>
             <p className="pdf-answer">{tool.answer}</p>
             <ol>
               {tool.steps.map((s) => (
@@ -1112,11 +1137,9 @@ export function PdfToolPage() {
           </div>
         </section>
         <section className="pdf-answers">
-          <h2>About {tool.name.toLowerCase()}</h2>
+          <h2>About {tool.name}</h2>
           <details>
-            <summary>
-              Is {tool.name.toLowerCase()} free, and do files get uploaded?
-            </summary>
+            <summary>Is this tool free, and do files get uploaded?</summary>
             <p>
               Yes. This tool runs locally in your browser without an account.
               PolyPDF does not receive your input files. Downloads are saved

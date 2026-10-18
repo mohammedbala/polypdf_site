@@ -176,7 +176,7 @@
   font:
     12px ui-monospace,
     monospace;
-  color: #6a7867;
+  color: #4f604c;
   background: var(--pdf-tint);
   width: 30px;
   height: 30px;
@@ -665,7 +665,7 @@
 .pdf-preview-empty {
   align-self: center;
   text-align: center;
-  color: #7c8d77;
+  color: #50634b;
 }
 .pdf-preview-empty p {
   margin: 20px 0 6px;
