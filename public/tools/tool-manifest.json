@@ -1,0 +1,2607 @@
+{
+  "version": "1.0.0",
+  "name": "PolyPDF browser tools",
+  "processing": "Browser: local memory. MCP: explicitly allowed local folder. No PDF upload service.",
+  "limits": {
+    "fileMB": 30,
+    "totalInputMB": 80,
+    "pages": 500,
+    "renderPages": 100,
+    "renderMegapixels": 16
+  },
+  "tools": [
+    {
+      "name": "polypdf_merge_pdf",
+      "title": "Merge PDF",
+      "description": "Combine two or more PDFs into a single file. Add your files, arrange them, and save a new PDF. Interactive forms are flattened in the combined copy; document bookmarks and signatures are not preserved.",
+      "url": "https://www.polypdf.com/tools/merge-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 20,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_split_pdf",
+      "title": "Split PDF",
+      "description": "Split a PDF into separate files by page count. Choose how many pages belong in each output, then download the group as a ZIP. Each output contains the selected source pages; interactive form values become static.",
+      "url": "https://www.polypdf.com/tools/split-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "chunkSize": {
+                "type": "number",
+                "description": "Pages per file",
+                "default": 1,
+                "minimum": 1,
+                "maximum": 500
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_extract_pdf_pages",
+      "title": "Extract PDF pages",
+      "description": "Extract selected PDF pages using page numbers and ranges such as 1, 3-5. The original file stays unchanged. PDF page numbers count from 1 and may differ from printed drawing numbers.",
+      "url": "https://www.polypdf.com/tools/extract-pdf-pages/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_delete_pdf_pages",
+      "title": "Delete PDF pages",
+      "description": "Remove selected pages from a PDF and download the remaining pages as a new file. At least one page must remain. Check the result before replacing an issued drawing set.",
+      "url": "https://www.polypdf.com/tools/delete-pdf-pages/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages to remove. Use 1, 3-5. Page numbers start at 1.",
+                "default": "1",
+                "maxLength": 2000
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_organize_pdf",
+      "title": "Organize PDF",
+      "description": "Reorder PDF pages by entering their new sequence. Use every page once to change order, or use Extract for a subset. Page numbers refer to the original file, not the position after reordering.",
+      "url": "https://www.polypdf.com/tools/organize-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "order": {
+                "type": "string",
+                "description": "Page order. Include every page once, separated by commas.",
+                "default": "",
+                "maxLength": 2000
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_rotate_pdf",
+      "title": "Rotate PDF",
+      "description": "Rotate selected PDF pages by 90, 180, or 270 degrees clockwise. Leave the page range blank to rotate every page. Rotation changes viewing orientation without rasterizing page artwork.",
+      "url": "https://www.polypdf.com/tools/rotate-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "angle": {
+                "type": "string",
+                "description": "Clockwise rotation",
+                "default": "90",
+                "enum": [
+                  "90",
+                  "180",
+                  "270"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_duplicate_pdf_pages",
+      "title": "Duplicate PDF pages",
+      "description": "Duplicate selected PDF pages directly after their originals. Choose how many extra copies to add per selected page. Form values in copied pages become static to prevent conflicting field names.",
+      "url": "https://www.polypdf.com/tools/duplicate-pdf-pages/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "copies": {
+                "type": "number",
+                "description": "Extra copies per page",
+                "default": 1,
+                "minimum": 1,
+                "maximum": 10
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_reverse_pdf_pages",
+      "title": "Reverse PDF pages",
+      "description": "Reverse the order of every page in a PDF, so the last page becomes the first. Download a separate corrected copy. This changes page order, not the orientation of each page.",
+      "url": "https://www.polypdf.com/tools/reverse-pdf-pages/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_insert_blank_pdf_pages",
+      "title": "Insert blank pages",
+      "description": "Insert blank pages before or after a chosen PDF page. New pages match the selected page size. Inserted pages contain no fields or artwork.",
+      "url": "https://www.polypdf.com/tools/insert-blank-pdf-pages/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "after": {
+                "type": "number",
+                "description": "Insert after page (0 = start)",
+                "default": 1,
+                "minimum": 0,
+                "maximum": 500
+              },
+              "count": {
+                "type": "number",
+                "description": "Blank pages",
+                "default": 1,
+                "minimum": 1,
+                "maximum": 50
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_interleave_pdf",
+      "title": "Interleave PDFs",
+      "description": "Interleave two PDFs by alternating pages from each file. Reverse the second file when the back-side scan is in reverse order. If the files have different page counts, remaining pages are appended.",
+      "url": "https://www.polypdf.com/tools/interleave-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "reverseSecond": {
+                "type": "boolean",
+                "description": "Reverse second PDF",
+                "default": false
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_jpg_to_pdf",
+      "title": "JPG to PDF",
+      "description": "Convert JPG images into PDF pages in your chosen order. Keep the image proportions and select A4, Letter, or original image size. Image-size mode uses 96 pixels per inch; verify scale before using a converted drawing for measurements.",
+      "url": "https://www.polypdf.com/tools/jpg-to-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "paper": {
+                "type": "string",
+                "description": "Paper size",
+                "default": "A4",
+                "enum": [
+                  "A4",
+                  "Letter",
+                  "A3",
+                  "Tabloid",
+                  "Image"
+                ]
+              },
+              "margin": {
+                "type": "number",
+                "description": "Margin (points)",
+                "default": 18,
+                "minimum": 0,
+                "maximum": 144
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_png_to_pdf",
+      "title": "PNG to PDF",
+      "description": "Convert PNG images to a PDF in the browser, retaining transparency and image proportions. Choose page size and margins. A PDF wrapper does not turn a raster drawing into vector geometry.",
+      "url": "https://www.polypdf.com/tools/png-to-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "paper": {
+                "type": "string",
+                "description": "Paper size",
+                "default": "A4",
+                "enum": [
+                  "A4",
+                  "Letter",
+                  "A3",
+                  "Tabloid",
+                  "Image"
+                ]
+              },
+              "margin": {
+                "type": "number",
+                "description": "Margin (points)",
+                "default": 18,
+                "minimum": 0,
+                "maximum": 144
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_webp_to_pdf",
+      "title": "WebP to PDF",
+      "description": "Convert WebP images into PDF pages locally. The images are decoded to PNG before embedding in the output PDF. Animated WebP input uses the decoded first frame only.",
+      "url": "https://www.polypdf.com/tools/webp-to-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "paper": {
+                "type": "string",
+                "description": "Paper size",
+                "default": "A4",
+                "enum": [
+                  "A4",
+                  "Letter",
+                  "A3",
+                  "Tabloid",
+                  "Image"
+                ]
+              },
+              "margin": {
+                "type": "number",
+                "description": "Margin (points)",
+                "default": 18,
+                "minimum": 0,
+                "maximum": 144
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_pdf_to_jpg",
+      "title": "PDF to JPG",
+      "description": "Convert PDF pages to JPG images at your chosen resolution. Download one image or a ZIP containing every selected page. JPEG is lossy and removes selectable text; use PNG for crisp linework.",
+      "url": "https://www.polypdf.com/tools/pdf-to-jpg/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "dpi": {
+                "type": "string",
+                "description": "Resolution (DPI)",
+                "default": "150",
+                "enum": [
+                  "72",
+                  "100",
+                  "150",
+                  "200"
+                ]
+              },
+              "quality": {
+                "type": "number",
+                "description": "Quality (%)",
+                "default": 85,
+                "minimum": 20,
+                "maximum": 100
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_pdf_to_png",
+      "title": "PDF to PNG",
+      "description": "Render PDF pages as PNG images in the browser. Select pages and resolution, then download the images together. PNG preserves rendered pixels, not editable PDF objects or measurement calibration.",
+      "url": "https://www.polypdf.com/tools/pdf-to-png/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "dpi": {
+                "type": "string",
+                "description": "Resolution (DPI)",
+                "default": "150",
+                "enum": [
+                  "72",
+                  "100",
+                  "150",
+                  "200"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_pdf_to_webp",
+      "title": "PDF to WebP",
+      "description": "Render selected PDF pages as WebP images with a quality setting. Export one image or download multiple pages as a ZIP. WebP output is a page image, not an editable or searchable PDF.",
+      "url": "https://www.polypdf.com/tools/pdf-to-webp/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "dpi": {
+                "type": "string",
+                "description": "Resolution (DPI)",
+                "default": "150",
+                "enum": [
+                  "72",
+                  "100",
+                  "150",
+                  "200"
+                ]
+              },
+              "quality": {
+                "type": "number",
+                "description": "Quality (%)",
+                "default": 85,
+                "minimum": 20,
+                "maximum": 100
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_pdf_to_text",
+      "title": "PDF to text",
+      "description": "Extract a PDF’s existing text layer to a UTF-8 text file. Page markers help you trace each section back to its source. Scanned pages without a text layer need OCR, which this browser tool does not perform. Reading order can differ on complex drawings.",
+      "url": "https://www.polypdf.com/tools/pdf-to-text/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_text_to_pdf",
+      "title": "Text to PDF",
+      "description": "Convert plain text into a readable PDF with automatic line wrapping and page breaks. Add a title and choose a font size. The built-in font supports Latin characters; unsupported characters are rejected rather than silently changed.",
+      "url": "https://www.polypdf.com/tools/text-to-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 0,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Document title",
+                "default": "Notes",
+                "maxLength": 150
+              },
+              "text": {
+                "type": "string",
+                "description": "Your text",
+                "default": "",
+                "maxLength": 100000
+              },
+              "fontSize": {
+                "type": "number",
+                "description": "Font size (points)",
+                "default": 18,
+                "minimum": 6,
+                "maximum": 96
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_compress_pdf",
+      "title": "Compress PDF",
+      "description": "Compress a PDF locally using lossless structural rewriting or a smaller, image-based copy. The result shows the actual size change. Image compression removes selectable text, links, forms, and vector detail. Lossless rewriting may not make an already optimized file smaller.",
+      "url": "https://www.polypdf.com/tools/compress-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "type": "string",
+                "description": "Compression method",
+                "default": "lossless",
+                "enum": [
+                  "lossless",
+                  "image"
+                ]
+              },
+              "dpi": {
+                "type": "string",
+                "description": "Image resolution (DPI)",
+                "default": "100",
+                "enum": [
+                  "72",
+                  "100",
+                  "150"
+                ]
+              },
+              "quality": {
+                "type": "number",
+                "description": "Image quality (%)",
+                "default": 65,
+                "minimum": 20,
+                "maximum": 95
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_flatten_pdf",
+      "title": "Flatten PDF forms",
+      "description": "Flatten standard PDF form fields into static page content. Filled values remain visible but are no longer editable form fields. This flattens AcroForm fields, not every comment or layer. XFA forms and signed PDFs are unsupported.",
+      "url": "https://www.polypdf.com/tools/flatten-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_fill_pdf_form",
+      "title": "Fill PDF forms",
+      "description": "Fill standard PDF forms locally, then download an interactive copy. The field list is read from your PDF, not guessed from its appearance. Scans and flat PDFs have no interactive fields. XFA and signed forms are unsupported.",
+      "url": "https://www.polypdf.com/tools/fill-pdf-form/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "values": {
+                "type": "object",
+                "description": "Exact field names mapped to text, boolean, or listed choice values. Inspect the PDF first.",
+                "additionalProperties": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 10000
+                    },
+                    {
+                      "type": "boolean"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_extract_pdf_form_data",
+      "title": "Extract form data",
+      "description": "Read standard PDF form fields and export their current values as JSON. Use this record to review entries or prepare an automated workflow. This reports AcroForm fields; it does not infer fields from a scan or assess signature validity.",
+      "url": "https://www.polypdf.com/tools/extract-pdf-form-data/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_remove_pdf_annotations",
+      "title": "Remove PDF annotations",
+      "description": "Remove PDF comments and markup annotations from selected pages. Interactive fields and link annotations remain in the file. Artwork already flattened into page content cannot be removed by this tool. This is not secure redaction.",
+      "url": "https://www.polypdf.com/tools/remove-pdf-annotations/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_watermark_pdf",
+      "title": "Watermark PDF",
+      "description": "Add a translucent text watermark to selected PDF pages. Choose the text, size, color, and opacity before exporting a copy. Watermarks are visible labels, not copy protection or redaction.",
+      "url": "https://www.polypdf.com/tools/watermark-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "text": {
+                "type": "string",
+                "description": "Text",
+                "default": "REVIEW",
+                "maxLength": 200
+              },
+              "fontSize": {
+                "type": "number",
+                "description": "Font size (points)",
+                "default": 42,
+                "minimum": 6,
+                "maximum": 96
+              },
+              "opacity": {
+                "type": "number",
+                "description": "Opacity (%)",
+                "default": 25,
+                "minimum": 5,
+                "maximum": 100
+              },
+              "color": {
+                "type": "string",
+                "description": "Text color",
+                "default": "#687766"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_number_pdf_pages",
+      "title": "Number PDF pages",
+      "description": "Add sequential page numbers to selected PDF pages. Choose a starting number, prefix, and header or footer placement. Numbers are added to page artwork and do not change PDF page labels or drawing sheet identifiers.",
+      "url": "https://www.polypdf.com/tools/number-pdf-pages/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "start": {
+                "type": "number",
+                "description": "Starting number",
+                "default": 1,
+                "minimum": 0,
+                "maximum": 9999999
+              },
+              "prefix": {
+                "type": "string",
+                "description": "Prefix",
+                "default": "",
+                "maxLength": 30
+              },
+              "position": {
+                "type": "string",
+                "description": "Position",
+                "default": "bottom-center",
+                "enum": [
+                  "bottom-left",
+                  "bottom-center",
+                  "bottom-right",
+                  "top-left",
+                  "top-center",
+                  "top-right"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_bates_number_pdf",
+      "title": "Bates numbering",
+      "description": "Add Bates numbers to a PDF using a prefix, starting number, and fixed digit count. Export a review copy with consecutive identifiers. Bates numbers identify pages; they do not certify completeness or replace a document-control register.",
+      "url": "https://www.polypdf.com/tools/bates-number-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "prefix": {
+                "type": "string",
+                "description": "Prefix",
+                "default": "DOC-",
+                "maxLength": 30
+              },
+              "start": {
+                "type": "number",
+                "description": "Starting number",
+                "default": 1,
+                "minimum": 0,
+                "maximum": 9999999
+              },
+              "digits": {
+                "type": "number",
+                "description": "Minimum digits",
+                "default": 6,
+                "minimum": 1,
+                "maximum": 10
+              },
+              "position": {
+                "type": "string",
+                "description": "Position",
+                "default": "bottom-center",
+                "enum": [
+                  "bottom-left",
+                  "bottom-center",
+                  "bottom-right",
+                  "top-left",
+                  "top-center",
+                  "top-right"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_crop_pdf",
+      "title": "Crop PDF",
+      "description": "Crop PDF pages by setting margins in points, where 72 points equal one inch. The crop changes the visible page boundary. Cropped content remains in the PDF. Do not use cropping to remove sensitive information.",
+      "url": "https://www.polypdf.com/tools/crop-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "top": {
+                "type": "number",
+                "description": "Top margin (points)",
+                "default": 18,
+                "minimum": 0,
+                "maximum": 1440
+              },
+              "right": {
+                "type": "number",
+                "description": "Right margin (points)",
+                "default": 18,
+                "minimum": 0,
+                "maximum": 1440
+              },
+              "bottom": {
+                "type": "number",
+                "description": "Bottom margin (points)",
+                "default": 18,
+                "minimum": 0,
+                "maximum": 1440
+              },
+              "left": {
+                "type": "number",
+                "description": "Left margin (points)",
+                "default": 18,
+                "minimum": 0,
+                "maximum": 1440
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_resize_pdf",
+      "title": "Resize PDF pages",
+      "description": "Resize PDF pages to a standard paper size while preserving artwork proportions. Content is centered on the new page. Resizing changes drawing scale. Recalibrate and check a known dimension before measuring.",
+      "url": "https://www.polypdf.com/tools/resize-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "paper": {
+                "type": "string",
+                "description": "Paper size",
+                "default": "A4",
+                "enum": [
+                  "A4",
+                  "Letter",
+                  "A3",
+                  "Tabloid"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_add_pdf_margins",
+      "title": "Add PDF margins",
+      "description": "Add equal white margins around PDF pages without scaling the existing page artwork. Choose the border width in points. The page size increases. Print at actual size to retain the artwork’s original scale.",
+      "url": "https://www.polypdf.com/tools/add-pdf-margins/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "margin": {
+                "type": "number",
+                "description": "Margin on each side (points)",
+                "default": 36,
+                "minimum": 1,
+                "maximum": 720
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_pdf_booklet",
+      "title": "Make a PDF booklet",
+      "description": "Arrange PDF pages in booklet order, two pages per landscape sheet. Blank panels pad the document to a multiple of four. Print double-sided with short-edge flipping and test one sheet first; printer settings vary.",
+      "url": "https://www.polypdf.com/tools/pdf-booklet/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "paper": {
+                "type": "string",
+                "description": "Paper size",
+                "default": "A4",
+                "enum": [
+                  "A4",
+                  "Letter",
+                  "A3",
+                  "Tabloid"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_n_up_pdf",
+      "title": "Multiple pages per sheet",
+      "description": "Create a two-up or four-up PDF contact sheet. Source pages retain their proportions and are placed in reading order. Reduced drawing pages are for review; their printed scale changes.",
+      "url": "https://www.polypdf.com/tools/n-up-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "perSheet": {
+                "type": "string",
+                "description": "Pages per sheet",
+                "default": "2",
+                "enum": [
+                  "2",
+                  "4"
+                ]
+              },
+              "paper": {
+                "type": "string",
+                "description": "Paper size",
+                "default": "A4",
+                "enum": [
+                  "A4",
+                  "Letter",
+                  "A3",
+                  "Tabloid"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_add_text_to_pdf",
+      "title": "Add text to PDF",
+      "description": "Add a new text label to selected PDF pages. Set its position from the top-left corner using percentages of the visible page. This adds text; it does not edit or erase existing text. The built-in font supports Latin characters.",
+      "url": "https://www.polypdf.com/tools/add-text-to-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "text": {
+                "type": "string",
+                "description": "Text",
+                "default": "REVIEW",
+                "maxLength": 200
+              },
+              "fontSize": {
+                "type": "number",
+                "description": "Font size (points)",
+                "default": 18,
+                "minimum": 6,
+                "maximum": 96
+              },
+              "x": {
+                "type": "number",
+                "description": "Left position (%)",
+                "default": 10,
+                "minimum": 0,
+                "maximum": 90
+              },
+              "y": {
+                "type": "number",
+                "description": "Top position (%)",
+                "default": 10,
+                "minimum": 0,
+                "maximum": 90
+              },
+              "color": {
+                "type": "string",
+                "description": "Text color",
+                "default": "#243128"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_add_image_to_pdf",
+      "title": "Add image to PDF",
+      "description": "Add a JPG or PNG image to selected PDF pages while preserving its proportions. Set its position and width as page percentages. A pasted signature image is not a cryptographic digital signature or a signature-request workflow.",
+      "url": "https://www.polypdf.com/tools/add-image-to-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "string",
+                "description": "Pages (blank = all). Use 1, 3-5. Page numbers start at 1.",
+                "default": "",
+                "maxLength": 2000
+              },
+              "x": {
+                "type": "number",
+                "description": "Left position (%)",
+                "default": 10,
+                "minimum": 0,
+                "maximum": 90
+              },
+              "y": {
+                "type": "number",
+                "description": "Top position (%)",
+                "default": 10,
+                "minimum": 0,
+                "maximum": 90
+              },
+              "width": {
+                "type": "number",
+                "description": "Image width (%)",
+                "default": 25,
+                "minimum": 1,
+                "maximum": 90
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_edit_pdf_metadata",
+      "title": "Edit PDF metadata",
+      "description": "Edit a PDF’s standard document information fields locally. Replace the title, author, subject, and keywords, then save a copy. This is not a privacy scrubber: embedded files, XMP, comments, and page content can retain other information.",
+      "url": "https://www.polypdf.com/tools/edit-pdf-metadata/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title",
+                "default": "",
+                "maxLength": 500
+              },
+              "author": {
+                "type": "string",
+                "description": "Author",
+                "default": "",
+                "maxLength": 500
+              },
+              "subject": {
+                "type": "string",
+                "description": "Subject",
+                "default": "",
+                "maxLength": 1000
+              },
+              "keywords": {
+                "type": "string",
+                "description": "Keywords (comma separated)",
+                "default": "",
+                "maxLength": 1000
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_inspect_pdf",
+      "title": "Inspect PDF",
+      "description": "Inspect PDF page count, page dimensions, rotation, standard metadata, and form fields. Export a machine-readable JSON report. Inspection does not certify accessibility, archival compliance, signature validity, or drawing scale.",
+      "url": "https://www.polypdf.com/tools/inspect-pdf/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "polypdf_compare_pdf_text",
+      "title": "Compare PDF text",
+      "description": "Compare the existing text layers of two PDFs page by page. Export a JSON report of added and removed lines with page references. This is a text comparison, not a visual overlay. Scans without text and geometry-only changes are not detected.",
+      "url": "https://www.polypdf.com/tools/compare-pdf-text/",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "request_id": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 128,
+            "description": "Stable unique request ID. Reuse only for an identical retry."
+          },
+          "files": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "Path inside the configured allowed root."
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$",
+                  "description": "Optional expected input fingerprint; mismatch rejects the request."
+                }
+              },
+              "required": [
+                "path"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "options": {
+            "type": "object",
+            "properties": {},
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "request_id",
+          "files"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

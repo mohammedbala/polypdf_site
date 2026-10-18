@@ -1,0 +1,1538 @@
+[
+  {
+    "id": "merge-pdf",
+    "name": "Merge PDF",
+    "category": "Organize",
+    "summary": "Combine drawings, attachments, and reports in your chosen order.",
+    "answer": "Combine two or more PDFs into a single file. Add your files, arrange them, and save a new PDF.",
+    "steps": [
+      "Choose your source files.",
+      "Arrange files in the order they should appear.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Interactive forms are flattened in the combined copy; document bookmarks and signatures are not preserved.",
+    "fields": [],
+    "minFiles": 2,
+    "maxFiles": 20,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "split-pdf",
+      "extract-pdf-pages",
+      "delete-pdf-pages"
+    ]
+  },
+  {
+    "id": "split-pdf",
+    "name": "Split PDF",
+    "category": "Organize",
+    "summary": "Separate a PDF into individual pages or page groups.",
+    "answer": "Split a PDF into separate files by page count. Choose how many pages belong in each output, then download the group as a ZIP.",
+    "steps": [
+      "Choose your source files.",
+      "Choose the number of pages per file.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Each output contains the selected source pages; interactive form values become static.",
+    "fields": [
+      {
+        "key": "chunkSize",
+        "label": "Pages per file",
+        "type": "number",
+        "default": 1,
+        "min": 1,
+        "max": 500
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "extract-pdf-pages",
+      "delete-pdf-pages"
+    ]
+  },
+  {
+    "id": "extract-pdf-pages",
+    "name": "Extract PDF pages",
+    "category": "Organize",
+    "summary": "Pull the exact sheets you need into a new PDF.",
+    "answer": "Extract selected PDF pages using page numbers and ranges such as 1, 3-5. The original file stays unchanged.",
+    "steps": [
+      "Choose your source files.",
+      "Enter the pages you want to keep.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "PDF page numbers count from 1 and may differ from printed drawing numbers.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "split-pdf",
+      "delete-pdf-pages"
+    ]
+  },
+  {
+    "id": "delete-pdf-pages",
+    "name": "Delete PDF pages",
+    "category": "Organize",
+    "summary": "Remove obsolete sheets and unwanted pages from a copy.",
+    "answer": "Remove selected pages from a PDF and download the remaining pages as a new file. At least one page must remain.",
+    "steps": [
+      "Choose your source files.",
+      "Enter the pages to remove.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Check the result before replacing an issued drawing set.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages to remove",
+        "type": "text",
+        "default": "1",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "split-pdf",
+      "extract-pdf-pages"
+    ]
+  },
+  {
+    "id": "organize-pdf",
+    "name": "Organize PDF",
+    "category": "Organize",
+    "summary": "Rearrange pages with a clear, numbered page order.",
+    "answer": "Reorder PDF pages by entering their new sequence. Use every page once to change order, or use Extract for a subset.",
+    "steps": [
+      "Choose your source files.",
+      "Set the page order with the up and down controls.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Page numbers refer to the original file, not the position after reordering.",
+    "fields": [
+      {
+        "key": "order",
+        "label": "Page order",
+        "type": "text",
+        "default": "",
+        "help": "Include every page once, separated by commas.",
+        "maxLength": 2000
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "split-pdf",
+      "extract-pdf-pages"
+    ]
+  },
+  {
+    "id": "rotate-pdf",
+    "name": "Rotate PDF",
+    "category": "Organize",
+    "summary": "Turn sideways or upside-down pages the right way.",
+    "answer": "Rotate selected PDF pages by 90, 180, or 270 degrees clockwise. Leave the page range blank to rotate every page.",
+    "steps": [
+      "Choose your source files.",
+      "Choose pages and a clockwise rotation.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Rotation changes viewing orientation without rasterizing page artwork.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "angle",
+        "label": "Clockwise rotation",
+        "type": "select",
+        "default": "90",
+        "options": [
+          "90",
+          "180",
+          "270"
+        ]
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "split-pdf",
+      "extract-pdf-pages"
+    ]
+  },
+  {
+    "id": "duplicate-pdf-pages",
+    "name": "Duplicate PDF pages",
+    "category": "Organize",
+    "summary": "Repeat a form or drawing without copying an entire file.",
+    "answer": "Duplicate selected PDF pages directly after their originals. Choose how many extra copies to add per selected page.",
+    "steps": [
+      "Choose your source files.",
+      "Choose the pages and number of extra copies.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Form values in copied pages become static to prevent conflicting field names.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "copies",
+        "label": "Extra copies per page",
+        "type": "number",
+        "default": 1,
+        "min": 1,
+        "max": 10
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "split-pdf",
+      "extract-pdf-pages"
+    ]
+  },
+  {
+    "id": "reverse-pdf-pages",
+    "name": "Reverse PDF pages",
+    "category": "Organize",
+    "summary": "Correct a scan that arrived back to front.",
+    "answer": "Reverse the order of every page in a PDF, so the last page becomes the first. Download a separate corrected copy.",
+    "steps": [
+      "Choose your source files.",
+      "Check the source page count.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "This changes page order, not the orientation of each page.",
+    "fields": [],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "split-pdf",
+      "extract-pdf-pages"
+    ]
+  },
+  {
+    "id": "insert-blank-pdf-pages",
+    "name": "Insert blank pages",
+    "category": "Organize",
+    "summary": "Add space for notes, separators, or duplex printing.",
+    "answer": "Insert blank pages before or after a chosen PDF page. New pages match the selected page size.",
+    "steps": [
+      "Choose your source files.",
+      "Choose the insertion point and blank-page count.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Inserted pages contain no fields or artwork.",
+    "fields": [
+      {
+        "key": "after",
+        "label": "Insert after page (0 = start)",
+        "type": "number",
+        "default": 1,
+        "min": 0,
+        "max": 500
+      },
+      {
+        "key": "count",
+        "label": "Blank pages",
+        "type": "number",
+        "default": 1,
+        "min": 1,
+        "max": 50
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "split-pdf",
+      "extract-pdf-pages"
+    ]
+  },
+  {
+    "id": "interleave-pdf",
+    "name": "Interleave PDFs",
+    "category": "Organize",
+    "summary": "Combine front and back scans in alternating order.",
+    "answer": "Interleave two PDFs by alternating pages from each file. Reverse the second file when the back-side scan is in reverse order.",
+    "steps": [
+      "Choose your source files.",
+      "Place front pages first and back pages second.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "If the files have different page counts, remaining pages are appended.",
+    "fields": [
+      {
+        "key": "reverseSecond",
+        "label": "Reverse second PDF",
+        "type": "checkbox",
+        "default": false
+      }
+    ],
+    "minFiles": 2,
+    "maxFiles": 2,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "merge-pdf",
+      "split-pdf",
+      "extract-pdf-pages"
+    ]
+  },
+  {
+    "id": "jpg-to-pdf",
+    "name": "JPG to PDF",
+    "category": "Convert",
+    "summary": "Turn photos and scans into a neatly sized PDF.",
+    "answer": "Convert JPG images into PDF pages in your chosen order. Keep the image proportions and select A4, Letter, or original image size.",
+    "steps": [
+      "Choose your source files.",
+      "Add JPG images and choose the page size.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Image-size mode uses 96 pixels per inch; verify scale before using a converted drawing for measurements.",
+    "fields": [
+      {
+        "key": "paper",
+        "label": "Paper size",
+        "type": "select",
+        "default": "A4",
+        "options": [
+          "A4",
+          "Letter",
+          "A3",
+          "Tabloid",
+          "Image"
+        ]
+      },
+      {
+        "key": "margin",
+        "label": "Margin (points)",
+        "type": "number",
+        "default": 18,
+        "min": 0,
+        "max": 144
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 20,
+    "types": [
+      "jpg"
+    ],
+    "readOnly": false,
+    "related": [
+      "png-to-pdf",
+      "webp-to-pdf",
+      "pdf-to-jpg"
+    ]
+  },
+  {
+    "id": "png-to-pdf",
+    "name": "PNG to PDF",
+    "category": "Convert",
+    "summary": "Collect PNG screenshots and drawings into one PDF.",
+    "answer": "Convert PNG images to a PDF in the browser, retaining transparency and image proportions. Choose page size and margins.",
+    "steps": [
+      "Choose your source files.",
+      "Arrange PNG images and select a page size.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "A PDF wrapper does not turn a raster drawing into vector geometry.",
+    "fields": [
+      {
+        "key": "paper",
+        "label": "Paper size",
+        "type": "select",
+        "default": "A4",
+        "options": [
+          "A4",
+          "Letter",
+          "A3",
+          "Tabloid",
+          "Image"
+        ]
+      },
+      {
+        "key": "margin",
+        "label": "Margin (points)",
+        "type": "number",
+        "default": 18,
+        "min": 0,
+        "max": 144
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 20,
+    "types": [
+      "png"
+    ],
+    "readOnly": false,
+    "related": [
+      "jpg-to-pdf",
+      "webp-to-pdf",
+      "pdf-to-jpg"
+    ]
+  },
+  {
+    "id": "webp-to-pdf",
+    "name": "WebP to PDF",
+    "category": "Convert",
+    "summary": "Make downloaded WebP images easier to share and print.",
+    "answer": "Convert WebP images into PDF pages locally. The images are decoded to PNG before embedding in the output PDF.",
+    "steps": [
+      "Choose your source files.",
+      "Add WebP files and select a page size.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Animated WebP input uses the decoded first frame only.",
+    "fields": [
+      {
+        "key": "paper",
+        "label": "Paper size",
+        "type": "select",
+        "default": "A4",
+        "options": [
+          "A4",
+          "Letter",
+          "A3",
+          "Tabloid",
+          "Image"
+        ]
+      },
+      {
+        "key": "margin",
+        "label": "Margin (points)",
+        "type": "number",
+        "default": 18,
+        "min": 0,
+        "max": 144
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 20,
+    "types": [
+      "webp"
+    ],
+    "readOnly": false,
+    "related": [
+      "jpg-to-pdf",
+      "png-to-pdf",
+      "pdf-to-jpg"
+    ]
+  },
+  {
+    "id": "pdf-to-jpg",
+    "name": "PDF to JPG",
+    "category": "Convert",
+    "summary": "Export selected pages as shareable JPEG images.",
+    "answer": "Convert PDF pages to JPG images at your chosen resolution. Download one image or a ZIP containing every selected page.",
+    "steps": [
+      "Choose your source files.",
+      "Choose pages, resolution, and JPEG quality.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "JPEG is lossy and removes selectable text; use PNG for crisp linework.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "dpi",
+        "label": "Resolution (DPI)",
+        "type": "select",
+        "default": "150",
+        "options": [
+          "72",
+          "100",
+          "150",
+          "200"
+        ]
+      },
+      {
+        "key": "quality",
+        "label": "Quality (%)",
+        "type": "number",
+        "default": 85,
+        "min": 20,
+        "max": 100
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "jpg-to-pdf",
+      "png-to-pdf",
+      "webp-to-pdf"
+    ]
+  },
+  {
+    "id": "pdf-to-png",
+    "name": "PDF to PNG",
+    "category": "Convert",
+    "summary": "Create crisp page images for reports and review.",
+    "answer": "Render PDF pages as PNG images in the browser. Select pages and resolution, then download the images together.",
+    "steps": [
+      "Choose your source files.",
+      "Choose pages and image resolution.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "PNG preserves rendered pixels, not editable PDF objects or measurement calibration.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "dpi",
+        "label": "Resolution (DPI)",
+        "type": "select",
+        "default": "150",
+        "options": [
+          "72",
+          "100",
+          "150",
+          "200"
+        ]
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "jpg-to-pdf",
+      "png-to-pdf",
+      "webp-to-pdf"
+    ]
+  },
+  {
+    "id": "pdf-to-webp",
+    "name": "PDF to WebP",
+    "category": "Convert",
+    "summary": "Export lightweight page images for the web.",
+    "answer": "Render selected PDF pages as WebP images with a quality setting. Export one image or download multiple pages as a ZIP.",
+    "steps": [
+      "Choose your source files.",
+      "Choose pages, resolution, and WebP quality.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "WebP output is a page image, not an editable or searchable PDF.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "dpi",
+        "label": "Resolution (DPI)",
+        "type": "select",
+        "default": "150",
+        "options": [
+          "72",
+          "100",
+          "150",
+          "200"
+        ]
+      },
+      {
+        "key": "quality",
+        "label": "Quality (%)",
+        "type": "number",
+        "default": 85,
+        "min": 20,
+        "max": 100
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "jpg-to-pdf",
+      "png-to-pdf",
+      "webp-to-pdf"
+    ]
+  },
+  {
+    "id": "pdf-to-text",
+    "name": "PDF to text",
+    "category": "Convert",
+    "summary": "Extract selectable text with page boundaries intact.",
+    "answer": "Extract a PDF\u2019s existing text layer to a UTF-8 text file. Page markers help you trace each section back to its source.",
+    "steps": [
+      "Choose your source files.",
+      "Choose the pages to extract.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Scanned pages without a text layer need OCR, which this browser tool does not perform. Reading order can differ on complex drawings.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": true,
+    "related": [
+      "jpg-to-pdf",
+      "png-to-pdf",
+      "webp-to-pdf"
+    ]
+  },
+  {
+    "id": "text-to-pdf",
+    "name": "Text to PDF",
+    "category": "Convert",
+    "summary": "Make a clean, paginated PDF from your notes.",
+    "answer": "Convert plain text into a readable PDF with automatic line wrapping and page breaks. Add a title and choose a font size.",
+    "steps": [
+      "Start with plain text.",
+      "Type or paste your text and choose its size.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "The built-in font supports Latin characters; unsupported characters are rejected rather than silently changed.",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Document title",
+        "type": "text",
+        "default": "Notes",
+        "maxLength": 150
+      },
+      {
+        "key": "text",
+        "label": "Your text",
+        "type": "textarea",
+        "default": "",
+        "maxLength": 100000
+      },
+      {
+        "key": "fontSize",
+        "label": "Font size (points)",
+        "type": "number",
+        "default": 18,
+        "min": 6,
+        "max": 96
+      }
+    ],
+    "minFiles": 0,
+    "maxFiles": 0,
+    "types": [],
+    "readOnly": false,
+    "related": [
+      "jpg-to-pdf",
+      "png-to-pdf",
+      "webp-to-pdf"
+    ]
+  },
+  {
+    "id": "compress-pdf",
+    "name": "Compress PDF",
+    "category": "Prepare",
+    "summary": "Reduce size with a choice between structural and image compression.",
+    "answer": "Compress a PDF locally using lossless structural rewriting or a smaller, image-based copy. The result shows the actual size change.",
+    "steps": [
+      "Choose your source files.",
+      "Choose lossless or image compression.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Image compression removes selectable text, links, forms, and vector detail. Lossless rewriting may not make an already optimized file smaller.",
+    "fields": [
+      {
+        "key": "mode",
+        "label": "Compression method",
+        "type": "select",
+        "default": "lossless",
+        "options": [
+          "lossless",
+          "image"
+        ]
+      },
+      {
+        "key": "dpi",
+        "label": "Image resolution (DPI)",
+        "type": "select",
+        "default": "100",
+        "options": [
+          "72",
+          "100",
+          "150"
+        ]
+      },
+      {
+        "key": "quality",
+        "label": "Image quality (%)",
+        "type": "number",
+        "default": 65,
+        "min": 20,
+        "max": 95
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "remove-pdf-annotations",
+      "crop-pdf",
+      "resize-pdf"
+    ]
+  },
+  {
+    "id": "flatten-pdf",
+    "name": "Flatten PDF forms",
+    "category": "Forms",
+    "summary": "Make filled form values part of the page.",
+    "answer": "Flatten standard PDF form fields into static page content. Filled values remain visible but are no longer editable form fields.",
+    "steps": [
+      "Choose your source files.",
+      "Check filled values in the preview before flattening.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "This flattens AcroForm fields, not every comment or layer. XFA forms and signed PDFs are unsupported.",
+    "fields": [],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "fill-pdf-form",
+      "extract-pdf-form-data"
+    ]
+  },
+  {
+    "id": "fill-pdf-form",
+    "name": "Fill PDF forms",
+    "category": "Forms",
+    "summary": "Fill existing text fields, choices, and checkboxes.",
+    "answer": "Fill standard PDF forms locally, then download an interactive copy. The field list is read from your PDF, not guessed from its appearance.",
+    "steps": [
+      "Choose your source files.",
+      "Complete the detected fields.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Scans and flat PDFs have no interactive fields. XFA and signed forms are unsupported.",
+    "fields": [],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "flatten-pdf",
+      "extract-pdf-form-data"
+    ]
+  },
+  {
+    "id": "extract-pdf-form-data",
+    "name": "Extract form data",
+    "category": "Forms",
+    "summary": "Export field names, values, types, and options as JSON.",
+    "answer": "Read standard PDF form fields and export their current values as JSON. Use this record to review entries or prepare an automated workflow.",
+    "steps": [
+      "Choose your source files.",
+      "Inspect the detected fields and export the data.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "This reports AcroForm fields; it does not infer fields from a scan or assess signature validity.",
+    "fields": [],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": true,
+    "related": [
+      "flatten-pdf",
+      "fill-pdf-form"
+    ]
+  },
+  {
+    "id": "remove-pdf-annotations",
+    "name": "Remove PDF annotations",
+    "category": "Prepare",
+    "summary": "Remove review comments while retaining form fields and links.",
+    "answer": "Remove PDF comments and markup annotations from selected pages. Interactive fields and link annotations remain in the file.",
+    "steps": [
+      "Choose your source files.",
+      "Choose the pages whose comments should be removed.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Artwork already flattened into page content cannot be removed by this tool. This is not secure redaction.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "compress-pdf",
+      "crop-pdf",
+      "resize-pdf"
+    ]
+  },
+  {
+    "id": "watermark-pdf",
+    "name": "Watermark PDF",
+    "category": "Mark up",
+    "summary": "Label a review copy with a visible text watermark.",
+    "answer": "Add a translucent text watermark to selected PDF pages. Choose the text, size, color, and opacity before exporting a copy.",
+    "steps": [
+      "Choose your source files.",
+      "Enter watermark text and select its appearance.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Watermarks are visible labels, not copy protection or redaction.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "text",
+        "label": "Text",
+        "type": "text",
+        "default": "REVIEW",
+        "maxLength": 200
+      },
+      {
+        "key": "fontSize",
+        "label": "Font size (points)",
+        "type": "number",
+        "default": 42,
+        "min": 6,
+        "max": 96
+      },
+      {
+        "key": "opacity",
+        "label": "Opacity (%)",
+        "type": "number",
+        "default": 25,
+        "min": 5,
+        "max": 100
+      },
+      {
+        "key": "color",
+        "label": "Text color",
+        "type": "color",
+        "default": "#687766"
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "number-pdf-pages",
+      "bates-number-pdf",
+      "add-text-to-pdf"
+    ]
+  },
+  {
+    "id": "number-pdf-pages",
+    "name": "Number PDF pages",
+    "category": "Mark up",
+    "summary": "Add consistent page numbers to a document.",
+    "answer": "Add sequential page numbers to selected PDF pages. Choose a starting number, prefix, and header or footer placement.",
+    "steps": [
+      "Choose your source files.",
+      "Choose the starting number and position.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Numbers are added to page artwork and do not change PDF page labels or drawing sheet identifiers.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "start",
+        "label": "Starting number",
+        "type": "number",
+        "default": 1,
+        "min": 0,
+        "max": 9999999
+      },
+      {
+        "key": "prefix",
+        "label": "Prefix",
+        "type": "text",
+        "default": "",
+        "maxLength": 30
+      },
+      {
+        "key": "position",
+        "label": "Position",
+        "type": "select",
+        "default": "bottom-center",
+        "options": [
+          "bottom-left",
+          "bottom-center",
+          "bottom-right",
+          "top-left",
+          "top-center",
+          "top-right"
+        ]
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "watermark-pdf",
+      "bates-number-pdf",
+      "add-text-to-pdf"
+    ]
+  },
+  {
+    "id": "bates-number-pdf",
+    "name": "Bates numbering",
+    "category": "Mark up",
+    "summary": "Give document pages stable, padded identifiers.",
+    "answer": "Add Bates numbers to a PDF using a prefix, starting number, and fixed digit count. Export a review copy with consecutive identifiers.",
+    "steps": [
+      "Choose your source files.",
+      "Set the prefix, starting number, and digit count.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Bates numbers identify pages; they do not certify completeness or replace a document-control register.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "prefix",
+        "label": "Prefix",
+        "type": "text",
+        "default": "DOC-",
+        "maxLength": 30
+      },
+      {
+        "key": "start",
+        "label": "Starting number",
+        "type": "number",
+        "default": 1,
+        "min": 0,
+        "max": 9999999
+      },
+      {
+        "key": "digits",
+        "label": "Minimum digits",
+        "type": "number",
+        "default": 6,
+        "min": 1,
+        "max": 10
+      },
+      {
+        "key": "position",
+        "label": "Position",
+        "type": "select",
+        "default": "bottom-center",
+        "options": [
+          "bottom-left",
+          "bottom-center",
+          "bottom-right",
+          "top-left",
+          "top-center",
+          "top-right"
+        ]
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "watermark-pdf",
+      "number-pdf-pages",
+      "add-text-to-pdf"
+    ]
+  },
+  {
+    "id": "crop-pdf",
+    "name": "Crop PDF",
+    "category": "Prepare",
+    "summary": "Trim the visible page boundary by equal or different margins.",
+    "answer": "Crop PDF pages by setting margins in points, where 72 points equal one inch. The crop changes the visible page boundary.",
+    "steps": [
+      "Choose your source files.",
+      "Set top, right, bottom, and left margins.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Cropped content remains in the PDF. Do not use cropping to remove sensitive information.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "top",
+        "label": "Top margin (points)",
+        "type": "number",
+        "default": 18,
+        "min": 0,
+        "max": 1440
+      },
+      {
+        "key": "right",
+        "label": "Right margin (points)",
+        "type": "number",
+        "default": 18,
+        "min": 0,
+        "max": 1440
+      },
+      {
+        "key": "bottom",
+        "label": "Bottom margin (points)",
+        "type": "number",
+        "default": 18,
+        "min": 0,
+        "max": 1440
+      },
+      {
+        "key": "left",
+        "label": "Left margin (points)",
+        "type": "number",
+        "default": 18,
+        "min": 0,
+        "max": 1440
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "compress-pdf",
+      "remove-pdf-annotations",
+      "resize-pdf"
+    ]
+  },
+  {
+    "id": "resize-pdf",
+    "name": "Resize PDF pages",
+    "category": "Prepare",
+    "summary": "Fit pages to A4, Letter, A3, or Tabloid without stretching.",
+    "answer": "Resize PDF pages to a standard paper size while preserving artwork proportions. Content is centered on the new page.",
+    "steps": [
+      "Choose your source files.",
+      "Choose the target paper size.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Resizing changes drawing scale. Recalibrate and check a known dimension before measuring.",
+    "fields": [
+      {
+        "key": "paper",
+        "label": "Paper size",
+        "type": "select",
+        "default": "A4",
+        "options": [
+          "A4",
+          "Letter",
+          "A3",
+          "Tabloid"
+        ]
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "compress-pdf",
+      "remove-pdf-annotations",
+      "crop-pdf"
+    ]
+  },
+  {
+    "id": "add-pdf-margins",
+    "name": "Add PDF margins",
+    "category": "Prepare",
+    "summary": "Create a clean border for binding, printing, or notes.",
+    "answer": "Add equal white margins around PDF pages without scaling the existing page artwork. Choose the border width in points.",
+    "steps": [
+      "Choose your source files.",
+      "Enter the margin width.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "The page size increases. Print at actual size to retain the artwork\u2019s original scale.",
+    "fields": [
+      {
+        "key": "margin",
+        "label": "Margin on each side (points)",
+        "type": "number",
+        "default": 36,
+        "min": 1,
+        "max": 720
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "compress-pdf",
+      "remove-pdf-annotations",
+      "crop-pdf"
+    ]
+  },
+  {
+    "id": "pdf-booklet",
+    "name": "Make a PDF booklet",
+    "category": "Prepare",
+    "summary": "Arrange pages for a folded, saddle-stitched booklet.",
+    "answer": "Arrange PDF pages in booklet order, two pages per landscape sheet. Blank panels pad the document to a multiple of four.",
+    "steps": [
+      "Choose your source files.",
+      "Choose the output paper size.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Print double-sided with short-edge flipping and test one sheet first; printer settings vary.",
+    "fields": [
+      {
+        "key": "paper",
+        "label": "Paper size",
+        "type": "select",
+        "default": "A4",
+        "options": [
+          "A4",
+          "Letter",
+          "A3",
+          "Tabloid"
+        ]
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "compress-pdf",
+      "remove-pdf-annotations",
+      "crop-pdf"
+    ]
+  },
+  {
+    "id": "n-up-pdf",
+    "name": "Multiple pages per sheet",
+    "category": "Prepare",
+    "summary": "Put two or four source pages on each output sheet.",
+    "answer": "Create a two-up or four-up PDF contact sheet. Source pages retain their proportions and are placed in reading order.",
+    "steps": [
+      "Choose your source files.",
+      "Choose two or four pages and the sheet size.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Reduced drawing pages are for review; their printed scale changes.",
+    "fields": [
+      {
+        "key": "perSheet",
+        "label": "Pages per sheet",
+        "type": "select",
+        "default": "2",
+        "options": [
+          "2",
+          "4"
+        ]
+      },
+      {
+        "key": "paper",
+        "label": "Paper size",
+        "type": "select",
+        "default": "A4",
+        "options": [
+          "A4",
+          "Letter",
+          "A3",
+          "Tabloid"
+        ]
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "compress-pdf",
+      "remove-pdf-annotations",
+      "crop-pdf"
+    ]
+  },
+  {
+    "id": "add-text-to-pdf",
+    "name": "Add text to PDF",
+    "category": "Mark up",
+    "summary": "Place a note, date, or label on a PDF page.",
+    "answer": "Add a new text label to selected PDF pages. Set its position from the top-left corner using percentages of the visible page.",
+    "steps": [
+      "Choose your source files.",
+      "Enter a label and choose its placement.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "This adds text; it does not edit or erase existing text. The built-in font supports Latin characters.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "text",
+        "label": "Text",
+        "type": "text",
+        "default": "REVIEW",
+        "maxLength": 200
+      },
+      {
+        "key": "fontSize",
+        "label": "Font size (points)",
+        "type": "number",
+        "default": 18,
+        "min": 6,
+        "max": 96
+      },
+      {
+        "key": "x",
+        "label": "Left position (%)",
+        "type": "number",
+        "default": 10,
+        "min": 0,
+        "max": 90
+      },
+      {
+        "key": "y",
+        "label": "Top position (%)",
+        "type": "number",
+        "default": 10,
+        "min": 0,
+        "max": 90
+      },
+      {
+        "key": "color",
+        "label": "Text color",
+        "type": "color",
+        "default": "#243128"
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "watermark-pdf",
+      "number-pdf-pages",
+      "bates-number-pdf"
+    ]
+  },
+  {
+    "id": "add-image-to-pdf",
+    "name": "Add image to PDF",
+    "category": "Mark up",
+    "summary": "Place a logo, stamp, or signature image on a page.",
+    "answer": "Add a JPG or PNG image to selected PDF pages while preserving its proportions. Set its position and width as page percentages.",
+    "steps": [
+      "Choose your source files.",
+      "Add a PDF first, then the image to place.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "A pasted signature image is not a cryptographic digital signature or a signature-request workflow.",
+    "fields": [
+      {
+        "key": "pages",
+        "label": "Pages (blank = all)",
+        "type": "text",
+        "default": "",
+        "help": "Use 1, 3-5. Page numbers start at 1.",
+        "maxLength": 2000
+      },
+      {
+        "key": "x",
+        "label": "Left position (%)",
+        "type": "number",
+        "default": 10,
+        "min": 0,
+        "max": 90
+      },
+      {
+        "key": "y",
+        "label": "Top position (%)",
+        "type": "number",
+        "default": 10,
+        "min": 0,
+        "max": 90
+      },
+      {
+        "key": "width",
+        "label": "Image width (%)",
+        "type": "number",
+        "default": 25,
+        "min": 1,
+        "max": 90
+      }
+    ],
+    "minFiles": 2,
+    "maxFiles": 2,
+    "types": [
+      "pdf",
+      "jpg",
+      "png"
+    ],
+    "readOnly": false,
+    "related": [
+      "watermark-pdf",
+      "number-pdf-pages",
+      "bates-number-pdf"
+    ]
+  },
+  {
+    "id": "edit-pdf-metadata",
+    "name": "Edit PDF metadata",
+    "category": "Inspect",
+    "summary": "Set the document title, author, subject, and keywords.",
+    "answer": "Edit a PDF\u2019s standard document information fields locally. Replace the title, author, subject, and keywords, then save a copy.",
+    "steps": [
+      "Choose your source files.",
+      "Enter the standard metadata values you want to keep.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "This is not a privacy scrubber: embedded files, XMP, comments, and page content can retain other information.",
+    "fields": [
+      {
+        "key": "title",
+        "label": "Title",
+        "type": "text",
+        "default": "",
+        "maxLength": 500
+      },
+      {
+        "key": "author",
+        "label": "Author",
+        "type": "text",
+        "default": "",
+        "maxLength": 500
+      },
+      {
+        "key": "subject",
+        "label": "Subject",
+        "type": "text",
+        "default": "",
+        "maxLength": 1000
+      },
+      {
+        "key": "keywords",
+        "label": "Keywords (comma separated)",
+        "type": "text",
+        "default": "",
+        "maxLength": 1000
+      }
+    ],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": false,
+    "related": [
+      "inspect-pdf",
+      "compare-pdf-text"
+    ]
+  },
+  {
+    "id": "inspect-pdf",
+    "name": "Inspect PDF",
+    "category": "Inspect",
+    "summary": "Check page sizes, rotation, form fields, and metadata.",
+    "answer": "Inspect PDF page count, page dimensions, rotation, standard metadata, and form fields. Export a machine-readable JSON report.",
+    "steps": [
+      "Choose your source files.",
+      "Review the page and document information.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "Inspection does not certify accessibility, archival compliance, signature validity, or drawing scale.",
+    "fields": [],
+    "minFiles": 1,
+    "maxFiles": 1,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": true,
+    "related": [
+      "edit-pdf-metadata",
+      "compare-pdf-text"
+    ]
+  },
+  {
+    "id": "compare-pdf-text",
+    "name": "Compare PDF text",
+    "category": "Inspect",
+    "summary": "Find changed text between two versions of a document.",
+    "answer": "Compare the existing text layers of two PDFs page by page. Export a JSON report of added and removed lines with page references.",
+    "steps": [
+      "Choose your source files.",
+      "Add the older PDF first and the newer PDF second.",
+      "Run the tool, review the result, and download your copy."
+    ],
+    "limitation": "This is a text comparison, not a visual overlay. Scans without text and geometry-only changes are not detected.",
+    "fields": [],
+    "minFiles": 2,
+    "maxFiles": 2,
+    "types": [
+      "pdf"
+    ],
+    "readOnly": true,
+    "related": [
+      "edit-pdf-metadata",
+      "inspect-pdf"
+    ]
+  }
+]

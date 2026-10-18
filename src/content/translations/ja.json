@@ -2818,7 +2818,8 @@
     "Work with the construction drawing set": "建設図面セットを使用して作業する",
     "Inspect the saved Mac example and its tested local build →": "Mac で保存したサンプルと、テストに使用したローカルビルドを確認 →",
     "Move checked quantities into the free Excel takeoff template →": "確認済みの数量を無料の Excel 数量拾いテンプレートに入力 →",
-    "Reconcile fixtures and receptacles with the electrical review sheet →": "電気設備の確認シートで照明器具とコンセントの数量を照合 →"
+    "Reconcile fixtures and receptacles with the electrical review sheet →": "電気設備の確認シートで照明器具とコンセントの数量を照合 →",
+    "PDF tools": "PDFツール"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

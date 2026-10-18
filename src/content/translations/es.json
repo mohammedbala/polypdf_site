@@ -2818,7 +2818,8 @@
     "Work with the construction drawing set": "Trabajar con el conjunto de dibujos de construcción.",
     "Inspect the saved Mac example and its tested local build →": "Consulta el ejemplo guardado en Mac y la compilación local utilizada en la prueba →",
     "Move checked quantities into the free Excel takeoff template →": "Lleva las cantidades verificadas a la plantilla gratuita de mediciones en Excel →",
-    "Reconcile fixtures and receptacles with the electrical review sheet →": "Verifica luminarias y tomas con la hoja de revisión eléctrica →"
+    "Reconcile fixtures and receptacles with the electrical review sheet →": "Verifica luminarias y tomas con la hoja de revisión eléctrica →",
+    "PDF tools": "Herramientas PDF"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

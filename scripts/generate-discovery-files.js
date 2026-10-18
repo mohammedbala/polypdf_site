@@ -158,6 +158,10 @@ const buildRouteMetadata = () => {
   next['/construction-pdf-markup'].title = 'PDF Markup Software for Construction | PolyPDF';
   for (const route of ['/', '/pdf-takeoff-software', '/construction-pdf-markup']) next[route].dateModified = '2026-10-16';
   for (const route of ['/product-facts', '/samples', '/tools', '/tools/construction-takeoff-spreadsheet']) next[route].dateModified = '2026-10-17';
+  const pdfTools = require('../src/toolkit/catalog.json');
+  next['/tools'] = {title: '36 Free Online PDF Tools — No Upload | PolyPDF', description: 'Merge, split, convert, fill, number, and prepare PDFs in your browser. 36 free tools with local processing, previews, downloads, and MCP automation.', robots: 'index, follow', dateModified: '2026-10-18'};
+  next['/tools/automation'] = {title: 'PDF Tools for AI Agents & MCP | PolyPDF', description: 'Connect 36 local PDF tools to your AI assistant. Download the MCP server with bounded file access, structured inputs, repeat-safe requests, and checksums.', robots: 'index, follow', dateModified: '2026-10-18'};
+  for (const t of pdfTools) next['/tools/' + t.id] = {title: t.name + ' Online Free | PolyPDF', description: t.summary + ' Free, local browser processing. Preview and download without an account.', robots:'index, follow', dateModified:'2026-10-18'};
   assert(next['/blog'], 'route-metadata.json must define the /blog index before generation');
   for (const post of blogPosts) {
     assert(next[blogPostPath(post.slug)], `Missing generated route for ${post.slug}`);
@@ -343,6 +347,12 @@ const buildLlmsText = () => {
     `${markdownLink('Compare PDF drawings', '/compare-pdf-drawings')}: inspect revision differences and create review markups`,
     '',
     ...Object.entries(growthMetadata).map(([route, [title, description]]) => `${markdownLink(title.replace(' | PolyPDF', ''), route)}: ${description}`),
+    '',
+    '## Free browser PDF tools',
+    '',
+    '- Browser tools process files locally without uploading PDFs. They are separate from the native desktop app and hosted connector. No account is required; file/page limits apply.',
+    '- Automation: https://www.polypdf.com/tools/automation/ — downloadable local MCP server and a machine-readable tool manifest.',
+    ...require('../src/toolkit/catalog.json').map(t => `${markdownLink(t.name, '/tools/' + t.id)}: ${t.answer} Limit: ${t.limitation}`),
     '',
     '## Product notes',
     '',

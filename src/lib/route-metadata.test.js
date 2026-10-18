@@ -1,6 +1,7 @@
 import routeMetadata from './route-metadata.json';
 import { blogPosts, blogPostPath } from './blogPosts';
 import { normalizeRoutePath, resolveRouteMetadata } from '../components/RouteMetadata';
+import pdfTools from '../toolkit/catalog.json';
 import siteRelease from './siteRelease.json';
 
 const expectedRoutes = [
@@ -32,6 +33,8 @@ const expectedRoutes = [
   '/compare-pdf-drawings',
   '/bluebeam-alternative-for-mac',
   '/tools/construction-takeoff-spreadsheet',
+  '/tools/automation',
+  ...pdfTools.map(t => '/tools/' + t.id),
   '/bluebeam-alternative', '/pdf-measuring-tool', '/electrical-takeoff-software', '/flooring-takeoff-software', '/samples', '/tools', '/tools/flooring-waste-calculator', '/tools/pdf-scale-checker'
 ];
 
