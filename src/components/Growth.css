@@ -16,3 +16,21 @@
 @media(max-width:700px){.handoff-checklist{padding:36px 0}.handoff-checklist-steps>li{padding-left:38px}.handoff-checklist h3{font-size:19px}}
 
 .form-practice{scroll-margin-top:24px;margin-block:32px}.form-practice h2{margin-top:0}.form-practice h3{margin-top:28px}.form-practice li{margin-block:10px}.form-practice p{line-height:1.65}.form-practice-evidence{font-size:.9rem;color:#52615b}.form-practice .dl-wrap{margin-block:20px}
+
+/* Anchor every compact menu to the whole navigation row, including the middle menu. */
+@media (max-width: 900px) {
+  .growth-nav-groups { position: relative; gap: 8px; }
+  .growth-nav details { position: static; }
+  .growth-menu, .growth-nav details:last-child .growth-menu {
+    inset-inline: 0;
+    width: auto;
+    min-width: 0;
+  }
+}
+@media (max-width: 400px) {
+  .growth-nav { gap: 10px; }
+  .growth-logo { font-size: 20px; gap: 6px; }
+  .growth-logo img { width: 28px; height: 28px; }
+  .growth-nav-download { padding-inline: 12px; }
+  .growth-nav summary { font-size: 14px; }
+}

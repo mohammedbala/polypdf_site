@@ -3,6 +3,13 @@
   "scope": "Static build checks; JSDOM axe excludes color contrast. Does not establish WCAG conformance or field performance.",
   "results": [
     {
+      "route": "/",
+      "staticAccessibilityViolations": 0,
+      "links": "pass",
+      "canonical": "pass",
+      "h1": "pass"
+    },
+    {
       "route": "/tools/construction-takeoff-spreadsheet",
       "staticAccessibilityViolations": 0,
       "links": "pass",

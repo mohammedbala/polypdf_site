@@ -6,14 +6,15 @@ const { JSDOM } = require('jsdom');
 const axe = require('axe-core');
 const englishOnly = require('../src/lib/englishOnlyRoutes.json');
 const build = path.resolve(process.env.BUILD_PATH || 'build');
-const routes = ['/tools/construction-takeoff-spreadsheet','/compare-pdf-drawings','/construction-pdf-markup','/windows','/pdf-takeoff-software','/measure-pdf-on-mac','/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff','/blog/create-fillable-pdf-form','/blog/calibrate-pdf-drawing-scale','/blog/why-pdf-measurements-are-wrong','/blog/pdf-takeoff-worked-example','/visual-search-pdf-count','/blog/count-pdf-symbols','/blog/measure-pdf-area-cutouts-depth','/blog/compare-pdf-drawing-revisions','/blog/pdf-markup-table-rfi-punch-list','/blog/ocr-scanned-pdf-drawings'];
+const routes = ['/','/tools/construction-takeoff-spreadsheet','/compare-pdf-drawings','/construction-pdf-markup','/windows','/pdf-takeoff-software','/measure-pdf-on-mac','/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff','/blog/create-fillable-pdf-form','/blog/calibrate-pdf-drawing-scale','/blog/why-pdf-measurements-are-wrong','/blog/pdf-takeoff-worked-example','/visual-search-pdf-count','/blog/count-pdf-symbols','/blog/measure-pdf-area-cutouts-depth','/blog/compare-pdf-drawing-revisions','/blog/pdf-markup-table-rfi-punch-list','/blog/ocr-scanned-pdf-drawings'];
 (async () => {
  const results = [];
  for (const route of routes) {
-  const dom = new JSDOM(fs.readFileSync(path.join(build, route, 'index.html'),'utf8'), { runScripts:'outside-only', url:'https://www.polypdf.com'+route+'/' });
+  const canonical = 'https://www.polypdf.com' + (route === '/' ? '/' : route + '/');
+  const dom = new JSDOM(fs.readFileSync(path.join(build, route, 'index.html'),'utf8'), { runScripts:'outside-only', url:canonical });
   const d=dom.window.document;
   assert.equal(d.querySelectorAll('h1').length,1,route+' single H1');
-  assert.equal(d.querySelector('link[rel=canonical]').href,'https://www.polypdf.com'+route+'/',route+' canonical');
+  assert.equal(d.querySelector('link[rel=canonical]').href,canonical,route+' canonical');
   assert(!d.querySelector('meta[name=robots]').content.includes('noindex'),route+' indexable');
   if (englishOnly.includes(route)) assert(!d.querySelector('link[hreflang]'),route+' English-only until localization');
   else assert(d.querySelector('link[hreflang="en"]'),route+' localized language alternatives');
