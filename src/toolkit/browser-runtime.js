@@ -30,9 +30,14 @@ export async function browserAdapter() {
       ),
     );
   const imageToPng = async (bytes) => {
-    const blob = new Blob([bytes], { type: "image/webp" }),
-      url = URL.createObjectURL(blob),
-      img = new Image();
+    const blob = new Blob([bytes], { type: "image/webp" });
+    const url = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(new ToolError("INVALID_IMAGE", "The image could not be read."));
+      reader.readAsDataURL(blob);
+    });
+    const img = new Image();
     try {
       await new Promise((resolve, reject) => {
         img.onload = resolve;
@@ -51,7 +56,7 @@ export async function browserAdapter() {
       c.getContext("2d").drawImage(img, 0, 0);
       return await encodeCanvas(c, "png", 1);
     } finally {
-      URL.revokeObjectURL(url);
+      img.src = "";
     }
   };
   return makeRenderAdapter({

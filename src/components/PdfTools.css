@@ -14,7 +14,7 @@
   margin: auto;
   padding-bottom: 70px;
 }
-.pdf-tools a {
+.pdf-shell a {
   color: var(--pdf-accent);
   text-underline-offset: 4px;
 }
