@@ -29,7 +29,8 @@ import VersionHistory from './components/VersionHistory';
 import WorkflowLanding from './components/WorkflowLanding';
 import BluebeamAlternative from './components/BluebeamAlternative';
 import ProductFacts from './components/ProductFacts';
-import { GrowthLanding, SamplesPage, ToolsPage, CalculatorPage } from './components/GrowthPages';
+import { GrowthLanding, SamplesPage, CalculatorPage } from './components/GrowthPages';
+import { PdfToolsHub, PdfToolPage, PdfAutomationPage } from './components/PdfTools';
 import ScaleCheckPage from './components/ScaleCheckPage';
 import TakeoffSpreadsheetPage from './components/TakeoffSpreadsheetPage';
 import { landingPages } from './lib/landingPages';
@@ -80,7 +81,9 @@ const AppRoutes = () => {
             <Route path="/bluebeam-alternative" element={<GrowthLanding kind="comparison" />} />
             <Route path="/samples" element={<SamplesPage />} />
             <Route path="/product-facts" element={<ProductFacts />} />
-            <Route path="/tools" element={<ToolsPage />} />
+            <Route path="/tools" element={<PdfToolsHub />} />
+            <Route path="/tools/automation" element={<PdfAutomationPage />} />
+            <Route path="/tools/:toolId" element={<PdfToolPage />} />
             <Route path="/tools/flooring-waste-calculator" element={<CalculatorPage />} />
             <Route path="/tools/pdf-scale-checker" element={<ScaleCheckPage />} />
             <Route path="/tools/construction-takeoff-spreadsheet" element={<TakeoffSpreadsheetPage />} />

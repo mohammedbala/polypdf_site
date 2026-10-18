@@ -356,10 +356,10 @@
     "dateModified": "2026-10-17"
   },
   "/tools": {
-    "title": "PDF Scale Checker & Construction Calculators | PolyPDF",
-    "description": "Check PDF scale accuracy against known dimensions, then calculate flooring waste and whole packs. Free tools with CSV records; no account required.",
+    "title": "36 Free Online PDF Tools — No Upload | PolyPDF",
+    "description": "Merge, split, convert, fill, number, and prepare PDFs in your browser. 36 free tools with local processing, previews, downloads, and MCP automation.",
     "robots": "index, follow",
-    "dateModified": "2026-10-17"
+    "dateModified": "2026-10-18"
   },
   "/tools/flooring-waste-calculator": {
     "title": "Flooring Waste Calculator: Area, Packs & Cost | PolyPDF",
@@ -384,5 +384,227 @@
     "description": "Download a free Excel takeoff template. Map PDF quantities to units and rates, avoid duplicate CSV totals, and inspect a real PolyPDF export.",
     "robots": "index, follow",
     "dateModified": "2026-10-17"
+  },
+  "/tools/automation": {
+    "title": "PDF Tools for AI Agents & MCP | PolyPDF",
+    "description": "Connect 36 local PDF tools to your AI assistant. Download the MCP server with bounded file access, structured inputs, repeat-safe requests, and checksums.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/merge-pdf": {
+    "title": "Merge PDF Online Free | PolyPDF",
+    "description": "Combine drawings, attachments, and reports in your chosen order. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/split-pdf": {
+    "title": "Split PDF Online Free | PolyPDF",
+    "description": "Separate a PDF into individual pages or page groups. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/extract-pdf-pages": {
+    "title": "Extract PDF pages Online Free | PolyPDF",
+    "description": "Pull the exact sheets you need into a new PDF. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/delete-pdf-pages": {
+    "title": "Delete PDF pages Online Free | PolyPDF",
+    "description": "Remove obsolete sheets and unwanted pages from a copy. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/organize-pdf": {
+    "title": "Organize PDF Online Free | PolyPDF",
+    "description": "Rearrange pages with a clear, numbered page order. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/rotate-pdf": {
+    "title": "Rotate PDF Online Free | PolyPDF",
+    "description": "Turn sideways or upside-down pages the right way. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/duplicate-pdf-pages": {
+    "title": "Duplicate PDF pages Online Free | PolyPDF",
+    "description": "Repeat a form or drawing without copying an entire file. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/reverse-pdf-pages": {
+    "title": "Reverse PDF pages Online Free | PolyPDF",
+    "description": "Correct a scan that arrived back to front. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/insert-blank-pdf-pages": {
+    "title": "Insert blank pages Online Free | PolyPDF",
+    "description": "Add space for notes, separators, or duplex printing. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/interleave-pdf": {
+    "title": "Interleave PDFs Online Free | PolyPDF",
+    "description": "Combine front and back scans in alternating order. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/jpg-to-pdf": {
+    "title": "JPG to PDF Online Free | PolyPDF",
+    "description": "Turn photos and scans into a neatly sized PDF. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/png-to-pdf": {
+    "title": "PNG to PDF Online Free | PolyPDF",
+    "description": "Collect PNG screenshots and drawings into one PDF. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/webp-to-pdf": {
+    "title": "WebP to PDF Online Free | PolyPDF",
+    "description": "Make downloaded WebP images easier to share and print. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/pdf-to-jpg": {
+    "title": "PDF to JPG Online Free | PolyPDF",
+    "description": "Export selected pages as shareable JPEG images. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/pdf-to-png": {
+    "title": "PDF to PNG Online Free | PolyPDF",
+    "description": "Create crisp page images for reports and review. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/pdf-to-webp": {
+    "title": "PDF to WebP Online Free | PolyPDF",
+    "description": "Export lightweight page images for the web. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/pdf-to-text": {
+    "title": "PDF to text Online Free | PolyPDF",
+    "description": "Extract selectable text with page boundaries intact. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/text-to-pdf": {
+    "title": "Text to PDF Online Free | PolyPDF",
+    "description": "Make a clean, paginated PDF from your notes. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/compress-pdf": {
+    "title": "Compress PDF Online Free | PolyPDF",
+    "description": "Reduce size with a choice between structural and image compression. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/flatten-pdf": {
+    "title": "Flatten PDF forms Online Free | PolyPDF",
+    "description": "Make filled form values part of the page. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/fill-pdf-form": {
+    "title": "Fill PDF forms Online Free | PolyPDF",
+    "description": "Fill existing text fields, choices, and checkboxes. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/extract-pdf-form-data": {
+    "title": "Extract form data Online Free | PolyPDF",
+    "description": "Export field names, values, types, and options as JSON. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/remove-pdf-annotations": {
+    "title": "Remove PDF annotations Online Free | PolyPDF",
+    "description": "Remove review comments while retaining form fields and links. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/watermark-pdf": {
+    "title": "Watermark PDF Online Free | PolyPDF",
+    "description": "Label a review copy with a visible text watermark. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/number-pdf-pages": {
+    "title": "Number PDF pages Online Free | PolyPDF",
+    "description": "Add consistent page numbers to a document. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/bates-number-pdf": {
+    "title": "Bates numbering Online Free | PolyPDF",
+    "description": "Give document pages stable, padded identifiers. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/crop-pdf": {
+    "title": "Crop PDF Online Free | PolyPDF",
+    "description": "Trim the visible page boundary by equal or different margins. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/resize-pdf": {
+    "title": "Resize PDF pages Online Free | PolyPDF",
+    "description": "Fit pages to A4, Letter, A3, or Tabloid without stretching. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/add-pdf-margins": {
+    "title": "Add PDF margins Online Free | PolyPDF",
+    "description": "Create a clean border for binding, printing, or notes. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/pdf-booklet": {
+    "title": "Make a PDF booklet Online Free | PolyPDF",
+    "description": "Arrange pages for a folded, saddle-stitched booklet. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/n-up-pdf": {
+    "title": "Multiple pages per sheet Online Free | PolyPDF",
+    "description": "Put two or four source pages on each output sheet. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/add-text-to-pdf": {
+    "title": "Add text to PDF Online Free | PolyPDF",
+    "description": "Place a note, date, or label on a PDF page. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/add-image-to-pdf": {
+    "title": "Add image to PDF Online Free | PolyPDF",
+    "description": "Place a logo, stamp, or signature image on a page. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/edit-pdf-metadata": {
+    "title": "Edit PDF metadata Online Free | PolyPDF",
+    "description": "Set the document title, author, subject, and keywords. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/inspect-pdf": {
+    "title": "Inspect PDF Online Free | PolyPDF",
+    "description": "Check page sizes, rotation, form fields, and metadata. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/compare-pdf-text": {
+    "title": "Compare PDF text Online Free | PolyPDF",
+    "description": "Find changed text between two versions of a document. Free, local browser processing. Preview and download without an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
   }
 }

@@ -40,7 +40,7 @@ export const footerLinkGroups = Object.freeze([
       Object.freeze({ to: '/teams/guide', label: 'Teams setup guide' }),
       Object.freeze({ to: '/bluebeam-alternative', label: 'Compare with Bluebeam' }),
       Object.freeze({ to: '/samples', label: 'Sample files' }),
-      Object.freeze({ to: '/tools', label: 'Calculators' })
+      Object.freeze({ to: '/tools', label: 'PDF tools' })
     ])
   }),
   Object.freeze({
