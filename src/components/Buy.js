@@ -212,7 +212,7 @@ const Buy = ({ forceInApp = false }) => {
       <header className="legal-header">
         <nav className="nav container">
           <Link to="/" className="logo">
-            <img src={parrotIcon} alt="PolyPDF" width="96" height="96" />
+            <img src={parrotIcon} alt="" width="96" height="96" />
             <span>PolyPDF</span>
           </Link>
           <Link to="/" className="back-link">
