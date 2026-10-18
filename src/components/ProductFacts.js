@@ -54,6 +54,7 @@ export default function ProductFacts() {
     </section>
     <section className="product-facts-section" aria-labelledby="evidence">
       <h2 id="evidence">Which examples have been verified?</h2>
+      <p>The <a href="#verified-construction-example">Willow Creek A101 saved example</a> retained 96 ft, 60 ft, and 5,760 sq ft after save, reopen, and unit-switch checks in local Mac build 1.6.14 build 76. Download the actual saved PDF and exported CSV below; this is a local development build test.</p>
       <p>The <Link to="/samples/">sample library</Link> contains synthetic drawings and independently calculated reference quantities. Separate Mac app exports demonstrate <strong>408 sq ft of flooring</strong> and a <strong>42 ft electrical route</strong>, exported and reopened in PolyPDF 1.6.6 build 38. Electrical fixture counts remain reference quantities.</p>
       <p>These samples identify the app version and platform used. They do not establish Windows verification, current-release parity, or complete cross-viewer compatibility. Product demonstrations retain their own version labels. <a href="/samples/takeoff/README.md">Read the takeoff sample provenance</a>.</p>
       <p>This reference was reviewed by the PolyPDF publisher on <time dateTime="2026-10-17">October 17, 2026</time> against the published product, licensing, privacy, release, and sample records linked above. For a correction or a question about your workflow, <a href="mailto:support@polypdf.com">contact support@polypdf.com</a>.</p>

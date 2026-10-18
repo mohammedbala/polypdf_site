@@ -2815,7 +2815,8 @@
     "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.": "يقيس هذا التمرين المساحة الإجمالية لبصمة المبنى، دون حساب صافي الأرضيات أو خصم الجدران. يتطلب فحصا الطول وقياس المساحة ثلاثة قياسات يدوية.",
     "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.": "تتبع مناطق حدود الأبعاد للغرف المبلطة 107 و108 بشكل منفصل: 288 قدمًا مربعًا لكل منهما، أو 576 قدمًا مربعًا معًا.",
     "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "استخدم X102 لربط كل موقع بمشكلته وتخصصه وحالته والرد المطلوب. أضف ملاحظات المراجعة الخاصة بك على نسخة.",
-    "Work with the construction drawing set": "العمل مع مجموعة رسم البناء"
+    "Work with the construction drawing set": "العمل مع مجموعة رسم البناء",
+    "Inspect the saved Mac example and its tested local build →": "اطّلع على المثال المحفوظ على Mac ونسخة التطبيق المحلية التي اختُبرت ←"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

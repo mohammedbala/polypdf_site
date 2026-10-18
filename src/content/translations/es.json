@@ -2815,7 +2815,8 @@
     "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.": "Este ejercicio mide la superficie bruta de la huella del edificio, sin calcular el pavimento neto ni descontar muros. Las dos comprobaciones de longitud y una de área utilizan tres mediciones manuales.",
     "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.": "Trace las zonas de límites de dimensiones para las habitaciones embaldosadas 107 y 108 por separado: 288 pies cuadrados cada una o 576 pies cuadrados juntas.",
     "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "Use X102 para relacionar cada ubicación con su problema, especialidad, estado y respuesta solicitada. Añada sus anotaciones de revisión en una copia.",
-    "Work with the construction drawing set": "Trabajar con el conjunto de dibujos de construcción."
+    "Work with the construction drawing set": "Trabajar con el conjunto de dibujos de construcción.",
+    "Inspect the saved Mac example and its tested local build →": "Consulta el ejemplo guardado en Mac y la compilación local utilizada en la prueba →"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
