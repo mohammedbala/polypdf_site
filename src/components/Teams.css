@@ -3,3 +3,9 @@
 .teams-picker-continue{display:inline-block;background:#315bd5;color:#fff;text-decoration:none;padding:12px 20px;border-radius:6px;font-weight:600;margin:14px 0 22px}.teams-picker-continue:hover{background:#244cb7}#team-purchase{scroll-margin-top:24px}
 
 .teams-document-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}.teams-table td{vertical-align:top}.teams-table td [role=status]{display:block;max-width:280px;font-size:12px;margin-top:8px}.teams-download code{overflow-wrap:anywhere}.teams-code input{font-family:monospace}.teams-code button{margin-bottom:12px}
+
+/* Keep the seat question readable and the number input usable on narrow phones. */
+@media (max-width: 480px) {
+  .teams-seat-heading { flex-direction: column; align-items: stretch; }
+  .teams-seat-number input { width: 100%; box-sizing: border-box; }
+}

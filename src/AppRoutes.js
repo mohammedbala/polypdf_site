@@ -19,6 +19,7 @@ import NotFound from './components/NotFound';
 import Privacy from './components/Privacy';
 import Refund from './components/Refund';
 import RouteMetadata from './components/RouteMetadata';
+import RouteNavigation from './components/RouteNavigation';
 import LanguageSelector from './components/LanguageSelector';
 import Support from './components/Support';
 import SiteFooter from './components/SiteFooter';
@@ -42,6 +43,7 @@ const AppRoutes = () => {
   return (
     <div className="App">
       <RouteMetadata />
+      <RouteNavigation />
       <SiteMotionProvider>
       <CheckoutReviewProvider>
         <a className="site-skip-link" href="#site-content">Skip to content</a>

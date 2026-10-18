@@ -39,7 +39,7 @@ record = {
 guide = '''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex, follow"><title>Electrical count review sheet | PolyPDF</title>
-<style>body{font-family:system-ui,sans-serif;line-height:1.65;max-width:760px;margin:40px auto;padding:0 24px;color:#162936}h1{line-height:1.15}a{color:#006d83}li{margin:.8em 0}code{overflow-wrap:anywhere}.note{border-left:3px solid #006d83;padding:1em;background:#f0f7f8}</style></head><body>
+<style>body{font-family:system-ui,sans-serif;line-height:1.65;max-width:760px;margin:40px auto;padding:0 24px;color:#162936}h1{line-height:1.15}a{color:#006d83}li{margin:.8em 0}code{overflow-wrap:anywhere}.note{border-left:3px solid #006d83;padding:1em;background:#f0f7f8}</style></head><body><main>
 <h1>Electrical count review sheet</h1>
 <p>Use the fictional Willow Creek Community Center E101 plan and E601 schedule, Revision A, to practice reviewing electrical quantities. These drawings are not for construction.</p>
 <p><a href="electrical-count-review.csv" download>Download the blank count review CSV</a> · <a href="../construction/06-Electrical-Lighting-and-Power.pdf">Open the two-sheet source PDF</a></p>
@@ -60,7 +60,7 @@ guide = '''<!doctype html>
 <h2>Keep the source with the estimate</h2><p>Keep app CSV output separate from this website-authored review sheet. Clear worksheet filters when a full export is needed, check subjects and units, and transfer reviewed quantities into your own estimating process with matching rates and scope. No material pricing, labor units or assemblies are supplied.</p>
 <p><a href="https://www.polypdf.com/tools/construction-takeoff-spreadsheet/">Use the Excel takeoff template and CSV mapping guide</a> · <a href="https://www.polypdf.com/electrical-takeoff-software/#electrical-options">Compare Free and Pro for this exercise</a></p>
 <p><a href="manifest.json">Source hashes and reference record</a> · <a href="../construction/DEMO-MANIFEST.json">Original construction drawing manifest</a> · <a href="https://www.polypdf.com/electrical-takeoff-software/">Electrical takeoff workflow</a></p>
-</body></html>'''
+</main></body></html>'''
 OUT.mkdir(parents=True, exist_ok=True)
 (OUT / 'electrical-count-review.csv').write_bytes(csv_bytes)
 (OUT / 'manifest.json').write_text(json.dumps(record, indent=2) + '\n')

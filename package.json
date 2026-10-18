@@ -30,7 +30,8 @@
     "verify:seo-growth": "node scripts/verify-seo-growth.cjs",
     "test:localized-consent": "node --test test/international-consent.test.cjs",
     "smoke:international": "node scripts/international/smoke.mjs",
-    "generate:evaluation-kit": "python3 scripts/generate-evaluation-kit.py"
+    "generate:evaluation-kit": "python3 scripts/generate-evaluation-kit.py",
+    "verify:navigation": "node scripts/verify-site-navigation.cjs"
   },
   "overrides": {
     "@tootallnate/once": "^1.1.2",
