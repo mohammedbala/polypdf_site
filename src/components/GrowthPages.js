@@ -9,7 +9,8 @@ import DownloadCTA from './DownloadCTA';
 import { growthPages } from '../lib/growthPages';
 import './Growth.css';
 import ConstructionLibrary from './ConstructionLibrary';
-export function GrowthLanding({ kind }) { return <WorkflowLanding page={growthPages[kind]}>{kind==='comparison'?<><ComparisonTable/><HandoffChecklist/><GrowthEvidence/></>:<GrowthEvidence kind={kind}/>}</WorkflowLanding>; }
+import ElectricalTakeoffEvaluation from './ElectricalTakeoffEvaluation';
+export function GrowthLanding({ kind }) { return <WorkflowLanding page={growthPages[kind]}>{kind==='comparison'?<><ComparisonTable/><HandoffChecklist/><GrowthEvidence/></>:<><GrowthEvidence kind={kind}/>{kind==='electrical' && <ElectricalTakeoffEvaluation />}</>}</WorkflowLanding>; }
 function ComparisonTable() { return <section className="growth-evidence"><div className="container"><p className="growth-kicker">Reviewed October 16, 2026</p><h2>Compare the work, the handoff, and the license.</h2><div className="growth-table-wrap" role="region" aria-label="Product comparison" tabIndex="0"><table><caption>PolyPDF and Bluebeam: evaluating construction PDF workflows</caption><thead><tr><th scope="col">Decision</th><th scope="col">PolyPDF</th><th scope="col">Bluebeam</th></tr></thead><tbody>{[
  ['Desktop platform','Desktop apps for Mac and Windows. One personal license covers up to 3 computers in any mix.','Revu is a Windows desktop application. Bluebeam documents separate web, supported iOS-on-Mac, and virtualization options for Mac users.'],
  ['Takeoff and quantities','Calibrated measurements, counts, and takeoff worksheets. Review quantities before exporting.','Evaluate Revu’s measurement and estimation features against your project’s established workflow and subscription tier.'],

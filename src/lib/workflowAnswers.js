@@ -23,9 +23,9 @@ export const workflowAnswers = {
     href: '/measure-pdf-on-mac/#try-mac-measurement', label: 'Try the Mac measurement sample'
   },
   '/electrical-takeoff-software': {
-    question: 'What does electrical takeoff software measure?',
-    answer: 'Electrical takeoff records quantities such as fixture counts and drawn route lengths from project plans. PolyPDF lets you calibrate PDFs, count items, measure routes, and export a reviewed worksheet. Pro Symbol Search finds candidate symbols that you must check. Plan lengths do not automatically include rises, drops, slack, fittings, or labor; document those allowances separately.',
-    href: '/samples/', label: 'Inspect the electrical practice files'
+    question: 'Can PolyPDF do electrical takeoffs on Mac and Windows?',
+    answer: 'Yes. PolyPDF records fixture counts and measured route lengths from electrical PDFs on Mac and Windows. Free includes calibration, drawing review, and up to 3 hand-created measurements per document. Pro unlocks Symbol Search and removes that measurement cap. Review symbol matches, classify fixture and device types, then export checked quantities for pricing. PolyPDF does not include an electrical labor or material cost database; a drawn circuit line is not a complete conduit or wire quantity.',
+    href: '/electrical-takeoff-software/#electrical-count-check', label: 'Check the electrical drawing and review sheet'
   },
   '/flooring-takeoff-software': {
     question: 'How do you estimate flooring from a PDF plan?',

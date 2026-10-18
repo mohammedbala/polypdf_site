@@ -19,6 +19,7 @@ export default function ConstructionExample({ kind = 'takeoff', context = 'sampl
         <p className="construction-example-provenance">Drawing reference values, not new app test results. Work on a copy and check your own saved output.</p>
         {kind === 'takeoff' && <p><Link to="/product-facts/#verified-construction-example">Inspect the saved Mac example and its tested local build →</Link></p>}
         {kind === 'takeoff' && <p><Link to="/tools/construction-takeoff-spreadsheet/">Move checked quantities into the free Excel takeoff template →</Link></p>}
+        {kind === 'electrical' && <p><Link to="/electrical-takeoff-software/#electrical-count-check">Reconcile fixtures and receptacles with the electrical review sheet →</Link></p>}
         <p><Link to={example.guide}>Open the related workflow guide →</Link></p>
       </div>
       <div className="construction-example-files">

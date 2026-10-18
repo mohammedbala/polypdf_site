@@ -2817,7 +2817,8 @@
     "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "Use X102 para relacionar cada local ao problema, à disciplina, ao status e à resposta solicitada. Adicione suas anotações de revisão em uma cópia.",
     "Work with the construction drawing set": "Trabalhe com o conjunto de desenho de construção",
     "Inspect the saved Mac example and its tested local build →": "Confira o exemplo salvo no Mac e a compilação local usada no teste →",
-    "Move checked quantities into the free Excel takeoff template →": "Transfira as quantidades conferidas para o modelo gratuito de levantamento em Excel →"
+    "Move checked quantities into the free Excel takeoff template →": "Transfira as quantidades conferidas para o modelo gratuito de levantamento em Excel →",
+    "Reconcile fixtures and receptacles with the electrical review sheet →": "Confira luminárias e tomadas com a planilha de revisão elétrica →"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

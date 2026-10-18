@@ -2817,7 +2817,8 @@
     "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "使用 X102 将每个位置与其问题、专业、状态和要求的回复对应起来。在副本上添加自己的审阅标注。",
     "Work with the construction drawing set": "使用施工图集",
     "Inspect the saved Mac example and its tested local build →": "查看 Mac 上保存的示例及测试所用的本地构建版本 →",
-    "Move checked quantities into the free Excel takeoff template →": "将核对后的工程量填入免费的 Excel 工程量统计模板 →"
+    "Move checked quantities into the free Excel takeoff template →": "将核对后的工程量填入免费的 Excel 工程量统计模板 →",
+    "Reconcile fixtures and receptacles with the electrical review sheet →": "使用电气核查表核对灯具和插座数量 →"
   },
   "sourceHash": "1613bec2f14beb7e0c1021cdd5184712c634791c8679a07d8d4811ea148d63b5",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
