@@ -1,0 +1,18 @@
+{
+  "title": "Construction takeoff estimating template",
+  "version": "1.0",
+  "created": "2026-10-17",
+  "kind": "Website-authored spreadsheet; not an app export",
+  "sheets": [
+    "Estimate",
+    "CSV example"
+  ],
+  "preparedEstimateRows": 20,
+  "currency": "USD",
+  "sourceCsv": "https://www.polypdf.com/samples/evaluation/local-build-1.6.14-76/willow-creek-a101-takeoff.csv",
+  "sourceCsvSha256": "f808a1720545693e917fd97346fc4fd3df2f99205952e96d150fe925b848a4e9",
+  "file": "polypdf-construction-takeoff-template.xlsx",
+  "sha256": "a36be5e1db3d0f512c1013e63a4dccf98a28673c2cb836626dd5eb9f80221cc7",
+  "validation": "Formula recalculation and edited-input tests in Artifact Tool; original export cells and saved XLSX inspected. No native Excel runtime test claimed.",
+  "limits": "No automatic PDF extraction, app synchronization, unit conversion, pack rounding, tax, labor, overhead or profit. User supplies scope, quantities, allowances and rates. CSV example is a local Mac 1.6.14 build76 test, not public-installer/Windows qualification."
+}

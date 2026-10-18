@@ -30,6 +30,7 @@ import BluebeamAlternative from './components/BluebeamAlternative';
 import ProductFacts from './components/ProductFacts';
 import { GrowthLanding, SamplesPage, ToolsPage, CalculatorPage } from './components/GrowthPages';
 import ScaleCheckPage from './components/ScaleCheckPage';
+import TakeoffSpreadsheetPage from './components/TakeoffSpreadsheetPage';
 import { landingPages } from './lib/landingPages';
 import './App.css';
 import './Monochrome.css';
@@ -81,6 +82,7 @@ const AppRoutes = () => {
             <Route path="/tools" element={<ToolsPage />} />
             <Route path="/tools/flooring-waste-calculator" element={<CalculatorPage />} />
             <Route path="/tools/pdf-scale-checker" element={<ScaleCheckPage />} />
+            <Route path="/tools/construction-takeoff-spreadsheet" element={<TakeoffSpreadsheetPage />} />
             <Route path="/bluebeam-alternative-for-mac" element={<BluebeamAlternative />} />
             <Route path={landingPages.revisionPackages.path} element={<WorkflowLanding page={landingPages.revisionPackages} />} />
             <Route path={landingPages.pdfTakeoffSoftware.path} element={<WorkflowLanding page={landingPages.pdfTakeoffSoftware} />} />

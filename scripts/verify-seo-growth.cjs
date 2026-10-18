@@ -6,7 +6,7 @@ const { JSDOM } = require('jsdom');
 const axe = require('axe-core');
 const englishOnly = require('../src/lib/englishOnlyRoutes.json');
 const build = path.resolve(process.env.BUILD_PATH || 'build');
-const routes = ['/compare-pdf-drawings','/construction-pdf-markup','/windows','/pdf-takeoff-software','/measure-pdf-on-mac','/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff','/blog/create-fillable-pdf-form','/blog/calibrate-pdf-drawing-scale','/blog/why-pdf-measurements-are-wrong','/blog/pdf-takeoff-worked-example','/visual-search-pdf-count','/blog/count-pdf-symbols','/blog/measure-pdf-area-cutouts-depth','/blog/compare-pdf-drawing-revisions','/blog/pdf-markup-table-rfi-punch-list','/blog/ocr-scanned-pdf-drawings'];
+const routes = ['/tools/construction-takeoff-spreadsheet','/compare-pdf-drawings','/construction-pdf-markup','/windows','/pdf-takeoff-software','/measure-pdf-on-mac','/product-facts','/pdf-measuring-tool','/electrical-takeoff-software','/flooring-takeoff-software','/bluebeam-alternative','/samples','/tools','/tools/flooring-waste-calculator','/tools/pdf-scale-checker','/blog/quantity-takeoff','/blog/create-fillable-pdf-form','/blog/calibrate-pdf-drawing-scale','/blog/why-pdf-measurements-are-wrong','/blog/pdf-takeoff-worked-example','/visual-search-pdf-count','/blog/count-pdf-symbols','/blog/measure-pdf-area-cutouts-depth','/blog/compare-pdf-drawing-revisions','/blog/pdf-markup-table-rfi-punch-list','/blog/ocr-scanned-pdf-drawings'];
 (async () => {
  const results = [];
  for (const route of routes) {

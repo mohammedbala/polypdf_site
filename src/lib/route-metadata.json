@@ -359,7 +359,7 @@
     "title": "PDF Scale Checker & Construction Calculators | PolyPDF",
     "description": "Check PDF scale accuracy against known dimensions, then calculate flooring waste and whole packs. Free tools with CSV records; no account required.",
     "robots": "index, follow",
-    "dateModified": "2026-10-16"
+    "dateModified": "2026-10-17"
   },
   "/tools/flooring-waste-calculator": {
     "title": "Flooring Waste Calculator: Area, Packs & Cost | PolyPDF",
@@ -378,5 +378,11 @@
     "description": "Check horizontal and vertical PDF measurement errors against your project tolerance. Compare known dimensions and download a CSV record. Free, no upload.",
     "robots": "index, follow",
     "dateModified": "2026-10-16"
+  },
+  "/tools/construction-takeoff-spreadsheet": {
+    "title": "Free Construction Takeoff Spreadsheet for Excel | PolyPDF",
+    "description": "Download a free Excel takeoff template. Map PDF quantities to units and rates, avoid duplicate CSV totals, and inspect a real PolyPDF export.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-17"
   }
 }
