@@ -12,6 +12,7 @@ import {
   StandardFonts,
   rgb,
   degrees,
+  layoutMultilineText,
 } from "pdf-lib";
 
 export const LIMITS = Object.freeze({
@@ -291,6 +292,40 @@ function safeText(font, text) {
     );
   }
   return text;
+}
+function fitMultilineField(field, font, text) {
+  if (!field.isMultiline() || !text.trim()) return false;
+  let resized = false;
+  for (const widget of field.acroField.getWidgets()) {
+    const rect = widget.getRectangle();
+    const rotation = widget.getAppearanceCharacteristics()?.getRotation() || 0;
+    const padding = (widget.getBorderStyle()?.getWidth() || 0) + 1;
+    const bounds = { x: 0, y: 0,
+      width: (rotation % 180 ? rect.height : rect.width) - 2 * padding,
+      height: (rotation % 180 ? rect.width : rect.height) - 2 * padding };
+    const appearance = widget.getDefaultAppearance() ?? field.acroField.getDefaultAppearance() ?? "";
+    const fontPattern = /(\/[^\s]+)\s+[-+]?(?:\d*\.?\d+)\s+Tf/g;
+    const matches = [...appearance.matchAll(fontPattern)];
+    const currentSize = Number(matches.at(-1)?.[0].split(/\s+/)[1]) || 0;
+    const layout = size => layoutMultilineText(text, {font, fontSize: size, alignment: field.getAlignment(), bounds});
+    const fits = result => result.lines.every(line => line.y >= 0 && line.y + line.height <= bounds.height && line.width <= bounds.width);
+    if (bounds.width <= 0 || bounds.height <= 0)
+      fail("FIELD_TEXT_OVERFLOW", `The field ${field.getName()} has no room for text.`);
+    if (currentSize > 0 && fits(layout(currentSize))) continue;
+    let low = 4, high = Math.min(500, Math.floor(layout(0).fontSize)), size = 0;
+    while (low <= high) {
+      const candidate = Math.floor((low + high) / 2);
+      if (fits(layout(candidate))) { size = candidate; low = candidate + 1; }
+      else high = candidate - 1;
+    }
+    if (!size)
+      fail("FIELD_TEXT_OVERFLOW", `Text does not fit the field ${field.getName()}. Shorten the entry or use the desktop editor.`);
+    widget.setDefaultAppearance(matches.length
+      ? appearance.replace(fontPattern, (_match, name) => `${name} ${size} Tf`)
+      : `${appearance}\n/Helvetica ${size} Tf`);
+    resized = resized || currentSize > 0;
+  }
+  return resized;
 }
 function visualSize(p) {
   const b = p.getCropBox(),
@@ -754,8 +789,11 @@ export async function runTool(
             );
           if (info.maxLength !== null && value.length > info.maxLength)
             fail("INVALID_OPTIONS", `${name} accepts at most ${info.maxLength} characters.`);
-          safeText(await doc.embedFont(StandardFonts.Helvetica), value.replace(/[\r\n\t]/g, " "));
+          const fieldFont = await doc.embedFont(StandardFonts.Helvetica);
+          safeText(fieldFont, value.replace(/[\r\n\t]/g, " "));
           f.setText(value);
+          if (fitMultilineField(f, fieldFont, value))
+            warnings.push("Text was resized to fit a multiline form field.");
         } else if (info.type === "PDFCheckBox") {
           if (typeof value !== "boolean")
             fail("INVALID_OPTIONS", `${name} needs true or false.`);
