@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
 const {JSDOM}=require('jsdom');
 const locales=require('../../src/toolkit/locales.json'),catalog=require('../../src/toolkit/catalog.json'),copy=require('../../src/toolkit/page-content.json');
 const icons=require('../../src/toolkit/icons.json');
-const root=path.resolve(__dirname,'../..'),build=path.join(root,process.env.BUILD_PATH||'build'),origin='https://www.polypdf.com';
+const root=path.resolve(__dirname,'../..'),build=path.resolve(root,process.env.BUILD_PATH||'build'),origin='https://www.polypdf.com';
 const manifest=JSON.parse(fs.readFileSync(path.join(build,'toolkit-international-manifest.json'),'utf8'));
 const sitemap=fs.readFileSync(path.join(build,'sitemap.xml'),'utf8');
 const locations=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);assert.equal(new Set(locations).size,locations.length,'unique sitemap URLs');
