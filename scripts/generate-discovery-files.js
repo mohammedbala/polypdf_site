@@ -162,7 +162,7 @@ const buildRouteMetadata = () => {
   const toolContent = require('../src/toolkit/page-content.json');
   next['/tools'] = {title: '36 Free Online PDF Tools — No Upload | PolyPDF', description: 'Merge, split, convert, fill, number, and prepare PDFs in your browser. 36 free tools with local processing, previews, downloads, and MCP automation.', robots: 'index, follow', dateModified: '2026-10-18'};
   next['/tools/automation'] = {title: 'PDF Tools for AI Agents & MCP | PolyPDF', description: 'Connect 36 local PDF tools to your AI assistant. Download the MCP server with bounded file access, structured inputs, repeat-safe requests, and checksums.', robots: 'index, follow', dateModified: '2026-10-18'};
-  for (const t of pdfTools) next['/tools/' + t.id] = {title: toolContent[t.id].title, description: toolContent[t.id].description, robots:'index, follow', dateModified:'2026-10-19'};
+  for (const t of pdfTools) next['/tools/' + t.id] = {title: toolContent[t.id].title, description: toolContent[t.id].description, robots:'index, follow', dateModified:'2026-10-19', image:'/tools/social/'+t.id+'.png', imageAlt:t.name+' — free browser PDF tool', imageWidth:1200, imageHeight:630};
   assert(next['/blog'], 'route-metadata.json must define the /blog index before generation');
   for (const post of blogPosts) {
     assert(next[blogPostPath(post.slug)], `Missing generated route for ${post.slug}`);

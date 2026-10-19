@@ -3,17 +3,19 @@ import './LanguageSelector.css';
 import { useLocation } from 'react-router';
 import locales from '../lib/locales.json';
 import { languagePath, localizedRoutes, normalizePath } from '../lib/internationalRoutes';
+import { toolkitLocales, toolkitRoutes } from '../toolkit/language';
 
 export default function LanguageSelector() {
   const { pathname } = useLocation();
   const source = normalizePath(pathname);
-  const route = localizedRoutes.includes(source) ? source : '/';
+  const isToolkit = toolkitRoutes.includes(source);
+  const route = isToolkit || localizedRoutes.includes(source) ? source : '/';
   return (
     <details className="language-selector" onKeyDown={e => { if (e.key === 'Escape') { e.currentTarget.open = false; e.currentTarget.querySelector('summary').focus(); } }}>
       <summary>Languages · English</summary>
       <nav aria-label="Choose a language" className="language-options">
         <a href={route === '/' ? '/' : `${route}/`} hrefLang="en" lang="en" aria-current="page">English</a>
-        {locales.map((locale) => <a key={locale.id} href={languagePath(locale.id, route)} hrefLang={locale.language} lang={locale.language} dir={locale.dir || 'ltr'}>{locale.label}</a>)}
+        {(isToolkit ? toolkitLocales : locales).map((locale) => <a key={locale.id} href={languagePath(locale.id, route)} hrefLang={locale.language} lang={locale.language} dir={locale.dir || 'ltr'}>{locale.label}</a>)}
       </nav>
     </details>
   );

@@ -7,7 +7,7 @@
   --pdf-paper: #f8faf6;
   background: var(--pdf-paper);
   color: var(--pdf-ink);
-  text-align: left;
+  text-align: start;
 }
 .pdf-shell {
   width: min(1240px, calc(100% - 64px));
@@ -144,7 +144,7 @@
   letter-spacing: 0.12em;
 }
 .pdf-sheet-heading strong {
-  margin-left: auto;
+  margin-inline-start: auto;
   font-size: 31px;
   font-weight: 500;
 }
@@ -157,7 +157,7 @@
   border-bottom: 1px solid var(--pdf-line);
 }
 .pdf-hero-sheet > a > svg {
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 .pdf-hero-sheet strong,
 .pdf-hero-sheet small {
@@ -301,7 +301,7 @@
   color: var(--pdf-muted);
 }
 .pdf-card-top > svg:last-child {
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 .pdf-tool-card h3 {
   margin-bottom: 10px;
@@ -409,7 +409,7 @@
 }
 .pdf-work-controls {
   padding: 24px;
-  border-right: 1px solid var(--pdf-line);
+  border-inline-end: 1px solid var(--pdf-line);
 }
 .pdf-control-title {
   display: flex;
@@ -432,7 +432,7 @@
   min-height: 44px;
 }
 .pdf-text-button {
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 .pdf-dropzone {
   border: 1px dashed #9dac99;
@@ -585,7 +585,7 @@
 }
 .pdf-limit {
   background: #f3f5ee;
-  border-left: 2px solid #9da88c;
+  border-inline-start: 2px solid #9da88c;
   padding: 12px 14px;
   font-size: 12px;
   line-height: 1.6 !important;
@@ -730,7 +730,7 @@
 }
 .pdf-result li small {
   font-size: 11px;
-  margin-left: auto;
+  margin-inline-start: auto;
   white-space: nowrap;
 }
 .pdf-text-output {
@@ -766,7 +766,7 @@
   padding-top: 55px;
 }
 .pdf-tool-guide ol {
-  padding-left: 23px;
+  padding-inline-start: 23px;
   color: var(--pdf-muted);
   line-height: 1.6;
 }
@@ -774,8 +774,8 @@
   margin-bottom: 12px;
 }
 .pdf-tool-guide .pdf-tool-note {
-  border-left: 1px solid var(--pdf-line);
-  padding-left: 30px;
+  border-inline-start: 1px solid var(--pdf-line);
+  padding-inline-start: 30px;
 }
 .pdf-tool-guide .pdf-tool-note h2 {
   font-size: 22px;
@@ -865,7 +865,7 @@
 }
 .pdf-automation blockquote {
   margin: 0;
-  border-left: 3px solid #8da480;
+  border-inline-start: 3px solid #8da480;
   padding: 10px 25px;
   font-size: 21px;
   line-height: 1.6;
@@ -975,7 +975,7 @@
     grid-template-columns: 1fr;
   }
   .pdf-work-controls {
-    border-right: 0;
+    border-inline-end: 0;
     border-bottom: 1px solid var(--pdf-line);
     padding: 20px;
   }
@@ -994,7 +994,7 @@
     padding-top: 35px;
   }
   .pdf-tool-guide .pdf-tool-note {
-    border-left: 0;
+    border-inline-start: 0;
     border-top: 1px solid var(--pdf-line);
     padding: 25px 0 0;
   }
@@ -1065,4 +1065,54 @@
     scroll-behavior: auto !important;
     transition: none !important;
   }
+}
+
+/* Original operation glyphs stay crisp at directory, heading and export sizes. */
+.pdf-custom-icon { flex: none; overflow: visible; }
+.pdf-heading-icon { display:flex; align-items:center; gap:18px; }
+.pdf-heading-icon h1 { margin-bottom:0; min-width:0; overflow-wrap:anywhere; }
+.pdf-heading-icon > svg { color:var(--pdf-accent); }
+.pdf-tool-heading .pdf-heading-icon { margin-bottom:18px; }
+.pdf-related .pdf-custom-icon { margin-bottom:14px; }
+.pdf-localized-nav { background:#f8faf6; border-bottom:1px solid #dce3db; }
+.pdf-localized-nav nav { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:24px 0; }
+.pdf-localized-nav nav > div { display:flex; flex-wrap:wrap; gap:12px 24px; }
+.pdf-localized-nav a { color:#304b3a; font-size:15px; text-decoration:none; }
+.pdf-localized-nav .pdf-wordmark { font-size:25px; font-weight:650; white-space:nowrap; }
+.pdf-wordmark span { font-weight:400; }
+.pdf-localized-footer { background:#edf2e9; text-align:start; padding:38px 0; color:#304b3a; }
+.pdf-localized-footer .pdf-shell { padding-bottom:0; }
+.pdf-localized-footer nav { display:flex; flex-wrap:wrap; gap:16px 24px; margin:20px 0; }
+.pdf-localized-footer a { color:inherit; }
+.pdf-localized-footer p { max-width:950px; line-height:1.65; }
+.pdf-localized-footer button { font:inherit; color:inherit; background:none; border:none; padding:0; text-decoration:underline; cursor:pointer; }
+.pdf-toolkit-localized .pdf-tools { text-align:start; }
+.pdf-toolkit-localized :is(h1,h2,h3,p,a,button,summary,label,small) { overflow-wrap:anywhere; }
+.pdf-toolkit-localized :is(h1,h2,h3) { line-height:1.2; }
+.pdf-toolkit-localized .pdf-filters button { white-space:normal; }
+.pdf-toolkit-localized .pdf-primary { height:auto; min-height:48px; }
+.pdf-toolkit-localized .language-options { max-height:65vh; overflow-y:auto; overscroll-behavior:contain; }
+.pdf-toolkit-localized[dir=rtl] .pdf-preview-paper { direction:ltr; }
+.pdf-toolkit-localized[dir=rtl] :is(input[type=number],.pdf-text-output,pre,code) { direction:ltr; text-align:left; }
+.pdf-toolkit-localized[dir=rtl] .pdf-tool-guide ol { padding-right:24px; padding-inline-start:0; }
+.pdf-toolkit-localized :is(.pdf-field,.pdf-control-title,.pdf-work-controls,.pdf-work-result) { min-width:0; }
+@media(max-width:767px) {
+  .pdf-heading-icon { align-items:flex-start; gap:12px; }
+  .pdf-heading-icon > svg { width:34px; height:34px; margin-top:3px; }
+  .pdf-localized-nav nav { flex-direction:column; align-items:flex-start; gap:16px; }
+  .pdf-localized-nav nav > div { gap:12px 20px; }
+  .pdf-toolkit-localized .pdf-tool-heading { align-items:flex-start; }
+}
+.pdf-language-retry { display:block; margin:18px auto; padding:12px 20px; font:inherit; color:#fff; background:#304b3a; border:0; border-radius:8px; cursor:pointer; }
+.pdf-toolkit-localized:lang(ar),.pdf-toolkit-localized:lang(he) { font-family:Tahoma,Arial,sans-serif; }
+.pdf-toolkit-localized:lang(hi),.pdf-toolkit-localized:lang(bn) { font-family:'Nirmala UI',Mangal,Arial,sans-serif; }
+.pdf-toolkit-localized:lang(ja),.pdf-toolkit-localized:lang(zh),.pdf-toolkit-localized:lang(ko) { font-family:'Hiragino Sans','Yu Gothic','Microsoft YaHei',Arial,sans-serif; }
+.pdf-toolkit-localized :is(h1,h2,h3) { letter-spacing:normal; }
+.pdf-toolkit-localized[dir=rtl] :is(.pdf-primary,.pdf-hero-sheet a) > svg:not([data-tool-icon]) { transform:scaleX(-1); }
+.pdf-toolkit-localized .pdf-preview-bar > div { direction:ltr; }
+@media(max-width:767px) {
+  .pdf-localized-nav nav { padding:16px 0; gap:12px; }
+  .pdf-localized-nav .pdf-wordmark { font-size:22px; }
+  .pdf-localized-nav nav > div { gap:10px 18px; }
+  .pdf-localized-nav nav > div a { font-size:14px; line-height:1.5; }
 }

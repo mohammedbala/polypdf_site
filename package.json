@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node scripts/toolkit/prepare.cjs && node scripts/toolkit/package.mjs && python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs && NODE_ENV=production node scripts/build-localized-tracking.cjs && node scripts/international/build.cjs && node scripts/international/verify.cjs",
+    "build": "node scripts/toolkit/icons.cjs && node scripts/toolkit/prepare.cjs && node scripts/toolkit/package.mjs && python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs && NODE_ENV=production node scripts/build-localized-tracking.cjs && node scripts/international/build.cjs && TOOLKIT_ONLY=1 node scripts/prerender.js && node scripts/international/verify.cjs && node scripts/toolkit/verify-international.cjs",
     "test": "react-scripts test",
     "test:screenshot-evidence": "node --test test/verify-screenshot-evidence.test.mjs",
     "refresh:screenshots": "node scripts/refresh-screenshot-inventory.mjs",
@@ -27,7 +27,7 @@
     "verify:screenshots": "node scripts/verify-screenshot-evidence.mjs",
     "smoke:production": "node scripts/post-deploy-smoke.mjs",
     "eject": "react-scripts eject",
-    "build:english": "python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
+    "build:english": "node scripts/toolkit/icons.cjs && python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
     "translations:extract": "npm run build:english && node scripts/international/build.cjs --extract",
     "test:international": "node --test test/international.test.cjs",
     "verify:international": "node scripts/international/verify.cjs",
@@ -36,7 +36,9 @@
     "smoke:international": "node scripts/international/smoke.mjs",
     "generate:evaluation-kit": "python3 scripts/generate-evaluation-kit.py",
     "verify:navigation": "node scripts/verify-site-navigation.cjs",
-    "test:pdf-tools": "node --test scripts/toolkit/engine.test.mjs scripts/toolkit/mcp.test.mjs scripts/toolkit/acceptance.test.mjs scripts/toolkit/form-edge.test.mjs scripts/toolkit/canvas-encode.test.mjs"
+    "test:pdf-tools": "node --test scripts/toolkit/engine.test.mjs scripts/toolkit/mcp.test.mjs scripts/toolkit/acceptance.test.mjs scripts/toolkit/form-edge.test.mjs scripts/toolkit/canvas-encode.test.mjs",
+    "translations:tools": "TOOLKIT_EXTRACT=1 node scripts/prerender.js",
+    "verify:tool-languages": "node scripts/toolkit/verify-international.cjs"
   },
   "overrides": {
     "@tootallnate/once": "^1.1.2",
@@ -67,6 +69,7 @@
     "@napi-rs/canvas": "^0.1.80",
     "axe-core": "4.10.3",
     "jsdom": "16.7.0",
+    "opencc-js": "1.4.2",
     "pngjs": "7.0.0",
     "react-scripts": "5.0.1"
   }

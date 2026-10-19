@@ -1,6 +1,12 @@
 'use strict';
 const test=require('node:test');const assert=require('node:assert/strict');const {JSDOM}=require('jsdom');
 const c=require('../scripts/international/content.cjs');
+test('translated guides link into working localized applications, without static tool clones',()=>{
+ const dom=new JSDOM('<main><a href="/tools/">PDF tools</a><a href="/tools/merge-pdf/">Merge</a><a href="/tools/tool-manifest.json">Manifest</a></main>');
+ c.localizeLinks(dom.window.document,c.locales[0],s=>s);
+ assert.deepEqual([...dom.window.document.querySelectorAll('a')].map(a=>a.getAttribute('href')),['/es/tools/','/es/tools/merge-pdf/','/tools/tool-manifest.json']);
+ assert(!c.routes.includes('/tools'));assert(!c.routes.includes('/tools/merge-pdf'));dom.window.close();
+});
 test('missing source translations fail instead of leaking English',()=>{
  const t=c.translateFactory({strings:{'Quick answer':'Respuesta breve'}});
  assert.equal(t('Quick answer'),'Respuesta breve');
