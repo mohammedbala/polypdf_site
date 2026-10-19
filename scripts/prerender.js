@@ -152,6 +152,7 @@ const { StaticRouter } = require('react-router');
 const AppRoutes = require(path.join(srcDirectory, 'AppRoutes.js')).default;
 const routeMetadata = require(path.join(srcDirectory, 'lib', 'route-metadata.json'));
 const { buildStructuredData } = require('./structured-data.js');
+if (process.env.TOOLKIT_ONLY === '1') { require('./toolkit/international.cjs')({React,renderToString,StaticRouter,AppRoutes,build:buildDirectory}); return; }
 
 const routeHtmlPath = (route) =>
   route === '/' ? path.join(buildDirectory, 'index.html') : path.join(buildDirectory, route.slice(1), 'index.html');
@@ -225,9 +226,11 @@ function serializeJsonLd(entry) {
 }
 
 console.log(`Prerendered ${rendered} routes plus the static 404 page.`);
+if (process.env.TOOLKIT_EXTRACT === '1' || process.env.TOOLKIT_LOCALIZE === '1') require('./toolkit/international.cjs')({React,renderToString,StaticRouter,AppRoutes,build:buildDirectory});
 }
 
-prerenderAllRoutes().catch((error) => {
+module.exports = {prerenderAllRoutes};
+if (require.main === module) prerenderAllRoutes().catch((error) => {
   console.error(error?.stack || error);
   process.exitCode = 1;
 });

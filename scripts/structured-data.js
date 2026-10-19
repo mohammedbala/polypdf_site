@@ -191,7 +191,7 @@ const buildStructuredData = (route) => {
   if (tool) return wrap([breadcrumbs([['/'], ['/tools', 'PDF tools'], [route, tool.name]]), {...webPage(route), mainEntity:{'@id':absolute(route)+'#tool'}}, {
     '@type':'WebApplication', '@id':absolute(route)+'#tool', name:tool.name, url:absolute(route), description:tool.answer,
     applicationCategory:'UtilitiesApplication', operatingSystem:'Modern web browser', browserRequirements:'JavaScript required; File API, Canvas, Web Workers',
-    isAccessibleForFree:true, offers:{'@type':'Offer',price:'0',priceCurrency:'USD'}, publisher:{'@id':ORG_ID}, featureList:[tool.summary,tool.limitation]
+    inLanguage:'en', image:absolute('/tools/social/'+tool.id+'.png'), potentialAction:{'@type':'UseAction',target:absolute(route)}, isAccessibleForFree:true, offers:{'@type':'Offer',price:'0',priceCurrency:'USD'}, publisher:{'@id':ORG_ID}, featureList:[tool.summary,tool.limitation]
   }]);
   if (route === '/tools') return wrap([breadcrumbs([['/'], [route,'PDF tools']]),{...webPage(route),'@type':'CollectionPage'}, {'@type':'ItemList',name:'36 free browser PDF tools',numberOfItems:pdfTools.length,itemListElement:pdfTools.map((t,i)=>({'@type':'ListItem',position:i+1,name:t.name,url:absolute('/tools/'+t.id)}))}]);
   if (route === '/') {

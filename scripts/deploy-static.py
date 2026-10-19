@@ -281,7 +281,7 @@ def run_local(args):
     # Reuse the site's own completeness gates rather than weakening their media,
     # prerender, and localized-page contracts in deployment code.
     env = {**os.environ, "BUILD_PATH": str(build)}
-    for gate in ("scripts/verify-prerender.mjs", "scripts/international/verify.cjs"):
+    for gate in ("scripts/verify-prerender.mjs", "scripts/international/verify.cjs", "scripts/toolkit/verify-international.cjs"):
         subprocess.run(["node", gate], cwd=repo, env=env, check=True)
     files = inventory(build)
     assets = json.loads((build / "asset-manifest.json").read_text())

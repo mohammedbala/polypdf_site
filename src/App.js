@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter } from 'react-router';
 import AppRoutes from './AppRoutes';
 
-const App = () => {
+const App = ({toolkitStrings}) => {
   return (
     <BrowserRouter>
-      <AppRoutes />
+      <AppRoutes toolkitStrings={toolkitStrings}/>
     </BrowserRouter>
   );
 };

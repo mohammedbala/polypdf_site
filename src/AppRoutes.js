@@ -1,7 +1,9 @@
 import React from 'react';
 import { SiteMotionProvider } from './components/SiteMotion';
 import CheckoutReviewProvider from './components/CheckoutReview';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useLocation } from 'react-router';
+import ToolkitApp from './components/ToolkitApp';
+import { toolkitLocale, toolkitRoutes, sourceRoute } from './toolkit/language';
 import Cookies from './components/Cookies';
 import Accessibility from './components/Accessibility';
 import CookieConsent from './components/CookieConsent';
@@ -40,7 +42,10 @@ import './Monochrome.css';
 // Everything inside the router lives here so the same tree can be rendered two ways:
 // - src/App.js wraps it in BrowserRouter for the real site, and
 // - scripts/prerender.js wraps it in StaticRouter to write each route's static HTML at build time.
-const AppRoutes = () => {
+const AppRoutes = ({toolkitStrings, toolkitCollect, toolkitMissing} = {}) => {
+  const location = useLocation();
+  const locale = toolkitLocale(location.pathname);
+  if (locale && toolkitRoutes.includes(sourceRoute(location.pathname))) return <ToolkitApp locale={locale} strings={toolkitStrings} collect={toolkitCollect} missing={toolkitMissing}/>;
   return (
     <div className="App">
       <RouteMetadata />

@@ -6,11 +6,12 @@ Stores complete local catalogs; builds use no external translation services.
 Resume with identical source strings. --locale limits an import to one language.
 """
 import argparse, concurrent.futures, hashlib, json, re, time, urllib.parse, urllib.request
+from collections import Counter
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
-parser=argparse.ArgumentParser();parser.add_argument('--locale');args=parser.parse_args()
-source=json.loads((ROOT/'.tmp/international/source-strings.json').read_text())
-locales=json.loads((ROOT/'src/lib/locales.json').read_text())
+parser=argparse.ArgumentParser();parser.add_argument('--locale');parser.add_argument('--toolkit',action='store_true');args=parser.parse_args()
+source=json.loads((ROOT/('.tmp/toolkit-international/source-strings.json' if args.toolkit else '.tmp/international/source-strings.json')).read_text())
+locales=json.loads((ROOT/('src/toolkit/locales.json' if args.toolkit else 'src/lib/locales.json')).read_text())
 if args.locale: locales=[l for l in locales if l['id']==args.locale]
 def protect(text,locale):
     # Disambiguate trade jargon in the source so the engine can inflect complete
@@ -26,6 +27,17 @@ def protect(text,locale):
     text=re.sub(r'\bredact\b', 'remove sensitive content from', text, flags=re.I)
     text=re.sub(r'\b(?:sanitization|sanitation)\b', 'hidden PDF data cleanup', text, flags=re.I)
     text=re.sub(r'\bsanitize\b', 'clean hidden data from', text, flags=re.I)
+    if args.toolkit:
+        text=re.sub(r'\bpadded identifiers\b', 'identifiers with leading zeros', text, flags=re.I)
+        text=re.sub(r'\bpage order\b', 'page sequence', text, flags=re.I)
+        text=re.sub(r'\breorder\b', 'rearrange', text, flags=re.I)
+        text=re.sub(r'\bclear page images\b', 'sharp page images', text, flags=re.I)
+        replacements=[]
+        def retain(match):
+            replacements.append(match.group(0))
+            return f'ZXQ{len(replacements)-1}QXZ'
+        text=re.sub(r'(?<![A-Za-z])(?:PolyPDF|WebMCP|WebP|PDF|JPEG|JPG|PNG|MCP|JSON|CSV|ZIP|DPI|OCR|SVG|RGB|JavaScript|Node\.js)(?![A-Za-z])',retain,text)
+        return text,replacements
     return text,[]
 
 def request(text,target):
@@ -50,9 +62,21 @@ def restore(translated,replacements):
     return translated.strip()
 
 def run(locale):
-    ident=locale['id']; target={'pt-br':'pt','zh-cn':'zh-CN'}.get(ident,ident)
-    file=ROOT/'src/content/translations'/f'{ident}.json'
+    ident=locale['id']; target={'pt-br':'pt','zh-cn':'zh-CN','zh-tw':'zh-TW','he':'iw'}.get(ident,ident)
+    file=ROOT/('src/toolkit/translations' if args.toolkit else 'src/content/translations')/f'{ident}.json'
+    file.parent.mkdir(parents=True,exist_ok=True)
     catalog=json.loads(file.read_text()) if file.exists() else {'language':locale['language'],'provider':'Google Translate; construction terminology disambiguated before translation','strings':{}}
+    if args.toolkit:
+        existing=ROOT/'src/content/translations'/f'{ident}.json'
+        previous=json.loads(existing.read_text())['strings'] if existing.exists() else {}
+        catalog['strings']={s:catalog['strings'].get(s,previous.get(s)) for s in source['strings'] if catalog['strings'].get(s,previous.get(s))}
+        catalog['provider']='Google machine translation; public website copy only; builds use saved catalogs'
+        # A glossary guard catches transliteration, renamed brands and ambiguous format names.
+        for s in list(catalog['strings']):
+            pattern=r'(?<![A-Za-z])(?:PolyPDF|WebMCP|WebP|PDF|JPEG|JPG|PNG|MCP|JSON|CSV|ZIP|DPI|OCR|SVG|RGB|JavaScript|Node\.js)(?![A-Za-z])'
+            terms=Counter(re.findall(pattern,s)); translated_terms=Counter(re.findall(pattern,re.sub(r'\bPDFs\b','PDF',catalog['strings'][s])))
+            if any(translated_terms[term]<count for term,count in terms.items()):
+                del catalog['strings'][s]
     pending=[s for s in source['strings'] if s not in catalog['strings']]
     batches=[]; batch=[]; length=0
     for s in pending:

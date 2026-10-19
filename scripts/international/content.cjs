@@ -8,7 +8,9 @@ const siteRelease = require('../../src/lib/siteRelease.json');
 const locales = require('../../src/lib/locales.json');
 const englishOnly = require('../../src/lib/englishOnlyRoutes.json');
 const ORIGIN = 'https://www.polypdf.com';
-const routes = Object.keys(metadata).filter((r) => !englishOnly.includes(r) && !metadata[r].robots.includes('noindex'));
+// Interactive tools are rendered by toolkit/international.cjs, with their React controls intact.
+const toolkitRoutes = ['/tools','/tools/automation',...require('../../src/toolkit/catalog.json').map(t=>'/tools/'+t.id)];
+const routes = Object.keys(metadata).filter((r) => !englishOnly.includes(r) && !toolkitRoutes.includes(r) && !metadata[r].robots.includes('noindex'));
 const normalize = (s) => s.replace(/\s+/g, ' ').trim();
 const esc = (s) => String(s).replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const routePath = (route) => route === '/' ? '/' : `${route.replace(/\/+$/, '')}/`;
@@ -31,7 +33,7 @@ function mapSchema(value, translate, locale, parentKey = '') {
   // Page IDs follow their localized URL; the publisher, website and product identities stay shared.
   if (locale && (['url','item','mainEntityOfPage'].includes(parentKey) || (parentKey === '@id' && value.endsWith('#webpage'))) && value.startsWith(ORIGIN)) {
     const url = new URL(value); const route = url.pathname.replace(/\/+$/, '') || '/';
-    if (routes.includes(route)) return `${ORIGIN}${localizedPath(locale.id, route)}${url.hash}`;
+    if (routes.includes(route) || toolkitRoutes.includes(route)) return `${ORIGIN}${localizedPath(locale.id, route)}${url.hash}`;
   }
   return value;
 }
@@ -120,7 +122,7 @@ function localizeLinks(document, locale, t) {
     const url = new URL(raw, ORIGIN);
     if (url.origin !== ORIGIN || !['http:','https:'].includes(url.protocol)) continue;
     const route = url.pathname.replace(/\/+$/, '') || '/';
-    if (routes.includes(route)) a.href = `${localizedPath(locale.id,route)}${url.search}${url.hash}`;
+    if (routes.includes(route) || toolkitRoutes.includes(route)) a.href = `${localizedPath(locale.id,route)}${url.search}${url.hash}`;
     else if (englishOnly.includes(route)) {
       if (['/buy','/upgrade'].includes(route)) {
         const placement = url.searchParams.get('source') || 'content';
