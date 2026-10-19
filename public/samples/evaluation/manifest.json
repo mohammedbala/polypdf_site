@@ -394,8 +394,8 @@
     }
   ],
   "sourceReleaseReference": {
-    "version": "1.6.15",
-    "build": "82",
+    "version": "1.6.16",
+    "build": "83",
     "releaseDate": "2026-10-19",
     "screenshotVersion": "1.4.3",
     "screenshotBuild": "20",
