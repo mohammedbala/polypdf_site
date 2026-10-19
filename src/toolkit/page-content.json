@@ -422,6 +422,7 @@
   },
   "extract-pdf-form-data": {
     "title": "Extract PDF Form Data to JSON Online Free | PolyPDF",
+    "heading": "Extract PDF form data online",
     "description": "Export PDF form field names, types, options, and values as JSON. Inspect entries locally in your browser and download free without uploading the PDF.",
     "example": "Export a completed inspection form’s values before adding them to a review register. The JSON includes exact field names, which also help an MCP assistant prepare a correctly addressed form-fill request.",
     "faqs": [
@@ -502,6 +503,7 @@
   },
   "bates-number-pdf": {
     "title": "Bates Numbering PDF Online — Add Identifiers | PolyPDF",
+    "heading": "Bates numbering for PDF pages",
     "description": "Add sequential Bates numbers to a PDF with a prefix, start value, and padded digits. Preview identifiers and download free with local browser processing.",
     "example": "Use prefix ISSUE- with starting value 42 and six digits to label the first selected page ISSUE-000042. The next receives ISSUE-000043. Keep a separate register of the issued range.",
     "faqs": [
@@ -602,6 +604,7 @@
   },
   "n-up-pdf": {
     "title": "N-Up PDF Online — 2 or 4 Pages per Sheet | PolyPDF",
+    "heading": "Put multiple PDF pages on one sheet",
     "description": "Place two or four PDF pages on one landscape sheet. Create a contact sheet in reading order, preview, and download free without uploading your document.",
     "example": "Create a four-up drawing index for a coordination meeting. Pages are reduced into a two-by-two arrangement, read left to right and top to bottom. Use full-size source sheets for dimensions.",
     "faqs": [

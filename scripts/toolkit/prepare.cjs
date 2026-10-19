@@ -7,3 +7,8 @@ fs.copyFileSync(path.join(source,'LICENSE'),path.join(target,'LICENSE'));
 console.log('Prepared local PDF rendering assets.');
 
 fs.rmSync(path.join(target,'pdf.worker.min.mjs'),{force:true});
+
+const webpSource=path.join(root,'node_modules/@jsquash/webp'),webpTarget=path.join(root,'public/pdf-runtime/webp/1.5.0');
+fs.mkdirSync(webpTarget,{recursive:true});
+for(const name of ['webp_enc.wasm','webp_enc_simd.wasm'])fs.copyFileSync(path.join(webpSource,'codec/enc',name),path.join(webpTarget,name));
+fs.copyFileSync(path.join(webpSource,'LICENSE'),path.join(webpTarget,'LICENSE'));
