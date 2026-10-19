@@ -1,5 +1,6 @@
 import { makeRenderAdapter } from "./render-adapter.mjs";
 import { ToolError } from "./engine.mjs";
+import { encodeCanvas } from "./canvas-encode.mjs";
 export async function browserAdapter() {
   const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
   pdfjs.GlobalWorkerOptions.workerSrc =
@@ -10,25 +11,6 @@ export async function browserAdapter() {
     c.height = h;
     return c;
   };
-  const encodeCanvas = (canvas, format, quality) =>
-    new Promise((resolve, reject) =>
-      canvas.toBlob(
-        async (blob) => {
-          if (!blob || (format === "webp" && blob.type !== "image/webp")) {
-            reject(
-              new ToolError(
-                "UNSUPPORTED_RUNTIME",
-                "This browser cannot export WebP. Try PNG or JPG.",
-              ),
-            );
-            return;
-          }
-          resolve(new Uint8Array(await blob.arrayBuffer()));
-        },
-        format === "jpg" ? "image/jpeg" : `image/${format}`,
-        quality,
-      ),
-    );
   const imageToPng = async (bytes) => {
     const blob = new Blob([bytes], { type: "image/webp" });
     const url = await new Promise((resolve, reject) => {

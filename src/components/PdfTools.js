@@ -18,6 +18,7 @@ import {
 } from "@phosphor-icons/react";
 import GrowthNav from "./GrowthNav";
 import catalog from "../toolkit/catalog.json";
+import pageContent from "../toolkit/page-content.json";
 import { trackEvent } from "../lib/analytics";
 import { buyPath } from "../lib/attribution";
 import "./PdfTools.css";
@@ -942,26 +943,37 @@ function Workspace({ tool }) {
                       <select
                         id={`form-${f.name}`}
                         disabled={f.readOnly}
+                        multiple={f.multiple}
                         value={
                           values[f.name] ??
-                          (Array.isArray(f.value) ? f.value[0] : f.value) ??
-                          ""
+                          (f.multiple ? (f.value || []) : (Array.isArray(f.value) ? f.value[0] : f.value)) ??
+                          (f.multiple ? [] : "")
                         }
                         onChange={(e) =>
-                          setValues((v) => ({ ...v, [f.name]: e.target.value }))
+                          setValues((v) => ({ ...v, [f.name]: f.multiple ? Array.from(e.target.selectedOptions, option => option.value) : e.target.value }))
                         }
                       >
-                        <option value="" disabled>
+                        {!f.multiple && <option value="" disabled>
                           Choose an option
-                        </option>
+                        </option>}
                         {f.options.map((v) => (
                           <option key={v}>{v}</option>
                         ))}
                       </select>
+                    ) : f.multiline ? (
+                      <textarea
+                        id={`form-${f.name}`}
+                        rows={4}
+                        disabled={f.readOnly}
+                        maxLength={Math.min(f.maxLength ?? 10000, 10000)}
+                        value={values[f.name] ?? f.value ?? ""}
+                        onChange={(e) => setValues((v) => ({ ...v, [f.name]: e.target.value }))}
+                      />
                     ) : (
                       <input
                         id={`form-${f.name}`}
                         disabled={f.readOnly || !supported}
+                        maxLength={Math.min(f.maxLength ?? 10000, 10000)}
                         value={values[f.name] ?? f.value ?? ""}
                         onChange={(e) =>
                           setValues((v) => ({ ...v, [f.name]: e.target.value }))
@@ -1095,6 +1107,7 @@ export function PdfToolPage() {
   const { toolId } = useParams();
   const tool = catalog.find((t) => t.id === toolId);
   if (!tool) return <PdfToolsHub />;
+  const content = pageContent[tool.id];
   return (
     <div className="pdf-tools">
       <ToolsHeader />
@@ -1109,7 +1122,7 @@ export function PdfToolPage() {
             <p className="pdf-eyebrow">
               {tool.category.toUpperCase()} / FREE BROWSER TOOL
             </p>
-            <h1>{tool.name} online</h1>
+            <h1>{content.heading || `${tool.name} online`}</h1>
             <p>{tool.summary}</p>
           </div>
           <span className="pdf-local-badge">
@@ -1126,6 +1139,8 @@ export function PdfToolPage() {
                 <li key={s}>{s}</li>
               ))}
             </ol>
+            <h2>A practical example</h2>
+            <p>{content.example}</p>
           </div>
           <div className="pdf-tool-note">
             <h2>Good to know</h2>
@@ -1138,6 +1153,12 @@ export function PdfToolPage() {
         </section>
         <section className="pdf-answers">
           <h2>About {tool.name}</h2>
+          {content.faqs.map(([question, answer]) => (
+            <details key={question}>
+              <summary>{question}</summary>
+              <p>{answer}</p>
+            </details>
+          ))}
           <details>
             <summary>Is this tool free, and do files get uploaded?</summary>
             <p>
@@ -1174,7 +1195,7 @@ export function PdfToolPage() {
         <section className="pdf-related">
           <h2>Keep working</h2>
           <div className="pdf-tool-grid">
-            {tool.related.map((id) => {
+            {content.related.map((id) => {
               const t = catalog.find((x) => x.id === id);
               return (
                 <Link className="pdf-tool-card" key={id} to={toolkitPath(id)}>

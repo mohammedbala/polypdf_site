@@ -37,7 +37,7 @@ export function optionSchema(tool) {
   return { type: "object", properties, additionalProperties: false };
 }
 export const manifest = {
-  version: "1.0.0",
+  version: "1.0.2",
   name: "PolyPDF browser tools",
   processing:
     "Browser: local memory. MCP: explicitly allowed local folder. No PDF upload service.",

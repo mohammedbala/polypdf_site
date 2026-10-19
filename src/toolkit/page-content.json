@@ -1,0 +1,726 @@
+{
+  "merge-pdf": {
+    "title": "Merge PDF Online — Combine Files Free | PolyPDF",
+    "description": "Merge PDF files in your chosen order, preview the result, and download one PDF. Free browser tool with no account or file upload. Originals stay unchanged.",
+    "example": "Combine a drawing set, a specification extract, and a review cover sheet. Add the cover first, use the file arrows to set the order, then check the first page of each section in the result.",
+    "faqs": [
+      [
+        "Can I choose the order when combining PDFs?",
+        "Yes. The files are merged from top to bottom in the file list, with each file’s pages kept in their original order. Use the up and down buttons before running Merge PDF."
+      ],
+      [
+        "Will merged PDFs keep editable forms and bookmarks?",
+        "Form values become static page content. Document bookmarks, tags, and embedded attachments are not carried into the combined document. Signed PDFs cannot be merged here; use an unsigned source copy."
+      ]
+    ],
+    "related": [
+      "organize-pdf",
+      "split-pdf",
+      "number-pdf-pages"
+    ]
+  },
+  "split-pdf": {
+    "title": "Split PDF Online — Separate Pages Free | PolyPDF",
+    "description": "Split a PDF into individual pages or equal page groups. Preview your source, choose pages per file, and download separate PDFs or a ZIP. No file upload.",
+    "example": "To separate a 12-page drawing package into six two-page files, set Pages per file to 2. Each output keeps its source order. Download individual files or use the ZIP for the complete group.",
+    "faqs": [
+      [
+        "How do I save every PDF page as a separate file?",
+        "Set Pages per file to 1. A three-page PDF produces three one-page PDFs. Download each result separately or download all results in a ZIP."
+      ],
+      [
+        "Can I split a PDF by custom page ranges?",
+        "This tool splits into groups of a fixed size. The final group can be smaller. To keep a custom selection such as 1, 3-5 in one file, use Extract PDF pages instead."
+      ]
+    ],
+    "related": [
+      "extract-pdf-pages",
+      "merge-pdf",
+      "delete-pdf-pages"
+    ]
+  },
+  "extract-pdf-pages": {
+    "title": "Extract PDF Pages Online — Save Selected Pages | PolyPDF",
+    "description": "Extract selected pages from a PDF using numbers and ranges such as 1, 3-5. Save a new PDF in order, free in your browser without uploading files.",
+    "example": "Send only the relevant sheets from a larger package. Enter 2, 5-7 to create a four-page copy. These numbers refer to positions in the PDF, so check them against the printed sheet identifiers.",
+    "faqs": [
+      [
+        "How do I extract nonconsecutive PDF pages?",
+        "Separate page numbers and ascending ranges with commas, for example 1, 3-5, 8. The output follows the order you enter. Repeated page numbers are included only once."
+      ],
+      [
+        "Does extracting pages delete them from the original PDF?",
+        "No. You download a new PDF containing the selection. The original file is unchanged. To create a copy with selected pages removed, use Delete PDF pages."
+      ]
+    ],
+    "related": [
+      "delete-pdf-pages",
+      "split-pdf",
+      "organize-pdf"
+    ]
+  },
+  "delete-pdf-pages": {
+    "title": "Delete PDF Pages Online — Remove Pages Free | PolyPDF",
+    "description": "Remove unwanted pages from a PDF and save a separate copy. Enter page numbers or ranges, preview the remaining pages, and download free with no upload.",
+    "example": "Remove a duplicate cover and an obsolete appendix by entering their PDF positions, such as 2, 8-10. Review the remaining page sequence before sending the corrected document.",
+    "faqs": [
+      [
+        "Can I remove several PDF pages at once?",
+        "Yes. Enter comma-separated numbers or ranges, such as 2, 4-6. The remaining pages keep their original order. At least one page must remain in the result."
+      ],
+      [
+        "Does removing a page securely erase confidential information?",
+        "This tool creates a copy without the selected pages, but it is not a document sanitization tool. Information elsewhere in the file can remain. Keep the original and use a dedicated redaction workflow for sensitive material."
+      ]
+    ],
+    "related": [
+      "extract-pdf-pages",
+      "organize-pdf",
+      "split-pdf"
+    ]
+  },
+  "organize-pdf": {
+    "title": "Organize PDF Online — Reorder PDF Pages Free | PolyPDF",
+    "description": "Reorder PDF pages with page arrows or a numbered sequence. Preview and save the rearranged PDF free, without uploading it or creating an account.",
+    "example": "Move an appendix ahead of the final sheet in a four-page PDF by entering 1, 2, 4, 3. The page-order controls provide the same rearrangement without typing the sequence.",
+    "faqs": [
+      [
+        "How do I move a PDF page to the beginning?",
+        "Use its up arrow until it reaches the first position, or enter a sequence such as 3, 1, 2 for a three-page file. Include every original page exactly once."
+      ],
+      [
+        "Can I omit or repeat pages while reordering?",
+        "Organize PDF requires each page once. Use Extract PDF pages to keep a subset, Delete PDF pages to remove sheets, or Duplicate PDF pages to repeat selected pages."
+      ]
+    ],
+    "related": [
+      "extract-pdf-pages",
+      "duplicate-pdf-pages",
+      "reverse-pdf-pages"
+    ]
+  },
+  "rotate-pdf": {
+    "title": "Rotate PDF Online — Turn Selected Pages Free | PolyPDF",
+    "description": "Rotate PDF pages 90, 180, or 270 degrees clockwise. Select individual pages or rotate the whole document, preview, and download locally in your browser.",
+    "example": "If only page 2 of a scan is sideways, enter 2 in Pages and select a 90-degree turn. Check its orientation in the result before downloading the corrected file.",
+    "faqs": [
+      [
+        "Can I rotate just one page of a PDF?",
+        "Yes. Enter its PDF page number, or use a range for several pages. Leave Pages blank to rotate every page. Each turn is added to the page’s existing rotation."
+      ],
+      [
+        "Does rotating a PDF reduce image quality?",
+        "This operation changes PDF rotation metadata without rasterizing the artwork. Text and vector objects are not converted into a page image. It does not straighten a scan by arbitrary angles."
+      ]
+    ],
+    "related": [
+      "reverse-pdf-pages",
+      "organize-pdf",
+      "crop-pdf"
+    ]
+  },
+  "duplicate-pdf-pages": {
+    "title": "Duplicate PDF Pages Online — Repeat Pages Free | PolyPDF",
+    "description": "Duplicate selected PDF pages and choose how many copies to add. Repeated pages follow each original. Preview and download free without uploading files.",
+    "example": "Repeat a site checklist for three areas by selecting its page and setting Extra copies per page to 2. The output contains the original checklist followed by two copies.",
+    "faqs": [
+      [
+        "Where are duplicated pages inserted?",
+        "Each selected page is followed immediately by its extra copies. Selecting page 2 with two extra copies turns 1, 2, 3 into 1, 2, 2, 2, 3."
+      ],
+      [
+        "Do duplicated PDF form pages remain fillable?",
+        "No. Page assembly flattens form values in the output, preventing repeated field names from sharing values unexpectedly. Keep the source form if you need separate editable originals."
+      ]
+    ],
+    "related": [
+      "insert-blank-pdf-pages",
+      "organize-pdf",
+      "fill-pdf-form"
+    ]
+  },
+  "reverse-pdf-pages": {
+    "title": "Reverse PDF Page Order Online Free | PolyPDF",
+    "description": "Reverse PDF page order so the last page comes first. Fix back-to-front scans, preview the result, and download a new PDF free without uploading your file.",
+    "example": "A scanner delivered pages in the order 5, 4, 3, 2, 1. Reverse PDF pages restores 1, 2, 3, 4, 5 in one operation, without requiring a typed page sequence.",
+    "faqs": [
+      [
+        "Does reversing a PDF turn its pages upside down?",
+        "No. It changes the sequence of pages, not their orientation. Use Rotate PDF if the page content itself is sideways or upside down."
+      ],
+      [
+        "How do I combine reversed back-side scans with front pages?",
+        "Use Interleave PDFs with the front scan first and the back scan second. Enable Reverse second PDF there to alternate the files in the correct order."
+      ]
+    ],
+    "related": [
+      "interleave-pdf",
+      "rotate-pdf",
+      "organize-pdf"
+    ]
+  },
+  "insert-blank-pdf-pages": {
+    "title": "Insert Blank Pages into a PDF Online Free | PolyPDF",
+    "heading": "Insert blank pages into a PDF",
+    "description": "Add blank pages to a PDF for notes, separators, or duplex printing. Choose an insertion point and count, preview and download free with no file upload.",
+    "example": "Add a notes page after a drawing by setting Insert after page to that sheet’s PDF position and Blank pages to 1. The blank page matches the visible size of the preceding sheet.",
+    "faqs": [
+      [
+        "How do I add a blank page at the start of a PDF?",
+        "Set Insert after page to 0. The new page uses the first source page’s visible dimensions. To append a page, enter the source document’s final page number."
+      ],
+      [
+        "Can I add several blank pages at once?",
+        "Yes. Choose a count from 1 to 50. They are inserted consecutively at the chosen point, provided the resulting document stays within the 500-page limit."
+      ]
+    ],
+    "related": [
+      "duplicate-pdf-pages",
+      "add-text-to-pdf",
+      "organize-pdf"
+    ]
+  },
+  "interleave-pdf": {
+    "title": "Interleave PDFs Online — Alternate Scanned Pages | PolyPDF",
+    "description": "Interleave two PDFs by alternating pages. Combine front and back scans, optionally reverse the second file, and download free without uploading files.",
+    "example": "Scan the front sides into one PDF and the back sides into another. Choose the front file first. If the backs arrived in reverse order, enable Reverse second PDF before combining.",
+    "faqs": [
+      [
+        "What is the difference between merging and interleaving PDFs?",
+        "Merge PDF places all of file A before all of file B. Interleave PDFs alternates A1, B1, A2, B2, making it useful for separate front-side and back-side scans."
+      ],
+      [
+        "What happens if the PDFs have different page counts?",
+        "Pages alternate while both files have pages available. Remaining pages from the longer file are appended. Check the result carefully when a scanner has skipped blank sides."
+      ]
+    ],
+    "related": [
+      "merge-pdf",
+      "reverse-pdf-pages",
+      "insert-blank-pdf-pages"
+    ]
+  },
+  "jpg-to-pdf": {
+    "title": "JPG to PDF Online — Convert Photos Free | PolyPDF",
+    "description": "Convert JPG and JPEG images into one PDF. Arrange photos, choose paper size and margins, then preview and download free. Your images stay in your browser.",
+    "example": "Collect site photos into a printable report by adding the JPGs in visit order. Choose Letter or A4 with a margin, then review each page before sharing the PDF.",
+    "faqs": [
+      [
+        "Can I combine multiple JPG images into one PDF?",
+        "Yes. Add up to 20 JPG or JPEG files and arrange them using the file arrows. Each image becomes one PDF page, with its proportions preserved."
+      ],
+      [
+        "What does Image paper size mean?",
+        "Image size maps 96 image pixels to one inch, then adds the chosen margins. It does not recover a drawing’s original physical scale. Check a known dimension before using a converted drawing for measurement."
+      ]
+    ],
+    "related": [
+      "png-to-pdf",
+      "pdf-to-jpg",
+      "merge-pdf"
+    ]
+  },
+  "png-to-pdf": {
+    "title": "PNG to PDF Online — Convert Images Free | PolyPDF",
+    "description": "Convert PNG screenshots and drawings into a PDF. Arrange images, retain transparency, and choose paper size and margins. Free local browser processing.",
+    "example": "Package a sequence of drawing screenshots as one PDF. Keep the images in review order and choose the same paper size for each page so the resulting document is easier to print.",
+    "faqs": [
+      [
+        "Does PNG to PDF preserve transparent backgrounds?",
+        "PNG transparency is retained in the embedded image. A PDF viewer usually displays the page against white. The image keeps its proportions when fitted inside the chosen page and margins."
+      ],
+      [
+        "Will converting a PNG make its text searchable?",
+        "No. The PNG remains a raster image inside a PDF. This tool does not perform OCR or recreate vector lines. Use an original text-based PDF when searchability or precise linework matters."
+      ]
+    ],
+    "related": [
+      "jpg-to-pdf",
+      "pdf-to-png",
+      "webp-to-pdf"
+    ]
+  },
+  "webp-to-pdf": {
+    "title": "WebP to PDF Online — Convert Images Free | PolyPDF",
+    "description": "Convert WebP images into a printable PDF in your browser. Arrange images and choose page size and margins. Free conversion with no account or file upload.",
+    "example": "Turn downloaded product reference images into a PDF appendix. Add the WebP files, arrange them by product, and select a paper size suitable for the report they will accompany.",
+    "faqs": [
+      [
+        "Can I convert several WebP files into one PDF?",
+        "Yes. Add up to 20 WebP images and arrange the file list. Each image is decoded locally and placed on its own PDF page with the chosen size and margins."
+      ],
+      [
+        "Does animated WebP become an animated PDF?",
+        "No. Only the decoded first frame is used. The output is a static PDF; it does not include animation, searchable text, or reconstructed vector artwork."
+      ]
+    ],
+    "related": [
+      "png-to-pdf",
+      "jpg-to-pdf",
+      "pdf-to-webp"
+    ]
+  },
+  "pdf-to-jpg": {
+    "title": "PDF to JPG Online — Export PDF Pages Free | PolyPDF",
+    "description": "Convert PDF pages to JPG images. Choose resolution and quality, preview, and download single images or a ZIP. Free browser conversion with no upload.",
+    "example": "Export a report page as a JPG for an email or presentation. Start at 100 DPI and review the labels. Higher resolution increases dimensions and may exceed the limit for large drawing sheets.",
+    "faqs": [
+      [
+        "Does this extract images or convert whole PDF pages?",
+        "It renders each selected page as a complete JPG image, including its visible text and artwork. It does not extract the original embedded photos as separate files."
+      ],
+      [
+        "Should I choose JPG or PNG for a drawing?",
+        "JPG uses lossy compression and offers a quality control. PNG avoids lossy image compression and is usually a better choice for crisp linework. Both outputs are raster images without selectable PDF text."
+      ]
+    ],
+    "related": [
+      "pdf-to-png",
+      "pdf-to-webp",
+      "jpg-to-pdf"
+    ]
+  },
+  "pdf-to-png": {
+    "title": "PDF to PNG Online — Export Clear Page Images | PolyPDF",
+    "description": "Convert PDF pages to PNG images with adjustable resolution. Select pages and download images or a ZIP, free in your browser without file uploads.",
+    "example": "Export a construction sheet for a review presentation. At the default 100 DPI, a 36 × 24 inch sheet becomes a 3600 × 2400 pixel image. Inspect small dimensions before using the image in a report.",
+    "faqs": [
+      [
+        "What resolution should I use for PDF to PNG?",
+        "Start at 100 DPI, then increase it if small text needs more detail. Each rendered page is limited to 16 megapixels. A 36 × 24 inch sheet fits at 100 DPI but exceeds that limit at 150 DPI."
+      ],
+      [
+        "Is a PNG export still a scaled, editable drawing?",
+        "No. It preserves the rendered pixels, not editable PDF objects, selectable text, or measurement calibration. Keep the source PDF for accurate takeoff and drawing review."
+      ]
+    ],
+    "related": [
+      "pdf-to-jpg",
+      "png-to-pdf",
+      "pdf-to-webp"
+    ]
+  },
+  "pdf-to-webp": {
+    "title": "PDF to WebP Online — Convert Page Images Free | PolyPDF",
+    "description": "Convert PDF pages to WebP images with resolution and quality controls. Download pages individually or as a ZIP, free with local browser processing.",
+    "example": "Prepare page images for a web-based project update. Export only the required pages, then compare the downloaded image’s legibility and file size before choosing a lower quality setting.",
+    "faqs": [
+      [
+        "How can I reduce the size of a WebP page image?",
+        "Lower the quality setting or DPI and run the export again. Quality controls compression; DPI changes pixel dimensions. Actual file size depends on the page, so inspect both the result and its byte size."
+      ],
+      [
+        "Can I export every PDF page as WebP?",
+        "Leave Pages blank to export all pages, up to the 100-page rendering limit. Each page produces one WebP image. For a larger document, process smaller page selections separately."
+      ]
+    ],
+    "related": [
+      "pdf-to-jpg",
+      "pdf-to-png",
+      "webp-to-pdf"
+    ]
+  },
+  "pdf-to-text": {
+    "title": "PDF to Text Online — Extract Selectable Text | PolyPDF",
+    "description": "Extract existing PDF text into a UTF-8 text file with page references. Select pages, preview, and download free without uploading files. No OCR for scans.",
+    "example": "Extract specification notes to find wording for a review checklist. The text file includes page markers, helping you return to the original sheet and check the surrounding context.",
+    "faqs": [
+      [
+        "Why is my scanned PDF producing little or no text?",
+        "A scan may contain only page images. This tool reads an existing PDF text layer and does not perform OCR. If no selectable text is found, the result includes a warning."
+      ],
+      [
+        "Will tables and columns keep their original layout?",
+        "No. The output is plain text, and reading order can differ on tables, multiple columns, and complex drawings. Verify extracted text against the source before using it in a report or an AI prompt."
+      ]
+    ],
+    "related": [
+      "compare-pdf-text",
+      "text-to-pdf",
+      "inspect-pdf"
+    ]
+  },
+  "text-to-pdf": {
+    "title": "Text to PDF Online — Create a PDF from Notes | PolyPDF",
+    "description": "Turn plain text into a PDF with a title, adjustable font size, automatic wrapping, and page breaks. Free browser tool with no account or document upload.",
+    "example": "Paste a short site-visit summary, add a descriptive title, and choose a readable font size. The tool creates A4 pages and continues long notes onto additional pages automatically.",
+    "faqs": [
+      [
+        "Can I create a PDF without uploading a file?",
+        "Yes. Enter or paste plain text directly into the tool. Add an optional title, choose a font size, and download the generated PDF. The text is processed in your browser."
+      ],
+      [
+        "Does Text to PDF support every language or rich formatting?",
+        "The built-in font supports Latin text, not every writing system. Unsupported characters produce an error. This tool creates plain text pages; it does not import Word formatting, tables, or HTML."
+      ]
+    ],
+    "related": [
+      "add-text-to-pdf",
+      "pdf-to-text",
+      "merge-pdf"
+    ]
+  },
+  "compress-pdf": {
+    "title": "Compress PDF Online — Reduce File Size Locally | PolyPDF",
+    "description": "Compress PDFs with lossless rewriting or image compression. See the file-size change before downloading. Free browser processing with no file upload.",
+    "example": "Try lossless rewriting first when preparing a report for email. If the file remains too large, consider image compression and inspect the small text. Keep the vector source for drawing measurements.",
+    "faqs": [
+      [
+        "Can I compress a PDF without losing quality?",
+        "Lossless mode rewrites the PDF structure without intentionally rasterizing its pages. It may reduce overhead, but an already optimized PDF can stay the same size or grow. The result reports actual input and output sizes."
+      ],
+      [
+        "Can I compress a PDF to an exact size such as 1 MB?",
+        "There is no guaranteed target size. Image mode lets you lower DPI and JPEG quality, but it removes selectable text, vector detail, links, and interactive fields. Compare the output size and readability before using it."
+      ]
+    ],
+    "related": [
+      "split-pdf",
+      "pdf-to-jpg",
+      "inspect-pdf"
+    ]
+  },
+  "flatten-pdf": {
+    "title": "Flatten PDF Online — Make Form Values Static | PolyPDF",
+    "description": "Flatten PDF form fields into visible page content. Keep filled values in a static copy, preview, and download free without uploading PDFs or signing in.",
+    "example": "After completing a construction review form, flatten a copy for a handoff that should show the entered values consistently. Reopen the result to check each value and keep the editable source separately.",
+    "faqs": [
+      [
+        "What does flattening a PDF form do?",
+        "Flattening paints standard AcroForm field appearances into the page and removes those interactive fields. Their values remain visible, but recipients can no longer edit them as form fields."
+      ],
+      [
+        "Does this flatten every annotation, layer, or signature?",
+        "No. This tool specifically flattens AcroForm fields. It does not flatten every comment or PDF layer, and it rejects XFA forms and signed PDFs. A PDF without interactive fields produces a clear no-fields message."
+      ]
+    ],
+    "related": [
+      "fill-pdf-form",
+      "extract-pdf-form-data",
+      "remove-pdf-annotations"
+    ]
+  },
+  "fill-pdf-form": {
+    "title": "Fill PDF Forms Online Free — No Upload | PolyPDF",
+    "description": "Fill existing PDF form fields in your browser. Enter text, select options, check boxes, and download an editable copy free. Your PDF is not uploaded.",
+    "example": "Try the construction review form sample, enter the project and reviewer, and select a review status. Download the interactive result, or continue to Flatten PDF when you need a static handoff copy.",
+    "faqs": [
+      [
+        "Why does my PDF have no fields to fill?",
+        "A flat PDF or scan can look like a form without containing interactive fields. This tool reads standard AcroForm fields. Use Add text to PDF for visible labels on a flat page; it does not create new form fields."
+      ],
+      [
+        "Does the completed PDF stay editable?",
+        "Yes. Filling saves an interactive copy with the entered values. Read-only fields cannot be changed, and XFA or signed forms are unsupported. Use Flatten PDF afterward if you need static field values."
+      ]
+    ],
+    "related": [
+      "flatten-pdf",
+      "extract-pdf-form-data",
+      "add-text-to-pdf"
+    ]
+  },
+  "extract-pdf-form-data": {
+    "title": "Extract PDF Form Data to JSON Online Free | PolyPDF",
+    "heading": "Extract PDF form data online",
+    "description": "Export PDF form field names, types, options, and values as JSON. Inspect entries locally in your browser and download free without uploading the PDF.",
+    "example": "Export a completed inspection form’s values before adding them to a review register. The JSON includes exact field names, which also help an MCP assistant prepare a correctly addressed form-fill request.",
+    "faqs": [
+      [
+        "What does the PDF form data export contain?",
+        "The JSON lists standard form fields with their names, types, current values, available choices, and read-only status. It does not export page artwork or interpret the meaning of the entries."
+      ],
+      [
+        "Can this extract data from a scanned or flattened form?",
+        "No. A scan or flattened form has no interactive field values to read. This tool does not perform OCR or infer fields from page appearance. An ordinary flat PDF returns an empty field list."
+      ]
+    ],
+    "related": [
+      "fill-pdf-form",
+      "inspect-pdf",
+      "pdf-to-text"
+    ]
+  },
+  "remove-pdf-annotations": {
+    "title": "Remove PDF Annotations & Comments Online | PolyPDF",
+    "description": "Remove comments and markup annotations from selected PDF pages. Keep form fields and links, preview, and download a copy free without uploading your PDF.",
+    "example": "Prepare a review copy without sticky notes and highlight annotations. Select the relevant pages, run the tool, and compare the output with the original so needed review information is not lost.",
+    "faqs": [
+      [
+        "Can I remove highlights and sticky notes from a PDF?",
+        "Yes, when they are stored as editable PDF annotations on the selected pages. Markup already flattened into the page artwork cannot be removed by this operation."
+      ],
+      [
+        "Are links and form fields removed too?",
+        "No. Link annotations and interactive form widgets are retained. This is a comment-cleanup tool, not secure redaction or a complete privacy scrubber."
+      ]
+    ],
+    "related": [
+      "flatten-pdf",
+      "crop-pdf",
+      "inspect-pdf"
+    ]
+  },
+  "watermark-pdf": {
+    "title": "Watermark PDF Online — Add a Text Watermark | PolyPDF",
+    "description": "Add a centered text watermark to PDF pages. Set the wording, size, color, and opacity, then preview and download free with local browser processing.",
+    "example": "Label a review set DRAFT before circulation. Apply the watermark to all pages, adjust opacity so dimensions remain readable, and inspect the result before issuing the copy.",
+    "faqs": [
+      [
+        "Can I watermark only selected PDF pages?",
+        "Yes. Enter page numbers or ranges, or leave Pages blank to apply the watermark throughout the document. Text is centered on each selected page and reduced to fit its width when needed."
+      ],
+      [
+        "Does a watermark prevent copying or hide confidential text?",
+        "No. It is a visible page label, not encryption, copy protection, or redaction. The placement tool supports unrotated pages and its built-in font supports Latin text."
+      ]
+    ],
+    "related": [
+      "add-text-to-pdf",
+      "add-image-to-pdf",
+      "bates-number-pdf"
+    ]
+  },
+  "number-pdf-pages": {
+    "title": "Add Page Numbers to PDF Online Free | PolyPDF",
+    "description": "Add PDF page numbers with a start value, prefix, and header or footer position. Number selected pages, preview, and download free without uploading files.",
+    "example": "Number the body of a report while leaving its cover unnumbered. Select pages 2-10 and start at 1. The first selected page receives 1, followed by consecutive numbers on the remaining selection.",
+    "faqs": [
+      [
+        "Can I start numbering after the cover page?",
+        "Yes. Enter the page range to number and choose a starting value. Numbering follows the order of the selected pages, so an excluded cover does not consume a number."
+      ],
+      [
+        "Will page numbers change the PDF’s page labels?",
+        "No. Numbers are added as visible page content. They do not rename drawing sheet identifiers or change PDF page labels shown by a viewer. Check that their placement does not cover existing text."
+      ]
+    ],
+    "related": [
+      "bates-number-pdf",
+      "add-pdf-margins",
+      "merge-pdf"
+    ]
+  },
+  "bates-number-pdf": {
+    "title": "Bates Numbering PDF Online — Add Identifiers | PolyPDF",
+    "heading": "Bates numbering for PDF pages",
+    "description": "Add sequential Bates numbers to a PDF with a prefix, start value, and padded digits. Preview identifiers and download free with local browser processing.",
+    "example": "Use prefix ISSUE- with starting value 42 and six digits to label the first selected page ISSUE-000042. The next receives ISSUE-000043. Keep a separate register of the issued range.",
+    "faqs": [
+      [
+        "How do I continue Bates numbering across several PDFs?",
+        "For one continuous result, merge the PDFs first and number the combined file. For separate files, enter the next starting number manually for each file and check the ranges for gaps or duplicates."
+      ],
+      [
+        "Does the digit setting limit the maximum Bates number?",
+        "It sets the minimum digit width by adding leading zeros. Larger numbers are not truncated. Bates labels identify pages; they do not certify completeness or replace a document-control register."
+      ]
+    ],
+    "related": [
+      "number-pdf-pages",
+      "merge-pdf",
+      "add-pdf-margins"
+    ]
+  },
+  "crop-pdf": {
+    "title": "Crop PDF Online — Trim Visible Page Margins | PolyPDF",
+    "description": "Crop PDF page margins using top, right, bottom, and left values. Select pages, preview, and download free. Cropping hides content; it is not redaction.",
+    "example": "Trim an unwanted white border by entering 18 points on each side, equivalent to a quarter inch. Check the preview to ensure title blocks and dimensions remain inside the visible page.",
+    "faqs": [
+      [
+        "What units does the PDF crop tool use?",
+        "Margins are entered in PDF points: 72 points equal one inch. They trim the existing crop box along the unrotated page axes. All four margins must leave a visible page area."
+      ],
+      [
+        "Is cropped content permanently removed from the PDF?",
+        "No. Cropping changes the visible page boundary. Hidden content can still be present and recoverable. Do not use this tool to remove confidential information."
+      ]
+    ],
+    "related": [
+      "resize-pdf",
+      "add-pdf-margins",
+      "rotate-pdf"
+    ]
+  },
+  "resize-pdf": {
+    "title": "Resize PDF Pages Online — A4, Letter & More | PolyPDF",
+    "description": "Resize PDF pages to A4, Letter, A3, or Tabloid while preserving artwork proportions. Preview and download free. Recheck drawing scale after resizing.",
+    "example": "Create a Letter-size reference copy of a larger drawing for a meeting packet. The artwork is fitted and centered on the new page. Keep the original-size file for scaled measurement.",
+    "faqs": [
+      [
+        "Does resizing a PDF stretch or crop the artwork?",
+        "The visible source page is scaled proportionally to fit and centered on the chosen paper size. Different proportions can leave white space. Use Crop PDF when you want to change the visible boundary instead."
+      ],
+      [
+        "Can I still measure a resized construction drawing?",
+        "Resizing changes its physical scale. Recalibrate against a known dimension and check a second dimension before measuring. The result is a static layout copy; interactive links and annotations are not retained."
+      ]
+    ],
+    "related": [
+      "crop-pdf",
+      "add-pdf-margins",
+      "n-up-pdf"
+    ]
+  },
+  "add-pdf-margins": {
+    "title": "Add Margins to PDF Online — White Page Borders | PolyPDF",
+    "description": "Add equal white margins around PDF pages without scaling their artwork. Choose border width in points, preview, and download free with no file upload.",
+    "example": "Add a half-inch notes border by setting Margin to 36 points. A Letter page grows from 8.5 × 11 inches to 9.5 × 12 inches, with the existing artwork kept at its original size.",
+    "faqs": [
+      [
+        "Will adding margins shrink my PDF content?",
+        "No. The output page grows on all four sides while the visible artwork retains its size. Print at actual size to preserve that relationship; a printer’s fit-to-page option can scale the result."
+      ],
+      [
+        "Can I use the new margins for page numbers or notes?",
+        "Yes. Download the result and continue with Add page numbers or Add text to PDF. The margin operation creates a static copy, so interactive links and editable annotations are not retained."
+      ]
+    ],
+    "related": [
+      "number-pdf-pages",
+      "add-text-to-pdf",
+      "resize-pdf"
+    ]
+  },
+  "pdf-booklet": {
+    "title": "PDF Booklet Maker Online — Arrange Print Pages | PolyPDF",
+    "description": "Arrange PDF pages for booklet printing, two pages per landscape side. Add blank panels automatically, preview, and download free without uploading files.",
+    "example": "Turn an eight-page handout into booklet order. The first output side places page 8 beside page 1; later sides arrange the remaining pages for folding. Test one duplex sheet before printing the full set.",
+    "faqs": [
+      [
+        "Why does the booklet PDF have pages out of reading order?",
+        "Booklet imposition pairs outer and inner pages so they read in order after double-sided printing and folding. It differs from a two-up contact sheet, which keeps adjacent pages together."
+      ],
+      [
+        "What if the source has an odd number of pages?",
+        "Blank panels pad the source to a multiple of four. Print the imposed PDF double-sided with short-edge flipping, and test your printer settings. Do not apply a second booklet layout in the print dialog."
+      ]
+    ],
+    "related": [
+      "n-up-pdf",
+      "insert-blank-pdf-pages",
+      "number-pdf-pages"
+    ]
+  },
+  "n-up-pdf": {
+    "title": "N-Up PDF Online — 2 or 4 Pages per Sheet | PolyPDF",
+    "heading": "Put multiple PDF pages on one sheet",
+    "description": "Place two or four PDF pages on one landscape sheet. Create a contact sheet in reading order, preview, and download free without uploading your document.",
+    "example": "Create a four-up drawing index for a coordination meeting. Pages are reduced into a two-by-two arrangement, read left to right and top to bottom. Use full-size source sheets for dimensions.",
+    "faqs": [
+      [
+        "How do I put four PDF pages on one sheet?",
+        "Choose 4 in Pages per sheet and select the output paper size. Source pages are fitted proportionally into a landscape two-by-two grid. Any unused positions on the final sheet remain blank."
+      ],
+      [
+        "Is N-up the same as booklet printing?",
+        "No. N-up keeps source pages in reading order for a contact sheet. Booklet PDF rearranges them for folding. Both reduce page artwork, so neither should be treated as retaining the original drawing scale."
+      ]
+    ],
+    "related": [
+      "pdf-booklet",
+      "resize-pdf",
+      "merge-pdf"
+    ]
+  },
+  "add-text-to-pdf": {
+    "title": "Add Text to PDF Online — Place Labels Free | PolyPDF",
+    "description": "Add text labels to selected PDF pages. Choose position, font size, and color, then preview and download free. Existing text is not changed or erased.",
+    "example": "Add a short review note near an empty area of a flat drawing. Position values are percentages from the visible page’s top-left corner. Preview the result to keep the label clear of dimensions.",
+    "faqs": [
+      [
+        "Can I edit existing PDF text with this tool?",
+        "No. It adds a new label over the page. It does not replace, erase, or reflow existing text. Use Fill PDF form for existing interactive text fields."
+      ],
+      [
+        "How do I position the new text?",
+        "Set horizontal and vertical positions as percentages from the top-left of the visible page. The label must fit within the page. Placement requires unrotated pages and Latin characters supported by the built-in font."
+      ]
+    ],
+    "related": [
+      "fill-pdf-form",
+      "watermark-pdf",
+      "add-image-to-pdf"
+    ]
+  },
+  "add-image-to-pdf": {
+    "title": "Add an Image to PDF Online — JPG or PNG | PolyPDF",
+    "description": "Place a JPG or PNG image on selected PDF pages. Set position and width, preserve proportions, preview, and download free without uploading your files.",
+    "example": "Place a small company logo in an unused corner of a report. Choose the PDF first and the image second, then set its width as a percentage of the page and check the preview.",
+    "faqs": [
+      [
+        "Can I add the same image to several PDF pages?",
+        "Yes. Select page numbers or ranges, or leave Pages blank for all pages. The same image and relative position are used on each selected page. Images must fit fully within unrotated pages."
+      ],
+      [
+        "Does adding a signature image digitally sign the PDF?",
+        "No. A pasted image is visible page artwork. It does not create a cryptographic signature, verify an identity, or provide a signature-request workflow."
+      ]
+    ],
+    "related": [
+      "watermark-pdf",
+      "add-text-to-pdf",
+      "png-to-pdf"
+    ]
+  },
+  "edit-pdf-metadata": {
+    "title": "Edit PDF Metadata Online — Title, Author & More | PolyPDF",
+    "description": "Edit a PDF’s title, author, subject, and keywords locally. Save updated document properties in a new PDF, free without an account or file upload.",
+    "example": "Give an issued report a clear document title and author before sharing it. Enter all four desired values; blank fields clear those standard properties. Inspect the downloaded copy to confirm them.",
+    "faqs": [
+      [
+        "Which PDF metadata fields can I change?",
+        "This tool replaces the standard document title, author, subject, and keywords. Separate keywords with commas. Empty inputs clear those fields rather than keeping their previous values."
+      ],
+      [
+        "Does editing metadata remove all personal information?",
+        "No. XMP metadata, comments, attachments, and page content can retain other information. This tool is not a complete privacy scrubber, and metadata keywords alone do not establish search rankings."
+      ]
+    ],
+    "related": [
+      "inspect-pdf",
+      "remove-pdf-annotations",
+      "pdf-to-text"
+    ]
+  },
+  "inspect-pdf": {
+    "title": "Inspect PDF Online — Pages, Metadata & Form Fields | PolyPDF",
+    "description": "Inspect PDF page count, dimensions, rotation, metadata, and form fields. Preview a JSON report and download it free with local browser processing.",
+    "example": "Check a supplied drawing package before processing it. The report shows page sizes and crop boxes, helping you spot mixed sheet dimensions. It also lists form names and available choices for automation.",
+    "faqs": [
+      [
+        "What units are PDF page dimensions reported in?",
+        "Widths, heights, and crop boxes are reported in PDF points, with 72 points per inch. Rotation is reported separately. These properties describe the file, not its calibrated drawing scale."
+      ],
+      [
+        "Does inspecting a PDF validate accessibility or signatures?",
+        "No. The report describes document properties and standard form fields. It does not certify accessibility, PDF/A compliance, signature validity, or measurement accuracy."
+      ]
+    ],
+    "related": [
+      "edit-pdf-metadata",
+      "extract-pdf-form-data",
+      "compare-pdf-text"
+    ]
+  },
+  "compare-pdf-text": {
+    "title": "Compare PDF Text Online — Find Changed Lines | PolyPDF",
+    "description": "Compare text in two PDFs page by page. Download a JSON report of added and removed lines free. Local processing; no OCR or visual drawing comparison.",
+    "example": "Compare two specification revisions with matching page order. Choose the earlier PDF first and the later PDF second, then inspect the reported added and removed lines against their source pages.",
+    "faqs": [
+      [
+        "Can this compare scanned PDFs or drawing geometry?",
+        "It compares existing text layers only. Scans without text and geometry-only drawing changes are not detected. Use a visual drawing-comparison workflow when linework, symbols, or layout changes matter."
+      ],
+      [
+        "What happens if pages have been inserted or reordered?",
+        "Pages are compared by their position, not matched by content. An inserted page can shift later comparisons. The JSON reports page counts, changed lines, repeated-line differences, and text-order-only changes; review those findings in context."
+      ]
+    ],
+    "related": [
+      "pdf-to-text",
+      "organize-pdf",
+      "inspect-pdf"
+    ]
+  }
+}

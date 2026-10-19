@@ -4,6 +4,7 @@ import { act } from "react-dom/test-utils";
 import { MemoryRouter, Routes, Route } from "react-router";
 import { PdfToolsHub, PdfToolPage } from "./PdfTools";
 import catalog from "../toolkit/catalog.json";
+import pageContent from "../toolkit/page-content.json";
 let node, root;
 beforeEach(() => {
   global.IS_REACT_ACT_ENVIRONMENT = true;
@@ -76,4 +77,19 @@ test("partial WebMCP registration is cleaned up on failure", () => {
   </MemoryRouter>));
   expect(unregisterTool).toHaveBeenCalledWith("polypdf_list_files");
   delete navigator.modelContext;
+});
+
+test.each(catalog)("$id renders useful, crawlable task-specific content", (tool) => {
+  act(() => root.render(<MemoryRouter initialEntries={[`/tools/${tool.id}/`]}>
+    <Routes><Route path="/tools/:toolId/" element={<PdfToolPage />} /></Routes>
+  </MemoryRouter>));
+  const content = pageContent[tool.id];
+  expect(node.querySelectorAll("h1")).toHaveLength(1);
+  expect(node.querySelector(".pdf-tool-guide").textContent).toContain(content.example);
+  for (const [question, answer] of content.faqs) {
+    expect(node.querySelector(".pdf-answers").textContent).toContain(question);
+    expect(node.querySelector(".pdf-answers").textContent).toContain(answer);
+  }
+  expect([...node.querySelectorAll(".pdf-related a")].map(a => a.getAttribute("href")))
+    .toEqual(content.related.map(id => `/tools/${id}/`));
 });
