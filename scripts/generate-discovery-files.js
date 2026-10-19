@@ -159,9 +159,10 @@ const buildRouteMetadata = () => {
   for (const route of ['/', '/pdf-takeoff-software', '/construction-pdf-markup']) next[route].dateModified = '2026-10-16';
   for (const route of ['/product-facts', '/samples', '/tools', '/tools/construction-takeoff-spreadsheet']) next[route].dateModified = '2026-10-17';
   const pdfTools = require('../src/toolkit/catalog.json');
+  const toolContent = require('../src/toolkit/page-content.json');
   next['/tools'] = {title: '36 Free Online PDF Tools — No Upload | PolyPDF', description: 'Merge, split, convert, fill, number, and prepare PDFs in your browser. 36 free tools with local processing, previews, downloads, and MCP automation.', robots: 'index, follow', dateModified: '2026-10-18'};
   next['/tools/automation'] = {title: 'PDF Tools for AI Agents & MCP | PolyPDF', description: 'Connect 36 local PDF tools to your AI assistant. Download the MCP server with bounded file access, structured inputs, repeat-safe requests, and checksums.', robots: 'index, follow', dateModified: '2026-10-18'};
-  for (const t of pdfTools) next['/tools/' + t.id] = {title: t.name + ' Online Free | PolyPDF', description: t.summary + ' Free, local browser processing. Preview and download without an account.', robots:'index, follow', dateModified:'2026-10-18'};
+  for (const t of pdfTools) next['/tools/' + t.id] = {title: toolContent[t.id].title, description: toolContent[t.id].description, robots:'index, follow', dateModified:'2026-10-19'};
   assert(next['/blog'], 'route-metadata.json must define the /blog index before generation');
   for (const post of blogPosts) {
     assert(next[blogPostPath(post.slug)], `Missing generated route for ${post.slug}`);

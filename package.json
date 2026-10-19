@@ -35,7 +35,7 @@
     "smoke:international": "node scripts/international/smoke.mjs",
     "generate:evaluation-kit": "python3 scripts/generate-evaluation-kit.py",
     "verify:navigation": "node scripts/verify-site-navigation.cjs",
-    "test:pdf-tools": "node --test scripts/toolkit/engine.test.mjs scripts/toolkit/mcp.test.mjs"
+    "test:pdf-tools": "node --test scripts/toolkit/engine.test.mjs scripts/toolkit/mcp.test.mjs scripts/toolkit/acceptance.test.mjs scripts/toolkit/form-edge.test.mjs"
   },
   "overrides": {
     "@tootallnate/once": "^1.1.2",

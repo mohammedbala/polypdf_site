@@ -237,6 +237,8 @@ function fieldData(doc) {
       readOnly: f.isReadOnly(),
       value: f.getText?.() ?? f.isChecked?.() ?? f.getSelected?.() ?? null,
       options: f.getOptions?.() || [],
+      ...(f instanceof PDFTextField ? { multiline: f.isMultiline(), maxLength: f.getMaxLength() ?? null } : {}),
+      ...([PDFDropdown, PDFOptionList, PDFRadioGroup].some(Type => f instanceof Type) ? { multiple: f.isMultiselect?.() || false } : {}),
     }));
 }
 export async function inspectPdf(bytes) {
@@ -750,7 +752,9 @@ export async function runTool(
               "INVALID_OPTIONS",
               "Text fields require text of at most 10,000 characters.",
             );
-          safeText(await doc.embedFont(StandardFonts.Helvetica), value);
+          if (info.maxLength !== null && value.length > info.maxLength)
+            fail("INVALID_OPTIONS", `${name} accepts at most ${info.maxLength} characters.`);
+          safeText(await doc.embedFont(StandardFonts.Helvetica), value.replace(/[\r\n\t]/g, " "));
           f.setText(value);
         } else if (info.type === "PDFCheckBox") {
           if (typeof value !== "boolean")
@@ -760,9 +764,12 @@ export async function runTool(
           ["PDFDropdown", "PDFOptionList", "PDFRadioGroup"].includes(info.type)
         ) {
           const values = Array.isArray(value) ? value : [value];
+          if (!info.multiple && values.length > 1)
+            fail("INVALID_OPTIONS", `Choose only one option for ${name}.`);
           if (values.some((v) => !info.options.includes(v)))
             fail("INVALID_OPTIONS", `Choose a listed option for ${name}.`);
-          f.select(info.type === "PDFRadioGroup" ? values[0] : values);
+          if (!values.length) f.clear();
+          else f.select(info.type === "PDFRadioGroup" ? values[0] : values);
         } else
           fail(
             "UNSUPPORTED_FIELD",

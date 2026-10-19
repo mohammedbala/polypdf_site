@@ -2,6 +2,8 @@
 
 The 36 operations in `src/toolkit/catalog.json` are the single public catalogue. The UI, static landing pages, option controls, MCP manifest and local MCP server use this catalogue. `engine.mjs` provides validation and PDF operations. Browser and Node adapters provide rendering/image decoding; original bytes are never overwritten.
 
+`src/toolkit/page-content.json` supplies each tool page’s unique search title, description, practical example, two task-specific answers, and three related operations. The metadata generator and visible page read the same content. `node scripts/toolkit/verify-pages.mjs` validates all 36 built pages: canonical URLs, indexability, sitemap entries, static answers/examples, unique metadata/questions, application schema, and related links. Search titles stay within the site’s 60-character budget and descriptions within 155 characters.
+
 ## Relationship to the prepared OpenAI integration
 
 The existing application repo has a native PolyPDF editor and a separate guest gateway with shared UI/model revisions, explicit file authorization, exact retry receipts, and temporary hosted workspaces. That runtime supports macOS and Windows and cannot simply run on the Linux static website host. Its October 3 deployment evidence does not establish public production activation or full ChatGPT acceptance.
@@ -32,3 +34,5 @@ MCP is an optional local stdio server. It accepts only paths under an explicit `
 `npm run build` copies pinned PDF.js assets, packages the local MCP adapter and lockfile, regenerates discovery, and prerenders every catalogue page with real content. Browser toolkit routes are English-only until deliberately localized; the existing translated routes are retained.
 
 `npm run test:pdf-tools` exercises all 36 actual operations plus input limits, field values/appearances, rotation/layout, signed-file refusal, MCP protocol transport, restricted paths, retry conflicts and output-resource checksums. The standard site tests, static navigation/accessibility checks and release hash/endpoint gates remain required. Use actual browser flows and render exported PDFs independently before publication. WebMCP registration is progressive enhancement; client/browser support is not guaranteed.
+
+The acceptance suite also executes every operation through a real stdio MCP client, reopens outputs, checks page sequences/dimensions/text or JSON/image content, verifies resource hashes and exact retries, and confirms source immutability. Form edge tests cover multiline values, multiple selections, single-choice validation, and field length limits. MCP 1.0.1 includes these form fixes; the package version follows the manifest so a changed engine does not replay results from the previous version.

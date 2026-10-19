@@ -8,7 +8,7 @@ const root = path.resolve("."),
 await fs.mkdir(stage, { recursive: true });
 const pkg = {
   name: "polypdf-browser-tools-mcp",
-  version: "1.0.0",
+  version: manifest.version,
   private: true,
   type: "module",
   description: "Local MCP interface for 36 PolyPDF browser PDF operations.",

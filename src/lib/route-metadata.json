@@ -392,219 +392,219 @@
     "dateModified": "2026-10-18"
   },
   "/tools/merge-pdf": {
-    "title": "Merge PDF Online Free | PolyPDF",
-    "description": "Combine drawings, attachments, and reports in your chosen order. Free, local browser processing. Preview and download without an account.",
+    "title": "Merge PDF Online — Combine Files Free | PolyPDF",
+    "description": "Merge PDF files in your chosen order, preview the result, and download one PDF. Free browser tool with no account or file upload. Originals stay unchanged.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/split-pdf": {
-    "title": "Split PDF Online Free | PolyPDF",
-    "description": "Separate a PDF into individual pages or page groups. Free, local browser processing. Preview and download without an account.",
+    "title": "Split PDF Online — Separate Pages Free | PolyPDF",
+    "description": "Split a PDF into individual pages or equal page groups. Preview your source, choose pages per file, and download separate PDFs or a ZIP. No file upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/extract-pdf-pages": {
-    "title": "Extract PDF pages Online Free | PolyPDF",
-    "description": "Pull the exact sheets you need into a new PDF. Free, local browser processing. Preview and download without an account.",
+    "title": "Extract PDF Pages Online — Save Selected Pages | PolyPDF",
+    "description": "Extract selected pages from a PDF using numbers and ranges such as 1, 3-5. Save a new PDF in order, free in your browser without uploading files.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/delete-pdf-pages": {
-    "title": "Delete PDF pages Online Free | PolyPDF",
-    "description": "Remove obsolete sheets and unwanted pages from a copy. Free, local browser processing. Preview and download without an account.",
+    "title": "Delete PDF Pages Online — Remove Pages Free | PolyPDF",
+    "description": "Remove unwanted pages from a PDF and save a separate copy. Enter page numbers or ranges, preview the remaining pages, and download free with no upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/organize-pdf": {
-    "title": "Organize PDF Online Free | PolyPDF",
-    "description": "Rearrange pages with a clear, numbered page order. Free, local browser processing. Preview and download without an account.",
+    "title": "Organize PDF Online — Reorder PDF Pages Free | PolyPDF",
+    "description": "Reorder PDF pages with page arrows or a numbered sequence. Preview and save the rearranged PDF free, without uploading it or creating an account.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/rotate-pdf": {
-    "title": "Rotate PDF Online Free | PolyPDF",
-    "description": "Turn sideways or upside-down pages the right way. Free, local browser processing. Preview and download without an account.",
+    "title": "Rotate PDF Online — Turn Selected Pages Free | PolyPDF",
+    "description": "Rotate PDF pages 90, 180, or 270 degrees clockwise. Select individual pages or rotate the whole document, preview, and download locally in your browser.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/duplicate-pdf-pages": {
-    "title": "Duplicate PDF pages Online Free | PolyPDF",
-    "description": "Repeat a form or drawing without copying an entire file. Free, local browser processing. Preview and download without an account.",
+    "title": "Duplicate PDF Pages Online — Repeat Pages Free | PolyPDF",
+    "description": "Duplicate selected PDF pages and choose how many copies to add. Repeated pages follow each original. Preview and download free without uploading files.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/reverse-pdf-pages": {
-    "title": "Reverse PDF pages Online Free | PolyPDF",
-    "description": "Correct a scan that arrived back to front. Free, local browser processing. Preview and download without an account.",
+    "title": "Reverse PDF Page Order Online Free | PolyPDF",
+    "description": "Reverse PDF page order so the last page comes first. Fix back-to-front scans, preview the result, and download a new PDF free without uploading your file.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/insert-blank-pdf-pages": {
-    "title": "Insert blank pages Online Free | PolyPDF",
-    "description": "Add space for notes, separators, or duplex printing. Free, local browser processing. Preview and download without an account.",
+    "title": "Insert Blank Pages into a PDF Online Free | PolyPDF",
+    "description": "Add blank pages to a PDF for notes, separators, or duplex printing. Choose an insertion point and count, preview and download free with no file upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/interleave-pdf": {
-    "title": "Interleave PDFs Online Free | PolyPDF",
-    "description": "Combine front and back scans in alternating order. Free, local browser processing. Preview and download without an account.",
+    "title": "Interleave PDFs Online — Alternate Scanned Pages | PolyPDF",
+    "description": "Interleave two PDFs by alternating pages. Combine front and back scans, optionally reverse the second file, and download free without uploading files.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/jpg-to-pdf": {
-    "title": "JPG to PDF Online Free | PolyPDF",
-    "description": "Turn photos and scans into a neatly sized PDF. Free, local browser processing. Preview and download without an account.",
+    "title": "JPG to PDF Online — Convert Photos Free | PolyPDF",
+    "description": "Convert JPG and JPEG images into one PDF. Arrange photos, choose paper size and margins, then preview and download free. Your images stay in your browser.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/png-to-pdf": {
-    "title": "PNG to PDF Online Free | PolyPDF",
-    "description": "Collect PNG screenshots and drawings into one PDF. Free, local browser processing. Preview and download without an account.",
+    "title": "PNG to PDF Online — Convert Images Free | PolyPDF",
+    "description": "Convert PNG screenshots and drawings into a PDF. Arrange images, retain transparency, and choose paper size and margins. Free local browser processing.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/webp-to-pdf": {
-    "title": "WebP to PDF Online Free | PolyPDF",
-    "description": "Make downloaded WebP images easier to share and print. Free, local browser processing. Preview and download without an account.",
+    "title": "WebP to PDF Online — Convert Images Free | PolyPDF",
+    "description": "Convert WebP images into a printable PDF in your browser. Arrange images and choose page size and margins. Free conversion with no account or file upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/pdf-to-jpg": {
-    "title": "PDF to JPG Online Free | PolyPDF",
-    "description": "Export selected pages as shareable JPEG images. Free, local browser processing. Preview and download without an account.",
+    "title": "PDF to JPG Online — Export PDF Pages Free | PolyPDF",
+    "description": "Convert PDF pages to JPG images. Choose resolution and quality, preview, and download single images or a ZIP. Free browser conversion with no upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/pdf-to-png": {
-    "title": "PDF to PNG Online Free | PolyPDF",
-    "description": "Create crisp page images for reports and review. Free, local browser processing. Preview and download without an account.",
+    "title": "PDF to PNG Online — Export Clear Page Images | PolyPDF",
+    "description": "Convert PDF pages to PNG images with adjustable resolution. Select pages and download images or a ZIP, free in your browser without file uploads.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/pdf-to-webp": {
-    "title": "PDF to WebP Online Free | PolyPDF",
-    "description": "Export lightweight page images for the web. Free, local browser processing. Preview and download without an account.",
+    "title": "PDF to WebP Online — Convert Page Images Free | PolyPDF",
+    "description": "Convert PDF pages to WebP images with resolution and quality controls. Download pages individually or as a ZIP, free with local browser processing.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/pdf-to-text": {
-    "title": "PDF to text Online Free | PolyPDF",
-    "description": "Extract selectable text with page boundaries intact. Free, local browser processing. Preview and download without an account.",
+    "title": "PDF to Text Online — Extract Selectable Text | PolyPDF",
+    "description": "Extract existing PDF text into a UTF-8 text file with page references. Select pages, preview, and download free without uploading files. No OCR for scans.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/text-to-pdf": {
-    "title": "Text to PDF Online Free | PolyPDF",
-    "description": "Make a clean, paginated PDF from your notes. Free, local browser processing. Preview and download without an account.",
+    "title": "Text to PDF Online — Create a PDF from Notes | PolyPDF",
+    "description": "Turn plain text into a PDF with a title, adjustable font size, automatic wrapping, and page breaks. Free browser tool with no account or document upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/compress-pdf": {
-    "title": "Compress PDF Online Free | PolyPDF",
-    "description": "Reduce size with a choice between structural and image compression. Free, local browser processing. Preview and download without an account.",
+    "title": "Compress PDF Online — Reduce File Size Locally | PolyPDF",
+    "description": "Compress PDFs with lossless rewriting or image compression. See the file-size change before downloading. Free browser processing with no file upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/flatten-pdf": {
-    "title": "Flatten PDF forms Online Free | PolyPDF",
-    "description": "Make filled form values part of the page. Free, local browser processing. Preview and download without an account.",
+    "title": "Flatten PDF Online — Make Form Values Static | PolyPDF",
+    "description": "Flatten PDF form fields into visible page content. Keep filled values in a static copy, preview, and download free without uploading PDFs or signing in.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/fill-pdf-form": {
-    "title": "Fill PDF forms Online Free | PolyPDF",
-    "description": "Fill existing text fields, choices, and checkboxes. Free, local browser processing. Preview and download without an account.",
+    "title": "Fill PDF Forms Online Free — No Upload | PolyPDF",
+    "description": "Fill existing PDF form fields in your browser. Enter text, select options, check boxes, and download an editable copy free. Your PDF is not uploaded.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/extract-pdf-form-data": {
-    "title": "Extract form data Online Free | PolyPDF",
-    "description": "Export field names, values, types, and options as JSON. Free, local browser processing. Preview and download without an account.",
+    "title": "Extract PDF Form Data to JSON Online Free | PolyPDF",
+    "description": "Export PDF form field names, types, options, and values as JSON. Inspect entries locally in your browser and download free without uploading the PDF.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/remove-pdf-annotations": {
-    "title": "Remove PDF annotations Online Free | PolyPDF",
-    "description": "Remove review comments while retaining form fields and links. Free, local browser processing. Preview and download without an account.",
+    "title": "Remove PDF Annotations & Comments Online | PolyPDF",
+    "description": "Remove comments and markup annotations from selected PDF pages. Keep form fields and links, preview, and download a copy free without uploading your PDF.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/watermark-pdf": {
-    "title": "Watermark PDF Online Free | PolyPDF",
-    "description": "Label a review copy with a visible text watermark. Free, local browser processing. Preview and download without an account.",
+    "title": "Watermark PDF Online — Add a Text Watermark | PolyPDF",
+    "description": "Add a centered text watermark to PDF pages. Set the wording, size, color, and opacity, then preview and download free with local browser processing.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/number-pdf-pages": {
-    "title": "Number PDF pages Online Free | PolyPDF",
-    "description": "Add consistent page numbers to a document. Free, local browser processing. Preview and download without an account.",
+    "title": "Add Page Numbers to PDF Online Free | PolyPDF",
+    "description": "Add PDF page numbers with a start value, prefix, and header or footer position. Number selected pages, preview, and download free without uploading files.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/bates-number-pdf": {
-    "title": "Bates numbering Online Free | PolyPDF",
-    "description": "Give document pages stable, padded identifiers. Free, local browser processing. Preview and download without an account.",
+    "title": "Bates Numbering PDF Online — Add Identifiers | PolyPDF",
+    "description": "Add sequential Bates numbers to a PDF with a prefix, start value, and padded digits. Preview identifiers and download free with local browser processing.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/crop-pdf": {
-    "title": "Crop PDF Online Free | PolyPDF",
-    "description": "Trim the visible page boundary by equal or different margins. Free, local browser processing. Preview and download without an account.",
+    "title": "Crop PDF Online — Trim Visible Page Margins | PolyPDF",
+    "description": "Crop PDF page margins using top, right, bottom, and left values. Select pages, preview, and download free. Cropping hides content; it is not redaction.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/resize-pdf": {
-    "title": "Resize PDF pages Online Free | PolyPDF",
-    "description": "Fit pages to A4, Letter, A3, or Tabloid without stretching. Free, local browser processing. Preview and download without an account.",
+    "title": "Resize PDF Pages Online — A4, Letter & More | PolyPDF",
+    "description": "Resize PDF pages to A4, Letter, A3, or Tabloid while preserving artwork proportions. Preview and download free. Recheck drawing scale after resizing.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/add-pdf-margins": {
-    "title": "Add PDF margins Online Free | PolyPDF",
-    "description": "Create a clean border for binding, printing, or notes. Free, local browser processing. Preview and download without an account.",
+    "title": "Add Margins to PDF Online — White Page Borders | PolyPDF",
+    "description": "Add equal white margins around PDF pages without scaling their artwork. Choose border width in points, preview, and download free with no file upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/pdf-booklet": {
-    "title": "Make a PDF booklet Online Free | PolyPDF",
-    "description": "Arrange pages for a folded, saddle-stitched booklet. Free, local browser processing. Preview and download without an account.",
+    "title": "PDF Booklet Maker Online — Arrange Print Pages | PolyPDF",
+    "description": "Arrange PDF pages for booklet printing, two pages per landscape side. Add blank panels automatically, preview, and download free without uploading files.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/n-up-pdf": {
-    "title": "Multiple pages per sheet Online Free | PolyPDF",
-    "description": "Put two or four source pages on each output sheet. Free, local browser processing. Preview and download without an account.",
+    "title": "N-Up PDF Online — 2 or 4 Pages per Sheet | PolyPDF",
+    "description": "Place two or four PDF pages on one landscape sheet. Create a contact sheet in reading order, preview, and download free without uploading your document.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/add-text-to-pdf": {
-    "title": "Add text to PDF Online Free | PolyPDF",
-    "description": "Place a note, date, or label on a PDF page. Free, local browser processing. Preview and download without an account.",
+    "title": "Add Text to PDF Online — Place Labels Free | PolyPDF",
+    "description": "Add text labels to selected PDF pages. Choose position, font size, and color, then preview and download free. Existing text is not changed or erased.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/add-image-to-pdf": {
-    "title": "Add image to PDF Online Free | PolyPDF",
-    "description": "Place a logo, stamp, or signature image on a page. Free, local browser processing. Preview and download without an account.",
+    "title": "Add an Image to PDF Online — JPG or PNG | PolyPDF",
+    "description": "Place a JPG or PNG image on selected PDF pages. Set position and width, preserve proportions, preview, and download free without uploading your files.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/edit-pdf-metadata": {
-    "title": "Edit PDF metadata Online Free | PolyPDF",
-    "description": "Set the document title, author, subject, and keywords. Free, local browser processing. Preview and download without an account.",
+    "title": "Edit PDF Metadata Online — Title, Author & More | PolyPDF",
+    "description": "Edit a PDF’s title, author, subject, and keywords locally. Save updated document properties in a new PDF, free without an account or file upload.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/inspect-pdf": {
-    "title": "Inspect PDF Online Free | PolyPDF",
-    "description": "Check page sizes, rotation, form fields, and metadata. Free, local browser processing. Preview and download without an account.",
+    "title": "Inspect PDF Online — Pages, Metadata & Form Fields | PolyPDF",
+    "description": "Inspect PDF page count, dimensions, rotation, metadata, and form fields. Preview a JSON report and download it free with local browser processing.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   },
   "/tools/compare-pdf-text": {
-    "title": "Compare PDF text Online Free | PolyPDF",
-    "description": "Find changed text between two versions of a document. Free, local browser processing. Preview and download without an account.",
+    "title": "Compare PDF Text Online — Find Changed Lines | PolyPDF",
+    "description": "Compare text in two PDFs page by page. Download a JSON report of added and removed lines free. Local processing; no OCR or visual drawing comparison.",
     "robots": "index, follow",
-    "dateModified": "2026-10-18"
+    "dateModified": "2026-10-19"
   }
 }
