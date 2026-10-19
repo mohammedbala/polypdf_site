@@ -89,6 +89,12 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.13 (build 74) preserves imported markups when combining PDFs, restores search highlights for phrases with spaces or line separators, and reduces repeated thumbnail rendering.";
+export const releaseAnswer = "PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in.";
 
 export const release1613Highlights = Object.freeze([releaseAnswer]);
+
+export const release1615Highlights = Object.freeze([
+  'Each named Teams employee can use up to three computers on one paid seat. Administrators choose the company-wide limit; existing installations stay at one until changed.',
+  'Add a computer without replacing another, explicitly replace a selected computer, or remove one computer while keeping the employee’s other computers connected.',
+  'Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before enabling the higher limit. Existing Entra setup and employee assignments stay in place.'
+]);
