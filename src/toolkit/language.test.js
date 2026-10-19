@@ -35,6 +35,13 @@ test('localized routes preserve destination and canonical protocol data',()=>{
 test('translated templates preserve dynamic file types verbatim',()=>{
   expect(translateText('Choose pdf, jpg files for this tool.',spanish)).toBe('Elige archivos pdf, jpg para esta herramienta.');
 });
+test('dynamic result quantities translate their labels and page counts',()=>{
+  const language={locale:locales[0],strings:{'file':'archivo','files':'archivos','· {0} pages':'· {0} páginas'}};
+  const node=document.createElement('div'),root=createRoot(node);
+  act(()=>root.render(localizeView(<div><p>{2}{' '}{'files'}{' · '}{'4.0 KB'}</p><small>{'4.0 KB'}{' · 3 pages'}</small></div>,language)));
+  expect(node.querySelector('p').textContent).toBe('2 archivos · 4.0 KB');
+  expect(node.querySelector('small').textContent).toBe('4.0 KB · 3 páginas');act(()=>root.unmount());
+});
 test('translates labels without changing field values, filenames or document content',()=>{
   const node=document.createElement('div'),root=createRoot(node);
   act(()=>root.render(localizeView(<div><button aria-label="Choose files">Choose files</button><select defaultValue="left"><option value="left">left</option></select><span translate="no">My report.pdf</span><pre>Choose files</pre><input defaultValue="Choose files"/></div>,spanish)));

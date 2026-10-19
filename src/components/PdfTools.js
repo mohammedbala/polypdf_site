@@ -268,7 +268,7 @@ function PdfPreview({
         }
         if (!disposed) setUrl(objectUrl);
       } catch (e) {
-        if (!disposed) setError(`Preview unavailable: ${e.message}`);
+        if (!disposed) setError(`Preview unavailable: ${translateText(e.message, language)}`);
       } finally {
         await adapter?.dispose();
         if (!disposed) setLoading(false);else if (objectUrl) URL.revokeObjectURL(objectUrl);
@@ -278,7 +278,7 @@ function PdfPreview({
       disposed = true;
       if (objectUrl) URL.revokeObjectURL(objectUrl);
     };
-  }, [file, page]);
+  }, [file, page, language]);
   return localizeView(<section className="pdf-preview" aria-label={label}>
       <div className="pdf-preview-bar">
         <strong>{label}</strong>
@@ -297,7 +297,7 @@ function PdfPreview({
       <div className="pdf-preview-paper">
         {loading ? <div className="pdf-preview-skeleton" role="status">
             Preparing preview…
-          </div> : error ? <p role="status">{error}</p> : url ? <img src={url} alt={`${label}, page ${page + 1}`} /> : <div className="pdf-preview-empty">
+          </div> : error ? <p role="status">{error}</p> : url ? <img src={url} alt={`${translateText(label, language)}, page ${page + 1}`} /> : <div className="pdf-preview-empty">
             <FilePdf size={48} />
             <p>Your PDF preview appears here.</p>
             <small>Choose a file or try the sample.</small>

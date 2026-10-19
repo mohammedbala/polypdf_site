@@ -59,12 +59,18 @@ export function localizeView(tree, language) {
     for (const attr of ["aria-label", "title", "alt", "placeholder"]) if (typeof node.props[attr] === "string") props[attr] = translateText(node.props[attr], language);
     for (const attr of ["to", "href"]) if (typeof node.props[attr] === "string") props[attr] = localizedHref(node.props[attr], language);
     const children = React.Children.toArray(node.props.children);
-    const joined = [];
-    for (const child of children) {
-      if ((typeof child === "string" || typeof child === "number") && typeof joined[joined.length - 1] === "string") joined[joined.length - 1] += child;
-      else joined.push(typeof child === "number" ? String(child) : child);
+    const translatedChildren = [];
+    for (let i = 0; i < children.length; i++) {
+      if (typeof children[i] !== "string" && typeof children[i] !== "number") { translatedChildren.push(visit(children[i])); continue; }
+      const fragments = [String(children[i])];
+      while (i + 1 < children.length && ["string", "number"].includes(typeof children[i + 1])) fragments.push(String(children[++i]));
+      const joined = fragments.join("");
+      const translated = translateText(joined, language);
+      // Prefer complete sentences; newly composed result quantities use their known fragments.
+      if (translated !== joined || Object.prototype.hasOwnProperty.call(language.strings || {}, normalize(joined))) translatedChildren.push(translated);
+      else translatedChildren.push(...fragments.map(fragment => translateText(fragment, language)));
     }
-    return React.cloneElement(node, props, ...(joined.map(visit)));
+    return React.cloneElement(node, props, ...translatedChildren);
   };
   return visit(tree);
 }

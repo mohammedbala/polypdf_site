@@ -18,7 +18,8 @@ function extractLiterals(strings) {
       JSXText(p){add(p.node.value);},
       StringLiteral(p){if(p.parent.type==='JSXAttribute' && !['aria-label','alt','title','placeholder'].includes(p.parent.name.name))return;
         if(p.parent.type==='ImportDeclaration')return;
-        if(/[\s?!…]/.test(p.node.value) || /^[A-Z][a-z]+$/.test(p.node.value))add(p.node.value);},
+        const renderedChoice=p.parentPath.isConditionalExpression() && p.key!=='test' && p.findParent(q=>q.isJSXExpressionContainer());
+        if(/[\s?!…]/.test(p.node.value) || /^[A-Z][a-z]+$/.test(p.node.value) || renderedChoice)add(p.node.value);},
       TemplateLiteral(p){const value=p.node.quasis.map((q,i)=>q.value.cooked+(i<p.node.expressions.length?`{${i}}`:'')).join('');if(/[A-Za-z]{2}/.test(value)&&/[\s?!…]/.test(value))add(value);}
     });
   }
