@@ -1,0 +1,17 @@
+{
+  "created": "2026-10-20",
+  "kind": "original practice templates, not app-generated outputs",
+  "fieldsPerPdf": 10,
+  "languages": [
+    "de"
+  ],
+  "files": {
+    "construction-review-field-map.csv": "e793a98eddb20327ff62ce75a0344a7f079328b5a30fc8933ad7058143c8a43e",
+    "construction-review-form-de.pdf": "d15d2479a74e6c0a52f665c3692774ba5bd73581d40bc6632de0b0270cbec5aa"
+  },
+  "locale": "de-DE",
+  "region": "DE",
+  "paper": "A4",
+  "dateFormat": "DD.MM.YYYY",
+  "fictional": true
+}

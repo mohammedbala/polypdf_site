@@ -80,7 +80,7 @@ test('the checked-in German regional library resolves exact verified PDF and pre
   const data = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/walkthrough-media.json')));
   const registry = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/product-locales.json'))).locales;
   verifyMediaFiles(data, registry, asset => fs.readFileSync(path.join(root, 'public', asset)), ['de']);
-  assert.equal(Object.keys(data.locales.de.assets).filter(asset => asset.endsWith('.pdf')).length, 12);
+  assert.equal(Object.keys(data.locales.de.assets).filter(asset => asset.startsWith('/samples/construction/') && asset.endsWith('.pdf')).length, 12);
   const source = '/samples/construction/02-Architectural-Revision-A.pdf';
   const preview = '/samples/construction/previews/02-Architectural-Revision-A--page-01.png';
   const dom = new JSDOM(`<a href="${source}">Plan</a><img src="${preview}" width="1440" height="960">`);
@@ -89,4 +89,28 @@ test('the checked-in German regional library resolves exact verified PDF and pre
     '/localized-media/de/samples/construction/02-Architektur-Revision-A.pdf');
   assert.equal(dom.window.document.querySelector('img').getAttribute('height'), '1272');
   assert.equal(data.locales.de.status, 'pilot', 'Partial media coverage must not activate the whole language');
+});
+test('German form copy and downloads are reconciled without mislabelling an English or French file', () => {
+  const data = require('../src/localization/walkthrough-media.json');
+  const form = data.locales.de.regionalForm;
+  const fixture = `<section data-regional-form>
+    <p data-regional-form-description>English or French version</p>
+    <ul><li data-regional-form-primary><a href="${form.primarySource}">English PDF</a></li>
+    <li data-regional-form-alternative><a href="${form.alternativeSources[0]}">French PDF</a></li>
+    <li data-regional-form-field-map><a href="${form.fieldMapSource}">Fields</a></li></ul>
+    <p data-regional-form-evidence>Old evidence</p></section>`;
+  const dom = new JSDOM(fixture);
+  localizeWalkthroughMedia(dom.window.document, locale, data);
+  const links = [...dom.window.document.querySelectorAll('a')];
+  assert.equal(links.length, 2);
+  assert.equal(links[0].textContent, 'Deutsches Übungsformular · PDF');
+  assert.equal(links[0].getAttribute('href'), '/localized-media/de/samples/forms/construction-review-form-de.pdf');
+  assert.equal(links[1].getAttribute('href'), '/localized-media/de/samples/forms/construction-review-field-map.csv');
+  assert.equal(dom.window.document.querySelector('[data-regional-form-evidence]').textContent, form.evidence);
+  assert.ok(!dom.window.document.body.textContent.includes('English'));
+  assert.ok(!dom.window.document.body.textContent.includes('French'));
+  const outside = new JSDOM(fixture + `<a href="${form.alternativeSources[0]}">Unrelated French form</a>`);
+  assert.throws(() => localizeWalkthroughMedia(outside.window.document, locale, data), /Missing localized/);
+  const changed = new JSDOM(fixture.replace(form.primarySource, '/samples/forms/new-form.pdf'));
+  assert.throws(() => localizeWalkthroughMedia(changed.window.document, locale, data), /Changed regional form section/);
 });

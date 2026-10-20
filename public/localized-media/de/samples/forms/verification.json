@@ -1,0 +1,13 @@
+[
+  {
+    "language": "de",
+    "sourceSha256": "d15d2479a74e6c0a52f665c3692774ba5bd73581d40bc6632de0b0270cbec5aa",
+    "filledSha256": "a5a9290a9a8241bced769f434f8917c7a7a8b640a90e173731d6126143b8923a",
+    "fields": 10,
+    "widgets": 12,
+    "canonicalValues": "pass",
+    "widgetValuesAndAppearances": "pass",
+    "pypdfSaveReopen": "pass",
+    "appRuntime": "not tested"
+  }
+]

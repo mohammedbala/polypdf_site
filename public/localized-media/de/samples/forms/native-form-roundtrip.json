@@ -1,0 +1,28 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "sourceSha256": "d15d2479a74e6c0a52f665c3692774ba5bd73581d40bc6632de0b0270cbec5aa",
+  "appBuild": "1.6.17+84",
+  "sourceFiles": {
+    "packages/pdf/src/acroform.ts": "da6d956ad05fcc78d5ade8fbdf1ab90fd743cb9bbd3cbb6d4cb6685625f9c92d",
+    "packages/pdf-node/src/native-annotation-export.ts": "ad12a77fd89ef702f46f66ac2a367e11251118626eaf18a397130bb0c8c0b52f",
+    "packages/pdf-node/src/append-only-writer.ts": "329532a2c67b57a701087ad0b5ea367434aa8026b25bd46bc9aeab9adc3b3551",
+    "tests/pdf-node/regional-form-roundtrip.test.ts": "0c145d320d62d539a74810bf6ae3123164b63ab0c686c4d10f6218359c6fd9fc"
+  },
+  "status": "passed",
+  "scope": "Actual PolyPDF form writer/importer with independent pdf-lib field-value checks; native UI validation pending",
+  "cases": [
+    {
+      "mode": "ordinary",
+      "sha256": "6c86bbc8e7452e96aef89116a369528cc3ed6eeba59f49998b40b1741a73c29a",
+      "fields": 10,
+      "widgets": 12
+    },
+    {
+      "mode": "append-only",
+      "sha256": "fbd7fc39dabb4c18ca6db77a7a920a48c75929b3ebf439926c269593714afb0c",
+      "fields": 10,
+      "widgets": 12
+    }
+  ]
+}

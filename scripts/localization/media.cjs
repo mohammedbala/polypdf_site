@@ -59,6 +59,29 @@ function visitAssets(document, callback) {
 }
 
 function localizeWalkthroughMedia(document, locale, manifest) {
+  const form = manifest.locales[locale.id]?.regionalForm;
+  if (form) {
+    for (const section of document.querySelectorAll('[data-regional-form]')) {
+      const primary = section.querySelector('[data-regional-form-primary] a[href]');
+      const fieldMap = section.querySelector('[data-regional-form-field-map] a[href]');
+      const description = section.querySelector('[data-regional-form-description]');
+      const evidence = section.querySelector('[data-regional-form-evidence]');
+      if (assetPath(primary?.getAttribute('href')) !== form.primarySource
+          || assetPath(fieldMap?.getAttribute('href')) !== form.fieldMapSource
+          || !description || !evidence) throw new Error(`Changed regional form section: ${locale.id}`);
+      // Reconcile the authored download group before resolving its assets. An alternate
+      // language elsewhere on the page still needs its own exact localized mapping.
+      for (const item of section.querySelectorAll('[data-regional-form-alternative]')) {
+        const source = assetPath(item.querySelector('a[href]')?.getAttribute('href'));
+        if (!form.alternativeSources.includes(source)) throw new Error(`Unknown regional form alternative: ${source}`);
+        item.remove();
+      }
+      primary.textContent = form.primaryLabel;
+      fieldMap.textContent = form.fieldMapLabel;
+      description.textContent = form.description;
+      evidence.textContent = form.evidence;
+    }
+  }
   visitAssets(document, value => resolveAsset(value, locale, manifest));
   const byUrl = new Map(Object.values(manifest.locales[locale.id]?.assets || {}).map(asset => [asset.url, asset]));
   for (const image of document.querySelectorAll('img[src]')) {
@@ -89,6 +112,14 @@ function verifyMediaFiles(manifest, productLocales, readAsset, localeIds = Objec
     const product = productLocales.find(locale => locale.siteId === id);
     if (!pack || !product || pack.appLocale !== product.tag || pack.region !== product.region) {
       throw new Error(`Unknown or mismatched product locale: ${id}`);
+    }
+    if (pack.regionalForm) {
+      const form = pack.regionalForm;
+      if (!Array.isArray(form.alternativeSources)
+          || ['primaryLabel', 'fieldMapLabel', 'description', 'evidence'].some(key => typeof form[key] !== 'string' || !form[key].trim())
+          || !pack.assets[form.primarySource] || !pack.assets[form.fieldMapSource]) {
+        throw new Error(`Incomplete regional form content: ${id}`);
+      }
     }
     for (const [source, asset] of Object.entries(pack.assets)) {
       resolveAsset(source, { id }, manifest);

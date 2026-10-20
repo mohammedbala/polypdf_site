@@ -1,0 +1,34 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "status": "passed",
+  "sourceSha256": "d15d2479a74e6c0a52f665c3692774ba5bd73581d40bc6632de0b0270cbec5aa",
+  "reviewed": "2026-10-20",
+  "scope": "Full-page rendered source and all three saved forms inspected. German umlauts, labels, dates, multiline notes, selections and check marks are legible with no clipping. This is PDF rendering review, not native app UI testing.",
+  "previews": [
+    {
+      "kind": "source",
+      "file": "previews/source.png",
+      "sha256": "7402268e907c3298c1febd557db8be9be3ca3f3925fa6d5151392c8ac04e362c",
+      "pdfSha256": "d15d2479a74e6c0a52f665c3692774ba5bd73581d40bc6632de0b0270cbec5aa"
+    },
+    {
+      "kind": "independent",
+      "file": "previews/independent.png",
+      "sha256": "1425efca001716255b4efaec8a6849ceb1741d009c94591528ab42a63e847cd8",
+      "pdfSha256": "a5a9290a9a8241bced769f434f8917c7a7a8b640a90e173731d6126143b8923a"
+    },
+    {
+      "kind": "ordinary",
+      "file": "previews/ordinary.png",
+      "sha256": "3d910612e6e7dd4878ee84cbd108973f571afc96fa16aafa9eb3426f31cecb40",
+      "pdfSha256": "6c86bbc8e7452e96aef89116a369528cc3ed6eeba59f49998b40b1741a73c29a"
+    },
+    {
+      "kind": "append-only",
+      "file": "previews/append-only.png",
+      "sha256": "f1d0571803118f8b01cf42bd9e773ff8624bde3eadd452efaeaa81fede1761d9",
+      "pdfSha256": "fbd7fc39dabb4c18ca6db77a7a920a48c75929b3ebf439926c269593714afb0c"
+    }
+  ]
+}

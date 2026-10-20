@@ -547,7 +547,54 @@
           "verification": "/localized-media/de/samples/construction/verification.json",
           "visualReview": "/localized-media/de/samples/construction/visual-review.json",
           "appPersistence": "/localized-media/de/samples/construction/native-roundtrip.json"
+        },
+        "/samples/forms/construction-review-form-en.pdf": {
+          "url": "/localized-media/de/samples/forms/construction-review-form-de.pdf",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "2a71e66d33171a72997418105bdd8ad5e5d13bea0ba00563c6115ba526b57b8b",
+          "sha256": "d15d2479a74e6c0a52f665c3692774ba5bd73581d40bc6632de0b0270cbec5aa",
+          "verification": "/localized-media/de/samples/forms/verification.json",
+          "visualReview": "/localized-media/de/samples/forms/visual-review.json",
+          "appPersistence": "/localized-media/de/samples/forms/native-form-roundtrip.json"
+        },
+        "/samples/forms/construction-review-field-map.csv": {
+          "url": "/localized-media/de/samples/forms/construction-review-field-map.csv",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "ad76c80c355e80a3152a68b1eb8ec2e3fe5b91ac3fe6d784839a9f03cff64ab8",
+          "sha256": "e793a98eddb20327ff62ce75a0344a7f079328b5a30fc8933ad7058143c8a43e",
+          "verification": "/localized-media/de/samples/forms/verification.json",
+          "visualReview": "/localized-media/de/samples/forms/visual-review.json",
+          "appPersistence": "/localized-media/de/samples/forms/native-form-roundtrip.json"
+        },
+        "/samples/forms/manifest.json": {
+          "url": "/localized-media/de/samples/forms/manifest.json",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "3d7ab1d571faec02f056215381ae28c0a7259931d02b31e01bd8d858915e1250",
+          "sha256": "5e8883187f66a12b1e0695a340e2fc870fd0f3e23cd8d8c9ce236cb6cf5c4630",
+          "verification": "/localized-media/de/samples/forms/verification.json",
+          "visualReview": "/localized-media/de/samples/forms/visual-review.json",
+          "appPersistence": "/localized-media/de/samples/forms/native-form-roundtrip.json"
         }
+      },
+      "regionalForm": {
+        "primarySource": "/samples/forms/construction-review-form-en.pdf",
+        "alternativeSources": [
+          "/samples/forms/construction-review-form-fr.pdf"
+        ],
+        "fieldMapSource": "/samples/forms/construction-review-field-map.csv",
+        "primaryLabel": "Deutsches Übungsformular · PDF",
+        "fieldMapLabel": "Feldkennungen und Feldtypen · CSV",
+        "description": "Dieses Beispiel zur Planprüfung enthält zehn Felder: Text, mehrzeilige Notizen, Kontrollkästchen, eine Optionsgruppe und eine Auswahlliste. Laden Sie das deutsche A4-Formular herunter, tragen Sie Testwerte ein und öffnen Sie eine gespeicherte Kopie erneut, um alle Werte zu prüfen.",
+        "evidence": "Dieses deutsche Übungsformular wurde am 20.10.2026 erstellt und mit unabhängigen PDF-Werkzeugen sowie den Formularfunktionen von PolyPDF 1.6.17, Build 84, geprüft. Die Prüfungen umfassen alle zehn Feldwerte und zwölf Steuerelemente nach normalem und inkrementellem Speichern. Die Bedienung in den nativen Apps auf Mac, Windows und iPad wurde für dieses Formular noch nicht geprüft. Öffnen Sie eine gespeicherte Kopie auch im PDF-Programm des Empfängers."
       }
     }
   },

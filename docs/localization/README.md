@@ -75,6 +75,21 @@ Registration refuses missing/stale geometry, visual or persistence receipts. The
 
 ## Content still required
 
-Regionalize every additional takeoff, evaluation, form and conversion sample, then build the other locale profiles. Capture each workflow in the corresponding app locale using its regional PDF. Regenerate responsive images, posters, video variants, captions and narration, then update guide instructions to the same dimensions and results. Existing US walkthrough counts and sheet names must be rewritten before the German pack is activated.
+Germany's A4 form is under `public/localized-media/de/samples/forms/`. Ten fields and twelve widgets pass canonical-field/widget checks, independent fill/save/reopen and both actual PolyPDF form-saving paths. Four full-page previews cover the source, independent output and ordinary/append-only app output. The form keeps German labels, umlauts, a fictional regional project and `TT.MM.JJJJ` dates; its field map uses semicolons. Default English/French generation remains byte-identical.
+
+Reproduce and register it with:
+
+```sh
+python3 scripts/generate-form-practice.py --locale de --output public/localized-media/de/samples/forms
+python3 scripts/verify-form-practice.py --locale de --source public/localized-media/de/samples/forms --output .tmp/localization/forms/de
+# From the app's polypdf workspace:
+npm run test:regional-form -- --source /absolute/path/to/site/public/localized-media/de/samples/forms/construction-review-form-de.pdf
+# After rendering and inspecting all four outputs and refreshing the source-bound receipts:
+node scripts/localization/register-regional-form.cjs --app-build 1.6.17+84
+```
+
+The regional form section replaces the English/French choice with one correctly labelled German download and updates its field-map label, description and evidence note. An unrelated alternate-language link still fails coverage. Registration leaves the full German pack in `pilot`. Native Mac/Windows/iPad form UI testing remains pending.
+
+Regionalize every additional takeoff, evaluation and conversion sample, then build the other locale profiles. Capture each workflow in the corresponding app locale using its regional PDF. Regenerate responsive images, posters, video variants, captions and narration, then update guide instructions to the same dimensions and results. Existing US walkthrough counts and sheet names must be rewritten before the German pack is activated.
 
 Teams uses a separately served walkthrough from the app repository. Its assets are inventoried separately and need the same locale/region/provenance rules in that serving path. Existing English-only Teams and samples routes must be brought into the localized page policy before the rollout can be considered complete.
