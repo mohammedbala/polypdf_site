@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const c = require('./content.cjs');
-const { assetPath, localizeWalkthroughMedia, resolveAsset, verifyMediaFiles } = require('../localization/media.cjs');
+const { assetPath, localizeWalkthroughMedia, localizeRegionalCopy, resolveAsset, verifyMediaFiles } = require('../localization/media.cjs');
 const walkthroughMedia = require('../../src/localization/walkthrough-media.json');
 // Pilot runs enforce complete media coverage before they can produce publishable pages.
 // Existing released locales remain on their existing assets until their pack is verified.
@@ -38,6 +38,7 @@ for (const locale of allLocales) {
   for (const route of c.routes) {
     const {dom,assets,schema,meta} = c.sourcePage(build,route);
     const d = dom.window.document;
+    if (!collect && localizedMediaLocales.has(locale.id)) localizeRegionalCopy(d, locale, walkthroughMedia);
     c.translateDOM(d.body,t);
     d.querySelector('[data-language-slot]').outerHTML = c.languageNavigation(route,locale,t);
     c.localizeLinks(d,locale,t);

@@ -1,0 +1,20 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "status": "passed",
+  "sourceManifestSha256": "cd65ee35ca1fb682c90bb5a0b6d3608599054b247fea77d97cdc444a4fb43603",
+  "scope": "Reference data derived from the verified German drawing manifest; archive reopened and every entry compared byte-for-byte; all platform results remain blank.",
+  "documents": 6,
+  "pages": 12,
+  "references": 14,
+  "blankChecks": 33,
+  "archiveEntries": 11,
+  "files": {
+    "START-HERE.html": "42e02d2dd12918d4603fdf2848ffa5615f9f2ee9a9f1537f596d1d853180bed8",
+    "reference-quantities.csv": "5eed5fea20136685c7d8b1b4fea80f9ea02adfb00335802facaecb9ed134c9ae",
+    "evaluation-results.csv": "9f4f809efb80ee145c61dfd32fee8603c54024915974832943c5e6935ab781ba",
+    "manifest.json": "8c682f76c5d01f6f5387ed9c909bbb49c719834e2957e1154fcf6fe5e2be598a",
+    "SHA256SUMS.txt": "b6565c02f697334c6c7f59d47dfac42df604d0f02748ffe459d648048d65be80",
+    "PolyPDF-Pruefpaket-de-DE.zip": "293589e58d0625c3c2154e6da871a7863a9f82eba626baa8de4c17603afffe95"
+  }
+}

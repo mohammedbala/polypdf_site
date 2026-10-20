@@ -1,0 +1,15 @@
+﻿Prüfung;Quelldatei;Blatt;Referenz;Erwarteter Wert;Einheit;Umfang
+A01;02-Architektur-Revision-A.pdf;A101;Gedruckte Referenzstrecke;5;m;"5 m bei 1:50; anschließend unabhängige Maße prüfen."
+A02;02-Architektur-Revision-A.pdf;A101;Äußere Gebäudebreite;24;m;Nach der Kalibrierung unabhängig messen.
+A03;02-Architektur-Revision-A.pdf;A101;Äußere Gebäudetiefe;15;m;Nach der Kalibrierung unabhängig messen.
+A04;02-Architektur-Revision-A.pdf;A101;Brutto-Grundfläche;360;m²;"24 × 15 m; keine Netto-Raumfläche und keine Wandabzüge."
+F01;10-Innenausbau-und-Einbaumoebel.pdf;I101;Fliesenbelag F2;36;m²;"Raum 107 und 108 jeweils 18 m²; Zuschläge separat erfassen."
+F02;10-Innenausbau-und-Einbaumoebel.pdf;I101;Elastischer Belag F1;324;m²;"Zonen gemäß Planbegrenzung; keine Wandabzüge oder Zuschläge."
+E01;06-Beleuchtung-und-Elektro.pdf;E101;Leuchten im Grundriss;24;Stück;"Legende und Details nicht mitzählen; jeder Suchtreffer ist zu prüfen."
+E02;06-Beleuchtung-und-Elektro.pdf;E101;Steckdosen im Grundriss;12;Stück;"Eigene Kategorie; keine Teilmenge der Leuchten."
+E03;06-Beleuchtung-und-Elektro.pdf;E101;Gezeichnete Stromkreislinie;34,5;m;"6,5 + 22 + 6 m; schematische Linie, keine Kabel- oder Rohrmenge."
+R01;03-Architektur-Revision-B.pdf;A101;Raum 103 nach Revision B;45;m²;"Zuvor 36 m²; Trennwand um 1,5 m versetzt."
+R02;03-Architektur-Revision-B.pdf;A101;Raum 104 nach Revision B;27;m²;"Zuvor 36 m²; Türversatz 0,75 m, zusätzliche Fensterbreite 1,5 m."
+C01;11-Koordination-und-Pruefung.pdf;X101;Vorbereitete PDF-Prüfnotizen;3;Stück;"Fiktive Prüfpunkte; eigene Notiz an einer Arbeitskopie ergänzen."
+C02;11-Koordination-und-Pruefung.pdf;X101;PDF-Ebenen;4;Stück;"ARCHITEKTUR; LÜFTUNG; ELEKTRO; PRÜFPUNKTE"
+O01;12-Gescannte-Bestandsplaene.pdf;A101 / C101;Nativer Text vor OCR;0;Zeichen;Bildbasierte Seiten. Nach OCR nach MEHRZWECKRAUM und LAGEPLAN UND ERSCHLIESSUNG suchen.

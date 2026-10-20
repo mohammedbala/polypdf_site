@@ -2,7 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { JSDOM } = require('jsdom');
 const crypto = require('node:crypto');
-const { localizeWalkthroughMedia, inventoryWalkthroughMedia, resolveAsset, needsLocalization, verifyMediaFiles } = require('../scripts/localization/media.cjs');
+const { localizeWalkthroughMedia, localizeRegionalCopy, inventoryWalkthroughMedia, resolveAsset, needsLocalization, verifyMediaFiles } = require('../scripts/localization/media.cjs');
 const locale = { id: 'de' };
 function manifest() {
   const assets = {};
@@ -113,4 +113,23 @@ test('German form copy and downloads are reconciled without mislabelling an Engl
   assert.throws(() => localizeWalkthroughMedia(outside.window.document, locale, data), /Missing localized/);
   const changed = new JSDOM(fixture.replace(form.primarySource, '/samples/forms/new-form.pdf'));
   assert.throws(() => localizeWalkthroughMedia(changed.window.document, locale, data), /Changed regional form section/);
+});
+test('regional exercise text changes source quantities before translation and refuses stale instructions', () => {
+  const data = require('../src/localization/walkthrough-media.json');
+  const { translateDOM } = require('../scripts/international/content.cjs');
+  const original = data.locales.de.regionalText['evaluation.dimensions'].source;
+  const dom = new JSDOM('<li data-regional-copy="evaluation.dimensions"></li>');
+  const item = dom.window.document.querySelector('li');
+  item.textContent = original;
+  localizeRegionalCopy(dom.window.document, locale, data);
+  translateDOM(dom.window.document.body, () => { throw Error('Regional text must not be translated twice'); });
+  assert.ok(item.textContent.includes('24 m') && item.textContent.includes('360 m²'));
+  assert.ok(!item.textContent.includes('5,760'));
+  assert.equal(item.getAttribute('lang'), 'de-DE');
+  item.textContent = original.replace('96 ft', '100 ft');
+  assert.throws(() => localizeRegionalCopy(dom.window.document, locale, data), /Stale regional/);
+  item.setAttribute('data-regional-copy', 'evaluation.unknown');
+  assert.throws(() => localizeRegionalCopy(dom.window.document, locale, data), /Missing regional/);
+  assert.throws(() => resolveAsset('/samples/evaluation/local-build-1.6.14-76/willow-creek-a101-measured.pdf', locale, data), /Missing localized/,
+    'Historical English app output cannot be represented as a new German capture');
 });

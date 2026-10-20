@@ -40,7 +40,7 @@ The main website build currently succeeds with the existing published localizati
 
 ## Verification
 
-- `npm run test:localized-media`: media coverage/provenance, regional image dimensions and actual German artifact checks.
+- `npm run test:localized-media`: 9/9, covering media provenance, regional image dimensions, German form downloads and source-bound exercise copy.
 - `node --test test/international.test.cjs test/international-consent.test.cjs`: 11 existing localization/consent cases passed after building.
 - `npm run build`: passed, including 240 guide translations and 836 translated toolkit pages.
 - German pilot enforcement: expected missing-asset failure, confirming no silent English fallback when enabled.
@@ -73,7 +73,7 @@ npm run localization:register-library -- --locale de --app-build 1.6.17+84
 
 Registration refuses missing/stale geometry, visual or persistence receipts. The media resolver updates preview dimensions along with URLs, preserving the A1 aspect ratio. This registration is local preparation and leaves the pack in `pilot`.
 
-## Content still required
+## German regional form
 
 Germany's A4 form is under `public/localized-media/de/samples/forms/`. Ten fields and twelve widgets pass canonical-field/widget checks, independent fill/save/reopen and both actual PolyPDF form-saving paths. Four full-page previews cover the source, independent output and ordinary/append-only app output. The form keeps German labels, umlauts, a fictional regional project and `TT.MM.JJJJ` dates; its field map uses semicolons. Default English/French generation remains byte-identical.
 
@@ -90,6 +90,24 @@ node scripts/localization/register-regional-form.cjs --app-build 1.6.17+84
 
 The regional form section replaces the English/French choice with one correctly labelled German download and updates its field-map label, description and evidence note. An unrelated alternate-language link still fails coverage. Registration leaves the full German pack in `pilot`. Native Mac/Windows/iPad form UI testing remains pending.
 
-Regionalize every additional takeoff, evaluation and conversion sample, then build the other locale profiles. Capture each workflow in the corresponding app locale using its regional PDF. Regenerate responsive images, posters, video variants, captions and narration, then update guide instructions to the same dimensions and results. Existing US walkthrough counts and sheet names must be rewritten before the German pack is activated.
+## German evaluation kit
+
+`public/localized-media/de/samples/evaluation/` derives six PDFs/twelve A1 sheets from the verified German library. Its guide and fourteen references use the 5 m calibration, 24 × 15 m footprint, 360 m² area, German finishes/counts/revisions and German OCR search terms. UTF-8 CSVs use semicolons and decimal commas. The results checklist contains 33 blank rows across Mac, Windows and iPad; it is an evaluation form, not completed platform evidence.
+
+The deterministic ZIP contains eleven entries, including the original regional PDFs, guide, CSVs, manifest and checksums. Generation reopens it and compares every entry byte-for-byte. Changed source PDF bytes or stale library evidence are rejected. The online guide uses web-relative drawing links and has its own hash; the full guide was visually inspected in the in-app browser.
+
+```sh
+python3 scripts/generate-regional-evaluation.py
+# After reviewing a changed guide, update its source-bound visual-review.json:
+node scripts/localization/register-regional-evaluation.cjs
+```
+
+The page build applies regional exercise copy before ordinary translation. Authored `data-regional-copy` elements require an exact source-text match and a nonempty regional replacement; stale copy stops the build. This keeps exercise instructions and PDF quantities aligned. The older English app-export examples retain their original identity and remain an explicit coverage gap until fresh German app outputs exist.
+
+There are now 50 verified German media mappings: 41 for the construction library, three for the form and six for the evaluation resources. Full-pack activation is still blocked by the remaining media.
+
+## Content still required
+
+Regionalize the remaining electrical review, takeoff, historical app-output replacements, conversion and spreadsheet samples, then build the other locale profiles. Capture each workflow in the corresponding app locale using its regional PDF. Regenerate responsive images, posters, video variants, captions and narration, then update guide instructions to the same dimensions and results. Existing US walkthrough counts and sheet names elsewhere must be rewritten before the German pack is activated.
 
 Teams uses a separately served walkthrough from the app repository. Its assets are inventoried separately and need the same locale/region/provenance rules in that serving path. Existing English-only Teams and samples routes must be brought into the localized page policy before the rollout can be considered complete.

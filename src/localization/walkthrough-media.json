@@ -583,6 +583,78 @@
           "verification": "/localized-media/de/samples/forms/verification.json",
           "visualReview": "/localized-media/de/samples/forms/visual-review.json",
           "appPersistence": "/localized-media/de/samples/forms/native-form-roundtrip.json"
+        },
+        "/samples/evaluation/polypdf-construction-evaluation-kit.zip": {
+          "url": "/localized-media/de/samples/evaluation/PolyPDF-Pruefpaket-de-DE.zip",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "2b5ac2c757e289593cc90a3df9a9d5f730f803b4f6d80f22cbecbc9a32f810ff",
+          "sha256": "293589e58d0625c3c2154e6da871a7863a9f82eba626baa8de4c17603afffe95",
+          "verification": "/localized-media/de/samples/evaluation/verification.json",
+          "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
+          "sourceLibrary": "/localized-media/de/samples/construction/DEMO-MANIFEST.json"
+        },
+        "/samples/evaluation/START-HERE.html": {
+          "url": "/localized-media/de/samples/evaluation/START-HERE.html",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "6cf2eb7a7adfa77feca90a54a4ba104ecd052d296638d2417474787c6bf44033",
+          "sha256": "42e02d2dd12918d4603fdf2848ffa5615f9f2ee9a9f1537f596d1d853180bed8",
+          "verification": "/localized-media/de/samples/evaluation/verification.json",
+          "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
+          "sourceLibrary": "/localized-media/de/samples/construction/DEMO-MANIFEST.json"
+        },
+        "/samples/evaluation/reference-quantities.csv": {
+          "url": "/localized-media/de/samples/evaluation/reference-quantities.csv",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "794c39a5227f6815ad051ec5bcb4bf0a3094a34eab7e87dac359fd226cf15cf0",
+          "sha256": "5eed5fea20136685c7d8b1b4fea80f9ea02adfb00335802facaecb9ed134c9ae",
+          "verification": "/localized-media/de/samples/evaluation/verification.json",
+          "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
+          "sourceLibrary": "/localized-media/de/samples/construction/DEMO-MANIFEST.json"
+        },
+        "/samples/evaluation/evaluation-results.csv": {
+          "url": "/localized-media/de/samples/evaluation/evaluation-results.csv",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "95080a6947fae8b566f2cad36e48c2a0f14c9363709b88dc85114a29f88c2084",
+          "sha256": "9f4f809efb80ee145c61dfd32fee8603c54024915974832943c5e6935ab781ba",
+          "verification": "/localized-media/de/samples/evaluation/verification.json",
+          "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
+          "sourceLibrary": "/localized-media/de/samples/construction/DEMO-MANIFEST.json"
+        },
+        "/samples/evaluation/manifest.json": {
+          "url": "/localized-media/de/samples/evaluation/manifest.json",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "6831f5dead8a4bea481af13f481ca2fa787b61ae73b76ce7919c2e06ab6a803c",
+          "sha256": "8c682f76c5d01f6f5387ed9c909bbb49c719834e2957e1154fcf6fe5e2be598a",
+          "verification": "/localized-media/de/samples/evaluation/verification.json",
+          "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
+          "sourceLibrary": "/localized-media/de/samples/construction/DEMO-MANIFEST.json"
+        },
+        "/samples/evaluation/SHA256SUMS.txt": {
+          "url": "/localized-media/de/samples/evaluation/SHA256SUMS.txt",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "b36a31ffed5713a6df88a7480fb0728b4dd21f18baeb2f5fcc62338575583e21",
+          "sha256": "b6565c02f697334c6c7f59d47dfac42df604d0f02748ffe459d648048d65be80",
+          "verification": "/localized-media/de/samples/evaluation/verification.json",
+          "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
+          "sourceLibrary": "/localized-media/de/samples/construction/DEMO-MANIFEST.json"
         }
       },
       "regionalForm": {
@@ -595,6 +667,24 @@
         "fieldMapLabel": "Feldkennungen und Feldtypen · CSV",
         "description": "Dieses Beispiel zur Planprüfung enthält zehn Felder: Text, mehrzeilige Notizen, Kontrollkästchen, eine Optionsgruppe und eine Auswahlliste. Laden Sie das deutsche A4-Formular herunter, tragen Sie Testwerte ein und öffnen Sie eine gespeicherte Kopie erneut, um alle Werte zu prüfen.",
         "evidence": "Dieses deutsche Übungsformular wurde am 20.10.2026 erstellt und mit unabhängigen PDF-Werkzeugen sowie den Formularfunktionen von PolyPDF 1.6.17, Build 84, geprüft. Die Prüfungen umfassen alle zehn Feldwerte und zwölf Steuerelemente nach normalem und inkrementellem Speichern. Die Bedienung in den nativen Apps auf Mac, Windows und iPad wurde für dieses Formular noch nicht geprüft. Öffnen Sie eine gespeicherte Kopie auch im PDF-Programm des Empfängers."
+      },
+      "regionalText": {
+        "evaluation.description": {
+          "source": "Use the Willow Creek evaluation kit to test the app on a consistent set of architectural, electrical, interiors, coordination, and scanned drawings. It includes six PDFs with twelve sheets, fourteen drawing references, and a blank Mac/Windows results checklist.",
+          "target": "Prüfen Sie die App mit dem fiktiven Bürgerhaus am Lindenpark: Architektur, Elektro, Innenausbau, Koordination und gescannte Pläne. Das deutsche Prüfpaket enthält sechs PDFs mit zwölf A1-Blättern, vierzehn Referenzwerten und eine leere Ergebnisliste mit 33 Prüfschritten für Mac, Windows und iPad."
+        },
+        "evaluation.calibration": {
+          "source": "Record your app version, build, operating system, and edition. Open A101, Revision A, and calibrate the printed 20 ft reference.",
+          "target": "Erfassen Sie App-Version, Build, Betriebssystem und Lizenzumfang. Öffnen Sie A101, Revision A, und kalibrieren Sie die gedruckte 5-m-Referenz."
+        },
+        "evaluation.dimensions": {
+          "source": "Check the independent 96 ft width and 60 ft depth, then measure the outside boundary: 5,760 sq ft gross. These are two length checks and one area.",
+          "target": "Prüfen Sie unabhängig 24 m Breite und 15 m Tiefe. Messen Sie anschließend die äußere Begrenzung: 360 m² Brutto-Grundfläche. Das sind zwei Längenprüfungen und eine Flächenmessung."
+        },
+        "evaluation.results": {
+          "source": "The kit contains original source drawings and authored references, not completed app tests. The 22 platform checks start as NOT RUN. Record your own results, including misses and unexpected differences. Historical app exports elsewhere on this site use separate drawings and keep their original version labels.",
+          "target": "Das Paket enthält vorbereitete Zeichnungen und Referenzwerte. Alle 33 Plattformprüfungen beginnen mit NICHT AUSGEFÜHRT. Erfassen Sie eigene Ergebnisse, einschließlich fehlender Treffer und unerwarteter Abweichungen. Die Plattformspalten belegen keine Funktionsgleichheit. Frühere App-Exporte auf dieser Website verwenden eigene Zeichnungen und behalten ihre ursprünglichen Versionsangaben."
+        }
       }
     }
   },

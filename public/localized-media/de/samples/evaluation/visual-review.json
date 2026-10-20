@@ -1,0 +1,9 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "status": "passed",
+  "reviewed": "2026-10-20",
+  "guideSha256": "42e02d2dd12918d4603fdf2848ffa5615f9f2ee9a9f1537f596d1d853180bed8",
+  "surface": "Codex in-app browser, localhost preview",
+  "scope": "Full rendered page inspected: German headings, body, all fourteen reference rows and six drawing links are legible with no overlap or clipping. Every local guide link resolves. No native application workflow or platform result is claimed."
+}

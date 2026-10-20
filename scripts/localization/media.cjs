@@ -94,6 +94,27 @@ function localizeWalkthroughMedia(document, locale, manifest) {
   }
 }
 
+// Run on original authored copy before ordinary translation. Region-specific examples
+// change the exercise itself (units, quantities and source project), so a translation of
+// the old US instructions cannot substitute for these source-bound replacements.
+function localizeRegionalCopy(document, locale, manifest) {
+  const pack = manifest.locales[locale.id];
+  const normalize = text => text.replace(/\s+/g, ' ').trim();
+  for (const node of document.querySelectorAll('[data-regional-copy]')) {
+    const key = node.getAttribute('data-regional-copy');
+    const copy = pack?.regionalText?.[key];
+    if (!copy || typeof copy.source !== 'string' || typeof copy.target !== 'string' || !copy.target.trim()) {
+      throw new Error(`Missing regional exercise copy: ${locale.id} ${key}`);
+    }
+    if (node.children.length || normalize(node.textContent) !== normalize(copy.source)) {
+      throw new Error(`Stale regional exercise copy: ${locale.id} ${key}`);
+    }
+    node.textContent = copy.target;
+    node.setAttribute('translate', 'no');
+    node.setAttribute('lang', pack.appLocale);
+  }
+}
+
 function inventoryWalkthroughMedia(document) {
   const paths = new Set();
   visitAssets(document, value => {
@@ -129,4 +150,4 @@ function verifyMediaFiles(manifest, productLocales, readAsset, localeIds = Objec
   }
 }
 
-module.exports = { assetPath, needsLocalization, resolveAsset, localizeWalkthroughMedia, inventoryWalkthroughMedia, verifyMediaFiles };
+module.exports = { assetPath, needsLocalization, resolveAsset, localizeWalkthroughMedia, localizeRegionalCopy, inventoryWalkthroughMedia, verifyMediaFiles };
