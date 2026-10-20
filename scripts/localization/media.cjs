@@ -113,6 +113,45 @@ function localizeRegionalCopy(document, locale, manifest) {
     node.setAttribute('translate', 'no');
     node.setAttribute('lang', pack.appLocale);
   }
+  for (const table of document.querySelectorAll('[data-regional-table]')) {
+    const key = table.getAttribute('data-regional-table');
+    const record = pack?.regionalTables?.[key];
+    const tableData = {
+      caption: normalize(table.querySelector('caption')?.textContent || ''),
+      headers: [...table.querySelectorAll('thead th')].map(cell => normalize(cell.textContent)),
+      rows: [...table.querySelectorAll('tbody tr')].map(row => [...row.children].map(cell => normalize(cell.textContent)))
+    };
+    if (!record || JSON.stringify(tableData) !== JSON.stringify(record.source)
+        || table.querySelector('a, button, input, select, img, svg')) {
+      throw new Error(`Missing or stale regional table: ${locale.id} ${key}`);
+    }
+    const target = record.target;
+    const strings = value => Array.isArray(value) && value.length > 0
+      && value.every(text => typeof text === 'string' && text.trim());
+    if (!target || typeof target.caption !== 'string' || !target.caption.trim()
+        || !strings(target.headers) || !Array.isArray(target.rows) || !target.rows.length
+        || target.rows.some(row => !strings(row) || row.length !== target.headers.length)) {
+      throw new Error(`Invalid regional table: ${locale.id} ${key}`);
+    }
+    table.replaceChildren();
+    const append = (parent, tag, text, scope) => {
+      const node = document.createElement(tag);
+      if (text !== undefined) node.textContent = text;
+      if (scope) node.setAttribute('scope', scope);
+      parent.appendChild(node);
+      return node;
+    };
+    append(table, 'caption', target.caption);
+    const head = append(append(table, 'thead'), 'tr');
+    target.headers.forEach(text => append(head, 'th', text, 'col'));
+    const body = append(table, 'tbody');
+    target.rows.forEach(values => {
+      const row = append(body, 'tr');
+      values.forEach((text, index) => append(row, index ? 'td' : 'th', text, index ? undefined : 'row'));
+    });
+    table.setAttribute('translate', 'no');
+    table.setAttribute('lang', pack.appLocale);
+  }
 }
 
 function inventoryWalkthroughMedia(document) {

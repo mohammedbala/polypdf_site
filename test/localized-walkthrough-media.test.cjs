@@ -133,3 +133,32 @@ test('regional exercise text changes source quantities before translation and re
   assert.throws(() => resolveAsset('/samples/evaluation/local-build-1.6.14-76/willow-creek-a101-measured.pdf', locale, data), /Missing localized/,
     'Historical English app output cannot be represented as a new German capture');
 });
+test('German electrical table matches the regional drawing instead of retaining US subsets', () => {
+  const fs = require('node:fs');
+  const profile = require('../scripts/localization/regional-electrical-de.json');
+  const data = manifest();
+  data.locales.de.regionalTables = profile.tables;
+  const component = fs.readFileSync(require.resolve('../src/components/ElectricalTakeoffEvaluation.js'), 'utf8');
+  const source = component.match(/<table data-regional-table="electrical.counts">[\s\S]*?<\/table>/)[0];
+  const dom = new JSDOM(source);
+  localizeRegionalCopy(dom.window.document, locale, data);
+  const table = dom.window.document.querySelector('table');
+  const rows = [...table.querySelectorAll('tbody tr')];
+  assert.equal(rows.length, 3);
+  assert.deepEqual(rows.map(row => row.lastElementChild.textContent), ['24 Stück', '12 Stück', '8 Stück']);
+  assert.equal(table.querySelectorAll('th[scope="row"]').length, 3);
+  assert.equal(table.querySelectorAll('th[scope="col"]').length, 3);
+  assert.equal(table.getAttribute('lang'), 'de-DE');
+  assert.equal(table.getAttribute('translate'), 'no');
+  assert.ok(!table.textContent.includes('GFCI') && !table.textContent.includes('Emergency'));
+  assert.throws(() => localizeRegionalCopy(new JSDOM(source.replace('20 ea', '21 ea')).window.document, locale, data), /stale regional table/);
+  assert.throws(() => localizeRegionalCopy(new JSDOM(source.replace('20 ea', '<input value="20">20 ea')).window.document, locale, data), /stale regional table/);
+  const invalid = structuredClone(data);
+  invalid.locales.de.regionalTables['electrical.counts'].target.rows[0].pop();
+  assert.throws(() => localizeRegionalCopy(new JSDOM(source).window.document, locale, invalid), /Invalid regional table/);
+  const escaped = structuredClone(data);
+  escaped.locales.de.regionalTables['electrical.counts'].target.rows[0][0] = '<img src=x onerror=alert(1)>';
+  const safe = new JSDOM(source);
+  localizeRegionalCopy(safe.window.document, locale, escaped);
+  assert.equal(safe.window.document.querySelector('img'), null, 'Regional table cells are plain text');
+});

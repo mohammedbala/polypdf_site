@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checks": [
+    "Modified source PDF bytes rejected",
+    "Incorrect count reference rejected",
+    "Incorrect route reference rejected"
+  ],
+  "scope": "Controlled corrupted copies; original regional library unchanged."
+}

@@ -1,6 +1,6 @@
 # Regional walkthrough media
 
-This branch implements media routing and Germany’s regional construction library for the German-first product localization plan. The German pilot has 41 verified asset mappings: 12 PDFs, 24 previews, a contact sheet, ZIP, guide and reference metadata. The full pack remains inactive while the screenshot/video workflows and additional sample families are unfinished. Nothing has been published.
+This branch implements media routing and Germany’s regional construction library, form, evaluation kit and electrical reference worksheet for the German-first product localization plan. The German pilot has 53 verified asset mappings. The full pack remains inactive while the screenshot/video workflows and additional sample families are unfinished. Nothing has been published.
 
 The app repository’s detailed scope, evidence and remaining implementation plan is at `docs/audits/global-localization-2026-10-20/README.md`.
 
@@ -40,8 +40,9 @@ The main website build currently succeeds with the existing published localizati
 
 ## Verification
 
-- `npm run test:localized-media`: 9/9, covering media provenance, regional image dimensions, German form downloads and source-bound exercise copy.
+- `npm run test:localized-media`: 10/10, covering media provenance, regional image dimensions, German form downloads, source-bound exercise copy and regional table structure/quantities.
 - `node --test test/international.test.cjs test/international-consent.test.cjs`: 11 existing localization/consent cases passed after building.
+- The electrical component's same-page navigation regression also passed.
 - `npm run build`: passed, including 240 guide translations and 836 translated toolkit pages.
 - German pilot enforcement: expected missing-asset failure, confirming no silent English fallback when enabled.
 
@@ -104,10 +105,27 @@ node scripts/localization/register-regional-evaluation.cjs
 
 The page build applies regional exercise copy before ordinary translation. Authored `data-regional-copy` elements require an exact source-text match and a nonempty regional replacement; stale copy stops the build. This keeps exercise instructions and PDF quantities aligned. The older English app-export examples retain their original identity and remain an explicit coverage gap until fresh German app outputs exist.
 
-There are now 50 verified German media mappings: 41 for the construction library, three for the form and six for the evaluation resources. Full-pack activation is still blocked by the remaining media.
+## German electrical reference worksheet
+
+`public/localized-media/de/samples/electrical/` contains a German guide, semicolon CSV and source manifest for E101/E501. The three separate categories follow the actual German PDF: 24 lights, 12 sockets and eight switches. All 44 plan tags and the three excluded legend symbols are checked against the verified regional library. The physical schematic segments are 6.5 + 22 + 6 = 34.5 m; the guide distinguishes them from installation quantities and distinguishes the unscaled E501 schematic from its separately calibrated 1:5 detail.
+
+Every observed count and app field starts blank. The guide and all four electrical exercise sections were inspected in the in-app browser. The latter use 13 source-bound replacements, a three-row regional table and 38 additional German draft translations. Actual prerendered markup passed strict translation without fallback and resolves the German PDF, CSV and guide. Table replacement uses plain text and retains accessible headers; changed original rows, interactive content or invalid target shapes are rejected. Three corruption probes rejected changed PDF bytes, a wrong device count and changed route geometry.
+
+```sh
+python3 scripts/generate-regional-electrical.py
+npm run build
+node scripts/localization/verify-regional-electrical-page.cjs
+# Inspect README.html and build/local-electrical-preview.html.
+# Refresh the exact-source guide/page visual receipts when content changes.
+node scripts/localization/register-regional-electrical.cjs
+```
+
+The page verifier retains an existing visual review only when the preview bytes are unchanged. Registration checks guide, component, catalog and regional-profile hashes. The full electrical page's screenshots, metadata, FAQ and currently English-only route policy remain pending; this receipt covers its four exercise sections, not a finished localized page or actual symbol-search run.
+
+There are now 53 verified German media mappings: 41 for the construction library, three for the form, six for evaluation resources and three for the electrical worksheet. Full-pack activation is still blocked by the remaining media.
 
 ## Content still required
 
-Regionalize the remaining electrical review, takeoff, historical app-output replacements, conversion and spreadsheet samples, then build the other locale profiles. Capture each workflow in the corresponding app locale using its regional PDF. Regenerate responsive images, posters, video variants, captions and narration, then update guide instructions to the same dimensions and results. Existing US walkthrough counts and sheet names elsewhere must be rewritten before the German pack is activated.
+Regionalize the remaining takeoff, historical app-output replacements, conversion and spreadsheet samples, then build the other locale profiles. Capture each workflow in the corresponding app locale using its regional PDF. Regenerate responsive images, posters, video variants, captions and narration, then update guide instructions to the same dimensions and results. Existing US walkthrough counts and sheet names elsewhere, including the shared blog construction-example components, must be rewritten before the German pack is activated.
 
 Teams uses a separately served walkthrough from the app repository. Its assets are inventoried separately and need the same locale/region/provenance rules in that serving path. Existing English-only Teams and samples routes must be brought into the localized page policy before the rollout can be considered complete.

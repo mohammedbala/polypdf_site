@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "sourceComponentSha256": "b703433bace3ac64e1f4a7271006785345012c2a0a07f10efe2f797a659f8232",
+  "catalogSha256": "357944806ac8b8a7b217f274bc92105965f6f543af283b6b0829d6ec10a1c1bb",
+  "regionalProfileSha256": "7324e9eaf76de861fe7823cce01c92db27c5f30fbcd57078e73633bbf7cfe683",
+  "previewSha256": "7eff56d4230f5c8da15cbe1385e7cf69c1a5916add53508fdfa27ffc747da78f",
+  "checks": [
+    "13 exact-source regional text replacements",
+    "Four US table rows replaced with three German rows",
+    "24/12/8 counts and 34.5 m line agree with regional drawing",
+    "No US project, E601, GFCI or US route references in the four exercise sections",
+    "Strict German translation completed without fallback",
+    "German PDF/CSV/guide destinations resolved"
+  ],
+  "limitations": [
+    "Four exercise sections only; full page screenshots, metadata, FAQ and route policy remain pending",
+    "The media pack remains pilot and inactive"
+  ],
+  "visualReview": "Full four-section preview inspected in the in-app browser using the built website CSS; German text and three-category table readable without clipping."
+}

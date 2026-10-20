@@ -1,0 +1,7 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "status": "passed",
+  "guideSha256": "658fc57c3f84c942b7eba5f0882d2474ab5f6486aa931391bb7e48a3ef6c5032",
+  "scope": "Full-page German guide inspected in the in-app browser: heading, all three count rows, scale/route instructions and footer readable; every local link resolves. No app execution or platform qualification is claimed."
+}

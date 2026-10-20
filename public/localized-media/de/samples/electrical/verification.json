@@ -1,0 +1,15 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "status": "passed",
+  "sourceManifestSha256": "cd65ee35ca1fb682c90bb5a0b6d3608599054b247fea77d97cdc444a4fb43603",
+  "sourcePdfSha256": "3ea5b1fda02a1042cb6dd7578dd1e104da97da8a781c193c59093d7448f7c68a",
+  "categories": 3,
+  "blankResults": 3,
+  "scope": "Checked regional source bytes, plan-only tags, separate legend symbols, physical line segments and blank CSV results.",
+  "files": {
+    "electrical-count-review.csv": "8194f172c136357ffa055e674d3cafcca6022a0db28e5678d6d1ae03cf07b004",
+    "README.html": "658fc57c3f84c942b7eba5f0882d2474ab5f6486aa931391bb7e48a3ef6c5032",
+    "manifest.json": "5f9fc3d4d26c75176c525b6db810943787573e056b3679bc5335d6928e501d1c"
+  }
+}

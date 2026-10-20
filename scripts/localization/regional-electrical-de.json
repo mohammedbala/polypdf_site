@@ -1,0 +1,79 @@
+{
+  "text": {
+    "electrical.start": {
+      "source": "Use the original Willow Creek E101 plan and E601 device schedule. Start in Free to check the file and route measurements; the automatic symbol-search exercise requires Pro.",
+      "target": "Nutzen Sie E101 und E501 des fiktiven Bürgerhauses am Lindenpark. Prüfen Sie Datei und Linienmaße zunächst in Free; die automatische Symbolsuche erfordert Pro."
+    },
+    "electrical.categories": {
+      "source": "One plan, four distinct categories",
+      "target": "Ein Grundriss, drei getrennte Kategorien"
+    },
+    "electrical.heading": {
+      "source": "Reconcile fixture and receptacle counts before pricing.",
+      "target": "Leuchten, Steckdosen und Schalter vor der Kalkulation prüfen."
+    },
+    "electrical.counts": {
+      "source": "Count only the E101 plan boundary, then compare with the E601 fixture and device schedule. The plan contains 24 luminaires, including 4 emergency units, and 18 receptacles, including 2 GFCI devices. The categories below separate those subsets so each item appears once.",
+      "target": "Zählen Sie nur die gekennzeichneten Plansymbole auf E101 und vergleichen Sie sie mit der Liste auf E501. Der Grundriss enthält 24 Leuchten, 12 Steckdosen und 8 Schalter. Jede Kategorie wird getrennt erfasst; Legende und Stromlaufschema zählen nicht mit."
+    },
+    "electrical.exclude": {
+      "source": "E101 has one extra luminaire and one extra receptacle in its legend. E601 contains details and schedules, not another floor of installed devices.",
+      "target": "Die Legende auf E101 enthält jeweils eine zusätzliche Leuchte, Steckdose und einen Schalter. Die Symbole im Stromlaufschema auf E501 stellen keine weiteren installierten Geräte dar."
+    },
+    "electrical.classify": {
+      "source": "Similar base symbols can have different tags or battery markers. Inspect those marks yourself; do not assume one Symbol Search capture understands the E or G classification.",
+      "target": "Suchen und prüfen Sie Leuchten, Steckdosen und Schalter getrennt. Einige Leuchten sind gedreht. Prüfen Sie Kennzeichnungen und jeden Treffer; ein einzelner Suchausschnitt deckt nicht automatisch alle Symbolfamilien ab."
+    },
+    "electrical.subjects": {
+      "source": "Keep LT-A, LT-E, REC-A, and REC-G distinct. Check that 20 + 4 reconciles to 24 luminaires and 16 + 2 to 18 receptacles. Do not add the subset to the all-device total again.",
+      "target": "Führen Sie L, SD und S getrennt. Vergleichen Sie 24 Leuchten, 12 Steckdosen und 8 Schalter mit den Kennzeichnungen auf E101. Zählen Sie kein Symbol in mehreren Kategorien."
+    },
+    "electrical.download": {
+      "source": "E101 plan and E601 schedule · PDF",
+      "target": "Grundriss E101 und Schema/Liste E501 · PDF"
+    },
+    "electrical.csv": {
+      "source": "The CSV contains four reference categories, blank observed counts, and NOT RUN statuses. Record your app version, platform, edition, and differences. It is a website-authored review sheet, not an app export.",
+      "target": "Die CSV enthält drei Referenzkategorien, leere Ergebnisfelder und den Status NICHT AUSGEFÜHRT. Erfassen Sie App-Version, Plattform, Lizenzumfang und Abweichungen. Diese vorbereitete Prüfliste ist kein App-Export."
+    },
+    "electrical.scope": {
+      "source": "This is a partial practice scope: switches, the panel, wiring, and other electrical work are excluded from the four count rows. These fictional drawings are not for construction. Their reference counts have not been verified by a current Mac or Windows Symbol Search run.",
+      "target": "Die drei Zeilen umfassen Leuchten, Steckdosen und Schalter auf E101. Verteilung, Leitungen und weitere Elektroarbeiten sind ausgeschlossen. Die fiktiven Pläne dienen nur der Übung; die Referenzwerte sind kein Ergebnis einer aktuellen Symbolsuche auf Mac oder Windows."
+    },
+    "electrical.route": {
+      "source": "Not by itself. E101 explicitly labels its dashed wiring as a circuit diagram. The selected LP-1 / CKTS 1, 3, 5, 7 path runs 8 ft north and 38 ft east, totaling 46 ft of drawn centerline. That is a scale-and-route exercise, not 46 ft of conduit or a conductor order.",
+      "target": "Die gestrichelte Stromkreislinie auf E101 ist schematisch. Ihre drei gezeichneten Abschnitte messen 6,5 m, 22 m und 6 m, insgesamt 34,5 m. Diese Maßstabsübung liefert keine ausführungsreife Kabel- oder Rohrmenge."
+    },
+    "electrical.free": {
+      "source": "For a Free measurement check, calibrate the printed 20 ft reference, verify the independent 96 ft building width, and measure the two route segments separately. These three hand-created length measurements fit within the Free limit; calibration sets the scale.",
+      "target": "Kalibrieren Sie für die Free-Übung die 5-m-Referenz bei 1:50. Prüfen Sie unabhängig 24 m Gebäudebreite und messen Sie die ersten beiden Linienabschnitte mit 6,5 m und 22 m. Das sind drei manuelle Messungen; der dritte Linienabschnitt erfordert zusätzlich eine weitere Messung."
+    },
+    "electrical.detail": {
+      "source": "Keep E601 diagrams and schedules out of scaled measurements: they are not to scale.",
+      "target": "Das Stromlaufschema auf E501 ist ohne Maßstab. Das gesonderte Leuchtendetail hat einen eigenen Maßstab 1:5 und eine 0,50-m-Referenz."
+    }
+  },
+  "tables": {
+    "electrical.counts": {
+      "source": {
+        "caption": "Authored E101/E601 drawing references, not automatic-count results",
+        "headers": ["Schedule category", "What to inspect on E101", "Reference count"],
+        "rows": [
+          ["LT-A · Standard luminaires", "L-01 through L-24, excluding the four / E units.", "20 ea"],
+          ["LT-E · Emergency luminaires", "L-01 / E, L-13 / E, L-17 / E, and L-24 / E.", "4 ea"],
+          ["REC-A · General receptacles", "R-01 through R-16.", "16 ea"],
+          ["REC-G · GFCI receptacles", "R-17 G and R-18 G.", "2 ea"]
+        ]
+      },
+      "target": {
+        "caption": "Referenzwerte auf E101/E501; keine Ergebnisse einer automatischen Zählung",
+        "headers": ["Kategorie", "Auf E101 prüfen", "Referenzanzahl"],
+        "rows": [
+          ["L · Leuchten", "L-01 bis L-24, einschließlich gedrehter Leuchten.", "24 Stück"],
+          ["SD · Steckdosen", "SD-01 bis SD-12.", "12 Stück"],
+          ["S · Schalter", "S-01 bis S-08.", "8 Stück"]
+        ]
+      }
+    }
+  }
+}

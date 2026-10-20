@@ -1,0 +1,102 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "preparedAt": "2026-10-20",
+  "referenceOnly": true,
+  "runtimeVerification": "not_performed",
+  "sourceManifestSha256": "cd65ee35ca1fb682c90bb5a0b6d3608599054b247fea77d97cdc444a4fb43603",
+  "project": "BÜRGERHAUS AM LINDENPARK",
+  "sheets": [
+    "E101",
+    "E501"
+  ],
+  "revision": "A",
+  "sourcePdf": {
+    "url": "/localized-media/de/samples/construction/06-Beleuchtung-und-Elektro.pdf",
+    "sha256": "3ea5b1fda02a1042cb6dd7578dd1e104da97da8a781c193c59093d7448f7c68a"
+  },
+  "categories": [
+    {
+      "id": "L",
+      "description": "Leuchten",
+      "referenceCount": 24,
+      "unit": "Stück",
+      "tags": [
+        "L-01",
+        "L-02",
+        "L-03",
+        "L-04",
+        "L-05",
+        "L-06",
+        "L-07",
+        "L-08",
+        "L-09",
+        "L-10",
+        "L-11",
+        "L-12",
+        "L-13",
+        "L-14",
+        "L-15",
+        "L-16",
+        "L-17",
+        "L-18",
+        "L-19",
+        "L-20",
+        "L-21",
+        "L-22",
+        "L-23",
+        "L-24"
+      ]
+    },
+    {
+      "id": "SD",
+      "description": "Steckdosen",
+      "referenceCount": 12,
+      "unit": "Stück",
+      "tags": [
+        "SD-01",
+        "SD-02",
+        "SD-03",
+        "SD-04",
+        "SD-05",
+        "SD-06",
+        "SD-07",
+        "SD-08",
+        "SD-09",
+        "SD-10",
+        "SD-11",
+        "SD-12"
+      ]
+    },
+    {
+      "id": "S",
+      "description": "Schalter",
+      "referenceCount": 8,
+      "unit": "Stück",
+      "tags": [
+        "S-01",
+        "S-02",
+        "S-03",
+        "S-04",
+        "S-05",
+        "S-06",
+        "S-07",
+        "S-08"
+      ]
+    }
+  ],
+  "scope": "Three separate E101 plan categories; excludes legend, E501 schematics/detail, distribution board and wiring.",
+  "routeReference": {
+    "drawnCenterlineMetres": 34.5,
+    "segmentMetres": [
+      6.5,
+      22,
+      6
+    ],
+    "notAConduitOrWireQuantity": true
+  },
+  "reviewCsv": {
+    "file": "electrical-count-review.csv",
+    "sha256": "8194f172c136357ffa055e674d3cafcca6022a0db28e5678d6d1ae03cf07b004"
+  }
+}
