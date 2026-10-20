@@ -14,6 +14,8 @@ node scripts/localization/sync-locales.cjs --app-root /path/to/app-repository/po
 
 The agreed app rollout includes English, German and 19 additional locale variants. Hebrew is excluded from the new rollout; pre-existing toolkit support is unchanged.
 
+The latest registry import marks Spanish, French, Brazilian Portuguese, Italian, Dutch and Polish as app pilots alongside German. Those six now have complete draft app catalogs, regional A2 quick-start PDFs and two actual Mac capture scenarios each, with 36 live checks and ordinary/append-only PDF verification. Their app evidence is under `docs/audits/global-localization-2026-10-20/regional-quick-start/` in the app repository. This registry status does not activate website packs: every walkthrough and regional sample family still needs its own completed coverage.
+
 [Source inventory](source-inventory.json) covers all 91 English routes, 149 candidate assets/downloads, 26 PDFs and 34 assets in the app repository’s Teams walkthrough. It records actual file hashes and page references, including currently English-only routes. Some candidates are language-neutral brand graphics or technical downloads and require explicit classification. Dynamic UI states and external CSS are outside this static inventory.
 
 Regenerate after a fresh site build:

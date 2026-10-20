@@ -1,6 +1,6 @@
 {
   "source": "PolyPDF packages/core/src/locales/registry.json",
-  "sourceSha256": "109cbce85ee26b0ad7db7edf7150fe056b9d319cbc34367db12d3bc6eb223c55",
+  "sourceSha256": "e3cc9c946e3e599cee177e75ed3dcf9d2a788018f6a4386636765f9d49df437b",
   "locales": [
     {
       "tag": "en-US",
@@ -24,7 +24,7 @@
       "label": "Español",
       "direction": "ltr",
       "region": "ES",
-      "status": "planned"
+      "status": "pilot"
     },
     {
       "tag": "fr-FR",
@@ -32,7 +32,7 @@
       "label": "Français",
       "direction": "ltr",
       "region": "FR",
-      "status": "planned"
+      "status": "pilot"
     },
     {
       "tag": "pt-BR",
@@ -40,7 +40,7 @@
       "label": "Português (Brasil)",
       "direction": "ltr",
       "region": "BR",
-      "status": "planned"
+      "status": "pilot"
     },
     {
       "tag": "pt-PT",
@@ -56,7 +56,7 @@
       "label": "Italiano",
       "direction": "ltr",
       "region": "IT",
-      "status": "planned"
+      "status": "pilot"
     },
     {
       "tag": "nl-NL",
@@ -64,7 +64,7 @@
       "label": "Nederlands",
       "direction": "ltr",
       "region": "NL",
-      "status": "planned"
+      "status": "pilot"
     },
     {
       "tag": "pl-PL",
@@ -72,7 +72,7 @@
       "label": "Polski",
       "direction": "ltr",
       "region": "PL",
-      "status": "planned"
+      "status": "pilot"
     },
     {
       "tag": "tr-TR",
