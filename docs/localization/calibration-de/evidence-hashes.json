@@ -1,0 +1,20 @@
+{
+  "status": "verified",
+  "files": {
+    "docs/localization/calibration-de/README.md": "7b0acf9b57934291e9ce8a602c82671c738be54914b24e2f66d8a2cd49d58620",
+    "docs/localization/calibration-de/browser-language-selection.json": "71ee393efd89251b25cf820a6bfd3a4d3a004e5440e79d1cb43983e918aa2f54",
+    "docs/localization/calibration-de/browser-preview.png": "9fbe89907a3b44cefc31bf5bf9bf780a90f7497a1cad275aa1afb97f9c9c3ec2",
+    "docs/localization/calibration-de/build.log": "460813ac9e25c2c0f19d7977ae2c98182ea841fb9f6dbebefcc994247577dbe9",
+    "docs/localization/calibration-de/full-pack-refusal.log": "328411eaeab33b5bb955af2b1c38fe0d9427ad6c66afcbc0300345ff5275f0a9",
+    "docs/localization/calibration-de/international-verification.log": "8dddfdf44d4f00bef1a1e321cb61dbbd6cc2ea84efee82dd3f5665b833b94010",
+    "docs/localization/calibration-de/tests.log": "cf3a2abacab2092d2cfd4bee0e9750be4c79112049be2ba7a7f8f0b83c1d4dcb"
+  },
+  "appBuild": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "9c05ce7ce6678ed39688b7ad83da364c162a5e8d30c23e7f9fb2b98b95ebf829",
+    "version": "1.6.17",
+    "bundleSetSha256": "a4df554d26cc8d1c55fef5ab9c0a4cd3c6d97ac63f848b5538fc6e9f422d0701"
+  },
+  "route": "/de/blog/calibrate-pdf-drawing-scale/"
+}

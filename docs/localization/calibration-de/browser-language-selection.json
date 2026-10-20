@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "flow": "German → English → German through the visible language selector",
+  "germanImages": [
+    {
+      "alt": "Deutsche PolyPDF-Oberfläche mit kalibriertem F-101-Bodenbelagsplan und ausgewählter Höhenprüfung von 3,60 m",
+      "src": "/localized-media/de/guides/calibration/unabhaengige-hoehenpruefung.png"
+    },
+    {
+      "alt": "Zusätzliche Übung: Architekturplan Bürgerhaus am Lindenpark",
+      "src": "/localized-media/de/samples/construction/previews/02-1.png"
+    },
+    {
+      "alt": "Deutscher F-101-Bodenbelagsplan auf A2: Raum 1 mit 20,52 m² netto und Randaussparung; Raum 2 mit 16,20 m².",
+      "src": "/localized-media/de/samples/takeoff/bodenbelag-uebung.png"
+    },
+    {
+      "alt": "Deutscher F-101-Plan mit 6,00-m-Breite und 3,60-m-Höhe neben dem Status Maßstab nicht gesetzt",
+      "src": "/localized-media/de/guides/calibration/massstab-nicht-gesetzt.png"
+    },
+    {
+      "alt": "Deutscher Kalibrierungsdialog mit erfassten 340,158 PDF-Punkten und eingegebener bekannter Distanz 6 m",
+      "src": "/localized-media/de/guides/calibration/bekannte-strecke.png"
+    }
+  ]
+}

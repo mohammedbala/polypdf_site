@@ -30,7 +30,7 @@
     },
     "takeoff.calibration.older": {
       "source": " The older screenshots in this guide use a different drawing at 18 PDF points per foot. Use the scale and dimensions of the file you actually open.",
-      "target": " Die älteren Screenshots in diesem Leitfaden zeigen eine andere Zeichnung mit Fußmaßen. Verwenden Sie Maßstab und Abmessungen der tatsächlich geöffneten Datei."
+      "target": " Die deutschen Screenshots zeigen denselben F-101-Übungsplan. Der zusätzlich verlinkte Architekturplan A101 ist eine eigene Übung mit anderen Abmessungen."
     },
     "takeoff.calibration.width": {
       "source": "Calibrate along Room 1’s printed 20 ft width: 180 PDF points ÷ 20 ft = 9 PDF points per foot. Calibration sets the scale; the following three rows are the manual measurements.",
@@ -42,7 +42,7 @@
     },
     "takeoff.calibration.evidence": {
       "source": "Reference dimensions come from the source geometry. Existing Mac outputs verify Room 1 at 228 sq ft and Room 2 at 180 sq ft in PolyPDF 1.6.6 build 38. This three-measurement exercise is guidance, not a new app test; current-release and Windows parity remain unverified.",
-      "target": "Die deutschen Referenzmaße sind anhand der gezeichneten PDF-Geometrie geprüft. Die verlinkten deutschen Mac-Beispiele enthalten 20,52 m² und 16,20 m² sowie eine getrennte Höhenprüfung von 3,60 m. Die vorbereiteten Messungen wurden in der App erneut geöffnet und exportiert. Dieser Kalibrierungsablauf mit zwei unabhängigen Längenprüfungen ist noch kein vollständig manuell geprüfter App-Durchlauf."
+      "target": "Im deutschen Mac-Entwicklungsstand von PolyPDF 1.6.17 Build 84 wurde die 6,00-m-Breite mit Zeigergesten kalibriert und die unabhängige Höhe als 3,60 m gemessen. Die zusätzliche 4,50-m-Prüfung, das Nachzeichnen der Nettofläche und das Speichern sind hier Übungsschritte, kein vollständig aufgezeichneter Durchlauf. Die verlinkten deutschen Mac-Exporte prüfen separat das Wiederöffnen und Exportieren vorbereiteter Flächen. Windows und natives iPad sind für diesen Kalibrierungsdurchlauf nicht geprüft."
     },
     "takeoff.calibration.link": {
       "source": "See the full 408 sq ft takeoff and saved Mac outputs",

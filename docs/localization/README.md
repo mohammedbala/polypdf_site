@@ -1,6 +1,6 @@
 # Regional walkthrough media
 
-This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has 65 verified asset mappings, including three prepared/native flooring download replacements. The full pack remains inactive while the screenshot/video workflows and additional sample families are unfinished. Nothing has been published.
+This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has 69 verified asset mappings. One complete route, the [German calibration guide](calibration-de/README.md), now uses German app captures, regional downloads and matching metric instructions in the normal local build. The rest of the pack remains incomplete. Nothing has been published.
 
 The app repository’s detailed scope, evidence and remaining implementation plan is at `docs/audits/global-localization-2026-10-20/README.md`.
 
@@ -37,6 +37,8 @@ POLYPDF_LOCALIZED_MEDIA_LOCALES=de node scripts/international/build.cjs
 ```
 
 This currently **fails intentionally** on a missing German `/og-image.png` replacement. Mark a locale pack `complete` only after all its media, examples and page expectations have been verified. Completed packs are enforced on every normal build.
+
+A pilot may also declare an individual route in `locales.<id>.pages`. Only a `complete` route with a matching locale/region activates its regional media. Its reviewed text overrides and element replacements are source-bound; stale copy, missing assets and changed bytes stop the build. Article image metadata uses the same verified asset as the visible hero. The international verifier compares those routes with their exact mapped images, while unfinished routes retain the original image checks.
 
 The main website build currently succeeds with the existing published localization behavior. It is not evidence that German media conversion is complete.
 

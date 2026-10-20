@@ -6,6 +6,7 @@ const crypto = require('crypto');
 const c = require('./content.cjs');
 const { assetPath, localizeWalkthroughMedia, localizeRegionalCopy, resolveAsset, verifyMediaFiles } = require('../localization/media.cjs');
 const walkthroughMedia = require('../../src/localization/walkthrough-media.json');
+const {localizedPage,pageTranslator,localizePageElements,localizeArticleImages} = require('../localization/pages.cjs');
 // Pilot runs enforce complete media coverage before they can produce publishable pages.
 // Existing released locales remain on their existing assets until their pack is verified.
 const localizedMediaLocales = new Set([
@@ -14,14 +15,16 @@ const localizedMediaLocales = new Set([
 ]);
 const build = path.resolve(c.root,process.env.BUILD_PATH || 'build');
 const collect = process.argv.includes('--extract');
-if (!collect && localizedMediaLocales.size) {
+const verifiedMediaLocales = new Set([...localizedMediaLocales,
+  ...Object.entries(walkthroughMedia.locales).filter(([,pack])=>Object.values(pack.pages || {}).some(page=>page.status==='complete')).map(([id])=>id)]);
+if (!collect && verifiedMediaLocales.size) {
   verifyMediaFiles(walkthroughMedia, require('../../src/localization/product-locales.json').locales, value => {
     const pathname = assetPath(value);
     if (!pathname) throw new Error(`Expected a local media file: ${value}`);
     const target = path.resolve(build, '.' + decodeURIComponent(pathname));
     if (!target.startsWith(build + path.sep)) throw new Error(`Media path escapes build: ${value}`);
     return fs.readFileSync(target);
-  }, [...localizedMediaLocales]);
+  }, [...verifiedMediaLocales]);
 }
 const trackingScript = collect ? '/static/js/localized-tracking.extract.js' : JSON.parse(fs.readFileSync(path.join(build, 'localized-tracking-manifest.json'), 'utf8')).src;
 const out = path.join(c.root,'.tmp/international');
@@ -33,17 +36,22 @@ const allLocales = collect ? [c.locales[0]] : c.locales;
 const json = (value) => JSON.stringify(value).replaceAll('<','\\u003c').replaceAll('>','\\u003e').replaceAll('&','\\u0026');
 for (const locale of allLocales) {
   const catalog = collect ? null : JSON.parse(fs.readFileSync(path.join(c.root,'src/content/translations',`${locale.id}.json`),'utf8'));
-  const t = c.translateFactory(catalog,collect);
+  const baseTranslate = c.translateFactory(catalog,collect);
+  const t = baseTranslate;
   const entries = [];
   for (const route of c.routes) {
+    const page = collect ? null : localizedPage(walkthroughMedia,locale,route);
+    const useRegionalMedia = !collect && (localizedMediaLocales.has(locale.id) || Boolean(page));
+    const t = pageTranslator(baseTranslate,page);
     const {dom,assets,schema,meta} = c.sourcePage(build,route);
     const d = dom.window.document;
-    if (!collect && localizedMediaLocales.has(locale.id)) localizeRegionalCopy(d, locale, walkthroughMedia);
+    localizePageElements(d,locale,page);
+    if (useRegionalMedia) localizeRegionalCopy(d, locale, walkthroughMedia);
     c.translateDOM(d.body,t);
     d.querySelector('[data-language-slot]').outerHTML = c.languageNavigation(route,locale,t);
     c.localizeLinks(d,locale,t);
-    c.localizeMetricPlan(d,locale,t);
-    if (!collect && localizedMediaLocales.has(locale.id)) localizeWalkthroughMedia(d, locale, walkthroughMedia);
+    if (useRegionalMedia) localizeWalkthroughMedia(d, locale, walkthroughMedia);
+    else c.localizeMetricPlan(d,locale,t);
     const canonical = c.ORIGIN+c.localizedPath(locale.id,route);
     const translatedMeta = {...meta,title:t(meta.title),description:t(meta.description),imageAlt:t(meta.imageAlt || 'PolyPDF — PDF drawing measurement and markup on Mac and Windows')};
     translatedMeta.title = editorialTitles[locale.id]?.[route] || translatedMeta.title;
@@ -51,10 +59,11 @@ for (const locale of allLocales) {
     const visibleTitle = translatedMeta.title.split('|')[0].trim();
     d.querySelector('h1').textContent = visibleTitle;
     const sourceImage = meta.image || `/og-image.png?v=${require('../../src/lib/siteRelease.json').screenshotCacheToken}`;
-    const image = new URL(!collect && localizedMediaLocales.has(locale.id) ? resolveAsset(sourceImage, locale, walkthroughMedia) : sourceImage,c.ORIGIN).href;
+    const image = new URL(useRegionalMedia ? resolveAsset(sourceImage, locale, walkthroughMedia) : sourceImage,c.ORIGIN).href;
     const blocks = c.mapSchema(schema,t,locale);
     // The product is one shared entity (@id .../#software): it keeps the same url on every localized home.
     if (route === '/') blocks.forEach((block,i)=>{ if (block['@type'] === 'SoftwareApplication' && schema[i]?.url) block.url = schema[i].url; });
+    if (useRegionalMedia) localizeArticleImages(blocks,locale,walkthroughMedia);
     for (const block of blocks) {
       if (block['@type'] === 'BlogPosting') {
         block.inLanguage = locale.language;
@@ -68,6 +77,7 @@ for (const locale of allLocales) {
     const html = `<!doctype html><html lang="${locale.language}" dir="${locale.dir || 'ltr'}" class="localized-page"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${c.esc(translatedMeta.title)}</title><meta name="description" content="${c.esc(translatedMeta.description)}"><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="${canonical}">${c.alternatives(route).map((a)=>`<link rel="alternate" hreflang="${a.language}" href="${a.href}">`).join('')}<link rel="alternate" type="application/rss+xml" href="/${locale.id}/feed.xml" title="PolyPDF — ${locale.label}"><meta property="og:type" content="${meta.type || 'website'}"><meta property="og:url" content="${canonical}"><meta property="og:title" content="${c.esc(translatedMeta.title)}"><meta property="og:description" content="${c.esc(translatedMeta.description)}"><meta property="og:locale" content="${locale.og}"><meta property="og:image" content="${image}"><meta property="og:image:alt" content="${c.esc(translatedMeta.imageAlt)}"><meta property="og:image:width" content="${meta.imageWidth || 1200}"><meta property="og:image:height" content="${meta.imageHeight || 630}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${c.esc(translatedMeta.title)}"><meta name="twitter:description" content="${c.esc(translatedMeta.description)}"><meta name="twitter:image" content="${image}"><meta name="twitter:image:alt" content="${c.esc(translatedMeta.imageAlt)}"><link rel="icon" href="/favicon.ico">${assets}${blocks.map((b)=>`<script type="application/ld+json">${json(b)}</script>`).join('')}</head><body>${d.body.innerHTML}${consentUI}<script defer src="${trackingScript}"></script></body></html>`;
     const entry = {route:c.localizedPath(locale.id,route),source:route,language:locale.language,title:translatedMeta.title,description:translatedMeta.description,type:meta.type || 'website',image,published:blocks.find((b)=>b['@type']==='BlogPosting')?.datePublished};
     entries.push(entry); manifest.push(entry);
+    t.verify();
     if (!collect) {
       const target = c.fileFor(build,c.localizedPath(locale.id,route));
       fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,html);

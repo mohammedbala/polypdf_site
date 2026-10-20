@@ -1,0 +1,65 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "9c05ce7ce6678ed39688b7ad83da364c162a5e8d30c23e7f9fb2b98b95ebf829",
+    "version": "1.6.17",
+    "bundleSetSha256": "a4df554d26cc8d1c55fef5ab9c0a4cd3c6d97ac63f848b5538fc6e9f422d0701"
+  },
+  "sourcePdf": "/localized-media/de/samples/takeoff/bodenbelag-uebung.pdf",
+  "sourceSha256": "2225016bafc5c55964a7bdd1e51b4766a80281675f6f2c86f93287c833f4bd60",
+  "captureScriptSha256": "78929d3f7c7e2b3bcca820ce40308d3a40c869e812dd124e7aeaf40a2933262d",
+  "profileSha256": "ef7bbbe76a2bcc2bb3767f955f6bb97d70c3659bf435b8450065777c02368dc0",
+  "capture": "Actual owned Electron renderer; UI control events and CDP pointer gestures. Automation APIs read annotations only.",
+  "calibration": {
+    "enteredMetres": 6,
+    "expectedPoints": 340.15748031496065,
+    "dialog": "Seitenmaßstab kalibrieren\n\nErfasste 340,158 PDF-Punkte zwischen eingerasteten Endpunkten. Geben Sie die reale Länge dieser Linie ein. Reine Zahlen werden als m interpretiert.\n\nBekannte Distanz\nAbbrechen\nOK",
+    "scaleText": "✓Kalibriert56,69292 PDF-Punkte pro m"
+  },
+  "independentCheck": {
+    "expectedMetres": 3.6,
+    "actualMetres": 3.6000000000000005,
+    "display": "3,60 m",
+    "points": [
+      {
+        "x": 210.70867800000002,
+        "y": 625.511595390625
+      },
+      {
+        "x": 210.70867800000002,
+        "y": 421.41708339062495
+      }
+    ],
+    "pointsPerMetre": 56.692919999999994
+  },
+  "viewport": {
+    "width": 1710,
+    "height": 1073,
+    "pixelRatio": 1
+  },
+  "shots": [
+    {
+      "file": "massstab-nicht-gesetzt.png",
+      "sha256": "9a0c28e935aa221805c7f6403d81d4f20d14491c2a3acdbb35f213d0398d3559"
+    },
+    {
+      "file": "bekannte-strecke.png",
+      "sha256": "f830f070a28500967412d1257687cb1c7f4851937b0b528dbdc5cea81b999fde"
+    },
+    {
+      "file": "unabhaengige-hoehenpruefung.png",
+      "sha256": "f53dbe24fa873f773408ef8e9ae6ded8c64157fcfbe7abf71267787d4201e992"
+    }
+  ],
+  "visualReview": "All three full-size app captures reviewed: German drawing and controls, visible 6 m input, calibrated ratio, independent 3,60 m reading.",
+  "limitations": [
+    "Local development build, not a published release",
+    "No Windows or native iPad run",
+    "This capture checks one independent length; the suggested second length, net area and Save sequence are separate exercises"
+  ]
+}

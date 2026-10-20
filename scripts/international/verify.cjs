@@ -7,6 +7,9 @@ const { JSDOM } = require('jsdom');
 const c = require('./content.cjs');
 const checks = require('./discovery-checks.cjs');
 const pageDates = require('./page-dates.cjs');
+const walkthroughMedia = require('../../src/localization/walkthrough-media.json');
+const {resolveAsset} = require('../localization/media.cjs');
+const {localizedPage} = require('../localization/pages.cjs');
 const build = path.resolve(c.root,process.env.BUILD_PATH || 'build');
 const manifest = JSON.parse(fs.readFileSync(path.join(build,'international-manifest.json'),'utf8'));
 assert.equal(manifest.routes.length,c.routes.length*c.locales.length);
@@ -79,12 +82,20 @@ for (const e of manifest.routes) {
     assert.equal(d.querySelectorAll('#localized-content ol li').length,original.steps,prefix+'all steps retained');
     assert.equal(d.querySelectorAll('#localized-content table').length,original.tables,prefix+'all tables retained');
     assert.equal(d.querySelectorAll('#localized-content .blog-faq-item').length,original.faq,prefix+'all FAQs retained');
+    const useRegionalMedia = walkthroughMedia.locales[locale.id]?.status === 'complete'
+      || Boolean(localizedPage(walkthroughMedia,locale,e.source))
+      || (process.env.POLYPDF_LOCALIZED_MEDIA_LOCALES || '').split(',').includes(locale.id);
+    if (useRegionalMedia) {
+      const expectedImages = useRegionalMedia ? original.images.map(src=>resolveAsset(src,locale,walkthroughMedia)) : original.images;
+    assert.deepEqual([...d.querySelectorAll('#localized-content img')].map((n)=>n.getAttribute('src')),expectedImages,prefix+'authentic source or verified regional images');
+    } else {
     // The metric plan moves ahead of the plan in feet and shows the reader's own sheet, so it is checked on its own.
     const isMetricPreview=(src)=>src.startsWith('/samples/metric/previews/');
     const localizedImages=[...d.querySelectorAll('#localized-content img')].map((n)=>n.getAttribute('src'));
     assert.deepEqual(localizedImages.filter((src)=>!isMetricPreview(src)),original.images.filter((src)=>!isMetricPreview(src)),prefix+'authentic images retained');
     assert.equal(localizedImages.filter(isMetricPreview).length,original.images.filter(isMetricPreview).length,prefix+'metric plan preview retained');
     for(const src of localizedImages.filter(isMetricPreview))assert(src.includes(`plan-${c.metricSheetLocales.includes(locale.id)?locale.id:'en'}-`),prefix+'metric plan preview language');
+    }
     assert.deepEqual([...d.querySelectorAll('#localized-content pre')].map((n)=>n.textContent),original.code,prefix+'code unchanged');
   }
   for(const script of d.querySelectorAll('script[type="application/ld+json"]')) {

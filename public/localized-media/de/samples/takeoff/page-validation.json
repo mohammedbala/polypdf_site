@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "Regional source bindings and source-preview accessibility on six built pages",
-  "profileSha256": "f83e7c65b006bbc98f1a2432c894fd6cf508ae47bae675ec1ccd972c0befb3a1",
+  "profileSha256": "dc8aea036bbab159e406dcc0b6041c208116ee24d6de790ff9ea75e355f9a429",
   "sourceFiles": {
     "src/components/AreaPractice.js": "91b3d07a1b906446c09b58136d96c21f6663a5fe654785bc1d4682fc63a32d86",
     "src/components/CalibrationPractice.js": "9cba1d4686b44596ea3a026ff118a260c68744cff5d4da2d17b0a5aec153576c",
@@ -59,7 +59,7 @@
     }
   ],
   "limitations": [
-    "Full page screenshots, videos and unbound metadata/FAQ remain pending; only three flooring app-output downloads have been replaced",
-    "No full media-pack or native UI qualification is claimed; the German pack remains pilot and inactive"
+    "Other pages still need full screenshot/video and metadata coverage; the German calibration guide has its own complete page verification",
+    "No full media-pack or cross-platform qualification is claimed; the German pack remains pilot with one completed guide"
   ]
 }

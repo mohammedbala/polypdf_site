@@ -91,7 +91,10 @@ test('the checked-in German regional library resolves exact verified PDF and pre
   const root = path.resolve(__dirname, '..');
   const data = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/walkthrough-media.json')));
   const registry = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/product-locales.json'))).locales;
-  verifyMediaFiles(data, registry, asset => fs.readFileSync(path.join(root, 'public', asset)), ['de']);
+  verifyMediaFiles(data, registry, asset => {
+    const sourcePath = data.locales.de.assets[asset]?.sourcePath;
+    return fs.readFileSync(sourcePath ? path.join(root,sourcePath) : path.join(root,'public',asset));
+  }, ['de']);
   assert.equal(Object.keys(data.locales.de.assets).filter(asset => asset.startsWith('/samples/construction/') && asset.endsWith('.pdf')).length, 12);
   const source = '/samples/construction/02-Architectural-Revision-A.pdf';
   const preview = '/samples/construction/previews/02-Architectural-Revision-A--page-01.png';

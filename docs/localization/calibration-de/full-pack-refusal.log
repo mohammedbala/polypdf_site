@@ -1,0 +1,18 @@
+Localized 30 pages: es
+Localized 30 pages: pt-br
+/Users/mohammedbala/Projects/polypdf_site-localization/scripts/localization/media.cjs:26
+  if (!asset) throw new Error(`Missing localized walkthrough asset: ${locale.id} ${source}`);
+              ^
+
+Error: Missing localized walkthrough asset: de /og-image.png
+    at resolveAsset (/Users/mohammedbala/Projects/polypdf_site-localization/scripts/localization/media.cjs:26:21)
+    at Object.<anonymous> (/Users/mohammedbala/Projects/polypdf_site-localization/scripts/international/build.cjs:60:46)
+    at Module._compile (node:internal/modules/cjs/loader:1781:14)
+    at Object..js (node:internal/modules/cjs/loader:1913:10)
+    at Module.load (node:internal/modules/cjs/loader:1505:32)
+    at Function._load (node:internal/modules/cjs/loader:1309:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.23.2

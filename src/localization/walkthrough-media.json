@@ -844,6 +844,62 @@
           "status": "verified",
           "verification": "/localized-media/de/samples/takeoff/app-exports/manifest.json",
           "visualReview": "/localized-media/de/samples/takeoff/app-exports/visual-review.json"
+        },
+        "/static/media/calibration-uncalibrated-v1-4-dark-web.a3e2ba99dfeb66dc2473.png": {
+          "url": "/localized-media/de/guides/calibration/massstab-nicht-gesetzt.png",
+          "locale": "de-DE",
+          "region": "DE",
+          "status": "verified",
+          "appBuild": "1.6.17+84",
+          "sourcePath": "src/assets/screenshots/calibration-uncalibrated-v1-4-dark-web.png",
+          "sourceSha256": "404892474ed9c54ba43ca629570940ea9e20dc561ab2ac998d18994dd2a36df3",
+          "sha256": "9a0c28e935aa221805c7f6403d81d4f20d14491c2a3acdbb35f213d0398d3559",
+          "width": 1710,
+          "height": 1073,
+          "alt": "Deutscher F-101-Plan mit 6,00-m-Breite und 3,60-m-Höhe neben dem Status Maßstab nicht gesetzt",
+          "verification": "/localized-media/de/guides/calibration/verification.json"
+        },
+        "/static/media/calibration-known-distance-dialog-v1-4-dark-web.1f7a8482836353d582f2.png": {
+          "url": "/localized-media/de/guides/calibration/bekannte-strecke.png",
+          "locale": "de-DE",
+          "region": "DE",
+          "status": "verified",
+          "appBuild": "1.6.17+84",
+          "sourcePath": "src/assets/screenshots/calibration-known-distance-dialog-v1-4-dark-web.png",
+          "sourceSha256": "213c5f29f27f6618954baaca9a772c2f08f6f1253248c93b1a09ed51e9e08728",
+          "sha256": "f830f070a28500967412d1257687cb1c7f4851937b0b528dbdc5cea81b999fde",
+          "width": 1710,
+          "height": 1073,
+          "alt": "Deutscher Kalibrierungsdialog mit erfassten 340,158 PDF-Punkten und eingegebener bekannter Distanz 6 m",
+          "verification": "/localized-media/de/guides/calibration/verification.json"
+        },
+        "/static/media/calibration-verified-second-span-v1-4-dark-web.55b48582ab08dfd30ee9.png": {
+          "url": "/localized-media/de/guides/calibration/unabhaengige-hoehenpruefung.png",
+          "locale": "de-DE",
+          "region": "DE",
+          "status": "verified",
+          "appBuild": "1.6.17+84",
+          "sourcePath": "src/assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png",
+          "sourceSha256": "27a2bb5ffe16d0867b7438b5c749606e1fcb531d53c9ba3c200e5d15e59d9a8b",
+          "sha256": "f53dbe24fa873f773408ef8e9ae6ded8c64157fcfbe7abf71267787d4201e992",
+          "width": 1710,
+          "height": 1073,
+          "alt": "Deutsche PolyPDF-Oberfläche mit kalibriertem F-101-Bodenbelagsplan und ausgewählter Höhenprüfung von 3,60 m",
+          "verification": "/localized-media/de/guides/calibration/verification.json"
+        },
+        "/guides/calibrate-pdf-drawing-scale.png": {
+          "url": "/localized-media/de/guides/calibration/unabhaengige-hoehenpruefung.png",
+          "locale": "de-DE",
+          "region": "DE",
+          "status": "verified",
+          "appBuild": "1.6.17+84",
+          "sourcePath": "public/guides/calibrate-pdf-drawing-scale.png",
+          "sourceSha256": "27a2bb5ffe16d0867b7438b5c749606e1fcb531d53c9ba3c200e5d15e59d9a8b",
+          "sha256": "f53dbe24fa873f773408ef8e9ae6ded8c64157fcfbe7abf71267787d4201e992",
+          "width": 1710,
+          "height": 1073,
+          "alt": "Deutsche PolyPDF-Oberfläche mit kalibriertem F-101-Bodenbelagsplan und ausgewählter Höhenprüfung von 3,60 m",
+          "verification": "/localized-media/de/guides/calibration/verification.json"
         }
       },
       "regionalForm": {
@@ -956,7 +1012,7 @@
         },
         "takeoff.calibration.older": {
           "source": " The older screenshots in this guide use a different drawing at 18 PDF points per foot. Use the scale and dimensions of the file you actually open.",
-          "target": " Die älteren Screenshots in diesem Leitfaden zeigen eine andere Zeichnung mit Fußmaßen. Verwenden Sie Maßstab und Abmessungen der tatsächlich geöffneten Datei."
+          "target": " Die deutschen Screenshots zeigen denselben F-101-Übungsplan. Der zusätzlich verlinkte Architekturplan A101 ist eine eigene Übung mit anderen Abmessungen."
         },
         "takeoff.calibration.width": {
           "source": "Calibrate along Room 1’s printed 20 ft width: 180 PDF points ÷ 20 ft = 9 PDF points per foot. Calibration sets the scale; the following three rows are the manual measurements.",
@@ -968,7 +1024,7 @@
         },
         "takeoff.calibration.evidence": {
           "source": "Reference dimensions come from the source geometry. Existing Mac outputs verify Room 1 at 228 sq ft and Room 2 at 180 sq ft in PolyPDF 1.6.6 build 38. This three-measurement exercise is guidance, not a new app test; current-release and Windows parity remain unverified.",
-          "target": "Die deutschen Referenzmaße sind anhand der gezeichneten PDF-Geometrie geprüft. Die verlinkten deutschen Mac-Beispiele enthalten 20,52 m² und 16,20 m² sowie eine getrennte Höhenprüfung von 3,60 m. Die vorbereiteten Messungen wurden in der App erneut geöffnet und exportiert. Dieser Kalibrierungsablauf mit zwei unabhängigen Längenprüfungen ist noch kein vollständig manuell geprüfter App-Durchlauf."
+          "target": "Im deutschen Mac-Entwicklungsstand von PolyPDF 1.6.17 Build 84 wurde die 6,00-m-Breite mit Zeigergesten kalibriert und die unabhängige Höhe als 3,60 m gemessen. Die zusätzliche 4,50-m-Prüfung, das Nachzeichnen der Nettofläche und das Speichern sind hier Übungsschritte, kein vollständig aufgezeichneter Durchlauf. Die verlinkten deutschen Mac-Exporte prüfen separat das Wiederöffnen und Exportieren vorbereiteter Flächen. Windows und natives iPad sind für diesen Kalibrierungsdurchlauf nicht geprüft."
         },
         "takeoff.calibration.link": {
           "source": "See the full 408 sq ft takeoff and saved Mac outputs",
@@ -1191,6 +1247,81 @@
                 "20,52 m²"
               ]
             ]
+          }
+        }
+      },
+      "pages": {
+        "/blog/calibrate-pdf-drawing-scale": {
+          "status": "complete",
+          "locale": "de-DE",
+          "region": "DE",
+          "evidence": "/localized-media/de/guides/calibration/verification.json",
+          "elements": [
+            {
+              "selector": ".blog-verification > div:nth-child(1) dd",
+              "source": "Aligned with PolyPDF 1.5.1 (build 23) on September 7, 2026. Earlier walkthroughs and screenshots retain their versions below.",
+              "target": "Deutscher Kalibrierungsdurchlauf im lokalen Entwicklungsstand 1.6.17 Build 84; kein Nachweis eines veröffentlichten Installers."
+            },
+            {
+              "selector": ".blog-verification > div:nth-child(2) dd",
+              "source": "September 3, 2026",
+              "target": "20. Oktober 2026"
+            },
+            {
+              "selector": ".blog-verification > div:nth-child(3) dd",
+              "source": "PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)",
+              "target": "PolyPDF 1.6.17 Build 84 — deutscher lokaler Entwicklungsstand"
+            },
+            {
+              "selector": ".blog-verification > div:nth-child(4) dd",
+              "source": "macOS and Windows",
+              "target": "Für diesen Durchlauf geprüft: macOS"
+            },
+            {
+              "selector": ".blog-formula code",
+              "source": "360 PDF pt ÷ 20 ft = 18 PDF pt per ft",
+              "target": "340,15748 PDF-Punkte ÷ 6,00 m ≈ 56,692913 PDF-Punkte pro m"
+            },
+            {
+              "selector": "#construction-example-takeoff figcaption bdi",
+              "source": "02-Architectural-Revision-A.pdf",
+              "target": "02-Architektur-Revision-A.pdf"
+            }
+          ],
+          "text": {
+            "To calibrate a PDF drawing, open the page in PolyPDF, choose Measurements › Scale, and either apply the scale notation printed on the sheet or choose Calibrate by Drawing Line. For line calibration, snap the two endpoints to a known span, enter its real-world length, and then measure a different labeled span. Do not begin takeoff until that second value agrees within the tolerance your work requires.": "Öffnen Sie die Zeichnung und wählen Sie Messungen › Maßstab. Nutzen Sie einen passenden Maßstab aus dem Plankopf oder „Durch Linienzeichnung kalibrieren“. Für dieses Beispiel wählen Sie Metrisch und unter Formatierung die Länge Meter. Aktivieren Sie das Einrasten, erfassen Sie die beiden Endpunkte der 6,00-m-Breite und geben Sie 6 ein. Prüfen Sie anschließend die unabhängige 3,60-m-Höhe. Beginnen Sie die Mengenermittlung erst, wenn die Kontrollmessung innerhalb Ihrer Projekttoleranz liegt.",
+            "PolyPDF dark-mode window showing an 18 PDF point per foot calibration and selected 12-foot verification measurement": "Deutsche PolyPDF-Oberfläche mit kalibriertem F-101-Bodenbelagsplan und ausgewählter Höhenprüfung von 3,60 m",
+            "The Page Scale card reports 18 PDF pt per ft, and a second, independently drawn 216-point span reads 12′-0″ with its measurement style controls open.": "Der Seitenmaßstab zeigt 56,69292 PDF-Punkte pro m. Die unabhängig gezeichnete Höhenprüfung liest 3,60 m und stimmt bei zwei Nachkommastellen mit der gedruckten Höhe überein.",
+            "The screenshots in this guide use a sample plan sheet.": "Tatsächliche Mac-Aufnahmen des deutschen F-101-Übungsplans in PolyPDF 1.6.17 Build 84 (lokaler Entwicklungsstand).",
+            "Metric dimensions in 1.5.1": "Metrische Darstellung für diese Übung",
+            "In PolyPDF 1.5.1, new metric dimensions default to millimetres. Existing documents retain their explicit display formats, and metric area and volume remain in square and cubic metres. Changing the displayed unit does not establish the page scale: verify a known dimension after any scale or unit change.": "Wählen Sie im Bereich Messungen › Maßstab zunächst Metrisch und unter Formatierung › Länge ausdrücklich Meter. Neue metrische Bemaßungen können sonst Millimeter verwenden. Die reine Zahl 6 wird im hier gewählten Meterformat als 6 m gelesen. Ein Wechsel der Anzeigeeinheit ersetzt keine Kalibrierung; bestehende Dokumente behalten ihre eigenen Formate.",
+            "PolyPDF dark-mode window showing Scale not set beside printed 20-foot and 12-foot plan dimensions": "Deutscher F-101-Plan mit 6,00-m-Breite und 3,60-m-Höhe neben dem Status Maßstab nicht gesetzt",
+            "Before calibration, the Page Scale card reads “Scale not set.” This sheet prints two references: a 20′-0″ horizontal span to calibrate from, and a separate 12′-0″ vertical span to check the result against.": "Vor der Kalibrierung steht im Seitenmaßstab „Maßstab nicht gesetzt“. Die obere 6,00-m-Breite von Raum 1 dient als Referenz. Die linke 3,60-m-Höhe wird danach unabhängig geprüft.",
+            "Open the Measurements panel, choose the Scale view, and confirm the page number shown in the Page Scale card.": "Öffnen Sie Messungen › Maßstab und prüfen Sie die angezeigte Seite. Wählen Sie Metrisch und im Abschnitt Formatierung für Länge die Option Meter. Aktivieren Sie das Einrasten über das Magnetsymbol in der Fußleiste.",
+            "Under “The sheet does not,” choose Calibrate by Drawing Line.": "Wählen Sie „Durch Linienzeichnung kalibrieren“ im Abschnitt „Der Plan gibt keinen Maßstab an“. Dieser Weg lässt sich auch nutzen, um den auf F-101 angegebenen Maßstab 1:50 anhand einer bekannten Strecke zu prüfen.",
+            "In Calibrate Page Scale, enter the real-world Known Distance. With the feet-and-inches format active, the bare value 20 is read as 20 feet.": "Geben Sie im Dialog „Seitenmaßstab kalibrieren“ unter „Bekannte Distanz“ den Wert 6 ein. Im zuvor gewählten Meterformat bedeutet dies 6 m. Bestätigen Sie mit OK.",
+            "Confirm the card says Calibrated and shows the captured ratio in PDF points per base unit.": "Prüfen Sie den Status „Kalibriert“ und das Verhältnis in PDF-Punkten pro m. Im aufgenommenen Durchlauf wird 56,69292 angezeigt.",
+            "Switch to a length measurement tool and measure a second labeled dimension that was not used for calibration.": "Wählen Sie „Lineare Bemaßung“ und erfassen Sie die beiden Endpunkte der separaten linken 3,60-m-Höhe. Diese Strecke wurde nicht für die Kalibrierung verwendet.",
+            "PolyPDF Calibrate Page Scale dialog showing 360 captured PDF points and a known distance of 20 feet": "Deutscher Kalibrierungsdialog mit erfassten 340,158 PDF-Punkten und eingegebener bekannter Distanz 6 m",
+            "After snapping across the printed 20′-0″ reference, PolyPDF reports “Captured 360 PDF points between snapped endpoints.” The Known Distance field contains 20, interpreted as feet in the active ft-in format.": "Nach dem Einrasten an der 6,00-m-Maßlinie meldet der Dialog gerundet 340,158 PDF-Punkte zwischen eingerasteten Endpunkten. Im Feld „Bekannte Distanz“ steht 6; der Dialog nennt m als Einheit für reine Zahlen.",
+            "Worked calibration: 20 feet across 360 points": "Rechenbeispiel: 6,00 m über rund 340,15748 PDF-Punkte",
+            "The sample sheet prints a 20′-0″ horizontal dimension on the main plan. Snapping to its two endpoints captures exactly 360 PDF points. Entering 20 feet makes the page conversion explicit rather than assuming the printed 1/4-inch scale survived export or scanning.": "Der deutsche Bodenbelagsplan F-101 ist auf A2 im Maßstab 1:50 gezeichnet. Die 6,00-m-Breite entspricht in der Quellgeometrie rund 340,15748 PDF-Punkten. Im tatsächlichen App-Durchlauf zeigt der Dialog 340,158 Punkte an. Kleine Unterschiede entstehen durch die Koordinaten- und Anzeigegenauigkeit; die Eingabe 6 m setzt den Maßstab aus der erfassten Strecke.",
+            "The saved Page Scale card therefore reports 18 PDF pt per ft. A different 216-point vertical span should convert to 12 feet: 216 PDF pt ÷ 18 PDF pt/ft = 12 ft.": "Die Formel verwendet den nominalen Maßstab 1:50. Die App zeigt für die tatsächlich eingerasteten Punkte 56,69292 PDF-Punkte pro m. Die unabhängige Höhe hat nominal rund 204,09449 PDF-Punkte und ergibt bei diesem Maßstab 3,60 m. Rechnen Sie nicht mit dem auf drei Nachkommastellen gerundeten Dialogwert weiter.",
+            "That independent vertical measurement reads exactly 12′-0″, matching the printed dimension on the sheet. On your own drawings, run the same check on a second labeled span and stop to investigate when the result falls outside the tolerance your takeoff requires. Accuracy depends on the drawing itself, the calibration you set, and where you place each endpoint.": "Die separat gezeichnete Höhenprüfung liest 3,60 m und stimmt bei der gewählten Anzeige mit der gedruckten Bemaßung überein. Prüfen Sie auf eigenen Zeichnungen weitere bekannte Strecken und beide Richtungen mit Ihrer Projekttoleranz. Eine passende gerundete Anzeige allein belegt keine beliebige Genauigkeit. Zeichnungsqualität, Maßstab und Endpunktwahl bestimmen das Ergebnis.",
+            "Measure the Willow Creek architectural plan": "Zusätzliche Übung: Architekturplan Bürgerhaus am Lindenpark",
+            "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.": "Öffnen Sie den deutschen Plan A101, Revision A. Kalibrieren Sie die gedruckte 5,00-m-Referenz; sie umfasst bei 1:50 rund 283,46457 PDF-Punkte.",
+            "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.": "Prüfen Sie unabhängig die Breite von 24,00 m und die Tiefe von 15,00 m. Zeichnen Sie anschließend die äußere Gebäudegrenze nach.",
+            "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.": "Vergleichen Sie die Brutto-Grundfläche mit 360,00 m². Halten Sie Plan, Revision, Betreff, Einheit und Summe im exportierten Datensatz fest.",
+            "Inspect the saved Mac example and its tested local build →": "Zum historischen englischen Mac-Beispiel; kein Nachweis für diese deutsche Zeichnung →",
+            "Translated from the English edition. Screenshots and app control names may remain in English. Original example units and verification dates are preserved. Prices are in USD; checkout, account, release feeds, and policies are in English.": "Diese Seite verwendet deutsche App-Aufnahmen und metrische deutsche Übungspläne. Der Kalibrierungsdurchlauf wurde im lokalen Mac-Entwicklungsstand geprüft. Windows und natives iPad wurden dafür nicht geprüft. Preise sind in USD; Checkout, Konto, Release-Feeds und Richtlinien sind auf Englisch.",
+            "Do not mix values from calibrated and uncalibrated pages. In PolyPDF 1.4.0, an uncalibrated page reports physical PDF points or square points rather than inventing a real-world scale.": "Mischen Sie keine Werte von kalibrierten und unkalibrierten Seiten. Ohne festgelegten Maßstab gibt PolyPDF physische PDF-Punkte beziehungsweise Quadratpunkte aus.",
+            "The exercise above uses the Willow Creek library. Earlier walkthrough screenshots and saved examples below retain their original drawings, versions, and quantities.": "Die zusätzliche Übung oben verwendet den deutschen Architekturplan A101. Die folgenden App-Aufnahmen zeigen den separaten deutschen Bodenbelagsplan F-101. Jeder Plan muss anhand seiner eigenen gedruckten Maße kalibriert werden.",
+            "Scrollable image: PolyPDF dark-mode window showing an 18 PDF point per foot calibration and selected 12-foot verification measurement": "Scrollbares Bild: Deutsche PolyPDF-Oberfläche mit kalibriertem F-101-Bodenbelagsplan und ausgewählter Höhenprüfung von 3,60 m",
+            "Scrollable image: PolyPDF dark-mode window showing Scale not set beside printed 20-foot and 12-foot plan dimensions": "Scrollbares Bild: Deutscher F-101-Plan mit 6,00-m-Breite und 3,60-m-Höhe neben dem Status Maßstab nicht gesetzt",
+            "Scrollable image: PolyPDF Calibrate Page Scale dialog showing 360 captured PDF points and a known distance of 20 feet": "Scrollbares Bild: Deutscher Kalibrierungsdialog mit erfassten 340,158 PDF-Punkten und eingegebener bekannter Distanz 6 m",
+            "Walkthrough verified": "Ablauf geprüft",
+            "Release review": "Stand des Beispiels",
+            "A green “Calibrated” state means a scale was saved. It does not mean the line or the typed distance was right, which is why the second known dimension matters.": "Der grüne Status „Kalibriert“ bestätigt, dass ein Maßstab gespeichert wurde. Er bestätigt nicht, dass die gewählte Strecke oder der eingegebene Wert richtig war. Deshalb ist die unabhängige Kontrollmessung erforderlich."
           }
         }
       }

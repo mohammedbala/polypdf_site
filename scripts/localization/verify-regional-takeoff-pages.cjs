@@ -70,8 +70,8 @@ fs.writeFileSync(path.join(root, 'public/localized-media/de/samples/takeoff/page
   sourceFiles: Object.fromEntries(sourceFiles.map(file => [file, hash(read(file))])),
   regionalCopyRecords: seen.size, regionalTables: seenTables.size, pages,
   limitations: [
-    'Full page screenshots, videos and unbound metadata/FAQ remain pending; only three flooring app-output downloads have been replaced',
-    'No full media-pack or native UI qualification is claimed; the German pack remains pilot and inactive'
+    'Other pages still need full screenshot/video and metadata coverage; the German calibration guide has its own complete page verification',
+    'No full media-pack or cross-platform qualification is claimed; the German pack remains pilot with one completed guide'
   ]
 }, null, 2) + '\n');
 console.log(`Verified ${seen.size} regional copy records, ${seenTables.size} tables and preview descriptions across six built pages.`);
