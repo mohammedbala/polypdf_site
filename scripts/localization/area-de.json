@@ -1,0 +1,191 @@
+{
+  "status": "complete",
+  "locale": "de-DE",
+  "region": "DE",
+  "evidence": "/localized-media/de/guides/area/verification.json",
+  "elements": [
+    {
+      "selector": ".blog-verification > div:nth-child(1) dd",
+      "source": "Aligned with PolyPDF 1.5.4 (build 26) on September 11, 2026. Earlier walkthroughs and screenshots retain their versions below.",
+      "target": "Deutscher Flächen- und Volumendurchlauf im lokalen Entwicklungsstand 1.6.17 Build 84; kein Nachweis eines veröffentlichten Installers."
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(2) dd",
+      "source": "September 3, 2026",
+      "target": "20. Oktober 2026"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(3) dd",
+      "source": "PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)",
+      "target": "PolyPDF 1.6.17 Build 84 — deutscher lokaler Entwicklungsstand"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(4) dd",
+      "source": "macOS and Windows",
+      "target": "Für diesen Durchlauf geprüft: macOS"
+    },
+    {
+      "selector": ".blog-formula[aria-label=\"Net area\"] code",
+      "source": "net area = outer boundary area − Σ(each cutout area)",
+      "target": "Nettofläche = Bruttofläche − Summe der Aussparungen"
+    },
+    {
+      "selector": ".blog-formula[aria-label=\"Example net area\"] code",
+      "source": "curved outer area − cutout 1 − cutout 2 = 28,793.49 sq ft net",
+      "target": "96,00 m² − 4,00 m² − 6,00 m² = 86,00 m²"
+    },
+    {
+      "selector": ".blog-formula[aria-label=\"Volume from net area\"] code",
+      "source": "volume = (outer area − cutout areas) × depth",
+      "target": "86,00 m² × 0,15 m = 12,90 m³"
+    },
+    {
+      "selector": "#construction-example-flooring figcaption bdi",
+      "source": "10-Interiors-Finishes-and-Millwork.pdf",
+      "target": "10-Innenausbau-und-Einbaumoebel.pdf"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(1) th:nth-child(1)",
+      "source": "Outer boundary",
+      "target": "Außenumriss"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(1) td:nth-child(2)",
+      "source": "Curved path",
+      "target": "12,00 m × 8,00 m"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(1) td:nth-child(3)",
+      "source": "Included in the net-area calculation",
+      "target": "96,00 m²"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(2) th:nth-child(1)",
+      "source": "Cutout 1",
+      "target": "Aussparung 1"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(2) td:nth-child(2)",
+      "source": "Closed polygon",
+      "target": "2,00 m × 2,00 m"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(2) td:nth-child(3)",
+      "source": "Subtracted from the outer area",
+      "target": "4,00 m² Abzug"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(3) th:nth-child(1)",
+      "source": "Cutout 2",
+      "target": "Aussparung 2"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(3) td:nth-child(2)",
+      "source": "Closed polygon",
+      "target": "3,00 m × 2,00 m"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(3) td:nth-child(3)",
+      "source": "Subtracted from the outer area",
+      "target": "6,00 m² Abzug"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(4) th:nth-child(1)",
+      "source": "Displayed net area",
+      "target": "Angezeigte Nettofläche"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(4) td:nth-child(2)",
+      "source": "Outer curved area − both cutouts",
+      "target": "96,00 − 4,00 − 6,00"
+    },
+    {
+      "selector": ".legal-section:nth-child(6) table tbody tr:nth-child(4) td:nth-child(3)",
+      "source": "28,793.49 sq ft",
+      "target": "86,00 m²"
+    },
+    {
+      "selector": ".blog-sources li:nth-child(3) span",
+      "source": "— Historic American Landscapes Survey HALS CA-2, the collection record for the drawing used in this guide.",
+      "target": "— Deutsche A3-Übungszeichnung S-102 mit zwei inneren Öffnungen. Die PDF-Geometrie wurde unabhängig geprüft und danach in der deutschen Mac-App nachgezeichnet."
+    },
+    {
+      "selector": ".blog-sources li:nth-child(4) span",
+      "source": "— PGAdesign, measured drawing, Historic American Landscapes Survey, National Park Service, U.S. Department of the Interior, 2006; Prints and Photographs Division, Library of Congress; HALS CA-2, sheet 2 of 5. This is the sheet shown beneath the example measurements.",
+      "target": "— Semikolongetrennte Referenztabelle mit deutschen Dezimalkommas. Sie enthält Rechenschritte und Kontrollwerte; sie ist kein App-Export. Addieren Sie nicht die gesamte Wertespalte."
+    },
+    {
+      "selector": ".blog-sources li:nth-child(5) span",
+      "source": "— Library of Congress guidance and the credit format used for this drawing collection.",
+      "target": "— Prüfprotokoll für die tatsächlich gezeichneten PDF-Rechtecke, die 4-m-Referenz und die deutsche PDF-Sprachkennung. Der App-Durchlauf ist getrennt dokumentiert."
+    }
+  ],
+  "links": [
+    {
+      "selector": "a[href=\"#practice-net-area\"]",
+      "source": "#practice-net-area",
+      "url": "/localized-media/de/samples/area/bodenplatte-aussparungen-uebung.pdf",
+      "label": "Deutschen S-102-Übungsplan herunterladen (PDF)",
+      "sha256": "1dbc83474ca321a686720e159f007d7401899a71e781b9e009b8b415bbe323c4"
+    },
+    {
+      "selector": ".blog-sources li:nth-child(3) a",
+      "source": "https://www.loc.gov/item/ca3441/",
+      "url": "/localized-media/de/samples/area/bodenplatte-aussparungen-uebung.pdf",
+      "label": "S-102: Deutsche A3-Bodenplatte herunterladen (PDF)",
+      "sha256": "1dbc83474ca321a686720e159f007d7401899a71e781b9e009b8b415bbe323c4"
+    },
+    {
+      "selector": ".blog-sources li:nth-child(4) a",
+      "source": "https://www.loc.gov/resource/hhh.ca3441.sheet.00002a/",
+      "url": "/localized-media/de/samples/area/bodenplatte-kontrollwerte.csv",
+      "label": "S-102: Deutsche Kontrollwerte herunterladen (CSV)",
+      "sha256": "9577baf1655a626e5319ee0218db8464cf0ad0c19d18b2efaa5e53d892580b62"
+    },
+    {
+      "selector": ".blog-sources li:nth-child(5) a",
+      "source": "https://guides.loc.gov/p-and-p-rights-and-restrictions/rights#114_habs.html",
+      "url": "/localized-media/de/samples/area/verification.json",
+      "label": "S-102: Geometrie-Prüfprotokoll (JSON)",
+      "sha256": "adaffd07c9ba1e4169234df6a465f0a1684cd01a6db2a1befcdded6e5c53ef82"
+    }
+  ],
+  "text": {
+    "Measure net PDF area, distinguish interior cutouts from edge exclusions, and check a 408 sq ft practice result against saved PDF and CSV outputs.": "PDF-Nettofläche mit zwei inneren Aussparungen messen: deutsche A3-Übung mit 86,00 m² und 12,90 m³ bei 150 mm Tiefe.",
+    "Net-area takeoff is more useful when the annotation records the outer boundary, each excluded opening, and any depth used for volume. PolyPDF 1.4.0 keeps those inputs on one selectable measurement.": "Eine nachvollziehbare Mengenermittlung hält Außenumriss, ausgeschlossene Öffnungen und die für das Volumen angenommene Dicke fest. Die deutsche Übung S-102 zeigt diese Schritte an einer einzigen Flächenmessung.",
+    "To measure net PDF area in PolyPDF, calibrate the page and verify a known dimension. Trace a closed area, then use Add Cutout for openings wholly inside its boundary. For an exclusion touching the outer edge, trace the net outline around it instead; do not subtract the same opening twice. Review the area, units, and formula before exporting. A positive real-world Depth changes area to volume; hatch styling does not change the quantity.": "Wählen Sie Metrisch und als Längeneinheit Meter. Kalibrieren Sie S-102 an der 4,00-m-Referenz und prüfen Sie die 12,00-m-Breite sowie 8,00-m-Höhe. Machen Sie die beiden Kontrollmessungen anschließend rückgängig. Zeichnen Sie mit Fläche den geschlossenen Außenumriss nach und nutzen Sie Ausschnitt hinzufügen für die beiden inneren Öffnungen. Die Nettofläche beträgt 86,00 m². Geben Sie als Tiefe 0,15 m ein; die Anzeige wechselt zu 12,90 m³. Den A3-Übungsplan und die Kontrollwerte finden Sie unten unter Quellen und Downloads.",
+    "PolyPDF dark mode showing a turquoise curved and crosshatched demonstration area with two cutouts, 28,793.49 square feet net, and 1 foot 6 inch depth": "Deutsche PolyPDF-Oberfläche mit Bodenplatte S-102, zwei inneren Aussparungen und 12,90 m³ bei 0,15 m Tiefe",
+    "Scrollable image: PolyPDF dark mode showing a turquoise curved and crosshatched demonstration area with two cutouts, 28,793.49 square feet net, and 1 foot 6 inch depth": "Scrollbares Bild: Deutsche PolyPDF-Oberfläche mit Bodenplatte S-102, zwei inneren Aussparungen und 12,90 m³ bei 0,15 m Tiefe",
+    "PolyPDF 1.4.0 with one curved area boundary, two cutouts subtracted from it, a 28,793.49 sq ft net area, a 1′-6″ depth, and the 43,190.23 cu ft volume that depth produces. The turquoise geometry is an example takeoff traced over a public-domain survey sheet.": "Tatsächliche deutsche Mac-Aufnahme in PolyPDF 1.6.17 Build 84 (lokaler Entwicklungsstand): rechteckige Bodenplatte mit 96,00 m² Bruttofläche, zwei Aussparungen mit 4,00 m² und 6,00 m² sowie 86,00 m² Nettofläche. Die eingegebene Tiefe 0,15 m ergibt 12,90 m³.",
+    "Base drawing: PGAdesign, Historic American Landscapes Survey, National Park Service; Prints and Photographs Division, Library of Congress; HALS CA-2, sheet 2 of 5.": "Grundlage: von PolyPDF erstellte fiktive deutsche A3-Übungszeichnung S-102, Bürgerhaus am Lindenpark. Keine Ausführungsplanung oder Zusicherung einer Normkonformität.",
+    "Move and resize area cutouts in 1.5.4": "Aussparungen verschieben und skalieren",
+    "Metric dimensions in 1.5.1": "Metrische Einheiten für diese Übung",
+    "In PolyPDF 1.5.1, new metric dimensions default to millimetres. Existing documents retain their explicit display formats, and metric area and volume remain in square and cubic metres. Changing the displayed unit does not establish the page scale: verify a known dimension after any scale or unit change.": "Wählen Sie Messungen › Maßstab › Metrisch und unter Formatierung › Länge ausdrücklich Meter. Neue metrische Bemaßungen können sonst Millimeter verwenden. Die deutsche Übung verwendet Meter, Quadratmeter und Kubikmeter. Die Anzeigeeinheit ersetzt keine Kalibrierung; prüfen Sie Breite und Höhe unabhängig.",
+    "Choose the Area measurement tool.": "Wählen Sie das Messwerkzeug Fläche.",
+    "Set the Subject and Status so the Takeoff Worksheet explains what the quantity represents.": "Halten Sie den gemessenen Bauteilumfang im Betreff und in den Projektnotizen fest. Für diese Übung ist dies die Bodenplatte abzüglich beider innerer Öffnungen.",
+    "For a straight path, the area follows the polygon formed by the vertices. When the area path is set to Curved, PolyPDF 1.4.0 uses the displayed smoothed boundary in its area calculation rather than measuring only the straight chords between control points. Use the mode that matches the actual edge, not the one that merely looks cleaner.": "S-102 hat gerade Kanten. Zeichnen Sie deshalb einen geraden, geschlossenen Umriss. Bei tatsächlich gekrümmten Kanten beeinflusst die geglättete Kurve die Flächenberechnung; prüfen Sie deren Verlauf gesondert. Der hier aufgezeichnete Durchlauf prüft keine gekrümmte Geometrie.",
+    "With the area selected, find Area Cutouts in the style controls and choose Add Cutout. Trace the first opening as a closed polygon. PolyPDF checks each cutout vertex against the stored straight outer control polygon and warns when a vertex falls outside it. That check does not prove that every connecting edge stays inside a concave outline, and a curved visible boundary can differ from the stored control polygon, so inspect the entire cutout at high zoom. Repeat Add Cutout for additional voids. The selected annotation shows the number of stored cutouts, and Remove Last removes the most recently added one.": "Wählen Sie die abgeschlossene Fläche und klicken Sie in den Stilwerkzeugen auf Ausschnitt hinzufügen. Zeichnen Sie Öffnung 1 (2,00 m × 2,00 m) geschlossen nach. Wiederholen Sie dies für Öffnung 2 (3,00 m × 2,00 m). Beide Öffnungen liegen vollständig innerhalb der Bodenplatte und überlappen sich nicht. PolyPDF prüft die Eckpunkte gegen das gespeicherte gerade Außenpolygon; dies belegt nicht, dass jede Verbindungskante innerhalb einer konkaven oder gekrümmten Grenze liegt. Prüfen Sie deshalb die vollständigen Umrisse.",
+    "The example above uses one curved outer boundary and two closed cutouts. The Records panel shows a net result of 28,793.49 sq ft, with both openings already subtracted. Your own totals depend on the drawing you start from, the scale you set for that page, and the boundary you decide to trace.": "Die deutsche Übung verwendet eine rechteckige Bodenplatte mit 12,00 m × 8,00 m. Von 96,00 m² werden die beiden inneren Öffnungen mit 4,00 m² und 6,00 m² abgezogen. Die tatsächliche App-Anzeige ergibt 86,00 m². Die Quelle bleibt unverändert; die Messungen entstehen durch Zeigergesten im deutschen Entwicklungsstand.",
+    "A selected area measurement exposes a Depth field. Enter a positive real-world length in the current measurement format—for example, 4 inches, 100 millimetres, or 1 foot 6 inches. Confirm the active input unit before typing a bare number. PolyPDF multiplies the net area by that depth and changes the worksheet quantity kind from Area to Volume. Clear the field to return to an area quantity.": "Bei ausgewählter Fläche steht das Feld Tiefe zur Verfügung. Geben Sie für diese Bodenplatte ausdrücklich 0,15 m ein; das entspricht 150 mm. Eine positive Tiefe multipliziert die Nettofläche und ändert die Mengenart zu Volumen. Leeren Sie das Feld, um wieder eine Fläche anzuzeigen. Prüfen Sie die Einheit, bevor Sie eine Zahl ohne Einheit eingeben.",
+    "In the example above, a 1′-6″ depth produces 43,190.23 cu ft. PolyPDF calculates from the full-precision geometry, so multiplying the rounded 28,793.49 sq ft display by hand can differ by a hundredth.": "Bei 86,00 m² Nettofläche und 0,15 m gleichmäßiger Tiefe zeigt die App 12,90 m³. Sie rechnet mit der vollständigen Geometriegenauigkeit. Die Übung ist bei zwei Nachkommastellen überprüft; sie ist kein Nachweis beliebiger Messgenauigkeit.",
+    "The Hatch controls set the pattern, colour, opacity, and scale used to draw the annotation. Increasing hatch scale changes the spacing or size of the pattern; it does not change the outer geometry, the cutouts, the net area, or the depth. The example above uses a diagonal crosshatch at 110 percent so the two cutouts stay easy to see.": "Schraffurmuster, Farbe, Deckkraft und Skalierung ändern das Aussehen einer Messung. Sie ändern weder Außenumriss noch Aussparungen, Nettofläche oder Tiefe. Die deutsche Aufnahme verwendet die tatsächlich gezeichnete Flächenmarkierung; eine diagonale Kreuzschraffur mit 110 Prozent wurde in diesem Durchlauf nicht geprüft.",
+    "Trace the net area outline around an edge-connected exclusion. Reserve Add Cutout for openings wholly inside the boundary. In the F-101 practice sheet, the 4 ft by 3 ft corner exclusion is already omitted from the 228 sq ft Room 1 outline; do not subtract it again.": "Zeichnen Sie bei einer randverbundenen Aussparung den Netto-Außenumriss um die Kerbe herum. Nutzen Sie Ausschnitt hinzufügen nur für vollständig innen liegende Öffnungen. Beim getrennten F-101-Bodenbelagsplan ist die 1,20 m × 0,90 m große Randaussparung bereits in der 20,52-m²-Fläche von Raum 1 berücksichtigt. Ziehen Sie sie nicht erneut ab. S-102 zeigt dagegen zwei echte innere Öffnungen.",
+    "Yes. PolyPDF 1.4.0 stores multiple cutout polygons on one area measurement and subtracts each from the outer area.": "Ja. PolyPDF speichert mehrere geschlossene Ausschnittpolygone auf einer Flächenmessung und zieht jedes von der Außenfläche ab. In der deutschen Übung sind es zwei nicht überlappende Öffnungen.",
+    "Take off finishes from the Willow Creek interiors plan": "Zusätzliche Übung: Innenausbau Bürgerhaus am Lindenpark",
+    "Sources and further reading": "Quellen und Downloads",
+    "Translated from the English edition. Screenshots and app control names may remain in English. Original example units and verification dates are preserved. Prices are in USD; checkout, account, release feeds, and policies are in English.": "Diese Seite verwendet deutsche App-Aufnahmen und metrische deutsche Übungspläne. Der Flächen- und Volumendurchlauf wurde im lokalen Mac-Entwicklungsstand geprüft. Windows, natives iPad, Speichern und Wiederöffnen wurden für S-102 nicht geprüft. Preise sind in USD; Checkout, Konto, Release-Feeds und Richtlinien sind auf Englisch.",
+    "Walkthrough verified": "Ablauf geprüft",
+    "Release review": "Stand des Beispiels",
+    "Open I101 and calibrate its 20 ft reference. Read the F1 and F2 finish key before measuring.": "Öffnen Sie den deutschen Innenausbauplan I101 und kalibrieren Sie dessen 5,00-m-Referenz. Lesen Sie vor dem Messen die Belagslegende für F1 und F2.",
+    "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.": "Zeichnen Sie die bemaßten Belagszonen der gefliesten Räume 107 und 108 getrennt nach: je 18,00 m², zusammen 36,00 m².",
+    "Compare F2 tile with 576 sq ft and F1 resilient flooring with 5,184 sq ft. Apply any waste allowance separately.": "Vergleichen Sie F2-Fliesen mit 36,00 m² und den elastischen F1-Belag mit 324,00 m². Berechnen Sie einen Verschnittzuschlag getrennt.",
+    "The exercise above uses the Willow Creek library. Earlier walkthrough screenshots and saved examples below retain their original drawings, versions, and quantities.": "Die Zusatzübung oben verwendet den deutschen Innenausbauplan I101. Der nachfolgende F-101-Plan erläutert eine Randkerbe und getrennt geprüfte Exporte. Die Aufnahme am Seitenanfang zeigt die Bodenplatte S-102 mit inneren Öffnungen. Jeder Plan hat seine eigenen Maße und muss separat kalibriert werden.",
+    "Worked net-area example": "Rechenbeispiel für die Nettofläche",
+    "Add depth only when volume is the intended quantity": "Tiefe für die Volumenberechnung eingeben",
+    "Hatch scale is visual, not mathematical": "Schraffurskalierung ändert nur die Darstellung",
+    "Limits worth knowing before you rely on a total": "Grenzen der Mengenberechnung",
+    "Test a net-area workflow on your own PDF": "Nettoflächen an der eigenen PDF prüfen",
+    "Depth is a typed uniform value, not a third dimension detected from the drawing. Do not use one depth where the assembly varies without a documented averaging method. If multiple zones have different thicknesses, create separate area measurements so each volume has an explicit boundary, Subject, and depth.": "Die Tiefe ist eine eingegebene, gleichmäßige Dicke; sie wird nicht aus der Zeichnung ermittelt. Bei unterschiedlichen Dicken sind getrennte Flächenmessungen erforderlich, damit Umriss, Betreff und Tiefe jeder Teilmenge nachvollziehbar bleiben.",
+    "A positive real-world Depth multiplies the net area and changes the result to volume. Clear Depth to return to area.": "Eine positive Tiefe in einer realen Längeneinheit multipliziert die Nettofläche und ergibt das Volumen. Leeren Sie das Feld Tiefe, um wieder die Fläche anzuzeigen."
+  }
+}

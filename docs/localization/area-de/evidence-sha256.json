@@ -1,0 +1,21 @@
+{
+  "docs/localization/area-de/README.md": "eb1e15d01ba66cc558af45ec34171b4101459da5b7d7f0f2066fefa1ff9ad4de",
+  "docs/localization/area-de/browser-language-check.json": "be0cbdc1382b72cb6bd6428d818cfc64e1ac1297c20e976c90bb66ac9571a9bb",
+  "docs/localization/area-de/browser-preview.png": "e50d00b39a3876f3bba2f8d5032f56d59defea959f89e58c7b44f32e80aeee16",
+  "public/localized-media/de/guides/area/bruttoflaeche.png": "0a8e4904cf375c90b3fc0b634793333784f28a5f1f5054f2429ab18992bfdea9",
+  "public/localized-media/de/guides/area/nettoflaeche-zwei-aussparungen.png": "57b1b3d3d37c68999f8bd443a3be590685009d190f549ecebca128a850dfcdf8",
+  "public/localized-media/de/guides/area/page-verification.json": "7edc4107734d1f15bb4cb3dbbdaa7865db89acfa4abef7dd6bebd6872b139fa4",
+  "public/localized-media/de/guides/area/verification.json": "5a41cad67bd1d77bcf33035e72d9d762fc1029fd8db0b7f1472fae5f60b1f590",
+  "public/localized-media/de/guides/area/volumen-mit-tiefe.png": "33b336b730c3c1cb1657d7d004382ac3c8313fc6bcc899a2499661c58e1da58e",
+  "public/localized-media/de/samples/area/bodenplatte-aussparungen-uebung.pdf": "1dbc83474ca321a686720e159f007d7401899a71e781b9e009b8b415bbe323c4",
+  "public/localized-media/de/samples/area/bodenplatte-aussparungen-uebung.png": "4b51ac119465a0cfbbb2371a389504386b2a2136464df20a61ea53979afdd983",
+  "public/localized-media/de/samples/area/bodenplatte-kontrollwerte.csv": "9577baf1655a626e5319ee0218db8464cf0ad0c19d18b2efaa5e53d892580b62",
+  "public/localized-media/de/samples/area/geometry.json": "e592eb62246a91cec546095e012ceed6f7f9162d9c282d49ea841fd05d73431c",
+  "public/localized-media/de/samples/area/verification.json": "adaffd07c9ba1e4169234df6a465f0a1684cd01a6db2a1befcdded6e5c53ef82",
+  "scripts/generate-area-demo-de.py": "a2e270f77969b4df48c6692ddef6c29ca9f331f0627d8566b899e6fafb8b12e9",
+  "scripts/localization/area-de.json": "77c80217149800a6d8cd33ad3949fa4eb431ac2b92e5a77e7cfc8df0d1b29f6c",
+  "scripts/localization/capture-area-de.mjs": "273f41cb7fa024fbe28ad0c089e7078a2c55017e54a153c157e2b7fd646c470d",
+  "scripts/localization/register-area-de.cjs": "2888ee28dd303afd5aed7fe02f2019cd2bcb68472929a3bc779a09fa4f863548",
+  "scripts/localization/verify-area-page.cjs": "ca1de74a8ef7fc9a15f2be121b551b03e70c287ac49afa9a3b1b41a2eafbe00b",
+  "scripts/verify-area-demo-de.py": "380db043549ff056114be45769526644aba39ca277908d0ec412b16f262b6d1c"
+}

@@ -1,0 +1,362 @@
+{
+  "schemaVersion": 1,
+  "locale": "de-DE",
+  "region": "DE",
+  "paper": "ISO A3 landscape",
+  "pagePoints": [
+    1190.5511811023623,
+    841.8897637795276
+  ],
+  "scaleRatio": 50,
+  "pointsPerMetre": 56.69291338582678,
+  "pdf": "bodenplatte-aussparungen-uebung.pdf",
+  "sha256": "1dbc83474ca321a686720e159f007d7401899a71e781b9e009b8b415bbe323c4",
+  "fictional": true,
+  "standardsComplianceClaimed": false,
+  "references": [
+    {
+      "id": "Bodenplatte",
+      "points": [
+        [
+          90.0,
+          230.0
+        ],
+        [
+          770.3149606299213,
+          230.0
+        ],
+        [
+          770.3149606299213,
+          683.5433070866143
+        ],
+        [
+          90.0,
+          683.5433070866143
+        ]
+      ],
+      "areaSquareMetres": 96
+    },
+    {
+      "id": "Öffnung 1",
+      "points": [
+        [
+          260.0787401574803,
+          343.38582677165357
+        ],
+        [
+          373.46456692913387,
+          343.38582677165357
+        ],
+        [
+          373.46456692913387,
+          456.77165354330714
+        ],
+        [
+          260.0787401574803,
+          456.77165354330714
+        ]
+      ],
+      "areaSquareMetres": 4
+    },
+    {
+      "id": "Öffnung 2",
+      "points": [
+        [
+          543.5433070866143,
+          456.77165354330714
+        ],
+        [
+          713.6220472440946,
+          456.77165354330714
+        ],
+        [
+          713.6220472440946,
+          570.1574803149606
+        ],
+        [
+          543.5433070866143,
+          570.1574803149606
+        ]
+      ],
+      "areaSquareMetres": 6
+    }
+  ],
+  "calibration": {
+    "points": [
+      [
+        90.0,
+        184.64566929133858
+      ],
+      [
+        316.77165354330714,
+        184.64566929133858
+      ]
+    ],
+    "metres": 4
+  },
+  "expected": {
+    "grossAreaSquareMetres": 96,
+    "cutoutAreasSquareMetres": [
+      4,
+      6
+    ],
+    "netAreaSquareMetres": 86,
+    "depthMetres": 0.15,
+    "volumeCubicMetres": 12.9
+  },
+  "textBoxes": [
+    {
+      "text": "BÜRGERHAUS AM LINDENPARK",
+      "x": 48,
+      "y": 786.8897637795276,
+      "width": 300.808,
+      "size": 19
+    },
+    {
+      "text": "Bodenplatte mit zwei Aussparungen",
+      "x": 48,
+      "y": 763.8897637795276,
+      "width": 239.28,
+      "size": 15
+    },
+    {
+      "text": "S-102",
+      "x": 1087.2051811023623,
+      "y": 786.8897637795276,
+      "width": 50.692,
+      "size": 19
+    },
+    {
+      "text": "Fiktive Messübung | Deutschland | Maße in m | Dicke 150 mm | Maßstab 1:50 auf A3",
+      "x": 48,
+      "y": 741.8897637795276,
+      "width": 413.09400000000005,
+      "size": 11
+    },
+    {
+      "text": "Öffnung 1",
+      "x": 288.4396535433071,
+      "y": 409.07874015748035,
+      "width": 56.664,
+      "size": 12
+    },
+    {
+      "text": "2,00 m × 2,00 m",
+      "x": 276.8746535433071,
+      "y": 390.07874015748035,
+      "width": 79.79400000000001,
+      "size": 11
+    },
+    {
+      "text": "Öffnung 2",
+      "x": 600.2506771653544,
+      "y": 522.4645669291339,
+      "width": 56.664,
+      "size": 12
+    },
+    {
+      "text": "3,00 m × 2,00 m",
+      "x": 588.6856771653544,
+      "y": 503.46456692913387,
+      "width": 79.79400000000001,
+      "size": 11
+    },
+    {
+      "text": "12,00 m",
+      "x": 410.2859803149606,
+      "y": 710.3858267716536,
+      "width": 39.743,
+      "size": 11
+    },
+    {
+      "text": "8,00 m",
+      "x": -16.8135,
+      "y": 0,
+      "width": 33.627,
+      "size": 11
+    },
+    {
+      "text": "BODENPLATTE - DICKE 150 mm",
+      "x": 337.14548031496065,
+      "y": 641.0236220472441,
+      "width": 186.024,
+      "size": 12
+    },
+    {
+      "text": "Außenkante nachzeichnen; beide Öffnungen abziehen.",
+      "x": 295.9354803149606,
+      "y": 266.85039370078744,
+      "width": 268.444,
+      "size": 11
+    },
+    {
+      "text": "4,00 m - Kalibrierstrecke",
+      "x": 143.78782677165356,
+      "y": 191.64566929133858,
+      "width": 119.196,
+      "size": 11
+    },
+    {
+      "text": "Kontrolle: 12,00 m Breite und 8,00 m Höhe unabhängig prüfen.",
+      "x": 90,
+      "y": 148,
+      "width": 306.339,
+      "size": 11
+    },
+    {
+      "text": "MESSAUFGABE",
+      "x": 825,
+      "y": 687.8897637795276,
+      "width": 84.00240000000001,
+      "size": 10.8
+    },
+    {
+      "text": "1. Metrisch und Länge Meter wählen.",
+      "x": 825,
+      "y": 664.8897637795276,
+      "width": 177.68160000000003,
+      "size": 10.8
+    },
+    {
+      "text": "2. An 4,00 m kalibrieren.",
+      "x": 825,
+      "y": 643.8897637795276,
+      "width": 117.05040000000002,
+      "size": 10.8
+    },
+    {
+      "text": "3. Breite und Höhe kontrollieren.",
+      "x": 825,
+      "y": 622.8897637795276,
+      "width": 154.872,
+      "size": 10.8
+    },
+    {
+      "text": "4. Äußeren Umriss schließen.",
+      "x": 825,
+      "y": 601.8897637795276,
+      "width": 142.23600000000002,
+      "size": 10.8
+    },
+    {
+      "text": "5. Zwei innere Aussparungen anlegen.",
+      "x": 825,
+      "y": 580.8897637795276,
+      "width": 184.89600000000002,
+      "size": 10.8
+    },
+    {
+      "text": "6. Tiefe 0,15 m eingeben.",
+      "x": 825,
+      "y": 559.8897637795276,
+      "width": 122.47200000000001,
+      "size": 10.8
+    },
+    {
+      "text": "KONTROLLWERTE",
+      "x": 825,
+      "y": 538.8897637795276,
+      "width": 98.99280000000002,
+      "size": 10.8
+    },
+    {
+      "text": "Brutto: 12,00 × 8,00 = 96,00 m²",
+      "x": 825,
+      "y": 515.8897637795276,
+      "width": 150.0984,
+      "size": 10.8
+    },
+    {
+      "text": "Öffnung 1: 2,00 × 2,00 = 4,00 m²",
+      "x": 825,
+      "y": 494.8897637795276,
+      "width": 156.708,
+      "size": 10.8
+    },
+    {
+      "text": "Öffnung 2: 3,00 × 2,00 = 6,00 m²",
+      "x": 825,
+      "y": 473.8897637795276,
+      "width": 156.708,
+      "size": 10.8
+    },
+    {
+      "text": "Netto: 96,00 - 4,00 - 6,00 = 86,00 m²",
+      "x": 825,
+      "y": 452.8897637795276,
+      "width": 177.984,
+      "size": 10.8
+    },
+    {
+      "text": "Volumen: 86,00 × 0,15 = 12,90 m³",
+      "x": 825,
+      "y": 429.8897637795276,
+      "width": 168.09120000000001,
+      "size": 10.8
+    },
+    {
+      "text": "ABGRENZUNG",
+      "x": 825,
+      "y": 406.8897637795276,
+      "width": 77.39280000000001,
+      "size": 10.8
+    },
+    {
+      "text": "Beide Öffnungen liegen vollständig innen.",
+      "x": 825,
+      "y": 383.8897637795276,
+      "width": 199.31400000000002,
+      "size": 10.8
+    },
+    {
+      "text": "Keine Randkerbe; keine Überlappung.",
+      "x": 825,
+      "y": 362.8897637795276,
+      "width": 183.0924,
+      "size": 10.8
+    },
+    {
+      "text": "Die Dicke ist eine angenommene Übungsgröße.",
+      "x": 825,
+      "y": 341.8897637795276,
+      "width": 229.88880000000003,
+      "size": 10.8
+    },
+    {
+      "text": "Keine statische Bemessung.",
+      "x": 825,
+      "y": 320.8897637795276,
+      "width": 136.26360000000003,
+      "size": 10.8
+    },
+    {
+      "text": "Keine Ausführungs- oder Genehmigungsplanung.",
+      "x": 825,
+      "y": 299.8897637795276,
+      "width": 237.12480000000002,
+      "size": 10.8
+    },
+    {
+      "text": "PLAN S-102 | REVISION A | 20.10.2026 | BLATT 1 / 1",
+      "x": 48,
+      "y": 96,
+      "width": 269.06,
+      "size": 11
+    },
+    {
+      "text": "A3 quer - 420 × 297 mm | Nur zur Software-Demonstration | Nicht zur Bauausführung verwenden.",
+      "x": 48,
+      "y": 75,
+      "width": 432.32,
+      "size": 10
+    },
+    {
+      "text": "Die dargestellten Bauteile und Maße sind fiktiv. Es wird keine Normkonformität zugesichert.",
+      "x": 48,
+      "y": 55,
+      "width": 404.03,
+      "size": 10
+    }
+  ],
+  "provenance": "Original PolyPDF fictional practice geometry; no external survey drawing."
+}

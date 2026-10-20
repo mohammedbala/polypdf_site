@@ -1,0 +1,133 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "e27c03301064db91e92566584f32f7aa5c349abc93767593007f3a1f29167d40",
+    "version": "1.6.17",
+    "bundleSetSha256": "b3fdf846c56dd118f1fbef1972833c08d4a53fe5a35e1b1fd94fe6903107da93"
+  },
+  "sourcePdf": "/localized-media/de/samples/area/bodenplatte-aussparungen-uebung.pdf",
+  "sourceSha256": "1dbc83474ca321a686720e159f007d7401899a71e781b9e009b8b415bbe323c4",
+  "captureScriptSha256": "273f41cb7fa024fbe28ad0c089e7078a2c55017e54a153c157e2b7fd646c470d",
+  "profileSha256": "77c80217149800a6d8cd33ad3949fa4eb431ac2b92e5a77e7cfc8df0d1b29f6c",
+  "capture": "Actual owned Electron renderer; UI control events and CDP pointer gestures. Automation APIs read annotations only.",
+  "calibration": {
+    "enteredMetres": 4,
+    "dialog": "Seitenmaßstab kalibrieren\n\nErfasste 226,772 PDF-Punkte zwischen eingerasteten Endpunkten. Geben Sie die reale Länge dieser Linie ein. Reine Zahlen werden als m interpretiert.\n\nBekannte Distanz\nAbbrechen\nOK"
+  },
+  "measurements": {
+    "width": {
+      "expected": 12,
+      "value": 11.999998236111473
+    },
+    "height": {
+      "expected": 8,
+      "value": 7.999998236111473
+    },
+    "gross": {
+      "expected": 96,
+      "value": 95.99996472223258
+    },
+    "net": {
+      "expected": 86,
+      "value": 85.99997354167326
+    },
+    "volume": {
+      "expected": 12.9,
+      "value": 12.899996031250987
+    }
+  },
+  "geometry": {
+    "x": 90,
+    "y": 158.34647050781246,
+    "points": [
+      {
+        "x": 0,
+        "y": 453.54330000000004
+      },
+      {
+        "x": 680.315,
+        "y": 453.54330000000004
+      },
+      {
+        "x": 680.315,
+        "y": 0
+      },
+      {
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "cutouts": [
+      [
+        {
+          "x": 170.07870000000003,
+          "y": 340.1575
+        },
+        {
+          "x": 283.46450000000004,
+          "y": 340.1575
+        },
+        {
+          "x": 283.46450000000004,
+          "y": 226.7717
+        },
+        {
+          "x": 170.07870000000003,
+          "y": 226.7717
+        }
+      ],
+      [
+        {
+          "x": 453.54330000000004,
+          "y": 226.77160000000003
+        },
+        {
+          "x": 623.6220000000001,
+          "y": 226.77160000000003
+        },
+        {
+          "x": 623.6220000000001,
+          "y": 113.38580000000002
+        },
+        {
+          "x": 453.54330000000004,
+          "y": 113.38580000000002
+        }
+      ]
+    ],
+    "pointsPerMetre": 56.692925,
+    "depthMetres": 0.15
+  },
+  "viewport": {
+    "width": 1710,
+    "height": 1073,
+    "pixelRatio": 1
+  },
+  "shots": [
+    {
+      "file": "bruttoflaeche.png",
+      "sha256": "0a8e4904cf375c90b3fc0b634793333784f28a5f1f5054f2429ab18992bfdea9"
+    },
+    {
+      "file": "nettoflaeche-zwei-aussparungen.png",
+      "sha256": "57b1b3d3d37c68999f8bd443a3be590685009d190f549ecebca128a850dfcdf8"
+    },
+    {
+      "file": "volumen-mit-tiefe.png",
+      "sha256": "33b336b730c3c1cb1657d7d004382ac3c8313fc6bcc899a2499661c58e1da58e"
+    }
+  ],
+  "visualReview": "Gross, two-cutout net area and depth/volume captures individually inspected; actual German UI and German source drawing.",
+  "limitations": [
+    "Local development build, not a published release",
+    "No Windows or native iPad run",
+    "Straight rectangular boundary and openings; curved boundaries not exercised",
+    "No Save/reopen in this capture",
+    "Bundled plugins disabled for this measurement-only capture"
+  ]
+}

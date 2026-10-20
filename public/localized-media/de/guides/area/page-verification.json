@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "route": "/de/blog/measure-pdf-area-cutouts-depth/",
+  "htmlSha256": "36e7050c50a9b02a1203a6df81aca7f23e8bd9d1b3aa0c6cc6692e66244eee59",
+  "localizedImages": 3,
+  "localizedDownloads": 10,
+  "sourceFiles": {
+    "scripts/international/build.cjs": "eb767b562332a86aabfd1ad083c99d605aec6661ff627ae9edd766fc2496cd2e",
+    "scripts/international/verify.cjs": "7418d16da848a115ddcbc079287061bf92d42fe7a58105a48731662e3000cfba",
+    "scripts/localization/pages.cjs": "c0715e3853c87b09bec0c5660f23b2e96c4009e3c2c255eb9a9b2b422f48ed0a",
+    "scripts/localization/area-de.json": "77c80217149800a6d8cd33ad3949fa4eb431ac2b92e5a77e7cfc8df0d1b29f6c",
+    "scripts/localization/capture-area-de.mjs": "273f41cb7fa024fbe28ad0c089e7078a2c55017e54a153c157e2b7fd646c470d",
+    "scripts/localization/register-area-de.cjs": "2888ee28dd303afd5aed7fe02f2019cd2bcb68472929a3bc779a09fa4f863548",
+    "scripts/localization/verify-area-page.cjs": "ca1de74a8ef7fc9a15f2be121b551b03e70c287ac49afa9a3b1b41a2eafbe00b",
+    "scripts/generate-area-demo-de.py": "a2e270f77969b4df48c6692ddef6c29ca9f331f0627d8566b899e6fafb8b12e9",
+    "scripts/verify-area-demo-de.py": "380db043549ff056114be45769526644aba39ca277908d0ec412b16f262b6d1c",
+    "src/content/guides/measure-pdf-area-cutouts-depth.js": "3f1207a62dec8da432d8669e2ca43df1caa1e68703abf434d660f74792bc6347",
+    "src/localization/walkthrough-media.json": "3594430dfc6d82ab6fe455a2e6958d78b5936df15765212bd60d51804323fe0b"
+  },
+  "checks": [
+    "Three instructional images use exact German bytes",
+    "Source PDF, reference CSV and geometry receipt have bound hashes and German link labels",
+    "Hero, social and Article image metadata agree",
+    "Metric quantities, formulas, captions, drawing attribution and supplemental exercises match regional PDFs",
+    "English and unfinished Spanish page keep existing media"
+  ],
+  "limitations": [
+    "One German area route completed in a pilot pack; the overall rollout remains incomplete",
+    "International transformation of the existing English prerender; no full React rebuild",
+    "Local Mac capture only; no Windows/native iPad or S-102 save/reopen evidence",
+    "No deployment"
+  ]
+}

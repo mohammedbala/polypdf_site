@@ -44,3 +44,21 @@ test('article schema images follow the same verified locale mapping while publis
   assert.equal(blocks[0].publisher.logo,'/brand.png');
   assert.throws(()=>localizeArticleImages([{'@type':'BlogPosting',image:'/guides/missing.png'}],locale,data),/Missing/);
 });
+test('regional download references require the intended link, locale path and exact file bytes',()=>{
+  const {localizePageLinks}=require('../scripts/localization/pages.cjs');
+  const {createHash}=require('node:crypto');
+  const bytes=Buffer.from('regional source');
+  const entry={selector:'a',source:'https://example.org/original',url:'/localized-media/de/samples/plate.pdf',label:'Deutscher Übungsplan',sha256:createHash('sha256').update(bytes).digest('hex')};
+  const page={locale:'de-DE',links:[entry]};
+  const make=()=>new JSDOM('<a href="https://example.org/original" hreflang="en">Old drawing</a>').window.document;
+  const d=make();localizePageLinks(d,locale,page,p=>{assert.equal(p,entry.url);return bytes;});
+  assert.equal(d.querySelector('a').getAttribute('href'),entry.url);
+  assert.equal(d.querySelector('a').textContent,entry.label);
+  assert.equal(d.querySelector('a').lang,'de-DE');
+  assert.equal(d.querySelector('a').hasAttribute('hreflang'),false);
+  assert.throws(()=>localizePageLinks(d,locale,page,()=>bytes),/Stale/);
+  assert.throws(()=>localizePageLinks(make(),locale,page,()=>Buffer.from('changed')),/Changed/);
+  for(const url of ['/localized-media/fr/plate.pdf','https://elsewhere.test/plate.pdf','/localized-media/de/%2e%2e/plate.pdf']){
+    assert.throws(()=>localizePageLinks(make(),locale,{...page,links:[{...entry,url}]},()=>bytes),/Invalid/);
+  }
+});

@@ -2,7 +2,7 @@
   "text": {
     "takeoff.area.source": {
       "source": "Use the separate F-101 flooring practice sheet: Room 1 is 20 ft × 12 ft with a 4 ft × 3 ft corner exclusion. Room 2 is 15 ft × 12 ft. The source uses 9 PDF points per foot; the historical screenshots in this guide use a different drawing.",
-      "target": "Nutzen Sie den deutschen Bodenbelagsplan F-101, Übungsausgabe B: Raum 1 misst 6,00 m × 3,60 m mit einer randverbundenen Aussparung von 1,20 m × 0,90 m. Raum 2 misst 4,50 m × 3,60 m. Der Plan hat Maßstab 1:50 auf A2. Historische Screenshots in diesem Leitfaden zeigen eine andere Zeichnung."
+      "target": "Nutzen Sie für diese zusätzliche Übung den deutschen Bodenbelagsplan F-101, Übungsausgabe B: Raum 1 misst 6,00 m × 3,60 m mit einer randverbundenen Aussparung von 1,20 m × 0,90 m. Raum 2 misst 4,50 m × 3,60 m. Der Plan hat Maßstab 1:50 auf A2. Die deutsche App-Aufnahme am Seitenanfang zeigt dagegen S-102 mit zwei inneren Öffnungen."
     },
     "takeoff.area.free": {
       "source": "Calibrate along the printed 20 ft span, then use one manual length measurement to check the independent 12 ft height. If the check agrees with your required tolerance, trace Room 1 around the corner exclusion and trace Room 2 separately. That is one length check and two area measurements.",

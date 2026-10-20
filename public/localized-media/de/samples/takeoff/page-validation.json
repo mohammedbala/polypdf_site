@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "Regional source bindings and source-preview accessibility on six built pages",
-  "profileSha256": "dc8aea036bbab159e406dcc0b6041c208116ee24d6de790ff9ea75e355f9a429",
+  "profileSha256": "99e12f5ce7b5435645c480f029040a5d3824f130d50797009dc65629eedc7846",
   "sourceFiles": {
     "src/components/AreaPractice.js": "91b3d07a1b906446c09b58136d96c21f6663a5fe654785bc1d4682fc63a32d86",
     "src/components/CalibrationPractice.js": "9cba1d4686b44596ea3a026ff118a260c68744cff5d4da2d17b0a5aec153576c",

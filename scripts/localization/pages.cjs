@@ -1,5 +1,6 @@
 'use strict';
 const {assetPath,resolveAsset} = require('./media.cjs');
+const {createHash} = require('node:crypto');
 const normalize = value => value.replace(/\s+/g,' ').trim();
 
 // A pilot can publish a fully reviewed route without claiming that its other routes are ready.
@@ -43,6 +44,32 @@ function localizePageElements(document, locale, page) {
   }
 }
 
+// A regional worked example may replace historical drawing references with its own
+// downloadable source and calculation record. Run after the ordinary asset resolver.
+function localizePageLinks(document, locale, page, readFile) {
+  for (const entry of page?.links || []) {
+    const nodes = [...document.querySelectorAll(entry.selector)];
+    if (nodes.length !== 1 || nodes[0].tagName !== 'A'
+        || nodes[0].getAttribute('href') !== entry.source) {
+      throw new Error(`Stale regional page link: ${entry.selector}`);
+    }
+    const pathname = assetPath(entry.url);
+    if (!pathname || entry.url !== pathname || !pathname.startsWith(`/localized-media/${locale.id}/`)
+        || decodeURIComponent(pathname) !== pathname || !/\.(pdf|csv|json)$/.test(pathname)
+        || !/^[a-f0-9]{64}$/.test(entry.sha256 || '') || !entry.label?.trim()) {
+      throw new Error(`Invalid regional page download: ${entry.url}`);
+    }
+    const actual = createHash('sha256').update(readFile(pathname)).digest('hex');
+    if (actual !== entry.sha256) throw new Error(`Changed regional page download: ${entry.url}`);
+    const node = nodes[0];
+    node.href = pathname;
+    node.textContent = entry.label;
+    node.lang = page.locale;
+    node.setAttribute('translate','no');
+    node.removeAttribute('hreflang');
+  }
+}
+
 // Article image metadata must use the same verified locale asset as its visible screenshot.
 // Publisher logos/organization identities remain shared.
 function localizeArticleImages(blocks, locale, manifest) {
@@ -64,4 +91,4 @@ function localizeArticleImages(blocks, locale, manifest) {
     block.image = replace(block.image);
   }
 }
-module.exports={localizedPage,pageTranslator,localizePageElements,localizeArticleImages};
+module.exports={localizedPage,pageTranslator,localizePageElements,localizePageLinks,localizeArticleImages};

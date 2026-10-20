@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const c = require('./content.cjs');
 const { assetPath, localizeWalkthroughMedia, localizeRegionalCopy, resolveAsset, verifyMediaFiles } = require('../localization/media.cjs');
 const walkthroughMedia = require('../../src/localization/walkthrough-media.json');
-const {localizedPage,pageTranslator,localizePageElements,localizeArticleImages} = require('../localization/pages.cjs');
+const {localizedPage,pageTranslator,localizePageElements,localizePageLinks,localizeArticleImages} = require('../localization/pages.cjs');
 // Pilot runs enforce complete media coverage before they can produce publishable pages.
 // Existing released locales remain on their existing assets until their pack is verified.
 const localizedMediaLocales = new Set([
@@ -52,6 +52,7 @@ for (const locale of allLocales) {
     c.localizeLinks(d,locale,t);
     if (useRegionalMedia) localizeWalkthroughMedia(d, locale, walkthroughMedia);
     else c.localizeMetricPlan(d,locale,t);
+    localizePageLinks(d,locale,page,value=>fs.readFileSync(path.join(build,value)));
     const canonical = c.ORIGIN+c.localizedPath(locale.id,route);
     const translatedMeta = {...meta,title:t(meta.title),description:t(meta.description),imageAlt:t(meta.imageAlt || 'PolyPDF — PDF drawing measurement and markup on Mac and Windows')};
     translatedMeta.title = editorialTitles[locale.id]?.[route] || translatedMeta.title;

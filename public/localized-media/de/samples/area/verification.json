@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "sha256": "1dbc83474ca321a686720e159f007d7401899a71e781b9e009b8b415bbe323c4",
+  "checks": [
+    "A3 physical page and German PDF catalog language",
+    "Three actual painted rectangles at 1:50",
+    "Independent 4 m calibration line",
+    "German extracted labels and all characters inside frame",
+    "Reference CSV matches net area and volume"
+  ],
+  "paintedAreasSquareMetres": [
+    96.00000405555548,
+    3.999998111111335,
+    5.9999971666670024
+  ],
+  "netAreaSquareMetres": 86.00000877777714,
+  "volumeCubicMetres": 12.90000131666657,
+  "limitations": [
+    "Fictional software demonstration, no engineering or standards certification",
+    "Rendering must be reviewed separately; text extraction is not visual proof"
+  ]
+}

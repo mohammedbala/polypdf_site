@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "surface": "Codex in-app browser",
+  "english": {
+    "hero": "/static/media/area-cutouts-depth-v1-4-dark-web.dec07a98201fc7c88d53.png",
+    "lang": "en"
+  },
+  "german": {
+    "alt": "Deutsche PolyPDF-Oberfläche mit Bodenplatte S-102, zwei inneren Aussparungen und 12,90 m³ bei 0,15 m Tiefe",
+    "hero": "/localized-media/de/guides/area/volumen-mit-tiefe.png",
+    "lang": "de",
+    "pdf": "/localized-media/de/samples/area/bodenplatte-aussparungen-uebung.pdf"
+  },
+  "checks": [
+    "Clicked the German page language menu to English; original English screenshot restored",
+    "Clicked the English page language menu to Deutsch; German S-102 screenshot and drawing restored",
+    "Reloaded final build and verified the direct S-102 PDF link above the screenshot",
+    "Visually reviewed the German screenshot, PDF link and caption in the actual rendered page",
+    "Downloaded the direct S-102 PDF through the browser; SHA-256 matches the verified regional source"
+  ],
+  "download": {
+    "file": "bodenplatte-aussparungen-uebung.pdf",
+    "sha256": "1dbc83474ca321a686720e159f007d7401899a71e781b9e009b8b415bbe323c4",
+    "matchesRegionalSource": true
+  }
+}
