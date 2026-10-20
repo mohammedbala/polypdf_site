@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "appBuild": "1.6.17+84",
+  "developmentBuild": true,
+  "importerSha256": "76636bb523528208455c15466addb620e1485eeddb3165c1367889110e72cfe3",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "b4122218be48b3da8a80bd8c29e6b8ea76a0581731d855ca905babb5b10cc922",
+    "version": "1.6.17",
+    "bundleSetSha256": "4b0d0d07bc19c1230545a8ccea45febb470c61803b327196ea73d620ae2ada95"
+  },
+  "appVerificationSha256": "2ceb02448db345276b5047397c42e70e287e9d7ca9e2803d6291b3474cf5f507",
+  "appWorkflowSha256": "2608cd1e25287d25669cf2fe83fb84f139575c5ebb6780b7199ab7c5c53409c7",
+  "geometry": {
+    "sheet": "F-101",
+    "paper": "A2",
+    "scale": "1:50",
+    "netAreasSquareMetres": [
+      20.52,
+      16.2
+    ],
+    "combinedNetSquareMetres": 36.72,
+    "lengthCheckMetres": 3.6
+  },
+  "provenance": [
+    "Drawing annotations were prepared by writer/importer tests and reopened in the actual Mac app.",
+    "CSV and summary PDF were saved through actual app export handlers and native macOS Save dialogs.",
+    "CSV and prepared drawing are byte-identical to verified app audit files.",
+    "The PDF summary preserves every page content stream; three local source links now point to the German web sample."
+  ],
+  "limitations": [
+    "No native calibration or drawing gesture test",
+    "No Windows or native iPad verification",
+    "Development localization pilot; not a released-language claim"
+  ],
+  "rewrittenLinks": 3,
+  "files": {
+    "bodenbelag-messungen.pdf": "0fb42d88964366b845b576eb132ee2880ff40415ed23e15010d80c123f61016c",
+    "bodenbelag-mengentabelle.csv": "8e175fab1f91c4d2e4bacedc59de73e2903d7d1de82eb2ae631644fb6507805e",
+    "bodenbelag-mengenuebersicht.pdf": "ad4a584b03f6289acc016d7a0659f6f2379469d81e5a889ae4862abdfe83003f"
+  },
+  "mappings": {
+    "/samples/takeoff/flooring-mac-measured.pdf": {
+      "url": "/localized-media/de/samples/takeoff/app-exports/bodenbelag-messungen.pdf",
+      "kind": "prepared-native-drawing",
+      "originalAppSha256": "0fb42d88964366b845b576eb132ee2880ff40415ed23e15010d80c123f61016c",
+      "sha256": "0fb42d88964366b845b576eb132ee2880ff40415ed23e15010d80c123f61016c",
+      "sourceSha256": "3f990a66a30332a38d56ee8e71c464ea558dc985ff09c4de829d36a349585e73"
+    },
+    "/samples/takeoff/flooring-mac-worksheet.csv": {
+      "url": "/localized-media/de/samples/takeoff/app-exports/bodenbelag-mengentabelle.csv",
+      "kind": "actual-mac-export",
+      "originalAppSha256": "8e175fab1f91c4d2e4bacedc59de73e2903d7d1de82eb2ae631644fb6507805e",
+      "sha256": "8e175fab1f91c4d2e4bacedc59de73e2903d7d1de82eb2ae631644fb6507805e",
+      "sourceSha256": "e52b000d55966b3fd7f8665040bc3d322eba92410cf8304f015cd4efc2c71148"
+    },
+    "/samples/takeoff/flooring-mac-summary.pdf": {
+      "url": "/localized-media/de/samples/takeoff/app-exports/bodenbelag-mengenuebersicht.pdf",
+      "kind": "actual-mac-export-derived",
+      "originalAppSha256": "4080682c9897e5e63a30ae9a93207cf9b344bc921f29c284657de84abd89b081",
+      "sha256": "ad4a584b03f6289acc016d7a0659f6f2379469d81e5a889ae4862abdfe83003f",
+      "sourceSha256": "33399cc159b03951946eac9fef47c2503b5cb1dab58ac29c61a0be021d4c49af"
+    }
+  }
+}

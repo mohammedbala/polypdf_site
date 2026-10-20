@@ -1,6 +1,6 @@
 # Regional walkthrough media
 
-This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has 62 verified asset mappings. The full pack remains inactive while the screenshot/video workflows and additional sample families are unfinished. Nothing has been published.
+This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has 65 verified asset mappings, including three prepared/native flooring download replacements. The full pack remains inactive while the screenshot/video workflows and additional sample families are unfinished. Nothing has been published.
 
 The app repository’s detailed scope, evidence and remaining implementation plan is at `docs/audits/global-localization-2026-10-20/README.md`.
 
@@ -42,10 +42,10 @@ The main website build currently succeeds with the existing published localizati
 
 ## Verification
 
-- `npm run test:localized-media`: 11/11, covering media provenance, regional image dimensions/descriptions, German form downloads, source-bound exercise copy and regional table structure/quantities.
+- `npm run test:localized-media`: 13/13, covering media provenance, regional image dimensions/descriptions, German form downloads, source-bound exercise copy and regional table structure/quantities, and the actual German flooring export files/source links.
 - `node --test test/international.test.cjs test/international-consent.test.cjs`: 11 existing localization/consent cases passed after building.
 - The electrical component's same-page navigation regression also passed.
-- `npm run build`: passed, including 240 guide translations and 836 translated toolkit pages.
+- The preceding `npm run build` passed, including 240 guide translations and 836 translated toolkit pages. This download-replacement milestone reuses its unchanged English bindings and runs the targeted page/media checks; it does not claim a new full site build.
 - German pilot enforcement: expected missing-asset failure, confirming no silent English fallback when enabled.
 
 ## German regional takeoff references
@@ -54,9 +54,9 @@ The main website build currently succeeds with the existing published localizati
 
 The verifier reads painted PDF operators and checks three known spans, two areas, two route legs, all twelve fixture graphics and excluded legends/endpoints. It also compares fifteen decimal-comma CSV rows against independent arithmetic and the reference PDFs. Five tests include altered scale, a removed fixture, a shifted route and an incorrect pack quantity. The eleven generated artifacts reproduce byte-for-byte. Refactoring the English generator for safe geometry reuse leaves its six source/reference files byte-identical.
 
-The app writer/importer passes four ordinary/append-only save/reopen cases, with decimal commas and `m²` preserved even after stripping private metadata. The earlier area-unit and English-prefix gaps are fixed: the route total now paints `Länge: 12,60 m`, clear of the source dimensions. The refreshed receipt also checks editable caption import. Separate actual Mac captures in the app audit verify reopening and interface-language switches; worksheet exports and complete workflow capture remain outstanding. These scripted outputs are not mapped as finished German walkthrough exports.
+The app writer/importer passes four ordinary/append-only save/reopen cases, with decimal commas and `m²` preserved even after stripping private metadata. The earlier area-unit and English-prefix gaps are fixed: the route total now paints `Länge: 12,60 m`, clear of the source dimensions. The refreshed receipt also checks editable caption import. Separate actual Mac captures in the app audit verify reopening and interface-language switches. A later Mac export flow now supplies the flooring worksheet CSV and PDF summary described below; complete workflow capture remains outstanding.
 
-Twenty-six exact-source text records and two metric tables are bound across six built pages. Source-preview alt text now describes the German geometry and survives ordinary translation. `page-validation.json` records the precise scope and hashes; it does not qualify the rest of each page. Historical English outputs remain explicitly identified and still require fresh German replacements. The full pack remains inactive.
+Twenty-six exact-source text records and two metric tables are bound across six built pages. Source-preview alt text now describes the German geometry and survives ordinary translation. `page-validation.json` records the precise scope and hashes; it does not qualify the rest of each page. Seven flooring-download links across three of those pages now resolve to verified German replacements. Historical electrical outputs remain explicitly identified and still require German replacements. The full pack remains inactive.
 
 Reproduce with Python containing ReportLab, pypdf and Pillow, plus Poppler:
 
@@ -72,7 +72,23 @@ npm run build
 npm run verify:regional-takeoff-pages
 ```
 
-The current full site build and all 22 media/international/consent tests pass. The German guide and all four source/reference PDF pages were visually inspected. Whole-page German walkthrough captures, worksheet/summary exports and native platform journeys remain pending.
+The previous full site build passed. The current targeted media suite passes 13 tests, and the six-page verifier checks 26 text bindings, two tables and seven flooring-export links. The German guide and all four source/reference PDF pages were visually inspected. Whole-page German walkthrough captures and native platform journeys remain pending.
+
+## German flooring app exports
+
+`public/localized-media/de/samples/takeoff/app-exports/` replaces three historical English downloads: the measured drawing, worksheet CSV and PDF summary. The prepared German drawing is A2 at 1:50 with 20.52 m² and 16.20 m² net areas and a separate 3.60 m height check. Its annotations were created by writer/importer tests and reopened in the actual Mac app. The CSV and summary were then exported through actual app handlers and native Save dialogs in the localization development build, version 1.6.17/build 84.
+
+The drawing and CSV are byte-identical to the verified app audit. The summary is a derivative that replaces three machine-local source links with the corresponding German web drawing; every page content stream remains byte-identical. Both PDF pages were rendered and inspected. The CSV keeps canonical `SUM(...)` formulas and quotes regional decimal commas. The localized guide distinguishes net area, the separate length row and repeated summary/detail sections to prevent double counting.
+
+The importer verifies the app receipt, workflow and all original file hashes. Registration checks its source hash, output bytes, manifest, guide and two rendered previews. The page copy explicitly describes prepared measurements and real exports; it does not claim native calibration/drawing gestures, Windows or native iPad qualification. These downloads do not activate the incomplete screenshot/video pack.
+
+```sh
+node scripts/localization/import-takeoff-exports.mjs /absolute/path/to/app/docs/audits/global-localization-2026-10-20/takeoff-reports
+# Render and inspect changed PDFs, then refresh app-exports/visual-review.json.
+npm run localization:register-takeoff
+npm run test:localized-media
+npm run verify:regional-takeoff-pages
+```
 
 ## German regional construction library
 
@@ -131,7 +147,7 @@ python3 scripts/generate-regional-evaluation.py
 node scripts/localization/register-regional-evaluation.cjs
 ```
 
-The page build applies regional exercise copy before ordinary translation. Authored `data-regional-copy` elements require an exact source-text match and a nonempty regional replacement; stale copy stops the build. This keeps exercise instructions and PDF quantities aligned. The older English app-export examples retain their original identity and remain an explicit coverage gap until fresh German app outputs exist.
+The page build applies regional exercise copy before ordinary translation. Authored `data-regional-copy` elements require an exact source-text match and a nonempty regional replacement; stale copy stops the build. This keeps exercise instructions and PDF quantities aligned. The flooring examples now use the verified German replacements above; the older electrical app-export examples retain their original identity and remain a coverage gap.
 
 ## German electrical reference worksheet
 
@@ -150,10 +166,10 @@ node scripts/localization/register-regional-electrical.cjs
 
 The page verifier retains an existing visual review only when the preview bytes are unchanged. Registration checks guide, component, catalog and regional-profile hashes. The full electrical page's screenshots, metadata, FAQ and currently English-only route policy remain pending; this receipt covers its four exercise sections, not a finished localized page or actual symbol-search run.
 
-There are now 53 verified German media mappings: 41 for the construction library, three for the form, six for evaluation resources and three for the electrical worksheet. Full-pack activation is still blocked by the remaining media.
+There are now 65 verified German media mappings: 41 for the construction library, three for the form, six for evaluation resources, three for the electrical worksheet, nine for takeoff source/reference assets and three for flooring app-output replacements. Full-pack activation is still blocked by the remaining media.
 
 ## Content still required
 
-Regionalize the remaining takeoff, historical app-output replacements, conversion and spreadsheet samples, then build the other locale profiles. Capture each workflow in the corresponding app locale using its regional PDF. Regenerate responsive images, posters, video variants, captions and narration, then update guide instructions to the same dimensions and results. Existing US walkthrough counts and sheet names elsewhere, including the shared blog construction-example components, must be rewritten before the German pack is activated.
+Complete the remaining electrical/count app-output replacements, conversion and spreadsheet samples, then build the other locale profiles. Capture each workflow in the corresponding app locale using its regional PDF. Regenerate responsive images, posters, video variants, captions and narration, then update guide instructions to the same dimensions and results. Existing US walkthrough counts and sheet names elsewhere, including the shared blog construction-example components, must be rewritten before the German pack is activated.
 
 Teams uses a separately served walkthrough from the app repository. Its assets are inventoried separately and need the same locale/region/provenance rules in that serving path. Existing English-only Teams and samples routes must be brought into the localized page policy before the rollout can be considered complete.

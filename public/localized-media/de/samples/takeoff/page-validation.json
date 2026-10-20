@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "scope": "Regional source bindings and source-preview accessibility on six built pages",
-  "profileSha256": "396b8882896e8ab8a000a1975ba0d89742cf3eb82cefcbe08ceddbe1fc0ab8c4",
+  "profileSha256": "f83e7c65b006bbc98f1a2432c894fd6cf508ae47bae675ec1ccd972c0befb3a1",
   "sourceFiles": {
     "src/components/AreaPractice.js": "91b3d07a1b906446c09b58136d96c21f6663a5fe654785bc1d4682fc63a32d86",
     "src/components/CalibrationPractice.js": "9cba1d4686b44596ea3a026ff118a260c68744cff5d4da2d17b0a5aec153576c",
@@ -19,41 +19,47 @@
       "route": "/blog/measure-pdf-area-cutouts-depth/",
       "sourceSha256": "57fb3a79db89e8dda41232964d1a90e172b6a771ff2d49b3d4b6e4c769cfc4b2",
       "regionalElements": 7,
-      "regionalImages": 1
+      "regionalImages": 1,
+      "regionalAppOutputLinks": 3
     },
     {
       "route": "/blog/calibrate-pdf-drawing-scale/",
       "sourceSha256": "f9ee722c2658744da117e7e233eab9ec8480920320d8c125520680080402ff45",
       "regionalElements": 9,
-      "regionalImages": 1
+      "regionalImages": 1,
+      "regionalAppOutputLinks": 0
     },
     {
       "route": "/pdf-takeoff-software/",
       "sourceSha256": "844e350524c75413680c93165755ef23723ca13684319ae05e039ac12ee3ad8e",
       "regionalElements": 5,
-      "regionalImages": 0
+      "regionalImages": 0,
+      "regionalAppOutputLinks": 2
     },
     {
       "route": "/measure-pdf-on-mac/",
       "sourceSha256": "920c55f677a514d7c48a3d26b1a4cae6731f9cd6f36c0cb7093836be56ff13bb",
       "regionalElements": 6,
-      "regionalImages": 0
+      "regionalImages": 0,
+      "regionalAppOutputLinks": 2
     },
     {
       "route": "/visual-search-pdf-count/",
       "sourceSha256": "455c2b288542f39de17d614fb9ccb64e763186506b1ccda47936009e98949a8b",
       "regionalElements": 5,
-      "regionalImages": 1
+      "regionalImages": 1,
+      "regionalAppOutputLinks": 0
     },
     {
       "route": "/blog/quantity-takeoff/",
       "sourceSha256": "37bad155d9dcaf0e321a2fcbf3718534506f20e33463389980384e4bf9c503f3",
       "regionalElements": 4,
-      "regionalImages": 0
+      "regionalImages": 0,
+      "regionalAppOutputLinks": 0
     }
   ],
   "limitations": [
-    "Full page screenshots, videos, unbound metadata/FAQ and historical app-output replacement remain pending",
+    "Full page screenshots, videos and unbound metadata/FAQ remain pending; only three flooring app-output downloads have been replaced",
     "No full media-pack or native UI qualification is claimed; the German pack remains pilot and inactive"
   ]
 }

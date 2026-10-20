@@ -1,0 +1,9 @@
+"Legende","Arbeitsbereich","Betreff","Status","Typ","Menge","Formel","Summe","Einheit","Seiten"
+"L1","Nicht zugewiesen","Höhenprüfung","Kein Status","Länge","1","SUM(3.6)","3,6","m","1"
+"A1","Nicht zugewiesen","Raum 1 netto","Kein Status","Fläche","1","SUM(20.52)","20,52","m²","1"
+"A2","Nicht zugewiesen","Raum 2 netto","Kein Status","Fläche","1","SUM(16.2)","16,2","m²","1"
+
+"Gruppe","Wert","Anzahl","Summe","Einheit"
+"Betreff","Höhenprüfung","1","3,6","m"
+"Betreff","Raum 1 netto","1","20,52","m²"
+"Betreff","Raum 2 netto","1","16,2","m²"

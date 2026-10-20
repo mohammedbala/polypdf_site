@@ -805,6 +805,45 @@
           "verification": "/localized-media/de/samples/takeoff/verification.json",
           "visualReview": "/localized-media/de/samples/takeoff/visual-review.json",
           "kind": "synthetic-practice-reference"
+        },
+        "/samples/takeoff/flooring-mac-measured.pdf": {
+          "url": "/localized-media/de/samples/takeoff/app-exports/bodenbelag-messungen.pdf",
+          "kind": "prepared-native-drawing",
+          "originalAppSha256": "0fb42d88964366b845b576eb132ee2880ff40415ed23e15010d80c123f61016c",
+          "sha256": "0fb42d88964366b845b576eb132ee2880ff40415ed23e15010d80c123f61016c",
+          "sourceSha256": "3f990a66a30332a38d56ee8e71c464ea558dc985ff09c4de829d36a349585e73",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "verification": "/localized-media/de/samples/takeoff/app-exports/manifest.json",
+          "visualReview": "/localized-media/de/samples/takeoff/app-exports/visual-review.json"
+        },
+        "/samples/takeoff/flooring-mac-worksheet.csv": {
+          "url": "/localized-media/de/samples/takeoff/app-exports/bodenbelag-mengentabelle.csv",
+          "kind": "actual-mac-export",
+          "originalAppSha256": "8e175fab1f91c4d2e4bacedc59de73e2903d7d1de82eb2ae631644fb6507805e",
+          "sha256": "8e175fab1f91c4d2e4bacedc59de73e2903d7d1de82eb2ae631644fb6507805e",
+          "sourceSha256": "e52b000d55966b3fd7f8665040bc3d322eba92410cf8304f015cd4efc2c71148",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "verification": "/localized-media/de/samples/takeoff/app-exports/manifest.json",
+          "visualReview": "/localized-media/de/samples/takeoff/app-exports/visual-review.json"
+        },
+        "/samples/takeoff/flooring-mac-summary.pdf": {
+          "url": "/localized-media/de/samples/takeoff/app-exports/bodenbelag-mengenuebersicht.pdf",
+          "kind": "actual-mac-export-derived",
+          "originalAppSha256": "4080682c9897e5e63a30ae9a93207cf9b344bc921f29c284657de84abd89b081",
+          "sha256": "ad4a584b03f6289acc016d7a0659f6f2379469d81e5a889ae4862abdfe83003f",
+          "sourceSha256": "33399cc159b03951946eac9fef47c2503b5cb1dab58ac29c61a0be021d4c49af",
+          "locale": "de-DE",
+          "region": "DE",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "verification": "/localized-media/de/samples/takeoff/app-exports/manifest.json",
+          "visualReview": "/localized-media/de/samples/takeoff/app-exports/visual-review.json"
         }
       },
       "regionalForm": {
@@ -901,11 +940,11 @@
         },
         "takeoff.area.historicalCsv": {
           "source": "In this Mac worksheet CSV, Quantity 2 means two area records; Total 408 with Unit sq ft is the measured area. The formula is SUM(228 + 180). Compare the saved page, formula, unit, and total before using an export for pricing.",
-          "target": "Die verlinkte historische Mac-CSV gehört zur englischen Zeichnung: Quantity 2 bezeichnet zwei Flächen, Total 408 mit Unit sq ft die gemessene Fläche; die Formel lautet SUM(228 + 180). Diese Werte sind keine Ergebnisse des deutschen Übungsplans. Vergleichen Sie Ihre deutschen Ergebnisse mit 20,52 m², 16,20 m² und 36,72 m² netto."
+          "target": "Die deutsche Mac-CSV enthält drei getrennte Zeilen: die Höhenprüfung mit 3,6 m sowie Raum 1 mit 20,52 m² und Raum 2 mit 16,2 m². Beide Flächen ergeben 36,72 m² netto; die Länge wird nicht zur Fläche addiert. Die Formeln bleiben maschinenlesbar als SUM(3.6), SUM(20.52) und SUM(16.2)."
         },
         "takeoff.area.historicalEvidence": {
           "source": "These existing outputs were saved, reopened, and checked in PolyPDF 1.6.6 build 38 on Mac. They verify the two net areas, not interior-cutout or volume behavior. The length-check-plus-two-areas sequence is guidance; the historical export contains only the two areas. No current-release or Windows test of this sequence has been completed. The synthetic drawing is for practice, not construction.",
-          "target": "Die historischen englischen Ergebnisse wurden mit PolyPDF 1.6.6 Build 38 auf dem Mac gespeichert, erneut geöffnet und geprüft. Sie belegen zwei Flächen der damaligen Zeichnung. Ein aktueller vollständiger deutscher App-Durchlauf einschließlich Mengentabellenexport und Windows-/iPad-Prüfung steht noch aus. Die deutschen PDF-Referenzen sind aus der Zeichnungsgeometrie berechnet."
+          "target": "Die vorbereiteten deutschen Messungen wurden im Mac-Entwicklungsstand von PolyPDF 1.6.17 Build 84 erneut geöffnet. Mengentabelle und PDF-Übersicht wurden über die App und native Speicherdialoge exportiert. Dies prüft das Wiederöffnen und Exportieren der vorbereiteten Werte, nicht manuelle Kalibrierungs- oder Zeichengesten. Windows- und iPad-Prüfungen stehen noch aus. Der Plan dient ausschließlich der Übung."
         },
         "takeoff.calibration.source": {
           "source": "Use F-101, Revision A, a separate synthetic flooring sheet at 1/8 inch = 1 foot. Calibrate from its 20 ft span, check independent 15 ft and 12 ft spans, then trace one net area. This exercise fits the Free allowance of three hand-created measurements.",
@@ -929,11 +968,11 @@
         },
         "takeoff.calibration.evidence": {
           "source": "Reference dimensions come from the source geometry. Existing Mac outputs verify Room 1 at 228 sq ft and Room 2 at 180 sq ft in PolyPDF 1.6.6 build 38. This three-measurement exercise is guidance, not a new app test; current-release and Windows parity remain unverified.",
-          "target": "Die deutschen Referenzmaße sind anhand der gezeichneten PDF-Geometrie geprüft. Die verlinkten historischen Mac-Ergebnisse gehören zur englischen Zeichnung mit 228 und 180 sq ft aus PolyPDF 1.6.6 Build 38. Sie sind keine Prüfung dieses deutschen Kalibrierungsablaufs; vollständige aktuelle Mac-/Windows-/iPad-Durchläufe stehen noch aus."
+          "target": "Die deutschen Referenzmaße sind anhand der gezeichneten PDF-Geometrie geprüft. Die verlinkten deutschen Mac-Beispiele enthalten 20,52 m² und 16,20 m² sowie eine getrennte Höhenprüfung von 3,60 m. Die vorbereiteten Messungen wurden in der App erneut geöffnet und exportiert. Dieser Kalibrierungsablauf mit zwei unabhängigen Längenprüfungen ist noch kein vollständig manuell geprüfter App-Durchlauf."
         },
         "takeoff.calibration.link": {
           "source": "See the full 408 sq ft takeoff and saved Mac outputs",
-          "target": "Zur vollständigen Übung mit 36,72 m² und den gesondert gekennzeichneten historischen Mac-Dateien"
+          "target": "Zur vollständigen Übung mit 36,72 m² und den deutschen Mac-Exporten"
         },
         "takeoff.evaluation.source": {
           "source": "Use the synthetic flooring drawing to test a small workflow within the Free limit. Its two net room areas total 408 sq ft. This is a practice drawing, not a construction document.",
@@ -949,7 +988,7 @@
         },
         "takeoff.evaluation.historical": {
           "source": "The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity. The three-measurement sequence above is an evaluation guide, not a separately verified app test.",
-          "target": "Die verlinkten historischen Mac-Dateien enthalten 408 sq ft aus der englischen Zeichnung und wurden in PolyPDF 1.6.6 Build 38 exportiert und erneut geöffnet. Sie sind keine deutschen Ergebnisse. Die Anleitung mit drei Messungen ist eine Übung; ein vollständiger aktueller deutscher App-Durchlauf samt Export und Plattformprüfung steht noch aus."
+          "target": "Die deutschen Dateien enthalten vorbereitete Messungen mit 20,52 m² und 16,20 m² sowie die getrennte Höhenprüfung von 3,60 m. Sie wurden im Mac-Entwicklungsstand von PolyPDF 1.6.17 Build 84 erneut geöffnet und als Mengentabelle exportiert. Manuelle Kalibrierungs- und Zeichengesten sowie Windows-/iPad-Parität sind damit noch nicht geprüft."
         },
         "takeoff.mac.scale": {
           "source": "Preview can show the dimensions of a PDF selection in its Crop inspector. Those page dimensions need a drawing scale to become real-world lengths. For example, a 3-inch line represents 12 ft only when the PDF is correctly scaled at 1/4 inch = 1 ft.",
@@ -969,7 +1008,7 @@
         },
         "takeoff.shared.provenance": {
           "source": "The practice drawings were redrawn on October 17, 2026 with walls, doors, dimensions, legends, and title blocks. The measured examples retain the original scale, geometry, and Mac-created annotations on the updated backgrounds. They are republished derivatives, not new desktop exports. The worksheet CSV and PDF totals come from the original October 16 test.",
-          "target": "Die deutschen Übungspläne stammen vom 20.10.2026 und verwenden metrische Maße sowie deutsche Hinweise, Legenden und Planköpfe. Die gesondert gekennzeichneten historischen Mac-Dateien gehören weiterhin zur englischen Zeichnung: alte Anmerkungen wurden auf überarbeiteten Hintergründen erneut veröffentlicht. Diese Dateien sind keine neuen deutschen App-Exporte."
+          "target": "Die deutschen Übungspläne vom 20.10.2026 verwenden metrische Maße sowie deutsche Hinweise, Legenden und Planköpfe. Beim Bodenbelagsbeispiel wurden vorbereitete Messungen in der Mac-App erneut geöffnet und die Mengentabelle sowie die PDF-Übersicht exportiert. Die PDF-Quelllinks führen zum deutschen Beispielplan; die Berichtsinhalte bleiben unverändert. Historische Elektro-App-Dateien gehören weiterhin zur englischen Zeichnung."
         },
         "takeoff.shared.exclude": {
           "source": "Count fixtures in the plan only. Exclude the legend symbols and the small JB route-endpoint boxes.",

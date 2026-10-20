@@ -52,10 +52,33 @@ for (const [original, file] of Object.entries(source.sourceMappings)) {
     } : {})
   };
 }
+const exportsManifest = read('app-exports/manifest.json');
+const exportsVisual = read('app-exports/visual-review.json');
+assert.equal(exportsManifest.status, 'passed');
+assert.equal(exportsManifest.locale, 'de-DE');
+assert.equal(exportsManifest.region, 'DE');
+assert.equal(exportsManifest.rewrittenLinks, 3);
+assert.equal(exportsManifest.importerSha256, hash(path.join(__dirname, 'import-takeoff-exports.mjs')));
+assert.equal(exportsVisual.status, 'passed');
+assert.equal(exportsVisual.manifestSha256, hash(path.join(folder, 'app-exports/manifest.json')));
+assert.equal(exportsVisual.readmeSha256, hash(path.join(folder, 'app-exports/README.md')));
+for (const [file, expected] of Object.entries(exportsVisual.previews)) {
+  assert.equal(hash(path.join(folder, 'app-exports', file)), expected);
+}
+for (const [original, asset] of Object.entries(exportsManifest.mappings)) {
+  assert.equal(hash(path.join(root, 'public', original)), asset.sourceSha256);
+  assert.equal(hash(path.join(root, 'public', asset.url)), asset.sha256);
+  assert.equal(exportsManifest.files[path.basename(asset.url)], asset.sha256);
+  pack.assets[original] = {
+    ...asset, locale:'de-DE', region:'DE', appBuild:exportsManifest.appBuild, status:'verified',
+    verification:`${base}/app-exports/manifest.json`,
+    visualReview:`${base}/app-exports/visual-review.json`
+  };
+}
 const copy = JSON.parse(fs.readFileSync(path.join(__dirname, 'regional-takeoff-de.json')));
 pack.regionalText = { ...pack.regionalText, ...copy.text };
 pack.regionalTables = { ...pack.regionalTables, ...copy.tables };
 verifyMediaFiles(media, JSON.parse(fs.readFileSync(path.join(root, 'src/localization/product-locales.json'))).locales,
   asset => fs.readFileSync(path.join(root, 'public', asset)), ['de']);
 fs.writeFileSync(mediaPath, JSON.stringify(media, null, 2) + '\n');
-console.log(`Registered ${Object.keys(source.sourceMappings).length} German takeoff sources and ${Object.keys(copy.text).length} regional copy bindings. Pack remains inactive.`);
+console.log(`Registered ${Object.keys(source.sourceMappings).length} German takeoff sources, ${Object.keys(exportsManifest.mappings).length} app-output replacements and ${Object.keys(copy.text).length} regional copy bindings. Pack remains inactive.`);

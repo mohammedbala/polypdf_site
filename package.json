@@ -30,7 +30,7 @@
     "build:english": "node scripts/toolkit/icons.cjs && python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
     "translations:extract": "npm run build:english && node scripts/international/build.cjs --extract",
     "test:international": "node --test test/international.test.cjs",
-    "test:localized-media": "node --test test/localized-walkthrough-media.test.cjs",
+    "test:localized-media": "node --test test/localized-walkthrough-media.test.cjs test/regional-takeoff-exports.test.cjs",
     "localization:inventory": "node scripts/localization/inventory.cjs",
     "localization:register-library": "node scripts/localization/register-regional-library.cjs",
     "localization:register-takeoff": "node scripts/localization/register-regional-takeoff.cjs",

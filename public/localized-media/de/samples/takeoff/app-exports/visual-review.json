@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "manifestSha256": "8b4e7d368e5fb0f49a74b2a88e194303f9dc194f60b2487df4e428edc0bb30ea",
+  "readmeSha256": "29cf6ee2a9fbd4983027a914fefba6035d86515879e39b2b42cde3eb8b6420ae",
+  "previews": {
+    "bodenbelag-messungen-1.png": "e8474d776f49f22c2dc093dcc610e42c182f1ece8a43c232596f48c846c01baa",
+    "bodenbelag-mengenuebersicht-1.png": "9f5799b14e143996b7aa7dad6bfbb5e07309756df72e3ae0bcf3a642aa5a4e2c"
+  },
+  "review": [
+    "Both complete PDF pages rendered and inspected: German title blocks, metric geometry, 20.52/16.20 square-metre captions and 3.60-metre check are readable.",
+    "The A4 summary retains German headings, 20.52/16.2 square-metre totals and a separate 3.6-metre row; intentional Workspace ellipsis is documented and full data remain in the CSV.",
+    "CSV values and three public drawing source links verified independently."
+  ],
+  "reviewStatus": "Agent visual review; professional linguistic review remains outstanding"
+}

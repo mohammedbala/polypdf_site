@@ -48,7 +48,14 @@ for (const route of [
     assert.equal(localized.height, 1273);
     assert.ok(!/\bfeet\b|\bfoot\b/.test(localized.alt));
   }
-  pages.push({ route: `/${route}/`, sourceSha256: hash(source), regionalElements: nodes.length, regionalImages: sourceImages.length });
+  const appOutputLinks = [...original.querySelectorAll('a[href^="/samples/takeoff/flooring-mac-"]')];
+  for (const link of appOutputLinks) {
+    const fixture = new JSDOM(link.outerHTML).window.document;
+    localizeWalkthroughMedia(fixture, {id:'de'}, manifest);
+    assert.ok(fixture.querySelector('a').href.includes('/localized-media/de/samples/takeoff/app-exports/'));
+  }
+  pages.push({ route: `/${route}/`, sourceSha256: hash(source), regionalElements: nodes.length,
+    regionalImages: sourceImages.length, regionalAppOutputLinks:appOutputLinks.length });
 }
 assert.deepEqual([...seen].sort(), Object.keys(profile.text).sort());
 assert.deepEqual([...seenTables].sort(), Object.keys(profile.tables).sort());
@@ -63,7 +70,7 @@ fs.writeFileSync(path.join(root, 'public/localized-media/de/samples/takeoff/page
   sourceFiles: Object.fromEntries(sourceFiles.map(file => [file, hash(read(file))])),
   regionalCopyRecords: seen.size, regionalTables: seenTables.size, pages,
   limitations: [
-    'Full page screenshots, videos, unbound metadata/FAQ and historical app-output replacement remain pending',
+    'Full page screenshots, videos and unbound metadata/FAQ remain pending; only three flooring app-output downloads have been replaced',
     'No full media-pack or native UI qualification is claimed; the German pack remains pilot and inactive'
   ]
 }, null, 2) + '\n');
