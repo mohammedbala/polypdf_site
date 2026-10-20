@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "manifestSha256": "d1a6e685f6acd8b9d04a45683abab11d19601256b7c6a8e101ddc9749a522607",
+  "verifierSha256": "10470be2e02c72de7a59c5f905603f135fdfb18105bac2860904a04276d3003c",
+  "physicalReferences": {
+    "areas": 2,
+    "calibrationAndChecks": 3,
+    "routeSegments": 2
+  },
+  "actualPlanSymbols": {
+    "typeA": 8,
+    "typeB": 4
+  },
+  "excludedSymbols": {
+    "legendFixtures": 2,
+    "routeEndpoints": 2,
+    "endpointLegend": 1
+  },
+  "referenceCsvRows": 15,
+  "pdfPages": 4,
+  "files": {
+    "README.html": "78fd407f336f6bc9e55b57589a028dd64fbf338fbc4e094bf3c76412e939799b",
+    "bodenbelag-referenz.csv": "1b78cad54428d9f2580cc3e073561c714697af9d07a07833f02bd8d3bb7036f6",
+    "bodenbelag-referenz.pdf": "dbf9c90967c8039c199f0f1d739e443ddc23df4aa434e916b8fe7db88b5ebe4c",
+    "bodenbelag-referenz.png": "8415fec361d2dfc4582c8db1212c672681efa036e6bd2d4fd5eff562cee4a1ee",
+    "bodenbelag-uebung.pdf": "2225016bafc5c55964a7bdd1e51b4766a80281675f6f2c86f93287c833f4bd60",
+    "bodenbelag-uebung.png": "fe326ca26ed8aca678ff1c08f1d0492b5f24d7414abfa2aea9718e20ddaafe55",
+    "elektro-referenz.csv": "6e4163e6d4398a204a95e5dad2be8d14641a8ca6594bf4cebfbcedd0dc9a121a",
+    "elektro-referenz.pdf": "f17fa50a92a54ceb38169f59fce6eac57fd2cf9fd4ad0d499ed40b2e08250b9e",
+    "elektro-referenz.png": "392d042c4fb4d1bb82cc049b6f07610864b602f8461e66d9da123baedaab4f99",
+    "elektro-uebung.pdf": "69b7e8654925b50eed01233e299ad9c63bad0c6cbc0585dd605a48978a4b5886",
+    "elektro-uebung.png": "3d2d30765892734954bee4737f3dbd4afdf1072f4c051ab4983870e92c6c1b76"
+  },
+  "limitations": [
+    "Source geometry and independent references; not app-export evidence",
+    "Automated checks do not replace visual review or native platform walkthroughs"
+  ]
+}

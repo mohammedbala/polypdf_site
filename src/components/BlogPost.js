@@ -262,13 +262,13 @@ const renderBlock = (block, index) => {
       return (
         <div key={key} className="blog-formula" role="note" aria-label={block.label || 'Formula'}>
           {block.label && <span className="blog-formula-label">{block.label}</span>}
-          <p><code>{formula}</code></p>
+          <p><code data-regional-copy={block.regionalKey}>{formula}</code></p>
           {block.explanation && <small>{block.explanation}</small>}
         </div>
       );
     }
     default:
-      return <p key={key} className="blog-paragraph">{block.text}</p>;
+      return <p key={key} className="blog-paragraph" data-regional-copy={block.regionalKey}>{block.text}</p>;
   }
 };
 

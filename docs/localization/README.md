@@ -1,6 +1,6 @@
 # Regional walkthrough media
 
-This branch implements media routing and Germany’s regional construction library, form, evaluation kit and electrical reference worksheet for the German-first product localization plan. The German pilot has 53 verified asset mappings. The full pack remains inactive while the screenshot/video workflows and additional sample families are unfinished. Nothing has been published.
+This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has 62 verified asset mappings. The full pack remains inactive while the screenshot/video workflows and additional sample families are unfinished. Nothing has been published.
 
 The app repository’s detailed scope, evidence and remaining implementation plan is at `docs/audits/global-localization-2026-10-20/README.md`.
 
@@ -42,11 +42,37 @@ The main website build currently succeeds with the existing published localizati
 
 ## Verification
 
-- `npm run test:localized-media`: 10/10, covering media provenance, regional image dimensions, German form downloads, source-bound exercise copy and regional table structure/quantities.
+- `npm run test:localized-media`: 11/11, covering media provenance, regional image dimensions/descriptions, German form downloads, source-bound exercise copy and regional table structure/quantities.
 - `node --test test/international.test.cjs test/international-consent.test.cjs`: 11 existing localization/consent cases passed after building.
 - The electrical component's same-page navigation regression also passed.
 - `npm run build`: passed, including 240 guide translations and 836 translated toolkit pages.
 - German pilot enforcement: expected missing-asset failure, confirming no silent English fallback when enabled.
+
+## German regional takeoff references
+
+`public/localized-media/de/samples/takeoff/` contains four A2 PDFs, two CSVs, four previews and a German HTML guide for a fictional Bürgerhaus annex. At 1:50, the net room areas are 20.52 m² and 16.20 m², totaling 36.72 m². The electrical exercise has eight Type A and four Type B lights, with a separate 9 m + 3.6 m route. The reference calculation keeps net area, a 10% waste assumption, 2 m² packs and rounding surplus separate.
+
+The verifier reads painted PDF operators and checks three known spans, two areas, two route legs, all twelve fixture graphics and excluded legends/endpoints. It also compares fifteen decimal-comma CSV rows against independent arithmetic and the reference PDFs. Five tests include altered scale, a removed fixture, a shifted route and an incorrect pack quantity. The eleven generated artifacts reproduce byte-for-byte. Refactoring the English generator for safe geometry reuse leaves its six source/reference files byte-identical.
+
+The app writer/importer passes four ordinary/append-only save/reopen cases, with decimal commas preserved even after stripping private metadata. Saved previews show two pending localization issues: the canonical area spelling `sq m` is still displayed, and multipoint PDF appearances still use the English `Length:` prefix. These scripted results are not mapped as finished German app exports or native UI evidence.
+
+Twenty-six exact-source text records and two metric tables are bound across six built pages. Source-preview alt text now describes the German geometry and survives ordinary translation. `page-validation.json` records the precise scope and hashes; it does not qualify the rest of each page. Historical English outputs remain explicitly identified and still require fresh German replacements. The full pack remains inactive.
+
+Reproduce with Python containing ReportLab, pypdf and Pillow, plus Poppler:
+
+```sh
+python3 scripts/generate-regional-takeoff.py
+python3 scripts/verify-regional-takeoff.py
+npm run test:regional-takeoff
+# From the app's polypdf workspace:
+npm run test:regional-takeoff -- --directory /absolute/path/to/site/public/localized-media/de/samples/takeoff
+# Refresh source-bound visual and native receipts after reviewing changed outputs, then:
+npm run localization:register-takeoff
+npm run build
+npm run verify:regional-takeoff-pages
+```
+
+The current full site build and all 22 media/international/consent tests pass. The German guide and all four source/reference PDF pages were visually inspected. Whole-page German walkthrough captures, worksheet/summary exports and native platform journeys remain pending.
 
 ## German regional construction library
 

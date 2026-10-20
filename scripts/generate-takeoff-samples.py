@@ -181,44 +181,48 @@ def electrical():
  rect(c,605,y-65,6,6,.65);text(c,622,y-64,'JB  Route endpoint / exclude',6.5)
  text(c,598,119,'ORIGINAL FICTIONAL PROJECT',6,True);text(c,598,107,'Not an electrical installation document.',6)
  c.save()
-flooring();electrical()
-rows={
- 'flooring':[['Room 1 gross',240,'sq ft','20 x 12'],['Room 1 shaft exclusion',-12,'sq ft','4 x 3 subtracted'],['Room 1 net',228,'sq ft','240 - 12; subtotal, do not sum twice'],['Room 2 net',180,'sq ft','15 x 12'],['Total net',408,'sq ft','228 + 180; total'],['Waste example',40.8,'sq ft','10% of 408'],['Required with waste',448.8,'sq ft','408 x 1.10'],['Whole packs',23,'packs','ceil(448.8 / 20)'],['Purchased area',460,'sq ft','23 x 20'],['Surplus beyond allowance',11.2,'sq ft','460 - 448.8']],
- 'electrical':[['Type A fixtures',8,'count','Circle with cross'],['Type B fixtures',4,'count','Square'],['Horizontal route leg',30,'ft','270 PDF points / 9'],['Vertical route leg',12,'ft','108 PDF points / 9'],['Total drawn route',42,'ft','30 + 12; excludes rises, drops, slack, fittings']]
-}
-for kind,data in rows.items():
- with (OUT/f'{kind}-reference.csv').open('w',newline='') as f:
-  writer=csv.writer(f,lineterminator='\n');writer.writerow(['Item','Reference quantity','Unit','Calculation or scope']);writer.writerows(data)
- c=frame(f'{kind}-reference.pdf','F-901' if kind=='flooring' else 'E-901',kind.title()+' quantity reference','QUANTITY CHECKING SCHEDULE','NOT TO SCALE')
- text(c,42,511,'REFERENCE QUANTITIES / INDEPENDENT CALCULATION',12,True)
- text(c,42,492,'Based on the corresponding practice drawing. This is a checking sheet, not a PolyPDF export.',8)
- xs=[42,245,358,750];y=469;rh=26
- rect(c,42,y-24,708,24,.5,PALE)
- for x,v in [(51,'ITEM / SCOPE'),(254,'QUANTITY / UNIT'),(367,'CALCULATION / BASIS')]:text(c,x,y-16,v,8,True)
- for i,(title,value,unit,note) in enumerate(data):
-  yy=y-24-(i+1)*rh
-  if i%2==0:rect(c,42,yy,708,rh,0,HexColor('#f5f6f6'))
-  line(c,42,yy,750,yy,.3,MUTED);text(c,51,yy+9,title,8);text(c,254,yy+9,f'{value:g} {unit}',8,True);text(c,367,yy+9,note,7.4)
- for x in xs:line(c,x,y,x,y-24-len(data)*rh,.4)
- yy=y-24-len(data)*rh-29
- for i,t in enumerate(['01  Calibrate at 9 PDF points per foot; verify a separate labeled span.', '02  Match the scope, subject, units and formula before pricing.', '03  Do not sum detail rows, subtotals and totals together.', '04  Add a project-specific waste allowance only after reviewing net quantities.']):text(c,42,yy-i*16,t,8)
- c.save()
-# Re-present historical annotations on the revised drawing without moving any
-# measurement vertices, page scale, viewport or app-specific measurement data.
-derivatives=[]
-for kind,name in [('flooring','flooring-mac-measured.pdf'),('electrical','electrical-mac-route.pdf')]:
- original=ROOT/'assets-source/samples/original-app-outputs'/name
- writer=PdfWriter();writer.clone_document_from_reader(PdfReader(original))
- src=PdfReader(OUT/f'{kind}-practice.pdf');old=writer.pages[0];new=src.pages[0]
- assert tuple(old.mediabox)==tuple(new.mediabox)
- old[NameObject('/Contents')]=new.raw_get('/Contents').clone(writer)
- old[NameObject('/Resources')]=new['/Resources'].clone(writer)
- note=io.BytesIO();nc=canvas.Canvas(note,pagesize=(W,H),invariant=1)
- text(nc,38,88,'Republished example: original Mac 1.6.6 b38 annotations; drawing background updated October 17, 2026.',6)
- nc.save();note.seek(0);old.merge_page(PdfReader(note).pages[0])
- writer.add_metadata({'/Title':f'Northline Studio Annex | {kind.title()} measured example','/Subject':'Republished derivative: October 17 drawing background with unchanged October 16 Mac measurement annotations. Not a new app export.'})
- with (OUT/name).open('wb') as f:writer.write(f)
- derivatives.append({'file':name,'originalSha256':hashlib.sha256(original.read_bytes()).hexdigest(),'sha256':hashlib.sha256((OUT/name).read_bytes()).hexdigest(),'transform':'Replaced page content/resources with October 17 construction-style drawing. Page boxes, annotation objects and measurement metadata retained; not a new desktop export.'})
-manifest={'kind':'synthetic-practice-reference','updatedAt':'2026-10-17','appExport':False,'scalePdfPointsPerFoot':9,'flooringNetSqFt':408,'electricalTypeA':8,'electricalTypeB':4,'electricalDrawnRouteFt':42,'flooringNetVertices':[[90,290],[270,290],[270,371],[234,371],[234,398],[90,398]],'electricalRouteVertices':[[100,300],[370,300],[370,408]],'files':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(OUT.glob('*')) if f.name.endswith(('-practice.pdf','-reference.pdf','-reference.csv'))},'republishedMeasuredExamples':derivatives}
-(OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
-print('Generated four construction-style reference PDFs and two measured derivatives.')
+def main():
+ flooring();electrical()
+ rows={
+  'flooring':[['Room 1 gross',240,'sq ft','20 x 12'],['Room 1 shaft exclusion',-12,'sq ft','4 x 3 subtracted'],['Room 1 net',228,'sq ft','240 - 12; subtotal, do not sum twice'],['Room 2 net',180,'sq ft','15 x 12'],['Total net',408,'sq ft','228 + 180; total'],['Waste example',40.8,'sq ft','10% of 408'],['Required with waste',448.8,'sq ft','408 x 1.10'],['Whole packs',23,'packs','ceil(448.8 / 20)'],['Purchased area',460,'sq ft','23 x 20'],['Surplus beyond allowance',11.2,'sq ft','460 - 448.8']],
+  'electrical':[['Type A fixtures',8,'count','Circle with cross'],['Type B fixtures',4,'count','Square'],['Horizontal route leg',30,'ft','270 PDF points / 9'],['Vertical route leg',12,'ft','108 PDF points / 9'],['Total drawn route',42,'ft','30 + 12; excludes rises, drops, slack, fittings']]
+ }
+ for kind,data in rows.items():
+  with (OUT/f'{kind}-reference.csv').open('w',newline='') as f:
+   writer=csv.writer(f,lineterminator='\n');writer.writerow(['Item','Reference quantity','Unit','Calculation or scope']);writer.writerows(data)
+  c=frame(f'{kind}-reference.pdf','F-901' if kind=='flooring' else 'E-901',kind.title()+' quantity reference','QUANTITY CHECKING SCHEDULE','NOT TO SCALE')
+  text(c,42,511,'REFERENCE QUANTITIES / INDEPENDENT CALCULATION',12,True)
+  text(c,42,492,'Based on the corresponding practice drawing. This is a checking sheet, not a PolyPDF export.',8)
+  xs=[42,245,358,750];y=469;rh=26
+  rect(c,42,y-24,708,24,.5,PALE)
+  for x,v in [(51,'ITEM / SCOPE'),(254,'QUANTITY / UNIT'),(367,'CALCULATION / BASIS')]:text(c,x,y-16,v,8,True)
+  for i,(title,value,unit,note) in enumerate(data):
+   yy=y-24-(i+1)*rh
+   if i%2==0:rect(c,42,yy,708,rh,0,HexColor('#f5f6f6'))
+   line(c,42,yy,750,yy,.3,MUTED);text(c,51,yy+9,title,8);text(c,254,yy+9,f'{value:g} {unit}',8,True);text(c,367,yy+9,note,7.4)
+  for x in xs:line(c,x,y,x,y-24-len(data)*rh,.4)
+  yy=y-24-len(data)*rh-29
+  for i,t in enumerate(['01  Calibrate at 9 PDF points per foot; verify a separate labeled span.', '02  Match the scope, subject, units and formula before pricing.', '03  Do not sum detail rows, subtotals and totals together.', '04  Add a project-specific waste allowance only after reviewing net quantities.']):text(c,42,yy-i*16,t,8)
+  c.save()
+ # Re-present historical annotations on the revised drawing without moving any
+ # measurement vertices, page scale, viewport or app-specific measurement data.
+ derivatives=[]
+ for kind,name in [('flooring','flooring-mac-measured.pdf'),('electrical','electrical-mac-route.pdf')]:
+  original=ROOT/'assets-source/samples/original-app-outputs'/name
+  writer=PdfWriter();writer.clone_document_from_reader(PdfReader(original))
+  src=PdfReader(OUT/f'{kind}-practice.pdf');old=writer.pages[0];new=src.pages[0]
+  assert tuple(old.mediabox)==tuple(new.mediabox)
+  old[NameObject('/Contents')]=new.raw_get('/Contents').clone(writer)
+  old[NameObject('/Resources')]=new['/Resources'].clone(writer)
+  note=io.BytesIO();nc=canvas.Canvas(note,pagesize=(W,H),invariant=1)
+  text(nc,38,88,'Republished example: original Mac 1.6.6 b38 annotations; drawing background updated October 17, 2026.',6)
+  nc.save();note.seek(0);old.merge_page(PdfReader(note).pages[0])
+  writer.add_metadata({'/Title':f'Northline Studio Annex | {kind.title()} measured example','/Subject':'Republished derivative: October 17 drawing background with unchanged October 16 Mac measurement annotations. Not a new app export.'})
+  with (OUT/name).open('wb') as f:writer.write(f)
+  derivatives.append({'file':name,'originalSha256':hashlib.sha256(original.read_bytes()).hexdigest(),'sha256':hashlib.sha256((OUT/name).read_bytes()).hexdigest(),'transform':'Replaced page content/resources with October 17 construction-style drawing. Page boxes, annotation objects and measurement metadata retained; not a new desktop export.'})
+ manifest={'kind':'synthetic-practice-reference','updatedAt':'2026-10-17','appExport':False,'scalePdfPointsPerFoot':9,'flooringNetSqFt':408,'electricalTypeA':8,'electricalTypeB':4,'electricalDrawnRouteFt':42,'flooringNetVertices':[[90,290],[270,290],[270,371],[234,371],[234,398],[90,398]],'electricalRouteVertices':[[100,300],[370,300],[370,408]],'files':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in sorted(OUT.glob('*')) if f.name.endswith(('-practice.pdf','-reference.pdf','-reference.csv'))},'republishedMeasuredExamples':derivatives}
+ (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+ print('Generated four construction-style reference PDFs and two measured derivatives.')
+
+if __name__ == "__main__":
+ main()

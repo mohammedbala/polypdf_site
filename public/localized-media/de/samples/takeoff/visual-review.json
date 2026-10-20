@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "manifestSha256": "d1a6e685f6acd8b9d04a45683abab11d19601256b7c6a8e101ddc9749a522607",
+  "checks": [
+    "Four final PDF pages inspected at full rendered size",
+    "German copy, accents, dimensions, legend, title blocks and tables legible",
+    "No visible clipping, overlap or missing glyphs",
+    "11 generated artifacts and manifest reproduce byte-for-byte",
+    "Six legacy English source/reference files unchanged after generator refactor",
+    "Five verifier tests pass including four deliberately corrupted variants"
+  ],
+  "previews": {
+    "bodenbelag-referenz.png": "8415fec361d2dfc4582c8db1212c672681efa036e6bd2d4fd5eff562cee4a1ee",
+    "bodenbelag-uebung.png": "fe326ca26ed8aca678ff1c08f1d0492b5f24d7414abfa2aea9718e20ddaafe55",
+    "elektro-referenz.png": "392d042c4fb4d1bb82cc049b6f07610864b602f8461e66d9da123baedaab4f99",
+    "elektro-uebung.png": "3d2d30765892734954bee4737f3dbd4afdf1072f4c051ab4983870e92c6c1b76"
+  },
+  "scope": "PDF page rendering only; HTML guide and app output review recorded separately",
+  "guideSha256": "78fd407f336f6bc9e55b57589a028dd64fbf338fbc4e094bf3c76412e939799b",
+  "guideReview": {
+    "status": "passed",
+    "surface": "Built-in browser, full-page screenshot",
+    "checks": [
+      "Both German source previews loaded",
+      "Six localized downloads present",
+      "Regional units, arithmetic and provenance readable; no clipped text"
+    ]
+  }
+}

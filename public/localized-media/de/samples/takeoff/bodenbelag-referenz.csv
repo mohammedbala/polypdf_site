@@ -1,0 +1,11 @@
+﻿Position;Referenzmenge;Einheit;Berechnung oder Umfang
+Raum 1 brutto;21,6;m²;6,00 × 3,60
+Schachtabzug Raum 1;-1,08;m²;1,20 × 0,90 abziehen
+Raum 1 netto;20,52;m²;"21,60 - 1,08; Zwischensumme"
+Raum 2 netto;16,2;m²;4,50 × 3,60
+Nettofläche gesamt;36,72;m²;"20,52 + 16,20; Gesamtsumme"
+Verschnittbeispiel;3,672;m²;"10 % von 36,72; Annahme"
+Bedarf mit Verschnitt;40,392;m²;"36,72 × 1,10; Annahme"
+Ganze Pakete;21;Pakete;"40,392 / 2; auf volle Pakete aufrunden"
+Bestellfläche;42;m²;"21 × 2; angenommene Packungsgröße"
+Überschuss durch Rundung;1,608;m²;"42 - 40,392; zusätzlich zum Verschnitt"

@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "locale": "de-DE",
+  "region": "DE",
+  "project": "BÜRGERHAUS AM LINDENPARK - ANBAU",
+  "date": "20.10.2026",
+  "issue": "ÜBUNGSAUSGABE B",
+  "kind": "synthetic-practice-reference",
+  "appExport": false,
+  "paper": "A2",
+  "pageSizePoints": [
+    1683.7795275590552,
+    1190.5511811023623
+  ],
+  "scaleRatio": 50,
+  "pointsPerMetre": 56.69291338582678,
+  "profileSha256": "abb43b57618c8afbdc2e35a731c9f66b46995abb392a68e68756188ef13e3115",
+  "generatorSha256": "55c63f53e4c7681b3ae455bd5bf02c016afb617a5aa57c2b47ff8a0ce6101a71",
+  "drawingGeometrySourceSha256": "1c4966c29c56763897453e5dd4013566c32a5585e36fdaf3d80ecc8b5c4ec582",
+  "flooring": {
+    "file": "bodenbelag-uebung.pdf",
+    "sheet": "F-101",
+    "referenceSpans": [
+      {
+        "id": "calibration",
+        "points": [
+          [
+            263.62204724409446,
+            769.1338582677166
+          ],
+          [
+            603.7795275590552,
+            769.1338582677166
+          ]
+        ],
+        "metres": 6
+      },
+      {
+        "id": "widthCheck",
+        "points": [
+          [
+            830.5511811023623,
+            769.1338582677166
+          ],
+          [
+            1085.6692913385828,
+            769.1338582677166
+          ]
+        ],
+        "metres": 4.5
+      },
+      {
+        "id": "heightCheck",
+        "points": [
+          [
+            263.62204724409446,
+            565.0393700787403
+          ],
+          [
+            263.62204724409446,
+            769.1338582677166
+          ]
+        ],
+        "metres": 3.6
+      }
+    ],
+    "areas": [
+      {
+        "id": "room1",
+        "label": "Raum 1 netto",
+        "squareMetres": 20.52,
+        "points": [
+          [
+            263.62204724409446,
+            565.0393700787403
+          ],
+          [
+            603.7795275590552,
+            565.0393700787403
+          ],
+          [
+            603.7795275590552,
+            718.1102362204725
+          ],
+          [
+            535.748031496063,
+            718.1102362204725
+          ],
+          [
+            535.748031496063,
+            769.1338582677166
+          ],
+          [
+            263.62204724409446,
+            769.1338582677166
+          ]
+        ]
+      },
+      {
+        "id": "room2",
+        "label": "Raum 2 netto",
+        "squareMetres": 16.2,
+        "points": [
+          [
+            830.5511811023623,
+            565.0393700787403
+          ],
+          [
+            1085.6692913385828,
+            565.0393700787403
+          ],
+          [
+            1085.6692913385828,
+            769.1338582677166
+          ],
+          [
+            830.5511811023623,
+            769.1338582677166
+          ]
+        ]
+      }
+    ],
+    "netSquareMetres": 36.72,
+    "excludedSquareMetres": 1.08,
+    "drawingCopyKeys": [
+      "01 / FLOOR FINISH PLAN",
+      "12'-0\"",
+      "15'-0\"",
+      "2 / TYPICAL FINISH TRANSITION",
+      "20'-0\"",
+      "3'-0\"",
+      "4'-0\"",
+      "ARCHITECTURAL / FINISHES",
+      "Close boundaries at the dashed door thresholds. Do not include door recesses.",
+      "Combined net area: 408 sq ft",
+      "DETAIL NOT TO SCALE / THRESHOLD LINE DEFINES SCOPE",
+      "Dimensions to inside finish faces. Dashed thresholds close takeoff boundaries.",
+      "EXISTING",
+      "EXISTING CORRIDOR / OUTSIDE FINISH SCOPE",
+      "EXISTING LOBBY",
+      "F1  Resilient floor / practice scope",
+      "F1 / 180 SF NET",
+      "F1 / 228 SF NET",
+      "F1 FINISH",
+      "F1 is a demonstration resilient finish. Hatch denotes scope, not plank layout.",
+      "FINISH PLAN NOTES",
+      "FINISH SCHEDULE",
+      "FLOOR FINISH PLAN",
+      "Floor finish plan and threshold detail",
+      "MEETING ROOM",
+      "Measure only Room 1 and Room 2. Lobby and corridor are background context.",
+      "NO FINISH",
+      "NOT IN TAKEOFF",
+      "No waste, base, thresholds or finish transitions are included in net area.",
+      "Not a permit or installation document.",
+      "ORIGINAL FICTIONAL PROJECT",
+      "PROJECT OFFICE",
+      "ROOM 1",
+      "ROOM 2",
+      "Room 1: 240 - 12 = 228 sq ft",
+      "Room 2: 15 x 12 = 180 sq ft",
+      "SHAFT",
+      "TRANSITION STRIP",
+      "Trace Room 1 around the 4 ft x 3 ft edge-connected shaft. Do not subtract twice.",
+      "Verify the 20 ft span and a separate 12 ft span before takeoff."
+    ]
+  },
+  "electrical": {
+    "file": "elektro-uebung.pdf",
+    "sheet": "E-101",
+    "routePoints": [
+      [
+        282.5196850393701,
+        583.9370078740158
+      ],
+      [
+        792.7559055118111,
+        583.9370078740158
+      ],
+      [
+        792.7559055118111,
+        788.0314960629922
+      ]
+    ],
+    "routeMetres": 12.6,
+    "segmentMetres": [
+      9,
+      3.6
+    ],
+    "typeACentres": [
+      [
+        291.9685039370079,
+        857.9527559055119
+      ],
+      [
+        424.251968503937,
+        857.9527559055119
+      ],
+      [
+        556.5354330708662,
+        857.9527559055119
+      ],
+      [
+        688.8188976377953,
+        857.9527559055119
+      ],
+      [
+        291.9685039370079,
+        735.1181102362206
+      ],
+      [
+        424.251968503937,
+        735.1181102362206
+      ],
+      [
+        556.5354330708662,
+        735.1181102362206
+      ],
+      [
+        688.8188976377953,
+        735.1181102362206
+      ]
+    ],
+    "typeBCentres": [
+      [
+        906.1417322834646,
+        857.9527559055119
+      ],
+      [
+        1038.4251968503938,
+        857.9527559055119
+      ],
+      [
+        906.1417322834646,
+        735.1181102362206
+      ],
+      [
+        1038.4251968503938,
+        735.1181102362206
+      ]
+    ],
+    "typeA": 8,
+    "typeB": 4,
+    "excludedLegendSymbols": 2,
+    "excludedRouteEndpoints": 2,
+    "symbolSizePoints": 30.236220472440948,
+    "drawingCopyKeys": [
+      "01 / LIGHTING AND DEMONSTRATION ROUTE",
+      "12'-0\"",
+      "30 ft + 12 ft = 42 ft drawn route.",
+      "30'-0\"",
+      "A",
+      "A  Type A fixture / 8 in plan",
+      "Architectural walls and doors are context. Only the two symbol types in the plan are counted.",
+      "B",
+      "B  Type B fixture / 4 in plan",
+      "CIRCULATION",
+      "Count plan symbols only. Exclude the symbol legend and route junction boxes.",
+      "ELECTRICAL / LIGHTING",
+      "ELECTRICAL PLAN NOTES",
+      "JB",
+      "JB  Route endpoint / exclude",
+      "Keep Type A and Type B in separate worksheet subjects.",
+      "LIGHTING / ROUTE PLAN",
+      "Legend symbols are not installed fixture instances; restrict the search to the plan.",
+      "Lighting plan and route takeoff",
+      "MEETING 03",
+      "No connected load, conductor sizing, protection or code compliance is specified.",
+      "No rises, drops, slack, fittings or circuit design.",
+      "Not a wire-length or procurement schedule.",
+      "Not an electrical installation document.",
+      "OFFICE 01",
+      "OFFICE 02",
+      "ORIGINAL FICTIONAL PROJECT",
+      "RISER",
+      "SCOPE / ROUTE ONLY",
+      "SYMBOL LEGEND",
+      "The green polyline is a route-measurement exercise. It is not an electrical design.",
+      "Trace the two green legs from JB to JB."
+    ]
+  },
+  "orderingAssumptions": {
+    "wasteRate": 0.1,
+    "packAreaSquareMetres": 2.0,
+    "wasteSquareMetres": 3.672,
+    "adjustedSquareMetres": 40.392,
+    "wholePacks": 21,
+    "purchasedSquareMetres": 42,
+    "packRoundingSurplusSquareMetres": 1.608,
+    "pricesIncluded": false
+  },
+  "sourceMappings": {
+    "flooring-practice.pdf": "bodenbelag-uebung.pdf",
+    "electrical-practice.pdf": "elektro-uebung.pdf",
+    "flooring-reference.pdf": "bodenbelag-referenz.pdf",
+    "electrical-reference.pdf": "elektro-referenz.pdf",
+    "flooring-reference.csv": "bodenbelag-referenz.csv",
+    "electrical-reference.csv": "elektro-referenz.csv",
+    "flooring-practice-preview.png": "bodenbelag-uebung.png",
+    "electrical-practice-preview.png": "elektro-uebung.png",
+    "README.md": "README.html"
+  },
+  "files": {
+    "README.html": "78fd407f336f6bc9e55b57589a028dd64fbf338fbc4e094bf3c76412e939799b",
+    "bodenbelag-referenz.csv": "1b78cad54428d9f2580cc3e073561c714697af9d07a07833f02bd8d3bb7036f6",
+    "bodenbelag-referenz.pdf": "dbf9c90967c8039c199f0f1d739e443ddc23df4aa434e916b8fe7db88b5ebe4c",
+    "bodenbelag-referenz.png": "8415fec361d2dfc4582c8db1212c672681efa036e6bd2d4fd5eff562cee4a1ee",
+    "bodenbelag-uebung.pdf": "2225016bafc5c55964a7bdd1e51b4766a80281675f6f2c86f93287c833f4bd60",
+    "bodenbelag-uebung.png": "fe326ca26ed8aca678ff1c08f1d0492b5f24d7414abfa2aea9718e20ddaafe55",
+    "elektro-referenz.csv": "6e4163e6d4398a204a95e5dad2be8d14641a8ca6594bf4cebfbcedd0dc9a121a",
+    "elektro-referenz.pdf": "f17fa50a92a54ceb38169f59fce6eac57fd2cf9fd4ad0d499ed40b2e08250b9e",
+    "elektro-referenz.png": "392d042c4fb4d1bb82cc049b6f07610864b602f8461e66d9da123baedaab4f99",
+    "elektro-uebung.pdf": "69b7e8654925b50eed01233e299ad9c63bad0c6cbc0585dd605a48978a4b5886",
+    "elektro-uebung.png": "3d2d30765892734954bee4737f3dbd4afdf1072f4c051ab4983870e92c6c1b76"
+  }
+}

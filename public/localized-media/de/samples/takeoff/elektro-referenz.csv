@@ -1,0 +1,6 @@
+﻿Position;Referenzmenge;Einheit;Berechnung oder Umfang
+Leuchten Typ A;8;Stück;"Kreis mit Kreuz; nur Grundriss"
+Leuchten Typ B;4;Stück;"Quadrat; nur Grundriss"
+Waagerechter Abschnitt;9;m;Zwischen AD und Richtungswechsel
+Senkrechter Abschnitt;3,6;m;Vom Richtungswechsel zur zweiten AD
+Gezeichnete Trasse gesamt;12,6;m;"9,00 + 3,60; ohne Zuschläge und Steigstrecken"

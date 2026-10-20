@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "scope": "Regional source bindings and source-preview accessibility on six built pages",
+  "profileSha256": "396b8882896e8ab8a000a1975ba0d89742cf3eb82cefcbe08ceddbe1fc0ab8c4",
+  "sourceFiles": {
+    "src/components/AreaPractice.js": "91b3d07a1b906446c09b58136d96c21f6663a5fe654785bc1d4682fc63a32d86",
+    "src/components/CalibrationPractice.js": "9cba1d4686b44596ea3a026ff118a260c68744cff5d4da2d17b0a5aec153576c",
+    "src/components/TakeoffEvaluation.js": "ea4446b786457e4fcd5e25a6a987a392418515a421ef43cc09eec97b7189c6f9",
+    "src/components/MacMeasurementEvaluation.js": "a589ec6624c2489ce58a1212d5b9aac12f87347df5ce85d0ee872a6501f8ee9e",
+    "src/components/SymbolCountEvaluation.js": "bdbb50df221223f29b1bcdbd931f3f447492bfe6d8beaddc30fc97864cca8807",
+    "src/components/SampleDrawingNote.js": "25bd3c8d874253ab54daae89220dd1955059e51c461abed2ca2d548924327faa",
+    "src/components/BlogPost.js": "c5f1615a9d4096bbe03ef1ee497faf63f593c5ab464cf0816464b1a5450ecb73",
+    "src/content/guides/quantity-takeoff.js": "c9638f625b3bc3823c787a8a7f435abaa68e223124c16c3180287449be362677"
+  },
+  "regionalCopyRecords": 26,
+  "regionalTables": 2,
+  "pages": [
+    {
+      "route": "/blog/measure-pdf-area-cutouts-depth/",
+      "sourceSha256": "57fb3a79db89e8dda41232964d1a90e172b6a771ff2d49b3d4b6e4c769cfc4b2",
+      "regionalElements": 7,
+      "regionalImages": 1
+    },
+    {
+      "route": "/blog/calibrate-pdf-drawing-scale/",
+      "sourceSha256": "f9ee722c2658744da117e7e233eab9ec8480920320d8c125520680080402ff45",
+      "regionalElements": 9,
+      "regionalImages": 1
+    },
+    {
+      "route": "/pdf-takeoff-software/",
+      "sourceSha256": "844e350524c75413680c93165755ef23723ca13684319ae05e039ac12ee3ad8e",
+      "regionalElements": 5,
+      "regionalImages": 0
+    },
+    {
+      "route": "/measure-pdf-on-mac/",
+      "sourceSha256": "920c55f677a514d7c48a3d26b1a4cae6731f9cd6f36c0cb7093836be56ff13bb",
+      "regionalElements": 6,
+      "regionalImages": 0
+    },
+    {
+      "route": "/visual-search-pdf-count/",
+      "sourceSha256": "455c2b288542f39de17d614fb9ccb64e763186506b1ccda47936009e98949a8b",
+      "regionalElements": 5,
+      "regionalImages": 1
+    },
+    {
+      "route": "/blog/quantity-takeoff/",
+      "sourceSha256": "37bad155d9dcaf0e321a2fcbf3718534506f20e33463389980384e4bf9c503f3",
+      "regionalElements": 4,
+      "regionalImages": 0
+    }
+  ],
+  "limitations": [
+    "Full page screenshots, videos, unbound metadata/FAQ and historical app-output replacement remain pending",
+    "No full media-pack or native UI qualification is claimed; the German pack remains pilot and inactive"
+  ]
+}

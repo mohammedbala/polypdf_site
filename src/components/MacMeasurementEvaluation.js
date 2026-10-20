@@ -24,7 +24,7 @@ export default function MacMeasurementEvaluation() {
         <div>
           <p className="growth-kicker">Page size and drawing scale</p>
           <h2 id="preview-and-scale">Can Preview measure a scaled PDF plan?</h2>
-          <p>Preview can show the dimensions of a PDF selection in its Crop inspector. Those page dimensions need a drawing scale to become real-world lengths. For example, a 3-inch line represents 12 ft only when the PDF is correctly scaled at 1/4 inch = 1 ft.</p>
+          <p><span data-regional-copy="takeoff.mac.scale">Preview can show the dimensions of a PDF selection in its Crop inspector. Those page dimensions need a drawing scale to become real-world lengths. For example, a 3-inch line represents 12 ft only when the PDF is correctly scaled at 1/4 inch = 1 ft.</span></p>
           <p>For room areas and a quantity worksheet, calibrate the drawing in PolyPDF, check an independent known span, and trace the required boundaries. Do not infer a drawing scale from screen zoom, paper size, or a title-block label alone.</p>
           <p><a href="https://support.apple.com/guide/preview/view-information-about-pdfs-and-images-prvw9c94f0a4/mac" target="_blank" rel="noopener noreferrer">Apple’s guide to Preview’s Inspector</a> · <Link to="/blog/calibrate-pdf-drawing-scale/">Calibrate a PDF drawing</Link></p>
         </div>

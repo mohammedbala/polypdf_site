@@ -91,6 +91,12 @@ function localizeWalkthroughMedia(document, locale, manifest) {
       image.setAttribute('width', String(asset.width));
       image.setAttribute('height', String(asset.height));
     }
+    if (asset?.alt !== undefined) {
+      if (typeof asset.alt !== 'string' || !asset.alt.trim()) throw new Error(`Invalid regional image description: ${locale.id}`);
+      image.setAttribute('alt', asset.alt);
+      image.setAttribute('lang', asset.locale);
+      image.setAttribute('translate', 'no');
+    }
   }
 }
 

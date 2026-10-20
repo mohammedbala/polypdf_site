@@ -1,0 +1,214 @@
+{
+  "text": {
+    "takeoff.area.source": {
+      "source": "Use the separate F-101 flooring practice sheet: Room 1 is 20 ft × 12 ft with a 4 ft × 3 ft corner exclusion. Room 2 is 15 ft × 12 ft. The source uses 9 PDF points per foot; the historical screenshots in this guide use a different drawing.",
+      "target": "Nutzen Sie den deutschen Bodenbelagsplan F-101, Übungsausgabe B: Raum 1 misst 6,00 m × 3,60 m mit einer randverbundenen Aussparung von 1,20 m × 0,90 m. Raum 2 misst 4,50 m × 3,60 m. Der Plan hat Maßstab 1:50 auf A2. Historische Screenshots in diesem Leitfaden zeigen eine andere Zeichnung."
+    },
+    "takeoff.area.free": {
+      "source": "Calibrate along the printed 20 ft span, then use one manual length measurement to check the independent 12 ft height. If the check agrees with your required tolerance, trace Room 1 around the corner exclusion and trace Room 2 separately. That is one length check and two area measurements.",
+      "target": "Kalibrieren Sie die eingezeichnete 6,00-m-Breite und prüfen Sie mit einer manuellen Längenmessung die unabhängige 3,60-m-Höhe. Wenn die Prüfung Ihrer Toleranz entspricht, zeichnen Sie Raum 1 um die Randaussparung und Raum 2 getrennt nach. Das sind eine Längenprüfung und zwei Flächenmessungen."
+    },
+    "takeoff.area.deduction": {
+      "source": "The 228 sq ft result already excludes the 12 sq ft corner. Do not subtract it again. The reference CSV includes gross, deduction, subtotal, waste, and total rows for explanation; summing its entire quantity column is incorrect.",
+      "target": "Die 20,52 m² enthalten bereits den Abzug der 1,08 m² großen Aussparung. Ziehen Sie diese nicht nochmals ab. Die Referenz-CSV enthält Brutto-, Abzugs-, Zwischen-, Verschnitt- und Gesamtwerte zur Erläuterung. Die gesamte Mengenspalte darf nicht addiert werden."
+    },
+    "takeoff.area.historicalCsv": {
+      "source": "In this Mac worksheet CSV, Quantity 2 means two area records; Total 408 with Unit sq ft is the measured area. The formula is SUM(228 + 180). Compare the saved page, formula, unit, and total before using an export for pricing.",
+      "target": "Die verlinkte historische Mac-CSV gehört zur englischen Zeichnung: Quantity 2 bezeichnet zwei Flächen, Total 408 mit Unit sq ft die gemessene Fläche; die Formel lautet SUM(228 + 180). Diese Werte sind keine Ergebnisse des deutschen Übungsplans. Vergleichen Sie Ihre deutschen Ergebnisse mit 20,52 m², 16,20 m² und 36,72 m² netto."
+    },
+    "takeoff.area.historicalEvidence": {
+      "source": "These existing outputs were saved, reopened, and checked in PolyPDF 1.6.6 build 38 on Mac. They verify the two net areas, not interior-cutout or volume behavior. The length-check-plus-two-areas sequence is guidance; the historical export contains only the two areas. No current-release or Windows test of this sequence has been completed. The synthetic drawing is for practice, not construction.",
+      "target": "Die historischen englischen Ergebnisse wurden mit PolyPDF 1.6.6 Build 38 auf dem Mac gespeichert, erneut geöffnet und geprüft. Sie belegen zwei Flächen der damaligen Zeichnung. Ein aktueller vollständiger deutscher App-Durchlauf einschließlich Mengentabellenexport und Windows-/iPad-Prüfung steht noch aus. Die deutschen PDF-Referenzen sind aus der Zeichnungsgeometrie berechnet."
+    },
+    "takeoff.calibration.source": {
+      "source": "Use F-101, Revision A, a separate synthetic flooring sheet at 1/8 inch = 1 foot. Calibrate from its 20 ft span, check independent 15 ft and 12 ft spans, then trace one net area. This exercise fits the Free allowance of three hand-created measurements.",
+      "target": "Nutzen Sie den deutschen fiktiven Bodenbelagsplan F-101, Übungsausgabe B, auf A2 im Maßstab 1:50. Kalibrieren Sie die 6,00-m-Breite, prüfen Sie unabhängig 4,50 m und 3,60 m und zeichnen Sie eine Nettofläche nach. Die drei manuellen Messungen passen in den Free-Umfang."
+    },
+    "takeoff.calibration.scale": {
+      "source": "This download uses 9 PDF points per foot.",
+      "target": "Dieser Download verwendet bei 1:50 rund 56,692913 PDF-Punkte pro Meter."
+    },
+    "takeoff.calibration.older": {
+      "source": " The older screenshots in this guide use a different drawing at 18 PDF points per foot. Use the scale and dimensions of the file you actually open.",
+      "target": " Die älteren Screenshots in diesem Leitfaden zeigen eine andere Zeichnung mit Fußmaßen. Verwenden Sie Maßstab und Abmessungen der tatsächlich geöffneten Datei."
+    },
+    "takeoff.calibration.width": {
+      "source": "Calibrate along Room 1’s printed 20 ft width: 180 PDF points ÷ 20 ft = 9 PDF points per foot. Calibration sets the scale; the following three rows are the manual measurements.",
+      "target": "Kalibrieren Sie die gedruckte 6,00-m-Breite von Raum 1: rund 340,15748 PDF-Punkte ÷ 6,00 m ergeben 56,692913 PDF-Punkte pro Meter. Die Kalibrierung setzt den Maßstab; die folgenden drei Tabellenzeilen sind die manuellen Messungen."
+    },
+    "takeoff.calibration.area": {
+      "source": "For the third measurement, trace Room 1 around its edge-connected 4 ft × 3 ft exclusion: (20 × 12) − (4 × 3) = 228 sq ft. Keep the two length checks separate from the area total, then save a copy and reopen it.",
+      "target": "Zeichnen Sie als dritte Messung Raum 1 um die randverbundene Aussparung von 1,20 m × 0,90 m nach: (6,00 × 3,60) − (1,20 × 0,90) = 20,52 m². Halten Sie beide Längenprüfungen von der Flächensumme getrennt. Speichern Sie eine Kopie und öffnen Sie sie erneut."
+    },
+    "takeoff.calibration.evidence": {
+      "source": "Reference dimensions come from the source geometry. Existing Mac outputs verify Room 1 at 228 sq ft and Room 2 at 180 sq ft in PolyPDF 1.6.6 build 38. This three-measurement exercise is guidance, not a new app test; current-release and Windows parity remain unverified.",
+      "target": "Die deutschen Referenzmaße sind anhand der gezeichneten PDF-Geometrie geprüft. Die verlinkten historischen Mac-Ergebnisse gehören zur englischen Zeichnung mit 228 und 180 sq ft aus PolyPDF 1.6.6 Build 38. Sie sind keine Prüfung dieses deutschen Kalibrierungsablaufs; vollständige aktuelle Mac-/Windows-/iPad-Durchläufe stehen noch aus."
+    },
+    "takeoff.calibration.link": {
+      "source": "See the full 408 sq ft takeoff and saved Mac outputs",
+      "target": "Zur vollständigen Übung mit 36,72 m² und den gesondert gekennzeichneten historischen Mac-Dateien"
+    },
+    "takeoff.evaluation.source": {
+      "source": "Use the synthetic flooring drawing to test a small workflow within the Free limit. Its two net room areas total 408 sq ft. This is a practice drawing, not a construction document.",
+      "target": "Prüfen Sie mit dem fiktiven deutschen Bodenbelagsplan einen kleinen Ablauf im Free-Umfang. Beide Nettoflächen ergeben zusammen 36,72 m². Der Plan dient der Übung und ist keine Ausführungsunterlage."
+    },
+    "takeoff.evaluation.areas": {
+      "source": " Trace Room 1 around its edge-connected exclusion: 240 − 12 = 228 sq ft. Trace Room 2: 180 sq ft. With the check measurement, that uses three hand-created measurements.",
+      "target": " Zeichnen Sie Raum 1 um die Randaussparung nach: 21,60 − 1,08 = 20,52 m². Raum 2 ergibt 16,20 m². Zusammen mit einer unabhängigen Längenprüfung sind dies drei manuelle Messungen."
+    },
+    "takeoff.evaluation.total": {
+      "source": " Check the two area rows total 408 sq ft. Keep the length check separate from the area total. Export the worksheet, save a separate PDF copy, and reopen it to inspect your measurements.",
+      "target": " Prüfen Sie, dass beide Flächenzeilen 36,72 m² ergeben. Halten Sie die Längenprüfung getrennt. Exportieren Sie die Mengentabelle, speichern Sie eine separate PDF-Kopie und öffnen Sie diese zur Kontrolle erneut."
+    },
+    "takeoff.evaluation.historical": {
+      "source": "The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity. The three-measurement sequence above is an evaluation guide, not a separately verified app test.",
+      "target": "Die verlinkten historischen Mac-Dateien enthalten 408 sq ft aus der englischen Zeichnung und wurden in PolyPDF 1.6.6 Build 38 exportiert und erneut geöffnet. Sie sind keine deutschen Ergebnisse. Die Anleitung mit drei Messungen ist eine Übung; ein vollständiger aktueller deutscher App-Durchlauf samt Export und Plattformprüfung steht noch aus."
+    },
+    "takeoff.mac.scale": {
+      "source": "Preview can show the dimensions of a PDF selection in its Crop inspector. Those page dimensions need a drawing scale to become real-world lengths. For example, a 3-inch line represents 12 ft only when the PDF is correctly scaled at 1/4 inch = 1 ft.",
+      "target": "Vorschau kann im Beschneiden-Inspektor die Abmessungen einer PDF-Auswahl zeigen. Erst der geprüfte Zeichnungsmaßstab macht daraus reale Längen: Eine 60 mm lange Linie entspricht bei korrektem Maßstab 1:50 einer Länge von 3,00 m."
+    },
+    "takeoff.count.source": {
+      "source": "The separate E-101, Revision A practice sheet contains 8 Type A fixtures and 4 Type B fixtures. These are reference quantities from the source drawing, not verified Symbol Search results. The historical screenshots use different demo sheets.",
+      "target": "Der deutsche Übungsplan E-101, Übungsausgabe B, enthält 8 Leuchten Typ A und 4 Leuchten Typ B. Dies sind anhand der Quellzeichnung geprüfte Referenzwerte, keine Ergebnisse der Symbolsuche. Historische Screenshots zeigen andere Zeichnungen."
+    },
+    "takeoff.count.route": {
+      "source": "The 42 ft route in the reference CSV is a length, not another fixture quantity. Do not add it to the two count rows.",
+      "target": "Die Trasse von 12,60 m in der Referenz-CSV ist eine Länge und keine weitere Leuchtenanzahl. Addieren Sie sie nicht zu den beiden Zählpositionen."
+    },
+    "takeoff.count.historical": {
+      "source": "The fixture counts have not been verified by a current-release Mac or Windows Symbol Search run. The existing Mac 1.6.6 build 38 electrical output verifies only the 42 ft route. It does not prove automatic count accuracy.",
+      "target": "Die Leuchtenzahlen sind noch nicht durch eine aktuelle Symbolsuche auf Mac, Windows oder iPad bestätigt. Das historische englische Ergebnis aus PolyPDF 1.6.6 Build 38 prüft nur eine andere Trasse von 42 ft; es belegt weder die deutsche Trasse noch die automatische Zählung."
+    },
+    "takeoff.shared.provenance": {
+      "source": "The practice drawings were redrawn on October 17, 2026 with walls, doors, dimensions, legends, and title blocks. The measured examples retain the original scale, geometry, and Mac-created annotations on the updated backgrounds. They are republished derivatives, not new desktop exports. The worksheet CSV and PDF totals come from the original October 16 test.",
+      "target": "Die deutschen Übungspläne stammen vom 20.10.2026 und verwenden metrische Maße sowie deutsche Hinweise, Legenden und Planköpfe. Die gesondert gekennzeichneten historischen Mac-Dateien gehören weiterhin zur englischen Zeichnung: alte Anmerkungen wurden auf überarbeiteten Hintergründen erneut veröffentlicht. Diese Dateien sind keine neuen deutschen App-Exporte."
+    },
+    "takeoff.shared.exclude": {
+      "source": "Count fixtures in the plan only. Exclude the legend symbols and the small JB route-endpoint boxes.",
+      "target": "Zählen Sie nur Leuchten im Grundriss. Legendensymbole und die kleinen Anschlussdosen AD an den Trassenenden zählen nicht mit."
+    },
+    "takeoff.guide.areas": {
+      "source": "The synthetic flooring practice drawing has a 20 ft by 12 ft room with a 4 ft by 3 ft exclusion: 240 minus 12 equals 228 sq ft. A second 15 ft by 12 ft room adds 180 sq ft, for 408 sq ft net.",
+      "target": "Der deutsche Bodenbelagsplan zeigt einen Raum von 6,00 m × 3,60 m mit einer Aussparung von 1,20 m × 0,90 m: 21,60 − 1,08 = 20,52 m². Raum 2 misst 4,50 m × 3,60 m und ergänzt 16,20 m². Zusammen ergeben sich 36,72 m² netto."
+    },
+    "takeoff.guide.formula": {
+      "source": "20 × 12 − 4 × 3 + 15 × 12 = 408 sq ft",
+      "target": "6,00 × 3,60 − 1,20 × 0,90 + 4,50 × 3,60 = 36,72 m²"
+    },
+    "takeoff.guide.waste": {
+      "source": "At a chosen 10% waste allowance, 408 × 1.10 gives 448.8 sq ft. With 20 sq ft per pack, rounding up requires 23 packs, or 460 sq ft purchased. The extra 11.2 sq ft is pack-rounding surplus beyond the waste-adjusted requirement.",
+      "target": "Bei beispielhaft 10 % Verschnitt ergeben 36,72 × 1,10 insgesamt 40,392 m². Mit angenommenen 2 m² je Paket werden 21 ganze Pakete beziehungsweise 42 m² bestellt. Die zusätzlichen 1,608 m² entstehen durch Packungsrundung über den verschnittbereinigten Bedarf hinaus. Verschnitt und Packungsgröße sind getrennte Annahmen."
+    },
+    "takeoff.guide.electrical": {
+      "source": "The synthetic electrical sheet has 8 Type A fixtures and 4 Type B fixtures. Keep both types separate even though the total is 12. The drawn route has a 30 ft horizontal leg and a 12 ft vertical leg: 42 ft on the plan.",
+      "target": "Der deutsche Elektro-Übungsplan enthält 8 Leuchten Typ A und 4 Leuchten Typ B. Führen Sie beide Typen getrennt, auch wenn die Summe 12 beträgt. Die gezeichnete Trasse besteht aus einem waagerechten Abschnitt von 9,00 m und einem senkrechten Abschnitt von 3,60 m, zusammen 12,60 m."
+    }
+  },
+  "tables": {
+    "takeoff.area.quantities": {
+      "source": {
+        "caption": "Compare the reviewed areas, not every subtotal",
+        "headers": [
+          "Area",
+          "Reference calculation",
+          "Net quantity"
+        ],
+        "rows": [
+          [
+            "Room 1",
+            "(20 × 12) − (4 × 3)",
+            "228 sq ft"
+          ],
+          [
+            "Room 2",
+            "15 × 12",
+            "180 sq ft"
+          ],
+          [
+            "Combined net area",
+            "228 + 180",
+            "408 sq ft"
+          ]
+        ]
+      },
+      "target": {
+        "caption": "Geprüfte Nettoflächen vergleichen, nicht alle Zwischenwerte addieren",
+        "headers": [
+          "Fläche",
+          "Referenzberechnung",
+          "Nettomenge"
+        ],
+        "rows": [
+          [
+            "Raum 1",
+            "(6,00 × 3,60) − (1,20 × 0,90)",
+            "20,52 m²"
+          ],
+          [
+            "Raum 2",
+            "4,50 × 3,60",
+            "16,20 m²"
+          ],
+          [
+            "Nettofläche gesamt",
+            "20,52 + 16,20",
+            "36,72 m²"
+          ]
+        ]
+      }
+    },
+    "takeoff.calibration.checks": {
+      "source": {
+        "caption": "Expected readings on F-101, Revision A",
+        "headers": [
+          "Measurement",
+          "Reference",
+          "Expected"
+        ],
+        "rows": [
+          [
+            "1. Horizontal check",
+            "Room 2 width",
+            "15 ft"
+          ],
+          [
+            "2. Vertical check",
+            "Room 1 height",
+            "12 ft"
+          ],
+          [
+            "3. Net area",
+            "Room 1, excluding the shaft",
+            "228 sq ft"
+          ]
+        ]
+      },
+      "target": {
+        "caption": "Erwartete Messwerte auf F-101, Übungsausgabe B",
+        "headers": [
+          "Messung",
+          "Referenz",
+          "Erwarteter Wert"
+        ],
+        "rows": [
+          [
+            "1. Waagerechte Prüfung",
+            "Breite von Raum 2",
+            "4,50 m"
+          ],
+          [
+            "2. Senkrechte Prüfung",
+            "Höhe von Raum 1",
+            "3,60 m"
+          ],
+          [
+            "3. Nettofläche",
+            "Raum 1 ohne Schachtaussparung",
+            "20,52 m²"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -39,6 +39,18 @@ test('regional drawings replace the original image aspect ratio as well as its U
   assert.equal(dom.window.document.querySelector('img').getAttribute('width'), '1800');
   assert.equal(dom.window.document.querySelector('img').getAttribute('height'), '1272');
 });
+test('regional previews replace obsolete units in alt text before ordinary translation', () => {
+  const data = manifest();
+  data.locales.de.assets['/guides/measure.png'].alt = 'Deutscher Plan mit 36,72 m² Nettofläche';
+  const dom = new JSDOM('<img src="/guides/measure.png" alt="English plan with 408 sq ft">');
+  localizeWalkthroughMedia(dom.window.document, locale, data);
+  const { translateDOM } = require('../scripts/international/content.cjs');
+  translateDOM(dom.window.document.body, source => { throw new Error(`Already regionalized: ${source}`); });
+  assert.equal(dom.window.document.querySelector('img').alt, data.locales.de.assets['/guides/measure.png'].alt);
+  data.locales.de.assets['/guides/measure.png'].alt = '';
+  assert.throws(() => localizeWalkthroughMedia(new JSDOM('<img src="/guides/measure.png">').window.document, locale, data),
+    /Invalid regional image description/);
+});
 test('explicitly neutral assets and third-party links retain their URLs', () => {
   const data = manifest();
   data.languageNeutralAssets.push('/guides/neutral.png');

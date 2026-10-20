@@ -1,0 +1,97 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "manifestSha256": "d1a6e685f6acd8b9d04a45683abab11d19601256b7c6a8e101ddc9749a522607",
+  "appBuild": "1.6.17+84",
+  "sourceFiles": {
+    "packages/pdf/src/native-annotation-import.ts": "394e518a1a85e91c5a9c3e2e3c7c68ecaae15c7974d0e54fd66b79b2922ef866",
+    "packages/pdf-node/src/native-annotation-export.ts": "428a02557e3c5ef6eeda2993f5388e8ebde272b968992d3ea6f72753a471ca97",
+    "packages/core/src/measurement.ts": "7439822b8ee91291aed366fec95b918e7814d8a9ce70233210f6795432f641b7",
+    "packages/core/src/workspace.ts": "f90862aa6440b51a34ef692db74dbd188ce5806dd4f97866ea5b81c9420afb57",
+    "tests/pdf-node/regional-takeoff-roundtrip.test.ts": "187e87dd61cd67add7b6a599b58983f85e872d617fc42974234d61dec894120f"
+  },
+  "status": "passed",
+  "scope": "Actual PDF writer/importer; scripted measurements, not native UI interaction or worksheet export evidence",
+  "limitations": [
+    "Area captions retain the current sq m spelling; regional unit typography remains pending",
+    "Multipoint appearance still paints the hard-coded English Length prefix; not qualified as a fully German app export"
+  ],
+  "cases": [
+    {
+      "file": "bodenbelag-uebung.pdf",
+      "sourceSha256": "2225016bafc5c55964a7bdd1e51b4766a80281675f6f2c86f93287c833f4bd60",
+      "mode": "ordinary",
+      "outputFile": "flooring-ordinary.pdf",
+      "outputSha256": "4bef27073381966e493bf70923f7e733c4ce1e001c380349db1d70b429f57e26",
+      "quantities": [
+        {
+          "value": 3.6,
+          "unit": "m",
+          "label": "3,60 m"
+        },
+        {
+          "value": 20.52,
+          "unit": "sq m",
+          "label": "20,52 sq m"
+        },
+        {
+          "value": 16.2,
+          "unit": "sq m",
+          "label": "16,20 sq m"
+        }
+      ]
+    },
+    {
+      "file": "bodenbelag-uebung.pdf",
+      "sourceSha256": "2225016bafc5c55964a7bdd1e51b4766a80281675f6f2c86f93287c833f4bd60",
+      "mode": "append-only",
+      "outputFile": "flooring-append-only.pdf",
+      "outputSha256": "58359be018c2d042a28fb3fe874e4f709e7970085596a2101754475771612d33",
+      "quantities": [
+        {
+          "value": 3.6,
+          "unit": "m",
+          "label": "3,60 m"
+        },
+        {
+          "value": 20.52,
+          "unit": "sq m",
+          "label": "20,52 sq m"
+        },
+        {
+          "value": 16.2,
+          "unit": "sq m",
+          "label": "16,20 sq m"
+        }
+      ]
+    },
+    {
+      "file": "elektro-uebung.pdf",
+      "sourceSha256": "69b7e8654925b50eed01233e299ad9c63bad0c6cbc0585dd605a48978a4b5886",
+      "mode": "ordinary",
+      "outputFile": "electrical-ordinary.pdf",
+      "outputSha256": "86b203d1aff7f8c7fa940bcf2ce9be0f9e4095a99aedfe19241b0d3277e403df",
+      "quantities": [
+        {
+          "value": 12.6,
+          "unit": "m",
+          "label": "12,60 m"
+        }
+      ]
+    },
+    {
+      "file": "elektro-uebung.pdf",
+      "sourceSha256": "69b7e8654925b50eed01233e299ad9c63bad0c6cbc0585dd605a48978a4b5886",
+      "mode": "append-only",
+      "outputFile": "electrical-append-only.pdf",
+      "outputSha256": "b151064ed7ffe4b2523645f364c90931fd8ec67c436c77f50c6a71777e78e8cf",
+      "quantities": [
+        {
+          "value": 12.6,
+          "unit": "m",
+          "label": "12,60 m"
+        }
+      ]
+    }
+  ]
+}

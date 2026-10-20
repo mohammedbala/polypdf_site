@@ -54,6 +54,7 @@ function translateDOM(element, translate) {
     node.textContent = leading + translate(normalize(node.textContent)) + trailing;
   }
   for (const node of element.querySelectorAll('[alt],[title],[aria-label]')) {
+    if (node.closest('[translate="no"]')) continue;
     for (const attr of ['alt','title','aria-label']) {
       if (node.hasAttribute(attr) && node.getAttribute(attr)) node.setAttribute(attr, translate(node.getAttribute(attr)));
     }

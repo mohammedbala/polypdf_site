@@ -44,7 +44,7 @@ export default function SymbolCountEvaluation() {
       <div className="container">
         <p className="growth-kicker">Review the scope before accepting a total</p>
         <h2 id="check-symbol-count">Check two fixture types on E-101.</h2>
-        <p>The separate E-101, Revision A practice sheet contains 8 Type A fixtures and 4 Type B fixtures. These are reference quantities from the source drawing, not verified Symbol Search results. The historical screenshots use different demo sheets.</p>
+        <p><span data-regional-copy="takeoff.count.source">The separate E-101, Revision A practice sheet contains 8 Type A fixtures and 4 Type B fixtures. These are reference quantities from the source drawing, not verified Symbol Search results. The historical screenshots use different demo sheets.</span></p>
         <div className="takeoff-decision-grid">
           <div>
             <ol className="takeoff-evaluation-steps">
@@ -59,7 +59,7 @@ export default function SymbolCountEvaluation() {
                 <tr><th scope="row">Type B</th><td>Square</td><td>4</td></tr>
               </tbody></table>
             </div>
-            <p>The 42 ft route in the reference CSV is a length, not another fixture quantity. Do not add it to the two count rows.</p>
+            <p><span data-regional-copy="takeoff.count.route">The 42 ft route in the reference CSV is a length, not another fixture quantity. Do not add it to the two count rows.</span></p>
             <p><Link to="/blog/count-pdf-symbols/">Follow the detailed Symbol Search guide →</Link> <Link to="/electrical-takeoff-software/">Review electrical takeoff scope →</Link></p>
           </div>
           <div className="takeoff-practice-files">
