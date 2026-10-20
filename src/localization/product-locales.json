@@ -1,0 +1,174 @@
+{
+  "source": "PolyPDF packages/core/src/locales/registry.json",
+  "sourceSha256": "109cbce85ee26b0ad7db7edf7150fe056b9d319cbc34367db12d3bc6eb223c55",
+  "locales": [
+    {
+      "tag": "en-US",
+      "siteId": "en",
+      "label": "English",
+      "direction": "ltr",
+      "region": "US",
+      "status": "complete"
+    },
+    {
+      "tag": "de-DE",
+      "siteId": "de",
+      "label": "Deutsch",
+      "direction": "ltr",
+      "region": "DE",
+      "status": "pilot"
+    },
+    {
+      "tag": "es-ES",
+      "siteId": "es",
+      "label": "Español",
+      "direction": "ltr",
+      "region": "ES",
+      "status": "planned"
+    },
+    {
+      "tag": "fr-FR",
+      "siteId": "fr",
+      "label": "Français",
+      "direction": "ltr",
+      "region": "FR",
+      "status": "planned"
+    },
+    {
+      "tag": "pt-BR",
+      "siteId": "pt-br",
+      "label": "Português (Brasil)",
+      "direction": "ltr",
+      "region": "BR",
+      "status": "planned"
+    },
+    {
+      "tag": "pt-PT",
+      "siteId": "pt-pt",
+      "label": "Português (Portugal)",
+      "direction": "ltr",
+      "region": "PT",
+      "status": "planned"
+    },
+    {
+      "tag": "it-IT",
+      "siteId": "it",
+      "label": "Italiano",
+      "direction": "ltr",
+      "region": "IT",
+      "status": "planned"
+    },
+    {
+      "tag": "nl-NL",
+      "siteId": "nl",
+      "label": "Nederlands",
+      "direction": "ltr",
+      "region": "NL",
+      "status": "planned"
+    },
+    {
+      "tag": "pl-PL",
+      "siteId": "pl",
+      "label": "Polski",
+      "direction": "ltr",
+      "region": "PL",
+      "status": "planned"
+    },
+    {
+      "tag": "tr-TR",
+      "siteId": "tr",
+      "label": "Türkçe",
+      "direction": "ltr",
+      "region": "TR",
+      "status": "planned"
+    },
+    {
+      "tag": "ru-RU",
+      "siteId": "ru",
+      "label": "Русский",
+      "direction": "ltr",
+      "region": "RU",
+      "status": "planned"
+    },
+    {
+      "tag": "uk-UA",
+      "siteId": "uk",
+      "label": "Українська",
+      "direction": "ltr",
+      "region": "UA",
+      "status": "planned"
+    },
+    {
+      "tag": "ar-SA",
+      "siteId": "ar",
+      "label": "العربية",
+      "direction": "rtl",
+      "region": "SA",
+      "status": "planned"
+    },
+    {
+      "tag": "hi-IN",
+      "siteId": "hi",
+      "label": "हिन्दी",
+      "direction": "ltr",
+      "region": "IN",
+      "status": "planned"
+    },
+    {
+      "tag": "id-ID",
+      "siteId": "id",
+      "label": "Bahasa Indonesia",
+      "direction": "ltr",
+      "region": "ID",
+      "status": "planned"
+    },
+    {
+      "tag": "vi-VN",
+      "siteId": "vi",
+      "label": "Tiếng Việt",
+      "direction": "ltr",
+      "region": "VN",
+      "status": "planned"
+    },
+    {
+      "tag": "th-TH",
+      "siteId": "th",
+      "label": "ไทย",
+      "direction": "ltr",
+      "region": "TH",
+      "status": "planned"
+    },
+    {
+      "tag": "ko-KR",
+      "siteId": "ko",
+      "label": "한국어",
+      "direction": "ltr",
+      "region": "KR",
+      "status": "planned"
+    },
+    {
+      "tag": "zh-CN",
+      "siteId": "zh-cn",
+      "label": "简体中文",
+      "direction": "ltr",
+      "region": "CN",
+      "status": "planned"
+    },
+    {
+      "tag": "zh-TW",
+      "siteId": "zh-tw",
+      "label": "繁體中文",
+      "direction": "ltr",
+      "region": "TW",
+      "status": "planned"
+    },
+    {
+      "tag": "ja-JP",
+      "siteId": "ja",
+      "label": "日本語",
+      "direction": "ltr",
+      "region": "JP",
+      "status": "planned"
+    }
+  ]
+}

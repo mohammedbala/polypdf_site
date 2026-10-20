@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "locales": {
+    "de": {
+      "appLocale": "de-DE",
+      "region": "DE",
+      "status": "pilot",
+      "assets": {}
+    }
+  },
+  "languageNeutralAssets": ["/static/media/polypdf_icon-96.d284af0697e0c81d8c9f.png"]
+}

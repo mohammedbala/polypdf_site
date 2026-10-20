@@ -1,0 +1,1359 @@
+{
+  "schemaVersion": 1,
+  "sourceRelease": {
+    "version": "1.6.16",
+    "build": "83",
+    "releaseDate": "2026-10-19",
+    "screenshotVersion": "1.4.3",
+    "screenshotBuild": "20",
+    "screenshotCacheToken": "1.4.3-20",
+    "featuredCaptureVersion": "1.5.1",
+    "featuredCaptureBuild": "23"
+  },
+  "coverage": {
+    "eligibleRoutes": 91,
+    "scannedRoutes": 91,
+    "currentlyTranslatedGuideRoutes": [
+      "/",
+      "/build-a-plugin",
+      "/blog",
+      "/blog/polypdf-1-5-5",
+      "/blog/polypdf-1-5-4",
+      "/blog/polypdf-1-5-1",
+      "/blog/create-interactive-pdf-stamps",
+      "/blog/calibrate-pdf-drawing-scale",
+      "/blog/why-pdf-measurements-are-wrong",
+      "/blog/measure-pdf-area-cutouts-depth",
+      "/blog/pdf-takeoff-worked-example",
+      "/blog/count-pdf-symbols",
+      "/blog/pdf-markup-table-rfi-punch-list",
+      "/blog/compare-pdf-drawing-revisions",
+      "/blog/create-fillable-pdf-form",
+      "/blog/ocr-scanned-pdf-drawings",
+      "/blog/digital-signature-vs-visual-signature-vs-seal",
+      "/blog/redact-and-sanitize-pdf",
+      "/blog/prepare-issued-pdf-set",
+      "/blog/how-to-use-polypdf-collaboration-beta",
+      "/blog/introducing-polypdf-plugins",
+      "/feature-requests",
+      "/support",
+      "/windows",
+      "/revision-packages",
+      "/pdf-takeoff-software",
+      "/measure-pdf-on-mac",
+      "/construction-pdf-markup",
+      "/visual-search-pdf-count",
+      "/compare-pdf-drawings"
+    ],
+    "currentlyEnglishOnlyRoutes": [
+      "/buy",
+      "/upgrade",
+      "/account",
+      "/terms",
+      "/privacy",
+      "/refund",
+      "/cookies",
+      "/accessibility",
+      "/versions",
+      "/teams",
+      "/teams/setup",
+      "/teams/guide",
+      "/bluebeam-alternative-for-mac",
+      "/pdf-measuring-tool",
+      "/electrical-takeoff-software",
+      "/flooring-takeoff-software",
+      "/bluebeam-alternative",
+      "/samples",
+      "/product-facts",
+      "/tools/flooring-waste-calculator",
+      "/tools/pdf-scale-checker",
+      "/tools/construction-takeoff-spreadsheet",
+      "/blog/quantity-takeoff"
+    ],
+    "missingPages": [],
+    "externalEmbeds": [],
+    "scope": "All English route metadata, including currently English-only pages, plus public sample, guide, screenshot and workflow files. External CSS, dynamic states, the separately served Teams walkthrough and native/iPad surfaces require separate review."
+  },
+  "assets": [
+    {
+      "source": "/guides/calibrate-pdf-drawing-scale.png",
+      "sha256": "27a2bb5ffe16d0867b7438b5c749606e1fcb531d53c9ba3c200e5d15e59d9a8b",
+      "routes": []
+    },
+    {
+      "source": "/guides/compare-pdf-drawing-revisions.png",
+      "sha256": "35e4f8725e08c29e55788d31db58dbbf9fc64a923871c646a1cc030f4b78f9f1",
+      "routes": []
+    },
+    {
+      "source": "/guides/count-pdf-symbols.png",
+      "sha256": "100a77a559397db28f7e920081d1c837c4a544ff65b5c30305a8a940c94980b5",
+      "routes": []
+    },
+    {
+      "source": "/guides/create-fillable-pdf-form.png",
+      "sha256": "15b2a6ed13ab1d3588a6a8c7d67a6992aa0d9487d1a4d7d83d41aa8af4fa4577",
+      "routes": []
+    },
+    {
+      "source": "/guides/create-interactive-pdf-stamps.png",
+      "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+      "routes": []
+    },
+    {
+      "source": "/guides/digital-signature-vs-visual-signature-vs-seal.png",
+      "sha256": "b1ddc7aea6054a580971cad7a66e573b87849163b01eaaa87f2f1b77a03083e1",
+      "routes": []
+    },
+    {
+      "source": "/guides/how-to-use-polypdf-collaboration-beta.png",
+      "sha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e",
+      "routes": []
+    },
+    {
+      "source": "/guides/introducing-polypdf-plugins.png",
+      "sha256": "0cecb92c9760503ef9fc30b6103e74a4ccdd271bab02fcec7b799d1656043f3a",
+      "routes": []
+    },
+    {
+      "source": "/guides/measure-pdf-area-cutouts-depth.png",
+      "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+      "routes": []
+    },
+    {
+      "source": "/guides/ocr-scanned-pdf-drawings.png",
+      "sha256": "c89eb58178ae38303cd5262cf443d875e7ed98e7433e28269f5c29d4485ce977",
+      "routes": []
+    },
+    {
+      "source": "/guides/pdf-markup-table-rfi-punch-list.png",
+      "sha256": "f418bffd7442d82a61e5f9ddc3424e98b824ff8a8e17639afa1c58a7c056ab05",
+      "routes": []
+    },
+    {
+      "source": "/guides/pdf-takeoff-worked-example.png",
+      "sha256": "0b588bda5e0b59bcecc742eaedc1db9937639c265493511b4121b4677fba8ef1",
+      "routes": []
+    },
+    {
+      "source": "/guides/polypdf-1-5-1.png",
+      "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+      "routes": []
+    },
+    {
+      "source": "/guides/polypdf-1-5-4.png",
+      "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+      "routes": []
+    },
+    {
+      "source": "/guides/polypdf-1-5-5.png",
+      "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+      "routes": []
+    },
+    {
+      "source": "/guides/prepare-issued-pdf-set.png",
+      "sha256": "efe037a44f197b420840bd10f59990674fc8bc3228e8aa2476e4009f4c215443",
+      "routes": []
+    },
+    {
+      "source": "/guides/quantity-takeoff.png",
+      "sha256": "0b588bda5e0b59bcecc742eaedc1db9937639c265493511b4121b4677fba8ef1",
+      "routes": []
+    },
+    {
+      "source": "/guides/redact-and-sanitize-pdf.png",
+      "sha256": "2dc88e556ad531a8407b039975f11ebf1db0b371ca697158d2feb9b665dd2453",
+      "routes": []
+    },
+    {
+      "source": "/guides/why-pdf-measurements-are-wrong.png",
+      "sha256": "4c16945802e27e59740ce954a73cdd4a807f3013dc10d9334c78e26e690fb168",
+      "routes": []
+    },
+    {
+      "source": "/images/workflows/compare.gif",
+      "sha256": "7c66bc64725a8ca5b83af26808cb5c4781da71063d390bb05cbaf7b2e0f76d5b",
+      "routes": [
+        "/"
+      ]
+    },
+    {
+      "source": "/images/workflows/compare.mp4",
+      "sha256": "5db3291be323bb6723af86644cd25c8ddd0be28612172e14a8f0eb48a866f370",
+      "routes": [
+        "/"
+      ]
+    },
+    {
+      "source": "/images/workflows/compare.webm",
+      "sha256": "54c85ecd1997662963724f1da8fe727f4ddb6e113b516bf0015e2e2ce274811e",
+      "routes": []
+    },
+    {
+      "source": "/images/workflows/compare.webp",
+      "sha256": "b0804aed94b798e6dc39f6138cf92c82c1b66c9cbc6cf01b9f69ac949ecef68c",
+      "routes": [
+        "/",
+        "/compare-pdf-drawings"
+      ]
+    },
+    {
+      "source": "/images/workflows/review.gif",
+      "sha256": "6d9269d62fe609389fb01afa8ccf3b8be7cfab6e8fdff3c1702b0e47515d6cef",
+      "routes": [
+        "/"
+      ]
+    },
+    {
+      "source": "/images/workflows/review.mp4",
+      "sha256": "94961a1ec2b6fa247a1ac07a031dbd32e38b839cfe2153c6e562efb7b2194c3e",
+      "routes": [
+        "/"
+      ]
+    },
+    {
+      "source": "/images/workflows/review.webm",
+      "sha256": "80ab606adf91a0b81615a72cf56e57f184aac7498791cbabc3b141619b3221b5",
+      "routes": []
+    },
+    {
+      "source": "/images/workflows/review.webp",
+      "sha256": "b3208c8d45264cb9105810471eecfa2bb9e6f42709d8bf2d41d1b548084e0cc9",
+      "routes": [
+        "/",
+        "/construction-pdf-markup"
+      ]
+    },
+    {
+      "source": "/images/workflows/takeoff.gif",
+      "sha256": "459777d097ae45cc2728dd9bf63730a43077b8d01f8e5adab2ce4d1219a64af6",
+      "routes": [
+        "/"
+      ]
+    },
+    {
+      "source": "/images/workflows/takeoff.mp4",
+      "sha256": "4bc2900cb19e1f891c293fb84474f96eb7b34d326935e559f800447c2453c4ac",
+      "routes": [
+        "/"
+      ]
+    },
+    {
+      "source": "/images/workflows/takeoff.webm",
+      "sha256": "f3295f8cb1b622863e8dfb9405352afe71313950fb399abe67abb7201e3627f0",
+      "routes": []
+    },
+    {
+      "source": "/images/workflows/takeoff.webp",
+      "sha256": "427eb6269069f1f969210cec2b0223d7dc29b7db43f6e4dd901456ce606dc034",
+      "routes": [
+        "/",
+        "/pdf-takeoff-software",
+        "/measure-pdf-on-mac",
+        "/bluebeam-alternative-for-mac",
+        "/pdf-measuring-tool",
+        "/electrical-takeoff-software",
+        "/flooring-takeoff-software",
+        "/bluebeam-alternative"
+      ]
+    },
+    {
+      "source": "/samples/construction/01-Civil-Site-and-Grading.pdf",
+      "sha256": "177f25d51559feef89a776ac7f88a928afa49da16ea0e9fbf972a7bfc1db8009",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/02-Architectural-Revision-A.pdf",
+      "sha256": "0a05c64b7074e55576952ccc493fcc3f07761fe038c53f3ec0ac73562bcebe51",
+      "routes": [
+        "/",
+        "/blog/quantity-takeoff",
+        "/blog/calibrate-pdf-drawing-scale",
+        "/blog/why-pdf-measurements-are-wrong",
+        "/blog/pdf-takeoff-worked-example",
+        "/blog/compare-pdf-drawing-revisions",
+        "/pdf-takeoff-software",
+        "/measure-pdf-on-mac",
+        "/compare-pdf-drawings",
+        "/pdf-measuring-tool",
+        "/bluebeam-alternative",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/03-Architectural-Revision-B.pdf",
+      "sha256": "546ea7eac41a9451f28b236a836bec95d9df0b3ce01b9b6c33d25547ff2c5647",
+      "routes": [
+        "/blog/compare-pdf-drawing-revisions",
+        "/compare-pdf-drawings",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/04-Structural-Foundation-and-Framing.pdf",
+      "sha256": "e2cd6fd0ad13ef82a2e27a6a6770f769b707a43d534a7260b71c0763e3aa0a23",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/05-Mechanical-HVAC.pdf",
+      "sha256": "9fab23b2ac3cceee1153e42c197c045ecfd351c2706071c7293bf4fe31a4b6d3",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/06-Electrical-Lighting-and-Power.pdf",
+      "sha256": "7cf37860e4da7a744fb4e66f594c6e3f6e4cdc4d37f932a6c0155267223a6e60",
+      "routes": [
+        "/blog/count-pdf-symbols",
+        "/visual-search-pdf-count",
+        "/electrical-takeoff-software",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/07-Plumbing-Water-and-Drainage.pdf",
+      "sha256": "d1454428f316d5f293cf6a3514cb60571c59a3483ca7aa0e74a9a5424ee9b518",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/08-Fire-Protection-and-Life-Safety.pdf",
+      "sha256": "27952ec9097c89734f80610387f02002a7776e35ad18c83e8de66ee7c0b3356c",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/09-Landscape-and-External-Works.pdf",
+      "sha256": "31c51d17aa835875e80169af8e357a92dcea861aa38236c00159c8cc3971ee03",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/10-Interiors-Finishes-and-Millwork.pdf",
+      "sha256": "b9d65475168417b3257c6e91d860f66812bef26fa7ff89f20bacb871559e1c74",
+      "routes": [
+        "/blog/measure-pdf-area-cutouts-depth",
+        "/flooring-takeoff-software",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/11-Coordination-and-Review.pdf",
+      "sha256": "ca941a1691d9ba9d2debfb5fa0e0c757c92d50106a90362d0747f88a31121681",
+      "routes": [
+        "/blog/pdf-markup-table-rfi-punch-list",
+        "/construction-pdf-markup",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/12-Scanned-Legacy-Drawings.pdf",
+      "sha256": "234887c9b7b3be62e6f120acb1a9b9e1adce5da515b6582c92eb96df9685cec0",
+      "routes": [
+        "/blog/ocr-scanned-pdf-drawings",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/contact-sheet.png",
+      "sha256": "d83054fd9fe747aa2e68cee7733945e5cdb1cdef870e0100c6a7f2fb10a70b0c",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/DEMO-GUIDE.html",
+      "sha256": "ef5ad4382bb7c8c7855d139cefc57fcaed7506784c6063dcd4a6499887199504",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/polypdf-construction-demo-library.zip",
+      "sha256": "de9d6fe62d79bbb58c867a1a0e5d241a02479e048e738d4b66140b17bfef64ee",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/01-Civil-Site-and-Grading--page-01.png",
+      "sha256": "a2ed10f739868367fca03444dc534c2744cf0ab391d1478a992de349d8415f13",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/01-Civil-Site-and-Grading--page-02.png",
+      "sha256": "550fa0f5c9972f995b2da371e05bba579527bdc4eaaad3efdd4180e764946150",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/02-Architectural-Revision-A--page-01.png",
+      "sha256": "a21009b0fd505b447f2cab643fb9f23969be960a50ae5c3cc52fb56cc0566328",
+      "routes": [
+        "/",
+        "/blog/quantity-takeoff",
+        "/blog/calibrate-pdf-drawing-scale",
+        "/blog/why-pdf-measurements-are-wrong",
+        "/blog/pdf-takeoff-worked-example",
+        "/blog/compare-pdf-drawing-revisions",
+        "/pdf-takeoff-software",
+        "/measure-pdf-on-mac",
+        "/compare-pdf-drawings",
+        "/pdf-measuring-tool",
+        "/bluebeam-alternative",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/02-Architectural-Revision-A--page-02.png",
+      "sha256": "b95780325b18ed72d2b7af2fb626dab7ab38be94e5636f75ed775d5121197453",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/03-Architectural-Revision-B--page-01.png",
+      "sha256": "2937fd2ee591aa38d958d4ed01ef6e60a847fb201220d1e690c6d309fee8f5b7",
+      "routes": [
+        "/blog/compare-pdf-drawing-revisions",
+        "/compare-pdf-drawings",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/03-Architectural-Revision-B--page-02.png",
+      "sha256": "8f70df42dc9ce25b60bd6034c03f1b879c5e5974ce5551276257166f5ae2fe4a",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-01.png",
+      "sha256": "0abc91fdde1f507fe8d342882172efecf960dee726fdaf3a892494149188473a",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-02.png",
+      "sha256": "9ee366ffa7fd57640cd88c56ca8231364f5e6202ee390e17b7ef29e28163504a",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/05-Mechanical-HVAC--page-01.png",
+      "sha256": "04a4534339ccfbd483bc41e0e64cf1580cd794cdd388d2e90a591b4efcfe07f7",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/05-Mechanical-HVAC--page-02.png",
+      "sha256": "53a0cdf08ea3e1ef4cc48396fa37ef487b1914394f08e7d882907abe16e2a163",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-01.png",
+      "sha256": "268fe5b1c28551a1c1fbce905f0118a8681b92efdb41ed8a7bee870ea5709db0",
+      "routes": [
+        "/blog/count-pdf-symbols",
+        "/visual-search-pdf-count",
+        "/electrical-takeoff-software",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-02.png",
+      "sha256": "902032729c4fb2e8a664d63891c343c33a484d1e2d0bf8abde32c7f917b77a8e",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-01.png",
+      "sha256": "2d68d2925c8c0ce84a3fc8db011a25a2e1c39b4ab4ccf2447e2db62a5581b038",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-02.png",
+      "sha256": "74719c10b254cedfc4957b31ad3363fc0c2f1ea6a1c62de6ece8f27c1da35d49",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-01.png",
+      "sha256": "8026bf80b4acf7a3b0fb793417a614b30a1cd48341777fa6c5af462494e19f7c",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-02.png",
+      "sha256": "aec1127265ac0e50c62043be9aaf602155d41b26471fc3059111307519f61ffd",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/09-Landscape-and-External-Works--page-01.png",
+      "sha256": "d9dcab07240598b0bc6ab969338e987c17b534c109013892e11a425cd3561c5e",
+      "routes": [
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/09-Landscape-and-External-Works--page-02.png",
+      "sha256": "3704ab1d24cbe1df0b8ac06495d8a73df4fe49fdfce5af7e34e453735f5c3593",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-01.png",
+      "sha256": "98072a62400c056b6e6b8c5ca3764466554ab72507dd2ae15ab2047643b2ab76",
+      "routes": [
+        "/blog/measure-pdf-area-cutouts-depth",
+        "/flooring-takeoff-software",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-02.png",
+      "sha256": "72dfeee23c28b8208277feca4703c6b5b87baadb16bf97f4728ca40789e52067",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/11-Coordination-and-Review--page-01.png",
+      "sha256": "a5753b05311b46ae461796b0f6e92db4871381825ca62e275d4b7828e7782f15",
+      "routes": [
+        "/blog/pdf-markup-table-rfi-punch-list",
+        "/construction-pdf-markup",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/11-Coordination-and-Review--page-02.png",
+      "sha256": "fd6a5e1d53a0fc3f84a40c03acca9b7375f99e4b433224abc696bc89516cfaee",
+      "routes": []
+    },
+    {
+      "source": "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-01.png",
+      "sha256": "a12f2196d3fed32ea8bd4aa224ee5993403e4961a3b7dfa94efda42a21fb7290",
+      "routes": [
+        "/blog/ocr-scanned-pdf-drawings",
+        "/samples"
+      ]
+    },
+    {
+      "source": "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-02.png",
+      "sha256": "e1385fc9d7814996a6f36184c22a460235e8e5672b338008a1827c94fc2db94f",
+      "routes": []
+    },
+    {
+      "source": "/samples/conversion/bluebeam-migration-checklist.csv",
+      "sha256": "04ed3ee70e3f284354c157c2552bd5a7be3cecd053dbf87f920f4451773a4df1",
+      "routes": [
+        "/bluebeam-alternative"
+      ]
+    },
+    {
+      "source": "/samples/conversion/northline-studio-rev-a.pdf",
+      "sha256": "4d666ff24720f4a1bde24288e78ff19b1f4fe160f216a3ffeda314c669404bb5",
+      "routes": [
+        "/",
+        "/construction-pdf-markup",
+        "/compare-pdf-drawings",
+        "/bluebeam-alternative-for-mac"
+      ]
+    },
+    {
+      "source": "/samples/conversion/northline-studio-rev-b.pdf",
+      "sha256": "977bc9e61dc567b212a6dea6f5d284a894680beacbb3c8d75e324e3684f94405",
+      "routes": [
+        "/",
+        "/compare-pdf-drawings"
+      ]
+    },
+    {
+      "source": "/samples/conversion/northline-studio-reviewed.pdf",
+      "sha256": "825f5d634fb97f2c7743e6bf81dde0a75b911639aced8643f5c65ae073e8434c",
+      "routes": [
+        "/construction-pdf-markup",
+        "/bluebeam-alternative-for-mac"
+      ]
+    },
+    {
+      "source": "/samples/electrical/electrical-count-review.csv",
+      "sha256": "387a005ab3fe678d9d1fae7ce0cf96df7d719e1050b5a638bba643bce4b2fbca",
+      "routes": [
+        "/electrical-takeoff-software"
+      ]
+    },
+    {
+      "source": "/samples/electrical/README.html",
+      "sha256": "723ae7e35fb29a4881b6a706ce0af64a69543a3ce134af0fb9ad60dd959eb038",
+      "routes": [
+        "/electrical-takeoff-software"
+      ]
+    },
+    {
+      "source": "/samples/evaluation/evaluation-results.csv",
+      "sha256": "95080a6947fae8b566f2cad36e48c2a0f14c9363709b88dc85114a29f88c2084",
+      "routes": [
+        "/product-facts"
+      ]
+    },
+    {
+      "source": "/samples/evaluation/local-build-1.6.14-76/verification.html",
+      "sha256": "f105ea9756572111da2aa8e3304daf43b0e0e5f5ed31d5db1cf6eb1991ee3c28",
+      "routes": [
+        "/product-facts"
+      ]
+    },
+    {
+      "source": "/samples/evaluation/local-build-1.6.14-76/willow-creek-a101-measured.pdf",
+      "sha256": "6e8d00bc5647db8b753fe2a95af2da58d9fb79ab7ef2538296f4e7a8a1324e4f",
+      "routes": [
+        "/product-facts"
+      ]
+    },
+    {
+      "source": "/samples/evaluation/local-build-1.6.14-76/willow-creek-a101-takeoff.csv",
+      "sha256": "f808a1720545693e917fd97346fc4fd3df2f99205952e96d150fe925b848a4e9",
+      "routes": [
+        "/product-facts",
+        "/tools/construction-takeoff-spreadsheet"
+      ]
+    },
+    {
+      "source": "/samples/evaluation/polypdf-construction-evaluation-kit.zip",
+      "sha256": "2b5ac2c757e289593cc90a3df9a9d5f730f803b4f6d80f22cbecbc9a32f810ff",
+      "routes": [
+        "/product-facts"
+      ]
+    },
+    {
+      "source": "/samples/evaluation/reference-quantities.csv",
+      "sha256": "794c39a5227f6815ad051ec5bcb4bf0a3094a34eab7e87dac359fd226cf15cf0",
+      "routes": [
+        "/product-facts"
+      ]
+    },
+    {
+      "source": "/samples/evaluation/START-HERE.html",
+      "sha256": "6cf2eb7a7adfa77feca90a54a4ba104ecd052d296638d2417474787c6bf44033",
+      "routes": [
+        "/product-facts"
+      ]
+    },
+    {
+      "source": "/samples/forms/construction-review-field-map.csv",
+      "sha256": "ad76c80c355e80a3152a68b1eb8ec2e3fe5b91ac3fe6d784839a9f03cff64ab8",
+      "routes": [
+        "/blog/create-fillable-pdf-form"
+      ]
+    },
+    {
+      "source": "/samples/forms/construction-review-form-en.pdf",
+      "sha256": "2a71e66d33171a72997418105bdd8ad5e5d13bea0ba00563c6115ba526b57b8b",
+      "routes": [
+        "/blog/create-fillable-pdf-form"
+      ]
+    },
+    {
+      "source": "/samples/forms/construction-review-form-fr.pdf",
+      "sha256": "4859b73424383731ab74fa29f5fc07889b3da0b463b1a3e433043797a11d0e0d",
+      "routes": [
+        "/blog/create-fillable-pdf-form"
+      ]
+    },
+    {
+      "source": "/samples/spreadsheets/polypdf-construction-takeoff-template.xlsx",
+      "sha256": "9cdc279825b8e2e85af04d9b1f252ecf52f32ae8b22ec02927f6c6d1177cbcc7",
+      "routes": [
+        "/tools/construction-takeoff-spreadsheet"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/electrical-mac-route-summary.pdf",
+      "sha256": "fdbeede5184b862b3ec85588e447e0987b7f37f239f342b18a00a309f4c452b0",
+      "routes": []
+    },
+    {
+      "source": "/samples/takeoff/electrical-mac-route.csv",
+      "sha256": "541d78cb97f847e500a83ffd55301590db385253926709d5515856f67c43a3ce",
+      "routes": []
+    },
+    {
+      "source": "/samples/takeoff/electrical-mac-route.pdf",
+      "sha256": "680386d2adc5fda1a99ff929dac5c4900170f820021aa41c178b2acab677b4f1",
+      "routes": []
+    },
+    {
+      "source": "/samples/takeoff/electrical-practice-preview.png",
+      "sha256": "7dd2f65977bcf208d14491a25f8a9dbdd441faeebcdf373688f2d37d311b087a",
+      "routes": [
+        "/visual-search-pdf-count"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/electrical-practice.pdf",
+      "sha256": "d53f079157b616068075e88c0a75dc5e1bde8604e9923c00f343ddd28ab53878",
+      "routes": [
+        "/visual-search-pdf-count"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/electrical-reference.csv",
+      "sha256": "43454bb6d09d735ecf7f27401bd5cbe1a55f160a5e21ec3711232447fabffd01",
+      "routes": [
+        "/visual-search-pdf-count"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/electrical-reference.pdf",
+      "sha256": "d7fe95bec384896bd1ca806194c93a7854cd1b3d3078b772cf01831039f5f491",
+      "routes": []
+    },
+    {
+      "source": "/samples/takeoff/flooring-mac-measured.pdf",
+      "sha256": "3f990a66a30332a38d56ee8e71c464ea558dc985ff09c4de829d36a349585e73",
+      "routes": [
+        "/blog/measure-pdf-area-cutouts-depth",
+        "/pdf-takeoff-software",
+        "/measure-pdf-on-mac"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/flooring-mac-summary.pdf",
+      "sha256": "33399cc159b03951946eac9fef47c2503b5cb1dab58ac29c61a0be021d4c49af",
+      "routes": [
+        "/blog/measure-pdf-area-cutouts-depth"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/flooring-mac-worksheet.csv",
+      "sha256": "e52b000d55966b3fd7f8665040bc3d322eba92410cf8304f015cd4efc2c71148",
+      "routes": [
+        "/blog/measure-pdf-area-cutouts-depth",
+        "/pdf-takeoff-software",
+        "/measure-pdf-on-mac"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/flooring-practice-preview.png",
+      "sha256": "8f7fe4bde6f324e7888e2266ce741278d156c6437a57ede19546d70ca7fc6c9e",
+      "routes": [
+        "/blog/calibrate-pdf-drawing-scale",
+        "/blog/measure-pdf-area-cutouts-depth"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/flooring-practice.pdf",
+      "sha256": "bdc4bcff4a834d479ff3feac5325198f8653a2f971cc15273f86494b39c848da",
+      "routes": [
+        "/blog/calibrate-pdf-drawing-scale",
+        "/blog/measure-pdf-area-cutouts-depth",
+        "/pdf-takeoff-software",
+        "/measure-pdf-on-mac"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/flooring-reference.csv",
+      "sha256": "83023dd21f449af55ace548567b6ac499c7eaaff5d396952d05eb8b95a9aeb58",
+      "routes": [
+        "/blog/calibrate-pdf-drawing-scale",
+        "/blog/measure-pdf-area-cutouts-depth"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/flooring-reference.pdf",
+      "sha256": "f644daf6722e34f343ecb4df7583b4b244f31375ffb922f5f32ebe3375352265",
+      "routes": [
+        "/pdf-takeoff-software",
+        "/measure-pdf-on-mac"
+      ]
+    },
+    {
+      "source": "/samples/takeoff/README.md",
+      "sha256": "5e487a329d352bf1d1c78e8ff10128434407acb7cc3e8899cd7e97dae2de3b5b",
+      "routes": [
+        "/product-facts"
+      ]
+    },
+    {
+      "source": "/static/media/architectural-tools-v1-5-1.9830f3da8b2a31466fd0.png",
+      "sha256": "53e5e7e13f2aa2b4e7fc8e65c584659e001f978ea08ba9a846a5d3bcaa632319",
+      "routes": [
+        "/blog/polypdf-1-5-1"
+      ]
+    },
+    {
+      "source": "/static/media/area-cutouts-depth-v1-4-dark-web.dec07a98201fc7c88d53.png",
+      "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+      "routes": [
+        "/blog",
+        "/blog/polypdf-1-5-5",
+        "/blog/polypdf-1-5-4",
+        "/blog/measure-pdf-area-cutouts-depth"
+      ]
+    },
+    {
+      "source": "/static/media/calibration-known-distance-dialog-v1-4-dark-web.1f7a8482836353d582f2.png",
+      "sha256": "213c5f29f27f6618954baaca9a772c2f08f6f1253248c93b1a09ed51e9e08728",
+      "routes": [
+        "/blog/calibrate-pdf-drawing-scale"
+      ]
+    },
+    {
+      "source": "/static/media/calibration-uncalibrated-v1-4-dark-web.a3e2ba99dfeb66dc2473.png",
+      "sha256": "404892474ed9c54ba43ca629570940ea9e20dc561ab2ac998d18994dd2a36df3",
+      "routes": [
+        "/blog/calibrate-pdf-drawing-scale"
+      ]
+    },
+    {
+      "source": "/static/media/calibration-verified-second-span-v1-4-dark-web.55b48582ab08dfd30ee9.png",
+      "sha256": "27a2bb5ffe16d0867b7438b5c749606e1fcb531d53c9ba3c200e5d15e59d9a8b",
+      "routes": [
+        "/blog",
+        "/blog/calibrate-pdf-drawing-scale"
+      ]
+    },
+    {
+      "source": "/static/media/collaboration-beta-live-v1-4-3-web.ca8610df481cc8e56612.png",
+      "sha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e",
+      "routes": [
+        "/blog",
+        "/blog/how-to-use-polypdf-collaboration-beta"
+      ]
+    },
+    {
+      "source": "/static/media/compare-editable-clouds-v1-4-dark-web.6679b62653c70295a427.png",
+      "sha256": "35e4f8725e08c29e55788d31db58dbbf9fc64a923871c646a1cc030f4b78f9f1",
+      "routes": [
+        "/blog",
+        "/blog/compare-pdf-drawing-revisions"
+      ]
+    },
+    {
+      "source": "/static/media/count-committed-v1-4-dark-web.c5a55b6b41eea3632737.png",
+      "sha256": "dec20dec4bacc92d65bec9045aedb8bb62ee4735b8fca2ef457f179316029d6b",
+      "routes": [
+        "/blog/count-pdf-symbols"
+      ]
+    },
+    {
+      "source": "/static/media/forms-v1-4-light-web.bacdaf926920754483b8.png",
+      "sha256": "15b2a6ed13ab1d3588a6a8c7d67a6992aa0d9487d1a4d7d83d41aa8af4fa4577",
+      "routes": [
+        "/blog",
+        "/blog/create-fillable-pdf-form"
+      ]
+    },
+    {
+      "source": "/static/media/markup-v1-4-dark-web.e35b3110dd6a31462cdd.png",
+      "sha256": "f418bffd7442d82a61e5f9ddc3424e98b824ff8a8e17639afa1c58a7c056ab05",
+      "routes": [
+        "/blog",
+        "/blog/pdf-markup-table-rfi-punch-list"
+      ]
+    },
+    {
+      "source": "/static/media/mutcd-r1-1-stop-v1-4-dark-web.a1176fdf1f0e32ab2e6d.png",
+      "sha256": "6fabbe32af1d1866fa9a6372e57e8ec9645f8287f0d498bbc9073872d9f61180",
+      "routes": [
+        "/blog/introducing-polypdf-plugins"
+      ]
+    },
+    {
+      "source": "/static/media/ocr-uss-akron-complete-v1-4-light-web.5d332f9ba32ae3d54f75.png",
+      "sha256": "911993184c43fedbaf48fcda74cc62b8ac1923d23e36bb19ac7dca5cd58204c9",
+      "routes": [
+        "/blog/ocr-scanned-pdf-drawings"
+      ]
+    },
+    {
+      "source": "/static/media/ocr-uss-akron-no-text-before-v1-4-light-web.7eb4135b422b0b760016.png",
+      "sha256": "c033a84521f063f6b2fa75d69b5d3f4aeaf2bb76d23daf1e3ba118ef5e0fbe3d",
+      "routes": [
+        "/blog/ocr-scanned-pdf-drawings"
+      ]
+    },
+    {
+      "source": "/static/media/ocr-uss-akron-search-hit-v1-4-light-web.f40f566d183f9885c733.png",
+      "sha256": "c89eb58178ae38303cd5262cf443d875e7ed98e7433e28269f5c29d4485ce977",
+      "routes": [
+        "/blog",
+        "/blog/ocr-scanned-pdf-drawings"
+      ]
+    },
+    {
+      "source": "/static/media/plugins-aisc-w24x55-generator-v1-4-dark-web.80f4acecb85af2978991.png",
+      "sha256": "6bb1c09da208b8513b9763841704e717508b48ba14449b255e3ecd07cd6a7926",
+      "routes": [
+        "/blog/introducing-polypdf-plugins"
+      ]
+    },
+    {
+      "source": "/static/media/plugins-aisc-w24x55-result-v1-4-dark-web.b255da813f9431bc6cbe.png",
+      "sha256": "b0548fdf5a08cc0d892f3265039e055ab5370fd6360cdf37b1c439d9fc503452",
+      "routes": [
+        "/blog/introducing-polypdf-plugins"
+      ]
+    },
+    {
+      "source": "/static/media/plugins-sidebar-v1-4-dark-web.7e63b66a253890743d92.png",
+      "sha256": "0cecb92c9760503ef9fc30b6103e74a4ccdd271bab02fcec7b799d1656043f3a",
+      "routes": [
+        "/blog",
+        "/blog/introducing-polypdf-plugins"
+      ]
+    },
+    {
+      "source": "/static/media/polypdf_icon-96.d284af0697e0c81d8c9f.png",
+      "sha256": "fd751619726c78e6f2d02a0215f971701a24c03c9e1835d8f487e9c070b36adb",
+      "routes": [
+        "/",
+        "/buy",
+        "/upgrade",
+        "/build-a-plugin",
+        "/account",
+        "/blog",
+        "/blog/polypdf-1-5-5",
+        "/blog/polypdf-1-5-4",
+        "/blog/polypdf-1-5-1",
+        "/blog/quantity-takeoff",
+        "/blog/create-interactive-pdf-stamps",
+        "/blog/calibrate-pdf-drawing-scale",
+        "/blog/why-pdf-measurements-are-wrong",
+        "/blog/measure-pdf-area-cutouts-depth",
+        "/blog/pdf-takeoff-worked-example",
+        "/blog/count-pdf-symbols",
+        "/blog/pdf-markup-table-rfi-punch-list",
+        "/blog/compare-pdf-drawing-revisions",
+        "/blog/create-fillable-pdf-form",
+        "/blog/ocr-scanned-pdf-drawings",
+        "/blog/digital-signature-vs-visual-signature-vs-seal",
+        "/blog/redact-and-sanitize-pdf",
+        "/blog/prepare-issued-pdf-set",
+        "/blog/how-to-use-polypdf-collaboration-beta",
+        "/blog/introducing-polypdf-plugins",
+        "/privacy",
+        "/refund",
+        "/feature-requests",
+        "/support",
+        "/windows",
+        "/terms",
+        "/versions",
+        "/revision-packages",
+        "/pdf-takeoff-software",
+        "/measure-pdf-on-mac",
+        "/construction-pdf-markup",
+        "/visual-search-pdf-count",
+        "/compare-pdf-drawings",
+        "/cookies",
+        "/accessibility",
+        "/teams",
+        "/teams/setup",
+        "/teams/guide",
+        "/bluebeam-alternative-for-mac",
+        "/pdf-measuring-tool",
+        "/electrical-takeoff-software",
+        "/flooring-takeoff-software",
+        "/bluebeam-alternative",
+        "/samples",
+        "/tools",
+        "/tools/flooring-waste-calculator",
+        "/product-facts",
+        "/tools/pdf-scale-checker",
+        "/tools/construction-takeoff-spreadsheet",
+        "/tools/automation",
+        "/tools/merge-pdf",
+        "/tools/split-pdf",
+        "/tools/extract-pdf-pages",
+        "/tools/delete-pdf-pages",
+        "/tools/organize-pdf",
+        "/tools/rotate-pdf",
+        "/tools/duplicate-pdf-pages",
+        "/tools/reverse-pdf-pages",
+        "/tools/insert-blank-pdf-pages",
+        "/tools/interleave-pdf",
+        "/tools/jpg-to-pdf",
+        "/tools/png-to-pdf",
+        "/tools/webp-to-pdf",
+        "/tools/pdf-to-jpg",
+        "/tools/pdf-to-png",
+        "/tools/pdf-to-webp",
+        "/tools/pdf-to-text",
+        "/tools/text-to-pdf",
+        "/tools/compress-pdf",
+        "/tools/flatten-pdf",
+        "/tools/fill-pdf-form",
+        "/tools/extract-pdf-form-data",
+        "/tools/remove-pdf-annotations",
+        "/tools/watermark-pdf",
+        "/tools/number-pdf-pages",
+        "/tools/bates-number-pdf",
+        "/tools/crop-pdf",
+        "/tools/resize-pdf",
+        "/tools/add-pdf-margins",
+        "/tools/pdf-booklet",
+        "/tools/n-up-pdf",
+        "/tools/add-text-to-pdf",
+        "/tools/add-image-to-pdf",
+        "/tools/edit-pdf-metadata",
+        "/tools/inspect-pdf",
+        "/tools/compare-pdf-text"
+      ]
+    },
+    {
+      "source": "/static/media/redaction-applied-result-v1-4-light-web.7b14a733ab9b64de6a55.png",
+      "sha256": "9d9e31eeabf2c0751567cba1f8fd13cc36dc9b100bdc2c0430cda74b995e5eef",
+      "routes": [
+        "/blog/redact-and-sanitize-pdf"
+      ]
+    },
+    {
+      "source": "/static/media/redaction-apply-confirmation-v1-4-light-web.8d5408da5b0dc1a8e3dd.png",
+      "sha256": "a96bae21503309ece9e03fe56c5b6487bc9a194ffe38f66642ccc39891c86024",
+      "routes": [
+        "/blog/redact-and-sanitize-pdf"
+      ]
+    },
+    {
+      "source": "/static/media/redaction-lab-before-v1-4-light-web.4910cbc900d830544f72.png",
+      "sha256": "a736d477b3743677ad4c4a2774ac8c48447a793e52fc867f1fee6a37dacf3515",
+      "routes": [
+        "/blog/redact-and-sanitize-pdf"
+      ]
+    },
+    {
+      "source": "/static/media/redaction-marked-text-v1-4-light-web.1dc7bc740e76901875ad.png",
+      "sha256": "4d2dab39ed14bf52e07e5bcdfb9eabe8531a63107a70da778df034c3533d1e51",
+      "routes": [
+        "/blog/redact-and-sanitize-pdf"
+      ]
+    },
+    {
+      "source": "/static/media/redaction-reopened-search-no-matches-v1-4-light-web.4c944a4fa20df034f69e.png",
+      "sha256": "2dc88e556ad531a8407b039975f11ebf1db0b371ca697158d2feb9b665dd2453",
+      "routes": [
+        "/blog",
+        "/blog/redact-and-sanitize-pdf"
+      ]
+    },
+    {
+      "source": "/static/media/revision-package-changes-impact-v1-5-dark-1536.a5c1b880387e301a043c.webp",
+      "sha256": "f9f302fcfceeaa88e5913f9cc9b8ddd7cf6362f44072543372c119abed16c492",
+      "routes": [
+        "/revision-packages"
+      ]
+    },
+    {
+      "source": "/static/media/revision-package-changes-impact-v1-5-dark-768.27c325b6184f179d4259.webp",
+      "sha256": "51b7ee6179990afe89c707c7528edd5a2339d4b0ac4fcc3df391ca0f35f26f9c",
+      "routes": [
+        "/revision-packages"
+      ]
+    },
+    {
+      "source": "/static/media/sanitize-options-v1-4-light-web.f894c8ab78476fa7a6df.png",
+      "sha256": "06ea56039c70c8dcf54d9ca977a00c031964ed481d2c5b699ae16a9ac8174fa1",
+      "routes": [
+        "/blog/redact-and-sanitize-pdf"
+      ]
+    },
+    {
+      "source": "/static/media/sanitize-result-v1-4-light-web.9a28a482a6d6bd1e4512.png",
+      "sha256": "2b4040d3547afe9dc0c5d00a6c5b8016df8311270976b5b57d47f470a4d95f0a",
+      "routes": [
+        "/blog/redact-and-sanitize-pdf"
+      ]
+    },
+    {
+      "source": "/static/media/shot-issued-bates-v1-4-light-web.b9fc5f4b5266d6e2d301.png",
+      "sha256": "fefceb9573b51034b9c8eed1293b8cc9aad2bd01375e684e3668821bab6384a7",
+      "routes": [
+        "/blog/prepare-issued-pdf-set"
+      ]
+    },
+    {
+      "source": "/static/media/shot-issued-final-v1-4-light-web.081594b76223a137bf51.png",
+      "sha256": "efe037a44f197b420840bd10f59990674fc8bc3228e8aa2476e4009f4c215443",
+      "routes": [
+        "/blog",
+        "/blog/prepare-issued-pdf-set"
+      ]
+    },
+    {
+      "source": "/static/media/shot-issued-headers-v1-4-light-web.08a687b6938d03a7985f.png",
+      "sha256": "e654a9462048b59026386f6f1768f78dfef67a97c8a1300ae728df23f1049ab0",
+      "routes": [
+        "/blog/prepare-issued-pdf-set"
+      ]
+    },
+    {
+      "source": "/static/media/shot-issued-preflight-v1-4-light-web.bebb455ee4ed57a6e05c.png",
+      "sha256": "b4c0bf0fd39cc952811ed9a6e7e33e13677d42a1179467047791369359863b60",
+      "routes": [
+        "/blog/prepare-issued-pdf-set"
+      ]
+    },
+    {
+      "source": "/static/media/signature-certificate-technical-v1-4-light-web.911b936bd3e7a89c4797.png",
+      "sha256": "1fa6428c1e5adb9b21213772fe6faff2585e5d91e3e7bdc6ac875fe5b04b4866",
+      "routes": [
+        "/blog/digital-signature-vs-visual-signature-vs-seal"
+      ]
+    },
+    {
+      "source": "/static/media/signature-seal-builder-warning-v1-4-light-web.e3c77508be0637131bd6.png",
+      "sha256": "370283dacb62087a555c9dc4d4b1e29c26d0225221bd41598dca1436f70227f4",
+      "routes": [
+        "/blog/digital-signature-vs-visual-signature-vs-seal"
+      ]
+    },
+    {
+      "source": "/static/media/signature-seal-inserted-v1-4-light-web.495526408480e272b498.png",
+      "sha256": "b1bac781e05375ab02bc497cac0c262f64c21f6a30aadea3cff6b00392c61eda",
+      "routes": [
+        "/blog/digital-signature-vs-visual-signature-vs-seal"
+      ]
+    },
+    {
+      "source": "/static/media/signature-valid-certificate-v1-4-light-web.a95572dcb70fd1c83afd.png",
+      "sha256": "b1ddc7aea6054a580971cad7a66e573b87849163b01eaaa87f2f1b77a03083e1",
+      "routes": [
+        "/blog",
+        "/blog/digital-signature-vs-visual-signature-vs-seal"
+      ]
+    },
+    {
+      "source": "/static/media/signature-visual-chooser-v1-4-light-web.bd71fa481fd24f6a27f1.png",
+      "sha256": "17691607bfb72af41d9b35d56b5c98dd8089482a750aea5bf562ba6a8636a12e",
+      "routes": [
+        "/blog/digital-signature-vs-visual-signature-vs-seal"
+      ]
+    },
+    {
+      "source": "/static/media/signature-visual-styles-v1-4-light-web.bd71fa481fd24f6a27f1.png",
+      "sha256": "17691607bfb72af41d9b35d56b5c98dd8089482a750aea5bf562ba6a8636a12e",
+      "routes": [
+        "/blog/digital-signature-vs-visual-signature-vs-seal"
+      ]
+    },
+    {
+      "source": "/static/media/stamp-blank-v1-5-1.07acd494318a5b67ce16.png",
+      "sha256": "f281cb881cc5c11e83b9c62c862bb90e50ae7a3b76bef4a320f9f7ace1a23219",
+      "routes": [
+        "/blog/create-interactive-pdf-stamps"
+      ]
+    },
+    {
+      "source": "/static/media/stamp-builder-v1-5-1.10d06e6b0b21334925a1.png",
+      "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+      "routes": [
+        "/blog",
+        "/blog/polypdf-1-5-1",
+        "/blog/create-interactive-pdf-stamps",
+        "/versions"
+      ]
+    },
+    {
+      "source": "/static/media/stamp-placed-v1-5-1.7be4a0368a4175ff4030.png",
+      "sha256": "2b54b77d920ab43dd807477a65c560b4a665a7bc84f12e2ef2bc29dd3346c907",
+      "routes": [
+        "/blog/create-interactive-pdf-stamps"
+      ]
+    },
+    {
+      "source": "/static/media/stamp-prompt-v1-5-1.fb6aebfc7a320ee7d95b.png",
+      "sha256": "bfe8fdc15fe529d7fd42c5d489a66cd97d385dd7ce870b1e910a09b6cd4fdbbb",
+      "routes": [
+        "/blog/create-interactive-pdf-stamps"
+      ]
+    },
+    {
+      "source": "/static/media/symbol-search-review-v1-4-dark-web-1536.5db1b5c5e2382f93bc4a.webp",
+      "sha256": "fe4b4fad3ef53ed8521cc2de8bcd6941b44c711eb20fe39f84e915eb79fea504",
+      "routes": [
+        "/visual-search-pdf-count"
+      ]
+    },
+    {
+      "source": "/static/media/symbol-search-review-v1-4-dark-web-768.a70af4fbd2c71dc8efe7.webp",
+      "sha256": "1ad277beaa00d0b2a3fbbba14b7d38d3bb030fafaaed1b02c1d48d8e14249f0f",
+      "routes": [
+        "/visual-search-pdf-count"
+      ]
+    },
+    {
+      "source": "/static/media/symbol-search-review-v1-4-dark-web.1908c6bf47d7d6f80386.png",
+      "sha256": "100a77a559397db28f7e920081d1c837c4a544ff65b5c30305a8a940c94980b5",
+      "routes": [
+        "/blog",
+        "/blog/count-pdf-symbols"
+      ]
+    },
+    {
+      "source": "/static/media/takeoff-v1-4-dark-web.7e2a052e1bef6a7cb281.png",
+      "sha256": "0b588bda5e0b59bcecc742eaedc1db9937639c265493511b4121b4677fba8ef1",
+      "routes": [
+        "/blog",
+        "/blog/quantity-takeoff",
+        "/blog/pdf-takeoff-worked-example"
+      ]
+    },
+    {
+      "source": "/static/media/wrong-scale-v1-4-dark-web.3a0ebf168f0619541333.png",
+      "sha256": "4c16945802e27e59740ce954a73cdd4a807f3013dc10d9334c78e26e690fb168",
+      "routes": [
+        "/blog",
+        "/blog/why-pdf-measurements-are-wrong"
+      ]
+    },
+    {
+      "source": "/tools/mcp/polypdf-browser-tools-mcp.zip",
+      "sha256": "6c6722b30c369e677714e79cbbd9e5171bb2c7dfa50aef055d3a709a41054cda",
+      "routes": [
+        "/tools/automation"
+      ]
+    }
+  ],
+  "appWalkthroughAssets": [
+    {
+      "source": "docs/teams/walkthrough/screenshots/01-purchase.jpg",
+      "sha256": "005bc7726e5901db2baec702568595ebbdd6482d83ae51678883a2318cbb8442"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/02-purchase.jpg",
+      "sha256": "ab20e52a4c98b1be6fc0b1134ac8d3730db16cee5311c3508cf8e931bc635982"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/03-purchase.jpg",
+      "sha256": "723f0f3c7ea11c732cfb1f58f4ee0c0caa60f6e03517a69fb98f257790999e99"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/04-purchase.jpg",
+      "sha256": "17540c00e14f6c581078d95516d92b3f782d99b2a8cbb7294a4b008b5d23db6a"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/05-install.jpg",
+      "sha256": "0d7d6b70e04b57281513b11d907e46a2e56b6106871f424f19b1a2c040b1dd63"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/06-install.jpg",
+      "sha256": "1ec53b19e868d294f48545486c22b945f468fb1617bd3e3fa2717159f4f46ae5"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/07-install.jpg",
+      "sha256": "5a6d8b7677b270e5b54168262cda2bd8f95c2954ca3735bc9ab94d070ce355b5"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/08-install.jpg",
+      "sha256": "b51e38d17ab663b40a1d810034fd054bed5baa9e0fa22cd79e7d5b90748f6748"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/09-install.jpg",
+      "sha256": "c0b95afd023f9094b744a4014711410b475432a03af8931fd06db9b01dcb6e6b"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/10-manage.jpg",
+      "sha256": "a9876540587b738adc6a36c89c16fc68db815a3cc2f9d3df93edcce649589f28"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/11-manage.jpg",
+      "sha256": "03fd85afb328a033b7ce6ce2a36b0ff34200caeddfca0124fcde47d81f6b2073"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/12-manage.jpg",
+      "sha256": "a2ba92f8a7d6ff4394beb6b64d024beddaf45c3939a199788fbcbdacb3436c2b"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/13-manage.jpg",
+      "sha256": "7746e068315c16a2ffc76dbfb97052b280732ac661ddd7a06871ff5e21332833"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/14-manage.jpg",
+      "sha256": "414d6ca9f5d7fc0dffef36872d2d8e6e11de8b24baa732d33a4f5ecd29adb212"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/15-use.jpg",
+      "sha256": "98e1bcf3e555964923fdbaced9924aacccbf442723678901775c112c24a58ca5"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/16-use.jpg",
+      "sha256": "5595e00e0fe841cc869d45cf21e18324b9be4f4a2670880e2c49348cb77825e5"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/17-use.jpg",
+      "sha256": "2a6d1898f5ab1b801af3c83c6e2b98295a3e7d3981a91d0488a4e37c793c4ac0"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/18-windows.jpg",
+      "sha256": "5f6df07b43ff098fd19a27847f40b87c67967971ebe2c68987468db5cc2d8f74"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/19-windows.jpg",
+      "sha256": "b2cf1da46d026cb761357a0a1784bf135c6e4bc124654fd578a4b187d9729cdc"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/20-windows.jpg",
+      "sha256": "02f2eb3051df82c102706997b33f7a6536574976589a0db447fa41c57015c0a5"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/21-windows.jpg",
+      "sha256": "e00d971a15090c33a557fa554a0b7617b03a361525d94b8c1841294e2dc86287"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/desktop-console-reconnected-79ef76e9.png",
+      "sha256": "1a1c653726cbb7542af0b8ed498617efa153ce978766e5ee1b539acb9f4a4d84"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-autodiscovered-79ef76e9.png",
+      "sha256": "081afd80ae225e7f42bb67dcdc26b68c8ef981a7140578a0b820006974cad16c"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-fresh-workspace-79ef76e9.png",
+      "sha256": "cdf7a3d1c8c0b092a379af4602e5152b22886bd4967cdc69ce8a5608484bc0f4"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-install-complete-79ef76e9.png",
+      "sha256": "bc06433c18c1c272d997d546c68ba08d4418cfc1d517a7e8e25878659b5f183e"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-install-welcome-79ef76e9.png",
+      "sha256": "3420f29acef7c13098c34b6319cfb347750bdcc3ba5609cda87e6a60ec921100"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-outage-79ef76e9.png",
+      "sha256": "2a938f7c8f1ad6c5c28be600bceab8f7b87b9eb048a51590f2a8ad9702fd8b9e"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-reconnected-79ef76e9.png",
+      "sha256": "40a1a4e0b376542754f5aad023acc43ed1d9adeac2b5c7b4a9f0f4dc9964f3e6"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-setup-cancelled-79ef76e9.png",
+      "sha256": "f2eb4ef99aa240231211a4c245d8c5806abec96dd4a6474ae4299079489433dd"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-setup-microsoft-79ef76e9.png",
+      "sha256": "83272bacfafcd2acd1f60e1e8f81a2f04e63629c189cc7f240ea3d7628f78028"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-setup-ready-79ef76e9.png",
+      "sha256": "764a2e9e5c813c0956f6ea8e42a36842b149989c847c0644e4c3495071bba949"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-setup-review-79ef76e9.png",
+      "sha256": "82fd96a32ac601d6d6971f1278888b747606ab9ba15498f8bcf5b06d1d14fdd7"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-setup-server-79ef76e9.png",
+      "sha256": "909c69198935c2e4a294bd965e9520e0b0535896ebf2b597868164d592553dab"
+    },
+    {
+      "source": "docs/teams/walkthrough/screenshots/windows-console-signed-in-79ef76e9.png",
+      "sha256": "16bb96ea058c2a680f0ea79b6a1e06e841e116509d39f3e74301aff6ae30165f"
+    }
+  ]
+}

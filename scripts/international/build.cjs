@@ -4,8 +4,25 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const c = require('./content.cjs');
+const { assetPath, localizeWalkthroughMedia, resolveAsset, verifyMediaFiles } = require('../localization/media.cjs');
+const walkthroughMedia = require('../../src/localization/walkthrough-media.json');
+// Pilot runs enforce complete media coverage before they can produce publishable pages.
+// Existing released locales remain on their existing assets until their pack is verified.
+const localizedMediaLocales = new Set([
+  ...Object.entries(walkthroughMedia.locales).filter(([, pack]) => pack.status === 'complete').map(([id]) => id),
+  ...(process.env.POLYPDF_LOCALIZED_MEDIA_LOCALES || '').split(',').filter(Boolean)
+]);
 const build = path.resolve(c.root,process.env.BUILD_PATH || 'build');
 const collect = process.argv.includes('--extract');
+if (!collect && localizedMediaLocales.size) {
+  verifyMediaFiles(walkthroughMedia, require('../../src/localization/product-locales.json').locales, value => {
+    const pathname = assetPath(value);
+    if (!pathname) throw new Error(`Expected a local media file: ${value}`);
+    const target = path.resolve(build, '.' + decodeURIComponent(pathname));
+    if (!target.startsWith(build + path.sep)) throw new Error(`Media path escapes build: ${value}`);
+    return fs.readFileSync(target);
+  }, [...localizedMediaLocales]);
+}
 const trackingScript = collect ? '/static/js/localized-tracking.extract.js' : JSON.parse(fs.readFileSync(path.join(build, 'localized-tracking-manifest.json'), 'utf8')).src;
 const out = path.join(c.root,'.tmp/international');
 fs.mkdirSync(out,{recursive:true});
@@ -25,13 +42,15 @@ for (const locale of allLocales) {
     d.querySelector('[data-language-slot]').outerHTML = c.languageNavigation(route,locale,t);
     c.localizeLinks(d,locale,t);
     c.localizeMetricPlan(d,locale,t);
+    if (!collect && localizedMediaLocales.has(locale.id)) localizeWalkthroughMedia(d, locale, walkthroughMedia);
     const canonical = c.ORIGIN+c.localizedPath(locale.id,route);
     const translatedMeta = {...meta,title:t(meta.title),description:t(meta.description),imageAlt:t(meta.imageAlt || 'PolyPDF — PDF drawing measurement and markup on Mac and Windows')};
     translatedMeta.title = editorialTitles[locale.id]?.[route] || translatedMeta.title;
     // The title tag may add a "| suffix"; the visible H1 and the article headline are the text before it.
     const visibleTitle = translatedMeta.title.split('|')[0].trim();
     d.querySelector('h1').textContent = visibleTitle;
-    const image = new URL(meta.image || `/og-image.png?v=${require('../../src/lib/siteRelease.json').screenshotCacheToken}`,c.ORIGIN).href;
+    const sourceImage = meta.image || `/og-image.png?v=${require('../../src/lib/siteRelease.json').screenshotCacheToken}`;
+    const image = new URL(!collect && localizedMediaLocales.has(locale.id) ? resolveAsset(sourceImage, locale, walkthroughMedia) : sourceImage,c.ORIGIN).href;
     const blocks = c.mapSchema(schema,t,locale);
     // The product is one shared entity (@id .../#software): it keeps the same url on every localized home.
     if (route === '/') blocks.forEach((block,i)=>{ if (block['@type'] === 'SoftwareApplication' && schema[i]?.url) block.url = schema[i].url; });
