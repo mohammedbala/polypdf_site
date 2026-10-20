@@ -60,6 +60,15 @@ function visitAssets(document, callback) {
 
 function localizeWalkthroughMedia(document, locale, manifest) {
   visitAssets(document, value => resolveAsset(value, locale, manifest));
+  const byUrl = new Map(Object.values(manifest.locales[locale.id]?.assets || {}).map(asset => [asset.url, asset]));
+  for (const image of document.querySelectorAll('img[src]')) {
+    const asset = byUrl.get(image.getAttribute('src'));
+    if (asset && Number.isInteger(asset.width) && asset.width > 0
+        && Number.isInteger(asset.height) && asset.height > 0) {
+      image.setAttribute('width', String(asset.width));
+      image.setAttribute('height', String(asset.height));
+    }
+  }
 }
 
 function inventoryWalkthroughMedia(document) {

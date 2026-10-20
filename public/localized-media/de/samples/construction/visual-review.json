@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "locale": "de-DE",
+  "region": "DE",
+  "status": "passed",
+  "reviewer": "Codex visual inspection",
+  "manifestSha256": "cd65ee35ca1fb682c90bb5a0b6d3608599054b247fea77d97cdc444a4fb43603",
+  "scope": "All 24 rendered sheets inspected in the contact sheet; 10 full-size page views checked for crowded labels, legends, revisions, schedules and details. Not construction standards certification.",
+  "fullSizePages": [
+    "01-2",
+    "03-1",
+    "04-1",
+    "04-2",
+    "07-1",
+    "08-1",
+    "09-1",
+    "10-2",
+    "11-1",
+    "11-2"
+  ],
+  "corrections": [
+    "Moved the foundation dimension inside the frame.",
+    "Matched countertop geometry to its stated 4.32 square metres.",
+    "Placed shrub tags beside symbols and separated the paving label from bench tags.",
+    "Moved cabinet and foundation details below their scale labels.",
+    "Kept both conflicting symbols visible in the coordination detail."
+  ],
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "16e81128955d3a00305bee95f1e7615321d4f2ae0051e81a6864867aa569304a"
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "b0254b40d942e14756a7e8aff81f51e85a3a0800d5d4e0652f08bac82da289bd"
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "795e4ec07257f8b91157f3d832f2255f76b78b3461180d84239639b67e1f85c7"
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "9d9b2bd548fb04cd8604a3c6187d4377f99db618bd69b3795e5f27f9f2720af2"
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "e084de66eb2b2d91f6c183a68775e3dd36f41fa67434b787eac08921f5846ff7"
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "3b5ff2802474af6944900c4f63aeb13a4a7fad6264074e9f63a12ba7fa88d983"
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "b1732c3e9ff3f5cfa0aa5c25fe944fcc3867c82fe853cd12e1736e4878c7970e"
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "c879b85f16dd85ef8d43fc900b732e91a8ddd648bd01192858b2cc2382d13ffc"
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "d2dcdb11ddc67c9acce33cbcc30157ab4fb26c53ffa504c57ee8aef65bba1e42"
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "b54b07ef793fbdbbe4f27e4dc4c943bac8933b7f654242ca2173854ca636cce5"
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "2e02a7bce843f12938a56a473882ed2c285b91693461ebab75238e9162397a38"
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "f9ee88cc1996df2f64c3808737af014baa90a628b328721d503a549ecba39647"
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "ff39380b9566edff18d28b7ffbcd50e490aca3ad27b87bffbbf037e5c9043117"
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "54fdd6ae4813ae2ade9eeca2a4a3156b5337e5c3e711a34dd8f0adb4a847ac16"
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "356d19db732f9a7ab9cc3603d5684425f0e3389c94928087e56c2063abb25d18"
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "3cf893ac4c22a82261301fb05bee77daf2ef2cc233d0e9ad2c8f89a8dee5de34"
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "9d0628d7fc3bb80d63a00eba949caa28adcd80be33fb4c6140d35bf29b6da4ee"
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "4b9f87785c8dfb2fed9390e98b0291cb10a23b37cecb14ec4ee8e3da63914901"
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "1148d172cb818f16bb51d6a3f65e1ee5dd8324a6c09b87826c25d4dd41d9bb42"
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "f821bfaa14c87fe08d98fade394bff3a2e3adc37ced0245472e96d0d33dd771c"
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "c0d7ce6b7048dd4b4a7b8c8a4825b8f09ffc099a1c428dcce503b43ff302ac76"
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "3644c4982e3143aa4aae1136fa0925ec74d48c211d8c164bfd153f85b8cca986"
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "87ff696f658de3db39a6a983231ece68e1ba236d5b93a3ee0669035b09bfdff0"
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "ce3e3561787f8149ddd8bc3a67db122e91f2ef89247d32aad0b7c3975ed1ffd0"
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "6763d300e0c96f860bf5a125ef6d47bc489636796a44fb76cb354eeed9c03877"
+  }
+}

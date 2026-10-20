@@ -30,6 +30,15 @@ test('missing, draft and wrong-region assets block localized publication', () =>
   data.locales.de.assets['/samples/plan.pdf'].region = 'US';
   assert.throws(() => resolveAsset('/samples/plan.pdf', locale, data), /Wrong language/);
 });
+test('regional drawings replace the original image aspect ratio as well as its URL', () => {
+  const data = manifest();
+  data.locales.de.assets['/guides/measure.png'].width = 1800;
+  data.locales.de.assets['/guides/measure.png'].height = 1272;
+  const dom = new JSDOM('<img src="/guides/measure.png" width="1440" height="960">');
+  localizeWalkthroughMedia(dom.window.document, locale, data);
+  assert.equal(dom.window.document.querySelector('img').getAttribute('width'), '1800');
+  assert.equal(dom.window.document.querySelector('img').getAttribute('height'), '1272');
+});
 test('explicitly neutral assets and third-party links retain their URLs', () => {
   const data = manifest();
   data.languageNeutralAssets.push('/guides/neutral.png');
@@ -63,4 +72,21 @@ test('source and translated file hashes must match before activating a media pac
   bytes.set('/localized-media/de/samples/plan.pdf', Buffer.from('changed translation'));
   assert.throws(() => verifyMediaFiles(data, registry, read), /Changed localized/);
   assert.throws(() => verifyMediaFiles(data, [{ ...registry[0], region: 'AT' }], read), /mismatched/);
+});
+test('the checked-in German regional library resolves exact verified PDF and preview bytes', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const root = path.resolve(__dirname, '..');
+  const data = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/walkthrough-media.json')));
+  const registry = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/product-locales.json'))).locales;
+  verifyMediaFiles(data, registry, asset => fs.readFileSync(path.join(root, 'public', asset)), ['de']);
+  assert.equal(Object.keys(data.locales.de.assets).filter(asset => asset.endsWith('.pdf')).length, 12);
+  const source = '/samples/construction/02-Architectural-Revision-A.pdf';
+  const preview = '/samples/construction/previews/02-Architectural-Revision-A--page-01.png';
+  const dom = new JSDOM(`<a href="${source}">Plan</a><img src="${preview}" width="1440" height="960">`);
+  localizeWalkthroughMedia(dom.window.document, locale, data);
+  assert.equal(dom.window.document.querySelector('a').getAttribute('href'),
+    '/localized-media/de/samples/construction/02-Architektur-Revision-A.pdf');
+  assert.equal(dom.window.document.querySelector('img').getAttribute('height'), '1272');
+  assert.equal(data.locales.de.status, 'pilot', 'Partial media coverage must not activate the whole language');
 });

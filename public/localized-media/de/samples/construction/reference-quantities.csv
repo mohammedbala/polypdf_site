@@ -1,0 +1,43 @@
+Dokument;Beschreibung;Wert;Einheit
+01;Grundstücksfläche (m²);2.400,00;m²
+01;Grundstücksumfang (m);200,00;m
+01;Stellplätze;8;-
+01;Befestigte Fläche (m²);144,00;m²
+01;Trinkwassertrasse (m);39,00;m
+01;Entwässerungstrasse (m);34,00;m
+01;Stromtrasse (m);57,00;m
+02;Bruttofläche (m²);360,00;m²
+02;Gebäudeumfang (m);78,00;m
+02;Fläche Raum 103 (m²);36,00;m²
+02;Fläche Raum 104 (m²);36,00;m²
+02;Interne Schnittverknüpfungen;2;-
+02;Versatz der Trennwand (m);0,00;m
+02;Versatz der Tür (m);0,00;m
+02;Zusätzliche Fensterbreite (m);0,00;m
+03;Bruttofläche (m²);360,00;m²
+03;Gebäudeumfang (m);78,00;m
+03;Fläche Raum 103 (m²);45,00;m²
+03;Fläche Raum 104 (m²);27,00;m²
+03;Interne Schnittverknüpfungen;2;-
+03;Versatz der Trennwand (m);1,50;m
+03;Versatz der Tür (m);0,75;m
+03;Zusätzliche Fensterbreite (m);1,50;m
+04;Stützen;12;-
+04;Einzelfundamente;12;-
+04;Bodenplattenfläche (m²);360,00;m²
+04;Bodenplattendicke (m);0,15;m
+04;Bodenplattenvolumen (m³);54,00;m³
+04;Fundamentvolumen gesamt (m³);17,496;m³
+04;Trägerlänge gesamt (m);132,00;m
+09;Befestigte Fläche (m²);144,00;m²
+10;Elastischer Bodenbelag (m²);324,00;m²
+10;Fliesenbelag (m²);36,00;m²
+10;Bodenbeläge gesamt (m²);360,00;m²
+10;Fliesen vor Zuschlägen;100;-
+10;Unterschränke;6;-
+10;Schrankmodul (m);1,20;m
+10;Arbeitsplattenfläche (m²);4,32;m²
+10;Sockellänge (m);7,20;m
+11;Bearbeitbare PDF-Notizen;3;-
+11;Absichtliche Prüfpunkte;3;-
+12;Scan-Auflösung (dpi);80;-
