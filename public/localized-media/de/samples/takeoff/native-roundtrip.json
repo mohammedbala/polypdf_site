@@ -5,16 +5,22 @@
   "appBuild": "1.6.17+84",
   "sourceFiles": {
     "packages/pdf/src/native-annotation-import.ts": "394e518a1a85e91c5a9c3e2e3c7c68ecaae15c7974d0e54fd66b79b2922ef866",
-    "packages/pdf-node/src/native-annotation-export.ts": "428a02557e3c5ef6eeda2993f5388e8ebde272b968992d3ea6f72753a471ca97",
+    "packages/pdf-node/src/native-annotation-export.ts": "592d27461f6c965f0f74491a010e949097861281ed747f3d006290d5dea8e3db",
     "packages/core/src/measurement.ts": "7439822b8ee91291aed366fec95b918e7814d8a9ce70233210f6795432f641b7",
     "packages/core/src/workspace.ts": "f90862aa6440b51a34ef692db74dbd188ce5806dd4f97866ea5b81c9420afb57",
-    "tests/pdf-node/regional-takeoff-roundtrip.test.ts": "187e87dd61cd67add7b6a599b58983f85e872d617fc42974234d61dec894120f"
+    "packages/core/src/measurement-service.ts": "ed12bec760209b91b8568d6f38e505750f2b15171ebb682877627170d0314aee",
+    "packages/core/src/measurement-unit-format.ts": "ea83ffcf18377f7c172b5c129e156bdd5884d5819cd87d049b9328cfd10793ef",
+    "packages/core/src/measurement-total-caption.ts": "d03d2457f156c66e229e3f2979b563f6625ab97751c247d0e97e186ebbc84440",
+    "packages/core/src/document-session.ts": "85865fd9734f6cae4e1c0776b8f67b900bc501be482b3da046ca006188bf360c",
+    "packages/pdf/src/native-measurement-caption.ts": "90fa53f7d7d88fee0d15b74a3f8d0c8804fdab27ff538e75f589c3e5e37f88c0",
+    "packages/pdf/src/native-caption-font-metrics.ts": "8cec41bbd98dcce431f1151126e052653edc48a1e821ff845ff6d9145926f0c5",
+    "packages/core/src/native-measurement-export-format.ts": "df3927d449ae9ebd2926f493d935f20333ac1c6787f9659cf52adcb9255e3dae",
+    "tests/pdf-node/regional-takeoff-roundtrip.test.ts": "8a2a0f38180d6560306a5f2574a0d64984566bdb28f1ea7b3dd0ff5b7f2dde18"
   },
   "status": "passed",
   "scope": "Actual PDF writer/importer; scripted measurements, not native UI interaction or worksheet export evidence",
   "limitations": [
-    "Area captions retain the current sq m spelling; regional unit typography remains pending",
-    "Multipoint appearance still paints the hard-coded English Length prefix; not qualified as a fully German app export"
+    "Native UI walkthrough capture and localized worksheet export remain separate checks"
   ],
   "cases": [
     {
@@ -22,7 +28,7 @@
       "sourceSha256": "2225016bafc5c55964a7bdd1e51b4766a80281675f6f2c86f93287c833f4bd60",
       "mode": "ordinary",
       "outputFile": "flooring-ordinary.pdf",
-      "outputSha256": "4bef27073381966e493bf70923f7e733c4ce1e001c380349db1d70b429f57e26",
+      "outputSha256": "0fb42d88964366b845b576eb132ee2880ff40415ed23e15010d80c123f61016c",
       "quantities": [
         {
           "value": 3.6,
@@ -32,12 +38,12 @@
         {
           "value": 20.52,
           "unit": "sq m",
-          "label": "20,52 sq m"
+          "label": "20,52 m²"
         },
         {
           "value": 16.2,
           "unit": "sq m",
-          "label": "16,20 sq m"
+          "label": "16,20 m²"
         }
       ]
     },
@@ -46,7 +52,7 @@
       "sourceSha256": "2225016bafc5c55964a7bdd1e51b4766a80281675f6f2c86f93287c833f4bd60",
       "mode": "append-only",
       "outputFile": "flooring-append-only.pdf",
-      "outputSha256": "58359be018c2d042a28fb3fe874e4f709e7970085596a2101754475771612d33",
+      "outputSha256": "2dfddf8d36876b1d8ca194fdb82853d208577d386b36e7cc94b7721838a24312",
       "quantities": [
         {
           "value": 3.6,
@@ -56,12 +62,12 @@
         {
           "value": 20.52,
           "unit": "sq m",
-          "label": "20,52 sq m"
+          "label": "20,52 m²"
         },
         {
           "value": 16.2,
           "unit": "sq m",
-          "label": "16,20 sq m"
+          "label": "16,20 m²"
         }
       ]
     },
@@ -70,7 +76,7 @@
       "sourceSha256": "69b7e8654925b50eed01233e299ad9c63bad0c6cbc0585dd605a48978a4b5886",
       "mode": "ordinary",
       "outputFile": "electrical-ordinary.pdf",
-      "outputSha256": "86b203d1aff7f8c7fa940bcf2ce9be0f9e4095a99aedfe19241b0d3277e403df",
+      "outputSha256": "8c6f0247a3a375344e74514545b3355c9be945eea27bc3783fd20b0b878b849f",
       "quantities": [
         {
           "value": 12.6,
@@ -84,7 +90,7 @@
       "sourceSha256": "69b7e8654925b50eed01233e299ad9c63bad0c6cbc0585dd605a48978a4b5886",
       "mode": "append-only",
       "outputFile": "electrical-append-only.pdf",
-      "outputSha256": "b151064ed7ffe4b2523645f364c90931fd8ec67c436c77f50c6a71777e78e8cf",
+      "outputSha256": "6641bdf99eeddcf33a6b9a292fde46f5603d54a59722fda6008f6b718eb38f27",
       "quantities": [
         {
           "value": 12.6,
