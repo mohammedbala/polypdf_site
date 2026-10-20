@@ -1,6 +1,6 @@
 {
   "source": "PolyPDF packages/core/src/locales/registry.json",
-  "sourceSha256": "e3cc9c946e3e599cee177e75ed3dcf9d2a788018f6a4386636765f9d49df437b",
+  "sourceSha256": "9e605b8bfba6a42f9ed25dde93f0ba905ef34dba87cf4b00f00659b33f42169a",
   "locales": [
     {
       "tag": "en-US",
@@ -80,7 +80,7 @@
       "label": "Türkçe",
       "direction": "ltr",
       "region": "TR",
-      "status": "planned"
+      "status": "pilot"
     },
     {
       "tag": "ru-RU",
