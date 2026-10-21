@@ -1,0 +1,112 @@
+{
+  "status": "passed",
+  "scope": "Local shared-library component preview; no native app capture or public route activation",
+  "desktop": {
+    "headings": [
+      "Um projeto. Doze PDFs. Vinte e quatro pranchas de construção.",
+      "Meça a planta arquitetônica do Centro Comunitário dos Ipês",
+      "Meça os pisos do Centro Comunitário dos Ipês",
+      "Conte os símbolos da planta elétrica dos Ipês",
+      "Compare as revisões arquitetônicas do Centro Comunitário dos Ipês",
+      "Revise a compatibilização do Centro Comunitário dos Ipês",
+      "Teste OCR nas plantas digitalizadas dos Ipês"
+    ],
+    "height": 720,
+    "images": [
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/01-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/02-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/03-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/04-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/05-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/06-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/07-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/08-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/09-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/10-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/11-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/pt-br/samples/construction/previews/12-1.png"
+      },
+      {
+        "loaded": false,
+        "src": "/localized-media/pt-br/samples/construction/previews/02-1.png"
+      },
+      {
+        "loaded": false,
+        "src": "/localized-media/pt-br/samples/construction/previews/10-1.png"
+      },
+      {
+        "loaded": false,
+        "src": "/localized-media/pt-br/samples/construction/previews/06-1.png"
+      },
+      {
+        "loaded": false,
+        "src": "/localized-media/pt-br/samples/construction/previews/02-1.png"
+      },
+      {
+        "loaded": false,
+        "src": "/localized-media/pt-br/samples/construction/previews/03-1.png"
+      },
+      {
+        "loaded": false,
+        "src": "/localized-media/pt-br/samples/construction/previews/11-1.png"
+      },
+      {
+        "loaded": false,
+        "src": "/localized-media/pt-br/samples/construction/previews/12-1.png"
+      }
+    ],
+    "language": "pt-br",
+    "pageOverflow": false,
+    "width": 1280,
+    "finalImageCheck": {
+      "count": 19,
+      "failed": [],
+      "loaded": 19,
+      "ocrTop": 101.3671875,
+      "pageOverflow": false
+    }
+  },
+  "mobile": {
+    "height": 844,
+    "overflowing": [],
+    "pageOverflow": false,
+    "width": 390
+  },
+  "consoleErrors": [],
+  "downloadPath": "/Users/mohammedbala/Downloads/PolyPDF-Plantas-de-construcao-pt-BR.zip"
+}

@@ -1,0 +1,61 @@
+> polypdf-landing@1.0.0 test:international
+> node --test test/international.test.cjs
+
+TAP version 13
+# Subtest: translated guides link into working localized applications, without static tool clones
+ok 1 - translated guides link into working localized applications, without static tool clones
+  ---
+  duration_ms: 31.468667
+  type: 'test'
+  ...
+# Subtest: missing source translations fail instead of leaking English
+ok 2 - missing source translations fail instead of leaking English
+  ---
+  duration_ms: 0.497541
+  type: 'test'
+  ...
+# Subtest: translates complete text fragments and accessible labels, preserves code and URLs
+ok 3 - translates complete text fragments and accessible labels, preserves code and URLs
+  ---
+  duration_ms: 9.298333
+  type: 'test'
+  ...
+# Subtest: localizes only published pages and labels the English checkout handoff
+ok 4 - localizes only published pages and labels the English checkout handoff
+  ---
+  duration_ms: 4.744542
+  type: 'test'
+  ...
+# Subtest: symmetric hreflang includes self, English and x-default without fabricated regions
+ok 5 - symmetric hreflang includes self, English and x-default without fabricated regions
+  ---
+  duration_ms: 0.111958
+  type: 'test'
+  ...
+# Subtest: all article routes are eligible; private, legal and transaction routes are not
+ok 6 - all article routes are eligible; private, legal and transaction routes are not
+  ---
+  duration_ms: 0.204583
+  type: 'test'
+  ...
+# Subtest: schema translates human text but preserves author identities, dates and asset URLs
+ok 7 - schema translates human text but preserves author identities, dates and asset URLs
+  ---
+  duration_ms: 0.182334
+  type: 'test'
+  ...
+# Subtest: localized page identities change language without splitting the shared product identity
+ok 8 - localized page identities change language without splitting the shared product identity
+  ---
+  duration_ms: 0.0895
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 587.022292

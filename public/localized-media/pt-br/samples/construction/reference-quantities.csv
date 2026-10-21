@@ -1,0 +1,43 @@
+Documento;Descrição;Valor;Unidade
+01;Área do terreno (m²);2.400,00;m²
+01;Perímetro do terreno (m);200,00;m
+01;Vagas de estacionamento;8;-
+01;Área pavimentada (m²);144,00;m²
+01;Comprimento da rede de água (m);39,00;m
+01;Comprimento da rede de esgoto (m);34,00;m
+01;Comprimento da rede elétrica (m);57,00;m
+02;Projeção retangular (m²);360,00;m²
+02;Perímetro da edificação (m);78,00;m
+02;Área do ambiente 103 (m²);36,00;m²
+02;Área do ambiente 104 (m²);36,00;m²
+02;Links internos para cortes;2;-
+02;Deslocamento da divisória (m);0,00;m
+02;Deslocamento da porta (m);0,00;m
+02;Largura da janela adicionada (m);0,00;m
+03;Projeção retangular (m²);360,00;m²
+03;Perímetro da edificação (m);78,00;m
+03;Área do ambiente 103 (m²);45,00;m²
+03;Área do ambiente 104 (m²);27,00;m²
+03;Links internos para cortes;2;-
+03;Deslocamento da divisória (m);1,50;m
+03;Deslocamento da porta (m);0,75;m
+03;Largura da janela adicionada (m);1,50;m
+04;Pilares;12;-
+04;Sapatas isoladas;12;-
+04;Área do piso de concreto (m²);360,00;m²
+04;Espessura do piso de concreto (m);0,15;m
+04;Volume do piso de concreto (m³);54,00;m³
+04;Volume total das sapatas (m³);17,496;m³
+04;Comprimento total das vigas (m);132,00;m
+09;Área pavimentada (m²);144,00;m²
+10;Piso resiliente (m²);324,00;m²
+10;Piso cerâmico (m²);36,00;m²
+10;Área total dos pisos (m²);360,00;m²
+10;Placas antes das perdas;100;-
+10;Armários inferiores;6;-
+10;Largura do módulo de armário (m);1,20;m
+10;Área da bancada (m²);4,32;m²
+10;Comprimento dos rodapés (m);7,20;m
+11;Notas PDF editáveis;3;-
+11;Pendências preparadas para o exercício;3;-
+12;Resolução da digitalização (dpi);80;-

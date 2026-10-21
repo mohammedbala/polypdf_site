@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "sourceArtifacts": 16,
+  "sha256": {
+    "01-Implantacao-e-terreno.pdf": "cfdd6c314d8ed50bceabc06cf97c77b19dedc92bc8c4dd581b2ea3739f25d7bd",
+    "02-Arquitetura-Revisao-A.pdf": "d84dd82a5d5fe65381010784c486228de9f22acb6d02a51e425bc15580926512",
+    "03-Arquitetura-Revisao-B.pdf": "0865d84b82e16985a621376d207dcdb35c8e6a69dd3f9e25679aa7153c136275",
+    "04-Fundacoes-e-estrutura.pdf": "39d83135fa6b9576b4f12939d843e7bfe89a48e755559ac3836e1fd4415c251a",
+    "05-Ventilacao.pdf": "eda4753c64f09aeaf5bcec2838ce62784839673fa93a72c9070ee1017a3055bf",
+    "06-Iluminacao-e-eletrica.pdf": "38eddf0b432d6600efcbaa391f92463380012d913934ec64fe7a295eebeb87cc",
+    "07-Agua-e-esgoto.pdf": "b7d82c0f3666a764b8b9aa478b30c421e2830d9d75bafaf7e7a0b0d8991db8f0",
+    "08-Protecao-contra-incendio-Exercicio.pdf": "85734be53eaab4bf5f9f645f8165c76971e698ee87ff9b6c262faba73b5a6d85",
+    "09-Paisagismo-e-areas-externas.pdf": "20d751a48ee87673845e09f88a48ab2015600d3efc3b520a263b16d55b08c5b5",
+    "10-Acabamentos-e-marcenaria.pdf": "2194645b1496b3c0e063564ac841f9ace29ab9e7ed567c11dee63b9f429178d2",
+    "11-Compatibilizacao-e-revisao.pdf": "6c7ae4a3dabaf71a6897397c3f4d41e45e0547d9172281b8b66f40b2f10ae84e",
+    "12-Plantas-existentes-digitalizadas.pdf": "445f59b4eb87cdcc8d52c045c210e0f9702a0db43d7e4153b4f4ee34a2d98348",
+    "DEMO-GUIDE.html": "76e841675efbbe7ae866b838623bfd2ed2136bdbb995f03576a9cbefd9493c5d",
+    "DEMO-MANIFEST.json": "3cb54720e7a8d52cd3f984cc54a64ee4375239b8e64c4afb1a9d83dea5247cf1",
+    "SHA256SUMS.txt": "579ef937d89dabf576f087137f3dcd6e2bc273ad4d7012e2e47f1014c618f4fb",
+    "reference-quantities.csv": "189e7dbe34df2270925d6120212dc20c2cb2ff4548d540db207b63b5bdd48f08"
+  }
+}

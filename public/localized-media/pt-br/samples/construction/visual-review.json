@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "locale": "pt-BR",
+  "region": "BR",
+  "status": "passed",
+  "reviewer": "Codex visual inspection",
+  "manifestSha256": "3cb54720e7a8d52cd3f984cc54a64ee4375239b8e64c4afb1a9d83dea5247cf1",
+  "scope": "All 24 final sheets inspected in contact sheet; twelve full-size previews inspected for Portuguese text expansion, schedules, tags, notes and scan legibility. Editorial draft; no standards certification or native app UI evidence.",
+  "fullSizePages": [
+    "03-2",
+    "06-1",
+    "11-2",
+    "01-1",
+    "04-2",
+    "05-2",
+    "07-2",
+    "08-2",
+    "09-1",
+    "10-2",
+    "12-1",
+    "02-1"
+  ],
+  "corrections": [
+    "Shortened slab level label to TOPO DO PISO before final generation to meet the existing nine-point minimum."
+  ],
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "492d48c432fc3ece35d4f704d0625d2995b5e880bf11389bf4366db2d7316cd3"
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "39ebc260e61a6de4eb6ac76af4760300ced2b1933544de8355d438011a02a5a0"
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "728ad393a5d53fccaeda07e4bd305ca4e314193180ddc17d0b14d2ed969d7b73"
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "b9646a33daa52c6c8a24bbff201dacc3ec3a4b43298bd7709798d512e62e8fc9"
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "579922730f5f79bd04809af2f330773983c5ad0b1534e14841d69ad03c791df9"
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "281e41be84562bf7464e770fabb5199d87e9f256114270cfb6a2bb264435631f"
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "01ce2b333236088380ba7aee1db484f67148964f417fb06c20142bf9cad42f0c"
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "c19e55e7110010f789bc9c7acde25ecf2771e077e0967dbef9448ee209df18bd"
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "d22a6e7af7db2d7278d1063c91531901df09708d55ead047e494e28dcf24a5c4"
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "bc44235eeb03c35b059469ba1f683ed3ff90f89c908f2b7857d0acf7152e39f5"
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "b97e0fdc470889a034275a33ebb3e21131123a421304dff303d37e28aac6d512"
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "64f51bb86269892fbd6ca4c1b8542d153e73740f076879b2a7805f3131b797ec"
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "5be0431020965d0c05e9956b104e7fd56df7476be56a7aa4f458915762b3b05a"
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "23df9574e61be9be10fd0a2c962fd6416c5303bc6d8349f14a9b80db21a2b628"
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "9b2c081c9aa07e5469ad42a9d7f8661ac66a43a743db7292c383e35e82155626"
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "588c9dc0b72305bc3762ca7d2675760fe3ff156ecfa171b38afff2d858115a47"
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "3e6e4cf82bffefa8c4c15d9e6116d7ebccfb3c8734fe105a7070054c428ba636"
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "26af09dd4e2442c8a03940aac24a8943a2fd937f2a38a168eb6484a189b0b214"
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "0506f174c75605a7b958c9a52ed2bba40349566b84cf561eff4904c6ff40b884"
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "5163efc7eec67b32527152228ee6d8ae5b64a65269a6548f581f91ad7f88c397"
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "320e1ff8b9ab42c7e0ae510f82c5c5d15d57a5c0e349661e4021b1ceeec63cde"
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "de6484e6b089f05dc526762dab534d0001d4a02194cec91ab6b54706288fbecc"
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "1d1ded98c3126c3074a6fe60941eb272427b50acf0dbb4a082565e4da2c413ed"
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "c0868b89ea8f72f5e7cb68a374566d3dfb4c0992a624bcd41034e0970faa69e0"
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "e9b5ae6464796b1265e80dadf5e9983712ebe91208e4e628a33a67d1d31e2476"
+  }
+}

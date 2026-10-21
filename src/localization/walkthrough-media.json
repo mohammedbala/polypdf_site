@@ -5221,6 +5221,974 @@
           "target": "12-Planos-existentes-escaneados.pdf"
         }
       }
+    },
+    "pt-br": {
+      "appLocale": "pt-BR",
+      "region": "BR",
+      "status": "pilot",
+      "assets": {
+        "/samples/construction/01-Civil-Site-and-Grading.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/01-Implantacao-e-terreno.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "177f25d51559feef89a776ac7f88a928afa49da16ea0e9fbf972a7bfc1db8009",
+          "sha256": "cfdd6c314d8ed50bceabc06cf97c77b19dedc92bc8c4dd581b2ea3739f25d7bd",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/01-Civil-Site-and-Grading--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/01-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a2ed10f739868367fca03444dc534c2744cf0ab391d1478a992de349d8415f13",
+          "sha256": "492d48c432fc3ece35d4f704d0625d2995b5e880bf11389bf4366db2d7316cd3",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "IMPLANTAÇÃO E REDES - C101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/01-Civil-Site-and-Grading--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/01-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "550fa0f5c9972f995b2da371e05bba579527bdc4eaaad3efdd4180e764946150",
+          "sha256": "39ebc260e61a6de4eb6ac76af4760300ced2b1933544de8355d438011a02a5a0",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "TERRENO, SEÇÕES E PAVIMENTAÇÃO - C201, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/02-Architectural-Revision-A.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/02-Arquitetura-Revisao-A.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "0a05c64b7074e55576952ccc493fcc3f07761fe038c53f3ec0ac73562bcebe51",
+          "sha256": "d84dd82a5d5fe65381010784c486228de9f22acb6d02a51e425bc15580926512",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/02-Architectural-Revision-A--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/02-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a21009b0fd505b447f2cab643fb9f23969be960a50ae5c3cc52fb56cc0566328",
+          "sha256": "728ad393a5d53fccaeda07e4bd305ca4e314193180ddc17d0b14d2ed969d7b73",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLANTA DO PAVIMENTO TÉRREO - A101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/02-Architectural-Revision-A--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/02-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "b95780325b18ed72d2b7af2fb626dab7ab38be94e5636f75ed775d5121197453",
+          "sha256": "b9646a33daa52c6c8a24bbff201dacc3ec3a4b43298bd7709798d512e62e8fc9",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "FACHADAS, CORTE E DETALHE DE PAREDE - A201, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/03-Architectural-Revision-B.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/03-Arquitetura-Revisao-B.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "546ea7eac41a9451f28b236a836bec95d9df0b3ce01b9b6c33d25547ff2c5647",
+          "sha256": "0865d84b82e16985a621376d207dcdb35c8e6a69dd3f9e25679aa7153c136275",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/03-Architectural-Revision-B--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/03-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "2937fd2ee591aa38d958d4ed01ef6e60a847fb201220d1e690c6d309fee8f5b7",
+          "sha256": "579922730f5f79bd04809af2f330773983c5ad0b1534e14841d69ad03c791df9",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLANTA DO PAVIMENTO TÉRREO - A101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/03-Architectural-Revision-B--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/03-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "8f70df42dc9ce25b60bd6034c03f1b879c5e5974ce5551276257166f5ae2fe4a",
+          "sha256": "281e41be84562bf7464e770fabb5199d87e9f256114270cfb6a2bb264435631f",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "FACHADAS, CORTE E DETALHE DE PAREDE - A201, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/04-Structural-Foundation-and-Framing.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/04-Fundacoes-e-estrutura.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "e2cd6fd0ad13ef82a2e27a6a6770f769b707a43d534a7260b71c0763e3aa0a23",
+          "sha256": "39d83135fa6b9576b4f12939d843e7bfe89a48e755559ac3836e1fd4415c251a",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/04-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "0abc91fdde1f507fe8d342882172efecf960dee726fdaf3a892494149188473a",
+          "sha256": "01ce2b333236088380ba7aee1db484f67148964f417fb06c20142bf9cad42f0c",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLANTA DE FUNDAÇÕES E PISO - S101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/04-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "9ee366ffa7fd57640cd88c56ca8231364f5e6202ee390e17b7ef29e28163504a",
+          "sha256": "c19e55e7110010f789bc9c7acde25ecf2771e077e0967dbef9448ee209df18bd",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ESQUEMA ESTRUTURAL E DETALHES - S201, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/05-Mechanical-HVAC.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/05-Ventilacao.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "9fab23b2ac3cceee1153e42c197c045ecfd351c2706071c7293bf4fe31a4b6d3",
+          "sha256": "eda4753c64f09aeaf5bcec2838ce62784839673fa93a72c9070ee1017a3055bf",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/05-Mechanical-HVAC--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/05-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "04a4534339ccfbd483bc41e0e64cf1580cd794cdd388d2e90a591b4efcfe07f7",
+          "sha256": "d22a6e7af7db2d7278d1063c91531901df09708d55ead047e494e28dcf24a5c4",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLANTA DE VENTILAÇÃO - M101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/05-Mechanical-HVAC--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/05-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "53a0cdf08ea3e1ef4cc48396fa37ef487b1914394f08e7d882907abe16e2a163",
+          "sha256": "bc44235eeb03c35b059469ba1f683ed3ff90f89c908f2b7857d0acf7152e39f5",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ESQUEMA E QUADRO DE VENTILAÇÃO - M501, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/06-Electrical-Lighting-and-Power.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/06-Iluminacao-e-eletrica.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "7cf37860e4da7a744fb4e66f594c6e3f6e4cdc4d37f932a6c0155267223a6e60",
+          "sha256": "38eddf0b432d6600efcbaa391f92463380012d913934ec64fe7a295eebeb87cc",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/06-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "268fe5b1c28551a1c1fbce905f0118a8681b92efdb41ed8a7bee870ea5709db0",
+          "sha256": "b97e0fdc470889a034275a33ebb3e21131123a421304dff303d37e28aac6d512",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ILUMINAÇÃO E TOMADAS - E101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/06-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "902032729c4fb2e8a664d63891c343c33a484d1e2d0bf8abde32c7f917b77a8e",
+          "sha256": "64f51bb86269892fbd6ca4c1b8542d153e73740f076879b2a7805f3131b797ec",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ESQUEMA ELÉTRICO E QUADRO DE LUMINÁRIAS - E501, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/07-Plumbing-Water-and-Drainage.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/07-Agua-e-esgoto.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d1454428f316d5f293cf6a3514cb60571c59a3483ca7aa0e74a9a5424ee9b518",
+          "sha256": "b7d82c0f3666a764b8b9aa478b30c421e2830d9d75bafaf7e7a0b0d8991db8f0",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/07-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "2d68d2925c8c0ce84a3fc8db011a25a2e1c39b4ab4ccf2447e2db62a5581b038",
+          "sha256": "5be0431020965d0c05e9956b104e7fd56df7476be56a7aa4f458915762b3b05a",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ABASTECIMENTO DE ÁGUA E ESGOTO - P101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/07-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "74719c10b254cedfc4957b31ad3363fc0c2f1ea6a1c62de6ece8f27c1da35d49",
+          "sha256": "23df9574e61be9be10fd0a2c962fd6416c5303bc6d8349f14a9b80db21a2b628",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ESQUEMA DE PRUMADAS E DETALHES SANITÁRIOS - P501, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/08-Fire-Protection-and-Life-Safety.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/08-Protecao-contra-incendio-Exercicio.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "27952ec9097c89734f80610387f02002a7776e35ad18c83e8de66ee7c0b3356c",
+          "sha256": "85734be53eaab4bf5f9f645f8165c76971e698ee87ff9b6c262faba73b5a6d85",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/08-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "8026bf80b4acf7a3b0fb793417a614b30a1cd48341777fa6c5af462494e19f7c",
+          "sha256": "9b2c081c9aa07e5469ad42a9d7f8661ac66a43a743db7292c383e35e82155626",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PROTEÇÃO CONTRA INCÊNDIO - EXERCÍCIO - F101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/08-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "aec1127265ac0e50c62043be9aaf602155d41b26471fc3059111307519f61ffd",
+          "sha256": "588c9dc0b72305bc3762ca7d2675760fe3ff156ecfa171b38afff2d858115a47",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ESQUEMA DE ROTAS DE FUGA E LEGENDA - F501, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/09-Landscape-and-External-Works.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/09-Paisagismo-e-areas-externas.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "31c51d17aa835875e80169af8e357a92dcea861aa38236c00159c8cc3971ee03",
+          "sha256": "20d751a48ee87673845e09f88a48ab2015600d3efc3b520a263b16d55b08c5b5",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/09-Landscape-and-External-Works--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/09-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d9dcab07240598b0bc6ab969338e987c17b534c109013892e11a425cd3561c5e",
+          "sha256": "3e6e4cf82bffefa8c4c15d9e6116d7ebccfb3c8734fe105a7070054c428ba636",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLANTIO E ÁREAS EXTERNAS - L101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/09-Landscape-and-External-Works--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/09-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "3704ab1d24cbe1df0b8ac06495d8a73df4fe49fdfce5af7e34e453735f5c3593",
+          "sha256": "26af09dd4e2442c8a03940aac24a8943a2fd937f2a38a168eb6484a189b0b214",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLANTIO, CAMINHOS E MOBILIÁRIO - L501, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/10-Interiors-Finishes-and-Millwork.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/10-Acabamentos-e-marcenaria.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "b9d65475168417b3257c6e91d860f66812bef26fa7ff89f20bacb871559e1c74",
+          "sha256": "2194645b1496b3c0e063564ac841f9ace29ab9e7ed567c11dee63b9f429178d2",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/10-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "98072a62400c056b6e6b8c5ca3764466554ab72507dd2ae15ab2047643b2ab76",
+          "sha256": "0506f174c75605a7b958c9a52ed2bba40349566b84cf561eff4904c6ff40b884",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLANTA DE ACABAMENTOS DE PISO - I101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/10-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "72dfeee23c28b8208277feca4703c6b5b87baadb16bf97f4728ca40789e52067",
+          "sha256": "5163efc7eec67b32527152228ee6d8ae5b64a65269a6548f581f91ad7f88c397",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "MARCENARIA E DETALHES DE PISO - I501, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/11-Coordination-and-Review.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/11-Compatibilizacao-e-revisao.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "ca941a1691d9ba9d2debfb5fa0e0c757c92d50106a90362d0747f88a31121681",
+          "sha256": "6c7ae4a3dabaf71a6897397c3f4d41e45e0547d9172281b8b66f40b2f10ae84e",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/11-Coordination-and-Review--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/11-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a5753b05311b46ae461796b0f6e92db4871381825ca62e275d4b7828e7782f15",
+          "sha256": "320e1ff8b9ab42c7e0ae510f82c5c5d15d57a5c0e349661e4021b1ceeec63cde",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "COMPATIBILIZAÇÃO DE INSTALAÇÕES - X101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/11-Coordination-and-Review--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/11-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "fd6a5e1d53a0fc3f84a40c03acca9b7375f99e4b433224abc696bc89516cfaee",
+          "sha256": "de6484e6b089f05dc526762dab534d0001d4a02194cec91ab6b54706288fbecc",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "REGISTRO DE PENDÊNCIAS E DETALHES - X102, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/12-Scanned-Legacy-Drawings.pdf": {
+          "url": "/localized-media/pt-br/samples/construction/12-Plantas-existentes-digitalizadas.pdf",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "234887c9b7b3be62e6f120acb1a9b9e1adce5da515b6582c92eb96df9685cec0",
+          "sha256": "445f59b4eb87cdcc8d52c045c210e0f9702a0db43d7e4153b4f4ee34a2d98348",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-01.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/12-1.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a12f2196d3fed32ea8bd4aa224ee5993403e4961a3b7dfa94efda42a21fb7290",
+          "sha256": "1d1ded98c3126c3074a6fe60941eb272427b50acf0dbb4a082565e4da2c413ed",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLANTA DIGITALIZADA - A101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-02.png": {
+          "url": "/localized-media/pt-br/samples/construction/previews/12-2.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "e1385fc9d7814996a6f36184c22a460235e8e5672b338008a1827c94fc2db94f",
+          "sha256": "c0868b89ea8f72f5e7cb68a374566d3dfb4c0992a624bcd41034e0970faa69e0",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "IMPLANTAÇÃO DIGITALIZADA - C101, CENTRO COMUNITÁRIO DOS IPÊS, planta de prática A1"
+        },
+        "/samples/construction/contact-sheet.png": {
+          "url": "/localized-media/pt-br/samples/construction/CONTACT-SHEET.png",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d83054fd9fe747aa2e68cee7733945e5cdb1cdef870e0100c6a7f2fb10a70b0c",
+          "sha256": "e9b5ae6464796b1265e80dadf5e9983712ebe91208e4e628a33a67d1d31e2476",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json",
+          "width": 2400,
+          "height": 2730
+        },
+        "/samples/construction/polypdf-construction-demo-library.zip": {
+          "url": "/localized-media/pt-br/samples/construction/PolyPDF-Plantas-de-construcao-pt-BR.zip",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "de9d6fe62d79bbb58c867a1a0e5d241a02479e048e738d4b66140b17bfef64ee",
+          "sha256": "0de0fce3c14b7dcc88f5b1fe3177f78651537561619619988eec67d8295c6793",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/DEMO-GUIDE.html": {
+          "url": "/localized-media/pt-br/samples/construction/DEMO-GUIDE.html",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "ef5ad4382bb7c8c7855d139cefc57fcaed7506784c6063dcd4a6499887199504",
+          "sha256": "76e841675efbbe7ae866b838623bfd2ed2136bdbb995f03576a9cbefd9493c5d",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/DEMO-MANIFEST.json": {
+          "url": "/localized-media/pt-br/samples/construction/DEMO-MANIFEST.json",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "23ea5c1fe033437b402d55905d11c2a63f9bed22e7a459ee66d44d41bb426559",
+          "sha256": "3cb54720e7a8d52cd3f984cc54a64ee4375239b8e64c4afb1a9d83dea5247cf1",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/SHA256SUMS.txt": {
+          "url": "/localized-media/pt-br/samples/construction/SHA256SUMS.txt",
+          "locale": "pt-BR",
+          "region": "BR",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "7357e6ec0ac885062f536334740a71bf15877fb04bec38cf30ac9a5a9b2cad2e",
+          "sha256": "579ef937d89dabf576f087137f3dcd6e2bc273ad4d7012e2e47f1014c618f4fb",
+          "verification": "/localized-media/pt-br/samples/construction/verification.json",
+          "visualReview": "/localized-media/pt-br/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pt-br/samples/construction/native-roundtrip.json"
+        }
+      },
+      "pages": {},
+      "regionalText": {
+        "library.kicker": {
+          "source": "The original PolyPDF drawing collection",
+          "target": "A coleção original de plantas do PolyPDF"
+        },
+        "library.heading": {
+          "source": "One project. Twelve PDFs. Twenty-four construction sheets.",
+          "target": "Um projeto. Doze PDFs. Vinte e quatro pranchas de construção."
+        },
+        "library.intro": {
+          "source": "Explore the fictional Willow Creek Community Center through coordinated architectural, structural, civil, MEP, and finish drawings. Every PDF contains two bookmarked ARCH D sheets (36 × 24 inches), with drawing numbers, schedules, legends, dimensions, and details.",
+          "target": "Explore o Centro Comunitário dos Ipês, um projeto fictício no Brasil, com plantas coordenadas de arquitetura, estruturas, implantação, instalações e acabamentos. Cada PDF contém duas pranchas A1 (841 × 594 mm) com marcadores, números de desenho, quadros, legendas, cotas e detalhes."
+        },
+        "library.download": {
+          "source": "Download all 24 sheets · ZIP",
+          "target": "Baixar as 24 pranchas · ZIP"
+        },
+        "library.guide": {
+          "source": "View the drawing guide and reference quantities →",
+          "target": "Ver o guia de plantas e os quantitativos de referência →"
+        },
+        "library.scope": {
+          "source": "These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Use the sheet-specific examples below. The earlier F-101 and E-101 exercises use different drawings and quantities.",
+          "target": "São plantas originais de demonstração, não um projeto executivo nem novos resultados de testes do PolyPDF. As plantas principais estão em 1:50 e as implantações em 1:200; as escalas dos detalhes variam. Calibre cada vista antes de medir. Use os exercícios específicos de cada prancha. Os exercícios anteriores F-101 e E-101 usam outros desenhos e quantitativos."
+        },
+        "library.nav.takeoff": {
+          "source": "Measurement",
+          "target": "Medição"
+        },
+        "library.nav.flooring": {
+          "source": "Flooring",
+          "target": "Pisos"
+        },
+        "library.nav.electrical": {
+          "source": "Electrical",
+          "target": "Elétrica"
+        },
+        "library.nav.compare": {
+          "source": "Revision comparison",
+          "target": "Comparação de revisões"
+        },
+        "library.nav.review": {
+          "source": "Coordination review",
+          "target": "Revisão de compatibilização"
+        },
+        "library.nav.ocr": {
+          "source": "OCR",
+          "target": "OCR"
+        },
+        "library.01.title": {
+          "source": "Civil site and grading · PDF",
+          "target": "Implantação e terreno · PDF"
+        },
+        "library.01.sheets": {
+          "source": "C101 · C501 · 2 sheets",
+          "target": "C101 · C201 · 2 pranchas"
+        },
+        "library.01.description": {
+          "source": "Site layout, grading, parking, drainage, pavement and curb details.",
+          "target": "Implantação, terreno, estacionamento, redes, pavimentação e detalhes de meio-fio."
+        },
+        "library.02.title": {
+          "source": "Architecture · Revision A · PDF",
+          "target": "Arquitetura · Revisão A · PDF"
+        },
+        "library.02.sheets": {
+          "source": "A101 · A201 · 2 sheets",
+          "target": "A101 · A201 · 2 pranchas"
+        },
+        "library.02.description": {
+          "source": "Dimensioned floor plan, elevations, building section and wall detail.",
+          "target": "Planta cotada, fachadas, corte da edificação e detalhe de parede."
+        },
+        "library.03.title": {
+          "source": "Architecture · Revision B · PDF",
+          "target": "Arquitetura · Revisão B · PDF"
+        },
+        "library.03.sheets": {
+          "source": "A101 · A201 · 2 sheets",
+          "target": "A101 · A201 · 2 pranchas"
+        },
+        "library.03.description": {
+          "source": "A matching revised set for comparison with Revision A.",
+          "target": "Conjunto revisado para comparar com a revisão A."
+        },
+        "library.04.title": {
+          "source": "Structural foundation and framing · PDF",
+          "target": "Fundações e estrutura · PDF"
+        },
+        "library.04.sheets": {
+          "source": "S101 · S501 · 2 sheets",
+          "target": "S101 · S201 · 2 pranchas"
+        },
+        "library.04.description": {
+          "source": "Footings, columns, roof framing, connection details and schedules.",
+          "target": "Sapatas, pilares, vigas de cobertura, detalhes e quadros."
+        },
+        "library.05.title": {
+          "source": "Mechanical / HVAC · PDF",
+          "target": "Ventilação · PDF"
+        },
+        "library.05.sheets": {
+          "source": "M101 · M501 · 2 sheets",
+          "target": "M101 · M501 · 2 pranchas"
+        },
+        "library.05.description": {
+          "source": "Ductwork, terminals, equipment, controls and mechanical details.",
+          "target": "Dutos, difusores, equipamentos e detalhes de ventilação."
+        },
+        "library.06.title": {
+          "source": "Electrical lighting and power · PDF",
+          "target": "Iluminação e elétrica · PDF"
+        },
+        "library.06.sheets": {
+          "source": "E101 · E601 · 2 sheets",
+          "target": "E101 · E501 · 2 pranchas"
+        },
+        "library.06.description": {
+          "source": "Lighting, receptacles, electrical diagrams and fixture schedules.",
+          "target": "Iluminação, tomadas, esquemas elétricos e quadro de luminárias."
+        },
+        "library.07.title": {
+          "source": "Plumbing water and drainage · PDF",
+          "target": "Água e esgoto · PDF"
+        },
+        "library.07.sheets": {
+          "source": "P101 · P501 · 2 sheets",
+          "target": "P101 · P501 · 2 pranchas"
+        },
+        "library.07.description": {
+          "source": "Water and drainage layouts, risers, fixtures and installation details.",
+          "target": "Redes de água e esgoto, prumadas e detalhes sanitários."
+        },
+        "library.08.title": {
+          "source": "Fire protection and life safety · PDF",
+          "target": "Proteção contra incêndio · Exercício · PDF"
+        },
+        "library.08.sheets": {
+          "source": "FP101 · FP501 · 2 sheets",
+          "target": "F101 · F501 · 2 pranchas"
+        },
+        "library.08.description": {
+          "source": "Sprinkler and life-safety symbols, risers, details and schedules.",
+          "target": "Símbolos de chuveiros automáticos e rotas de fuga, esquemas, detalhes e legendas para prática."
+        },
+        "library.09.title": {
+          "source": "Landscape and external works · PDF",
+          "target": "Paisagismo e áreas externas · PDF"
+        },
+        "library.09.sheets": {
+          "source": "L101 · L501 · 2 sheets",
+          "target": "L101 · L501 · 2 pranchas"
+        },
+        "library.09.description": {
+          "source": "Planting, paving, landscape details and an authored planting schedule.",
+          "target": "Plantio, pavimentação, detalhes externos e quadro de vegetação."
+        },
+        "library.10.title": {
+          "source": "Interiors, finishes and millwork · PDF",
+          "target": "Acabamentos e marcenaria · PDF"
+        },
+        "library.10.sheets": {
+          "source": "I101 · I501 · 2 sheets",
+          "target": "I101 · I501 · 2 pranchas"
+        },
+        "library.10.description": {
+          "source": "Room finishes, floor patterns, casework elevations and interior details.",
+          "target": "Acabamentos dos ambientes, pisos, elevações de marcenaria e detalhes internos."
+        },
+        "library.11.title": {
+          "source": "Coordination and review · PDF",
+          "target": "Compatibilização e revisão · PDF"
+        },
+        "library.11.sheets": {
+          "source": "X101 · X102 · 2 sheets",
+          "target": "X101 · X102 · 2 pranchas"
+        },
+        "library.11.description": {
+          "source": "Overlaid disciplines, three authored review notes and four PDF layers.",
+          "target": "Disciplinas sobrepostas, três notas de revisão e quatro camadas PDF."
+        },
+        "library.12.title": {
+          "source": "Scanned legacy drawings · PDF",
+          "target": "Plantas existentes digitalizadas · PDF"
+        },
+        "library.12.sheets": {
+          "source": "A101 · C101 · 2 sheets",
+          "target": "A101 · C101 · 2 pranchas"
+        },
+        "library.12.description": {
+          "source": "Image-only architectural and site sheets for OCR practice.",
+          "target": "Plantas de arquitetura e implantação sem camada de texto para praticar OCR."
+        },
+        "library.handoff": {
+          "source": "Keep an untouched master and mark up a copy. Check the drawing scope, units, exported quantities, and saved-file handoff in your own workflow. All projects and coordination issues are fictional; no customer drawing or professional seal is included.",
+          "target": "Mantenha um original intacto e faça as marcações em uma cópia. Confira o escopo do desenho, as unidades, os quantitativos exportados e o arquivo salvo antes de entregar. Os projetos e as interferências de compatibilização são fictícios; não há plantas de clientes nem carimbos profissionais."
+        },
+        "exercise.kicker": {
+          "source": "Work with the construction drawing set",
+          "target": "Pratique com o conjunto de plantas de construção"
+        },
+        "exercise.takeoff.title": {
+          "source": "Measure the Willow Creek architectural plan",
+          "target": "Meça a planta arquitetônica do Centro Comunitário dos Ipês"
+        },
+        "exercise.takeoff.sheets": {
+          "source": "A101 · A201",
+          "target": "A101 · A201"
+        },
+        "exercise.takeoff.step1": {
+          "source": "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.",
+          "target": "Abra A101, revisão A. Calibre o comprimento de referência impresso de 5,00 m: em 1:50 ele equivale a cerca de 283,46457 pontos PDF."
+        },
+        "exercise.takeoff.step2": {
+          "source": "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.",
+          "target": "Confira separadamente a largura de 24,00 m e a profundidade de 15,00 m; depois trace o contorno externo da edificação."
+        },
+        "exercise.takeoff.step3": {
+          "source": "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.",
+          "target": "Compare a projeção retangular com 360,00 m². Mantenha a prancha, a revisão, o item, a unidade e o total junto à medição exportada."
+        },
+        "exercise.takeoff.scope": {
+          "source": "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.",
+          "target": "Este exercício mede a projeção retangular bruta. Não mede a área útil nem desconta as paredes. As duas conferências de comprimento e a medição de área são três medições manuais."
+        },
+        "exercise.provenance": {
+          "source": "Drawing reference values, not new app test results. Work on a copy and check your own saved output.",
+          "target": "Os valores são referências do desenho, não novos resultados de testes do aplicativo. Trabalhe em uma cópia e confira o arquivo salvo."
+        },
+        "exercise.historicalMac": {
+          "source": "Inspect the saved Mac example and its tested local build →",
+          "target": "Exemplo anterior dos EUA: ver o arquivo salvo no Mac e a versão local testada →"
+        },
+        "exercise.download.A": {
+          "source": "Download Revision A · PDF",
+          "target": "Baixar a revisão A · PDF"
+        },
+        "library.02.filename": {
+          "source": "02-Architectural-Revision-A.pdf",
+          "target": "02-Arquitetura-Revisao-A.pdf"
+        },
+        "exercise.flooring.title": {
+          "source": "Take off finishes from the Willow Creek interiors plan",
+          "target": "Meça os pisos do Centro Comunitário dos Ipês"
+        },
+        "exercise.flooring.sheets": {
+          "source": "I101 · I501",
+          "target": "I101 · I501"
+        },
+        "exercise.flooring.step1": {
+          "source": "Open I101 and calibrate its 20 ft reference. Read the F1 and F2 finish key before measuring.",
+          "target": "Abra I101 e calibre sua referência de 5,00 m. Leia a legenda dos pisos F1 e F2 antes de medir."
+        },
+        "exercise.flooring.step2": {
+          "source": "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.",
+          "target": "Trace separadamente as áreas cotadas dos sanitários 107 e 108: 18,00 m² cada uma, 36,00 m² no total."
+        },
+        "exercise.flooring.step3": {
+          "source": "Compare F2 tile with 576 sq ft and F1 resilient flooring with 5,184 sq ft. Apply any waste allowance separately.",
+          "target": "Compare o piso cerâmico F2 com 36,00 m² e o resiliente F1 com 324,00 m². Aplique separadamente qualquer percentual de perda."
+        },
+        "exercise.flooring.scope": {
+          "source": "The authored finish schedule uses room dimension boundaries without wall-thickness deductions. These exercise areas are not net installed quantities; I501 details use different scales.",
+          "target": "O quadro usa os limites cotados dos ambientes sem descontar a espessura das paredes. Estas áreas de prática não são quantitativos líquidos executados; os detalhes de I501 usam outras escalas."
+        },
+        "exercise.download.drawing": {
+          "source": "Download the example drawing · PDF",
+          "target": "Baixar a planta de prática · PDF"
+        },
+        "library.10.filename": {
+          "source": "10-Interiors-Finishes-and-Millwork.pdf",
+          "target": "10-Acabamentos-e-marcenaria.pdf"
+        },
+        "exercise.electrical.title": {
+          "source": "Count the Willow Creek lighting plan",
+          "target": "Conte os símbolos da planta elétrica dos Ipês"
+        },
+        "exercise.electrical.sheets": {
+          "source": "E101 · E601",
+          "target": "E101 · E501"
+        },
+        "exercise.electrical.step1": {
+          "source": "Open E101 and identify the luminaire symbol in the legend. Count only the plan, excluding legend and detail examples.",
+          "target": "Abra E101 e identifique o símbolo de luminária na legenda. Conte somente os símbolos da planta e exclua os exemplos da legenda e dos detalhes."
+        },
+        "exercise.electrical.step2": {
+          "source": "Review 24 plan luminaires, including 4 emergency luminaires. The emergency subset is included in 24, not added to it.",
+          "target": "Confira as 24 luminárias, 12 tomadas e 8 interruptores da planta. Mantenha separadas as contagens das três categorias."
+        },
+        "exercise.electrical.step3": {
+          "source": "Calibrate the 20 ft reference. Trace the LP-1 / CKTS 1, 3, 5, 7 diagram from the panel, then north and east: 8 + 38 = 46 ft.",
+          "target": "Calibre a referência de 5,00 m. Trace o percurso esquemático de E101 e compare com 34,50 m. E501 contém o esquema elétrico e o quadro de luminárias."
+        },
+        "exercise.electrical.scope": {
+          "source": "The dashed wiring is a circuit diagram, not a conduit takeoff. Pro is required for Symbol Search; review every candidate. The 24 fixtures and 46 ft are drawing references, not app results.",
+          "target": "O traçado descontínuo representa um percurso esquemático, não uma medição de eletrodutos para execução. A busca de símbolos exige Pro; revise cada sugestão. As 24 luminárias, 12 tomadas, 8 interruptores e os 34,50 m são referências do desenho, não resultados do aplicativo."
+        },
+        "exercise.historicalElectrical": {
+          "source": "Reconcile fixtures and receptacles with the electrical review sheet →",
+          "target": "Exercício elétrico anterior dos EUA: ver a conferência separada de luminárias e tomadas →"
+        },
+        "library.06.filename": {
+          "source": "06-Electrical-Lighting-and-Power.pdf",
+          "target": "06-Iluminacao-e-eletrica.pdf"
+        },
+        "exercise.compare.title": {
+          "source": "Compare the Willow Creek architectural revisions",
+          "target": "Compare as revisões arquitetônicas do Centro Comunitário dos Ipês"
+        },
+        "exercise.compare.sheets": {
+          "source": "A101 · A201",
+          "target": "A101 · A201"
+        },
+        "exercise.compare.step1": {
+          "source": "Open Revision A and Revision B. Pair A101 with A101 and A201 with A201; keep the full sheet extents aligned.",
+          "target": "Abra as revisões A e B. Associe A101 a A101 e A201 a A201; alinhe as pranchas A1 completas."
+        },
+        "exercise.compare.step2": {
+          "source": "On A101, review the 6 ft partition shift between rooms 103 and 104 and the 3 ft movement of the room 104 door.",
+          "target": "Em A101, examine o deslocamento de 1,50 m para leste da divisória entre os ambientes 103 e 104 e o de 0,75 m para leste da porta do ambiente 104."
+        },
+        "exercise.compare.step3": {
+          "source": "Review the added 6 ft south glazing on A101 and A201, then check the revised issue fields and notes.",
+          "target": "Examine a nova janela sul de 1,50 m em A101 e A201, além dos campos de emissão e das notas alteradas."
+        },
+        "exercise.compare.scope": {
+          "source": "Room 103 changes from 576 to 720 sq ft; room 104 changes from 576 to 432 sq ft. The gross footprint stays 5,760 sq ft. These are authored changes, not a promised detection count.",
+          "target": "O ambiente 103 passa de 36,00 para 45,00 m²; o ambiente 104 passa de 36,00 para 27,00 m². A projeção permanece em 360,00 m². São alterações preparadas nos desenhos, não uma quantidade garantida de detecções."
+        },
+        "exercise.download.B": {
+          "source": "Download Revision B · PDF",
+          "target": "Baixar a revisão B · PDF"
+        },
+        "library.03.filename": {
+          "source": "03-Architectural-Revision-B.pdf",
+          "target": "03-Arquitetura-Revisao-B.pdf"
+        },
+        "exercise.review.title": {
+          "source": "Review the Willow Creek coordination sheets",
+          "target": "Revise a compatibilização do Centro Comunitário dos Ipês"
+        },
+        "exercise.review.sheets": {
+          "source": "X101 · X102",
+          "target": "X101 · X102"
+        },
+        "exercise.review.step1": {
+          "source": "Open X101 and inspect the three numbered coordination issues and their existing sticky notes.",
+          "target": "Abra X101 e examine as três pendências numeradas de compatibilização e suas notas PDF existentes."
+        },
+        "exercise.review.step2": {
+          "source": "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.",
+          "target": "Use X102 para relacionar cada localização à sua consulta, disciplina, status e resposta solicitada. Adicione suas marcações a uma cópia."
+        },
+        "exercise.review.step3": {
+          "source": "Save the copy, reopen it, and inspect the annotations and any exported Markup Table before handing it off.",
+          "target": "Salve a cópia, reabra-a e confira as marcações e qualquer tabela exportada antes de entregar."
+        },
+        "exercise.review.scope": {
+          "source": "The source contains three authored issues and four PDF layers. These are fictional coordination exercises; no engineering or code-compliance conclusion is established.",
+          "target": "O original contém três pendências para prática e quatro camadas PDF. Estes exercícios fictícios de compatibilização não constituem validação técnica nem comprovação de atendimento a normas."
+        },
+        "library.11.filename": {
+          "source": "11-Coordination-and-Review.pdf",
+          "target": "11-Compatibilizacao-e-revisao.pdf"
+        },
+        "exercise.ocr.title": {
+          "source": "Test OCR on the Willow Creek scanned sheets",
+          "target": "Teste OCR nas plantas digitalizadas dos Ipês"
+        },
+        "exercise.ocr.sheets": {
+          "source": "A101 · C101",
+          "target": "A101 · C101"
+        },
+        "exercise.ocr.step1": {
+          "source": "Open the scanned set and try searching for WILLOW CREEK. The original two-page PDF contains images without native text.",
+          "target": "Abra o conjunto digitalizado e busque SALÃO MULTIUSO. O PDF original de duas páginas contém imagens sem texto nativo."
+        },
+        "exercise.ocr.step2": {
+          "source": "Run OCR on a working copy. Search for COMMUNITY ROOM on A101 and SITE PLAN on C101, then inspect the recognized text.",
+          "target": "Execute OCR em uma cópia de trabalho. Busque SALÃO MULTIUSO em A101 e IMPLANTAÇÃO E REDES em C101, e confira o texto reconhecido."
+        },
+        "exercise.ocr.step3": {
+          "source": "Save and reopen the result. Repeat the searches and visually check dimensions before measuring the scanned drawing.",
+          "target": "Salve e reabra o resultado. Repita as buscas e confira visualmente as cotas antes de medir a planta digitalizada."
+        },
+        "exercise.ocr.scope": {
+          "source": "Search targets are printed source text, not a promise of recognition accuracy. OCR does not repair drawing scale or scan distortion.",
+          "target": "Os termos de busca aparecem nos desenhos originais; seu reconhecimento não é garantido. OCR não corrige a escala da planta nem as deformações da digitalização."
+        },
+        "library.12.filename": {
+          "source": "12-Scanned-Legacy-Drawings.pdf",
+          "target": "12-Plantas-existentes-digitalizadas.pdf"
+        }
+      }
     }
   },
   "languageNeutralAssets": [
