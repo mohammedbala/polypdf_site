@@ -78,3 +78,16 @@ test('a source-bound bibliography row becomes a verified regional download witho
   assert.throws(()=>localizePageLinks(changed,locale,page,()=>Buffer.from('changed')),/Changed/);
   assert.throws(()=>localizePageLinks(changed,locale,{...page,downloads:[{...entry,url:'/localized-media/fr/sample.pdf'}]},()=>bytes),/Invalid/);
 });
+
+test('regional PDF cards keep their preview when the destination and label change',()=>{
+  const {localizePageLinks}=require('../scripts/localization/pages.cjs');
+  const {createHash}=require('node:crypto'),bytes=Buffer.from('regional drawing');
+  const entry={selector:'a',source:'/old.pdf',url:'/localized-media/de/samples/compare/revision.pdf',label:'Revision herunterladen',labelSelector:'span',sha256:createHash('sha256').update(bytes).digest('hex')};
+  const page={locale:'de-DE',links:[entry]},make=()=>new JSDOM('<a href="/old.pdf" download><img src="/german-preview.png" alt="Deutscher Grundriss"><span>Download</span></a>').window.document;
+  const d=make();localizePageLinks(d,locale,page,()=>bytes);
+  assert.equal(d.querySelector('img').getAttribute('src'),'/german-preview.png');assert.equal(d.querySelector('img').alt,'Deutscher Grundriss');
+  assert.equal(d.querySelector('span').textContent,entry.label);assert.equal(d.querySelector('a').getAttribute('href'),entry.url);assert.ok(d.querySelector('a').hasAttribute('download'));
+  for(const labelSelector of [undefined,'img','missing'])assert.throws(()=>localizePageLinks(make(),locale,{...page,links:[{...entry,labelSelector}]},()=>bytes),/regional download label/);
+  const ambiguous=make();ambiguous.querySelector('a').append(ambiguous.createElement('span'));assert.throws(()=>localizePageLinks(ambiguous,locale,page,()=>bytes),/regional download label/);
+  const nested=make();nested.querySelector('span').innerHTML='<button>Action</button>';assert.throws(()=>localizePageLinks(nested,locale,page,()=>bytes),/regional download label/);
+});

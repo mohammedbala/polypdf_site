@@ -1,6 +1,6 @@
 # Regional walkthrough media
 
-This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has 74 verified asset mappings and three complete routes: [calibration](calibration-de/README.md), [area/cutouts/depth](area-de/README.md), and [symbol count](count-de/README.md). Each uses German app captures, matching regional PDFs and verified instructions in the normal local build. The rest of the pack remains incomplete. Nothing has been published.
+This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has 76 verified asset mappings and four complete routes: [calibration](calibration-de/README.md), [area/cutouts/depth](area-de/README.md), [symbol count](count-de/README.md), and [drawing comparison](compare-de/README.md). Each uses German app captures, matching regional PDFs and verified instructions in the normal local build. The rest of the pack remains incomplete. Nothing has been published.
 
 The app repository’s detailed scope, evidence and remaining implementation plan is at `docs/audits/global-localization-2026-10-20/README.md`.
 

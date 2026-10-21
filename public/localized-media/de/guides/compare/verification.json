@@ -1,0 +1,817 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "ca1daa0aa083c8e5468887ecaf12827e4fc1b54b72270cd5db7fc6c26728af1f",
+    "version": "1.6.17",
+    "bundleSetSha256": "fff40f78420c45a3e91769dd22ac2369178e13e64fd2294fc51ec057aefb13da"
+  },
+  "sourceHashes": [
+    "a70c762fbdade60284bb9bb7340b0355b2392551daacf3d06b03546316adcb30",
+    "423a0dc9282933056d3b40d6878a9e8e786fc7096c6e9c65eddd1c9f2d08248f"
+  ],
+  "savedSha256": "671bde4ec37c77d684ee0070b3c8fe81efcc851c8498c41ea7f0a2b1af07f071",
+  "captureScriptSha256": "557c83771ac5d42cd87589e039588fd0341383916dbd3bb0bceb5c74f7a6912e",
+  "originalClouds": [
+    {
+      "id": "comparecloud-p1-1",
+      "label": "Vergleichsänderung S. 1 Nr. 1",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1233.687,
+      "y": 399.33899999999994,
+      "width": 19.86700000000019,
+      "height": 345.696,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 19.86700000000019,
+          "y": 0
+        },
+        {
+          "x": 19.86700000000019,
+          "y": 345.696
+        },
+        {
+          "x": 0,
+          "y": 345.696
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-2",
+      "label": "Vergleichsänderung S. 1 Nr. 2",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1631.01,
+      "y": 447.02099999999996,
+      "width": 456.92100000000005,
+      "height": 139.07400000000007,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 456.92100000000005,
+          "y": 0
+        },
+        {
+          "x": 456.92100000000005,
+          "y": 139.07400000000007
+        },
+        {
+          "x": 0,
+          "y": 139.07400000000007
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-3",
+      "label": "Vergleichsänderung S. 1 Nr. 3",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 915.829,
+      "y": 534.4390000000001,
+      "width": 194.6880000000001,
+      "height": 75.49699999999984,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 194.6880000000001,
+          "y": 0
+        },
+        {
+          "x": 194.6880000000001,
+          "y": 75.49699999999984
+        },
+        {
+          "x": 0,
+          "y": 75.49699999999984
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-4",
+      "label": "Vergleichsänderung S. 1 Nr. 4",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1273.42,
+      "y": 534.4390000000001,
+      "width": 162.90199999999982,
+      "height": 75.49699999999984,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 162.90199999999982,
+          "y": 0
+        },
+        {
+          "x": 162.90199999999982,
+          "y": 75.49699999999984
+        },
+        {
+          "x": 0,
+          "y": 75.49699999999984
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-5",
+      "label": "Vergleichsänderung S. 1 Nr. 5",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1631.01,
+      "y": 598.0149999999999,
+      "width": 433.0820000000001,
+      "height": 27.815000000000055,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 433.0820000000001,
+          "y": 0
+        },
+        {
+          "x": 433.0820000000001,
+          "y": 27.815000000000055
+        },
+        {
+          "x": 0,
+          "y": 27.815000000000055
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-6",
+      "label": "Vergleichsänderung S. 1 Nr. 6",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1281.366,
+      "y": 685.433,
+      "width": 107.27700000000004,
+      "height": 67.54899999999998,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 107.27700000000004,
+          "y": 0
+        },
+        {
+          "x": 107.27700000000004,
+          "y": 67.54899999999998
+        },
+        {
+          "x": 0,
+          "y": 67.54899999999998
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-7",
+      "label": "Vergleichsänderung S. 1 Nr. 7",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 2211.102,
+      "y": 836.4259999999999,
+      "width": 19.865999999999985,
+      "height": 27.815000000000055,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 19.865999999999985,
+          "y": 0
+        },
+        {
+          "x": 19.865999999999985,
+          "y": 27.815000000000055
+        },
+        {
+          "x": 0,
+          "y": 27.815000000000055
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-8",
+      "label": "Vergleichsänderung S. 1 Nr. 8",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 2155.476,
+      "y": 876.1619999999999,
+      "width": 27.813000000000102,
+      "height": 19.867000000000075,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 27.813000000000102,
+          "y": 0
+        },
+        {
+          "x": 27.813000000000102,
+          "y": 19.867000000000075
+        },
+        {
+          "x": 0,
+          "y": 19.867000000000075
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-9",
+      "label": "Vergleichsänderung S. 1 Nr. 9",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 375.47,
+      "y": 1241.726,
+      "width": 99.33099999999996,
+      "height": 27.81399999999985,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 99.33099999999996,
+          "y": 0
+        },
+        {
+          "x": 99.33099999999996,
+          "y": 27.81399999999985
+        },
+        {
+          "x": 0,
+          "y": 27.81399999999985
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p2-1",
+      "label": "Vergleichsänderung S. 2 Nr. 1",
+      "author": "Vergleich",
+      "page": 2,
+      "x": 1297.259,
+      "y": 518.5450000000001,
+      "width": 67.54500000000007,
+      "height": 59.60199999999986,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 67.54500000000007,
+          "y": 0
+        },
+        {
+          "x": 67.54500000000007,
+          "y": 59.60199999999986
+        },
+        {
+          "x": 0,
+          "y": 59.60199999999986
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p2-2",
+      "label": "Vergleichsänderung S. 2 Nr. 2",
+      "author": "Vergleich",
+      "page": 2,
+      "x": 2211.102,
+      "y": 836.4259999999999,
+      "width": 19.865999999999985,
+      "height": 27.815000000000055,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 19.865999999999985,
+          "y": 0
+        },
+        {
+          "x": 19.865999999999985,
+          "y": 27.815000000000055
+        },
+        {
+          "x": 0,
+          "y": 27.815000000000055
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p2-3",
+      "label": "Vergleichsänderung S. 2 Nr. 3",
+      "author": "Vergleich",
+      "page": 2,
+      "x": 2155.476,
+      "y": 876.1619999999999,
+      "width": 27.813000000000102,
+      "height": 19.867000000000075,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 27.813000000000102,
+          "y": 0
+        },
+        {
+          "x": 27.813000000000102,
+          "y": 19.867000000000075
+        },
+        {
+          "x": 0,
+          "y": 19.867000000000075
+        }
+      ]
+    }
+  ],
+  "reopenedClouds": [
+    {
+      "id": "comparecloud-p1-1",
+      "label": "Vergleichsänderung S. 1 Nr. 1",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1233.687,
+      "y": 399.33899999999994,
+      "width": 19.86700000000019,
+      "height": 345.696,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 19.86700000000019,
+          "y": 0
+        },
+        {
+          "x": 19.86700000000019,
+          "y": 345.696
+        },
+        {
+          "x": 0,
+          "y": 345.696
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-2",
+      "label": "Vergleichsänderung S. 1 Nr. 2",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1631.01,
+      "y": 447.02099999999996,
+      "width": 456.92100000000005,
+      "height": 139.07400000000007,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 456.92100000000005,
+          "y": 0
+        },
+        {
+          "x": 456.92100000000005,
+          "y": 139.07400000000007
+        },
+        {
+          "x": 0,
+          "y": 139.07400000000007
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-3",
+      "label": "Vergleichsänderung S. 1 Nr. 3",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 915.829,
+      "y": 534.4390000000001,
+      "width": 194.6880000000001,
+      "height": 75.49699999999984,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 194.6880000000001,
+          "y": 0
+        },
+        {
+          "x": 194.6880000000001,
+          "y": 75.49699999999984
+        },
+        {
+          "x": 0,
+          "y": 75.49699999999984
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-4",
+      "label": "Vergleichsänderung S. 1 Nr. 4",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1273.42,
+      "y": 534.4390000000001,
+      "width": 162.90199999999982,
+      "height": 75.49699999999984,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 162.90199999999982,
+          "y": 0
+        },
+        {
+          "x": 162.90199999999982,
+          "y": 75.49699999999984
+        },
+        {
+          "x": 0,
+          "y": 75.49699999999984
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-5",
+      "label": "Vergleichsänderung S. 1 Nr. 5",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1631.01,
+      "y": 598.0149999999999,
+      "width": 433.0820000000001,
+      "height": 27.815000000000055,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 433.0820000000001,
+          "y": 0
+        },
+        {
+          "x": 433.0820000000001,
+          "y": 27.815000000000055
+        },
+        {
+          "x": 0,
+          "y": 27.815000000000055
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-6",
+      "label": "Vergleichsänderung S. 1 Nr. 6",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 1281.366,
+      "y": 685.433,
+      "width": 107.27700000000004,
+      "height": 67.54899999999998,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 107.27700000000004,
+          "y": 0
+        },
+        {
+          "x": 107.27700000000004,
+          "y": 67.54899999999998
+        },
+        {
+          "x": 0,
+          "y": 67.54899999999998
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-7",
+      "label": "Vergleichsänderung S. 1 Nr. 7",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 2211.102,
+      "y": 836.4259999999999,
+      "width": 19.865999999999985,
+      "height": 27.815000000000055,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 19.865999999999985,
+          "y": 0
+        },
+        {
+          "x": 19.865999999999985,
+          "y": 27.815000000000055
+        },
+        {
+          "x": 0,
+          "y": 27.815000000000055
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-8",
+      "label": "Vergleichsänderung S. 1 Nr. 8",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 2155.476,
+      "y": 876.1619999999999,
+      "width": 27.813000000000102,
+      "height": 19.867000000000075,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 27.813000000000102,
+          "y": 0
+        },
+        {
+          "x": 27.813000000000102,
+          "y": 19.867000000000075
+        },
+        {
+          "x": 0,
+          "y": 19.867000000000075
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p1-9",
+      "label": "Vergleichsänderung S. 1 Nr. 9",
+      "author": "Vergleich",
+      "page": 1,
+      "x": 375.47,
+      "y": 1241.726,
+      "width": 99.33099999999996,
+      "height": 27.81399999999985,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 99.33099999999996,
+          "y": 0
+        },
+        {
+          "x": 99.33099999999996,
+          "y": 27.81399999999985
+        },
+        {
+          "x": 0,
+          "y": 27.81399999999985
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p2-1",
+      "label": "Vergleichsänderung S. 2 Nr. 1",
+      "author": "Vergleich",
+      "page": 2,
+      "x": 1297.259,
+      "y": 518.5450000000001,
+      "width": 67.54500000000007,
+      "height": 59.60199999999986,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 67.54500000000007,
+          "y": 0
+        },
+        {
+          "x": 67.54500000000007,
+          "y": 59.60199999999986
+        },
+        {
+          "x": 0,
+          "y": 59.60199999999986
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p2-2",
+      "label": "Vergleichsänderung S. 2 Nr. 2",
+      "author": "Vergleich",
+      "page": 2,
+      "x": 2211.102,
+      "y": 836.4259999999999,
+      "width": 19.865999999999985,
+      "height": 27.815000000000055,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 19.865999999999985,
+          "y": 0
+        },
+        {
+          "x": 19.865999999999985,
+          "y": 27.815000000000055
+        },
+        {
+          "x": 0,
+          "y": 27.815000000000055
+        }
+      ]
+    },
+    {
+      "id": "comparecloud-p2-3",
+      "label": "Vergleichsänderung S. 2 Nr. 3",
+      "author": "Vergleich",
+      "page": 2,
+      "x": 2155.476,
+      "y": 876.1619999999999,
+      "width": 27.813000000000102,
+      "height": 19.867000000000075,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 27.813000000000102,
+          "y": 0
+        },
+        {
+          "x": 27.813000000000102,
+          "y": 19.867000000000075
+        },
+        {
+          "x": 0,
+          "y": 19.867000000000075
+        }
+      ]
+    }
+  ],
+  "sourceLinks": [
+    {
+      "page": 1,
+      "x": 174.6929,
+      "y": 806.5831,
+      "width": 44,
+      "height": 44,
+      "contents": "Gebäudeschnitt A201 öffnen",
+      "hyperlinkTarget": {
+        "kind": "page",
+        "pageIndex": 1
+      }
+    },
+    {
+      "page": 1,
+      "x": 1421.937,
+      "y": 806.5831,
+      "width": 44,
+      "height": 44,
+      "contents": "Gebäudeschnitt A201 öffnen",
+      "hyperlinkTarget": {
+        "kind": "page",
+        "pageIndex": 1
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "native:6R",
+      "text": "Hyperlink\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nGehe zu Seite 2\nImportiertes PDF\nErstellt 20.10.26, 23:46:09\nNicht zugewiesen"
+    },
+    {
+      "id": "native:20R",
+      "text": "Hyperlink\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nGehe zu Seite 2\nImportiertes PDF\nErstellt 20.10.26, 23:46:09\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-1",
+      "text": "Vergleichsänderung S. 1 Nr. 1\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-2",
+      "text": "Vergleichsänderung S. 1 Nr. 2\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-3",
+      "text": "Vergleichsänderung S. 1 Nr. 3\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-4",
+      "text": "Vergleichsänderung S. 1 Nr. 4\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-5",
+      "text": "Vergleichsänderung S. 1 Nr. 5\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-6",
+      "text": "Vergleichsänderung S. 1 Nr. 6\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-7",
+      "text": "Vergleichsänderung S. 1 Nr. 7\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-8",
+      "text": "Vergleichsänderung S. 1 Nr. 8\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p1-9",
+      "text": "Vergleichsänderung S. 1 Nr. 9\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n1\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p2-1",
+      "text": "Vergleichsänderung S. 2 Nr. 1\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n2\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p2-2",
+      "text": "Vergleichsänderung S. 2 Nr. 2\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n2\nVergleich\nNicht zugewiesen"
+    },
+    {
+      "id": "comparecloud-p2-3",
+      "text": "Vergleichsänderung S. 2 Nr. 3\nKein Status\nOffen\nIn Bearbeitung\nAbgeschlossen\nAkzeptiert\nAbgelehnt\nAbgebrochen\nÜberprüft\n2\nVergleich\nNicht zugewiesen"
+    }
+  ],
+  "dialogText": "Dokumente vergleichen\nAktuelle Datei\nDokument A\narchitektur-revision-a.pdf (Aktuell)\nDurchsuchen…\nSeiten\nAlle Seiten (1 - 2)\nvon 2\nÜberarbeitete Datei\nDokument B\narchitektur-revision-b.pdf\nDurchsuchen…\nSeiten\nAlle Seiten\nAusgabe\nAnwenden auf\nNeues Vergleichsdokument\n\nBereiche, die sich vom überarbeiteten Dokument unterscheiden, werden auf einer Kopie der aktuellen Datei mit bearbeitbaren Revisionswolken markiert; unveränderte Seiten bleiben unverändert.\n\nAbbrechen\nVergleichen",
+  "completion": "architektur-revision-a.pdf\n×\nVergleich – architektur-revision-a vs architektur-revision-b.pdf\n×\n+\nUpgrade\nNAME\nVergleich – architektur-revision-a vs architektur-revision-b.pdf\nSEITEN\n2\nSEITE HINZUFÜGEN\nImportierte 14 Anmerkungen\n/2\n53%\n33.1\" x 23.4\"\nMASSSTAB\nKein Maßstab",
+  "shots": [
+    {
+      "file": "vergleich-dialog.png",
+      "sha256": "eb7e42267f7bbb672871aeca3a09d00b20a50d153eda7bcada9d1df8d3535658"
+    },
+    {
+      "file": "vergleich-a101.png",
+      "sha256": "13342953a6af6585484ffb2ba32dded1171b38064928107236a2e8a146615e1a"
+    },
+    {
+      "file": "vergleich-a201.png",
+      "sha256": "0f62425b105f131eec56ad65a3a6a1892bd4a62dd9e27782b8556a83ac09d44c"
+    },
+    {
+      "file": "vergleich-wieder-geoeffnet.png",
+      "sha256": "438eecefcab75a414dd75e2156fc0b8dc69cb39aa72793b742e55be0a5ea761d"
+    }
+  ],
+  "capture": "Actual owned Electron app; production menu and UI handlers; native Open and Save completed through computer use; fresh-process reopen; annotation observer is read-only.",
+  "limitations": [
+    "Local Mac development build; not a published release or Windows/native iPad qualification",
+    "Bundled plugins disabled; German comparison author and subjects are creation-time document content"
+  ],
+  "profileSha256": "aef269830a6362f99d44a7381d7e703b452c90741caf77f27c00a0ba39f73cde",
+  "sources": [
+    {
+      "url": "/localized-media/de/samples/compare/architektur-revision-a.pdf",
+      "sha256": "a70c762fbdade60284bb9bb7340b0355b2392551daacf3d06b03546316adcb30"
+    },
+    {
+      "url": "/localized-media/de/samples/compare/architektur-revision-b.pdf",
+      "sha256": "423a0dc9282933056d3b40d6878a9e8e786fc7096c6e9c65eddd1c9f2d08248f"
+    }
+  ],
+  "savedPdf": "/localized-media/de/samples/compare/vergleich-a-b.pdf",
+  "visualReview": "Four real Mac captures inspected. The configured German dialog names both revisions; A101 and A201 show selected editable clouds. The fresh-process screenshot shows the saved German drawing and Markup Table. Twelve clouds and two source links agree with the 14-item table; not all rows are simultaneously visible."
+}

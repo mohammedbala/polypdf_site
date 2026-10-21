@@ -76,8 +76,21 @@ function localizePageLinks(document, locale, page, readFile) {
     const actual = createHash('sha256').update(readFile(pathname)).digest('hex');
     if (actual !== entry.sha256) throw new Error(`Changed regional page download: ${entry.url}`);
     const node = isDownloadRow ? document.createElement('a') : nodes[0];
+    // Image download cards retain their preview and accessible image description.
+    // Only an explicitly selected plain label may be replaced inside the link.
+    let label = node;
+    if (entry.labelSelector) {
+      const labels = node.querySelectorAll(entry.labelSelector);
+      if (isDownloadRow || labels.length !== 1 || labels[0].children.length
+          || !['SPAN','B','STRONG'].includes(labels[0].tagName)) {
+        throw new Error(`Invalid regional download label: ${entry.selector}`);
+      }
+      label = labels[0];
+    } else if (node.querySelector('img,picture,svg')) {
+      throw new Error(`Missing regional download label: ${entry.selector}`);
+    }
     node.href = pathname;
-    node.textContent = entry.label;
+    label.textContent = entry.label;
     node.lang = page.locale;
     node.setAttribute('translate','no');
     node.removeAttribute('hreflang');

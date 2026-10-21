@@ -1,0 +1,292 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "files": {
+    "architektur-revision-b.pdf": "423a0dc9282933056d3b40d6878a9e8e786fc7096c6e9c65eddd1c9f2d08248f",
+    "architektur-revision-a.pdf": "a70c762fbdade60284bb9bb7340b0355b2392551daacf3d06b03546316adcb30",
+    "vergleich-a-b.pdf": "671bde4ec37c77d684ee0070b3c8fe81efcc851c8498c41ea7f0a2b1af07f071"
+  },
+  "clouds": [
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 1",
+      "author": "Vergleich",
+      "rect": [
+        1217.252,
+        922.339,
+        1269.989,
+        1300.847
+      ],
+      "vertices": [
+        1233.687,
+        1284.441,
+        1253.554,
+        1284.441,
+        1253.554,
+        938.745,
+        1233.687,
+        938.745
+      ]
+    },
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 2",
+      "author": "Vergleich",
+      "rect": [
+        1614.673,
+        1081.377,
+        2104.273,
+        1253.067
+      ],
+      "vertices": [
+        1631.01,
+        1236.759,
+        2087.931,
+        1236.759,
+        2087.931,
+        1097.685,
+        1631.01,
+        1097.685
+      ]
+    },
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 3",
+      "author": "Vergleich",
+      "rect": [
+        899.575,
+        1057.59,
+        1126.772,
+        1165.596
+      ],
+      "vertices": [
+        915.829,
+        1149.341,
+        1110.517,
+        1149.341,
+        1110.517,
+        1073.844,
+        915.829,
+        1073.844
+      ]
+    },
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 4",
+      "author": "Vergleich",
+      "rect": [
+        1256.912,
+        1057.337,
+        1452.83,
+        1165.849
+      ],
+      "vertices": [
+        1273.42,
+        1149.341,
+        1436.322,
+        1149.341,
+        1436.322,
+        1073.844,
+        1273.42,
+        1073.844
+      ]
+    },
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 5",
+      "author": "Vergleich",
+      "rect": [
+        1614.687,
+        1041.627,
+        2080.416,
+        1102.089
+      ],
+      "vertices": [
+        1631.01,
+        1085.765,
+        2064.092,
+        1085.765,
+        2064.092,
+        1057.95,
+        1631.01,
+        1057.95
+      ]
+    },
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 6",
+      "author": "Vergleich",
+      "rect": [
+        1264.98,
+        914.412,
+        1405.029,
+        1014.733
+      ],
+      "vertices": [
+        1281.366,
+        998.347,
+        1388.643,
+        998.347,
+        1388.643,
+        930.798,
+        1281.366,
+        930.798
+      ]
+    },
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 7",
+      "author": "Vergleich",
+      "rect": [
+        2194.211,
+        802.681,
+        2247.858,
+        864.212
+      ],
+      "vertices": [
+        2211.102,
+        847.354,
+        2230.968,
+        847.354,
+        2230.968,
+        819.539,
+        2211.102,
+        819.539
+      ]
+    },
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 8",
+      "author": "Vergleich",
+      "rect": [
+        2138.618,
+        770.893,
+        2200.147,
+        824.476
+      ],
+      "vertices": [
+        2155.476,
+        807.618,
+        2183.289,
+        807.618,
+        2183.289,
+        787.751,
+        2155.476,
+        787.751
+      ]
+    },
+    {
+      "page": 1,
+      "subject": "Vergleichsänderung S. 1 Nr. 9",
+      "author": "Vergleich",
+      "rect": [
+        358.58,
+        397.382,
+        491.691,
+        458.912
+      ],
+      "vertices": [
+        375.47,
+        442.054,
+        474.801,
+        442.054,
+        474.801,
+        414.24,
+        375.47,
+        414.24
+      ]
+    },
+    {
+      "page": 2,
+      "subject": "Vergleichsänderung S. 2 Nr. 1",
+      "author": "Vergleich",
+      "rect": [
+        1280.369,
+        1088.775,
+        1381.694,
+        1182.093
+      ],
+      "vertices": [
+        1297.259,
+        1165.235,
+        1364.804,
+        1165.235,
+        1364.804,
+        1105.633,
+        1297.259,
+        1105.633
+      ]
+    },
+    {
+      "page": 2,
+      "subject": "Vergleichsänderung S. 2 Nr. 2",
+      "author": "Vergleich",
+      "rect": [
+        2194.211,
+        802.681,
+        2247.858,
+        864.212
+      ],
+      "vertices": [
+        2211.102,
+        847.354,
+        2230.968,
+        847.354,
+        2230.968,
+        819.539,
+        2211.102,
+        819.539
+      ]
+    },
+    {
+      "page": 2,
+      "subject": "Vergleichsänderung S. 2 Nr. 3",
+      "author": "Vergleich",
+      "rect": [
+        2138.618,
+        770.893,
+        2200.147,
+        824.476
+      ],
+      "vertices": [
+        2155.476,
+        807.618,
+        2183.289,
+        807.618,
+        2183.289,
+        787.751,
+        2155.476,
+        787.751
+      ]
+    }
+  ],
+  "links": [
+    {
+      "page": 1,
+      "rect": [
+        174.693,
+        833.197,
+        218.693,
+        877.197
+      ]
+    },
+    {
+      "page": 1,
+      "rect": [
+        1421.937,
+        833.197,
+        1465.937,
+        877.197
+      ]
+    }
+  ],
+  "checks": [
+    "All three PDFs carry de-DE metadata and two aligned A1 pages",
+    "Saved base drawing text and decoded content streams are unchanged",
+    "Twelve public Polygon annotations have German subjects/authors, cloud borders and appearance streams",
+    "Nine clouds on A101, three on A201, two original sheet links retained"
+  ],
+  "limitations": [
+    "Public PDF structure inspection; external PDF viewers and native iPad not qualified"
+  ]
+}

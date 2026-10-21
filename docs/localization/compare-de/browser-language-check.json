@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "surface": "Codex in-app browser",
+  "route": "/de/blog/compare-pdf-drawing-revisions/",
+  "navigation": [
+    "en",
+    "de",
+    "en",
+    "de"
+  ],
+  "checks": [
+    "Actual language-menu clicks select the corresponding route",
+    "English uses original compare-editable-clouds image; German uses vergleich-wieder-geoeffnet.png",
+    "German hero loads at its original 1710 × 1073 dimensions",
+    "German metric construction instructions and both preview cards remain visible",
+    "Both PDF cards downloaded through actual clicks; the saved result downloaded through the browser file-link API",
+    "All three downloaded PDFs are byte-identical to the retained public assets",
+    "Final page reloaded after the verification-label copy update; both sample previews load at 1800 × 1272"
+  ],
+  "downloads": [
+    {
+      "file": "architektur-revision-a.pdf",
+      "bytes": 51044,
+      "sha256": "a70c762fbdade60284bb9bb7340b0355b2392551daacf3d06b03546316adcb30"
+    },
+    {
+      "file": "architektur-revision-b.pdf",
+      "bytes": 51226,
+      "sha256": "423a0dc9282933056d3b40d6878a9e8e786fc7096c6e9c65eddd1c9f2d08248f"
+    },
+    {
+      "file": "vergleich-a-b.pdf",
+      "bytes": 143993,
+      "sha256": "671bde4ec37c77d684ee0070b3c8fe81efcc851c8498c41ea7f0a2b1af07f071"
+    }
+  ],
+  "recovery": "Initial file-link download timed out during disk exhaustion. After freeing verified regenerable task build output, browser interaction and all three downloads succeeded.",
+  "limitations": [
+    "Local browser build; no deployment",
+    "This comparison workflow is verified on Mac only; no Windows/native iPad qualification"
+  ],
+  "htmlSha256": "0fb699d47ab191b78f6a782708577712251568d0fb49883514f78028236053d1",
+  "screenshots": [
+    {
+      "file": "browser-preview.png",
+      "sha256": "471d2505b0e56c0f2fdee49bd4342ef874c3a588f5f2c5264fa29bd9d1198ae6"
+    },
+    {
+      "file": "browser-samples.png",
+      "sha256": "c68e2a18bc667ba50eb4eaf7124a558095a34d48e8bbb0b9a7d3b51025e80a95"
+    }
+  ]
+}

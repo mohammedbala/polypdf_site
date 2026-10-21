@@ -7,7 +7,7 @@
   "sourceFiles": {
     "scripts/international/build.cjs": "eb767b562332a86aabfd1ad083c99d605aec6661ff627ae9edd766fc2496cd2e",
     "scripts/international/verify.cjs": "7418d16da848a115ddcbc079287061bf92d42fe7a58105a48731662e3000cfba",
-    "scripts/localization/pages.cjs": "fe3bcb70cdc45d942d38f2e528f69a332ebe549280f0736239ceb0a43d6efbad",
+    "scripts/localization/pages.cjs": "e36e74e1c6e54b832a89f314a223a2f7acc983780a4bd92e757dcf64b46e574f",
     "scripts/localization/area-de.json": "77c80217149800a6d8cd33ad3949fa4eb431ac2b92e5a77e7cfc8df0d1b29f6c",
     "scripts/localization/capture-area-de.mjs": "273f41cb7fa024fbe28ad0c089e7078a2c55017e54a153c157e2b7fd646c470d",
     "scripts/localization/register-area-de.cjs": "2888ee28dd303afd5aed7fe02f2019cd2bcb68472929a3bc779a09fa4f863548",
@@ -15,7 +15,7 @@
     "scripts/generate-area-demo-de.py": "a2e270f77969b4df48c6692ddef6c29ca9f331f0627d8566b899e6fafb8b12e9",
     "scripts/verify-area-demo-de.py": "380db043549ff056114be45769526644aba39ca277908d0ec412b16f262b6d1c",
     "src/content/guides/measure-pdf-area-cutouts-depth.js": "3f1207a62dec8da432d8669e2ca43df1caa1e68703abf434d660f74792bc6347",
-    "src/localization/walkthrough-media.json": "f168f4864eedbfde41d2f5443b4e5cfda88cb585b13071b5988e230a7cbabf24"
+    "src/localization/walkthrough-media.json": "0e94d5b1e1f3168b2d16ad3dd08bedafeda28425e30de5c4e8fc91a81f678e40"
   },
   "checks": [
     "Three instructional images use exact German bytes",

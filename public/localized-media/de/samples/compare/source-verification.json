@@ -1,0 +1,146 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "operation": "Add PDF /Lang only to copies of the existing verified German construction revision pair",
+  "scriptSha256": "54efab22610846741c3a01112e614e0cf2aa3590b38d19cde73fe1c5cd98a26d",
+  "documents": [
+    {
+      "revision": "A",
+      "sourceFile": "02-Architektur-Revision-A.pdf",
+      "sourceSha256": "6d091b9d34967e55fc413a7828cc47dcc5662acd2818d768238ad9fa6efc13ed",
+      "file": "architektur-revision-a.pdf",
+      "sha256": "a70c762fbdade60284bb9bb7340b0355b2392551daacf3d06b03546316adcb30",
+      "language": "de-DE",
+      "pages": [
+        {
+          "sheet": "A101",
+          "mediaBox": [
+            0,
+            0,
+            2383.937,
+            1683.78
+          ],
+          "cropBox": [
+            0,
+            0,
+            2383.937,
+            1683.78
+          ],
+          "rotation": 0,
+          "contentStreamSha256": "cf3d12b038ddd454ed6c42494decc04210894c120eb648f5a05e6168fc659cbe",
+          "renderedPixelsSha256": "a709ca4b519052ae75569a418561a60bacf1219b9872534f49025e85bab442a1",
+          "preview": "revision-a-1.png",
+          "previewSha256": "5081b9303007da13e3d4d76633f0289b5f9d3daa79d7936a9b585a9b907714a5",
+          "originalAndTaggedPixelsIdentical": true
+        },
+        {
+          "sheet": "A201",
+          "mediaBox": [
+            0,
+            0,
+            2383.937,
+            1683.78
+          ],
+          "cropBox": [
+            0,
+            0,
+            2383.937,
+            1683.78
+          ],
+          "rotation": 0,
+          "contentStreamSha256": "36e58245e71cc76704bb1028c76d6c442bb54d7b4bf0daa1feabdc5bf8bd6a48",
+          "renderedPixelsSha256": "e260fd81ddfbf487df0f03422d741cd55933e44331ef10b0f8275af0ace8b06e",
+          "preview": "revision-a-2.png",
+          "previewSha256": "633d1816f1dffa87627d3baf9128f32ed718269d6afaf39d910b3b0e6b3ee5e1",
+          "originalAndTaggedPixelsIdentical": true
+        }
+      ],
+      "referenceFacts": {
+        "buildingMetres": [
+          24,
+          15
+        ],
+        "areaSquareMetres": 360,
+        "perimeterMetres": 78,
+        "room103SquareMetres": 36,
+        "room104SquareMetres": 36,
+        "sectionLinks": 2,
+        "partitionShiftMetres": 0,
+        "doorShiftMetres": 0,
+        "addedWindowMetres": 0
+      }
+    },
+    {
+      "revision": "B",
+      "sourceFile": "03-Architektur-Revision-B.pdf",
+      "sourceSha256": "4231ebda5b97e3749863a86f931693c1c5d9aba06c210058cfe9237da5d47f46",
+      "file": "architektur-revision-b.pdf",
+      "sha256": "423a0dc9282933056d3b40d6878a9e8e786fc7096c6e9c65eddd1c9f2d08248f",
+      "language": "de-DE",
+      "pages": [
+        {
+          "sheet": "A101",
+          "mediaBox": [
+            0,
+            0,
+            2383.937,
+            1683.78
+          ],
+          "cropBox": [
+            0,
+            0,
+            2383.937,
+            1683.78
+          ],
+          "rotation": 0,
+          "contentStreamSha256": "66c37ac13267f1d627ab2ab1fa18a14e503809fe5eabf5cb2c10fd4545bcaccc",
+          "renderedPixelsSha256": "49b725c84d91504caade9b14ad3bcd94a409a4f36a4de6af6a76333852ff6b5a",
+          "preview": "revision-b-1.png",
+          "previewSha256": "9beae50193e7b55788b6264181b7de8557644b09720bf21fb2911ed7df15b86a",
+          "originalAndTaggedPixelsIdentical": true
+        },
+        {
+          "sheet": "A201",
+          "mediaBox": [
+            0,
+            0,
+            2383.937,
+            1683.78
+          ],
+          "cropBox": [
+            0,
+            0,
+            2383.937,
+            1683.78
+          ],
+          "rotation": 0,
+          "contentStreamSha256": "a920ef420d843687bec1e142f7649cf2a0748b17f6bba2e9d49fc1cf15abd0d8",
+          "renderedPixelsSha256": "df70321314f9dae163581e3147680dc8dab7f404072faaa468af3d00fdffeb47",
+          "preview": "revision-b-2.png",
+          "previewSha256": "4e062a0c0c661ddcd458d20096da5f0cfdcf3a65a9a42a6e7a8a052f38b27c2f",
+          "originalAndTaggedPixelsIdentical": true
+        }
+      ],
+      "referenceFacts": {
+        "buildingMetres": [
+          24,
+          15
+        ],
+        "areaSquareMetres": 360,
+        "perimeterMetres": 78,
+        "room103SquareMetres": 45,
+        "room104SquareMetres": 27,
+        "sectionLinks": 2,
+        "partitionShiftMetres": 1.5,
+        "doorShiftMetres": 0.75,
+        "addedWindowMetres": 1.5
+      }
+    }
+  ],
+  "limitations": [
+    "Fictional demonstration drawings; no standards certification",
+    "Three design changes plus revision/date/schedule text changes; no promised detected-cloud count",
+    "These tagged copies do not update the remaining construction-library metadata"
+  ]
+}

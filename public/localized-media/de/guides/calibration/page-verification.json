@@ -8,7 +8,7 @@
     "scripts/international/build.cjs": "eb767b562332a86aabfd1ad083c99d605aec6661ff627ae9edd766fc2496cd2e",
     "scripts/international/verify.cjs": "7418d16da848a115ddcbc079287061bf92d42fe7a58105a48731662e3000cfba",
     "scripts/localization/media.cjs": "0cf1a415a52b389ccc81235075f943574fbe03b450d0d62619f2bd4d4047f671",
-    "scripts/localization/pages.cjs": "fe3bcb70cdc45d942d38f2e528f69a332ebe549280f0736239ceb0a43d6efbad",
+    "scripts/localization/pages.cjs": "e36e74e1c6e54b832a89f314a223a2f7acc983780a4bd92e757dcf64b46e574f",
     "scripts/localization/calibration-de.json": "ef7bbbe76a2bcc2bb3767f955f6bb97d70c3659bf435b8450065777c02368dc0",
     "scripts/localization/capture-calibration-de.mjs": "78929d3f7c7e2b3bcca820ce40308d3a40c869e812dd124e7aeaf40a2933262d",
     "scripts/localization/register-calibration-de.cjs": "b5c97cb980ba57ce126d4f3ddfb05de1f5cceca4100718430d3702c83f72304c",
@@ -18,7 +18,7 @@
     "src/lib/route-metadata.json": "3b66faba48ef4f43b1be9e3bf784a81b07576efed5bff0982085005bfd8c1d58",
     "src/components/CalibrationPractice.js": "9cba1d4686b44596ea3a026ff118a260c68744cff5d4da2d17b0a5aec153576c",
     "src/components/BlogPost.js": "c5f1615a9d4096bbe03ef1ee497faf63f593c5ab464cf0816464b1a5450ecb73",
-    "src/localization/walkthrough-media.json": "f168f4864eedbfde41d2f5443b4e5cfda88cb585b13071b5988e230a7cbabf24"
+    "src/localization/walkthrough-media.json": "0e94d5b1e1f3168b2d16ad3dd08bedafeda28425e30de5c4e8fc91a81f678e40"
   },
   "checks": [
     "All five instructional images and drawing previews resolve to exact verified German bytes",
