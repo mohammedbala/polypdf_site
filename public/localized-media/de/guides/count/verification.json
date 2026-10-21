@@ -1,0 +1,340 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "827e65135c10b27a3b2bceb0e2d5d1855e2bf2f2b3d106da9f9c4ead7f1d5d39",
+    "version": "1.6.17",
+    "bundleSetSha256": "276b2770e340a90205344f4bf72375962e3e70b9caa448c3f3ee1c91ca1d3485"
+  },
+  "sourcePdf": "/localized-media/de/samples/count/q101-symbolzaehlung.pdf",
+  "sourceSha256": "52cc449e5cd935ef6db14aec817243bcc10175fa9831ef56ad919f74fef38332",
+  "geometrySha256": "43faefb541ec8f7ebd8e29104e6da0b1d292d05f12d5acadfe221981c5099117",
+  "captureScriptSha256": "67a3e1e7ffd5f5da929d3c706a68cd37420c8edbc44369bf662d1a244db695d5",
+  "profileSha256": "c098c8bbf92aac46863d1a75e7dae5d97e3ada3f10d32170c9c27f5bdd31cb02",
+  "capture": "Actual owned Electron app, normal signed Pro activation, UI events and native pointer drag; automation annotation observer is read-only.",
+  "candidates": [
+    {
+      "id": "vs-0-9095-2780-285x285-r90",
+      "x": 0.5486165329477916,
+      "y": 0.24547095309110628,
+      "classes": "visual-search-candidate visual-search-candidate-accepted visual-search-candidate-active"
+    },
+    {
+      "id": "vs-0-11030-2785-285x285-r0",
+      "x": 0.6635361293721691,
+      "y": 0.24588615103036876,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-2720-3065-285x285-r180",
+      "x": 0.17000086218905025,
+      "y": 0.26940838530368766,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-4230-3070-285x285-r270",
+      "x": 0.25967900823357776,
+      "y": 0.269832056670282,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-6215-3070-285x285-r270",
+      "x": 0.3775702548335011,
+      "y": 0.269832056670282,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-7490-3070-285x285-r270",
+      "x": 0.45329460597305105,
+      "y": 0.269832056670282,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-9095-3725-285x285-r90",
+      "x": 0.5486165329477916,
+      "y": 0.3248415469088937,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-11030-3730-285x285-r0",
+      "x": 0.6635361293721691,
+      "y": 0.32526521827548804,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-2720-4860-285x285-r180",
+      "x": 0.17000086218905025,
+      "y": 0.42017607781995664,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-4230-4865-285x285-r270",
+      "x": 0.25967900823357776,
+      "y": 0.42059974918655096,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-6215-4865-285x285-r270",
+      "x": 0.3775702548335011,
+      "y": 0.42059974918655096,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-7490-4865-285x285-r270",
+      "x": 0.45329460597305105,
+      "y": 0.42059974918655096,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-9095-5520-285x285-r90",
+      "x": 0.5486165329477916,
+      "y": 0.4756177128524946,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-11030-5525-285x285-r0",
+      "x": 0.6635361293721691,
+      "y": 0.476032910791757,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-12655-6610-285x285-r0",
+      "x": 0.7600444790318619,
+      "y": 0.5671730951735358,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-9095-6890-285x285-r90",
+      "x": 0.5486165329477916,
+      "y": 0.5906868560195228,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    },
+    {
+      "id": "vs-0-11030-6895-285x285-r0",
+      "x": 0.6635361293721691,
+      "y": 0.5911105273861171,
+      "classes": "visual-search-candidate visual-search-candidate-accepted"
+    }
+  ],
+  "excludedLegend": "vs-0-12655-6610-285x285-r0",
+  "counts": [
+    {
+      "id": "count-mvhil0f6-lous8",
+      "label": "1",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 910.25,
+      "y": 281.0124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-8ftpr",
+      "label": "2",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 1103.75,
+      "y": 281.5124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-q9oal",
+      "label": "3",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 272.75,
+      "y": 309.5124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-j0b4r",
+      "label": "4",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 423.75,
+      "y": 310.0124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-9cqdp",
+      "label": "5",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 622.25,
+      "y": 310.0124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-faem3",
+      "label": "6",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 749.75,
+      "y": 310.0124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-ebdqe",
+      "label": "7",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 910.25,
+      "y": 375.5124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-r4gi2",
+      "label": "8",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 1103.75,
+      "y": 376.0124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-f7v47",
+      "label": "9",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 272.75,
+      "y": 489.0124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-n1eer",
+      "label": "10",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 423.75,
+      "y": 489.5124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-l2qq7",
+      "label": "11",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 622.25,
+      "y": 489.5124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-9xm1s",
+      "label": "12",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 749.75,
+      "y": 489.5124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-fqbzk",
+      "label": "13",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 910.25,
+      "y": 555.0124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-s5feo",
+      "label": "14",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 1103.75,
+      "y": 555.5124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-ag8jr",
+      "label": "15",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 910.25,
+      "y": 692.0124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    },
+    {
+      "id": "count-mvhil0f6-s9so3",
+      "label": "16",
+      "nativeSubject": "Zuluftauslässe Q-101",
+      "countSeriesId": "cseries-mvhil0f6-peqr99",
+      "x": 1103.75,
+      "y": 692.5124,
+      "width": 27,
+      "height": 22.4752,
+      "page": 1
+    }
+  ],
+  "rows": [
+    {
+      "subject": "Zuluftauslässe Q-101",
+      "quantity": "16",
+      "total": "16"
+    }
+  ],
+  "countToggle": {
+    "label": "Aus",
+    "options": [
+      "An",
+      "Aus"
+    ],
+    "canonical": false
+  },
+  "shots": [
+    {
+      "file": "symbolsuche-17-treffer.png",
+      "sha256": "010341229dbe22375b2b8c17d8fc386809a243d89921f7f3855b8271b6a4a246",
+      "darkSamples": 2437
+    },
+    {
+      "file": "symbolsuche-legende-ausgeschlossen.png",
+      "sha256": "9a7629627b32d0f40a6b74568e9bb6ca0d7b36cb29190fb2b296031a51caa0c3",
+      "darkSamples": 2458
+    },
+    {
+      "file": "zaehlung-16-mengenermittlung.png",
+      "sha256": "25b8e7f568c88c58bf2db4e1dbc86edee483e53dfc9244c52a812d9b256b950b",
+      "darkSamples": 2469
+    }
+  ],
+  "visualReview": "All three actual Mac captures inspected: 17 visible highlights, excluded legend with 16 selected, 16 red check marks and German worksheet total 16. German drawing and Count toggle labels agree.",
+  "limitations": [
+    "Local Mac development build; not a published release or Windows/native iPad qualification",
+    "No Save/reopen or report export in this capture",
+    "Bundled plugins disabled; disposable mock keychain used for local activation fixture"
+  ]
+}

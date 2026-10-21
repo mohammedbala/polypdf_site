@@ -62,3 +62,19 @@ test('regional download references require the intended link, locale path and ex
     assert.throws(()=>localizePageLinks(make(),locale,{...page,links:[{...entry,url}]},()=>bytes),/Invalid/);
   }
 });
+
+test('a source-bound bibliography row becomes a verified regional download without HTML injection',()=>{
+  const {localizePageLinks}=require('../scripts/localization/pages.cjs');
+  const {createHash}=require('node:crypto'),bytes=Buffer.from('regional drawing');
+  const entry={selector:'li',source:'Historical drawing — Old note',url:'/localized-media/de/samples/count.pdf',label:'Deutscher Übungsplan',note:'<b>Fiktiv</b>',sha256:createHash('sha256').update(bytes).digest('hex')};
+  const page={locale:'de-DE',downloads:[entry]},make=()=>new JSDOM('<ol><li>Historical drawing<span> — Old note</span></li></ol>').window.document;
+  const d=make();localizePageElements(d,locale,page);translateDOM(d.body,()=>{throw Error('Source row translated too soon');});
+  localizePageLinks(d,locale,page,()=>bytes);
+  assert.equal(d.querySelector('a').getAttribute('href'),entry.url);assert.equal(d.querySelector('li').lang,'de-DE');
+  assert.equal(d.querySelector('span').textContent,' — <b>Fiktiv</b>');assert.equal(d.querySelector('b'),null);
+  assert.throws(()=>localizePageElements(new JSDOM('<li>Changed drawing</li>').window.document,locale,page),/Stale/);
+  assert.throws(()=>localizePageLinks(make(),locale,page,()=>bytes),/Stale/);
+  const changed=make();localizePageElements(changed,locale,page);
+  assert.throws(()=>localizePageLinks(changed,locale,page,()=>Buffer.from('changed')),/Changed/);
+  assert.throws(()=>localizePageLinks(changed,locale,{...page,downloads:[{...entry,url:'/localized-media/fr/sample.pdf'}]},()=>bytes),/Invalid/);
+});

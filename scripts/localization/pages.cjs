@@ -42,15 +42,29 @@ function localizePageElements(document, locale, page) {
     node.lang = locale.language;
     node.setAttribute('translate','no');
   }
+  // Reserve source-bound bibliographic rows before ordinary translation. Their verified
+  // download links are installed after the media resolver, using DOM text rather than HTML.
+  for (const entry of page?.downloads || []) {
+    const nodes = [...document.querySelectorAll(entry.selector)];
+    if (nodes.length !== 1 || nodes[0].tagName !== 'LI'
+        || normalize(nodes[0].textContent) !== normalize(entry.source)
+        || nodes[0].querySelector('a,button,input,select')) {
+      throw new Error(`Stale regional download row: ${entry.selector}`);
+    }
+    nodes[0].setAttribute('translate','no');
+  }
 }
 
 // A regional worked example may replace historical drawing references with its own
 // downloadable source and calculation record. Run after the ordinary asset resolver.
 function localizePageLinks(document, locale, page, readFile) {
-  for (const entry of page?.links || []) {
+  for (const entry of [...(page?.links || []), ...(page?.downloads || [])]) {
+    const isDownloadRow = (page.downloads || []).includes(entry);
     const nodes = [...document.querySelectorAll(entry.selector)];
-    if (nodes.length !== 1 || nodes[0].tagName !== 'A'
-        || nodes[0].getAttribute('href') !== entry.source) {
+    if (nodes.length !== 1 || (isDownloadRow
+        ? nodes[0].tagName !== 'LI' || normalize(nodes[0].textContent) !== normalize(entry.source)
+          || nodes[0].getAttribute('translate') !== 'no' || nodes[0].querySelector('a,button,input,select')
+        : nodes[0].tagName !== 'A' || nodes[0].getAttribute('href') !== entry.source)) {
       throw new Error(`Stale regional page link: ${entry.selector}`);
     }
     const pathname = assetPath(entry.url);
@@ -61,12 +75,18 @@ function localizePageLinks(document, locale, page, readFile) {
     }
     const actual = createHash('sha256').update(readFile(pathname)).digest('hex');
     if (actual !== entry.sha256) throw new Error(`Changed regional page download: ${entry.url}`);
-    const node = nodes[0];
+    const node = isDownloadRow ? document.createElement('a') : nodes[0];
     node.href = pathname;
     node.textContent = entry.label;
     node.lang = page.locale;
     node.setAttribute('translate','no');
     node.removeAttribute('hreflang');
+    if (isDownloadRow) {
+      const note = document.createElement('span');
+      note.textContent = entry.note ? ` — ${entry.note}` : '';
+      nodes[0].replaceChildren(node,note);
+      nodes[0].lang = page.locale;
+    }
   }
 }
 

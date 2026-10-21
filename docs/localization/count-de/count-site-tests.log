@@ -1,0 +1,172 @@
+TAP version 13
+# Subtest: translated guides link into working localized applications, without static tool clones
+ok 1 - translated guides link into working localized applications, without static tool clones
+  ---
+  duration_ms: 30.912291
+  type: 'test'
+  ...
+# Subtest: missing source translations fail instead of leaking English
+ok 2 - missing source translations fail instead of leaking English
+  ---
+  duration_ms: 0.490083
+  type: 'test'
+  ...
+# Subtest: translates complete text fragments and accessible labels, preserves code and URLs
+ok 3 - translates complete text fragments and accessible labels, preserves code and URLs
+  ---
+  duration_ms: 8.986625
+  type: 'test'
+  ...
+# Subtest: localizes only published pages and labels the English checkout handoff
+ok 4 - localizes only published pages and labels the English checkout handoff
+  ---
+  duration_ms: 4.228625
+  type: 'test'
+  ...
+# Subtest: symmetric hreflang includes self, English and x-default without fabricated regions
+ok 5 - symmetric hreflang includes self, English and x-default without fabricated regions
+  ---
+  duration_ms: 0.11075
+  type: 'test'
+  ...
+# Subtest: all article routes are eligible; private, legal and transaction routes are not
+ok 6 - all article routes are eligible; private, legal and transaction routes are not
+  ---
+  duration_ms: 0.208791
+  type: 'test'
+  ...
+# Subtest: schema translates human text but preserves author identities, dates and asset URLs
+ok 7 - schema translates human text but preserves author identities, dates and asset URLs
+  ---
+  duration_ms: 0.174792
+  type: 'test'
+  ...
+# Subtest: localized page identities change language without splitting the shared product identity
+ok 8 - localized page identities change language without splitting the shared product identity
+  ---
+  duration_ms: 0.08275
+  type: 'test'
+  ...
+# Subtest: language selection changes every responsive screenshot, video and drawing download
+ok 9 - language selection changes every responsive screenshot, video and drawing download
+  ---
+  duration_ms: 31.921708
+  type: 'test'
+  ...
+# Subtest: missing, draft and wrong-region assets block localized publication
+ok 10 - missing, draft and wrong-region assets block localized publication
+  ---
+  duration_ms: 0.255167
+  type: 'test'
+  ...
+# Subtest: regional drawings replace the original image aspect ratio as well as its URL
+ok 11 - regional drawings replace the original image aspect ratio as well as its URL
+  ---
+  duration_ms: 6.63625
+  type: 'test'
+  ...
+# Subtest: regional previews replace obsolete units in alt text before ordinary translation
+ok 12 - regional previews replace obsolete units in alt text before ordinary translation
+  ---
+  duration_ms: 7.486292
+  type: 'test'
+  ...
+# Subtest: explicitly neutral assets and third-party links retain their URLs
+ok 13 - explicitly neutral assets and third-party links retain their URLs
+  ---
+  duration_ms: 0.1245
+  type: 'test'
+  ...
+# Subtest: screenshots and workflow posters outside guides are still subject to locale coverage
+ok 14 - screenshots and workflow posters outside guides are still subject to locale coverage
+  ---
+  duration_ms: 0.0845
+  type: 'test'
+  ...
+# Subtest: source and translated file hashes must match before activating a media pack
+ok 15 - source and translated file hashes must match before activating a media pack
+  ---
+  duration_ms: 0.74525
+  type: 'test'
+  ...
+# Subtest: the checked-in German regional library resolves exact verified PDF and preview bytes
+ok 16 - the checked-in German regional library resolves exact verified PDF and preview bytes
+  ---
+  duration_ms: 132.553416
+  type: 'test'
+  ...
+# Subtest: German form copy and downloads are reconciled without mislabelling an English or French file
+ok 17 - German form copy and downloads are reconciled without mislabelling an English or French file
+  ---
+  duration_ms: 14.699542
+  type: 'test'
+  ...
+# Subtest: regional exercise text changes source quantities before translation and refuses stale instructions
+ok 18 - regional exercise text changes source quantities before translation and refuses stale instructions
+  ---
+  duration_ms: 7.219292
+  type: 'test'
+  ...
+# Subtest: German electrical table matches the regional drawing instead of retaining US subsets
+ok 19 - German electrical table matches the regional drawing instead of retaining US subsets
+  ---
+  duration_ms: 22.816042
+  type: 'test'
+  ...
+# Subtest: only an explicitly completed route enables a partial locale pack
+ok 20 - only an explicitly completed route enables a partial locale pack
+  ---
+  duration_ms: 0.831458
+  type: 'test'
+  ...
+# Subtest: regional copy overrides are scoped and unused source text fails the build
+ok 21 - regional copy overrides are scoped and unused source text fails the build
+  ---
+  duration_ms: 0.212334
+  type: 'test'
+  ...
+# Subtest: verification dates and formulas are source-bound and not translated a second time
+ok 22 - verification dates and formulas are source-bound and not translated a second time
+  ---
+  duration_ms: 41.471708
+  type: 'test'
+  ...
+# Subtest: article schema images follow the same verified locale mapping while publisher logos remain shared
+ok 23 - article schema images follow the same verified locale mapping while publisher logos remain shared
+  ---
+  duration_ms: 0.54075
+  type: 'test'
+  ...
+# Subtest: regional download references require the intended link, locale path and exact file bytes
+ok 24 - regional download references require the intended link, locale path and exact file bytes
+  ---
+  duration_ms: 22.052834
+  type: 'test'
+  ...
+# Subtest: a source-bound bibliography row becomes a verified regional download without HTML injection
+ok 25 - a source-bound bibliography row becomes a verified regional download without HTML injection
+  ---
+  duration_ms: 11.943375
+  type: 'test'
+  ...
+# Subtest: German flooring downloads resolve to verified regional files without activating incomplete media
+ok 26 - German flooring downloads resolve to verified regional files without activating incomplete media
+  ---
+  duration_ms: 4.547042
+  type: 'test'
+  ...
+# Subtest: German summary links target the regional drawing without local paths
+ok 27 - German summary links target the regional drawing without local paths
+  ---
+  duration_ms: 8.296167
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 682.785167

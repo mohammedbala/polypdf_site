@@ -1,0 +1,145 @@
+{
+  "status": "complete",
+  "locale": "de-DE",
+  "region": "DE",
+  "evidence": "/localized-media/de/guides/count/verification.json",
+  "elements": [
+    {
+      "selector": ".blog-verification > div:nth-child(1) dd",
+      "source": "Aligned with PolyPDF 1.5.1 (build 23) on September 7, 2026. Earlier walkthroughs and screenshots retain their versions below.",
+      "target": "Deutscher Symbolzählungsdurchlauf im lokalen Entwicklungsstand 1.6.17 Build 84; kein Nachweis eines veröffentlichten Installers."
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(2) dd",
+      "source": "September 3, 2026",
+      "target": "20. Oktober 2026"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(3) dd",
+      "source": "PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)",
+      "target": "PolyPDF 1.6.17 Build 84 — deutscher lokaler Entwicklungsstand"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(4) dd",
+      "source": "macOS and Windows",
+      "target": "Für diesen Durchlauf geprüft: macOS"
+    },
+    {
+      "selector": ".blog-formula[aria-label=\"What the run produced\"] code",
+      "source": "5 small symbols → 5 reviewed candidates → 5 committed counts",
+      "target": "17 Treffer − 1 Legendensymbol = 16 gezählte Zuluftauslässe"
+    },
+    {
+      "selector": "#construction-example-electrical .construction-example-sheets bdi",
+      "source": "E101 · E601",
+      "target": "E101 · E501"
+    },
+    {
+      "selector": "#construction-example-electrical figcaption bdi",
+      "source": "06-Electrical-Lighting-and-Power.pdf",
+      "target": "06-Beleuchtung-und-Elektro.pdf"
+    }
+  ],
+  "downloads": [
+    {
+      "selector": ".blog-sources li:nth-child(1)",
+      "source": "PolyPDF 1.4.0 (build 17) in-app guide: Symbol Search + Auto-Count — UI steps, on-device matching behavior, and review controls. PolyPDF 1.4.1 changed access to require Pro without changing the captured search interface.",
+      "url": "/localized-media/de/samples/count/q101-symbolzaehlung.pdf",
+      "label": "Q-101: Deutschen A2-Übungsplan herunterladen (PDF)",
+      "note": "Fiktiver Büroausbau im Maßstab 1:50 mit 16 Zuluftauslässen im Grundriss und einem identischen Legendensymbol. Dies ist die unveränderte Zeichnung aus den App-Aufnahmen.",
+      "sha256": "52cc449e5cd935ef6db14aec817243bcc10175fa9831ef56ad919f74fef38332"
+    },
+    {
+      "selector": ".blog-sources li:nth-child(2)",
+      "source": "Screenshots in this guide: PolyPDF 1.4.0 on our demo plan — The search returned five matches, and Count committed five sequential markers in one linked series. The second screenshot shows a committed 12-marker series beside its worksheet total.",
+      "url": "/localized-media/de/samples/count/geometry.json",
+      "label": "Q-101: Geometrie-Prüfprotokoll herunterladen (JSON)",
+      "note": "Unabhängig aus der PDF gelesene Positionen der 17 tatsächlich gezeichneten Symbole. Die Referenz unterscheidet 16 Plansymbole und eine Legendenkopie; sie ist kein App-Export.",
+      "sha256": "43faefb541ec8f7ebd8e29104e6da0b1d292d05f12d5acadfe221981c5099117"
+    }
+  ],
+  "text": {
+    "Choose Symbol Search, set the pages and matching options, then drag a close box around one clean example. PolyPDF highlights candidate matches without changing the document. Include or exclude each candidate, then choose Count to create one linked Count series. Treat the result as assisted counting: legends, schedules, similar symbols, and low-quality scans can all need manual correction.": "Öffnen Sie den deutschen Übungsplan Q-101 und wählen Sie Symbolsuche. Geben Sie als Suchbegriff „Zuluftauslässe Q-101“ ein, wählen Sie Aktuelle Seite und rahmen Sie das ZL-Symbol in der Legende eng ein. Die Suche liefert 17 Treffer. Schließen Sie die Legendenkopie aus und prüfen Sie die 16 Plansymbole. Erst Zähle 16 erzeugt die verknüpfte Zählserie. Unter Messungen › Aufzeichnungen zeigt die Mengenermittlung anschließend Menge 16 und Summe 16.",
+    "PolyPDF dark-mode Symbol Search review showing five matched symbols, five selected candidates, and a Count 5 action": "Deutsche PolyPDF-Symbolsuche auf Q-101 mit 17 Treffern, 16 ausgewählten Plansymbolen und ausgeschlossenem Legendensymbol",
+    "Scrollable image: PolyPDF dark-mode Symbol Search review showing five matched symbols, five selected candidates, and a Count 5 action": "Scrollbares Bild: Deutsche PolyPDF-Symbolsuche auf Q-101 mit 17 Treffern, 16 ausgewählten Plansymbolen und ausgeschlossenem Legendensymbol",
+    "Symbol Search in PolyPDF 1.4.0, paused at the review step after the matcher returned “5 matches — 5 selected”. Nothing reaches the document until you press Count, so this is the moment to include or exclude each candidate.": "Tatsächliche deutsche Mac-Aufnahme in PolyPDF 1.6.17 Build 84 (lokaler Entwicklungsstand): 17 Treffer, davon 16 ausgewählt. Das identische ZL-Symbol in der Legende ist ausgeschlossen. Vor Zähle 16 sind die Treffer nur eine Prüfansicht; die Zeichnung enthält noch keine Zählmarkierungen.",
+    "The drawing is our demo sheet rather than a real project.": "Grundlage: von PolyPDF erstellter fiktiver deutscher A2-Übungsplan Q-101 für einen Büroausbau, Maßstab 1:50. Der Plan ist keine Ausführungsplanung und kein Normennachweis.",
+    "Open the drawing and go to the sheet that contains a clean example of the item you want to count.": "Öffnen Sie den unten verlinkten deutschen A2-Übungsplan Q-101. Er enthält 16 Zuluftauslässe im Grundriss und eine identische Kopie in der Legende.",
+    "Choose Symbol Search from the measurement toolbar or from Tools > Measure. The Search sidebar switches to its Symbol view.": "Wählen Sie Symbolsuche in der Werkzeugleiste. Die Seitenleiste Suchen zeigt die Symbolansicht.",
+    "Enter a subject that will make sense in the takeoff later, such as Level 2 Supply Diffuser rather than a generic Auto Count label.": "Geben Sie im Feld Suchbegriff „Zuluftauslässe Q-101“ ein. Dieser Text wird zum Betreff der späteren Zählserie.",
+    "Choose Current Page, All Pages, or a specific page range. Start narrow when title blocks and legends repeat across many sheets.": "Wählen Sie Aktuelle Seite. Die hier geprüfte Übung umfasst nur das eine Blatt Q-101.",
+    "Set confidence, Match rotations, and scale tolerance. Keep the defaults for a first pass unless the drawing gives you a reason to broaden the search.": "Lassen Sie für diesen Durchlauf die Vorgaben unverändert: Vertrauen 84 %, Drehungen berücksichtigen und 15 % Größentoleranz. Andere Pläne können angepasste Einstellungen erfordern.",
+    "Drag a tight box around one complete symbol. Avoid including its identifier, nearby walls, or dimension lines when those elements vary between placements.": "Ziehen Sie einen engen Rahmen um das vollständige ZL-Symbol in der Legende. Lassen Sie die Beschriftung und benachbarte Linien außerhalb des Rahmens.",
+    "Review the highlights. Click a candidate to include or exclude it, or use Previous and Next to inspect them one at a time. Candidates overlapping an existing Count are marked Already counted and excluded by default.": "Prüfen Sie alle 17 hervorgehobenen Treffer. Klicken Sie die Legendenkopie an, um sie auszuschließen. Es bleiben 16 ausgewählte Plansymbole; in der Legende darf keine zu zählende Position verbleiben.",
+    "Choose Count only after the selected total matches what you can defend. PolyPDF converts the accepted candidates into one linked Count series under the subject you entered.": "Wählen Sie Zähle 16. Öffnen Sie Messungen › Aufzeichnungen und prüfen Sie in der Mengenermittlung die Zeile „Zuluftauslässe Q-101“: Menge 16 und Summe 16. Die roten Häkchen bilden eine verknüpfte Serie; ihre Nummernbeschriftung ist in dieser Aufnahme ausgeschaltet.",
+    "Worked example: five symbols, five reviewed matches": "Rechenbeispiel: 17 Treffer prüfen, 16 Plansymbole zählen",
+    "The sheet in the screenshot above carries five identical small symbols, plus one oversized copy of the same graphic further down the page. Boxing one of the small symbols returns exactly those five candidates; the oversized copy stays out of the set.": "Q-101 zeigt 16 identische ZL-Symbole an den vorgesehenen Positionen im Bürogrundriss und eine zusätzliche Kopie in der Legende. Das eng eingerahmte Legendensymbol liefert mit den Vorgaben 17 Treffer. Alle 17 Hervorhebungen wurden mit den unabhängig aus der PDF gelesenen Symbolpositionen verglichen.",
+    "All five candidates are the symbol being counted, so all five stay selected and Count 5 commits them. The five markers arrive on the page as one linked series, sharing the subject that was typed into the search and numbered in sequence. On a project drawing, the include-and-exclude pass is where the time goes: match quality depends on the sheet you are working from.": "Die Legendenkopie beschreibt das Symbol und gehört nicht zur eingebauten Menge. Nach ihrem Ausschluss zeigt die Seitenleiste 17 Treffer und 16 ausgewählt. Zähle 16 erzeugt 16 Markierungen unter dem gemeinsamen Betreff „Zuluftauslässe Q-101“. Jede Markierung liegt an einem der 16 Plansymbole; die Mengenermittlung zeigt dieselbe Anzahl. Prüfen Sie bei eigenen Zeichnungen jeden Treffer und den vollständigen Zählumfang erneut.",
+    "What the run produced": "Ergebnis des Durchlaufs",
+    "A count is only as good as its scope. Check for legend and detail copies of the symbol before the total goes anywhere.": "Die Legende bleibt außerhalb der Zählmenge. Das Prüfen und Ausschließen geschieht vor dem Übernehmen der Markierungen in die Zeichnung.",
+    "PolyPDF dark mode showing 12 committed Supply diffuser count markers and a worksheet total of 12 with the legend excluded": "Deutsche PolyPDF-Oberfläche mit 16 gesetzten Zählmarkierungen auf Q-101 und Mengenermittlung mit Menge 16 und Summe 16",
+    "Scrollable image: PolyPDF dark mode showing 12 committed Supply diffuser count markers and a worksheet total of 12 with the legend excluded": "Scrollbares Bild: Deutsche PolyPDF-Oberfläche mit 16 gesetzten Zählmarkierungen auf Q-101 und Mengenermittlung mit Menge 16 und Summe 16",
+    "A second sample sheet, after its count was committed: twelve Supply diffuser markers on the plan and a worksheet total of 12, with the legend copy of the symbol left out. The markers are one linked Count series, so the page and the worksheet report the same number.": "Derselbe deutsche Q-101-Plan nach Zähle 16: 16 rote Häkchen im Grundriss, keine Markierung auf der Legendenkopie. Die ausgewählte verknüpfte Serie hat den Betreff „Zuluftauslässe Q-101“. Die Mengenermittlung unter Aufzeichnungen zeigt Menge 16 und Summe 16. Nummernbeschriftungen sind ausgeschaltet; intern bleibt die Serie fortlaufend nummeriert.",
+    "Count the Willow Creek lighting plan": "Zusätzliche Übung: Beleuchtungsplan Bürgerhaus am Lindenpark",
+    "Open E101 and identify the luminaire symbol in the legend. Count only the plan, excluding legend and detail examples.": "Öffnen Sie den deutschen Elektroplan E101 und identifizieren Sie das Leuchtensymbol in der Legende. Zählen Sie nur den Grundriss; schließen Sie Legenden- und Detailkopien aus.",
+    "Review 24 plan luminaires, including 4 emergency luminaires. The emergency subset is included in 24, not added to it.": "Die Referenz für E101 umfasst 24 Leuchten, 12 Steckdosen und 8 Schalter. Halten Sie diese drei Symbolarten als getrennte Mengen fest.",
+    "Calibrate the 20 ft reference. Trace the LP-1 / CKTS 1, 3, 5, 7 diagram from the panel, then north and east: 8 + 38 = 46 ft.": "Kalibrieren Sie die 5,00-m-Referenz und prüfen Sie den im deutschen Plan angegebenen schematischen Leitungsweg von 34,50 m. E501 ergänzt das Stromlaufschema und die Leuchtenliste.",
+    "The dashed wiring is a circuit diagram, not a conduit takeoff. Pro is required for Symbol Search; review every candidate. The 24 fixtures and 46 ft are drawing references, not app results.": "Die gestrichelte Verbindung ist ein schematischer Leitungsweg, keine ausführungsreife Kabellänge. Die 24 Leuchten, 12 Steckdosen, 8 Schalter und 34,50 m sind Zeichnungsreferenzen. Der oben gezeigte App-Durchlauf prüft ausschließlich die 16 Zuluftauslässe auf Q-101.",
+    "Drawing reference values, not new app test results. Work on a copy and check your own saved output.": "Diese Zusatzübung enthält Zeichnungsreferenzen und keine neuen App-Ergebnisse für E101. Arbeiten Sie auf einer Kopie und prüfen Sie die gespeicherte Ausgabe gesondert.",
+    "Sources and further reading": "Quellen und Downloads",
+    "Release review": "Stand des Beispiels",
+    "Walkthrough verified": "Ablauf geprüft",
+    "Translated from the English edition. Screenshots and app control names may remain in English. Original example units and verification dates are preserved. Prices are in USD; checkout, account, release feeds, and policies are in English.": "Diese Seite verwendet deutsche App-Aufnahmen und deutsche Übungspläne. Der Symbolzählungsdurchlauf wurde im lokalen Mac-Entwicklungsstand geprüft. Windows, natives iPad, Speichern, Wiederöffnen und Export wurden für diesen Durchlauf nicht geprüft. Preise sind in USD; Checkout, Konto, Release-Feeds und Richtlinien sind auf Englisch.",
+    "The exercise above uses the Willow Creek library. Earlier walkthrough screenshots and saved examples below retain their original drawings, versions, and quantities.": "Die Zusatzübung oben verwendet den deutschen Elektroplan E101 mit Leuchten, Steckdosen und Schaltern. Die App-Aufnahmen und der nachfolgende Durchlauf verwenden ausschließlich Q-101 mit 16 Zuluftauslässen. Die beiden Pläne haben getrennte Referenzmengen.",
+    "Practice a count with known reference quantities": "Mit dem Plan aus den Aufnahmen üben",
+    "The separate E-101 drawing contains 8 Type A fixtures and 4 Type B fixtures. Its source counts are reference quantities, not verified automatic results; the screenshots in this guide use different demo sheets. The Symbol Search exercise requires Pro.": "Laden Sie Q-101 herunter und wiederholen Sie den gezeigten Durchlauf: 17 Treffer einschließlich Legende, nach der Prüfung 16 ausgewählte Plansymbole und eine verknüpfte Serie mit Menge 16. Für die Symbolsuche benötigen Sie Pro. Die Quellzeichnung bleibt unverändert; arbeiten Sie zum Speichern auf einer Kopie.",
+    "Symbol Search can turn one boxed example into a reviewable set of count candidates. The useful result comes from pairing that automation with a deliberate human check before anything is added to the PDF.": "Die Symbolsuche vergleicht ein eingerahmtes Muster mit der Zeichnung und schlägt passende Stellen vor. Eine belastbare Anzahl entsteht erst, wenn Sie alle Treffer prüfen und die tatsächlich benötigten Positionen übernehmen.",
+    "What Symbol Search actually does": "So arbeitet die Symbolsuche",
+    "Symbol Search compares the visual sample you box with rendered regions of the pages you choose. It is useful for repeated plan marks such as diffusers, receptacles, fixtures, valves, or keyed details. It does not read the designer's intent, understand a legend, or decide which candidates belong in an estimate. The output is a set of proposed matches for you to review.": "Die Symbolsuche vergleicht das eingerahmte Muster mit gerenderten Bereichen der gewählten Seiten. Sie eignet sich für wiederkehrende Plansymbole wie Luftauslässe, Steckdosen, Leuchten oder Ventile. Sie erkennt weder die Planungsabsicht noch den Inhalt einer Legende und entscheidet nicht, welche Positionen zur Mengenermittlung gehören. Sie liefert Treffer zur Prüfung.",
+    "Matching runs on the device. You can search the current page, all pages, or a page range and adjust confidence, rotation matching, and scale tolerance. Until you press Count, the candidates are only a review overlay: the document and its takeoff records have not changed.": "Die Suche läuft auf dem Gerät. Sie können die aktuelle Seite, alle Seiten oder einen Seitenbereich wählen und Schwellenwert, Drehungen sowie Größentoleranz einstellen. Bis zum Übernehmen bleiben die Treffer eine vorübergehende Prüfansicht; die Anmerkungen und Mengenaufzeichnungen sind unverändert.",
+    "Use a human check even when every highlight looks plausible at first glance. A title-block symbol can be graphically identical to a plan symbol while representing no installed quantity.": "Prüfen Sie jeden Treffer, auch wenn die Hervorhebungen zunächst plausibel wirken. Ein grafisch identisches Symbol im Plankopf oder in der Legende stellt keine eingebaute Menge dar.",
+    "Step by step: run a symbol count": "Schritt für Schritt: Symbole auf Q-101 zählen",
+    "Tune the search without hiding uncertainty": "Sucheinstellungen gezielt anpassen",
+    "Symbol Search controls and their review tradeoffs": "Einstellungen der Symbolsuche und erforderliche Nachprüfung",
+    "Control": "Einstellung",
+    "When to change it": "Wann ändern?",
+    "What to re-check": "Was anschließend prüfen?",
+    "Confidence": "Vertrauen",
+    "Lower it when real symbols are being missed; raise it when many look-alikes appear.": "Senken Sie den Schwellenwert, wenn richtige Symbole fehlen; erhöhen Sie ihn bei vielen ähnlichen Fehlertreffern.",
+    "A lower threshold usually increases both recall and false positives.": "Ein niedrigerer Schwellenwert findet meist mehr richtige Symbole, kann aber auch mehr Fehlertreffer liefern.",
+    "Match rotations": "Drehungen berücksichtigen",
+    "Turn it on when the same mark appears at different orientations.": "Aktivieren Sie diese Option, wenn dasselbe Symbol in unterschiedlichen Ausrichtungen vorkommt.",
+    "Rotated linework or directional symbols may still need closer inspection.": "Prüfen Sie gedrehte Linien und richtungsabhängige Symbole besonders sorgfältig.",
+    "Scale tolerance": "Größentoleranz",
+    "Broaden it when the same symbol is plotted at slightly different sizes.": "Erweitern Sie die Toleranz, wenn dasselbe Symbol in leicht unterschiedlichen Größen dargestellt ist.",
+    "Similar symbols at other sizes can enter the candidate set.": "Ähnliche Symbole anderer Größe können zusätzlich in die Trefferliste gelangen.",
+    "Page scope": "Seitenbereich",
+    "Use a range for the discipline and revision you are actually counting.": "Begrenzen Sie die Suche auf das benötigte Gewerk und den passenden Planstand.",
+    "Legends, schedules, cover sheets, and duplicated details can inflate totals.": "Legenden, Listen, Deckblätter und mehrfach dargestellte Details können die Anzahl erhöhen.",
+    "A cleaner sample is usually more valuable than repeatedly moving the confidence slider. If the box contains a room boundary, label, or hatch, the search may favor those pixels instead of the symbol. Capture one complete mark with as little changing context as practical.": "Ein sauber gewähltes Muster hilft oft mehr als wiederholtes Verschieben des Schwellenwerts. Enthält der Rahmen eine Raumkante, Beschriftung oder Schraffur, kann die Suche diese Elemente bevorzugen. Rahmen Sie ein vollständiges Symbol mit möglichst wenig wechselnder Umgebung ein.",
+    "Quality checks before and after Count": "Qualität vor und nach dem Übernehmen prüfen",
+    "Scan every highlighted location at a readable zoom, especially dense areas where candidates overlap other linework.": "Prüfen Sie jede hervorgehobene Stelle bei gut lesbarer Vergrößerung, besonders in dichten Bereichen mit überlagerter Linienführung.",
+    "Check legends, key plans, schedules, enlarged details, and title blocks for non-installation copies of the symbol.": "Prüfen Sie Legenden, Übersichtspläne, Listen, vergrößerte Details und Planköpfe auf Symbolkopien, die nicht zur eingebauten Menge gehören.",
+    "Compare the accepted total with room-by-room or zone-by-zone expectations instead of trusting one sheet-wide number.": "Vergleichen Sie die Anzahl je Raum oder Zone mit Ihrer Erwartung, statt nur einer Gesamtsumme für das Blatt zu vertrauen.",
+    "Look for already-counted markers before adding a second series over the same items.": "Prüfen Sie vorhandene Zählmarkierungen, bevor Sie eine zweite Serie auf dieselben Positionen setzen.",
+    "After committing, inspect the linked Count series in the takeoff and Markup Table and give it a specific subject.": "Prüfen Sie nach dem Übernehmen die verknüpfte Zählserie in der Mengenermittlung und Anmerkungstabelle und vergeben Sie einen eindeutigen Betreff.",
+    "Save a review copy and preserve the source drawing so the basis of the count remains auditable.": "Speichern Sie eine separate Prüfkopie und bewahren Sie die Quellzeichnung auf. Speichern und Wiederöffnen sind im hier gezeigten Durchlauf nicht geprüft.",
+    "Scanned, faint, skewed, compressed, or heavily marked-up sheets can reduce match quality. When the candidate set cannot be reviewed confidently, use manual Count or split the work into smaller page regions and reconcile the totals.": "Scans, blasse oder schiefe Vorlagen, Kompressionsartefakte und viele vorhandene Anmerkungen können die Trefferqualität verschlechtern. Lassen sich die Ergebnisse nicht sicher prüfen, zählen Sie manuell oder bearbeiten Sie kleinere Bereiche und gleichen Sie die Teilsummen ab.",
+    "Free-tier behavior and downstream use": "Pro-Zugang und weitere Verwendung der Mengen",
+    "Symbol Search is a PolyPDF Pro workflow in the current release. Once Pro access admits a search, the accepted candidates can be committed as one linked Count series without a separate per-search count cap. The Free app separately supports up to three hand-created measurements per document.": "Die Symbolsuche erfordert PolyPDF Pro. Nach Freigabe der Suche lassen sich die akzeptierten Treffer als eine verknüpfte Zählserie übernehmen; es gibt keine zusätzliche Mengenobergrenze je Suche. Die kostenlose App erlaubt unabhängig davon bis zu drei von Hand erstellte Messungen pro Dokument.",
+    "Once committed, the matches behave as one linked Count series. Use a subject that survives export, then review the rows with the rest of the document's markups. If the total will support procurement or pricing, export the relevant takeoff or markup data and retain the reviewed PDF with it; the exported number should never be separated from its scope and revision.": "Nach dem Übernehmen bilden die Markierungen eine verknüpfte Zählserie. Verwenden Sie einen eindeutigen Betreff und prüfen Sie die Zeile zusammen mit den übrigen Anmerkungen. Für Beschaffung oder Kalkulation sollten exportierte Mengen gemeinsam mit der geprüften PDF, dem Zählumfang und dem Planstand aufbewahrt werden. Der hier dokumentierte Durchlauf prüft die Mengenermittlung auf dem Bildschirm, keinen Export.",
+    "No. Search results are candidates in a review overlay. The document changes only after you choose Count to commit the selected candidates.": "Nein. Die Treffer erscheinen zunächst nur in einer vorübergehenden Prüfansicht. Erst das Übernehmen mit Zähle fügt die ausgewählten Markierungen zur Zeichnung hinzu.",
+    "No. PolyPDF proposes visual matches, but a person must decide whether each match belongs in the requested scope. Legends and similar graphics are common reasons to exclude a candidate.": "Nein. PolyPDF schlägt visuelle Treffer vor. Sie entscheiden, welche davon zum gefragten Umfang gehören. Legendenkopien und ähnliche Symbole müssen häufig ausgeschlossen werden.",
+    "No. Symbol Search requires PolyPDF Pro in the current release. Free still includes markup, review, calibration, and up to three hand-created measurements per document.": "Nein. Die Symbolsuche erfordert PolyPDF Pro. Die kostenlose Version enthält Anmerkungen, Planprüfung, Kalibrierung und bis zu drei von Hand erstellte Messungen pro Dokument.",
+    "The sample box, page scope, confidence, rotation setting, scale tolerance, scan quality, and surrounding linework all affect the candidate set. Capture a cleaner sample and review the matching controls one at a time.": "Musterrahmen, Seitenbereich, Schwellenwert, Drehungen, Größentoleranz, Scanqualität und umgebende Linien beeinflussen die Treffer. Wählen Sie ein sauberes Muster und ändern Sie jeweils nur eine Einstellung, bevor Sie die Ergebnisse erneut prüfen."
+  },
+  "links": [
+    {
+      "selector": "a[href=\"/de/visual-search-pdf-count/#check-symbol-count\"]",
+      "source": "/de/visual-search-pdf-count/#check-symbol-count",
+      "url": "/localized-media/de/samples/count/q101-symbolzaehlung.pdf",
+      "label": "Deutschen Q-101-Übungsplan herunterladen (PDF)",
+      "sha256": "52cc449e5cd935ef6db14aec817243bcc10175fa9831ef56ad919f74fef38332"
+    }
+  ]
+}

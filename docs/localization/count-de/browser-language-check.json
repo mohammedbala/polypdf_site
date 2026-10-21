@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "surface": "Codex in-app browser",
+  "english": {
+    "hero": "/static/media/symbol-search-review-v1-4-dark-web.1908c6bf47d7d6f80386.png",
+    "lang": "en",
+    "pdf": "/visual-search-pdf-count/#check-symbol-count"
+  },
+  "german": {
+    "formula": "17 Treffer − 1 Legendensymbol = 16 gezählte Zuluftauslässe",
+    "images": [
+      {
+        "alt": "Deutsche PolyPDF-Symbolsuche auf Q-101 mit 17 Treffern, 16 ausgewählten Plansymbolen und ausgeschlossenem Legendensymbol",
+        "height": 1073,
+        "src": "/localized-media/de/guides/count/symbolsuche-legende-ausgeschlossen.png",
+        "width": 1710
+      },
+      {
+        "alt": "Deutsche PolyPDF-Oberfläche mit 16 gesetzten Zählmarkierungen auf Q-101 und Mengenermittlung mit Menge 16 und Summe 16",
+        "height": 1073,
+        "src": "/localized-media/de/guides/count/zaehlung-16-mengenermittlung.png",
+        "width": 1710
+      }
+    ],
+    "lang": "de",
+    "pdf": "/localized-media/de/samples/count/q101-symbolzaehlung.pdf"
+  },
+  "checks": [
+    "English → Deutsch swaps the two app screenshots and direct Q-101 PDF link",
+    "Deutsch → English restores original media and exercise",
+    "English → Deutsch restores verified regional assets",
+    "Both app images loaded at 1710 × 1073 in the real browser",
+    "German formula and result caption visually reviewed at the default narrow viewport; images retain horizontal panning",
+    "Direct Q-101 PDF downloaded through the browser"
+  ],
+  "download": {
+    "file": "q101-symbolzaehlung.pdf",
+    "sha256": "52cc449e5cd935ef6db14aec817243bcc10175fa9831ef56ad919f74fef38332",
+    "matchesRegionalSource": true
+  }
+}
