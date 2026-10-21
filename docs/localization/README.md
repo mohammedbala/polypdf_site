@@ -1,10 +1,10 @@
 # Regional walkthrough media
 
-This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has 76 verified asset mappings and four complete routes: [calibration](calibration-de/README.md), [area/cutouts/depth](area-de/README.md), [symbol count](count-de/README.md), and [drawing comparison](compare-de/README.md). Each uses German app captures, matching regional PDFs and verified instructions in the normal local build. The rest of the pack remains incomplete. Nothing has been published.
+This branch implements media routing and Germany’s regional construction library, form, evaluation kit, electrical reference worksheet and takeoff references for the German-first product localization plan. The German pilot has **89 verified asset mappings and eight complete routes**: [calibration](calibration-de/README.md), [area/cutouts/depth](area-de/README.md), [symbol count](count-de/README.md), [drawing comparison](compare-de/README.md), [markup review](markup-de/README.md), [OCR](ocr-de/README.md), [forms](forms-de/README.md), and [interactive stamps](stamps-de/README.md). Each uses German app captures, matching regional PDFs and verified instructions in the normal local build. The rest of the pack remains incomplete. Nothing has been published.
 
-The app repository’s detailed scope, evidence and remaining implementation plan is at `docs/audits/global-localization-2026-10-20/README.md`.
+The app repository’s detailed scope, evidence and remaining implementation plan is at `docs/audits/global-localization-2026-10-20/README.md`. The earlier locked-screen markup draft has since completed native Save, exports and full-process reopening; its history remains in the route-specific audit.
 
-The [German markup-table draft](markup-de/README.md) adds a verified X101 practice PDF, 97 source-bound copy overrides and two actual German app captures. Status/comment editing, five readable columns, metric paper dimensions and the two-row filter are verified. Native Save, exports and fresh-process reopen remain pending because the Mac was locked. This draft does not add a completed route or activate new media mappings.
+The latest stamp increment reuses the unchanged English build and toolkit outputs, regenerates all 240 editorial translations, and passes 14 media/export tests, 11 international/consent tests and the 240-page international verifier. Actual browser language switching and two PDF downloads also pass. Per-route receipts retain each capture’s original build and platform scope.
 
 ## Registry and inventory
 

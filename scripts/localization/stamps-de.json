@@ -1,0 +1,113 @@
+{
+  "status": "complete",
+  "locale": "de-DE",
+  "region": "DE",
+  "evidence": "/localized-media/de/guides/stamps/verification.json",
+  "elements": [
+    {
+      "selector": ".blog-verification > div:nth-child(1) dd",
+      "source": "Aligned with PolyPDF 1.5.1 (build 23) on September 7, 2026.",
+      "target": "Deutscher Stempel-Durchlauf im lokalen Entwicklungsstand 1.6.17 Build 84; kein Nachweis eines veröffentlichten Installers."
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(2) dd",
+      "source": "September 7, 2026",
+      "target": "21. Oktober 2026"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(3) dd",
+      "source": "PolyPDF 1.5.1 (build 23); screenshots from the signed macOS release",
+      "target": "PolyPDF 1.6.17 Build 84 — deutscher lokaler Entwicklungsstand"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(4) dd",
+      "source": "macOS and Windows",
+      "target": "Für diesen Durchlauf geprüft: macOS"
+    }
+  ],
+  "text": {
+    "Markup & Review": "Anmerkungen und Planprüfung",
+    "Release review": "Stand der Anleitung",
+    "Walkthrough verified": "Ablauf geprüft",
+    "Translated from the English edition. Screenshots and app control names may remain in English. Original example units and verification dates are preserved. Prices are in USD; checkout, account, release feeds, and policies are in English.": "Dieser deutsche Übungsablauf verwendet deutsche App-Aufnahmen und eine metrische Beispielzeichnung für Deutschland. Geprüft wurde der lokale Mac-Entwicklungsstand; andere Anleitungen können noch englische Inhalte enthalten. Preise sind in USD; Kaufabwicklung, Konto, Release-Feeds und Richtlinien sind auf Englisch.",
+    "Build interactive PDF stamps in PolyPDF 1.5.1. Arrange fields, prompt for a reviewer, add an automatic date, and save reusable stamps on Mac or Windows.": "Interaktive Prüfstempel in der deutschen PolyPDF-Oberfläche erstellen: leere Vorlage, Pflichtangabe, automatisches Datum und gespeicherte deutsche Beispiel-PDF.",
+    "Open a PDF, open the arrow beside Stamp, and choose Create Interactive Stamp… Start with the empty canvas, add fields, set their values and appearance, and arrange them in the preview. Leave Add to toolset unchecked for a one-off stamp, or check it to save a reusable template. Choose Insert on Page, click the drawing, complete the placement prompt, and choose Place Stamp.": "Öffnen Sie die deutsche Übungszeichnung und im Stempel-Menü den interaktiven Stempel-Editor. Erstellen Sie eine 300 × 140 pt große Vorlage mit Prüfvermerk, prüfender Person und aktuellem Datum. Lassen Sie Zum Werkzeugset hinzufügen eingeschaltet. Wählen Sie Auf Seite einfügen, klicken Sie in den freien Bereich unterhalb des Plans und geben Sie Musterprüfung ein. Speichern Sie eine neue PDF und öffnen Sie sie nach einem vollständigen App-Neustart erneut.",
+    "A review stamp can keep a fixed heading while asking for a different reviewer on every placement. This example builds a simple REVIEWED stamp with a reviewer and an automatic date on the sample drawing included with PolyPDF.": "Dieses Beispiel erstellt den wiederverwendbaren Stempel Planprüfung - Übung auf einer fiktiven deutschen A2-Zeichnung im Maßstab 1:50. GEPRÜFT - ÜBUNG bleibt fest, die prüfende Person wird bei jeder Platzierung neu abgefragt und das Datum automatisch eingesetzt. Die Aufnahmen, die Vorlage und die gespeicherte PDF gehören zu demselben deutschen Mac-Durchlauf.",
+    "PolyPDF 1.5.1 interactive stamp builder showing a REVIEWED heading, Morgan Lee reviewer, automatic date, and checked Add to toolset option": "Deutscher PolyPDF-Stempel-Editor mit drei Feldern auf einer 300 × 140 pt großen Vorlage und aktivierter Speicherung im Werkzeugset",
+    "Scrollable image: PolyPDF 1.5.1 interactive stamp builder showing a REVIEWED heading, Morgan Lee reviewer, automatic date, and checked Add to toolset option": "Scrollbares Bild: Deutscher PolyPDF-Stempel-Editor mit drei Feldern auf einer 300 × 140 pt großen Vorlage und aktivierter Speicherung im Werkzeugset",
+    "PolyPDF 1.5.1 new interactive stamp with a blank square canvas, no fields, and Add to toolset unchecked": "Neuer deutscher interaktiver Stempel mit leerer 240 × 240 pt großer Zeichenfläche und aktiviertem Zum Werkzeugset hinzufügen",
+    "Scrollable image: PolyPDF 1.5.1 new interactive stamp with a blank square canvas, no fields, and Add to toolset unchecked": "Scrollbares Bild: Neuer deutscher interaktiver Stempel mit leerer 240 × 240 pt großer Zeichenfläche und aktiviertem Zum Werkzeugset hinzufügen",
+    "PolyPDF Drawing Review placement dialog with required Reviewer entry, fixed REVIEWED heading, and automatic review date": "Deutscher Platzierungsdialog mit Pflichtangabe Prüfende Person, festem Prüfvermerk und automatisch eingesetztem Datum",
+    "Scrollable image: PolyPDF Drawing Review placement dialog with required Reviewer entry, fixed REVIEWED heading, and automatic review date": "Scrollbares Bild: Deutscher Platzierungsdialog mit Pflichtangabe Prüfende Person, festem Prüfvermerk und automatisch eingesetztem Datum",
+    "PolyPDF 1.5.1 showing the completed review stamp selected below the sample floor plan with stamp style controls visible": "Deutscher Prüfstempel GEPRÜFT - ÜBUNG mit Musterprüfung und 21.10.2026 im freien Bereich unter der A2-Übungszeichnung",
+    "Scrollable image: PolyPDF 1.5.1 showing the completed review stamp selected below the sample floor plan with stamp style controls visible": "Scrollbares Bild: Deutscher Prüfstempel GEPRÜFT - ÜBUNG mit Musterprüfung und 21.10.2026 im freien Bereich unter der A2-Übungszeichnung",
+    "The actual 1.5.1 builder with a 300 × 180 pt canvas and three fields. REVIEWED is fixed, Reviewer is prompted, and Review date uses Current date. Morgan Lee is fictional sample data.": "Der tatsächliche deutsche Editor mit einer 300 × 140 pt großen Vorlage und drei Textfeldern. Prüfvermerk ist fest, Prüfende Person ist eine erforderliche Eingabe ohne Vorgabewert und Prüfdatum verwendet das aktuelle Datum. Die Vorlage wird im Werkzeugset gespeichert.",
+    "Every new stamp starts with an empty 240 × 240 pt square. The open PDF and any selected annotation are not copied into the new stamp. Add to toolset starts unchecked.": "Ein neuer Stempel beginnt mit einer leeren 240 × 240 pt großen Fläche und ohne Felder. Zum Werkzeugset hinzufügen ist in diesem Entwicklungsstand bereits aktiviert. Weder die offene PDF-Seite noch eine ausgewählte Anmerkung wird in die Vorlage kopiert.",
+    "The placement prompt asks for Reviewer. The fixed heading and automatic date are shown but disabled because Ask when placing is off for those fields.": "Der Dialog verlangt eine prüfende Person. Hier wird der fiktive Wert Musterprüfung eingegeben. Prüfvermerk und Datum sind sichtbar, aber nicht bearbeitbar. Ohne Pflichtangabe verweigert die App die Platzierung.",
+    "The placed stamp is an ordinary PDF stamp annotation with a saved appearance. The editor’s field outlines are gone; the selection handles here are the normal controls for moving or resizing the placed annotation.": "Der 300 × 140 pt große Stempel liegt im freien Bereich unter dem Grundriss, rechts neben der Kalibrierungsstrecke und links vom Schriftfeld. Die deutsche Zeichnung bleibt unverändert. Gespeichert wird eine PDF-Stempelanmerkung mit sichtbarer Darstellung und den zugehörigen PolyPDF-Metadaten.",
+    "Start with a blank canvas": "Mit einer leeren Vorlage beginnen",
+    "Give each field a clear job": "Drei Felder mit klaren Aufgaben",
+    "Arrange and inspect the artwork": "Felder positionieren und prüfen",
+    "Choose one-off placement or a reusable tool": "Vorlage speichern und erneut verwenden",
+    "Save, reopen, and check the delivered PDF": "PDF speichern, neu öffnen und vergleichen",
+    "Open the PDF that will receive the stamp.": "Laden Sie unten pruefplan-vorlage.pdf herunter und öffnen Sie die deutsche A2-Übungszeichnung. Sie ist eine Demonstration und keine Ausführungsplanung.",
+    "Open the arrow beside the Stamp toolbar button and choose Create Interactive Stamp…": "Öffnen Sie den Pfeil neben Stempel und wählen Sie den Befehl zum Erstellen eines interaktiven Stempels.",
+    "Give the stamp a useful name. Set Width (pt), Height (pt), fill, border color, and border width for the canvas you need.": "Nennen Sie die Vorlage Planprüfung - Übung. Setzen Sie Breite auf 300 pt und Höhe auf 140 pt, Füllung auf Weiß sowie Rand und Textfarbe auf #245b66. Die Randbreite beträgt 2 pt.",
+    "Choose Add Field to start the layout. A new stamp needs at least one field before it can be inserted.": "Klicken Sie dreimal auf Feld hinzufügen. Legen Sie die unten beschriebenen Textfelder an; ohne Feld lässt sich die leere Vorlage nicht einfügen.",
+    "The canvas dimensions are PDF points, not the calibrated real-world units of the drawing. A rectangular review stamp is simply a canvas with different width and height values.": "Die Größe des Stempels wird in PDF-Punkten angegeben. Der Maßstab 1:50 und die metrischen Abmessungen der Zeichnung ändern diese Werte nicht. Die deutsche Beispieldatei enthält außerdem eine bekannte Kalibrierungsstrecke.",
+    "Select a field to edit its Label, Type, default value, placement behavior, position, size, font, ink color, alignment, bold, and italic settings. Labels identify the field in the editor and placement prompt; the field value is what appears in the stamp.": "Wählen Sie jeweils ein Feld aus und stellen Sie Beschriftung, Typ, Quelle, Vorgabewert, Platzierungsverhalten und Darstellung ein. Alle drei Felder dieses Beispiels sind Textfelder. Die Beschriftung erscheint im Editor und in der Abfrage; auf dem Stempel steht der jeweilige Feldwert.",
+    "The three fields in this example": "Die drei Textfelder der deutschen Vorlage",
+    "Field": "Feld",
+    "Value": "Wert",
+    "Ask when placing": "Beim Platzieren fragen",
+    "Review status": "Prüfvermerk",
+    "Custom value: REVIEWED": "Benutzerdefinierter Wert: GEPRÜFT - ÜBUNG",
+    "Off; this heading stays fixed": "Aus; dieser Text bleibt fest",
+    "Reviewer": "Prüfende Person",
+    "Custom value: Morgan Lee for this sample": "Benutzerdefinierter Wert: leer lassen",
+    "On, with Required checked": "Ein; Erforderlich einschalten",
+    "Review date": "Prüfdatum",
+    "Current date": "Aktuelles Datum",
+    "Off; refreshed automatically": "Aus; bei jeder Platzierung neu ermittelt",
+    "For your own template, leave the reviewer default empty when every placement should require a fresh answer. Use Required for a prompted value that must be filled before placement.": "Lassen Sie den Vorgabewert für Prüfende Person leer. Aktivieren Sie Beim Platzieren fragen und Erforderlich. So verlangt auch eine später wiederverwendete Vorlage eine neue Eingabe und übernimmt nicht den Namen der vorherigen Platzierung.",
+    "Default value can use a custom value, current user, current date, current time, document name, or page number. Automatic values are resolved for each new placement; they are not a promise that an already placed stamp will change later.": "Für Prüfdatum wählen Sie Aktuelles Datum und lassen die Abfrage ausgeschaltet. Im geprüften Durchlauf wurde 21.10.2026 eingesetzt. Automatische Werte werden bei einer neuen Platzierung ermittelt; ein bereits gespeicherter Stempel behält sein damaliges Datum.",
+    "Drag a field in the preview to move it; drag its corner handle to resize it.": "Prüfvermerk: links 12, oben 12, Breite 276, Höhe 38 pt; Arial 22 pt, fett und zentriert.",
+    "Use Left, Top, Width, and Height for precise positions in PDF points.": "Prüfende Person: links 12, oben 58, Breite 276, Höhe 28 pt; Arial 16 pt und zentriert.",
+    "Use Select all fields and Align fields… to align or distribute a group. Check whether alignment is relative to the stamp or the selection.": "Prüfdatum: links 12, oben 98, Breite 276, Höhe 28 pt; Arial 16 pt und zentriert.",
+    "Use Focus field for close inspection and Fit stamp to check the complete layout.": "Prüfen Sie die gesamte Vorschau. Alle drei Felder verwenden die Textfarbe #245b66. Die Beschriftung des noch leeren Personenfelds im Editor ist kein gespeicherter Vorgabewert.",
+    "Allow room for longer names and multiline answers. A preview with a short sample value does not establish that every future answer will fit.": "Probieren Sie für den späteren Einsatz längere Namen aus und vergrößern Sie die Vorlage bei Bedarf. Dieses Beispiel belegt die Darstellung von Musterprüfung; beliebig lange Eingaben wurden nicht geprüft.",
+    "Selection outlines, field labels, and resize handles belong to the editor. They are not part of the stamp that is placed or saved into the PDF.": "Auswahlrahmen, Feldbeschriftungen und Größenanfasser gehören zur Bearbeitung. Sie erscheinen nicht als Teil des gespeicherten Stempels.",
+    "Leave Add to toolset unchecked when you only need this stamp once. Check it when you want a reusable definition; Save in toolset then appears so you can choose its destination.": "Lassen Sie Zum Werkzeugset hinzufügen für diese Übung eingeschaltet und verwenden Sie Benutzerdefinierte Stempel als Ziel. Die Vorlage bleibt damit nach einem App-Neustart verfügbar. Für eine einmalige Platzierung können Sie das Kontrollkästchen ausschalten.",
+    "Choose Insert on Page.": "Wählen Sie Auf Seite einfügen.",
+    "Click the intended location on the PDF.": "Klicken Sie in den freien Bereich unter dem Grundriss, rechts neben der Kalibrierungsstrecke und links vom Schriftfeld. Verdecken Sie keine Planmaße oder Beschriftungen.",
+    "Review the values shown in the placement dialog. Fill every required prompted field.": "Lassen Sie Prüfende Person zunächst leer und versuchen Sie die Platzierung: Die App fordert diese Pflichtangabe an. Tragen Sie anschließend Musterprüfung ein.",
+    "Choose Place Stamp. Inspect the result and move or resize it as needed.": "Wählen Sie Stempel platzieren. Prüfen Sie Prüfvermerk, Personenangabe, Datum und Position auf dem Blatt.",
+    "For another placement of a saved template, select it from the Stamp menu or its toolset and enter the new placement details.": "Nach dem Speichern und einem vollständigen App-Neustart wählen Sie Planprüfung - Übung erneut aus dem Stempel-Menü. Beim nächsten Klick auf die Seite ist das Personenfeld wieder leer. Brechen Sie diese zweite Abfrage ab, wenn Sie nur den einen Beispielstempel behalten möchten.",
+    "Save your working copy, close it, and reopen the saved file. Check the text, size, orientation, and position. Open the same saved PDF in the viewer your recipient uses before relying on a project-specific exchange workflow.": "Speichern Sie über Datei › Speichern unter… eine separate PDF, beenden Sie PolyPDF vollständig und öffnen Sie das Ergebnis erneut. Im geprüften Mac-Durchlauf bleiben der Stempel, alle drei Werte und die Position erhalten. Eine unabhängige PDF-Darstellung bestätigt lesbare Umlaute und die unveränderte Zeichnung. Prüfen Sie zusätzlich das PDF-Programm Ihrer Empfänger.",
+    "Use Properties to edit the values of a placed interactive stamp in PolyPDF. Editing a saved template changes future placements; it does not rewrite every stamp you have already placed. A recipient can view the saved appearance in a PDF viewer, but the PolyPDF template editor is not a cross-application feature.": "Die erneut geöffnete native Stempeldarstellung bewahrt ihre Werte und Metadaten. Im hier geprüften Stand lassen sich an diesem importierten Artwork die Feldwerte jedoch nicht über den Vorlageneditor ändern; die App bietet Verschieben, Skalieren und Drehen an. Verwenden Sie für neue Angaben die gespeicherte Vorlage und eine neue Platzierung. Änderungen an einer Vorlage ändern vorhandene Stempel nicht.",
+    "An interactive review stamp is visual annotation artwork. It does not create a certificate signature, execute imported PDF JavaScript, or calculate arbitrary stamp formulas. Certificate-backed signing remains a separate workflow.": "GEPRÜFT - ÜBUNG ist ein fiktiver sichtbarer Prüfvermerk und kein Nachweis einer Freigabe. Die gespeicherte Darstellung ist ein Rasterbild; ihre Werte stehen zusätzlich in PolyPDF-Metadaten, nicht als auswählbarer Seitentext. Dieser Stempel erzeugt keine Zertifikatssignatur und führt kein importiertes PDF-JavaScript aus.",
+    "No. Create Interactive Stamp starts with an empty canvas and no fields. It does not copy the page, selected artwork, or form fields from the PDF.": "Nein. Eine neue Vorlage hat eine leere Zeichenfläche und keine Felder. Die offene PDF-Seite, ausgewählte Anmerkungen und Formularfelder werden nicht kopiert.",
+    "No. Add to toolset is unchecked by default. Leave it off for a one-off placement, or turn it on and choose a destination for a reusable template.": "Nein. In diesem Entwicklungsstand ist Zum Werkzeugset hinzufügen bereits eingeschaltet. Lassen Sie es für die wiederverwendbare Übung an oder schalten Sie es für eine einmalige Platzierung aus.",
+    "Yes. Turn on Ask when placing for the reviewer, and choose Current date for the date field. Automatic values refresh for each placement; existing stamps retain their saved values.": "Ja. Lassen Sie den Vorgabewert für Prüfende Person leer und aktivieren Sie Abfrage und Pflichtangabe. Prüfdatum verwendet das aktuelle Datum. Nach einem Neustart wurde eine neue leere Personenabfrage aus derselben gespeicherten Vorlage geprüft; vorhandene Stempel behalten ihre Werte.",
+    "A review stamp supplies visible artwork and field values. It does not create a certificate-backed signature or prove who approved the drawing. Use the separate digital signature workflow when cryptographic verification is required.": "Nein. Der sichtbare Prüfvermerk bestätigt weder die Identität einer Person noch eine rechtsverbindliche Freigabe. Eine Zertifikatssignatur ist ein eigener Ablauf.",
+    "Does a new stamp copy the open PDF page?": "Kopiert ein neuer Stempel die geöffnete PDF-Seite?",
+    "Do I have to save every stamp to a toolset?": "Muss jede Vorlage in einem Werkzeugset gespeichert werden?",
+    "Can I use a different reviewer and date for each placement?": "Kann ich bei jeder Platzierung eine neue Person und ein neues Datum verwenden?",
+    "Is a review stamp a digital signature?": "Ist ein Prüfstempel eine digitale Signatur?",
+    "— Interactive stamps shipped for Mac and Windows in version 1.5.1, build 23.": "— Historischer Einführungshinweis. Dieser deutsche Durchlauf wurde separat am 21.10.2026 im lokalen macOS-Entwicklungsstand 1.6.17 Build 84 geprüft."
+  },
+  "extraDownloads": [
+    {
+      "url": "/localized-media/de/samples/stamps/pruefplan-vorlage.pdf",
+      "label": "Deutsche A2-Übungszeichnung herunterladen (PDF)",
+      "note": "Fiktiver Grundriss im Maßstab 1:50 mit metrischen Maßen und freiem Bereich für den Prüfstempel.",
+      "sha256": "52cc449e5cd935ef6db14aec817243bcc10175fa9831ef56ad919f74fef38332"
+    },
+    {
+      "url": "/localized-media/de/samples/stamps/pruefplan-mit-stempel.pdf",
+      "label": "Gespeichertes deutsches Stempelbeispiel herunterladen (PDF)",
+      "note": "Tatsächliche native Speicherung; Stempel und Werte nach vollständigem App-Neustart sowie unabhängig im PDF geprüft.",
+      "sha256": "612da8b06d408a05931808705da2058988414c705386d392afdd24a002a17eb8"
+    }
+  ]
+}

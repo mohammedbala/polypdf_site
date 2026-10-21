@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "surface": "Codex in-app browser",
+  "route": "/de/blog/create-interactive-pdf-stamps/",
+  "languageSwitches": [
+    "en",
+    "de",
+    "en",
+    "de"
+  ],
+  "loadedRegionalImages": 4,
+  "downloadSha256": {
+    "pruefplan-vorlage.pdf": "52cc449e5cd935ef6db14aec817243bcc10175fa9831ef56ad919f74fef38332",
+    "pruefplan-mit-stempel.pdf": "612da8b06d408a05931808705da2058988414c705386d392afdd24a002a17eb8"
+  },
+  "htmlSha256": "748781b37438be6464090ac0f9c1cec0eb69fab903ebe0c80778181de3d38805",
+  "screenshotSha256": "6eaca95e5d33847ac9a49e2f2a5ff32e611a26972438980073637557fb3f8906",
+  "checks": [
+    "Normal language-menu links select German media and restore English originals",
+    "All four German images loaded after scrolling",
+    "Actual browser PDF downloads match independently verified source and native output",
+    "Final regional footer notice and precise blank-area placement copy verified"
+  ],
+  "limitations": [
+    "Local development server; no deployment",
+    "Desktop browser viewport only"
+  ]
+}

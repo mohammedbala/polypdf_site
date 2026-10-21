@@ -1,0 +1,589 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "93ac0661025743f3fcb30ce24771749a3cbcbee84d970e7efc97128e61f58c72",
+    "version": "1.6.17",
+    "bundleSetSha256": "647b69e5f84b95af6350b67bc71f71a4b6eb15d699444698306b24b0c72a887c"
+  },
+  "sourceHash": "52cc449e5cd935ef6db14aec817243bcc10175fa9831ef56ad919f74fef38332",
+  "captureScriptSha256": "5b39d364886d700d7b3ee155d955a7d2ff522cb5ef08b477be82978f403359c1",
+  "blank": {
+    "width": "240",
+    "height": "240",
+    "fields": true,
+    "saveToToolset": true
+  },
+  "fields": [
+    [
+      {
+        "attribute": "data-field-select",
+        "value": "stamp-e5fd324d-5d28-4cec-b4d0-409e00a426b6",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-label",
+        "value": "Prüfvermerk",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-kind",
+        "value": "text",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-source",
+        "value": "fixed",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-default",
+        "value": "GEPRÜFT - ÜBUNG",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-prompt",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-required",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-x",
+        "value": "12",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-y",
+        "value": "12",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-width",
+        "value": "276",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-height",
+        "value": "38",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-family",
+        "value": "Arial",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-font",
+        "value": "22",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-color",
+        "value": "#245b66",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-alignment",
+        "value": "center",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-bold",
+        "value": "on",
+        "checked": true,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-italic",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    [
+      {
+        "attribute": "data-field-select",
+        "value": "stamp-f7b69ed4-f70f-4f09-b6d2-feb23eb5ff06",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-label",
+        "value": "Prüfende Person",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-kind",
+        "value": "text",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-source",
+        "value": "fixed",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-default",
+        "value": "",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-prompt",
+        "value": "on",
+        "checked": true,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-required",
+        "value": "on",
+        "checked": true,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-x",
+        "value": "12",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-y",
+        "value": "58",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-width",
+        "value": "276",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-height",
+        "value": "28",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-family",
+        "value": "Arial",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-font",
+        "value": "16",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-color",
+        "value": "#245b66",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-alignment",
+        "value": "center",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-bold",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-italic",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ],
+    [
+      {
+        "attribute": "data-field-select",
+        "value": "stamp-6d0a93a5-bc40-42da-bc49-9e964a36f2e6",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-label",
+        "value": "Prüfdatum",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-kind",
+        "value": "text",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-source",
+        "value": "currentDate",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-default",
+        "value": "",
+        "disabled": true
+      },
+      {
+        "attribute": "data-field-prompt",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-required",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-x",
+        "value": "12",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-y",
+        "value": "98",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-width",
+        "value": "276",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-height",
+        "value": "28",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-family",
+        "value": "Arial",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-font",
+        "value": "16",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-color",
+        "value": "#245b66",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-alignment",
+        "value": "center",
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-bold",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      },
+      {
+        "attribute": "data-field-italic",
+        "value": "on",
+        "checked": false,
+        "disabled": false
+      }
+    ]
+  ],
+  "missing": "Füllen Sie dieses Feld aus: Prüfende Person",
+  "placed": [
+    {
+      "id": "imageStamp-mvi18r2i-2cxa9a",
+      "tool": "imageStamp",
+      "page": 1,
+      "x": 669.9982402258979,
+      "y": 969.9998402932331,
+      "width": 300,
+      "height": 140,
+      "label": "Planprüfung - Übung",
+      "interactiveStamp": {
+        "name": "Planprüfung - Übung",
+        "definition": {
+          "version": 1,
+          "width": 300,
+          "height": 140,
+          "fields": [
+            {
+              "id": "stamp-e5fd324d-5d28-4cec-b4d0-409e00a426b6",
+              "label": "Prüfvermerk",
+              "kind": "text",
+              "source": "fixed",
+              "prompt": false,
+              "required": false,
+              "defaultValue": "GEPRÜFT - ÜBUNG",
+              "options": [],
+              "fontSize": 22,
+              "alignment": "center",
+              "widgets": [
+                {
+                  "bounds": {
+                    "x": 12,
+                    "y": 12,
+                    "width": 276,
+                    "height": 38
+                  }
+                }
+              ],
+              "textColor": "#245b66",
+              "fontFamily": "Arial",
+              "bold": true,
+              "italic": false
+            },
+            {
+              "id": "stamp-f7b69ed4-f70f-4f09-b6d2-feb23eb5ff06",
+              "label": "Prüfende Person",
+              "kind": "text",
+              "source": "fixed",
+              "prompt": true,
+              "required": true,
+              "defaultValue": "",
+              "options": [],
+              "fontSize": 16,
+              "alignment": "center",
+              "widgets": [
+                {
+                  "bounds": {
+                    "x": 12,
+                    "y": 58,
+                    "width": 276,
+                    "height": 28
+                  }
+                }
+              ],
+              "textColor": "#245b66",
+              "fontFamily": "Arial",
+              "bold": false,
+              "italic": false
+            },
+            {
+              "id": "stamp-6d0a93a5-bc40-42da-bc49-9e964a36f2e6",
+              "label": "Prüfdatum",
+              "kind": "text",
+              "source": "currentDate",
+              "prompt": false,
+              "required": false,
+              "defaultValue": "",
+              "options": [],
+              "fontSize": 16,
+              "alignment": "center",
+              "widgets": [
+                {
+                  "bounds": {
+                    "x": 12,
+                    "y": 98,
+                    "width": 276,
+                    "height": 28
+                  }
+                }
+              ],
+              "textColor": "#245b66",
+              "fontFamily": "Arial",
+              "bold": false,
+              "italic": false
+            }
+          ],
+          "canvas": {
+            "fillColor": "#ffffff",
+            "borderColor": "#245b66",
+            "borderWidth": 2
+          }
+        },
+        "values": {
+          "stamp-e5fd324d-5d28-4cec-b4d0-409e00a426b6": "GEPRÜFT - ÜBUNG",
+          "stamp-f7b69ed4-f70f-4f09-b6d2-feb23eb5ff06": "Musterprüfung",
+          "stamp-6d0a93a5-bc40-42da-bc49-9e964a36f2e6": "21.10.2026"
+        }
+      }
+    }
+  ],
+  "reopened": [
+    {
+      "id": "imageStamp-mvi18r2i-2cxa9a",
+      "tool": "imageStamp",
+      "page": 1,
+      "x": 669.998,
+      "y": 970,
+      "width": 300,
+      "height": 140,
+      "label": "Planprüfung - Übung",
+      "interactiveStamp": {
+        "name": "Planprüfung - Übung",
+        "definition": {
+          "version": 1,
+          "width": 300,
+          "height": 140,
+          "fields": [
+            {
+              "id": "stamp-e5fd324d-5d28-4cec-b4d0-409e00a426b6",
+              "label": "Prüfvermerk",
+              "kind": "text",
+              "source": "fixed",
+              "prompt": false,
+              "required": false,
+              "defaultValue": "GEPRÜFT - ÜBUNG",
+              "options": [],
+              "fontSize": 22,
+              "alignment": "center",
+              "widgets": [
+                {
+                  "bounds": {
+                    "x": 12,
+                    "y": 12,
+                    "width": 276,
+                    "height": 38
+                  }
+                }
+              ],
+              "textColor": "#245b66",
+              "fontFamily": "Arial",
+              "bold": true,
+              "italic": false
+            },
+            {
+              "id": "stamp-f7b69ed4-f70f-4f09-b6d2-feb23eb5ff06",
+              "label": "Prüfende Person",
+              "kind": "text",
+              "source": "fixed",
+              "prompt": true,
+              "required": true,
+              "defaultValue": "",
+              "options": [],
+              "fontSize": 16,
+              "alignment": "center",
+              "widgets": [
+                {
+                  "bounds": {
+                    "x": 12,
+                    "y": 58,
+                    "width": 276,
+                    "height": 28
+                  }
+                }
+              ],
+              "textColor": "#245b66",
+              "fontFamily": "Arial",
+              "bold": false,
+              "italic": false
+            },
+            {
+              "id": "stamp-6d0a93a5-bc40-42da-bc49-9e964a36f2e6",
+              "label": "Prüfdatum",
+              "kind": "text",
+              "source": "currentDate",
+              "prompt": false,
+              "required": false,
+              "defaultValue": "",
+              "options": [],
+              "fontSize": 16,
+              "alignment": "center",
+              "widgets": [
+                {
+                  "bounds": {
+                    "x": 12,
+                    "y": 98,
+                    "width": 276,
+                    "height": 28
+                  }
+                }
+              ],
+              "textColor": "#245b66",
+              "fontFamily": "Arial",
+              "bold": false,
+              "italic": false
+            }
+          ],
+          "canvas": {
+            "fillColor": "#ffffff",
+            "borderColor": "#245b66",
+            "borderWidth": 2
+          }
+        },
+        "values": {
+          "stamp-e5fd324d-5d28-4cec-b4d0-409e00a426b6": "GEPRÜFT - ÜBUNG",
+          "stamp-f7b69ed4-f70f-4f09-b6d2-feb23eb5ff06": "Musterprüfung",
+          "stamp-6d0a93a5-bc40-42da-bc49-9e964a36f2e6": "21.10.2026"
+        }
+      }
+    }
+  ],
+  "template": {
+    "file": "Planprüfung - Übung-9f1920d7c2b9.polypdftools",
+    "sha256": "2333b2d8ad6dfd31ca6333a9235326a8a59939a678d6aaa16ef96ba38db9bba9"
+  },
+  "templateReopened": "2333b2d8ad6dfd31ca6333a9235326a8a59939a678d6aaa16ef96ba38db9bba9",
+  "layout": [
+    {
+      "selector": "[data-field-select]",
+      "label": "Prüfende Person",
+      "width": 324,
+      "labelWidth": 94.2525634765625
+    },
+    {
+      "selector": "[data-field-source]",
+      "label": "Benutzerdefinierter Wert",
+      "width": 324,
+      "labelWidth": 140.52174377441406
+    }
+  ],
+  "reusedPrompt": [
+    {
+      "index": "0",
+      "value": "GEPRÜFT - ÜBUNG",
+      "disabled": true
+    },
+    {
+      "index": "1",
+      "value": "",
+      "disabled": false
+    },
+    {
+      "index": "2",
+      "value": "21.10.2026",
+      "disabled": true
+    }
+  ],
+  "shots": [
+    {
+      "file": "stempel-leer.png",
+      "sha256": "9e4b30afb7fa5e90f369d9e416107c9fdff1f2df1142bf84fc90a78287c7b21e"
+    },
+    {
+      "file": "stempel-editor.png",
+      "sha256": "664ea5bf69033ab5e1e435093c1ca96527a90326713c33db4c231a8a98b50a0b"
+    },
+    {
+      "file": "stempel-abfrage.png",
+      "sha256": "3532358131ae707322e77d7127394917e99c90fdfa24b0cf71a195a9fc039255"
+    },
+    {
+      "file": "stempel-platziert.png",
+      "sha256": "86209bff4c834a9cdf5bd3fc62f98907282c2cd3d431769dd7b803e280fdb0e7"
+    },
+    {
+      "file": "stempel-wieder-geoeffnet.png",
+      "sha256": "94ec1799b0d1afe993064e59332c83efb108c963b5b3d03a8562aa65d62ae4e0"
+    }
+  ],
+  "activations": 1,
+  "savedSha256": "612da8b06d408a05931808705da2058988414c705386d392afdd24a002a17eb8",
+  "scope": "Actual builder and prompt controls, required refusal, pointer placement, native Save As, full process restart and actual reuse prompt from retained template. No model seeding. Pro activation uses the ordinary UI with a signed loopback fixture in the owned profile.",
+  "limitations": [
+    "Local Mac development build; no Windows/native iPad qualification.",
+    "Independent saved-PDF rendering and page verification are separate checks.",
+    "Saved coordinates agree within 0.001 PDF point; field identities, definitions and values agree exactly.",
+    "Visual appearance is a raster image; stamp values are preserved in PolyPDF metadata, not selectable page text.",
+    "Reopened native artwork retains metadata but the current app does not offer value editing on that imported artwork; reuse the saved template for a fresh placement.",
+    "The reused-template prompt was canceled after proving its reviewer default was empty; the delivered PDF contains one stamp."
+  ],
+  "profileSha256": "f73ec8d36e6adf7e4dd2d35ff06b63d514fa34f597c55472dc9f62fd7755a119",
+  "exportVerificationSha256": "caf406f12341ab1204ef013f86a8efb20917344c25d8ec577d60c67d5fdb0090",
+  "visualReview": "Actual German blank builder, full editor, placement prompt, placed stamp and fresh-process reopened captures inspected. Field/source labels fit after the CSS correction. Independent Poppler rendering of the source and saved A2 PDFs shows readable German glyphs and a stamp below the plan, beside the calibration line and left of the title block, with no drawing overlap."
+}

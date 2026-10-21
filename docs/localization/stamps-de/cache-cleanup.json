@@ -1,0 +1,23 @@
+{
+  "recordedAt": "2026-10-21T11:39:00.601061+00:00",
+  "authorization": "User explicitly authorized freeing unnecessary system storage",
+  "removed": [
+    {
+      "path": "/Users/mohammedbala/.npm/_npx",
+      "logicalBytes": 18426727,
+      "reason": "Regenerable package, font, or Babel compilation cache"
+    },
+    {
+      "path": "/Users/mohammedbala/.cache/fontconfig",
+      "logicalBytes": 8053352,
+      "reason": "Regenerable package, font, or Babel compilation cache"
+    },
+    {
+      "path": "/Users/mohammedbala/Projects/polypdf_site-localization/node_modules/.cache/babel-loader",
+      "logicalBytes": 36254274,
+      "reason": "Regenerable package, font, or Babel compilation cache"
+    }
+  ],
+  "logicalBytes": 62734353,
+  "remainingBytes": 1329414144
+}

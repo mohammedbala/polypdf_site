@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "nativeCaptureSha256": "59e185a168ff1777766eb8cceca06edb9e8923c43f8c3bdffe1c8167134c40c0",
+  "files": {
+    "pruefplan-vorlage.pdf": "52cc449e5cd935ef6db14aec817243bcc10175fa9831ef56ad919f74fef38332",
+    "pruefplan-mit-stempel.pdf": "612da8b06d408a05931808705da2058988414c705386d392afdd24a002a17eb8",
+    "planpruefung.polypdftools": "2333b2d8ad6dfd31ca6333a9235326a8a59939a678d6aaa16ef96ba38db9bba9"
+  },
+  "pagePoints": [
+    0.0,
+    0.0,
+    1683.78,
+    1190.551
+  ],
+  "language": "de-DE",
+  "sourceContentUnchanged": true,
+  "stampAnnotations": 1,
+  "appearancePixels": [
+    1200,
+    560
+  ],
+  "stampRect": [
+    669.998,
+    80.551,
+    969.998,
+    220.551
+  ],
+  "fieldLabels": [
+    "Prüfvermerk",
+    "Prüfende Person",
+    "Prüfdatum"
+  ],
+  "values": [
+    "GEPRÜFT - ÜBUNG",
+    "Musterprüfung",
+    "21.10.2026"
+  ],
+  "limitations": [
+    "Visual appearance is a raster image; stamp values are preserved in PolyPDF metadata, not selectable page text.",
+    "Reopened native artwork retains metadata but the current app does not offer value editing on that imported artwork; reuse the saved template for a fresh placement."
+  ]
+}
