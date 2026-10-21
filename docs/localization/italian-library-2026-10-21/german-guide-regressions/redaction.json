@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "route": "/de/blog/redact-and-sanitize-pdf/",
+  "htmlSha256": "f515d26498f27352bb888b7ad0ebfa6842505b064ade2940334a9fcb3d6db5e8",
+  "localizedImageSlots": 7,
+  "distinctDisplayedCaptures": 6,
+  "retainedNativeCaptures": 7,
+  "localizedPdfDownloads": 4,
+  "sourceFiles": {
+    "scripts/localization/redaction-de.json": "a0920c6865e88d6e25b53ca775731ee70b07f7eca9e361e67b76017322dcd0f3",
+    "scripts/localization/generate-redaction-de.py": "058608fbc509beaa5cce3a68647fa83598a30d2ed4ec6eb02895be9fba3b705b",
+    "scripts/localization/capture-redaction-de.mjs": "db012004b5a7c4c8d19c0bfe1928aae45ac138a16cb6684afbbf83b9f8095b23",
+    "scripts/localization/register-redaction-de.cjs": "7c7c9f85f4b733b455be579d0cba73917d228ef87dd63158ce98f8a0130fd453",
+    "scripts/localization/verify-redaction-de.py": "f46f41d336d184abfd4054ec496e58c999452d969cc0425031d2c4993712c5d7",
+    "scripts/localization/verify-redaction-page.cjs": "cee3b3966a70035b355408dcd1fd7c0ce4398a9ea25a27321e2e62ab3ae133b5",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/international/build.cjs": "e57d4ccef3ee18db73c4635fcb3073bbbd2623de27a3d21c64bc00d5a144ba2b",
+    "src/content/guides/redact-and-sanitize-pdf.js": "450e758f425ee1782c29506629c810fa402584ad6f6700933d5e82a979c1af7d",
+    "src/localization/walkthrough-media.json": "47a2278fc132cc1eacc4f02472d06d2daf83fee34ffb124a6aab7d4d202cb536"
+  },
+  "checks": [
+    "Seven image slots use verified German app states in their actual sequence",
+    "Four regional PDF downloads verified by hash",
+    "Full-process reopen and independent output verification",
+    "Immediate confirmation, retained page attachment, fresh metadata and host-language Save dialog documented",
+    "Visible, Open Graph and Article images agree in URL and dimensions",
+    "English and unfinished Spanish retain their examples"
+  ],
+  "limitations": [
+    "One completed German route within a pilot pack; full rollout remains incomplete",
+    "Local Mac development capture; no released installer, Windows or native iPad qualification",
+    "No deployment"
+  ]
+}

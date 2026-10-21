@@ -1,0 +1,442 @@
+{
+  "locale": "it-IT",
+  "region": "IT",
+  "status": "editorial-draft",
+  "scope": "Shared construction library cards and six source-bound exercises; full Italian site catalog, samples route and Italian walkthrough capture remain pending.",
+  "text": {
+    "library.kicker": {
+      "source": "The original PolyPDF drawing collection",
+      "target": "La raccolta originale di disegni PolyPDF"
+    },
+    "library.heading": {
+      "source": "One project. Twelve PDFs. Twenty-four construction sheets.",
+      "target": "Un progetto. Dodici PDF. Ventiquattro tavole di costruzione."
+    },
+    "library.intro": {
+      "source": "Explore the fictional Willow Creek Community Center through coordinated architectural, structural, civil, MEP, and finish drawings. Every PDF contains two bookmarked ARCH D sheets (36 × 24 inches), with drawing numbers, schedules, legends, dimensions, and details.",
+      "target": "Esplora il Centro Civico dei Tigli, un progetto fittizio in Italia, attraverso disegni coordinati di architettura, strutture, sistemazioni esterne, impianti e finiture. Ogni PDF contiene due tavole A1 con segnalibri, numeri di tavola, abachi, legende, quote e dettagli."
+    },
+    "library.download": {
+      "source": "Download all 24 sheets · ZIP",
+      "target": "Scarica tutte le 24 tavole · ZIP"
+    },
+    "library.guide": {
+      "source": "View the drawing guide and reference quantities →",
+      "target": "Apri la guida ai disegni e alle quantità di riferimento →"
+    },
+    "library.scope": {
+      "source": "These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Use the sheet-specific examples below. The earlier F-101 and E-101 exercises use different drawings and quantities.",
+      "target": "Questi disegni originali servono per esercitazioni; non sono documenti autorizzativi né risultati verificati di PolyPDF. Le piante principali sono in scala 1:50 e le planimetrie in scala 1:200; i dettagli hanno scale proprie. Calibra ogni vista prima di misurare e segui gli esercizi qui sotto. I precedenti esercizi statunitensi F-101 ed E-101 usano disegni e quantità differenti."
+    },
+    "library.nav.takeoff": {
+      "source": "Measurement",
+      "target": "Misurazioni"
+    },
+    "library.nav.flooring": {
+      "source": "Flooring",
+      "target": "Pavimenti"
+    },
+    "library.nav.electrical": {
+      "source": "Electrical",
+      "target": "Impianti elettrici"
+    },
+    "library.nav.compare": {
+      "source": "Revision comparison",
+      "target": "Confronto revisioni"
+    },
+    "library.nav.review": {
+      "source": "Coordination review",
+      "target": "Coordinamento"
+    },
+    "library.nav.ocr": {
+      "source": "OCR",
+      "target": "OCR"
+    },
+    "library.01.title": {
+      "source": "Civil site and grading · PDF",
+      "target": "Planimetria e terreno · PDF"
+    },
+    "library.01.sheets": {
+      "source": "C101 · C501 · 2 sheets",
+      "target": "C101 · C201 · 2 tavole"
+    },
+    "library.01.description": {
+      "source": "Site layout, grading, parking, drainage, pavement and curb details.",
+      "target": "Sistemazione del lotto, terreno, parcheggi, reti, pavimentazioni e dettagli dei cordoli."
+    },
+    "library.02.title": {
+      "source": "Architecture · Revision A · PDF",
+      "target": "Architettura · Revisione A · PDF"
+    },
+    "library.02.sheets": {
+      "source": "A101 · A201 · 2 sheets",
+      "target": "A101 · A201 · 2 tavole"
+    },
+    "library.02.description": {
+      "source": "Dimensioned floor plan, elevations, building section and wall detail.",
+      "target": "Pianta quotata, prospetti, sezione dell'edificio e dettaglio della parete."
+    },
+    "library.03.title": {
+      "source": "Architecture · Revision B · PDF",
+      "target": "Architettura · Revisione B · PDF"
+    },
+    "library.03.sheets": {
+      "source": "A101 · A201 · 2 sheets",
+      "target": "A101 · A201 · 2 tavole"
+    },
+    "library.03.description": {
+      "source": "A matching revised set for comparison with Revision A.",
+      "target": "Serie revisionata corrispondente alla revisione A, pronta per il confronto."
+    },
+    "library.04.title": {
+      "source": "Structural foundation and framing · PDF",
+      "target": "Fondazioni e strutture · PDF"
+    },
+    "library.04.sheets": {
+      "source": "S101 · S501 · 2 sheets",
+      "target": "S101 · S201 · 2 tavole"
+    },
+    "library.04.description": {
+      "source": "Footings, columns, roof framing, connection details and schedules.",
+      "target": "Plinti, pilastri, travi di copertura, dettagli e quantità di riferimento."
+    },
+    "library.05.title": {
+      "source": "Mechanical / HVAC · PDF",
+      "target": "Ventilazione · PDF"
+    },
+    "library.05.sheets": {
+      "source": "M101 · M501 · 2 sheets",
+      "target": "M101 · M501 · 2 tavole"
+    },
+    "library.05.description": {
+      "source": "Ductwork, terminals, equipment, controls and mechanical details.",
+      "target": "Canali, diffusori, unità di trattamento aria, schema e abaco."
+    },
+    "library.06.title": {
+      "source": "Electrical lighting and power · PDF",
+      "target": "Illuminazione e impianti elettrici · PDF"
+    },
+    "library.06.sheets": {
+      "source": "E101 · E601 · 2 sheets",
+      "target": "E101 · E501 · 2 tavole"
+    },
+    "library.06.description": {
+      "source": "Lighting, receptacles, electrical diagrams and fixture schedules.",
+      "target": "Apparecchi illuminanti, prese, schema elettrico e abaco degli apparecchi."
+    },
+    "library.07.title": {
+      "source": "Plumbing water and drainage · PDF",
+      "target": "Rete idrica e scarichi · PDF"
+    },
+    "library.07.sheets": {
+      "source": "P101 · P501 · 2 sheets",
+      "target": "P101 · P501 · 2 tavole"
+    },
+    "library.07.description": {
+      "source": "Water and drainage layouts, risers, fixtures and installation details.",
+      "target": "Reti idriche e di scarico, colonne, apparecchi sanitari e dettagli."
+    },
+    "library.08.title": {
+      "source": "Fire protection and life safety · PDF",
+      "target": "Protezione antincendio · Esercizio · PDF"
+    },
+    "library.08.sheets": {
+      "source": "FP101 · FP501 · 2 sheets",
+      "target": "F101 · F501 · 2 tavole"
+    },
+    "library.08.description": {
+      "source": "Sprinkler and life-safety symbols, risers, details and schedules.",
+      "target": "Simboli antincendio, schema delle vie di esodo, dettagli e legenda per esercitazioni."
+    },
+    "library.09.title": {
+      "source": "Landscape and external works · PDF",
+      "target": "Verde e spazi esterni · PDF"
+    },
+    "library.09.sheets": {
+      "source": "L101 · L501 · 2 sheets",
+      "target": "L101 · L501 · 2 tavole"
+    },
+    "library.09.description": {
+      "source": "Planting, paving, landscape details and an authored planting schedule.",
+      "target": "Piantumazioni, pavimentazioni, dettagli esterni e abaco della vegetazione."
+    },
+    "library.10.title": {
+      "source": "Interiors, finishes and millwork · PDF",
+      "target": "Finiture e arredi · PDF"
+    },
+    "library.10.sheets": {
+      "source": "I101 · I501 · 2 sheets",
+      "target": "I101 · I501 · 2 tavole"
+    },
+    "library.10.description": {
+      "source": "Room finishes, floor patterns, casework elevations and interior details.",
+      "target": "Finiture dei locali, pavimenti, prospetti degli arredi e dettagli interni."
+    },
+    "library.11.title": {
+      "source": "Coordination and review · PDF",
+      "target": "Coordinamento e revisione · PDF"
+    },
+    "library.11.sheets": {
+      "source": "X101 · X102 · 2 sheets",
+      "target": "X101 · X102 · 2 tavole"
+    },
+    "library.11.description": {
+      "source": "Overlaid disciplines, three authored review notes and four PDF layers.",
+      "target": "Discipline sovrapposte, tre note di revisione e quattro livelli PDF."
+    },
+    "library.12.title": {
+      "source": "Scanned legacy drawings · PDF",
+      "target": "Tavole esistenti scansionate · PDF"
+    },
+    "library.12.sheets": {
+      "source": "A101 · C101 · 2 sheets",
+      "target": "A101 · C101 · 2 tavole"
+    },
+    "library.12.description": {
+      "source": "Image-only architectural and site sheets for OCR practice.",
+      "target": "Pianta architettonica e planimetria senza livello di testo per esercitarsi con l'OCR."
+    },
+    "library.handoff": {
+      "source": "Keep an untouched master and mark up a copy. Check the drawing scope, units, exported quantities, and saved-file handoff in your own workflow. All projects and coordination issues are fictional; no customer drawing or professional seal is included.",
+      "target": "Conserva un originale intatto e annota una copia. Controlla l'ambito del disegno, le unità, le quantità esportate e il file salvato prima della consegna. Tutti i progetti e le interferenze sono fittizi; non sono inclusi disegni di clienti né timbri professionali."
+    },
+    "exercise.kicker": {
+      "source": "Work with the construction drawing set",
+      "target": "Esercitati con le tavole di costruzione"
+    },
+    "exercise.takeoff.title": {
+      "source": "Measure the Willow Creek architectural plan",
+      "target": "Misura la pianta architettonica del Centro Civico dei Tigli"
+    },
+    "exercise.takeoff.sheets": {
+      "source": "A101 · A201",
+      "target": "A101 · A201"
+    },
+    "exercise.takeoff.step1": {
+      "source": "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.",
+      "target": "Apri A101, revisione A. Calibra la lunghezza di riferimento stampata di 5,00 m: in scala 1:50 corrisponde a circa 283,46457 punti PDF."
+    },
+    "exercise.takeoff.step2": {
+      "source": "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.",
+      "target": "Verifica separatamente la larghezza di 24,00 m e la profondità di 15,00 m, quindi traccia il contorno esterno dell'edificio."
+    },
+    "exercise.takeoff.step3": {
+      "source": "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.",
+      "target": "Confronta l'impronta rettangolare con 360,00 m². Conserva tavola, revisione, oggetto, unità e totale insieme alla misurazione esportata."
+    },
+    "exercise.takeoff.scope": {
+      "source": "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.",
+      "target": "L'esercizio misura l'impronta rettangolare lorda. Non misura la superficie netta dei pavimenti né sottrae le pareti. Le due verifiche di lunghezza e il rilievo dell'area sono tre misurazioni manuali."
+    },
+    "exercise.provenance": {
+      "source": "Drawing reference values, not new app test results. Work on a copy and check your own saved output.",
+      "target": "I valori sono riferimenti del disegno, non nuovi risultati di test dell'app. Lavora su una copia e controlla il file salvato."
+    },
+    "exercise.historicalMac": {
+      "source": "Inspect the saved Mac example and its tested local build →",
+      "target": "Precedente esempio statunitense: esamina il file salvato su Mac e la versione locale verificata →"
+    },
+    "exercise.download.A": {
+      "source": "Download Revision A · PDF",
+      "target": "Scarica la revisione A · PDF"
+    },
+    "library.02.filename": {
+      "source": "02-Architectural-Revision-A.pdf",
+      "target": "02-Architettura-Revisione-A.pdf"
+    },
+    "exercise.flooring.title": {
+      "source": "Take off finishes from the Willow Creek interiors plan",
+      "target": "Misura i pavimenti del Centro Civico dei Tigli"
+    },
+    "exercise.flooring.sheets": {
+      "source": "I101 · I501",
+      "target": "I101 · I501"
+    },
+    "exercise.flooring.step1": {
+      "source": "Open I101 and calibrate its 20 ft reference. Read the F1 and F2 finish key before measuring.",
+      "target": "Apri I101 e calibra il riferimento di 5,00 m. Leggi la legenda delle finiture F1 e F2 prima di misurare."
+    },
+    "exercise.flooring.step2": {
+      "source": "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.",
+      "target": "Traccia separatamente le aree quotate dei servizi 107 e 108: 18,00 m² ciascuna, per un totale di 36,00 m²."
+    },
+    "exercise.flooring.step3": {
+      "source": "Compare F2 tile with 576 sq ft and F1 resilient flooring with 5,184 sq ft. Apply any waste allowance separately.",
+      "target": "Confronta il pavimento ceramico F2 con 36,00 m² e il resiliente F1 con 324,00 m². Applica separatamente le eventuali percentuali di sfrido."
+    },
+    "exercise.flooring.scope": {
+      "source": "The authored finish schedule uses room dimension boundaries without wall-thickness deductions. These exercise areas are not net installed quantities; I501 details use different scales.",
+      "target": "L'abaco usa i confini quotati dei locali senza detrarre lo spessore delle pareti. Queste aree di esercitazione non sono quantità nette posate; i dettagli di I501 usano scale diverse."
+    },
+    "exercise.download.drawing": {
+      "source": "Download the example drawing · PDF",
+      "target": "Scarica la tavola dell'esercizio · PDF"
+    },
+    "library.10.filename": {
+      "source": "10-Interiors-Finishes-and-Millwork.pdf",
+      "target": "10-Finiture-e-arredi.pdf"
+    },
+    "exercise.electrical.title": {
+      "source": "Count the Willow Creek lighting plan",
+      "target": "Conta i simboli della pianta elettrica dei Tigli"
+    },
+    "exercise.electrical.sheets": {
+      "source": "E101 · E601",
+      "target": "E101 · E501"
+    },
+    "exercise.electrical.step1": {
+      "source": "Open E101 and identify the luminaire symbol in the legend. Count only the plan, excluding legend and detail examples.",
+      "target": "Apri E101 e identifica il simbolo dell'apparecchio illuminante nella legenda. Conta solo i simboli della pianta, escludendo gli esempi della legenda e dei dettagli."
+    },
+    "exercise.electrical.step2": {
+      "source": "Review 24 plan luminaires, including 4 emergency luminaires. The emergency subset is included in 24, not added to it.",
+      "target": "Verifica i 24 apparecchi illuminanti, le 12 prese e gli 8 interruttori della pianta. Mantieni separati i conteggi delle tre categorie."
+    },
+    "exercise.electrical.step3": {
+      "source": "Calibrate the 20 ft reference. Trace the LP-1 / CKTS 1, 3, 5, 7 diagram from the panel, then north and east: 8 + 38 = 46 ft.",
+      "target": "Calibra il riferimento di 5,00 m. Traccia il percorso schematico di E101 e confrontalo con 34,50 m. E501 contiene lo schema elettrico e l'abaco degli apparecchi."
+    },
+    "exercise.electrical.scope": {
+      "source": "The dashed wiring is a circuit diagram, not a conduit takeoff. Pro is required for Symbol Search; review every candidate. The 24 fixtures and 46 ft are drawing references, not app results.",
+      "target": "Il tratteggio indica un percorso schematico, non un computo esecutivo delle tubazioni elettriche. La ricerca dei simboli richiede Pro: verifica ogni proposta. I 24 apparecchi, le 12 prese, gli 8 interruttori e i 34,50 m sono riferimenti del disegno, non risultati dell'app."
+    },
+    "exercise.historicalElectrical": {
+      "source": "Reconcile fixtures and receptacles with the electrical review sheet →",
+      "target": "Precedente esercizio elettrico statunitense: verifica separatamente apparecchi e prese →"
+    },
+    "library.06.filename": {
+      "source": "06-Electrical-Lighting-and-Power.pdf",
+      "target": "06-Illuminazione-e-impianti-elettrici.pdf"
+    },
+    "exercise.compare.title": {
+      "source": "Compare the Willow Creek architectural revisions",
+      "target": "Confronta le revisioni architettoniche del Centro Civico dei Tigli"
+    },
+    "exercise.compare.sheets": {
+      "source": "A101 · A201",
+      "target": "A101 · A201"
+    },
+    "exercise.compare.step1": {
+      "source": "Open Revision A and Revision B. Pair A101 with A101 and A201 with A201; keep the full sheet extents aligned.",
+      "target": "Apri le revisioni A e B. Associa A101 ad A101 e A201 ad A201, mantenendo allineate le tavole A1 complete."
+    },
+    "exercise.compare.step2": {
+      "source": "On A101, review the 6 ft partition shift between rooms 103 and 104 and the 3 ft movement of the room 104 door.",
+      "target": "In A101 esamina lo spostamento di 1,50 m verso est della parete tra i locali 103 e 104 e quello di 0,75 m verso est della porta del locale 104."
+    },
+    "exercise.compare.step3": {
+      "source": "Review the added 6 ft south glazing on A101 and A201, then check the revised issue fields and notes.",
+      "target": "Esamina la nuova finestra sud di 1,50 m in A101 e A201, quindi controlla i campi di emissione e le note modificate."
+    },
+    "exercise.compare.scope": {
+      "source": "Room 103 changes from 576 to 720 sq ft; room 104 changes from 576 to 432 sq ft. The gross footprint stays 5,760 sq ft. These are authored changes, not a promised detection count.",
+      "target": "Il locale 103 passa da 36,00 a 45,00 m²; il locale 104 passa da 36,00 a 27,00 m². L'impronta resta di 360,00 m². Sono modifiche predisposte nei disegni, non un numero garantito di differenze rilevate."
+    },
+    "exercise.download.B": {
+      "source": "Download Revision B · PDF",
+      "target": "Scarica la revisione B · PDF"
+    },
+    "library.03.filename": {
+      "source": "03-Architectural-Revision-B.pdf",
+      "target": "03-Architettura-Revisione-B.pdf"
+    },
+    "exercise.review.title": {
+      "source": "Review the Willow Creek coordination sheets",
+      "target": "Esamina il coordinamento del Centro Civico dei Tigli"
+    },
+    "exercise.review.sheets": {
+      "source": "X101 · X102",
+      "target": "X101 · X102"
+    },
+    "exercise.review.step1": {
+      "source": "Open X101 and inspect the three numbered coordination issues and their existing sticky notes.",
+      "target": "Apri X101 ed esamina le tre interferenze numerate e le relative note PDF già presenti."
+    },
+    "exercise.review.step2": {
+      "source": "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.",
+      "target": "Usa X102 per collegare ogni posizione al problema, alla disciplina, allo stato e alla risposta richiesta. Aggiungi le tue annotazioni a una copia."
+    },
+    "exercise.review.step3": {
+      "source": "Save the copy, reopen it, and inspect the annotations and any exported Markup Table before handing it off.",
+      "target": "Salva la copia, riaprila e controlla le annotazioni e l'eventuale tabella esportata prima della consegna."
+    },
+    "exercise.review.scope": {
+      "source": "The source contains three authored issues and four PDF layers. These are fictional coordination exercises; no engineering or code-compliance conclusion is established.",
+      "target": "L'originale contiene tre interferenze per esercitazioni e quattro livelli PDF. Questi esercizi fittizi di coordinamento non costituiscono una verifica tecnica né una prova di conformità normativa."
+    },
+    "library.11.filename": {
+      "source": "11-Coordination-and-Review.pdf",
+      "target": "11-Coordinamento-e-revisione.pdf"
+    },
+    "exercise.ocr.title": {
+      "source": "Test OCR on the Willow Creek scanned sheets",
+      "target": "Prova l'OCR sulle tavole scansionate dei Tigli"
+    },
+    "exercise.ocr.sheets": {
+      "source": "A101 · C101",
+      "target": "A101 · C101"
+    },
+    "exercise.ocr.step1": {
+      "source": "Open the scanned set and try searching for WILLOW CREEK. The original two-page PDF contains images without native text.",
+      "target": "Apri la serie scansionata e cerca SALA POLIVALENTE. Il PDF originale di due pagine contiene immagini senza testo nativo."
+    },
+    "exercise.ocr.step2": {
+      "source": "Run OCR on a working copy. Search for COMMUNITY ROOM on A101 and SITE PLAN on C101, then inspect the recognized text.",
+      "target": "Esegui l'OCR su una copia di lavoro. Cerca SALA POLIVALENTE in A101 e PLANIMETRIA E RETI in C101, quindi controlla il testo riconosciuto."
+    },
+    "exercise.ocr.step3": {
+      "source": "Save and reopen the result. Repeat the searches and visually check dimensions before measuring the scanned drawing.",
+      "target": "Salva e riapri il risultato. Ripeti le ricerche e verifica visivamente le quote prima di misurare la tavola scansionata."
+    },
+    "exercise.ocr.scope": {
+      "source": "Search targets are printed source text, not a promise of recognition accuracy. OCR does not repair drawing scale or scan distortion.",
+      "target": "I termini di ricerca sono stampati nei disegni originali; il riconoscimento non è garantito. L'OCR non corregge la scala del disegno né le distorsioni della scansione."
+    },
+    "library.12.filename": {
+      "source": "12-Scanned-Legacy-Drawings.pdf",
+      "target": "12-Tavole-esistenti-scansionate.pdf"
+    },
+    "exercise.spreadsheet": {
+      "source": "Move checked quantities into the free Excel takeoff template →",
+      "target": "Trasferisci le quantità verificate nel modello Excel gratuito per il computo →"
+    },
+    "exercise.workflow": {
+      "source": "Open the related workflow guide →",
+      "target": "Apri la guida al flusso di lavoro correlato →"
+    },
+    "exercise.library": {
+      "source": "Browse the complete drawing library →",
+      "target": "Esplora la biblioteca completa dei disegni →"
+    }
+  },
+  "previews": {
+    "/samples/construction/previews/01-Civil-Site-and-Grading--page-01.png": "PLANIMETRIA E RETI - C101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/01-Civil-Site-and-Grading--page-02.png": "TERRENO, SEZIONI E PAVIMENTAZIONI - C201, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/02-Architectural-Revision-A--page-01.png": "PIANTA DEL PIANO TERRA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/02-Architectural-Revision-A--page-02.png": "PROSPETTI, SEZIONE E DETTAGLIO PARETE - A201, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/03-Architectural-Revision-B--page-01.png": "PIANTA DEL PIANO TERRA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/03-Architectural-Revision-B--page-02.png": "PROSPETTI, SEZIONE E DETTAGLIO PARETE - A201, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-01.png": "PIANTA DELLE FONDAZIONI E DELLA SOLETTA - S101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-02.png": "SCHEMA STRUTTURALE E DETTAGLI - S201, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/05-Mechanical-HVAC--page-01.png": "PIANTA DELLA VENTILAZIONE - M101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/05-Mechanical-HVAC--page-02.png": "SCHEMA E ABACO DELLA VENTILAZIONE - M501, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-01.png": "ILLUMINAZIONE E PRESE - E101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-02.png": "SCHEMA ELETTRICO E ABACO APPARECCHI - E501, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-01.png": "RETE IDRICA E SCARICHI - P101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-02.png": "SCHEMA DELLE COLONNE E DETTAGLI SANITARI - P501, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-01.png": "PROTEZIONE ANTINCENDIO - ESERCIZIO - F101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-02.png": "SCHEMA DELLE VIE DI ESODO E LEGENDA - F501, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/09-Landscape-and-External-Works--page-01.png": "PIANTUMAZIONI E SPAZI ESTERNI - L101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/09-Landscape-and-External-Works--page-02.png": "VERDE, PERCORSI E ARREDI - L501, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-01.png": "PIANTA DELLE FINITURE A PAVIMENTO - I101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-02.png": "ARREDI E DETTAGLI DEI PAVIMENTI - I501, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/11-Coordination-and-Review--page-01.png": "COORDINAMENTO DEGLI IMPIANTI - X101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/11-Coordination-and-Review--page-02.png": "REGISTRO DELLE INTERFERENZE E DETTAGLI - X102, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-01.png": "PIANTA SCANSIONATA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+    "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-02.png": "PLANIMETRIA SCANSIONATA - C101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni"
+  },
+  "preview": {
+    "title": "Biblioteca di tavole in italiano",
+    "notice": "Anteprima locale della biblioteca e degli esercizi; il sito completo in italiano e la pagina degli esempi sono ancora in preparazione."
+  }
+}

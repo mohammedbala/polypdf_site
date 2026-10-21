@@ -1,0 +1,210 @@
+{
+  "status": "passed",
+  "scope": "Local website shared-component QA; no native app capture or published route",
+  "desktopHeader": {
+    "copyNodes": 126,
+    "height": 720,
+    "images": [
+      {
+        "alt": "PLANIMETRIA E RETI - C101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/01-1.png"
+      },
+      {
+        "alt": "PIANTA DEL PIANO TERRA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PIANTA DEL PIANO TERRA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "PIANTA DELLE FONDAZIONI E DELLA SOLETTA - S101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/04-1.png"
+      },
+      {
+        "alt": "PIANTA DELLA VENTILAZIONE - M101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/05-1.png"
+      },
+      {
+        "alt": "ILLUMINAZIONE E PRESE - E101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "RETE IDRICA E SCARICHI - P101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/07-1.png"
+      },
+      {
+        "alt": "PROTEZIONE ANTINCENDIO - ESERCIZIO - F101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/08-1.png"
+      },
+      {
+        "alt": "PIANTUMAZIONI E SPAZI ESTERNI - L101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/09-1.png"
+      },
+      {
+        "alt": "PIANTA DELLE FINITURE A PAVIMENTO - I101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "COORDINAMENTO DEGLI IMPIANTI - X101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "PIANTA SCANSIONATA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/12-1.png"
+      },
+      {
+        "alt": "PIANTA DEL PIANO TERRA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": false,
+        "src": "/localized-media/it/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PIANTA DELLE FINITURE A PAVIMENTO - I101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": false,
+        "src": "/localized-media/it/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "ILLUMINAZIONE E PRESE - E101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": false,
+        "src": "/localized-media/it/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "PIANTA DEL PIANO TERRA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": false,
+        "src": "/localized-media/it/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PIANTA DEL PIANO TERRA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": false,
+        "src": "/localized-media/it/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "COORDINAMENTO DEGLI IMPIANTI - X101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": false,
+        "src": "/localized-media/it/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "PIANTA SCANSIONATA - A101, CENTRO CIVICO DEI TIGLI, tavola A1 per esercitazioni",
+        "loaded": false,
+        "src": "/localized-media/it/samples/construction/previews/12-1.png"
+      }
+    ],
+    "lang": "it",
+    "scrollWidth": 1280,
+    "width": 1280
+  },
+  "desktopFinal": {
+    "images": [
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/01-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/02-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/03-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/04-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/05-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/06-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/07-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/08-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/09-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/10-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/11-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/12-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/02-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/10-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/06-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/02-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/03-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/11-1.png"
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/it/samples/construction/previews/12-1.png"
+      }
+    ],
+    "ocrTop": 100.90625,
+    "scrollWidth": 1280,
+    "uniqueCopyRecords": 101,
+    "width": 1280
+  },
+  "electrical": {
+    "scrollWidth": 1280,
+    "text": "ESERCITATI CON LE TAVOLE DI COSTRUZIONE\n\nConta i simboli della pianta elettrica dei Tigli\n\nE101 · E501\n\nApri E101 e identifica il simbolo dell'apparecchio illuminante nella legenda. Conta solo i simboli della pianta, escludendo gli esempi della legenda e dei dettagli.\nVerifica i 24 apparecchi illuminanti, le 12 prese e gli 8 interruttori della pianta. Mantieni separati i conteggi delle tre categorie.\nCalibra il riferimento di 5,00 m. Traccia il percorso schematico di E101 e confrontalo con 34,50 m. E501 contiene lo schema elettrico e l'abaco degli apparecchi.\n\nIl tratteggio indica un percorso schematico, non un computo esecutivo delle tubazioni elettriche. La ricerca dei simboli richiede Pro: verifica ogni proposta. I 24 apparecchi, le 12 prese, gli 8 interruttori e i 34,50 m sono riferimenti del disegno, non risultati dell'app.\n\nI valori sono riferimenti del disegno, non nuovi risultati di test dell'app. Lavora su una copia e controlla il file salvato.\n\nPrecedente esercizio elettrico statunitense: verifica separatamente apparecchi e prese →\n\nApri la guida al flusso di lavoro correlato →\n\nScarica la tavola dell'esercizio · PDF\n06-Illuminazione-e-impianti-elettrici.pdf\n\nEsplora la biblioteca completa dei disegni →",
+    "top": 28.03125,
+    "width": 1280
+  },
+  "mobile": {
+    "heading": "Un progetto. Dodici PDF. Ventiquattro tavole di costruzione.",
+    "height": 844,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "downloadPath": "/Users/mohammedbala/Downloads/PolyPDF-Tavole-di-costruzione-it-IT.zip",
+  "screenshots": [
+    "browser-desktop-header.jpg",
+    "browser-desktop-electrical.jpg",
+    "browser-mobile-header.jpg"
+  ]
+}

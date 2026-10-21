@@ -19,13 +19,14 @@ const results=[];
 for(const locale of locales) {
   const profile=JSON.parse(read(`scripts/localization/library-copy-${locale}.json`));
   const library=JSON.parse(read(`public/localized-media/${locale}/samples/construction/DEMO-MANIFEST.json`));
-  const catalog=JSON.parse(read(`src/content/translations/${locale}.json`));
   const preview=profile.preview??(locale==='de'?{title:'Deutsche Planbibliothek',notice:'Lokale Vorschau der Planbibliothek und Übungen; die vollständige Beispielseite ist noch nicht freigegeben.'}:{title:'Bibliothèque de plans en français',notice:'Aperçu local de la bibliothèque et des exercices ; la page complète des exemples reste en préparation.'});
   if(!['de','fr'].includes(locale)&&!profile.preview)throw new Error(`Missing localized preview labels: ${locale}`);
   const dom=new JSDOM(`<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${preview.title} · PolyPDF</title>${stylesheet}<style>body{padding:24px}main{max-width:1200px;margin:auto}.local-preview{font-size:14px}</style></head><body><main><p class="local-preview" translate="no">${preview.notice}</p>${sections.map(s=>s.outerHTML).join('')}</main></body></html>`);
   const d=dom.window.document;
   localizeRegionalCopy(d,{id:locale},media);
-  translateDOM(d.body,translateFactory(catalog));
+  // A regional component must be complete on its own, including pilot languages
+  // without a full-site catalog. An unbound translatable string still fails.
+  translateDOM(d.body,translateFactory({strings:{}}));
   localizeWalkthroughMedia(d,{id:locale},media);
   const seen=new Set();
   for(const n of d.querySelectorAll('[data-regional-copy]')){
@@ -66,4 +67,4 @@ for(const locale of locales) {
 }
 fs.mkdirSync(path.join(root,audit),{recursive:true});
 fs.writeFileSync(path.join(root,audit,'verification.json'),JSON.stringify({status:'passed',sourceHtmlSha256:hash(source),results,limitations:['Shared components only; /samples remains English-only and all checked media packs remain pilot','React prerender and international stage use existing compiled site assets; no full production bundle build','Editorial drafts awaiting native-speaker review; no new native application or platform verification','No publication']},null,2)+'\n');
-console.log(`Verified ${results.length} regional libraries: 98 copy records, 12 cards, 6 exercises, 19 images and 21 downloads each.`);
+console.log(`Verified ${results.length} regional libraries: ${results.map(r=>`${r.locale}=${r.copyRecords}`).join(', ')} copy records; 12 cards, 6 exercises, 19 images and 21 downloads each.`);

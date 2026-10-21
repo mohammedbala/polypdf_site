@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "route": "/de/blog/compare-pdf-drawing-revisions/",
+  "htmlSha256": "dfc5a0ae3048e6f40de91bed786bc8bc69985c4e66d20913d00e0d9850426042",
+  "localizedImages": 3,
+  "localizedDownloads": 5,
+  "sourceFiles": {
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/localization/compare-de.json": "aef269830a6362f99d44a7381d7e703b452c90741caf77f27c00a0ba39f73cde",
+    "scripts/localization/prepare-compare-de.py": "54efab22610846741c3a01112e614e0cf2aa3590b38d19cde73fe1c5cd98a26d",
+    "scripts/localization/verify-compare-pdfs.py": "9146f4cd9ec20677146732f8035470cb16c9db38de7e711658c49daad26693e6",
+    "scripts/localization/capture-compare-de.mjs": "557c83771ac5d42cd87589e039588fd0341383916dbd3bb0bceb5c74f7a6912e",
+    "scripts/localization/register-compare-de.cjs": "22946d9905ba8e99f530869f4ad4609678f24939c2193b72777a60af09308860",
+    "scripts/localization/verify-compare-page.cjs": "0e1b547f5adf94caed2ca2c7c1d4397fa95507e4a4db58cd870f575b2e1aa370",
+    "src/content/guides/compare-pdf-drawing-revisions.js": "9208a316678c1f6d5877a0f154812f6521b747e168327d27aa36cd3db8b964bb",
+    "src/localization/walkthrough-media.json": "47a2278fc132cc1eacc4f02472d06d2daf83fee34ffb124a6aab7d4d202cb536"
+  },
+  "checks": [
+    "Three instructional images use hash-verified German assets",
+    "Both source PDFs and the saved comparison match the actual Mac capture",
+    "PDF download cards retain their previews and German accessible labels",
+    "Twelve German clouds, two original links, metric source changes and saved-reopen instructions agree",
+    "Hero, social and Article image metadata agree",
+    "English and unfinished Spanish retain their original media"
+  ],
+  "limitations": [
+    "Fourth completed German route within a pilot pack; global rollout remains incomplete",
+    "International transformation of existing English prerender; no full React rebuild",
+    "Local Mac development capture; Windows/native iPad and other PDF viewers not qualified",
+    "No deployment"
+  ]
+}

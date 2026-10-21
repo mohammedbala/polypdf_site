@@ -395,6 +395,18 @@
     "library.12.filename": {
       "source": "12-Scanned-Legacy-Drawings.pdf",
       "target": "12-Gescannte-Bestandsplaene.pdf"
+    },
+    "exercise.spreadsheet": {
+      "source": "Move checked quantities into the free Excel takeoff template →",
+      "target": "Geprüfte Mengen in die kostenlose Excel-Aufmaßvorlage übertragen →"
+    },
+    "exercise.workflow": {
+      "source": "Open the related workflow guide →",
+      "target": "Öffnen Sie den zugehörigen Workflow-Leitfaden →"
+    },
+    "exercise.library": {
+      "source": "Browse the complete drawing library →",
+      "target": "Durchsuchen Sie die komplette Zeichnungsbibliothek →"
     }
   },
   "previews": {

@@ -395,6 +395,18 @@
     "library.12.filename": {
       "source": "12-Scanned-Legacy-Drawings.pdf",
       "target": "12-Plantas-existentes-digitalizadas.pdf"
+    },
+    "exercise.spreadsheet": {
+      "source": "Move checked quantities into the free Excel takeoff template →",
+      "target": "Transfira as quantidades conferidas para o modelo gratuito de levantamento em Excel →"
+    },
+    "exercise.workflow": {
+      "source": "Open the related workflow guide →",
+      "target": "Abra o guia de fluxo de trabalho relacionado →"
+    },
+    "exercise.library": {
+      "source": "Browse the complete drawing library →",
+      "target": "Navegue pela biblioteca completa de desenhos →"
     }
   },
   "previews": {

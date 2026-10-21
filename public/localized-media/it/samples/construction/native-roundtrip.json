@@ -1,0 +1,185 @@
+{
+  "locale": "it-IT",
+  "region": "IT",
+  "manifestSha256": "1f07d29187e6de7c87a438ce4f9079d6d3de581b4d0a174f85dd53740e57372b",
+  "appBuild": "1.6.17+84",
+  "sourceFiles": {
+    "packages/pdf/src/native-annotation-import.ts": "3304419799a45e123163cc19f17e2b8bda1833a6608fab7bdeec1567f86f0fcd",
+    "packages/pdf-node/src/native-annotation-export.ts": "eeed63abe04852cca326021e8724f8787ac5e0bffac164a95cc83427389b1b8b",
+    "packages/core/src/measurement.ts": "7439822b8ee91291aed366fec95b918e7814d8a9ce70233210f6795432f641b7",
+    "packages/core/src/workspace.ts": "f90862aa6440b51a34ef692db74dbd188ce5806dd4f97866ea5b81c9420afb57",
+    "tests/pdf-node/regional-library-roundtrip.test.ts": "dab84e0b0efb2813e27a764a0ea6272f39aafbc0cca2f74b66229d319f1da574"
+  },
+  "status": "passed",
+  "scope": "Actual PolyPDF annotation writer/importer and measurement service; not native UI interaction or platform qualification",
+  "cases": [
+    {
+      "file": "01-Planimetria-e-terreno.pdf",
+      "sourceSha256": "b63eb88b5d6fca15f5d1d3e51a69867a399031b542c035f64dc0bb2db3e0dfaa",
+      "mode": "ordinary",
+      "outputSha256": "93e5774d81f1acb1c00d24dce69ff30e0b6762c298b2aab642cc48336370881c",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "01-Planimetria-e-terreno.pdf",
+      "sourceSha256": "b63eb88b5d6fca15f5d1d3e51a69867a399031b542c035f64dc0bb2db3e0dfaa",
+      "mode": "append-only",
+      "outputSha256": "c42d0ab64cc832a1c8c03d9d5f1bda1bd86ffe9aaa33fc5020291890e6ec1486",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "02-Architettura-Revisione-A.pdf",
+      "sourceSha256": "9361ed4e7988cc82ff248abbb73f740eaaee4233139d3ec46f05d3fac2e06edb",
+      "mode": "ordinary",
+      "outputSha256": "9da902f89d6d0c203a8f7993efa7c48c46d6e411063ba065d7f8a972047733e9",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "02-Architettura-Revisione-A.pdf",
+      "sourceSha256": "9361ed4e7988cc82ff248abbb73f740eaaee4233139d3ec46f05d3fac2e06edb",
+      "mode": "append-only",
+      "outputSha256": "4bc1fad677612ea5f9e4093d6a8635fbfbc9d268906ece5b164f19d507c8ad99",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Architettura-Revisione-B.pdf",
+      "sourceSha256": "37c93ed8ab68857c5dcdb763295143a3294045683e1be5b30d378f144b311d11",
+      "mode": "ordinary",
+      "outputSha256": "5d7ca6652b80bbd76d2ee3de21635f66ba7f4f9f8793805923fb6ead6dcf14a9",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Architettura-Revisione-B.pdf",
+      "sourceSha256": "37c93ed8ab68857c5dcdb763295143a3294045683e1be5b30d378f144b311d11",
+      "mode": "append-only",
+      "outputSha256": "0f458d758bfbc77d555e7985b95641fc0fca33352b6032872c7464152e1c96f5",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Fondazioni-e-strutture.pdf",
+      "sourceSha256": "0c7082748a8f8500e90c836b4f04764c70fd617e2d56f254d66f81b824c8b124",
+      "mode": "ordinary",
+      "outputSha256": "5512839e3d0d050c5f6d364f7068fa295a2973491b5811b4a8c0099834d9642e",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Fondazioni-e-strutture.pdf",
+      "sourceSha256": "0c7082748a8f8500e90c836b4f04764c70fd617e2d56f254d66f81b824c8b124",
+      "mode": "append-only",
+      "outputSha256": "93abf250e6c0ee0fd30d781e24506f0a0c452b2ac652c778a4412423c47bec8a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Ventilazione.pdf",
+      "sourceSha256": "2d61a6c44790addb4037111d15c0e5ab007bb3e9681f0a9c0631244035955f90",
+      "mode": "ordinary",
+      "outputSha256": "073e904694bfb7778b241218b9300736cfdf99a7424378751b02f6db8ca1ca9f",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Ventilazione.pdf",
+      "sourceSha256": "2d61a6c44790addb4037111d15c0e5ab007bb3e9681f0a9c0631244035955f90",
+      "mode": "append-only",
+      "outputSha256": "62fa8c6e147ed149cb866813b460dfaa314a06b1ced793dd4b6c2daac1a181b7",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Illuminazione-e-impianti-elettrici.pdf",
+      "sourceSha256": "195e5b2cbcbb479c3f6243d2c6361207b856757e717100ab3e003e6600a09008",
+      "mode": "ordinary",
+      "outputSha256": "d87bc1fcc476815efe49a61de39e7c371e19cefbc452cbe1af7254d4d93361fe",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Illuminazione-e-impianti-elettrici.pdf",
+      "sourceSha256": "195e5b2cbcbb479c3f6243d2c6361207b856757e717100ab3e003e6600a09008",
+      "mode": "append-only",
+      "outputSha256": "4d04d6dc81e2700bea8ad2c5c1ef61f55559b22dc247542bd243b0a61cc8976b",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Rete-idrica-e-scarichi.pdf",
+      "sourceSha256": "e1dac65f0d60f3fa3b942ea7f1dab3281ddff1af9cfd9e8de8efeb74413b5fe4",
+      "mode": "ordinary",
+      "outputSha256": "d7f9b9b330c500d11120cd01b2b5dab4278d2b1d605a7166a63e3d8b75ad9bb8",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Rete-idrica-e-scarichi.pdf",
+      "sourceSha256": "e1dac65f0d60f3fa3b942ea7f1dab3281ddff1af9cfd9e8de8efeb74413b5fe4",
+      "mode": "append-only",
+      "outputSha256": "e6543bc97971b3618bb517dc4ed9ea7cd89d4511147d49eb0ece66b8fe548267",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Protezione-antincendio-Esercizio.pdf",
+      "sourceSha256": "c61a8a67781af0a08e765d693aeed906703011521ec66918402365fe74aa7e48",
+      "mode": "ordinary",
+      "outputSha256": "d231b4c26cbd02613a815063382cb39d98fe6283ce0bb3a7df95571706499afe",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Protezione-antincendio-Esercizio.pdf",
+      "sourceSha256": "c61a8a67781af0a08e765d693aeed906703011521ec66918402365fe74aa7e48",
+      "mode": "append-only",
+      "outputSha256": "28d446d61effc1ff150a9cecad82e5629bdc9e434d4067ce2f3ce23a1937672c",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "09-Verde-e-spazi-esterni.pdf",
+      "sourceSha256": "554e65c0fbde8c3d3ae0650c9d3ef81dac8fe41377608f075222b954b0e7683c",
+      "mode": "ordinary",
+      "outputSha256": "e5ed6e775e36b7514a64d5167bffdeec96f4743be9bfc205cbae3674752f92e1",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "09-Verde-e-spazi-esterni.pdf",
+      "sourceSha256": "554e65c0fbde8c3d3ae0650c9d3ef81dac8fe41377608f075222b954b0e7683c",
+      "mode": "append-only",
+      "outputSha256": "e1af709c71e471c2a14d8749ccb5c2ea5e527603035c887a37ade2155fbaff93",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "10-Finiture-e-arredi.pdf",
+      "sourceSha256": "e406f29075a18001a5c9965991f1573c8f477e2205136bca9f397aae9c9e5dd8",
+      "mode": "ordinary",
+      "outputSha256": "83199ee2351f60524e4932a762f8e81cbb028f70b65458be7e21372566781b0b",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "10-Finiture-e-arredi.pdf",
+      "sourceSha256": "e406f29075a18001a5c9965991f1573c8f477e2205136bca9f397aae9c9e5dd8",
+      "mode": "append-only",
+      "outputSha256": "ecaea51e704a3f3589ebc6fda8cf324266cbfacc3f56133764c7c8578140f135",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Coordinamento-e-revisione.pdf",
+      "sourceSha256": "b9f7b47e85236cafcaa99b4d4c0338b25f904bacfa2e87af0314b210ad61060b",
+      "mode": "ordinary",
+      "outputSha256": "b44f99b042a0741f3159ecbf8da68a0c4423d1b46241a796a04956517b98cf5b",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Coordinamento-e-revisione.pdf",
+      "sourceSha256": "b9f7b47e85236cafcaa99b4d4c0338b25f904bacfa2e87af0314b210ad61060b",
+      "mode": "append-only",
+      "outputSha256": "bb80d7b2ab9cdc66f30f55a1e01ff69cdb21e4f2924b6293b00d3772523ee69c",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Tavole-esistenti-scansionate.pdf",
+      "sourceSha256": "517808026c5fd214668ebd7f835e32b1e8a31f35c042339a37f0ccc9a0881ff1",
+      "mode": "ordinary",
+      "outputSha256": "4c99a0310b094cf66766e4ac1436595265ff450ba026acee578bc6266104c54e",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Tavole-esistenti-scansionate.pdf",
+      "sourceSha256": "517808026c5fd214668ebd7f835e32b1e8a31f35c042339a37f0ccc9a0881ff1",
+      "mode": "append-only",
+      "outputSha256": "ea0367f311332e07451dd50d72cc0a0ccdd174d7b627431497dc6ee4d206309c",
+      "quantityMetres": 4.999999999997638
+    }
+  ]
+}

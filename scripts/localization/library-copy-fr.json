@@ -395,6 +395,18 @@
     "library.12.filename": {
       "source": "12-Scanned-Legacy-Drawings.pdf",
       "target": "12-Plans-existants-numerises.pdf"
+    },
+    "exercise.spreadsheet": {
+      "source": "Move checked quantities into the free Excel takeoff template →",
+      "target": "Transférez les quantités vérifiées dans le modèle de métré Excel gratuit →"
+    },
+    "exercise.workflow": {
+      "source": "Open the related workflow guide →",
+      "target": "Ouvrez le guide de workflow associé →"
+    },
+    "exercise.library": {
+      "source": "Browse the complete drawing library →",
+      "target": "Parcourez la bibliothèque de dessins complète →"
     }
   },
   "previews": {

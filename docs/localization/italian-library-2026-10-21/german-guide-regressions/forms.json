@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "route": "/de/blog/create-fillable-pdf-form/",
+  "htmlSha256": "bd41962c59006957b1c50e5f7a4b9835b63b9173af7e6ee5c670769fb7f1a047",
+  "localizedImages": 1,
+  "localizedPdfDownloads": 2,
+  "localizedCsvDownloads": 1,
+  "sourceFiles": {
+    "scripts/localization/forms-de.json": "36020cecb5ac35da09f25107e2f7f4846c91525ae208f971ebe0af8c1a0b621f",
+    "scripts/localization/prepare-forms-de.py": "57f9c56dce6dbc78ca6838e1f63f9e68a829152d0743c92dd17458a85c0f713a",
+    "scripts/localization/capture-forms-de.mjs": "ad9edcd55335a1f6eaed506068109c7bc08e72ca8e37b17c36f2ee3941775938",
+    "scripts/localization/register-forms-de.cjs": "761b5e14efe9acf6a0db76746c0a8bd044f8596ee81f040811075302ee725c2a",
+    "scripts/localization/verify-forms-de.py": "43d79fef625fde0bf1d13914c4440e778ae528938efa9de485f8768be845d665",
+    "scripts/localization/verify-forms-page.cjs": "311c35f2b66e34238fc9a2ca0c84a3ab66129f671cf22864525702904ee2a747",
+    "scripts/localization/media.cjs": "66ff44d39d7374a2c14fd872e666dc1c684b8b8026e9d833e5163566f7336d9c",
+    "scripts/international/build.cjs": "e57d4ccef3ee18db73c4635fcb3073bbbd2623de27a3d21c64bc00d5a144ba2b",
+    "src/content/guides/create-fillable-pdf-form.js": "5e52dc765f62e98de40c1f5c4ee416efea453e1db631ef02a4261366a10d3270",
+    "src/localization/walkthrough-media.json": "47a2278fc132cc1eacc4f02472d06d2daf83fee34ffb124a6aab7d4d202cb536"
+  },
+  "checks": [
+    "German actual app hero and social image",
+    "Source and native saved PDF plus eleven-field map verified by hash",
+    "Eleven canonical values and thirteen widgets survive native Save and full app restart",
+    "Guide explains added list field, stable keys, configured tab order and intentionally missing required checkbox",
+    "English and unfinished Spanish preserved"
+  ],
+  "limitations": [
+    "One completed German route within a pilot pack; full rollout remains incomplete",
+    "Local Mac development capture; no released installer, Windows or native iPad qualification",
+    "No deployment"
+  ]
+}

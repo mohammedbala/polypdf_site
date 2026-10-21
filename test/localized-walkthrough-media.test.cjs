@@ -4,6 +4,22 @@ const { JSDOM } = require('jsdom');
 const crypto = require('node:crypto');
 const { localizeWalkthroughMedia, localizeRegionalCopy, inventoryWalkthroughMedia, resolveAsset, needsLocalization, verifyMediaFiles } = require('../scripts/localization/media.cjs');
 const locale = { id: 'de' };
+const { translateDOM, translateFactory } = require('../scripts/international/content.cjs');
+test('standalone regional copy needs no full-site catalog and rejects unbound prose', () => {
+  const data = {locales:{it:{appLocale:'it-IT',region:'IT',assets:{},regionalText:{
+    'exercise.workflow':{source:'Open the related workflow guide →',target:'Apri la guida correlata →'},
+  }}}};
+  const dom = new JSDOM('<a href="/guides/measure/"><span data-regional-copy="exercise.workflow">Open the related workflow guide →</span></a>');
+  localizeRegionalCopy(dom.window.document,{id:'it'},data);
+  translateDOM(dom.window.document.body,translateFactory({strings:{}}));
+  assert.equal(dom.window.document.querySelector('a').textContent,'Apri la guida correlata →');
+  assert.equal(dom.window.document.querySelector('a').getAttribute('href'),'/guides/measure/');
+  const unbound = dom.window.document.createElement('p');
+  unbound.textContent = 'This exercise text is not localized';
+  dom.window.document.body.append(unbound);
+  assert.throws(()=>translateDOM(dom.window.document.body,translateFactory({strings:{}})),/Missing translation: This exercise text is not localized/);
+  dom.window.close();
+});
 function manifest() {
   const assets = {};
   for (const source of ['/guides/measure.png', '/guides/measure-large.webp', '/samples/plan.pdf', '/videos/measure.mp4', '/videos/measure.vtt']) {

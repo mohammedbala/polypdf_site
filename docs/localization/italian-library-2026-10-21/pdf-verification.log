@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "documents": 12,
+  "pages": 24,
+  "physicalReferences": 274,
+  "archive": "requires source-bound visual and app persistence receipts",
+  "sha256": null,
+  "visualReview": "separate source-bound receipt"
+}

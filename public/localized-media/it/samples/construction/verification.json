@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "locale": "it-IT",
+  "region": "IT",
+  "manifestSha256": "1f07d29187e6de7c87a438ce4f9079d6d3de581b4d0a174f85dd53740e57372b",
+  "automatedStatus": "passed",
+  "manualVisualReview": "required; keep a separate source-bound receipt",
+  "limits": "Demonstration geometry only. No standards certification or native application workflow validation.",
+  "documents": [
+    {
+      "id": "01",
+      "file": "01-Planimetria-e-terreno.pdf",
+      "sha256": "b63eb88b5d6fca15f5d1d3e51a69867a399031b542c035f64dc0bb2db3e0dfaa",
+      "pages": [
+        {
+          "sheet": "C101",
+          "page": 1,
+          "textItems": 60,
+          "physicalReferences": 16,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 128,
+            "text_show_operators": 60,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "C201",
+          "page": 2,
+          "textItems": 65,
+          "physicalReferences": 4,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 163,
+            "text_show_operators": 65,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "file": "02-Architettura-Revisione-A.pdf",
+      "sha256": "9361ed4e7988cc82ff248abbb73f740eaaee4233139d3ec46f05d3fac2e06edb",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 90,
+          "physicalReferences": 60,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 466,
+            "text_show_operators": 90,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "A201",
+          "page": 2,
+          "textItems": 62,
+          "physicalReferences": 17,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 204,
+            "text_show_operators": 62,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "file": "03-Architettura-Revisione-B.pdf",
+      "sha256": "37c93ed8ab68857c5dcdb763295143a3294045683e1be5b30d378f144b311d11",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 92,
+          "physicalReferences": 60,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 478,
+            "text_show_operators": 92,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "A201",
+          "page": 2,
+          "textItems": 62,
+          "physicalReferences": 18,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 209,
+            "text_show_operators": 62,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "file": "04-Fondazioni-e-strutture.pdf",
+      "sha256": "0c7082748a8f8500e90c836b4f04764c70fd617e2d56f254d66f81b824c8b124",
+      "pages": [
+        {
+          "sheet": "S101",
+          "page": 1,
+          "textItems": 61,
+          "physicalReferences": 15,
+          "symbolInstances": 12,
+          "pdf": {
+            "drawing_operators": 247,
+            "text_show_operators": 61,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "S201",
+          "page": 2,
+          "textItems": 64,
+          "physicalReferences": 2,
+          "symbolInstances": 12,
+          "pdf": {
+            "drawing_operators": 259,
+            "text_show_operators": 64,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "file": "05-Ventilazione.pdf",
+      "sha256": "2d61a6c44790addb4037111d15c0e5ab007bb3e9681f0a9c0631244035955f90",
+      "pages": [
+        {
+          "sheet": "M101",
+          "page": 1,
+          "textItems": 79,
+          "physicalReferences": 5,
+          "symbolInstances": 23,
+          "pdf": {
+            "drawing_operators": 818,
+            "text_show_operators": 79,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "M501",
+          "page": 2,
+          "textItems": 57,
+          "physicalReferences": 3,
+          "symbolInstances": 6,
+          "pdf": {
+            "drawing_operators": 242,
+            "text_show_operators": 57,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "file": "06-Illuminazione-e-impianti-elettrici.pdf",
+      "sha256": "195e5b2cbcbb479c3f6243d2c6361207b856757e717100ab3e003e6600a09008",
+      "pages": [
+        {
+          "sheet": "E101",
+          "page": 1,
+          "textItems": 103,
+          "physicalReferences": 5,
+          "symbolInstances": 47,
+          "pdf": {
+            "drawing_operators": 885,
+            "text_show_operators": 103,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "E501",
+          "page": 2,
+          "textItems": 59,
+          "physicalReferences": 2,
+          "symbolInstances": 9,
+          "pdf": {
+            "drawing_operators": 214,
+            "text_show_operators": 59,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "file": "07-Rete-idrica-e-scarichi.pdf",
+      "sha256": "e1dac65f0d60f3fa3b942ea7f1dab3281ddff1af9cfd9e8de8efeb74413b5fe4",
+      "pages": [
+        {
+          "sheet": "P101",
+          "page": 1,
+          "textItems": 70,
+          "physicalReferences": 7,
+          "symbolInstances": 15,
+          "pdf": {
+            "drawing_operators": 540,
+            "text_show_operators": 70,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "P501",
+          "page": 2,
+          "textItems": 62,
+          "physicalReferences": 0,
+          "symbolInstances": 9,
+          "pdf": {
+            "drawing_operators": 183,
+            "text_show_operators": 62,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "file": "08-Protezione-antincendio-Esercizio.pdf",
+      "sha256": "c61a8a67781af0a08e765d693aeed906703011521ec66918402365fe74aa7e48",
+      "pages": [
+        {
+          "sheet": "F101",
+          "page": 1,
+          "textItems": 103,
+          "physicalReferences": 5,
+          "symbolInstances": 44,
+          "pdf": {
+            "drawing_operators": 986,
+            "text_show_operators": 103,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "F501",
+          "page": 2,
+          "textItems": 60,
+          "physicalReferences": 0,
+          "symbolInstances": 7,
+          "pdf": {
+            "drawing_operators": 157,
+            "text_show_operators": 60,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "file": "09-Verde-e-spazi-esterni.pdf",
+      "sha256": "554e65c0fbde8c3d3ae0650c9d3ef81dac8fe41377608f075222b954b0e7683c",
+      "pages": [
+        {
+          "sheet": "L101",
+          "page": 1,
+          "textItems": 110,
+          "physicalReferences": 13,
+          "symbolInstances": 53,
+          "pdf": {
+            "drawing_operators": 875,
+            "text_show_operators": 110,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "L501",
+          "page": 2,
+          "textItems": 67,
+          "physicalReferences": 7,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 125,
+            "text_show_operators": 67,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "file": "10-Finiture-e-arredi.pdf",
+      "sha256": "e406f29075a18001a5c9965991f1573c8f477e2205136bca9f397aae9c9e5dd8",
+      "pages": [
+        {
+          "sheet": "I101",
+          "page": 1,
+          "textItems": 86,
+          "physicalReferences": 15,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 458,
+            "text_show_operators": 86,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "I501",
+          "page": 2,
+          "textItems": 56,
+          "physicalReferences": 14,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 165,
+            "text_show_operators": 56,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "file": "11-Coordinamento-e-revisione.pdf",
+      "sha256": "b9f7b47e85236cafcaa99b4d4c0338b25f904bacfa2e87af0314b210ad61060b",
+      "pages": [
+        {
+          "sheet": "X101",
+          "page": 1,
+          "textItems": 56,
+          "physicalReferences": 6,
+          "symbolInstances": 8,
+          "pdf": {
+            "drawing_operators": 454,
+            "text_show_operators": 56,
+            "image_xobjects": 0,
+            "layer_tags": [
+              "/LARCH",
+              "/LELEC",
+              "/LISSUES",
+              "/LMECH"
+            ]
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "X102",
+          "page": 2,
+          "textItems": 70,
+          "physicalReferences": 0,
+          "symbolInstances": 2,
+          "pdf": {
+            "drawing_operators": 115,
+            "text_show_operators": 70,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "file": "12-Tavole-esistenti-scansionate.pdf",
+      "sha256": "517808026c5fd214668ebd7f835e32b1e8a31f35c042339a37f0ccc9a0881ff1",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 0,
+          "physicalReferences": 0,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 0,
+            "text_show_operators": 0,
+            "image_xobjects": 1,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "C101",
+          "page": 2,
+          "textItems": 0,
+          "physicalReferences": 0,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 0,
+            "text_show_operators": 0,
+            "image_xobjects": 1,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "94cef854fb32a5c1c571f19ec87c4b2aafb8d527d55aa87197cfff56e2289483",
+      "pdf": "01-Planimetria-e-terreno.pdf",
+      "pdfSha256": "b63eb88b5d6fca15f5d1d3e51a69867a399031b542c035f64dc0bb2db3e0dfaa",
+      "page": 1
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "b292b9578670896082b49947a31c992fb9b0aa0d5db3b447d1e626071024882e",
+      "pdf": "01-Planimetria-e-terreno.pdf",
+      "pdfSha256": "b63eb88b5d6fca15f5d1d3e51a69867a399031b542c035f64dc0bb2db3e0dfaa",
+      "page": 2
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "7961775b536a77768d59ecd85bc2a634dec7ff646076cbde7e31a0a96adbc8ef",
+      "pdf": "02-Architettura-Revisione-A.pdf",
+      "pdfSha256": "9361ed4e7988cc82ff248abbb73f740eaaee4233139d3ec46f05d3fac2e06edb",
+      "page": 1
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "8f1f05c3ac7efd7cd833192578a0ce26a53c7d0cb80166c4b10859974d355e38",
+      "pdf": "02-Architettura-Revisione-A.pdf",
+      "pdfSha256": "9361ed4e7988cc82ff248abbb73f740eaaee4233139d3ec46f05d3fac2e06edb",
+      "page": 2
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "47d4cdf71474ac7e18648d8d46f0724089ce9ed000c0f87987e1561a15a51647",
+      "pdf": "03-Architettura-Revisione-B.pdf",
+      "pdfSha256": "37c93ed8ab68857c5dcdb763295143a3294045683e1be5b30d378f144b311d11",
+      "page": 1
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "3b0d2b1394e28728b14896ddd392e21d5665b0370c21a28cdc803d0c2a6383bb",
+      "pdf": "03-Architettura-Revisione-B.pdf",
+      "pdfSha256": "37c93ed8ab68857c5dcdb763295143a3294045683e1be5b30d378f144b311d11",
+      "page": 2
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "12a92c0f3b273315d941809c5dbc75cefde89b9d9a2ae0cb5a9dc1c1f42fd285",
+      "pdf": "04-Fondazioni-e-strutture.pdf",
+      "pdfSha256": "0c7082748a8f8500e90c836b4f04764c70fd617e2d56f254d66f81b824c8b124",
+      "page": 1
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "2c23ea3443da3256f170378a14a3cb2bdbf05bd753f1a5934d9590d5f3ae5cb8",
+      "pdf": "04-Fondazioni-e-strutture.pdf",
+      "pdfSha256": "0c7082748a8f8500e90c836b4f04764c70fd617e2d56f254d66f81b824c8b124",
+      "page": 2
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "198d777d0cfaca3522023aaa217f14ac4bd6b78b6c439b75e380e5e80b1accea",
+      "pdf": "05-Ventilazione.pdf",
+      "pdfSha256": "2d61a6c44790addb4037111d15c0e5ab007bb3e9681f0a9c0631244035955f90",
+      "page": 1
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "91cb731a394e8adc4952c34c432837f071c40170119d0d73d6a722cae76181e4",
+      "pdf": "05-Ventilazione.pdf",
+      "pdfSha256": "2d61a6c44790addb4037111d15c0e5ab007bb3e9681f0a9c0631244035955f90",
+      "page": 2
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "b8fe447a0adae5d4b5aa4b2b3e24c57036c35ff14eca24cb62fe8c3a80ee458e",
+      "pdf": "06-Illuminazione-e-impianti-elettrici.pdf",
+      "pdfSha256": "195e5b2cbcbb479c3f6243d2c6361207b856757e717100ab3e003e6600a09008",
+      "page": 1
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "962f8b08fc014dfee3ca8417d06c3a17834a5c70945ac3000ca10f85b19039f3",
+      "pdf": "06-Illuminazione-e-impianti-elettrici.pdf",
+      "pdfSha256": "195e5b2cbcbb479c3f6243d2c6361207b856757e717100ab3e003e6600a09008",
+      "page": 2
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "e31ea3c158dfa251a5f471e6470a860296e28fd1ebdfc153ca6536dc6e3d24fa",
+      "pdf": "07-Rete-idrica-e-scarichi.pdf",
+      "pdfSha256": "e1dac65f0d60f3fa3b942ea7f1dab3281ddff1af9cfd9e8de8efeb74413b5fe4",
+      "page": 1
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "40666c0a3bf0097f3116f2667161655cd75c97fae70a4e0717d54f3c3bc89a30",
+      "pdf": "07-Rete-idrica-e-scarichi.pdf",
+      "pdfSha256": "e1dac65f0d60f3fa3b942ea7f1dab3281ddff1af9cfd9e8de8efeb74413b5fe4",
+      "page": 2
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "f42a6aa9d596cbff7334d8e54cee5f46763fb49c99bb7e35ad99c0a67f0c707d",
+      "pdf": "08-Protezione-antincendio-Esercizio.pdf",
+      "pdfSha256": "c61a8a67781af0a08e765d693aeed906703011521ec66918402365fe74aa7e48",
+      "page": 1
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "a821329d322cba67973353759d3dee9f10edfa43b9ab991e661c9bac799f1718",
+      "pdf": "08-Protezione-antincendio-Esercizio.pdf",
+      "pdfSha256": "c61a8a67781af0a08e765d693aeed906703011521ec66918402365fe74aa7e48",
+      "page": 2
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "b58d42105240c893f01317780f1cbab0af9ca5eb809d651a973678f933753d41",
+      "pdf": "09-Verde-e-spazi-esterni.pdf",
+      "pdfSha256": "554e65c0fbde8c3d3ae0650c9d3ef81dac8fe41377608f075222b954b0e7683c",
+      "page": 1
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "e0aa48d760f61ef5886c74249beda7b54296864f578e6b301eb8b157101e6089",
+      "pdf": "09-Verde-e-spazi-esterni.pdf",
+      "pdfSha256": "554e65c0fbde8c3d3ae0650c9d3ef81dac8fe41377608f075222b954b0e7683c",
+      "page": 2
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "c11e67c6bd761357ddd4f797919c069e581fe0a8d3f4c5113ad797ded4e38dff",
+      "pdf": "10-Finiture-e-arredi.pdf",
+      "pdfSha256": "e406f29075a18001a5c9965991f1573c8f477e2205136bca9f397aae9c9e5dd8",
+      "page": 1
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "ab0ca015d0eb5b9286008d64fed052888883993c40b48432a455a8137f6617ca",
+      "pdf": "10-Finiture-e-arredi.pdf",
+      "pdfSha256": "e406f29075a18001a5c9965991f1573c8f477e2205136bca9f397aae9c9e5dd8",
+      "page": 2
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "518a4c357e642c4e9e4fa980b93c700bce41fd8e362f97afa3cdbe127429c068",
+      "pdf": "11-Coordinamento-e-revisione.pdf",
+      "pdfSha256": "b9f7b47e85236cafcaa99b4d4c0338b25f904bacfa2e87af0314b210ad61060b",
+      "page": 1
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "03bcca7f0b19cf487005bfb2db756bddacddc145bf8e67c07d7f3da6b8242bf2",
+      "pdf": "11-Coordinamento-e-revisione.pdf",
+      "pdfSha256": "b9f7b47e85236cafcaa99b4d4c0338b25f904bacfa2e87af0314b210ad61060b",
+      "page": 2
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "2468ad152f27d69c4454e785b17b7d889cf8dbf595827abe9d6ac92a256027ef",
+      "pdf": "12-Tavole-esistenti-scansionate.pdf",
+      "pdfSha256": "517808026c5fd214668ebd7f835e32b1e8a31f35c042339a37f0ccc9a0881ff1",
+      "page": 1
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "721f1010779b829b8994da17e07db60db613ad7fe22e6341f87df2ff5556bdef",
+      "pdf": "12-Tavole-esistenti-scansionate.pdf",
+      "pdfSha256": "517808026c5fd214668ebd7f835e32b1e8a31f35c042339a37f0ccc9a0881ff1",
+      "page": 2
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "b4f710c0fa2541c1742509b2992450307a2049328526c38c77e38e1468b1e493"
+  }
+}

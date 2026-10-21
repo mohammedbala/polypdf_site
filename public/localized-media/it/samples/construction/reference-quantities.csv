@@ -1,0 +1,43 @@
+Documento;Descrizione;Valore;Unità
+01;Area del lotto (m²);2.400,00;m²
+01;Perimetro del lotto (m);200,00;m
+01;Posti auto;8;-
+01;Area pavimentata (m²);144,00;m²
+01;Lunghezza della rete idrica (m);39,00;m
+01;Lunghezza della rete fognaria (m);34,00;m
+01;Lunghezza della rete elettrica (m);57,00;m
+02;Impronta rettangolare (m²);360,00;m²
+02;Perimetro dell'edificio (m);78,00;m
+02;Area del locale 103 (m²);36,00;m²
+02;Area del locale 104 (m²);36,00;m²
+02;Collegamenti interni alle sezioni;2;-
+02;Spostamento della parete (m);0,00;m
+02;Spostamento della porta (m);0,00;m
+02;Larghezza della finestra aggiunta (m);0,00;m
+03;Impronta rettangolare (m²);360,00;m²
+03;Perimetro dell'edificio (m);78,00;m
+03;Area del locale 103 (m²);45,00;m²
+03;Area del locale 104 (m²);27,00;m²
+03;Collegamenti interni alle sezioni;2;-
+03;Spostamento della parete (m);1,50;m
+03;Spostamento della porta (m);0,75;m
+03;Larghezza della finestra aggiunta (m);1,50;m
+04;Pilastri;12;-
+04;Plinti;12;-
+04;Area della soletta (m²);360,00;m²
+04;Spessore della soletta (m);0,15;m
+04;Volume della soletta (m³);54,00;m³
+04;Volume totale dei plinti (m³);17,496;m³
+04;Lunghezza totale delle travi (m);132,00;m
+09;Area pavimentata (m²);144,00;m²
+10;Pavimento resiliente (m²);324,00;m²
+10;Pavimento ceramico (m²);36,00;m²
+10;Area totale dei pavimenti (m²);360,00;m²
+10;Piastrelle prima dello sfrido;100;-
+10;Mobili base;6;-
+10;Larghezza del modulo di arredo (m);1,20;m
+10;Area del piano di lavoro (m²);4,32;m²
+10;Lunghezza degli zoccoli (m);7,20;m
+11;Note PDF modificabili;3;-
+11;Interferenze predisposte per l'esercizio;3;-
+12;Risoluzione della scansione (dpi);80;-

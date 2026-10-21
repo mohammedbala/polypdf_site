@@ -34,9 +34,9 @@ export default function ConstructionExample({ kind = 'takeoff', context = 'sampl
         <p className="construction-example-scope" data-regional-copy={landing?.scope ? undefined : `exercise.${kind}.scope`}>{(landing && landing.scope) || example.scope}</p>
         <p className="construction-example-provenance" data-regional-copy={landing ? undefined : "exercise.provenance"}>{landing ? landing.note : 'Drawing reference values, not new app test results. Work on a copy and check your own saved output.'}</p>
         {kind === 'takeoff' && <p><Link to="/product-facts/#verified-construction-example"><span data-regional-copy="exercise.historicalMac">Inspect the saved Mac example and its test record →</span></Link></p>}
-        {kind === 'takeoff' && <p><Link to="/tools/construction-takeoff-spreadsheet/">Move checked quantities into the free Excel takeoff template →</Link></p>}
+        {kind === 'takeoff' && <p><Link to="/tools/construction-takeoff-spreadsheet/"><span data-regional-copy="exercise.spreadsheet">Move checked quantities into the free Excel takeoff template →</span></Link></p>}
         {kind === 'electrical' && <p><Link to="/electrical-takeoff-software/#electrical-count-check"><span data-regional-copy="exercise.historicalElectrical">Reconcile fixtures and receptacles with the electrical review sheet →</span></Link></p>}
-        <p><Link to={example.guide}>Open the related workflow guide →</Link></p>
+        <p><Link to={example.guide}><span data-regional-copy="exercise.workflow">Open the related workflow guide →</span></Link></p>
       </div>
       <div className="construction-example-files">
         {example.files.map(file => <figure key={file}>
@@ -46,7 +46,7 @@ export default function ConstructionExample({ kind = 'takeoff', context = 'sampl
           </SampleLink>
           <figcaption><bdi dir="ltr" translate="no" data-regional-copy={`library.${file.slice(0,2)}.filename`}>{file}.pdf</bdi></figcaption>
         </figure>)}
-        <p><Link to="/samples/#construction-library">Browse the complete drawing library →</Link></p>
+        <p><Link to="/samples/#construction-library"><span data-regional-copy="exercise.library">Browse the complete drawing library →</span></Link></p>
       </div>
     </div>
   </section>;
