@@ -1,0 +1,168 @@
+TAP version 13
+# Subtest: tr-TR 01: regional calibration and PDF structure survive ordinary save/reopen
+ok 1 - tr-TR 01: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 104.927042
+  type: 'test'
+  ...
+# Subtest: tr-TR 01: regional calibration and PDF structure survive append-only save/reopen
+ok 2 - tr-TR 01: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 22.550041
+  type: 'test'
+  ...
+# Subtest: tr-TR 02: regional calibration and PDF structure survive ordinary save/reopen
+ok 3 - tr-TR 02: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 15.683542
+  type: 'test'
+  ...
+# Subtest: tr-TR 02: regional calibration and PDF structure survive append-only save/reopen
+ok 4 - tr-TR 02: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 17.042125
+  type: 'test'
+  ...
+# Subtest: tr-TR 03: regional calibration and PDF structure survive ordinary save/reopen
+ok 5 - tr-TR 03: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 12.155167
+  type: 'test'
+  ...
+# Subtest: tr-TR 03: regional calibration and PDF structure survive append-only save/reopen
+ok 6 - tr-TR 03: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 16.262959
+  type: 'test'
+  ...
+# Subtest: tr-TR 04: regional calibration and PDF structure survive ordinary save/reopen
+ok 7 - tr-TR 04: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 8.258542
+  type: 'test'
+  ...
+# Subtest: tr-TR 04: regional calibration and PDF structure survive append-only save/reopen
+ok 8 - tr-TR 04: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 21.257625
+  type: 'test'
+  ...
+# Subtest: tr-TR 05: regional calibration and PDF structure survive ordinary save/reopen
+ok 9 - tr-TR 05: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 12.389458
+  type: 'test'
+  ...
+# Subtest: tr-TR 05: regional calibration and PDF structure survive append-only save/reopen
+ok 10 - tr-TR 05: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 12.339
+  type: 'test'
+  ...
+# Subtest: tr-TR 06: regional calibration and PDF structure survive ordinary save/reopen
+ok 11 - tr-TR 06: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 8.45
+  type: 'test'
+  ...
+# Subtest: tr-TR 06: regional calibration and PDF structure survive append-only save/reopen
+ok 12 - tr-TR 06: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.672417
+  type: 'test'
+  ...
+# Subtest: tr-TR 07: regional calibration and PDF structure survive ordinary save/reopen
+ok 13 - tr-TR 07: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.95775
+  type: 'test'
+  ...
+# Subtest: tr-TR 07: regional calibration and PDF structure survive append-only save/reopen
+ok 14 - tr-TR 07: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.382875
+  type: 'test'
+  ...
+# Subtest: tr-TR 08: regional calibration and PDF structure survive ordinary save/reopen
+ok 15 - tr-TR 08: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.4805
+  type: 'test'
+  ...
+# Subtest: tr-TR 08: regional calibration and PDF structure survive append-only save/reopen
+ok 16 - tr-TR 08: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.552667
+  type: 'test'
+  ...
+# Subtest: tr-TR 09: regional calibration and PDF structure survive ordinary save/reopen
+ok 17 - tr-TR 09: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 5.844125
+  type: 'test'
+  ...
+# Subtest: tr-TR 09: regional calibration and PDF structure survive append-only save/reopen
+ok 18 - tr-TR 09: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.856834
+  type: 'test'
+  ...
+# Subtest: tr-TR 10: regional calibration and PDF structure survive ordinary save/reopen
+ok 19 - tr-TR 10: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 5.609458
+  type: 'test'
+  ...
+# Subtest: tr-TR 10: regional calibration and PDF structure survive append-only save/reopen
+ok 20 - tr-TR 10: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 18.7675
+  type: 'test'
+  ...
+# Subtest: tr-TR 11: regional calibration and PDF structure survive ordinary save/reopen
+not ok 21 - tr-TR 11: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 18.831042
+  type: 'test'
+  location: '/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/.tmp/localization/regional-library-roundtrip.test.mjs:211736:5'
+  failureType: 'testCodeFailure'
+  error: 'Expected instance of PDFString5, but got instance of PDFHexString3'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    new UnexpectedObjectTypeError2 (file:///Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/.tmp/localization/regional-library-roundtrip.test.mjs:5854:26)
+    PDFContext2.lookup (file:///Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/.tmp/localization/regional-library-roundtrip.test.mjs:7547:17)
+    PDFDict4.lookup (file:///Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/.tmp/localization/regional-library-roundtrip.test.mjs:6899:52)
+    file:///Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/.tmp/localization/regional-library-roundtrip.test.mjs:211725:18
+    Array.map (<anonymous>)
+    layerNames (file:///Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/.tmp/localization/regional-library-roundtrip.test.mjs:211723:27)
+    TestContext.<anonymous> (file:///Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/.tmp/localization/regional-library-roundtrip.test.mjs:211793:24)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: tr-TR 11: regional calibration and PDF structure survive append-only save/reopen
+ok 22 - tr-TR 11: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 18.832458
+  type: 'test'
+  ...
+# Subtest: tr-TR 12: regional calibration and PDF structure survive ordinary save/reopen
+ok 23 - tr-TR 12: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 16.703042
+  type: 'test'
+  ...
+# Subtest: tr-TR 12: regional calibration and PDF structure survive append-only save/reopen
+ok 24 - tr-TR 12: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 54.855541
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 23
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 655.370584

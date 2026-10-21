@@ -1,0 +1,178 @@
+{
+  "locale": "tr-TR",
+  "region": "TR",
+  "manifestSha256": "13c6c3f82e10352507b78ce0ae4be3f2551134b66a5194d7f761f2040b1a6739",
+  "appBuild": "1.6.17+84",
+  "sourceFiles": {
+    "packages/pdf/src/native-annotation-import.ts": "3304419799a45e123163cc19f17e2b8bda1833a6608fab7bdeec1567f86f0fcd",
+    "packages/pdf-node/src/native-annotation-export.ts": "eeed63abe04852cca326021e8724f8787ac5e0bffac164a95cc83427389b1b8b",
+    "packages/core/src/measurement.ts": "7439822b8ee91291aed366fec95b918e7814d8a9ce70233210f6795432f641b7",
+    "packages/core/src/workspace.ts": "f90862aa6440b51a34ef692db74dbd188ce5806dd4f97866ea5b81c9420afb57",
+    "tests/pdf-node/regional-library-roundtrip.test.ts": "dab84e0b0efb2813e27a764a0ea6272f39aafbc0cca2f74b66229d319f1da574"
+  },
+  "status": "incomplete",
+  "scope": "Actual PolyPDF annotation writer/importer and measurement service; not native UI interaction or platform qualification",
+  "cases": [
+    {
+      "file": "01-Arazi-ve-Altyapi.pdf",
+      "sourceSha256": "b2062e3e8dd7ab35397edc384adfd577299e5bd8a3ec3d98ef6cb589e4805c5a",
+      "mode": "ordinary",
+      "outputSha256": "c1020375d99fce597da177136479e1da949d04a980206c0d2861c4a7fb743a83",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "01-Arazi-ve-Altyapi.pdf",
+      "sourceSha256": "b2062e3e8dd7ab35397edc384adfd577299e5bd8a3ec3d98ef6cb589e4805c5a",
+      "mode": "append-only",
+      "outputSha256": "27227b6a77864069bbe092e9427894ed622d874903bc3f346f3b982689ef6ca4",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "02-Mimari-Revizyon-A.pdf",
+      "sourceSha256": "6b73b95bc27dc428b2ad1b8e5d641024b437773475f0425b174ccf55f8a07b4c",
+      "mode": "ordinary",
+      "outputSha256": "d0ee299ff5a5c71206acaa77a568d438e6fa2ebe0044a38da44eb5e97c4f3067",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "02-Mimari-Revizyon-A.pdf",
+      "sourceSha256": "6b73b95bc27dc428b2ad1b8e5d641024b437773475f0425b174ccf55f8a07b4c",
+      "mode": "append-only",
+      "outputSha256": "cbf3e157440e4745f37bff79f41b8d5332ceb9bb7b81567e254e444fdb9940d1",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Mimari-Revizyon-B.pdf",
+      "sourceSha256": "63f93e678ea03957d37d1896f3c1f385b2be7535d22e849f301181c849b9d830",
+      "mode": "ordinary",
+      "outputSha256": "9a30dd27f0376b2b2651922713719047776e3b6050fe8514e121a5aa2ba3f0f1",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Mimari-Revizyon-B.pdf",
+      "sourceSha256": "63f93e678ea03957d37d1896f3c1f385b2be7535d22e849f301181c849b9d830",
+      "mode": "append-only",
+      "outputSha256": "d21687c279a4ef5fa2671ff85f8548436ced547c0bf06a4f896098a5839f2b01",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Temel-ve-Tasiyici-Sistem.pdf",
+      "sourceSha256": "29734ca59a58943f9fbf069394b0c167ef8d98a25a7f0fc42dc70ffa5a506884",
+      "mode": "ordinary",
+      "outputSha256": "d051e7dc27d68076babb7d0156ec7b2e76d1e2c71e3f115d79ae201235606bde",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Temel-ve-Tasiyici-Sistem.pdf",
+      "sourceSha256": "29734ca59a58943f9fbf069394b0c167ef8d98a25a7f0fc42dc70ffa5a506884",
+      "mode": "append-only",
+      "outputSha256": "4bafbd694cfcbd8349fdd636a927775b134c8326bf308bc71d4258c5bd80c57e",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Havalandirma.pdf",
+      "sourceSha256": "b03d95e94aadabdebdf379d8434e4fd10662984a79d246a71445bcb3b591794b",
+      "mode": "ordinary",
+      "outputSha256": "708b0c9b4cb58e362463bba4cf5ba55d38708edde9a24992850f9502f73113b0",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Havalandirma.pdf",
+      "sourceSha256": "b03d95e94aadabdebdf379d8434e4fd10662984a79d246a71445bcb3b591794b",
+      "mode": "append-only",
+      "outputSha256": "f7ce1f3d1761b6048e38536e9e19e9618b478f3449fce6cffc35cc97c296ef16",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Aydinlatma-ve-Elektrik.pdf",
+      "sourceSha256": "f1fd501edbb70675f293f2ed64012dba91195e2aace9370f9fcf9119d1ffa8f7",
+      "mode": "ordinary",
+      "outputSha256": "850fd86bccf97496a11832ae7a8bbf807dd14e2e71301b7191546b0b6fbaf647",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Aydinlatma-ve-Elektrik.pdf",
+      "sourceSha256": "f1fd501edbb70675f293f2ed64012dba91195e2aace9370f9fcf9119d1ffa8f7",
+      "mode": "append-only",
+      "outputSha256": "a24807480fcf372293f45035e4e1be21fd0da1a2f9c5139928b3cd89e6c7ed39",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Su-ve-Atik-Su.pdf",
+      "sourceSha256": "3888b72d486f715540e9eccf22c803dc60675a551c45a8fdccb7152eac445e57",
+      "mode": "ordinary",
+      "outputSha256": "c12dedc24feeac160815ac2bdea962a26eefe3de14958b358ea422db916ab348",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Su-ve-Atik-Su.pdf",
+      "sourceSha256": "3888b72d486f715540e9eccf22c803dc60675a551c45a8fdccb7152eac445e57",
+      "mode": "append-only",
+      "outputSha256": "85f37a4de13fb582a37ccad8f53c766e0813630f1674158809e42924f00f9cc1",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Yangindan-Korunma-Alistirma.pdf",
+      "sourceSha256": "8a0b81c8a1fdc3087cc87bfb4b7e54339c09e1fab04271f2df5e22bc3e0533e2",
+      "mode": "ordinary",
+      "outputSha256": "d0df578e7a2bbdb56a6f9385cc1b81bb83a6f416570927c4363ca5d709429684",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Yangindan-Korunma-Alistirma.pdf",
+      "sourceSha256": "8a0b81c8a1fdc3087cc87bfb4b7e54339c09e1fab04271f2df5e22bc3e0533e2",
+      "mode": "append-only",
+      "outputSha256": "e34c199285f51772c217a1052da1bc9edb7198d4d538094aaab9aeb48c3b7f8a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "09-Peyzaj-ve-Dis-Alanlar.pdf",
+      "sourceSha256": "3db7613ccedfa0484f91de959601d61c2ba29cd86f87d109b3747ecbeaf469a5",
+      "mode": "ordinary",
+      "outputSha256": "fb004c457dffa7993d7a039522d0a2c66727daed72c89c65820515fdb8464361",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "09-Peyzaj-ve-Dis-Alanlar.pdf",
+      "sourceSha256": "3db7613ccedfa0484f91de959601d61c2ba29cd86f87d109b3747ecbeaf469a5",
+      "mode": "append-only",
+      "outputSha256": "9b99ce1681d06199e9d10e93c96b60110737b5052a22bc82559325c6e57b9ae7",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "10-Kaplamalar-ve-Sabit-Mobilya.pdf",
+      "sourceSha256": "cd557cef108f3e0c7e6cb9a85015e8c17d35d6f6367ad17b90e806df81c02035",
+      "mode": "ordinary",
+      "outputSha256": "87e075b2548d6a14324cfa63f5d5b783e9de447a30ff597e9e3f113be5839945",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "10-Kaplamalar-ve-Sabit-Mobilya.pdf",
+      "sourceSha256": "cd557cef108f3e0c7e6cb9a85015e8c17d35d6f6367ad17b90e806df81c02035",
+      "mode": "append-only",
+      "outputSha256": "5166d197b1b6051322d8ee6050aeb556dd3b2fe015a71c38af2c66159005025a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Koordinasyon-ve-Inceleme.pdf",
+      "sourceSha256": "e8bea440f6b90a97ffaa99486bd904db9bcfc0bed12b425da68dea48bb698572",
+      "mode": "append-only",
+      "outputSha256": "c8539b2ebab4c37ed167fe4f871c26b9e86220479b233e38fdeb814979dd5483",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Taranmis-Mevcut-Cizimler.pdf",
+      "sourceSha256": "1225a350bf32ccc64c4cd89ec5d645c0a0936350f01f8fd0959a0348d0b45a4c",
+      "mode": "ordinary",
+      "outputSha256": "047eb0dedd10768b5293775687d3f7651de16ecacb6763b760b499a7f78778f3",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Taranmis-Mevcut-Cizimler.pdf",
+      "sourceSha256": "1225a350bf32ccc64c4cd89ec5d645c0a0936350f01f8fd0959a0348d0b45a4c",
+      "mode": "append-only",
+      "outputSha256": "10417b6a838f0397df439d40eeed662747d8da255d92b6486f2e8dad04aa0a4b",
+      "quantityMetres": 4.999999999997638
+    }
+  ]
+}

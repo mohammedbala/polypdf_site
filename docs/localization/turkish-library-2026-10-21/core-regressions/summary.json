@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "locales": 7,
+  "coreCases": 168,
+  "tests": 182,
+  "results": [
+    {
+      "locale": "de-DE",
+      "coreCases": 24,
+      "layerEncodingChecks": 2,
+      "status": "passed"
+    },
+    {
+      "locale": "fr-FR",
+      "coreCases": 24,
+      "layerEncodingChecks": 2,
+      "status": "passed"
+    },
+    {
+      "locale": "es-ES",
+      "coreCases": 24,
+      "layerEncodingChecks": 2,
+      "status": "passed"
+    },
+    {
+      "locale": "pt-BR",
+      "coreCases": 24,
+      "layerEncodingChecks": 2,
+      "status": "passed"
+    },
+    {
+      "locale": "it-IT",
+      "coreCases": 24,
+      "layerEncodingChecks": 2,
+      "status": "passed"
+    },
+    {
+      "locale": "nl-NL",
+      "coreCases": 24,
+      "layerEncodingChecks": 2,
+      "status": "passed"
+    },
+    {
+      "locale": "pl-PL",
+      "coreCases": 24,
+      "layerEncodingChecks": 2,
+      "status": "passed"
+    }
+  ]
+}

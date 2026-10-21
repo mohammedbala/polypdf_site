@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "sourceSha256": "e8bea440f6b90a97ffaa99486bd904db9bcfc0bed12b425da68dea48bb698572",
+  "sourceLayerNames": [
+    "MİMARİ",
+    "HAVALANDIRMA",
+    "ELEKTRİK TESİSATI",
+    "KOORDİNASYON SORUNLARI"
+  ],
+  "saved": [
+    {
+      "mode": "ordinary",
+      "sha256": "9ffc886e0fe0f82e64d9730272f0647e6f1a9a6bc304a40b69414ccc21997c12",
+      "layerNames": [
+        "MİMARİ",
+        "HAVALANDIRMA",
+        "ELEKTRİK TESİSATI",
+        "KOORDİNASYON SORUNLARI"
+      ]
+    },
+    {
+      "mode": "append-only",
+      "sha256": "496d70793c0aff6b7a822c862a141d5230aac18706e802c200f89d3becb62ec1",
+      "layerNames": [
+        "MİMARİ",
+        "HAVALANDIRMA",
+        "ELEKTRİK TESİSATI",
+        "KOORDİNASYON SORUNLARI"
+      ]
+    }
+  ],
+  "scope": "Independent pypdf reopening confirms exact Turkish names through both core writers; no native UI claim"
+}

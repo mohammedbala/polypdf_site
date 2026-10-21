@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: regional layer comparison decodes literal and hexadecimal text strings exactly
+ok 1 - regional layer comparison decodes literal and hexadecimal text strings exactly
+  ---
+  duration_ms: 4.447958
+  type: 'test'
+  ...
+# Subtest: regional layer comparison rejects non-text layer names
+ok 2 - regional layer comparison rejects non-text layer names
+  ---
+  duration_ms: 0.462916
+  type: 'test'
+  ...
+# Subtest: it-IT 01: regional calibration and PDF structure survive ordinary save/reopen
+ok 3 - it-IT 01: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 57.382542
+  type: 'test'
+  ...
+# Subtest: it-IT 01: regional calibration and PDF structure survive append-only save/reopen
+ok 4 - it-IT 01: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 19.54475
+  type: 'test'
+  ...
+# Subtest: it-IT 02: regional calibration and PDF structure survive ordinary save/reopen
+ok 5 - it-IT 02: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 14.459083
+  type: 'test'
+  ...
+# Subtest: it-IT 02: regional calibration and PDF structure survive append-only save/reopen
+ok 6 - it-IT 02: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 16.529583
+  type: 'test'
+  ...
+# Subtest: it-IT 03: regional calibration and PDF structure survive ordinary save/reopen
+ok 7 - it-IT 03: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 10.9005
+  type: 'test'
+  ...
+# Subtest: it-IT 03: regional calibration and PDF structure survive append-only save/reopen
+ok 8 - it-IT 03: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 14.3585
+  type: 'test'
+  ...
+# Subtest: it-IT 04: regional calibration and PDF structure survive ordinary save/reopen
+ok 9 - it-IT 04: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 8.285625
+  type: 'test'
+  ...
+# Subtest: it-IT 04: regional calibration and PDF structure survive append-only save/reopen
+ok 10 - it-IT 04: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 15.002
+  type: 'test'
+  ...
+# Subtest: it-IT 05: regional calibration and PDF structure survive ordinary save/reopen
+ok 11 - it-IT 05: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 14.345459
+  type: 'test'
+  ...
+# Subtest: it-IT 05: regional calibration and PDF structure survive append-only save/reopen
+ok 12 - it-IT 05: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.789459
+  type: 'test'
+  ...
+# Subtest: it-IT 06: regional calibration and PDF structure survive ordinary save/reopen
+ok 13 - it-IT 06: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.757083
+  type: 'test'
+  ...
+# Subtest: it-IT 06: regional calibration and PDF structure survive append-only save/reopen
+ok 14 - it-IT 06: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.171041
+  type: 'test'
+  ...
+# Subtest: it-IT 07: regional calibration and PDF structure survive ordinary save/reopen
+ok 15 - it-IT 07: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.44925
+  type: 'test'
+  ...
+# Subtest: it-IT 07: regional calibration and PDF structure survive append-only save/reopen
+ok 16 - it-IT 07: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.016209
+  type: 'test'
+  ...
+# Subtest: it-IT 08: regional calibration and PDF structure survive ordinary save/reopen
+ok 17 - it-IT 08: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.695
+  type: 'test'
+  ...
+# Subtest: it-IT 08: regional calibration and PDF structure survive append-only save/reopen
+ok 18 - it-IT 08: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.854
+  type: 'test'
+  ...
+# Subtest: it-IT 09: regional calibration and PDF structure survive ordinary save/reopen
+ok 19 - it-IT 09: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.386666
+  type: 'test'
+  ...
+# Subtest: it-IT 09: regional calibration and PDF structure survive append-only save/reopen
+ok 20 - it-IT 09: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.7975
+  type: 'test'
+  ...
+# Subtest: it-IT 10: regional calibration and PDF structure survive ordinary save/reopen
+ok 21 - it-IT 10: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 7.662791
+  type: 'test'
+  ...
+# Subtest: it-IT 10: regional calibration and PDF structure survive append-only save/reopen
+ok 22 - it-IT 10: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.652667
+  type: 'test'
+  ...
+# Subtest: it-IT 11: regional calibration and PDF structure survive ordinary save/reopen
+ok 23 - it-IT 11: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 12.345208
+  type: 'test'
+  ...
+# Subtest: it-IT 11: regional calibration and PDF structure survive append-only save/reopen
+ok 24 - it-IT 11: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 13.660417
+  type: 'test'
+  ...
+# Subtest: it-IT 12: regional calibration and PDF structure survive ordinary save/reopen
+ok 25 - it-IT 12: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 12.25775
+  type: 'test'
+  ...
+# Subtest: it-IT 12: regional calibration and PDF structure survive append-only save/reopen
+ok 26 - it-IT 12: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 49.643792
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 505.04475

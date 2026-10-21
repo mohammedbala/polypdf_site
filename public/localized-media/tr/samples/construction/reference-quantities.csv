@@ -1,0 +1,43 @@
+Belge;Açıklama;Değer;Birim
+01;Parsel alanı (m²);2.400,00;m²
+01;Parsel çevresi (m);200,00;m
+01;Otopark yeri sayısı;8;-
+01;Sert zemin alanı (m²);144,00;m²
+01;Su hattı uzunluğu (m);39,00;m
+01;Atık su hattı uzunluğu (m);34,00;m
+01;Elektrik kablosu uzunluğu (m);57,00;m
+02;Dikdörtgen taban alanı (m²);360,00;m²
+02;Bina çevresi (m);78,00;m
+02;103 numaralı oda alanı (m²);36,00;m²
+02;104 numaralı oda alanı (m²);36,00;m²
+02;Belge içi kesit bağlantıları;2;-
+02;Duvarın yer değiştirmesi (m);0,00;m
+02;Kapının yer değiştirmesi (m);0,00;m
+02;Eklenen pencere genişliği (m);0,00;m
+03;Dikdörtgen taban alanı (m²);360,00;m²
+03;Bina çevresi (m);78,00;m
+03;103 numaralı oda alanı (m²);45,00;m²
+03;104 numaralı oda alanı (m²);27,00;m²
+03;Belge içi kesit bağlantıları;2;-
+03;Duvarın yer değiştirmesi (m);1,50;m
+03;Kapının yer değiştirmesi (m);0,75;m
+03;Eklenen pencere genişliği (m);1,50;m
+04;Kolonlar;12;-
+04;Tekil temeller;12;-
+04;Beton döşeme alanı (m²);360,00;m²
+04;Beton döşeme kalınlığı (m);0,15;m
+04;Beton döşeme hacmi (m³);54,00;m³
+04;Toplam tekil temel hacmi (m³);17,496;m³
+04;Toplam kiriş uzunluğu (m);132,00;m
+09;Sert zemin alanı (m²);144,00;m²
+10;Esnek zemin kaplaması (m²);324,00;m²
+10;Seramik kaplama (m²);36,00;m²
+10;Toplam zemin kaplaması (m²);360,00;m²
+10;Fire öncesi seramik adedi;100;-
+10;Alt dolaplar;6;-
+10;Dolap modülü genişliği (m);1,20;m
+10;Tezgâh alanı (m²);4,32;m²
+10;Baza uzunluğu (m);7,20;m
+11;Düzenlenebilir PDF notları;3;-
+11;Önceden çizilmiş çakışmalar;3;-
+12;Tarama çözünürlüğü (dpi);80;-

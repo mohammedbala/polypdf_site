@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "locale": "tr-TR",
+  "artifactCount": 16,
+  "artifacts": {
+    "01-Arazi-ve-Altyapi.pdf": "b2062e3e8dd7ab35397edc384adfd577299e5bd8a3ec3d98ef6cb589e4805c5a",
+    "02-Mimari-Revizyon-A.pdf": "6b73b95bc27dc428b2ad1b8e5d641024b437773475f0425b174ccf55f8a07b4c",
+    "03-Mimari-Revizyon-B.pdf": "63f93e678ea03957d37d1896f3c1f385b2be7535d22e849f301181c849b9d830",
+    "04-Temel-ve-Tasiyici-Sistem.pdf": "29734ca59a58943f9fbf069394b0c167ef8d98a25a7f0fc42dc70ffa5a506884",
+    "05-Havalandirma.pdf": "b03d95e94aadabdebdf379d8434e4fd10662984a79d246a71445bcb3b591794b",
+    "06-Aydinlatma-ve-Elektrik.pdf": "f1fd501edbb70675f293f2ed64012dba91195e2aace9370f9fcf9119d1ffa8f7",
+    "07-Su-ve-Atik-Su.pdf": "3888b72d486f715540e9eccf22c803dc60675a551c45a8fdccb7152eac445e57",
+    "08-Yangindan-Korunma-Alistirma.pdf": "8a0b81c8a1fdc3087cc87bfb4b7e54339c09e1fab04271f2df5e22bc3e0533e2",
+    "09-Peyzaj-ve-Dis-Alanlar.pdf": "3db7613ccedfa0484f91de959601d61c2ba29cd86f87d109b3747ecbeaf469a5",
+    "10-Kaplamalar-ve-Sabit-Mobilya.pdf": "cd557cef108f3e0c7e6cb9a85015e8c17d35d6f6367ad17b90e806df81c02035",
+    "11-Koordinasyon-ve-Inceleme.pdf": "e8bea440f6b90a97ffaa99486bd904db9bcfc0bed12b425da68dea48bb698572",
+    "12-Taranmis-Mevcut-Cizimler.pdf": "1225a350bf32ccc64c4cd89ec5d645c0a0936350f01f8fd0959a0348d0b45a4c",
+    "DEMO-GUIDE.html": "ffb3c9e0ebc73e1c44e66e89f9aa5e32c097967c1bb9ab18d371bca45563e530",
+    "DEMO-MANIFEST.json": "13c6c3f82e10352507b78ce0ae4be3f2551134b66a5194d7f761f2040b1a6739",
+    "SHA256SUMS.txt": "7e395bf73a717ee8b5b682843bc5e21c177416b5ff13086e7373cf7c2823c2f8",
+    "reference-quantities.csv": "1f7bf92b35f53e41906b7a6e4297f3d5b6a1a1c030600d6e041ea6763999ba2f"
+  }
+}

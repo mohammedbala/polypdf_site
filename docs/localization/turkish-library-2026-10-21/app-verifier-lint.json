@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "command": "eslint tests/pdf-node/regional-library-roundtrip.test.ts",
+  "workingDirectory": "polypdf",
+  "fileSha256": "9f83878927a5dca8d9bf2ec5225e453b1f4cd3e1a2ebc9bdb497568842ab4ddb",
+  "errors": 0,
+  "warnings": 0
+}

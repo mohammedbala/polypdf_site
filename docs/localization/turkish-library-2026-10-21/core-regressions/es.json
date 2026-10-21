@@ -1,0 +1,186 @@
+{
+  "locale": "es-ES",
+  "region": "ES",
+  "manifestSha256": "f806742e96a4f1ba265b1e8cd1df907246f06360c07e6fb57b69f784f71f87f1",
+  "appBuild": "1.6.17+84",
+  "sourceFiles": {
+    "packages/pdf/src/native-annotation-import.ts": "3304419799a45e123163cc19f17e2b8bda1833a6608fab7bdeec1567f86f0fcd",
+    "packages/pdf-node/src/native-annotation-export.ts": "eeed63abe04852cca326021e8724f8787ac5e0bffac164a95cc83427389b1b8b",
+    "packages/core/src/measurement.ts": "7439822b8ee91291aed366fec95b918e7814d8a9ce70233210f6795432f641b7",
+    "packages/core/src/workspace.ts": "f90862aa6440b51a34ef692db74dbd188ce5806dd4f97866ea5b81c9420afb57",
+    "tests/pdf-node/regional-library-roundtrip.test.ts": "9f83878927a5dca8d9bf2ec5225e453b1f4cd3e1a2ebc9bdb497568842ab4ddb"
+  },
+  "status": "passed",
+  "layerEncodingChecks": 2,
+  "scope": "Actual PolyPDF annotation writer/importer and measurement service; not native UI interaction or platform qualification",
+  "cases": [
+    {
+      "file": "01-Emplazamiento-y-terreno.pdf",
+      "sourceSha256": "4ec471b60fc01ad42d0fe61959085869942fddae0c194038549019f870c77040",
+      "mode": "ordinary",
+      "outputSha256": "d15226270c99593ddf7d01abed7998bc619949edf52df7e8a434a7a0b4f506fd",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "01-Emplazamiento-y-terreno.pdf",
+      "sourceSha256": "4ec471b60fc01ad42d0fe61959085869942fddae0c194038549019f870c77040",
+      "mode": "append-only",
+      "outputSha256": "37fd59fd69e09faa824168c12edb562fd273bf29e05ced179e200ac49b07a1c9",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "02-Arquitectura-Revision-A.pdf",
+      "sourceSha256": "dfa2c094eeb38a045e326add49bf055616d7c192f72d2342e99e2a190798aaa5",
+      "mode": "ordinary",
+      "outputSha256": "86d989de7d1043465ffdafbf19c116c896ea0a44d69098e0dc90d27d3d17d199",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "02-Arquitectura-Revision-A.pdf",
+      "sourceSha256": "dfa2c094eeb38a045e326add49bf055616d7c192f72d2342e99e2a190798aaa5",
+      "mode": "append-only",
+      "outputSha256": "eddfde0c9e665ede7b8be3480de64b546854ea32b50992532ce9ceb53e50fe1f",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Arquitectura-Revision-B.pdf",
+      "sourceSha256": "2bfb8b80e369b62524a00f4b215ad69559356d1e8fa7c42898b76ae5c7633543",
+      "mode": "ordinary",
+      "outputSha256": "0a4293bc601055a5211c459297c241054fde48e285587a273077b100e49990f5",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Arquitectura-Revision-B.pdf",
+      "sourceSha256": "2bfb8b80e369b62524a00f4b215ad69559356d1e8fa7c42898b76ae5c7633543",
+      "mode": "append-only",
+      "outputSha256": "7abcc3472408f56506d3a162672fe4fd18ea0c9a41711d566743202bf3f5263f",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Cimentacion-y-estructura.pdf",
+      "sourceSha256": "7891f9bff42dc7c73486416a5ed45d625549972978bfa2b484fc345e0cfd86ba",
+      "mode": "ordinary",
+      "outputSha256": "635228e48e7002ac97bf938a5cef174133cfe5ae9fa7bf142f932e44f1ab668b",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Cimentacion-y-estructura.pdf",
+      "sourceSha256": "7891f9bff42dc7c73486416a5ed45d625549972978bfa2b484fc345e0cfd86ba",
+      "mode": "append-only",
+      "outputSha256": "5c8c7f96ea91e4d6c3bef21d2323257274173a5eb00d50f0617de3b720e63e2a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Ventilacion.pdf",
+      "sourceSha256": "8488a54e1ed29d13ab601484abaa218a2bc0a8ad8d775c3bddec7ea8d5f061a5",
+      "mode": "ordinary",
+      "outputSha256": "5bd0f161500f1dad71c2c2e39049ccf59af20783e9c54fbfa45dd1cd0c1acb43",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Ventilacion.pdf",
+      "sourceSha256": "8488a54e1ed29d13ab601484abaa218a2bc0a8ad8d775c3bddec7ea8d5f061a5",
+      "mode": "append-only",
+      "outputSha256": "9cec09d72955ce08a18ffb9cdad624a45e5ff074a10eadceb173e55df08f26e7",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Alumbrado-y-electricidad.pdf",
+      "sourceSha256": "c287fd99df127d8852b411eeb238399a7b6cc4c9a29f03f2720e68a79e050849",
+      "mode": "ordinary",
+      "outputSha256": "8e42cf5e1eed272202ba6feab3efa5639549767e2506f802cac15e8d4e77d7b2",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Alumbrado-y-electricidad.pdf",
+      "sourceSha256": "c287fd99df127d8852b411eeb238399a7b6cc4c9a29f03f2720e68a79e050849",
+      "mode": "append-only",
+      "outputSha256": "fc9299e162faca6e77e61c036171327f8a09e57bb528aac5b3356f4484c5e09a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Abastecimiento-y-saneamiento.pdf",
+      "sourceSha256": "0bf1cc7da22923a35f95c2fe36d7edfb67db4b05b27bec393f53b95e5de7bc3e",
+      "mode": "ordinary",
+      "outputSha256": "c07ceac879b9bb8322888e2a3cde3781be238849274dc34303a1a2cd70af7f7a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Abastecimiento-y-saneamiento.pdf",
+      "sourceSha256": "0bf1cc7da22923a35f95c2fe36d7edfb67db4b05b27bec393f53b95e5de7bc3e",
+      "mode": "append-only",
+      "outputSha256": "c25c2ece6885ea8c75980dec4d5b3b541c6deee6069fce1e2696dd26761b4e29",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Proteccion-contra-incendios-Ejercicio.pdf",
+      "sourceSha256": "77ac028f5eeb36746d134565adda4c666231f77b9f08b0c11f644169bd620d46",
+      "mode": "ordinary",
+      "outputSha256": "80d72ece3cec379a19cee8f267733d35c9030fda0814c6bf0d7f8d9216fb6b48",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Proteccion-contra-incendios-Ejercicio.pdf",
+      "sourceSha256": "77ac028f5eeb36746d134565adda4c666231f77b9f08b0c11f644169bd620d46",
+      "mode": "append-only",
+      "outputSha256": "33d01f9f7b9d0f8c6b709ec639f79d3b3dc37a0df86ec4957ac1af4b7ff200c8",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "09-Jardineria-y-exteriores.pdf",
+      "sourceSha256": "e79b868bb5d6078c283967e6b04e0fc916d6ec8a0f162ea09aee56a8bfa0f75a",
+      "mode": "ordinary",
+      "outputSha256": "9d665e7319d453e25ffd2ceeb1f7d43280063c2ea402165fdf844507f35ed791",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "09-Jardineria-y-exteriores.pdf",
+      "sourceSha256": "e79b868bb5d6078c283967e6b04e0fc916d6ec8a0f162ea09aee56a8bfa0f75a",
+      "mode": "append-only",
+      "outputSha256": "7122d546dc3b7f1b459b8379e2bb6ae7f976703ed68373f201edfe26c51f0a85",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "10-Acabados-y-mobiliario-fijo.pdf",
+      "sourceSha256": "70b7abc076ab1a4b21abfcfdb59e4620f9041bd52bf483039fa1a1cf1940d7ba",
+      "mode": "ordinary",
+      "outputSha256": "0a5a409345cb4d2a58aa37880d231dbb19d9c9596bd3328e8f219163eef005e7",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "10-Acabados-y-mobiliario-fijo.pdf",
+      "sourceSha256": "70b7abc076ab1a4b21abfcfdb59e4620f9041bd52bf483039fa1a1cf1940d7ba",
+      "mode": "append-only",
+      "outputSha256": "a13486a6211ab2d97dae52127db78f684040b155c19a2c4bb1ce593a69bf31f2",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Coordinacion-y-revision.pdf",
+      "sourceSha256": "15100a779f9e096d81bd6f31825771766b85328a3844479e5a4cb80f5ca741fc",
+      "mode": "ordinary",
+      "outputSha256": "b5e9a8b0c0beffe52fa7f64d5bca689b3b75cafcf7f29ce39aadf45b9016b528",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Coordinacion-y-revision.pdf",
+      "sourceSha256": "15100a779f9e096d81bd6f31825771766b85328a3844479e5a4cb80f5ca741fc",
+      "mode": "append-only",
+      "outputSha256": "f927c527c1e8b24d781f1a84d617d9b745ffcf3654c7af8f765ae844d6c9b845",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Planos-existentes-escaneados.pdf",
+      "sourceSha256": "cfe165ed6c70841d01ba8d447852f81427caf9211b157ba9f738de4bc53ed2f4",
+      "mode": "ordinary",
+      "outputSha256": "0b280ef310eef0e1f940a662a442dc60a667c7c98bc0db07361772b8c7d3c04a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Planos-existentes-escaneados.pdf",
+      "sourceSha256": "cfe165ed6c70841d01ba8d447852f81427caf9211b157ba9f738de4bc53ed2f4",
+      "mode": "append-only",
+      "outputSha256": "721617e223eee7aa521b272f189dab257b09c383cf47f1723ee0d09ef3bed00c",
+      "quantityMetres": 4.999999999997638
+    }
+  ]
+}

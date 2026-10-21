@@ -1,0 +1,235 @@
+{
+  "url": "http://127.0.0.1:4897/local-library-tr-preview.html",
+  "scope": "Local shared-library preview; no native app walkthrough capture",
+  "header": {
+    "copyRecords": 101,
+    "downloads": 21,
+    "height": 720,
+    "images": [
+      {
+        "alt": "VAZİYET VE ALTYAPI PLANI - C101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/01-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "TEMEL VE DÖŞEME PLANI - S101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/04-1.png"
+      },
+      {
+        "alt": "HAVALANDIRMA PLANI - M101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/05-1.png"
+      },
+      {
+        "alt": "AYDINLATMA VE PRİZ PLANI - E101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "SU VE ATIK SU TESİSATI - P101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/07-1.png"
+      },
+      {
+        "alt": "YANGINDAN KORUNMA - ALIŞTIRMA - F101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/08-1.png"
+      },
+      {
+        "alt": "BİTKİLENDİRME VE DIŞ ALANLAR - L101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/09-1.png"
+      },
+      {
+        "alt": "ZEMİN KAPLAMA PLANI - I101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "TESİSAT KOORDİNASYONU - X101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "TARANMIŞ KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/12-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": false,
+        "src": "/localized-media/tr/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "ZEMİN KAPLAMA PLANI - I101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": false,
+        "src": "/localized-media/tr/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "AYDINLATMA VE PRİZ PLANI - E101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": false,
+        "src": "/localized-media/tr/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": false,
+        "src": "/localized-media/tr/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": false,
+        "src": "/localized-media/tr/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "TESİSAT KOORDİNASYONU - X101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": false,
+        "src": "/localized-media/tr/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "TARANMIŞ KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": false,
+        "src": "/localized-media/tr/samples/construction/previews/12-1.png"
+      }
+    ],
+    "lang": "tr",
+    "scrollWidth": 1280,
+    "width": 1280
+  },
+  "electrical": {
+    "hash": "#construction-example-electrical",
+    "scrollWidth": 1280,
+    "text": "YAPI ÇİZİMİ SETİYLE ÇALIŞIN\n\nIhlamur Mahalle Merkezi'nin elektrik planındaki sembolleri sayın\n\nE101 · E501\n\nE101'i açın ve lejanttaki armatür sembolünü tanıyın. Yalnızca plandaki sembolleri sayın; lejant ve detay örneklerini hariç tutun.\nPlandaki 24 armatürü, 12 prizi ve 8 anahtarı kontrol edin. Üç kategorinin sayımını ayrı tutun.\n5,00 m referansını kalibre edin. E101'deki şematik hattı ölçüp 34,50 m ile karşılaştırın. E501, elektrik şemasını ve armatür listesini içerir.\n\nKesik çizgi şematik hattı gösterir; tesisat borusu metrajı değildir. Sembol Arama için Pro gerekir; her eşleşmeyi inceleyin. 24 armatür, 12 priz, 8 anahtar ve 34,50 m çizim referanslarıdır, uygulama sonucu değildir.\n\nBunlar çizimdeki referans değerlerdir; yeni uygulama testi sonuçları değildir. Kopya üzerinde çalışın ve kendi kaydettiğiniz çıktıyı kontrol edin.\n\nÖnceki ABD elektrik alıştırması: armatürleri ve prizleri ayrı kontrol edin →\n\nİlgili işlem rehberini açın →\n\nAlıştırma çizimini indir · PDF\n06-Aydinlatma-ve-Elektrik.pdf\n\nÇizim kütüphanesinin tamamını inceleyin →",
+    "top": 27.796875,
+    "width": 1280
+  },
+  "ocr": {
+    "hash": "#construction-example-ocr",
+    "images": [
+      {
+        "alt": "VAZİYET VE ALTYAPI PLANI - C101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/01-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "TEMEL VE DÖŞEME PLANI - S101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/04-1.png"
+      },
+      {
+        "alt": "HAVALANDIRMA PLANI - M101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/05-1.png"
+      },
+      {
+        "alt": "AYDINLATMA VE PRİZ PLANI - E101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "SU VE ATIK SU TESİSATI - P101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/07-1.png"
+      },
+      {
+        "alt": "YANGINDAN KORUNMA - ALIŞTIRMA - F101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/08-1.png"
+      },
+      {
+        "alt": "BİTKİLENDİRME VE DIŞ ALANLAR - L101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/09-1.png"
+      },
+      {
+        "alt": "ZEMİN KAPLAMA PLANI - I101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "TESİSAT KOORDİNASYONU - X101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "TARANMIŞ KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/12-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "ZEMİN KAPLAMA PLANI - I101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "AYDINLATMA VE PRİZ PLANI - E101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "ZEMİN KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "TESİSAT KOORDİNASYONU - X101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "TARANMIŞ KAT PLANI - A101, IHLAMUR MAHALLE MERKEZİ, A1 alıştırma paftası",
+        "loaded": true,
+        "src": "/localized-media/tr/samples/construction/previews/12-1.png"
+      }
+    ],
+    "text": "YAPI ÇİZİMİ SETİYLE ÇALIŞIN\n\nIhlamur Mahalle Merkezi'nin taranmış paftalarında OCR'ı deneyin\n\nA101 · C101\n\nTaranmış seti açıp ÇOK AMAÇLI SALON ifadesini aramayı deneyin. Özgün iki sayfalık PDF, metin katmanı olmayan görüntüler içerir.\nÇalışma kopyasına OCR uygulayın. A101'de ÇOK AMAÇLI SALON, C101'de VAZİYET VE ALTYAPI PLANI ifadelerini arayın ve tanınan metni kontrol edin.\nSonucu kaydedip yeniden açın. Aramaları tekrarlayın; taranmış çizimi ölçmeden önce ölçüleri görsel olarak kontrol edin.\n\nAranacak ifadeler özgün çizimlerde basılıdır; tanıma doğruluğu garanti edilmez. OCR, çizim ölçeğini veya tarama bozulmasını düzeltmez.\n\nBunlar çizimdeki referans değerlerdir; yeni uygulama testi sonuçları değildir. Kopya üzerinde çalışın ve kendi kaydettiğiniz çıktıyı kontrol edin.\n\nİlgili işlem rehberini açın →\n\nAlıştırma çizimini indir · PDF\n12-Taranmis-Mevcut-Cizimler.pdf\n\nÇizim kütüphanesinin tamamını inceleyin →",
+    "top": 101.25
+  },
+  "downloadPath": "/Users/mohammedbala/Downloads/PolyPDF-Yapi-Cizimleri-tr-TR.zip",
+  "mobile": {
+    "heading": "Bir proje. On iki PDF. Yirmi dört yapı paftası.",
+    "height": 844,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "screenshots": [
+    "browser-desktop.jpg",
+    "browser-electrical.jpg",
+    "browser-mobile.jpg"
+  ],
+  "status": "passed",
+  "cleanup": {
+    "tabClosed": true,
+    "viewportReset": true
+  }
+}

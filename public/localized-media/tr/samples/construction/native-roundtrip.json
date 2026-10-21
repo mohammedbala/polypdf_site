@@ -1,0 +1,186 @@
+{
+  "locale": "tr-TR",
+  "region": "TR",
+  "manifestSha256": "13c6c3f82e10352507b78ce0ae4be3f2551134b66a5194d7f761f2040b1a6739",
+  "appBuild": "1.6.17+84",
+  "sourceFiles": {
+    "packages/pdf/src/native-annotation-import.ts": "3304419799a45e123163cc19f17e2b8bda1833a6608fab7bdeec1567f86f0fcd",
+    "packages/pdf-node/src/native-annotation-export.ts": "eeed63abe04852cca326021e8724f8787ac5e0bffac164a95cc83427389b1b8b",
+    "packages/core/src/measurement.ts": "7439822b8ee91291aed366fec95b918e7814d8a9ce70233210f6795432f641b7",
+    "packages/core/src/workspace.ts": "f90862aa6440b51a34ef692db74dbd188ce5806dd4f97866ea5b81c9420afb57",
+    "tests/pdf-node/regional-library-roundtrip.test.ts": "9f83878927a5dca8d9bf2ec5225e453b1f4cd3e1a2ebc9bdb497568842ab4ddb"
+  },
+  "status": "passed",
+  "layerEncodingChecks": 2,
+  "scope": "Actual PolyPDF annotation writer/importer and measurement service; not native UI interaction or platform qualification",
+  "cases": [
+    {
+      "file": "01-Arazi-ve-Altyapi.pdf",
+      "sourceSha256": "b2062e3e8dd7ab35397edc384adfd577299e5bd8a3ec3d98ef6cb589e4805c5a",
+      "mode": "ordinary",
+      "outputSha256": "b1fe5785b33ad2b4b28b34d788edfbce41c5eddef94043470d293ae68db3177e",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "01-Arazi-ve-Altyapi.pdf",
+      "sourceSha256": "b2062e3e8dd7ab35397edc384adfd577299e5bd8a3ec3d98ef6cb589e4805c5a",
+      "mode": "append-only",
+      "outputSha256": "2f9f14ea010ec0fd75d862592acc8a348e59beb4f868619718af2059b35cadd6",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "02-Mimari-Revizyon-A.pdf",
+      "sourceSha256": "6b73b95bc27dc428b2ad1b8e5d641024b437773475f0425b174ccf55f8a07b4c",
+      "mode": "ordinary",
+      "outputSha256": "6498c3f5dacf78bfbc9d83d1aa577d6db4cc5dc2ecd5f47acb575a165c5282aa",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "02-Mimari-Revizyon-A.pdf",
+      "sourceSha256": "6b73b95bc27dc428b2ad1b8e5d641024b437773475f0425b174ccf55f8a07b4c",
+      "mode": "append-only",
+      "outputSha256": "9f6a0e75ff9f20811b872dc2b333307ac783be31ea8e1fefc7cee608e042a4ee",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Mimari-Revizyon-B.pdf",
+      "sourceSha256": "63f93e678ea03957d37d1896f3c1f385b2be7535d22e849f301181c849b9d830",
+      "mode": "ordinary",
+      "outputSha256": "c3a2d1046806700a741cba884fa079e17ea311bdb3534866d3f8a2c362676788",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Mimari-Revizyon-B.pdf",
+      "sourceSha256": "63f93e678ea03957d37d1896f3c1f385b2be7535d22e849f301181c849b9d830",
+      "mode": "append-only",
+      "outputSha256": "86a3fc78b8b86436d62f9b0b644bcb08fb36753b438cff9013535828736912e7",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Temel-ve-Tasiyici-Sistem.pdf",
+      "sourceSha256": "29734ca59a58943f9fbf069394b0c167ef8d98a25a7f0fc42dc70ffa5a506884",
+      "mode": "ordinary",
+      "outputSha256": "0cb809d9ed58f19451405866a8420abf258ec62afab5fa6baa520a8806aaadd6",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Temel-ve-Tasiyici-Sistem.pdf",
+      "sourceSha256": "29734ca59a58943f9fbf069394b0c167ef8d98a25a7f0fc42dc70ffa5a506884",
+      "mode": "append-only",
+      "outputSha256": "953acdbd9a3f085ef3dfedb217b689906a14c33868897813ee96307463e5ba16",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Havalandirma.pdf",
+      "sourceSha256": "b03d95e94aadabdebdf379d8434e4fd10662984a79d246a71445bcb3b591794b",
+      "mode": "ordinary",
+      "outputSha256": "dbceb59f77ab56c2d26ec0847d3ca20eae6ff0d4842745375f4c81e2d3837289",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Havalandirma.pdf",
+      "sourceSha256": "b03d95e94aadabdebdf379d8434e4fd10662984a79d246a71445bcb3b591794b",
+      "mode": "append-only",
+      "outputSha256": "dfcc1207c8fe6775e05e5c7979219d953b16255a40d380d0e0f2ce3d8d398252",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Aydinlatma-ve-Elektrik.pdf",
+      "sourceSha256": "f1fd501edbb70675f293f2ed64012dba91195e2aace9370f9fcf9119d1ffa8f7",
+      "mode": "ordinary",
+      "outputSha256": "3a5bc5edff4f063a4d988a976f66a6ed98f70b87d337b419820db20a3ee95450",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Aydinlatma-ve-Elektrik.pdf",
+      "sourceSha256": "f1fd501edbb70675f293f2ed64012dba91195e2aace9370f9fcf9119d1ffa8f7",
+      "mode": "append-only",
+      "outputSha256": "ea32ab1184812c82cb3c1641aaa7ab1a1447910ccb16778278e7c5213611ffc1",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Su-ve-Atik-Su.pdf",
+      "sourceSha256": "3888b72d486f715540e9eccf22c803dc60675a551c45a8fdccb7152eac445e57",
+      "mode": "ordinary",
+      "outputSha256": "6f61be75fc1771aa7b32f69bda85430baba09f064a8cda319deb1cdce5515fee",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Su-ve-Atik-Su.pdf",
+      "sourceSha256": "3888b72d486f715540e9eccf22c803dc60675a551c45a8fdccb7152eac445e57",
+      "mode": "append-only",
+      "outputSha256": "4f17b55d4001e55f19cd8e0819b62d5a367c4f4a7a9103d50f8e2bdccfb2d782",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Yangindan-Korunma-Alistirma.pdf",
+      "sourceSha256": "8a0b81c8a1fdc3087cc87bfb4b7e54339c09e1fab04271f2df5e22bc3e0533e2",
+      "mode": "ordinary",
+      "outputSha256": "d0116b4e254715b5a2186d1588958b01a8d5ec249e3cb9cb5cf7e21b67558dcd",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Yangindan-Korunma-Alistirma.pdf",
+      "sourceSha256": "8a0b81c8a1fdc3087cc87bfb4b7e54339c09e1fab04271f2df5e22bc3e0533e2",
+      "mode": "append-only",
+      "outputSha256": "0163e152a0565cdf387d037fd8fd5d87a9a2560d90ea9b5ef6fd5a69e901d591",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "09-Peyzaj-ve-Dis-Alanlar.pdf",
+      "sourceSha256": "3db7613ccedfa0484f91de959601d61c2ba29cd86f87d109b3747ecbeaf469a5",
+      "mode": "ordinary",
+      "outputSha256": "517dc82b8db3da6dcfc5be06293de81cc7766859789e254f43c9be8d8c086683",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "09-Peyzaj-ve-Dis-Alanlar.pdf",
+      "sourceSha256": "3db7613ccedfa0484f91de959601d61c2ba29cd86f87d109b3747ecbeaf469a5",
+      "mode": "append-only",
+      "outputSha256": "5164c1693cf35aa64c610a971578f9c5a8b09a8eb830c50756b03469058b1383",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "10-Kaplamalar-ve-Sabit-Mobilya.pdf",
+      "sourceSha256": "cd557cef108f3e0c7e6cb9a85015e8c17d35d6f6367ad17b90e806df81c02035",
+      "mode": "ordinary",
+      "outputSha256": "595b8a4a36c12e3affa28468fafae5e29fbafd1f35e2d0ab92296599ff324cad",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "10-Kaplamalar-ve-Sabit-Mobilya.pdf",
+      "sourceSha256": "cd557cef108f3e0c7e6cb9a85015e8c17d35d6f6367ad17b90e806df81c02035",
+      "mode": "append-only",
+      "outputSha256": "a979b7ebbc15d1442217f27ec84942806b861df43a922e39544eb04fa7000006",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Koordinasyon-ve-Inceleme.pdf",
+      "sourceSha256": "e8bea440f6b90a97ffaa99486bd904db9bcfc0bed12b425da68dea48bb698572",
+      "mode": "ordinary",
+      "outputSha256": "9ffc886e0fe0f82e64d9730272f0647e6f1a9a6bc304a40b69414ccc21997c12",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Koordinasyon-ve-Inceleme.pdf",
+      "sourceSha256": "e8bea440f6b90a97ffaa99486bd904db9bcfc0bed12b425da68dea48bb698572",
+      "mode": "append-only",
+      "outputSha256": "496d70793c0aff6b7a822c862a141d5230aac18706e802c200f89d3becb62ec1",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Taranmis-Mevcut-Cizimler.pdf",
+      "sourceSha256": "1225a350bf32ccc64c4cd89ec5d645c0a0936350f01f8fd0959a0348d0b45a4c",
+      "mode": "ordinary",
+      "outputSha256": "b1158404bb4c42868387d194724b81bdad959477caff35382ebb44c573090c19",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Taranmis-Mevcut-Cizimler.pdf",
+      "sourceSha256": "1225a350bf32ccc64c4cd89ec5d645c0a0936350f01f8fd0959a0348d0b45a4c",
+      "mode": "append-only",
+      "outputSha256": "ecdf18544986089b1e7fc819a433c436849b30ecba1b1ffe253ad43c40258a8f",
+      "quantityMetres": 4.999999999997638
+    }
+  ]
+}

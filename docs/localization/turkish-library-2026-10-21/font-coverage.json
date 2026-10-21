@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "profileSha256": "d005d27413210d314ce2b90ac755959bb70cb0b12393a235922332b353c92b20",
+  "defaultMissing": {
+    "regular": [],
+    "bold": []
+  },
+  "selectedMissing": {
+    "regular": [],
+    "bold": []
+  },
+  "sourceSha256": "9367a43b3d6ef3386330a138ed7c986bcb2bcc393ce739478edea6b9335edbaf",
+  "turkishCharacters": "I ı İ i Ç ç Ğ ğ Ö ö Ş ş Ü ü",
+  "roundTripWeights": 2,
+  "roundTripPdfSha256": "d43268c156e422d8c6392887897a4e32b2cd98f41cf6807d334e7e98998d407d",
+  "roundTripTextExact": true
+}

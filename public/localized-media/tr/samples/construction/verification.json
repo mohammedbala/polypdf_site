@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "locale": "tr-TR",
+  "region": "TR",
+  "manifestSha256": "13c6c3f82e10352507b78ce0ae4be3f2551134b66a5194d7f761f2040b1a6739",
+  "automatedStatus": "passed",
+  "manualVisualReview": "required; keep a separate source-bound receipt",
+  "limits": "Demonstration geometry only. No standards certification or native application workflow validation.",
+  "documents": [
+    {
+      "id": "01",
+      "file": "01-Arazi-ve-Altyapi.pdf",
+      "sha256": "b2062e3e8dd7ab35397edc384adfd577299e5bd8a3ec3d98ef6cb589e4805c5a",
+      "pages": [
+        {
+          "sheet": "C101",
+          "page": 1,
+          "textItems": 55,
+          "physicalReferences": 16,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 128,
+            "text_show_operators": 55,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "C201",
+          "page": 2,
+          "textItems": 59,
+          "physicalReferences": 4,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 163,
+            "text_show_operators": 59,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "file": "02-Mimari-Revizyon-A.pdf",
+      "sha256": "6b73b95bc27dc428b2ad1b8e5d641024b437773475f0425b174ccf55f8a07b4c",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 84,
+          "physicalReferences": 60,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 466,
+            "text_show_operators": 84,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "A201",
+          "page": 2,
+          "textItems": 59,
+          "physicalReferences": 17,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 204,
+            "text_show_operators": 59,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "file": "03-Mimari-Revizyon-B.pdf",
+      "sha256": "63f93e678ea03957d37d1896f3c1f385b2be7535d22e849f301181c849b9d830",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 86,
+          "physicalReferences": 60,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 478,
+            "text_show_operators": 86,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "A201",
+          "page": 2,
+          "textItems": 59,
+          "physicalReferences": 18,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 209,
+            "text_show_operators": 59,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "file": "04-Temel-ve-Tasiyici-Sistem.pdf",
+      "sha256": "29734ca59a58943f9fbf069394b0c167ef8d98a25a7f0fc42dc70ffa5a506884",
+      "pages": [
+        {
+          "sheet": "S101",
+          "page": 1,
+          "textItems": 58,
+          "physicalReferences": 15,
+          "symbolInstances": 12,
+          "pdf": {
+            "drawing_operators": 247,
+            "text_show_operators": 58,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "S201",
+          "page": 2,
+          "textItems": 59,
+          "physicalReferences": 2,
+          "symbolInstances": 12,
+          "pdf": {
+            "drawing_operators": 259,
+            "text_show_operators": 59,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "file": "05-Havalandirma.pdf",
+      "sha256": "b03d95e94aadabdebdf379d8434e4fd10662984a79d246a71445bcb3b591794b",
+      "pages": [
+        {
+          "sheet": "M101",
+          "page": 1,
+          "textItems": 73,
+          "physicalReferences": 5,
+          "symbolInstances": 23,
+          "pdf": {
+            "drawing_operators": 818,
+            "text_show_operators": 73,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "M501",
+          "page": 2,
+          "textItems": 54,
+          "physicalReferences": 3,
+          "symbolInstances": 6,
+          "pdf": {
+            "drawing_operators": 242,
+            "text_show_operators": 54,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "file": "06-Aydinlatma-ve-Elektrik.pdf",
+      "sha256": "f1fd501edbb70675f293f2ed64012dba91195e2aace9370f9fcf9119d1ffa8f7",
+      "pages": [
+        {
+          "sheet": "E101",
+          "page": 1,
+          "textItems": 98,
+          "physicalReferences": 5,
+          "symbolInstances": 47,
+          "pdf": {
+            "drawing_operators": 885,
+            "text_show_operators": 98,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "E501",
+          "page": 2,
+          "textItems": 56,
+          "physicalReferences": 2,
+          "symbolInstances": 9,
+          "pdf": {
+            "drawing_operators": 214,
+            "text_show_operators": 56,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "file": "07-Su-ve-Atik-Su.pdf",
+      "sha256": "3888b72d486f715540e9eccf22c803dc60675a551c45a8fdccb7152eac445e57",
+      "pages": [
+        {
+          "sheet": "P101",
+          "page": 1,
+          "textItems": 65,
+          "physicalReferences": 7,
+          "symbolInstances": 15,
+          "pdf": {
+            "drawing_operators": 540,
+            "text_show_operators": 65,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "P501",
+          "page": 2,
+          "textItems": 57,
+          "physicalReferences": 0,
+          "symbolInstances": 9,
+          "pdf": {
+            "drawing_operators": 183,
+            "text_show_operators": 57,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "file": "08-Yangindan-Korunma-Alistirma.pdf",
+      "sha256": "8a0b81c8a1fdc3087cc87bfb4b7e54339c09e1fab04271f2df5e22bc3e0533e2",
+      "pages": [
+        {
+          "sheet": "F101",
+          "page": 1,
+          "textItems": 97,
+          "physicalReferences": 5,
+          "symbolInstances": 44,
+          "pdf": {
+            "drawing_operators": 986,
+            "text_show_operators": 97,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "F501",
+          "page": 2,
+          "textItems": 56,
+          "physicalReferences": 0,
+          "symbolInstances": 7,
+          "pdf": {
+            "drawing_operators": 157,
+            "text_show_operators": 56,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "file": "09-Peyzaj-ve-Dis-Alanlar.pdf",
+      "sha256": "3db7613ccedfa0484f91de959601d61c2ba29cd86f87d109b3747ecbeaf469a5",
+      "pages": [
+        {
+          "sheet": "L101",
+          "page": 1,
+          "textItems": 107,
+          "physicalReferences": 13,
+          "symbolInstances": 53,
+          "pdf": {
+            "drawing_operators": 875,
+            "text_show_operators": 107,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "L501",
+          "page": 2,
+          "textItems": 63,
+          "physicalReferences": 7,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 125,
+            "text_show_operators": 63,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "file": "10-Kaplamalar-ve-Sabit-Mobilya.pdf",
+      "sha256": "cd557cef108f3e0c7e6cb9a85015e8c17d35d6f6367ad17b90e806df81c02035",
+      "pages": [
+        {
+          "sheet": "I101",
+          "page": 1,
+          "textItems": 81,
+          "physicalReferences": 15,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 458,
+            "text_show_operators": 81,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "I501",
+          "page": 2,
+          "textItems": 53,
+          "physicalReferences": 14,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 165,
+            "text_show_operators": 53,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "file": "11-Koordinasyon-ve-Inceleme.pdf",
+      "sha256": "e8bea440f6b90a97ffaa99486bd904db9bcfc0bed12b425da68dea48bb698572",
+      "pages": [
+        {
+          "sheet": "X101",
+          "page": 1,
+          "textItems": 51,
+          "physicalReferences": 6,
+          "symbolInstances": 8,
+          "pdf": {
+            "drawing_operators": 454,
+            "text_show_operators": 51,
+            "image_xobjects": 0,
+            "layer_tags": [
+              "/LARCH",
+              "/LELEC",
+              "/LISSUES",
+              "/LMECH"
+            ]
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "X102",
+          "page": 2,
+          "textItems": 66,
+          "physicalReferences": 0,
+          "symbolInstances": 2,
+          "pdf": {
+            "drawing_operators": 115,
+            "text_show_operators": 66,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "file": "12-Taranmis-Mevcut-Cizimler.pdf",
+      "sha256": "1225a350bf32ccc64c4cd89ec5d645c0a0936350f01f8fd0959a0348d0b45a4c",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 0,
+          "physicalReferences": 0,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 0,
+            "text_show_operators": 0,
+            "image_xobjects": 1,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "C101",
+          "page": 2,
+          "textItems": 0,
+          "physicalReferences": 0,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 0,
+            "text_show_operators": 0,
+            "image_xobjects": 1,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "5cee5dea3a0c172e5456e07beb1af6c9a819f73b81940147ff5ef0b5ed7d5710",
+      "pdf": "01-Arazi-ve-Altyapi.pdf",
+      "pdfSha256": "b2062e3e8dd7ab35397edc384adfd577299e5bd8a3ec3d98ef6cb589e4805c5a",
+      "page": 1
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "4dce9b2113b3579985b8aa7f7bb1de1ecdd9f7552f531bdede1bbb70b255c7d7",
+      "pdf": "01-Arazi-ve-Altyapi.pdf",
+      "pdfSha256": "b2062e3e8dd7ab35397edc384adfd577299e5bd8a3ec3d98ef6cb589e4805c5a",
+      "page": 2
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "f3b7b35fedab626dd0380fc11ec50efaefa1e180189bcbd36b8068c9d1c2aa8f",
+      "pdf": "02-Mimari-Revizyon-A.pdf",
+      "pdfSha256": "6b73b95bc27dc428b2ad1b8e5d641024b437773475f0425b174ccf55f8a07b4c",
+      "page": 1
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "c7ffb4f5a33421dcff3a8e71e4dde40d62c9e2ef0d07d2b82907a8941dd5f3cb",
+      "pdf": "02-Mimari-Revizyon-A.pdf",
+      "pdfSha256": "6b73b95bc27dc428b2ad1b8e5d641024b437773475f0425b174ccf55f8a07b4c",
+      "page": 2
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "781cad0db39763ba805bb1129e403c551996dd7cb43bc0c0b28790fbdb9dbfb6",
+      "pdf": "03-Mimari-Revizyon-B.pdf",
+      "pdfSha256": "63f93e678ea03957d37d1896f3c1f385b2be7535d22e849f301181c849b9d830",
+      "page": 1
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "44ce3254b0b5d8540bb8fab914d6d8c076b2fc8524ff2fc570caaa5b9d1c62da",
+      "pdf": "03-Mimari-Revizyon-B.pdf",
+      "pdfSha256": "63f93e678ea03957d37d1896f3c1f385b2be7535d22e849f301181c849b9d830",
+      "page": 2
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "bf80f4e3bfc8968e774d9d86aed3366793b1fe206038d07de06835c9bdedae95",
+      "pdf": "04-Temel-ve-Tasiyici-Sistem.pdf",
+      "pdfSha256": "29734ca59a58943f9fbf069394b0c167ef8d98a25a7f0fc42dc70ffa5a506884",
+      "page": 1
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "9e9be399d575049cdc93fe2a8b325624bca69f006072776ee85b253005eb54ba",
+      "pdf": "04-Temel-ve-Tasiyici-Sistem.pdf",
+      "pdfSha256": "29734ca59a58943f9fbf069394b0c167ef8d98a25a7f0fc42dc70ffa5a506884",
+      "page": 2
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "339aaac3ee1c66190f1d97b980ea0e5095e19ecbf5fb0d22b678a7f849d8a834",
+      "pdf": "05-Havalandirma.pdf",
+      "pdfSha256": "b03d95e94aadabdebdf379d8434e4fd10662984a79d246a71445bcb3b591794b",
+      "page": 1
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "0d7a0ae44d181c0df3416ee29ff5aa86a1bd57a526d1f5f7ecb392eeea6438ef",
+      "pdf": "05-Havalandirma.pdf",
+      "pdfSha256": "b03d95e94aadabdebdf379d8434e4fd10662984a79d246a71445bcb3b591794b",
+      "page": 2
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "30eeca01dba5aca607b86dc75203cb46e306ed06d6db3e3eaf9f5ba630bdba74",
+      "pdf": "06-Aydinlatma-ve-Elektrik.pdf",
+      "pdfSha256": "f1fd501edbb70675f293f2ed64012dba91195e2aace9370f9fcf9119d1ffa8f7",
+      "page": 1
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "e8e2aff7b690e12f061b7f4b0f408ecdaf038094914ada590b609e390e7b498b",
+      "pdf": "06-Aydinlatma-ve-Elektrik.pdf",
+      "pdfSha256": "f1fd501edbb70675f293f2ed64012dba91195e2aace9370f9fcf9119d1ffa8f7",
+      "page": 2
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "1766b64b9ad1550d847659b2963bae0347f7582c394ba589c6927d2bbbb074c0",
+      "pdf": "07-Su-ve-Atik-Su.pdf",
+      "pdfSha256": "3888b72d486f715540e9eccf22c803dc60675a551c45a8fdccb7152eac445e57",
+      "page": 1
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "14c4d8de0ad6f3039d696c259f9f775737eb799636d154397f187010c4ff3cfa",
+      "pdf": "07-Su-ve-Atik-Su.pdf",
+      "pdfSha256": "3888b72d486f715540e9eccf22c803dc60675a551c45a8fdccb7152eac445e57",
+      "page": 2
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "b0932c97717d90ada7016944290bf7f8daad50b37b39e33ec826100aaafd0a3c",
+      "pdf": "08-Yangindan-Korunma-Alistirma.pdf",
+      "pdfSha256": "8a0b81c8a1fdc3087cc87bfb4b7e54339c09e1fab04271f2df5e22bc3e0533e2",
+      "page": 1
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "6b36e17a84991f1abe1fc40243170a6ae39da7f92f83309a4320c01bb0512909",
+      "pdf": "08-Yangindan-Korunma-Alistirma.pdf",
+      "pdfSha256": "8a0b81c8a1fdc3087cc87bfb4b7e54339c09e1fab04271f2df5e22bc3e0533e2",
+      "page": 2
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "d5e14a8226b8ecb63e6783bf1ff78d2cc8910710ed0a34a25cb3fe37e42f73d6",
+      "pdf": "09-Peyzaj-ve-Dis-Alanlar.pdf",
+      "pdfSha256": "3db7613ccedfa0484f91de959601d61c2ba29cd86f87d109b3747ecbeaf469a5",
+      "page": 1
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "e0f4e955818ab66289ab30a4d3cd37152ac5d504c1200db90dae3ec30a97c5f5",
+      "pdf": "09-Peyzaj-ve-Dis-Alanlar.pdf",
+      "pdfSha256": "3db7613ccedfa0484f91de959601d61c2ba29cd86f87d109b3747ecbeaf469a5",
+      "page": 2
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "bad671846a4a77ff058597f88646875d6da7fe5e0af10b8dc61b5264e712aabf",
+      "pdf": "10-Kaplamalar-ve-Sabit-Mobilya.pdf",
+      "pdfSha256": "cd557cef108f3e0c7e6cb9a85015e8c17d35d6f6367ad17b90e806df81c02035",
+      "page": 1
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "d5a5b57f8cc9f2d7b39f06305892ac9937573780d35a7d3b04079f81037a69a9",
+      "pdf": "10-Kaplamalar-ve-Sabit-Mobilya.pdf",
+      "pdfSha256": "cd557cef108f3e0c7e6cb9a85015e8c17d35d6f6367ad17b90e806df81c02035",
+      "page": 2
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "12f23633a272b6ede431fc43dbba45199379f87f547c407b4a00ecf7527200ce",
+      "pdf": "11-Koordinasyon-ve-Inceleme.pdf",
+      "pdfSha256": "e8bea440f6b90a97ffaa99486bd904db9bcfc0bed12b425da68dea48bb698572",
+      "page": 1
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "d52c112067027e77681be8f5f25954836c5f1c24c4fffb2238eeb89fb4ba82f7",
+      "pdf": "11-Koordinasyon-ve-Inceleme.pdf",
+      "pdfSha256": "e8bea440f6b90a97ffaa99486bd904db9bcfc0bed12b425da68dea48bb698572",
+      "page": 2
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "9e449592c26778dcaed1384457de10d67d0a39ac4459b61fa01c4c08afd6af4a",
+      "pdf": "12-Taranmis-Mevcut-Cizimler.pdf",
+      "pdfSha256": "1225a350bf32ccc64c4cd89ec5d645c0a0936350f01f8fd0959a0348d0b45a4c",
+      "page": 1
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "6d056d507bb3dfd878b6d11b2ea7eb8eaf9c15a394cb2ae8cd171e14e9dd44d6",
+      "pdf": "12-Taranmis-Mevcut-Cizimler.pdf",
+      "pdfSha256": "1225a350bf32ccc64c4cd89ec5d645c0a0936350f01f8fd0959a0348d0b45a4c",
+      "page": 2
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "30321815f483961718634453e786a5ddac478b6bd0e83f82d9095ccc7ca14c15"
+  }
+}
