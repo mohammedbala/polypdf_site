@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "route": "/de/blog/create-interactive-pdf-stamps/",
+  "htmlSha256": "54a1c1572d869d25675a928e14f46f473d144b142b293620ed649352d56c67f4",
+  "localizedImages": 4,
+  "localizedPdfDownloads": 2,
+  "sourceFiles": {
+    "scripts/localization/stamps-de.json": "f73ec8d36e6adf7e4dd2d35ff06b63d514fa34f597c55472dc9f62fd7755a119",
+    "scripts/localization/prepare-stamps-de.cjs": "62fe87eca7d846b3b4c643283b0704f69f43e11d95592ec5fe4cbba9953cff25",
+    "scripts/localization/capture-stamps-de.mjs": "5b39d364886d700d7b3ee155d955a7d2ff522cb5ef08b477be82978f403359c1",
+    "scripts/localization/register-stamps-de.cjs": "0c3581cceeb7ea6416770de428395d6792d5b75a6da6e4525911f6d18b8177a2",
+    "scripts/localization/verify-stamps-de.py": "2578770d85d17a83dfd0907fc208d72ec11863bdc6d7d31ad53a9dd2284eba95",
+    "scripts/localization/verify-stamps-page.cjs": "4e1c52ef14498d1da56e6dc6830437252ea15592d2a52052b31098c65eb4d9b4",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/international/build.cjs": "e57d4ccef3ee18db73c4635fcb3073bbbd2623de27a3d21c64bc00d5a144ba2b",
+    "src/content/guides/create-interactive-pdf-stamps.js": "61abb94e517be3498a3d7c4aa682138faa124b7e4221a3965e81bb94a98e393f",
+    "src/localization/walkthrough-media.json": "2c22e2a9f9a4f7ac5f177410479322446240f656c67dbfabeb21a9acb946c607"
+  },
+  "checks": [
+    "Four actual German app images and matching social image",
+    "Two regional PDF downloads verified by hash",
+    "Full process reopen and retained template with empty reviewer prompt",
+    "Actual 300 × 140 dimensions, checked default and reopened-value edit limitation documented",
+    "English and unfinished Spanish preserved"
+  ],
+  "limitations": [
+    "One completed German route within a pilot pack; full rollout remains incomplete",
+    "Local Mac development capture; no released installer, Windows or native iPad qualification",
+    "No deployment"
+  ]
+}

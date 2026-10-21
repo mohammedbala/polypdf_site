@@ -12,7 +12,7 @@ Die beiden fiktiven A3-Pläne zeigen ein vereinfachtes Bürgerhaus in Deutschlan
 4. Schließen Sie die Datei und öffnen Sie genau die gespeicherte Kopie erneut. Suchen Sie wieder nach der vollständigen Kennung und prüfen Sie den extrahierten Text unabhängig.
 5. Vergleichen Sie den restlichen Plan und das Rasterdetail mit der Quelle. Diese Inhalte sollen erhalten bleiben.
 
-Der direkte Test des PDF-Kerns hat genau einen Textabschnitt entfernt. Die Kennung fehlt im extrahierten Text und in den geprüften dekodierten PDF-Objekten; der übrige Seitentext und die Bildpixel bleiben unverändert. Die Ausgabe enthält keine Verknüpfung auf eine frühere PDF-Revision. Dies ist noch kein Nachweis des nativen Speichern-Dialogs oder einer vollständigen Benutzeranleitung: Die App-Aufnahmen und der native Speichern-/Neuöffnen-Durchlauf stehen aus.
+Der native deutsche Durchlauf wurde am 21.10.2026 im lokalen Mac-Entwicklungsstand 1.6.17 Build 84 abgeschlossen. `pruefplan-geschwaerzt.pdf` wurde über den nativen Speichern-Dialog geschrieben und nach einem vollständigen App-Neustart erneut geöffnet. Die Suche meldet **Keine Treffer**. Die unabhängige Prüfung bestätigt: Die Kennung fehlt im extrahierten Text, in den Rohbytes und in den geprüften dekodierten PDF-Objekten; der übrige Seitentext und die Bildpixel bleiben unverändert. Die Ausgabe enthält keine Verknüpfung auf eine frühere PDF-Revision. Die Quelle bleibt unverändert.
 
 ## Bereinigungsübung
 
@@ -22,6 +22,8 @@ Der direkte Test des PDF-Kerns hat genau einen Textabschnitt entfernt. Die Kennu
 2. Führen Sie die Bereinigung aus und speichern Sie unter `pruefplan-bereinigt.pdf`.
 3. Untersuchen Sie die gespeicherte Datei unabhängig: Seitentext, beide Bilder, Metadaten, Aktionen und Anhänge sind getrennte Prüfgegenstände.
 
-Im direkten Kerntest werden die ursprünglichen Metadaten und ein JavaScript-Eintrag entfernt. Der direkte Seitenanhang bleibt mit identischen Nutzdaten erhalten; die Kennung und beide Bilder bleiben ebenfalls erhalten. Eine Bereinigung entfernt hier keinen sichtbaren Seitentext. Die native Speicherung kann neue Erzeuger- und Änderungszeit-Metadaten hinzufügen; das wird im noch ausstehenden Speichern-Durchlauf gesondert geprüft.
+Auch `pruefplan-bereinigt.pdf` wurde nativ gespeichert und nach einem vollständigen App-Neustart geöffnet. Die ursprünglichen Metadaten und ein JavaScript-Eintrag sind entfernt. Der direkte Seitenanhang bleibt mit identischen Nutzdaten erhalten; die Kennung und beide Bilder bleiben ebenfalls erhalten. Eine Bereinigung entfernt hier keinen sichtbaren Seitentext. Die native Speicherung schreibt neue `/Producer`- und `/ModDate`-Einträge. Die unabhängigen Darstellungen von Quelle und Ausgabe sind pixelgleich.
+
+`export-verification.json` enthält die Prüfsummen der vier PDFs und die Ergebnisse der Inhaltsprüfung. Die App-Aufnahmen zeigen die deutsche Oberfläche; der native Speichern-Dialog folgt der englischen Sprache des verwendeten macOS. Windows, iPad und ein veröffentlichter Installer wurden in diesem Durchlauf nicht qualifiziert.
 
 Diese Ergebnisse gelten für die bereitgestellten fiktiven Beispiele. Sie belegen keine vollständige Entfernung vertraulicher Inhalte in beliebigen PDFs. Verwenden Sie für reale vertrauliche Unterlagen das freigegebene Prüfverfahren Ihrer Organisation und prüfen Sie die tatsächliche gespeicherte Datei.

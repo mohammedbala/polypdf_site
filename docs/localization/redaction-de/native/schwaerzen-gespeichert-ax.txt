@@ -1,0 +1,137 @@
+Window: "PolyPDF", App: PolyPDF.
+0 standard window PolyPDF, Secondary Actions: Raise
+	1 container PolyPDF
+		2 container
+			3 HTML content PolyPDF, URL: file:///Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/renderer/index.html
+				4 container
+					5 tab group Geöffnete Dokumente
+						6 tab (selected) pruefplan-geschwaerzt.pdf Tab schließen, Help: pruefplan-geschwaerzt.pdf, Value: 1
+						7 button Eine weitere PDF öffnen
+					8 container Anmerkungs-Werkzeugleiste
+						9 button Rückgängig (⌘Z)
+						10 button (disabled) Wiederholen (⇧⌘Z)
+						11 button Neues PDF (⌘N)
+						12 button Öffnen (⌘O)
+						13 button Speichern (⌘S)
+						14 button Drucken (⌘P)
+						15 button PDF per E-Mail senden (⇧⌘E)
+						16 button Nach links drehen
+						17 button Nach rechts drehen
+						18 button (disabled) Ausschneiden (⌘X)
+						19 button (disabled) Kopieren (⌘C)
+						20 button Einfügen (⌘V)
+						21 toggle button Description: Format übertragen (F), Value: 0
+						22 button (disabled) Löschen (⌫)
+						23 toggle button Description: Hyperlink (I), Value: 0
+						24 button Reduzieren
+						25 toggle button Description: Bereichszoom (Z), Value: 0
+						26 toggle button Description: Schnappschuss (⌃G), Value: 0
+						27 toggle button Description: Schwärzen, Value: 0
+						28 toggle button Description: Rechteck (R), Value: 0
+						29 toggle button Description: Kreis (O), Value: 0
+						30 toggle button Description: Bogen (⇧O), Value: 0
+						31 toggle button Description: Revisionswolke (C), Value: 0
+						32 toggle button Description: Pfeil (A), Value: 0
+						33 toggle button Description: Linie (L), Value: 0
+						34 toggle button Description: Polylinie (Y), Value: 0
+						35 toggle button Description: Polygon (P), Value: 0
+						36 toggle button Description: Stift (N), Value: 0
+						37 toggle button Description: Markieren (H), Value: 0
+						38 toggle button Description: Text (T), Value: 0
+						39 toggle button Description: Schreibmaschine, Value: 0
+						40 toggle button Description: Sprechblase (Q), Value: 0
+						41 toggle button Description: Bemaßung (D), Value: 0
+						42 toggle button Description: Stempel (K): Genehmigt, Value: 0
+						43 pop up button Stempel wählen: Genehmigt
+						44 button Bildstempel
+						45 toggle button Description: Lineare Bemaßung (⇧L), Value: 0
+						46 toggle button Description: Fläche (⇧A), Value: 0
+						47 toggle button Description: Umfang (⇧E), Value: 0
+						48 toggle button Description: Durchmesser, Value: 0
+						49 toggle button Description: Radius, Value: 0
+						50 toggle button Description: Pfadlänge (⇧Y), Value: 0
+						51 toggle button Description: Winkel (⇧Q), Value: 0
+						52 toggle button Description: Zählen (⇧K), Value: 0
+						53 toggle button Description: Symbolsuche, Value: 0
+						54 button Messeeinstellungen
+					55 container Stil-Werkzeugleiste
+						56 text NAME pruefplan-geschwaerzt.pdf SEITEN 1
+						57 button SEITE HINZUFÜGEN, Help: Leere Seite nach aktueller Seite hinzufügen
+					58 container Seitenleiste
+						59 toggle button Description: Miniaturansichten, Value: 0
+						60 toggle button Description: Suchen, Value: 1
+						61 toggle button Description: Lesezeichen, Value: 0
+						62 toggle button Description: Formulare, Value: 0
+						63 toggle button Description: Unterschriften, Value: 0
+						64 toggle button Description: Messungen, Value: 0
+						65 toggle button Description: Maßstabsbereiche, Value: 0
+						66 toggle button Description: Arbeitsbereiche, Value: 0
+						67 toggle button Description: Ebenen, Value: 0
+						68 toggle button Description: Anhänge, Value: 0
+						69 toggle button Description: Werkzeugset, Value: 0
+						70 toggle button Description: Plugins, Value: 0
+						71 toggle button Description: Inspektor, Value: 0
+						72 pop up button Einstellungen
+					73 container
+						74 text Suchen
+						75 button Seitenleiste schließen
+						76 button Text
+						77 button Symbol
+						78 container
+							79 text Dokumenttext durchsuchen
+							80 search text field (settable) Dokumenttext durchsuchen, Value: VORGANG-LINDE-742
+							81 button Suchen
+						82 text Geben Sie Text ein, um im aktuellen PDF zu suchen.
+						83 text Keine Treffer.
+						84 splitter Seitenleiste Größe ändern
+					85 container
+						86 image
+						87 image
+						88 image
+						89 image
+						90 image
+						91 image
+					92 container Ansichtsstatus und Navigation
+						93 toggle button Description: Anmerkungstabelle anzeigen, Value: 0
+						94 toggle button Description: Vertikal teilen (⌃2), Value: 0
+						95 toggle button Description: Horizontal teilen (⌃H), Value: 0
+						96 toggle button Description: Einzelseite (⌃4) — Scroll- und Zoom-Einstellungen (Rechtsklick), Value: 0
+						97 toggle button Description: Kontinuierliches Scrollen (⌃5) — Scroll- und Zoom-Einstellungen (Rechtsklick), Value: 1
+						98 toggle button Description: Nebeneinander (⌃6) — Scroll- und Zoom-Einstellungen (Rechtsklick), Value: 0
+						99 toggle button Description: Textauswahl, Value: 0
+						100 button Aktuelles Werkzeug
+						101 text Gespeicherte 0 Anmerkungen
+						102 button (disabled) Erste Seite (⌘Home)
+						103 button (disabled) Vorherige Seite (PgUp)
+						104 text field (settable) Description: Gehe zu Seite, Value: 1
+						105 text /1
+						106 button (disabled) Nächste Seite (PgDn)
+						107 button (disabled) Letzte Seite (⌘End)
+						108 toggle button Description: Einrasten aus — klicken zum Aktivieren für Anmerkungen und Inhalt; Rechtsklick für Optionen, Value: 0
+						109 toggle button Description: Hilfslinien aus — klicken zum Anzeigen, Value: 0
+						110 toggle button Description: Hilfsmaße aus — klicken zum Aktivieren für Auto und Anmerkung; Rechtsklick für Optionen, Value: 0
+						111 toggle button Description: Befehlszeile anzeigen (/), Value: 0
+						112 button Breite anpassen (⌃0)
+						113 button Höhe anpassen (⌃1)
+						114 button Seite anpassen (⌃9)
+						115 button Zoom
+						116 button Herauszoomen (⌘-)
+						117 button Hineinzoomen (⌘=)
+						118 text 420 x 297 mm
+						119 button Description: Zeichnungsmaßstab: Kein Maßstab. Seite 1 hat keinen Zeichnungsmaßstab, daher werden Messungen in PDF-Punkten angezeigt. Klicken, um einen festzulegen., Help: Seite 1 hat keinen Zeichnungsmaßstab, daher werden Messungen in PDF-Punkten angezeigt. Klicken, um einen festzulegen.
+							120 text MASSSTAB
+							121 text Kein Maßstab
+	122 close button
+	123 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	124 minimize button
+125 menu bar
+	126 PolyPDF
+	127 Datei
+	128 Bearbeiten​
+	129 Ansicht
+	130 Dokument
+	131 Werkzeuge
+	132 Fenster
+	133 Hilfe
+
+The focused UI element is 3 HTML content PolyPDF, URL: file:///Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/renderer/index.html

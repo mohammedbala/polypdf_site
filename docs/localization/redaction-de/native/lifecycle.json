@@ -1,0 +1,38 @@
+{
+  "complete": true,
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "bdbd92b1f149e8217a3c09322bc202b50f03f23947f7deb9a3c3e3f92634fe84",
+    "version": "1.6.17",
+    "bundleSetSha256": "824e61b43de2583684d69c0dbe783c2e62817fbaf319b4791e0daafe99b7db89"
+  },
+  "sourceHash": "31e37ad6f9db7f10db3f733a0cd5da2f47d1dc06865def5629ce785122a657d8",
+  "sanitizeSourceHash": "c1fd5aa3f350db7d30d67667ecbfd857f7170b3e6d7145bfdcc1e14b3be80e89",
+  "runnerSha256": "db012004b5a7c4c8d19c0bfe1928aae45ac138a16cb6684afbbf83b9f8095b23",
+  "records": [
+    {
+      "phase": "redaction",
+      "inputSha256": "31e37ad6f9db7f10db3f733a0cd5da2f47d1dc06865def5629ce785122a657d8",
+      "outputSha256": "e563219a1c699167735260120e18c0cc2abd5233359a885472283101e3f85644"
+    },
+    {
+      "phase": "reopen",
+      "inputSha256": "e563219a1c699167735260120e18c0cc2abd5233359a885472283101e3f85644"
+    },
+    {
+      "phase": "sanitize",
+      "inputSha256": "c1fd5aa3f350db7d30d67667ecbfd857f7170b3e6d7145bfdcc1e14b3be80e89",
+      "outputSha256": "06a64a9cb3633bd319c82bdf48fe239dcb7752bd0677b33eb8f01dbda2e3a403"
+    },
+    {
+      "phase": "sanitized-reopen",
+      "inputSha256": "06a64a9cb3633bd319c82bdf48fe239dcb7752bd0677b33eb8f01dbda2e3a403"
+    }
+  ],
+  "activations": 1,
+  "scope": "Owned process/loopback-fixture lifecycle only. Native controls, screenshots and output verification are documented separately."
+}

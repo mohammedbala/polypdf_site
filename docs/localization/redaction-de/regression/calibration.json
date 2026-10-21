@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "route": "/de/blog/calibrate-pdf-drawing-scale/",
+  "htmlSha256": "defddb9992ee455bbefdc3cb1a384b598e598f64c48467c5d51a74aed07e2169",
+  "localizedImages": 5,
+  "localizedDownloads": 3,
+  "sourceFiles": {
+    "scripts/international/build.cjs": "e57d4ccef3ee18db73c4635fcb3073bbbd2623de27a3d21c64bc00d5a144ba2b",
+    "scripts/international/verify.cjs": "6c74edc35945d91e631ca722de6de39c2e6fabfb7193ad98d268a98bb0fb90b7",
+    "scripts/localization/media.cjs": "66ff44d39d7374a2c14fd872e666dc1c684b8b8026e9d833e5163566f7336d9c",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/localization/calibration-de.json": "ef7bbbe76a2bcc2bb3767f955f6bb97d70c3659bf435b8450065777c02368dc0",
+    "scripts/localization/capture-calibration-de.mjs": "78929d3f7c7e2b3bcca820ce40308d3a40c869e812dd124e7aeaf40a2933262d",
+    "scripts/localization/register-calibration-de.cjs": "b5c97cb980ba57ce126d4f3ddfb05de1f5cceca4100718430d3702c83f72304c",
+    "scripts/localization/verify-calibration-page.cjs": "b79ec4d3683a821c3136da6a2df48c1732645c0479c2f6ef70c1fbda7d90a0f6",
+    "src/content/guides/calibrate-pdf-drawing-scale.js": "da24cdcb32348803ae808665673398ba06440f56e56340926ffe8d2d6a7a4685",
+    "src/content/translations/de.json": "357944806ac8b8a7b217f274bc92105965f6f543af283b6b0829d6ec10a1c1bb",
+    "src/lib/route-metadata.json": "3b66faba48ef4f43b1be9e3bf784a81b07576efed5bff0982085005bfd8c1d58",
+    "src/components/CalibrationPractice.js": "9cba1d4686b44596ea3a026ff118a260c68744cff5d4da2d17b0a5aec153576c",
+    "src/components/BlogPost.js": "c5f1615a9d4096bbe03ef1ee497faf63f593c5ab464cf0816464b1a5450ecb73",
+    "src/localization/walkthrough-media.json": "2c22e2a9f9a4f7ac5f177410479322446240f656c67dbfabeb21a9acb946c607"
+  },
+  "checks": [
+    "All five instructional images and drawing previews resolve to exact verified German bytes",
+    "All regional downloads point into the German media pack",
+    "Visible hero, Open Graph, Twitter and Article image agree",
+    "Captions, formulas, reference dimensions and verification scope match the German exercise",
+    "English and unfinished Spanish page retain their existing media"
+  ],
+  "limitations": [
+    "One complete German guide in an otherwise incomplete pilot pack",
+    "International stage exercised against the existing English prerender; no new React source change",
+    "No deployment"
+  ]
+}

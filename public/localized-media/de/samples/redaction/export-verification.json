@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "scope": "native Save outputs",
+  "lifecycleSha256": "d23d63c99c0acebe55ae1a133f9eda488fe7e6f56df85cb8b1f8866fb6d5acec",
+  "sourceVerificationSha256": "2631a42b241ed7997f0f55e3fc62409b153e75affc313c57964b1f65804440a2",
+  "files": {
+    "pruefplan-schwaerzen.pdf": "31e37ad6f9db7f10db3f733a0cd5da2f47d1dc06865def5629ce785122a657d8",
+    "pruefplan-bereinigen.pdf": "c1fd5aa3f350db7d30d67667ecbfd857f7170b3e6d7145bfdcc1e14b3be80e89",
+    "pruefplan-geschwaerzt.pdf": "e563219a1c699167735260120e18c0cc2abd5233359a885472283101e3f85644",
+    "pruefplan-bereinigt.pdf": "06a64a9cb3633bd319c82bdf48fe239dcb7752bd0677b33eb8f01dbda2e3a403"
+  },
+  "redaction": {
+    "targetAbsentFromExtractedTextAndDecodedObjects": true,
+    "decodedStreamsChecked": 2,
+    "otherPageTextPreserved": true,
+    "imagePixelsPreserved": true,
+    "previousRevisionLink": false,
+    "endOfFileMarkers": 1
+  },
+  "sanitation": {
+    "pageTextPreserved": true,
+    "bothImagePlacementsPreserved": true,
+    "originalInfoAndJavaScriptRemoved": true,
+    "outputInfoDictionary": {
+      "/Producer": "PolyPDF / PolyPDF 1.6.17",
+      "/ModDate": "D:20261021171808Z"
+    },
+    "directPageAttachmentsBefore": [
+      {
+        "name": "pruefnotiz.txt",
+        "payloadSha256": "7f4b537aa84307ad5aa932b3b0b2fa322f4be9e0e1e0edf43312e44b9b52a31f"
+      }
+    ],
+    "directPageAttachmentsAfter": [
+      {
+        "name": "pruefnotiz.txt",
+        "payloadSha256": "7f4b537aa84307ad5aa932b3b0b2fa322f4be9e0e1e0edf43312e44b9b52a31f"
+      }
+    ]
+  },
+  "limitations": [
+    "These checks qualify only the fictional examples and observed content types.",
+    "The source text and separate image pixels are distinct; no general confidential-release certification is claimed."
+  ]
+}

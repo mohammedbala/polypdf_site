@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "cta": true,
+  "downloads": [
+    {
+      "href": "/localized-media/de/samples/redaction/pruefplan-schwaerzen.pdf",
+      "label": "Deutsche Schwärzungsquelle herunterladen (PDF)"
+    },
+    {
+      "href": "/localized-media/de/samples/redaction/pruefplan-geschwaerzt.pdf",
+      "label": "Gespeichertes Schwärzungsergebnis herunterladen (PDF)"
+    },
+    {
+      "href": "/localized-media/de/samples/redaction/pruefplan-bereinigen.pdf",
+      "label": "Deutsche Bereinigungsquelle herunterladen (PDF)"
+    },
+    {
+      "href": "/localized-media/de/samples/redaction/pruefplan-bereinigt.pdf",
+      "label": "Gespeichertes Bereinigungsergebnis herunterladen (PDF)"
+    }
+  ],
+  "images": [
+    {
+      "alt": "Deutsches PolyPDF nach vollständigem Neustart mit pruefplan-geschwaerzt.pdf: schwarze Fläche über der Kennung und Keine Treffer für VORGANG-LINDE-742",
+      "naturalHeight": 2146,
+      "naturalWidth": 3420,
+      "src": "/localized-media/de/guides/redaction/schwaerzen-wieder-geoeffnet.jpg"
+    },
+    {
+      "alt": "Deutsches PolyPDF mit einem Suchtreffer für VORGANG-LINDE-742 auf dem fiktiven A3-Plan Bürgerhaus Lindenhof",
+      "naturalHeight": 2146,
+      "naturalWidth": 3420,
+      "src": "/localized-media/de/guides/redaction/schwaerzen-vorher.jpg"
+    },
+    {
+      "alt": "Deutscher Dialog Schwärzung anwenden nach dem Zeichnen des Bereichs über der fiktiven Kennung",
+      "naturalHeight": 2146,
+      "naturalWidth": 3420,
+      "src": "/localized-media/de/guides/redaction/schwaerzen-bestaetigen.jpg"
+    },
+    {
+      "alt": "Deutsches PolyPDF nach Anwendung der Schwärzung mit schwarzer Kennungsfläche und Keine Treffer im Suchbereich",
+      "naturalHeight": 2146,
+      "naturalWidth": 3420,
+      "src": "/localized-media/de/guides/redaction/schwaerzen-angewendet.jpg"
+    },
+    {
+      "alt": "Deutsches PolyPDF nach vollständigem Neustart mit pruefplan-geschwaerzt.pdf: schwarze Fläche über der Kennung und Keine Treffer für VORGANG-LINDE-742",
+      "naturalHeight": 2146,
+      "naturalWidth": 3420,
+      "src": "/localized-media/de/guides/redaction/schwaerzen-wieder-geoeffnet.jpg"
+    },
+    {
+      "alt": "Deutscher Dialog Dokument bereinigen mit aktivierten Optionen für Metadaten, Miniaturen, Anhänge und JavaScript; Formularentfernung ausgeschaltet",
+      "naturalHeight": 2146,
+      "naturalWidth": 3420,
+      "src": "/localized-media/de/guides/redaction/bereinigen-optionen.jpg"
+    },
+    {
+      "alt": "Deutsches PolyPDF nach Dokumentbereinigung mit sichtbarer Kennung, zwei Rasterdetails und weiterhin vorhandenem direkten Seitenanhang",
+      "naturalHeight": 2146,
+      "naturalWidth": 3420,
+      "src": "/localized-media/de/guides/redaction/bereinigen-ergebnis.jpg"
+    }
+  ],
+  "lang": "de",
+  "pageWidth": 1280,
+  "title": "PDF schwärzen und bereinigen: Grenzen von PolyPDF",
+  "url": "http://127.0.0.1:4185/de/blog/redact-and-sanitize-pdf/",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "allSevenImageSlotsLoaded": true,
+  "languageSwitch": {
+    "sequence": [
+      "de",
+      "en",
+      "de"
+    ],
+    "englishHero": "/static/media/redaction-reopened-search-no-matches-v1-4-light-web.4c944a4fa20df034f69e.png",
+    "englishGermanDownloadCount": 0,
+    "germanDownloadCount": 4
+  },
+  "scope": "Local browser desktop preview; native app/PDF evidence recorded separately"
+}

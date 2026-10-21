@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "bdbd92b1f149e8217a3c09322bc202b50f03f23947f7deb9a3c3e3f92634fe84",
+    "version": "1.6.17",
+    "bundleSetSha256": "824e61b43de2583684d69c0dbe783c2e62817fbaf319b4791e0daafe99b7db89"
+  },
+  "runnerSha256": "db012004b5a7c4c8d19c0bfe1928aae45ac138a16cb6684afbbf83b9f8095b23",
+  "lifecycleSha256": "d23d63c99c0acebe55ae1a133f9eda488fe7e6f56df85cb8b1f8866fb6d5acec",
+  "uiVerificationSha256": "42953bc51b29db1fc033e0e86e2ab8c97258d33d2124807a7090506081d65d53",
+  "profileSha256": "a0920c6865e88d6e25b53ca775731ee70b07f7eca9e361e67b76017322dcd0f3",
+  "exportVerificationSha256": "5c0b08c38ad19af88cee60701b8be65bf391a37cd1249390abfb825a4c4874ff",
+  "shots": [
+    {
+      "file": "schwaerzen-vorher.jpg",
+      "sha256": "2007c9a437a1f3fe1f8b6e219b10df825fe4e80cfe0352bdf7d6d1b6b0809786",
+      "width": 3420,
+      "height": 2146,
+      "format": "JPEG",
+      "unalteredCaptureBytes": true
+    },
+    {
+      "file": "schwaerzen-bestaetigen.jpg",
+      "sha256": "cd000988ad27ed20524a097449205b8bd1a6b93bb6fe8363c07437245293e165",
+      "width": 3420,
+      "height": 2146,
+      "format": "JPEG",
+      "unalteredCaptureBytes": true
+    },
+    {
+      "file": "schwaerzen-angewendet.jpg",
+      "sha256": "0d07120cec989248f4f3839546e862a49c7722e7da9edc21aebc0db5d040e5ec",
+      "width": 3420,
+      "height": 2146,
+      "format": "JPEG",
+      "unalteredCaptureBytes": true
+    },
+    {
+      "file": "schwaerzen-wieder-geoeffnet.jpg",
+      "sha256": "02a434f2747767e0ba32014344163bbce9ce01cacdf008ce7ccf692256edbbca",
+      "width": 3420,
+      "height": 2146,
+      "format": "JPEG",
+      "unalteredCaptureBytes": true
+    },
+    {
+      "file": "bereinigen-optionen.jpg",
+      "sha256": "431a545597a029421535c6b77e9b29e08e1041335c927e0e073482e9343b36ef",
+      "width": 3420,
+      "height": 2146,
+      "format": "JPEG",
+      "unalteredCaptureBytes": true
+    },
+    {
+      "file": "bereinigen-ergebnis.jpg",
+      "sha256": "5923901ce9a37c246e204fc49a6e33160005d8a00239980299ef6a2e30d681b3",
+      "width": 3420,
+      "height": 2146,
+      "format": "JPEG",
+      "unalteredCaptureBytes": true
+    },
+    {
+      "file": "bereinigen-wieder-geoeffnet.jpg",
+      "sha256": "af1bb54bc07ec85abcdd3fe5b69eccbe698cdf769760be00e9329e42896669b4",
+      "width": 3420,
+      "height": 2146,
+      "format": "JPEG",
+      "unalteredCaptureBytes": true
+    }
+  ],
+  "checks": [
+    "German language and metric paper units selected through Settings",
+    "Fictional token has one search result before redaction and no results after apply and after full process restart",
+    "Pointer-drawn region opens confirmation immediately; no separately staged-mark step",
+    "Both outputs saved through native Save As and reopened in fresh app processes",
+    "Cleanup result reports original metadata and one JavaScript/action entry removed; direct page attachment still present"
+  ],
+  "visualReview": "All seven raw captures inspected: German app text and regional plan readable; no substituted or painted labels. Cleanup status line truncates at available footer width; full result was read through native accessibility. JPEG bytes retained without resizing or re-encoding.",
+  "sanitizedSourceAndOutputRenderSha256": "073653a59dffb360b10247b14c1718d547a647993bfeb089ea4547d06fc5829e",
+  "limitations": [
+    "These checks qualify only the fictional examples and observed content types.",
+    "The source text and separate image pixels are distinct; no general confidential-release certification is claimed.",
+    "English native macOS Save controls follow the host OS language; application chrome and document text are German.",
+    "The direct page attachment remains byte-for-byte after cleanup; the guide explicitly documents it.",
+    "Local Mac development build only; no released-installer, Windows or iPad qualification.",
+    "One completed German route within a pilot pack; no production publication."
+  ]
+}
