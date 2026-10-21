@@ -1,52 +1,47 @@
-# German markup-table walkthrough preparation
+# German markup-table walkthrough — 21 October 2026
 
-Status: **draft; controls verified, native Save/exports/reopen pending**. The German media pack remains at 76 verified mappings and four completed routes. `/de/blog/pdf-markup-table-rfi-punch-list/` has not been registered as a completed regional route.
+Status: **complete in the local German pilot**. The pilot has 78 verified asset mappings and five completed routes. The overall localization rollout remains incomplete.
 
-## Prepared drawing and copy
+The route `/de/blog/pdf-markup-table-rfi-punch-list/` uses the real German app with the fictional Bürgerhaus am Lindenpark X101 coordination drawing. The A1 sheet has metric dimensions, four layers, three editable notes and `/Lang de-DE`. The original page operators, geometry and regional content are preserved. Its source PDF and preview regenerate byte-for-byte.
 
-`public/localized-media/de/samples/markup/x101-koordinationspruefung.pdf` contains the first A1 sheet from the existing German coordination library: the fictional Bürgerhaus am Lindenpark, metric dimensions, German notes, four layers and three editable PDF notes. The preparation clarifies note subjects/comments and assigns stable IDs. It preserves painted page content, text, boxes, layer references and rendered pixels. `/Lang` is `de-DE`. The second sheet is intentionally excluded because its fixed printed status checklist would conflict with the live status exercise.
+## Native workflow and persistence fix
 
-The PDF, preview and verification receipt regenerate byte-for-byte. `source-repeatability.json` and the public `source-verification.json` record independent PDF and Poppler checks. The original drawing is unchanged.
+The first unlocked run completed the native Save and both exports, then failed its fresh-process reopen assertion: Offen and In Bearbeitung disappeared. The app merge was replacing workspace-only statuses with undefined native values on unchanged imported notes. The app fix retains open/inProgress/reviewed unless a later external review state supersedes them. Six new cases reproduced the bug in both writers; all 35 edit-authority and 36 review-data tests now pass.
 
-`scripts/localization/markup-de.draft.json` contains 97 German text overrides and six source-bound element replacements. It describes the actual three prepared notes, the three-status example, filtering to two visible rows, a five-column CSV and a PDF summary grouped by status. The draft distinguishes printed reference circles from editable notes and fictional completion from real project approval. Its status terminology matches all eight current German app options, including **Akzeptiert**, **Abgebrochen** and **Überprüft**.
+The successful run is retained under [native](native/validation.json), with the exact app/script/source hashes. PolyPDF 1.6.17 build 84 source is `b280ed6d1abbf0e504a79b84a6c8e70b9344775e5c4f86080c616d952b9ac413`.
 
-`draft-contract.json` verifies the current English prerender, consumed copy overrides, regional source hashes and app vocabulary. It also verifies that the draft is absent from the public manifest and cannot activate regional media. Future-facing Save/export/reopen instructions in this draft are not passing workflow evidence.
+- The owned German profile explicitly selects metric units and five columns: Betreff, Status, Seite, Kommentare and Autor.
+- Real table controls set Offen, In Bearbeitung and Abgeschlossen, and edit the third note's completion comment.
+- Filtering excludes Abgeschlossen and leaves two rows; clearing it restores all three.
+- Real native dialogs save the editable review PDF, three-row CSV and status-grouped summary PDF.
+- A fresh app process restores all three statuses, full comments, subjects and geometry.
+- All three app phases quit normally without signals; the disposable profile is removed.
 
-## Actual app evidence
+Four actual app screenshots were inspected. The saved drawing and the summary's single page were rendered with Poppler and inspected. Independent checks verify public note subjects/comments, private workspace statuses, CSV columns/values, and one summary count per status. The source drawing remains unchanged.
 
-The current [controls receipt](controls/controls-validation.json) and [visual review](controls/visual-review.json) cover an isolated Mac development instance, PolyPDF 1.6.17 build 84, source `ca1daa0aa083c8e5468887ecaf12827e4fc1b54b72270cd5db7fc6c26728af1f`.
+The public summary substitutes public PDF page links for three machine-local PolyPDF links and declares German language metadata. Its page content, extracted text and rendered pixels are identical to the native export. The original export is retained in `native/`. The summary deliberately shortens long detail cells; the page explains this and provides full text in the CSV and editable PDF. Public links open page 1, without the native annotation-focus behavior.
 
-- The source opens with its three exact German note subjects, comments and positions.
-- Real Settings controls select metric measurements; the footer reads **841 x 594 mm**. This is an explicit demonstration preference, not a locale side effect.
-- The real column manager selects Betreff, Status, Seite, Kommentare and Autor. Real resize gestures make the German Status and Seite labels readable.
-- Production table controls set PR-001 to **Offen**, PR-002 to **In Bearbeitung** and PR-003 to **Abgeschlossen**. The inline comment editor records the fictional completion explanation.
-- Filtering out Abgeschlossen leaves two visible rows. Clearing the filter restores all three. The source PDF remains unchanged.
-- Both app phases quit normally, and the disposable profile is removed. The two captured frames were inspected. The log's unavailable plugin handler is expected with plugins disabled for this owned test instance.
+## Website qualification
 
-The [three-status screenshot](controls/pruefregister-drei-status.png) and [filter screenshot](controls/pruefregister-filter.png) are **partial QA evidence**, not registered public walkthrough assets. The source/build/script hashes are retained. These checks do not qualify Windows, native iPad, released installers, native Save, exports or fresh-process reopening.
+The completed profile consumes 97 source-bound copy overrides and six element replacements. All eight status terms match the current app catalog. The page supplies four verified downloads: original X101, saved review PDF, detailed CSV and public summary PDF.
 
-The earlier `before-native-save/` attempt reached Save As, but Computer Use reported a locked Mac. It timed out without creating a saved PDF, CSV or summary PDF. That attempt and its exact script/build/source receipt are preserved separately. Both of its processes quit normally; its stopped disposable profile was removed after confirming no matching process remained.
+The [page receipt](../../../public/localized-media/de/guides/markup/page-verification.json) verifies both localized images, all downloads, source/capture hashes, German terminology, social/schema metadata and preservation of English/unfinished Spanish behavior. The [browser receipt](browser-verification.json) verifies English → German → English through the visible selector, two loaded German images and four real browser downloads with identical hashes. [Browser screenshot](browser-german.png).
 
-## Reproduction and completion
+Validation passed: 27 unit tests, page-specific checks, 240 international marketing pages and 836 localized toolkit pages. English React/prerender output was rebuilt, then the international and toolkit stages ran normally. The first international check preceded toolkit reconstruction and failed on missing `/es/tools/`; after the required toolkit stage, both complete verification suites passed. Desktop and shared-iPad app builds pass; this does not qualify native iPad hardware.
 
-Use a Python environment with pypdf and Pillow, plus Poppler. From this isolated site checkout:
+## Reproduction
+
+From this isolated website checkout, with a built app and an unlocked Mac:
 
 ```sh
-python3 scripts/localization/prepare-markup-de.py
-POLYPDF_APP_ROOT=/absolute/path/to/polypdf node scripts/localization/verify-markup-draft.cjs
-POLYPDF_APP_ROOT=/absolute/path/to/polypdf node scripts/localization/capture-markup-de.mjs --controls-only
+POLYPDF_APP_ROOT=/absolute/path/to/polypdf node scripts/localization/capture-markup-de.mjs
+python3 scripts/localization/verify-markup-pdfs.py
+POLYPDF_APP_ROOT=/absolute/path/to/polypdf node scripts/localization/register-markup-de.cjs
+node scripts/localization/verify-markup-page.cjs
 ```
 
-The controls-only mode deliberately writes `controls-validation.json` with `status: partial`, no output files and an explicit native-workflow limitation. It never writes a passing `validation.json`.
+Complete the three native Save dialogs with the runner's printed paths. Preserve earlier output before repeating: it refuses to overwrite deliverables. The PDF verifier needs pypdf, Pillow and Poppler. Registration checks the successful capture and current app build; the final page verifier runs after rebuilding localized pages and copying the verified public assets into the build.
 
-Once the Mac is unlocked, run the same capture without `--controls-only`. Complete its three native Save dialogs through Computer Use using the paths printed by the runner:
+The draft remains an unregistered template; `markup-de.json` is its completed profile with verified download records. Earlier locked, controls-only and status-loss attempts are retained under `before-native-save/`, `controls/` and `status-reopen-failure/`. They remain partial/failed evidence.
 
-1. `.tmp/localization/markup-de/x101-pruefregister.pdf`
-2. `.tmp/localization/markup-de/pruefregister.csv`
-3. `.tmp/localization/markup-de/pruefregister-zusammenfassung.pdf`
-
-The full run must verify all exports and a fresh-process reopen before it writes a passing receipt. Retain any earlier output before repeating; the runner refuses to overwrite the three deliverables. Do not treat controls-only output as substitute evidence.
-
-Then independently inspect native PDF note fields, the three CSV records/five columns, PDF summary counts and every rendered summary page. If the summary embeds local source links, preserve the original app export and create a documented public-link derivative with unchanged page content. Register the verified screenshots/downloads, complete the profile, run the page and international checks, and verify language switching and download hashes in the browser. Only then increment the complete-route count.
-
-The existing 26 page/media/international tests pass; see `site-tests.log`. App production source was unchanged in this checkpoint. No push, PR, deployment, email or release occurred.
+The capture uses prepared editable notes, not newly drawn annotations. Completion statuses are fictional, not project approvals. Windows, native iPad, full linguistic review and the remaining languages/media/sample families remain open. No push, PR, deployment, email or release occurred.

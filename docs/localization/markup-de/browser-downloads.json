@@ -1,0 +1,18 @@
+[
+  {
+    "label": "X101: Deutschen Übungsplan herunterladen (PDF)",
+    "path": "/Users/mohammedbala/Downloads/x101-koordinationspruefung.pdf"
+  },
+  {
+    "label": "Gespeicherte deutsche Prüfkopie herunterladen (PDF)",
+    "path": "/Users/mohammedbala/Downloads/x101-pruefregister.pdf"
+  },
+  {
+    "label": "Vollständiges deutsches Prüfregister herunterladen (CSV)",
+    "path": "/Users/mohammedbala/Downloads/pruefregister.csv"
+  },
+  {
+    "label": "Deutsche Anmerkungsübersicht herunterladen (PDF)",
+    "path": "/Users/mohammedbala/Downloads/pruefregister-zusammenfassung.pdf"
+  }
+]

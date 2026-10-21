@@ -78,12 +78,13 @@ for (const e of manifest.routes) {
   if(e.source==='/')checks.assertLocalizedHomeSchema([...d.querySelectorAll('script[type="application/ld+json"]')].map((s)=>JSON.parse(s.textContent)),strings[locale.id][productDescription],prefix);
   if(e.source!=='/') {
     const original=englishStructures.get(e.source);
+    const regionalPage=localizedPage(walkthroughMedia,locale,e.source);
     assert.equal(d.querySelectorAll('#localized-content .legal-section').length,original.sections,prefix+'all sections retained');
-    assert.equal(d.querySelectorAll('#localized-content ol li').length,original.steps,prefix+'all steps retained');
+    assert.equal(d.querySelectorAll('#localized-content ol li').length,original.steps+(regionalPage?.extraDownloads?.length || 0),prefix+'all steps retained with declared regional downloads');
     assert.equal(d.querySelectorAll('#localized-content table').length,original.tables,prefix+'all tables retained');
     assert.equal(d.querySelectorAll('#localized-content .blog-faq-item').length,original.faq,prefix+'all FAQs retained');
     const useRegionalMedia = walkthroughMedia.locales[locale.id]?.status === 'complete'
-      || Boolean(localizedPage(walkthroughMedia,locale,e.source))
+      || Boolean(regionalPage)
       || (process.env.POLYPDF_LOCALIZED_MEDIA_LOCALES || '').split(',').includes(locale.id);
     if (useRegionalMedia) {
       const expectedImages = useRegionalMedia ? original.images.map(src=>resolveAsset(src,locale,walkthroughMedia)) : original.images;

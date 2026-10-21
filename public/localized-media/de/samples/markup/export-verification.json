@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "nativeCaptureSha256": "3712fc660634552b4b259817b639b9523828a3f135ad703a806b6c5df783c1ae",
+  "sourceSha256": "5d1795f69f4f731a6265e376bc7e587f73021afc69c52096c0badfce677c5aef",
+  "notes": [
+    {
+      "id": "pruefpunkt-001",
+      "tool": "note",
+      "nativeSubject": "PR-001 - Lüftungsdurchführung",
+      "contents": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen.",
+      "status": "open",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1443.59055,
+      "y": 693.54378,
+      "width": 22,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-002",
+      "tool": "note",
+      "nativeSubject": "PR-002 - Deckenkoordination",
+      "contents": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen.",
+      "status": "inProgress",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1018.3937,
+      "y": 608.50441,
+      "width": 22.000000000000114,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-003",
+      "tool": "note",
+      "nativeSubject": "PR-003 - Kabeldurchführung",
+      "contents": "Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus.",
+      "status": "completed",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 763.275591,
+      "y": 863.62252,
+      "width": 22,
+      "height": 22
+    }
+  ],
+  "csvRows": [
+    {
+      "Betreff": "PR-001 - Lüftungsdurchführung",
+      "Status": "Offen",
+      "Seite": "1",
+      "Kommentare": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen.",
+      "Autor": "PolyPDF Musterprüfung"
+    },
+    {
+      "Betreff": "PR-002 - Deckenkoordination",
+      "Status": "In Bearbeitung",
+      "Seite": "1",
+      "Kommentare": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen.",
+      "Autor": "PolyPDF Musterprüfung"
+    },
+    {
+      "Betreff": "PR-003 - Kabeldurchführung",
+      "Status": "Abgeschlossen",
+      "Seite": "1",
+      "Kommentare": "Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus.",
+      "Autor": "PolyPDF Musterprüfung"
+    }
+  ],
+  "summaryPages": 1,
+  "summaryGroups": {
+    "Offen": 1,
+    "In Bearbeitung": 1,
+    "Abgeschlossen": 1
+  },
+  "rawSummarySha256": "958b66f3e86bd4d5d8f6de3b4f1a94ce8d158ba9042d95b88e391bd1ac6e243d",
+  "publicLinks": [
+    {
+      "annotation": "pruefpunkt-001",
+      "target": "https://www.polypdf.com/localized-media/de/samples/markup/x101-pruefregister.pdf#page=1"
+    },
+    {
+      "annotation": "pruefpunkt-002",
+      "target": "https://www.polypdf.com/localized-media/de/samples/markup/x101-pruefregister.pdf#page=1"
+    },
+    {
+      "annotation": "pruefpunkt-003",
+      "target": "https://www.polypdf.com/localized-media/de/samples/markup/x101-pruefregister.pdf#page=1"
+    }
+  ],
+  "summaryPixelsUnchanged": true,
+  "derivativeChanges": [
+    "Three local report URIs replaced by public source-PDF page links",
+    "Catalog Lang set to de-DE"
+  ],
+  "files": {
+    "x101-pruefregister.pdf": "73cc554690d758c46932ea9d91b9755375c74612991805765f5ed255db60fbda",
+    "pruefregister.csv": "8fe547bddc3ef25d1e9852f1419678a419f4536d2545e5bb03c796a72ae6f4c5",
+    "pruefregister-zusammenfassung.pdf": "1ce1554f26a1a266c912abe5285759db25a9fbad205f5e08b640a26781e416f3"
+  },
+  "limitations": [
+    "Summary cells intentionally shorten long subjects/comments; CSV and editable PDF retain complete values",
+    "Public summary links open page 1; local PolyPDF annotation-focus links remain in the retained raw export",
+    "Verification covers a local Mac development build, not Windows or native iPad"
+  ]
+}

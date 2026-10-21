@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "navigation": [
+    "English → Deutsch through the visible language menu",
+    "Deutsch → English restored the original English screenshot"
+  ],
+  "germanRoute": "/de/blog/pdf-markup-table-rfi-punch-list/",
+  "germanImagesLoaded": 2,
+  "downloads": [
+    {
+      "label": "X101: Deutschen Übungsplan herunterladen (PDF)",
+      "path": "/Users/mohammedbala/Downloads/x101-koordinationspruefung.pdf",
+      "sha256": "5d1795f69f4f731a6265e376bc7e587f73021afc69c52096c0badfce677c5aef",
+      "bytes": 48056
+    },
+    {
+      "label": "Gespeicherte deutsche Prüfkopie herunterladen (PDF)",
+      "path": "/Users/mohammedbala/Downloads/x101-pruefregister.pdf",
+      "sha256": "73cc554690d758c46932ea9d91b9755375c74612991805765f5ed255db60fbda",
+      "bytes": 80686
+    },
+    {
+      "label": "Vollständiges deutsches Prüfregister herunterladen (CSV)",
+      "path": "/Users/mohammedbala/Downloads/pruefregister.csv",
+      "sha256": "8fe547bddc3ef25d1e9852f1419678a419f4536d2545e5bb03c796a72ae6f4c5",
+      "bytes": 564
+    },
+    {
+      "label": "Deutsche Anmerkungsübersicht herunterladen (PDF)",
+      "path": "/Users/mohammedbala/Downloads/pruefregister-zusammenfassung.pdf",
+      "sha256": "1ce1554f26a1a266c912abe5285759db25a9fbad205f5e08b640a26781e416f3",
+      "bytes": 16100
+    }
+  ],
+  "screenshot": "browser-german.png",
+  "limitations": [
+    "Local static build served on loopback; not deployed",
+    "Desktop browser viewport; no mobile device qualification"
+  ]
+}

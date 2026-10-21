@@ -58,13 +58,16 @@ function localizePageElements(document, locale, page) {
 // A regional worked example may replace historical drawing references with its own
 // downloadable source and calculation record. Run after the ordinary asset resolver.
 function localizePageLinks(document, locale, page, readFile) {
-  for (const entry of [...(page?.links || []), ...(page?.downloads || [])]) {
-    const isDownloadRow = (page.downloads || []).includes(entry);
-    const nodes = [...document.querySelectorAll(entry.selector)];
-    if (nodes.length !== 1 || (isDownloadRow
+  for (const entry of [...(page?.links || []), ...(page?.downloads || []), ...(page?.extraDownloads || [])]) {
+    const extra = (page.extraDownloads || []).includes(entry);
+    const isDownloadRow = extra || (page.downloads || []).includes(entry);
+    const lists = extra ? [...document.querySelectorAll('.blog-sources > ol')] : [];
+    if (extra && lists.length !== 1) throw new Error('Missing regional download list');
+    const nodes = extra ? [document.createElement('li')] : [...document.querySelectorAll(entry.selector)];
+    if (!extra && (nodes.length !== 1 || (isDownloadRow
         ? nodes[0].tagName !== 'LI' || normalize(nodes[0].textContent) !== normalize(entry.source)
           || nodes[0].getAttribute('translate') !== 'no' || nodes[0].querySelector('a,button,input,select')
-        : nodes[0].tagName !== 'A' || nodes[0].getAttribute('href') !== entry.source)) {
+        : nodes[0].tagName !== 'A' || nodes[0].getAttribute('href') !== entry.source))) {
       throw new Error(`Stale regional page link: ${entry.selector}`);
     }
     const pathname = assetPath(entry.url);
@@ -99,6 +102,7 @@ function localizePageLinks(document, locale, page, readFile) {
       note.textContent = entry.note ? ` — ${entry.note}` : '';
       nodes[0].replaceChildren(node,note);
       nodes[0].lang = page.locale;
+      if (extra) lists[0].append(nodes[0]);
     }
   }
 }

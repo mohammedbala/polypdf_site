@@ -19,7 +19,7 @@ const locale = c.locales.find(item => item.id === 'de');
 assert.equal(profile.status, 'draft');
 assert.equal(profile.locale, 'de-DE');
 assert.equal(profile.region, 'DE');
-assert.equal(manifest.locales.de.pages[route], undefined, 'Draft must not activate a public route');
+assert.notDeepEqual(manifest.locales.de.pages[route], profile, 'The draft itself must not activate a public route');
 const candidate = structuredClone(manifest);
 candidate.locales.de.pages[route] = profile;
 assert.equal(localizedPage(candidate, locale, route), null, 'A draft cannot enable regional media');
@@ -61,6 +61,7 @@ for (const value of Object.values(profile.text)) {
 }
 const report = {
   status: 'passed', draft: true, registered: false, route,
+  completedProfileRegistered: Boolean(manifest.locales.de.pages[route]),
   elements: profile.elements.length, consumedTextOverrides: Object.keys(profile.text).length,
   profileSha256: hash(read(profilePath)), sourceVerificationSha256: hash(read(sourcePath)),
   appCatalogSha256: hash(catalogBytes), statusLabels,
@@ -74,9 +75,9 @@ const report = {
     'Every German override is consumed by the actual DOM/schema translator',
     'All eight documented status labels match the current app catalog',
     'The drawing, preview and original regional library hashes agree',
-    'Draft is absent from the public manifest and cannot enable regional media'
+    'Draft itself cannot enable regional media; any completed profile is verified separately'
   ],
-  remaining: ['Native Save', 'CSV and summary PDF export', 'Fresh-process reopen', 'Public registration and browser verification']
+  completionEvidence: 'Run verify-markup-page.cjs for the completed profile and native export receipts'
 };
 const output = path.join(root, 'docs/localization/markup-de/draft-contract.json');
 fs.mkdirSync(path.dirname(output), {recursive: true});

@@ -91,3 +91,19 @@ test('regional PDF cards keep their preview when the destination and label chang
   const ambiguous=make();ambiguous.querySelector('a').append(ambiguous.createElement('span'));assert.throws(()=>localizePageLinks(ambiguous,locale,page,()=>bytes),/regional download label/);
   const nested=make();nested.querySelector('span').innerHTML='<button>Action</button>';assert.throws(()=>localizePageLinks(nested,locale,page,()=>bytes),/regional download label/);
 });
+
+test('supplemental regional downloads require one bibliography and verified local bytes',()=>{
+  const {localizePageLinks}=require('../scripts/localization/pages.cjs');
+  const {createHash}=require('node:crypto'),bytes=Buffer.from('summary export');
+  const entry={url:'/localized-media/de/samples/summary.pdf',label:'PDF-Übersicht',note:'<script>literal text</script>',sha256:createHash('sha256').update(bytes).digest('hex')};
+  const page={locale:'de-DE',extraDownloads:[entry]};
+  const make=()=>new JSDOM('<section class="blog-sources"><ol><li>Existing reference</li></ol></section>').window.document;
+  const d=make();localizePageLinks(d,locale,page,()=>bytes);
+  assert.equal(d.querySelectorAll('li').length,2);assert.equal(d.querySelector('li').textContent,'Existing reference');
+  assert.equal(d.querySelector('a').getAttribute('href'),entry.url);assert.equal(d.querySelector('a').lang,'de-DE');
+  assert.equal(d.querySelector('span').textContent,' — '+entry.note);assert.equal(d.querySelector('script'),null);
+  assert.throws(()=>localizePageLinks(make(),locale,page,()=>Buffer.from('wrong file')),/Changed/);
+  assert.throws(()=>localizePageLinks(make(),locale,{...page,extraDownloads:[{...entry,url:'/localized-media/fr/summary.pdf'}]},()=>bytes),/Invalid/);
+  for(const html of ['', '<section class="blog-sources"><ol></ol><ol></ol></section>'])
+    assert.throws(()=>localizePageLinks(new JSDOM(html).window.document,locale,page,()=>bytes),/Missing regional download list/);
+});

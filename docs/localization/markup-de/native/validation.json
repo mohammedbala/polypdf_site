@@ -1,0 +1,217 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "b280ed6d1abbf0e504a79b84a6c8e70b9344775e5c4f86080c616d952b9ac413",
+    "version": "1.6.17",
+    "bundleSetSha256": "3239ae71b4984e7053cd54c38d48f9ab1b1e1b93813f9efb1d86564280bb73c8"
+  },
+  "sourceHash": "5d1795f69f4f731a6265e376bc7e587f73021afc69c52096c0badfce677c5aef",
+  "captureScriptSha256": "318e1f7c545a67bb12eebc50906e6a74d0def4725117bad262557128b992ba33",
+  "initialNotes": [
+    {
+      "id": "pruefpunkt-001",
+      "tool": "note",
+      "nativeSubject": "PR-001 - Lüftungsdurchführung",
+      "contents": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen.",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1443.59055,
+      "y": 693.54378,
+      "width": 22,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-002",
+      "tool": "note",
+      "nativeSubject": "PR-002 - Deckenkoordination",
+      "contents": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen.",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1018.3937,
+      "y": 608.50441,
+      "width": 22.000000000000114,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-003",
+      "tool": "note",
+      "nativeSubject": "PR-003 - Kabeldurchführung",
+      "contents": "Für die Kabeltrasse fehlt das Durchführungsdetail an der Trennwand. Detail und Zuständigkeit ergänzen.",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 763.275591,
+      "y": 863.62252,
+      "width": 22,
+      "height": 22
+    }
+  ],
+  "reviewedNotes": [
+    {
+      "id": "pruefpunkt-001",
+      "tool": "note",
+      "nativeSubject": "PR-001 - Lüftungsdurchführung",
+      "contents": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen.",
+      "status": "open",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1443.59055,
+      "y": 693.54378,
+      "width": 22,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-002",
+      "tool": "note",
+      "nativeSubject": "PR-002 - Deckenkoordination",
+      "contents": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen.",
+      "status": "inProgress",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1018.3937,
+      "y": 608.50441,
+      "width": 22.000000000000114,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-003",
+      "tool": "note",
+      "nativeSubject": "PR-003 - Kabeldurchführung",
+      "contents": "Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus.",
+      "status": "completed",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 763.275591,
+      "y": 863.62252,
+      "width": 22,
+      "height": 22
+    }
+  ],
+  "reopenedNotes": [
+    {
+      "id": "pruefpunkt-001",
+      "tool": "note",
+      "nativeSubject": "PR-001 - Lüftungsdurchführung",
+      "contents": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen.",
+      "status": "open",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1443.59055,
+      "y": 693.54378,
+      "width": 22,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-002",
+      "tool": "note",
+      "nativeSubject": "PR-002 - Deckenkoordination",
+      "contents": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen.",
+      "status": "inProgress",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1018.3937,
+      "y": 608.50441,
+      "width": 22.000000000000114,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-003",
+      "tool": "note",
+      "nativeSubject": "PR-003 - Kabeldurchführung",
+      "contents": "Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus.",
+      "status": "completed",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 763.275591,
+      "y": 863.62252,
+      "width": 22,
+      "height": 22
+    }
+  ],
+  "rows": [
+    {
+      "id": "pruefpunkt-001",
+      "subject": "PR-001 - Lüftungsdurchführung",
+      "status": "Offen",
+      "comment": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen."
+    },
+    {
+      "id": "pruefpunkt-002",
+      "subject": "PR-002 - Deckenkoordination",
+      "status": "In Bearbeitung",
+      "comment": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen."
+    },
+    {
+      "id": "pruefpunkt-003",
+      "subject": "PR-003 - Kabeldurchführung",
+      "status": "Abgeschlossen",
+      "comment": "Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus."
+    }
+  ],
+  "filteredRows": [
+    {
+      "id": "pruefpunkt-001",
+      "subject": "PR-001 - Lüftungsdurchführung",
+      "status": "Offen",
+      "comment": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen."
+    },
+    {
+      "id": "pruefpunkt-002",
+      "subject": "PR-002 - Deckenkoordination",
+      "status": "In Bearbeitung",
+      "comment": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen."
+    }
+  ],
+  "filterText": "Filter: Status\nAlle auswählen\nAbgeschlossen\nIn Bearbeitung\nOffen\nFilter löschen\nFertig",
+  "columnHeaders": [
+    "Betreff",
+    "Status",
+    "Seite",
+    "Kommentare",
+    "Autor"
+  ],
+  "paperDimensions": "841 x 594 mm",
+  "exportOptions": "Zusammenfassungs-Export\nDetailspalten\nBetreff\n↑\n↓\nStatus\n↑\n↓\nSeite\n↑\n↓\nKommentare\n↑\n↓\nAutor\n↑\n↓\nDaten\n↑\n↓\nFarbe\n↑\n↓\nEbene\n↑\n↓\nArbeitsbereich\n↑\n↓\nGesamtsummen gruppieren nach\nStatus\n↑\n↓\nBetreff\n↑\n↓\nSeite\n↑\n↓\nKommentare\n↑\n↓\nAutor\n↑\n↓\nDaten\n↑\n↓\nFarbe\n↑\n↓\nEbene\n↑\n↓\nArbeitsbereich\n↑\n↓\nBericht nach dem Speichern öffnen\nMarkierungsvorschauen einbeziehen (erste Markierung in jeder Mengenermittlungszeile)\nBerichtsseiten an diesen Plan anhängen\n\nGesamtsummen halten unterschiedliche Maßeinheiten und Mengentypen getrennt.\n\nAbbrechen\nBericht erstellen",
+  "shots": [
+    {
+      "file": "pruefregister-drei-status.png",
+      "sha256": "e967497bcd04adce9ee7f59a0b79912a415d109d2d77cca601842897993f9915"
+    },
+    {
+      "file": "pruefregister-filter.png",
+      "sha256": "e23105edb4590808c510d5e1a06298f17c39ccba30f4336be9b732658581445e"
+    },
+    {
+      "file": "pruefregister-exportoptionen.png",
+      "sha256": "cde2ba5ce98672ceb60a74ace559811624d048b1ca35a8f9888d5c78b3af2840"
+    },
+    {
+      "file": "pruefregister-wieder-geoeffnet.png",
+      "sha256": "d42ee036943bc33df1076827e810134895de0254a9613966c5897cdc441a5444"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "x101-pruefregister.pdf",
+      "sha256": "73cc554690d758c46932ea9d91b9755375c74612991805765f5ed255db60fbda"
+    },
+    {
+      "file": "pruefregister.csv",
+      "sha256": "8fe547bddc3ef25d1e9852f1419678a419f4536d2545e5bb03c796a72ae6f4c5"
+    },
+    {
+      "file": "pruefregister-zusammenfassung.pdf",
+      "sha256": "958b66f3e86bd4d5d8f6de3b4f1a94ce8d158ba9042d95b88e391bd1ac6e243d"
+    }
+  ],
+  "capture": "Actual owned Electron app; prepared regional source notes; production table status/comment/filter/export handlers; native Save dialogs; fresh-process reopen; annotation observer is read-only.",
+  "limitations": [
+    "Local Mac development build; not a published release or Windows/native iPad qualification",
+    "The source has three prepared editable notes. This run does not demonstrate drawing new annotations.",
+    "Completion is fictional demonstration data, not a real project approval."
+  ]
+}

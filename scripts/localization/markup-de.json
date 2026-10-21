@@ -1,0 +1,173 @@
+{
+  "status": "complete",
+  "locale": "de-DE",
+  "region": "DE",
+  "evidence": "/localized-media/de/guides/markup/verification.json",
+  "elements": [
+    {
+      "selector": ".blog-verification > div:nth-child(1) dd",
+      "source": "Aligned with PolyPDF 1.5.4 (build 26) on September 11, 2026. Earlier walkthroughs and screenshots retain their versions below.",
+      "target": "Deutscher Prüfregister-Durchlauf im lokalen Entwicklungsstand 1.6.17 Build 84; kein Nachweis eines veröffentlichten Installers."
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(2) dd",
+      "source": "September 3, 2026",
+      "target": "21. Oktober 2026"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(3) dd",
+      "source": "PolyPDF 1.5.0 (build 22); screenshot from 1.4.0 (build 17)",
+      "target": "PolyPDF 1.6.17 Build 84 — deutscher lokaler Entwicklungsstand"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(4) dd",
+      "source": "macOS and Windows",
+      "target": "Für diesen Durchlauf geprüft: macOS"
+    },
+    {
+      "selector": "#construction-example-review .construction-example-sheets bdi",
+      "source": "X101 · X102",
+      "target": "X101"
+    },
+    {
+      "selector": "#construction-example-review figcaption bdi",
+      "source": "11-Coordination-and-Review.pdf",
+      "target": "x101-koordinationspruefung.pdf"
+    }
+  ],
+  "text": {
+    "Create one markup per issue, give it a stable subject, put the actionable question or observation in Comments, and assign a review status. Open the Markup Table to select and reveal rows, sort or filter the register, and update statuses. Clear filters for a full register, or document the filters for a focused review. Check exported rows and summary counts against the intended scope. PolyPDF does not create or attach a formal RFI, submittal, or punch record.": "Öffnen Sie den deutschen Übungsplan X101 mit seinen drei vorbereiteten Prüfnotizen. In der Anmerkungstabelle erhält PR-001 den Status Offen, PR-002 In Bearbeitung und PR-003 Abgeschlossen. Ergänzen Sie bei PR-003 einen Kommentar zum geänderten Status. Blenden Sie zum Prüfen der noch offenen Arbeit Abgeschlossen aus; es bleiben zwei Zeilen. Löschen Sie den Filter vor dem vollständigen Export und gleichen Sie die drei exportierten Einträge mit dem Plan ab. Speichern Sie eine separate Prüfkopie und öffnen Sie sie erneut. Formelle Anfragen, Antworten und Freigaben verwaltet weiterhin Ihr Projektsystem.",
+    "A PolyPDF drawing review with an RFI callout, a revision cloud, a completed-work rectangle, and three matching Markup Table rows": "Deutsche PolyPDF-Anmerkungstabelle zum Koordinationsplan X101 mit drei Prüfnotizen in den Status Offen, In Bearbeitung und Abgeschlossen",
+    "Scrollable image: A PolyPDF drawing review with an RFI callout, a revision cloud, a completed-work rectangle, and three matching Markup Table rows": "Scrollbares Bild: Deutsche PolyPDF-Anmerkungstabelle zum Koordinationsplan X101 mit drei Prüfnotizen in den Status Offen, In Bearbeitung und Abgeschlossen",
+    "Three markups on a clinic coordination sheet — an Open RFI callout, an In Progress revision cloud, and a Completed verification rectangle — each with its own row in the Markup Table. Selecting a row reveals the markup it describes, so a review meeting can work straight down the register.": "Drei vorbereitete Prüfnotizen auf dem deutschen A1-Koordinationsplan X101 des fiktiven Bürgerhauses am Lindenpark. Die Anmerkungstabelle zeigt PR-001 als Offen, PR-002 als In Bearbeitung und PR-003 als Abgeschlossen. Eine ausgewählte Zeile verweist auf die zugehörige Notiz im Plan. Die roten Kreise und Nummern sind bereits Teil der Zeichnung; die drei PDF-Notizen bleiben bearbeitbar.",
+    "The sheet is a demo clinic plan we drew for this guide, not a real project.": "Von PolyPDF erstellter fiktiver deutscher Demonstrationsplan, keine Ausführungsplanung. Der Durchlauf bearbeitet drei bereits vorhandene PDF-Notizen und zeigt nicht das Zeichnen neuer Anmerkungen.",
+    "A cloud on a plan explains where an issue is. A disciplined markup row explains what it is, who must review it, and what can be handed to the system that owns the formal record.": "Der Plan zeigt, wo ein Prüfpunkt liegt. Eine eindeutige Tabellenzeile erklärt die Frage, ihren Bearbeitungsstand und den Bezug zum formellen Vorgang im Projektsystem.",
+    "Highlight a review area without hiding its details": "Prüfbereiche hervorheben und Details lesbar halten",
+    "In PolyPDF 1.5.4, highlights blend with the drawing so text and linework remain readable. Select a filled annotation and use Highlight beside Fill in the style toolbar to turn the shape into a highlight. Add a callout or comment to record what the highlighted region needs.": "Gefüllte Anmerkungen können als Hervorhebung über dem Plan liegen, ohne dessen Linien und Text zu verdecken. Wählen Sie eine gefüllte Form und aktivieren Sie Markieren neben Füllung in der Stil-Werkzeugleiste. Ergänzen Sie die konkrete Frage als Kommentar oder Sprechblase. Die roten Kreise im X101-Übungsplan sind dagegen fest gezeichnete Verweise auf die vorbereiteten Notizen.",
+    "Use a repeatable review stamp in 1.5.1": "Wiederverwendbare Prüfstempel einsetzen",
+    "The interactive stamp builder lets you prepare a fixed review heading with prompted reviewer or status fields and an automatic date. Save the template to a toolset if you will reuse it, then complete the values for each placement. A stamp records visible review information; it does not replace the Markup Table discussion or a certificate signature.": "Mit dem interaktiven Stempel-Editor können Sie eine feste Überschrift, abzufragende Angaben zur prüfenden Person oder zum Status und ein automatisches Datum vorbereiten. Speichern Sie die Vorlage bei Bedarf im Werkzeugset und füllen Sie die Angaben bei jeder Platzierung aus. Ein Stempel dokumentiert sichtbare Prüfinformationen; er ersetzt weder die Kommentare der Anmerkungstabelle noch eine Zertifikatssignatur.",
+    "Follow the interactive stamp walkthrough": "Anleitung für interaktive Prüfstempel öffnen",
+    "Define what PolyPDF owns in the workflow": "Aufgaben von Planprüfung und Projektsystem trennen",
+    "PolyPDF holds the marked-up drawing and a structured register of the markups on it. Rows carry subject, status, page, comments, author, dates, color, layer, workspace, and configured custom columns. Selecting a row reveals its page markup.": "PolyPDF speichert den kommentierten Plan und eine strukturierte Liste seiner Anmerkungen. Die Zeilen enthalten Betreff, Status, Seite, Kommentare, Autor, Datumsangaben, Farbe, Ebene, Arbeitsbereich und gegebenenfalls benutzerdefinierte Spalten. Beim Auswählen einer Zeile wird die zugehörige Anmerkung im Plan sichtbar.",
+    "That is useful input to an RFI or punch-list process, but it is not the system of record. PolyPDF does not assign a formal RFI number from a project server, route the question to a design professional, attach an official response, or enforce contractual due dates. Those steps stay in the project platform or procedure your team has approved.": "Diese Angaben unterstützen Koordinationsfragen und Mängellisten. Formelle Vorgangsnummern, Weiterleitung, offizielle Antworten, Fristen und Freigaben bleiben im dafür vorgesehenen Projektsystem. PolyPDF erzeugt aus einer Prüfnotiz keinen formellen Anfrage- oder Mangelvorgang.",
+    "In the screenshot, the callout and row titled “RFI - door clearance” ask for confirmation of 18 inches of latch-side clearance at Room 302. Capturing the question on the drawing is the first step; issuing it as a numbered RFI still happens in your project system.": "PR-001 fragt im deutschen Beispiel nach Öffnung und Durchführung des Lüftungskanals durch die Trennwand. Die Notiz hält Ort und Fragestellung fest. Eine offizielle Anfrage mit Nummer, Empfänger und Antwortverlauf muss anschließend nach dem vorgesehenen Projektablauf erfasst werden.",
+    "Choose a naming and status convention first": "Betreff und Status einheitlich verwenden",
+    "A register becomes searchable when subjects are predictable. Put the durable identifier and a short description in Subject, then use Comments for the complete question, observation, or acceptance note. Do not leave the only meaningful description inside a callout graphic.": "Einheitliche Betreffzeilen machen das Register durchsuchbar. Verwenden Sie eine dauerhafte Kennung und eine kurze Beschreibung. Die vollständige Frage, Beobachtung oder Begründung gehört in Kommentare und sollte nicht nur in einer grafischen Sprechblase stehen.",
+    "Example review conventions": "Beispiele für einheitliche Prüfvermerke",
+    "Use case": "Anwendungsfall",
+    "Subject pattern": "Betreff",
+    "Suggested status path": "Möglicher Statusablauf",
+    "Design question": "Koordinationsfrage",
+    "RFI-014 — Confirm ceiling grid height": "PR-001 - Lüftungsdurchführung",
+    "Open > In Progress > Reviewed or Accepted": "Offen > In Bearbeitung > Überprüft oder Akzeptiert",
+    "Punch item": "Mangelpunkt",
+    "PUNCH-107 — Seal wall penetration": "M-107 - Wanddurchführung schließen",
+    "Open > In Progress > Completed > Reviewed": "Offen > In Bearbeitung > Abgeschlossen > Überprüft",
+    "Rejected proposal": "Abgelehnter Vorschlag",
+    "ASI-006 — Door swing revision": "Ä-006 - Türanschlag ändern",
+    "Open > Rejected": "Offen > Abgelehnt",
+    "PolyPDF offers No Status, Open, In Progress, Completed, Accepted, Rejected, and Reviewed. Your project may define those words differently. Document the team's meaning before review begins; for example, Completed may mean the field work is reported complete, while Reviewed means someone independently checked it.": "Die verfügbaren Statuswerte lauten Kein Status, Offen, In Bearbeitung, Abgeschlossen, Akzeptiert, Abgelehnt, Abgebrochen und Überprüft. Legen Sie ihre Bedeutung im Team fest. Abgeschlossen kann eine gemeldete Fertigstellung bedeuten; Überprüft kann die anschließende unabhängige Kontrolle bezeichnen. Die drei Statuswerte im Übungsplan sind fiktive Beispieldaten.",
+    "Build the issue register on the drawing": "Die drei Prüfnotizen bearbeiten",
+    "Open the correct drawing revision and save a working copy if your document-control procedure requires one.": "Öffnen Sie x101-koordinationspruefung.pdf. Der deutsche A1-Plan enthält drei vorbereitete bearbeitbare Notizen zu den nummerierten Stellen 01, 02 und 03.",
+    "Add a cloud, callout, text, shape, photo stamp, or other markup at the exact issue location. Keep one independently closeable issue per markup or logical group.": "Öffnen Sie die Anmerkungstabelle über die Schaltfläche am unteren Fensterrand. Wählen Sie unter Spalten… die Felder Betreff, Status, Seite, Kommentare und Autor. Verbreitern Sie bei Bedarf die Statusspalte. Prüfen Sie die Betreffzeilen PR-001 - Lüftungsdurchführung, PR-002 - Deckenkoordination und PR-003 - Kabeldurchführung sowie die zugehörigen Kommentare.",
+    "Set a specific Subject. Put the requested decision, observed condition, dimension, or acceptance criterion in Comments.": "Wählen Sie eine Zeile und prüfen Sie die zugehörige Stelle auf X101. Die Geometrie und vorhandenen roten Referenzkreise bleiben unverändert.",
+    "Open the Markup Table from the footer control, Window > Panels > Markup Table, or the sidebar context menu.": "Setzen Sie die drei Zeilen zunächst auf Offen. Ändern Sie anschließend PR-002 auf In Bearbeitung.",
+    "Select a row to reveal its associated page markup. Use the Status control in the row to apply the agreed review state.": "Öffnen Sie bei PR-003 die Zelle Kommentare mit einem Doppelklick. Tragen Sie ein: „Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus.“ Bestätigen Sie mit Eingabe und setzen Sie den Status auf Abgeschlossen.",
+    "Sort a column by its heading. Use the funnel controls on supported columns to keep only the values relevant to the current review.": "Prüfen Sie alle drei Zeilen. Blenden Sie über den Statusfilter Abgeschlossen aus; es bleiben PR-001 und PR-002. Löschen Sie den Filter anschließend wieder.",
+    "Review the visible rows against the page, choose a detailed export or summary, and verify the exported scope for the receiving workflow.": "Speichern Sie als x101-pruefregister.pdf, exportieren Sie die vollständigen drei Zeilen und öffnen Sie die gespeicherte Prüfkopie erneut. Prüfen Sie Betreff, Kommentar, Status und Position jeder Notiz.",
+    "The table can also update comments and subjects inline. Multi-selection can support consistent bulk status changes, but scope those changes carefully: a convenient batch edit is not a substitute for verifying each location.": "Betreff und Kommentare lassen sich direkt in der Tabelle bearbeiten. Mehrfachauswahl ermöglicht gemeinsame Statusänderungen; prüfen Sie den ausgewählten Umfang vor jeder Änderung. Der hier gezeigte Durchlauf bearbeitet die drei vorbereiteten Notizen einzeln.",
+    "Filter for a focused review session": "Eine gezielte Prüfansicht filtern",
+    "Use the table as a review window, not a second drawing. A superintendent might filter to one page or workspace, an architect might inspect a specific subject family, and a closeout reviewer might focus on rows whose current status still requires action. PolyPDF keeps the visible row connected to the page so the reviewer can inspect geometry and context before changing the state.": "Ein Filter begrenzt die sichtbaren Zeilen, verändert aber nicht die Zahl der Anmerkungen im Dokument. Auf X101 bleiben nach dem Ausblenden von Abgeschlossen zwei Zeilen sichtbar: PR-001 ist Offen, PR-002 In Bearbeitung. Die dritte Notiz bleibt im Plan erhalten.",
+    "Filter Page when the meeting is reviewing one sheet or area.": "Filtern Sie Seite, wenn nur ein Blatt besprochen werden soll.",
+    "Filter Subject or Comments for a known issue prefix, discipline, room, or tag.": "Verwenden Sie Betreff oder Kommentare für Kennungen, Räume, Gewerke oder Suchbegriffe.",
+    "Filter Author, Layer, or Workspace when responsibility or drawing organization carries the scope.": "Filtern Sie bei Bedarf nach Autor, Ebene oder Arbeitsbereich.",
+    "Sort Status to group the lifecycle states, then inspect every row before a bulk update.": "Sortieren Sie nach Status und prüfen Sie jede Zeile vor einer gemeinsamen Änderung.",
+    "Clear filters before final reconciliation so an unresolved row is not omitted merely because it was hidden.": "Löschen Sie die Filter vor dem abschließenden Abgleich des vollständigen Registers.",
+    "A filtered count is only the visible subset. Do not assume a detailed export contains hidden rows. Clear filters when the recipient needs the full register; otherwise record the active filters and compare exported rows or summary counts with the intended scope.": "Zwei sichtbare Zeilen bedeuten in dieser Übung weiterhin drei Anmerkungen im Dokument. Für den vollständigen Export muss der Filter gelöscht sein. Soll nur eine Teilmenge weitergegeben werden, halten Sie den Filterumfang fest und vergleichen Sie die exportierten Zeilen mit dieser Teilmenge.",
+    "Export what the receiving process needs": "Die passenden Exportdaten auswählen",
+    "The Markup Table export menu offers detailed CSV, summary CSV, summary PDF, JSON, and copied text. Detailed rows include the built-in fields shown in the table and configured custom-column values. The summary formats aggregate the visible scope, which is useful for a meeting record or progress snapshot.": "Das Menü Exportieren bietet detaillierte CSV-Daten, eine CSV-Zusammenfassung, eine PDF-Zusammenfassung, JSON und kopierbaren Text. Für das Beispiel wählen Sie Betreff, Status, Seite, Kommentare und Autor. Gruppieren Sie die PDF-Zusammenfassung nach Status; bei gelöschtem Filter ist jeder der drei verwendeten Statuswerte einmal vertreten.",
+    "Choose an export based on the receiving task": "Exportformat nach Verwendungszweck wählen",
+    "Output": "Ausgabe",
+    "Good fit": "Geeignet für",
+    "Important check": "Prüfung vor der Weitergabe",
+    "Detailed CSV": "Detaillierte CSV",
+    "Import, spreadsheet reconciliation, or a formal register": "Weiterbearbeitung in einer Tabelle oder Übernahme in ein Register.",
+    "Clear filters for a full register; verify the exported row count.": "Für das vollständige Beispiel drei Datensätze mit den gewählten fünf Spalten prüfen.",
+    "Summary CSV": "CSV-Zusammenfassung",
+    "Counts by status, page, subject, workspace, or custom value": "Anzahl nach Status, Seite, Betreff, Arbeitsbereich oder eigener Spalte.",
+    "It summarizes the current visible scope.": "Die Zusammenfassung berücksichtigt nur den sichtbaren Umfang.",
+    "Summary PDF": "PDF-Zusammenfassung",
+    "Human-readable review attachment": "Lesbare Anlage für die gemeinsame Planprüfung.",
+    "Inspect the rendered pages before issue.": "Alle gerenderten Seiten und die ausgewählten Angaben kontrollieren.",
+    "JSON or copied text": "JSON oder kopierter Text",
+    "Structured handoff or quick communication": "Strukturierte Übergabe oder kurze Mitteilung.",
+    "The receiving system still owns validation and record creation.": "Das empfangende System übernimmt die Prüfung und Erfassung des formellen Vorgangs.",
+    "Attach the reviewed PDF or summary to the formal RFI or punch record according to project procedure. If the official platform assigns a different identifier, update the PolyPDF subject or maintain an explicit cross-reference rather than allowing two numbering systems to drift.": "Bewahren Sie Prüfkopie und Export gemeinsam mit den Planständen auf. Vergibt das Projektsystem eine andere Kennung, ergänzen Sie einen eindeutigen Querverweis. Die Anzahl in einer Zusammenfassung darf nicht zusätzlich zu den Detailzeilen gezählt werden: Beide beschreiben denselben Umfang.",
+    "Closeout checks before you hand the register over": "Vor der Übergabe prüfen",
+    "Verify the PDF file name, revision, and sheet identity before adding or closing issues.": "Prüfen Sie Dateiname, Revision und Blattnummer vor dem Anlegen oder Abschließen eines Prüfpunkts.",
+    "Require a comment that explains why a status changed when the change is not self-evident.": "Begründen Sie Statusänderungen mit einem Kommentar, wenn der Grund nicht bereits eindeutig ist.",
+    "Distinguish reported completion from independent review in the team's status rules.": "Unterscheiden Sie eine gemeldete Fertigstellung von der unabhängigen Kontrolle.",
+    "Reopen the saved PDF and inspect representative rows, page links, comments, and appearances.": "Öffnen Sie die gespeicherte PDF erneut und prüfen Sie die Notizen, Kommentare, Statuswerte und Positionen.",
+    "Export after filters are intentionally set, and label the export with its scope and date.": "Exportieren Sie erst nach bewusster Auswahl oder Löschung der Filter. Halten Sie Umfang und Datum fest.",
+    "Keep the authoritative RFI, punch, response, approval, and due-date history in the designated project system.": "Verwalten Sie formelle Anfragen, Mängel, Antworten, Freigaben und Fristen im dafür vorgesehenen Projektsystem.",
+    "This separation makes the workflow stronger: PolyPDF remains the direct visual review record, while the project system remains the place where contractual communication and closure are controlled.": "PolyPDF dokumentiert die Prüfung unmittelbar am Plan. Das Projektsystem hält die maßgebliche Kommunikation und den Abschluss der formellen Vorgänge fest. Die fiktiven Beispiele auf X101 belegen keine Ausführungsqualität oder Regelkonformität eines realen Bauvorhabens.",
+    "Does PolyPDF create a formal RFI?": "Erzeugt PolyPDF eine formelle Planungsanfrage?",
+    "No. It can label a markup, store comments and status, and export the review data. A formal RFI number, routing, response, due date, and issue history belong in your approved project system.": "Nein. PolyPDF speichert Betreff, Kommentare und Status am Plan und kann diese Daten exportieren. Formelle Nummer, Weiterleitung, Antwort, Frist und Vorgangsverlauf gehören in Ihr Projektsystem.",
+    "Do Markup Table filters apply to every export?": "Berücksichtigen Exporte ausgefilterte Zeilen?",
+    "Do not assume an export includes hidden rows. Clear filters for a full register. If you need a focused report, record the filters and compare exported rows or summary counts against the visible and total markup counts before distribution.": "Gehen Sie nicht davon aus. Löschen Sie Filter für das vollständige Register. Prüfen Sie bei einem gezielten Export, ob die Datensätze oder Summen genau dem gewählten sichtbaren Umfang entsprechen.",
+    "Which markup statuses are available?": "Welche Statuswerte sind verfügbar?",
+    "No Status, Open, In Progress, Completed, Accepted, Rejected, and Reviewed. Define what each state means for your team before using them as a controlled process.": "Kein Status, Offen, In Bearbeitung, Abgeschlossen, Akzeptiert, Abgelehnt, Abgebrochen und Überprüft. Vereinbaren Sie vor Beginn, was diese Werte im Projekt bedeuten.",
+    "Can I export PDF comments to CSV?": "Kann ich PDF-Kommentare als CSV exportieren?",
+    "Yes. PolyPDF can export detailed markup rows as CSV, including subject, status, page, comments, author, dates, color, layer, workspace, and configured custom columns.": "Ja. Der detaillierte CSV-Export enthält die ausgewählten Tabellenfelder, beispielsweise Betreff, Status, Seite, Kommentare und Autor. Benutzerdefinierte Spalten lassen sich ebenfalls einbeziehen.",
+    "Turn drawing comments into a reviewable register": "Planvermerke als Prüfregister bearbeiten",
+    "Download PolyPDF for macOS or Windows, mark up a working copy, and open the Markup Table to review the resulting rows. Keep formal RFI and punch records in the system your project designates.": "Laden Sie PolyPDF für Mac oder Windows herunter, arbeiten Sie mit einer Prüfkopie und kontrollieren Sie die Anmerkungstabelle. Der hier gezeigte deutsche Durchlauf verwendet X101 auf dem Mac. Formelle Vorgänge bleiben im vorgesehenen Projektsystem.",
+    "Work with the construction drawing set": "Mit dem deutschen Übungsplan arbeiten",
+    "Review the Willow Creek coordination sheets": "Koordinationsprüfung am Bürgerhaus am Lindenpark",
+    "Open X101 and inspect the three numbered coordination issues and their existing sticky notes.": "Öffnen Sie X101 und prüfen Sie die drei nummerierten Koordinationsstellen und die vorhandenen bearbeitbaren PDF-Notizen.",
+    "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.": "Diese Übung verwendet nur X101. Die drei Notizen enthalten die jeweiligen Fragen; ihren Bearbeitungsstand ändern Sie in der Anmerkungstabelle. Das gedruckte Ausgangsregister X102 ist in dieser Datei nicht enthalten.",
+    "Save the copy, reopen it, and inspect the annotations and any exported Markup Table before handing it off.": "Speichern Sie eine separate Prüfkopie, öffnen Sie sie erneut und prüfen Sie alle drei Notizen und die exportierten Tabellenangaben.",
+    "The source contains three authored issues and four PDF layers. These are fictional coordination exercises; no engineering or code-compliance conclusion is established.": "X101 enthält drei vorbereitete Prüfnotizen und vier PDF-Ebenen. Gezeichnete Abmessungen verwenden Meter und Millimeter. Die Beispiele sind fiktiv und kein Nachweis einer fachlichen Freigabe oder Regelkonformität.",
+    "Drawing reference values, not new app test results. Work on a copy and check your own saved output.": "Die Ausgangszeichnung bleibt erhalten. Statusänderungen und Kommentare werden ausschließlich in einer separaten Prüfkopie gespeichert.",
+    "The exercise above uses the Willow Creek library. Earlier walkthrough screenshots and saved examples below retain their original drawings, versions, and quantities.": "Die App-Aufnahmen und folgenden Schritte verwenden denselben deutschen X101-Übungsplan. Drei vorhandene Notizen bilden das Register; die ursprünglichen roten Kreise und Nummern sind fest gezeichneter Seiteninhalt.",
+    "Release review": "Entwicklungsstand",
+    "Walkthrough verified": "Durchlauf geprüft",
+    "9 min read": "9 Min. Lesezeit",
+    "Translated from the English edition. Screenshots and app control names may remain in English. Original example units and verification dates are preserved. Prices are in USD; checkout, account, release feeds, and policies are in English.": "Diese Seite verwendet deutsche App-Aufnahmen und einen deutschen A1-Übungsplan. Der Prüfregister-Durchlauf bezieht sich auf den lokalen Mac-Entwicklungsstand. Windows und natives iPad wurden für diesen Durchlauf nicht geprüft. Preise sind in USD; Checkout, Konto, Release-Feeds und Richtlinien sind auf Englisch."
+  },
+  "links": [
+    {
+      "selector": "#construction-example-review a[href=\"/localized-media/de/samples/construction/11-Koordination-und-Pruefung.pdf\"]",
+      "source": "/localized-media/de/samples/construction/11-Koordination-und-Pruefung.pdf",
+      "labelSelector": "span",
+      "url": "/localized-media/de/samples/markup/x101-koordinationspruefung.pdf",
+      "label": "X101: Deutschen Übungsplan herunterladen (PDF)",
+      "sha256": "5d1795f69f4f731a6265e376bc7e587f73021afc69c52096c0badfce677c5aef"
+    }
+  ],
+  "downloads": [
+    {
+      "selector": ".blog-sources li:nth-child(1)",
+      "source": "PolyPDF 1.5.0 (build 22) Markups List implementation and in-app guidance — Covers the row fields, status vocabulary, filtering, selection, and export formats described above.",
+      "url": "/localized-media/de/samples/markup/x101-pruefregister.pdf",
+      "label": "Gespeicherte deutsche Prüfkopie herunterladen (PDF)",
+      "note": "Drei bearbeitbare Prüfnotizen mit den Statuswerten Offen, In Bearbeitung und Abgeschlossen; nach einem vollständigen App-Neustart geprüft.",
+      "sha256": "73cc554690d758c46932ea9d91b9755375c74612991805765f5ed255db60fbda"
+    },
+    {
+      "selector": ".blog-sources li:nth-child(2)",
+      "source": "The sample clinic coordination sheet shown in this guide — Three markups in the Markup Table with comments and the Open, In Progress, and Completed statuses.",
+      "url": "/localized-media/de/samples/markup/pruefregister.csv",
+      "label": "Vollständiges deutsches Prüfregister herunterladen (CSV)",
+      "note": "Drei Datensätze und fünf Spalten, einschließlich vollständiger Betreffzeilen und Kommentare.",
+      "sha256": "8fe547bddc3ef25d1e9852f1419678a419f4536d2545e5bb03c796a72ae6f4c5"
+    }
+  ],
+  "extraDownloads": [
+    {
+      "url": "/localized-media/de/samples/markup/pruefregister-zusammenfassung.pdf",
+      "label": "Deutsche Anmerkungsübersicht herunterladen (PDF)",
+      "note": "Nach Status gruppiert, jeweils ein Prüfpunkt. Lange Detailtexte sind gekürzt; vollständige Inhalte stehen in CSV und Prüfkopie. Die öffentlichen Quellenlinks öffnen Seite 1 der Prüfkopie.",
+      "sha256": "1ce1554f26a1a266c912abe5285759db25a9fbad205f5e08b640a26781e416f3"
+    }
+  ]
+}

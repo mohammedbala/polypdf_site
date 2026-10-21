@@ -1,0 +1,47 @@
+
+> polypdf-landing@1.0.0 build:english
+> node scripts/toolkit/icons.cjs && python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs
+
+Prepared 36 original SVG icons and 36 tool-specific social images.
+Evaluation kit: 6 PDFs / 12 sheets, 14 references, 22 blank platform checks; no runtime result claimed.
+Electrical review generated: 4 reference categories, blank results, source hashes.
+Generated 91 route records, 14 guides, sitemap.xml, feed.xml and llms.txt.
+
+> polypdf-landing@1.0.0 verify:screenshots
+> node scripts/verify-screenshot-evidence.mjs
+
+PASS screenshot evidence: 65 PNG(s), 0 violation(s), 45 evidence record(s).
+Inventory: guide-hero-source=14, guide-public-hero=15, og-template-dependency=1, public-guide-root=19, public-og=1, public-reference=20, rendered-data-reference=61, script-reference=6, site-screenshot-root=45, src-reference=61.
+Missing records: 0; orphan public guides: 0.
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  359.56 kB  build/static/js/main.21aab75f.js
+  176.72 kB  build/static/js/118.be4aa5b9.chunk.js
+  138.54 kB  build/static/js/704.6c5de69a.chunk.js
+  33.23 kB   build/static/css/main.5ac3014f.css
+  28.21 kB   build/static/js/14.579f4172.chunk.js
+  9.89 kB    build/static/js/419.4088072e.chunk.js
+  8.65 kB    build/static/js/607.cf379526.chunk.js
+  7.36 kB    build/static/js/273.40baee9d.chunk.js
+  7.34 kB    build/static/js/229.55fa840a.chunk.js
+  822 B      build/static/js/132.b68b726f.chunk.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+Generated server-readable metadata for 91 routes and the 404 page.
+Prerendered 91 routes plus the static 404 page.
+Verified prerendered markup and JSON-LD for 91 routes.

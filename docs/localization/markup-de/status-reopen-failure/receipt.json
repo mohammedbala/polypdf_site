@@ -1,0 +1,51 @@
+{
+  "status": "failed",
+  "reason": "Native saves and exports completed, but a fresh reopen lost workspace-only open and inProgress statuses on unchanged foreign notes.",
+  "files": [
+    {
+      "file": "electron.log",
+      "sha256": "a032923341f3f9d9625db76b88099e2c419edea7aa31766e381855f0adebe080",
+      "bytes": 6756
+    },
+    {
+      "file": "failure.json",
+      "sha256": "06143b7c7a5a6570b90e9f4e692f009316e2c8f296d858efdaa70716e83cc5eb",
+      "bytes": 5601
+    },
+    {
+      "file": "failure.png",
+      "sha256": "661f4aa3530e7eda9eed3760039dca0394d9423953b7016f5f2eb5981e2060ca",
+      "bytes": 145785
+    },
+    {
+      "file": "pruefregister-drei-status.png",
+      "sha256": "e967497bcd04adce9ee7f59a0b79912a415d109d2d77cca601842897993f9915",
+      "bytes": 145402
+    },
+    {
+      "file": "pruefregister-exportoptionen.png",
+      "sha256": "c5e231e9de3f960027d58bedd7798d8baf970750354372b6a65defead3453980",
+      "bytes": 165348
+    },
+    {
+      "file": "pruefregister-filter.png",
+      "sha256": "4c5017d6ae09f49e03e0a25faf969ed770768c81145686b8d320a2685c5d2ef0",
+      "bytes": 147786
+    },
+    {
+      "file": "pruefregister-zusammenfassung.pdf",
+      "sha256": "161b32dc3276d6078ba3ef1ebfcbf8771486978abbe26da84570fb5395fb2376",
+      "bytes": 16362
+    },
+    {
+      "file": "pruefregister.csv",
+      "sha256": "8fe547bddc3ef25d1e9852f1419678a419f4536d2545e5bb03c796a72ae6f4c5",
+      "bytes": 564
+    },
+    {
+      "file": "x101-pruefregister.pdf",
+      "sha256": "168c1e6239763e3420b077929f4354ad40f132d7458a56fae646f563a76d3148",
+      "bytes": 80686
+    }
+  ]
+}
