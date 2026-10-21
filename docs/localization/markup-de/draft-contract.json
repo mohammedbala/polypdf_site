@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "draft": true,
+  "registered": false,
+  "route": "/blog/pdf-markup-table-rfi-punch-list",
+  "elements": 6,
+  "consumedTextOverrides": 97,
+  "profileSha256": "abca8aa009bda67bbd30640f8ee0b1711147c339fb985ccf90d616177f82cbd8",
+  "sourceVerificationSha256": "e76ef158598732e69c5df11f887c5374c5207c483d5bc7625da1cf15507872f9",
+  "appCatalogSha256": "e71febd459fd20e21544235fd54a3a08777712eff58b94438348c290bca943d7",
+  "statusLabels": [
+    "Kein Status",
+    "Offen",
+    "In Bearbeitung",
+    "Abgeschlossen",
+    "Akzeptiert",
+    "Abgelehnt",
+    "Abgebrochen",
+    "Überprüft"
+  ],
+  "sourceFiles": {
+    "scripts/localization/markup-de.draft.json": "abca8aa009bda67bbd30640f8ee0b1711147c339fb985ccf90d616177f82cbd8",
+    "scripts/localization/prepare-markup-de.py": "7924f3d3dab2688c4c91cafe1a832b7e3085f38aa7b5e11a020fe5fdd6bbf315",
+    "scripts/localization/verify-markup-draft.cjs": "5686217828c89c6f707560ed5e7d1f2fcba2f8f964413f1a039b787ecaa1f793",
+    "scripts/localization/pages.cjs": "e36e74e1c6e54b832a89f314a223a2f7acc983780a4bd92e757dcf64b46e574f",
+    "scripts/international/content.cjs": "4c9fed12b698292f60175c754578b9c9d5aef7b7db07d76b3802b641ec4f3257",
+    "src/content/guides/pdf-markup-table-rfi-punch-list.js": "48b3eb3009adbaaed0913f012486ecc6319bf280a894b9562eee879b2b5534c4"
+  },
+  "checks": [
+    "Every source-bound element matches the current English prerender",
+    "Every German override is consumed by the actual DOM/schema translator",
+    "All eight documented status labels match the current app catalog",
+    "The drawing, preview and original regional library hashes agree",
+    "Draft is absent from the public manifest and cannot enable regional media"
+  ],
+  "remaining": [
+    "Native Save",
+    "CSV and summary PDF export",
+    "Fresh-process reopen",
+    "Public registration and browser verification"
+  ]
+}

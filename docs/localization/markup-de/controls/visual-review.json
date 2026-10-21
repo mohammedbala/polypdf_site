@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "scope": "Two controls-only screenshots; native save/export/reopen still pending",
+  "checks": [
+    "German X101 and all three complete subject labels are visible",
+    "All three German statuses and the complete Seite header are readable",
+    "Five selected columns align with the guide instructions",
+    "The filter excludes Abgeschlossen and displays 2 von 3 Elemente",
+    "The page-size footer reads 841 x 594 mm",
+    "Printed red reference circles remain source drawing content"
+  ],
+  "shots": [
+    {
+      "file": "pruefregister-drei-status.png",
+      "sha256": "6dcaac98b1295b149de6818a3cf3373a971a00e25719948734e6570c70d97bee"
+    },
+    {
+      "file": "pruefregister-filter.png",
+      "sha256": "40d630b86697307111780dfa5f97ce503892e14d485bfecce3030043d8058f85"
+    }
+  ]
+}

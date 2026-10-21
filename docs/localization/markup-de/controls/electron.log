@@ -1,0 +1,42 @@
+automation clean quit: armed on isolated userData /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile — watching /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile/automation-quit-request
+
+DevTools listening on ws://127.0.0.1:9477/devtools/browser/6fbe61c5-7b7c-45fd-8b64-1793fc68dc69
+[pdfium] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium-worker] stage: core bridge required
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+automation-instance: pid 44287 (6 processes)
+automation-instance: record /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile/automation-instance.json
+automation-instance: teardown with  node scripts/automation-instance.mjs teardown --user-data /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile
+automation clean quit: request seen — discarding unsaved changes and quitting
+automation-instance: verified gone — 6 process(es), root pid 44287 (clean quit, no signals sent)
+automation clean quit: armed on isolated userData /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile — watching /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile/automation-quit-request
+
+DevTools listening on ws://127.0.0.1:9478/devtools/browser/ba5269e1-bedd-4b73-a73a-1ef9823f0ba7
+[pdfium] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium-worker] stage: core bridge required
+[pdfium:tile-1] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium:tile-1] [pdfium-worker] stage: core bridge required
+[pdfium:tile-2] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium:tile-2] [pdfium-worker] stage: core bridge required
+[pdfium:tile-1] [pdfium-worker] stage: tile bridge loaded
+[pdfium:tile-2] [pdfium-worker] stage: tile bridge loaded
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+[pdfium] [pdfium-worker] stage: tile bridge loaded
+automation-instance: pid 44803 (7 processes)
+automation-instance: record /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile/automation-instance.json
+automation-instance: teardown with  node scripts/automation-instance.mjs teardown --user-data /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+automation clean quit: request seen — discarding unsaved changes and quitting
+automation-instance: verified gone — 7 process(es), root pid 44803 (clean quit, no signals sent)

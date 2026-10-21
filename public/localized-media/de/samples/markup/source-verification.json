@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "source": "11-Koordination-und-Pruefung.pdf",
+  "sourceSha256": "30792bd11c6221326ab85047d9cc76e4ce1d9f0f1ce410516dc0cf0b277b3e54",
+  "file": "x101-koordinationspruefung.pdf",
+  "sha256": "5d1795f69f4f731a6265e376bc7e587f73021afc69c52096c0badfce677c5aef",
+  "pages": 1,
+  "sheet": "X101",
+  "format": "A1",
+  "scale": "1:50",
+  "sourcePageContentUnchanged": true,
+  "sourcePageTextUnchanged": true,
+  "optionalContentLayers": 4,
+  "notes": [
+    {
+      "id": "pruefpunkt-001",
+      "subject": "PR-001 - Lüftungsdurchführung",
+      "comment": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen."
+    },
+    {
+      "id": "pruefpunkt-002",
+      "subject": "PR-002 - Deckenkoordination",
+      "comment": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen."
+    },
+    {
+      "id": "pruefpunkt-003",
+      "subject": "PR-003 - Kabeldurchführung",
+      "comment": "Für die Kabeltrasse fehlt das Durchführungsdetail an der Trennwand. Detail und Zuständigkeit ergänzen."
+    }
+  ],
+  "pixelEquivalentToOriginalSheet": {
+    "passed": true,
+    "width": 1440,
+    "height": 1018,
+    "render": "Poppler; RGB pixel comparison; 1440-pixel longest edge"
+  },
+  "preview": {
+    "file": "x101-vorschau.png",
+    "sha256": "b76704474fc337ee6a4f3fe206a2bb140601c4287900ad20a27fdb3b62835b88"
+  },
+  "adaptation": "First sheet extracted from the German coordination library. Three existing editable PDF note subjects/comments are clarified, without status words embedded in their text. Printed X102 checklist is intentionally excluded; app statuses are demonstrated on X101."
+}

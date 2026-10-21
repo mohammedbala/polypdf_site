@@ -4,6 +4,8 @@ This branch implements media routing and Germany’s regional construction libra
 
 The app repository’s detailed scope, evidence and remaining implementation plan is at `docs/audits/global-localization-2026-10-20/README.md`.
 
+The [German markup-table draft](markup-de/README.md) adds a verified X101 practice PDF, 97 source-bound copy overrides and two actual German app captures. Status/comment editing, five readable columns, metric paper dimensions and the two-row filter are verified. Native Save, exports and fresh-process reopen remain pending because the Mac was locked. This draft does not add a completed route or activate new media mappings.
+
 ## Registry and inventory
 
 `src/localization/product-locales.json` is an explicit, hashed import of the app’s canonical locale registry. Import with:

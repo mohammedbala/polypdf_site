@@ -1,0 +1,155 @@
+{
+  "status": "partial",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "ca1daa0aa083c8e5468887ecaf12827e4fc1b54b72270cd5db7fc6c26728af1f",
+    "version": "1.6.17",
+    "bundleSetSha256": "fff40f78420c45a3e91769dd22ac2369178e13e64fd2294fc51ec057aefb13da"
+  },
+  "sourceHash": "5d1795f69f4f731a6265e376bc7e587f73021afc69c52096c0badfce677c5aef",
+  "captureScriptSha256": "318e1f7c545a67bb12eebc50906e6a74d0def4725117bad262557128b992ba33",
+  "initialNotes": [
+    {
+      "id": "pruefpunkt-001",
+      "tool": "note",
+      "nativeSubject": "PR-001 - Lüftungsdurchführung",
+      "contents": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen.",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1443.59055,
+      "y": 693.54378,
+      "width": 22,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-002",
+      "tool": "note",
+      "nativeSubject": "PR-002 - Deckenkoordination",
+      "contents": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen.",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1018.3937,
+      "y": 608.50441,
+      "width": 22.000000000000114,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-003",
+      "tool": "note",
+      "nativeSubject": "PR-003 - Kabeldurchführung",
+      "contents": "Für die Kabeltrasse fehlt das Durchführungsdetail an der Trennwand. Detail und Zuständigkeit ergänzen.",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 763.275591,
+      "y": 863.62252,
+      "width": 22,
+      "height": 22
+    }
+  ],
+  "reviewedNotes": [
+    {
+      "id": "pruefpunkt-001",
+      "tool": "note",
+      "nativeSubject": "PR-001 - Lüftungsdurchführung",
+      "contents": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen.",
+      "status": "open",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1443.59055,
+      "y": 693.54378,
+      "width": 22,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-002",
+      "tool": "note",
+      "nativeSubject": "PR-002 - Deckenkoordination",
+      "contents": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen.",
+      "status": "inProgress",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 1018.3937,
+      "y": 608.50441,
+      "width": 22.000000000000114,
+      "height": 22
+    },
+    {
+      "id": "pruefpunkt-003",
+      "tool": "note",
+      "nativeSubject": "PR-003 - Kabeldurchführung",
+      "contents": "Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus.",
+      "status": "completed",
+      "author": "PolyPDF Musterprüfung",
+      "page": 1,
+      "x": 763.275591,
+      "y": 863.62252,
+      "width": 22,
+      "height": 22
+    }
+  ],
+  "rows": [
+    {
+      "id": "pruefpunkt-001",
+      "subject": "PR-001 - Lüftungsdurchführung",
+      "status": "Offen",
+      "comment": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen."
+    },
+    {
+      "id": "pruefpunkt-002",
+      "subject": "PR-002 - Deckenkoordination",
+      "status": "In Bearbeitung",
+      "comment": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen."
+    },
+    {
+      "id": "pruefpunkt-003",
+      "subject": "PR-003 - Kabeldurchführung",
+      "status": "Abgeschlossen",
+      "comment": "Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus."
+    }
+  ],
+  "filteredRows": [
+    {
+      "id": "pruefpunkt-001",
+      "subject": "PR-001 - Lüftungsdurchführung",
+      "status": "Offen",
+      "comment": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen."
+    },
+    {
+      "id": "pruefpunkt-002",
+      "subject": "PR-002 - Deckenkoordination",
+      "status": "In Bearbeitung",
+      "comment": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen."
+    }
+  ],
+  "filterText": "Filter: Status\nAlle auswählen\nAbgeschlossen\nIn Bearbeitung\nOffen\nFilter löschen\nFertig",
+  "columnHeaders": [
+    "Betreff",
+    "Status",
+    "Seite",
+    "Kommentare",
+    "Autor"
+  ],
+  "paperDimensions": "841 x 594 mm",
+  "shots": [
+    {
+      "file": "pruefregister-drei-status.png",
+      "sha256": "6dcaac98b1295b149de6818a3cf3373a971a00e25719948734e6570c70d97bee"
+    },
+    {
+      "file": "pruefregister-filter.png",
+      "sha256": "40d630b86697307111780dfa5f97ce503892e14d485bfecce3030043d8058f85"
+    }
+  ],
+  "outputs": [],
+  "capture": "Actual owned Electron app; German metric profile; production column/status/comment/filter handlers; no native save, export or reopen.",
+  "limitations": [
+    "Controls-only evidence: native Save, exports and fresh-process reopen remain unverified.",
+    "Local Mac development build; not a published release or Windows/native iPad qualification",
+    "The source has three prepared editable notes. This run does not demonstrate drawing new annotations.",
+    "Completion is fictional demonstration data, not a real project approval."
+  ]
+}

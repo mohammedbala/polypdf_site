@@ -1,0 +1,62 @@
+{
+  "status": "partial",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "blocker": "Computer Use reports the Mac is locked; native Save could not be completed. Capture timed out waiting for the saved PDF.",
+  "checksPassed": [
+    "Three prepared German notes imported with their subjects and positions",
+    "Production table controls set Offen, In Bearbeitung and Abgeschlossen",
+    "PR-003 comment edited through the real inline input",
+    "Status filter shows two rows and keeps the completed note in the document",
+    "Filter reset restores three rows",
+    "Both isolated app phases quit normally; no owned process remains"
+  ],
+  "notVerified": [
+    "Native Save",
+    "CSV export",
+    "Summary PDF export",
+    "Fresh-process reopen"
+  ],
+  "missingOutputs": [
+    "x101-pruefregister.pdf",
+    "pruefregister.csv",
+    "pruefregister-zusammenfassung.pdf"
+  ],
+  "publicRegistration": false,
+  "notes": [
+    {
+      "id": "pruefpunkt-001",
+      "nativeSubject": "PR-001 - Lüftungsdurchführung",
+      "status": "open",
+      "contents": "Wie werden Öffnung und Durchführung des Lüftungskanals durch die Trennwand ausgebildet? Bitte Detail ergänzen."
+    },
+    {
+      "id": "pruefpunkt-002",
+      "nativeSubject": "PR-002 - Deckenkoordination",
+      "status": "inProgress",
+      "contents": "Zuluftauslass und Leuchte überlagern sich. Lage und erforderliche Abstände im Deckenplan abstimmen."
+    },
+    {
+      "id": "pruefpunkt-003",
+      "nativeSubject": "PR-003 - Kabeldurchführung",
+      "status": "completed",
+      "contents": "Übung: Durchführungsdetail ergänzt. Ausführung als abgeschlossen gemeldet; unabhängige Prüfung steht aus."
+    }
+  ],
+  "files": {
+    "build-source.json": "23ae5197d983370f8642da4fbb667ddc7d69b09e724325fea7c824897d64b2ed",
+    "capture-script.mjs": "e09ee8cf2306116d0d0face106d5941d7ee59752bfd1e22c01af4d079c60f947",
+    "electron.log": "2503be9eab911bb895dc3bd70b2c2dc0b36f522e1e3da1528f293212a85145d6",
+    "failure.json": "f1c3124f530e8977e5a21a69cae77e61af44380aa3681976d348c669a38087a0",
+    "failure.png": "677cdbd0a7decd1fc7c3726442d345cd0ec6fe13f8205d30da87f7fbd428c431",
+    "pruefregister-drei-status.png": "5928fffe988543a7760cc4cb07101936f70901b4976c5080488e08408b2ed1ca",
+    "pruefregister-filter.png": "14711992cae2821665a81e26c2fe5f69df6410363071ad324a8c14fac8f58a2a",
+    "source-verification.json": "e76ef158598732e69c5df11f887c5374c5207c483d5bc7625da1cf15507872f9"
+  },
+  "profileCleanup": {
+    "ownedPath": "/Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/markup-de/profile",
+    "liveMatchingProcesses": 0,
+    "normalQuitConfirmed": true
+  }
+}

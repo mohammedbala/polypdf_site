@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "files": {
+    "x101-koordinationspruefung.pdf": "5d1795f69f4f731a6265e376bc7e587f73021afc69c52096c0badfce677c5aef",
+    "x101-vorschau.png": "b76704474fc337ee6a4f3fe206a2bb140601c4287900ad20a27fdb3b62835b88",
+    "source-verification.json": "e76ef158598732e69c5df11f887c5374c5207c483d5bc7625da1cf15507872f9"
+  },
+  "checks": [
+    "Prepared PDF, preview and source receipt regenerate byte-for-byte",
+    "Poppler pixel comparison proves the original X101 painted content is unchanged",
+    "Three editable note objects and four referenced layers remain intact"
+  ]
+}
