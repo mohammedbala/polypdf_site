@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "pages": 2,
+  "source": "public/localized-media/de/samples/construction/12-Gescannte-Bestandsplaene.pdf",
+  "sourceSha256": "7874c1a5cfcbde14899540e08220be4678c47f678264d559bc9d87f97474d82f",
+  "file": "bestandsplaene-a101-c101.pdf",
+  "sha256": "1ff545884111c602bc82966867f1015257afee466f690491f33d500cff875687",
+  "imageOnly": true,
+  "pageOperatorsAndImagesUnchanged": true,
+  "searchTargets": [
+    {
+      "page": 1,
+      "text": "MEHRZWECKRAUM"
+    },
+    {
+      "page": 2,
+      "text": "ENTWÄSSERUNG"
+    }
+  ],
+  "provenance": "Fictional Bürgerhaus am Lindenpark, Germany. A101 floor plan and C101 site plan. No actual construction approval."
+}

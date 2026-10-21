@@ -1,0 +1,132 @@
+A101
+BÜRGERHAUS
+AM
+LINDENPARK
+POLYPDF
+Lindenweg 12, 12345 Musterstadt | LP-DE-26-014 | FIKTIVES PROJEKT
+NUR ZUR DEMONSTRATION
+PROJEKT
+BÜRGERHAUS AM
+LINDENPARK
+ERDGESCHOSS
+-
+GRUNDRISS
+LP-DE-26-014
+Maßstab
+1:50
+Eingeschossig / 360,00 m2
+PLANHINWEISE
+24,00
+m
+Außenabmessungen: 24,00 m x 15,00 m.
+Bruttofläche:
+360,00
+m'.
+Umfang:
+78,00
+m.
+Türflügel: 0,90 m. Die Möblierung dient nur der
+Orientierung.
+PLANBEZEICHNUNG
+Œ]
+o
+Œ]
+Œ]
+@
+Œ]
+Revision A: Ausgangsstand.
+ERDGESCHOSS
+-
+Vor
+dem
+Messen
+anhand
+der
+Referenzstrecke
+GRUNDRISS
+•
+0
+Œ]
+Œ]
+Œ]
+Œ]
+o
+Œ]
+Œ]
+Œ]
+Œ]
+kalibrieren.
+KURSRAUM
+WERKRAUM
+MEHRZWECKRAUM
+BESPRECHUNG
+Eine
+zweite
+bekannte
+Länge
+zur
+Kontrolle
+messen.
+104
+101
+102
+103
+36.00 m
+36,00m
+- 36,00m'•
+36,00m
+FACHBEREICH
+ARCHITEKTUR
+•
+15,00 m
+FLUR
+AUSGABE
+111
+01
+A201
+Revision
+A
+72,00 m2
+20.10.2026
+Gezeichnet: PP / Geprüft:
+QA
+PLANANGABEN
+TECHNIK
+WC
+2
+WC
+1
+LAGER
+VERWALTUNG
+FOYER
+Maßstab: 1:50
+108
+106
+109
+105
+110
+107
+18,00 m?
+18,00 m?
+36,00 m2
+18,00 m?
+36,00 m2
+18,00 m2
+Originalformat: A1
+Maßketten in m;
+Bauteilangaben ggf. in mm
+VERWENDUNG
+12,00 m
+6,00 m
+6,00
+m
+NICHT
+ZUR
+BAUAUSFÜHRUNG
+Keine Ausführungsplanung
+und kein Nachweis der
+REFERENZSTRECKE: 5,00 m
+Einhaltung von Normen oder
+Vorschriften.
+A101
+FIKTIVES PROJEKT | NUR ZUR DEMONSTRATION | NICHT ZUR BAUAUSFÜHRUNG

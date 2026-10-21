@@ -1,0 +1,39 @@
+automation clean quit: armed on isolated userData /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/ocr-de/profile — watching /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/ocr-de/profile/automation-quit-request
+[pdfium] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+
+DevTools listening on ws://127.0.0.1:9487/devtools/browser/5c0b7690-32ee-4a0b-868f-5c6b39975a51
+[pdfium] [pdfium-worker] stage: core bridge required
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+automation-instance: pid 66906 (5 processes)
+automation-instance: record /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/ocr-de/profile/automation-instance.json
+automation-instance: teardown with  node scripts/automation-instance.mjs teardown --user-data /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/ocr-de/profile
+automation clean quit: request seen — discarding unsaved changes and quitting
+automation-instance: verified gone — 5 process(es), root pid 66906 (clean quit, no signals sent)
+automation clean quit: armed on isolated userData /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/ocr-de/profile — watching /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/ocr-de/profile/automation-quit-request
+
+DevTools listening on ws://127.0.0.1:9488/devtools/browser/1dae9b2d-b17e-4a5e-86cf-40074b0d1f27
+[pdfium] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium-worker] stage: core bridge required
+[pdfium:tile-2] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium:tile-1] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium:tile-2] [pdfium-worker] stage: core bridge required
+[pdfium:tile-1] [pdfium-worker] stage: core bridge required
+[pdfium:tile-1] [pdfium-worker] stage: tile bridge loaded
+[pdfium:tile-2] [pdfium-worker] stage: tile bridge loaded
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+[pdfium] [pdfium-worker] stage: tile bridge loaded
+automation-instance: pid 67316 (7 processes)
+automation-instance: record /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/ocr-de/profile/automation-instance.json
+automation-instance: teardown with  node scripts/automation-instance.mjs teardown --user-data /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/ocr-de/profile
+automation clean quit: request seen — discarding unsaved changes and quitting
+automation-instance: verified gone — 7 process(es), root pid 67316 (clean quit, no signals sent)

@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "navigation": "English → Deutsch → English using the visible language control",
+  "german": {
+    "images": [
+      {
+        "loaded": true,
+        "src": "/localized-media/de/guides/ocr/ocr-suche-mehrzweckraum.png",
+        "width": 1710
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/de/samples/construction/previews/12-1.png",
+        "width": 1800
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/de/guides/ocr/ocr-ohne-text.png",
+        "width": 1710
+      },
+      {
+        "loaded": true,
+        "src": "/localized-media/de/guides/ocr/ocr-abgeschlossen.png",
+        "width": 1710
+      }
+    ],
+    "lang": "de",
+    "title": "OCR für gescannte PDF-Baupläne",
+    "url": "http://127.0.0.1:8877/de/blog/ocr-scanned-pdf-drawings/"
+  },
+  "returned": {
+    "hero": "/static/media/ocr-uss-akron-search-hit-v1-4-light-web.f40f566d183f9885c733.png",
+    "lang": "en",
+    "url": "http://127.0.0.1:8877/blog/ocr-scanned-pdf-drawings/"
+  },
+  "downloads": [
+    {
+      "file": "bestandsplaene-a101-c101.pdf",
+      "path": "/Users/mohammedbala/Downloads/bestandsplaene-a101-c101.pdf",
+      "sha256": "1ff545884111c602bc82966867f1015257afee466f690491f33d500cff875687"
+    },
+    {
+      "file": "bestandsplaene-durchsuchbar.pdf",
+      "path": "/Users/mohammedbala/Downloads/bestandsplaene-durchsuchbar.pdf",
+      "sha256": "4f15e296964326a43de7550d4ff17d7f014457ed3f39359b95dcdb4ad673dae4"
+    }
+  ],
+  "downloadsMatchPublicFiles": true
+}

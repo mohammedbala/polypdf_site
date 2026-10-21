@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "nativeCaptureSha256": "cddde9941d92029f2a3fb01a010abe03ff9cfe91bdf96887912e2735e4a3ef67",
+  "files": {
+    "bestandsplaene-a101-c101.pdf": "1ff545884111c602bc82966867f1015257afee466f690491f33d500cff875687",
+    "bestandsplaene-durchsuchbar.pdf": "4f15e296964326a43de7550d4ff17d7f014457ed3f39359b95dcdb4ad673dae4"
+  },
+  "pages": 2,
+  "language": "de-DE",
+  "ocrMetadata": {
+    "source": "PolyPDFElectron",
+    "processedPageCount": 2,
+    "textLayerCount": 2,
+    "bornDigitalSkippedCount": 0,
+    "recognizedPageCount": 2,
+    "ocrEngine": "image",
+    "generatedAt": "2026-10-21T10:07:16.301Z"
+  },
+  "testTerms": [
+    {
+      "page": 1,
+      "term": "MEHRZWECKRAUM",
+      "matches": 1
+    },
+    {
+      "page": 2,
+      "term": "ENTWÄSSERUNG",
+      "matches": 1
+    }
+  ],
+  "scanImageBytesUnchanged": true,
+  "renderedPixelsUnchanged": false,
+  "renderDifferences": [
+    {
+      "page": 1,
+      "changedPixels": 3858,
+      "totalPixels": 1590000,
+      "maxChannelDelta": 2,
+      "ocrOpacity": 0.01
+    },
+    {
+      "page": 2,
+      "changedPixels": 3476,
+      "totalPixels": 1590000,
+      "maxChannelDelta": 2,
+      "ocrOpacity": 0.01
+    }
+  ],
+  "workbook": {
+    "sha256": "789448d1339fd20202d55e971daf9c6e781600eb58bfe722a443872d900dd7bf",
+    "sheets": [
+      "Pages",
+      "Annotations"
+    ],
+    "bothTermsPresent": true
+  },
+  "limitations": [
+    "Some symbols and area units were misrecognized; these outputs are not a certified transcription.",
+    "The writer uses 1% white OCR text: unchanged scan image bytes, but small measured pixel differences.",
+    "Workbook package and term presence checked; spreadsheet application layout not qualified.",
+    "An English office-export success notice remains in the German app."
+  ]
+}

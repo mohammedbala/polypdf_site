@@ -1026,6 +1026,62 @@
           "height": 1073,
           "alt": "Deutsche PolyPDF-Oberfläche mit wieder geöffneter X101-Prüfkopie und drei Anmerkungszeilen: Offen, In Bearbeitung und Abgeschlossen",
           "verification": "/localized-media/de/guides/markup/verification.json"
+        },
+        "/static/media/ocr-uss-akron-no-text-before-v1-4-light-web.7eb4135b422b0b760016.png": {
+          "url": "/localized-media/de/guides/ocr/ocr-ohne-text.png",
+          "locale": "de-DE",
+          "region": "DE",
+          "status": "verified",
+          "appBuild": "1.6.17+84",
+          "sourcePath": "src/assets/screenshots/ocr-uss-akron-no-text-before-v1-4-light-web.png",
+          "sourceSha256": "c033a84521f063f6b2fa75d69b5d3f4aeaf2bb76d23daf1e3ba118ef5e0fbe3d",
+          "sha256": "347ea84900cfd11dc5445da3628bb8df02f0bf8685e8b0a83455dc01a8a5cc9c",
+          "width": 1710,
+          "height": 1073,
+          "alt": "Deutsche PolyPDF-Suche: MEHRZWECKRAUM liefert vor OCR keine Treffer auf A101",
+          "verification": "/localized-media/de/guides/ocr/verification.json"
+        },
+        "/static/media/ocr-uss-akron-complete-v1-4-light-web.5d332f9ba32ae3d54f75.png": {
+          "url": "/localized-media/de/guides/ocr/ocr-abgeschlossen.png",
+          "locale": "de-DE",
+          "region": "DE",
+          "status": "verified",
+          "appBuild": "1.6.17+84",
+          "sourcePath": "src/assets/screenshots/ocr-uss-akron-complete-v1-4-light-web.png",
+          "sourceSha256": "911993184c43fedbaf48fcda74cc62b8ac1923d23e36bb19ac7dca5cd58204c9",
+          "sha256": "2600a2e01308c8ba74ec0e4d750857680bb8c8b3c9a19b214ec9d2956320a9bb",
+          "width": 1710,
+          "height": 1073,
+          "alt": "Deutscher OCR-Dialog: OCR abgeschlossen bei 100 Prozent für beide gescannten Pläne",
+          "verification": "/localized-media/de/guides/ocr/verification.json"
+        },
+        "/static/media/ocr-uss-akron-search-hit-v1-4-light-web.f40f566d183f9885c733.png": {
+          "url": "/localized-media/de/guides/ocr/ocr-suche-mehrzweckraum.png",
+          "locale": "de-DE",
+          "region": "DE",
+          "status": "verified",
+          "appBuild": "1.6.17+84",
+          "sourcePath": "src/assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png",
+          "sourceSha256": "c89eb58178ae38303cd5262cf443d875e7ed98e7433e28269f5c29d4485ce977",
+          "sha256": "46f062e49f34e6d2dcbf3488a813f159ba6a525bcaa09a9e094d5f588847fd1b",
+          "width": 1710,
+          "height": 1073,
+          "alt": "Deutsche PolyPDF-Suche nach erneutem Öffnen: ein Treffer für MEHRZWECKRAUM auf A101",
+          "verification": "/localized-media/de/guides/ocr/verification.json"
+        },
+        "/guides/ocr-scanned-pdf-drawings.png": {
+          "url": "/localized-media/de/guides/ocr/ocr-suche-mehrzweckraum.png",
+          "locale": "de-DE",
+          "region": "DE",
+          "status": "verified",
+          "appBuild": "1.6.17+84",
+          "sourcePath": "public/guides/ocr-scanned-pdf-drawings.png",
+          "sourceSha256": "c89eb58178ae38303cd5262cf443d875e7ed98e7433e28269f5c29d4485ce977",
+          "sha256": "46f062e49f34e6d2dcbf3488a813f159ba6a525bcaa09a9e094d5f588847fd1b",
+          "width": 1710,
+          "height": 1073,
+          "alt": "Deutsche PolyPDF-Suche nach erneutem Öffnen: ein Treffer für MEHRZWECKRAUM auf A101",
+          "verification": "/localized-media/de/guides/ocr/verification.json"
         }
       },
       "regionalForm": {
@@ -2138,6 +2194,104 @@
               "label": "Deutsche Anmerkungsübersicht herunterladen (PDF)",
               "note": "Nach Status gruppiert, jeweils ein Prüfpunkt. Lange Detailtexte sind gekürzt; vollständige Inhalte stehen in CSV und Prüfkopie. Die öffentlichen Quellenlinks öffnen Seite 1 der Prüfkopie.",
               "sha256": "1ce1554f26a1a266c912abe5285759db25a9fbad205f5e08b640a26781e416f3"
+            }
+          ]
+        },
+        "/blog/ocr-scanned-pdf-drawings": {
+          "status": "complete",
+          "locale": "de-DE",
+          "region": "DE",
+          "evidence": "/localized-media/de/guides/ocr/verification.json",
+          "elements": [
+            {
+              "selector": ".blog-verification > div:nth-child(1) dd",
+              "source": "Aligned with PolyPDF 1.5.1 (build 23) on September 7, 2026. Earlier walkthroughs and screenshots retain their versions below.",
+              "target": "Deutscher OCR-Durchlauf im lokalen Entwicklungsstand 1.6.17 Build 84; kein Nachweis eines veröffentlichten Installers."
+            },
+            {
+              "selector": ".blog-verification > div:nth-child(2) dd",
+              "source": "September 3, 2026",
+              "target": "21. Oktober 2026"
+            },
+            {
+              "selector": ".blog-verification > div:nth-child(3) dd",
+              "source": "PolyPDF 1.5.0 (build 22); screenshots from 1.4.0 (build 17)",
+              "target": "PolyPDF 1.6.17 Build 84 — deutscher lokaler Entwicklungsstand"
+            },
+            {
+              "selector": ".blog-verification > div:nth-child(4) dd",
+              "source": "macOS and Windows",
+              "target": "Für diesen Durchlauf geprüft: macOS"
+            },
+            {
+              "selector": "#construction-example-ocr figcaption bdi",
+              "source": "12-Scanned-Legacy-Drawings.pdf",
+              "target": "bestandsplaene-a101-c101.pdf"
+            },
+            {
+              "selector": ".blog-sources li:nth-child(1) span",
+              "source": "— The NASA record marks the report Public and states that it is a work of the U.S. government with public use permitted.",
+              "target": "— Von PolyPDF erstelltes fiktives deutsches Beispiel: zwei gescannte A1-Blätter, metrische Maße und deutsche Planbeschriftung. Keine Ausführungsplanung."
+            }
+          ],
+          "text": {
+            "To OCR a scanned PDF drawing in PolyPDF 1.5, save a working copy, choose Document › OCR, and let the whole-document recognition run finish. PolyPDF uses local OCR, adds a best-effort searchable layer where supported, and analyzes AEC structure such as schedules, title blocks, drawing labels, and dimensions. Export recognized tables from File › Export › Excel Workbook (Tables + Text)… while that OCR session is still open. Reopen the saved PDF, search representative terms, and visually verify every critical value.": "Öffnen Sie die beiden gescannten deutschen Übungspläne A101 und C101. Suchen Sie vor der OCR nach MEHRZWECKRAUM: Es gibt keine Treffer. Starten Sie Dokument › OCR… und warten Sie auf „OCR abgeschlossen.“ bei 100 %. Exportieren Sie bei Bedarf vor dem Schließen über Datei › Exportieren › Excel-Arbeitsmappe (Tabellen + Text)… eine Arbeitsmappe. Speichern Sie das PDF unter einem neuen Namen. Nach einem vollständigen App-Neustart liefert MEHRZWECKRAUM einen Treffer auf Seite 1 und ENTWÄSSERUNG einen Treffer auf Seite 2. Kontrollieren Sie erkannte Zahlen und Einheiten am Scan.",
+            "The scan is a public-domain NACA report on the U.S.S. Akron from NASA’s technical reports server. OCR is best effort, so check anything consequential against the scanned page.": "Fiktive deutsche Demonstrationspläne des Bürgerhauses am Lindenpark: A101 Grundriss und C101 Lageplan, A1, metrische Maße. OCR ist fehleranfällig; wichtige Angaben am sichtbaren Scan prüfen.",
+            "Searching SURFACE in the saved, reopened PDF returns three results and highlights the selected one in yellow on the drawing. The recognized text is saved into the PDF, so the search still works after closing and reopening the file.": "Die gespeicherte und nach einem vollständigen App-Neustart wieder geöffnete PDF liefert für MEHRZWECKRAUM genau einen Treffer auf A101. Der ausgewählte Begriff ist gelb markiert. Auch ENTWÄSSERUNG wird auf C101 gefunden. Diese beiden Prüfungen bestätigen nicht die Richtigkeit aller erkannten Zeichen.",
+            "PolyPDF search panel showing three SURFACE results and a selected highlight on the U.S.S. Akron engineering scan after OCR": "Deutsche PolyPDF-Suche nach erneutem Öffnen mit einem Treffer für MEHRZWECKRAUM und gelber Markierung auf A101",
+            "Scrollable image: PolyPDF search panel showing three SURFACE results and a selected highlight on the U.S.S. Akron engineering scan after OCR": "Scrollbares Bild: Deutsche PolyPDF-Suche nach erneutem Öffnen mit einem Treffer für MEHRZWECKRAUM und gelber Markierung auf A101",
+            "PolyPDF search panel showing No matches for SURFACE before OCR on an image-only U.S.S. Akron engineering scan": "Deutsche PolyPDF-Suche vor OCR: MEHRZWECKRAUM liefert auf dem gescannten Grundriss A101 keine Treffer",
+            "Scrollable image: PolyPDF search panel showing No matches for SURFACE before OCR on an image-only U.S.S. Akron engineering scan": "Scrollbares Bild: Deutsche PolyPDF-Suche vor OCR: MEHRZWECKRAUM liefert auf dem gescannten Grundriss A101 keine Treffer",
+            "PolyPDF OCR dialog showing OCR complete at 100 percent over the U.S.S. Akron engineering scan": "Deutscher OCR-Dialog mit OCR abgeschlossen bei 100 Prozent über dem gescannten Grundriss A101",
+            "Scrollable image: PolyPDF OCR dialog showing OCR complete at 100 percent over the U.S.S. Akron engineering scan": "Scrollbares Bild: Deutscher OCR-Dialog mit OCR abgeschlossen bei 100 Prozent über dem gescannten Grundriss A101",
+            "Before OCR, the same SURFACE query returns “No matches” because this page is image-only.": "Vor der OCR liefert MEHRZWECKRAUM „Keine Treffer.“. Beide Seiten der Ausgangsdatei bestehen aus Bildern ohne eingebetteten Text.",
+            "The whole-document run has reached “OCR complete” at 100%, while the dialog title still reads “OCR in Progress.” Completion means the run finished, not that every character came through correctly.": "Der echte Lauf über beide Seiten zeigt „OCR abgeschlossen.“ und 100 %. Der Dialogtitel lautet weiterhin „OCR läuft“. „OCR abbrechen“ ist deaktiviert. Die Anzeige bestätigt das Ende des Laufs, nicht eine fehlerfreie Erkennung.",
+            "Duplicate the source PDF or use Save As so the original scan remains untouched.": "Laden Sie den deutschen Scan A101/C101 herunter. Bewahren Sie die Ausgangsdatei auf und speichern Sie das OCR-Ergebnis später unter einem anderen Namen.",
+            "Choose Document › OCR. OCR starts for the current document; the current dialog does not offer a page-range or language picker.": "Wählen Sie Dokument › OCR…. Der Lauf verarbeitet das ganze Dokument. Der Dialog bietet keine Auswahl für Seitenbereich oder OCR-Sprache. Die deutsche Oberflächensprache legt keine eigene Erkennungssprache fest.",
+            "Keep the dialog open to watch progress, or close it if you want the run to continue in the background. Choose Cancel OCR when you need to stop; a cancelled run discards its result.": "Lassen Sie den Dialog für die Fortschrittsanzeige geöffnet. Mit Schließen läuft die Erkennung im Hintergrund weiter; OCR abbrechen verwirft den abgebrochenen Lauf.",
+            "Save the recognized document under a distinct filename, close it, and reopen that saved file.": "Exportieren Sie eine benötigte Excel-Arbeitsmappe noch in dieser Sitzung. Speichern Sie danach die durchsuchbare PDF unter einem eigenen Namen, beenden Sie PolyPDF vollständig und öffnen Sie die gespeicherte Datei erneut.",
+            "Search several terms from different pages and copy short passages into plain text to inspect recognition quality.": "Suchen Sie MEHRZWECKRAUM auf Seite 1 und ENTWÄSSERUNG auf Seite 2. In diesem Durchlauf erscheint jeweils ein Treffer mit gelber Markierung. Prüfen Sie zusätzlich erkannte Zahlen, Flächeneinheiten und Sonderzeichen gegen das Bild.",
+            "Review AEC structure and export tables before closing the session": "Erkannten Text vor dem Schließen als Arbeitsmappe exportieren",
+            "Since PolyPDF 1.4.4, OCR also builds a current-session model of likely schedules, title-block fields, drawing and detail labels, dimensions, regions, rows, and cells. This is useful for review and spreadsheet handoff, but it is still inferred from page pixels and selectable text—not an authoritative schedule database.": "OCR kann in der laufenden Sitzung auch Tabellen und Planfelder erschließen. Die beiden hier verwendeten Blätter sind Grundriss und Lageplan. Der native Export enthielt die Blätter Pages und Annotations und beide deutschen Suchbegriffe; zusätzliche Tabellenblätter wurden in diesem Durchlauf nicht erkannt. Daraus folgt kein Nachweis einer vollständigen Raum- oder Mengenliste.",
+            "Finish the OCR run and inspect the recognized table names, headings, rows, and dimensions.": "Warten Sie auf den Abschluss der OCR. Prüfen Sie erkannten Text und gegebenenfalls erkannte Tabellen gegen den sichtbaren Plan.",
+            "Choose File › Export › Excel Workbook (Tables + Text)… while the recognized document session remains open.": "Wählen Sie noch in derselben Sitzung Datei › Exportieren › Excel-Arbeitsmappe (Tabellen + Text)….",
+            "Open the workbook and compare critical quantities, dimensions, tags, and schedule cells with the visible PDF.": "Öffnen Sie die Arbeitsmappe in Ihrer Tabellenanwendung und vergleichen Sie wichtige Angaben mit dem Plan. Hier wurden die native Speicherung, die Dateistruktur und beide Suchbegriffe geprüft; die Darstellung in Excel wurde nicht geprüft. Blattnamen und die Export-Erfolgsmeldung sind in diesem Entwicklungsstand teilweise noch Englisch.",
+            "Worked use case: find “Surface of ship” on a scanned engineering drawing": "Durchgeführte Übung: deutsche Raum- und Leitungsnamen in zwei Scans finden",
+            "The NACA page shown here is a raster scan with no extractable text before OCR: searching SURFACE returns “No matches.” After the whole-document run finished, we saved the result, quit PolyPDF, reopened the saved PDF, and repeated the same search. PolyPDF returned three results and selected one “Surface of ship” occurrence on the drawing.": "Die Ausgangsdatei enthält zwei Bildseiten ohne extrahierbaren Text. Vor OCR findet die Suche MEHRZWECKRAUM nicht. Nach dem tatsächlichen OCR-Lauf wurden eine Arbeitsmappe und eine separate PDF über die nativen Speicherdialoge exportiert. Nach einem vollständigen Neustart liefert die gespeicherte PDF einen Treffer für MEHRZWECKRAUM auf A101 und einen für ENTWÄSSERUNG auf C101. Die ausgewählten Stellen werden gelb markiert.",
+            "Copying text out of the saved PDF returns “REPORT NATIONAL ADVISORY COMMITTEE FOR AERONAUTICS,” “Surface of ship,” and “U.S. S. Akron.” The same text also contains errors in small italic labels and dimension notation, so use OCR hits for navigation and compare every consequential identifier, note, or measurement with the visible scan.": "Die gespeicherte Textebene enthält unter anderem BÜRGERHAUS AM LINDENPARK, MEHRZWECKRAUM und ENTWÄSSERUNG. Gleichzeitig wurden Möbelsymbole als Zeichen und manche Flächeneinheiten falsch erkannt, etwa m² als m? oder m'. Die eingebetteten Scanbilder bleiben unverändert; die derzeit mit 1 % Deckkraft hinzugefügte OCR-Schrift erzeugt geringe Pixelabweichungen. Verwenden Sie Treffer zur Orientierung und prüfen Sie alle wichtigen Maße und Angaben am Bild.",
+            "Yes. After OCR builds its current-session AEC structure, choose File › Export › Excel Workbook (Tables + Text)…. Review the resulting rows and cells against the drawing; OCR and table reconstruction are best effort.": "Ja. Wählen Sie nach der OCR in derselben Sitzung Datei › Exportieren › Excel-Arbeitsmappe (Tabellen + Text)…. Erkannte Tabellen und Text sind fehleranfällig. Dieser deutsche Durchlauf exportierte Text in den Blättern Pages und Annotations, aber keine zusätzlichen erkannten Tabellenblätter. Prüfen Sie die Inhalte in Ihrer Tabellenanwendung.",
+            "Test OCR on the Willow Creek scanned sheets": "OCR mit den deutschen Bestandsplänen A101 und C101 prüfen",
+            "Open the scanned set and try searching for WILLOW CREEK. The original two-page PDF contains images without native text.": "Öffnen Sie den deutschen Scan und suchen Sie MEHRZWECKRAUM. Vor OCR gibt es keine Treffer; beide Seiten enthalten nur Bilder.",
+            "Run OCR on a working copy. Search for COMMUNITY ROOM on A101 and SITE PLAN on C101, then inspect the recognized text.": "Starten Sie Dokument › OCR…. Prüfen Sie danach MEHRZWECKRAUM auf A101 und ENTWÄSSERUNG auf C101. In diesem Durchlauf wurde jeweils ein Treffer gefunden.",
+            "Save and reopen the result. Repeat the searches and visually check dimensions before measuring the scanned drawing.": "Speichern Sie eine separate durchsuchbare PDF und öffnen Sie sie nach einem vollständigen Neustart erneut. Wiederholen Sie beide Suchen und prüfen Sie Maße am Scan.",
+            "Drawing reference values, not new app test results. Work on a copy and check your own saved output.": "Tatsächlich im deutschen macOS-Entwicklungsstand ausgeführt: OCR, native Exporte und Suche nach vollständigem Neustart. Ihr eigenes Ergebnis kann je nach Erkennung und System abweichen.",
+            "The exercise above uses the Willow Creek library. Earlier walkthrough screenshots and saved examples below retain their original drawings, versions, and quantities.": "Diese deutsche Anleitung verwendet durchgehend dieselben regionalen Pläne A101 und C101. Die Bildschirmaufnahmen zeigen den tatsächlichen OCR-Lauf und die nach einem Neustart erneut geöffnete Ergebnisdatei."
+          },
+          "links": [
+            {
+              "selector": "#construction-example-ocr a[href=\"/localized-media/de/samples/construction/12-Gescannte-Bestandsplaene.pdf\"]",
+              "source": "/localized-media/de/samples/construction/12-Gescannte-Bestandsplaene.pdf",
+              "labelSelector": "span",
+              "url": "/localized-media/de/samples/ocr/bestandsplaene-a101-c101.pdf",
+              "label": "Deutschen Scan A101/C101 herunterladen (PDF)",
+              "sha256": "1ff545884111c602bc82966867f1015257afee466f690491f33d500cff875687"
+            },
+            {
+              "selector": ".blog-sources li:nth-child(1) a",
+              "source": "https://ntrs.nasa.gov/citations/19930091505",
+              "url": "/localized-media/de/samples/ocr/bestandsplaene-a101-c101.pdf",
+              "label": "Deutsche Ausgangspläne ohne Textebene (PDF)",
+              "sha256": "1ff545884111c602bc82966867f1015257afee466f690491f33d500cff875687"
+            }
+          ],
+          "downloads": [
+            {
+              "selector": ".blog-sources li:nth-child(4)",
+              "source": "PolyPDF 1.5: local AEC OCR and table export — AEC structure and Excel export were introduced in 1.4.4. The embedded searchable layer covers Latin, Greek, and Cyrillic scripts, and language availability depends on the computer’s operating system and installed support.",
+              "url": "/localized-media/de/samples/ocr/bestandsplaene-durchsuchbar.pdf",
+              "label": "Gespeichertes deutsches OCR-Ergebnis herunterladen (PDF)",
+              "note": "Zwei Seiten mit geprüfter Suche nach MEHRZWECKRAUM und ENTWÄSSERUNG, auch nach einem vollständigen App-Neustart. Erkennungsfehler bei anderen Zeichen und Einheiten bleiben enthalten.",
+              "sha256": "4f15e296964326a43de7550d4ff17d7f014457ed3f39359b95dcdb4ad673dae4"
             }
           ]
         }

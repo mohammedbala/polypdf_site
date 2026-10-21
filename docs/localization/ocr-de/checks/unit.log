@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: language selection changes every responsive screenshot, video and drawing download
+ok 1 - language selection changes every responsive screenshot, video and drawing download
+  ---
+  duration_ms: 48.774208
+  type: 'test'
+  ...
+# Subtest: missing, draft and wrong-region assets block localized publication
+ok 2 - missing, draft and wrong-region assets block localized publication
+  ---
+  duration_ms: 0.395292
+  type: 'test'
+  ...
+# Subtest: regional drawings replace the original image aspect ratio as well as its URL
+ok 3 - regional drawings replace the original image aspect ratio as well as its URL
+  ---
+  duration_ms: 8.084
+  type: 'test'
+  ...
+# Subtest: regional previews replace obsolete units in alt text before ordinary translation
+ok 4 - regional previews replace obsolete units in alt text before ordinary translation
+  ---
+  duration_ms: 11.825416
+  type: 'test'
+  ...
+# Subtest: explicitly neutral assets and third-party links retain their URLs
+ok 5 - explicitly neutral assets and third-party links retain their URLs
+  ---
+  duration_ms: 0.20925
+  type: 'test'
+  ...
+# Subtest: screenshots and workflow posters outside guides are still subject to locale coverage
+ok 6 - screenshots and workflow posters outside guides are still subject to locale coverage
+  ---
+  duration_ms: 0.140209
+  type: 'test'
+  ...
+# Subtest: source and translated file hashes must match before activating a media pack
+ok 7 - source and translated file hashes must match before activating a media pack
+  ---
+  duration_ms: 1.234
+  type: 'test'
+  ...
+# Subtest: the checked-in German regional library resolves exact verified PDF and preview bytes
+ok 8 - the checked-in German regional library resolves exact verified PDF and preview bytes
+  ---
+  duration_ms: 167.232125
+  type: 'test'
+  ...
+# Subtest: German form copy and downloads are reconciled without mislabelling an English or French file
+ok 9 - German form copy and downloads are reconciled without mislabelling an English or French file
+  ---
+  duration_ms: 21.914875
+  type: 'test'
+  ...
+# Subtest: regional exercise text changes source quantities before translation and refuses stale instructions
+ok 10 - regional exercise text changes source quantities before translation and refuses stale instructions
+  ---
+  duration_ms: 13.059792
+  type: 'test'
+  ...
+# Subtest: German electrical table matches the regional drawing instead of retaining US subsets
+ok 11 - German electrical table matches the regional drawing instead of retaining US subsets
+  ---
+  duration_ms: 38.805875
+  type: 'test'
+  ...
+# Subtest: only an explicitly completed route enables a partial locale pack
+ok 12 - only an explicitly completed route enables a partial locale pack
+  ---
+  duration_ms: 1.103875
+  type: 'test'
+  ...
+# Subtest: regional copy overrides are scoped and unused source text fails the build
+ok 13 - regional copy overrides are scoped and unused source text fails the build
+  ---
+  duration_ms: 0.261958
+  type: 'test'
+  ...
+# Subtest: verification dates and formulas are source-bound and not translated a second time
+ok 14 - verification dates and formulas are source-bound and not translated a second time
+  ---
+  duration_ms: 61.744084
+  type: 'test'
+  ...
+# Subtest: article schema images follow the same verified locale mapping while publisher logos remain shared
+ok 15 - article schema images follow the same verified locale mapping while publisher logos remain shared
+  ---
+  duration_ms: 0.857917
+  type: 'test'
+  ...
+# Subtest: regional download references require the intended link, locale path and exact file bytes
+ok 16 - regional download references require the intended link, locale path and exact file bytes
+  ---
+  duration_ms: 32.857167
+  type: 'test'
+  ...
+# Subtest: a source-bound bibliography row becomes a verified regional download without HTML injection
+ok 17 - a source-bound bibliography row becomes a verified regional download without HTML injection
+  ---
+  duration_ms: 21.694667
+  type: 'test'
+  ...
+# Subtest: regional PDF cards keep their preview when the destination and label change
+ok 18 - regional PDF cards keep their preview when the destination and label change
+  ---
+  duration_ms: 28.78025
+  type: 'test'
+  ...
+# Subtest: supplemental regional downloads require one bibliography and verified local bytes
+ok 19 - supplemental regional downloads require one bibliography and verified local bytes
+  ---
+  duration_ms: 17.957458
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 619.499667

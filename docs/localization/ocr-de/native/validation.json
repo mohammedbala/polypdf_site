@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "b280ed6d1abbf0e504a79b84a6c8e70b9344775e5c4f86080c616d952b9ac413",
+    "version": "1.6.17",
+    "bundleSetSha256": "3239ae71b4984e7053cd54c38d48f9ab1b1e1b93813f9efb1d86564280bb73c8"
+  },
+  "sourceHash": "1ff545884111c602bc82966867f1015257afee466f690491f33d500cff875687",
+  "captureScriptSha256": "757fdee2374e7f9f01f383c21882ddbfb6224fd7457cad326f0ea3018684af74",
+  "before": {
+    "query": "MEHRZWECKRAUM",
+    "rows": [],
+    "text": "Keine Treffer."
+  },
+  "completion": "OCR läuft\n\nPolyPDF fügt diesem PDF eine bestmöglich durchsuchbare Textebene hinzu.\n\nOCR abgeschlossen.\n100 %\n\nGroße Scans und Bauzeichnungen können einige Minuten dauern.\n\nDieser Computer kann Arabisch, Han (Chinesisch/Japanisch), Hangul (Koreanisch), Hiragana (Japanisch), Katakana (Japanisch) und Thailändisch erkennen, aber PolyPDF kann nur Kyrillisch, Griechisch und Lateinisch in einer durchsuchbaren Ebene einbetten. Ein Dokument in Arabisch, Han (Chinesisch/Japanisch), Hangul (Koreanisch), Hiragana (Japanisch), Katakana (Japanisch) und Thailändisch bleibt unverändert und wird als Textexport angeboten.\n\nOCR abbrechen\nSchließen",
+  "searches": {
+    "walkthrough": [
+      {
+        "query": "MEHRZWECKRAUM",
+        "rows": [
+          "Seite 1\n] o Œ] • 0 Œ] Œ] Œ] kalibrieren. MEHRZWECKRAUM KURSRAUM BESPRECHUNG WERKRAUM Eine zweite bekannte Länge"
+        ],
+        "text": "Seite 1\n] o Œ] • 0 Œ] Œ] Œ] kalibrieren. MEHRZWECKRAUM KURSRAUM BESPRECHUNG WERKRAUM Eine zweite bekannte Länge",
+        "row": "Seite 1\n] o Œ] • 0 Œ] Œ] Œ] kalibrieren. MEHRZWECKRAUM KURSRAUM BESPRECHUNG WERKRAUM Eine zweite bekannte Länge",
+        "rects": [
+          {
+            "x": 119.292,
+            "y": 288.66,
+            "width": 79.498,
+            "height": 6.69074
+          }
+        ]
+      },
+      {
+        "query": "ENTWÄSSERUNG",
+        "rows": [
+          "Seite 2\nnnte Länge zur Kontrolle messen. ENTWÄSSERUNG: 34,00 m Für jede Übung eine Kopie des Originalplans ve"
+        ],
+        "text": "Seite 2\nnnte Länge zur Kontrolle messen. ENTWÄSSERUNG: 34,00 m Für jede Übung eine Kopie des Originalplans ve",
+        "row": "Seite 2\nnnte Länge zur Kontrolle messen. ENTWÄSSERUNG: 34,00 m Für jede Übung eine Kopie des Originalplans ve",
+        "rects": [
+          {
+            "x": 633.304,
+            "y": 279.85,
+            "width": 75.9869,
+            "height": 9.11059
+          }
+        ]
+      }
+    ],
+    "reopen": [
+      {
+        "query": "MEHRZWECKRAUM",
+        "rows": [
+          "Seite 1\n] o Œ] • 0 Œ] Œ] Œ] kalibrieren. MEHRZWECKRAUM KURSRAUM BESPRECHUNG WERKRAUM Eine zweite bekannte Länge"
+        ],
+        "text": "Seite 1\n] o Œ] • 0 Œ] Œ] Œ] kalibrieren. MEHRZWECKRAUM KURSRAUM BESPRECHUNG WERKRAUM Eine zweite bekannte Länge",
+        "row": "Seite 1\n] o Œ] • 0 Œ] Œ] Œ] kalibrieren. MEHRZWECKRAUM KURSRAUM BESPRECHUNG WERKRAUM Eine zweite bekannte Länge",
+        "rects": [
+          {
+            "x": 119.292,
+            "y": 288.66,
+            "width": 79.498,
+            "height": 6.69074
+          }
+        ]
+      },
+      {
+        "query": "ENTWÄSSERUNG",
+        "rows": [
+          "Seite 2\nnnte Länge zur Kontrolle messen. ENTWÄSSERUNG: 34,00 m Für jede Übung eine Kopie des Originalplans ve"
+        ],
+        "text": "Seite 2\nnnte Länge zur Kontrolle messen. ENTWÄSSERUNG: 34,00 m Für jede Übung eine Kopie des Originalplans ve",
+        "row": "Seite 2\nnnte Länge zur Kontrolle messen. ENTWÄSSERUNG: 34,00 m Für jede Übung eine Kopie des Originalplans ve",
+        "rects": [
+          {
+            "x": 633.304,
+            "y": 279.85,
+            "width": 75.9869,
+            "height": 9.11059
+          }
+        ]
+      }
+    ]
+  },
+  "shots": [
+    {
+      "file": "ocr-ohne-text.png",
+      "sha256": "347ea84900cfd11dc5445da3628bb8df02f0bf8685e8b0a83455dc01a8a5cc9c"
+    },
+    {
+      "file": "ocr-abgeschlossen.png",
+      "sha256": "2600a2e01308c8ba74ec0e4d750857680bb8c8b3c9a19b214ec9d2956320a9bb"
+    },
+    {
+      "file": "ocr-suche-mehrzweckraum.png",
+      "sha256": "46f062e49f34e6d2dcbf3488a813f159ba6a525bcaa09a9e094d5f588847fd1b"
+    },
+    {
+      "file": "ocr-suche-entwaesserung.png",
+      "sha256": "c83f14fc6b799b6df1779f62ceb42c4caea980739dca2b721ca3f21aafe41b07"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "bestandsplaene-durchsuchbar.pdf",
+      "sha256": "4f15e296964326a43de7550d4ff17d7f014457ed3f39359b95dcdb4ad673dae4"
+    },
+    {
+      "file": "bestandsplaene-ocr.xlsx",
+      "sha256": "789448d1339fd20202d55e971daf9c6e781600eb58bfe722a443872d900dd7bf"
+    }
+  ],
+  "capture": "Actual owned German Electron instance; real whole-document native OCR; normal Excel/PDF native Save dialogs; fresh-process search on both pages; state observers do not seed recognition or search.",
+  "limitations": [
+    "Local Mac development build; Windows and native iPad not qualified.",
+    "OCR is best effort. Selected matches do not establish full transcription accuracy.",
+    "Workbook tables are inferred and need independent review."
+  ]
+}
