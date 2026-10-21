@@ -1,8 +1,9 @@
-"""Regression checks for the independent PDF geometry verifier."""
+"""Regression checks for regional drawing fonts and independent PDF geometry."""
 import io
 import unittest
 from pypdf import PdfReader
 from reportlab.pdfgen import canvas
+from regional_library import Region, Sheet
 from verify_regional_library import check_reference, geometry, has_segment
 
 
@@ -54,6 +55,35 @@ class RegionalGeometryTests(unittest.TestCase):
         for key in ("areaSquareMetres", "volumeCubicMetres"):
             with self.assertRaises(AssertionError):
                 check_reference({**reference, key: 999}, paths)
+
+
+class RegionalFontTests(unittest.TestCase):
+    @staticmethod
+    def render_text(region, text):
+        stream = io.BytesIO()
+        pdf = canvas.Canvas(stream, pagesize=(900, 600), invariant=1)
+        sheet = Sheet.__new__(Sheet)
+        sheet.r, sheet.c, sheet.code = region, pdf, "FONT"
+        sheet.record = {"textBounds": []}
+        sheet.text(50, 500, text, 18)
+        sheet.text(50, 450, text, 18, bold=True)
+        pdf.save()
+        return stream.getvalue()
+
+    def test_polish_diacritics_survive_both_embedded_weights(self):
+        text = "Zażółć gęślą jaźń ĄĆĘŁŃÓŚŹŻ"
+        with self.assertRaisesRegex(ValueError, "missing font glyphs"):
+            self.render_text(Region("de-DE"), text)
+        data = self.render_text(Region("pl-PL"), text)
+        page = PdfReader(io.BytesIO(data)).pages[0]
+        self.assertEqual(page.extract_text().count(text), 2)
+
+    def test_polish_font_registration_preserves_existing_locale_output(self):
+        text = "BÜRGERHAUS / 360,00 m²"
+        before = self.render_text(Region("de-DE"), text)
+        self.render_text(Region("pl-PL"), "SŁUP / ŁĄCZNIK")
+        after = self.render_text(Region("de-DE"), text)
+        self.assertEqual(before, after)
 
 
 if __name__ == "__main__":

@@ -8197,6 +8197,986 @@
           "target": "Bekijk de volledige tekeningenbibliotheek →"
         }
       }
+    },
+    "pl": {
+      "appLocale": "pl-PL",
+      "region": "PL",
+      "status": "pilot",
+      "assets": {
+        "/samples/construction/01-Civil-Site-and-Grading.pdf": {
+          "url": "/localized-media/pl/samples/construction/01-Teren-i-sieci.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "177f25d51559feef89a776ac7f88a928afa49da16ea0e9fbf972a7bfc1db8009",
+          "sha256": "22bc6cd5b3de9091db738f2626dfe9e455eb0e77214117056b399dc1370a1e8c",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/01-Civil-Site-and-Grading--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/01-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a2ed10f739868367fca03444dc534c2744cf0ab391d1478a992de349d8415f13",
+          "sha256": "8b0093cb16d5a2a78bb6db06d03546ed45f8fa34c1d23b01548dbe280a950aaa",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLAN TERENU I SIECI - C101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/01-Civil-Site-and-Grading--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/01-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "550fa0f5c9972f995b2da371e05bba579527bdc4eaaad3efdd4180e764946150",
+          "sha256": "a22ee037b0656d7d8c6c866c3e0068c6d01a9eb2a627fec2d2729aa9ae6297a5",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "TEREN, PRZEKROJE I NAWIERZCHNIE - C201, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/02-Architectural-Revision-A.pdf": {
+          "url": "/localized-media/pl/samples/construction/02-Architektura-Rewizja-A.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "0a05c64b7074e55576952ccc493fcc3f07761fe038c53f3ec0ac73562bcebe51",
+          "sha256": "cf84e36d6c5da335e494eb952ddc37340fac9d80fa99812df30a7c7007017d7a",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/02-Architectural-Revision-A--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/02-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a21009b0fd505b447f2cab643fb9f23969be960a50ae5c3cc52fb56cc0566328",
+          "sha256": "add18ada0e9b3dd02839b85bdebf520e72cb3dd0cf9d13078e8c331725c6b1d8",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/02-Architectural-Revision-A--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/02-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "b95780325b18ed72d2b7af2fb626dab7ab38be94e5636f75ed775d5121197453",
+          "sha256": "ebfb74ba8e4d8d22ef2d9fb4e2fc57563dc14b547b432d7e9c8403b9ef8b358b",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ELEWACJE, PRZEKRÓJ I DETAL ŚCIANY - A201, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/03-Architectural-Revision-B.pdf": {
+          "url": "/localized-media/pl/samples/construction/03-Architektura-Rewizja-B.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "546ea7eac41a9451f28b236a836bec95d9df0b3ce01b9b6c33d25547ff2c5647",
+          "sha256": "5616cb6e40b1d6ef2c137fd00a532295ccecf934bcad6a21653162e4efc83dd8",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/03-Architectural-Revision-B--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/03-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "2937fd2ee591aa38d958d4ed01ef6e60a847fb201220d1e690c6d309fee8f5b7",
+          "sha256": "30bdb845f807ad0fa24a8c297f56bf4ed544493c49b048f9746215df17242e12",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/03-Architectural-Revision-B--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/03-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "8f70df42dc9ce25b60bd6034c03f1b879c5e5974ce5551276257166f5ae2fe4a",
+          "sha256": "1cbadcef194f211aacef47288dbd3bd7a98552fcefe8f62b4e1a3feb84cfb127",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ELEWACJE, PRZEKRÓJ I DETAL ŚCIANY - A201, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/04-Structural-Foundation-and-Framing.pdf": {
+          "url": "/localized-media/pl/samples/construction/04-Fundamenty-i-konstrukcja.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "e2cd6fd0ad13ef82a2e27a6a6770f769b707a43d534a7260b71c0763e3aa0a23",
+          "sha256": "3d62d8eb25739df87de28c6e5b4822126695f9df054538e8486cca28967773ee",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/04-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "0abc91fdde1f507fe8d342882172efecf960dee726fdaf3a892494149188473a",
+          "sha256": "d1d05d7ff6a27b531a285ee25c8d12705b0b54a3f49dd234224e7dbbb3900856",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "RZUT FUNDAMENTÓW I PŁYTY - S101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/04-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "9ee366ffa7fd57640cd88c56ca8231364f5e6202ee390e17b7ef29e28163504a",
+          "sha256": "71854be63db43f131ab0e3168ba425f40b4648b5c955c94bc4f6b5218bc802ab",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "SCHEMAT KONSTRUKCJI I DETALE - S201, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/05-Mechanical-HVAC.pdf": {
+          "url": "/localized-media/pl/samples/construction/05-Wentylacja.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "9fab23b2ac3cceee1153e42c197c045ecfd351c2706071c7293bf4fe31a4b6d3",
+          "sha256": "a68c80766b26166e212b97bf5410615ac4d4bbf03dccf749a1869cad1eb6e1e8",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/05-Mechanical-HVAC--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/05-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "04a4534339ccfbd483bc41e0e64cf1580cd794cdd388d2e90a591b4efcfe07f7",
+          "sha256": "6e18744aba72fa93b90ffa57df1dd4608555aafb52c0fb809e85ceca4718a765",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "RZUT WENTYLACJI - M101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/05-Mechanical-HVAC--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/05-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "53a0cdf08ea3e1ef4cc48396fa37ef487b1914394f08e7d882907abe16e2a163",
+          "sha256": "b6fc8576ef234cf408b26cb16a9b17c06797e7b4001b97118a2a21af824673cb",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "SCHEMAT I ZESTAWIENIE WENTYLACJI - M501, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/06-Electrical-Lighting-and-Power.pdf": {
+          "url": "/localized-media/pl/samples/construction/06-Oswietlenie-i-instalacje-elektryczne.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "7cf37860e4da7a744fb4e66f594c6e3f6e4cdc4d37f932a6c0155267223a6e60",
+          "sha256": "4e8c82e1fb9207ae2ed9ce13aa39b1320c7642cf2baa8f09a67eb2937190a110",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/06-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "268fe5b1c28551a1c1fbce905f0118a8681b92efdb41ed8a7bee870ea5709db0",
+          "sha256": "ddd2390de40eedbf30960024b0ace37f5b6eff9a7e5fe24ac7d97ea3a005dd49",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "OŚWIETLENIE I GNIAZDA - E101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/06-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "902032729c4fb2e8a664d63891c343c33a484d1e2d0bf8abde32c7f917b77a8e",
+          "sha256": "809abfc1d7af7893bb4103cf6839657ed99e1451aa45a553a4bb15fb6e19f862",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "SCHEMAT ELEKTRYCZNY I OPRAWY - E501, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/07-Plumbing-Water-and-Drainage.pdf": {
+          "url": "/localized-media/pl/samples/construction/07-Wodociag-i-kanalizacja.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d1454428f316d5f293cf6a3514cb60571c59a3483ca7aa0e74a9a5424ee9b518",
+          "sha256": "4158995b5596b2d176f46242d2ae0798ddf3101dc5325aa344b2e3a77755980e",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/07-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "2d68d2925c8c0ce84a3fc8db011a25a2e1c39b4ab4ccf2447e2db62a5581b038",
+          "sha256": "ff7b273e2c0d674cfcfe2d93f6d4e03dc551e2a69269ab8a3f7d2aca8b8da896",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "WODOCIĄG I KANALIZACJA - P101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/07-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "74719c10b254cedfc4957b31ad3363fc0c2f1ea6a1c62de6ece8f27c1da35d49",
+          "sha256": "7827cc1587e31aafdf17f6e2fe3e2d4156bc70a39adf597bf8fbf8a5d27ee6b5",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "SCHEMAT PIONÓW I DETALE SANITARNE - P501, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/08-Fire-Protection-and-Life-Safety.pdf": {
+          "url": "/localized-media/pl/samples/construction/08-Ochrona-przeciwpozarowa-Cwiczenie.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "27952ec9097c89734f80610387f02002a7776e35ad18c83e8de66ee7c0b3356c",
+          "sha256": "2f913907730ef17fb1527733f5bb820a4244f61f3f246a7d1ae25a8abef27e99",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/08-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "8026bf80b4acf7a3b0fb793417a614b30a1cd48341777fa6c5af462494e19f7c",
+          "sha256": "d9e20c18379a8a70756ceb72c521d87b8cf7568222d13ac5b0e03ff5f01158c9",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "OCHRONA PPOŻ. - ĆWICZENIE - F101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/08-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "aec1127265ac0e50c62043be9aaf602155d41b26471fc3059111307519f61ffd",
+          "sha256": "116be62dbb9b91e01ee51dd239626dd43e4cea23f8f38a34b779976dfe6abdb9",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "SCHEMAT EWAKUACJI I LEGENDA - F501, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/09-Landscape-and-External-Works.pdf": {
+          "url": "/localized-media/pl/samples/construction/09-Zielen-i-teren-zewnetrzny.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "31c51d17aa835875e80169af8e357a92dcea861aa38236c00159c8cc3971ee03",
+          "sha256": "29da8a28b8589c9102b4fd5563d2116533e94bb87483b31080fc30c5218d43db",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/09-Landscape-and-External-Works--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/09-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d9dcab07240598b0bc6ab969338e987c17b534c109013892e11a425cd3561c5e",
+          "sha256": "042b113efd7cd68d07b7de68affe8b53d2ed88b7bafe594f674470b201134b27",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ZIELEŃ I ZAGOSPODAROWANIE TERENU - L101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/09-Landscape-and-External-Works--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/09-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "3704ab1d24cbe1df0b8ac06495d8a73df4fe49fdfce5af7e34e453735f5c3593",
+          "sha256": "0268f6bc0296ed6b27b96ff30e6370818c33a04d9f96591d96ba83815148a04f",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "NASADZENIA, ŚCIEŻKI I WYPOSAŻENIE - L501, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/10-Interiors-Finishes-and-Millwork.pdf": {
+          "url": "/localized-media/pl/samples/construction/10-Wykonczenie-i-zabudowa-meblowa.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "b9d65475168417b3257c6e91d860f66812bef26fa7ff89f20bacb871559e1c74",
+          "sha256": "5c6b6db037f4bad174a597761d95d188383f6a9764949321d1c1f84325b7bbad",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/10-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "98072a62400c056b6e6b8c5ca3764466554ab72507dd2ae15ab2047643b2ab76",
+          "sha256": "e0099c58896807eecbc75ec5d42c1fdd769e60be09d161e1b47aee6182edc620",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLAN WYKOŃCZENIA PODŁÓG - I101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/10-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "72dfeee23c28b8208277feca4703c6b5b87baadb16bf97f4728ca40789e52067",
+          "sha256": "575631cc5a94242146a2b24accdb1e11bc71207164b33e29808787d7fc44381e",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ZABUDOWA MEBLOWA I DETALE PODŁÓG - I501, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/11-Coordination-and-Review.pdf": {
+          "url": "/localized-media/pl/samples/construction/11-Koordynacja-i-przeglad.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "ca941a1691d9ba9d2debfb5fa0e0c757c92d50106a90362d0747f88a31121681",
+          "sha256": "3ba05dfdba2d6f9ec0894a28515c137b2a74692f25342b7e008775face06c447",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/11-Coordination-and-Review--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/11-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a5753b05311b46ae461796b0f6e92db4871381825ca62e275d4b7828e7782f15",
+          "sha256": "a0faf1043206d06a532195be0448ae02851837fb237bde5f7a46a02670911acb",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "KOORDYNACJA INSTALACJI - X101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/11-Coordination-and-Review--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/11-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "fd6a5e1d53a0fc3f84a40c03acca9b7375f99e4b433224abc696bc89516cfaee",
+          "sha256": "c68f124ba8f2735f43413aa2c736f764afc6f69886b190ee5b81f5cbef654d06",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "REJESTR UWAG I DETALE - X102, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/12-Scanned-Legacy-Drawings.pdf": {
+          "url": "/localized-media/pl/samples/construction/12-Skany-rysunkow-istniejacych.pdf",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "234887c9b7b3be62e6f120acb1a9b9e1adce5da515b6582c92eb96df9685cec0",
+          "sha256": "4c42af65752ab893bace28355e9c9212a6dc5f522e8a34d60db8d045a4f024ef",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-01.png": {
+          "url": "/localized-media/pl/samples/construction/previews/12-1.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a12f2196d3fed32ea8bd4aa224ee5993403e4961a3b7dfa94efda42a21fb7290",
+          "sha256": "38d831e37687d1ecbdfd4d97d6b8e8bc6057815488bdbc4e9940a9ac3a865231",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ZESKANOWANY RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-02.png": {
+          "url": "/localized-media/pl/samples/construction/previews/12-2.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "e1385fc9d7814996a6f36184c22a460235e8e5672b338008a1827c94fc2db94f",
+          "sha256": "ac79dbeef9d3e7503a4afeb501374937e78f5e65b71686d24408e07e34234d61",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ZESKANOWANY PLAN TERENU - C101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń"
+        },
+        "/samples/construction/contact-sheet.png": {
+          "url": "/localized-media/pl/samples/construction/CONTACT-SHEET.png",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d83054fd9fe747aa2e68cee7733945e5cdb1cdef870e0100c6a7f2fb10a70b0c",
+          "sha256": "670625d8d34ea08cc5fa880fc3d8c81648516923a859580c574971dbbdf9ec47",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json",
+          "width": 2400,
+          "height": 2730
+        },
+        "/samples/construction/polypdf-construction-demo-library.zip": {
+          "url": "/localized-media/pl/samples/construction/PolyPDF-Rysunki-budowlane-pl-PL.zip",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "de9d6fe62d79bbb58c867a1a0e5d241a02479e048e738d4b66140b17bfef64ee",
+          "sha256": "c50644364b7f726bdfcfb2ded1c5d661125835cd558479c3f7c6d578be049c42",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/DEMO-GUIDE.html": {
+          "url": "/localized-media/pl/samples/construction/DEMO-GUIDE.html",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "ef5ad4382bb7c8c7855d139cefc57fcaed7506784c6063dcd4a6499887199504",
+          "sha256": "9a0e66a38c3b3e8523ececda4a4b0fa44a2209f7814e95056ccb90776881e034",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/DEMO-MANIFEST.json": {
+          "url": "/localized-media/pl/samples/construction/DEMO-MANIFEST.json",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "23ea5c1fe033437b402d55905d11c2a63f9bed22e7a459ee66d44d41bb426559",
+          "sha256": "04b166af3891d2b84f55c8964541b93a39f4ba63e9107037b108a17e4d239208",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/SHA256SUMS.txt": {
+          "url": "/localized-media/pl/samples/construction/SHA256SUMS.txt",
+          "locale": "pl-PL",
+          "region": "PL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "7357e6ec0ac885062f536334740a71bf15877fb04bec38cf30ac9a5a9b2cad2e",
+          "sha256": "2aed50a802481f013176833110f6e2190d68ad055e75d274400229d2890c972e",
+          "verification": "/localized-media/pl/samples/construction/verification.json",
+          "visualReview": "/localized-media/pl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/pl/samples/construction/native-roundtrip.json"
+        }
+      },
+      "pages": {},
+      "regionalText": {
+        "library.kicker": {
+          "source": "The original PolyPDF drawing collection",
+          "target": "Autorska kolekcja rysunków PolyPDF"
+        },
+        "library.heading": {
+          "source": "One project. Twelve PDFs. Twenty-four construction sheets.",
+          "target": "Jeden projekt. Dwanaście plików PDF. Dwadzieścia cztery arkusze budowlane."
+        },
+        "library.intro": {
+          "source": "Explore the fictional Willow Creek Community Center through coordinated architectural, structural, civil, MEP, and finish drawings. Every PDF contains two bookmarked ARCH D sheets (36 × 24 inches), with drawing numbers, schedules, legends, dimensions, and details.",
+          "target": "Poznaj fikcyjny Dom Sąsiedzki Lipowy w Polsce na skoordynowanych rysunkach architektury, konstrukcji, terenu, instalacji i wykończenia. Każdy PDF zawiera dwa arkusze A1 z zakładkami, numerami rysunków, zestawieniami, legendami, wymiarami i detalami."
+        },
+        "library.download": {
+          "source": "Download all 24 sheets · ZIP",
+          "target": "Pobierz wszystkie 24 arkusze · ZIP"
+        },
+        "library.guide": {
+          "source": "View the drawing guide and reference quantities →",
+          "target": "Zobacz przewodnik po rysunkach i ilości odniesienia →"
+        },
+        "library.scope": {
+          "source": "These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Use the sheet-specific examples below. The earlier F-101 and E-101 exercises use different drawings and quantities.",
+          "target": "Te autorskie rysunki służą demonstracji; nie są dokumentacją do pozwolenia na budowę ani zweryfikowanymi wynikami PolyPDF. Główne rzuty mają skalę 1:50, a plany terenu 1:200; detale mają własne skale. Skalibruj każdy widok przed pomiarem i skorzystaj z ćwiczeń poniżej. Wcześniejsze amerykańskie ćwiczenia F-101 i E-101 wykorzystują inne rysunki i ilości."
+        },
+        "library.nav.takeoff": {
+          "source": "Measurement",
+          "target": "Pomiary"
+        },
+        "library.nav.flooring": {
+          "source": "Flooring",
+          "target": "Podłogi"
+        },
+        "library.nav.electrical": {
+          "source": "Electrical",
+          "target": "Instalacje elektryczne"
+        },
+        "library.nav.compare": {
+          "source": "Revision comparison",
+          "target": "Porównanie rewizji"
+        },
+        "library.nav.review": {
+          "source": "Coordination review",
+          "target": "Przegląd koordynacji"
+        },
+        "library.nav.ocr": {
+          "source": "OCR",
+          "target": "OCR"
+        },
+        "library.01.title": {
+          "source": "Civil site and grading · PDF",
+          "target": "Teren i sieci · PDF"
+        },
+        "library.01.sheets": {
+          "source": "C101 · C501 · 2 sheets",
+          "target": "C101 · C201 · 2 arkusze"
+        },
+        "library.01.description": {
+          "source": "Site layout, grading, parking, drainage, pavement and curb details.",
+          "target": "Układ terenu, wysokości, parking, sieci, nawierzchnie i detale obrzeży."
+        },
+        "library.02.title": {
+          "source": "Architecture · Revision A · PDF",
+          "target": "Architektura · Rewizja A · PDF"
+        },
+        "library.02.sheets": {
+          "source": "A101 · A201 · 2 sheets",
+          "target": "A101 · A201 · 2 arkusze"
+        },
+        "library.02.description": {
+          "source": "Dimensioned floor plan, elevations, building section and wall detail.",
+          "target": "Zwymiarowany rzut, elewacje, przekrój budynku i detal ściany."
+        },
+        "library.03.title": {
+          "source": "Architecture · Revision B · PDF",
+          "target": "Architektura · Rewizja B · PDF"
+        },
+        "library.03.sheets": {
+          "source": "A101 · A201 · 2 sheets",
+          "target": "A101 · A201 · 2 arkusze"
+        },
+        "library.03.description": {
+          "source": "A matching revised set for comparison with Revision A.",
+          "target": "Odpowiadający zestaw po zmianach do porównania z rewizją A."
+        },
+        "library.04.title": {
+          "source": "Structural foundation and framing · PDF",
+          "target": "Fundamenty i konstrukcja · PDF"
+        },
+        "library.04.sheets": {
+          "source": "S101 · S501 · 2 sheets",
+          "target": "S101 · S201 · 2 arkusze"
+        },
+        "library.04.description": {
+          "source": "Footings, columns, roof framing, connection details and schedules.",
+          "target": "Stopy fundamentowe, słupy, belki dachu, detale i ilości odniesienia."
+        },
+        "library.05.title": {
+          "source": "Mechanical / HVAC · PDF",
+          "target": "Wentylacja · PDF"
+        },
+        "library.05.sheets": {
+          "source": "M101 · M501 · 2 sheets",
+          "target": "M101 · M501 · 2 arkusze"
+        },
+        "library.05.description": {
+          "source": "Ductwork, terminals, equipment, controls and mechanical details.",
+          "target": "Kanały, nawiewniki, wywiewniki, centrale, schemat i zestawienie elementów."
+        },
+        "library.06.title": {
+          "source": "Electrical lighting and power · PDF",
+          "target": "Oświetlenie i instalacje elektryczne · PDF"
+        },
+        "library.06.sheets": {
+          "source": "E101 · E601 · 2 sheets",
+          "target": "E101 · E501 · 2 arkusze"
+        },
+        "library.06.description": {
+          "source": "Lighting, receptacles, electrical diagrams and fixture schedules.",
+          "target": "Oprawy, gniazda, schemat elektryczny i zestawienie opraw."
+        },
+        "library.07.title": {
+          "source": "Plumbing water and drainage · PDF",
+          "target": "Wodociąg i kanalizacja · PDF"
+        },
+        "library.07.sheets": {
+          "source": "P101 · P501 · 2 sheets",
+          "target": "P101 · P501 · 2 arkusze"
+        },
+        "library.07.description": {
+          "source": "Water and drainage layouts, risers, fixtures and installation details.",
+          "target": "Przewody wodne i kanalizacyjne, piony, przybory sanitarne i detale."
+        },
+        "library.08.title": {
+          "source": "Fire protection and life safety · PDF",
+          "target": "Ochrona przeciwpożarowa · Ćwiczenie · PDF"
+        },
+        "library.08.sheets": {
+          "source": "FP101 · FP501 · 2 sheets",
+          "target": "F101 · F501 · 2 arkusze"
+        },
+        "library.08.description": {
+          "source": "Sprinkler and life-safety symbols, risers, details and schedules.",
+          "target": "Symbole ochrony przeciwpożarowej, schemat ewakuacji, detale i legenda do ćwiczeń."
+        },
+        "library.09.title": {
+          "source": "Landscape and external works · PDF",
+          "target": "Zieleń i teren zewnętrzny · PDF"
+        },
+        "library.09.sheets": {
+          "source": "L101 · L501 · 2 sheets",
+          "target": "L101 · L501 · 2 arkusze"
+        },
+        "library.09.description": {
+          "source": "Planting, paving, landscape details and an authored planting schedule.",
+          "target": "Nasadzenia, nawierzchnie, detale terenu i zestawienie roślin."
+        },
+        "library.10.title": {
+          "source": "Interiors, finishes and millwork · PDF",
+          "target": "Wykończenie i zabudowa meblowa · PDF"
+        },
+        "library.10.sheets": {
+          "source": "I101 · I501 · 2 sheets",
+          "target": "I101 · I501 · 2 arkusze"
+        },
+        "library.10.description": {
+          "source": "Room finishes, floor patterns, casework elevations and interior details.",
+          "target": "Wykończenie pomieszczeń, podłogi, widoki zabudowy i detale wnętrz."
+        },
+        "library.11.title": {
+          "source": "Coordination and review · PDF",
+          "target": "Koordynacja i przegląd · PDF"
+        },
+        "library.11.sheets": {
+          "source": "X101 · X102 · 2 sheets",
+          "target": "X101 · X102 · 2 arkusze"
+        },
+        "library.11.description": {
+          "source": "Overlaid disciplines, three authored review notes and four PDF layers.",
+          "target": "Nałożone branże, trzy notatki przeglądowe i cztery warstwy PDF."
+        },
+        "library.12.title": {
+          "source": "Scanned legacy drawings · PDF",
+          "target": "Skany rysunków istniejących · PDF"
+        },
+        "library.12.sheets": {
+          "source": "A101 · C101 · 2 sheets",
+          "target": "A101 · C101 · 2 arkusze"
+        },
+        "library.12.description": {
+          "source": "Image-only architectural and site sheets for OCR practice.",
+          "target": "Rzut architektoniczny i plan terenu bez warstwy tekstowej do ćwiczeń OCR."
+        },
+        "library.handoff": {
+          "source": "Keep an untouched master and mark up a copy. Check the drawing scope, units, exported quantities, and saved-file handoff in your own workflow. All projects and coordination issues are fictional; no customer drawing or professional seal is included.",
+          "target": "Zachowaj niezmieniony oryginał i nanoś adnotacje na kopii. Przed przekazaniem sprawdź zakres rysunku, jednostki, wyeksportowane ilości i zapisany plik. Wszystkie projekty i kolizje są fikcyjne; nie zawierają rysunków klientów ani pieczęci osób z uprawnieniami."
+        },
+        "exercise.kicker": {
+          "source": "Work with the construction drawing set",
+          "target": "Ćwicz na zestawie rysunków budowlanych"
+        },
+        "exercise.takeoff.title": {
+          "source": "Measure the Willow Creek architectural plan",
+          "target": "Zmierz rzut architektoniczny Domu Sąsiedzkiego Lipowy"
+        },
+        "exercise.takeoff.sheets": {
+          "source": "A101 · A201",
+          "target": "A101 · A201"
+        },
+        "exercise.takeoff.step1": {
+          "source": "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.",
+          "target": "Otwórz A101, rewizja A. Skalibruj wydrukowany odcinek wzorcowy 5,00 m: przy skali 1:50 odpowiada on około 283,46457 punktu PDF."
+        },
+        "exercise.takeoff.step2": {
+          "source": "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.",
+          "target": "Sprawdź niezależnie szerokość 24,00 m i głębokość 15,00 m, a następnie obrysuj zewnętrzną granicę budynku."
+        },
+        "exercise.takeoff.step3": {
+          "source": "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.",
+          "target": "Porównaj powierzchnię prostokątnego obrysu z 360,00 m². Zachowaj arkusz, rewizję, temat, jednostkę i sumę wraz z eksportowanym pomiarem."
+        },
+        "exercise.takeoff.scope": {
+          "source": "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.",
+          "target": "Ćwiczenie dotyczy prostokątnego obrysu brutto. Nie wyznacza powierzchni podłóg netto ani nie odejmuje ścian. Dwie kontrole długości i pomiar powierzchni to trzy pomiary ręczne."
+        },
+        "exercise.provenance": {
+          "source": "Drawing reference values, not new app test results. Work on a copy and check your own saved output.",
+          "target": "To wartości odniesienia z rysunku, nie nowe wyniki testów aplikacji. Pracuj na kopii i sprawdź własny zapisany plik."
+        },
+        "exercise.historicalMac": {
+          "source": "Inspect the saved Mac example and its tested local build →",
+          "target": "Wcześniejszy przykład amerykański: sprawdź plik zapisany na Macu i testowaną wersję lokalną →"
+        },
+        "exercise.download.A": {
+          "source": "Download Revision A · PDF",
+          "target": "Pobierz rewizję A · PDF"
+        },
+        "library.02.filename": {
+          "source": "02-Architectural-Revision-A.pdf",
+          "target": "02-Architektura-Rewizja-A.pdf"
+        },
+        "exercise.flooring.title": {
+          "source": "Take off finishes from the Willow Creek interiors plan",
+          "target": "Oblicz ilości wykończenia podłóg Domu Sąsiedzkiego Lipowy"
+        },
+        "exercise.flooring.sheets": {
+          "source": "I101 · I501",
+          "target": "I101 · I501"
+        },
+        "exercise.flooring.step1": {
+          "source": "Open I101 and calibrate its 20 ft reference. Read the F1 and F2 finish key before measuring.",
+          "target": "Otwórz I101 i skalibruj odcinek wzorcowy 5,00 m. Przed pomiarem przeczytaj legendę wykończenia F1 i F2."
+        },
+        "exercise.flooring.step2": {
+          "source": "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.",
+          "target": "Obrysuj osobno zwymiarowane obszary toalet 107 i 108: po 18,00 m², łącznie 36,00 m²."
+        },
+        "exercise.flooring.step3": {
+          "source": "Compare F2 tile with 576 sq ft and F1 resilient flooring with 5,184 sq ft. Apply any waste allowance separately.",
+          "target": "Porównaj powierzchnię płytek F2 z 36,00 m², a wykładziny elastycznej F1 z 324,00 m². Ewentualny zapas na odpady dolicz osobno."
+        },
+        "exercise.flooring.scope": {
+          "source": "The authored finish schedule uses room dimension boundaries without wall-thickness deductions. These exercise areas are not net installed quantities; I501 details use different scales.",
+          "target": "Zestawienie wykorzystuje zwymiarowane granice pomieszczeń bez potrącania grubości ścian. Ilości do ćwiczeń nie są ilościami netto do wbudowania; detale I501 mają inne skale."
+        },
+        "exercise.download.drawing": {
+          "source": "Download the example drawing · PDF",
+          "target": "Pobierz rysunek do ćwiczenia · PDF"
+        },
+        "library.10.filename": {
+          "source": "10-Interiors-Finishes-and-Millwork.pdf",
+          "target": "10-Wykonczenie-i-zabudowa-meblowa.pdf"
+        },
+        "exercise.electrical.title": {
+          "source": "Count the Willow Creek lighting plan",
+          "target": "Zlicz symbole na planie instalacji elektrycznej Domu Sąsiedzkiego Lipowy"
+        },
+        "exercise.electrical.sheets": {
+          "source": "E101 · E601",
+          "target": "E101 · E501"
+        },
+        "exercise.electrical.step1": {
+          "source": "Open E101 and identify the luminaire symbol in the legend. Count only the plan, excluding legend and detail examples.",
+          "target": "Otwórz E101 i rozpoznaj symbol oprawy w legendzie. Zliczaj wyłącznie symbole na rzucie; pomiń przykłady w legendzie i detalach."
+        },
+        "exercise.electrical.step2": {
+          "source": "Review 24 plan luminaires, including 4 emergency luminaires. The emergency subset is included in 24, not added to it.",
+          "target": "Sprawdź 24 oprawy, 12 gniazd i 8 łączników na rzucie. Prowadź osobne zliczenia dla trzech kategorii."
+        },
+        "exercise.electrical.step3": {
+          "source": "Calibrate the 20 ft reference. Trace the LP-1 / CKTS 1, 3, 5, 7 diagram from the panel, then north and east: 8 + 38 = 46 ft.",
+          "target": "Skalibruj odcinek wzorcowy 5,00 m. Zmierz schematyczną trasę na E101 i porównaj wynik z 34,50 m. E501 zawiera schemat elektryczny i zestawienie opraw."
+        },
+        "exercise.electrical.scope": {
+          "source": "The dashed wiring is a circuit diagram, not a conduit takeoff. Pro is required for Symbol Search; review every candidate. The 24 fixtures and 46 ft are drawing references, not app results.",
+          "target": "Linia przerywana przedstawia schematyczną trasę, nie przedmiar rur instalacyjnych. Wyszukiwanie symboli wymaga Pro; sprawdź każde wskazanie. 24 oprawy, 12 gniazd, 8 łączników i 34,50 m to wartości z rysunku, nie wyniki aplikacji."
+        },
+        "exercise.historicalElectrical": {
+          "source": "Reconcile fixtures and receptacles with the electrical review sheet →",
+          "target": "Wcześniejsze amerykańskie ćwiczenie elektryczne: sprawdź osobno oprawy i gniazda →"
+        },
+        "library.06.filename": {
+          "source": "06-Electrical-Lighting-and-Power.pdf",
+          "target": "06-Oswietlenie-i-instalacje-elektryczne.pdf"
+        },
+        "exercise.compare.title": {
+          "source": "Compare the Willow Creek architectural revisions",
+          "target": "Porównaj rewizje architektury Domu Sąsiedzkiego Lipowy"
+        },
+        "exercise.compare.sheets": {
+          "source": "A101 · A201",
+          "target": "A101 · A201"
+        },
+        "exercise.compare.step1": {
+          "source": "Open Revision A and Revision B. Pair A101 with A101 and A201 with A201; keep the full sheet extents aligned.",
+          "target": "Otwórz rewizję A i rewizję B. Połącz A101 z A101 oraz A201 z A201; wyrównaj pełne obrysy arkuszy A1."
+        },
+        "exercise.compare.step2": {
+          "source": "On A101, review the 6 ft partition shift between rooms 103 and 104 and the 3 ft movement of the room 104 door.",
+          "target": "Na A101 sprawdź przesunięcie ściany między pomieszczeniami 103 i 104 o 1,50 m na wschód oraz drzwi pomieszczenia 104 o 0,75 m na wschód."
+        },
+        "exercise.compare.step3": {
+          "source": "Review the added 6 ft south glazing on A101 and A201, then check the revised issue fields and notes.",
+          "target": "Sprawdź nowe okno południowe szerokości 1,50 m na A101 i A201, a następnie zmienione dane wydania i uwagi."
+        },
+        "exercise.compare.scope": {
+          "source": "Room 103 changes from 576 to 720 sq ft; room 104 changes from 576 to 432 sq ft. The gross footprint stays 5,760 sq ft. These are authored changes, not a promised detection count.",
+          "target": "Pomieszczenie 103 zmienia powierzchnię z 36,00 na 45,00 m²; pomieszczenie 104 z 36,00 na 27,00 m². Obrys pozostaje równy 360,00 m². Są to celowo wprowadzone zmiany, nie gwarantowana liczba wykrytych różnic."
+        },
+        "exercise.download.B": {
+          "source": "Download Revision B · PDF",
+          "target": "Pobierz rewizję B · PDF"
+        },
+        "library.03.filename": {
+          "source": "03-Architectural-Revision-B.pdf",
+          "target": "03-Architektura-Rewizja-B.pdf"
+        },
+        "exercise.review.title": {
+          "source": "Review the Willow Creek coordination sheets",
+          "target": "Sprawdź koordynację branżową Domu Sąsiedzkiego Lipowy"
+        },
+        "exercise.review.sheets": {
+          "source": "X101 · X102",
+          "target": "X101 · X102"
+        },
+        "exercise.review.step1": {
+          "source": "Open X101 and inspect the three numbered coordination issues and their existing sticky notes.",
+          "target": "Otwórz X101 i sprawdź trzy ponumerowane kolizje oraz przypisane do nich istniejące notatki PDF."
+        },
+        "exercise.review.step2": {
+          "source": "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.",
+          "target": "Na X102 powiąż każdą lokalizację z uwagą, branżą, statusem i oczekiwaną odpowiedzią. Dodaj własne adnotacje przeglądowe na kopii."
+        },
+        "exercise.review.step3": {
+          "source": "Save the copy, reopen it, and inspect the annotations and any exported Markup Table before handing it off.",
+          "target": "Zapisz kopię, otwórz ją ponownie i przed przekazaniem sprawdź adnotacje oraz ewentualny eksport tabeli adnotacji."
+        },
+        "exercise.review.scope": {
+          "source": "The source contains three authored issues and four PDF layers. These are fictional coordination exercises; no engineering or code-compliance conclusion is established.",
+          "target": "Oryginał zawiera trzy uwagi do ćwiczeń i cztery warstwy PDF. Fikcyjne ćwiczenia koordynacyjne nie stanowią zatwierdzenia technicznego ani potwierdzenia zgodności z przepisami."
+        },
+        "library.11.filename": {
+          "source": "11-Coordination-and-Review.pdf",
+          "target": "11-Koordynacja-i-przeglad.pdf"
+        },
+        "exercise.ocr.title": {
+          "source": "Test OCR on the Willow Creek scanned sheets",
+          "target": "Wypróbuj OCR na skanach Domu Sąsiedzkiego Lipowy"
+        },
+        "exercise.ocr.sheets": {
+          "source": "A101 · C101",
+          "target": "A101 · C101"
+        },
+        "exercise.ocr.step1": {
+          "source": "Open the scanned set and try searching for WILLOW CREEK. The original two-page PDF contains images without native text.",
+          "target": "Otwórz zestaw skanów i spróbuj wyszukać SALA WIELOFUNKCYJNA. Oryginalny dwustronicowy PDF zawiera obrazy bez warstwy tekstowej."
+        },
+        "exercise.ocr.step2": {
+          "source": "Run OCR on a working copy. Search for COMMUNITY ROOM on A101 and SITE PLAN on C101, then inspect the recognized text.",
+          "target": "Wykonaj OCR na kopii roboczej. Wyszukaj SALA WIELOFUNKCYJNA na A101 i PLAN TERENU I SIECI na C101, a następnie sprawdź rozpoznany tekst."
+        },
+        "exercise.ocr.step3": {
+          "source": "Save and reopen the result. Repeat the searches and visually check dimensions before measuring the scanned drawing.",
+          "target": "Zapisz wynik i otwórz go ponownie. Powtórz wyszukiwanie i sprawdź wymiary wzrokowo przed pomiarem zeskanowanego rysunku."
+        },
+        "exercise.ocr.scope": {
+          "source": "Search targets are printed source text, not a promise of recognition accuracy. OCR does not repair drawing scale or scan distortion.",
+          "target": "Frazy wyszukiwania są wydrukowane na rysunkach; poprawność rozpoznania nie jest gwarantowana. OCR nie naprawia skali rysunku ani zniekształceń skanu."
+        },
+        "library.12.filename": {
+          "source": "12-Scanned-Legacy-Drawings.pdf",
+          "target": "12-Skany-rysunkow-istniejacych.pdf"
+        },
+        "exercise.spreadsheet": {
+          "source": "Move checked quantities into the free Excel takeoff template →",
+          "target": "Przenieś sprawdzone ilości do bezpłatnego szablonu przedmiaru w Excelu →"
+        },
+        "exercise.workflow": {
+          "source": "Open the related workflow guide →",
+          "target": "Otwórz powiązany przewodnik po czynnościach →"
+        },
+        "exercise.library": {
+          "source": "Browse the complete drawing library →",
+          "target": "Przejrzyj pełną bibliotekę rysunków →"
+        }
+      }
     }
   },
   "languageNeutralAssets": [

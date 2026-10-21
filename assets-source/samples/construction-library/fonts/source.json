@@ -1,0 +1,21 @@
+{
+  "family": "Noto Sans",
+  "sourceAppCommit": "2e71492381f856a12a2d4cc178e80b3269a67e5a",
+  "sourceDirectory": "polypdf/assets/fonts",
+  "purpose": "Polish regional construction library glyph coverage",
+  "files": {
+    "NotoSans-Bold.ttf": "c976e4b1b99edc88775377fcc21692ca4bfa46b6d6ca6522bfda505b28ff9d6a",
+    "NotoSans-Regular.ttf": "478c558ea716033cd60c03438f628dfa75694dcf6b5f6d505a2f05fd2b4f3823",
+    "OFL-NotoSans-Bold.txt": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
+    "OFL.txt": "e2e177a32561584d4fc13aaa3cd8e53758a12910f013fe9ca125419111722029"
+  },
+  "boldUpstream": {
+    "family": "Noto Sans",
+    "style": "Bold",
+    "source": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/hinted/ttf/NotoSans/NotoSans-Bold.ttf",
+    "commit": "ffebf8c1ee449e544955a7e813c54f9b73848eac",
+    "sha256": "c976e4b1b99edc88775377fcc21692ca4bfa46b6d6ca6522bfda505b28ff9d6a",
+    "license": "OFL-NotoSans-Bold.txt",
+    "purpose": "Embedded Polish regional quick-start drawing glyph coverage"
+  }
+}

@@ -1,0 +1,110 @@
+
+> polypdf-landing@1.0.0 test:localized-media
+> node --test test/localized-walkthrough-media.test.cjs test/regional-takeoff-exports.test.cjs
+
+TAP version 13
+# Subtest: standalone regional copy needs no full-site catalog and rejects unbound prose
+ok 1 - standalone regional copy needs no full-site catalog and rejects unbound prose
+  ---
+  duration_ms: 31.959166
+  type: 'test'
+  ...
+# Subtest: language selection changes every responsive screenshot, video and drawing download
+ok 2 - language selection changes every responsive screenshot, video and drawing download
+  ---
+  duration_ms: 8.354583
+  type: 'test'
+  ...
+# Subtest: missing, draft and wrong-region assets block localized publication
+ok 3 - missing, draft and wrong-region assets block localized publication
+  ---
+  duration_ms: 0.134667
+  type: 'test'
+  ...
+# Subtest: regional drawings replace the original image aspect ratio as well as its URL
+ok 4 - regional drawings replace the original image aspect ratio as well as its URL
+  ---
+  duration_ms: 2.649083
+  type: 'test'
+  ...
+# Subtest: regional previews replace obsolete units in alt text before ordinary translation
+ok 5 - regional previews replace obsolete units in alt text before ordinary translation
+  ---
+  duration_ms: 5.907125
+  type: 'test'
+  ...
+# Subtest: explicitly neutral assets and third-party links retain their URLs
+ok 6 - explicitly neutral assets and third-party links retain their URLs
+  ---
+  duration_ms: 0.073041
+  type: 'test'
+  ...
+# Subtest: screenshots and workflow posters outside guides are still subject to locale coverage
+ok 7 - screenshots and workflow posters outside guides are still subject to locale coverage
+  ---
+  duration_ms: 0.131333
+  type: 'test'
+  ...
+# Subtest: source and translated file hashes must match before activating a media pack
+ok 8 - source and translated file hashes must match before activating a media pack
+  ---
+  duration_ms: 0.797958
+  type: 'test'
+  ...
+# Subtest: the checked-in de regional library resolves exact verified PDF and preview bytes
+ok 9 - the checked-in de regional library resolves exact verified PDF and preview bytes
+  ---
+  duration_ms: 147.166458
+  type: 'test'
+  ...
+# Subtest: the checked-in fr regional library resolves exact verified PDF and preview bytes
+ok 10 - the checked-in fr regional library resolves exact verified PDF and preview bytes
+  ---
+  duration_ms: 75.234167
+  type: 'test'
+  ...
+# Subtest: German form copy and downloads are reconciled without mislabelling an English or French file
+ok 11 - German form copy and downloads are reconciled without mislabelling an English or French file
+  ---
+  duration_ms: 18.675958
+  type: 'test'
+  ...
+# Subtest: regional exercise text changes source quantities before translation and refuses stale instructions
+ok 12 - regional exercise text changes source quantities before translation and refuses stale instructions
+  ---
+  duration_ms: 2.709375
+  type: 'test'
+  ...
+# Subtest: German electrical table matches the regional drawing instead of retaining US subsets
+ok 13 - German electrical table matches the regional drawing instead of retaining US subsets
+  ---
+  duration_ms: 22.135958
+  type: 'test'
+  ...
+# Subtest: a completed form walkthrough can explain its own native derivative without changing other pages
+ok 14 - a completed form walkthrough can explain its own native derivative without changing other pages
+  ---
+  duration_ms: 13.528375
+  type: 'test'
+  ...
+# Subtest: German flooring downloads resolve to verified regional files without activating incomplete media
+ok 15 - German flooring downloads resolve to verified regional files without activating incomplete media
+  ---
+  duration_ms: 7.98775
+  type: 'test'
+  ...
+# Subtest: German summary links target the regional drawing without local paths
+ok 16 - German summary links target the regional drawing without local paths
+  ---
+  duration_ms: 6.993584
+  type: 'test'
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 16
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 875.305291

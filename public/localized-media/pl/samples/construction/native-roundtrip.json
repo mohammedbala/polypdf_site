@@ -1,0 +1,185 @@
+{
+  "locale": "pl-PL",
+  "region": "PL",
+  "manifestSha256": "04b166af3891d2b84f55c8964541b93a39f4ba63e9107037b108a17e4d239208",
+  "appBuild": "1.6.17+84",
+  "sourceFiles": {
+    "packages/pdf/src/native-annotation-import.ts": "3304419799a45e123163cc19f17e2b8bda1833a6608fab7bdeec1567f86f0fcd",
+    "packages/pdf-node/src/native-annotation-export.ts": "eeed63abe04852cca326021e8724f8787ac5e0bffac164a95cc83427389b1b8b",
+    "packages/core/src/measurement.ts": "7439822b8ee91291aed366fec95b918e7814d8a9ce70233210f6795432f641b7",
+    "packages/core/src/workspace.ts": "f90862aa6440b51a34ef692db74dbd188ce5806dd4f97866ea5b81c9420afb57",
+    "tests/pdf-node/regional-library-roundtrip.test.ts": "dab84e0b0efb2813e27a764a0ea6272f39aafbc0cca2f74b66229d319f1da574"
+  },
+  "status": "passed",
+  "scope": "Actual PolyPDF annotation writer/importer and measurement service; not native UI interaction or platform qualification",
+  "cases": [
+    {
+      "file": "01-Teren-i-sieci.pdf",
+      "sourceSha256": "22bc6cd5b3de9091db738f2626dfe9e455eb0e77214117056b399dc1370a1e8c",
+      "mode": "ordinary",
+      "outputSha256": "7fa2266202fbc62af2e5bba47f5f66490db136d5c43f4c6b30284898284347a0",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "01-Teren-i-sieci.pdf",
+      "sourceSha256": "22bc6cd5b3de9091db738f2626dfe9e455eb0e77214117056b399dc1370a1e8c",
+      "mode": "append-only",
+      "outputSha256": "a0f6c89f6c02903003456fec9c4adb7a4a436aab26b1ac04f4198ce4ea733154",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "02-Architektura-Rewizja-A.pdf",
+      "sourceSha256": "cf84e36d6c5da335e494eb952ddc37340fac9d80fa99812df30a7c7007017d7a",
+      "mode": "ordinary",
+      "outputSha256": "a7d3fa6200ab44eaf16a82de9116364621a99a91ecca3f7c941aa3b90e74aebe",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "02-Architektura-Rewizja-A.pdf",
+      "sourceSha256": "cf84e36d6c5da335e494eb952ddc37340fac9d80fa99812df30a7c7007017d7a",
+      "mode": "append-only",
+      "outputSha256": "dd974e8640e9a4b3b0b5edbae3a3bd214743b3670361f25f16d79ae501fe5f89",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Architektura-Rewizja-B.pdf",
+      "sourceSha256": "5616cb6e40b1d6ef2c137fd00a532295ccecf934bcad6a21653162e4efc83dd8",
+      "mode": "ordinary",
+      "outputSha256": "e0f71de80a2a85e4a489abaf0e86e79ac8173efd686a0fa2f0220946f53eb873",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Architektura-Rewizja-B.pdf",
+      "sourceSha256": "5616cb6e40b1d6ef2c137fd00a532295ccecf934bcad6a21653162e4efc83dd8",
+      "mode": "append-only",
+      "outputSha256": "c901089d7f77f3521b97934c4e1abdd97deeeb6cfd89dc0fbdec5b4e6d198d48",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Fundamenty-i-konstrukcja.pdf",
+      "sourceSha256": "3d62d8eb25739df87de28c6e5b4822126695f9df054538e8486cca28967773ee",
+      "mode": "ordinary",
+      "outputSha256": "8ab46c6dcafcf0c9694f744921f126456b63d72c9ef57a6378fbe63a1acc342c",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Fundamenty-i-konstrukcja.pdf",
+      "sourceSha256": "3d62d8eb25739df87de28c6e5b4822126695f9df054538e8486cca28967773ee",
+      "mode": "append-only",
+      "outputSha256": "195e50982354d788f6f0c18243781ad257d89fac9667debe62a62439447e2065",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Wentylacja.pdf",
+      "sourceSha256": "a68c80766b26166e212b97bf5410615ac4d4bbf03dccf749a1869cad1eb6e1e8",
+      "mode": "ordinary",
+      "outputSha256": "7db39430f419a0c0dbcfe614ff619be72b0ec49235684ffe30c64e5edbad5f64",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Wentylacja.pdf",
+      "sourceSha256": "a68c80766b26166e212b97bf5410615ac4d4bbf03dccf749a1869cad1eb6e1e8",
+      "mode": "append-only",
+      "outputSha256": "aafb60ff1ac210430d7cc116b8c68fdfabb16fcc1e5a8691cdf4f17a336646ba",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Oswietlenie-i-instalacje-elektryczne.pdf",
+      "sourceSha256": "4e8c82e1fb9207ae2ed9ce13aa39b1320c7642cf2baa8f09a67eb2937190a110",
+      "mode": "ordinary",
+      "outputSha256": "64013d071688c9cf6bf5c0b43db982c542c054568b33ebaabdd09be239cbfe3c",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Oswietlenie-i-instalacje-elektryczne.pdf",
+      "sourceSha256": "4e8c82e1fb9207ae2ed9ce13aa39b1320c7642cf2baa8f09a67eb2937190a110",
+      "mode": "append-only",
+      "outputSha256": "182c88e5c01c39f8db4fbb21f859ae391e978d1f7430452a529a9b4a87b70162",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Wodociag-i-kanalizacja.pdf",
+      "sourceSha256": "4158995b5596b2d176f46242d2ae0798ddf3101dc5325aa344b2e3a77755980e",
+      "mode": "ordinary",
+      "outputSha256": "1d6fc327ad3db101cc9d921500fd1c9f4639f9a45e4a2938bf5bb3af413545b4",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Wodociag-i-kanalizacja.pdf",
+      "sourceSha256": "4158995b5596b2d176f46242d2ae0798ddf3101dc5325aa344b2e3a77755980e",
+      "mode": "append-only",
+      "outputSha256": "5d77ae0fe6adb60424fe037d6e5c56de0e4eba1640c6157ac1c6c52ab2a5bdba",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Ochrona-przeciwpozarowa-Cwiczenie.pdf",
+      "sourceSha256": "2f913907730ef17fb1527733f5bb820a4244f61f3f246a7d1ae25a8abef27e99",
+      "mode": "ordinary",
+      "outputSha256": "1b2e747fdf33ed922289aab53973871bb941e5d92ec218e3712d847cb32215fe",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Ochrona-przeciwpozarowa-Cwiczenie.pdf",
+      "sourceSha256": "2f913907730ef17fb1527733f5bb820a4244f61f3f246a7d1ae25a8abef27e99",
+      "mode": "append-only",
+      "outputSha256": "2a5d2be6825f70adc381b72c6bd2bb59eb7a84b236f770668a29e31be25735ea",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "09-Zielen-i-teren-zewnetrzny.pdf",
+      "sourceSha256": "29da8a28b8589c9102b4fd5563d2116533e94bb87483b31080fc30c5218d43db",
+      "mode": "ordinary",
+      "outputSha256": "4ee21335956c5b472a59f6739d3cd85e7014ab26be18d1d853dce73b290cf7ec",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "09-Zielen-i-teren-zewnetrzny.pdf",
+      "sourceSha256": "29da8a28b8589c9102b4fd5563d2116533e94bb87483b31080fc30c5218d43db",
+      "mode": "append-only",
+      "outputSha256": "36cd0181b595bf2c61ad284e9c4a39f72b7bf9725b71fbbf2ffceac8463d5acb",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "10-Wykonczenie-i-zabudowa-meblowa.pdf",
+      "sourceSha256": "5c6b6db037f4bad174a597761d95d188383f6a9764949321d1c1f84325b7bbad",
+      "mode": "ordinary",
+      "outputSha256": "2d1ab1cb895fb238b7eaa215b0d12c7232ae20755b3fd7ea791aef50d038c1b8",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "10-Wykonczenie-i-zabudowa-meblowa.pdf",
+      "sourceSha256": "5c6b6db037f4bad174a597761d95d188383f6a9764949321d1c1f84325b7bbad",
+      "mode": "append-only",
+      "outputSha256": "10752a042869b41b433fc018846f5d57cef78587e40c9c8f3544cfd710c0eef6",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Koordynacja-i-przeglad.pdf",
+      "sourceSha256": "3ba05dfdba2d6f9ec0894a28515c137b2a74692f25342b7e008775face06c447",
+      "mode": "ordinary",
+      "outputSha256": "ede1bad99f6634dcc0338ab16638530f545b68df8e90af335fd1119097ae0275",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Koordynacja-i-przeglad.pdf",
+      "sourceSha256": "3ba05dfdba2d6f9ec0894a28515c137b2a74692f25342b7e008775face06c447",
+      "mode": "append-only",
+      "outputSha256": "2d8f324ac8220f4cd4d801eedf82d39c555ac89c7fa62cf110c0283253895da5",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Skany-rysunkow-istniejacych.pdf",
+      "sourceSha256": "4c42af65752ab893bace28355e9c9212a6dc5f522e8a34d60db8d045a4f024ef",
+      "mode": "ordinary",
+      "outputSha256": "7e24684412897066be7b990e0988969584cb06ed0627b3e42ca2a2aea6ed9e82",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Skany-rysunkow-istniejacych.pdf",
+      "sourceSha256": "4c42af65752ab893bace28355e9c9212a6dc5f522e8a34d60db8d045a4f024ef",
+      "mode": "append-only",
+      "outputSha256": "fa7631e4dd7bf67cdf4a65b1aa6612987909097ae42e41270fe00c925b2a2ae5",
+      "quantityMetres": 4.999999999997638
+    }
+  ]
+}

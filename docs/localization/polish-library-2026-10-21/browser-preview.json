@@ -1,0 +1,272 @@
+{
+  "status": "passed",
+  "scope": "Local shared-library website QA, not native application walkthrough evidence",
+  "locale": "pl-PL",
+  "url": "http://127.0.0.1:4896/local-library-pl-preview.html",
+  "desktopInitial": {
+    "height": 720,
+    "images": [
+      {
+        "alt": "PLAN TERENU I SIECI - C101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/01-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "RZUT FUNDAMENTÓW I PŁYTY - S101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/04-1.png"
+      },
+      {
+        "alt": "RZUT WENTYLACJI - M101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/05-1.png"
+      },
+      {
+        "alt": "OŚWIETLENIE I GNIAZDA - E101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "WODOCIĄG I KANALIZACJA - P101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/07-1.png"
+      },
+      {
+        "alt": "OCHRONA PPOŻ. - ĆWICZENIE - F101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/08-1.png"
+      },
+      {
+        "alt": "ZIELEŃ I ZAGOSPODAROWANIE TERENU - L101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/09-1.png"
+      },
+      {
+        "alt": "PLAN WYKOŃCZENIA PODŁÓG - I101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "KOORDYNACJA INSTALACJI - X101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "ZESKANOWANY RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/12-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": false,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PLAN WYKOŃCZENIA PODŁÓG - I101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": false,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "OŚWIETLENIE I GNIAZDA - E101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": false,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": false,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": false,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "KOORDYNACJA INSTALACJI - X101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": false,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "ZESKANOWANY RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": false,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/12-1.png"
+      }
+    ],
+    "lang": "pl",
+    "scrollWidth": 1280,
+    "uniqueCopyRecords": 101,
+    "width": 1280
+  },
+  "electrical": {
+    "scrollWidth": 1280,
+    "text": "ĆWICZ NA ZESTAWIE RYSUNKÓW BUDOWLANYCH\n\nZlicz symbole na planie instalacji elektrycznej Domu Sąsiedzkiego Lipowy\n\nE101 · E501\n\nOtwórz E101 i rozpoznaj symbol oprawy w legendzie. Zliczaj wyłącznie symbole na rzucie; pomiń przykłady w legendzie i detalach.\nSprawdź 24 oprawy, 12 gniazd i 8 łączników na rzucie. Prowadź osobne zliczenia dla trzech kategorii.\nSkalibruj odcinek wzorcowy 5,00 m. Zmierz schematyczną trasę na E101 i porównaj wynik z 34,50 m. E501 zawiera schemat elektryczny i zestawienie opraw.\n\nLinia przerywana przedstawia schematyczną trasę, nie przedmiar rur instalacyjnych. Wyszukiwanie symboli wymaga Pro; sprawdź każde wskazanie. 24 oprawy, 12 gniazd, 8 łączników i 34,50 m to wartości z rysunku, nie wyniki aplikacji.\n\nTo wartości odniesienia z rysunku, nie nowe wyniki testów aplikacji. Pracuj na kopii i sprawdź własny zapisany plik.\n\nWcześniejsze amerykańskie ćwiczenie elektryczne: sprawdź osobno oprawy i gniazda →\n\nOtwórz powiązany przewodnik po czynnościach →\n\nPobierz rysunek do ćwiczenia · PDF\n06-Oswietlenie-i-instalacje-elektryczne.pdf\n\nPrzejrzyj pełną bibliotekę rysunków →",
+    "top": 27.796875,
+    "width": 1280
+  },
+  "desktopFinal": {
+    "height": 720,
+    "images": [
+      {
+        "alt": "PLAN TERENU I SIECI - C101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/01-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "RZUT FUNDAMENTÓW I PŁYTY - S101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/04-1.png"
+      },
+      {
+        "alt": "RZUT WENTYLACJI - M101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/05-1.png"
+      },
+      {
+        "alt": "OŚWIETLENIE I GNIAZDA - E101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "WODOCIĄG I KANALIZACJA - P101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/07-1.png"
+      },
+      {
+        "alt": "OCHRONA PPOŻ. - ĆWICZENIE - F101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/08-1.png"
+      },
+      {
+        "alt": "ZIELEŃ I ZAGOSPODAROWANIE TERENU - L101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/09-1.png"
+      },
+      {
+        "alt": "PLAN WYKOŃCZENIA PODŁÓG - I101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "KOORDYNACJA INSTALACJI - X101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "ZESKANOWANY RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/12-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PLAN WYKOŃCZENIA PODŁÓG - I101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "OŚWIETLENIE I GNIAZDA - E101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "KOORDYNACJA INSTALACJI - X101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "ZESKANOWANY RZUT PARTERU - A101, DOM SĄSIEDZKI LIPOWY, rysunek A1 do ćwiczeń",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/pl/samples/construction/previews/12-1.png"
+      }
+    ],
+    "lang": "pl",
+    "ocrText": "ĆWICZ NA ZESTAWIE RYSUNKÓW BUDOWLANYCH\n\nWypróbuj OCR na skanach Domu Sąsiedzkiego Lipowy\n\nA101 · C101\n\nOtwórz zestaw skanów i spróbuj wyszukać SALA WIELOFUNKCYJNA. Oryginalny dwustronicowy PDF zawiera obrazy bez warstwy tekstowej.\nWykonaj OCR na kopii roboczej. Wyszukaj SALA WIELOFUNKCYJNA na A101 i PLAN TERENU I SIECI na C101, a następnie sprawdź rozpoznany tekst.\nZapisz wynik i otwórz go ponownie. Powtórz wyszukiwanie i sprawdź wymiary wzrokowo przed pomiarem zeskanowanego rysunku.\n\nFrazy wyszukiwania są wydrukowane na rysunkach; poprawność rozpoznania nie jest gwarantowana. OCR nie naprawia skali rysunku ani zniekształceń skanu.\n\nTo wartości odniesienia z rysunku, nie nowe wyniki testów aplikacji. Pracuj na kopii i sprawdź własny zapisany plik.\n\nOtwórz powiązany przewodnik po czynnościach →\n\nPobierz rysunek do ćwiczenia · PDF\n12-Skany-rysunkow-istniejacych.pdf\n\nPrzejrzyj pełną bibliotekę rysunków →",
+    "ocrTop": 101.25,
+    "scrollWidth": 1280,
+    "width": 1280
+  },
+  "mobile": {
+    "height": 844,
+    "lang": "pl",
+    "scrollWidth": 390,
+    "title": "Polska biblioteka rysunków · PolyPDF",
+    "width": 390
+  },
+  "downloadPath": "/Users/mohammedbala/Downloads/PolyPDF-Rysunki-budowlane-pl-PL.zip",
+  "screenshots": [
+    "browser-desktop-header.jpg",
+    "browser-desktop-electrical.jpg",
+    "browser-mobile-header.jpg"
+  ]
+}

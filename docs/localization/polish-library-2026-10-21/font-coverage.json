@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "profileSha256": "bee5d8214df197413e930b5ee5624e3010491e15816b1b36ac961f6d0cbf27b2",
+  "defaultMissing": {
+    "regular": [
+      "Ą",
+      "ą",
+      "Ę",
+      "ę",
+      "Ń",
+      "ń",
+      "Ś",
+      "ś",
+      "ź",
+      "Ż",
+      "ż"
+    ],
+    "bold": [
+      "Ą",
+      "ą",
+      "Ę",
+      "ę",
+      "Ń",
+      "ń",
+      "Ś",
+      "ś",
+      "ź",
+      "Ż",
+      "ż"
+    ]
+  },
+  "selectedMissing": {
+    "regular": [],
+    "bold": []
+  },
+  "sourceSha256": "9367a43b3d6ef3386330a138ed7c986bcb2bcc393ce739478edea6b9335edbaf"
+}

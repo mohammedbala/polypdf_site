@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: pl-PL 01: regional calibration and PDF structure survive ordinary save/reopen
+ok 1 - pl-PL 01: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 97.641875
+  type: 'test'
+  ...
+# Subtest: pl-PL 01: regional calibration and PDF structure survive append-only save/reopen
+ok 2 - pl-PL 01: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 21.933583
+  type: 'test'
+  ...
+# Subtest: pl-PL 02: regional calibration and PDF structure survive ordinary save/reopen
+ok 3 - pl-PL 02: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 17.227667
+  type: 'test'
+  ...
+# Subtest: pl-PL 02: regional calibration and PDF structure survive append-only save/reopen
+ok 4 - pl-PL 02: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 18.615375
+  type: 'test'
+  ...
+# Subtest: pl-PL 03: regional calibration and PDF structure survive ordinary save/reopen
+ok 5 - pl-PL 03: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 12.374125
+  type: 'test'
+  ...
+# Subtest: pl-PL 03: regional calibration and PDF structure survive append-only save/reopen
+ok 6 - pl-PL 03: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 15.81025
+  type: 'test'
+  ...
+# Subtest: pl-PL 04: regional calibration and PDF structure survive ordinary save/reopen
+ok 7 - pl-PL 04: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 7.884041
+  type: 'test'
+  ...
+# Subtest: pl-PL 04: regional calibration and PDF structure survive append-only save/reopen
+ok 8 - pl-PL 04: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 17.918583
+  type: 'test'
+  ...
+# Subtest: pl-PL 05: regional calibration and PDF structure survive ordinary save/reopen
+ok 9 - pl-PL 05: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 11.316084
+  type: 'test'
+  ...
+# Subtest: pl-PL 05: regional calibration and PDF structure survive append-only save/reopen
+ok 10 - pl-PL 05: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.615667
+  type: 'test'
+  ...
+# Subtest: pl-PL 06: regional calibration and PDF structure survive ordinary save/reopen
+ok 11 - pl-PL 06: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 7.859792
+  type: 'test'
+  ...
+# Subtest: pl-PL 06: regional calibration and PDF structure survive append-only save/reopen
+ok 12 - pl-PL 06: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.787083
+  type: 'test'
+  ...
+# Subtest: pl-PL 07: regional calibration and PDF structure survive ordinary save/reopen
+ok 13 - pl-PL 07: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.87125
+  type: 'test'
+  ...
+# Subtest: pl-PL 07: regional calibration and PDF structure survive append-only save/reopen
+ok 14 - pl-PL 07: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.428042
+  type: 'test'
+  ...
+# Subtest: pl-PL 08: regional calibration and PDF structure survive ordinary save/reopen
+ok 15 - pl-PL 08: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 5.715791
+  type: 'test'
+  ...
+# Subtest: pl-PL 08: regional calibration and PDF structure survive append-only save/reopen
+ok 16 - pl-PL 08: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.323917
+  type: 'test'
+  ...
+# Subtest: pl-PL 09: regional calibration and PDF structure survive ordinary save/reopen
+ok 17 - pl-PL 09: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 5.728542
+  type: 'test'
+  ...
+# Subtest: pl-PL 09: regional calibration and PDF structure survive append-only save/reopen
+ok 18 - pl-PL 09: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.491958
+  type: 'test'
+  ...
+# Subtest: pl-PL 10: regional calibration and PDF structure survive ordinary save/reopen
+ok 19 - pl-PL 10: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 5.676958
+  type: 'test'
+  ...
+# Subtest: pl-PL 10: regional calibration and PDF structure survive append-only save/reopen
+ok 20 - pl-PL 10: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.921292
+  type: 'test'
+  ...
+# Subtest: pl-PL 11: regional calibration and PDF structure survive ordinary save/reopen
+ok 21 - pl-PL 11: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 11.113666
+  type: 'test'
+  ...
+# Subtest: pl-PL 11: regional calibration and PDF structure survive append-only save/reopen
+ok 22 - pl-PL 11: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 14.596417
+  type: 'test'
+  ...
+# Subtest: pl-PL 12: regional calibration and PDF structure survive ordinary save/reopen
+ok 23 - pl-PL 12: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 16.411458
+  type: 'test'
+  ...
+# Subtest: pl-PL 12: regional calibration and PDF structure survive append-only save/reopen
+ok 24 - pl-PL 12: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 53.384083
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 614.773208

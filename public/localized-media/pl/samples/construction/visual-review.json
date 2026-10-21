@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "locale": "pl-PL",
+  "region": "PL",
+  "status": "passed",
+  "reviewer": "Codex visual inspection",
+  "manifestSha256": "04b166af3891d2b84f55c8964541b93a39f4ba63e9107037b108a17e4d239208",
+  "scope": "All 24 final sheets inspected in contact sheet; twelve full-size previews inspected for Polish diacritics, text expansion, schedules, tags, notes, details and scan legibility. Editorial draft; no standards certification or native app UI evidence.",
+  "fullSizePages": [
+    "02-1",
+    "03-2",
+    "06-1",
+    "04-2",
+    "05-1",
+    "07-2",
+    "08-2",
+    "09-1",
+    "10-1",
+    "01-1",
+    "11-2",
+    "12-1"
+  ],
+  "fontChoice": "Licensed Noto Sans regular and bold, reusing app source fonts; no missing Polish glyphs or clipping observed.",
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "8b0093cb16d5a2a78bb6db06d03546ed45f8fa34c1d23b01548dbe280a950aaa",
+      "pdf": "01-Teren-i-sieci.pdf",
+      "pdfSha256": "22bc6cd5b3de9091db738f2626dfe9e455eb0e77214117056b399dc1370a1e8c",
+      "page": 1
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "a22ee037b0656d7d8c6c866c3e0068c6d01a9eb2a627fec2d2729aa9ae6297a5",
+      "pdf": "01-Teren-i-sieci.pdf",
+      "pdfSha256": "22bc6cd5b3de9091db738f2626dfe9e455eb0e77214117056b399dc1370a1e8c",
+      "page": 2
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "add18ada0e9b3dd02839b85bdebf520e72cb3dd0cf9d13078e8c331725c6b1d8",
+      "pdf": "02-Architektura-Rewizja-A.pdf",
+      "pdfSha256": "cf84e36d6c5da335e494eb952ddc37340fac9d80fa99812df30a7c7007017d7a",
+      "page": 1
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "ebfb74ba8e4d8d22ef2d9fb4e2fc57563dc14b547b432d7e9c8403b9ef8b358b",
+      "pdf": "02-Architektura-Rewizja-A.pdf",
+      "pdfSha256": "cf84e36d6c5da335e494eb952ddc37340fac9d80fa99812df30a7c7007017d7a",
+      "page": 2
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "30bdb845f807ad0fa24a8c297f56bf4ed544493c49b048f9746215df17242e12",
+      "pdf": "03-Architektura-Rewizja-B.pdf",
+      "pdfSha256": "5616cb6e40b1d6ef2c137fd00a532295ccecf934bcad6a21653162e4efc83dd8",
+      "page": 1
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "1cbadcef194f211aacef47288dbd3bd7a98552fcefe8f62b4e1a3feb84cfb127",
+      "pdf": "03-Architektura-Rewizja-B.pdf",
+      "pdfSha256": "5616cb6e40b1d6ef2c137fd00a532295ccecf934bcad6a21653162e4efc83dd8",
+      "page": 2
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "d1d05d7ff6a27b531a285ee25c8d12705b0b54a3f49dd234224e7dbbb3900856",
+      "pdf": "04-Fundamenty-i-konstrukcja.pdf",
+      "pdfSha256": "3d62d8eb25739df87de28c6e5b4822126695f9df054538e8486cca28967773ee",
+      "page": 1
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "71854be63db43f131ab0e3168ba425f40b4648b5c955c94bc4f6b5218bc802ab",
+      "pdf": "04-Fundamenty-i-konstrukcja.pdf",
+      "pdfSha256": "3d62d8eb25739df87de28c6e5b4822126695f9df054538e8486cca28967773ee",
+      "page": 2
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "6e18744aba72fa93b90ffa57df1dd4608555aafb52c0fb809e85ceca4718a765",
+      "pdf": "05-Wentylacja.pdf",
+      "pdfSha256": "a68c80766b26166e212b97bf5410615ac4d4bbf03dccf749a1869cad1eb6e1e8",
+      "page": 1
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "b6fc8576ef234cf408b26cb16a9b17c06797e7b4001b97118a2a21af824673cb",
+      "pdf": "05-Wentylacja.pdf",
+      "pdfSha256": "a68c80766b26166e212b97bf5410615ac4d4bbf03dccf749a1869cad1eb6e1e8",
+      "page": 2
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "ddd2390de40eedbf30960024b0ace37f5b6eff9a7e5fe24ac7d97ea3a005dd49",
+      "pdf": "06-Oswietlenie-i-instalacje-elektryczne.pdf",
+      "pdfSha256": "4e8c82e1fb9207ae2ed9ce13aa39b1320c7642cf2baa8f09a67eb2937190a110",
+      "page": 1
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "809abfc1d7af7893bb4103cf6839657ed99e1451aa45a553a4bb15fb6e19f862",
+      "pdf": "06-Oswietlenie-i-instalacje-elektryczne.pdf",
+      "pdfSha256": "4e8c82e1fb9207ae2ed9ce13aa39b1320c7642cf2baa8f09a67eb2937190a110",
+      "page": 2
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "ff7b273e2c0d674cfcfe2d93f6d4e03dc551e2a69269ab8a3f7d2aca8b8da896",
+      "pdf": "07-Wodociag-i-kanalizacja.pdf",
+      "pdfSha256": "4158995b5596b2d176f46242d2ae0798ddf3101dc5325aa344b2e3a77755980e",
+      "page": 1
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "7827cc1587e31aafdf17f6e2fe3e2d4156bc70a39adf597bf8fbf8a5d27ee6b5",
+      "pdf": "07-Wodociag-i-kanalizacja.pdf",
+      "pdfSha256": "4158995b5596b2d176f46242d2ae0798ddf3101dc5325aa344b2e3a77755980e",
+      "page": 2
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "d9e20c18379a8a70756ceb72c521d87b8cf7568222d13ac5b0e03ff5f01158c9",
+      "pdf": "08-Ochrona-przeciwpozarowa-Cwiczenie.pdf",
+      "pdfSha256": "2f913907730ef17fb1527733f5bb820a4244f61f3f246a7d1ae25a8abef27e99",
+      "page": 1
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "116be62dbb9b91e01ee51dd239626dd43e4cea23f8f38a34b779976dfe6abdb9",
+      "pdf": "08-Ochrona-przeciwpozarowa-Cwiczenie.pdf",
+      "pdfSha256": "2f913907730ef17fb1527733f5bb820a4244f61f3f246a7d1ae25a8abef27e99",
+      "page": 2
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "042b113efd7cd68d07b7de68affe8b53d2ed88b7bafe594f674470b201134b27",
+      "pdf": "09-Zielen-i-teren-zewnetrzny.pdf",
+      "pdfSha256": "29da8a28b8589c9102b4fd5563d2116533e94bb87483b31080fc30c5218d43db",
+      "page": 1
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "0268f6bc0296ed6b27b96ff30e6370818c33a04d9f96591d96ba83815148a04f",
+      "pdf": "09-Zielen-i-teren-zewnetrzny.pdf",
+      "pdfSha256": "29da8a28b8589c9102b4fd5563d2116533e94bb87483b31080fc30c5218d43db",
+      "page": 2
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "e0099c58896807eecbc75ec5d42c1fdd769e60be09d161e1b47aee6182edc620",
+      "pdf": "10-Wykonczenie-i-zabudowa-meblowa.pdf",
+      "pdfSha256": "5c6b6db037f4bad174a597761d95d188383f6a9764949321d1c1f84325b7bbad",
+      "page": 1
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "575631cc5a94242146a2b24accdb1e11bc71207164b33e29808787d7fc44381e",
+      "pdf": "10-Wykonczenie-i-zabudowa-meblowa.pdf",
+      "pdfSha256": "5c6b6db037f4bad174a597761d95d188383f6a9764949321d1c1f84325b7bbad",
+      "page": 2
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "a0faf1043206d06a532195be0448ae02851837fb237bde5f7a46a02670911acb",
+      "pdf": "11-Koordynacja-i-przeglad.pdf",
+      "pdfSha256": "3ba05dfdba2d6f9ec0894a28515c137b2a74692f25342b7e008775face06c447",
+      "page": 1
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "c68f124ba8f2735f43413aa2c736f764afc6f69886b190ee5b81f5cbef654d06",
+      "pdf": "11-Koordynacja-i-przeglad.pdf",
+      "pdfSha256": "3ba05dfdba2d6f9ec0894a28515c137b2a74692f25342b7e008775face06c447",
+      "page": 2
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "38d831e37687d1ecbdfd4d97d6b8e8bc6057815488bdbc4e9940a9ac3a865231",
+      "pdf": "12-Skany-rysunkow-istniejacych.pdf",
+      "pdfSha256": "4c42af65752ab893bace28355e9c9212a6dc5f522e8a34d60db8d045a4f024ef",
+      "page": 1
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "ac79dbeef9d3e7503a4afeb501374937e78f5e65b71686d24408e07e34234d61",
+      "pdf": "12-Skany-rysunkow-istniejacych.pdf",
+      "pdfSha256": "4c42af65752ab893bace28355e9c9212a6dc5f522e8a34d60db8d045a4f024ef",
+      "page": 2
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "670625d8d34ea08cc5fa880fc3d8c81648516923a859580c574971dbbdf9ec47"
+  }
+}

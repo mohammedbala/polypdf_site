@@ -1,0 +1,43 @@
+Dokument;Opis;Wartość;Jednostka
+01;Powierzchnia działki (m²);2 400,00;m²
+01;Obwód działki (m);200,00;m
+01;Miejsca parkingowe;8;-
+01;Powierzchnia utwardzona (m²);144,00;m²
+01;Długość wodociągu (m);39,00;m
+01;Długość kanalizacji (m);34,00;m
+01;Długość kabla elektrycznego (m);57,00;m
+02;Powierzchnia prostokątnego obrysu (m²);360,00;m²
+02;Obwód budynku (m);78,00;m
+02;Powierzchnia pomieszczenia 103 (m²);36,00;m²
+02;Powierzchnia pomieszczenia 104 (m²);36,00;m²
+02;Wewnętrzne odnośniki do przekrojów;2;-
+02;Przesunięcie ściany (m);0,00;m
+02;Przesunięcie drzwi (m);0,00;m
+02;Szerokość dodanego okna (m);0,00;m
+03;Powierzchnia prostokątnego obrysu (m²);360,00;m²
+03;Obwód budynku (m);78,00;m
+03;Powierzchnia pomieszczenia 103 (m²);45,00;m²
+03;Powierzchnia pomieszczenia 104 (m²);27,00;m²
+03;Wewnętrzne odnośniki do przekrojów;2;-
+03;Przesunięcie ściany (m);1,50;m
+03;Przesunięcie drzwi (m);0,75;m
+03;Szerokość dodanego okna (m);1,50;m
+04;Słupy;12;-
+04;Stopy fundamentowe;12;-
+04;Powierzchnia płyty betonowej (m²);360,00;m²
+04;Grubość płyty betonowej (m);0,15;m
+04;Objętość płyty betonowej (m³);54,00;m³
+04;Łączna objętość stóp fundamentowych (m³);17,496;m³
+04;Łączna długość belek (m);132,00;m
+09;Powierzchnia utwardzona (m²);144,00;m²
+10;Wykładzina elastyczna (m²);324,00;m²
+10;Płytki podłogowe (m²);36,00;m²
+10;Łączna powierzchnia podłóg (m²);360,00;m²
+10;Liczba płytek bez zapasu;100;-
+10;Szafki dolne;6;-
+10;Szerokość modułu szafki (m);1,20;m
+10;Powierzchnia blatu (m²);4,32;m²
+10;Długość cokołu (m);7,20;m
+11;Edytowalne notatki PDF;3;-
+11;Celowo narysowane kolizje;3;-
+12;Rozdzielczość skanu (dpi);80;-

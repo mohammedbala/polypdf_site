@@ -53,9 +53,19 @@ class Region:
         self.data = json.loads((Path(__file__).parent / "regional" / f"{locale}.json").read_text())
         self.locale, self.region = self.data["locale"], self.data["region"]
         self.project = self.data["project"]
-        font_dir = Path(reportlab.__file__).parent / "fonts"
-        pdfmetrics.registerFont(TTFont("RegionalCAD", str(font_dir / "Vera.ttf")))
-        pdfmetrics.registerFont(TTFont("RegionalCAD-B", str(font_dir / "VeraBd.ttf")))
+        family = self.data.get("fontFamily", "Vera")
+        if family == "Vera":
+            font_dir = Path(reportlab.__file__).parent / "fonts"
+            regular, bold = font_dir / "Vera.ttf", font_dir / "VeraBd.ttf"
+            self.font, self.bold_font = "RegionalCAD", "RegionalCAD-B"
+        elif family == "NotoSans":
+            font_dir = Path(__file__).parent / "fonts"
+            regular, bold = font_dir / "NotoSans-Regular.ttf", font_dir / "NotoSans-Bold.ttf"
+            self.font, self.bold_font = "RegionalCAD-NotoSans", "RegionalCAD-NotoSans-B"
+        else:
+            raise ValueError(f"Unsupported regional drawing font: {family}")
+        pdfmetrics.registerFont(TTFont(self.font, str(regular)))
+        pdfmetrics.registerFont(TTFont(self.bold_font, str(bold)))
 
     def t(self, key):
         return self.data["labels"][key]  # Missing translations fail; no English fallback.
@@ -86,7 +96,7 @@ class Sheet:
 
     def text(self, x, y, value, size=16, bold=False, color=INK, align="left", width=None, angle=0):
         value = str(value)
-        font = "RegionalCAD-B" if bold else "RegionalCAD"
+        font = self.r.bold_font if bold else self.r.font
         missing = {ord(char) for char in value if not char.isspace() and ord(char) not in pdfmetrics.getFont(font).face.charWidths}
         if missing:
             raise ValueError(f"{self.r.locale}: missing font glyphs {missing}: {value}")
@@ -163,7 +173,7 @@ class Sheet:
             words, row = str(value).split(), ""
             for word in words:
                 test = f"{row} {word}".strip()
-                if pdfmetrics.stringWidth(test, "RegionalCAD", size) > width and row:
+                if pdfmetrics.stringWidth(test, self.r.font, size) > width and row:
                     self.text(x, y, row, size)
                     y -= size * 1.45
                     row = word
@@ -301,7 +311,7 @@ class Sheet:
                 tx, ty = x + (a+10 if tag_side == "right" else -a-10), y-4
                 align = "left" if tag_side == "right" else "right"
             if self.r.data.get("maskSymbolTags"):
-                width = pdfmetrics.stringWidth(tag, "RegionalCAD", 12)
+                width = pdfmetrics.stringWidth(tag, self.r.font, 12)
                 left = tx - width * {"left": 0, "center": .5, "right": 1}[align]
                 self.rect(left-2, ty-3, width+4, 16, 0, fill="#ffffff")
             self.text(tx, ty, tag, 12, align=align)
