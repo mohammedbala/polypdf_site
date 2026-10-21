@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "locale": "fr-FR",
+  "region": "FR",
+  "manifestSha256": "e90a8792fac4ea9a212202a7306d4cc6b4d45fb80c226c153258158bc4592953",
+  "automatedStatus": "passed",
+  "manualVisualReview": "required; keep a separate source-bound receipt",
+  "limits": "Demonstration geometry only. No standards certification or native application workflow validation.",
+  "documents": [
+    {
+      "id": "01",
+      "file": "01-Plan-de-masse-et-terrain.pdf",
+      "sha256": "354403216dd1474e9cb17aa324b3e59d42efb3b146f026c9768692a45a993ab5",
+      "pages": [
+        {
+          "sheet": "C101",
+          "page": 1,
+          "textItems": 62,
+          "physicalReferences": 16,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 128,
+            "text_show_operators": 62,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "C201",
+          "page": 2,
+          "textItems": 67,
+          "physicalReferences": 4,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 163,
+            "text_show_operators": 67,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "file": "02-Architecture-Indice-A.pdf",
+      "sha256": "1c74b81bab45046991836c27adfd3e60a5573787a88bf0b41dce3d7e45d727af",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 93,
+          "physicalReferences": 60,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 466,
+            "text_show_operators": 93,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "A201",
+          "page": 2,
+          "textItems": 64,
+          "physicalReferences": 17,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 204,
+            "text_show_operators": 64,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "file": "03-Architecture-Indice-B.pdf",
+      "sha256": "3f5c40af9e0239c116c1c28b99bdd0940d0d6985725c4acc75dcb71e5ae3c20f",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 95,
+          "physicalReferences": 60,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 478,
+            "text_show_operators": 95,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "A201",
+          "page": 2,
+          "textItems": 64,
+          "physicalReferences": 18,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 209,
+            "text_show_operators": 64,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "file": "04-Fondations-et-structure.pdf",
+      "sha256": "f811af1b75e09f586be574429d6e3a83376c4377aa479d172669b40590275580",
+      "pages": [
+        {
+          "sheet": "S101",
+          "page": 1,
+          "textItems": 64,
+          "physicalReferences": 15,
+          "symbolInstances": 12,
+          "pdf": {
+            "drawing_operators": 247,
+            "text_show_operators": 64,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "S201",
+          "page": 2,
+          "textItems": 66,
+          "physicalReferences": 2,
+          "symbolInstances": 12,
+          "pdf": {
+            "drawing_operators": 259,
+            "text_show_operators": 66,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "file": "05-Ventilation.pdf",
+      "sha256": "85be8f2049ab0d1888d8c969223d8217a0a1f047772f9d85f93c9e5693b7d2cc",
+      "pages": [
+        {
+          "sheet": "M101",
+          "page": 1,
+          "textItems": 81,
+          "physicalReferences": 5,
+          "symbolInstances": 23,
+          "pdf": {
+            "drawing_operators": 818,
+            "text_show_operators": 81,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "M501",
+          "page": 2,
+          "textItems": 61,
+          "physicalReferences": 3,
+          "symbolInstances": 6,
+          "pdf": {
+            "drawing_operators": 242,
+            "text_show_operators": 61,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "file": "06-Eclairage-et-electricite.pdf",
+      "sha256": "6f892ae33c460d3e1f1a3ebe7b2c48f5f506988a44369c0e0671192b1dde771c",
+      "pages": [
+        {
+          "sheet": "E101",
+          "page": 1,
+          "textItems": 105,
+          "physicalReferences": 5,
+          "symbolInstances": 47,
+          "pdf": {
+            "drawing_operators": 885,
+            "text_show_operators": 105,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "E501",
+          "page": 2,
+          "textItems": 63,
+          "physicalReferences": 2,
+          "symbolInstances": 9,
+          "pdf": {
+            "drawing_operators": 214,
+            "text_show_operators": 63,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "file": "07-Eau-potable-et-evacuation.pdf",
+      "sha256": "4b166b450dc7f3c9bcaeff93da48627a2be859951fefb6e8172847d47ac0ea31",
+      "pages": [
+        {
+          "sheet": "P101",
+          "page": 1,
+          "textItems": 72,
+          "physicalReferences": 7,
+          "symbolInstances": 15,
+          "pdf": {
+            "drawing_operators": 540,
+            "text_show_operators": 72,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "P501",
+          "page": 2,
+          "textItems": 65,
+          "physicalReferences": 0,
+          "symbolInstances": 9,
+          "pdf": {
+            "drawing_operators": 183,
+            "text_show_operators": 65,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "file": "08-Securite-incendie-Exercice.pdf",
+      "sha256": "0f161707a35464ec8f18fb30b079bcbd0ce1964a8613d3d5f2d37e0199cddb56",
+      "pages": [
+        {
+          "sheet": "F101",
+          "page": 1,
+          "textItems": 103,
+          "physicalReferences": 5,
+          "symbolInstances": 44,
+          "pdf": {
+            "drawing_operators": 986,
+            "text_show_operators": 103,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "F501",
+          "page": 2,
+          "textItems": 64,
+          "physicalReferences": 0,
+          "symbolInstances": 7,
+          "pdf": {
+            "drawing_operators": 157,
+            "text_show_operators": 64,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "file": "09-Amenagements-paysagers.pdf",
+      "sha256": "54c63765da4582cdcad9a341dcaf629193a6562d4227956ab95d3b501c3d9874",
+      "pages": [
+        {
+          "sheet": "L101",
+          "page": 1,
+          "textItems": 115,
+          "physicalReferences": 13,
+          "symbolInstances": 53,
+          "pdf": {
+            "drawing_operators": 875,
+            "text_show_operators": 115,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "L501",
+          "page": 2,
+          "textItems": 71,
+          "physicalReferences": 7,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 125,
+            "text_show_operators": 71,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "file": "10-Revetements-et-mobilier-integre.pdf",
+      "sha256": "45a557222e6e0c4dce9730201d765e30c7244b0a9ddea55953b5a820b4881ec8",
+      "pages": [
+        {
+          "sheet": "I101",
+          "page": 1,
+          "textItems": 92,
+          "physicalReferences": 15,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 458,
+            "text_show_operators": 92,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "I501",
+          "page": 2,
+          "textItems": 59,
+          "physicalReferences": 14,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 165,
+            "text_show_operators": 59,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "file": "11-Synthese-et-verification.pdf",
+      "sha256": "47e7f5a121041ac7d8e0f350c3234bdca1b1c1c4a0a9866acf0e929bcf004027",
+      "pages": [
+        {
+          "sheet": "X101",
+          "page": 1,
+          "textItems": 57,
+          "physicalReferences": 6,
+          "symbolInstances": 8,
+          "pdf": {
+            "drawing_operators": 454,
+            "text_show_operators": 57,
+            "image_xobjects": 0,
+            "layer_tags": [
+              "/LARCH",
+              "/LELEC",
+              "/LISSUES",
+              "/LMECH"
+            ]
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "X102",
+          "page": 2,
+          "textItems": 71,
+          "physicalReferences": 0,
+          "symbolInstances": 2,
+          "pdf": {
+            "drawing_operators": 115,
+            "text_show_operators": 71,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "file": "12-Plans-existants-numerises.pdf",
+      "sha256": "586173211ca8bf882acb2aa7de93c7c788c9c8375dfc667dbc2ad3417ec014f3",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 0,
+          "physicalReferences": 0,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 0,
+            "text_show_operators": 0,
+            "image_xobjects": 1,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "C101",
+          "page": 2,
+          "textItems": 0,
+          "physicalReferences": 0,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 0,
+            "text_show_operators": 0,
+            "image_xobjects": 1,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "584df5152c84387af01383265f1538203accefa257fa9bb7f1618dbc669cacd4",
+      "pdf": "01-Plan-de-masse-et-terrain.pdf",
+      "pdfSha256": "354403216dd1474e9cb17aa324b3e59d42efb3b146f026c9768692a45a993ab5",
+      "page": 1
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "4afc7d1809c7aafd5bfe758d9becf3ff938a168b8d756f53abc124b1d5594358",
+      "pdf": "01-Plan-de-masse-et-terrain.pdf",
+      "pdfSha256": "354403216dd1474e9cb17aa324b3e59d42efb3b146f026c9768692a45a993ab5",
+      "page": 2
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "f6ac6adf154285de3b130b049c3f2d23be1845d564f24eb19fe3e55566505d17",
+      "pdf": "02-Architecture-Indice-A.pdf",
+      "pdfSha256": "1c74b81bab45046991836c27adfd3e60a5573787a88bf0b41dce3d7e45d727af",
+      "page": 1
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "07e149e5bf6bba3d9de009d17aa77e6ba182c060dc3f2941854587a435c4ecaa",
+      "pdf": "02-Architecture-Indice-A.pdf",
+      "pdfSha256": "1c74b81bab45046991836c27adfd3e60a5573787a88bf0b41dce3d7e45d727af",
+      "page": 2
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "689fd7a46f23125a650a25037bc05b47d916f894717ecd994547f654069f1e97",
+      "pdf": "03-Architecture-Indice-B.pdf",
+      "pdfSha256": "3f5c40af9e0239c116c1c28b99bdd0940d0d6985725c4acc75dcb71e5ae3c20f",
+      "page": 1
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "0a02cec1a57e7126f7f4d38759d84ff702d840175289a77f3f178b67e05462b7",
+      "pdf": "03-Architecture-Indice-B.pdf",
+      "pdfSha256": "3f5c40af9e0239c116c1c28b99bdd0940d0d6985725c4acc75dcb71e5ae3c20f",
+      "page": 2
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "b7bb88b8ae3778eb59fb6825bebbdd55acca0725ae20fc15a1c2e8be55ce9643",
+      "pdf": "04-Fondations-et-structure.pdf",
+      "pdfSha256": "f811af1b75e09f586be574429d6e3a83376c4377aa479d172669b40590275580",
+      "page": 1
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "981156d0a6fbe70f6017d6114cd9e4fe36deed06a1939ddc1da0aa95d9016aba",
+      "pdf": "04-Fondations-et-structure.pdf",
+      "pdfSha256": "f811af1b75e09f586be574429d6e3a83376c4377aa479d172669b40590275580",
+      "page": 2
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "f3578343b53681c0a534b3f3538c6a5d8942fc4c6fabfa6a5aad3840ec6c5ce9",
+      "pdf": "05-Ventilation.pdf",
+      "pdfSha256": "85be8f2049ab0d1888d8c969223d8217a0a1f047772f9d85f93c9e5693b7d2cc",
+      "page": 1
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "3c82af5a7e8eb927ea115901099d940e6416dfc7c8d0163131a4d3e4374ce9e9",
+      "pdf": "05-Ventilation.pdf",
+      "pdfSha256": "85be8f2049ab0d1888d8c969223d8217a0a1f047772f9d85f93c9e5693b7d2cc",
+      "page": 2
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "6eef8a1c605d6dab30de3884d0a29f33a44a8cbaa23f0727e25c21e3af7ae266",
+      "pdf": "06-Eclairage-et-electricite.pdf",
+      "pdfSha256": "6f892ae33c460d3e1f1a3ebe7b2c48f5f506988a44369c0e0671192b1dde771c",
+      "page": 1
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "35e85754ed034d0c6ea0c244c074c31ec23d7f020d11d71626845672c7154211",
+      "pdf": "06-Eclairage-et-electricite.pdf",
+      "pdfSha256": "6f892ae33c460d3e1f1a3ebe7b2c48f5f506988a44369c0e0671192b1dde771c",
+      "page": 2
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "f4b56543d47a8342c892f31ed70d35b6f502c15d307643a2e2949604c2c10cb3",
+      "pdf": "07-Eau-potable-et-evacuation.pdf",
+      "pdfSha256": "4b166b450dc7f3c9bcaeff93da48627a2be859951fefb6e8172847d47ac0ea31",
+      "page": 1
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "2158179877bdb5c02c364eefc8992073051baf6c415a940e2a25b0785d7dacc5",
+      "pdf": "07-Eau-potable-et-evacuation.pdf",
+      "pdfSha256": "4b166b450dc7f3c9bcaeff93da48627a2be859951fefb6e8172847d47ac0ea31",
+      "page": 2
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "756eca81c0091a5a5ad08a6b7887d8572af578bb590b52b8e5ded582d7d5c72a",
+      "pdf": "08-Securite-incendie-Exercice.pdf",
+      "pdfSha256": "0f161707a35464ec8f18fb30b079bcbd0ce1964a8613d3d5f2d37e0199cddb56",
+      "page": 1
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "8cc358cdbe0e3fdbffbff3be6ad34f06c0545209318e8543ae66a701e1210968",
+      "pdf": "08-Securite-incendie-Exercice.pdf",
+      "pdfSha256": "0f161707a35464ec8f18fb30b079bcbd0ce1964a8613d3d5f2d37e0199cddb56",
+      "page": 2
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "b6d5bf677b9fba835ee8832e081ecfe564e0f9eac63c9d9f440fa9aa902626b4",
+      "pdf": "09-Amenagements-paysagers.pdf",
+      "pdfSha256": "54c63765da4582cdcad9a341dcaf629193a6562d4227956ab95d3b501c3d9874",
+      "page": 1
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "4cf028bd8f5d0fd220b89d3d966f90a3b28e70fc38975da93a9f339cc4d26487",
+      "pdf": "09-Amenagements-paysagers.pdf",
+      "pdfSha256": "54c63765da4582cdcad9a341dcaf629193a6562d4227956ab95d3b501c3d9874",
+      "page": 2
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "6ea696a756bf60ba6fc7ff1e7ee62951a49bf5efcd26a54541030a7686642c8c",
+      "pdf": "10-Revetements-et-mobilier-integre.pdf",
+      "pdfSha256": "45a557222e6e0c4dce9730201d765e30c7244b0a9ddea55953b5a820b4881ec8",
+      "page": 1
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "8086b5f2f434811b5c4efe923febe2c62c51420faf5326aff6179b9ff18088ec",
+      "pdf": "10-Revetements-et-mobilier-integre.pdf",
+      "pdfSha256": "45a557222e6e0c4dce9730201d765e30c7244b0a9ddea55953b5a820b4881ec8",
+      "page": 2
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "f7bbfef93efcede1647d67afd7caa202acd231f782f88df2a2bed65f3d0c982f",
+      "pdf": "11-Synthese-et-verification.pdf",
+      "pdfSha256": "47e7f5a121041ac7d8e0f350c3234bdca1b1c1c4a0a9866acf0e929bcf004027",
+      "page": 1
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "85446f642b751116795b11843ceb025359e27e9bcc016dc571ee8bb756e54cb8",
+      "pdf": "11-Synthese-et-verification.pdf",
+      "pdfSha256": "47e7f5a121041ac7d8e0f350c3234bdca1b1c1c4a0a9866acf0e929bcf004027",
+      "page": 2
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "8f1bd9a3301bc373015d980747aa27cba4d037ec2ac519a4af3cb9d37fbb24fe",
+      "pdf": "12-Plans-existants-numerises.pdf",
+      "pdfSha256": "586173211ca8bf882acb2aa7de93c7c788c9c8375dfc667dbc2ad3417ec014f3",
+      "page": 1
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "28d8df945f85daca2c05fe474a5f4df2ebd8745502ad63dbe133a5a8f53201fb",
+      "pdf": "12-Plans-existants-numerises.pdf",
+      "pdfSha256": "586173211ca8bf882acb2aa7de93c7c788c9c8375dfc667dbc2ad3417ec014f3",
+      "page": 2
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "d4f1d15d873e9d409f315f56715be6e80f423be89d8b2144778bb6be74aed9ce"
+  }
+}

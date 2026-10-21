@@ -1,0 +1,71 @@
+{
+  "status": "passed",
+  "generatorSha256": "2627b32df10b22bd8de23756e12acf4937a45b9b55793f4f1870751d16ecb793",
+  "profileSha256": "79d2d9e6ef0dff6ea3222a277a3900435872d86a87d184e4be7a1e1510c2761a",
+  "files": [
+    {
+      "file": "01-Plan-de-masse-et-terrain.pdf",
+      "sha256": "354403216dd1474e9cb17aa324b3e59d42efb3b146f026c9768692a45a993ab5"
+    },
+    {
+      "file": "02-Architecture-Indice-A.pdf",
+      "sha256": "1c74b81bab45046991836c27adfd3e60a5573787a88bf0b41dce3d7e45d727af"
+    },
+    {
+      "file": "03-Architecture-Indice-B.pdf",
+      "sha256": "3f5c40af9e0239c116c1c28b99bdd0940d0d6985725c4acc75dcb71e5ae3c20f"
+    },
+    {
+      "file": "04-Fondations-et-structure.pdf",
+      "sha256": "f811af1b75e09f586be574429d6e3a83376c4377aa479d172669b40590275580"
+    },
+    {
+      "file": "05-Ventilation.pdf",
+      "sha256": "85be8f2049ab0d1888d8c969223d8217a0a1f047772f9d85f93c9e5693b7d2cc"
+    },
+    {
+      "file": "06-Eclairage-et-electricite.pdf",
+      "sha256": "6f892ae33c460d3e1f1a3ebe7b2c48f5f506988a44369c0e0671192b1dde771c"
+    },
+    {
+      "file": "07-Eau-potable-et-evacuation.pdf",
+      "sha256": "4b166b450dc7f3c9bcaeff93da48627a2be859951fefb6e8172847d47ac0ea31"
+    },
+    {
+      "file": "08-Securite-incendie-Exercice.pdf",
+      "sha256": "0f161707a35464ec8f18fb30b079bcbd0ce1964a8613d3d5f2d37e0199cddb56"
+    },
+    {
+      "file": "09-Amenagements-paysagers.pdf",
+      "sha256": "54c63765da4582cdcad9a341dcaf629193a6562d4227956ab95d3b501c3d9874"
+    },
+    {
+      "file": "10-Revetements-et-mobilier-integre.pdf",
+      "sha256": "45a557222e6e0c4dce9730201d765e30c7244b0a9ddea55953b5a820b4881ec8"
+    },
+    {
+      "file": "11-Synthese-et-verification.pdf",
+      "sha256": "47e7f5a121041ac7d8e0f350c3234bdca1b1c1c4a0a9866acf0e929bcf004027"
+    },
+    {
+      "file": "12-Plans-existants-numerises.pdf",
+      "sha256": "586173211ca8bf882acb2aa7de93c7c788c9c8375dfc667dbc2ad3417ec014f3"
+    },
+    {
+      "file": "DEMO-GUIDE.html",
+      "sha256": "33432f6c6d35c17850b1b1d3104aa72e13214dcd9968506d8eda07a7eb7f98ea"
+    },
+    {
+      "file": "DEMO-MANIFEST.json",
+      "sha256": "e90a8792fac4ea9a212202a7306d4cc6b4d45fb80c226c153258158bc4592953"
+    },
+    {
+      "file": "SHA256SUMS.txt",
+      "sha256": "78c890f50d8b42da867b91f66e893c1789a69425b50c22f4c1ae7d6837c96c10"
+    },
+    {
+      "file": "reference-quantities.csv",
+      "sha256": "bc69a88135f203b7c89c1b4c92b424d59a0b8df279bacb1950cfa971cc1dbc79"
+    }
+  ]
+}

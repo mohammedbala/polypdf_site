@@ -85,26 +85,28 @@ test('source and translated file hashes must match before activating a media pac
   assert.throws(() => verifyMediaFiles(data, registry, read), /Changed localized/);
   assert.throws(() => verifyMediaFiles(data, [{ ...registry[0], region: 'AT' }], read), /mismatched/);
 });
-test('the checked-in German regional library resolves exact verified PDF and preview bytes', () => {
+for (const [id, filename] of [['de', '02-Architektur-Revision-A.pdf'], ['fr', '02-Architecture-Indice-A.pdf']]) {
+test(`the checked-in ${id} regional library resolves exact verified PDF and preview bytes`, () => {
   const fs = require('node:fs');
   const path = require('node:path');
   const root = path.resolve(__dirname, '..');
   const data = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/walkthrough-media.json')));
   const registry = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/product-locales.json'))).locales;
   verifyMediaFiles(data, registry, asset => {
-    const sourcePath = data.locales.de.assets[asset]?.sourcePath;
+    const sourcePath = data.locales[id].assets[asset]?.sourcePath;
     return fs.readFileSync(sourcePath ? path.join(root,sourcePath) : path.join(root,'public',asset));
-  }, ['de']);
-  assert.equal(Object.keys(data.locales.de.assets).filter(asset => asset.startsWith('/samples/construction/') && asset.endsWith('.pdf')).length, 12);
+  }, [id]);
+  assert.equal(Object.keys(data.locales[id].assets).filter(asset => asset.startsWith('/samples/construction/') && asset.endsWith('.pdf')).length, 12);
   const source = '/samples/construction/02-Architectural-Revision-A.pdf';
   const preview = '/samples/construction/previews/02-Architectural-Revision-A--page-01.png';
   const dom = new JSDOM(`<a href="${source}">Plan</a><img src="${preview}" width="1440" height="960">`);
-  localizeWalkthroughMedia(dom.window.document, locale, data);
+  localizeWalkthroughMedia(dom.window.document, { id }, data);
   assert.equal(dom.window.document.querySelector('a').getAttribute('href'),
-    '/localized-media/de/samples/construction/02-Architektur-Revision-A.pdf');
+    `/localized-media/${id}/samples/construction/${filename}`);
   assert.equal(dom.window.document.querySelector('img').getAttribute('height'), '1272');
-  assert.equal(data.locales.de.status, 'pilot', 'Partial media coverage must not activate the whole language');
+  assert.equal(data.locales[id].status, 'pilot', 'Partial media coverage must not activate the whole language');
 });
+}
 test('German form copy and downloads are reconciled without mislabelling an English or French file', () => {
   const data = require('../src/localization/walkthrough-media.json');
   const form = data.locales.de.regionalForm;

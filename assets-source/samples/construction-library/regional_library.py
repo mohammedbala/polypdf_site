@@ -64,6 +64,14 @@ class Region:
         text = f"{value:,.{places}f}"
         return text.replace(",", "\0").replace(".", self.data["decimal"]).replace("\0", self.data["group"])
 
+    def tag(self, kind, index):
+        defaults = {"column": "ST", "diffuser": "ZL", "ahu": "LG", "extract": "AL",
+                    "light": "L", "socket": "SD", "switch": "S", "wc": "WC", "basin": "WB",
+                    "floorDrain": "BA", "sprinkler": "SP", "smoke": "RM", "exit": "AW",
+                    "extinguisher": "FL", "tree": "B", "shrub": "S", "bench": "BK", "panel": "UV"}
+        prefixes = self.data.get("symbolPrefixes", defaults)
+        return f"{prefixes[kind]}-{index:02}"
+
     def length(self, value):
         return f"{self.n(value)} m"
 
@@ -285,11 +293,18 @@ class Sheet:
             raise ValueError(f"Unknown symbol: {kind}")
         c.restoreState()
         if tag:
-            if tag_side == "below":
-                self.text(x, y - a - 21, tag, 12, align="center")
-            else:
-                self.text(x + (a+10 if tag_side == "right" else -a-10), y-4, tag, 12,
-                          align="left" if tag_side == "right" else "right")
+            tag_side = self.r.data.get("symbolTagSides", {}).get(kind, tag_side)
+            tx, ty, align = x, y - a - 21, "center"
+            if tag_side == "above":
+                ty = y + a + 12
+            elif tag_side in ("left", "right"):
+                tx, ty = x + (a+10 if tag_side == "right" else -a-10), y-4
+                align = "left" if tag_side == "right" else "right"
+            if self.r.data.get("maskSymbolTags"):
+                width = pdfmetrics.stringWidth(tag, "RegionalCAD", 12)
+                left = tx - width * {"left": 0, "center": .5, "right": 1}[align]
+                self.rect(left-2, ty-3, width+4, 16, 0, fill="#ffffff")
+            self.text(tx, ty, tag, 12, align=align)
 
 
 class View:
@@ -407,7 +422,8 @@ class Document:
     def __init__(self, region, out, number):
         self.r, self.number = region, number
         self.path = out / region.data["files"][number-1]
-        self.c = canvas.Canvas(str(self.path), pagesize=(W, H), pageCompression=1, invariant=1)
+        self.c = canvas.Canvas(str(self.path), pagesize=(W, H), pageCompression=1, invariant=1,
+                               lang=region.data.get("pdfLanguage"))
         self.c.setTitle(f"{region.project['name']} | {region.t('library')}")
         self.c.setAuthor("PolyPDF")
         self.c.setSubject(f"{region.t('fictional')}. {region.t('notForConstruction')}. {region.locale}")
@@ -588,7 +604,7 @@ def structure(region, out):
         for x in (0, 8, 16, 24):
             index += 1
             v.rect(x-.9, y-.9, 1.8, 1.8, width=1.3)
-            v.symbol("column", x, y, f"ST-{index:02}", size=22)
+            v.symbol("column", x, y, region.tag("column", index), size=22)
     v.dimension((0, 15), (24, 15), 100)
     v.dimension((0, 0), (0, 15), 80)
     v.reference(0, -3, 5)
@@ -641,40 +657,50 @@ def services(region, out, number):
                 v.line(x, 7.5, x, y, width=1.7, color=BLUE)
                 for dx in (-1, 1):
                     v.line(x, y, x+dx, y, width=1.4, color=BLUE)
-                    v.symbol("diffuser", x+dx, y, f"ZL-{len(entries)+1:02}", size=24)
+                    v.symbol("diffuser", x+dx, y, region.tag("diffuser", len(entries)+1), size=24)
                     entries.append("diffuser")
         for i, x in enumerate((19, 22)):
-            v.symbol("ahu", x, 3, f"LG-{i+1:02}", size=36)
+            v.symbol("ahu", x, 3, region.tag("ahu", i+1), size=36)
         for i, x in enumerate((13.5, 16.5)):
-            v.symbol("extract", x, 3, f"AL-{i+1:02}", size=24)
+            v.symbol("extract", x, 3, region.tag("extract", i+1), size=24)
         symbols = [("diffuser", 16), ("ahu", 2), ("extract", 2)]
     elif number == 6:
+        if region.data.get("maskSymbolTags"):
+            routes["circuit"] = v.route([(1, 1), (1, 7.5), (23, 7.5), (23, 13.5)], "circuit", GOLD, [6, 4])
         for i, (x, y) in enumerate((x, y) for y in (10.5, 13.5, 3) for x in (2, 5, 8, 11, 14, 17, 20, 23)):
-            v.symbol("light", x, y, f"L-{i+1:02}", size=23, rotation=90 if i % 4 == 0 else 0)
+            v.symbol("light", x, y, region.tag("light", i+1), size=23, rotation=90 if i % 4 == 0 else 0)
         for i, x in enumerate((1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23)):
-            v.symbol("socket", x, .6, f"SD-{i+1:02}", size=18)
+            v.symbol("socket", x, .6, region.tag("socket", i+1), size=18)
         for i, x in enumerate((2, 5, 8, 11, 14, 17, 20, 23)):
-            v.symbol("switch", x, 8.7, f"S-{i+1:02}", size=18)
-        routes["circuit"] = v.route([(1, 1), (1, 7.5), (23, 7.5), (23, 13.5)], "circuit", GOLD, [6, 4])
+            v.symbol("switch", x, 8.7, region.tag("switch", i+1), size=18)
+        if not region.data.get("maskSymbolTags"):
+            routes["circuit"] = v.route([(1, 1), (1, 7.5), (23, 7.5), (23, 13.5)], "circuit", GOLD, [6, 4])
         symbols = [("light", 24), ("socket", 12), ("switch", 8)]
     elif number == 7:
+        if region.data.get("maskSymbolTags"):
+            for key, xx, col in (("coldWater", 13.2, BLUE), ("hotWater", 13.5, RED), ("wasteWater", 16.2, GRAY)):
+                routes[key] = v.route([(xx, 0), (xx, 7.5), (18.5, 7.5), (18.5, 3)], key, col)
         for i, (x, y) in enumerate(((12.7, 1), (12.7, 5), (15.7, 1), (15.7, 5))):
-            v.symbol("wc", x, y, f"WC-{i+1:02}", size=26)
-            v.symbol("basin", x+1.5, y, f"WB-{i+1:02}", size=24)
-            v.symbol("floorDrain", x+.7, y+(.9 if y == 1 else -.9), f"BA-{i+1:02}", size=18)
-        for key, xx, col in (("coldWater", 13.2, BLUE), ("hotWater", 13.5, RED), ("wasteWater", 16.2, GRAY)):
-            routes[key] = v.route([(xx, 0), (xx, 7.5), (18.5, 7.5), (18.5, 3)], key, col)
+            v.symbol("wc", x, y, region.tag("wc", i+1), size=26)
+            v.symbol("basin", x+1.5, y, region.tag("basin", i+1), size=24)
+            v.symbol("floorDrain", x+.7, y+(.9 if y == 1 else -.9), region.tag("floorDrain", i+1), size=18)
+        if not region.data.get("maskSymbolTags"):
+            for key, xx, col in (("coldWater", 13.2, BLUE), ("hotWater", 13.5, RED), ("wasteWater", 16.2, GRAY)):
+                routes[key] = v.route([(xx, 0), (xx, 7.5), (18.5, 7.5), (18.5, 3)], key, col)
         symbols = [("wc", 4), ("basin", 4), ("floorDrain", 4)]
     else:
+        if region.data.get("maskSymbolTags"):
+            routes["escapeRoute"] = v.route([(21, 12), (21, 7.5), (.5, 7.5)], "escapeRoute", "#428062", [8, 5])
         for i, (x, y) in enumerate((x, y) for y in (3, 7.5, 12) for x in (1.5, 4.5, 7.5, 10.5, 13.5, 16.5, 19.5, 22.5)):
-            v.symbol("sprinkler", x, y, f"SP-{i+1:02}", size=19)
+            v.symbol("sprinkler", x, y, region.tag("sprinkler", i+1), size=19)
         for i, (x, y) in enumerate((x, y) for y in (4.5, 13.5) for x in (3, 9, 15, 21)):
-            v.symbol("smoke", x, y, f"RM-{i+1:02}", size=20)
+            v.symbol("smoke", x, y, region.tag("smoke", i+1), size=20)
         for i, (x, y) in enumerate(((.5, 7.5), (23.5, 7.5), (11.5, .5), (11.5, 14.5))):
-            v.symbol("exit", x, y, f"AW-{i+1:02}", size=21)
+            v.symbol("exit", x, y, region.tag("exit", i+1), size=21)
         for i, x in enumerate((2, 8, 14, 20)):
-            v.symbol("extinguisher", x, 6.3, f"FL-{i+1:02}", size=19)
-        routes["escapeRoute"] = v.route([(21, 12), (21, 7.5), (.5, 7.5)], "escapeRoute", "#428062", [8, 5])
+            v.symbol("extinguisher", x, 6.3, region.tag("extinguisher", i+1), size=19)
+        if not region.data.get("maskSymbolTags"):
+            routes["escapeRoute"] = v.route([(21, 12), (21, 7.5), (.5, 7.5)], "escapeRoute", "#428062", [8, 5])
         symbols = [("sprinkler", 24), ("smoke", 8), ("exit", 4), ("extinguisher", 4)]
     sidebar(sh, [note, "calibrate", "excludeLegend"], symbols)
     d.facts = {"planCounts": dict(symbols), "legendCounts": {kind: 1 for kind, _ in symbols}, "routesMetres": routes}
@@ -683,7 +709,7 @@ def services(region, out, number):
     sh.view_title(100, 1440, "1", diagram_title, None, 1300)
     if number == 5:
         sh.rect(160, 1080, 200, 180, 2, fill=LIGHT)
-        sh.text(260, 1150, "LG-01", 19, True, align="center")
+        sh.text(260, 1150, region.tag("ahu", 1), 19, True, align="center")
         for y in (1110, 1230):
             sh.poly([(360, y), (1080, y), (1080, y-140)], 4, BLUE)
             for x in (540, 760, 980):
@@ -692,7 +718,7 @@ def services(region, out, number):
         sh.text(440, 1305, region.t("duct")+" 400 x 250 mm", 18)
     elif number == 6:
         sh.rect(160, 1000, 210, 300, 1.5, fill=LIGHT)
-        sh.text(265, 1140, "UV-01", 22, True, align="center")
+        sh.text(265, 1140, region.tag("panel", 1), 22, True, align="center")
         for i, kind in enumerate(("light", "socket", "switch")):
             y = 1250-i*95
             sh.line(370, y, 1110, y, 2, GOLD)
@@ -744,11 +770,11 @@ def landscape(region, out):
     sh.view_title(100, 1440, "1", "landscapePlan", 200, 1450)
     v = site_base(sh, True)
     for i, (x, y) in enumerate((x, y) for y in (35, 38) for x in (4, 10, 16, 22, 28, 34, 40, 46, 52)):
-        v.symbol("tree", x, y, f"B-{i+1:02}", size=20)
+        v.symbol("tree", x, y, region.tag("tree", i+1), size=20)
     for i, (x, y) in enumerate((x, y) for x in (3, 57) for y in range(4, 28, 2)):
-        v.symbol("shrub", x, y, f"S-{i+1:02}", size=12, tag_side="right" if x == 3 else "left")
+        v.symbol("shrub", x, y, region.tag("shrub", i+1), size=12, tag_side="right" if x == 3 else "left")
     for i, x in enumerate((9, 15, 21, 27, 33, 39, 45, 51)):
-        v.symbol("bench", x, 13, f"BK-{i+1:02}", size=17)
+        v.symbol("bench", x, 13, region.tag("bench", i+1), size=17)
     sidebar(sh, ["plantNote", "siteDimensions", "calibrate"], [("tree", 18), ("shrub", 24), ("bench", 8)])
     sh = d.sheet("L501", "landscapeDetails", "landscape")
     sh.view_title(100, 1440, "1", "treePit", 20, 950)
@@ -907,7 +933,8 @@ def coordination(region, out):
 
 def scanned(region, out, temp):
     path = out / region.data["files"][11]
-    pdf = canvas.Canvas(str(path), pagesize=(W, H), pageCompression=1, invariant=1)
+    pdf = canvas.Canvas(str(path), pagesize=(W, H), pageCompression=1, invariant=1,
+                        lang=region.data.get("pdfLanguage"))
     pdf.setTitle(region.project["name"]+" | "+region.t("scan"))
     pdf.setAuthor("PolyPDF")
     pdf.setSubject(region.t("scanNote"))
@@ -994,7 +1021,7 @@ def package_library(out, locale):
         assert any(item["file"] == preview["file"] and item["sha256"] == preview["sha256"] for item in visual["previews"])
         files.append(preview["file"])
     assert hashlib.sha256((out / "CONTACT-SHEET.png").read_bytes()).hexdigest() == visual["contactSheet"]["sha256"]
-    archive = out / f"PolyPDF-Bauzeichnungen-{locale}.zip"
+    archive = out / manifest.get("archiveFile", f"PolyPDF-Bauzeichnungen-{locale}.zip")
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zipped:
         for name in sorted(files):
             info = zipfile.ZipInfo(name, (2026, 10, 20, 0, 0, 0))
@@ -1029,6 +1056,9 @@ def main():
                 "paper": {"name": "ISO A1", "widthPoints": W, "heightPoints": H, "widthMm": 841, "heightMm": 594},
                 "project": region.project, "fictional": True, "standardsComplianceClaimed": False,
                 "documents": records, "reviewStatus": "generated; verification and rendered review required"}
+    if "archiveFile" in region.data:
+        manifest["archiveFile"] = region.data["archiveFile"]
+        manifest["verificationText"] = {"reference": region.t("reference"), "checked": region.t("checked")}
     (out / "DEMO-MANIFEST.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+"\n")
     with (out / "reference-quantities.csv").open("w", newline="") as stream:
         writer = csv.writer(stream, delimiter=";", lineterminator="\n")
@@ -1041,7 +1071,7 @@ def main():
     (out / "SHA256SUMS.txt").write_text("".join(f'{record["sha256"]}  {record["file"]}\n' for record in records))
     write_guide(region, out, records)
     # A previous archive cannot describe newly generated PDFs until previews and checks finish.
-    (out / f"PolyPDF-Bauzeichnungen-{region.locale}.zip").unlink(missing_ok=True)
+    (out / manifest.get("archiveFile", f"PolyPDF-Bauzeichnungen-{region.locale}.zip")).unlink(missing_ok=True)
     print(json.dumps({"locale": region.locale, "pdfs": len(records), "pages": sum(len(r["pages"]) for r in records),
                       "directory": str(out), "archive": "created by verify_regional_library.py after verification"}, indent=2))
 

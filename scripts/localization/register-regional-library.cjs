@@ -69,7 +69,7 @@ for (const document of manifest.documents) {
   }
 }
 register('contact-sheet.png', 'CONTACT-SHEET.png');
-register('polypdf-construction-demo-library.zip', `PolyPDF-Bauzeichnungen-${manifest.locale}.zip`);
+register('polypdf-construction-demo-library.zip', manifest.archiveFile ?? `PolyPDF-Bauzeichnungen-${manifest.locale}.zip`);
 register('DEMO-GUIDE.html', 'DEMO-GUIDE.html');
 register('DEMO-MANIFEST.json', 'DEMO-MANIFEST.json');
 register('SHA256SUMS.txt', 'SHA256SUMS.txt');

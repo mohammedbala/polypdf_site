@@ -1,0 +1,43 @@
+Document;Description;Valeur;Unité
+01;Surface de la parcelle (m²);2 400,00;m²
+01;Périmètre de la parcelle (m);200,00;m
+01;Places de stationnement;8;-
+01;Surface revêtue (m²);144,00;m²
+01;Longueur du réseau d'eau potable (m);39,00;m
+01;Longueur du réseau d'évacuation (m);34,00;m
+01;Longueur du réseau électrique (m);57,00;m
+02;Emprise rectangulaire (m²);360,00;m²
+02;Périmètre du bâtiment (m);78,00;m
+02;Surface de la pièce 103 (m²);36,00;m²
+02;Surface de la pièce 104 (m²);36,00;m²
+02;Liens internes vers les coupes;2;-
+02;Déplacement de la cloison (m);0,00;m
+02;Déplacement de la porte (m);0,00;m
+02;Largeur de la fenêtre ajoutée (m);0,00;m
+03;Emprise rectangulaire (m²);360,00;m²
+03;Périmètre du bâtiment (m);78,00;m
+03;Surface de la pièce 103 (m²);45,00;m²
+03;Surface de la pièce 104 (m²);27,00;m²
+03;Liens internes vers les coupes;2;-
+03;Déplacement de la cloison (m);1,50;m
+03;Déplacement de la porte (m);0,75;m
+03;Largeur de la fenêtre ajoutée (m);1,50;m
+04;Poteaux;12;-
+04;Semelles isolées;12;-
+04;Surface du dallage (m²);360,00;m²
+04;Épaisseur du dallage (m);0,15;m
+04;Volume du dallage (m³);54,00;m³
+04;Volume total des semelles (m³);17,496;m³
+04;Longueur totale des poutres (m);132,00;m
+09;Surface revêtue (m²);144,00;m²
+10;Sol souple (m²);324,00;m²
+10;Carrelage (m²);36,00;m²
+10;Total des revêtements de sol (m²);360,00;m²
+10;Carreaux avant majoration;100;-
+10;Meubles bas;6;-
+10;Largeur du module de meuble (m);1,20;m
+10;Surface du plan de travail (m²);4,32;m²
+10;Longueur des plinthes (m);7,20;m
+11;Notes PDF modifiables;3;-
+11;Points à vérifier introduits pour l'exercice;3;-
+12;Résolution de numérisation (ppp);80;-

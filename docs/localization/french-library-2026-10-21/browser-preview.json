@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "browser": "Codex in-app browser",
+  "scope": "Standalone French library guide on loopback; no public route enabled",
+  "language": "fr",
+  "articles": 12,
+  "pdfLinks": 12,
+  "horizontalOverflow": false,
+  "expandedReferenceValues": [
+    "60,00 / 40,00",
+    "2 400,00",
+    "200,00",
+    "8",
+    "144,00",
+    "39,00",
+    "34,00",
+    "57,00"
+  ],
+  "download": {
+    "file": "01-Plan-de-masse-et-terrain.pdf",
+    "sha256": "354403216dd1474e9cb17aa324b3e59d42efb3b146f026c9768692a45a993ab5",
+    "matchesSource": true
+  },
+  "screenshot": {
+    "file": "guide-preview.png",
+    "sha256": "d4d1fd355becb0dffa16ce48cc8509e69db21f4cf24530ccf0ee5ea264974874"
+  }
+}

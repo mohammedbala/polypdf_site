@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "locale": "fr-FR",
+  "region": "FR",
+  "status": "passed",
+  "reviewer": "Codex visual inspection",
+  "manifestSha256": "e90a8792fac4ea9a212202a7306d4cc6b4d45fb80c226c153258158bc4592953",
+  "scope": "All 24 final rendered sheets inspected in contact sheet. Full-size inspection of listed unchanged/final views plus equipment and landscape sheets during iteration. Linguistic draft; not construction standards certification or native application UI validation.",
+  "fullSizePages": [
+    "03-1",
+    "05-2",
+    "06-1",
+    "07-1",
+    "07-2",
+    "08-2",
+    "10-2",
+    "11-2"
+  ],
+  "corrections": [
+    "Localized equipment tag prefixes as well as descriptive text.",
+    "Moved French electrical socket labels above symbols to clear the drawing boundary.",
+    "Masked French symbol labels and painted service routes behind the equipment for legibility."
+  ],
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "584df5152c84387af01383265f1538203accefa257fa9bb7f1618dbc669cacd4"
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "4afc7d1809c7aafd5bfe758d9becf3ff938a168b8d756f53abc124b1d5594358"
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "f6ac6adf154285de3b130b049c3f2d23be1845d564f24eb19fe3e55566505d17"
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "07e149e5bf6bba3d9de009d17aa77e6ba182c060dc3f2941854587a435c4ecaa"
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "689fd7a46f23125a650a25037bc05b47d916f894717ecd994547f654069f1e97"
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "0a02cec1a57e7126f7f4d38759d84ff702d840175289a77f3f178b67e05462b7"
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "b7bb88b8ae3778eb59fb6825bebbdd55acca0725ae20fc15a1c2e8be55ce9643"
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "981156d0a6fbe70f6017d6114cd9e4fe36deed06a1939ddc1da0aa95d9016aba"
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "f3578343b53681c0a534b3f3538c6a5d8942fc4c6fabfa6a5aad3840ec6c5ce9"
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "3c82af5a7e8eb927ea115901099d940e6416dfc7c8d0163131a4d3e4374ce9e9"
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "6eef8a1c605d6dab30de3884d0a29f33a44a8cbaa23f0727e25c21e3af7ae266"
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "35e85754ed034d0c6ea0c244c074c31ec23d7f020d11d71626845672c7154211"
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "f4b56543d47a8342c892f31ed70d35b6f502c15d307643a2e2949604c2c10cb3"
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "2158179877bdb5c02c364eefc8992073051baf6c415a940e2a25b0785d7dacc5"
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "756eca81c0091a5a5ad08a6b7887d8572af578bb590b52b8e5ded582d7d5c72a"
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "8cc358cdbe0e3fdbffbff3be6ad34f06c0545209318e8543ae66a701e1210968"
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "b6d5bf677b9fba835ee8832e081ecfe564e0f9eac63c9d9f440fa9aa902626b4"
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "4cf028bd8f5d0fd220b89d3d966f90a3b28e70fc38975da93a9f339cc4d26487"
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "6ea696a756bf60ba6fc7ff1e7ee62951a49bf5efcd26a54541030a7686642c8c"
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "8086b5f2f434811b5c4efe923febe2c62c51420faf5326aff6179b9ff18088ec"
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "f7bbfef93efcede1647d67afd7caa202acd231f782f88df2a2bed65f3d0c982f"
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "85446f642b751116795b11843ceb025359e27e9bcc016dc571ee8bb756e54cb8"
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "8f1bd9a3301bc373015d980747aa27cba4d037ec2ac519a4af3cb9d37fbb24fe"
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "28d8df945f85daca2c05fe474a5f4df2ebd8745502ad63dbe133a5a8f53201fb"
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "d4f1d15d873e9d409f315f56715be6e80f423be89d8b2144778bb6be74aed9ce"
+  }
+}

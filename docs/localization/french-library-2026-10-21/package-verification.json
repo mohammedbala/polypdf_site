@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "archive": "PolyPDF-Plans-de-construction-fr-FR.zip",
+  "sha256": "06ccabf55ca2ad12f09e4cb08a89a7a63ec049675065e7d95e2980654b635200",
+  "entries": 44,
+  "pdfs": 12,
+  "pages": 24,
+  "physicalReferences": 274,
+  "mediaMappings": 41,
+  "nativeUiVerified": false,
+  "publicRoutesEnabled": 0
+}

@@ -149,6 +149,8 @@ def verify_document(record, region, folder):
     path = folder / record["file"]
     assert digest(path) == record["sha256"], f"PDF hash changed: {path.name}"
     reader = PdfReader(path)
+    if "pdfLanguage" in region.data:
+        assert reader.trailer["/Root"].get("/Lang") == region.data["pdfLanguage"], "Wrong PDF language"
     assert len(reader.pages) == len(record["pages"]) == 2
     outlines = list(outlines_flat(reader.outline))
     assert len(outlines) == 2 and [reader.get_destination_page_number(o) for o in outlines] == [0, 1]
@@ -282,7 +284,7 @@ def main():
            and json.loads(file.read_text()).get("status") == "passed" for file in receipts):
         archive = package_library(folder, region.locale)
     else:
-        (folder / f"PolyPDF-Bauzeichnungen-{region.locale}.zip").unlink(missing_ok=True)
+        (folder / manifest.get("archiveFile", f"PolyPDF-Bauzeichnungen-{region.locale}.zip")).unlink(missing_ok=True)
     print(json.dumps({"status": "passed", "documents": 12, "pages": 24,
                       "physicalReferences": sum(p["physicalReferences"] for d in verified for p in d["pages"]),
                       "archive": str(archive) if archive else "requires source-bound visual and app persistence receipts",
