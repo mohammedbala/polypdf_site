@@ -1,0 +1,50 @@
+{
+  "status": "sources_verified_native_walkthrough_pending",
+  "locale": "de-DE",
+  "region": "DE",
+  "files": {
+    "public/localized-media/de/samples/redaction/README.md": {
+      "bytes": 3354,
+      "sha256": "454f522928bca0bc0fbae7933c5f8ef15618442f99150112d39db5bf1b08cb74"
+    },
+    "public/localized-media/de/samples/redaction/pruefplan-bereinigen.pdf": {
+      "bytes": 5721,
+      "sha256": "c1fd5aa3f350db7d30d67667ecbfd857f7170b3e6d7145bfdcc1e14b3be80e89"
+    },
+    "public/localized-media/de/samples/redaction/pruefplan-schwaerzen.pdf": {
+      "bytes": 4627,
+      "sha256": "31e37ad6f9db7f10db3f733a0cd5da2f47d1dc06865def5629ce785122a657d8"
+    },
+    "public/localized-media/de/samples/redaction/regeneration-verification.json": {
+      "bytes": 241,
+      "sha256": "17d7b527af5ce41dc81d7efc479b9c86d0951e0e89c9d88ebcc555c5c11f4323"
+    },
+    "public/localized-media/de/samples/redaction/source-manifest.json": {
+      "bytes": 534,
+      "sha256": "3a7966ee6c66be325339234a64bc4a0e07c0094883ea7e11b2033229e45fc084"
+    },
+    "public/localized-media/de/samples/redaction/source-verification.json": {
+      "bytes": 1582,
+      "sha256": "2631a42b241ed7997f0f55e3fc62409b153e75affc313c57964b1f65804440a2"
+    },
+    "scripts/localization/capture-redaction-de.mjs": {
+      "bytes": 5339,
+      "sha256": "db012004b5a7c4c8d19c0bfe1928aae45ac138a16cb6684afbbf83b9f8095b23"
+    },
+    "scripts/localization/generate-redaction-de.py": {
+      "bytes": 7340,
+      "sha256": "058608fbc509beaa5cce3a68647fa83598a30d2ed4ec6eb02895be9fba3b705b"
+    },
+    "scripts/localization/verify-redaction-de.py": {
+      "bytes": 8109,
+      "sha256": "f46f41d336d184abfd4054ec496e58c999452d969cc0425031d2c4993712c5d7"
+    }
+  },
+  "appAudit": "/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/docs/audits/global-localization-2026-10-20/redaction-guide/README.md",
+  "unchangedMediaPack": {
+    "assetMappings": 89,
+    "completedRoutes": 8
+  },
+  "nativeCaptureBlocker": "Mac locked on both Computer Use attempts; no activation or native workflow step performed",
+  "published": false
+}

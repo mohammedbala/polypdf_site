@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "sources": {
+    "pruefplan-schwaerzen.pdf": {
+      "sha256": "31e37ad6f9db7f10db3f733a0cd5da2f47d1dc06865def5629ce785122a657d8",
+      "pagePoints": [
+        1190.551,
+        841.8898
+      ],
+      "planMetresFromPaintedRectangle": [
+        24.00000138888889,
+        12.000000694444445
+      ],
+      "tokenOccurrences": 1,
+      "tokenFitsRegion": true,
+      "textInsidePageBorder": true,
+      "images": [
+        {
+          "width": 480,
+          "height": 220,
+          "pixelsSha256": "299d94cb65388ebabef7acfee31d705746d863ead3dbf164866fc08a9bc64d1f"
+        }
+      ],
+      "pageAttachments": []
+    },
+    "pruefplan-bereinigen.pdf": {
+      "sha256": "c1fd5aa3f350db7d30d67667ecbfd857f7170b3e6d7145bfdcc1e14b3be80e89",
+      "pagePoints": [
+        1190.551,
+        841.8898
+      ],
+      "planMetresFromPaintedRectangle": [
+        24.00000138888889,
+        12.000000694444445
+      ],
+      "tokenOccurrences": 1,
+      "tokenFitsRegion": true,
+      "textInsidePageBorder": true,
+      "images": [
+        {
+          "width": 480,
+          "height": 220,
+          "pixelsSha256": "299d94cb65388ebabef7acfee31d705746d863ead3dbf164866fc08a9bc64d1f"
+        },
+        {
+          "width": 480,
+          "height": 220,
+          "pixelsSha256": "299d94cb65388ebabef7acfee31d705746d863ead3dbf164866fc08a9bc64d1f"
+        }
+      ],
+      "pageAttachments": [
+        {
+          "name": "pruefnotiz.txt",
+          "payloadSha256": "7f4b537aa84307ad5aa932b3b0b2fa322f4be9e0e1e0edf43312e44b9b52a31f"
+        }
+      ]
+    }
+  }
+}

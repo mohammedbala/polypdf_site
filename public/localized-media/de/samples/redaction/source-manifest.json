@@ -1,0 +1,25 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "token": "VORGANG-LINDE-742",
+  "pagePoints": [
+    1190.5511811023623,
+    841.8897637795277
+  ],
+  "planMetres": [
+    24,
+    12
+  ],
+  "planScale": "1:100",
+  "redactionRegion": {
+    "x": 795,
+    "y": 571,
+    "width": 280,
+    "height": 32
+  },
+  "fictional": true,
+  "files": {
+    "pruefplan-schwaerzen.pdf": "31e37ad6f9db7f10db3f733a0cd5da2f47d1dc06865def5629ce785122a657d8",
+    "pruefplan-bereinigen.pdf": "c1fd5aa3f350db7d30d67667ecbfd857f7170b3e6d7145bfdcc1e14b3be80e89"
+  }
+}
