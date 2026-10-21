@@ -46,7 +46,7 @@ for (const locale of allLocales) {
     const {dom,assets,schema,meta} = c.sourcePage(build,route);
     const d = dom.window.document;
     localizePageElements(d,locale,page);
-    if (useRegionalMedia) localizeRegionalCopy(d, locale, walkthroughMedia);
+    if (useRegionalMedia) localizeRegionalCopy(d, locale, walkthroughMedia, page);
     c.translateDOM(d.body,t);
     d.querySelector('[data-language-slot]').outerHTML = c.languageNavigation(route,locale,t);
     c.localizeLinks(d,locale,t);

@@ -3,6 +3,31 @@ const {JSDOM}=require('jsdom');
 const {localizedPage,pageTranslator,localizePageElements,localizeArticleImages}=require('../scripts/localization/pages.cjs');
 const {translateDOM}=require('../scripts/international/content.cjs');
 const locale={id:'de',language:'de'};
+const {localizeRegionalCopy}=require('../scripts/localization/media.cjs');
+
+test('shared exercises preserve exact guide prose while retaining stale-source detection',()=>{
+  const data={locales:{de:{appLocale:'de-DE',region:'DE',regionalText:{'exercise.review.step1':{source:'Open the two sheets.',target:'Beide Blätter öffnen.'}}}}};
+  const page={locale:'de-DE',region:'DE',text:{'Open the two sheets.':'Nur X101 öffnen.'},elements:[]};
+  const make=text=>new JSDOM(`<p data-regional-copy="exercise.review.step1">${text}</p>`).window.document;
+  const d=make('Open the two sheets.');
+  localizeRegionalCopy(d,locale,data,page);
+  const t=pageTranslator(()=>{throw Error('Unexpected base translation');},page);
+  translateDOM(d.body,t);t.verify();
+  assert.equal(d.querySelector('p').textContent,'Nur X101 öffnen.');
+  assert.throws(()=>localizeRegionalCopy(make('Changed source.'),locale,data,page),/Stale regional exercise/);
+  assert.throws(()=>localizeRegionalCopy(make('Open the two sheets.'),locale,data,{...page,region:'FR'}),/Wrong regional copy page/);
+});
+
+test('guide-specific filenames require an applied source-bound element override',()=>{
+  const data={locales:{de:{appLocale:'de-DE',region:'DE',regionalText:{'library.11.filename':{source:'Source.pdf',target:'Zwei-Blaetter.pdf'}}}}};
+  const page={locale:'de-DE',region:'DE',text:{},elements:[{selector:'bdi',source:'Source.pdf',target:'x101.pdf'}]};
+  const make=()=>new JSDOM('<bdi data-regional-copy="library.11.filename" translate="no">Source.pdf</bdi>').window.document;
+  assert.throws(()=>localizeRegionalCopy(make(),locale,data,page),/Stale regional page exercise/);
+  const d=make();localizePageElements(d,locale,page);localizeRegionalCopy(d,locale,data,page);
+  assert.equal(d.querySelector('bdi').textContent,'x101.pdf');
+  const changed=structuredClone(data);changed.locales.de.regionalText['library.11.filename'].source='Different.pdf';
+  assert.throws(()=>localizeRegionalCopy(d,locale,changed,page),/Stale regional page exercise/);
+});
 const manifest=()=>({locales:{de:{status:'pilot',appLocale:'de-DE',region:'DE',pages:{'/guide':{status:'complete',locale:'de-DE',region:'DE',evidence:'/proof.json',elements:[],text:{}}}}}});
 test('only an explicitly completed route enables a partial locale pack',()=>{
   const data=manifest();

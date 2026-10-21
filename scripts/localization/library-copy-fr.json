@@ -1,0 +1,426 @@
+{
+  "locale": "fr-FR",
+  "region": "FR",
+  "status": "draft",
+  "scope": "Shared library and exercises only; does not qualify complete routes or native walkthroughs",
+  "text": {
+    "library.kicker": {
+      "source": "The original PolyPDF drawing collection",
+      "target": "La collection de plans originaux PolyPDF"
+    },
+    "library.heading": {
+      "source": "One project. Twelve PDFs. Twenty-four construction sheets.",
+      "target": "Un projet. Douze PDF. Vingt-quatre feuilles de plans."
+    },
+    "library.intro": {
+      "source": "Explore the fictional Willow Creek Community Center through coordinated architectural, structural, civil, MEP, and finish drawings. Every PDF contains two bookmarked ARCH D sheets (36 × 24 inches), with drawing numbers, schedules, legends, dimensions, and details.",
+      "target": "Explorez la Maison de quartier des Tilleuls, un projet fictif, à travers des plans coordonnés d’architecture, de structure, de voirie et réseaux, de lots techniques et de finitions. Chaque PDF contient deux feuilles A1 (841 × 594 mm) avec signets, numéros de plans, nomenclatures, légendes, cotes et détails."
+    },
+    "library.download": {
+      "source": "Download all 24 sheets · ZIP",
+      "target": "Télécharger les 24 feuilles · ZIP"
+    },
+    "library.guide": {
+      "source": "View the drawing guide and reference quantities →",
+      "target": "Consulter le guide des plans et les quantités de référence →"
+    },
+    "library.scope": {
+      "source": "These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Use the sheet-specific examples below. The earlier F-101 and E-101 exercises use different drawings and quantities.",
+      "target": "Ces dessins originaux servent à la démonstration. Ce ne sont ni des documents de permis ni des résultats enregistrés par PolyPDF. Les plans de niveau sont au 1:50 ; les plans de masse et les détails ont d’autres échelles. Étalonnez chaque vue avant de mesurer. Utilisez les exercices propres à chaque feuille ci-dessous. Les anciens exercices F-101 et E-101 utilisent d’autres dessins et quantités."
+    },
+    "library.nav.takeoff": {
+      "source": "Measurement",
+      "target": "Mesures"
+    },
+    "library.nav.flooring": {
+      "source": "Flooring",
+      "target": "Revêtements de sol"
+    },
+    "library.nav.electrical": {
+      "source": "Electrical",
+      "target": "Électricité"
+    },
+    "library.nav.compare": {
+      "source": "Revision comparison",
+      "target": "Comparaison des indices"
+    },
+    "library.nav.review": {
+      "source": "Coordination review",
+      "target": "Vérification de synthèse"
+    },
+    "library.nav.ocr": {
+      "source": "OCR",
+      "target": "OCR"
+    },
+    "library.01.title": {
+      "source": "Civil site and grading · PDF",
+      "target": "Plan de masse et terrain · PDF"
+    },
+    "library.01.sheets": {
+      "source": "C101 · C501 · 2 sheets",
+      "target": "C101 · C201 · 2 feuilles"
+    },
+    "library.01.description": {
+      "source": "Site layout, grading, parking, drainage, pavement and curb details.",
+      "target": "Implantation, aménagement du terrain, stationnement, réseaux, revêtements et détails de bordures."
+    },
+    "library.02.title": {
+      "source": "Architecture · Revision A · PDF",
+      "target": "Architecture · Indice A · PDF"
+    },
+    "library.02.sheets": {
+      "source": "A101 · A201 · 2 sheets",
+      "target": "A101 · A201 · 2 feuilles"
+    },
+    "library.02.description": {
+      "source": "Dimensioned floor plan, elevations, building section and wall detail.",
+      "target": "Plan de niveau coté, façades, coupe du bâtiment et détail de paroi."
+    },
+    "library.03.title": {
+      "source": "Architecture · Revision B · PDF",
+      "target": "Architecture · Indice B · PDF"
+    },
+    "library.03.sheets": {
+      "source": "A101 · A201 · 2 sheets",
+      "target": "A101 · A201 · 2 feuilles"
+    },
+    "library.03.description": {
+      "source": "A matching revised set for comparison with Revision A.",
+      "target": "Jeu de plans modifié correspondant à l’indice A pour la comparaison."
+    },
+    "library.04.title": {
+      "source": "Structural foundation and framing · PDF",
+      "target": "Fondations et structure · PDF"
+    },
+    "library.04.sheets": {
+      "source": "S101 · S501 · 2 sheets",
+      "target": "S101 · S201 · 2 feuilles"
+    },
+    "library.04.description": {
+      "source": "Footings, columns, roof framing, connection details and schedules.",
+      "target": "Semelles, poteaux, structure de toiture, détails d’assemblage et nomenclatures."
+    },
+    "library.05.title": {
+      "source": "Mechanical / HVAC · PDF",
+      "target": "Ventilation · PDF"
+    },
+    "library.05.sheets": {
+      "source": "M101 · M501 · 2 sheets",
+      "target": "M101 · M501 · 2 feuilles"
+    },
+    "library.05.description": {
+      "source": "Ductwork, terminals, equipment, controls and mechanical details.",
+      "target": "Gaines, bouches, équipements, régulation et détails de ventilation."
+    },
+    "library.06.title": {
+      "source": "Electrical lighting and power · PDF",
+      "target": "Éclairage et électricité · PDF"
+    },
+    "library.06.sheets": {
+      "source": "E101 · E601 · 2 sheets",
+      "target": "E101 · E501 · 2 feuilles"
+    },
+    "library.06.description": {
+      "source": "Lighting, receptacles, electrical diagrams and fixture schedules.",
+      "target": "Éclairage, prises de courant, schéma électrique et nomenclature des luminaires."
+    },
+    "library.07.title": {
+      "source": "Plumbing water and drainage · PDF",
+      "target": "Eau potable et évacuation · PDF"
+    },
+    "library.07.sheets": {
+      "source": "P101 · P501 · 2 sheets",
+      "target": "P101 · P501 · 2 feuilles"
+    },
+    "library.07.description": {
+      "source": "Water and drainage layouts, risers, fixtures and installation details.",
+      "target": "Réseaux d’eau et d’évacuation, colonnes, appareils sanitaires et détails de pose."
+    },
+    "library.08.title": {
+      "source": "Fire protection and life safety · PDF",
+      "target": "Sécurité incendie · Exercice · PDF"
+    },
+    "library.08.sheets": {
+      "source": "FP101 · FP501 · 2 sheets",
+      "target": "F101 · F501 · 2 feuilles"
+    },
+    "library.08.description": {
+      "source": "Sprinkler and life-safety symbols, risers, details and schedules.",
+      "target": "Symboles de sprinklers et de sécurité, colonnes, détails et nomenclatures ; sans attestation de conformité."
+    },
+    "library.09.title": {
+      "source": "Landscape and external works · PDF",
+      "target": "Aménagements paysagers · PDF"
+    },
+    "library.09.sheets": {
+      "source": "L101 · L501 · 2 sheets",
+      "target": "L101 · L501 · 2 feuilles"
+    },
+    "library.09.description": {
+      "source": "Planting, paving, landscape details and an authored planting schedule.",
+      "target": "Plantations, revêtements, détails paysagers et nomenclature de végétaux créée pour l’exercice."
+    },
+    "library.10.title": {
+      "source": "Interiors, finishes and millwork · PDF",
+      "target": "Revêtements et mobilier intégré · PDF"
+    },
+    "library.10.sheets": {
+      "source": "I101 · I501 · 2 sheets",
+      "target": "I101 · I501 · 2 feuilles"
+    },
+    "library.10.description": {
+      "source": "Room finishes, floor patterns, casework elevations and interior details.",
+      "target": "Finitions des pièces, calepinage, élévations du mobilier et détails intérieurs."
+    },
+    "library.11.title": {
+      "source": "Coordination and review · PDF",
+      "target": "Synthèse et vérification · PDF"
+    },
+    "library.11.sheets": {
+      "source": "X101 · X102 · 2 sheets",
+      "target": "X101 · X102 · 2 feuilles"
+    },
+    "library.11.description": {
+      "source": "Overlaid disciplines, three authored review notes and four PDF layers.",
+      "target": "Superposition des lots techniques, trois notes de vérification préparées et quatre calques PDF."
+    },
+    "library.12.title": {
+      "source": "Scanned legacy drawings · PDF",
+      "target": "Plans existants numérisés · PDF"
+    },
+    "library.12.sheets": {
+      "source": "A101 · C101 · 2 sheets",
+      "target": "A101 · C101 · 2 feuilles"
+    },
+    "library.12.description": {
+      "source": "Image-only architectural and site sheets for OCR practice.",
+      "target": "Feuilles d’architecture et de plan de masse constituées uniquement d’images, pour pratiquer l’OCR."
+    },
+    "library.handoff": {
+      "source": "Keep an untouched master and mark up a copy. Check the drawing scope, units, exported quantities, and saved-file handoff in your own workflow. All projects and coordination issues are fictional; no customer drawing or professional seal is included.",
+      "target": "Conservez un original intact et annotez une copie. Vérifiez le périmètre du dessin, les unités, les quantités exportées et la transmission du fichier enregistré dans votre propre procédure. Tous les projets et points de synthèse sont fictifs ; aucun plan client ni visa professionnel n’est inclus."
+    },
+    "exercise.kicker": {
+      "source": "Work with the construction drawing set",
+      "target": "Utiliser le jeu de plans de construction"
+    },
+    "exercise.takeoff.title": {
+      "source": "Measure the Willow Creek architectural plan",
+      "target": "Mesurer le plan architectural de la Maison de quartier des Tilleuls"
+    },
+    "exercise.takeoff.sheets": {
+      "source": "A101 · A201",
+      "target": "A101 · A201"
+    },
+    "exercise.takeoff.step1": {
+      "source": "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.",
+      "target": "Ouvrez A101, indice A. Étalonnez la longueur de référence imprimée de 5,00 m : au 1:50, elle correspond à environ 283,46457 points PDF."
+    },
+    "exercise.takeoff.step2": {
+      "source": "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.",
+      "target": "Contrôlez séparément la largeur de 24,00 m et la profondeur de 15,00 m, puis tracez le contour extérieur du bâtiment."
+    },
+    "exercise.takeoff.step3": {
+      "source": "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.",
+      "target": "Comparez l’emprise rectangulaire à 360,00 m². Conservez le plan, l’indice, l’objet, l’unité et le total avec la mesure exportée."
+    },
+    "exercise.takeoff.scope": {
+      "source": "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.",
+      "target": "Cet exercice porte sur l’emprise rectangulaire brute. Il ne mesure pas le sol net et ne déduit pas les murs. Les deux contrôles de longueur et la mesure de surface sont trois mesures manuelles."
+    },
+    "exercise.provenance": {
+      "source": "Drawing reference values, not new app test results. Work on a copy and check your own saved output.",
+      "target": "Les valeurs sont des références du dessin, pas de nouveaux résultats de tests de l’application. Travaillez sur une copie et vérifiez votre fichier enregistré."
+    },
+    "exercise.historicalMac": {
+      "source": "Inspect the saved Mac example and its tested local build →",
+      "target": "Ancien exemple américain : consulter le fichier Mac enregistré et la version locale testée →"
+    },
+    "exercise.download.A": {
+      "source": "Download Revision A · PDF",
+      "target": "Télécharger l’indice A · PDF"
+    },
+    "library.02.filename": {
+      "source": "02-Architectural-Revision-A.pdf",
+      "target": "02-Architecture-Indice-A.pdf"
+    },
+    "exercise.flooring.title": {
+      "source": "Take off finishes from the Willow Creek interiors plan",
+      "target": "Métrer les revêtements de la Maison de quartier des Tilleuls"
+    },
+    "exercise.flooring.sheets": {
+      "source": "I101 · I501",
+      "target": "I101 · I501"
+    },
+    "exercise.flooring.step1": {
+      "source": "Open I101 and calibrate its 20 ft reference. Read the F1 and F2 finish key before measuring.",
+      "target": "Ouvrez I101 et étalonnez sa référence de 5,00 m. Lisez la légende des revêtements F1 et F2 avant de mesurer."
+    },
+    "exercise.flooring.step2": {
+      "source": "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.",
+      "target": "Tracez séparément les zones cotées des pièces carrelées 107 et 108 : 18,00 m² chacune, soit 36,00 m² au total."
+    },
+    "exercise.flooring.step3": {
+      "source": "Compare F2 tile with 576 sq ft and F1 resilient flooring with 5,184 sq ft. Apply any waste allowance separately.",
+      "target": "Comparez le carrelage F2 à 36,00 m² et le sol souple F1 à 324,00 m². Appliquez séparément toute majoration pour les chutes."
+    },
+    "exercise.flooring.scope": {
+      "source": "The authored finish schedule uses room dimension boundaries without wall-thickness deductions. These exercise areas are not net installed quantities; I501 details use different scales.",
+      "target": "La nomenclature utilise les limites cotées des pièces sans déduire l’épaisseur des murs. Ces surfaces d’exercice ne sont pas des quantités nettes posées ; les détails I501 utilisent d’autres échelles."
+    },
+    "exercise.download.drawing": {
+      "source": "Download the example drawing · PDF",
+      "target": "Télécharger le plan d’exercice · PDF"
+    },
+    "library.10.filename": {
+      "source": "10-Interiors-Finishes-and-Millwork.pdf",
+      "target": "10-Revetements-et-mobilier-integre.pdf"
+    },
+    "exercise.electrical.title": {
+      "source": "Count the Willow Creek lighting plan",
+      "target": "Compter les symboles du plan électrique des Tilleuls"
+    },
+    "exercise.electrical.sheets": {
+      "source": "E101 · E601",
+      "target": "E101 · E501"
+    },
+    "exercise.electrical.step1": {
+      "source": "Open E101 and identify the luminaire symbol in the legend. Count only the plan, excluding legend and detail examples.",
+      "target": "Ouvrez E101 et repérez le symbole de luminaire dans la légende. Comptez uniquement les symboles du plan, en excluant les exemples de légende et de détail."
+    },
+    "exercise.electrical.step2": {
+      "source": "Review 24 plan luminaires, including 4 emergency luminaires. The emergency subset is included in 24, not added to it.",
+      "target": "Vérifiez les 24 luminaires, 12 prises de courant et 8 interrupteurs du plan. Conservez des quantités distinctes pour ces trois catégories."
+    },
+    "exercise.electrical.step3": {
+      "source": "Calibrate the 20 ft reference. Trace the LP-1 / CKTS 1, 3, 5, 7 diagram from the panel, then north and east: 8 + 38 = 46 ft.",
+      "target": "Étalonnez la référence de 5,00 m. Tracez le cheminement schématique sur E101 et comparez-le à 34,50 m. E501 contient le schéma électrique et la nomenclature des luminaires."
+    },
+    "exercise.electrical.scope": {
+      "source": "The dashed wiring is a circuit diagram, not a conduit takeoff. Pro is required for Symbol Search; review every candidate. The 24 fixtures and 46 ft are drawing references, not app results.",
+      "target": "Le tracé en pointillés représente un cheminement schématique, pas un métré de conduits à exécuter. La recherche de symboles nécessite Pro ; vérifiez chaque proposition. Les 24 luminaires, 12 prises, 8 interrupteurs et 34,50 m sont des références du dessin, pas des résultats de l’application."
+    },
+    "exercise.historicalElectrical": {
+      "source": "Reconcile fixtures and receptacles with the electrical review sheet →",
+      "target": "Ancien exercice électrique américain : consulter le contrôle distinct des luminaires et prises →"
+    },
+    "library.06.filename": {
+      "source": "06-Electrical-Lighting-and-Power.pdf",
+      "target": "06-Eclairage-et-electricite.pdf"
+    },
+    "exercise.compare.title": {
+      "source": "Compare the Willow Creek architectural revisions",
+      "target": "Comparer les indices architecturaux de la Maison de quartier des Tilleuls"
+    },
+    "exercise.compare.sheets": {
+      "source": "A101 · A201",
+      "target": "A101 · A201"
+    },
+    "exercise.compare.step1": {
+      "source": "Open Revision A and Revision B. Pair A101 with A101 and A201 with A201; keep the full sheet extents aligned.",
+      "target": "Ouvrez les indices A et B. Associez A101 à A101 et A201 à A201 ; alignez les feuilles A1 dans leur intégralité."
+    },
+    "exercise.compare.step2": {
+      "source": "On A101, review the 6 ft partition shift between rooms 103 and 104 and the 3 ft movement of the room 104 door.",
+      "target": "Sur A101, examinez le déplacement de 1,50 m vers l’est de la cloison entre les pièces 103 et 104, puis celui de 0,75 m vers l’est de la porte de la pièce 104."
+    },
+    "exercise.compare.step3": {
+      "source": "Review the added 6 ft south glazing on A101 and A201, then check the revised issue fields and notes.",
+      "target": "Examinez le vitrage sud ajouté de 1,50 m sur A101 et A201, puis les champs d’émission et les notes modifiés."
+    },
+    "exercise.compare.scope": {
+      "source": "Room 103 changes from 576 to 720 sq ft; room 104 changes from 576 to 432 sq ft. The gross footprint stays 5,760 sq ft. These are authored changes, not a promised detection count.",
+      "target": "La pièce 103 passe de 36,00 à 45,00 m² ; la pièce 104 passe de 36,00 à 27,00 m². L’emprise reste de 360,00 m². Il s’agit de modifications préparées dans les dessins, pas d’un nombre de détections garanti."
+    },
+    "exercise.download.B": {
+      "source": "Download Revision B · PDF",
+      "target": "Télécharger l’indice B · PDF"
+    },
+    "library.03.filename": {
+      "source": "03-Architectural-Revision-B.pdf",
+      "target": "03-Architecture-Indice-B.pdf"
+    },
+    "exercise.review.title": {
+      "source": "Review the Willow Creek coordination sheets",
+      "target": "Vérifier les plans de synthèse de la Maison de quartier des Tilleuls"
+    },
+    "exercise.review.sheets": {
+      "source": "X101 · X102",
+      "target": "X101 · X102"
+    },
+    "exercise.review.step1": {
+      "source": "Open X101 and inspect the three numbered coordination issues and their existing sticky notes.",
+      "target": "Ouvrez X101 et examinez les trois points de synthèse numérotés et leurs notes PDF existantes."
+    },
+    "exercise.review.step2": {
+      "source": "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.",
+      "target": "Utilisez X102 pour associer chaque emplacement à sa question, son lot, son état et la réponse demandée. Ajoutez vos propres annotations sur une copie."
+    },
+    "exercise.review.step3": {
+      "source": "Save the copy, reopen it, and inspect the annotations and any exported Markup Table before handing it off.",
+      "target": "Enregistrez la copie, rouvrez-la et vérifiez les annotations ainsi que tout tableau d’annotations exporté avant transmission."
+    },
+    "exercise.review.scope": {
+      "source": "The source contains three authored issues and four PDF layers. These are fictional coordination exercises; no engineering or code-compliance conclusion is established.",
+      "target": "La source contient trois points préparés pour l’exercice et quatre calques PDF. Ces exercices fictifs de synthèse ne constituent ni une validation technique ni une attestation de conformité réglementaire."
+    },
+    "library.11.filename": {
+      "source": "11-Coordination-and-Review.pdf",
+      "target": "11-Synthese-et-verification.pdf"
+    },
+    "exercise.ocr.title": {
+      "source": "Test OCR on the Willow Creek scanned sheets",
+      "target": "Tester l’OCR sur les plans numérisés des Tilleuls"
+    },
+    "exercise.ocr.sheets": {
+      "source": "A101 · C101",
+      "target": "A101 · C101"
+    },
+    "exercise.ocr.step1": {
+      "source": "Open the scanned set and try searching for WILLOW CREEK. The original two-page PDF contains images without native text.",
+      "target": "Ouvrez le jeu de plans numérisés et recherchez SALLE POLYVALENTE. Le PDF original de deux pages contient des images sans texte natif."
+    },
+    "exercise.ocr.step2": {
+      "source": "Run OCR on a working copy. Search for COMMUNITY ROOM on A101 and SITE PLAN on C101, then inspect the recognized text.",
+      "target": "Lancez l’OCR sur une copie de travail. Recherchez SALLE POLYVALENTE sur A101 et PLAN DE MASSE ET RÉSEAUX sur C101, puis examinez le texte reconnu."
+    },
+    "exercise.ocr.step3": {
+      "source": "Save and reopen the result. Repeat the searches and visually check dimensions before measuring the scanned drawing.",
+      "target": "Enregistrez et rouvrez le résultat. Répétez les recherches et contrôlez visuellement les cotes avant de mesurer le dessin numérisé."
+    },
+    "exercise.ocr.scope": {
+      "source": "Search targets are printed source text, not a promise of recognition accuracy. OCR does not repair drawing scale or scan distortion.",
+      "target": "Les termes recherchés figurent sur les dessins sources ; leur reconnaissance n’est pas garantie. L’OCR ne corrige ni l’échelle du dessin ni les déformations de numérisation."
+    },
+    "library.12.filename": {
+      "source": "12-Scanned-Legacy-Drawings.pdf",
+      "target": "12-Plans-existants-numerises.pdf"
+    }
+  },
+  "previews": {
+    "/samples/construction/previews/01-Civil-Site-and-Grading--page-01.png": "Plan de masse et terrain — C101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/01-Civil-Site-and-Grading--page-02.png": "Plan de masse et terrain — C201, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/02-Architectural-Revision-A--page-01.png": "Architecture · Indice A — A101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/02-Architectural-Revision-A--page-02.png": "Architecture · Indice A — A201, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/03-Architectural-Revision-B--page-01.png": "Architecture · Indice B — A101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/03-Architectural-Revision-B--page-02.png": "Architecture · Indice B — A201, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-01.png": "Fondations et structure — S101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-02.png": "Fondations et structure — S201, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/05-Mechanical-HVAC--page-01.png": "Ventilation — M101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/05-Mechanical-HVAC--page-02.png": "Ventilation — M501, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-01.png": "Éclairage et électricité — E101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-02.png": "Éclairage et électricité — E501, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-01.png": "Eau potable et évacuation — P101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-02.png": "Eau potable et évacuation — P501, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-01.png": "Sécurité incendie · Exercice — F101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-02.png": "Sécurité incendie · Exercice — F501, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/09-Landscape-and-External-Works--page-01.png": "Aménagements paysagers — L101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/09-Landscape-and-External-Works--page-02.png": "Aménagements paysagers — L501, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-01.png": "Revêtements et mobilier intégré — I101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-02.png": "Revêtements et mobilier intégré — I501, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/11-Coordination-and-Review--page-01.png": "Synthèse et vérification — X101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/11-Coordination-and-Review--page-02.png": "Synthèse et vérification — X102, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-01.png": "Plans existants numérisés — A101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1",
+    "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-02.png": "Plans existants numérisés — C101, MAISON DE QUARTIER DES TILLEULS, plan d’exercice A1"
+  }
+}

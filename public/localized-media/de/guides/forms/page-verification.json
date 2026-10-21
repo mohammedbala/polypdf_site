@@ -12,10 +12,10 @@
     "scripts/localization/register-forms-de.cjs": "761b5e14efe9acf6a0db76746c0a8bd044f8596ee81f040811075302ee725c2a",
     "scripts/localization/verify-forms-de.py": "43d79fef625fde0bf1d13914c4440e778ae528938efa9de485f8768be845d665",
     "scripts/localization/verify-forms-page.cjs": "311c35f2b66e34238fc9a2ca0c84a3ab66129f671cf22864525702904ee2a747",
-    "scripts/localization/media.cjs": "12f5cfd490fd2e2998fc1c9c86b5814cc22105c9dfe5f823c6293c218609996d",
-    "scripts/international/build.cjs": "e64d62669641cf1585b723d7f128a07dded6475e5d12966a22f7731ab064ee36",
+    "scripts/localization/media.cjs": "66ff44d39d7374a2c14fd872e666dc1c684b8b8026e9d833e5163566f7336d9c",
+    "scripts/international/build.cjs": "7bfe3b29bd1612b5484a81efa5af9c3edb564e3628b465a3be627cb139a0936b",
     "src/content/guides/create-fillable-pdf-form.js": "5e52dc765f62e98de40c1f5c4ee416efea453e1db631ef02a4261366a10d3270",
-    "src/localization/walkthrough-media.json": "712fc850c88d24b424ed1bce50533c410e981136d33ba845ac4e1eef7d98712e"
+    "src/localization/walkthrough-media.json": "fd4e3a11a680bd0bca711688d310f79295101f87c6887bb1e85faf2274b4703d"
   },
   "checks": [
     "German actual app hero and social image",

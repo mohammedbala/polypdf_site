@@ -1,18 +1,18 @@
 {
   "status": "passed",
   "route": "/de/blog/count-pdf-symbols/",
-  "htmlSha256": "64002f3599bc3189397db8d1910eaab8886c6dfa53e7ad47e9f09ca350ebdc32",
+  "htmlSha256": "e9951d5c87a5bf08fa61984e7d6cbea1b3c0d324008d21011d49c5db6bc8a4eb",
   "localizedImages": 3,
   "localizedDownloads": 4,
   "sourceFiles": {
-    "scripts/localization/pages.cjs": "e36e74e1c6e54b832a89f314a223a2f7acc983780a4bd92e757dcf64b46e574f",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
     "scripts/localization/count-de.json": "c098c8bbf92aac46863d1a75e7dae5d97e3ada3f10d32170c9c27f5bdd31cb02",
     "scripts/localization/prepare-count-de.py": "3e6b650fd7337101928c3f6a7430f8cb10aaa703061700d737f7814a3acb4e42",
     "scripts/localization/capture-count-de.mjs": "67a3e1e7ffd5f5da929d3c706a68cd37420c8edbc44369bf662d1a244db695d5",
     "scripts/localization/register-count-de.cjs": "29733e82fdb6d7b676b83f24825671328c9570442f661767241546febd5f7325",
     "scripts/localization/verify-count-page.cjs": "da005dc0303427becaee5e73cec1a1837470836fe5eae7f07a3625d798514364",
     "src/content/guides/count-pdf-symbols.js": "632730bd474b42b1bb26a517c84906a43a4bea7303b5ec33a504133af984b9de",
-    "src/localization/walkthrough-media.json": "0e94d5b1e1f3168b2d16ad3dd08bedafeda28425e30de5c4e8fc91a81f678e40"
+    "src/localization/walkthrough-media.json": "fd4e3a11a680bd0bca711688d310f79295101f87c6887bb1e85faf2274b4703d"
   },
   "checks": [
     "Three instructional images use hash-verified German assets",

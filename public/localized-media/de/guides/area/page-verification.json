@@ -1,13 +1,13 @@
 {
   "status": "passed",
   "route": "/de/blog/measure-pdf-area-cutouts-depth/",
-  "htmlSha256": "36e7050c50a9b02a1203a6df81aca7f23e8bd9d1b3aa0c6cc6692e66244eee59",
+  "htmlSha256": "d0c4b0f6108be18d71478c73702b1f1da16a7a4ac9a494821859ece97ff717d8",
   "localizedImages": 3,
   "localizedDownloads": 10,
   "sourceFiles": {
-    "scripts/international/build.cjs": "eb767b562332a86aabfd1ad083c99d605aec6661ff627ae9edd766fc2496cd2e",
-    "scripts/international/verify.cjs": "7418d16da848a115ddcbc079287061bf92d42fe7a58105a48731662e3000cfba",
-    "scripts/localization/pages.cjs": "e36e74e1c6e54b832a89f314a223a2f7acc983780a4bd92e757dcf64b46e574f",
+    "scripts/international/build.cjs": "7bfe3b29bd1612b5484a81efa5af9c3edb564e3628b465a3be627cb139a0936b",
+    "scripts/international/verify.cjs": "6c74edc35945d91e631ca722de6de39c2e6fabfb7193ad98d268a98bb0fb90b7",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
     "scripts/localization/area-de.json": "77c80217149800a6d8cd33ad3949fa4eb431ac2b92e5a77e7cfc8df0d1b29f6c",
     "scripts/localization/capture-area-de.mjs": "273f41cb7fa024fbe28ad0c089e7078a2c55017e54a153c157e2b7fd646c470d",
     "scripts/localization/register-area-de.cjs": "2888ee28dd303afd5aed7fe02f2019cd2bcb68472929a3bc779a09fa4f863548",
@@ -15,7 +15,7 @@
     "scripts/generate-area-demo-de.py": "a2e270f77969b4df48c6692ddef6c29ca9f331f0627d8566b899e6fafb8b12e9",
     "scripts/verify-area-demo-de.py": "380db043549ff056114be45769526644aba39ca277908d0ec412b16f262b6d1c",
     "src/content/guides/measure-pdf-area-cutouts-depth.js": "3f1207a62dec8da432d8669e2ca43df1caa1e68703abf434d660f74792bc6347",
-    "src/localization/walkthrough-media.json": "0e94d5b1e1f3168b2d16ad3dd08bedafeda28425e30de5c4e8fc91a81f678e40"
+    "src/localization/walkthrough-media.json": "fd4e3a11a680bd0bca711688d310f79295101f87c6887bb1e85faf2274b4703d"
   },
   "checks": [
     "Three instructional images use exact German bytes",

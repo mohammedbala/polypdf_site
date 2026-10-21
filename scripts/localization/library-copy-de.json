@@ -1,0 +1,426 @@
+{
+  "locale": "de-DE",
+  "region": "DE",
+  "status": "draft",
+  "scope": "Shared library and exercises only; does not qualify complete routes or native walkthroughs",
+  "text": {
+    "library.kicker": {
+      "source": "The original PolyPDF drawing collection",
+      "target": "Die PolyPDF-Sammlung eigener Bauzeichnungen"
+    },
+    "library.heading": {
+      "source": "One project. Twelve PDFs. Twenty-four construction sheets.",
+      "target": "Ein Projekt. Zwölf PDFs. Vierundzwanzig Planblätter."
+    },
+    "library.intro": {
+      "source": "Explore the fictional Willow Creek Community Center through coordinated architectural, structural, civil, MEP, and finish drawings. Every PDF contains two bookmarked ARCH D sheets (36 × 24 inches), with drawing numbers, schedules, legends, dimensions, and details.",
+      "target": "Erkunden Sie das fiktive Bürgerhaus am Lindenpark anhand aufeinander abgestimmter Architektur-, Tragwerks-, Gelände-, Haustechnik- und Ausbaupläne. Jede PDF enthält zwei mit Lesezeichen versehene A1-Blätter (841 × 594 mm) mit Blattnummern, Listen, Legenden, Maßen und Details."
+    },
+    "library.download": {
+      "source": "Download all 24 sheets · ZIP",
+      "target": "Alle 24 Planblätter herunterladen · ZIP"
+    },
+    "library.guide": {
+      "source": "View the drawing guide and reference quantities →",
+      "target": "Planübersicht und Referenzmengen ansehen →"
+    },
+    "library.scope": {
+      "source": "These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Use the sheet-specific examples below. The earlier F-101 and E-101 exercises use different drawings and quantities.",
+      "target": "Diese eigens erstellten Demonstrationszeichnungen sind keine Genehmigungsunterlagen und keine gespeicherten PolyPDF-Arbeitsergebnisse. Die Gebäudegrundrisse verwenden 1:50; Lagepläne und Details haben andere Maßstäbe. Kalibrieren Sie jede Ansicht vor dem Messen. Nutzen Sie die blattspezifischen Übungen unten. Die früheren F-101- und E-101-Übungen verwenden andere Zeichnungen und Mengen."
+    },
+    "library.nav.takeoff": {
+      "source": "Measurement",
+      "target": "Messen"
+    },
+    "library.nav.flooring": {
+      "source": "Flooring",
+      "target": "Bodenbeläge"
+    },
+    "library.nav.electrical": {
+      "source": "Electrical",
+      "target": "Elektro"
+    },
+    "library.nav.compare": {
+      "source": "Revision comparison",
+      "target": "Revisionsvergleich"
+    },
+    "library.nav.review": {
+      "source": "Coordination review",
+      "target": "Koordinationsprüfung"
+    },
+    "library.nav.ocr": {
+      "source": "OCR",
+      "target": "OCR"
+    },
+    "library.01.title": {
+      "source": "Civil site and grading · PDF",
+      "target": "Lageplan und Gelände · PDF"
+    },
+    "library.01.sheets": {
+      "source": "C101 · C501 · 2 sheets",
+      "target": "C101 · C201 · 2 Blätter"
+    },
+    "library.01.description": {
+      "source": "Site layout, grading, parking, drainage, pavement and curb details.",
+      "target": "Geländeaufteilung, Erschließung, Stellplätze, Entwässerung, Beläge und Randdetails."
+    },
+    "library.02.title": {
+      "source": "Architecture · Revision A · PDF",
+      "target": "Architektur · Revision A · PDF"
+    },
+    "library.02.sheets": {
+      "source": "A101 · A201 · 2 sheets",
+      "target": "A101 · A201 · 2 Blätter"
+    },
+    "library.02.description": {
+      "source": "Dimensioned floor plan, elevations, building section and wall detail.",
+      "target": "Bemaßter Grundriss, Ansichten, Gebäudeschnitt und Wanddetail."
+    },
+    "library.03.title": {
+      "source": "Architecture · Revision B · PDF",
+      "target": "Architektur · Revision B · PDF"
+    },
+    "library.03.sheets": {
+      "source": "A101 · A201 · 2 sheets",
+      "target": "A101 · A201 · 2 Blätter"
+    },
+    "library.03.description": {
+      "source": "A matching revised set for comparison with Revision A.",
+      "target": "Passender überarbeiteter Plansatz zum Vergleich mit Revision A."
+    },
+    "library.04.title": {
+      "source": "Structural foundation and framing · PDF",
+      "target": "Fundamente und Tragwerk · PDF"
+    },
+    "library.04.sheets": {
+      "source": "S101 · S501 · 2 sheets",
+      "target": "S101 · S201 · 2 Blätter"
+    },
+    "library.04.description": {
+      "source": "Footings, columns, roof framing, connection details and schedules.",
+      "target": "Fundamente, Stützen, Dachtragwerk, Anschlussdetails und Listen."
+    },
+    "library.05.title": {
+      "source": "Mechanical / HVAC · PDF",
+      "target": "Lüftung · PDF"
+    },
+    "library.05.sheets": {
+      "source": "M101 · M501 · 2 sheets",
+      "target": "M101 · M501 · 2 Blätter"
+    },
+    "library.05.description": {
+      "source": "Ductwork, terminals, equipment, controls and mechanical details.",
+      "target": "Luftkanäle, Auslässe, Geräte, Regelung und Lüftungsdetails."
+    },
+    "library.06.title": {
+      "source": "Electrical lighting and power · PDF",
+      "target": "Beleuchtung und Elektro · PDF"
+    },
+    "library.06.sheets": {
+      "source": "E101 · E601 · 2 sheets",
+      "target": "E101 · E501 · 2 Blätter"
+    },
+    "library.06.description": {
+      "source": "Lighting, receptacles, electrical diagrams and fixture schedules.",
+      "target": "Beleuchtung, Steckdosen, Stromlaufschema und Leuchtenliste."
+    },
+    "library.07.title": {
+      "source": "Plumbing water and drainage · PDF",
+      "target": "Trinkwasser und Entwässerung · PDF"
+    },
+    "library.07.sheets": {
+      "source": "P101 · P501 · 2 sheets",
+      "target": "P101 · P501 · 2 Blätter"
+    },
+    "library.07.description": {
+      "source": "Water and drainage layouts, risers, fixtures and installation details.",
+      "target": "Wasser- und Entwässerungsleitungen, Strangschema, Sanitärobjekte und Einbaudetails."
+    },
+    "library.08.title": {
+      "source": "Fire protection and life safety · PDF",
+      "target": "Brandschutz · Übungsplan · PDF"
+    },
+    "library.08.sheets": {
+      "source": "FP101 · FP501 · 2 sheets",
+      "target": "F101 · F501 · 2 Blätter"
+    },
+    "library.08.description": {
+      "source": "Sprinkler and life-safety symbols, risers, details and schedules.",
+      "target": "Beispielsymbole für Sprinkler und Sicherheit, Strangschema, Details und Listen; kein Brandschutznachweis."
+    },
+    "library.09.title": {
+      "source": "Landscape and external works · PDF",
+      "target": "Landschaft und Außenanlagen · PDF"
+    },
+    "library.09.sheets": {
+      "source": "L101 · L501 · 2 sheets",
+      "target": "L101 · L501 · 2 Blätter"
+    },
+    "library.09.description": {
+      "source": "Planting, paving, landscape details and an authored planting schedule.",
+      "target": "Pflanzung, Beläge, Außenanlagendetails und eine für das Beispiel erstellte Pflanzliste."
+    },
+    "library.10.title": {
+      "source": "Interiors, finishes and millwork · PDF",
+      "target": "Innenausbau und Einbaumöbel · PDF"
+    },
+    "library.10.sheets": {
+      "source": "I101 · I501 · 2 sheets",
+      "target": "I101 · I501 · 2 Blätter"
+    },
+    "library.10.description": {
+      "source": "Room finishes, floor patterns, casework elevations and interior details.",
+      "target": "Raumbeläge, Verlegemuster, Möbelansichten und Ausbaudetails."
+    },
+    "library.11.title": {
+      "source": "Coordination and review · PDF",
+      "target": "Koordination und Prüfung · PDF"
+    },
+    "library.11.sheets": {
+      "source": "X101 · X102 · 2 sheets",
+      "target": "X101 · X102 · 2 Blätter"
+    },
+    "library.11.description": {
+      "source": "Overlaid disciplines, three authored review notes and four PDF layers.",
+      "target": "Überlagerte Fachpläne, drei vorbereitete Prüfnotizen und vier PDF-Ebenen."
+    },
+    "library.12.title": {
+      "source": "Scanned legacy drawings · PDF",
+      "target": "Gescannte Bestandspläne · PDF"
+    },
+    "library.12.sheets": {
+      "source": "A101 · C101 · 2 sheets",
+      "target": "A101 · C101 · 2 Blätter"
+    },
+    "library.12.description": {
+      "source": "Image-only architectural and site sheets for OCR practice.",
+      "target": "Architektur- und Lageplan ohne native Textebene für OCR-Übungen."
+    },
+    "library.handoff": {
+      "source": "Keep an untouched master and mark up a copy. Check the drawing scope, units, exported quantities, and saved-file handoff in your own workflow. All projects and coordination issues are fictional; no customer drawing or professional seal is included.",
+      "target": "Bewahren Sie eine unveränderte Vorlage auf und bearbeiten Sie eine Kopie. Prüfen Sie Planumfang, Einheiten, exportierte Mengen und die Übergabe der gespeicherten Datei in Ihrem eigenen Arbeitsablauf. Alle Projekte und Koordinationsfragen sind fiktiv; es sind weder Kundenzeichnungen noch fachliche Freigabestempel enthalten."
+    },
+    "exercise.kicker": {
+      "source": "Work with the construction drawing set",
+      "target": "Mit dem Bauzeichnungs-Paket arbeiten"
+    },
+    "exercise.takeoff.title": {
+      "source": "Measure the Willow Creek architectural plan",
+      "target": "Architekturplan des Bürgerhauses am Lindenpark messen"
+    },
+    "exercise.takeoff.sheets": {
+      "source": "A101 · A201",
+      "target": "A101 · A201"
+    },
+    "exercise.takeoff.step1": {
+      "source": "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.",
+      "target": "Öffnen Sie A101, Revision A. Kalibrieren Sie die gedruckte 5,00-m-Referenz; sie umfasst bei 1:50 rund 283,46457 PDF-Punkte."
+    },
+    "exercise.takeoff.step2": {
+      "source": "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.",
+      "target": "Prüfen Sie unabhängig die Breite von 24,00 m und die Tiefe von 15,00 m. Zeichnen Sie anschließend die äußere Gebäudegrenze nach."
+    },
+    "exercise.takeoff.step3": {
+      "source": "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.",
+      "target": "Vergleichen Sie die Brutto-Grundfläche mit 360,00 m². Halten Sie Plan, Revision, Betreff, Einheit und Summe im exportierten Datensatz fest."
+    },
+    "exercise.takeoff.scope": {
+      "source": "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.",
+      "target": "Diese Übung ermittelt die Brutto-Grundfläche, keine Netto-Bodenbelagsfläche und keine Wandabzüge. Die beiden Längenkontrollen und eine Flächenmessung sind drei manuelle Messungen."
+    },
+    "exercise.provenance": {
+      "source": "Drawing reference values, not new app test results. Work on a copy and check your own saved output.",
+      "target": "Die Werte sind Zeichnungsreferenzen, keine neuen App-Testergebnisse. Arbeiten Sie auf einer Kopie und prüfen Sie Ihre gespeicherte Datei."
+    },
+    "exercise.historicalMac": {
+      "source": "Inspect the saved Mac example and its tested local build →",
+      "target": "Früheres US-Beispiel: gespeicherte Mac-Datei und getesteten lokalen Build ansehen →"
+    },
+    "exercise.download.A": {
+      "source": "Download Revision A · PDF",
+      "target": "Revision A herunterladen · PDF"
+    },
+    "library.02.filename": {
+      "source": "02-Architectural-Revision-A.pdf",
+      "target": "02-Architektur-Revision-A.pdf"
+    },
+    "exercise.flooring.title": {
+      "source": "Take off finishes from the Willow Creek interiors plan",
+      "target": "Bodenbeläge des Bürgerhauses am Lindenpark ermitteln"
+    },
+    "exercise.flooring.sheets": {
+      "source": "I101 · I501",
+      "target": "I101 · I501"
+    },
+    "exercise.flooring.step1": {
+      "source": "Open I101 and calibrate its 20 ft reference. Read the F1 and F2 finish key before measuring.",
+      "target": "Öffnen Sie I101 und kalibrieren Sie die 5,00-m-Referenz. Lesen Sie vor dem Messen die Belagslegende für F1 und F2."
+    },
+    "exercise.flooring.step2": {
+      "source": "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.",
+      "target": "Zeichnen Sie die bemaßten Belagszonen der gefliesten Räume 107 und 108 getrennt nach: je 18,00 m², zusammen 36,00 m²."
+    },
+    "exercise.flooring.step3": {
+      "source": "Compare F2 tile with 576 sq ft and F1 resilient flooring with 5,184 sq ft. Apply any waste allowance separately.",
+      "target": "Vergleichen Sie F2-Fliesen mit 36,00 m² und den elastischen F1-Belag mit 324,00 m². Berechnen Sie einen Verschnittzuschlag getrennt."
+    },
+    "exercise.flooring.scope": {
+      "source": "The authored finish schedule uses room dimension boundaries without wall-thickness deductions. These exercise areas are not net installed quantities; I501 details use different scales.",
+      "target": "Die Belagsliste verwendet die bemaßten Raumgrenzen ohne Abzug der Wandstärken. Diese Übungsflächen sind keine Netto-Einbaumengen; Details auf I501 haben andere Maßstäbe."
+    },
+    "exercise.download.drawing": {
+      "source": "Download the example drawing · PDF",
+      "target": "Übungszeichnung herunterladen · PDF"
+    },
+    "library.10.filename": {
+      "source": "10-Interiors-Finishes-and-Millwork.pdf",
+      "target": "10-Innenausbau-und-Einbaumoebel.pdf"
+    },
+    "exercise.electrical.title": {
+      "source": "Count the Willow Creek lighting plan",
+      "target": "Beleuchtungsplan des Bürgerhauses am Lindenpark zählen"
+    },
+    "exercise.electrical.sheets": {
+      "source": "E101 · E601",
+      "target": "E101 · E501"
+    },
+    "exercise.electrical.step1": {
+      "source": "Open E101 and identify the luminaire symbol in the legend. Count only the plan, excluding legend and detail examples.",
+      "target": "Öffnen Sie E101 und identifizieren Sie das Leuchtensymbol in der Legende. Zählen Sie nur den Grundriss; schließen Sie Legenden- und Detailkopien aus."
+    },
+    "exercise.electrical.step2": {
+      "source": "Review 24 plan luminaires, including 4 emergency luminaires. The emergency subset is included in 24, not added to it.",
+      "target": "Prüfen Sie 24 Leuchten, 12 Steckdosen und 8 Schalter im Grundriss. Halten Sie diese drei Symbolarten als getrennte Mengen fest."
+    },
+    "exercise.electrical.step3": {
+      "source": "Calibrate the 20 ft reference. Trace the LP-1 / CKTS 1, 3, 5, 7 diagram from the panel, then north and east: 8 + 38 = 46 ft.",
+      "target": "Kalibrieren Sie die 5,00-m-Referenz. Zeichnen Sie den schematischen Leitungsweg auf E101 nach und vergleichen Sie ihn mit 34,50 m. E501 enthält das Stromlaufschema und die Leuchtenliste."
+    },
+    "exercise.electrical.scope": {
+      "source": "The dashed wiring is a circuit diagram, not a conduit takeoff. Pro is required for Symbol Search; review every candidate. The 24 fixtures and 46 ft are drawing references, not app results.",
+      "target": "Die gestrichelte Verbindung ist ein schematischer Leitungsweg, keine ausführungsreife Kabellänge. Für die Symbolsuche ist Pro erforderlich; prüfen Sie jeden Treffer. Die 24 Leuchten, 12 Steckdosen, 8 Schalter und 34,50 m sind Zeichnungsreferenzen, keine App-Ergebnisse."
+    },
+    "exercise.historicalElectrical": {
+      "source": "Reconcile fixtures and receptacles with the electrical review sheet →",
+      "target": "Frühere US-Elektroübung: getrennte Leuchten- und Steckdosenprüfung ansehen →"
+    },
+    "library.06.filename": {
+      "source": "06-Electrical-Lighting-and-Power.pdf",
+      "target": "06-Beleuchtung-und-Elektro.pdf"
+    },
+    "exercise.compare.title": {
+      "source": "Compare the Willow Creek architectural revisions",
+      "target": "Architekturrevisionen des Bürgerhauses am Lindenpark vergleichen"
+    },
+    "exercise.compare.sheets": {
+      "source": "A101 · A201",
+      "target": "A101 · A201"
+    },
+    "exercise.compare.step1": {
+      "source": "Open Revision A and Revision B. Pair A101 with A101 and A201 with A201; keep the full sheet extents aligned.",
+      "target": "Öffnen Sie Revision A und Revision B. Vergleichen Sie A101 mit A101 und A201 mit A201; richten Sie die vollständigen A1-Blätter deckungsgleich aus."
+    },
+    "exercise.compare.step2": {
+      "source": "On A101, review the 6 ft partition shift between rooms 103 and 104 and the 3 ft movement of the room 104 door.",
+      "target": "Prüfen Sie auf A101 die um 1,50 m nach Osten versetzte Trennwand zwischen Raum 103 und 104 sowie die um 0,75 m nach Osten verschobene Tür von Raum 104."
+    },
+    "exercise.compare.step3": {
+      "source": "Review the added 6 ft south glazing on A101 and A201, then check the revised issue fields and notes.",
+      "target": "Prüfen Sie die zusätzliche 1,50 m breite Südverglasung auf A101 und A201 sowie die angepassten Ausgabefelder und Hinweise."
+    },
+    "exercise.compare.scope": {
+      "source": "Room 103 changes from 576 to 720 sq ft; room 104 changes from 576 to 432 sq ft. The gross footprint stays 5,760 sq ft. These are authored changes, not a promised detection count.",
+      "target": "Raum 103 wächst von 36,00 auf 45,00 m²; Raum 104 verkleinert sich von 36,00 auf 27,00 m². Die Bruttofläche bleibt 360,00 m². Dies sind vorbereitete Planänderungen, keine zugesagte Zahl erkannter Unterschiede."
+    },
+    "exercise.download.B": {
+      "source": "Download Revision B · PDF",
+      "target": "Revision B herunterladen · PDF"
+    },
+    "library.03.filename": {
+      "source": "03-Architectural-Revision-B.pdf",
+      "target": "03-Architektur-Revision-B.pdf"
+    },
+    "exercise.review.title": {
+      "source": "Review the Willow Creek coordination sheets",
+      "target": "Koordinationspläne des Bürgerhauses am Lindenpark prüfen"
+    },
+    "exercise.review.sheets": {
+      "source": "X101 · X102",
+      "target": "X101 · X102"
+    },
+    "exercise.review.step1": {
+      "source": "Open X101 and inspect the three numbered coordination issues and their existing sticky notes.",
+      "target": "Öffnen Sie X101 und prüfen Sie die drei nummerierten Koordinationsstellen und ihre vorhandenen PDF-Notizen."
+    },
+    "exercise.review.step2": {
+      "source": "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.",
+      "target": "Ordnen Sie auf X102 jede Stelle ihrer Frage, ihrem Gewerk, ihrem Status und der angeforderten Rückmeldung zu. Ergänzen Sie eigene Prüfmarkierungen auf einer Kopie."
+    },
+    "exercise.review.step3": {
+      "source": "Save the copy, reopen it, and inspect the annotations and any exported Markup Table before handing it off.",
+      "target": "Speichern Sie die Kopie, öffnen Sie sie erneut und prüfen Sie die Anmerkungen sowie eine gegebenenfalls exportierte Anmerkungstabelle vor der Übergabe."
+    },
+    "exercise.review.scope": {
+      "source": "The source contains three authored issues and four PDF layers. These are fictional coordination exercises; no engineering or code-compliance conclusion is established.",
+      "target": "Die Quelle enthält drei vorbereitete Prüfpunkte und vier PDF-Ebenen. Dies sind fiktive Koordinationsübungen; sie begründen weder eine fachliche Freigabe noch einen Nachweis der Regelkonformität."
+    },
+    "library.11.filename": {
+      "source": "11-Coordination-and-Review.pdf",
+      "target": "11-Koordination-und-Pruefung.pdf"
+    },
+    "exercise.ocr.title": {
+      "source": "Test OCR on the Willow Creek scanned sheets",
+      "target": "OCR auf den gescannten Plänen des Bürgerhauses am Lindenpark prüfen"
+    },
+    "exercise.ocr.sheets": {
+      "source": "A101 · C101",
+      "target": "A101 · C101"
+    },
+    "exercise.ocr.step1": {
+      "source": "Open the scanned set and try searching for WILLOW CREEK. The original two-page PDF contains images without native text.",
+      "target": "Öffnen Sie den gescannten Plansatz und suchen Sie nach MEHRZWECKRAUM. Die ursprüngliche zweiseitige PDF enthält nur Bilder ohne native Textebene."
+    },
+    "exercise.ocr.step2": {
+      "source": "Run OCR on a working copy. Search for COMMUNITY ROOM on A101 and SITE PLAN on C101, then inspect the recognized text.",
+      "target": "Führen Sie OCR auf einer Arbeitskopie aus. Suchen Sie danach MEHRZWECKRAUM auf A101 und ENTWÄSSERUNG auf C101 und prüfen Sie den erkannten Text."
+    },
+    "exercise.ocr.step3": {
+      "source": "Save and reopen the result. Repeat the searches and visually check dimensions before measuring the scanned drawing.",
+      "target": "Speichern Sie das Ergebnis und öffnen Sie es erneut. Wiederholen Sie die Suchen und prüfen Sie die Maße visuell, bevor Sie den Scan vermessen."
+    },
+    "exercise.ocr.scope": {
+      "source": "Search targets are printed source text, not a promise of recognition accuracy. OCR does not repair drawing scale or scan distortion.",
+      "target": "Die Suchbegriffe sind auf der Quelle abgedruckt; ihre Erkennung wird nicht zugesichert. OCR korrigiert weder Planmaßstab noch Scanverzerrung."
+    },
+    "library.12.filename": {
+      "source": "12-Scanned-Legacy-Drawings.pdf",
+      "target": "12-Gescannte-Bestandsplaene.pdf"
+    }
+  },
+  "previews": {
+    "/samples/construction/previews/01-Civil-Site-and-Grading--page-01.png": "Lageplan und Gelände — C101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/01-Civil-Site-and-Grading--page-02.png": "Lageplan und Gelände — C201, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/02-Architectural-Revision-A--page-01.png": "Architektur · Revision A — A101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/02-Architectural-Revision-A--page-02.png": "Architektur · Revision A — A201, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/03-Architectural-Revision-B--page-01.png": "Architektur · Revision B — A101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/03-Architectural-Revision-B--page-02.png": "Architektur · Revision B — A201, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-01.png": "Fundamente und Tragwerk — S101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-02.png": "Fundamente und Tragwerk — S201, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/05-Mechanical-HVAC--page-01.png": "Lüftung — M101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/05-Mechanical-HVAC--page-02.png": "Lüftung — M501, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-01.png": "Beleuchtung und Elektro — E101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-02.png": "Beleuchtung und Elektro — E501, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-01.png": "Trinkwasser und Entwässerung — P101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-02.png": "Trinkwasser und Entwässerung — P501, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-01.png": "Brandschutz · Übungsplan — F101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-02.png": "Brandschutz · Übungsplan — F501, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/09-Landscape-and-External-Works--page-01.png": "Landschaft und Außenanlagen — L101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/09-Landscape-and-External-Works--page-02.png": "Landschaft und Außenanlagen — L501, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-01.png": "Innenausbau und Einbaumöbel — I101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-02.png": "Innenausbau und Einbaumöbel — I501, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/11-Coordination-and-Review--page-01.png": "Koordination und Prüfung — X101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/11-Coordination-and-Review--page-02.png": "Koordination und Prüfung — X102, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-01.png": "Gescannte Bestandspläne — A101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan",
+    "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-02.png": "Gescannte Bestandspläne — C101, BÜRGERHAUS AM LINDENPARK, A1-Übungsplan"
+  }
+}

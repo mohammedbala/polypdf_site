@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "surface": "Codex built-in browser",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "checks": [
+    "French and German library headers and first three regional previews inspected; all three visible images loaded in each language",
+    "No horizontal overflow in either desktop library view",
+    "French measurement exercise inspected with matching A101 preview, 5,00 m calibration, 24,00 × 15,00 m dimensions and 360,00 m² reference",
+    "French measurement PDF downloaded through its visible link; exact source hash verified"
+  ],
+  "download": {
+    "file": "02-Architecture-Indice-A.pdf",
+    "sha256": "1c74b81bab45046991836c27adfd3e60a5573787a88bf0b41dce3d7e45d727af"
+  },
+  "screenshots": {
+    "german-library-desktop.png": "01c69cb467d2afcdcc630814cd6c98a9bbda4ea42c375b87781693dd4392f9e2",
+    "french-library-desktop.png": "33be6d96b695b06671f786ab414db1083f4da3f3455d6d19d2ed4f4f43ce0b4e",
+    "french-measurement-desktop.png": "25f1fd8d097b0fd88ab39a9b45097561e6653ea009054667e208dbc325ea9161"
+  },
+  "nativeApps": "Mac still locked; no native workflow capture or Save dialog performed",
+  "limitations": [
+    "Component previews only, not the complete samples route",
+    "No narrow viewport or native platform qualification in this checkpoint"
+  ]
+}

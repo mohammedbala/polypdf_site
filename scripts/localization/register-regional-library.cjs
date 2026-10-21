@@ -73,6 +73,11 @@ register('polypdf-construction-demo-library.zip', manifest.archiveFile ?? `PolyP
 register('DEMO-GUIDE.html', 'DEMO-GUIDE.html');
 register('DEMO-MANIFEST.json', 'DEMO-MANIFEST.json');
 register('SHA256SUMS.txt', 'SHA256SUMS.txt');
-verifyMediaFiles(media, registry, asset => fs.readFileSync(path.join(root, 'public', asset)), [localeId]);
+const copyProfile = path.join(__dirname, `library-copy-${localeId}.json`);
+if (fs.existsSync(copyProfile)) require('./register-library-copy.cjs').registerLibraryCopy(media, localeId);
+verifyMediaFiles(media, registry, asset => {
+  const publicFile = path.join(root, 'public', asset);
+  return fs.readFileSync(fs.existsSync(publicFile) ? publicFile : path.join(root, 'build', asset));
+}, [localeId]);
 fs.writeFileSync(mediaPath, JSON.stringify(media, null, 2) + '\n');
 console.log(`Registered ${manifest.documents.length} regional PDFs, 24 previews, contact sheet, ZIP, guide and reference metadata. Pack status: ${pack.status}.`);

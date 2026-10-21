@@ -111,18 +111,45 @@ function localizeWalkthroughMedia(document, locale, manifest, page = null) {
 // Run on original authored copy before ordinary translation. Region-specific examples
 // change the exercise itself (units, quantities and source project), so a translation of
 // the old US instructions cannot substitute for these source-bound replacements.
-function localizeRegionalCopy(document, locale, manifest) {
+function localizeRegionalCopy(document, locale, manifest, page = null) {
   const pack = manifest.locales[locale.id];
   const normalize = text => text.replace(/\s+/g, ' ').trim();
+  if (page && (page.locale !== pack?.appLocale || page.region !== pack?.region)) {
+    throw new Error(`Wrong regional copy page locale: ${locale.id}`);
+  }
+  // Regional previews can introduce descriptions absent from the ordinary translation
+  // catalog. Reserve them before translateDOM; the same verified asset resolves later.
+  for (const image of document.querySelectorAll('img[src]')) {
+    const asset = pack?.assets?.[assetPath(image.getAttribute('src'))];
+    if (asset?.alt === undefined) continue;
+    resolveAsset(image.getAttribute('src'), locale, manifest);
+    if (typeof asset.alt !== 'string' || !asset.alt.trim()) throw new Error(`Invalid regional image description: ${locale.id}`);
+    if (page?.text && Object.hasOwn(page.text, normalize(image.getAttribute('alt') || ''))) continue;
+    image.setAttribute('alt', asset.alt);
+    image.setAttribute('lang', asset.locale);
+    image.setAttribute('translate', 'no');
+  }
   for (const node of document.querySelectorAll('[data-regional-copy]')) {
     const key = node.getAttribute('data-regional-copy');
     const copy = pack?.regionalText?.[key];
     if (!copy || typeof copy.source !== 'string' || typeof copy.target !== 'string' || !copy.target.trim()) {
       throw new Error(`Missing regional exercise copy: ${locale.id} ${key}`);
     }
+    // A verified guide can use a different fixture from the shared library. Its exact
+    // element override has already run; preserve it only if both sources still agree.
+    const element = page?.elements?.find(entry => document.querySelector(entry.selector) === node);
+    if (element) {
+      if (node.children.length || normalize(element.source) !== normalize(copy.source)
+          || node.textContent !== element.target || node.getAttribute('translate') !== 'no') {
+        throw new Error(`Stale regional page exercise copy: ${locale.id} ${key}`);
+      }
+      continue;
+    }
     if (node.children.length || normalize(node.textContent) !== normalize(copy.source)) {
       throw new Error(`Stale regional exercise copy: ${locale.id} ${key}`);
     }
+    // Leave contextual prose to pageTranslator so its unused-source check remains active.
+    if (page?.text && Object.hasOwn(page.text, normalize(copy.source))) continue;
     node.textContent = copy.target;
     node.setAttribute('translate', 'no');
     node.setAttribute('lang', pack.appLocale);

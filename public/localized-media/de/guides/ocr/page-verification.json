@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "route": "/de/blog/ocr-scanned-pdf-drawings/",
-  "htmlSha256": "3999b1f33b73152d0365f908cdebe5f6e773e8a1cc0467fc670bc3e1feb46ba4",
+  "htmlSha256": "c36c7b9688d99641b4a9cf7ca924aaff1e46ba9f6fc45056880dfbc074e670d4",
   "localizedImages": 4,
   "localizedPdfDownloads": 2,
   "sourceFiles": {
@@ -12,7 +12,7 @@
     "scripts/localization/verify-ocr-de.py": "f74273ebdaa809feb26745d5bd2baef2117184218e4fdd6db9c1bc9610a5c3be",
     "scripts/localization/verify-ocr-page.cjs": "8ac36cb9c17ceae59e259b0bbed4689cfccc29ba7bc5cd000a392ea885cf30ec",
     "src/content/guides/ocr-scanned-pdf-drawings.js": "11db745078fbcc70f64ce840335c08974221d38c54e05e6cc3fd7f4b2257b104",
-    "src/localization/walkthrough-media.json": "464eafe4e39bff9840f57180a9ffe14f830276e9964efdb066d6f2ad9b8c0ea0"
+    "src/localization/walkthrough-media.json": "fd4e3a11a680bd0bca711688d310f79295101f87c6887bb1e85faf2274b4703d"
   },
   "checks": [
     "German actual app images and regional drawing preview",

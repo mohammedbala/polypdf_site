@@ -12,9 +12,9 @@
     "scripts/localization/verify-stamps-de.py": "2578770d85d17a83dfd0907fc208d72ec11863bdc6d7d31ad53a9dd2284eba95",
     "scripts/localization/verify-stamps-page.cjs": "4e1c52ef14498d1da56e6dc6830437252ea15592d2a52052b31098c65eb4d9b4",
     "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
-    "scripts/international/build.cjs": "e64d62669641cf1585b723d7f128a07dded6475e5d12966a22f7731ab064ee36",
+    "scripts/international/build.cjs": "7bfe3b29bd1612b5484a81efa5af9c3edb564e3628b465a3be627cb139a0936b",
     "src/content/guides/create-interactive-pdf-stamps.js": "61abb94e517be3498a3d7c4aa682138faa124b7e4221a3965e81bb94a98e393f",
-    "src/localization/walkthrough-media.json": "d4fbb2f0f5f96e5f0f1362cbfcead97a5490e95a14d22c12b649938e280cb4e1"
+    "src/localization/walkthrough-media.json": "fd4e3a11a680bd0bca711688d310f79295101f87c6887bb1e85faf2274b4703d"
   },
   "checks": [
     "Four actual German app images and matching social image",
