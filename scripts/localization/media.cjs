@@ -58,8 +58,16 @@ function visitAssets(document, callback) {
   }
 }
 
-function localizeWalkthroughMedia(document, locale, manifest) {
-  const form = manifest.locales[locale.id]?.regionalForm;
+function localizeWalkthroughMedia(document, locale, manifest, page = null) {
+  const baseForm = manifest.locales[locale.id]?.regionalForm;
+  const override = page?.regionalForm;
+  if (override && (!baseForm || page.locale !== manifest.locales[locale.id]?.appLocale
+      || page.region !== manifest.locales[locale.id]?.region
+      || Object.keys(override).some(key => !['description', 'evidence'].includes(key))
+      || ['description', 'evidence'].some(key => typeof override[key] !== 'string' || !override[key].trim()))) {
+    throw new Error(`Invalid page regional form copy: ${locale.id}`);
+  }
+  const form = baseForm && {...baseForm, ...override};
   if (form) {
     for (const section of document.querySelectorAll('[data-regional-form]')) {
       const primary = section.querySelector('[data-regional-form-primary] a[href]');

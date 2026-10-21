@@ -1,0 +1,205 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "nativeCaptureSha256": "1ce85769585d08f8a8fafb7b777175243273cee2cd38103dd98e09974bb65302",
+  "fields": 11,
+  "widgets": 13,
+  "types": {
+    "text": 4,
+    "comboBox": 1,
+    "radio": 1,
+    "checkbox": 3,
+    "multilineText": 1,
+    "listBox": 1
+  },
+  "canonicalValues": {
+    "project": "Bürgerhaus / Nordflügel",
+    "visit_date": "21.10.2026",
+    "reviewer": "Musterprüfung",
+    "drawing_revision": "A101 / Revision B",
+    "trade": "Elektro",
+    "review_status": "/FollowUp",
+    "drawing_checked": "/Yes",
+    "photos_referenced": "/Off",
+    "action_assigned": "/Yes",
+    "observation": "Nur zur Übung. Türöffnung anhand von A101, Revision B prüfen.\nZuständig: Musterprüfung. Nächster Schritt: Planreferenz bestätigen.",
+    "pruefbereich": "Südflügel"
+  },
+  "widgetEvidence": [
+    {
+      "name": "project",
+      "value": "Bürgerhaus / Nordflügel",
+      "appearanceState": null,
+      "appearanceNonempty": true,
+      "rect": [
+        40.0,
+        660.0,
+        355.0,
+        686.0
+      ]
+    },
+    {
+      "name": "visit_date",
+      "value": "21.10.2026",
+      "appearanceState": null,
+      "appearanceNonempty": true,
+      "rect": [
+        375.0,
+        660.0,
+        555.0,
+        686.0
+      ]
+    },
+    {
+      "name": "reviewer",
+      "value": "Musterprüfung",
+      "appearanceState": null,
+      "appearanceNonempty": true,
+      "rect": [
+        40.0,
+        602.0,
+        287.0,
+        628.0
+      ]
+    },
+    {
+      "name": "drawing_revision",
+      "value": "A101 / Revision B",
+      "appearanceState": null,
+      "appearanceNonempty": true,
+      "rect": [
+        307.0,
+        602.0,
+        555.0,
+        628.0
+      ]
+    },
+    {
+      "name": "trade",
+      "value": "Elektro",
+      "appearanceState": null,
+      "appearanceNonempty": true,
+      "rect": [
+        40.0,
+        502.0,
+        287.0,
+        529.0
+      ]
+    },
+    {
+      "name": "review_status",
+      "value": "/FollowUp",
+      "appearanceState": "/Off",
+      "appearanceNonempty": true,
+      "rect": [
+        307.0,
+        509.0,
+        318.0,
+        520.0
+      ]
+    },
+    {
+      "name": "review_status",
+      "value": "/FollowUp",
+      "appearanceState": "/FollowUp",
+      "appearanceNonempty": true,
+      "rect": [
+        389.0,
+        509.0,
+        400.0,
+        520.0
+      ]
+    },
+    {
+      "name": "review_status",
+      "value": "/FollowUp",
+      "appearanceState": "/Off",
+      "appearanceNonempty": true,
+      "rect": [
+        471.0,
+        509.0,
+        482.0,
+        520.0
+      ]
+    },
+    {
+      "name": "drawing_checked",
+      "value": "/Yes",
+      "appearanceState": "/Yes",
+      "appearanceNonempty": true,
+      "rect": [
+        40.0,
+        466.0,
+        52.0,
+        478.0
+      ]
+    },
+    {
+      "name": "photos_referenced",
+      "value": "/Off",
+      "appearanceState": "/Off",
+      "appearanceNonempty": true,
+      "rect": [
+        40.0,
+        439.0,
+        52.0,
+        451.0
+      ]
+    },
+    {
+      "name": "action_assigned",
+      "value": "/Yes",
+      "appearanceState": "/Yes",
+      "appearanceNonempty": true,
+      "rect": [
+        40.0,
+        412.0,
+        52.0,
+        424.0
+      ]
+    },
+    {
+      "name": "observation",
+      "value": "Nur zur Übung. Türöffnung anhand von A101, Revision B prüfen.\nZuständig: Musterprüfung. Nächster Schritt: Planreferenz bestätigen.",
+      "appearanceState": null,
+      "appearanceNonempty": true,
+      "rect": [
+        40.0,
+        206.0,
+        555.0,
+        372.0
+      ]
+    },
+    {
+      "name": "pruefbereich",
+      "value": "Südflügel",
+      "appearanceState": null,
+      "appearanceNonempty": true,
+      "rect": [
+        309.5,
+        411.39,
+        555.5,
+        464.39
+      ]
+    }
+  ],
+  "paper": "A4",
+  "files": {
+    "planpruefung-vorlage.pdf": "d797d31117aed9fd1a751a987050d703224651c730e587fd6e1cff6e91f7f2e9",
+    "planpruefung-ausgefuellt.pdf": "ed44243938fa737a049481d34988a3f961a23e6efd1a77081508df57dc3f2024",
+    "feldkennungen.csv": "deefeedc1c0b695da9a9f1f29add58900cc4e85146b281cd65e795711e224c8f"
+  },
+  "checks": [
+    "Canonical field tree and page widgets point to the same objects",
+    "All eleven values match the actual app capture after restart",
+    "All thirteen widget appearances are nonempty; radio and checkbox appearance states agree with canonical values",
+    "German locale, A4 geometry and German list choices preserved",
+    "Final result remains interactive"
+  ],
+  "limitations": [
+    "photos_referenced remains unchecked despite its required flag; this is an intentionally incomplete practice example.",
+    "Configured tab order is recorded, but hardware keyboard traversal is not qualified.",
+    "No Windows, native iPad or third-party interactive filling qualification."
+  ]
+}

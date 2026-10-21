@@ -1,0 +1,94 @@
+{
+  "status": "complete",
+  "locale": "de-DE",
+  "region": "DE",
+  "evidence": "/localized-media/de/guides/forms/verification.json",
+  "elements": [
+    {
+      "selector": ".blog-verification > div:nth-child(1) dd",
+      "source": "Aligned with PolyPDF 1.5.1 (build 23) on September 7, 2026. Earlier walkthroughs and screenshots retain their versions below.",
+      "target": "Deutscher Formular-Durchlauf im lokalen Entwicklungsstand 1.6.17 Build 84; kein Nachweis eines veröffentlichten Installers."
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(2) dd",
+      "source": "September 3, 2026",
+      "target": "21. Oktober 2026"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(3) dd",
+      "source": "PolyPDF 1.5.0 (build 22); screenshot from 1.4.0 (build 17)",
+      "target": "PolyPDF 1.6.17 Build 84 — deutscher lokaler Entwicklungsstand"
+    },
+    {
+      "selector": ".blog-verification > div:nth-child(4) dd",
+      "source": "macOS and Windows",
+      "target": "Für diesen Durchlauf geprüft: macOS"
+    },
+    {
+      "selector": ".blog-hero-figure figcaption",
+      "source": "The Forms palette holds all six field types you can author, next to a finished ten-field Site Inspection Checklist. That form uses three text fields, two choice fields, one radio group, and four independent checkboxes. The checklist is a sample form we built for this guide, not a real project document.",
+      "target": "Nach dem vollständigen App-Neustart: deutsche Oberfläche, alle sechs Feldtypen und die gespeicherte A4-Planprüfung mit elf Feldern. Südflügel, Elektro und Nachverfolgung sind gewählt. Fotoreferenzen ergänzt bleibt absichtlich abgewählt. Dieses fiktive Übungsformular ist kein abgeschlossener Prüfbericht."
+    }
+  ],
+  "text": {
+    "Create a fillable PDF form in PolyPDF. Download English and French practice forms, add AcroForm fields, and check saved values before sharing.": "Deutsches A4-Übungsformular herunterladen, ein Listenfeld ergänzen und elf gespeicherte Feldwerte nach einem App-Neustart prüfen.",
+    "The PolyPDF Forms panel showing six field types beside a ten-field site inspection checklist": "Deutsche PolyPDF-Formularpalette mit sechs Feldtypen und wieder geöffneter A4-Planprüfung mit elf Feldern",
+    "Scrollable image: The PolyPDF Forms panel showing six field types beside a ten-field site inspection checklist": "Scrollbares Bild: Deutsche PolyPDF-Formularpalette und gespeicherte A4-Planprüfung mit elf Feldern",
+    "For an unsigned, unrestricted PDF, open Forms and place Text, Multiline Text, Checkbox, Radio, Combo Box, or List Box fields. Give each a unique name, tooltip, options, flags, and tab order, then test a saved copy in PolyPDF and another target viewer. PolyPDF authors AcroForms; signed or secured PDFs block authoring, and dynamic XFA is preserved but not filled as an ordinary AcroForm.": "Öffnen Sie die deutsche A4-Vorlage und die Seitenleiste Formulare. Wählen Sie Feld hinzufügen und den Typ Listenfeld. Verwenden Sie pruefbereich als Kennung und Nordflügel, Südflügel sowie Außenanlage als Optionen. Füllen Sie die vorhandenen Felder aus, speichern Sie unter einem neuen Namen und öffnen Sie die Datei nach einem vollständigen App-Neustart erneut. Dieser Mac-Durchlauf bewahrt alle elf Feldwerte. Das Beispiel enthält absichtlich ein nicht erfülltes Pflichtfeld.",
+    "Use AcroForm fields when recipients should fill in the PDF itself. Use the interactive stamp builder in 1.5.1 for a reusable review mark whose values are entered when it is placed. The saved stamp is an annotation appearance; it does not add fillable AcroForm fields or execute imported stamp JavaScript.": "Verwenden Sie AcroForm-Felder, wenn Empfänger direkt im PDF Eingaben machen sollen. Ein interaktiver Stempel dient dagegen als wiederverwendbarer Prüfvermerk. Sein gespeichertes Erscheinungsbild ist eine Anmerkung und fügt keine ausfüllbaren AcroForm-Felder hinzu.",
+    "Open the PDF and show the Forms panel from the sidebar or Window > Panels > Forms.": "Öffnen Sie planpruefung-vorlage.pdf und wählen Sie Formulare in der Seitenleiste. Die Ausgangsdatei enthält zehn Felder. Ziehen Sie die rechte Kante der Seitenleiste bei Bedarf breiter, damit alle deutschen Bezeichnungen lesbar sind.",
+    "Drag a field type from the palette onto the page. You can also select a type and click the page, or choose Add Field for numeric placement.": "Klicken Sie auf Feld hinzufügen und wählen Sie Listenfeld. Für diese A4-Vorlage verwenden Sie Seite 1, X 310, Y 378, Breite 245 und Höhe 52; diese Platzierungswerte sind PDF-Punkte.",
+    "Enter a unique field name. PolyPDF rejects blank names, duplicates, certain bracket characters, and periods because PDF reserves a period for parent-child field-name hierarchy.": "Prüfen Sie zunächst den bereits vorhandenen Namen project: PolyPDF zeigt „Ein Formularfeld mit diesem Namen existiert bereits.“ und deaktiviert die Bestätigung. Ersetzen Sie ihn durch pruefbereich. Stabile Feldkennungen werden nicht automatisch übersetzt.",
+    "Add a visible tooltip that identifies the field to someone navigating without relying only on page position.": "Tragen Sie als Tooltip „Prüfbereich auswählen“ ein. Die sichtbare Beschriftung „Prüfbereich (zusätzliches Listenfeld)“ ist bereits auf der Vorlage gedruckt.",
+    "For radio, combo, and list fields, enter one option per line. Radio groups require at least two options.": "Tragen Sie Nordflügel, Südflügel und Außenanlage als drei getrennte Zeilen ein. Für diese Übung ist Südflügel der Standardwert; die Mehrfachauswahl bleibt aus.",
+    "Set the relevant behavior flags, such as Required or Read Only, and add a default value only when the form's business rule calls for one.": "Lassen Sie die zusätzlichen Flags dieses Listenfelds ausgeschaltet. Die vorhandenen Kontrollkästchen der Vorlage sind erforderlich. Ein nicht gesetztes Pflichtkästchen bleibt im Formularbereich als fehlend erkennbar; Speichern allein bestätigt keine vollständige Prüfung.",
+    "Set the page and tab order. Arrange the field on the page by dragging its move grip, resize it with the handles, or nudge it with the arrow keys.": "Setzen Sie die Tab-Reihenfolge des neuen Felds auf 13, nach den zwölf vorhandenen Steuerelementen. Bestätigen Sie mit Feld hinzufügen. Die Seitenleiste zeigt nun elf Formularfelder.",
+    "Repeat with a consistent naming scheme, then save a working copy before the fill test.": "Geben Sie Bürgerhaus / Nordflügel, 21.10.2026 und Musterprüfung ein. Wählen Sie Elektro, Nachverfolgung und Südflügel. Setzen Sie Planrevision erfasst und Verantwortliche Person zugewiesen; lassen Sie Fotoreferenzen ergänzt für den Fehlzustand absichtlich leer. Ergänzen Sie eine deutsche Notiz mit Umlauten und Zeilenumbruch.",
+    "Use names that describe data, such as bill_to_company, rather than positions such as top_left_1. Stable names help downstream mappings survive layout changes.": "Behalten Sie die vorhandenen Feldkennungen wie project, review_status und observation unverändert, wenn sie mit einem Datensystem verbunden sind. Sichtbare Beschriftungen und Tooltips sind deutsch. Die Optionsgruppe speichert für Nachverfolgung weiterhin den stabilen Wert FollowUp.",
+    "Save a new PDF and reopen it rather than relying only on the unsaved editor view.": "Speichern Sie über Datei › Speichern unter… eine neue PDF. Beenden Sie PolyPDF vollständig, öffnen Sie die gespeicherte Datei erneut und vergleichen Sie alle elf Werte. Genau dieser Ablauf wurde im deutschen Mac-Durchlauf geprüft.",
+    "Tab from the first field to the last. Confirm order, focus visibility, tooltips, and keyboard operation.": "Prüfen Sie für Ihren Einsatz zusätzlich die Tastaturreihenfolge, sichtbaren Fokus und Tooltips. Die konfigurierte Position 13 ist hier dokumentiert; ein vollständiger Test mit der Hardware-Tastatur gehört nicht zu diesem Durchlauf.",
+    "Exercise every checkbox, radio group, combo box, and list box. Confirm defaults, required states, and option labels.": "Vergleichen Sie Elektro, Nachverfolgung und Südflügel sowie die zwei gesetzten und das eine leere Kontrollkästchen. Das leere Pflichtfeld Fotoreferenzen ergänzt bleibt absichtlich unvollständig.",
+    "Free files. No account or email required. These original practice templates are separate from the older checklist shown above. Adapt the fields to your project.": "Kostenlose Übungsdateien ohne Konto oder E-Mail. Die Vorlage, das gespeicherte Ergebnis und die Bildschirmaufnahme gehören zu demselben deutschen Beispiel. Passen Sie Beschriftungen und Pflichtfelder an Ihren tatsächlichen Ablauf an.",
+    "Open a downloaded form. Enter a project name, date, reviewer, and drawing revision.": "Öffnen Sie die deutsche Vorlage, ergänzen Sie das Listenfeld wie oben beschrieben und tragen Sie Projekt, Datum, prüfende Person und Planrevision ein.",
+    "Select a scope and review status, check the relevant boxes, and enter a note with an accented character and a line break.": "Wählen Sie Elektro, Nachverfolgung und Südflügel. Setzen Sie zwei Kontrollkästchen und lassen Sie Fotoreferenzen ergänzt absichtlich leer. Verwenden Sie Umlaute und einen Zeilenumbruch in der Notiz.",
+    "Use Save As to create a separate copy. Close it, reopen it, and compare all ten fields with your entries.": "Speichern Sie eine separate Kopie, starten Sie die App neu und vergleichen Sie alle elf Felder. Der gespeicherte Übungsstand ist weiterhin interaktiv."
+  },
+  "regionalForm": {
+    "description": "Deutsche A4-Vorlage zur Planprüfung mit zehn vorhandenen Feldern. Ergänzen Sie im beschrifteten freien Bereich ein Listenfeld namens pruefbereich. Das gespeicherte Beispiel enthält danach elf Felder und dreizehn Steuerelemente: vier einzeilige Texte, eine mehrzeilige Notiz, drei Kontrollkästchen, eine Optionsgruppe mit drei Schaltflächen, ein Kombinationsfeld und ein Listenfeld.",
+    "evidence": "Am 21.10.2026 im deutschen macOS-Entwicklungsstand PolyPDF 1.6.17 Build 84 ausgeführt: Feld hinzufügen, doppelte Kennung ablehnen, alle elf Werte setzen, über den nativen Dialog speichern und nach vollständigem App-Neustart erneut öffnen. Unabhängige PDF-Prüfungen bestätigen Feldwerte und Darstellungen. Fotoreferenzen ergänzt bleibt absichtlich abgewählt, obwohl das Feld erforderlich ist. Windows, natives iPad, Tastaturreihenfolge und interaktives Ausfüllen in anderen PDF-Programmen wurden für dieses Beispiel nicht geprüft."
+  },
+  "links": [
+    {
+      "selector": "[data-regional-form-primary] a",
+      "source": "/localized-media/de/samples/forms/construction-review-form-de.pdf",
+      "url": "/localized-media/de/samples/forms-guide/planpruefung-vorlage.pdf",
+      "label": "Deutsche Vorlage mit zehn Feldern · PDF",
+      "sha256": "d797d31117aed9fd1a751a987050d703224651c730e587fd6e1cff6e91f7f2e9"
+    },
+    {
+      "selector": "[data-regional-form-field-map] a",
+      "source": "/localized-media/de/samples/forms/construction-review-field-map.csv",
+      "url": "/localized-media/de/samples/forms-guide/feldkennungen.csv",
+      "label": "Elf Feldkennungen und Feldtypen · CSV",
+      "sha256": "deefeedc1c0b695da9a9f1f29add58900cc4e85146b281cd65e795711e224c8f"
+    }
+  ],
+  "downloads": [
+    {
+      "selector": ".blog-sources li:nth-child(1)",
+      "source": "PolyPDF 1.5.0 (build 22) Forms panel, form-authoring model, and in-app guidance — Covers the field types, naming rules, authoring limits, read-only behavior, and XFA handling described above.",
+      "url": "/localized-media/de/samples/forms-guide/planpruefung-vorlage.pdf",
+      "label": "Deutsche A4-Vorlage herunterladen (PDF)",
+      "note": "Zehn Felder und gedruckter Platz für das zusätzliche Listenfeld. Fiktives deutsches Bauprojekt, keine Ausführungsplanung.",
+      "sha256": "d797d31117aed9fd1a751a987050d703224651c730e587fd6e1cff6e91f7f2e9"
+    },
+    {
+      "selector": ".blog-sources li:nth-child(2)",
+      "source": "The sample Site Inspection Checklist shown in this guide — A one-page sample form with ten AcroForm fields across the six authorable field types.",
+      "url": "/localized-media/de/samples/forms-guide/planpruefung-ausgefuellt.pdf",
+      "label": "Gespeichertes deutsches Beispiel herunterladen (PDF)",
+      "note": "Elf interaktive Felder nach nativer Speicherung und vollständigem App-Neustart geprüft. Fotoreferenzen ergänzt bleibt als bewusst fehlendes Pflichtfeld leer.",
+      "sha256": "ed44243938fa737a049481d34988a3f961a23e6efd1a77081508df57dc3f2024"
+    }
+  ]
+}

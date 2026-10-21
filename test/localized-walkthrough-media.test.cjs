@@ -177,3 +177,17 @@ test('German electrical table matches the regional drawing instead of retaining 
   localizeRegionalCopy(safe.window.document, locale, escaped);
   assert.equal(safe.window.document.querySelector('img'), null, 'Regional table cells are plain text');
 });
+
+test('a completed form walkthrough can explain its own native derivative without changing other pages', () => {
+  const data = manifest();
+  data.locales.de.regionalForm={primarySource:'/samples/plan.pdf',fieldMapSource:'/samples/plan.pdf',alternativeSources:[],primaryLabel:'Vorlage',fieldMapLabel:'Feldnamen',description:'Standardvorlage',evidence:'Allgemeiner Nachweis'};
+  const html='<section data-regional-form><p data-regional-form-description></p><p data-regional-form-evidence></p><div data-regional-form-primary><a href="/samples/plan.pdf">PDF</a></div><div data-regional-form-field-map><a href="/samples/plan.pdf">CSV</a></div></section>';
+  const page={locale:'de-DE',region:'DE',regionalForm:{description:'Vorlage plus neues Listenfeld',evidence:'Native Speicherung geprüft'}};
+  const specialized=new JSDOM(html).window.document;
+  localizeWalkthroughMedia(specialized,locale,data,page);
+  assert.equal(specialized.querySelector('[data-regional-form-evidence]').textContent,page.regionalForm.evidence);
+  const ordinary=new JSDOM(html).window.document;
+  localizeWalkthroughMedia(ordinary,locale,data);
+  assert.equal(ordinary.querySelector('[data-regional-form-evidence]').textContent,'Allgemeiner Nachweis');
+  for(const bad of [{...page,region:'US'},{...page,regionalForm:{...page.regionalForm,primarySource:'/unexpected.pdf'}},{...page,regionalForm:{description:''}}])assert.throws(()=>localizeWalkthroughMedia(new JSDOM(html).window.document,locale,data,bad),/Invalid page regional form copy/);
+});

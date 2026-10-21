@@ -50,7 +50,7 @@ for (const locale of allLocales) {
     c.translateDOM(d.body,t);
     d.querySelector('[data-language-slot]').outerHTML = c.languageNavigation(route,locale,t);
     c.localizeLinks(d,locale,t);
-    if (useRegionalMedia) localizeWalkthroughMedia(d, locale, walkthroughMedia);
+    if (useRegionalMedia) localizeWalkthroughMedia(d, locale, walkthroughMedia, page);
     else c.localizeMetricPlan(d,locale,t);
     localizePageLinks(d,locale,page,value=>fs.readFileSync(path.join(build,value)));
     const canonical = c.ORIGIN+c.localizedPath(locale.id,route);

@@ -1,0 +1,26 @@
+{
+  "time": "2026-10-21T10:50:56.891104+00:00",
+  "authorization": "User explicitly authorized clearing unnecessary system storage; limited to regenerable compiler/transpiler/JavaScript code caches.",
+  "freeBefore": 810532864,
+  "removed": [
+    {
+      "path": "/private/var/folders/gg/cympw5ks1w347vnq3cw2cxl40000gn/C/clang/ModuleCache",
+      "files": 445,
+      "logicalBytes": 467190516,
+      "reason": "Regenerable compiled code cache; source and installed runtime preserved"
+    },
+    {
+      "path": "/Users/mohammedbala/Projects/polypdf_site-localization/node_modules/.cache/babel-loader",
+      "files": 20573,
+      "logicalBytes": 146836237,
+      "reason": "Regenerable compiled code cache; source and installed runtime preserved"
+    },
+    {
+      "path": "/Users/mohammedbala/Library/Caches/Codex/Default/Partitions/codex-browser-app/Code Cache",
+      "files": 975,
+      "logicalBytes": 81775375,
+      "reason": "Regenerable compiled code cache; source and installed runtime preserved"
+    }
+  ],
+  "freeAfter": 1573597184
+}

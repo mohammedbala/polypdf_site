@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "sourceSha256": "d15d2479a74e6c0a52f665c3692774ba5bd73581d40bc6632de0b0270cbec5aa",
+  "sha256": "d797d31117aed9fd1a751a987050d703224651c730e587fd6e1cff6e91f7f2e9",
+  "fields": 10,
+  "widgets": 12,
+  "paper": "A4",
+  "addedLabel": "Prüfbereich (zusätzliches Listenfeld)",
+  "authoredFieldPlan": {
+    "name": "pruefbereich",
+    "type": "listBox",
+    "tooltip": "Prüfbereich auswählen",
+    "options": [
+      "Nordflügel",
+      "Südflügel",
+      "Außenanlage"
+    ],
+    "tabOrder": 13,
+    "bounds": {
+      "x": 310,
+      "y": 378,
+      "width": 245,
+      "height": 52
+    }
+  },
+  "scope": "Existing authored values and AcroForm tree preserved. Added printed label only; the app must create the eleventh field."
+}

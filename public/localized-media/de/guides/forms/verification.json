@@ -1,0 +1,583 @@
+{
+  "status": "passed",
+  "locale": "de-DE",
+  "region": "DE",
+  "platform": "darwin",
+  "build": {
+    "schemaVersion": 1,
+    "recipe": "desktop-performance-source-v1",
+    "sourceSha256": "728f812de145fa5b2ced3611dca36189d38082a3e3d73e084019b2855c3bc1a1",
+    "version": "1.6.17",
+    "bundleSetSha256": "40d0a1bd1ee6a8bae45520f7fbe07d37ea9e56e9269a1489cc35ea62d9dbd815"
+  },
+  "sourceHash": "d797d31117aed9fd1a751a987050d703224651c730e587fd6e1cff6e91f7f2e9",
+  "captureScriptSha256": "ad9edcd55335a1f6eaed506068109c7bc08e72ca8e37b17c36f2ee3941775938",
+  "before": [
+    {
+      "name": "action_assigned",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false
+    },
+    {
+      "name": "drawing_checked",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false
+    },
+    {
+      "name": "drawing_revision",
+      "type": "text",
+      "value": "A101 / Revision B"
+    },
+    {
+      "name": "observation",
+      "type": "textarea",
+      "value": ""
+    },
+    {
+      "name": "photos_referenced",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false
+    },
+    {
+      "name": "project",
+      "type": "text",
+      "value": "Bürgerhaus am Lindenpark / Musterstadt"
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "Closed",
+      "checked": false
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "FollowUp",
+      "checked": false
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "Open",
+      "checked": false
+    },
+    {
+      "name": "reviewer",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "name": "trade",
+      "type": "select-one",
+      "value": "Gewerk auswählen",
+      "options": [
+        {
+          "value": "Gewerk auswählen",
+          "label": "Gewerk auswählen",
+          "selected": true
+        },
+        {
+          "value": "Allgemein",
+          "label": "Allgemein",
+          "selected": false
+        },
+        {
+          "value": "Elektro",
+          "label": "Elektro",
+          "selected": false
+        },
+        {
+          "value": "Ausbau",
+          "label": "Ausbau",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "visit_date",
+      "type": "text",
+      "value": "20.10.2026"
+    }
+  ],
+  "palette": [
+    {
+      "type": "text",
+      "label": "Text"
+    },
+    {
+      "type": "multilineText",
+      "label": "Mehrzeiliger Text"
+    },
+    {
+      "type": "checkbox",
+      "label": "Kontrollkästchen"
+    },
+    {
+      "type": "radio",
+      "label": "Option"
+    },
+    {
+      "type": "comboBox",
+      "label": "Kombinationsfeld"
+    },
+    {
+      "type": "listBox",
+      "label": "Listenfeld"
+    }
+  ],
+  "duplicateError": "Ein Formularfeld mit diesem Namen existiert bereits.",
+  "fieldSettings": [
+    {
+      "name": "data-form-author-type",
+      "type": "select-one",
+      "value": "listBox",
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-name",
+      "type": "text",
+      "value": "pruefbereich",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-tooltip",
+      "type": "text",
+      "value": "Prüfbereich auswählen",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-required",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-readonly",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-noexport",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-password",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-comb",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-fileselect",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-nospellcheck",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-noscroll",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-richtext",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-notoggletooff",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-radiosinunison",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-editable-combo",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": true
+    },
+    {
+      "name": "data-form-author-sort",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-commitonsel",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-multiselect",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-page",
+      "type": "number",
+      "value": "1",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-x",
+      "type": "number",
+      "value": "310",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-y",
+      "type": "number",
+      "value": "378",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-width",
+      "type": "number",
+      "value": "245",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-height",
+      "type": "number",
+      "value": "52",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-tab-order",
+      "type": "number",
+      "value": "13",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-default",
+      "type": "text",
+      "value": "Südflügel",
+      "checked": false,
+      "disabled": false
+    },
+    {
+      "name": "data-form-author-options",
+      "type": "textarea",
+      "value": "Nordflügel\nSüdflügel\nAußenanlage",
+      "disabled": false
+    }
+  ],
+  "values": {
+    "project": "Bürgerhaus / Nordflügel",
+    "visit_date": "21.10.2026",
+    "reviewer": "Musterprüfung",
+    "drawing_revision": "A101 / Revision B",
+    "trade": "Elektro",
+    "review_status": "FollowUp",
+    "drawing_checked": true,
+    "photos_referenced": false,
+    "action_assigned": true,
+    "observation": "Nur zur Übung. Türöffnung anhand von A101, Revision B prüfen.\nZuständig: Musterprüfung. Nächster Schritt: Planreferenz bestätigen.",
+    "pruefbereich": "Südflügel"
+  },
+  "filled": [
+    {
+      "name": "action_assigned",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true
+    },
+    {
+      "name": "drawing_checked",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true
+    },
+    {
+      "name": "drawing_revision",
+      "type": "text",
+      "value": "A101 / Revision B"
+    },
+    {
+      "name": "observation",
+      "type": "textarea",
+      "value": "Nur zur Übung. Türöffnung anhand von A101, Revision B prüfen.\nZuständig: Musterprüfung. Nächster Schritt: Planreferenz bestätigen."
+    },
+    {
+      "name": "photos_referenced",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false
+    },
+    {
+      "name": "project",
+      "type": "text",
+      "value": "Bürgerhaus / Nordflügel"
+    },
+    {
+      "name": "pruefbereich",
+      "type": "select-one",
+      "value": "Südflügel",
+      "options": [
+        {
+          "value": "Nordflügel",
+          "label": "Nordflügel",
+          "selected": false
+        },
+        {
+          "value": "Südflügel",
+          "label": "Südflügel",
+          "selected": true
+        },
+        {
+          "value": "Außenanlage",
+          "label": "Außenanlage",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "Closed",
+      "checked": false
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "FollowUp",
+      "checked": true
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "Open",
+      "checked": false
+    },
+    {
+      "name": "reviewer",
+      "type": "text",
+      "value": "Musterprüfung"
+    },
+    {
+      "name": "trade",
+      "type": "select-one",
+      "value": "Elektro",
+      "options": [
+        {
+          "value": "Gewerk auswählen",
+          "label": "Gewerk auswählen",
+          "selected": false
+        },
+        {
+          "value": "Allgemein",
+          "label": "Allgemein",
+          "selected": false
+        },
+        {
+          "value": "Elektro",
+          "label": "Elektro",
+          "selected": true
+        },
+        {
+          "value": "Ausbau",
+          "label": "Ausbau",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "visit_date",
+      "type": "text",
+      "value": "21.10.2026"
+    }
+  ],
+  "reopened": [
+    {
+      "name": "action_assigned",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true
+    },
+    {
+      "name": "drawing_checked",
+      "type": "checkbox",
+      "value": "on",
+      "checked": true
+    },
+    {
+      "name": "drawing_revision",
+      "type": "text",
+      "value": "A101 / Revision B"
+    },
+    {
+      "name": "observation",
+      "type": "textarea",
+      "value": "Nur zur Übung. Türöffnung anhand von A101, Revision B prüfen.\nZuständig: Musterprüfung. Nächster Schritt: Planreferenz bestätigen."
+    },
+    {
+      "name": "photos_referenced",
+      "type": "checkbox",
+      "value": "on",
+      "checked": false
+    },
+    {
+      "name": "project",
+      "type": "text",
+      "value": "Bürgerhaus / Nordflügel"
+    },
+    {
+      "name": "pruefbereich",
+      "type": "select-one",
+      "value": "Südflügel",
+      "options": [
+        {
+          "value": "Nordflügel",
+          "label": "Nordflügel",
+          "selected": false
+        },
+        {
+          "value": "Südflügel",
+          "label": "Südflügel",
+          "selected": true
+        },
+        {
+          "value": "Außenanlage",
+          "label": "Außenanlage",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "Closed",
+      "checked": false
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "FollowUp",
+      "checked": true
+    },
+    {
+      "name": "review_status",
+      "type": "radio",
+      "value": "Open",
+      "checked": false
+    },
+    {
+      "name": "reviewer",
+      "type": "text",
+      "value": "Musterprüfung"
+    },
+    {
+      "name": "trade",
+      "type": "select-one",
+      "value": "Elektro",
+      "options": [
+        {
+          "value": "Gewerk auswählen",
+          "label": "Gewerk auswählen",
+          "selected": false
+        },
+        {
+          "value": "Allgemein",
+          "label": "Allgemein",
+          "selected": false
+        },
+        {
+          "value": "Elektro",
+          "label": "Elektro",
+          "selected": true
+        },
+        {
+          "value": "Ausbau",
+          "label": "Ausbau",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "name": "visit_date",
+      "type": "text",
+      "value": "21.10.2026"
+    }
+  ],
+  "shots": [
+    {
+      "file": "formular-vorlage.png",
+      "sha256": "9faa29723a77ab492ffcae455804ca73cb21934a949e70dd9b1986cd41aadd1f"
+    },
+    {
+      "file": "formular-listenfeld.png",
+      "sha256": "f9bc7e3db85aba2e37f7d855dee0334ea8b8d31c82c9f4ba51267ce02cfad9d1"
+    },
+    {
+      "file": "formular-ausgefuellt.png",
+      "sha256": "e63f8a0b5ce125491e9a94cfdeae3b2357787a748541c4ed9bf788177541416f"
+    },
+    {
+      "file": "formular-wieder-geoeffnet.png",
+      "sha256": "f2384a9254b53044e8b39f37206c8b0308df4edc20f8eedde308e0f2a7b7067e"
+    }
+  ],
+  "savedSha256": "ed44243938fa737a049481d34988a3f961a23e6efd1a77081508df57dc3f2024",
+  "scope": "Actual German form controls and authoring dialog, duplicate-name refusal, all eleven values through DOM events, native Save As and full process restart. No model seeding.",
+  "limitations": [
+    "Local Mac development build; no Windows/native iPad or third-party interactive filling qualification.",
+    "Field types are exercised through renderer controls; hardware keyboard tab-order testing remains separate.",
+    "photos_referenced remains unchecked despite its required flag; this is an intentionally incomplete practice example.",
+    "Configured tab order is recorded, but hardware keyboard traversal is not qualified.",
+    "No Windows, native iPad or third-party interactive filling qualification.",
+    "The capture retains authored stable field identifiers and raw PDF flag identifiers; the toolbar uses the existing German-catalog word Upgrade.",
+    "The pre-save audit capture retains a transient English update status; only the reopened capture is mapped to the public walkthrough."
+  ],
+  "profileSha256": "36020cecb5ac35da09f25107e2f7f4846c91525ae208f971ebe0af8c1a0b621f",
+  "exportVerificationSha256": "5e667cbd395664eb3e638e94d7d298dadb459705de4b8750ca8494a8d6e00303",
+  "visualReview": "Final reopened screenshot: all six German palette labels readable after actual sidebar resizing; German A4 sheet and saved values visible. Native output rendered independently with Poppler: no clipped input, overlapping labels or missing German glyphs. Public hero uses the reopened state."
+}

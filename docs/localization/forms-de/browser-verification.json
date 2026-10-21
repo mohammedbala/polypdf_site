@@ -1,0 +1,37 @@
+{
+  "status": "passed",
+  "route": "/de/blog/create-fillable-pdf-form/",
+  "host": "127.0.0.1:8496",
+  "journey": [
+    "English guide shows forms-v1-4-light-web and English/French templates",
+    "Actual language-menu click Deutsch",
+    "German actual-app hero loaded; source, saved example and field-map links point to forms-guide regional files",
+    "Three browser downloads byte-match their verified public source files",
+    "Actual language-menu click English restores original English hero and template"
+  ],
+  "downloads": [
+    {
+      "download": "/Users/mohammedbala/Downloads/planpruefung-vorlage.pdf",
+      "publicPath": "public/localized-media/de/samples/forms-guide/planpruefung-vorlage.pdf",
+      "sha256": "d797d31117aed9fd1a751a987050d703224651c730e587fd6e1cff6e91f7f2e9"
+    },
+    {
+      "download": "/Users/mohammedbala/Downloads/planpruefung-ausgefuellt.pdf",
+      "publicPath": "public/localized-media/de/samples/forms-guide/planpruefung-ausgefuellt.pdf",
+      "sha256": "ed44243938fa737a049481d34988a3f961a23e6efd1a77081508df57dc3f2024"
+    },
+    {
+      "download": "/Users/mohammedbala/Downloads/feldkennungen.csv",
+      "publicPath": "public/localized-media/de/samples/forms-guide/feldkennungen.csv",
+      "sha256": "deefeedc1c0b695da9a9f1f29add58900cc4e85146b281cd65e795711e224c8f"
+    }
+  ],
+  "screenshots": {
+    "browser-instructions.jpg": "5fcdffc3b35c247f895347956aa0cd836a83560b27b7f66722dfef3d607fbcf8",
+    "browser-de.jpg": "e8c4c29a26a5e54d06f21501ae9b9b57c486351e8fa30b076e3059fd943d6209"
+  },
+  "limitations": [
+    "Local browser only; no deployment",
+    "Other pilot routes and language packs remain incomplete"
+  ]
+}

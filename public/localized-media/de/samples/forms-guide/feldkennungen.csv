@@ -1,0 +1,12 @@
+Sprache;Feldkennung;Feldtyp;Sichtbare Beschriftung
+de;project;Text;Projekt / Ort
+de;visit_date;Text;Datum der Begehung (TT.MM.JJJJ)
+de;reviewer;Text;Geprüft von
+de;drawing_revision;Text;Plan / Revisionsstand
+de;trade;Kombinationsfeld;Gewerk
+de;review_status;Optionsgruppe;Bearbeitungsstand
+de;drawing_checked;Kontrollkästchen;Planrevision erfasst
+de;photos_referenced;Kontrollkästchen;Fotoreferenzen ergänzt
+de;action_assigned;Kontrollkästchen;Verantwortliche Person zugewiesen
+de;observation;Mehrzeiliger Text;Beobachtung, Zuständigkeit und nächster Schritt
+de;pruefbereich;Listenfeld;Prüfbereich auswählen

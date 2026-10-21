@@ -1,0 +1,65 @@
+automation clean quit: armed on isolated userData /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile — watching /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile/automation-quit-request
+
+DevTools listening on ws://127.0.0.1:9493/devtools/browser/0a0f1582-7d44-4b35-ba75-37c3d05c1752
+[pdfium] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium-worker] stage: core bridge required
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+automation-instance: pid 76838 (5 processes)
+automation-instance: record /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile/automation-instance.json
+automation-instance: teardown with  node scripts/automation-instance.mjs teardown --user-data /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile
+automation clean quit: request seen — discarding unsaved changes and quitting
+automation-instance: verified gone — 5 process(es), root pid 76838 (clean quit, no signals sent)
+automation clean quit: armed on isolated userData /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile — watching /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile/automation-quit-request
+
+DevTools listening on ws://127.0.0.1:9494/devtools/browser/cd1f289c-4197-4eab-90ce-a296f006e47c
+[pdfium] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium-worker] stage: core bridge required
+[pdfium:tile-2] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium:tile-1] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium:tile-2] [pdfium-worker] stage: core bridge required
+[pdfium:tile-1] [pdfium-worker] stage: core bridge required
+[pdfium:tile-1] [pdfium-worker] stage: tile bridge loaded
+[pdfium:tile-2] [pdfium-worker] stage: tile bridge loaded
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+[pdfium] [pdfium-worker] stage: tile bridge loaded
+automation-instance: pid 77345 (7 processes)
+automation-instance: record /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile/automation-instance.json
+automation-instance: teardown with  node scripts/automation-instance.mjs teardown --user-data /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+automation clean quit: request seen — discarding unsaved changes and quitting
+automation-instance: verified gone — 7 process(es), root pid 77345 (clean quit, no signals sent)
+automation clean quit: armed on isolated userData /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile — watching /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile/automation-quit-request
+
+DevTools listening on ws://127.0.0.1:9495/devtools/browser/c3eac723-190f-4d52-98f9-27e2a63509ba
+[pdfium] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium-worker] stage: core bridge required
+[pdfium:tile-2] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium-worker] stage: core bridge required
+[pdfium-worker] stage: tile bridge loaded
+[pdfium:tile-1] [pdfium-worker] loading bridge: dir=/Users/mohammedbala/.codex/worktrees/global-localization/polypdfmac/polypdf/dist/native/pdfium/darwin-arm64 core=true tile=true pdfium=true
+[pdfium-worker] stage: core bridge required
+[pdfium-worker] stage: tile bridge loaded
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+Error occurred in handler for 'plugins:list-installed': Error: No handler registered for 'plugins:list-installed'
+    at Session.<anonymous> (node:electron/js2c/browser_init:2:114720)
+    at Session.emit (node:events:509:28)
+[pdfium] [pdfium-worker] stage: tile bridge loaded
+automation-instance: pid 78108 (7 processes)
+automation-instance: record /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile/automation-instance.json
+automation-instance: teardown with  node scripts/automation-instance.mjs teardown --user-data /Users/mohammedbala/Projects/polypdf_site-localization/.tmp/localization/forms-de/profile
+automation clean quit: request seen — discarding unsaved changes and quitting
+automation-instance: verified gone — 7 process(es), root pid 78108 (clean quit, no signals sent)
