@@ -1,0 +1,185 @@
+{
+  "locale": "nl-NL",
+  "region": "NL",
+  "manifestSha256": "f1663f379c9d518da451f98662f2381b37428706fbcd8f98f56a4ba79e93b99c",
+  "appBuild": "1.6.17+84",
+  "sourceFiles": {
+    "packages/pdf/src/native-annotation-import.ts": "3304419799a45e123163cc19f17e2b8bda1833a6608fab7bdeec1567f86f0fcd",
+    "packages/pdf-node/src/native-annotation-export.ts": "eeed63abe04852cca326021e8724f8787ac5e0bffac164a95cc83427389b1b8b",
+    "packages/core/src/measurement.ts": "7439822b8ee91291aed366fec95b918e7814d8a9ce70233210f6795432f641b7",
+    "packages/core/src/workspace.ts": "f90862aa6440b51a34ef692db74dbd188ce5806dd4f97866ea5b81c9420afb57",
+    "tests/pdf-node/regional-library-roundtrip.test.ts": "dab84e0b0efb2813e27a764a0ea6272f39aafbc0cca2f74b66229d319f1da574"
+  },
+  "status": "passed",
+  "scope": "Actual PolyPDF annotation writer/importer and measurement service; not native UI interaction or platform qualification",
+  "cases": [
+    {
+      "file": "01-Situatie-en-terrein.pdf",
+      "sourceSha256": "ed40414ac50b8eca5b258c24253a9fa01b187952b3aaeeb60caf78f1a83edb8e",
+      "mode": "ordinary",
+      "outputSha256": "db6fd516f23976a14fb81b84d0ab645429e54e4dddc055f80ec28ca5b71bedf0",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "01-Situatie-en-terrein.pdf",
+      "sourceSha256": "ed40414ac50b8eca5b258c24253a9fa01b187952b3aaeeb60caf78f1a83edb8e",
+      "mode": "append-only",
+      "outputSha256": "bcd19541d2604cedde2bdcffcf72e4a3ca5974d7bb879379cbb26993046917d6",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "02-Bouwkunde-Revisie-A.pdf",
+      "sourceSha256": "1ec1514d4c8d407ac323933af2d23995fe59eaa9afc621797138fc8602db4e29",
+      "mode": "ordinary",
+      "outputSha256": "a43e6c2f0f558335d06481dd09aa0c45057de1b2350481a3454816c7529cd21d",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "02-Bouwkunde-Revisie-A.pdf",
+      "sourceSha256": "1ec1514d4c8d407ac323933af2d23995fe59eaa9afc621797138fc8602db4e29",
+      "mode": "append-only",
+      "outputSha256": "2d12aadce3f24e9481ce1da9132ff53f10c3d4e9210c90c9fe62a2dae519063a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Bouwkunde-Revisie-B.pdf",
+      "sourceSha256": "0afb7097d876966e4afc635c613684fb6ead7135c677685bf8c14e7eab81a289",
+      "mode": "ordinary",
+      "outputSha256": "be72a283007094d77892df3a439bccf32db5589038e84cf49500f734ba6d56b0",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "03-Bouwkunde-Revisie-B.pdf",
+      "sourceSha256": "0afb7097d876966e4afc635c613684fb6ead7135c677685bf8c14e7eab81a289",
+      "mode": "append-only",
+      "outputSha256": "ac3f1cdeefba234154ef44781ecd158be5e05a5f9c73b2b38f16b42213910ffb",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Fundering-en-constructie.pdf",
+      "sourceSha256": "cf25db69b5fbefa45a4521c7157deae59dc635f7e59bbc7fc547f5ec5f62ad80",
+      "mode": "ordinary",
+      "outputSha256": "a51f9bd3e121b381b5ca201d0ac1c93abd491af5bf0b8a94456cc321ab84023a",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "04-Fundering-en-constructie.pdf",
+      "sourceSha256": "cf25db69b5fbefa45a4521c7157deae59dc635f7e59bbc7fc547f5ec5f62ad80",
+      "mode": "append-only",
+      "outputSha256": "4dcfcfe76e14c7e7d3f87eb3059b3db29c24b1b6078418062381e0723832bb85",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Ventilatie.pdf",
+      "sourceSha256": "f05647a6b06ca89352bdfb7a6079766b6d4f92a909a381612d012a2f62f405f7",
+      "mode": "ordinary",
+      "outputSha256": "4350acde7340bac06fa9b3db03f7bf5acd354722ee2fc9d5589ac751f36ecdfb",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "05-Ventilatie.pdf",
+      "sourceSha256": "f05647a6b06ca89352bdfb7a6079766b6d4f92a909a381612d012a2f62f405f7",
+      "mode": "append-only",
+      "outputSha256": "ecbbe03bd689f6d3cf4aa69a9ba6152446e9640319493c9009d17b8423d5e7e1",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Verlichting-en-elektrotechniek.pdf",
+      "sourceSha256": "cb4e223686651fb8647f10deba63ef92a9b2887486cbaf48aef49f68b7f61d97",
+      "mode": "ordinary",
+      "outputSha256": "b6d095b5deb41409af961f9a25bd08aab21da6ee18ef7006df4545aeb52edad3",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "06-Verlichting-en-elektrotechniek.pdf",
+      "sourceSha256": "cb4e223686651fb8647f10deba63ef92a9b2887486cbaf48aef49f68b7f61d97",
+      "mode": "append-only",
+      "outputSha256": "d1d66af740f663e0930469e71d6d96e5a3948dfb2b4a75ecd43853be431f2801",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Waterleidingen-en-afvoer.pdf",
+      "sourceSha256": "dc790f6babd9a560b5a3d60a0d2ee1d25fc6b30c7d72c1bb5e51d2fd9778c2c1",
+      "mode": "ordinary",
+      "outputSha256": "71b4665950104392d93b2f6ca76c842c8cb936c9dead01ef4d7957f8897826f8",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "07-Waterleidingen-en-afvoer.pdf",
+      "sourceSha256": "dc790f6babd9a560b5a3d60a0d2ee1d25fc6b30c7d72c1bb5e51d2fd9778c2c1",
+      "mode": "append-only",
+      "outputSha256": "3b3226d2ea4eaa1bac1ddf062a09963fb0308ef5c27d450398465521b7c03d07",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Brandbeveiliging-Oefening.pdf",
+      "sourceSha256": "11e6ad59f35d1baf6828c91e9aede0c9ca1b7f4220534ba6a82895d68acb4e68",
+      "mode": "ordinary",
+      "outputSha256": "7480a0e63b907cd107bb5064a64d137ffb8035bc7160ea0d97c1c02726890928",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "08-Brandbeveiliging-Oefening.pdf",
+      "sourceSha256": "11e6ad59f35d1baf6828c91e9aede0c9ca1b7f4220534ba6a82895d68acb4e68",
+      "mode": "append-only",
+      "outputSha256": "804d8121459a95b756480da223460ce02b9cc38bc113830303fd2960762ffe89",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "09-Groen-en-buitenruimte.pdf",
+      "sourceSha256": "d80c50cabd1cfd63128d990a604d25aa815e93ef3cdd3cb1031521ca4ddb5987",
+      "mode": "ordinary",
+      "outputSha256": "6353e82b0be5086c915a8d9140677c0483d42bd261e5563b55da49eb73a8ea99",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "09-Groen-en-buitenruimte.pdf",
+      "sourceSha256": "d80c50cabd1cfd63128d990a604d25aa815e93ef3cdd3cb1031521ca4ddb5987",
+      "mode": "append-only",
+      "outputSha256": "49e35bb031b756b895bd2a0dae0502320589a5530ab2f7031c39951c9b79e98d",
+      "quantityMetres": 10.000000000030557
+    },
+    {
+      "file": "10-Afwerking-en-meubelwerk.pdf",
+      "sourceSha256": "ff0180afae7fd3cf907c88dc6319d38eaad80c09aa96ea1d906aeebbd74ca3ef",
+      "mode": "ordinary",
+      "outputSha256": "3796c996304ab02c7e56673f6fe9a48eb1271c7a4b9d50ad56212894f72737c3",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "10-Afwerking-en-meubelwerk.pdf",
+      "sourceSha256": "ff0180afae7fd3cf907c88dc6319d38eaad80c09aa96ea1d906aeebbd74ca3ef",
+      "mode": "append-only",
+      "outputSha256": "3401933b85aa1d56e39d02bb1d44b94c6f698c050f08074688d1bf5b2da79c97",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Coordinatie-en-controle.pdf",
+      "sourceSha256": "2876a24328a9f93957b9678396ac8bc5f6ee873e017c21b935bcd85bae855d39",
+      "mode": "ordinary",
+      "outputSha256": "df56b593fdd8fceb26af994a1d8986ed470afc37a27cd1b35aa01058b7a80685",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "11-Coordinatie-en-controle.pdf",
+      "sourceSha256": "2876a24328a9f93957b9678396ac8bc5f6ee873e017c21b935bcd85bae855d39",
+      "mode": "append-only",
+      "outputSha256": "7b5955ea4b12648e1a927117d4b5a703af16c2ca067445a0dbc6ba8f5796ffb8",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Gescande-bestaande-tekeningen.pdf",
+      "sourceSha256": "3155d5465f39035822dff108cc85c36e0611af0a3abffbda67f15a78bb281e1f",
+      "mode": "ordinary",
+      "outputSha256": "f02bf97b113436570b6b7a35dc4341be81b0078ce32c7291c387990fdc856562",
+      "quantityMetres": 4.999999999997638
+    },
+    {
+      "file": "12-Gescande-bestaande-tekeningen.pdf",
+      "sourceSha256": "3155d5465f39035822dff108cc85c36e0611af0a3abffbda67f15a78bb281e1f",
+      "mode": "append-only",
+      "outputSha256": "053a184a70d072ab3cf7e9974d0cc4728f6252b3ba732e3cc40d36e6fed572de",
+      "quantityMetres": 4.999999999997638
+    }
+  ]
+}

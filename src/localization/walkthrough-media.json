@@ -7217,6 +7217,986 @@
           "target": "Esplora la biblioteca completa dei disegni →"
         }
       }
+    },
+    "nl": {
+      "appLocale": "nl-NL",
+      "region": "NL",
+      "status": "pilot",
+      "assets": {
+        "/samples/construction/01-Civil-Site-and-Grading.pdf": {
+          "url": "/localized-media/nl/samples/construction/01-Situatie-en-terrein.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "177f25d51559feef89a776ac7f88a928afa49da16ea0e9fbf972a7bfc1db8009",
+          "sha256": "ed40414ac50b8eca5b258c24253a9fa01b187952b3aaeeb60caf78f1a83edb8e",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/01-Civil-Site-and-Grading--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/01-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a2ed10f739868367fca03444dc534c2744cf0ab391d1478a992de349d8415f13",
+          "sha256": "e8eb81cb5721cc2b5aba6ed5ce971b6ddb9fcab745b5e747da4214ba0c55e5d8",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "SITUATIE EN NUTSLEIDINGEN - C101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/01-Civil-Site-and-Grading--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/01-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "550fa0f5c9972f995b2da371e05bba579527bdc4eaaad3efdd4180e764946150",
+          "sha256": "a7f2a09a8f22a2830737b52b7dcc2864e42caffa52ffd6d6c1afef57fab0e12d",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "TERREIN, PROFIELEN EN VERHARDING - C201, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/02-Architectural-Revision-A.pdf": {
+          "url": "/localized-media/nl/samples/construction/02-Bouwkunde-Revisie-A.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "0a05c64b7074e55576952ccc493fcc3f07761fe038c53f3ec0ac73562bcebe51",
+          "sha256": "1ec1514d4c8d407ac323933af2d23995fe59eaa9afc621797138fc8602db4e29",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/02-Architectural-Revision-A--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/02-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a21009b0fd505b447f2cab643fb9f23969be960a50ae5c3cc52fb56cc0566328",
+          "sha256": "d8bb774912ad22f37765ff48e6988da2c426c346187e5bdcb4dd127ea583d940",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/02-Architectural-Revision-A--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/02-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "b95780325b18ed72d2b7af2fb626dab7ab38be94e5636f75ed775d5121197453",
+          "sha256": "ef9475be4444f0506d80d65991225df4304cb4e6131d316b4f28144df90f91dc",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "GEVELS, DOORSNEDE EN WANDDETAIL - A201, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/03-Architectural-Revision-B.pdf": {
+          "url": "/localized-media/nl/samples/construction/03-Bouwkunde-Revisie-B.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "546ea7eac41a9451f28b236a836bec95d9df0b3ce01b9b6c33d25547ff2c5647",
+          "sha256": "0afb7097d876966e4afc635c613684fb6ead7135c677685bf8c14e7eab81a289",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/03-Architectural-Revision-B--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/03-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "2937fd2ee591aa38d958d4ed01ef6e60a847fb201220d1e690c6d309fee8f5b7",
+          "sha256": "ac1a7e52e0f406fe67ece9747010f05d86b376016cc2d642e7a97e65d109c4cd",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/03-Architectural-Revision-B--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/03-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "8f70df42dc9ce25b60bd6034c03f1b879c5e5974ce5551276257166f5ae2fe4a",
+          "sha256": "ea1f9249fab0f69be5eb7c8837db85449ecb91781b9e3f41794b4fa57a0be239",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "GEVELS, DOORSNEDE EN WANDDETAIL - A201, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/04-Structural-Foundation-and-Framing.pdf": {
+          "url": "/localized-media/nl/samples/construction/04-Fundering-en-constructie.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "e2cd6fd0ad13ef82a2e27a6a6770f769b707a43d534a7260b71c0763e3aa0a23",
+          "sha256": "cf25db69b5fbefa45a4521c7157deae59dc635f7e59bbc7fc547f5ec5f62ad80",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/04-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "0abc91fdde1f507fe8d342882172efecf960dee726fdaf3a892494149188473a",
+          "sha256": "d2ac4e44daf32991ff4368a6599306de4e91e6de288d70351ace0ada7b26d154",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "FUNDERINGS- EN VLOERPLAN - S101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/04-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "9ee366ffa7fd57640cd88c56ca8231364f5e6202ee390e17b7ef29e28163504a",
+          "sha256": "9daa7d87bca7ced37fb68cac64f399ce5fa142040223c4f9ac0d9312d1b7a555",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "CONSTRUCTIESCHEMA EN DETAILS - S201, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/05-Mechanical-HVAC.pdf": {
+          "url": "/localized-media/nl/samples/construction/05-Ventilatie.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "9fab23b2ac3cceee1153e42c197c045ecfd351c2706071c7293bf4fe31a4b6d3",
+          "sha256": "f05647a6b06ca89352bdfb7a6079766b6d4f92a909a381612d012a2f62f405f7",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/05-Mechanical-HVAC--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/05-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "04a4534339ccfbd483bc41e0e64cf1580cd794cdd388d2e90a591b4efcfe07f7",
+          "sha256": "ae971bcd8c6a7f3558ea9d56b34e78ff62aa86587b37915ce487bb798734c7af",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "PLATTEGROND VENTILATIE - M101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/05-Mechanical-HVAC--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/05-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "53a0cdf08ea3e1ef4cc48396fa37ef487b1914394f08e7d882907abe16e2a163",
+          "sha256": "cc5782838157d458614bdd534f2cded736d907405592e282a68632aeca88e503",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "VENTILATIESCHEMA EN ELEMENTENSTAAT - M501, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/06-Electrical-Lighting-and-Power.pdf": {
+          "url": "/localized-media/nl/samples/construction/06-Verlichting-en-elektrotechniek.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "7cf37860e4da7a744fb4e66f594c6e3f6e4cdc4d37f932a6c0155267223a6e60",
+          "sha256": "cb4e223686651fb8647f10deba63ef92a9b2887486cbaf48aef49f68b7f61d97",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/06-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "268fe5b1c28551a1c1fbce905f0118a8681b92efdb41ed8a7bee870ea5709db0",
+          "sha256": "1d0cb20991128043081469fde125504398a449491abeb797588e776dbb1f2662",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "VERLICHTING EN WANDCONTACTDOZEN - E101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/06-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "902032729c4fb2e8a664d63891c343c33a484d1e2d0bf8abde32c7f917b77a8e",
+          "sha256": "8e0ec993434c553fb019f86fe332556a2b08a25e96f4598f64db0168f2021ec0",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "ELEKTRISCH SCHEMA EN ARMATURENSTAAT - E501, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/07-Plumbing-Water-and-Drainage.pdf": {
+          "url": "/localized-media/nl/samples/construction/07-Waterleidingen-en-afvoer.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d1454428f316d5f293cf6a3514cb60571c59a3483ca7aa0e74a9a5424ee9b518",
+          "sha256": "dc790f6babd9a560b5a3d60a0d2ee1d25fc6b30c7d72c1bb5e51d2fd9778c2c1",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/07-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "2d68d2925c8c0ce84a3fc8db011a25a2e1c39b4ab4ccf2447e2db62a5581b038",
+          "sha256": "c38e88fec28a0518c50cfd6733c6bf3a0e351ffb1eb2b04fe2ce4a518aef230f",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "WATERLEIDINGEN EN AFVOER - P101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/07-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "74719c10b254cedfc4957b31ad3363fc0c2f1ea6a1c62de6ece8f27c1da35d49",
+          "sha256": "d058979fdef70134466691e09b668fe049c4bdebb096ad9c832f58600c6b0159",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "STIJGLEIDINGSCHEMA EN SANITAIRE DETAILS - P501, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/08-Fire-Protection-and-Life-Safety.pdf": {
+          "url": "/localized-media/nl/samples/construction/08-Brandbeveiliging-Oefening.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "27952ec9097c89734f80610387f02002a7776e35ad18c83e8de66ee7c0b3356c",
+          "sha256": "11e6ad59f35d1baf6828c91e9aede0c9ca1b7f4220534ba6a82895d68acb4e68",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/08-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "8026bf80b4acf7a3b0fb793417a614b30a1cd48341777fa6c5af462494e19f7c",
+          "sha256": "f6bf0d34e642d6b918d9703c728dafde664f76419e6eda3ee0b957f8012f0922",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "BRANDBEVEILIGING - OEFENING - F101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/08-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "aec1127265ac0e50c62043be9aaf602155d41b26471fc3059111307519f61ffd",
+          "sha256": "83dac2cddd43ef76166605676cdd098fdf288f556f02421d12c69935ae665587",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "VLUCHTWEGENSCHEMA EN LEGENDA - F501, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/09-Landscape-and-External-Works.pdf": {
+          "url": "/localized-media/nl/samples/construction/09-Groen-en-buitenruimte.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "31c51d17aa835875e80169af8e357a92dcea861aa38236c00159c8cc3971ee03",
+          "sha256": "d80c50cabd1cfd63128d990a604d25aa815e93ef3cdd3cb1031521ca4ddb5987",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/09-Landscape-and-External-Works--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/09-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d9dcab07240598b0bc6ab969338e987c17b534c109013892e11a425cd3561c5e",
+          "sha256": "a2910f0bb37303234bfb1c92e2d01c6243d47989d3d6b0096efa09dc256d9158",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "BEPLANTING EN BUITENRUIMTE - L101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/09-Landscape-and-External-Works--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/09-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "3704ab1d24cbe1df0b8ac06495d8a73df4fe49fdfce5af7e34e453735f5c3593",
+          "sha256": "39b53c7e47d61b7313b14bf1ea7143eb880f7e3f4f3338e36591b42fb2273054",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "GROEN, PADEN EN STRAATMEUBILAIR - L501, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/10-Interiors-Finishes-and-Millwork.pdf": {
+          "url": "/localized-media/nl/samples/construction/10-Afwerking-en-meubelwerk.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "b9d65475168417b3257c6e91d860f66812bef26fa7ff89f20bacb871559e1c74",
+          "sha256": "ff0180afae7fd3cf907c88dc6319d38eaad80c09aa96ea1d906aeebbd74ca3ef",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/10-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "98072a62400c056b6e6b8c5ca3764466554ab72507dd2ae15ab2047643b2ab76",
+          "sha256": "638e32f4a064ca3445c732761b25fc6caa07adca405e633f12db21fcfd852328",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "AFWERKING VAN VLOEREN - I101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/10-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "72dfeee23c28b8208277feca4703c6b5b87baadb16bf97f4728ca40789e52067",
+          "sha256": "9b7dfc721ac36a209fbdfbfd0583585efc8d71af20119893beea9fbc45e1d935",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "MEUBELWERK EN VLOERDETAILS - I501, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/11-Coordination-and-Review.pdf": {
+          "url": "/localized-media/nl/samples/construction/11-Coordinatie-en-controle.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "ca941a1691d9ba9d2debfb5fa0e0c757c92d50106a90362d0747f88a31121681",
+          "sha256": "2876a24328a9f93957b9678396ac8bc5f6ee873e017c21b935bcd85bae855d39",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/11-Coordination-and-Review--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/11-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a5753b05311b46ae461796b0f6e92db4871381825ca62e275d4b7828e7782f15",
+          "sha256": "204a96a7c7f2ad29c34eb63ee909a70416fd5625a4dee4aef9765795a628c2e4",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "COÖRDINATIE VAN INSTALLATIES - X101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/11-Coordination-and-Review--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/11-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "fd6a5e1d53a0fc3f84a40c03acca9b7375f99e4b433224abc696bc89516cfaee",
+          "sha256": "f5e20dc4ec361296d4d4c3907dd6f5b13a55d22c9002764f06a863f3c99112a3",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "KNELPUNTENREGISTER EN DETAILS - X102, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/12-Scanned-Legacy-Drawings.pdf": {
+          "url": "/localized-media/nl/samples/construction/12-Gescande-bestaande-tekeningen.pdf",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "234887c9b7b3be62e6f120acb1a9b9e1adce5da515b6582c92eb96df9685cec0",
+          "sha256": "3155d5465f39035822dff108cc85c36e0611af0a3abffbda67f15a78bb281e1f",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-01.png": {
+          "url": "/localized-media/nl/samples/construction/previews/12-1.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "a12f2196d3fed32ea8bd4aa224ee5993403e4961a3b7dfa94efda42a21fb7290",
+          "sha256": "6d199e4bde75a71af671dd8e5e65b01615733ce258026f61ab335d07c96c263d",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "GESCANDE PLATTEGROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-02.png": {
+          "url": "/localized-media/nl/samples/construction/previews/12-2.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "e1385fc9d7814996a6f36184c22a460235e8e5672b338008a1827c94fc2db94f",
+          "sha256": "9156c34ecc6e6421df06669333490ac300fad3ba59229fa3e5dee2745d308949",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 1800,
+          "height": 1272,
+          "alt": "GESCANDE SITUATIE - C101, WIJKCENTRUM DE LINDE, A1-oefentekening"
+        },
+        "/samples/construction/contact-sheet.png": {
+          "url": "/localized-media/nl/samples/construction/CONTACT-SHEET.png",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "d83054fd9fe747aa2e68cee7733945e5cdb1cdef870e0100c6a7f2fb10a70b0c",
+          "sha256": "84b0c7b29c9b18cda7deca59f681daf7b863fdc27cc797d22cde8b7d459f76ef",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json",
+          "width": 2400,
+          "height": 2730
+        },
+        "/samples/construction/polypdf-construction-demo-library.zip": {
+          "url": "/localized-media/nl/samples/construction/PolyPDF-Bouwtekeningen-nl-NL.zip",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "de9d6fe62d79bbb58c867a1a0e5d241a02479e048e738d4b66140b17bfef64ee",
+          "sha256": "b42c158317e5bc259ded02a1175e338df6a95d277b622fc660ea23765538e3c6",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/DEMO-GUIDE.html": {
+          "url": "/localized-media/nl/samples/construction/DEMO-GUIDE.html",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "ef5ad4382bb7c8c7855d139cefc57fcaed7506784c6063dcd4a6499887199504",
+          "sha256": "bae3a0614e2d6aadbc30a4d1317e9e5897c4ebf51b3630263a55c2360689ab80",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/DEMO-MANIFEST.json": {
+          "url": "/localized-media/nl/samples/construction/DEMO-MANIFEST.json",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "23ea5c1fe033437b402d55905d11c2a63f9bed22e7a459ee66d44d41bb426559",
+          "sha256": "f1663f379c9d518da451f98662f2381b37428706fbcd8f98f56a4ba79e93b99c",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        },
+        "/samples/construction/SHA256SUMS.txt": {
+          "url": "/localized-media/nl/samples/construction/SHA256SUMS.txt",
+          "locale": "nl-NL",
+          "region": "NL",
+          "appBuild": "1.6.17+84",
+          "status": "verified",
+          "sourceSha256": "7357e6ec0ac885062f536334740a71bf15877fb04bec38cf30ac9a5a9b2cad2e",
+          "sha256": "5102116ed25042b4f9740ccf3c4e70c292578691016f55f0d4b4ad29bd3f6d62",
+          "verification": "/localized-media/nl/samples/construction/verification.json",
+          "visualReview": "/localized-media/nl/samples/construction/visual-review.json",
+          "appPersistence": "/localized-media/nl/samples/construction/native-roundtrip.json"
+        }
+      },
+      "pages": {},
+      "regionalText": {
+        "library.kicker": {
+          "source": "The original PolyPDF drawing collection",
+          "target": "De oorspronkelijke PolyPDF-tekeningencollectie"
+        },
+        "library.heading": {
+          "source": "One project. Twelve PDFs. Twenty-four construction sheets.",
+          "target": "Eén project. Twaalf PDF's. Vierentwintig bouwtekeningen."
+        },
+        "library.intro": {
+          "source": "Explore the fictional Willow Creek Community Center through coordinated architectural, structural, civil, MEP, and finish drawings. Every PDF contains two bookmarked ARCH D sheets (36 × 24 inches), with drawing numbers, schedules, legends, dimensions, and details.",
+          "target": "Verken het fictieve Wijkcentrum De Linde in Nederland aan de hand van samenhangende tekeningen voor bouwkunde, constructie, terrein, installaties en afwerking. Elke PDF bevat twee A1-bladen met bladwijzers, tekeningnummers, staten, legenda's, maten en details."
+        },
+        "library.download": {
+          "source": "Download all 24 sheets · ZIP",
+          "target": "Download alle 24 bladen · ZIP"
+        },
+        "library.guide": {
+          "source": "View the drawing guide and reference quantities →",
+          "target": "Bekijk de tekeningengids en referentiehoeveelheden →"
+        },
+        "library.scope": {
+          "source": "These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Use the sheet-specific examples below. The earlier F-101 and E-101 exercises use different drawings and quantities.",
+          "target": "Deze oorspronkelijke tekeningen zijn bedoeld om te oefenen; het zijn geen vergunningsstukken of geverifieerde PolyPDF-resultaten. De hoofdplattegronden hebben schaal 1:50 en de situatietekeningen schaal 1:200; details hebben eigen schalen. Kalibreer elk aanzicht voordat je meet en volg de oefeningen hieronder. De eerdere Amerikaanse oefeningen F-101 en E-101 gebruiken andere tekeningen en hoeveelheden."
+        },
+        "library.nav.takeoff": {
+          "source": "Measurement",
+          "target": "Meten"
+        },
+        "library.nav.flooring": {
+          "source": "Flooring",
+          "target": "Vloeren"
+        },
+        "library.nav.electrical": {
+          "source": "Electrical",
+          "target": "Elektrotechniek"
+        },
+        "library.nav.compare": {
+          "source": "Revision comparison",
+          "target": "Revisies vergelijken"
+        },
+        "library.nav.review": {
+          "source": "Coordination review",
+          "target": "Coördinatie controleren"
+        },
+        "library.nav.ocr": {
+          "source": "OCR",
+          "target": "OCR"
+        },
+        "library.01.title": {
+          "source": "Civil site and grading · PDF",
+          "target": "Situatie en terrein · PDF"
+        },
+        "library.01.sheets": {
+          "source": "C101 · C501 · 2 sheets",
+          "target": "C101 · C201 · 2 bladen"
+        },
+        "library.01.description": {
+          "source": "Site layout, grading, parking, drainage, pavement and curb details.",
+          "target": "Terreinindeling, hoogten, parkeren, nutsleidingen, verharding en banddetails."
+        },
+        "library.02.title": {
+          "source": "Architecture · Revision A · PDF",
+          "target": "Bouwkunde · Revisie A · PDF"
+        },
+        "library.02.sheets": {
+          "source": "A101 · A201 · 2 sheets",
+          "target": "A101 · A201 · 2 bladen"
+        },
+        "library.02.description": {
+          "source": "Dimensioned floor plan, elevations, building section and wall detail.",
+          "target": "Bemate plattegrond, gevels, gebouwdoorsnede en wanddetail."
+        },
+        "library.03.title": {
+          "source": "Architecture · Revision B · PDF",
+          "target": "Bouwkunde · Revisie B · PDF"
+        },
+        "library.03.sheets": {
+          "source": "A101 · A201 · 2 sheets",
+          "target": "A101 · A201 · 2 bladen"
+        },
+        "library.03.description": {
+          "source": "A matching revised set for comparison with Revision A.",
+          "target": "Bijbehorende herziene set voor vergelijking met revisie A."
+        },
+        "library.04.title": {
+          "source": "Structural foundation and framing · PDF",
+          "target": "Fundering en constructie · PDF"
+        },
+        "library.04.sheets": {
+          "source": "S101 · S501 · 2 sheets",
+          "target": "S101 · S201 · 2 bladen"
+        },
+        "library.04.description": {
+          "source": "Footings, columns, roof framing, connection details and schedules.",
+          "target": "Funderingspoeren, kolommen, dakliggers, details en referentiehoeveelheden."
+        },
+        "library.05.title": {
+          "source": "Mechanical / HVAC · PDF",
+          "target": "Ventilatie · PDF"
+        },
+        "library.05.sheets": {
+          "source": "M101 · M501 · 2 sheets",
+          "target": "M101 · M501 · 2 bladen"
+        },
+        "library.05.description": {
+          "source": "Ductwork, terminals, equipment, controls and mechanical details.",
+          "target": "Kanalen, roosters, luchtbehandelingskasten, schema en elementenstaat."
+        },
+        "library.06.title": {
+          "source": "Electrical lighting and power · PDF",
+          "target": "Verlichting en elektrotechniek · PDF"
+        },
+        "library.06.sheets": {
+          "source": "E101 · E601 · 2 sheets",
+          "target": "E101 · E501 · 2 bladen"
+        },
+        "library.06.description": {
+          "source": "Lighting, receptacles, electrical diagrams and fixture schedules.",
+          "target": "Armaturen, wandcontactdozen, elektrisch schema en armaturenstaat."
+        },
+        "library.07.title": {
+          "source": "Plumbing water and drainage · PDF",
+          "target": "Waterleidingen en afvoer · PDF"
+        },
+        "library.07.sheets": {
+          "source": "P101 · P501 · 2 sheets",
+          "target": "P101 · P501 · 2 bladen"
+        },
+        "library.07.description": {
+          "source": "Water and drainage layouts, risers, fixtures and installation details.",
+          "target": "Water- en afvoerleidingen, stijgleidingen, sanitaire toestellen en details."
+        },
+        "library.08.title": {
+          "source": "Fire protection and life safety · PDF",
+          "target": "Brandbeveiliging · Oefening · PDF"
+        },
+        "library.08.sheets": {
+          "source": "FP101 · FP501 · 2 sheets",
+          "target": "F101 · F501 · 2 bladen"
+        },
+        "library.08.description": {
+          "source": "Sprinkler and life-safety symbols, risers, details and schedules.",
+          "target": "Brandbeveiligingssymbolen, vluchtwegenschema, details en oefenlegenda."
+        },
+        "library.09.title": {
+          "source": "Landscape and external works · PDF",
+          "target": "Groen en buitenruimte · PDF"
+        },
+        "library.09.sheets": {
+          "source": "L101 · L501 · 2 sheets",
+          "target": "L101 · L501 · 2 bladen"
+        },
+        "library.09.description": {
+          "source": "Planting, paving, landscape details and an authored planting schedule.",
+          "target": "Beplanting, verharding, buitendetails en beplantingsstaat."
+        },
+        "library.10.title": {
+          "source": "Interiors, finishes and millwork · PDF",
+          "target": "Afwerking en meubelwerk · PDF"
+        },
+        "library.10.sheets": {
+          "source": "I101 · I501 · 2 sheets",
+          "target": "I101 · I501 · 2 bladen"
+        },
+        "library.10.description": {
+          "source": "Room finishes, floor patterns, casework elevations and interior details.",
+          "target": "Ruimteafwerkingen, vloeren, meubelaanzichten en interieurdetails."
+        },
+        "library.11.title": {
+          "source": "Coordination and review · PDF",
+          "target": "Coördinatie en controle · PDF"
+        },
+        "library.11.sheets": {
+          "source": "X101 · X102 · 2 sheets",
+          "target": "X101 · X102 · 2 bladen"
+        },
+        "library.11.description": {
+          "source": "Overlaid disciplines, three authored review notes and four PDF layers.",
+          "target": "Overlappende disciplines, drie controlenotities en vier PDF-lagen."
+        },
+        "library.12.title": {
+          "source": "Scanned legacy drawings · PDF",
+          "target": "Gescande bestaande tekeningen · PDF"
+        },
+        "library.12.sheets": {
+          "source": "A101 · C101 · 2 sheets",
+          "target": "A101 · C101 · 2 bladen"
+        },
+        "library.12.description": {
+          "source": "Image-only architectural and site sheets for OCR practice.",
+          "target": "Bouwkundige plattegrond en situatietekening zonder tekstlaag om met OCR te oefenen."
+        },
+        "library.handoff": {
+          "source": "Keep an untouched master and mark up a copy. Check the drawing scope, units, exported quantities, and saved-file handoff in your own workflow. All projects and coordination issues are fictional; no customer drawing or professional seal is included.",
+          "target": "Bewaar een ongewijzigd origineel en annoteer een kopie. Controleer het doel van de tekening, de eenheden, de geëxporteerde hoeveelheden en het opgeslagen bestand vóór overdracht. Alle projecten en coördinatieknelpunten zijn fictief; er zijn geen klanttekeningen of professionele keurmerken opgenomen."
+        },
+        "exercise.kicker": {
+          "source": "Work with the construction drawing set",
+          "target": "Oefen met de bouwtekeningenset"
+        },
+        "exercise.takeoff.title": {
+          "source": "Measure the Willow Creek architectural plan",
+          "target": "Meet de bouwkundige plattegrond van Wijkcentrum De Linde"
+        },
+        "exercise.takeoff.sheets": {
+          "source": "A101 · A201",
+          "target": "A101 · A201"
+        },
+        "exercise.takeoff.step1": {
+          "source": "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.",
+          "target": "Open A101, revisie A. Kalibreer de afgedrukte referentielengte van 5,00 m: op schaal 1:50 komt deze overeen met ongeveer 283,46457 PDF-punten."
+        },
+        "exercise.takeoff.step2": {
+          "source": "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.",
+          "target": "Controleer de breedte van 24,00 m en de diepte van 15,00 m afzonderlijk en trek vervolgens de buitenomtrek van het gebouw na."
+        },
+        "exercise.takeoff.step3": {
+          "source": "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.",
+          "target": "Vergelijk de rechthoekige voetafdruk met 360,00 m². Bewaar blad, revisie, onderwerp, eenheid en totaal bij de geëxporteerde meting."
+        },
+        "exercise.takeoff.scope": {
+          "source": "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.",
+          "target": "Deze oefening meet de bruto rechthoekige voetafdruk. Ze meet geen netto vloeroppervlak en trekt geen wanden af. De twee lengtecontroles en de oppervlaktemeting zijn drie handmatige metingen."
+        },
+        "exercise.provenance": {
+          "source": "Drawing reference values, not new app test results. Work on a copy and check your own saved output.",
+          "target": "Dit zijn referentiewaarden uit de tekening, geen nieuwe app-testresultaten. Werk op een kopie en controleer je opgeslagen bestand."
+        },
+        "exercise.historicalMac": {
+          "source": "Inspect the saved Mac example and its tested local build →",
+          "target": "Eerder Amerikaans voorbeeld: bekijk het op de Mac opgeslagen bestand en de geteste lokale versie →"
+        },
+        "exercise.download.A": {
+          "source": "Download Revision A · PDF",
+          "target": "Download revisie A · PDF"
+        },
+        "library.02.filename": {
+          "source": "02-Architectural-Revision-A.pdf",
+          "target": "02-Bouwkunde-Revisie-A.pdf"
+        },
+        "exercise.flooring.title": {
+          "source": "Take off finishes from the Willow Creek interiors plan",
+          "target": "Meet de vloeren van Wijkcentrum De Linde"
+        },
+        "exercise.flooring.sheets": {
+          "source": "I101 · I501",
+          "target": "I101 · I501"
+        },
+        "exercise.flooring.step1": {
+          "source": "Open I101 and calibrate its 20 ft reference. Read the F1 and F2 finish key before measuring.",
+          "target": "Open I101 en kalibreer de referentie van 5,00 m. Lees de legenda voor vloerafwerkingen F1 en F2 voordat je meet."
+        },
+        "exercise.flooring.step2": {
+          "source": "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.",
+          "target": "Trek de bemate gebieden van toiletruimten 107 en 108 afzonderlijk na: elk 18,00 m², samen 36,00 m²."
+        },
+        "exercise.flooring.step3": {
+          "source": "Compare F2 tile with 576 sq ft and F1 resilient flooring with 5,184 sq ft. Apply any waste allowance separately.",
+          "target": "Vergelijk tegelvloer F2 met 36,00 m² en veerkrachtige vloer F1 met 324,00 m². Pas eventuele toeslagen voor snijverlies afzonderlijk toe."
+        },
+        "exercise.flooring.scope": {
+          "source": "The authored finish schedule uses room dimension boundaries without wall-thickness deductions. These exercise areas are not net installed quantities; I501 details use different scales.",
+          "target": "De staat gebruikt de bemate ruimtebegrenzingen zonder aftrek van wanddikten. Deze oefenoppervlakten zijn geen netto aangebrachte hoeveelheden; de details op I501 hebben andere schalen."
+        },
+        "exercise.download.drawing": {
+          "source": "Download the example drawing · PDF",
+          "target": "Download de oefentekening · PDF"
+        },
+        "library.10.filename": {
+          "source": "10-Interiors-Finishes-and-Millwork.pdf",
+          "target": "10-Afwerking-en-meubelwerk.pdf"
+        },
+        "exercise.electrical.title": {
+          "source": "Count the Willow Creek lighting plan",
+          "target": "Tel de symbolen op het elektrotechnische plan van De Linde"
+        },
+        "exercise.electrical.sheets": {
+          "source": "E101 · E601",
+          "target": "E101 · E501"
+        },
+        "exercise.electrical.step1": {
+          "source": "Open E101 and identify the luminaire symbol in the legend. Count only the plan, excluding legend and detail examples.",
+          "target": "Open E101 en herken het armatuursymbool in de legenda. Tel alleen de symbolen in de plattegrond; sluit voorbeelden in de legenda en details uit."
+        },
+        "exercise.electrical.step2": {
+          "source": "Review 24 plan luminaires, including 4 emergency luminaires. The emergency subset is included in 24, not added to it.",
+          "target": "Controleer de 24 armaturen, 12 wandcontactdozen en 8 schakelaars in de plattegrond. Houd de drie categorieën afzonderlijk bij."
+        },
+        "exercise.electrical.step3": {
+          "source": "Calibrate the 20 ft reference. Trace the LP-1 / CKTS 1, 3, 5, 7 diagram from the panel, then north and east: 8 + 38 = 46 ft.",
+          "target": "Kalibreer de referentie van 5,00 m. Trek het schematische tracé op E101 na en vergelijk het met 34,50 m. E501 bevat het elektrische schema en de armaturenstaat."
+        },
+        "exercise.electrical.scope": {
+          "source": "The dashed wiring is a circuit diagram, not a conduit takeoff. Pro is required for Symbol Search; review every candidate. The 24 fixtures and 46 ft are drawing references, not app results.",
+          "target": "De stippellijn toont een schematisch tracé, geen uitvoeringshoeveelheid voor installatiebuizen. Symbolen zoeken vereist Pro; controleer elk voorstel. De 24 armaturen, 12 wandcontactdozen, 8 schakelaars en 34,50 m zijn tekeningreferenties, geen app-resultaten."
+        },
+        "exercise.historicalElectrical": {
+          "source": "Reconcile fixtures and receptacles with the electrical review sheet →",
+          "target": "Eerdere Amerikaanse elektrotechnische oefening: controleer armaturen en contactdozen afzonderlijk →"
+        },
+        "library.06.filename": {
+          "source": "06-Electrical-Lighting-and-Power.pdf",
+          "target": "06-Verlichting-en-elektrotechniek.pdf"
+        },
+        "exercise.compare.title": {
+          "source": "Compare the Willow Creek architectural revisions",
+          "target": "Vergelijk de bouwkundige revisies van Wijkcentrum De Linde"
+        },
+        "exercise.compare.sheets": {
+          "source": "A101 · A201",
+          "target": "A101 · A201"
+        },
+        "exercise.compare.step1": {
+          "source": "Open Revision A and Revision B. Pair A101 with A101 and A201 with A201; keep the full sheet extents aligned.",
+          "target": "Open revisie A en revisie B. Koppel A101 aan A101 en A201 aan A201; lijn de volledige A1-bladen op elkaar uit."
+        },
+        "exercise.compare.step2": {
+          "source": "On A101, review the 6 ft partition shift between rooms 103 and 104 and the 3 ft movement of the room 104 door.",
+          "target": "Controleer op A101 de verplaatsing van de wand tussen ruimten 103 en 104 met 1,50 m naar het oosten en die van de deur van ruimte 104 met 0,75 m naar het oosten."
+        },
+        "exercise.compare.step3": {
+          "source": "Review the added 6 ft south glazing on A101 and A201, then check the revised issue fields and notes.",
+          "target": "Controleer het nieuwe zuidraam van 1,50 m op A101 en A201, en bekijk de gewijzigde uitgiftegegevens en opmerkingen."
+        },
+        "exercise.compare.scope": {
+          "source": "Room 103 changes from 576 to 720 sq ft; room 104 changes from 576 to 432 sq ft. The gross footprint stays 5,760 sq ft. These are authored changes, not a promised detection count.",
+          "target": "Ruimte 103 verandert van 36,00 naar 45,00 m²; ruimte 104 van 36,00 naar 27,00 m². De voetafdruk blijft 360,00 m². Dit zijn vooraf getekende wijzigingen, geen gegarandeerd aantal gedetecteerde verschillen."
+        },
+        "exercise.download.B": {
+          "source": "Download Revision B · PDF",
+          "target": "Download revisie B · PDF"
+        },
+        "library.03.filename": {
+          "source": "03-Architectural-Revision-B.pdf",
+          "target": "03-Bouwkunde-Revisie-B.pdf"
+        },
+        "exercise.review.title": {
+          "source": "Review the Willow Creek coordination sheets",
+          "target": "Controleer de installatiecoördinatie van Wijkcentrum De Linde"
+        },
+        "exercise.review.sheets": {
+          "source": "X101 · X102",
+          "target": "X101 · X102"
+        },
+        "exercise.review.step1": {
+          "source": "Open X101 and inspect the three numbered coordination issues and their existing sticky notes.",
+          "target": "Open X101 en bekijk de drie genummerde coördinatieknelpunten en de bijbehorende bestaande PDF-notities."
+        },
+        "exercise.review.step2": {
+          "source": "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.",
+          "target": "Gebruik X102 om elke locatie te koppelen aan het knelpunt, de discipline, de status en de gevraagde reactie. Voeg je eigen controleannotaties toe aan een kopie."
+        },
+        "exercise.review.step3": {
+          "source": "Save the copy, reopen it, and inspect the annotations and any exported Markup Table before handing it off.",
+          "target": "Sla de kopie op, open haar opnieuw en controleer de annotaties en een eventueel geëxporteerde annotatietabel vóór overdracht."
+        },
+        "exercise.review.scope": {
+          "source": "The source contains three authored issues and four PDF layers. These are fictional coordination exercises; no engineering or code-compliance conclusion is established.",
+          "target": "Het origineel bevat drie oefenknelpunten en vier PDF-lagen. Deze fictieve coördinatieoefeningen vormen geen technische goedkeuring of bewijs van naleving van voorschriften."
+        },
+        "library.11.filename": {
+          "source": "11-Coordination-and-Review.pdf",
+          "target": "11-Coordinatie-en-controle.pdf"
+        },
+        "exercise.ocr.title": {
+          "source": "Test OCR on the Willow Creek scanned sheets",
+          "target": "Probeer OCR op de gescande tekeningen van De Linde"
+        },
+        "exercise.ocr.sheets": {
+          "source": "A101 · C101",
+          "target": "A101 · C101"
+        },
+        "exercise.ocr.step1": {
+          "source": "Open the scanned set and try searching for WILLOW CREEK. The original two-page PDF contains images without native text.",
+          "target": "Open de gescande set en zoek MULTIFUNCTIONELE ZAAL. De oorspronkelijke PDF van twee pagina's bevat afbeeldingen zonder oorspronkelijke tekstlaag."
+        },
+        "exercise.ocr.step2": {
+          "source": "Run OCR on a working copy. Search for COMMUNITY ROOM on A101 and SITE PLAN on C101, then inspect the recognized text.",
+          "target": "Voer OCR uit op een werkkopie. Zoek MULTIFUNCTIONELE ZAAL op A101 en SITUATIE EN NUTSLEIDINGEN op C101 en controleer de herkende tekst."
+        },
+        "exercise.ocr.step3": {
+          "source": "Save and reopen the result. Repeat the searches and visually check dimensions before measuring the scanned drawing.",
+          "target": "Sla het resultaat op en open het opnieuw. Herhaal de zoekopdrachten en controleer de maten visueel voordat je de gescande tekening meet."
+        },
+        "exercise.ocr.scope": {
+          "source": "Search targets are printed source text, not a promise of recognition accuracy. OCR does not repair drawing scale or scan distortion.",
+          "target": "De zoektermen staan op de oorspronkelijke tekeningen; correcte herkenning is niet gegarandeerd. OCR herstelt geen tekenschaal of scanvervorming."
+        },
+        "library.12.filename": {
+          "source": "12-Scanned-Legacy-Drawings.pdf",
+          "target": "12-Gescande-bestaande-tekeningen.pdf"
+        },
+        "exercise.spreadsheet": {
+          "source": "Move checked quantities into the free Excel takeoff template →",
+          "target": "Zet gecontroleerde hoeveelheden over naar het gratis Excel-sjabloon voor hoeveelheden →"
+        },
+        "exercise.workflow": {
+          "source": "Open the related workflow guide →",
+          "target": "Open de bijbehorende werkinstructie →"
+        },
+        "exercise.library": {
+          "source": "Browse the complete drawing library →",
+          "target": "Bekijk de volledige tekeningenbibliotheek →"
+        }
+      }
     }
   },
   "languageNeutralAssets": [

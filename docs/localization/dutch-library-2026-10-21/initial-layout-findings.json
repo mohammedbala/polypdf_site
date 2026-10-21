@@ -1,0 +1,17 @@
+{
+  "manifestSha256": "d9f5c8a3e862c312ea9be96cdcd9876c46badf068ca215a7434f857e1b9e264d",
+  "findings": [
+    {
+      "file": "05-Ventilatie.pdf",
+      "sheet": "M101",
+      "text": "VENTILATIEPLATTEGROND",
+      "size": 16
+    },
+    {
+      "file": "10-Afwerking-en-meubelwerk.pdf",
+      "sheet": "I101",
+      "text": "VLOERAFWERKINGSPLAN",
+      "size": 16
+    }
+  ]
+}

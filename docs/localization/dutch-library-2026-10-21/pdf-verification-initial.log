@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/mohammedbala/Projects/polypdf_site-localization/assets-source/samples/construction-library/verify_regional_library.py", line 295, in <module>
+    main()
+  File "/Users/mohammedbala/Projects/polypdf_site-localization/assets-source/samples/construction-library/verify_regional_library.py", line 273, in main
+    verified = [verify_document(document, region, folder) for document in documents]
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mohammedbala/Projects/polypdf_site-localization/assets-source/samples/construction-library/verify_regional_library.py", line 175, in verify_document
+    verify_text(data, text)
+  File "/Users/mohammedbala/Projects/polypdf_site-localization/assets-source/samples/construction-library/verify_regional_library.py", line 129, in verify_text
+    assert all(28 <= x <= W-28 and 28 <= y <= H-28 for x, y in corners), f"Text crosses drawing frame: {text['text']}"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Text crosses drawing frame: VENTILATIEPLATTEGROND

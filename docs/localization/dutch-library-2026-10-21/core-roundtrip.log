@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: nl-NL 01: regional calibration and PDF structure survive ordinary save/reopen
+ok 1 - nl-NL 01: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 70.31975
+  type: 'test'
+  ...
+# Subtest: nl-NL 01: regional calibration and PDF structure survive append-only save/reopen
+ok 2 - nl-NL 01: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 22.462125
+  type: 'test'
+  ...
+# Subtest: nl-NL 02: regional calibration and PDF structure survive ordinary save/reopen
+ok 3 - nl-NL 02: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 16.415291
+  type: 'test'
+  ...
+# Subtest: nl-NL 02: regional calibration and PDF structure survive append-only save/reopen
+ok 4 - nl-NL 02: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 17.883666
+  type: 'test'
+  ...
+# Subtest: nl-NL 03: regional calibration and PDF structure survive ordinary save/reopen
+ok 5 - nl-NL 03: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 11.7525
+  type: 'test'
+  ...
+# Subtest: nl-NL 03: regional calibration and PDF structure survive append-only save/reopen
+ok 6 - nl-NL 03: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 15.418417
+  type: 'test'
+  ...
+# Subtest: nl-NL 04: regional calibration and PDF structure survive ordinary save/reopen
+ok 7 - nl-NL 04: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 9.423125
+  type: 'test'
+  ...
+# Subtest: nl-NL 04: regional calibration and PDF structure survive append-only save/reopen
+ok 8 - nl-NL 04: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 15.255792
+  type: 'test'
+  ...
+# Subtest: nl-NL 05: regional calibration and PDF structure survive ordinary save/reopen
+ok 9 - nl-NL 05: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 9.061209
+  type: 'test'
+  ...
+# Subtest: nl-NL 05: regional calibration and PDF structure survive append-only save/reopen
+ok 10 - nl-NL 05: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 17.409459
+  type: 'test'
+  ...
+# Subtest: nl-NL 06: regional calibration and PDF structure survive ordinary save/reopen
+ok 11 - nl-NL 06: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 10.954541
+  type: 'test'
+  ...
+# Subtest: nl-NL 06: regional calibration and PDF structure survive append-only save/reopen
+ok 12 - nl-NL 06: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 12.476125
+  type: 'test'
+  ...
+# Subtest: nl-NL 07: regional calibration and PDF structure survive ordinary save/reopen
+ok 13 - nl-NL 07: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.768
+  type: 'test'
+  ...
+# Subtest: nl-NL 07: regional calibration and PDF structure survive append-only save/reopen
+ok 14 - nl-NL 07: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.28975
+  type: 'test'
+  ...
+# Subtest: nl-NL 08: regional calibration and PDF structure survive ordinary save/reopen
+ok 15 - nl-NL 08: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.343041
+  type: 'test'
+  ...
+# Subtest: nl-NL 08: regional calibration and PDF structure survive append-only save/reopen
+ok 16 - nl-NL 08: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.285041
+  type: 'test'
+  ...
+# Subtest: nl-NL 09: regional calibration and PDF structure survive ordinary save/reopen
+ok 17 - nl-NL 09: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 8.169334
+  type: 'test'
+  ...
+# Subtest: nl-NL 09: regional calibration and PDF structure survive append-only save/reopen
+ok 18 - nl-NL 09: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.809833
+  type: 'test'
+  ...
+# Subtest: nl-NL 10: regional calibration and PDF structure survive ordinary save/reopen
+ok 19 - nl-NL 10: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.395167
+  type: 'test'
+  ...
+# Subtest: nl-NL 10: regional calibration and PDF structure survive append-only save/reopen
+ok 20 - nl-NL 10: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.663583
+  type: 'test'
+  ...
+# Subtest: nl-NL 11: regional calibration and PDF structure survive ordinary save/reopen
+ok 21 - nl-NL 11: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 12.526917
+  type: 'test'
+  ...
+# Subtest: nl-NL 11: regional calibration and PDF structure survive append-only save/reopen
+ok 22 - nl-NL 11: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 17.461834
+  type: 'test'
+  ...
+# Subtest: nl-NL 12: regional calibration and PDF structure survive ordinary save/reopen
+ok 23 - nl-NL 12: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 21.33125
+  type: 'test'
+  ...
+# Subtest: nl-NL 12: regional calibration and PDF structure survive append-only save/reopen
+ok 24 - nl-NL 12: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 59.236625
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 614.592417

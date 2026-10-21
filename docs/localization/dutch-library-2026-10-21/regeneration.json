@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "locale": "nl-NL",
+  "artifactCount": 16,
+  "artifacts": {
+    "01-Situatie-en-terrein.pdf": "ed40414ac50b8eca5b258c24253a9fa01b187952b3aaeeb60caf78f1a83edb8e",
+    "02-Bouwkunde-Revisie-A.pdf": "1ec1514d4c8d407ac323933af2d23995fe59eaa9afc621797138fc8602db4e29",
+    "03-Bouwkunde-Revisie-B.pdf": "0afb7097d876966e4afc635c613684fb6ead7135c677685bf8c14e7eab81a289",
+    "04-Fundering-en-constructie.pdf": "cf25db69b5fbefa45a4521c7157deae59dc635f7e59bbc7fc547f5ec5f62ad80",
+    "05-Ventilatie.pdf": "f05647a6b06ca89352bdfb7a6079766b6d4f92a909a381612d012a2f62f405f7",
+    "06-Verlichting-en-elektrotechniek.pdf": "cb4e223686651fb8647f10deba63ef92a9b2887486cbaf48aef49f68b7f61d97",
+    "07-Waterleidingen-en-afvoer.pdf": "dc790f6babd9a560b5a3d60a0d2ee1d25fc6b30c7d72c1bb5e51d2fd9778c2c1",
+    "08-Brandbeveiliging-Oefening.pdf": "11e6ad59f35d1baf6828c91e9aede0c9ca1b7f4220534ba6a82895d68acb4e68",
+    "09-Groen-en-buitenruimte.pdf": "d80c50cabd1cfd63128d990a604d25aa815e93ef3cdd3cb1031521ca4ddb5987",
+    "10-Afwerking-en-meubelwerk.pdf": "ff0180afae7fd3cf907c88dc6319d38eaad80c09aa96ea1d906aeebbd74ca3ef",
+    "11-Coordinatie-en-controle.pdf": "2876a24328a9f93957b9678396ac8bc5f6ee873e017c21b935bcd85bae855d39",
+    "12-Gescande-bestaande-tekeningen.pdf": "3155d5465f39035822dff108cc85c36e0611af0a3abffbda67f15a78bb281e1f",
+    "DEMO-GUIDE.html": "bae3a0614e2d6aadbc30a4d1317e9e5897c4ebf51b3630263a55c2360689ab80",
+    "DEMO-MANIFEST.json": "f1663f379c9d518da451f98662f2381b37428706fbcd8f98f56a4ba79e93b99c",
+    "SHA256SUMS.txt": "5102116ed25042b4f9740ccf3c4e70c292578691016f55f0d4b4ad29bd3f6d62",
+    "reference-quantities.csv": "a416ac20d2ed41686880f951920b723e2e2f9459839574dbaad174e570cdb4ce"
+  }
+}

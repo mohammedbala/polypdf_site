@@ -1,0 +1,253 @@
+{
+  "status": "passed",
+  "scope": "Local shared-library website QA, not native application walkthrough evidence",
+  "locale": "nl-NL",
+  "url": "http://127.0.0.1:4895/local-library-nl-preview.html",
+  "desktopInitial": {
+    "height": 720,
+    "images": [
+      {
+        "alt": "SITUATIE EN NUTSLEIDINGEN - C101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/01-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "FUNDERINGS- EN VLOERPLAN - S101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/04-1.png"
+      },
+      {
+        "alt": "PLATTEGROND VENTILATIE - M101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/05-1.png"
+      },
+      {
+        "alt": "VERLICHTING EN WANDCONTACTDOZEN - E101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "WATERLEIDINGEN EN AFVOER - P101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/07-1.png"
+      },
+      {
+        "alt": "BRANDBEVEILIGING - OEFENING - F101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/08-1.png"
+      },
+      {
+        "alt": "BEPLANTING EN BUITENRUIMTE - L101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/09-1.png"
+      },
+      {
+        "alt": "AFWERKING VAN VLOEREN - I101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "COÖRDINATIE VAN INSTALLATIES - X101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "GESCANDE PLATTEGROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": true,
+        "src": "/localized-media/nl/samples/construction/previews/12-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": false,
+        "src": "/localized-media/nl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "AFWERKING VAN VLOEREN - I101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": false,
+        "src": "/localized-media/nl/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "VERLICHTING EN WANDCONTACTDOZEN - E101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": false,
+        "src": "/localized-media/nl/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": false,
+        "src": "/localized-media/nl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": false,
+        "src": "/localized-media/nl/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "COÖRDINATIE VAN INSTALLATIES - X101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": false,
+        "src": "/localized-media/nl/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "GESCANDE PLATTEGROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "loaded": false,
+        "src": "/localized-media/nl/samples/construction/previews/12-1.png"
+      }
+    ],
+    "lang": "nl",
+    "scrollWidth": 1280,
+    "uniqueCopyRecords": 101,
+    "width": 1280
+  },
+  "electrical": {
+    "scrollWidth": 1280,
+    "text": "OEFEN MET DE BOUWTEKENINGENSET\n\nTel de symbolen op het elektrotechnische plan van De Linde\n\nE101 · E501\n\nOpen E101 en herken het armatuursymbool in de legenda. Tel alleen de symbolen in de plattegrond; sluit voorbeelden in de legenda en details uit.\nControleer de 24 armaturen, 12 wandcontactdozen en 8 schakelaars in de plattegrond. Houd de drie categorieën afzonderlijk bij.\nKalibreer de referentie van 5,00 m. Trek het schematische tracé op E101 na en vergelijk het met 34,50 m. E501 bevat het elektrische schema en de armaturenstaat.\n\nDe stippellijn toont een schematisch tracé, geen uitvoeringshoeveelheid voor installatiebuizen. Symbolen zoeken vereist Pro; controleer elk voorstel. De 24 armaturen, 12 wandcontactdozen, 8 schakelaars en 34,50 m zijn tekeningreferenties, geen app-resultaten.\n\nDit zijn referentiewaarden uit de tekening, geen nieuwe app-testresultaten. Werk op een kopie en controleer je opgeslagen bestand.\n\nEerdere Amerikaanse elektrotechnische oefening: controleer armaturen en contactdozen afzonderlijk →\n\nOpen de bijbehorende werkinstructie →\n\nDownload de oefentekening · PDF\n06-Verlichting-en-elektrotechniek.pdf\n\nBekijk de volledige tekeningenbibliotheek →",
+    "top": 28.203125,
+    "width": 1280
+  },
+  "desktopFinal": {
+    "height": 720,
+    "images": [
+      {
+        "alt": "SITUATIE EN NUTSLEIDINGEN - C101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/01-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "FUNDERINGS- EN VLOERPLAN - S101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/04-1.png"
+      },
+      {
+        "alt": "PLATTEGROND VENTILATIE - M101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/05-1.png"
+      },
+      {
+        "alt": "VERLICHTING EN WANDCONTACTDOZEN - E101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "WATERLEIDINGEN EN AFVOER - P101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/07-1.png"
+      },
+      {
+        "alt": "BRANDBEVEILIGING - OEFENING - F101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/08-1.png"
+      },
+      {
+        "alt": "BEPLANTING EN BUITENRUIMTE - L101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/09-1.png"
+      },
+      {
+        "alt": "AFWERKING VAN VLOEREN - I101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "COÖRDINATIE VAN INSTALLATIES - X101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "GESCANDE PLATTEGROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/12-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "AFWERKING VAN VLOEREN - I101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/10-1.png"
+      },
+      {
+        "alt": "VERLICHTING EN WANDCONTACTDOZEN - E101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/06-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/02-1.png"
+      },
+      {
+        "alt": "PLATTEGROND BEGANE GROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/03-1.png"
+      },
+      {
+        "alt": "COÖRDINATIE VAN INSTALLATIES - X101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/11-1.png"
+      },
+      {
+        "alt": "GESCANDE PLATTEGROND - A101, WIJKCENTRUM DE LINDE, A1-oefentekening",
+        "complete": true,
+        "naturalWidth": 1800,
+        "src": "/localized-media/nl/samples/construction/previews/12-1.png"
+      }
+    ],
+    "lang": "nl",
+    "ocrText": "OEFEN MET DE BOUWTEKENINGENSET\n\nProbeer OCR op de gescande tekeningen van De Linde\n\nA101 · C101\n\nOpen de gescande set en zoek MULTIFUNCTIONELE ZAAL. De oorspronkelijke PDF van twee pagina's bevat afbeeldingen zonder oorspronkelijke tekstlaag.\nVoer OCR uit op een werkkopie. Zoek MULTIFUNCTIONELE ZAAL op A101 en SITUATIE EN NUTSLEIDINGEN op C101 en controleer de herkende tekst.\nSla het resultaat op en open het opnieuw. Herhaal de zoekopdrachten en controleer de maten visueel voordat je de gescande tekening meet.\n\nDe zoektermen staan op de oorspronkelijke tekeningen; correcte herkenning is niet gegarandeerd. OCR herstelt geen tekenschaal of scanvervorming.\n\nDit zijn referentiewaarden uit de tekening, geen nieuwe app-testresultaten. Werk op een kopie en controleer je opgeslagen bestand.\n\nOpen de bijbehorende werkinstructie →\n\nDownload de oefentekening · PDF\n12-Gescande-bestaande-tekeningen.pdf\n\nBekijk de volledige tekeningenbibliotheek →",
+    "ocrTop": 101.078125,
+    "scrollWidth": 1280,
+    "width": 1280
+  },
+  "mobile": {
+    "height": 844,
+    "lang": "nl",
+    "scrollWidth": 390,
+    "title": "Nederlandse tekeningenbibliotheek · PolyPDF",
+    "width": 390
+  },
+  "downloadPath": "/Users/mohammedbala/Downloads/PolyPDF-Bouwtekeningen-nl-NL.zip",
+  "screenshots": [
+    "browser-desktop-header.jpg",
+    "browser-desktop-electrical.jpg",
+    "browser-mobile-header.jpg"
+  ]
+}

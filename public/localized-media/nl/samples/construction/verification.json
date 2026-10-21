@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "locale": "nl-NL",
+  "region": "NL",
+  "manifestSha256": "f1663f379c9d518da451f98662f2381b37428706fbcd8f98f56a4ba79e93b99c",
+  "automatedStatus": "passed",
+  "manualVisualReview": "required; keep a separate source-bound receipt",
+  "limits": "Demonstration geometry only. No standards certification or native application workflow validation.",
+  "documents": [
+    {
+      "id": "01",
+      "file": "01-Situatie-en-terrein.pdf",
+      "sha256": "ed40414ac50b8eca5b258c24253a9fa01b187952b3aaeeb60caf78f1a83edb8e",
+      "pages": [
+        {
+          "sheet": "C101",
+          "page": 1,
+          "textItems": 59,
+          "physicalReferences": 16,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 128,
+            "text_show_operators": 59,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "C201",
+          "page": 2,
+          "textItems": 63,
+          "physicalReferences": 4,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 163,
+            "text_show_operators": 63,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "file": "02-Bouwkunde-Revisie-A.pdf",
+      "sha256": "1ec1514d4c8d407ac323933af2d23995fe59eaa9afc621797138fc8602db4e29",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 89,
+          "physicalReferences": 60,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 466,
+            "text_show_operators": 89,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "A201",
+          "page": 2,
+          "textItems": 62,
+          "physicalReferences": 17,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 204,
+            "text_show_operators": 62,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "file": "03-Bouwkunde-Revisie-B.pdf",
+      "sha256": "0afb7097d876966e4afc635c613684fb6ead7135c677685bf8c14e7eab81a289",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 91,
+          "physicalReferences": 60,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 478,
+            "text_show_operators": 91,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "A201",
+          "page": 2,
+          "textItems": 62,
+          "physicalReferences": 18,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 209,
+            "text_show_operators": 62,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "file": "04-Fundering-en-constructie.pdf",
+      "sha256": "cf25db69b5fbefa45a4521c7157deae59dc635f7e59bbc7fc547f5ec5f62ad80",
+      "pages": [
+        {
+          "sheet": "S101",
+          "page": 1,
+          "textItems": 60,
+          "physicalReferences": 15,
+          "symbolInstances": 12,
+          "pdf": {
+            "drawing_operators": 247,
+            "text_show_operators": 60,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "S201",
+          "page": 2,
+          "textItems": 63,
+          "physicalReferences": 2,
+          "symbolInstances": 12,
+          "pdf": {
+            "drawing_operators": 259,
+            "text_show_operators": 63,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "file": "05-Ventilatie.pdf",
+      "sha256": "f05647a6b06ca89352bdfb7a6079766b6d4f92a909a381612d012a2f62f405f7",
+      "pages": [
+        {
+          "sheet": "M101",
+          "page": 1,
+          "textItems": 78,
+          "physicalReferences": 5,
+          "symbolInstances": 23,
+          "pdf": {
+            "drawing_operators": 818,
+            "text_show_operators": 78,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "M501",
+          "page": 2,
+          "textItems": 57,
+          "physicalReferences": 3,
+          "symbolInstances": 6,
+          "pdf": {
+            "drawing_operators": 242,
+            "text_show_operators": 57,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "file": "06-Verlichting-en-elektrotechniek.pdf",
+      "sha256": "cb4e223686651fb8647f10deba63ef92a9b2887486cbaf48aef49f68b7f61d97",
+      "pages": [
+        {
+          "sheet": "E101",
+          "page": 1,
+          "textItems": 102,
+          "physicalReferences": 5,
+          "symbolInstances": 47,
+          "pdf": {
+            "drawing_operators": 885,
+            "text_show_operators": 102,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "E501",
+          "page": 2,
+          "textItems": 60,
+          "physicalReferences": 2,
+          "symbolInstances": 9,
+          "pdf": {
+            "drawing_operators": 214,
+            "text_show_operators": 60,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "file": "07-Waterleidingen-en-afvoer.pdf",
+      "sha256": "dc790f6babd9a560b5a3d60a0d2ee1d25fc6b30c7d72c1bb5e51d2fd9778c2c1",
+      "pages": [
+        {
+          "sheet": "P101",
+          "page": 1,
+          "textItems": 69,
+          "physicalReferences": 7,
+          "symbolInstances": 15,
+          "pdf": {
+            "drawing_operators": 540,
+            "text_show_operators": 69,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "P501",
+          "page": 2,
+          "textItems": 62,
+          "physicalReferences": 0,
+          "symbolInstances": 9,
+          "pdf": {
+            "drawing_operators": 183,
+            "text_show_operators": 62,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "file": "08-Brandbeveiliging-Oefening.pdf",
+      "sha256": "11e6ad59f35d1baf6828c91e9aede0c9ca1b7f4220534ba6a82895d68acb4e68",
+      "pages": [
+        {
+          "sheet": "F101",
+          "page": 1,
+          "textItems": 100,
+          "physicalReferences": 5,
+          "symbolInstances": 44,
+          "pdf": {
+            "drawing_operators": 986,
+            "text_show_operators": 100,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "F501",
+          "page": 2,
+          "textItems": 59,
+          "physicalReferences": 0,
+          "symbolInstances": 7,
+          "pdf": {
+            "drawing_operators": 157,
+            "text_show_operators": 59,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "file": "09-Groen-en-buitenruimte.pdf",
+      "sha256": "d80c50cabd1cfd63128d990a604d25aa815e93ef3cdd3cb1031521ca4ddb5987",
+      "pages": [
+        {
+          "sheet": "L101",
+          "page": 1,
+          "textItems": 110,
+          "physicalReferences": 13,
+          "symbolInstances": 53,
+          "pdf": {
+            "drawing_operators": 875,
+            "text_show_operators": 110,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "L501",
+          "page": 2,
+          "textItems": 67,
+          "physicalReferences": 7,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 125,
+            "text_show_operators": 67,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "file": "10-Afwerking-en-meubelwerk.pdf",
+      "sha256": "ff0180afae7fd3cf907c88dc6319d38eaad80c09aa96ea1d906aeebbd74ca3ef",
+      "pages": [
+        {
+          "sheet": "I101",
+          "page": 1,
+          "textItems": 86,
+          "physicalReferences": 15,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 458,
+            "text_show_operators": 86,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "I501",
+          "page": 2,
+          "textItems": 56,
+          "physicalReferences": 14,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 165,
+            "text_show_operators": 56,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "file": "11-Coordinatie-en-controle.pdf",
+      "sha256": "2876a24328a9f93957b9678396ac8bc5f6ee873e017c21b935bcd85bae855d39",
+      "pages": [
+        {
+          "sheet": "X101",
+          "page": 1,
+          "textItems": 55,
+          "physicalReferences": 6,
+          "symbolInstances": 8,
+          "pdf": {
+            "drawing_operators": 454,
+            "text_show_operators": 55,
+            "image_xobjects": 0,
+            "layer_tags": [
+              "/LARCH",
+              "/LELEC",
+              "/LISSUES",
+              "/LMECH"
+            ]
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "X102",
+          "page": 2,
+          "textItems": 68,
+          "physicalReferences": 0,
+          "symbolInstances": 2,
+          "pdf": {
+            "drawing_operators": 115,
+            "text_show_operators": 68,
+            "image_xobjects": 0,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "file": "12-Gescande-bestaande-tekeningen.pdf",
+      "sha256": "3155d5465f39035822dff108cc85c36e0611af0a3abffbda67f15a78bb281e1f",
+      "pages": [
+        {
+          "sheet": "A101",
+          "page": 1,
+          "textItems": 0,
+          "physicalReferences": 0,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 0,
+            "text_show_operators": 0,
+            "image_xobjects": 1,
+            "layer_tags": []
+          },
+          "status": "passed"
+        },
+        {
+          "sheet": "C101",
+          "page": 2,
+          "textItems": 0,
+          "physicalReferences": 0,
+          "symbolInstances": 0,
+          "pdf": {
+            "drawing_operators": 0,
+            "text_show_operators": 0,
+            "image_xobjects": 1,
+            "layer_tags": []
+          },
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "e8eb81cb5721cc2b5aba6ed5ce971b6ddb9fcab745b5e747da4214ba0c55e5d8",
+      "pdf": "01-Situatie-en-terrein.pdf",
+      "pdfSha256": "ed40414ac50b8eca5b258c24253a9fa01b187952b3aaeeb60caf78f1a83edb8e",
+      "page": 1
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "a7f2a09a8f22a2830737b52b7dcc2864e42caffa52ffd6d6c1afef57fab0e12d",
+      "pdf": "01-Situatie-en-terrein.pdf",
+      "pdfSha256": "ed40414ac50b8eca5b258c24253a9fa01b187952b3aaeeb60caf78f1a83edb8e",
+      "page": 2
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "d8bb774912ad22f37765ff48e6988da2c426c346187e5bdcb4dd127ea583d940",
+      "pdf": "02-Bouwkunde-Revisie-A.pdf",
+      "pdfSha256": "1ec1514d4c8d407ac323933af2d23995fe59eaa9afc621797138fc8602db4e29",
+      "page": 1
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "ef9475be4444f0506d80d65991225df4304cb4e6131d316b4f28144df90f91dc",
+      "pdf": "02-Bouwkunde-Revisie-A.pdf",
+      "pdfSha256": "1ec1514d4c8d407ac323933af2d23995fe59eaa9afc621797138fc8602db4e29",
+      "page": 2
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "ac1a7e52e0f406fe67ece9747010f05d86b376016cc2d642e7a97e65d109c4cd",
+      "pdf": "03-Bouwkunde-Revisie-B.pdf",
+      "pdfSha256": "0afb7097d876966e4afc635c613684fb6ead7135c677685bf8c14e7eab81a289",
+      "page": 1
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "ea1f9249fab0f69be5eb7c8837db85449ecb91781b9e3f41794b4fa57a0be239",
+      "pdf": "03-Bouwkunde-Revisie-B.pdf",
+      "pdfSha256": "0afb7097d876966e4afc635c613684fb6ead7135c677685bf8c14e7eab81a289",
+      "page": 2
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "d2ac4e44daf32991ff4368a6599306de4e91e6de288d70351ace0ada7b26d154",
+      "pdf": "04-Fundering-en-constructie.pdf",
+      "pdfSha256": "cf25db69b5fbefa45a4521c7157deae59dc635f7e59bbc7fc547f5ec5f62ad80",
+      "page": 1
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "9daa7d87bca7ced37fb68cac64f399ce5fa142040223c4f9ac0d9312d1b7a555",
+      "pdf": "04-Fundering-en-constructie.pdf",
+      "pdfSha256": "cf25db69b5fbefa45a4521c7157deae59dc635f7e59bbc7fc547f5ec5f62ad80",
+      "page": 2
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "ae971bcd8c6a7f3558ea9d56b34e78ff62aa86587b37915ce487bb798734c7af",
+      "pdf": "05-Ventilatie.pdf",
+      "pdfSha256": "f05647a6b06ca89352bdfb7a6079766b6d4f92a909a381612d012a2f62f405f7",
+      "page": 1
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "cc5782838157d458614bdd534f2cded736d907405592e282a68632aeca88e503",
+      "pdf": "05-Ventilatie.pdf",
+      "pdfSha256": "f05647a6b06ca89352bdfb7a6079766b6d4f92a909a381612d012a2f62f405f7",
+      "page": 2
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "1d0cb20991128043081469fde125504398a449491abeb797588e776dbb1f2662",
+      "pdf": "06-Verlichting-en-elektrotechniek.pdf",
+      "pdfSha256": "cb4e223686651fb8647f10deba63ef92a9b2887486cbaf48aef49f68b7f61d97",
+      "page": 1
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "8e0ec993434c553fb019f86fe332556a2b08a25e96f4598f64db0168f2021ec0",
+      "pdf": "06-Verlichting-en-elektrotechniek.pdf",
+      "pdfSha256": "cb4e223686651fb8647f10deba63ef92a9b2887486cbaf48aef49f68b7f61d97",
+      "page": 2
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "c38e88fec28a0518c50cfd6733c6bf3a0e351ffb1eb2b04fe2ce4a518aef230f",
+      "pdf": "07-Waterleidingen-en-afvoer.pdf",
+      "pdfSha256": "dc790f6babd9a560b5a3d60a0d2ee1d25fc6b30c7d72c1bb5e51d2fd9778c2c1",
+      "page": 1
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "d058979fdef70134466691e09b668fe049c4bdebb096ad9c832f58600c6b0159",
+      "pdf": "07-Waterleidingen-en-afvoer.pdf",
+      "pdfSha256": "dc790f6babd9a560b5a3d60a0d2ee1d25fc6b30c7d72c1bb5e51d2fd9778c2c1",
+      "page": 2
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "f6bf0d34e642d6b918d9703c728dafde664f76419e6eda3ee0b957f8012f0922",
+      "pdf": "08-Brandbeveiliging-Oefening.pdf",
+      "pdfSha256": "11e6ad59f35d1baf6828c91e9aede0c9ca1b7f4220534ba6a82895d68acb4e68",
+      "page": 1
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "83dac2cddd43ef76166605676cdd098fdf288f556f02421d12c69935ae665587",
+      "pdf": "08-Brandbeveiliging-Oefening.pdf",
+      "pdfSha256": "11e6ad59f35d1baf6828c91e9aede0c9ca1b7f4220534ba6a82895d68acb4e68",
+      "page": 2
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "a2910f0bb37303234bfb1c92e2d01c6243d47989d3d6b0096efa09dc256d9158",
+      "pdf": "09-Groen-en-buitenruimte.pdf",
+      "pdfSha256": "d80c50cabd1cfd63128d990a604d25aa815e93ef3cdd3cb1031521ca4ddb5987",
+      "page": 1
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "39b53c7e47d61b7313b14bf1ea7143eb880f7e3f4f3338e36591b42fb2273054",
+      "pdf": "09-Groen-en-buitenruimte.pdf",
+      "pdfSha256": "d80c50cabd1cfd63128d990a604d25aa815e93ef3cdd3cb1031521ca4ddb5987",
+      "page": 2
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "638e32f4a064ca3445c732761b25fc6caa07adca405e633f12db21fcfd852328",
+      "pdf": "10-Afwerking-en-meubelwerk.pdf",
+      "pdfSha256": "ff0180afae7fd3cf907c88dc6319d38eaad80c09aa96ea1d906aeebbd74ca3ef",
+      "page": 1
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "9b7dfc721ac36a209fbdfbfd0583585efc8d71af20119893beea9fbc45e1d935",
+      "pdf": "10-Afwerking-en-meubelwerk.pdf",
+      "pdfSha256": "ff0180afae7fd3cf907c88dc6319d38eaad80c09aa96ea1d906aeebbd74ca3ef",
+      "page": 2
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "204a96a7c7f2ad29c34eb63ee909a70416fd5625a4dee4aef9765795a628c2e4",
+      "pdf": "11-Coordinatie-en-controle.pdf",
+      "pdfSha256": "2876a24328a9f93957b9678396ac8bc5f6ee873e017c21b935bcd85bae855d39",
+      "page": 1
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "f5e20dc4ec361296d4d4c3907dd6f5b13a55d22c9002764f06a863f3c99112a3",
+      "pdf": "11-Coordinatie-en-controle.pdf",
+      "pdfSha256": "2876a24328a9f93957b9678396ac8bc5f6ee873e017c21b935bcd85bae855d39",
+      "page": 2
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "6d199e4bde75a71af671dd8e5e65b01615733ce258026f61ab335d07c96c263d",
+      "pdf": "12-Gescande-bestaande-tekeningen.pdf",
+      "pdfSha256": "3155d5465f39035822dff108cc85c36e0611af0a3abffbda67f15a78bb281e1f",
+      "page": 1
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "9156c34ecc6e6421df06669333490ac300fad3ba59229fa3e5dee2745d308949",
+      "pdf": "12-Gescande-bestaande-tekeningen.pdf",
+      "pdfSha256": "3155d5465f39035822dff108cc85c36e0611af0a3abffbda67f15a78bb281e1f",
+      "page": 2
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "84b0c7b29c9b18cda7deca59f681daf7b863fdc27cc797d22cde8b7d459f76ef"
+  }
+}

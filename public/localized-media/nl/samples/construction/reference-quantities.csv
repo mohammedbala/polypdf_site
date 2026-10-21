@@ -1,0 +1,43 @@
+Document;Omschrijving;Waarde;Eenheid
+01;Perceeloppervlakte (m²);2.400,00;m²
+01;Perceelomtrek (m);200,00;m
+01;Parkeerplaatsen;8;-
+01;Verhard oppervlak (m²);144,00;m²
+01;Waterleidinglengte (m);39,00;m
+01;Rioleringslengte (m);34,00;m
+01;Elektriciteitskabellengte (m);57,00;m
+02;Rechthoekige voetafdruk (m²);360,00;m²
+02;Gebouwomtrek (m);78,00;m
+02;Oppervlakte ruimte 103 (m²);36,00;m²
+02;Oppervlakte ruimte 104 (m²);36,00;m²
+02;Interne doorsnedelinks;2;-
+02;Wandverplaatsing (m);0,00;m
+02;Deurverplaatsing (m);0,00;m
+02;Breedte toegevoegd raam (m);0,00;m
+03;Rechthoekige voetafdruk (m²);360,00;m²
+03;Gebouwomtrek (m);78,00;m
+03;Oppervlakte ruimte 103 (m²);45,00;m²
+03;Oppervlakte ruimte 104 (m²);27,00;m²
+03;Interne doorsnedelinks;2;-
+03;Wandverplaatsing (m);1,50;m
+03;Deurverplaatsing (m);0,75;m
+03;Breedte toegevoegd raam (m);1,50;m
+04;Kolommen;12;-
+04;Funderingspoeren;12;-
+04;Betonvloeroppervlakte (m²);360,00;m²
+04;Betonvloerdikte (m);0,15;m
+04;Betonvloerinhoud (m³);54,00;m³
+04;Totale inhoud funderingspoeren (m³);17,496;m³
+04;Totale liggerlengte (m);132,00;m
+09;Verhard oppervlak (m²);144,00;m²
+10;Veerkrachtige vloer (m²);324,00;m²
+10;Tegelvloer (m²);36,00;m²
+10;Totale vloerafwerking (m²);360,00;m²
+10;Tegels vóór snijverlies;100;-
+10;Onderkasten;6;-
+10;Breedte kastmodule (m);1,20;m
+10;Werkbladoppervlakte (m²);4,32;m²
+10;Plintlengte (m);7,20;m
+11;Bewerkbare PDF-notities;3;-
+11;Vooraf getekende knelpunten;3;-
+12;Scanresolutie (dpi);80;-

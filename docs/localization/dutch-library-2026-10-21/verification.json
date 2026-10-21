@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "sourceHtmlSha256": "e76f4a8e85c0cafd7ceb1aefc0e02a83e22adf42b23a8a8e20d43959de3e0ade",
+  "results": [
+    {
+      "locale": "de-DE",
+      "copyRecords": 101,
+      "cards": 12,
+      "exercises": 6,
+      "images": 19,
+      "downloads": 21,
+      "htmlSha256": "584f6c0ed44fc582813c924b2667c25b64e8832e47168ff99f7d71ca47412284",
+      "profileSha256": "53e465736258927ba4ae46359762f936deed556f8bb8c26130f488669d2f2444",
+      "libraryManifestSha256": "cd65ee35ca1fb682c90bb5a0b6d3608599054b247fea77d97cdc444a4fb43603"
+    },
+    {
+      "locale": "fr-FR",
+      "copyRecords": 101,
+      "cards": 12,
+      "exercises": 6,
+      "images": 19,
+      "downloads": 21,
+      "htmlSha256": "029545e5bed2bcb6c5e1b9cd650e59fbcacfbf799258e714632cc4183de7480b",
+      "profileSha256": "c6233e56dd2dcfe7e255a94f4439282cda2cd27dee2cf65153e223d897aa7a1b",
+      "libraryManifestSha256": "e90a8792fac4ea9a212202a7306d4cc6b4d45fb80c226c153258158bc4592953"
+    },
+    {
+      "locale": "es-ES",
+      "copyRecords": 101,
+      "cards": 12,
+      "exercises": 6,
+      "images": 19,
+      "downloads": 21,
+      "htmlSha256": "ecc2012a5d5391629df8d75ce758e3bec17e9b2d99e51045679ae1829d18252c",
+      "profileSha256": "6597140e5c71e73c14d91c01c62163b0a9421d7c0c6f0ee6fd674c544bc6d38a",
+      "libraryManifestSha256": "f806742e96a4f1ba265b1e8cd1df907246f06360c07e6fb57b69f784f71f87f1"
+    },
+    {
+      "locale": "pt-BR",
+      "copyRecords": 101,
+      "cards": 12,
+      "exercises": 6,
+      "images": 19,
+      "downloads": 21,
+      "htmlSha256": "e247d2777a3d190a9007a34872b90381bffcf9024ed777d250033647285524d5",
+      "profileSha256": "625ca11f972485147fbbd29466df6933560014c643fba5fae09fd4d6078132fb",
+      "libraryManifestSha256": "3cb54720e7a8d52cd3f984cc54a64ee4375239b8e64c4afb1a9d83dea5247cf1"
+    },
+    {
+      "locale": "it-IT",
+      "copyRecords": 101,
+      "cards": 12,
+      "exercises": 6,
+      "images": 19,
+      "downloads": 21,
+      "htmlSha256": "8a23197dc2b1d153ad364a0c64c680ad70cf627ea4f2004cccc2b863f429b37b",
+      "profileSha256": "582b2da98081b36833c0702147fb9e0a5d267ea0a66285a6fd6d3b0e42dd971b",
+      "libraryManifestSha256": "1f07d29187e6de7c87a438ce4f9079d6d3de581b4d0a174f85dd53740e57372b"
+    },
+    {
+      "locale": "nl-NL",
+      "copyRecords": 101,
+      "cards": 12,
+      "exercises": 6,
+      "images": 19,
+      "downloads": 21,
+      "htmlSha256": "031416f33a02476d6a16f480a9cf37d497483cfb3704245515a1206e973676f0",
+      "profileSha256": "4702208607ea0ad03e69a88d2c51ba23bc1bc1f77d1907498bc2f56385e1fbfa",
+      "libraryManifestSha256": "f1663f379c9d518da451f98662f2381b37428706fbcd8f98f56a4ba79e93b99c"
+    }
+  ],
+  "limitations": [
+    "Shared components only; /samples remains English-only and all checked media packs remain pilot",
+    "React prerender and international stage use existing compiled site assets; no full production bundle build",
+    "Editorial drafts awaiting native-speaker review; no new native application or platform verification",
+    "No publication"
+  ]
+}
