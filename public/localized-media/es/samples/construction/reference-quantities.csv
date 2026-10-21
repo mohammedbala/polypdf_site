@@ -1,0 +1,43 @@
+Documento;Descripción;Valor;Unidad
+01;Superficie de la parcela (m²);2.400,00;m²
+01;Perímetro de la parcela (m);200,00;m
+01;Plazas de aparcamiento;8;-
+01;Superficie pavimentada (m²);144,00;m²
+01;Longitud de la red de abastecimiento (m);39,00;m
+01;Longitud de la red de saneamiento (m);34,00;m
+01;Longitud de la red eléctrica (m);57,00;m
+02;Huella rectangular (m²);360,00;m²
+02;Perímetro del edificio (m);78,00;m
+02;Superficie de la estancia 103 (m²);36,00;m²
+02;Superficie de la estancia 104 (m²);36,00;m²
+02;Enlaces internos a secciones;2;-
+02;Desplazamiento del tabique (m);0,00;m
+02;Desplazamiento de la puerta (m);0,00;m
+02;Ancho de la ventana añadida (m);0,00;m
+03;Huella rectangular (m²);360,00;m²
+03;Perímetro del edificio (m);78,00;m
+03;Superficie de la estancia 103 (m²);45,00;m²
+03;Superficie de la estancia 104 (m²);27,00;m²
+03;Enlaces internos a secciones;2;-
+03;Desplazamiento del tabique (m);1,50;m
+03;Desplazamiento de la puerta (m);0,75;m
+03;Ancho de la ventana añadida (m);1,50;m
+04;Pilares;12;-
+04;Zapatas aisladas;12;-
+04;Superficie de la solera (m²);360,00;m²
+04;Espesor de la solera (m);0,15;m
+04;Volumen de la solera (m³);54,00;m³
+04;Volumen total de las zapatas (m³);17,496;m³
+04;Longitud total de las vigas (m);132,00;m
+09;Superficie pavimentada (m²);144,00;m²
+10;Pavimento resiliente (m²);324,00;m²
+10;Pavimento cerámico (m²);36,00;m²
+10;Superficie total de pavimentos (m²);360,00;m²
+10;Baldosas antes de añadir merma;100;-
+10;Muebles bajos;6;-
+10;Ancho del módulo de mueble (m);1,20;m
+10;Superficie de la encimera (m²);4,32;m²
+10;Longitud de los zócalos (m);7,20;m
+11;Notas PDF editables;3;-
+11;Incidencias introducidas para el ejercicio;3;-
+12;Resolución de escaneado (ppp);80;-

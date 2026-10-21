@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-21",
+  "locale": "es-ES",
+  "region": "ES",
+  "sourceProfileSha256": "94bbd9624fcfe376f8f2a5aabf930dd0636510eaaf6f83723edd15b3fc35d8ca",
+  "copyProfileSha256": "184fe9b777298d5f08ea8d97df51dbc2375aa0a7373791fe88ebf94413ab9a56",
+  "verifierSha256": "4ed99227c627d9c1eb5db4e0d2d628a0774ac25d75c2ff03159f9d799ead2062",
+  "screenshots": [
+    {
+      "file": "electrical-exercise-preview.jpg",
+      "sha256": "d15b64084ea33b6be79a9a1d329932e0f1f1b3b11d7c4df565ed22789f72b0bc"
+    },
+    {
+      "file": "library-mobile-preview.jpg",
+      "sha256": "3628ee6f2b2f958af0c8d2734076927493312873a41dd3fd3262b3abd4423eb6"
+    },
+    {
+      "file": "library-preview.jpg",
+      "sha256": "0f3b40eda1cc0525bac3ea049dc6b313bb552622858845d4e19b6cfd1936dea4"
+    }
+  ],
+  "status": "pilot",
+  "completeWalkthroughRoutes": 0,
+  "published": false
+}

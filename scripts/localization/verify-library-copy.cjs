@@ -11,12 +11,18 @@ const sections=[...original.querySelectorAll('#construction-library,.constructio
 assert.equal(sections.length,7);
 const media=JSON.parse(read('src/localization/walkthrough-media.json'));
 const stylesheet=[...original.querySelectorAll('link[rel="stylesheet"]')].map(n=>n.outerHTML).join('');
+const auditIndex=process.argv.indexOf('--audit');
+const audit=auditIndex<0?'docs/localization/library-copy-2026-10-21':process.argv[auditIndex+1];
+if(!audit)throw new Error('Pass an audit directory after --audit');
+const locales=Object.keys(media.locales).filter(locale=>fs.existsSync(path.join(root,`scripts/localization/library-copy-${locale}.json`)));
 const results=[];
-for(const locale of ['de','fr']) {
+for(const locale of locales) {
   const profile=JSON.parse(read(`scripts/localization/library-copy-${locale}.json`));
   const library=JSON.parse(read(`public/localized-media/${locale}/samples/construction/DEMO-MANIFEST.json`));
   const catalog=JSON.parse(read(`src/content/translations/${locale}.json`));
-  const dom=new JSDOM(`<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${locale==='de'?'Deutsche Planbibliothek':'Bibliothèque de plans en français'} · PolyPDF</title>${stylesheet}<style>body{padding:24px}main{max-width:1200px;margin:auto}.local-preview{font-size:14px}</style></head><body><main><p class="local-preview" translate="no">${locale==='de'?'Lokale Vorschau der Planbibliothek und Übungen; die vollständige Beispielseite ist noch nicht freigegeben.':'Aperçu local de la bibliothèque et des exercices ; la page complète des exemples reste en préparation.'}</p>${sections.map(s=>s.outerHTML).join('')}</main></body></html>`);
+  const preview=profile.preview??(locale==='de'?{title:'Deutsche Planbibliothek',notice:'Lokale Vorschau der Planbibliothek und Übungen; die vollständige Beispielseite ist noch nicht freigegeben.'}:{title:'Bibliothèque de plans en français',notice:'Aperçu local de la bibliothèque et des exercices ; la page complète des exemples reste en préparation.'});
+  if(!['de','fr'].includes(locale)&&!profile.preview)throw new Error(`Missing localized preview labels: ${locale}`);
+  const dom=new JSDOM(`<!doctype html><html lang="${locale}"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${preview.title} · PolyPDF</title>${stylesheet}<style>body{padding:24px}main{max-width:1200px;margin:auto}.local-preview{font-size:14px}</style></head><body><main><p class="local-preview" translate="no">${preview.notice}</p>${sections.map(s=>s.outerHTML).join('')}</main></body></html>`);
   const d=dom.window.document;
   localizeRegionalCopy(d,{id:locale},media);
   translateDOM(d.body,translateFactory(catalog));
@@ -58,6 +64,6 @@ for(const locale of ['de','fr']) {
   results.push({locale:profile.locale,copyRecords:seen.size,cards:12,exercises:6,images:19,downloads:downloads.length,htmlSha256:hash(html),profileSha256:hash(read(`scripts/localization/library-copy-${locale}.json`)),libraryManifestSha256:hash(read(`public/localized-media/${locale}/samples/construction/DEMO-MANIFEST.json`))});
   dom.window.close();
 }
-const audit='docs/localization/library-copy-2026-10-21';fs.mkdirSync(path.join(root,audit),{recursive:true});
-fs.writeFileSync(path.join(root,audit,'verification.json'),JSON.stringify({status:'passed',sourceHtmlSha256:hash(source),results,limitations:['Shared components only; /samples remains English-only and both media packs remain pilot','React prerender and international stage use existing compiled site assets; no full production bundle build','Editorial drafts awaiting native-speaker review; no new native application or platform verification','No publication']},null,2)+'\n');
-console.log('Verified both regional libraries: 98 copy records, 12 cards, 6 exercises, 19 images and 21 downloads each.');
+fs.mkdirSync(path.join(root,audit),{recursive:true});
+fs.writeFileSync(path.join(root,audit,'verification.json'),JSON.stringify({status:'passed',sourceHtmlSha256:hash(source),results,limitations:['Shared components only; /samples remains English-only and all checked media packs remain pilot','React prerender and international stage use existing compiled site assets; no full production bundle build','Editorial drafts awaiting native-speaker review; no new native application or platform verification','No publication']},null,2)+'\n');
+console.log(`Verified ${results.length} regional libraries: 98 copy records, 12 cards, 6 exercises, 19 images and 21 downloads each.`);

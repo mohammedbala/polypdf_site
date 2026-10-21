@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "existingRegionalPacks": [
+    {
+      "locale": "de",
+      "trackedArtifactsUnchanged": 45
+    },
+    {
+      "locale": "fr",
+      "trackedArtifactsUnchanged": 45
+    }
+  ],
+  "existingMediaRecordsUnchanged": true,
+  "sharedGeneratorUnchanged": true,
+  "generatorSha256": "2627b32df10b22bd8de23756e12acf4937a45b9b55793f4f1870751d16ecb793",
+  "newPack": {
+    "locale": "es-ES",
+    "assets": 41,
+    "status": "pilot",
+    "completeRoutes": 0
+  }
+}

@@ -1,0 +1,154 @@
+TAP version 13
+# Subtest: es-ES 01: regional calibration and PDF structure survive ordinary save/reopen
+ok 1 - es-ES 01: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 97.583292
+  type: 'test'
+  ...
+# Subtest: es-ES 01: regional calibration and PDF structure survive append-only save/reopen
+ok 2 - es-ES 01: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 21.023709
+  type: 'test'
+  ...
+# Subtest: es-ES 02: regional calibration and PDF structure survive ordinary save/reopen
+ok 3 - es-ES 02: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 15.314417
+  type: 'test'
+  ...
+# Subtest: es-ES 02: regional calibration and PDF structure survive append-only save/reopen
+ok 4 - es-ES 02: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 17.372917
+  type: 'test'
+  ...
+# Subtest: es-ES 03: regional calibration and PDF structure survive ordinary save/reopen
+ok 5 - es-ES 03: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 10.789834
+  type: 'test'
+  ...
+# Subtest: es-ES 03: regional calibration and PDF structure survive append-only save/reopen
+ok 6 - es-ES 03: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 14.473291
+  type: 'test'
+  ...
+# Subtest: es-ES 04: regional calibration and PDF structure survive ordinary save/reopen
+ok 7 - es-ES 04: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 8.189583
+  type: 'test'
+  ...
+# Subtest: es-ES 04: regional calibration and PDF structure survive append-only save/reopen
+ok 8 - es-ES 04: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 16.818917
+  type: 'test'
+  ...
+# Subtest: es-ES 05: regional calibration and PDF structure survive ordinary save/reopen
+ok 9 - es-ES 05: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 11.244209
+  type: 'test'
+  ...
+# Subtest: es-ES 05: regional calibration and PDF structure survive append-only save/reopen
+ok 10 - es-ES 05: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 12.642167
+  type: 'test'
+  ...
+# Subtest: es-ES 06: regional calibration and PDF structure survive ordinary save/reopen
+ok 11 - es-ES 06: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 7.246583
+  type: 'test'
+  ...
+# Subtest: es-ES 06: regional calibration and PDF structure survive append-only save/reopen
+ok 12 - es-ES 06: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 12.028625
+  type: 'test'
+  ...
+# Subtest: es-ES 07: regional calibration and PDF structure survive ordinary save/reopen
+ok 13 - es-ES 07: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.647666
+  type: 'test'
+  ...
+# Subtest: es-ES 07: regional calibration and PDF structure survive append-only save/reopen
+ok 14 - es-ES 07: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.230334
+  type: 'test'
+  ...
+# Subtest: es-ES 08: regional calibration and PDF structure survive ordinary save/reopen
+ok 15 - es-ES 08: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 7.320833
+  type: 'test'
+  ...
+# Subtest: es-ES 08: regional calibration and PDF structure survive append-only save/reopen
+ok 16 - es-ES 08: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.737125
+  type: 'test'
+  ...
+# Subtest: es-ES 09: regional calibration and PDF structure survive ordinary save/reopen
+ok 17 - es-ES 09: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.203833
+  type: 'test'
+  ...
+# Subtest: es-ES 09: regional calibration and PDF structure survive append-only save/reopen
+ok 18 - es-ES 09: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 10.332416
+  type: 'test'
+  ...
+# Subtest: es-ES 10: regional calibration and PDF structure survive ordinary save/reopen
+ok 19 - es-ES 10: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 6.334791
+  type: 'test'
+  ...
+# Subtest: es-ES 10: regional calibration and PDF structure survive append-only save/reopen
+ok 20 - es-ES 10: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 11.50325
+  type: 'test'
+  ...
+# Subtest: es-ES 11: regional calibration and PDF structure survive ordinary save/reopen
+ok 21 - es-ES 11: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 11.382833
+  type: 'test'
+  ...
+# Subtest: es-ES 11: regional calibration and PDF structure survive append-only save/reopen
+ok 22 - es-ES 11: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 14.021583
+  type: 'test'
+  ...
+# Subtest: es-ES 12: regional calibration and PDF structure survive ordinary save/reopen
+ok 23 - es-ES 12: regional calibration and PDF structure survive ordinary save/reopen
+  ---
+  duration_ms: 11.851833
+  type: 'test'
+  ...
+# Subtest: es-ES 12: regional calibration and PDF structure survive append-only save/reopen
+ok 24 - es-ES 12: regional calibration and PDF structure survive append-only save/reopen
+  ---
+  duration_ms: 52.230208
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 596.762917

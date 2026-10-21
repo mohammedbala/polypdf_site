@@ -1,0 +1,430 @@
+{
+  "locale": "es-ES",
+  "region": "ES",
+  "status": "editorial-draft",
+  "scope": "Shared construction library cards and six source-bound exercises; full samples route and Spanish walkthrough capture remain pending.",
+  "text": {
+    "library.kicker": {
+      "source": "The original PolyPDF drawing collection",
+      "target": "La colección original de planos de PolyPDF"
+    },
+    "library.heading": {
+      "source": "One project. Twelve PDFs. Twenty-four construction sheets.",
+      "target": "Un proyecto. Doce PDF. Veinticuatro hojas de construcción."
+    },
+    "library.intro": {
+      "source": "Explore the fictional Willow Creek Community Center through coordinated architectural, structural, civil, MEP, and finish drawings. Every PDF contains two bookmarked ARCH D sheets (36 × 24 inches), with drawing numbers, schedules, legends, dimensions, and details.",
+      "target": "Explore el Centro Vecinal Los Olmos, un proyecto ficticio en España, mediante planos coordinados de arquitectura, estructuras, urbanización, instalaciones y acabados. Cada PDF contiene dos hojas A1 (841 × 594 mm) con marcadores, números de plano, cuadros, leyendas, cotas y detalles."
+    },
+    "library.download": {
+      "source": "Download all 24 sheets · ZIP",
+      "target": "Descargar las 24 hojas · ZIP"
+    },
+    "library.guide": {
+      "source": "View the drawing guide and reference quantities →",
+      "target": "Ver la guía de planos y las cantidades de referencia →"
+    },
+    "library.scope": {
+      "source": "These are original demonstration drawings, not permit documents or verified PolyPDF outputs. The main building plans use 1/4 inch = 1 foot; site and detail scales vary. Calibrate each view before measuring. Use the sheet-specific examples below. The earlier F-101 and E-101 exercises use different drawings and quantities.",
+      "target": "Son planos originales de demostración, no un proyecto de ejecución ni nuevos resultados de pruebas de PolyPDF. Las plantas principales están a 1:50 y los emplazamientos a 1:200; las escalas de los detalles varían. Calibre cada vista antes de medir. Use los ejercicios específicos de cada hoja. Los ejercicios anteriores F-101 y E-101 utilizan otros dibujos y cantidades."
+    },
+    "library.nav.takeoff": {
+      "source": "Measurement",
+      "target": "Medición"
+    },
+    "library.nav.flooring": {
+      "source": "Flooring",
+      "target": "Pavimentos"
+    },
+    "library.nav.electrical": {
+      "source": "Electrical",
+      "target": "Electricidad"
+    },
+    "library.nav.compare": {
+      "source": "Revision comparison",
+      "target": "Comparación de revisiones"
+    },
+    "library.nav.review": {
+      "source": "Coordination review",
+      "target": "Revisión de coordinación"
+    },
+    "library.nav.ocr": {
+      "source": "OCR",
+      "target": "OCR"
+    },
+    "library.01.title": {
+      "source": "Civil site and grading · PDF",
+      "target": "Emplazamiento y terreno · PDF"
+    },
+    "library.01.sheets": {
+      "source": "C101 · C501 · 2 sheets",
+      "target": "C101 · C201 · 2 hojas"
+    },
+    "library.01.description": {
+      "source": "Site layout, grading, parking, drainage, pavement and curb details.",
+      "target": "Emplazamiento, terreno, aparcamiento, redes, pavimentos y detalles de bordillo."
+    },
+    "library.02.title": {
+      "source": "Architecture · Revision A · PDF",
+      "target": "Arquitectura · Revisión A · PDF"
+    },
+    "library.02.sheets": {
+      "source": "A101 · A201 · 2 sheets",
+      "target": "A101 · A201 · 2 hojas"
+    },
+    "library.02.description": {
+      "source": "Dimensioned floor plan, elevations, building section and wall detail.",
+      "target": "Planta acotada, alzados, sección del edificio y detalle de muro."
+    },
+    "library.03.title": {
+      "source": "Architecture · Revision B · PDF",
+      "target": "Arquitectura · Revisión B · PDF"
+    },
+    "library.03.sheets": {
+      "source": "A101 · A201 · 2 sheets",
+      "target": "A101 · A201 · 2 hojas"
+    },
+    "library.03.description": {
+      "source": "A matching revised set for comparison with Revision A.",
+      "target": "Conjunto revisado para compararlo con la revisión A."
+    },
+    "library.04.title": {
+      "source": "Structural foundation and framing · PDF",
+      "target": "Cimentación y estructura · PDF"
+    },
+    "library.04.sheets": {
+      "source": "S101 · S501 · 2 sheets",
+      "target": "S101 · S201 · 2 hojas"
+    },
+    "library.04.description": {
+      "source": "Footings, columns, roof framing, connection details and schedules.",
+      "target": "Zapatas, pilares, vigas de cubierta, detalles y cuadros."
+    },
+    "library.05.title": {
+      "source": "Mechanical / HVAC · PDF",
+      "target": "Ventilación · PDF"
+    },
+    "library.05.sheets": {
+      "source": "M101 · M501 · 2 sheets",
+      "target": "M101 · M501 · 2 hojas"
+    },
+    "library.05.description": {
+      "source": "Ductwork, terminals, equipment, controls and mechanical details.",
+      "target": "Conductos, difusores, equipos y detalles de ventilación."
+    },
+    "library.06.title": {
+      "source": "Electrical lighting and power · PDF",
+      "target": "Alumbrado y electricidad · PDF"
+    },
+    "library.06.sheets": {
+      "source": "E101 · E601 · 2 sheets",
+      "target": "E101 · E501 · 2 hojas"
+    },
+    "library.06.description": {
+      "source": "Lighting, receptacles, electrical diagrams and fixture schedules.",
+      "target": "Alumbrado, tomas de corriente, esquemas eléctricos y cuadro de luminarias."
+    },
+    "library.07.title": {
+      "source": "Plumbing water and drainage · PDF",
+      "target": "Abastecimiento y saneamiento · PDF"
+    },
+    "library.07.sheets": {
+      "source": "P101 · P501 · 2 sheets",
+      "target": "P101 · P501 · 2 hojas"
+    },
+    "library.07.description": {
+      "source": "Water and drainage layouts, risers, fixtures and installation details.",
+      "target": "Redes de abastecimiento y saneamiento, montantes y detalles sanitarios."
+    },
+    "library.08.title": {
+      "source": "Fire protection and life safety · PDF",
+      "target": "Protección contra incendios · Ejercicio · PDF"
+    },
+    "library.08.sheets": {
+      "source": "FP101 · FP501 · 2 sheets",
+      "target": "F101 · F501 · 2 hojas"
+    },
+    "library.08.description": {
+      "source": "Sprinkler and life-safety symbols, risers, details and schedules.",
+      "target": "Símbolos de rociadores y evacuación, esquemas, detalles y leyendas de práctica."
+    },
+    "library.09.title": {
+      "source": "Landscape and external works · PDF",
+      "target": "Jardinería y exteriores · PDF"
+    },
+    "library.09.sheets": {
+      "source": "L101 · L501 · 2 sheets",
+      "target": "L101 · L501 · 2 hojas"
+    },
+    "library.09.description": {
+      "source": "Planting, paving, landscape details and an authored planting schedule.",
+      "target": "Plantaciones, pavimentos, detalles exteriores y cuadro de vegetación."
+    },
+    "library.10.title": {
+      "source": "Interiors, finishes and millwork · PDF",
+      "target": "Acabados y mobiliario fijo · PDF"
+    },
+    "library.10.sheets": {
+      "source": "I101 · I501 · 2 sheets",
+      "target": "I101 · I501 · 2 hojas"
+    },
+    "library.10.description": {
+      "source": "Room finishes, floor patterns, casework elevations and interior details.",
+      "target": "Acabados de estancias, pavimentos, alzados de mobiliario y detalles interiores."
+    },
+    "library.11.title": {
+      "source": "Coordination and review · PDF",
+      "target": "Coordinación y revisión · PDF"
+    },
+    "library.11.sheets": {
+      "source": "X101 · X102 · 2 sheets",
+      "target": "X101 · X102 · 2 hojas"
+    },
+    "library.11.description": {
+      "source": "Overlaid disciplines, three authored review notes and four PDF layers.",
+      "target": "Disciplinas superpuestas, tres notas de revisión y cuatro capas PDF."
+    },
+    "library.12.title": {
+      "source": "Scanned legacy drawings · PDF",
+      "target": "Planos existentes escaneados · PDF"
+    },
+    "library.12.sheets": {
+      "source": "A101 · C101 · 2 sheets",
+      "target": "A101 · C101 · 2 hojas"
+    },
+    "library.12.description": {
+      "source": "Image-only architectural and site sheets for OCR practice.",
+      "target": "Plantas de arquitectura y emplazamiento sin capa de texto para practicar OCR."
+    },
+    "library.handoff": {
+      "source": "Keep an untouched master and mark up a copy. Check the drawing scope, units, exported quantities, and saved-file handoff in your own workflow. All projects and coordination issues are fictional; no customer drawing or professional seal is included.",
+      "target": "Conserve un original intacto y anote una copia. Compruebe el alcance del dibujo, las unidades, las cantidades exportadas y el archivo guardado antes de entregarlo. Los proyectos y las incidencias de coordinación son ficticios; no se incluyen planos de clientes ni sellos profesionales."
+    },
+    "exercise.kicker": {
+      "source": "Work with the construction drawing set",
+      "target": "Practique con el conjunto de planos de construcción"
+    },
+    "exercise.takeoff.title": {
+      "source": "Measure the Willow Creek architectural plan",
+      "target": "Mida la planta arquitectónica del Centro Vecinal Los Olmos"
+    },
+    "exercise.takeoff.sheets": {
+      "source": "A101 · A201",
+      "target": "A101 · A201"
+    },
+    "exercise.takeoff.step1": {
+      "source": "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.",
+      "target": "Abra A101, revisión A. Calibre la longitud de referencia impresa de 5,00 m: a 1:50 equivale a unos 283,46457 puntos PDF."
+    },
+    "exercise.takeoff.step2": {
+      "source": "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.",
+      "target": "Compruebe por separado el ancho de 24,00 m y el fondo de 15,00 m; después trace el contorno exterior del edificio."
+    },
+    "exercise.takeoff.step3": {
+      "source": "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.",
+      "target": "Compare la huella rectangular con 360,00 m². Conserve el plano, la revisión, el concepto, la unidad y el total con la medición exportada."
+    },
+    "exercise.takeoff.scope": {
+      "source": "This is a gross footprint exercise. It does not measure net flooring or subtract walls. The two length checks and one area use three manual measurements.",
+      "target": "Este ejercicio mide la huella rectangular bruta. No mide la superficie útil ni descuenta los muros. Las dos comprobaciones de longitud y la medición de superficie son tres mediciones manuales."
+    },
+    "exercise.provenance": {
+      "source": "Drawing reference values, not new app test results. Work on a copy and check your own saved output.",
+      "target": "Los valores son referencias del dibujo, no nuevos resultados de pruebas de la aplicación. Trabaje sobre una copia y compruebe el archivo guardado."
+    },
+    "exercise.historicalMac": {
+      "source": "Inspect the saved Mac example and its tested local build →",
+      "target": "Ejemplo estadounidense anterior: ver el archivo guardado en Mac y la versión local probada →"
+    },
+    "exercise.download.A": {
+      "source": "Download Revision A · PDF",
+      "target": "Descargar la revisión A · PDF"
+    },
+    "library.02.filename": {
+      "source": "02-Architectural-Revision-A.pdf",
+      "target": "02-Arquitectura-Revision-A.pdf"
+    },
+    "exercise.flooring.title": {
+      "source": "Take off finishes from the Willow Creek interiors plan",
+      "target": "Mida los pavimentos del Centro Vecinal Los Olmos"
+    },
+    "exercise.flooring.sheets": {
+      "source": "I101 · I501",
+      "target": "I101 · I501"
+    },
+    "exercise.flooring.step1": {
+      "source": "Open I101 and calibrate its 20 ft reference. Read the F1 and F2 finish key before measuring.",
+      "target": "Abra I101 y calibre su referencia de 5,00 m. Lea la leyenda de pavimentos F1 y F2 antes de medir."
+    },
+    "exercise.flooring.step2": {
+      "source": "Trace the dimension-boundary zones for tiled rooms 107 and 108 separately: 288 sq ft each, or 576 sq ft together.",
+      "target": "Trace por separado las zonas acotadas de los aseos 107 y 108: 18,00 m² cada una, 36,00 m² en total."
+    },
+    "exercise.flooring.step3": {
+      "source": "Compare F2 tile with 576 sq ft and F1 resilient flooring with 5,184 sq ft. Apply any waste allowance separately.",
+      "target": "Compare el pavimento cerámico F2 con 36,00 m² y el resiliente F1 con 324,00 m². Aplique por separado cualquier porcentaje de merma."
+    },
+    "exercise.flooring.scope": {
+      "source": "The authored finish schedule uses room dimension boundaries without wall-thickness deductions. These exercise areas are not net installed quantities; I501 details use different scales.",
+      "target": "El cuadro utiliza los límites acotados de las estancias sin descontar el espesor de los muros. Estas superficies de práctica no son cantidades netas colocadas; los detalles de I501 usan otras escalas."
+    },
+    "exercise.download.drawing": {
+      "source": "Download the example drawing · PDF",
+      "target": "Descargar el plano de práctica · PDF"
+    },
+    "library.10.filename": {
+      "source": "10-Interiors-Finishes-and-Millwork.pdf",
+      "target": "10-Acabados-y-mobiliario-fijo.pdf"
+    },
+    "exercise.electrical.title": {
+      "source": "Count the Willow Creek lighting plan",
+      "target": "Cuente los símbolos del plano eléctrico de Los Olmos"
+    },
+    "exercise.electrical.sheets": {
+      "source": "E101 · E601",
+      "target": "E101 · E501"
+    },
+    "exercise.electrical.step1": {
+      "source": "Open E101 and identify the luminaire symbol in the legend. Count only the plan, excluding legend and detail examples.",
+      "target": "Abra E101 e identifique el símbolo de luminaria en la leyenda. Cuente solo los símbolos del plano y excluya los ejemplos de la leyenda y los detalles."
+    },
+    "exercise.electrical.step2": {
+      "source": "Review 24 plan luminaires, including 4 emergency luminaires. The emergency subset is included in 24, not added to it.",
+      "target": "Compruebe las 24 luminarias, 12 tomas de corriente y 8 interruptores del plano. Mantenga separados los recuentos de las tres categorías."
+    },
+    "exercise.electrical.step3": {
+      "source": "Calibrate the 20 ft reference. Trace the LP-1 / CKTS 1, 3, 5, 7 diagram from the panel, then north and east: 8 + 38 = 46 ft.",
+      "target": "Calibre la referencia de 5,00 m. Trace el recorrido esquemático de E101 y compárelo con 34,50 m. E501 contiene el esquema eléctrico y el cuadro de luminarias."
+    },
+    "exercise.electrical.scope": {
+      "source": "The dashed wiring is a circuit diagram, not a conduit takeoff. Pro is required for Symbol Search; review every candidate. The 24 fixtures and 46 ft are drawing references, not app results.",
+      "target": "El trazado discontinuo representa un recorrido esquemático, no una medición de canalizaciones para ejecutar. La búsqueda de símbolos requiere Pro; revise cada propuesta. Las 24 luminarias, 12 tomas, 8 interruptores y los 34,50 m son referencias del dibujo, no resultados de la aplicación."
+    },
+    "exercise.historicalElectrical": {
+      "source": "Reconcile fixtures and receptacles with the electrical review sheet →",
+      "target": "Ejercicio eléctrico estadounidense anterior: ver la comprobación separada de luminarias y tomas →"
+    },
+    "library.06.filename": {
+      "source": "06-Electrical-Lighting-and-Power.pdf",
+      "target": "06-Alumbrado-y-electricidad.pdf"
+    },
+    "exercise.compare.title": {
+      "source": "Compare the Willow Creek architectural revisions",
+      "target": "Compare las revisiones arquitectónicas del Centro Vecinal Los Olmos"
+    },
+    "exercise.compare.sheets": {
+      "source": "A101 · A201",
+      "target": "A101 · A201"
+    },
+    "exercise.compare.step1": {
+      "source": "Open Revision A and Revision B. Pair A101 with A101 and A201 with A201; keep the full sheet extents aligned.",
+      "target": "Abra las revisiones A y B. Empareje A101 con A101 y A201 con A201; alinee las hojas A1 completas."
+    },
+    "exercise.compare.step2": {
+      "source": "On A101, review the 6 ft partition shift between rooms 103 and 104 and the 3 ft movement of the room 104 door.",
+      "target": "En A101, examine el desplazamiento de 1,50 m hacia el este del tabique entre las estancias 103 y 104 y el de 0,75 m hacia el este de la puerta de la estancia 104."
+    },
+    "exercise.compare.step3": {
+      "source": "Review the added 6 ft south glazing on A101 and A201, then check the revised issue fields and notes.",
+      "target": "Examine la nueva ventana sur de 1,50 m en A101 y A201, y los campos de emisión y las notas modificados."
+    },
+    "exercise.compare.scope": {
+      "source": "Room 103 changes from 576 to 720 sq ft; room 104 changes from 576 to 432 sq ft. The gross footprint stays 5,760 sq ft. These are authored changes, not a promised detection count.",
+      "target": "La estancia 103 pasa de 36,00 a 45,00 m²; la estancia 104 pasa de 36,00 a 27,00 m². La huella permanece en 360,00 m². Son cambios preparados en los dibujos, no un número garantizado de detecciones."
+    },
+    "exercise.download.B": {
+      "source": "Download Revision B · PDF",
+      "target": "Descargar la revisión B · PDF"
+    },
+    "library.03.filename": {
+      "source": "03-Architectural-Revision-B.pdf",
+      "target": "03-Arquitectura-Revision-B.pdf"
+    },
+    "exercise.review.title": {
+      "source": "Review the Willow Creek coordination sheets",
+      "target": "Revise la coordinación del Centro Vecinal Los Olmos"
+    },
+    "exercise.review.sheets": {
+      "source": "X101 · X102",
+      "target": "X101 · X102"
+    },
+    "exercise.review.step1": {
+      "source": "Open X101 and inspect the three numbered coordination issues and their existing sticky notes.",
+      "target": "Abra X101 y examine las tres incidencias de coordinación numeradas y sus notas PDF existentes."
+    },
+    "exercise.review.step2": {
+      "source": "Use X102 to match each location to its issue, trade, status, and requested response. Add your own review markup on a copy.",
+      "target": "Use X102 para relacionar cada ubicación con su consulta, disciplina, estado y respuesta solicitada. Añada sus anotaciones a una copia."
+    },
+    "exercise.review.step3": {
+      "source": "Save the copy, reopen it, and inspect the annotations and any exported Markup Table before handing it off.",
+      "target": "Guarde la copia, vuelva a abrirla y compruebe las anotaciones y cualquier tabla exportada antes de entregarla."
+    },
+    "exercise.review.scope": {
+      "source": "The source contains three authored issues and four PDF layers. These are fictional coordination exercises; no engineering or code-compliance conclusion is established.",
+      "target": "El original contiene tres incidencias de práctica y cuatro capas PDF. Estos ejercicios ficticios de coordinación no constituyen una validación técnica ni una acreditación de cumplimiento normativo."
+    },
+    "library.11.filename": {
+      "source": "11-Coordination-and-Review.pdf",
+      "target": "11-Coordinacion-y-revision.pdf"
+    },
+    "exercise.ocr.title": {
+      "source": "Test OCR on the Willow Creek scanned sheets",
+      "target": "Pruebe OCR con los planos escaneados de Los Olmos"
+    },
+    "exercise.ocr.sheets": {
+      "source": "A101 · C101",
+      "target": "A101 · C101"
+    },
+    "exercise.ocr.step1": {
+      "source": "Open the scanned set and try searching for WILLOW CREEK. The original two-page PDF contains images without native text.",
+      "target": "Abra el conjunto escaneado y busque SALA POLIVALENTE. El PDF original de dos páginas contiene imágenes sin texto nativo."
+    },
+    "exercise.ocr.step2": {
+      "source": "Run OCR on a working copy. Search for COMMUNITY ROOM on A101 and SITE PLAN on C101, then inspect the recognized text.",
+      "target": "Ejecute OCR en una copia de trabajo. Busque SALA POLIVALENTE en A101 y EMPLAZAMIENTO Y REDES en C101, y examine el texto reconocido."
+    },
+    "exercise.ocr.step3": {
+      "source": "Save and reopen the result. Repeat the searches and visually check dimensions before measuring the scanned drawing.",
+      "target": "Guarde y vuelva a abrir el resultado. Repita las búsquedas y compruebe visualmente las cotas antes de medir el dibujo escaneado."
+    },
+    "exercise.ocr.scope": {
+      "source": "Search targets are printed source text, not a promise of recognition accuracy. OCR does not repair drawing scale or scan distortion.",
+      "target": "Los términos de búsqueda aparecen en los dibujos originales; su reconocimiento no está garantizado. OCR no corrige la escala del plano ni las deformaciones del escaneado."
+    },
+    "library.12.filename": {
+      "source": "12-Scanned-Legacy-Drawings.pdf",
+      "target": "12-Planos-existentes-escaneados.pdf"
+    }
+  },
+  "previews": {
+    "/samples/construction/previews/01-Civil-Site-and-Grading--page-01.png": "Emplazamiento y terreno - C101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/01-Civil-Site-and-Grading--page-02.png": "Emplazamiento y terreno - C201, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/02-Architectural-Revision-A--page-01.png": "Arquitectura · Revisión A - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/02-Architectural-Revision-A--page-02.png": "Arquitectura · Revisión A - A201, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/03-Architectural-Revision-B--page-01.png": "Arquitectura · Revisión B - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/03-Architectural-Revision-B--page-02.png": "Arquitectura · Revisión B - A201, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-01.png": "Cimentación y estructura - S101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/04-Structural-Foundation-and-Framing--page-02.png": "Cimentación y estructura - S201, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/05-Mechanical-HVAC--page-01.png": "Ventilación - M101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/05-Mechanical-HVAC--page-02.png": "Ventilación - M501, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-01.png": "Alumbrado y electricidad - E101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/06-Electrical-Lighting-and-Power--page-02.png": "Alumbrado y electricidad - E501, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-01.png": "Abastecimiento y saneamiento - P101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/07-Plumbing-Water-and-Drainage--page-02.png": "Abastecimiento y saneamiento - P501, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-01.png": "Protección contra incendios · Ejercicio - F101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/08-Fire-Protection-and-Life-Safety--page-02.png": "Protección contra incendios · Ejercicio - F501, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/09-Landscape-and-External-Works--page-01.png": "Jardinería y exteriores - L101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/09-Landscape-and-External-Works--page-02.png": "Jardinería y exteriores - L501, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-01.png": "Acabados y mobiliario fijo - I101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/10-Interiors-Finishes-and-Millwork--page-02.png": "Acabados y mobiliario fijo - I501, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/11-Coordination-and-Review--page-01.png": "Coordinación y revisión - X101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/11-Coordination-and-Review--page-02.png": "Coordinación y revisión - X102, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-01.png": "Planos existentes escaneados - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+    "/samples/construction/previews/12-Scanned-Legacy-Drawings--page-02.png": "Planos existentes escaneados - C101, CENTRO VECINAL LOS OLMOS, plano de práctica A1"
+  },
+  "preview": {
+    "title": "Biblioteca de planos en español",
+    "notice": "Vista previa local de la biblioteca y los ejercicios; la página completa de ejemplos sigue en preparación."
+  }
+}

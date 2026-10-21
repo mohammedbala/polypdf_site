@@ -1,0 +1,323 @@
+{
+  "cards": 12,
+  "downloads": [
+    "/localized-media/es/samples/construction/PolyPDF-Planos-de-construccion-es-ES.zip",
+    "/localized-media/es/samples/construction/DEMO-GUIDE.html",
+    "/localized-media/es/samples/construction/01-Emplazamiento-y-terreno.pdf",
+    "/localized-media/es/samples/construction/02-Arquitectura-Revision-A.pdf",
+    "/localized-media/es/samples/construction/03-Arquitectura-Revision-B.pdf",
+    "/localized-media/es/samples/construction/04-Cimentacion-y-estructura.pdf",
+    "/localized-media/es/samples/construction/05-Ventilacion.pdf",
+    "/localized-media/es/samples/construction/06-Alumbrado-y-electricidad.pdf",
+    "/localized-media/es/samples/construction/07-Abastecimiento-y-saneamiento.pdf",
+    "/localized-media/es/samples/construction/08-Proteccion-contra-incendios-Ejercicio.pdf",
+    "/localized-media/es/samples/construction/09-Jardineria-y-exteriores.pdf",
+    "/localized-media/es/samples/construction/10-Acabados-y-mobiliario-fijo.pdf",
+    "/localized-media/es/samples/construction/11-Coordinacion-y-revision.pdf",
+    "/localized-media/es/samples/construction/12-Planos-existentes-escaneados.pdf",
+    "/localized-media/es/samples/construction/02-Arquitectura-Revision-A.pdf",
+    "/localized-media/es/samples/construction/10-Acabados-y-mobiliario-fijo.pdf",
+    "/localized-media/es/samples/construction/06-Alumbrado-y-electricidad.pdf",
+    "/localized-media/es/samples/construction/02-Arquitectura-Revision-A.pdf",
+    "/localized-media/es/samples/construction/03-Arquitectura-Revision-B.pdf",
+    "/localized-media/es/samples/construction/11-Coordinacion-y-revision.pdf",
+    "/localized-media/es/samples/construction/12-Planos-existentes-escaneados.pdf"
+  ],
+  "exercises": 6,
+  "horizontalOverflow": false,
+  "images": [
+    {
+      "alt": "Emplazamiento y terreno - C101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/01-1.png"
+    },
+    {
+      "alt": "Arquitectura · Revisión A - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/02-1.png"
+    },
+    {
+      "alt": "Arquitectura · Revisión B - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/03-1.png"
+    },
+    {
+      "alt": "Cimentación y estructura - S101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/04-1.png"
+    },
+    {
+      "alt": "Ventilación - M101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/05-1.png"
+    },
+    {
+      "alt": "Alumbrado y electricidad - E101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/06-1.png"
+    },
+    {
+      "alt": "Abastecimiento y saneamiento - P101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/07-1.png"
+    },
+    {
+      "alt": "Protección contra incendios · Ejercicio - F101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/08-1.png"
+    },
+    {
+      "alt": "Jardinería y exteriores - L101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/09-1.png"
+    },
+    {
+      "alt": "Acabados y mobiliario fijo - I101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/10-1.png"
+    },
+    {
+      "alt": "Coordinación y revisión - X101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/11-1.png"
+    },
+    {
+      "alt": "Planos existentes escaneados - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/12-1.png"
+    },
+    {
+      "alt": "Arquitectura · Revisión A - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": false,
+      "src": "/localized-media/es/samples/construction/previews/02-1.png"
+    },
+    {
+      "alt": "Acabados y mobiliario fijo - I101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": false,
+      "src": "/localized-media/es/samples/construction/previews/10-1.png"
+    },
+    {
+      "alt": "Alumbrado y electricidad - E101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": false,
+      "src": "/localized-media/es/samples/construction/previews/06-1.png"
+    },
+    {
+      "alt": "Arquitectura · Revisión A - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": false,
+      "src": "/localized-media/es/samples/construction/previews/02-1.png"
+    },
+    {
+      "alt": "Arquitectura · Revisión B - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": false,
+      "src": "/localized-media/es/samples/construction/previews/03-1.png"
+    },
+    {
+      "alt": "Coordinación y revisión - X101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": false,
+      "src": "/localized-media/es/samples/construction/previews/11-1.png"
+    },
+    {
+      "alt": "Planos existentes escaneados - A101, CENTRO VECINAL LOS OLMOS, plano de práctica A1",
+      "loaded": false,
+      "src": "/localized-media/es/samples/construction/previews/12-1.png"
+    }
+  ],
+  "locale": "es",
+  "title": "Biblioteca de planos en español · PolyPDF",
+  "viewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "sections": [
+    {
+      "id": "construction-example-takeoff",
+      "images": [
+        {
+          "loaded": true,
+          "src": "/localized-media/es/samples/construction/previews/02-1.png"
+        }
+      ],
+      "overflow": false,
+      "rect": {
+        "height": 694.6640625,
+        "width": 1200
+      },
+      "text": "PRACTIQUE CON EL CONJUNTO DE PLANOS DE CONSTRUCCIÓN\n\nMida la planta arquitectónica del Centro Vecinal Los Olmos\n\nA101 · A201\n\nAbra A101, revisión A. Calibre la longitud de referencia impresa de 5,00 m: a 1:50 equivale a unos 283,46457 puntos PDF.\nCompruebe por separado el ancho de 24,00 m y el fondo de 15,00 m; después trace el contorno exterior del edificio.\nCompare la huella rectangular con 360,00 m². Conserve el plano, la revisión, el concepto, la unidad y el total con la medición exportada.\n\nEste ejercicio mide la huella rectangular bruta. No mide la superficie útil ni descuenta los muros. Las dos comprobaciones de longitud y la medición de superficie son tres mediciones manuales.\n\nLos valores son referencias del dibujo, no nuevos resultados de pruebas de la aplicación. Trabaje sobre una copia y compruebe el archivo guardado.\n\nEjemplo estadounidense anterior: ver el archivo guardado en Mac y la versión local probada →\n\nLleva las cantidades verificadas a la plantilla gratuita de mediciones en Excel →\n\nAbra la guía de flujo de trabajo relacionada →\n\nDescargar la revisión A · PDF\n02-Arquitectura-Revision-A.pdf\n\nExplore la biblioteca de dibujos completa →"
+    },
+    {
+      "id": "construction-example-flooring",
+      "images": [
+        {
+          "loaded": true,
+          "src": "/localized-media/es/samples/construction/previews/10-1.png"
+        }
+      ],
+      "overflow": false,
+      "rect": {
+        "height": 617.8828125,
+        "width": 1200
+      },
+      "text": "PRACTIQUE CON EL CONJUNTO DE PLANOS DE CONSTRUCCIÓN\n\nMida los pavimentos del Centro Vecinal Los Olmos\n\nI101 · I501\n\nAbra I101 y calibre su referencia de 5,00 m. Lea la leyenda de pavimentos F1 y F2 antes de medir.\nTrace por separado las zonas acotadas de los aseos 107 y 108: 18,00 m² cada una, 36,00 m² en total.\nCompare el pavimento cerámico F2 con 36,00 m² y el resiliente F1 con 324,00 m². Aplique por separado cualquier porcentaje de merma.\n\nEl cuadro utiliza los límites acotados de las estancias sin descontar el espesor de los muros. Estas superficies de práctica no son cantidades netas colocadas; los detalles de I501 usan otras escalas.\n\nLos valores son referencias del dibujo, no nuevos resultados de pruebas de la aplicación. Trabaje sobre una copia y compruebe el archivo guardado.\n\nAbra la guía de flujo de trabajo relacionada →\n\nDescargar el plano de práctica · PDF\n10-Acabados-y-mobiliario-fijo.pdf\n\nExplore la biblioteca de dibujos completa →"
+    },
+    {
+      "id": "construction-example-electrical",
+      "images": [
+        {
+          "loaded": true,
+          "src": "/localized-media/es/samples/construction/previews/06-1.png"
+        }
+      ],
+      "overflow": false,
+      "rect": {
+        "height": 718.5,
+        "width": 1200
+      },
+      "text": "PRACTIQUE CON EL CONJUNTO DE PLANOS DE CONSTRUCCIÓN\n\nCuente los símbolos del plano eléctrico de Los Olmos\n\nE101 · E501\n\nAbra E101 e identifique el símbolo de luminaria en la leyenda. Cuente solo los símbolos del plano y excluya los ejemplos de la leyenda y los detalles.\nCompruebe las 24 luminarias, 12 tomas de corriente y 8 interruptores del plano. Mantenga separados los recuentos de las tres categorías.\nCalibre la referencia de 5,00 m. Trace el recorrido esquemático de E101 y compárelo con 34,50 m. E501 contiene el esquema eléctrico y el cuadro de luminarias.\n\nEl trazado discontinuo representa un recorrido esquemático, no una medición de canalizaciones para ejecutar. La búsqueda de símbolos requiere Pro; revise cada propuesta. Las 24 luminarias, 12 tomas, 8 interruptores y los 34,50 m son referencias del dibujo, no resultados de la aplicación.\n\nLos valores son referencias del dibujo, no nuevos resultados de pruebas de la aplicación. Trabaje sobre una copia y compruebe el archivo guardado.\n\nEjercicio eléctrico estadounidense anterior: ver la comprobación separada de luminarias y tomas →\n\nAbra la guía de flujo de trabajo relacionada →\n\nDescargar el plano de práctica · PDF\n06-Alumbrado-y-electricidad.pdf\n\nExplore la biblioteca de dibujos completa →"
+    },
+    {
+      "id": "construction-example-compare",
+      "images": [
+        {
+          "loaded": false,
+          "src": "/localized-media/es/samples/construction/previews/02-1.png"
+        },
+        {
+          "loaded": false,
+          "src": "/localized-media/es/samples/construction/previews/03-1.png"
+        }
+      ],
+      "overflow": false,
+      "rect": {
+        "height": 1055.125,
+        "width": 1200
+      },
+      "text": "PRACTIQUE CON EL CONJUNTO DE PLANOS DE CONSTRUCCIÓN\n\nCompare las revisiones arquitectónicas del Centro Vecinal Los Olmos\n\nA101 · A201\n\nAbra las revisiones A y B. Empareje A101 con A101 y A201 con A201; alinee las hojas A1 completas.\nEn A101, examine el desplazamiento de 1,50 m hacia el este del tabique entre las estancias 103 y 104 y el de 0,75 m hacia el este de la puerta de la estancia 104.\nExamine la nueva ventana sur de 1,50 m en A101 y A201, y los campos de emisión y las notas modificados.\n\nLa estancia 103 pasa de 36,00 a 45,00 m²; la estancia 104 pasa de 36,00 a 27,00 m². La huella permanece en 360,00 m². Son cambios preparados en los dibujos, no un número garantizado de detecciones.\n\nLos valores son referencias del dibujo, no nuevos resultados de pruebas de la aplicación. Trabaje sobre una copia y compruebe el archivo guardado.\n\nAbra la guía de flujo de trabajo relacionada →\n\nDescargar la revisión A · PDF\n02-Arquitectura-Revision-A.pdf\nDescargar la revisión B · PDF\n03-Arquitectura-Revision-B.pdf\n\nExplore la biblioteca de dibujos completa →"
+    },
+    {
+      "id": "construction-example-review",
+      "images": [
+        {
+          "loaded": false,
+          "src": "/localized-media/es/samples/construction/previews/11-1.png"
+        }
+      ],
+      "overflow": false,
+      "rect": {
+        "height": 617.8828125,
+        "width": 1200
+      },
+      "text": "PRACTIQUE CON EL CONJUNTO DE PLANOS DE CONSTRUCCIÓN\n\nRevise la coordinación del Centro Vecinal Los Olmos\n\nX101 · X102\n\nAbra X101 y examine las tres incidencias de coordinación numeradas y sus notas PDF existentes.\nUse X102 para relacionar cada ubicación con su consulta, disciplina, estado y respuesta solicitada. Añada sus anotaciones a una copia.\nGuarde la copia, vuelva a abrirla y compruebe las anotaciones y cualquier tabla exportada antes de entregarla.\n\nEl original contiene tres incidencias de práctica y cuatro capas PDF. Estos ejercicios ficticios de coordinación no constituyen una validación técnica ni una acreditación de cumplimiento normativo.\n\nLos valores son referencias del dibujo, no nuevos resultados de pruebas de la aplicación. Trabaje sobre una copia y compruebe el archivo guardado.\n\nAbra la guía de flujo de trabajo relacionada →\n\nDescargar el plano de práctica · PDF\n11-Coordinacion-y-revision.pdf\n\nExplore la biblioteca de dibujos completa →"
+    },
+    {
+      "id": "construction-example-ocr",
+      "images": [
+        {
+          "loaded": false,
+          "src": "/localized-media/es/samples/construction/previews/12-1.png"
+        }
+      ],
+      "overflow": false,
+      "rect": {
+        "height": 594.8515625,
+        "width": 1200
+      },
+      "text": "PRACTIQUE CON EL CONJUNTO DE PLANOS DE CONSTRUCCIÓN\n\nPruebe OCR con los planos escaneados de Los Olmos\n\nA101 · C101\n\nAbra el conjunto escaneado y busque SALA POLIVALENTE. El PDF original de dos páginas contiene imágenes sin texto nativo.\nEjecute OCR en una copia de trabajo. Busque SALA POLIVALENTE en A101 y EMPLAZAMIENTO Y REDES en C101, y examine el texto reconocido.\nGuarde y vuelva a abrir el resultado. Repita las búsquedas y compruebe visualmente las cotas antes de medir el dibujo escaneado.\n\nLos términos de búsqueda aparecen en los dibujos originales; su reconocimiento no está garantizado. OCR no corrige la escala del plano ni las deformaciones del escaneado.\n\nLos valores son referencias del dibujo, no nuevos resultados de pruebas de la aplicación. Trabaje sobre una copia y compruebe el archivo guardado.\n\nAbra la guía de flujo de trabajo relacionada →\n\nDescargar el plano de práctica · PDF\n12-Planos-existentes-escaneados.pdf\n\nExplore la biblioteca de dibujos completa →"
+    }
+  ],
+  "downloadPath": "/Users/mohammedbala/Downloads/PolyPDF-Planos-de-construccion-es-ES.zip",
+  "finalImageLoad": [
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/01-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/02-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/03-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/04-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/05-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/06-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/07-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/08-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/09-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/10-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/11-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/12-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/02-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/10-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/06-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/02-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/03-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/11-1.png"
+    },
+    {
+      "loaded": true,
+      "src": "/localized-media/es/samples/construction/previews/12-1.png"
+    }
+  ],
+  "electricalViewport": {
+    "bottom": 746.359375,
+    "loaded": true,
+    "overflow": false,
+    "top": 27.859375
+  },
+  "mobile": {
+    "cards": 12,
+    "firstImageLoaded": true,
+    "heading": "Un proyecto. Doce PDF. Veinticuatro hojas de construcción.",
+    "horizontalOverflow": false,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "scope": "Local shared-library preview. Exercise DOM gathered during smooth anchor scrolling; settled electrical screenshot verified separately. All 19 desktop images eventually loaded."
+}

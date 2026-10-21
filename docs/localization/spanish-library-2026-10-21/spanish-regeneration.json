@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "scope": "All 16 generated Spanish source artifacts reproduce byte-for-byte in a new temporary directory. Verification-only copies removed.",
+  "generatorSha256": "2627b32df10b22bd8de23756e12acf4937a45b9b55793f4f1870751d16ecb793",
+  "profileSha256": "94bbd9624fcfe376f8f2a5aabf930dd0636510eaaf6f83723edd15b3fc35d8ca",
+  "files": [
+    {
+      "file": "01-Emplazamiento-y-terreno.pdf",
+      "sha256": "4ec471b60fc01ad42d0fe61959085869942fddae0c194038549019f870c77040"
+    },
+    {
+      "file": "02-Arquitectura-Revision-A.pdf",
+      "sha256": "dfa2c094eeb38a045e326add49bf055616d7c192f72d2342e99e2a190798aaa5"
+    },
+    {
+      "file": "03-Arquitectura-Revision-B.pdf",
+      "sha256": "2bfb8b80e369b62524a00f4b215ad69559356d1e8fa7c42898b76ae5c7633543"
+    },
+    {
+      "file": "04-Cimentacion-y-estructura.pdf",
+      "sha256": "7891f9bff42dc7c73486416a5ed45d625549972978bfa2b484fc345e0cfd86ba"
+    },
+    {
+      "file": "05-Ventilacion.pdf",
+      "sha256": "8488a54e1ed29d13ab601484abaa218a2bc0a8ad8d775c3bddec7ea8d5f061a5"
+    },
+    {
+      "file": "06-Alumbrado-y-electricidad.pdf",
+      "sha256": "c287fd99df127d8852b411eeb238399a7b6cc4c9a29f03f2720e68a79e050849"
+    },
+    {
+      "file": "07-Abastecimiento-y-saneamiento.pdf",
+      "sha256": "0bf1cc7da22923a35f95c2fe36d7edfb67db4b05b27bec393f53b95e5de7bc3e"
+    },
+    {
+      "file": "08-Proteccion-contra-incendios-Ejercicio.pdf",
+      "sha256": "77ac028f5eeb36746d134565adda4c666231f77b9f08b0c11f644169bd620d46"
+    },
+    {
+      "file": "09-Jardineria-y-exteriores.pdf",
+      "sha256": "e79b868bb5d6078c283967e6b04e0fc916d6ec8a0f162ea09aee56a8bfa0f75a"
+    },
+    {
+      "file": "10-Acabados-y-mobiliario-fijo.pdf",
+      "sha256": "70b7abc076ab1a4b21abfcfdb59e4620f9041bd52bf483039fa1a1cf1940d7ba"
+    },
+    {
+      "file": "11-Coordinacion-y-revision.pdf",
+      "sha256": "15100a779f9e096d81bd6f31825771766b85328a3844479e5a4cb80f5ca741fc"
+    },
+    {
+      "file": "12-Planos-existentes-escaneados.pdf",
+      "sha256": "cfe165ed6c70841d01ba8d447852f81427caf9211b157ba9f738de4bc53ed2f4"
+    },
+    {
+      "file": "DEMO-MANIFEST.json",
+      "sha256": "f806742e96a4f1ba265b1e8cd1df907246f06360c07e6fb57b69f784f71f87f1"
+    },
+    {
+      "file": "DEMO-GUIDE.html",
+      "sha256": "afc014d98bfc96816d097b57fe03bbb271be767704428dbb220f43e1410fae71"
+    },
+    {
+      "file": "reference-quantities.csv",
+      "sha256": "172e26a0ffaaf0e91c429a3c97f7380c14200bd7dda4cec76bb9bb6734c920af"
+    },
+    {
+      "file": "SHA256SUMS.txt",
+      "sha256": "1306294dfd7e7b622ec3d5ba0d9704294f4ab7490c5bf33f97403b31ee936e5d"
+    }
+  ]
+}

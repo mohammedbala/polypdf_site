@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "locale": "es-ES",
+  "region": "ES",
+  "status": "passed",
+  "reviewer": "Codex visual inspection",
+  "manifestSha256": "f806742e96a4f1ba265b1e8cd1df907246f06360c07e6fb57b69f784f71f87f1",
+  "scope": "All 24 final sheets inspected in contact sheet; twelve full-size previews inspected for Spanish text, schedules, tags, geometry, notes and scan legibility. Editorial draft; no standards certification or native app UI evidence.",
+  "fullSizePages": [
+    "03-1",
+    "06-1",
+    "07-2",
+    "11-2",
+    "01-1",
+    "04-2",
+    "05-2",
+    "07-1",
+    "08-2",
+    "09-1",
+    "10-2",
+    "12-1"
+  ],
+  "corrections": [],
+  "previews": [
+    {
+      "file": "previews/01-1.png",
+      "sha256": "75d953955810e301e2c0a03da00bcd3bd8d4344e68022a45e823e80151d850af"
+    },
+    {
+      "file": "previews/01-2.png",
+      "sha256": "3e2b777efd960441718d29ecd78701d96a5880f5fd0cabd42ee45a8662adbef4"
+    },
+    {
+      "file": "previews/02-1.png",
+      "sha256": "dd6b6d79af0e3064dadc4286e70a8a13feec86f7b04e449ceb8c8fec17b2a4a9"
+    },
+    {
+      "file": "previews/02-2.png",
+      "sha256": "d7057c8544f0b7a5a691a2a1b3f0cf621d7ee1d6cd5ec1ed6bc2512a5f3a2266"
+    },
+    {
+      "file": "previews/03-1.png",
+      "sha256": "03be10453acfc2431851245fff93a2daaa6e34faf3922d8ea8e8dfbae179b959"
+    },
+    {
+      "file": "previews/03-2.png",
+      "sha256": "bafab61a6b74f8ccb89827d415d7fbd2b0117a3f50f1708ac1ee9641918b38fe"
+    },
+    {
+      "file": "previews/04-1.png",
+      "sha256": "857c90b7b3b9d1a41f1d0fd1f62073c75f4409841e93066663cf433315a59e0c"
+    },
+    {
+      "file": "previews/04-2.png",
+      "sha256": "d4c5197da5429fd6f27821e8d79d46017ee1d4fdfb3473e67afe5b18bb3b796d"
+    },
+    {
+      "file": "previews/05-1.png",
+      "sha256": "383596b84ffeb6df7d7da17812952d6a4fa85768ce3102b42a74f00b9b04fd21"
+    },
+    {
+      "file": "previews/05-2.png",
+      "sha256": "4abda05919657e82e88ca085628f7591e67637688dae6c1f651030f360bcc36e"
+    },
+    {
+      "file": "previews/06-1.png",
+      "sha256": "e1bb86f14c863c1b9023325ac85276fc6a790f41568ddb38fc0c9197e2437515"
+    },
+    {
+      "file": "previews/06-2.png",
+      "sha256": "a577658c81a5f90e1c32647657457338188e44c2874f1167f6d7e77d5c54f5c9"
+    },
+    {
+      "file": "previews/07-1.png",
+      "sha256": "a92a655ed7e8074dc82dcdef3ab31ebd828bec22d31364f82e9734c76b768731"
+    },
+    {
+      "file": "previews/07-2.png",
+      "sha256": "4fa57477074a3252e4ed1a795abd428d321631f6c712161cb84d66f705f11aed"
+    },
+    {
+      "file": "previews/08-1.png",
+      "sha256": "a2ad3e55cd2ad532cd2309ca53a13451fac652f1e1719ca5691b44c9ef179f23"
+    },
+    {
+      "file": "previews/08-2.png",
+      "sha256": "8228fec0744f44530dbef0dc2ef178e71316d44b4ee0d20f90dc70c298e6ba5f"
+    },
+    {
+      "file": "previews/09-1.png",
+      "sha256": "2b6bb1929d352192b35e8652c7e5653295c4cf08562432f618712cdea6281976"
+    },
+    {
+      "file": "previews/09-2.png",
+      "sha256": "f7d78869318908f08982cf120c235ab2ff954a92f6a979933de06dae211f326e"
+    },
+    {
+      "file": "previews/10-1.png",
+      "sha256": "3e6f0f6b67b675bb8d5c3e1d8c73e2d5f44904be498dd3fd156072236bad95a2"
+    },
+    {
+      "file": "previews/10-2.png",
+      "sha256": "0ba08862c3dd9af0c7bd79875510cfb30d270870c570cede3935a8868dfa9cf6"
+    },
+    {
+      "file": "previews/11-1.png",
+      "sha256": "c0ea1eb43d585b27f0ef2193bfa8988a1c544afbfa27bf366351e913464666a4"
+    },
+    {
+      "file": "previews/11-2.png",
+      "sha256": "ed85bc9f8e13dc7498da54636130a6c7d942966c988f22a1cc30af6a44776960"
+    },
+    {
+      "file": "previews/12-1.png",
+      "sha256": "c74938f5e90d0e1e97b1f2fb71c8553c44f5597818599eddf7377049d4010cf6"
+    },
+    {
+      "file": "previews/12-2.png",
+      "sha256": "c8c6d977c867fe2d901b09ada3a295f36a9d820c01541ecadb746f0da7f471e9"
+    }
+  ],
+  "contactSheet": {
+    "file": "CONTACT-SHEET.png",
+    "sha256": "14eb63d38448140a2feb2608079b0c22f72a428ccefb3f3d88fb3034717b9c55"
+  }
+}
