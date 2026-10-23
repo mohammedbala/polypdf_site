@@ -1,0 +1,226 @@
+import React, { useEffect } from 'react';
+import { Link } from 'react-router';
+import { motion } from 'framer-motion';
+import {
+  FaArrowLeft,
+  FaDownload,
+  FaEnvelope,
+  FaKey,
+  FaLifeRing,
+  FaReceipt
+} from 'react-icons/fa';
+import parrotIcon from '../assets/polypdf_icon-96.png';
+import ActivationSteps from './ActivationSteps';
+import { licenseRightsText, licenseDeliveryText } from '../lib/commercialOffer';
+import siteRelease from '../lib/siteRelease.json';
+
+const sections = [
+  {
+    icon: <FaDownload />,
+    title: `Update to ${siteRelease.version}`,
+    content: [
+      'Save your work, choose Help > Check for Updates, and follow the prompt. On Windows, a downloaded update installs when you quit. Close and reopen the app to finish updating.',
+      `After relaunch, About should show version ${siteRelease.version}, build ${siteRelease.build}. Your existing PolyPDF 1.x Pro license continues to apply.`,
+      'If an update is unavailable, use the current Mac or Windows download on this site. Mac requires macOS 14 or later on Apple silicon or Intel; Windows requires Windows 10 or 11, x64.'
+    ]
+  },
+  {
+    icon: <FaLifeRing />,
+    title: 'Wheel zoom, panning, and snapshots',
+    content: [
+      "Zoom with the mouse wheel in Single page view without holding Command. Multipage views scroll by default. Customize wheel and double-click-drag zoom separately for each layout in Settings > View, or right-click the page-layout buttons in the bottom bar.",
+      "Double-click and drag to zoom around the point you choose. When the wheel is set to scroll in Single page view, scrolling past a page edge advances to the next or previous page, with protection against accidental trackpad momentum.",
+      "Hold Shift and drag with the left mouse button to pan. Hold Shift while scrolling the wheel to pan horizontally.",
+      "Snapshots retain their size and proportions when pasted between differently rotated pages. Saved snapshot artwork also preserves its orientation when opened in other PDF viewers."
+]
+  },
+  {
+    icon: <FaLifeRing />,
+    title: 'Highlights, arcs, cutouts, and estimate scrolling',
+    content: [
+      'Select a filled annotation and use Highlight beside Fill in the style toolbar to blend its color with the drawing underneath.',
+      'For an arc, drag the middle handle to change radius or an end handle to change sweep. Helper dimensions show radius for middle and corner handles, and arc length for sweep handles.',
+      'Select an area cutout to resize it with handles aligned to its selection frame, or drag inside it to move the opening. Check the net area after changing a cutout.',
+      'The estimate workspace supports vertical and horizontal scrolling and keeps its position when you edit a value.'
+    ]
+  },
+  {
+    icon: <FaLifeRing />,
+    title: 'Trouble opening a PDF on a Windows shared drive',
+    content: [
+      'Version 1.5.4 removes an unnecessary file operation from the Windows checks performed before opening a PDF. Update first, then retry using a copy of the affected file.',
+      'If the error continues, use Help > Report to Support immediately afterwards. Include the time, exact error message, and whether you opened the file by double-clicking or through File > Open.',
+      'Tell us whether the file is still visible in File Explorer and opens in another PDF reader, whether a local copy opens, what hosts the shared drive (Windows Server or NAS), and whether you use a VPN.'
+    ]
+  },
+  {
+    icon: <FaLifeRing />,
+    title: 'Stamps, presentation, and metric dimensions',
+    content: [
+      'Open the arrow beside Stamp > Create Interactive Stamp… to start with a blank canvas. Add to toolset is optional and unchecked by default.',
+      'For a placed interactive stamp, use Properties to change its values. A visual stamp does not create a certificate signature.',
+      'Open a PDF and choose View > Presentation Mode. Use arrow keys to change pages and Escape to return to the workspace.',
+      'New metric dimensions default to millimetres. Existing document formats are preserved; check Measurements > Formatting and verify the page scale when a displayed value is unexpected.'
+    ]
+  },
+  {
+    icon: <FaLifeRing />,
+    title: 'Revision Package help',
+    content: [
+      'For a Revision Package issue, include the stage you were in: import, reconciliation, changes and impact, references, or publication.',
+      'Include the issue label, affected sheet number, and the exact message shown. Do not email confidential drawings unless support asks for a safe reproduction.',
+      'Free users can view and navigate an existing Revision Package. Creating or changing package state and publishing require PolyPDF Pro.'
+    ]
+  },
+  {
+    icon: <FaEnvelope />,
+    title: 'Contact',
+    content: [
+      'Support email: support@polypdf.com',
+      'Use this address for purchase questions, license activation problems, and general product support.',
+      'When possible, include your app version, your OS (macOS or Windows) and its version, Stripe receipt email, license key suffix, and a short description of the problem.'
+    ]
+  },
+  {
+    icon: <FaDownload />,
+    title: 'Direct download',
+    content: [
+      'PolyPDF for macOS and Windows is sold and downloaded directly from PolyPDF.com.',
+      'Direct purchases are processed through Stripe and unlocked with a PolyPDF license key sent by email.',
+      licenseRightsText,
+      'If you need help with activation, deactivation, or refund requests, contact support@polypdf.com.'
+    ]
+  },
+  {
+    icon: <FaReceipt />,
+    title: 'Refunds and billing',
+    content: [
+      'Direct website purchases processed by Stripe include PolyPDF\'s 14-day money-back guarantee, in addition to any non-waivable consumer rights.',
+      'Request a refund within 14 calendar days of payment and PolyPDF will return the amount paid for the license to the original payment method where possible.',
+      'For billing questions, use the links in your Stripe receipt or contact PolyPDF support.',
+      'Refunded licenses may be deactivated after the refund is completed.'
+    ]
+  }
+];
+
+const Support = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <div className="legal-page support">
+      <header className="legal-header">
+        <nav className="nav container">
+          <Link to="/" className="logo">
+            <img src={parrotIcon} alt="" width="96" height="96" />
+            <span>PolyPDF</span>
+          </Link>
+          <Link to="/" className="back-link">
+            <FaArrowLeft /> Back to Home
+          </Link>
+        </nav>
+      </header>
+
+      <motion.main
+        className="legal-content"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="container">
+          <div className="legal-hero">
+            <h1>Support</h1>
+            <p className="legal-subtitle">Purchase, licensing, and product help for PolyPDF on Mac and Windows</p>
+            <p className="last-updated">Last updated: September 13, 2026</p>
+          </div>
+
+          <div className="legal-intro">
+            <p>
+              Get help with installation, product workflows, purchases, and license activation.
+              The current public release is PolyPDF {siteRelease.version} (build {siteRelease.build}) on Mac and Windows.
+              When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.
+            </p>
+          </div>
+
+          <p><Link to="/versions/">What changed in {siteRelease.version}</Link> · <Link to="/blog/create-interactive-pdf-stamps/">Interactive stamp guide</Link> · <Link to="/blog/">All guides</Link></p>
+
+          <div className="legal-sections">
+            {sections.map((section, index) => (
+              <motion.section
+                key={section.title}
+                className="legal-section"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+              >
+                <div className="section-header">
+                  <div className="section-icon">{section.icon}</div>
+                  <h2>{section.title}</h2>
+                </div>
+                <ul className="section-content">
+                  {section.content.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </motion.section>
+            ))}
+          </div>
+
+          {/* The single most-asked post-purchase question, and until now it was answered only
+              inside the licence email. */}
+          <section className="legal-section">
+            <div className="section-header">
+              <div className="section-icon"><FaKey /></div>
+              <h2>Activating your license key</h2>
+            </div>
+            <ActivationSteps heading={null} />
+            <p className="support-aside">{licenseDeliveryText}</p>
+            <p className="support-aside">
+              One license activates up to 3 computers, Mac or Windows in any mix. Moving to a new
+              machine when all 3 are used? Deactivate on the old one from the same window, then
+              activate on the new one.
+            </p>
+          </section>
+
+          <section className="legal-section">
+            <div className="section-header">
+              <div className="section-icon"><FaLifeRing /></div>
+              <h2>Before you contact support</h2>
+            </div>
+            <ul className="section-content">
+              <li>Confirm you are running the version you downloaded from PolyPDF.com.</li>
+              <li>Include the app version and build number if you can.</li>
+              <li>For purchase issues, attach the Stripe receipt email or order confirmation.</li>
+            </ul>
+          </section>
+
+          <section className="legal-section">
+            <h2>Ideas and feature requests</h2>
+            <p>
+              Tell us the drawing workflow you want to improve and how you handle it today.
+            </p>
+            <div className="contact-info">
+              <Link to="/feature-requests/" className="contact-link">
+                <FaLifeRing /> Open Feature Requests
+              </Link>
+            </div>
+          </section>
+
+          <section className="legal-section">
+            <h2>Support email</h2>
+            <div className="contact-info">
+              <a href="mailto:support@polypdf.com" className="contact-link">
+                <FaEnvelope /> support@polypdf.com
+              </a>
+            </div>
+          </section>
+        </div>
+      </motion.main>
+
+    </div>
+  );
+};
+
+export default Support;

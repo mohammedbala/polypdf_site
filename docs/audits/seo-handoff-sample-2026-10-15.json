@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-15",
+  "source": "/samples/conversion/northline-studio-rev-a.pdf",
+  "sourceSha256": "4d666ff24720f4a1bde24288e78ff19b1f4fe160f216a3ffeda314c669404bb5",
+  "output": "/samples/conversion/northline-studio-reviewed.pdf",
+  "sha256": "825f5d634fb97f2c7743e6bf81dde0a75b911639aced8643f5c65ae073e8434c",
+  "bytes": 40107,
+  "authoring": {
+    "app": "PolyPDF",
+    "version": "1.6.6",
+    "build": "38",
+    "method": "Native Open dialog, Rectangle tool, Text tool, Save, close document and native reopen"
+  },
+  "verified": {
+    "pageCount": 1,
+    "annotations": [
+      "Square",
+      "FreeText"
+    ],
+    "note": "CHECK DOOR CLEARANCE / Synthetic handoff sample.",
+    "appearancesPresent": true,
+    "reopen": "PolyPDF native UI displayed both saved annotations and the note",
+    "independentReader": "pypdf",
+    "independentRenderer": "PDFium",
+    "privatePathOrEmailScan": "No user home paths, task paths, or owner account email found in raw or decoded streams"
+  },
+  "limits": "One synthetic drawing with a rectangle and text annotation. No Bluebeam, Acrobat, Studio, custom-column, measurement, form, or signature compatibility qualification."
+}

@@ -1,0 +1,244 @@
+{
+  "schema": "polypdf-blog-current-dev-capture-proof/v1",
+  "state": "plugin-inserted",
+  "capturedImage": {
+    "path": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png",
+    "filename": "plugin-current-dev-aisc-inserted-dark-maximized.png",
+    "sha256": "9b9feb4ffca97314dabde4343b4cdace1b3df66856ab59251888391d1ad57c72",
+    "width": 3420,
+    "height": 2146,
+    "themeProofPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png.theme-proof.json",
+    "themeProofCapturedAt": "2026-08-19T11:31:40.303Z"
+  },
+  "proofCapturedAt": "2026-08-19T11:31:42.030Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "expectedBaseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "expectedWorkingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "rendererBundle": {
+      "path": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf/dist/renderer/app.js",
+      "sha256": "c5cd81d05969d6a45ba416f52a42bf0bcf4dc36dab2eff0e76996d9c8b7fb1df"
+    },
+    "mainBundle": {
+      "path": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf/dist/main/main.js",
+      "sha256": "94585a99f0d877d9fc3c34c02c6d2a47de12a42a64b55d79de2718751a97cf11"
+    },
+    "captureDriver": {
+      "path": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/capture-driver.mjs",
+      "sha256": "fad11c5a0388f0f93838d39bab33050ac3ed12302099f1279807beedf918639c",
+      "noEmulationMechanism": "Emulation.clearDeviceMetricsOverride before native maximize and Page.captureScreenshot"
+    }
+  },
+  "ownedInstance": {
+    "automationRecordPath": "/private/tmp/polypdf-plugin-current-dev-UDkryF/automation-instance.json",
+    "pid": 64240,
+    "pidTree": [
+      64240,
+      64313,
+      64340,
+      64352,
+      64504,
+      64600,
+      64601,
+      64602
+    ],
+    "userData": "/private/tmp/polypdf-plugin-current-dev-UDkryF",
+    "argv": [
+      ".",
+      "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/fixtures/plugin-reference-sheet.pdf",
+      "--remote-debugging-port=9507",
+      "--disable-background-timer-throttling",
+      "--disable-renderer-backgrounding",
+      "--disable-backgrounding-occluded-windows"
+    ],
+    "startedAt": "2026-08-19T11:11:39.578Z",
+    "spawnedByPid": 64237,
+    "processCommand": "PolyPDF"
+  },
+  "renderer": {
+    "settings": {
+      "version": "1.3.4",
+      "build": "16",
+      "appearance": "dark"
+    },
+    "theme": {
+      "datasetTheme": "dark",
+      "bodyDark": true,
+      "prefersDark": true,
+      "chromeBase": "#26282b",
+      "chromeElevated": "#313437"
+    },
+    "geometry": {
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "innerWidth": 1710,
+      "innerHeight": 1073,
+      "screenX": 0,
+      "screenY": 34,
+      "availWidth": 1710,
+      "availHeight": 1073,
+      "screenWidth": 1710,
+      "screenHeight": 1107,
+      "devicePixelRatio": 2
+    },
+    "styleToolbar": {
+      "exists": true,
+      "visible": true,
+      "sectionCount": 4,
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "overflowClass": false,
+      "rect": {
+        "x": 0,
+        "y": 44,
+        "width": 1710,
+        "height": 36
+      }
+    },
+    "documentName": "plugin-reference-sheet.pdf",
+    "activePanel": "plugins",
+    "visiblePanelText": "Pin a command to put it on the sidebar. Right-click a pinned icon to remove it.Manage...AISC Steel SectionsPolyPDF · v1.0.6Insert AISC Steel Section…PinPDF MapsPolyPDF · v1.0.3Insert Map…PinProfessional Seal MakerPolyPDF · v1.0.7Insert Professional Seal…Pin",
+    "dialog": null,
+    "aiscAnnotation": {
+      "id": "aisc-W24X55-profile",
+      "kind": "shape",
+      "tool": "polygon",
+      "page": 1,
+      "x": 110.97299634344529,
+      "y": 229.08260300988624,
+      "width": 42.06,
+      "height": 141.6,
+      "label": "W24×55",
+      "strokeColor": "#1a4d8f",
+      "lineWidth": 2,
+      "points": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 42.06,
+          "y": 0
+        },
+        {
+          "x": 42.06,
+          "y": 3.03
+        },
+        {
+          "x": 22.215,
+          "y": 3.03
+        },
+        {
+          "x": 22.215,
+          "y": 138.57
+        },
+        {
+          "x": 42.06,
+          "y": 138.57
+        },
+        {
+          "x": 42.06,
+          "y": 141.6
+        },
+        {
+          "x": 0,
+          "y": 141.6
+        },
+        {
+          "x": 0,
+          "y": 138.57
+        },
+        {
+          "x": 19.845,
+          "y": 138.57
+        },
+        {
+          "x": 19.845,
+          "y": 3.03
+        },
+        {
+          "x": 0,
+          "y": 3.03
+        }
+      ],
+      "pluginProvenance": {
+        "pluginId": "com.polypdf.steel-sections",
+        "pluginVersion": "1.0.6",
+        "generatorId": "aisc-steel-section/v1",
+        "dataVersion": "AISC-v16.0",
+        "parameters": {
+          "designation": "W24X55",
+          "unitSystem": "customary",
+          "drawingScale": "1\" = 1'-0\"",
+          "lineWidth": 2,
+          "strokeColor": "#1a4d8f"
+        }
+      },
+      "createdAt": "2026-08-19T11:21:24.292Z",
+      "modifiedAt": "2026-08-19T11:21:24.292Z"
+    },
+    "aiscDom": {
+      "visible": true,
+      "selected": true,
+      "rect": {
+        "x": 583.1243896484375,
+        "y": 463.4921875,
+        "width": 63.4296875,
+        "height": 213.5546875
+      }
+    },
+    "mutcd": null
+  },
+  "cgWindow": {
+    "capturedAt": "2026-08-19T11:31:41Z",
+    "queriedPID": 64240,
+    "windows": [
+      {
+        "alpha": 1,
+        "bounds": {
+          "height": 1073,
+          "width": 1710,
+          "x": 0,
+          "y": 34
+        },
+        "layer": 0,
+        "onScreen": true,
+        "ownerName": "PolyPDF",
+        "ownerPID": 64240,
+        "sharingState": 1,
+        "windowName": "PolyPDF",
+        "windowNumber": 1997
+      }
+    ]
+  },
+  "assertions": {
+    "exactSourceCommit": true,
+    "exactTrackedDiff": true,
+    "exactOwnedRootPID": true,
+    "exactOwnedUserData": true,
+    "expectedFixtureOpened": true,
+    "processAliveAtProof": true,
+    "appVersion": true,
+    "darkAppSetting": true,
+    "darkRenderer": true,
+    "rendererNativeGeometry": true,
+    "cgWindowNativeGeometry": true,
+    "cgWindowOwnedByExactPID": true,
+    "screenshotExactPhysicalDimensions": true,
+    "screenshotMatchesNativeDpr": true,
+    "themeProofPassed": true,
+    "fullStyleToolbarVisible": true,
+    "noStyleToolbarOverflow": true,
+    "correctOwnedFixture": true,
+    "activePluginPanel": true,
+    "noDialog": true,
+    "genuinePluginProvenance": true,
+    "visibleSelectedOutput": true,
+    "outputInsideFixture": true
+  },
+  "failedAssertions": [],
+  "passes": true
+}

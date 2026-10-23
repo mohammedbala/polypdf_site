@@ -1,0 +1,54 @@
+
+> polypdf-landing@1.0.0 build
+> node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs && node scripts/international/build.cjs && node scripts/international/verify.cjs
+
+Generated 42 route records, 13 guides, sitemap.xml, feed.xml and llms.txt.
+
+> polypdf-landing@1.0.0 verify:screenshots
+> node scripts/verify-screenshot-evidence.mjs
+
+PASS screenshot evidence: 64 PNG(s), 0 violation(s), 45 evidence record(s).
+Inventory: guide-hero-source=14, guide-public-hero=14, og-template-dependency=1, public-guide-root=18, public-og=1, public-reference=19, rendered-data-reference=60, script-reference=2, site-screenshot-root=45, src-reference=60.
+Missing records: 0; orphan public guides: 0.
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  266.91 kB (+134 B)  build/static/js/main.1a0c2aa9.js
+  25.26 kB            build/static/css/main.f1418c56.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+
+Generated server-readable metadata for 42 routes and the 404 page.
+Prerendered 42 routes plus the static 404 page.
+Verified prerendered markup and JSON-LD for 42 routes.
+Localized 30 pages: es
+Localized 30 pages: pt-br
+Localized 30 pages: de
+Localized 30 pages: fr
+Localized 30 pages: ar
+Localized 30 pages: hi
+Localized 30 pages: zh-cn
+Localized 30 pages: ja
+International publishing: 240 pages; 2139 unique source strings.
+Verified Español: 30 full pages.
+Verified Português (Brasil): 30 full pages.
+Verified Deutsch: 30 full pages.
+Verified Français: 30 full pages.
+Verified العربية: 30 full pages.
+Verified हिन्दी: 30 full pages.
+Verified 简体中文: 30 full pages.
+Verified 日本語: 30 full pages.
+International SEO/AEO verification passed: 240 pages, 8 languages; content parity, code, assets, links, schema, canonical, hreflang, RTL and sitemap.

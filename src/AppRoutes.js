@@ -1,0 +1,112 @@
+import React from 'react';
+import { SiteMotionProvider } from './components/SiteMotion';
+import CheckoutReviewProvider from './components/CheckoutReview';
+import { Route, Routes, useLocation } from 'react-router';
+import ToolkitApp from './components/ToolkitApp';
+import { toolkitLocale, toolkitRoutes, sourceRoute } from './toolkit/language';
+import Cookies from './components/Cookies';
+import Accessibility from './components/Accessibility';
+import CookieConsent from './components/CookieConsent';
+import Account from './components/Account';
+import Teams from './components/Teams';
+import TeamsSetup from './components/TeamsSetup';
+import TeamsGuide from './components/TeamsGuide';
+import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
+import BuildYourOwnPlugin from './components/BuildYourOwnPlugin';
+import Buy from './components/Buy';
+import FeatureRequests from './components/FeatureRequests';
+import Home from './components/Home';
+import NotFound from './components/NotFound';
+import Privacy from './components/Privacy';
+import Refund from './components/Refund';
+import RouteMetadata from './components/RouteMetadata';
+import RouteNavigation from './components/RouteNavigation';
+import LanguageSelector from './components/LanguageSelector';
+import Support from './components/Support';
+import SiteFooter from './components/SiteFooter';
+import WindowsPreview from './components/WindowsPreview';
+import Terms from './components/Terms';
+import VersionHistory from './components/VersionHistory';
+import WorkflowLanding from './components/WorkflowLanding';
+import BluebeamAlternative from './components/BluebeamAlternative';
+import ProductFacts from './components/ProductFacts';
+import { GrowthLanding, SamplesPage, CalculatorPage } from './components/GrowthPages';
+import { PdfToolsHub, PdfToolPage, PdfAutomationPage } from './components/PdfTools';
+import ScaleCheckPage from './components/ScaleCheckPage';
+import TakeoffSpreadsheetPage from './components/TakeoffSpreadsheetPage';
+import { landingPages } from './lib/landingPages';
+import './App.css';
+import './Monochrome.css';
+
+// Everything inside the router lives here so the same tree can be rendered two ways:
+// - src/App.js wraps it in BrowserRouter for the real site, and
+// - scripts/prerender.js wraps it in StaticRouter to write each route's static HTML at build time.
+const AppRoutes = ({toolkitStrings, toolkitCollect, toolkitMissing} = {}) => {
+  const location = useLocation();
+  const locale = toolkitLocale(location.pathname);
+  if (locale && toolkitRoutes.includes(sourceRoute(location.pathname))) return <ToolkitApp locale={locale} strings={toolkitStrings} collect={toolkitCollect} missing={toolkitMissing}/>;
+  return (
+    <div className="App">
+      <RouteMetadata />
+      <RouteNavigation />
+      <SiteMotionProvider>
+      <CheckoutReviewProvider>
+        <a className="site-skip-link" href="#site-content">Skip to content</a>
+        <CookieConsent />
+        <div className="site-language-bar"><div className="container"><LanguageSelector /></div></div>
+        <div id="site-content" tabIndex={-1}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/buy" element={<Buy />} />
+            {/* The app's upgrade dialog opens /buy with source=/utm_source= set, and Buy detects that
+                on its own — so every already-installed copy gets the in-app view without an app
+                release. /upgrade is the stable short URL for support replies and for a future build to
+                point at directly; it renders the same view unconditionally. */}
+            <Route path="/upgrade" element={<Buy forceInApp />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/teams" element={<Teams />} />
+            <Route path="/teams/setup" element={<TeamsSetup />} />
+            <Route path="/teams/guide" element={<TeamsGuide />} />
+            <Route path="/build-a-plugin" element={<BuildYourOwnPlugin />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/cookies" element={<Cookies />} />
+            <Route path="/accessibility" element={<Accessibility />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/refund" element={<Refund />} />
+            <Route path="/feature-requests" element={<FeatureRequests />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/windows" element={<WindowsPreview />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/versions" element={<VersionHistory />} />
+            <Route path="/pdf-measuring-tool" element={<GrowthLanding kind="measurement" />} />
+            <Route path="/electrical-takeoff-software" element={<GrowthLanding kind="electrical" />} />
+            <Route path="/flooring-takeoff-software" element={<GrowthLanding kind="flooring" />} />
+            <Route path="/bluebeam-alternative" element={<GrowthLanding kind="comparison" />} />
+            <Route path="/samples" element={<SamplesPage />} />
+            <Route path="/product-facts" element={<ProductFacts />} />
+            <Route path="/tools" element={<PdfToolsHub />} />
+            <Route path="/tools/automation" element={<PdfAutomationPage />} />
+            <Route path="/tools/:toolId" element={<PdfToolPage />} />
+            <Route path="/tools/flooring-waste-calculator" element={<CalculatorPage />} />
+            <Route path="/tools/pdf-scale-checker" element={<ScaleCheckPage />} />
+            <Route path="/tools/construction-takeoff-spreadsheet" element={<TakeoffSpreadsheetPage />} />
+            <Route path="/bluebeam-alternative-for-mac" element={<BluebeamAlternative />} />
+            <Route path={landingPages.revisionPackages.path} element={<WorkflowLanding page={landingPages.revisionPackages} />} />
+            <Route path={landingPages.pdfTakeoffSoftware.path} element={<WorkflowLanding page={landingPages.pdfTakeoffSoftware} />} />
+            <Route path={landingPages.measurePdfOnMac.path} element={<WorkflowLanding page={landingPages.measurePdfOnMac} />} />
+            <Route path={landingPages.constructionPdfMarkup.path} element={<WorkflowLanding page={landingPages.constructionPdfMarkup} />} />
+            <Route path={landingPages.visualSearchPdfCount.path} element={<WorkflowLanding page={landingPages.visualSearchPdfCount} />} />
+            <Route path={landingPages.comparePdfDrawings.path} element={<WorkflowLanding page={landingPages.comparePdfDrawings} />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+        <SiteFooter />
+      </CheckoutReviewProvider>
+      </SiteMotionProvider>
+    </div>
+  );
+};
+
+export default AppRoutes;

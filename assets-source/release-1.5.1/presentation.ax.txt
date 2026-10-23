@@ -1,0 +1,22 @@
+Local checkout path abbreviated; UI values unchanged.
+Window: "PolyPDF", App: PolyPDF.
+0 standard window PolyPDF, Secondary Actions: Raise
+	1 container PolyPDF
+		2 container
+			3 HTML content PolyPDF, URL: file://<desktop-checkout>/polypdf/.tmp/sparkle-private-1.5.1-23/install/PolyPDF.app/Contents/Resources/app.asar/dist/renderer/index.html
+				4 container Presentation Mode
+					5 button (disabled) Previous Page
+					6 text 1 / 1
+					7 button (disabled) Next Page
+					8 button Exit Presentation (Esc)
+9 menu bar
+	10 PolyPDF
+	11 File
+	12 Edit​
+	13 View
+	14 Document
+	15 Tools
+	16 Window
+	17 Help
+
+The focused UI element is 3 HTML content PolyPDF, URL: file://<desktop-checkout>/polypdf/.tmp/sparkle-private-1.5.1-23/install/PolyPDF.app/Contents/Resources/app.asar/dist/renderer/index.html

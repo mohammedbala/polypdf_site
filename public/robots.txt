@@ -1,0 +1,150 @@
+# robots.txt for https://www.polypdf.com
+#
+# Policy decision (2026-08-08): this is a marketing site — being read, cited, and recommended by
+# search engines AND answer engines (ChatGPT, Claude, Perplexity, Google AI features) is the goal.
+# AI crawlers are therefore deliberately ALLOWED, including training-corpus crawlers: appearing in
+# model training data is upside for a product site, not a leak. Every route now ships fully
+# prerendered HTML, so crawlers that do not execute JavaScript still read complete pages.
+# A machine-readable product summary for LLMs lives at /llms.txt.
+#
+# /static/ (JS/CSS) is intentionally NOT blocked: Google renders pages and penalizes blocked
+# resources. /account is kept out of indexes via its noindex meta robots tag, not here.
+
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# --- AI / answer-engine crawlers: explicitly welcome ---------------------------------------------
+# Listed by name so a future tightening of the wildcard policy cannot silently lock them out.
+
+# OpenAI: training (GPTBot), search index (OAI-SearchBot), on-demand user fetches (ChatGPT-User)
+User-agent: GPTBot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: OAI-SearchBot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: ChatGPT-User
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# Anthropic: training (ClaudeBot), search (Claude-SearchBot), user fetches (Claude-User)
+User-agent: ClaudeBot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: Claude-SearchBot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: Claude-User
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# Perplexity: index (PerplexityBot), user fetches (Perplexity-User)
+User-agent: PerplexityBot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: Perplexity-User
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# Google: Google-Extended governs Gemini/AI training use (AI Overviews uses regular Googlebot)
+User-agent: Google-Extended
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# Apple Intelligence training opt-in
+User-agent: Applebot-Extended
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# Meta AI training
+User-agent: meta-externalagent
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# Amazon (Alexa/Rufus answers)
+User-agent: Amazonbot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# Common Crawl feeds many open training corpora
+User-agent: CCBot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# --- Traditional search & social preview crawlers ------------------------------------------------
+
+User-agent: Googlebot-Image
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: Bingbot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: DuckDuckBot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: Applebot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: facebookexternalhit
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: Twitterbot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: LinkedInBot
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+User-agent: WhatsApp
+Disallow: /api/
+Disallow: /admin/
+Allow: /
+
+# --- SEO-tool scrapers: blocked (no marketing value, real crawl load) ----------------------------
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+Sitemap: https://www.polypdf.com/sitemap.xml

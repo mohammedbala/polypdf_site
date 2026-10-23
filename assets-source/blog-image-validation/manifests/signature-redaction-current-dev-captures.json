@@ -1,0 +1,325 @@
+{
+  "version": 1,
+  "status": "passed",
+  "topics": [
+    "digital-signature-vs-visual-signature-vs-seal",
+    "redact-and-sanitize-pdf"
+  ],
+  "source": {
+    "captureSnapshotPath": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "trackedWorkingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "displayedVersion": "1.3.4",
+    "displayedBuild": "16"
+  },
+  "captureContract": {
+    "appearance": "dark",
+    "nativeWindowState": "maximized",
+    "runtimeBoundsCssPixels": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "screenAvailableBoundsCssPixels": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "devicePixelRatio": 2,
+    "capturePixels": [
+      3420,
+      2146
+    ],
+    "viewportEmulation": false,
+    "pageOnlyCrop": false,
+    "fullStyleToolbarVisible": true,
+    "styleToolbarOverflow": false,
+    "darkPixelGatePassed": true,
+    "manualVisualInspection": "passed"
+  },
+  "fixtures": [
+    {
+      "id": "signature-lifecycle",
+      "path": "../signature-lifecycle-current2-output/save-as-forms-signatures-working.pdf",
+      "sha256": "bf5986d60fd37de6c5c78ed0239ef2e3c6a2d4d4f9dc76854dbdd136467d5b83",
+      "rights": "Owned automated test fixture derived from the repository's generated Acrobat basic-form fixture; no customer or live workspace data.",
+      "visibleSyntheticValues": [
+        "PolyPDF Automation Signer",
+        "Ada Lovelace",
+        "Grace Hopper",
+        "Mohammed",
+        "QA",
+        "Legal"
+      ],
+      "visibleValueBoundary": "Mohammed, QA, and Legal are literal generated list-option values in the owned fixture, not customer names or a live reviewer roster."
+    },
+    {
+      "id": "signature-seal-test-sheet",
+      "path": "../fixtures/signature-seal-test-sheet.pdf",
+      "sha256": "3210d792e0c657a03071aba98b0f90012a0a958e49b0441247c16f6ebaba34fa",
+      "rights": "Owned synthetic test sheet with deliberately fictional TEST NOT VALID seal data."
+    },
+    {
+      "id": "redaction-supported-saved",
+      "path": "../redaction-output/redaction-supported-working.pdf",
+      "baselineSha256": "588d35c4a28c0041258e588eb3ae3509cfecf4a5d15216bda5c7f8eff027f360",
+      "sha256": "506f07e25297edc96222e3fb78fb5b0387363b89c8bf1a3cf9746aaf5ded7461",
+      "rights": "Owned synthetic fixture generated for this validation; no personal or customer data.",
+      "claimBoundary": "Saved-file verification covers the one selected direct, unfiltered native-text token CASE-ORCHID-742 only."
+    },
+    {
+      "id": "sanitize-saved",
+      "path": "../sanitize-output/sanitize-working.pdf",
+      "baselineSha256": "81a4ece673bd548001494d7a8ec2d702daf79060f13e5ed117916f779fcb1095",
+      "sha256": "42ce4f1fa883b70f8870554fa4325aa9c6236efbe2a5457fb68257931a9dd4de",
+      "rights": "Owned synthetic sanitation fixture; no personal or customer data.",
+      "claimBoundary": "Original metadata and the fixture JavaScript name tree were removed, but save wrote Producer and ModDate metadata; the direct FileAttachment payload and both image paths remained."
+    }
+  ],
+  "verificationReports": [
+    "../signature-capture-evidence.json",
+    "../signature-lifecycle-current2-report.json",
+    "../redaction-output/redaction-verification.json",
+    "../sanitize-output/sanitize-verification.json",
+    "../signature-redaction-sanitize-capture-audit.json"
+  ],
+  "captures": [
+    {
+      "id": "signature-valid-certificate",
+      "state": "reopened certificate validation panel",
+      "sourcePng": "../captures/signature-valid-certificate-dark.png",
+      "sourceSha256": "953adffc410748912609963737559751f223b3a61db0a241bb41af8067f89135",
+      "proof": {
+        "path": "../captures/signature-valid-certificate-dark.png.theme-proof.json",
+        "sha256": "5d188ca5d2736aeb88f54361b748736ea7ae8c1863fe4b29023c96f2b220a62c"
+      },
+      "claim": "The freshly reopened synthetic PDF reports Valid With Changes for a configured self-signed identity and shows its level-3 allowed and blocked change classes.",
+      "limits": "Configured-profile trust is not public CA trust; the signature covers an earlier revision and reports later allowed incremental changes.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/signature-valid-certificate-currentdev-dark-web.png",
+      "webSha256": "0d647561355065d8573c5b183e7908bf8432e7821dd0064ca149ad2f52986d42",
+      "webPixels": [1710, 1073],
+      "publicGuidePng": "../../../public/guides/digital-signature-vs-visual-signature-vs-seal.png",
+      "publicGuideSha256": "0d647561355065d8573c5b183e7908bf8432e7821dd0064ca149ad2f52986d42"
+    },
+    {
+      "id": "signature-certificate-technical",
+      "state": "expanded certificate technical details",
+      "sourcePng": "../captures/signature-certificate-technical-dark.png",
+      "sourceSha256": "e0574d474b36db8367c0f1743128411d71cf6efefbcb882d6e25f0f861cc9774",
+      "proof": {
+        "path": "../captures/signature-certificate-technical-dark.png.theme-proof.json",
+        "sha256": "bad4c9f178b8a1b7c3e59080f4dba3f1ab5d9d832fabc36bee323e864ac74c69"
+      },
+      "claim": "The panel reports valid Byte Range, CMS Digest, CMS Signature, configured trust, and certificate validity.",
+      "limits": "Timestamp, timestamp trust, LTV, and revocation evidence are missing; Modified After Signing is Yes and Covers Document is No.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/signature-certificate-technical-currentdev-dark-web.png",
+      "webSha256": "2c3adaaef2065eae5121fd70a7790a1c3c5cea39c73e0df1e29a779033dcc6af",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "signature-visual-chooser",
+      "state": "visual-signature chooser",
+      "sourcePng": "../captures/signature-visual-chooser-dark.png",
+      "sourceSha256": "7a9302be2e86c7d364787f15557cc8270960a41285f8c8260a0895eb55125c38",
+      "proof": {
+        "path": "../captures/signature-visual-chooser-dark.png.theme-proof.json",
+        "sha256": "638bcfe4c47c3aeb7811969fd8e5d9008f6222685ee5aaec96ffba250e417a8b"
+      },
+      "claim": "The current Apply Signature dialog displays a saved visual-signature appearance.",
+      "limits": "Visual mode is page appearance only and does not create a CMS signature.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/signature-visual-chooser-currentdev-dark-web.png",
+      "webSha256": "3faadbc85accbbebf35ba97f7a6ef716b0c8cbd1ab5107ebf17b3ee4850eb3ab",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "signature-visual-styles",
+      "state": "visual-signature style choices",
+      "sourcePng": "../captures/signature-visual-styles-dark.png",
+      "sourceSha256": "a777ef4835d8558614783aa81acf907229bdc81d6c4330ef9bb802e3a593a265",
+      "proof": {
+        "path": "../captures/signature-visual-styles-dark.png.theme-proof.json",
+        "sha256": "1b483251f7b30de5082418977fa6df237fe74da1aa17e8b3d4a94e49b6ede6c7"
+      },
+      "claim": "The dialog displays Standard, Classic, Flourish, Handwritten, and Formal visual styles.",
+      "limits": "A style does not identify a certificate holder or protect PDF bytes.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/signature-visual-styles-currentdev-dark-web.png",
+      "webSha256": "af1cacc791943c8ff7178f0fffebf130e5cab6a98e4ee5a2d528e49d40ad143a",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "signature-seal-builder-warning",
+      "state": "Professional Seal Maker warning",
+      "sourcePng": "../captures/signature-seal-builder-warning-dark.png",
+      "sourceSha256": "7d868a3748f7c2d9fe053efd8119e0ec33fe72f7bc3ff5a754399a9e4afe909e",
+      "proof": {
+        "path": "../captures/signature-seal-builder-warning-dark.png.theme-proof.json",
+        "sha256": "f416888aa46ca0cb9f3cbf2bc165a2bcc7fc9029b75f59d0ae191a3aa50f1758"
+      },
+      "claim": "The current plugin displays deliberately fictional TEST NOT VALID data and its artwork-only warning.",
+      "limits": "The graphic is not a cryptographic signature and does not verify licensure, authority, status, or board compliance.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/signature-seal-builder-warning-currentdev-dark-web.png",
+      "webSha256": "a3ff44188c4547b8e964bc212aa47c9a375a50921f48cc53aabd6518fc8b84aa",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "signature-seal-inserted",
+      "state": "fictional seal inserted and selected",
+      "sourcePng": "../captures/signature-seal-inserted-dark.png",
+      "sourceSha256": "588aaa1ec44c0c01264d339b7441887f02d433a0387218ee8f01b40b4e22e575",
+      "proof": {
+        "path": "../captures/signature-seal-inserted-dark.png.theme-proof.json",
+        "sha256": "b59236a938be0fe45bba6d467e5204f6436597ee409bbc1c48a0c2da2732b5f7"
+      },
+      "claim": "The exact fictional TEST NOT VALID seal is inserted and selected on an owned synthetic test sheet.",
+      "limits": "This proves editable visual placement only.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/signature-seal-inserted-currentdev-dark-web.png",
+      "webSha256": "f2c12a0d90e2793b3089f181501981831f5bf5aad504547076fbaf6c018c9664",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "redaction-reopened-search-no-matches",
+      "state": "saved and reopened search result",
+      "sourcePng": "../captures/redaction-reopened-search-no-matches-dark.png",
+      "sourceSha256": "958ca8de299a8d6275ceda9a2b729e692c5f21b71d89d253ecc4b866203d3aec",
+      "proof": {
+        "path": "../captures/redaction-reopened-search-no-matches-dark.png.theme-proof.json",
+        "sha256": "70369fa21d999fa47edfaa0ed73f33293bcb01d3460d8612703c7909b040a9ac"
+      },
+      "claim": "A fresh reopen shows No matches for CASE-ORCHID-742 and the applied black region.",
+      "limits": "This is evidence only for the one selected supported native-text token and this search path; the separate image remains.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/redaction-reopened-search-no-matches-currentdev-dark-web.png",
+      "webSha256": "63fa912b6f7b0d8ccc1f641638d8945cd49a36aada9d41ab19e77c152e4edd88",
+      "webPixels": [1710, 1073],
+      "publicGuidePng": "../../../public/guides/redact-and-sanitize-pdf.png",
+      "publicGuideSha256": "63fa912b6f7b0d8ccc1f641638d8945cd49a36aada9d41ab19e77c152e4edd88"
+    },
+    {
+      "id": "redaction-before",
+      "state": "supported native-text fixture before redaction",
+      "sourcePng": "../captures/redaction-lab-before-dark.png",
+      "sourceSha256": "40ceaed1040687c5d3bbad0d8e5ff0badad246b95a023919d3053f7265ee6a93",
+      "proof": {
+        "path": "../captures/redaction-lab-before-dark.png.theme-proof.json",
+        "sha256": "4a84f4ae632d44b9e092c4afc95e1171eafee11a09e897da8ae748b5cc184180"
+      },
+      "claim": "The controlled fixture visibly contains one direct unfiltered CASE-ORCHID-742 text target and a separate raster sample.",
+      "limits": "A before frame identifies the target but proves no removal.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/redaction-lab-before-currentdev-dark-web.png",
+      "webSha256": "a054ce04af7385163f1d19ad498f4c596fc14a2a50007a2cd8f5c950262f11bd",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "redaction-marked",
+      "state": "redaction preview over target",
+      "sourcePng": "../captures/redaction-marked-text-dark.png",
+      "sourceSha256": "96067b0185d993a3440fdabe8cc341b535d36e19525ef265071273e350c24d6e",
+      "proof": {
+        "path": "../captures/redaction-marked-text-dark.png.theme-proof.json",
+        "sha256": "51f9e1feb390f898e2eb7565c82eb9d23428133c45570e9718ff4f9bb1282cd6"
+      },
+      "claim": "The current Redact tool preview is placed over the one supported token.",
+      "limits": "A marked preview is a requested region, not proof of applied or saved removal.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/redaction-marked-text-currentdev-dark-web.png",
+      "webSha256": "082feb95b53a13792e3ae42582965794998c0af630e772861956ca7b909897d1",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "redaction-confirmation",
+      "state": "Apply Redactions confirmation dialog",
+      "sourcePng": "../captures/redaction-apply-confirmation-dark.png",
+      "sourceSha256": "85d27f772c464b5385618b587dfb8a8945fc6417c69f27ab291a0952c6f87558",
+      "proof": {
+        "path": "../captures/redaction-apply-confirmation-dark.png.theme-proof.json",
+        "sha256": "31093d915ea1e3d46d1c38a665b9d6bcfdb9e33832bd54bf84004500fdde4276"
+      },
+      "claim": "The screenshot records the actual current confirmation wording for one marked region.",
+      "limits": "Dialog wording is not proof of universal or saved-file removal.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/redaction-apply-confirmation-currentdev-dark-web.png",
+      "webSha256": "d264935759740f89f6ea652497569aae6c05bf770bf1fef076a6f9f318fbae3a",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "redaction-applied",
+      "state": "applied black region with separate image retained",
+      "sourcePng": "../captures/redaction-applied-result-dark.png",
+      "sourceSha256": "ceb32ad616bbc377e03895e4710761da4f7a995823c9b024635bdf8dba43f84b",
+      "proof": {
+        "path": "../captures/redaction-applied-result-dark.png.theme-proof.json",
+        "sha256": "a2523cc8acf04e974f580db24f0458be7fd10fa62f2d4caf7de55346496edfb0"
+      },
+      "claim": "The applied black region is visible and the separate raster image remains on the page.",
+      "limits": "Visual appearance alone is not saved-byte removal evidence.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/redaction-applied-result-currentdev-dark-web.png",
+      "webSha256": "d807ba4d5f7c53ae9f813dab8a5b4b440229d59670f1b8a00910dc674b0a673c",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "sanitize-options",
+      "state": "Sanitize Document defaults and warning",
+      "sourcePng": "../captures/sanitize-options-dark.png",
+      "sourceSha256": "5737a7fa0a759ac88e2003c5942dbc4ad37de1ad59717f4080c67fa37df82171",
+      "proof": {
+        "path": "../captures/sanitize-options-dark.png.theme-proof.json",
+        "sha256": "12386507a98a5f5db3359ce1ba4430ac37d5f45c3c72669caf042255438bc6d6"
+      },
+      "claim": "The current dialog selects metadata, thumbnails, attachments, and JavaScript/actions while leaving form/signature removal off.",
+      "limits": "The option labels and defaults do not prove the saved object inventory.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/sanitize-options-currentdev-dark-web.png",
+      "webSha256": "44dc6141b84016d080984d38e6e42cc4d08e12a4da34f0b1bc7b47c04bd4b7ca",
+      "webPixels": [1710, 1073]
+    },
+    {
+      "id": "sanitize-result",
+      "state": "Sanitize Document UI-reported result",
+      "sourcePng": "../captures/sanitize-result-dark.png",
+      "sourceSha256": "95b7b9ec7d6fd8d4f8766c466a36b0fcf4585f74ff79ff75e476ebd84881ce5e",
+      "proof": {
+        "path": "../captures/sanitize-result-dark.png.theme-proof.json",
+        "sha256": "3a785fb8abaf0bad49ef56980b66634a901e26a20b462e3e8408c977b8f9057c"
+      },
+      "claim": "The current footer reports removal of metadata and one JavaScript/action entry for this run.",
+      "limits": "Saved-file inspection found new Producer and ModDate metadata, the unchanged direct FileAttachment payload, and retained top-level and nested image paths; recursive action traversal was not proven.",
+      "sourcePixels": [3420, 2146],
+      "webPng": "../../../src/assets/screenshots/sanitize-result-currentdev-dark-web.png",
+      "webSha256": "b35712a2bd9c4d9784fd1e7afd3ac4878b96ac5b0d6c803bc82f7bf38eea7a1d",
+      "webPixels": [1710, 1073]
+    }
+  ],
+  "publicationScope": {
+    "approvedWebPngs": [
+      "../../../src/assets/screenshots/signature-valid-certificate-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/signature-certificate-technical-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/signature-visual-chooser-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/signature-visual-styles-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/signature-seal-builder-warning-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/signature-seal-inserted-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/redaction-reopened-search-no-matches-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/redaction-lab-before-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/redaction-marked-text-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/redaction-apply-confirmation-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/redaction-applied-result-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/sanitize-options-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/sanitize-result-currentdev-dark-web.png"
+    ],
+    "approvedPublicHeroes": [
+      "../../../public/guides/digital-signature-vs-visual-signature-vs-seal.png",
+      "../../../public/guides/redact-and-sanitize-pdf.png"
+    ]
+  },
+  "webTransformation": "Exact 50% full-frame derivative of each 3420x2146 native-maximized source, producing 1710x1073 pixels; metadata stripped and PNG compression level 9. No interface elements were added, removed, rearranged, cropped, or retouched.",
+  "privateKeyHandling": "Generated PKCS#12 files are not publication assets and were moved out of the site tree to the isolated temporary capture workspace."
+}

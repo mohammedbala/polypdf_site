@@ -1,0 +1,754 @@
+{
+  "/": {
+    "title": "Construction PDF Takeoff & Markup Software | PolyPDF",
+    "description": "Measure PDF drawings, count symbols, compare revisions, and review markups on Mac and Windows. Start free; unlock PolyPDF Pro with one payment.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/buy": {
+    "title": "Buy PolyPDF Pro Once | Measurements, Search & Plugins",
+    "description": "Unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates on three Mac or Windows computers for $74.95 once.",
+    "robots": "index, follow"
+  },
+  "/upgrade": {
+    "title": "Upgrade to PolyPDF Pro | Unlock Every Pro Workflow",
+    "description": "Unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates for $74.95 once, with a 14-day guarantee.",
+    "robots": "noindex, follow"
+  },
+  "/build-a-plugin": {
+    "title": "Build a PolyPDF Plugin | Developer Guide",
+    "description": "Build signed, no-code PolyPDF plugin packages with Node and a drawing tool. Installing and running plugin workflows requires PolyPDF Pro.",
+    "robots": "index, follow"
+  },
+  "/account": {
+    "title": "PolyPDF Account | Manage Your License",
+    "description": "Use a secure email sign-in link to view your PolyPDF purchases, license details, and activated computers.",
+    "robots": "noindex, nofollow"
+  },
+  "/blog": {
+    "title": "PolyPDF Guides | PDF Measurement, Takeoff & Markup",
+    "description": "Practical guides to PDF measurement, takeoff, markup, revision review, forms, and OCR in PolyPDF for Mac and Windows.",
+    "robots": "index, follow"
+  },
+  "/blog/polypdf-1-5-5": {
+    "title": "PolyPDF 1.5.5: Zoom Controls and Snapshot Fixes",
+    "description": "PolyPDF 1.5.5 for Mac and Windows adds customizable wheel and drag zoom, Shift panning, and fixes for snapshot sizing and saved orientation.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/polypdf-1-5-5.png?v=1.4.0-17",
+    "imageAlt": "PolyPDF 1.4.0 example of a measured area with two cutouts and a depth value on a survey drawing",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/polypdf-1-5-4": {
+    "title": "PolyPDF 1.5.4: Highlights, Arcs & Cutouts",
+    "description": "PolyPDF 1.5.4 for Mac and Windows improves highlights, arc handles, area cutouts, estimate scrolling, shared-drive opening checks, and interactive PDFs.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/polypdf-1-5-4.png?v=1.4.0-17",
+    "imageAlt": "PolyPDF 1.4.0 example of a measured area with two cutouts and a depth value on a survey drawing",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/polypdf-1-5-1": {
+    "title": "PolyPDF 1.5.1: Stamps, Symbols & Presentation Mode",
+    "description": "PolyPDF 1.5.1 is out for Mac and Windows: interactive stamps, expanded symbols, Presentation Mode, clearer metric defaults, and more reliable PDF review.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/polypdf-1-5-1.png?v=1.5.1-23",
+    "imageAlt": "PolyPDF 1.5.1 stamp canvas with REVIEWED heading, reviewer, date, and optional toolset saving",
+    "imageWidth": 1233,
+    "imageHeight": 768
+  },
+  "/blog/quantity-takeoff": {
+    "title": "Quantity Takeoff: Process, Examples & Checks | PolyPDF",
+    "description": "Learn how quantity takeoff turns drawings into checked areas, lengths, and counts. Separate waste and pricing, and practice with downloadable PDFs.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/quantity-takeoff.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF dark-mode takeoff with a 540 square foot area, 30 foot length, 12 count markers, Records panel, and Markup Table",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/create-interactive-pdf-stamps": {
+    "title": "Create Interactive PDF Review Stamps | PolyPDF",
+    "description": "Build interactive PDF stamps in PolyPDF 1.5.1. Arrange fields, prompt for a reviewer, add an automatic date, and save reusable stamps on Mac or Windows.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/create-interactive-pdf-stamps.png?v=1.5.1-23",
+    "imageAlt": "PolyPDF 1.5.1 interactive stamp builder showing a REVIEWED heading, Morgan Lee reviewer, automatic date, and checked Add to toolset option",
+    "imageWidth": 1233,
+    "imageHeight": 768
+  },
+  "/blog/calibrate-pdf-drawing-scale": {
+    "title": "How to Calibrate a PDF Drawing Scale | PolyPDF",
+    "description": "Calibrate PDF drawing scale from a known dimension. Download a practice plan, check two reference spans, and try a net-area measurement in PolyPDF.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/calibrate-pdf-drawing-scale.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF dark-mode window showing an 18 PDF point per foot calibration and selected 12-foot verification measurement",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/why-pdf-measurements-are-wrong": {
+    "title": "Why PDF Measurements Are Wrong | PolyPDF Guide",
+    "description": "Find the cause of wrong PDF measurements: page scale, units, endpoints, mixed-scale details, or scan distortion. Includes a practical diagnostic order.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/why-pdf-measurements-are-wrong.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF dark mode showing Scale Not set and a 360.00 PDF-point line over a printed 20-foot reference",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/measure-pdf-area-cutouts-depth": {
+    "title": "Measure PDF Area, Cutouts, and Volume | PolyPDF",
+    "description": "Measure net PDF area, distinguish interior cutouts from edge exclusions, and check a 408 sq ft practice result against saved PDF and CSV outputs.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/measure-pdf-area-cutouts-depth.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF dark mode showing a turquoise curved and crosshatched demonstration area with two cutouts, 28,793.49 square feet net, and 1 foot 6 inch depth",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/pdf-takeoff-worked-example": {
+    "title": "PDF Takeoff Worked Example | PolyPDF Guide",
+    "description": "Follow a practical PDF takeoff example: calibrate the plan, measure area and lengths, auto-count symbols, review records, and export CSV or PDF.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/pdf-takeoff-worked-example.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF dark-mode takeoff with a 540 square foot area, 30 foot length, 12 count markers, Records panel, and Markup Table",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/count-pdf-symbols": {
+    "title": "How to Count Symbols in a PDF Drawing | PolyPDF",
+    "description": "Count repeated symbols with PolyPDF Pro Symbol Search, including setup, candidate review, false-positive checks, and takeoff QA.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/count-pdf-symbols.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF dark-mode Symbol Search review showing five matched symbols, five selected candidates, and a Count 5 action",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/pdf-markup-table-rfi-punch-list": {
+    "title": "PDF Markup Table for RFI and Punch Lists | PolyPDF",
+    "description": "Organize PDF comments for RFI and punch-list review with PolyPDF Markup Table filters, statuses, clear issue labels, and CSV or PDF exports.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/pdf-markup-table-rfi-punch-list.png?v=1.4.3-20",
+    "imageAlt": "A PolyPDF drawing review with an RFI callout, a revision cloud, a completed-work rectangle, and three matching Markup Table rows",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/compare-pdf-drawing-revisions": {
+    "title": "How to Compare PDF Drawing Revisions | PolyPDF",
+    "description": "Compare two PDF drawing revisions in PolyPDF, prepare aligned source files, review detected change clouds, and verify the saved comparison record.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/compare-pdf-drawing-revisions.png?v=1.4.3-20",
+    "imageAlt": "Dark-mode PolyPDF comparison result with four violet revision clouds, one selected cloud, full cloud style controls, and four visible Markup Table rows",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/create-fillable-pdf-form": {
+    "title": "How to Create a Fillable PDF Form | PolyPDF",
+    "description": "Create a fillable PDF form in PolyPDF. Download English and French practice forms, add AcroForm fields, and check saved values before sharing.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/create-fillable-pdf-form.png?v=1.4.3-20",
+    "imageAlt": "The PolyPDF Forms panel showing six field types beside a ten-field site inspection checklist",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/ocr-scanned-pdf-drawings": {
+    "title": "OCR Scanned PDF Drawings: Practical Guide | PolyPDF",
+    "description": "Run local AEC OCR on scanned PDF drawings, verify searchable text, and export best-effort schedules and tables to an Excel workbook.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/ocr-scanned-pdf-drawings.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF search panel showing three SURFACE results and a selected highlight on the U.S.S. Akron engineering scan after OCR",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/digital-signature-vs-visual-signature-vs-seal": {
+    "title": "Digital vs Visual PDF Signatures and Seals | PolyPDF",
+    "description": "Compare certificate-backed PDF signatures, visual marks, and professional seal artwork, including integrity, trust, limits, and a safe issue order.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/digital-signature-vs-visual-signature-vs-seal.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF Signatures panel showing a reopened signed drawing reported as Valid With Changes with level 3 permissions",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/redact-and-sanitize-pdf": {
+    "title": "Redact and Sanitize a PDF: PolyPDF Limits",
+    "description": "Learn what PolyPDF redaction and sanitation can remove, what can survive, and how to verify a saved PDF before deciding whether it is safe to share.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/redact-and-sanitize-pdf.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF showing a reopened redaction result with a black region and Search reporting no matches for CASE-ORCHID-742",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/prepare-issued-pdf-set": {
+    "title": "How to Prepare an Issued PDF Set | PolyPDF",
+    "description": "Prepare an issued PDF set with page labels, Bates numbering, headers, footers, watermarks, preflight, and final-viewer verification in PolyPDF.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/prepare-issued-pdf-set.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF showing a five-sheet issue set with the Bates identifier ISSUED-IFC-0101 printed on sheet G-001",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/blog/how-to-use-polypdf-collaboration-beta": {
+    "title": "How to Use PolyPDF Collaboration Beta",
+    "description": "Set up PolyPDF Collaboration Beta on a company file share, approve Mac and Windows users, sync markups, resolve conflicts, and restore signed history.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/how-to-use-polypdf-collaboration-beta.png?v=1.4.3-20",
+    "imageAlt": "PolyPDF Collaboration Beta settings over a sample drawing, with company connection, mounted share, signed history, and conflict center sections",
+    "imageWidth": 1224,
+    "imageHeight": 768
+  },
+  "/blog/introducing-polypdf-plugins": {
+    "title": "PolyPDF Plugins: How They Work",
+    "description": "How PolyPDF Pro plugins handle declarative packages, permissions, sideload consent, and the steel-section, seal, and map generators included with the app.",
+    "robots": "index, follow",
+    "type": "article",
+    "image": "/guides/introducing-polypdf-plugins.png?v=1.4.3-20",
+    "imageAlt": "The PolyPDF Plugins sidebar listing AISC Steel Sections, PDF Maps, and Professional Seal Maker beside a blank sample sheet",
+    "imageWidth": 1710,
+    "imageHeight": 1073
+  },
+  "/privacy": {
+    "title": "Privacy Policy | PolyPDF",
+    "description": "Learn how PolyPDF handles website, checkout, licensing, diagnostics, and support data while keeping your PDF content on your computer.",
+    "robots": "index, follow"
+  },
+  "/refund": {
+    "title": "Refund Policy | PolyPDF",
+    "description": "Read the PolyPDF refund policy for one-time Pro license purchases, including eligibility, timing, and statutory rights.",
+    "robots": "index, follow"
+  },
+  "/feature-requests": {
+    "title": "PolyPDF Feature Requests | Suggest Product Ideas",
+    "description": "Suggest a PolyPDF improvement by email and learn what details help the team evaluate ideas for future Mac and Windows releases.",
+    "robots": "index, follow"
+  },
+  "/support": {
+    "title": "PolyPDF Support | Help With PDF Measurement and Licensing",
+    "description": "Get help with PolyPDF installation, PDF measurement and markup workflows, license activation, and account access.",
+    "robots": "index, follow"
+  },
+  "/windows": {
+    "title": "PolyPDF for Windows | PDF Measurement and Markup",
+    "description": "Download PolyPDF for Windows 10 and 11. Measure PDF drawings, review markups, and compare revisions. Start free with no trial timer.",
+    "robots": "index, follow"
+  },
+  "/terms": {
+    "title": "Terms of Use | PolyPDF",
+    "description": "Read the terms that apply to PolyPDF Free, PolyPDF Pro licenses, updates, support, acceptable use, and liability.",
+    "robots": "index, follow"
+  },
+  "/versions": {
+    "title": "PolyPDF Version History | Release Notes",
+    "description": "Read PolyPDF release notes for Mac and Windows, including current versions, fixes, and the update history for your desktop app.",
+    "robots": "index, follow"
+  },
+  "/revision-packages": {
+    "title": "Revision Package Workflow for PDF Drawings | PolyPDF",
+    "description": "Import drawing issues, reconcile sheets, carry review work forward, inspect changes and impact, review references, and publish a current PDF package.",
+    "robots": "index, follow"
+  },
+  "/pdf-takeoff-software": {
+    "title": "Construction Takeoff Software for Mac & Windows | PolyPDF",
+    "description": "Compare Free and Pro PDF takeoff for Mac and Windows. Try 3 measurements per document, inspect sample exports, and review one-time Pro licensing.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/measure-pdf-on-mac": {
+    "title": "Measure a PDF on Mac | PolyPDF Drawing Tools",
+    "description": "Measure PDF drawings on Mac with calibrated distance, area, perimeter, angle, and count tools in a local-first desktop app. Start free.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/construction-pdf-markup": {
+    "title": "PDF Markup Software for Construction | PolyPDF",
+    "description": "Review construction PDFs on Mac and Windows. Start with free markup, track issues in the Markup Table, and check PDF and CSV handoffs before buying Pro.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/visual-search-pdf-count": {
+    "title": "Visual Search PDF Symbol Count | PolyPDF",
+    "description": "Count drawing symbols with PolyPDF Pro on Mac and Windows. Inspect a practice PDF, review fixture candidates, and check quantities before exporting.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-17"
+  },
+  "/compare-pdf-drawings": {
+    "title": "Compare PDF Drawings on Mac & Windows | PolyPDF",
+    "description": "Compare PDF drawings on Mac and Windows. Try a free comparison, inspect a sample A/B pair, and choose colored overlays or Revision Packages with Pro.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/cookies": {
+    "title": "Cookie Policy | PolyPDF",
+    "description": "Choose optional cookies, learn what PolyPDF stores, and manage analytics and advertising measurement.",
+    "robots": "index, follow"
+  },
+  "/accessibility": {
+    "title": "Accessibility | PolyPDF",
+    "description": "Accessibility features, known limitations and help using the PolyPDF website.",
+    "robots": "index, follow"
+  },
+  "/teams": {
+    "title": "PolyPDF Teams | Company SSO and License Management",
+    "description": "Company-hosted license management and Microsoft Entra ID sign-in for PolyPDF. One-time pricing per named user.",
+    "robots": "noindex, follow"
+  },
+  "/teams/setup": {
+    "title": "Set up PolyPDF Teams | Administrator Guide",
+    "description": "Install and operate your company-hosted PolyPDF license manager with trusted HTTPS, Microsoft Entra sign-in, local seats and protected backups.",
+    "robots": "noindex, follow"
+  },
+  "/teams/guide": {
+    "title": "PolyPDF Teams Setup Guide | Install, Assign & Sign In",
+    "description": "Set up the PolyPDF License Manager, connect Microsoft Entra, assign team seats and help employees sign in. Includes troubleshooting and server maintenance.",
+    "robots": "index, follow",
+    "dateModified": "2026-09-25"
+  },
+  "/bluebeam-alternative-for-mac": {
+    "title": "Bluebeam Alternative for Mac | PolyPDF Takeoff & Markup",
+    "description": "Compare PolyPDF with Bluebeam’s current Mac options for PDF measurement, takeoff, markup, exports, and collaboration. Try your own drawings free.",
+    "robots": "index, follow",
+    "image": "/images/workflows/takeoff.webp",
+    "imageAlt": "PolyPDF measuring a sample construction plan with quantities in the takeoff worksheet",
+    "imageWidth": 1280,
+    "imageHeight": 800
+  },
+  "/pdf-measuring-tool": {
+    "title": "PDF Measuring Tool for Mac & Windows | PolyPDF",
+    "description": "Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/electrical-takeoff-software": {
+    "title": "Electrical Takeoff Software for Mac & Windows | PolyPDF",
+    "description": "Review electrical fixture counts and route lengths on Mac or Windows. Try the E101 sample, compare Free and Pro, and export quantities for estimating.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-17"
+  },
+  "/flooring-takeoff-software": {
+    "title": "Flooring Takeoff Software for Mac & Windows | PolyPDF",
+    "description": "Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/bluebeam-alternative": {
+    "title": "Bluebeam Alternative for Mac & Windows | PolyPDF",
+    "description": "Compare PolyPDF and Bluebeam for takeoff, markup and licensing. Use the migration checklist to test PDF handoff, quantities and Studio requirements.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/samples": {
+    "title": "Construction PDF Samples & Quantity Worksheets | PolyPDF",
+    "description": "Download 24 construction drawing sheets, architectural and MEP sample PDFs, detailed practice plans and quantity references. No signup required.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-17"
+  },
+  "/tools": {
+    "title": "36 Free Online PDF Tools — No Upload | PolyPDF",
+    "description": "Merge, split, convert, fill, number, and prepare PDFs in your browser. 36 free tools with local processing, previews, downloads, and MCP automation.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/flooring-waste-calculator": {
+    "title": "Flooring Waste Calculator: Area, Packs & Cost | PolyPDF",
+    "description": "Calculate flooring area with waste, round to whole packs, and estimate material cost. Add multiple rooms, switch units, and export your worksheet.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/product-facts": {
+    "title": "PolyPDF Product Facts: Platforms, Free & Pro, Limits",
+    "description": "Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-17"
+  },
+  "/tools/pdf-scale-checker": {
+    "title": "PDF Scale Accuracy Checker: Free Reference Check | PolyPDF",
+    "description": "Check horizontal and vertical PDF measurement errors against your project tolerance. Compare known dimensions and download a CSV record. Free, no upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-16"
+  },
+  "/tools/construction-takeoff-spreadsheet": {
+    "title": "Free Construction Takeoff Spreadsheet for Excel | PolyPDF",
+    "description": "Download a free Excel takeoff template. Map PDF quantities to units and rates, avoid duplicate CSV totals, and inspect a real PolyPDF export.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-17"
+  },
+  "/tools/automation": {
+    "title": "PDF Tools for AI Agents & MCP | PolyPDF",
+    "description": "Connect 36 local PDF tools to your AI assistant. Download the MCP server with bounded file access, structured inputs, repeat-safe requests, and checksums.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-18"
+  },
+  "/tools/merge-pdf": {
+    "title": "Merge PDF Online — Combine Files Free | PolyPDF",
+    "description": "Merge PDF files in your chosen order, preview the result, and download one PDF. Free browser tool with no account or file upload. Originals stay unchanged.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/merge-pdf.png",
+    "imageAlt": "Merge PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/split-pdf": {
+    "title": "Split PDF Online — Separate Pages Free | PolyPDF",
+    "description": "Split a PDF into individual pages or equal page groups. Preview your source, choose pages per file, and download separate PDFs or a ZIP. No file upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/split-pdf.png",
+    "imageAlt": "Split PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/extract-pdf-pages": {
+    "title": "Extract PDF Pages Online — Save Selected Pages | PolyPDF",
+    "description": "Extract selected pages from a PDF using numbers and ranges such as 1, 3-5. Save a new PDF in order, free in your browser without uploading files.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/extract-pdf-pages.png",
+    "imageAlt": "Extract PDF pages — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/delete-pdf-pages": {
+    "title": "Delete PDF Pages Online — Remove Pages Free | PolyPDF",
+    "description": "Remove unwanted pages from a PDF and save a separate copy. Enter page numbers or ranges, preview the remaining pages, and download free with no upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/delete-pdf-pages.png",
+    "imageAlt": "Delete PDF pages — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/organize-pdf": {
+    "title": "Organize PDF Online — Reorder PDF Pages Free | PolyPDF",
+    "description": "Reorder PDF pages with page arrows or a numbered sequence. Preview and save the rearranged PDF free, without uploading it or creating an account.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/organize-pdf.png",
+    "imageAlt": "Organize PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/rotate-pdf": {
+    "title": "Rotate PDF Online — Turn Selected Pages Free | PolyPDF",
+    "description": "Rotate PDF pages 90, 180, or 270 degrees clockwise. Select individual pages or rotate the whole document, preview, and download locally in your browser.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/rotate-pdf.png",
+    "imageAlt": "Rotate PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/duplicate-pdf-pages": {
+    "title": "Duplicate PDF Pages Online — Repeat Pages Free | PolyPDF",
+    "description": "Duplicate selected PDF pages and choose how many copies to add. Repeated pages follow each original. Preview and download free without uploading files.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/duplicate-pdf-pages.png",
+    "imageAlt": "Duplicate PDF pages — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/reverse-pdf-pages": {
+    "title": "Reverse PDF Page Order Online Free | PolyPDF",
+    "description": "Reverse PDF page order so the last page comes first. Fix back-to-front scans, preview the result, and download a new PDF free without uploading your file.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/reverse-pdf-pages.png",
+    "imageAlt": "Reverse PDF pages — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/insert-blank-pdf-pages": {
+    "title": "Insert Blank Pages into a PDF Online Free | PolyPDF",
+    "description": "Add blank pages to a PDF for notes, separators, or duplex printing. Choose an insertion point and count, preview and download free with no file upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/insert-blank-pdf-pages.png",
+    "imageAlt": "Insert blank pages — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/interleave-pdf": {
+    "title": "Interleave PDFs Online — Alternate Scanned Pages | PolyPDF",
+    "description": "Interleave two PDFs by alternating pages. Combine front and back scans, optionally reverse the second file, and download free without uploading files.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/interleave-pdf.png",
+    "imageAlt": "Interleave PDFs — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/jpg-to-pdf": {
+    "title": "JPG to PDF Online — Convert Photos Free | PolyPDF",
+    "description": "Convert JPG and JPEG images into one PDF. Arrange photos, choose paper size and margins, then preview and download free. Your images stay in your browser.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/jpg-to-pdf.png",
+    "imageAlt": "JPG to PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/png-to-pdf": {
+    "title": "PNG to PDF Online — Convert Images Free | PolyPDF",
+    "description": "Convert PNG screenshots and drawings into a PDF. Arrange images, retain transparency, and choose paper size and margins. Free local browser processing.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/png-to-pdf.png",
+    "imageAlt": "PNG to PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/webp-to-pdf": {
+    "title": "WebP to PDF Online — Convert Images Free | PolyPDF",
+    "description": "Convert WebP images into a printable PDF in your browser. Arrange images and choose page size and margins. Free conversion with no account or file upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/webp-to-pdf.png",
+    "imageAlt": "WebP to PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/pdf-to-jpg": {
+    "title": "PDF to JPG Online — Export PDF Pages Free | PolyPDF",
+    "description": "Convert PDF pages to JPG images. Choose resolution and quality, preview, and download single images or a ZIP. Free browser conversion with no upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/pdf-to-jpg.png",
+    "imageAlt": "PDF to JPG — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/pdf-to-png": {
+    "title": "PDF to PNG Online — Export Clear Page Images | PolyPDF",
+    "description": "Convert PDF pages to PNG images with adjustable resolution. Select pages and download images or a ZIP, free in your browser without file uploads.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/pdf-to-png.png",
+    "imageAlt": "PDF to PNG — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/pdf-to-webp": {
+    "title": "PDF to WebP Online — Convert Page Images Free | PolyPDF",
+    "description": "Convert PDF pages to WebP images with resolution and quality controls. Download pages individually or as a ZIP, free with local browser processing.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/pdf-to-webp.png",
+    "imageAlt": "PDF to WebP — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/pdf-to-text": {
+    "title": "PDF to Text Online — Extract Selectable Text | PolyPDF",
+    "description": "Extract existing PDF text into a UTF-8 text file with page references. Select pages, preview, and download free without uploading files. No OCR for scans.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/pdf-to-text.png",
+    "imageAlt": "PDF to text — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/text-to-pdf": {
+    "title": "Text to PDF Online — Create a PDF from Notes | PolyPDF",
+    "description": "Turn plain text into a PDF with a title, adjustable font size, automatic wrapping, and page breaks. Free browser tool with no account or document upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/text-to-pdf.png",
+    "imageAlt": "Text to PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/compress-pdf": {
+    "title": "Compress PDF Online — Reduce File Size Locally | PolyPDF",
+    "description": "Compress PDFs with lossless rewriting or image compression. See the file-size change before downloading. Free browser processing with no file upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/compress-pdf.png",
+    "imageAlt": "Compress PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/flatten-pdf": {
+    "title": "Flatten PDF Online — Make Form Values Static | PolyPDF",
+    "description": "Flatten PDF form fields into visible page content. Keep filled values in a static copy, preview, and download free without uploading PDFs or signing in.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/flatten-pdf.png",
+    "imageAlt": "Flatten PDF forms — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/fill-pdf-form": {
+    "title": "Fill PDF Forms Online Free — No Upload | PolyPDF",
+    "description": "Fill existing PDF form fields in your browser. Enter text, select options, check boxes, and download an editable copy free. Your PDF is not uploaded.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/fill-pdf-form.png",
+    "imageAlt": "Fill PDF forms — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/extract-pdf-form-data": {
+    "title": "Extract PDF Form Data to JSON Online Free | PolyPDF",
+    "description": "Export PDF form field names, types, options, and values as JSON. Inspect entries locally in your browser and download free without uploading the PDF.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/extract-pdf-form-data.png",
+    "imageAlt": "Extract form data — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/remove-pdf-annotations": {
+    "title": "Remove PDF Annotations & Comments Online | PolyPDF",
+    "description": "Remove comments and markup annotations from selected PDF pages. Keep form fields and links, preview, and download a copy free without uploading your PDF.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/remove-pdf-annotations.png",
+    "imageAlt": "Remove PDF annotations — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/watermark-pdf": {
+    "title": "Watermark PDF Online — Add a Text Watermark | PolyPDF",
+    "description": "Add a centered text watermark to PDF pages. Set the wording, size, color, and opacity, then preview and download free with local browser processing.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/watermark-pdf.png",
+    "imageAlt": "Watermark PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/number-pdf-pages": {
+    "title": "Add Page Numbers to PDF Online Free | PolyPDF",
+    "description": "Add PDF page numbers with a start value, prefix, and header or footer position. Number selected pages, preview, and download free without uploading files.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/number-pdf-pages.png",
+    "imageAlt": "Number PDF pages — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/bates-number-pdf": {
+    "title": "Bates Numbering PDF Online — Add Identifiers | PolyPDF",
+    "description": "Add sequential Bates numbers to a PDF with a prefix, start value, and padded digits. Preview identifiers and download free with local browser processing.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/bates-number-pdf.png",
+    "imageAlt": "Bates numbering — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/crop-pdf": {
+    "title": "Crop PDF Online — Trim Visible Page Margins | PolyPDF",
+    "description": "Crop PDF page margins using top, right, bottom, and left values. Select pages, preview, and download free. Cropping hides content; it is not redaction.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/crop-pdf.png",
+    "imageAlt": "Crop PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/resize-pdf": {
+    "title": "Resize PDF Pages Online — A4, Letter & More | PolyPDF",
+    "description": "Resize PDF pages to A4, Letter, A3, or Tabloid while preserving artwork proportions. Preview and download free. Recheck drawing scale after resizing.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/resize-pdf.png",
+    "imageAlt": "Resize PDF pages — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/add-pdf-margins": {
+    "title": "Add Margins to PDF Online — White Page Borders | PolyPDF",
+    "description": "Add equal white margins around PDF pages without scaling their artwork. Choose border width in points, preview, and download free with no file upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/add-pdf-margins.png",
+    "imageAlt": "Add PDF margins — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/pdf-booklet": {
+    "title": "PDF Booklet Maker Online — Arrange Print Pages | PolyPDF",
+    "description": "Arrange PDF pages for booklet printing, two pages per landscape side. Add blank panels automatically, preview, and download free without uploading files.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/pdf-booklet.png",
+    "imageAlt": "Make a PDF booklet — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/n-up-pdf": {
+    "title": "N-Up PDF Online — 2 or 4 Pages per Sheet | PolyPDF",
+    "description": "Place two or four PDF pages on one landscape sheet. Create a contact sheet in reading order, preview, and download free without uploading your document.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/n-up-pdf.png",
+    "imageAlt": "Multiple pages per sheet — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/add-text-to-pdf": {
+    "title": "Add Text to PDF Online — Place Labels Free | PolyPDF",
+    "description": "Add text labels to selected PDF pages. Choose position, font size, and color, then preview and download free. Existing text is not changed or erased.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/add-text-to-pdf.png",
+    "imageAlt": "Add text to PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/add-image-to-pdf": {
+    "title": "Add an Image to PDF Online — JPG or PNG | PolyPDF",
+    "description": "Place a JPG or PNG image on selected PDF pages. Set position and width, preserve proportions, preview, and download free without uploading your files.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/add-image-to-pdf.png",
+    "imageAlt": "Add image to PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/edit-pdf-metadata": {
+    "title": "Edit PDF Metadata Online — Title, Author & More | PolyPDF",
+    "description": "Edit a PDF’s title, author, subject, and keywords locally. Save updated document properties in a new PDF, free without an account or file upload.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/edit-pdf-metadata.png",
+    "imageAlt": "Edit PDF metadata — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/inspect-pdf": {
+    "title": "Inspect PDF Online — Pages, Metadata & Form Fields | PolyPDF",
+    "description": "Inspect PDF page count, dimensions, rotation, metadata, and form fields. Preview a JSON report and download it free with local browser processing.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/inspect-pdf.png",
+    "imageAlt": "Inspect PDF — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  },
+  "/tools/compare-pdf-text": {
+    "title": "Compare PDF Text Online — Find Changed Lines | PolyPDF",
+    "description": "Compare text in two PDFs page by page. Download a JSON report of added and removed lines free. Local processing; no OCR or visual drawing comparison.",
+    "robots": "index, follow",
+    "dateModified": "2026-10-19",
+    "image": "/tools/social/compare-pdf-text.png",
+    "imageAlt": "Compare PDF text — free browser PDF tool",
+    "imageWidth": 1200,
+    "imageHeight": 630
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "preparedAt": "2026-10-17",
+  "referenceOnly": true,
+  "runtimeVerification": "not_performed",
+  "project": "Willow Creek Community Center",
+  "sheets": [
+    "E101",
+    "E601"
+  ],
+  "revision": "A",
+  "sourcePdf": {
+    "url": "https://www.polypdf.com/samples/construction/06-Electrical-Lighting-and-Power.pdf",
+    "sha256": "7cf37860e4da7a744fb4e66f594c6e3f6e4cdc4d37f932a6c0155267223a6e60"
+  },
+  "reviewCsv": {
+    "file": "electrical-count-review.csv",
+    "sha256": "387a005ab3fe678d9d1fae7ce0cf96df7d719e1050b5a638bba643bce4b2fbca"
+  },
+  "scope": "Four mutually exclusive luminaire and receptacle categories on the E101 plan. Excludes legend symbols, E601 details, switches, panel and wiring.",
+  "categories": [
+    {
+      "id": "LT-A",
+      "description": "Standard luminaires",
+      "referenceCount": 20,
+      "unit": "ea",
+      "tags": "L-01 through L-24 excluding / E units"
+    },
+    {
+      "id": "LT-E",
+      "description": "Emergency luminaires",
+      "referenceCount": 4,
+      "unit": "ea",
+      "tags": "L-01 / E; L-13 / E; L-17 / E; L-24 / E"
+    },
+    {
+      "id": "REC-A",
+      "description": "General receptacles",
+      "referenceCount": 16,
+      "unit": "ea",
+      "tags": "R-01 through R-16"
+    },
+    {
+      "id": "REC-G",
+      "description": "GFCI receptacles",
+      "referenceCount": 2,
+      "unit": "ea",
+      "tags": "R-17 G; R-18 G"
+    }
+  ],
+  "routeReference": {
+    "drawnCenterlineFt": 46.0,
+    "verticesFt": [
+      [
+        46,
+        21
+      ],
+      [
+        46,
+        29
+      ],
+      [
+        84,
+        29
+      ]
+    ],
+    "notAConduitOrWireQuantity": true
+  }
+}

@@ -1,0 +1,857 @@
+import { useSiteMotion } from './SiteMotion';
+import { trackEvent } from '../lib/analytics';
+import GrowthNav from './GrowthNav';
+import GrowthEvidence, { WorkflowEntrances } from './GrowthEvidence';
+import React, { memo, useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router';
+import {
+  ArrowRight,
+  CheckCircle,
+  DownloadSimple,
+  Infinity,
+  Lightning,
+  LockKey,
+  ShieldCheck,
+  Sparkle,
+  SquaresFour,
+} from '@phosphor-icons/react';
+import DownloadCTA from './DownloadCTA';
+import DirectCheckoutLink from './DirectCheckoutLink';
+import { OfferButtonLabel, OfferGuarantee, OfferPrice } from './OfferPrice';
+import WorkflowDemos, { workflowDemos, WorkflowDemoMedia } from './WorkflowDemos';
+import PlanComparison from './PlanComparison';
+import { captureAttribution } from '../lib/attribution';
+import { usePlatform } from '../lib/platform';
+import { commercialOffer, licenseRightsText, refundSummaryText } from '../lib/commercialOffer';
+import siteRelease from '../lib/siteRelease.json';
+import { releaseAnswer } from '../lib/releaseHighlights';
+import { closedOfferMessage, useCommercialOffer } from '../lib/useCommercialOffer';
+import shotSymbolSearch768 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-768.webp';
+import shotSymbolSearch1536 from '../assets/screenshots/symbol-search-review-v1-4-dark-web-1536.webp';
+import shotTakeoff768 from '../assets/screenshots/takeoff-v1-4-dark-web-768.webp';
+import shotTakeoff1536 from '../assets/screenshots/takeoff-v1-4-dark-web-1536.webp';
+import shotCompare768 from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web-768.webp';
+import shotCompare1536 from '../assets/screenshots/compare-editable-clouds-v1-4-dark-web-1536.webp';
+import shotAutoArea768 from '../assets/screenshots/auto-area-v1-4-dark-web-768.webp';
+import shotAutoArea1536 from '../assets/screenshots/auto-area-v1-4-dark-web-1536.webp';
+import shotOcrSearch768 from '../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web-768.webp';
+import shotOcrSearch1536 from '../assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web-1536.webp';
+import shotCustomShortcuts768 from '../assets/screenshots/custom-shortcuts-v1-4-light-web-768.webp';
+import shotCustomShortcuts1536 from '../assets/screenshots/custom-shortcuts-v1-4-light-web-1536.webp';
+import shotSanitize768 from '../assets/screenshots/sanitize-options-v1-4-light-web-768.webp';
+import shotSanitize1536 from '../assets/screenshots/sanitize-options-v1-4-light-web-1536.webp';
+import shotPdfMapsMotion from '../assets/motion/pdf-map-plan-v1-4-1024.mp4';
+import shotPdfMapsPoster768 from '../assets/motion/pdf-map-plan-v1-4-poster-768.webp';
+import shotPdfMapsPoster1536 from '../assets/motion/pdf-map-plan-v1-4-poster-1536.webp';
+
+const releaseSeries = siteRelease.version.split('.').slice(0, 2).join('.');
+const homeWorkflowImageSizes = '(max-width: 760px) calc(100vw - 56px), (max-width: 1120px) calc(50vw - 64px), 590px';
+const responsiveWorkflowShot = (small, large) => ({
+  image: small,
+  imageSrcSet: `${small} 768w, ${large} 1536w`,
+  imageSizes: homeWorkflowImageSizes
+});
+
+// Every source is a full-frame capture of the shipping PolyPDF 1.4 series. Focused cards crop only
+// at presentation time so the important controls read clearly without manufacturing replacement UI.
+export const homeScreenshots = [
+  {
+    ...responsiveWorkflowShot(shotSymbolSearch768, shotSymbolSearch1536),
+    motion: 'symbol-search',
+    theme: 'dark',
+    framing: 'focus',
+    focus: 'symbol-search',
+    category: 'Count',
+    access: 'Pro',
+    title: 'Review Symbol Search matches before counting',
+    alt: 'PolyPDF Symbol Search showing five matches, all five selected, on a sample drawing',
+    caption: 'Box one symbol, inspect the candidates, and commit only the matches you accept. Five reviewed matches are ready here.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    ...responsiveWorkflowShot(shotTakeoff768, shotTakeoff1536),
+    motion: 'takeoff-records',
+    theme: 'dark',
+    framing: 'context',
+    category: 'Takeoff',
+    title: 'Measured quantities stay tied to the sheet',
+    alt: 'PolyPDF takeoff worksheet showing 14 items beside a sample plan with a 540 square foot area, a 30 foot length, and 12 supply diffusers',
+    caption: 'The Records view keeps a 540 sq ft area, 30 ft length, and 12 diffuser counts beside the drawing they came from.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    ...responsiveWorkflowShot(shotOcrSearch768, shotOcrSearch1536),
+    theme: 'light',
+    framing: 'focus',
+    focus: 'ocr-search',
+    category: 'OCR',
+    title: 'Search scanned pages after OCR',
+    alt: 'PolyPDF in light mode showing OCR text search results for Akron on a scanned historical drawing',
+    caption: 'Run OCR on a received scan, then search the recognized text without losing the original page image or document context.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    ...responsiveWorkflowShot(shotCustomShortcuts768, shotCustomShortcuts1536),
+    theme: 'light',
+    framing: 'focus',
+    focus: 'shortcuts',
+    category: 'Shortcuts',
+    title: 'Make every command feel familiar',
+    alt: 'PolyPDF light-mode Keyboard Shortcuts settings showing searchable, editable command assignments',
+    caption: 'Search commands, assign the keys you already use, clear individual mappings, or reset the complete shortcut set.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    ...responsiveWorkflowShot(shotCompare768, shotCompare1536),
+    theme: 'dark',
+    framing: 'focus',
+    focus: 'compare',
+    category: 'Compare',
+    title: 'Turn drawing changes into review-ready markups',
+    alt: 'PolyPDF Compare Documents showing four editable purple revision clouds and their matching Markup Table records',
+    caption: 'Compare two revisions, inspect the detected changes as editable clouds, and track every result in the Markup Table.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    ...responsiveWorkflowShot(shotPdfMapsPoster768, shotPdfMapsPoster1536),
+    video: shotPdfMapsMotion,
+    motion: 'pdf-maps',
+    theme: 'dark',
+    framing: 'focus',
+    focus: 'pdf-maps',
+    category: 'Maps',
+    access: 'Pro',
+    title: 'Turn a building-level map into plan-ready linework',
+    alt: 'PolyPDF placing a building-level Murray Street map, converting it from Liberty cartography to CAD Linework, then adding MUTCD Stop and Yield signs',
+    caption: 'Place a real building-scale map, resize it to the sheet, switch it to CAD Linework, then add built-in MUTCD signs at the intersections.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    ...responsiveWorkflowShot(shotAutoArea768, shotAutoArea1536),
+    motion: 'auto-area',
+    theme: 'dark',
+    framing: 'focus',
+    focus: 'auto-area',
+    category: 'Auto Area',
+    title: 'Detect enclosed rooms with Auto Area',
+    alt: 'PolyPDF 1.4 Auto Area previewing the detected Assembly room boundary at 135 square feet with a Space to capture room hint',
+    caption: 'Choose Area, hover inside an enclosed room, and press Space to capture the detected boundary as a measured area.',
+    width: 1710,
+    height: 1073
+  },
+  {
+    ...responsiveWorkflowShot(shotSanitize768, shotSanitize1536),
+    theme: 'light',
+    framing: 'focus',
+    focus: 'sanitize',
+    category: 'Document prep',
+    title: 'Review what sanitization will remove',
+    alt: 'PolyPDF light-mode Sanitize Document dialog with document-data removal options selected',
+    caption: 'Choose the supported document data to remove, review the consequences, and keep destructive options explicit before saving.',
+    width: 1710,
+    height: 1073
+  }
+];
+
+
+const freeFeatures = [
+  'Open your PDFs on Mac or Windows, with no trial timer',
+  'Mark up, review, and calibrate the drawing scale',
+  'Try up to 3 hand-created measurements per document',
+  'Open, view, and navigate portable Revision Packages',
+  'Browse every preset tool; upgrade to Pro to use toolsets, PDF content editing, and overlay'
+];
+
+const proFeatures = [
+  'Unlimited hand-created measurements and Symbol Search auto-count',
+  'PDF content editing, preset and custom toolsets, and colored overlays',
+  'Installed plugins, including PDF Maps and Professional Seal Maker',
+  'Revision Package creation, updates, and publishing',
+  'Up to 3 Mac or Windows computers, in any mix',
+  'Every public PolyPDF 1.x update included'
+];
+
+export const featureFamilies = [
+  {
+    family: 'Measure & takeoff',
+    tools: 'Distance · Area · Perimeter · Angle · Radius · Diameter · Count · Dimension',
+    outcome: 'Calibrated quantities that remain tied to the sheet'
+  },
+  {
+    family: 'Automated quantities',
+    tools: 'Symbol Search · Auto Area · cutouts · path and circular suggestions',
+    outcome: 'Review candidates and geometry before committing results'
+  },
+  {
+    family: 'Markup & coordination',
+    tools: 'Interactive stamps · callouts · notes · highlights · comments · Markup Table',
+    outcome: 'RFIs, review status, and discussion directly on the PDF'
+  },
+  {
+    family: 'Search & document prep',
+    tools: 'AEC OCR · table extraction · text search · forms · page organization',
+    outcome: 'Turn received files into searchable, usable deliverables'
+  },
+  {
+    family: 'Revision Packages',
+    tools: 'Issue import · sheet reconciliation · carryover · impact · references · publish',
+    outcome: 'Move a reviewed drawing set forward without rebuilding the record'
+  },
+  {
+    family: 'Compare & protect',
+    tools: 'Page comparison · editable revision clouds · redaction · sanitization',
+    outcome: 'Find changes and prepare controlled outgoing files'
+  },
+  {
+    family: 'Libraries & standards',
+    tools: 'Architectural · Landscape · Doors · Windows · Fire Protection · MUTCD · BTX, SVG, DXF import',
+    outcome: 'Place consistent project and standards content quickly'
+  },
+  {
+    family: 'Extend & customize',
+    tools: 'PDF Maps · plugins · custom keyboard shortcuts',
+    outcome: 'Fit PolyPDF to the way your team already works'
+  },
+  {
+    family: 'Desktop workflow',
+    tools: 'macOS · Windows · Presentation Mode · local PDF work · Excel, CSV, PDF export',
+    outcome: 'Work in a native app and hand off familiar file formats'
+  }
+];
+
+const steps = [
+  {
+    title: 'Download the app free',
+    description: 'Grab the Mac DMG or the signed Windows installer and open the full product, not a time-limited trial.'
+  },
+  {
+    title: 'Test it on a real drawing',
+    description: 'Calibrate scale and place up to 3 hand-created measurements in each document to confirm it fits your workflow.'
+  },
+  {
+    title: 'Unlock unlimited when ready',
+    description: `If PolyPDF saves you time, buy the ${commercialOffer.price} Pro license to remove the measurement cap and unlock Symbol Search, plugins, and Revision Package updates without a yearly fee.`
+  }
+];
+
+// Exported for content checks and any future presentation that must match the visible answers.
+export const homeFaqs = [
+  {
+    question: 'What is PolyPDF?',
+    answer: 'PolyPDF is a desktop PDF drawing app for Mac and Windows. It combines markup, calibrated measurement and takeoff, Symbol Search, local AEC OCR, forms, signatures, document preparation, and revision management in one workspace.'
+  },
+  {
+    question: `What is new in PolyPDF ${siteRelease.version}?`,
+    answer: releaseAnswer
+  },
+  {
+    question: 'What can I do before I pay?',
+    answer: 'Download PolyPDF free on Mac or Windows. Open your PDFs, calibrate scale, mark up and review drawings, place up to 3 hand-created measurements in each document, and view Revision Packages. PDF content editing, toolset placement, colored overlays, Symbol Search, installed plugins, and Revision Package creation and publishing require Pro.'
+  },
+  {
+    question: 'Does one license cover both Mac and Windows?',
+    answer: 'Yes. A license activates PolyPDF on up to 3 computers in any mix — three Macs, three Windows PCs, or any combination.'
+  },
+  {
+    question: 'What does the $74.95 license unlock?',
+    answer: `The Pro license removes the hand-created measurement limit and unlocks PDF content editing, preset and custom toolsets, colored overlays, Symbol Search, installed plugins such as PDF Maps and Professional Seal Maker, and Revision Package creation, updates, and publishing. ${licenseRightsText}`
+  },
+  {
+    question: 'Is this a subscription?',
+    answer: `No. PolyPDF Pro is ${commercialOffer.price} once. There is no annual renewal, recurring maintenance bill, or subscription timer.`
+  },
+  {
+    question: 'What happens after I buy?',
+    answer: 'Checkout is handled securely by Stripe. Your license key is delivered by email, and you paste it into the app once — on Mac or Windows — to unlock unlimited measurements, Symbol Search, installed plugins, and Revision Package changes and publishing.'
+  },
+  {
+    question: 'Does PolyPDF work offline?',
+    answer: 'Core PDF opening, rendering, markup, measurement, takeoff, OCR, Revision Package work, forms, signatures, and export run locally. Internet access is used for connected features such as PDF Maps, licensing, updates, purchases, account access, support, optional timestamping, and diagnostics when you opt in.'
+  },
+  {
+    question: 'How do I activate the license key?',
+    answer: 'Open PolyPDF and choose Upgrade to PolyPDF Pro — it is in the PolyPDF menu on Mac (Command-Shift-L) and the Help menu on Windows (Ctrl-Shift-L). Paste the key from your email, which looks like PPM-XXXX-XXXX-XXXX, and click Activate. There is no restart and no reinstall, and the drawing you have open keeps everything already on it.'
+  },
+  {
+    question: 'Is there a money-back guarantee?',
+    answer: 'Yes. Direct website purchases include a 14-day money-back guarantee. Request a refund within 14 days of payment and PolyPDF will return the amount paid to the original payment method where possible. The refund policy also preserves any statutory rights you have.'
+  }
+];
+
+const HeroProductBoard = () => (
+  <figure id="product-demo" className="hero-current-demo">
+    <WorkflowDemoMedia demo={workflowDemos[0]} source="home_hero" eager />
+    <figcaption>
+      <span>Actual PolyPDF interface · sample construction drawing</span>
+      <a href="#workflows" onClick={() => trackEvent('workflow_section_click', { source: 'home_hero' })}>Watch the workflows <ArrowRight aria-hidden="true" /></a>
+    </figcaption>
+  </figure>
+);
+
+export const ShowcaseMotionLayer = memo(({ motionType }) => {
+  if (motionType === 'symbol-search') {
+    return (
+      <svg className="shot-motion-layer shot-motion-symbol-search" viewBox="0 0 1710 1073" aria-hidden="true">
+        {[
+          [831, 221], [1006, 221], [1181, 221], [831, 397], [1006, 397]
+        ].map(([x, y], index) => (
+          <g key={`${x}-${y}`} className="symbol-match-glint" style={{ '--motion-index': index }}>
+            <path d={`M${x - 10} ${y}H${x + 10}M${x} ${y - 10}V${y + 10}`} />
+            <circle cx={x} cy={y} r="16" />
+          </g>
+        ))}
+        <circle className="symbol-count-ripple" cx="117" cy="343" r="27" />
+      </svg>
+    );
+  }
+
+  if (motionType === 'takeoff-records') {
+    return (
+      <svg className="shot-motion-layer shot-motion-takeoff" viewBox="0 0 1710 1073" aria-hidden="true">
+        <g className="takeoff-pair-glow" style={{ '--motion-index': 0 }}>
+          <ellipse cx="962" cy="558" rx="80" ry="28" />
+          <rect x="204" y="420" width="79" height="39" rx="9" />
+        </g>
+        <g className="takeoff-pair-glow" style={{ '--motion-index': 1 }}>
+          <ellipse cx="962" cy="851" rx="76" ry="25" />
+          <rect x="212" y="510" width="71" height="39" rx="9" />
+        </g>
+        <g className="takeoff-pair-glow" style={{ '--motion-index': 2 }}>
+          <ellipse cx="681" cy="425" rx="78" ry="30" />
+          <rect x="216" y="594" width="67" height="39" rx="9" />
+        </g>
+      </svg>
+    );
+  }
+
+  if (motionType === 'calibration-check') {
+    return (
+      <svg className="shot-motion-layer shot-motion-calibration" viewBox="0 0 1710 1073" aria-hidden="true">
+        <circle className="calibration-endpoint calibration-endpoint-start" cx="594" cy="401" r="18" />
+        <circle className="calibration-endpoint calibration-endpoint-end" cx="594" cy="727" r="18" />
+        <circle className="calibration-status-ring" cx="83" cy="267" r="24" />
+        <path className="calibration-cursor" d="M574 374L606 397L591 401L584 417Z" />
+      </svg>
+    );
+  }
+
+  if (motionType === 'auto-area') {
+    return (
+      <svg className="shot-motion-layer shot-motion-auto-area" viewBox="0 0 1710 1073" aria-hidden="true">
+        <defs>
+          <linearGradient id="auto-area-detection-sheen" x1="0" x2="1">
+            <stop offset="0" stopColor="#b5b5b5" stopOpacity="0" />
+            <stop offset="0.5" stopColor="#ffffff" stopOpacity="0.58" />
+            <stop offset="1" stopColor="#b5b5b5" stopOpacity="0" />
+          </linearGradient>
+          <mask id="auto-area-region-mask">
+            <rect width="1710" height="1073" fill="black" />
+            <path fill="white" d="M412 328H820V574H412Z" />
+          </mask>
+        </defs>
+        <rect
+          className="auto-area-detection-sweep"
+          x="300"
+          y="328"
+          width="160"
+          height="246"
+          fill="url(#auto-area-detection-sheen)"
+          mask="url(#auto-area-region-mask)"
+        />
+        {[
+          [412, 328], [820, 328], [820, 574], [412, 574]
+        ].map(([cx, cy], index) => (
+          <circle
+            key={`${cx}-${cy}`}
+            className="auto-area-node-pulse"
+            cx={cx}
+            cy={cy}
+            r="16"
+            style={{ '--motion-index': index }}
+          />
+        ))}
+      </svg>
+    );
+  }
+
+  return null;
+});
+
+ShowcaseMotionLayer.displayName = 'ShowcaseMotionLayer';
+
+const ProductShotMedia = memo(({ shot }) => {
+  const { motionOff } = useSiteMotion();
+  const mediaRef = useRef(null);
+  const [motionActive, setMotionActive] = useState(false);
+
+  useEffect(() => {
+    if (!shot.motion || motionOff || typeof IntersectionObserver === 'undefined') {
+      setMotionActive(false);
+      return undefined;
+    }
+
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) return undefined;
+
+    const media = mediaRef.current;
+    if (!media) return undefined;
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setMotionActive(entry.isIntersecting && entry.intersectionRatio >= 0.2);
+    }, { threshold: [0, 0.2, 0.65] });
+
+    observer.observe(media);
+    return () => observer.disconnect();
+  }, [shot.motion, motionOff]);
+
+  return (
+    <div
+      ref={mediaRef}
+      className={`product-shot-media${shot.motion ? ` has-${shot.motion}-motion` : ''}${motionActive ? ' is-motion-active' : ''}`}
+    >
+      {shot.video && motionActive && !motionOff ? (
+        <video
+          controls
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster={shot.image}
+          aria-label={shot.alt}
+          width={shot.width}
+          height={shot.height}
+        >
+          <source src={shot.video} type="video/mp4" />
+        </video>
+      ) : (
+        <img
+          src={shot.image}
+          srcSet={shot.imageSrcSet}
+          sizes={shot.imageSizes}
+          alt={shot.alt}
+          loading="lazy"
+          width={shot.width}
+          height={shot.height}
+        />
+      )}
+      {shot.motion && !shot.video && !motionOff && <ShowcaseMotionLayer motionType={shot.motion} />}
+    </div>
+  );
+});
+
+ProductShotMedia.displayName = 'ProductShotMedia';
+
+export const FeatureIndex = () => (
+  <section className="feature-index-section" id="features">
+    <div className="container">
+      <motion.div
+        className="section-header feature-index-header"
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+      >
+        <span className="section-kicker"><SquaresFour aria-hidden="true" weight="bold" /> Capability index</span>
+        <h2>One PDF workspace, organized by the work.</h2>
+        <p>Scan the complete product by job: measurement, review, search, document preparation, standards, protection, and extensions.</p>
+      </motion.div>
+
+      <p className="capability-scroll-hint">Swipe to compare tools and outcomes</p>
+      <div
+        className="capability-table-shell"
+        role="region"
+        aria-label="PolyPDF capability index"
+        tabIndex="0"
+      >
+        <table className="capability-table">
+          <caption className="sr-only">PolyPDF capability index organized by workflow</caption>
+          <thead>
+            <tr>
+              <th scope="col">Workflow</th>
+              <th scope="col">Included tools</th>
+              <th scope="col">What it gives you</th>
+            </tr>
+          </thead>
+          <tbody>
+            {featureFamilies.map((row, index) => (
+              <tr key={row.family}>
+                <th scope="row">
+                  <span className="capability-family">
+                    <span className="capability-index">{String(index + 1).padStart(2, '0')}</span>
+                    <strong>{row.family}</strong>
+                  </span>
+                </th>
+                <td>{row.tools}</td>
+                <td>{row.outcome}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="feature-index-summary">
+        <p><strong>Keep the work in one desktop workspace:</strong> move from scale calibration to quantities, drawing review, and final document preparation.</p>
+        <a href="#workflows" className="secondary-btn feature-index-action">
+          <Sparkle aria-hidden="true" weight="bold" /> See authentic product UI
+        </a>
+      </div>
+    </div>
+  </section>
+);
+
+export const WorkflowGrid = () => (
+  <section className="showcase showcase-compact" id="workflows">
+    <div className="container">
+      <motion.div
+        className="section-header workflow-grid-header"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <span className="section-kicker"><Sparkle aria-hidden="true" weight="bold" /> Eight product workflows</span>
+        <h2>Full app context, then close enough to inspect.</h2>
+        <p>These authentic PolyPDF {siteRelease.screenshotVersion} captures preserve the complete desktop context while moving close enough to inspect each useful control. The {releaseSeries} Revision Package interface appears above.</p>
+      </motion.div>
+
+      <p className="workflow-scroll-hint">Swipe to scan all eight workflows</p>
+      <div className="workflow-grid" tabIndex="0" role="region" aria-label="PolyPDF workflow screenshots">
+        {homeScreenshots.map((shot, index) => (
+          <motion.figure
+            key={shot.title}
+            id={shot.motion ? `${shot.motion}-demo` : undefined}
+            className={`workflow-card theme-${shot.theme} is-${shot.framing}${shot.focus ? ` focus-${shot.focus}` : ''}`}
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.52, delay: (index % 2) * 0.07, ease: [0.21, 0.65, 0.32, 1] }}
+          >
+            <div className="shot-plate workflow-shot">
+              <ProductShotMedia shot={shot} />
+            </div>
+            <figcaption>
+              <div className="workflow-meta">
+                <span className="showcase-index">{String(index + 1).padStart(2, '0')}</span>
+                <span className="workflow-category">{shot.category}</span>
+                {shot.access && <span className="workflow-access">{shot.access} workflow</span>}
+                <span className="workflow-view-mode">
+                  {shot.theme === 'light' ? 'Light' : 'Dark'} UI · {shot.framing === 'focus' ? 'Feature focus' : 'Full window'}
+                </span>
+              </div>
+              <h3>{shot.title}</h3>
+              <p>{shot.caption}</p>
+            </figcaption>
+          </motion.figure>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const PricingSection = ({ offer, onDownload, primaryPlatform }) => (
+  <section className="pricing pricing-early" id="pricing" data-conversion-section="pricing">
+    <div className="container">
+      <motion.div
+        className="section-header"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      >
+        <span className="section-kicker">One app. A clear upgrade.</span>
+        <h2>Start free. Go Pro for $74.95 once.</h2>
+        <p>Use your own drawings before you decide. When you need the full toolkit, one Pro license covers up to 3 Mac or Windows computers.</p>
+      </motion.div>
+
+      <div className="pricing-grid">
+        <motion.article
+          className="pricing-card"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <span className="paper-tape pricing-card-tape" aria-hidden="true" />
+          <div className="plan-pill">Free</div>
+          <h3>Make sure it fits your work.</h3>
+          <p className="plan-price">$0</p>
+          <ul className="plan-list">
+            {freeFeatures.map((feature) => (
+              <li key={feature}>
+                <CheckCircle aria-hidden="true" weight="bold" /> {feature}
+              </li>
+            ))}
+          </ul>
+          <a href={primaryPlatform.url} className="secondary-btn full-width" download onClick={() => onDownload('pricing_free')}>
+            <DownloadSimple aria-hidden="true" weight="bold" /> Download free for {primaryPlatform.name}
+          </a>
+        </motion.article>
+
+        <motion.article
+          className="pricing-card pricing-card-pro"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+        >
+          <span className="paper-tape pricing-card-tape" aria-hidden="true" />
+          <div className="plan-pill plan-pill-dark">Pro license</div>
+          <h3>The complete drawing toolkit.</h3>
+          <OfferPrice />
+          <ul className="plan-list">
+            {proFeatures.map((feature) => (
+              <li key={feature}>
+                <Lightning aria-hidden="true" weight="bold" /> {feature}
+              </li>
+            ))}
+          </ul>
+          {offer.available ? (
+            <DirectCheckoutLink
+              offer={offer}
+              source="website_pricing"
+              pageVariant="home_pricing"
+              className="primary-btn full-width offer-cta"
+            >
+              <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
+            </DirectCheckoutLink>
+          ) : (
+            <p className="plan-note offer-closed">{closedOfferMessage(offer.closedReason)}</p>
+          )}
+          {offer.available && <OfferGuarantee compact inverse />}
+          <p className="plan-note">{licenseRightsText}</p>
+          <p className="plan-note">Secure Stripe checkout, license key emailed on payment. {refundSummaryText}</p>
+        </motion.article>
+      </div>
+      <PlanComparison />
+    </div>
+  </section>
+);
+
+const Home = () => {
+  const offer = useCommercialOffer();
+  const { primaryPlatform } = usePlatform();
+
+  useEffect(() => {
+    captureAttribution();
+  }, []);
+
+  useEffect(() => {
+    if (typeof IntersectionObserver !== 'function') return undefined;
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        if (trackEvent('purchase_section_view', { source: 'home', section: entry.target.dataset.conversionSection })) {
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('[data-conversion-section]').forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
+  const handleDownloadClick = (source) => {
+    trackEvent('download_click', { source, platform: primaryPlatform.key });
+  };
+
+  return (
+    <div className="Home">
+      <GrowthNav />
+
+      <main>
+      <section className="hero">
+        <div className="container hero-layout">
+          <motion.div
+            className="hero-content"
+            initial={false}
+          >
+            <div className="hero-badge">
+              <LockKey aria-hidden="true" weight="bold" /> PolyPDF {siteRelease.version} · Mac &amp; Windows
+            </div>
+
+            <h1>
+              Measure, take off, and review construction PDFs on <span className="hero-highlight">Mac and Windows.</span>
+            </h1>
+
+            <p className="hero-subtitle">
+              PDF measurement, markup, and revision review for construction teams on Mac and Windows. Your drawings, one desktop workspace.
+            </p>
+
+            <div className="hero-cta conversion-hero-cta" id="download">
+              <DownloadCTA
+                source="hero"
+                compact
+                adjacentAction={(
+                  <DirectCheckoutLink
+              offer={offer}
+                    source="website_hero"
+                    pageVariant="home_hero"
+                    className="primary-btn hero-buy offer-cta"
+                  >
+                    <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel action="Get Pro" />
+                  </DirectCheckoutLink>
+                )}
+              />
+            </div>
+
+            <OfferGuarantee compact />
+            <p className="hero-note">No subscription. Up to 3 computers. Every 1.x update included.</p>
+          </motion.div>
+
+          <HeroProductBoard />
+
+          <motion.div
+            className="hero-stats compact-stats"
+            aria-label="Pro license facts"
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: 'spring', stiffness: 100, damping: 20, delay: 0.24 }}
+          >
+            <div className="stat">
+              <strong>$74.95</strong>
+              <p>One payment · no subscription</p>
+            </div>
+            <div className="stat">
+              <strong>3</strong>
+              <p>Computers per license</p>
+            </div>
+            <div className="stat">
+              <strong>Mac + PC</strong>
+              <p>Use either platform in any mix</p>
+            </div>
+            <div className="stat">
+              <strong>1.x</strong>
+              <p>Every public update included</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <WorkflowEntrances />
+      <GrowthEvidence />
+
+      <WorkflowDemos />
+
+      <PricingSection offer={offer} onDownload={handleDownloadClick} primaryPlatform={primaryPlatform} />
+
+      <FeatureIndex />
+
+      <div className="home-release-link" id="latest-release">
+        <div className="container">
+          <span>PolyPDF {siteRelease.version} (build {siteRelease.build}) is available for Mac and Windows.</span>
+          <Link to="/versions/">Read what’s new <ArrowRight aria-hidden="true" /></Link>
+        </div>
+      </div>
+
+      <section className="how-it-works">
+        <div className="container">
+          <motion.div
+            className="section-header"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <span className="section-kicker">Try it on your next drawing</span>
+            <h2>Try it on your workflow before you buy.</h2>
+            <p>Download free, test it on your own drawings, and pay once only if you want the complete Pro workflow.</p>
+          </motion.div>
+
+          <div className="step-path">
+            {steps.map((step, index) => (
+              <motion.article
+                key={step.title}
+                className="step-path-item"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+              >
+                <div className="step-number">0{index + 1}</div>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="faq" id="faq">
+        <div className="container">
+          <motion.div
+            className="section-header"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <span className="section-kicker">Before you decide</span>
+            <h2>A few things worth knowing.</h2>
+            <p>What you get, how the license works, and what happens after checkout.</p>
+          </motion.div>
+
+          <div className="faq-grid">
+            {homeFaqs.map((item, index) => (
+              <motion.article
+                key={item.question}
+                className="faq-card"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.06 }}
+              >
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="cta-section">
+        <div className="container">
+          <motion.div
+            className="cta-content"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <span className="cta-sketch" aria-hidden="true" />
+            <h2>Put your next drawing to work.</h2>
+            <p>Try PolyPDF free on your own plans, or unlock the complete Pro toolkit for $74.95 once. One license, up to 3 computers, no subscription.</p>
+            <div className="cta-download-row">
+              <DownloadCTA source="bottom_cta" size="large" tone="on-dark" />
+              <DirectCheckoutLink
+              offer={offer}
+                source="website_bottom_cta"
+                pageVariant="home_bottom"
+                className="secondary-btn cta-mac-btn offer-cta"
+              >
+                <Infinity aria-hidden="true" weight="bold" /> <OfferButtonLabel />
+              </DirectCheckoutLink>
+            </div>
+            <OfferGuarantee compact inverse />
+            <div className="trust-indicators">
+              <div className="indicator">
+                <ShieldCheck aria-hidden="true" weight="bold" />
+                <span>Signed builds — notarized on Mac, Authenticode on Windows</span>
+              </div>
+              <div className="indicator">
+                <CheckCircle aria-hidden="true" weight="bold" />
+                <span>Up to 3 computers per license</span>
+              </div>
+              <div className="indicator">
+                <LockKey aria-hidden="true" weight="bold" />
+                <span>Secure Stripe checkout</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      </main>
+
+    </div>
+  );
+};
+
+export default Home;

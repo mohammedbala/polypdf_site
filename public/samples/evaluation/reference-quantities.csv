@@ -1,0 +1,15 @@
+﻿Check ID,Source PDF,Sheet,Reference,Expected value,Unit,Scope
+A01,02-Architectural-Revision-A.pdf,A101,Printed calibration reference,20,ft,360 PDF points; verify against the source drawing.
+A02,02-Architectural-Revision-A.pdf,A101,Independent outside width,96,ft,Measure independently after calibration.
+A03,02-Architectural-Revision-A.pdf,A101,Independent outside depth,60,ft,Measure independently after calibration.
+A04,02-Architectural-Revision-A.pdf,A101,Gross building footprint,5760,sq ft,96 x 60; not net floor area. Two length checks plus one area = 3 manual measurements.
+F01,10-Interiors-Finishes-and-Millwork.pdf,I101,F2 tile zones total,576,sq ft,"Rooms 107 and 108: 288 each; dimension boundaries, no wall-thickness deductions."
+F02,10-Interiors-Finishes-and-Millwork.pdf,I101,F1 resilient zones total,5184,sq ft,Schedule reference; use a separate copy or Pro if manual measurements exceed 3. Waste is separate.
+E01,06-Electrical-Lighting-and-Power.pdf,E101,Plan luminaires,24,count,Includes emergency subset; exclude legend and detail symbols. Pro required for Symbol Search.
+E02,06-Electrical-Lighting-and-Power.pdf,E101,Emergency subset,4,count,Included in 24; do not add again.
+E03,06-Electrical-Lighting-and-Power.pdf,E101,"LP-1 CKTS 1,3,5,7 drawn route",46.0,ft,"8 + 38; circuit-diagram geometry, NOT a conduit quantity."
+R01,03-Architectural-Revision-B.pdf,A101,Revision B room 103,720,sq ft,Revision A 576; partition shifts 6 ft.
+R02,03-Architectural-Revision-B.pdf,A101,Revision B room 104,432,sq ft,Revision A 576; door shifts 3 ft; added glazing is 6 ft. Authored changes are not a detection-count promise.
+C01,11-Coordination-and-Review.pdf,X101,Authored coordination notes,3,count,Fictional issues; add your own note on a working copy.
+C02,11-Coordination-and-Review.pdf,X101,PDF layers,4,count,Architecture; Mechanical; Electrical; Review issues.
+O01,12-Scanned-Legacy-Drawings.pdf,A101 / C101,Original native text,0,characters,"Image-only input. After OCR, check COMMUNITY ROOM and SITE PLAN, then save and reopen."

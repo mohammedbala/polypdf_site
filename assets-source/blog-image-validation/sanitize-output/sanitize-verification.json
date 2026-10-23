@@ -1,0 +1,79 @@
+{
+  "generatedAt": "2026-08-19T11:36:33Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "pdf": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/sanitize-output/sanitize-working.pdf",
+  "baselineSha256": "81a4ece673bd548001494d7a8ec2d702daf79060f13e5ed117916f779fcb1095",
+  "savedSha256": "42ce4f1fa883b70f8870554fa4325aa9c6236efbe2a5457fb68257931a9dd4de",
+  "fileChangedAfterSanitizeAndSave": true,
+  "selectedOptions": {
+    "metadata": true,
+    "thumbnails": true,
+    "attachments": true,
+    "javascript": true,
+    "forms": false
+  },
+  "uiReportedResult": "Sanitize Document: removed metadata and 1 JavaScript/action entry",
+  "checks": {
+    "qpdfSyntaxPasses": true,
+    "originalMetadataEntryCount": 9,
+    "savedMetadataEntryCount": 2,
+    "originalMetadataKeysRemoved": [
+      "/Author",
+      "/CreationDate",
+      "/Creator",
+      "/Keywords",
+      "/Subject",
+      "/Title",
+      "/Trapped"
+    ],
+    "savedMetadataWrittenByPolyPDF": {
+      "/Producer": "PolyPDF / PolyPDF 1.3.4",
+      "/ModDate": "D:20260819113255Z"
+    },
+    "javaScriptNameTreeBefore": true,
+    "javaScriptNameTreeAfter": false,
+    "directFileAttachmentAnnotationsBefore": 1,
+    "directFileAttachmentAnnotationsAfter": 1,
+    "directAttachmentPayloadSha256Before": "c9d8ce121b3ea28459aa54f2fe5562a8981f6a499181a7b29bb341f2e5c9da33",
+    "directAttachmentPayloadSha256After": "c9d8ce121b3ea28459aa54f2fe5562a8981f6a499181a7b29bb341f2e5c9da33",
+    "topLevelImagesBefore": 1,
+    "topLevelImagesAfter": 1,
+    "nestedImagesBefore": 1,
+    "nestedImagesAfter": 1,
+    "topLevelFormsBefore": 1,
+    "topLevelFormsAfter": 1,
+    "targetTextCountBefore": 2,
+    "targetTextCountAfter": 2,
+    "acroFormPresentBefore": false,
+    "acroFormPresentAfter": false,
+    "pageThumbnailsBefore": 0,
+    "pageThumbnailsAfter": 0,
+    "embeddedFileNameTreeBefore": false,
+    "embeddedFileNameTreeAfter": false,
+    "associatedFileReferencesBefore": 0,
+    "associatedFileReferencesAfter": 0
+  },
+  "screenshots": {
+    "dialog": "captures/sanitize-options-dark.png",
+    "result": "captures/sanitize-result-dark.png"
+  },
+  "screenshotClaims": {
+    "dialog": "Shows the current Sanitize Document controls, their current defaults, the form/signature warning, and the fact that form removal is off by default. It does not prove what the saved PDF contains.",
+    "result": "Shows the current UI-reported result for this run: original metadata removed and one JavaScript/action entry removed. It does not prove exhaustive traversal or a metadata-free saved file."
+  },
+  "claimBoundary": [
+    "The controlled before/after inspection verifies that this fixture's JavaScript name tree was removed.",
+    "The original nine metadata entries were removed, but saving wrote two new PolyPDF metadata entries (/Producer and /ModDate); do not call the saved file metadata-free.",
+    "A direct /FileAttachment annotation and its exact embedded payload remained byte-for-byte identical even though the attachment option was selected. The current sanitizer does not traverse that annotation path.",
+    "The fixture had no EmbeddedFiles name tree, associated-file reference, page thumbnail, or AcroForm before sanitization, so this run cannot validate removal of those structures.",
+    "Top-level and Form-XObject-nested images remained. Sanitize Document does not redact, recompress, downsample, or remove visible page images/content in this workflow.",
+    "The JavaScript check covers the fixture's catalog JavaScript name tree only. It does not prove recursive removal from arbitrary annotation/action chains.",
+    "The screenshots show current UI state and the app-reported count; the saved-file structure checks are the evidence for the narrower claims above."
+  ],
+  "passesNarrowVerifiedClaims": true,
+  "passesUniversalSanitizationClaim": false
+}

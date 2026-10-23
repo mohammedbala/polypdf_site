@@ -1,0 +1,5 @@
+{"id":"image_001","type":"image","path":"assets/new-york-map-full.png","source":"existing","description":"new york map full","provenance":{"provider":"local","adopted":true}}
+{"id":"image_002","type":"image","path":"assets/polypdf-mutcd-tools-ui.png","source":"existing","description":"polypdf mutcd tools ui","width":1710,"height":1073,"provenance":{"provider":"local","adopted":true}}
+{"id":"image_003","type":"image","path":"assets/polypdf-pdf-maps-ui.png","source":"existing","description":"polypdf pdf maps ui","width":1710,"height":1073,"provenance":{"provider":"local","adopted":true}}
+{"id":"icon_001","type":"icon","path":"assets/r1-1.svg","source":"existing","description":"r1 1","provenance":{"provider":"local","adopted":true}}
+{"id":"icon_002","type":"icon","path":"assets/r1-2.svg","source":"existing","description":"r1 2","provenance":{"provider":"local","adopted":true}}

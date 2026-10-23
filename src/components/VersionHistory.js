@@ -1,0 +1,459 @@
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router';
+import { motion } from 'framer-motion';
+import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
+import parrotIcon from '../assets/polypdf_icon-96.png';
+import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
+import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, release164Highlights, release165Highlights, release166Highlights, release167Highlights, release1613Highlights, release1615Highlights, release1616Highlights, release1619Highlights, release1620Highlights, releaseAnswer } from '../lib/releaseHighlights';
+import siteRelease from '../lib/siteRelease.json';
+
+// This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
+// electron-updater's latest.yml on Windows — so a release publishes itself here with no edit.
+const MAC_FEED = '/downloads/polypdfmac-appcast.xml';
+const WINDOWS_FEED = '/downloads/windows/latest.yml';
+
+// The downloads directory is served immutable with a one-year max-age, so a plain fetch would keep
+// showing a cached feed long after a release. Vary the URL hourly to get a fresh copy.
+const feedUrl = (path) => `${path}?t=${Math.floor(Date.now() / 3600000)}`;
+
+const MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'
+];
+const SHORT_MONTHS = MONTHS.map((month) => month.slice(0, 3));
+
+// Dates are formatted from the feed's own calendar fields rather than through the viewer's
+// timezone: a release published late in the evening would otherwise show the following day.
+const formatFeedDate = (value) => {
+  const rfc822 = /(\d{1,2})\s+([A-Za-z]{3})[a-z]*\s+(\d{4})/.exec(value || '');
+  if (rfc822) {
+    const month = SHORT_MONTHS.indexOf(rfc822[2]);
+    if (month >= 0) return `${MONTHS[month]} ${Number(rfc822[1])}, ${rfc822[3]}`;
+  }
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return '';
+  return `${MONTHS[parsed.getUTCMonth()]} ${parsed.getUTCDate()}, ${parsed.getUTCFullYear()}`;
+};
+
+// Matched on localName so the sparkle: prefixed elements resolve without namespace juggling.
+const childText = (parent, localName) => {
+  const child = Array.from(parent.children).find((node) => node.localName === localName);
+  return child ? child.textContent.trim() : '';
+};
+
+export const fetchMacReleases = async () => {
+  const response = await fetch(feedUrl(MAC_FEED), { cache: 'no-cache' });
+  if (!response.ok) throw new Error(`appcast responded ${response.status}`);
+  const doc = new DOMParser().parseFromString(await response.text(), 'application/xml');
+  if (doc.getElementsByTagName('parsererror').length) throw new Error('appcast is not valid XML');
+
+  const releases = Array.from(doc.getElementsByTagName('item'))
+    .map((item) => {
+      const build = Number(childText(item, 'version'));
+      const pubDate = childText(item, 'pubDate');
+      return {
+        platform: 'macOS',
+        version: childText(item, 'shortVersionString') || childText(item, 'title'),
+        build,
+        date: formatFeedDate(pubDate),
+        sortKey: Date.parse(pubDate) || 0,
+        notes: childText(item, 'releaseNotesLink') || null
+      };
+    })
+    .filter((release) => release.version && Number.isFinite(release.build))
+    .sort((a, b) => b.build - a.build);
+
+  if (!releases.length) throw new Error('appcast carries no releases');
+  return releases;
+};
+
+export const fetchWindowsRelease = async () => {
+  const response = await fetch(feedUrl(WINDOWS_FEED), { cache: 'no-cache' });
+  if (!response.ok) throw new Error(`latest.yml responded ${response.status}`);
+  const text = await response.text();
+
+  const version = (/^version:\s*'?([^'\s]+)'?/m.exec(text) || [])[1];
+  if (!version) throw new Error('latest.yml carries no version');
+  // latest.yml has no build field; the build is the suffix of the versioned installer it points at.
+  const build = Number((/PolyPDFSetup-v[\d.]+-(\d+)\.exe/.exec(text) || [])[1]);
+  const releaseDate = (/^releaseDate:\s*'?([^'\n]+?)'?\s*$/m.exec(text) || [])[1];
+  const notes = Number.isFinite(build)
+    ? `/downloads/windows/PolyPDFWin-v${version}-${build}.html`
+    : null;
+
+  return {
+    platform: 'Windows',
+    version,
+    build: Number.isFinite(build) ? build : null,
+    date: formatFeedDate(releaseDate),
+    sortKey: Date.parse(releaseDate) || 0,
+    notes
+  };
+};
+
+// Human summaries, keyed by platform, version and build. A release the feed carries without an entry
+// here still renders — it just shows its date and its release-notes link.
+const RELEASE_PROSE = {
+  'macOS 1.6.20 (87)': release1620Highlights,
+  'Windows 1.6.20 (87)': release1620Highlights,
+  'macOS 1.6.19 (86)': release1619Highlights,
+  'Windows 1.6.19 (86)': release1619Highlights,
+  'macOS 1.6.16 (83)': release1616Highlights,
+  'Windows 1.6.16 (83)': release1616Highlights,
+  'macOS 1.6.15 (82)': release1615Highlights,
+  'Windows 1.6.15 (82)': release1615Highlights,
+  'macOS 1.6.13 (74)': release1613Highlights,
+  'Windows 1.6.13 (74)': release1613Highlights,
+  'macOS 1.6.7 (39)': release167Highlights,
+  'Windows 1.6.7 (39)': release167Highlights,
+  'macOS 1.6.6 (38)': release166Highlights,
+  'Windows 1.6.6 (38)': release166Highlights,
+  'macOS 1.6.5 (37)': release165Highlights,
+  'Windows 1.6.5 (37)': release165Highlights,
+  'macOS 1.6.4 (36)': release164Highlights,
+  'Windows 1.6.4 (36)': release164Highlights,
+  'macOS 1.6.2 (34)': release162Highlights,
+  'Windows 1.6.2 (34)': release162Highlights,
+  'macOS 1.6.1 (32)': release161Highlights,
+  'Windows 1.6.1 (32)': release161Highlights,
+  'macOS 1.6.0 (31)': release160Highlights,
+  'Windows 1.6.0 (31)': release160Highlights,
+  'macOS 1.5.8 (30)': release158Highlights,
+  'Windows 1.5.8 (30)': release158Highlights,
+  'macOS 1.5.7 (29)': release157Highlights,
+  'Windows 1.5.7 (29)': release157Highlights,
+  'macOS 1.5.6 (28)': release156Highlights,
+  'Windows 1.5.6 (28)': release156Highlights,
+  'macOS 1.5.5 (27)': release155Highlights,
+  'Windows 1.5.5 (27)': release155Highlights,
+  'macOS 1.5.4 (26)': release154Highlights,
+  'Windows 1.5.4 (26)': [...release154Highlights, release154WindowsFix],
+  'macOS 1.5.3 (25)': release153Highlights,
+  'Windows 1.5.3 (25)': release153Highlights,
+  'macOS 1.5.2 (24)': release152Highlights,
+  'Windows 1.5.2 (24)': release152Highlights,
+  'macOS 1.5.1 (23)': releaseHighlights,
+  'Windows 1.5.1 (23)': releaseHighlights,
+  'macOS 1.5.0 (22)': [
+    'Revision Packages add a guided path for importing a new drawing issue, reconciling sheets, carrying reviewed work forward, reviewing changes and quantity or cost impact, checking references, and publishing a current package with a revision report.',
+    'Portable .polyset projects keep verified source copies, revision history, sheet links, and publication records together while leaving the original PDFs unchanged.',
+    'Dialogs and sidebars were audited for clearer actions, reliable keyboard behavior, readable layouts, long content, narrow panels, and smaller windows.',
+    'PDF rendering, annotation movement, page operations, saving, signatures, and update checks include additional reliability safeguards.'
+  ],
+  'Windows 1.5.0 (22)': [
+    'Revision Packages add a guided path for importing a new drawing issue, reconciling sheets, carrying reviewed work forward, reviewing changes and quantity or cost impact, checking references, and publishing a current package with a revision report.',
+    'Portable .polyset projects keep verified source copies, revision history, sheet links, and publication records together while leaving the original PDFs unchanged.',
+    'Dialogs and sidebars were audited for clearer actions, reliable keyboard behavior, readable layouts, long content, narrow panels, and smaller windows.',
+    'PDF rendering, annotation movement, page operations, saving, signatures, and update checks include additional reliability safeguards.'
+  ],
+  'macOS 1.4.4 (21)': [
+    'AEC OCR can recover structured schedules, title-block details, drawing labels, and dimensions from plan sheets, with local table-model inference and spreadsheet-ready table output.',
+    'Tool Chest adds built-in Doors, Windows, and Fire Protection sets, plus BTX, SVG, and DXF toolset import.',
+    'Measurements add Radius and Diameter tools, path and circular suggestions, movable labels and leaders, precision controls, helper dimensions, and keyboard nudging.',
+    'Edit PDF fonts, Markups List count series, toolset export and drag-and-drop, collaboration setup, plugin discovery, and PDF rendering reliability were refined.'
+  ],
+  'Windows 1.4.4 (21)': [
+    'AEC OCR can recover structured schedules, title-block details, drawing labels, and dimensions from plan sheets, with local table-model inference and spreadsheet-ready table output.',
+    'Tool Chest adds built-in Doors, Windows, and Fire Protection sets, plus BTX, SVG, and DXF toolset import.',
+    'Measurements add Radius and Diameter tools, path and circular suggestions, movable labels and leaders, precision controls, helper dimensions, and keyboard nudging.',
+    'Edit PDF fonts, Markups List count series, toolset export and drag-and-drop, collaboration setup, plugin discovery, and PDF rendering reliability were refined.'
+  ],
+  'macOS 1.4.3 (20)': [
+    'Collaboration Beta lets approved Mac and Windows users exchange live markups, cursors, presence, and ordered offline edits through a customer-owned host while the PDF stays on the mounted company share.',
+    'Owners can approve devices as Owner, Editor, or Viewer, resolve offline conflicts, restore signed history, and safeguard controlled saves and externally replaced PDFs.',
+    'Annotation text adds a shared cross-platform font catalogue while retaining installed-font discovery on macOS and preserving saved defaults.',
+    'Visual signatures add selectable ink colors, preserve their exported appearance, remain editable when visual-only, and undo as one operation.'
+  ],
+  'Windows 1.4.3 (20)': [
+    'Collaboration Beta lets approved Mac and Windows users exchange live markups, cursors, presence, and ordered offline edits through a customer-owned host while the PDF stays on the mounted company share.',
+    'Owners can approve devices as Owner, Editor, or Viewer, resolve offline conflicts, restore signed history, and safeguard controlled saves and externally replaced PDFs.',
+    'Annotation text adds a shared cross-platform font catalogue while retaining installed-font discovery on macOS and preserving saved defaults.',
+    'Visual signatures add selectable ink colors, preserve their exported appearance, remain editable when visual-only, and undo as one operation.'
+  ],
+  'macOS 1.4.2 (19)': [
+    'Symbol Search has a clearer sample-selection and review workflow, with more reliable unique-label and count-series handling.',
+    'Estimate and takeoff views improve columns, filtering, totals, navigation, and PDF summary output.',
+    'Bundled Maps, Steel Sections, and Seal Maker plugins remain discoverable on Free; inserting plugin content prompts for Pro.',
+    'Split panes, map resizing, Edit PDF content handling, Save All, text selection, area measurements, and Markup Table presentation received fixes.'
+  ],
+  'Windows 1.4.2 (19)': [
+    'Symbol Search has a clearer sample-selection and review workflow, with more reliable unique-label and count-series handling.',
+    'Estimate and takeoff views improve columns, filtering, totals, navigation, and PDF summary output.',
+    'Bundled Maps, Steel Sections, and Seal Maker plugins remain discoverable on Free; inserting plugin content prompts for Pro.',
+    'Split panes, map resizing, Edit PDF content handling, Save All, text selection, area measurements, and Markup Table presentation received fixes.'
+  ],
+  'macOS 1.4.1 (18)': [
+    'Symbol Search and plugin workflows now guide Free users consistently to the PolyPDF Pro upgrade screen.',
+    'Pro access is enforced across both the visible interface and the underlying document services.',
+    'License changes safely close in-progress Pro workflows and return the document to Select with Thumbnails open.',
+    'Saved Free workspaces no longer reopen directly into Symbol Search or a paid plugin surface, and the 100-license Founder offer now has a clear sold-out state.'
+  ],
+  'Windows 1.4.1 (18)': [
+    'Symbol Search and plugin workflows now guide Free users consistently to the PolyPDF Pro upgrade screen.',
+    'Pro access is enforced across both the visible interface and the underlying document services.',
+    'License changes safely close in-progress Pro workflows and return the document to Select with Thumbnails open.',
+    'Saved Free workspaces no longer reopen directly into Symbol Search or a paid plugin surface, and the 100-license Founder offer now has a clear sold-out state.'
+  ],
+  'macOS 1.4.0 (17)': [
+    'PDF Maps places styled maps on plans and keeps them editable as live geographic viewports.',
+    'Auto Area finds enclosed rooms; area cutouts resize, and optional helper dimensions support direct numeric entry.',
+    'Custom Shortcuts lets you review, reassign, clear, and reset commands from Settings.',
+    'Split-view zoom, snapping controls, plugin editing, toolbars, Settings, palettes, document controls, and drawing reliability were refined.'
+  ],
+  'Windows 1.4.0 (17)': [
+    'PDF Maps places styled maps on plans and keeps them editable as live geographic viewports.',
+    'Auto Area finds enclosed rooms; area cutouts resize, and optional helper dimensions support direct numeric entry.',
+    'Custom Shortcuts lets you review, reassign, clear, and reset commands from Settings.',
+    'Split-view zoom, snapping controls, plugin editing, toolbars, Settings, palettes, document controls, and drawing reliability were refined.'
+  ],
+  'macOS 1.3.4 (16)': [
+    'Fit Height joins Fit Page and Fit Width, with viewport alignment that no longer reserves a scrollbar gutter.',
+    'Command-click inserts a vertex and Command-Shift-click removes one on areas, polylines, and Workspace edges.',
+    'Narrow-sidebar and common laptop layouts keep toolbars, plugin controls, measurement panels, and contextual controls usable.',
+    'Generated seals handle long names more cleanly and export their current artwork correctly.'
+  ],
+  'Windows 1.3.4 (16)': [
+    'Fit Height joins Fit Page and Fit Width, with viewport alignment that no longer reserves a scrollbar gutter.',
+    'Ctrl-click inserts a vertex and Ctrl-Shift-click removes one on areas, polylines, and Workspace edges.',
+    'Narrow-sidebar and common laptop layouts keep toolbars, plugin controls, measurement panels, and contextual controls usable.',
+    'Generated seals export correctly, and opened documents use corrected Windows path handling.'
+  ],
+  'macOS 1.1.3 (8)': [
+    'Saved style defaults, per tool: set highlight color, pen color, font and more once — every new markup uses them, even after quitting and reopening. Right-click a markup and choose "Set as Tool Default", or adjust the style bar with nothing selected.',
+    'Text boxes and callouts start empty, so you can place and type straight away.',
+    'The Callout keyboard shortcut is now Q, matching the key most estimators already use.',
+    'Fixed: on Macs without Xcode, PolyPDF could trigger a macOS prompt to install the command line developer tools. They were never needed, and the prompt is gone.'
+  ],
+  'macOS 1.1.2 (7)': [
+    'Visual Search and automatic counting: select a symbol on a drawing and PolyPDF finds the other instances on the page, ready to commit as a Count series in one step.',
+    'A dedicated search panel with results in context and highlighting across the document.',
+    'Fixed: Command-X/C/V/A did nothing in text fields — including the license key box. All four shortcuts work everywhere now.',
+    'Fixed: a temporary network problem could reset an activated Pro copy to the Free tier.',
+    'Fixed: edits to markups imported from 1.0.x-era files could be silently undone on reopen.',
+    'Fixed: saving certain large CAD and plan-set PDFs could produce a file other viewers reported as damaged.'
+  ],
+  'macOS 1.1.1 (6)': [
+    'Fixed: after closing the last window, opening a PDF from the Finder did nothing. It now opens in a new window as expected.',
+    'Fill and hatch opacity controls are now steppers with 10% increments.'
+  ],
+  'macOS 1.1.0 (5)': [
+    'A major new foundation for PolyPDF, verified against the ISO 32000-2 PDF standard.',
+    'Measurements and takeoff: calibrate a sheet once, measure lengths, areas, and counts, and pull totals into a takeoff worksheet.',
+    'Full markup set: clouds, callouts, hatches, industry line styles, stamps, snapshots, and built-in symbol tool sets.',
+    'Compare Documents: differences between two revisions arrive as editable revision-cloud markups.',
+    'OCR for scanned sheets, including rotated labels on plan sets.',
+    'Forms and digital signatures, Bates numbering, watermarks, flatten, page operations, and redaction. Redaction removes decodable text; vector or outlined content and some nested images can survive under the black fill, so check sensitive output before you send it.'
+  ],
+  'macOS 1.0.3 (4)': ['Maintenance release for the original native Mac app.'],
+  'macOS 1.0.2 (3)': ['Maintenance release for the original native Mac app.'],
+  'macOS 1.0.1 (2)': ['Maintenance release for the original native Mac app.'],
+  'Windows 1.1.3 (8)': [
+    'The first signed release of PolyPDF for Windows 10 and 11: the installer and the app are code-signed by Euclidean Software, LLC.',
+    'The same PolyPDF engine as the Mac app, at the same version.',
+    'Updates install themselves — a new version downloads in the background and is applied when you quit.'
+  ]
+};
+
+const proseKey = (release) => `${release.platform} ${release.version} (${release.build})`;
+
+// Rendered only while the feeds are still loading, or if one cannot be reached, so the page is never
+// empty. Published history is retained when the feeds supply fresher release details.
+const FALLBACK_RELEASES = [
+  { platform: 'macOS', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html` },
+  { platform: 'Windows', version: siteRelease.version, build: Number(siteRelease.build), date: 'October 22, 2026', notes: `/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html` },
+  { platform: 'macOS', version: '1.6.19', build: 86, date: 'October 22, 2026', notes: '/downloads/PolyPDFMac-v1.6.19-86.html' },
+  { platform: 'Windows', version: '1.6.19', build: 86, date: 'October 22, 2026', notes: '/downloads/windows/PolyPDFWin-v1.6.19-86.html' },
+  { platform: 'macOS', version: '1.6.16', build: 83, date: 'October 19, 2026', notes: '/downloads/PolyPDFMac-v1.6.16-83.html' },
+  { platform: 'Windows', version: '1.6.16', build: 83, date: 'October 19, 2026', notes: '/downloads/windows/PolyPDFWin-v1.6.16-83.html' },
+  { platform: 'macOS', version: '1.5.5', build: 27, date: 'September 13, 2026', notes: '/downloads/PolyPDFMac-v1.5.5-27.html' },
+  { platform: 'Windows', version: '1.5.5', build: 27, date: 'September 13, 2026', notes: '/downloads/windows/PolyPDFWin-v1.5.5-27.html' },
+  { platform: 'macOS', version: '1.5.0', build: 22, date: 'September 3, 2026', notes: '/downloads/PolyPDFMac-v1.5.0-22.html' },
+  { platform: 'Windows', version: '1.5.0', build: 22, date: 'September 3, 2026', notes: '/downloads/windows/PolyPDFWin-v1.5.0-22.html' },
+  { platform: 'Windows', version: '1.4.4', build: 21, date: 'August 30, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.4-21.html' },
+  { platform: 'macOS', version: '1.4.4', build: 21, date: 'August 29, 2026', notes: '/downloads/PolyPDFMac-v1.4.4-21.html' },
+  { platform: 'macOS', version: '1.4.3', build: 20, date: 'August 27, 2026', notes: '/downloads/PolyPDFMac-v1.4.3-20.html' },
+  { platform: 'Windows', version: '1.4.3', build: 20, date: 'August 27, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.3-20.html' },
+  { platform: 'macOS', version: '1.4.2', build: 19, date: 'August 26, 2026', notes: '/downloads/PolyPDFMac-v1.4.2-19.html' },
+  { platform: 'Windows', version: '1.4.2', build: 19, date: 'August 26, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.2-19.html' },
+  { platform: 'macOS', version: '1.4.1', build: 18, date: 'August 23, 2026', notes: '/downloads/PolyPDFMac-v1.4.1-18.html' },
+  { platform: 'Windows', version: '1.4.1', build: 18, date: 'August 24, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.1-18.html' },
+  { platform: 'macOS', version: '1.4.0', build: 17, date: 'August 23, 2026', notes: '/downloads/PolyPDFMac-v1.4.0-17.html' },
+  { platform: 'Windows', version: '1.4.0', build: 17, date: 'August 23, 2026', notes: '/downloads/windows/PolyPDFWin-v1.4.0-17.html' },
+  { platform: 'macOS', version: '1.3.4', build: 16, date: 'August 17, 2026', notes: '/downloads/PolyPDFMac-v1.3.4-16.html' },
+  { platform: 'Windows', version: '1.3.4', build: 16, date: 'August 17, 2026', notes: '/downloads/windows/PolyPDFWin-v1.3.4-16.html' },
+  { platform: 'macOS', version: '1.3.2', build: 14, date: 'August 10, 2026', notes: '/downloads/PolyPDFMac-v1.3.2-14.html' },
+  { platform: 'macOS', version: '1.3.1', build: 13, date: 'August 9, 2026', notes: '/downloads/PolyPDFMac-v1.3.1-13.html' },
+  { platform: 'macOS', version: '1.3.0', build: 11, date: 'August 8, 2026', notes: '/downloads/PolyPDFMac-v1.3.0-11.html' },
+  { platform: 'macOS', version: '1.2.1', build: 10, date: 'August 4, 2026', notes: '/downloads/PolyPDFMac-v1.2.1-10.html' },
+  { platform: 'macOS', version: '1.2.0', build: 9, date: 'August 2, 2026', notes: '/downloads/PolyPDFMac-v1.2.0-9.html' },
+  { platform: 'Windows', version: '1.1.3', build: 8, date: 'July 29, 2026', notes: null },
+  { platform: 'macOS', version: '1.1.3', build: 8, date: 'July 28, 2026', notes: '/downloads/PolyPDFMac-v1.1.3-8.html' },
+  { platform: 'macOS', version: '1.1.2', build: 7, date: 'July 28, 2026', notes: '/downloads/PolyPDFMac-v1.1.2-7.html' },
+  { platform: 'macOS', version: '1.1.1', build: 6, date: 'July 23, 2026', notes: '/downloads/PolyPDFMac-v1.1.1-6.html' },
+  { platform: 'macOS', version: '1.1.0', build: 5, date: 'July 19, 2026', notes: '/downloads/PolyPDFMac-v1.1.0-5.html' },
+  { platform: 'macOS', version: '1.0.3', build: 4, date: 'April 27, 2026', notes: null },
+  { platform: 'macOS', version: '1.0.2', build: 3, date: 'April 27, 2026', notes: null },
+  { platform: 'macOS', version: '1.0.1', build: 2, date: 'April 27, 2026', notes: null }
+].map((release) => ({ ...release, sortKey: Date.parse(release.date) }));
+
+// latest.yml contains only one Windows release. Retain published history for both platforms,
+// letting live entries replace the matching snapshot rather than discarding older releases.
+export const mergePublishedReleases = (liveReleases, publishedReleases = FALLBACK_RELEASES) => {
+  const byRelease = new Map(publishedReleases.map((release) => [proseKey(release), release]));
+  for (const release of liveReleases) byRelease.set(proseKey(release), release);
+  return [...byRelease.values()].sort(
+    (a, b) => (b.sortKey || 0) - (a.sortKey || 0) || (b.build || 0) - (a.build || 0)
+  );
+};
+
+const platformIcon = (platform) => (platform === 'Windows' ? <FaWindows /> : <FaApple />);
+
+const platformChip = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '0.4rem',
+  marginLeft: 'auto',
+  padding: '0.2rem 0.75rem',
+  borderRadius: 999,
+  background: 'var(--accent-soft)',
+  color: 'var(--gray-700)',
+  fontSize: '0.85rem',
+  fontWeight: 600,
+  whiteSpace: 'nowrap'
+};
+
+const currentVersionLine = (releases) => {
+  const parts = ['macOS', 'Windows']
+    .map((platform) => releases.find((release) => release.platform === platform))
+    .filter(Boolean)
+    .map((release) => `${release.platform} ${release.version} (${release.build})`);
+  return parts.length ? `Current: ${parts.join(' · ')}` : '';
+};
+
+const VersionHistory = () => {
+  const [releases, setReleases] = useState(FALLBACK_RELEASES);
+  const [feedFailed, setFeedFailed] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    Promise.allSettled([fetchMacReleases(), fetchWindowsRelease()]).then(([mac, windows]) => {
+      if (cancelled) return;
+      const fallbackFor = (platform) => FALLBACK_RELEASES.filter((release) => release.platform === platform);
+      const macReleases = mac.status === 'fulfilled' ? mac.value : fallbackFor('macOS');
+      const windowsReleases = windows.status === 'fulfilled' ? [windows.value] : fallbackFor('Windows');
+
+      setFeedFailed(mac.status === 'rejected' || windows.status === 'rejected');
+      setReleases(mergePublishedReleases([...macReleases, ...windowsReleases]));
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  return (
+    <div className="legal-page version-history">
+      <header className="legal-header">
+        <nav className="nav container">
+          <Link to="/" className="logo">
+            <img src={parrotIcon} alt="" width="96" height="96" />
+            <span>PolyPDF</span>
+          </Link>
+          <Link to="/" className="back-link">
+            <FaArrowLeft /> Back to Home
+          </Link>
+        </nav>
+      </header>
+
+      <motion.main
+        className="legal-content"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="container">
+          <div className="legal-hero">
+            <h1>Version History</h1>
+            <p className="legal-subtitle">What has shipped in PolyPDF for Mac and Windows, release by release</p>
+            <p className="last-updated">{currentVersionLine(releases)}</p>
+          </div>
+
+          <div className="legal-intro">
+            <p>
+              PolyPDF updates itself. On Mac, choose Help &gt; Check for Updates in the app, or accept the
+              update prompt when it appears. On Windows, an update downloads in the background and installs
+              when you quit. Save your work before installing. Your existing PolyPDF 1.x Pro license
+              continues to apply.
+            </p>
+            <p>{releaseAnswer}</p>
+            <p className="last-updated">
+              Versions read as version (build); the number in parentheses is the build number support asks
+              for.{feedFailed && ' The live update feed could not be reached, so this list may be behind.'}
+            </p>
+          </div>
+
+          <figure className="release-highlight-image">
+            <div className="shot-plate">
+              <img
+                src={stampBuilderImage}
+                sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1120px) calc(100vw - 80px), 980px"
+                alt="PolyPDF 1.5.1 interactive stamp builder with review fields and optional toolset saving"
+                width="1233"
+                height="768"
+                loading="eager"
+              />
+            </div>
+            <figcaption><strong>New in 1.5.1:</strong> Build interactive review stamps on a blank canvas. <Link to="/blog/polypdf-1-5-1/">Read the release overview</Link> or <Link to="/blog/create-interactive-pdf-stamps/">follow the stamp guide</Link>. Actual 1.5.1 Mac capture.</figcaption>
+          </figure>
+
+          <div className="legal-sections">
+            {releases.map((release, index) => {
+              const highlights = RELEASE_PROSE[proseKey(release)];
+              return (
+                <motion.section
+                  key={proseKey(release)}
+                  className="legal-section"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: Math.min(index, 6) * 0.06 }}
+                >
+                  <div className="section-header">
+                    <div className="section-icon"><FaTag /></div>
+                    <h2>{release.build ? `${release.version} (${release.build})` : release.version}</h2>
+                    <span style={platformChip}>
+                      {platformIcon(release.platform)} {release.platform}
+                    </span>
+                  </div>
+                  <p className="last-updated">{release.date}</p>
+                  {highlights && (
+                    <ul className="section-content">
+                      {highlights.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {release.notes && (
+                    <p style={{ marginTop: '1rem' }}>
+                      <a href={release.notes} target="_blank" rel="noopener noreferrer">
+                        Full release notes
+                      </a>
+                    </p>
+                  )}
+                </motion.section>
+              );
+            })}
+          </div>
+        </div>
+      </motion.main>
+
+    </div>
+  );
+};
+
+export default VersionHistory;

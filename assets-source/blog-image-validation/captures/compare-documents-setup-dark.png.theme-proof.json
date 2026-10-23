@@ -1,0 +1,148 @@
+{
+  "capturedAt": "2026-08-19T11:03:36.568Z",
+  "appSource": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "commit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "diffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "nativeWindow": {
+    "windowState": "maximized",
+    "verification": "native BrowserWindow bounds exactly match Screen.avail",
+    "runtimeBounds": {
+      "screenX": 0,
+      "screenY": 34,
+      "outerWidth": 1710,
+      "outerHeight": 1073,
+      "availLeft": 0,
+      "availTop": 34,
+      "availWidth": 1710,
+      "availHeight": 1073
+    },
+    "browserCdp": {
+      "supported": false,
+      "error": "Browser.getWindowForTarget failed on browser and page CDP endpoints: browser='Browser.getWindowForTarget' wasn't found; page='Browser.getWindowForTarget' wasn't found"
+    },
+    "final": {
+      "windowState": "maximized",
+      "runtimeMaximized": true,
+      "axMatchesRuntime": true,
+      "runtimeBounds": {
+        "left": 0,
+        "top": 34,
+        "width": 1710,
+        "height": 1073,
+        "availLeft": 0,
+        "availTop": 34,
+        "availWidth": 1710,
+        "availHeight": 1073
+      },
+      "axBounds": {
+        "pid": 57851,
+        "left": 0,
+        "top": 34,
+        "width": 1710,
+        "height": 1073
+      }
+    }
+  },
+  "mode": "setup",
+  "initialState": {
+    "dialogId": "compareDocuments",
+    "comparisonPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/fixtures/compare-rev-b.pdf",
+    "comparisonName": "compare-rev-b.pdf"
+  },
+  "fullStyleBarVisible": true,
+  "facts": {
+    "version": "1.3.4",
+    "build": "16",
+    "appAppearance": "dark",
+    "datasetTheme": "dark",
+    "bodyDark": true,
+    "prefersDark": true,
+    "chromeBase": "#26282b",
+    "chromeElevated": "#313437",
+    "devicePixelRatio": 2,
+    "innerWidth": 1710,
+    "innerHeight": 1073,
+    "outerWidth": 1710,
+    "outerHeight": 1073,
+    "screenX": 0,
+    "screenY": 34,
+    "screenWidth": 1710,
+    "screenHeight": 1107,
+    "screenAvailLeft": 0,
+    "screenAvailTop": 34,
+    "screenAvailWidth": 1710,
+    "screenAvailHeight": 1073,
+    "documentName": "compare-rev-a.pdf",
+    "dialogId": "compareDocuments",
+    "comparisonPath": "/Users/mohammedbala/Projects/polypdf_site-organic-guides/assets-source/blog-image-validation/fixtures/compare-rev-b.pdf",
+    "comparisonName": "compare-rev-b.pdf",
+    "compareConfirmEnabled": true,
+    "annotationCount": 0,
+    "revisionCloudCount": 0,
+    "selectedRevisionCloudCount": 0,
+    "selectedCloudId": "",
+    "markupsPanelActive": false,
+    "markupsTableVisible": false,
+    "markupRows": [],
+    "footerStatus": "Opened compare-rev-a.pdf",
+    "styleControlsText": "‹ Name compare-rev-a.pdf Pages 1 Add Page ⊕ ›",
+    "styleToolbar": {
+      "present": true,
+      "className": "style-toolbar",
+      "trackPresent": true,
+      "clientWidth": 1657,
+      "scrollWidth": 1657,
+      "scrollLeft": 0,
+      "hasOverflowClass": false,
+      "sectionCount": 3,
+      "sections": [
+        {
+          "id": "",
+          "text": "Name compare-rev-a.pdf",
+          "left": 43,
+          "right": 205.53125,
+          "width": 162.53125,
+          "displayed": true,
+          "withinTrack": true
+        },
+        {
+          "id": "",
+          "text": "Pages 1",
+          "left": 205.53125,
+          "right": 260.0859375,
+          "width": 54.5546875,
+          "displayed": true,
+          "withinTrack": true
+        },
+        {
+          "id": "",
+          "text": "Add Page ⊕",
+          "left": 260.0859375,
+          "right": 349.046875,
+          "width": 88.9609375,
+          "displayed": true,
+          "withinTrack": true
+        }
+      ],
+      "controlCount": 1,
+      "visibleControlCount": 1,
+      "visibleScrollButtonCount": 0
+    }
+  },
+  "pixelProof": {
+    "width": 3420,
+    "height": 2146,
+    "darkHits": 4066741,
+    "lightHits": 2825462,
+    "darkRatio": 0.5541032411722067,
+    "lightRatio": 0.38497599232626456,
+    "topDarkHits": 575256,
+    "topLightHits": 33,
+    "topDarkRatio": 0.9344639376218323,
+    "expectedWidth": 3420,
+    "expectedHeight": 2146,
+    "passes": true
+  }
+}

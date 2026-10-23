@@ -1,0 +1,688 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-03T04:03:12.490Z",
+  "passed": true,
+  "pilotReportPath": ".tmp/revision-package-pilot/report.json",
+  "outputDir": ".tmp/drawing-set-rollout/revision-package-ui/journey",
+  "discipline": "architectural",
+  "application": {
+    "electronBinary": "/Users/mohammedbala/Projects/polypdfmac/node_modules/electron/dist/Electron.app/Contents/MacOS/Electron",
+    "rendererUrl": "file:///Users/mohammedbala/Projects/polypdfmac/polypdf/dist/renderer/index.html",
+    "profile": "community",
+    "featureFlag": "POLYPDF_DRAWING_SETS=1",
+    "discipline": "architectural"
+  },
+  "inputs": {
+    "pilotCaseId": "architectural-albuquerque-adu-550",
+    "discipline": "architectural",
+    "seedManifest": {
+      "relativePath": ".tmp/revision-package-pilot/runs/2026-09-03T02-20-18-861Z/architectural-albuquerque-adu-550/ui-seed/project/architectural-albuquerque-adu-550.polyset",
+      "byteLength": 18956,
+      "sha256": "689bc41c345e6349f435abd09976bf1ee13649533f818911c868fb090f682460"
+    },
+    "controlledRevision": {
+      "relativePath": ".tmp/revision-package-pilot/runs/2026-09-03T02-20-18-861Z/architectural-albuquerque-adu-550/inputs/A-101-controlled-revision-P1.pdf",
+      "byteLength": 231448,
+      "sha256": "d10d8b164fea618940c5718ca5371eb40088f40321467f798ccffdb689ed7c2e"
+    },
+    "workingManifestPath": ".tmp/drawing-set-rollout/revision-package-ui/journey/project/architectural-albuquerque-adu-550.polyset",
+    "expectedSheetNumber": "A-101",
+    "expectedTitle": "Foundation Plan",
+    "expectedQuantityDelta": 1,
+    "expectedCostDelta": "150.00",
+    "expectedUncertainMatch": false,
+    "beforeManifestRevision": 3,
+    "beforeIssueCount": 1,
+    "beforeRevisionId": "0927631e-ac7d-4a93-8698-387e67a5312a"
+  },
+  "stages": [
+    {
+      "stage": "ready",
+      "screenshot": {
+        "relativePath": ".tmp/drawing-set-rollout/revision-package-ui/journey/screenshots/00-package-ready.png",
+        "byteLength": 107810,
+        "sha256": "f5a2e5a3dd0744fba886f6c464f7898c0e7de73d26ae5716dd9b4f4c0672d308"
+      },
+      "ui": {
+        "viewport": {
+          "width": 1539,
+          "height": 966,
+          "devicePixelRatio": 2
+        },
+        "panel": {
+          "panel": "drawingSets",
+          "visible": true,
+          "updateEnabled": true,
+          "text": "Albuquerque 550-square-foot casita construction plansSaved · Manifest revision 3 Update Package…Import → recognize → reconcile → review changes and impact → review references → publish Package tools Import Sources… Recognize Again Reconcile Sheets… Reference Review… Change Review… Recognition Setup… No package diagnostics Search sheets Current All revisions G G-001 Unclassified —Official baseline Current architectural A-101 Foundation Plan BASELINEOfficial baseline Current A A-102 Unclassified —Official baseline Current A-103 Unclassified —Official baseline Current A-104 Unclassified —Official baseline Current A-105 Unclassified —Official baseline Current A-106 Unclassified —Official baseline Current A-107 Unclassified —Official baseline Current"
+        },
+        "dialog": {
+          "id": "",
+          "title": "",
+          "activeStage": "",
+          "text": "",
+          "fieldValues": {}
+        },
+        "reconciliationRows": [],
+        "compareRows": [],
+        "linkRows": [],
+        "resultSections": [],
+        "alignment": {
+          "status": "",
+          "confirmEnabled": false,
+          "panes": []
+        }
+      }
+    },
+    {
+      "stage": "import",
+      "screenshot": {
+        "relativePath": ".tmp/drawing-set-rollout/revision-package-ui/journey/screenshots/01-import.png",
+        "byteLength": 286788,
+        "sha256": "f075a0543170dcbe2666748ab30dffe12e86e34e695e623c7483972fc135b0fa"
+      },
+      "ui": {
+        "viewport": {
+          "width": 1539,
+          "height": 966,
+          "devicePixelRatio": 2
+        },
+        "panel": {
+          "panel": "drawingSets",
+          "visible": true,
+          "updateEnabled": true,
+          "text": "Albuquerque 550-square-foot casita construction plansSaved · Manifest revision 3 Update Package…Import → recognize → reconcile → review changes and impact → review references → publish Package tools Import Sources… Recognize Again Reconcile Sheets… Reference Review… Change Review… Recognition Setup… No package diagnostics Search sheets Current All revisions G G-001 Unclassified —Official baseline Current architectural A-101 Foundation Plan BASELINEOfficial baseline Current A A-102 Unclassified —Official baseline Current A-103 Unclassified —Official baseline Current A-104 Unclassified —Official baseline Current A-105 Unclassified —Official baseline Current A-106 Unclassified —Official baseline Current A-107 Unclassified —Official baseline Current"
+        },
+        "dialog": {
+          "id": "drawingSet",
+          "title": "Update Package…",
+          "activeStage": "Import",
+          "text": "Update Package…PolyPDF preserves a verified source copy; the original PDFs are never changed. Import → recognize → reconcile → review changes and impact → review references → publish1Import2Reconcile3Changes + impact4References5Publish Choose PDF Files…Choose Folder… Cancel",
+          "fieldValues": {}
+        },
+        "reconciliationRows": [],
+        "compareRows": [],
+        "linkRows": [],
+        "resultSections": [],
+        "alignment": {
+          "status": "",
+          "confirmEnabled": false,
+          "panes": []
+        }
+      }
+    },
+    {
+      "stage": "issue-details",
+      "screenshot": {
+        "relativePath": ".tmp/drawing-set-rollout/revision-package-ui/journey/screenshots/02-issue-details.png",
+        "byteLength": 296302,
+        "sha256": "2b21226f1f324bb074c076ded5562318f81f902e163dcf936a0dcba4f528b66a"
+      },
+      "ui": {
+        "viewport": {
+          "width": 1539,
+          "height": 966,
+          "devicePixelRatio": 2
+        },
+        "panel": {
+          "panel": "drawingSets",
+          "visible": true,
+          "updateEnabled": true,
+          "text": "Albuquerque 550-square-foot casita construction plansSaved · Manifest revision 3 Update Package…Import → recognize → reconcile → review changes and impact → review references → publish Package tools Import Sources… Recognize Again Reconcile Sheets… Reference Review… Change Review… Recognition Setup… No package diagnostics Search sheets Current All revisions G G-001 Unclassified —Official baseline Current architectural A-101 Foundation Plan BASELINEOfficial baseline Current A A-102 Unclassified —Official baseline Current A-103 Unclassified —Official baseline Current A-104 Unclassified —Official baseline Current A-105 Unclassified —Official baseline Current A-106 Unclassified —Official baseline Current A-107 Unclassified —Official baseline Current"
+        },
+        "dialog": {
+          "id": "drawingSet",
+          "title": "Import New Issue",
+          "activeStage": "Import",
+          "text": "Import New IssuePolyPDF preserves a verified source copy; the original PDFs are never changed. Import → recognize → reconcile → review changes and impact → review references → publish1Import2Reconcile3Changes + impact4References5Publish Issue label Issue date Issue type Partial update Full reissue Cancel Preserve and Recognize",
+          "fieldValues": {
+            "[data-issue-label]": "Controlled Revision P1",
+            "[data-issue-date]": "2026-09-01",
+            "[data-issue-mode]": "partial"
+          }
+        },
+        "reconciliationRows": [],
+        "compareRows": [],
+        "linkRows": [],
+        "resultSections": [],
+        "alignment": {
+          "status": "",
+          "confirmEnabled": true,
+          "panes": []
+        }
+      }
+    },
+    {
+      "stage": "reconcile",
+      "screenshot": {
+        "relativePath": ".tmp/drawing-set-rollout/revision-package-ui/journey/screenshots/03-reconcile.png",
+        "byteLength": 732226,
+        "sha256": "78f8e65b9224e401a38900b9fdd7fdae560d319924aed86d787df9636377b896"
+      },
+      "ui": {
+        "viewport": {
+          "width": 1539,
+          "height": 966,
+          "devicePixelRatio": 2
+        },
+        "panel": {
+          "panel": "drawingSets",
+          "visible": true,
+          "updateEnabled": true,
+          "text": "Albuquerque 550-square-foot casita construction plansSaved · Manifest revision 5 Update Package…Import → recognize → reconcile → review changes and impact → review references → publish Package tools Import Sources… Recognize Again Reconcile Sheets… Reference Review… Change Review… Recognition Setup… No package diagnostics Search sheets Current All revisions G G-001 Unclassified —Official baseline Current architectural A-101 Foundation Plan BASELINEOfficial baseline Current A A-102 Unclassified —Official baseline Current A-103 Unclassified —Official baseline Current A-104 Unclassified —Official baseline Current A-105 Unclassified —Official baseline Current A-106 Unclassified —Official baseline Current A-107 Unclassified —Official baseline Current"
+        },
+        "dialog": {
+          "id": "drawingSet",
+          "title": "Sheet Reconciliation",
+          "activeStage": "Reconcile",
+          "text": "Sheet ReconciliationReview every proposed identity and replacement. Revision codes never decide what becomes current. Import → recognize → reconcile → review changes and impact → review references → publish1Import2Reconcile3Changes + impact4References5Publish A-101Foundation Plan Sheet action Replace Add Manual match Skip Replacement target — G-001 — A-101 — Foundation Plan A-102 — A-103 — A-104 — A-105 — A-106 — A-107 — Sheet number Carry forward markups, scales, Spaces, and manual links exact-box · 100%Align… Cancel Apply Reviewed Revisions",
+          "fieldValues": {}
+        },
+        "reconciliationRows": [
+          {
+            "action": "replace",
+            "targetSheetId": "09964830-38c3-4dc4-824a-7f0099d483a8",
+            "sheetNumber": "A-101",
+            "transferChecked": true,
+            "transferDisabled": false,
+            "identityRequired": false,
+            "identityChecked": false,
+            "registrationApproved": true,
+            "text": "A-101Foundation Plan Sheet action Replace Add Manual match Skip Replacement target — G-001 — A-101 — Foundation Plan A-102 — A-103 — A-104 — A-105 — A-106 — A-107 — Sheet number Carry forward markups, scales, Spaces, and manual links exact-box · 100%Align…"
+          }
+        ],
+        "compareRows": [],
+        "linkRows": [],
+        "resultSections": [],
+        "alignment": {
+          "status": "",
+          "confirmEnabled": true,
+          "panes": []
+        }
+      }
+    },
+    {
+      "stage": "changes-impact",
+      "screenshot": {
+        "relativePath": ".tmp/drawing-set-rollout/revision-package-ui/journey/screenshots/04-changes-impact.png",
+        "byteLength": 517096,
+        "sha256": "be9573c9a0494f5c255aa5cb99ed85b2926f204993753fb2b15057eddb3873e0"
+      },
+      "ui": {
+        "viewport": {
+          "width": 1539,
+          "height": 966,
+          "devicePixelRatio": 2
+        },
+        "panel": {
+          "panel": "drawingSets",
+          "visible": true,
+          "updateEnabled": true,
+          "text": "Albuquerque 550-square-foot casita construction plansSaved · Manifest revision 6 Update Package…Import → recognize → reconcile → review changes and impact → review references → publish Package tools Import Sources… Recognize Again Reconcile Sheets… Reference Review… Change Review… Recognition Setup… No package diagnostics Search sheets Current All revisions G G-001 Unclassified —Official baseline Current architectural A-101 Foundation Plan —Controlled Revision P1 Current A A-102 Unclassified —Official baseline Current A-103 Unclassified —Official baseline Current A-104 Unclassified —Official baseline Current A-105 Unclassified —Official baseline Current A-106 Unclassified —Official baseline Current A-107 Unclassified —Official baseline Current"
+        },
+        "dialog": {
+          "id": "drawingSet",
+          "title": "Change Review",
+          "activeStage": "Changes + impact",
+          "text": "Change ReviewEach current sheet is checked against its immediately superseded revision, with measured quantity and cost impact when project data is present. Import → recognize → reconcile → review changes and impact → review references → publish1Import2Reconcile3Changes + impact4References5Publish G-001AddedQuantity groups changed: 0 · Cost impact unavailable—A-101Foundation PlanChanged · Differences: 2Quantity groups changed: 1 · Cost impact: USD 150.00100% · exact-boxBaseline revisionBASELINE · reviewed-source-date · Official baselineAlign…A-102AddedQuantity groups changed: 0 · Cost impact unavailable—A-103AddedQuantity groups changed: 0 · Cost impact unavailable—A-104AddedQuantity groups changed: 0 · Cost impact unavailable—A-105AddedQuantity groups changed: 0 · Cost impact unavailable—A-106AddedQuantity groups changed: 0 · Cost impact unavailable—A-107AddedQuantity groups changed: 0 · Cost impact unavailable— Also publish per-sheet change PDFs Output name Cancel Publish Revision Report",
+          "fieldValues": {
+            "[data-output-name]": "Albuquerque 550-square-foot casita construction plans"
+          }
+        },
+        "reconciliationRows": [],
+        "compareRows": [
+          {
+            "sheetNumber": "G-001",
+            "status": "added",
+            "checked": false,
+            "disabled": true,
+            "text": "G-001AddedQuantity groups changed: 0 · Cost impact unavailable—"
+          },
+          {
+            "sheetNumber": "A-101",
+            "status": "changed",
+            "checked": true,
+            "disabled": false,
+            "text": "A-101Foundation PlanChanged · Differences: 2Quantity groups changed: 1 · Cost impact: USD 150.00100% · exact-boxBaseline revisionBASELINE · reviewed-source-date · Official baselineAlign…"
+          },
+          {
+            "sheetNumber": "A-102",
+            "status": "added",
+            "checked": false,
+            "disabled": true,
+            "text": "A-102AddedQuantity groups changed: 0 · Cost impact unavailable—"
+          },
+          {
+            "sheetNumber": "A-103",
+            "status": "added",
+            "checked": false,
+            "disabled": true,
+            "text": "A-103AddedQuantity groups changed: 0 · Cost impact unavailable—"
+          },
+          {
+            "sheetNumber": "A-104",
+            "status": "added",
+            "checked": false,
+            "disabled": true,
+            "text": "A-104AddedQuantity groups changed: 0 · Cost impact unavailable—"
+          },
+          {
+            "sheetNumber": "A-105",
+            "status": "added",
+            "checked": false,
+            "disabled": true,
+            "text": "A-105AddedQuantity groups changed: 0 · Cost impact unavailable—"
+          },
+          {
+            "sheetNumber": "A-106",
+            "status": "added",
+            "checked": false,
+            "disabled": true,
+            "text": "A-106AddedQuantity groups changed: 0 · Cost impact unavailable—"
+          },
+          {
+            "sheetNumber": "A-107",
+            "status": "added",
+            "checked": false,
+            "disabled": true,
+            "text": "A-107AddedQuantity groups changed: 0 · Cost impact unavailable—"
+          }
+        ],
+        "linkRows": [],
+        "resultSections": [],
+        "alignment": {
+          "status": "",
+          "confirmEnabled": true,
+          "panes": []
+        }
+      }
+    },
+    {
+      "stage": "references",
+      "screenshot": {
+        "relativePath": ".tmp/drawing-set-rollout/revision-package-ui/journey/screenshots/05-references.png",
+        "byteLength": 659121,
+        "sha256": "a2a8a5836f14e8c698e84418467fae02675ee4465f5a684583c98bf712a75402"
+      },
+      "ui": {
+        "viewport": {
+          "width": 1539,
+          "height": 966,
+          "devicePixelRatio": 2
+        },
+        "panel": {
+          "panel": "drawingSets",
+          "visible": true,
+          "updateEnabled": true,
+          "text": "Albuquerque 550-square-foot casita construction plansSaved · Manifest revision 7 Update Package…Import → recognize → reconcile → review changes and impact → review references → publish Package tools Import Sources… Recognize Again Reconcile Sheets… Reference Review… Change Review… Recognition Setup… No package diagnostics Search sheets Current All revisions G G-001 Unclassified —Official baseline Current architectural A-101 Foundation Plan —Controlled Revision P1 Current A A-102 Unclassified —Official baseline Current A-103 Unclassified —Official baseline Current A-104 Unclassified —Official baseline Current A-105 Unclassified —Official baseline Current A-106 Unclassified —Official baseline Current A-107 Unclassified —Official baseline Current"
+        },
+        "dialog": {
+          "id": "drawingSet",
+          "title": "Reference Review",
+          "activeStage": "References",
+          "text": "Reference ReviewOnly high-confidence sheet references start selected. Manual links are never replaced. Import → recognize → reconcile → review changes and impact → review references → publish1Import2Reconcile3Changes + impact4References5Publish High confidence 1A-101A101 · exact-contextNeeds review 0Blocked 39DA-102DA102 · missingCA-102CA102 · missingHS2650HS2650 · missingCW2650CW2650 · missingP-100P100 · missingSC3050SC3050 · missingEA-102EA102 · missingRJ-11RJ-11 · missingR-49R-49 · missingAA-101AA101 · missingR-10R-10 · missingR-10R-10 · missingR-10R-10 · missingx 144X144 · missingSF550SF550 · missingSF000SF000 · missingR-10R-10 · missingR-49R-49 · missingR-6.2R6.2 · missingR-4.04R4.04 · missingLA-103LA103 · missingHA-103HA103 · missingGA-103GA103 · missingR-49R-49 · missingD698D698 · missingRJ-45RJ-45 · missingRJ-45RJ-45 · missingRG-6RG-6 · missingRG-6RG-6 · missingRG-6RG-6 · missingR314.5R3145 · missingR315.3R3153 · missingR315.4R3154 · missingR314.3R3143 · missingR315.3R3153 · missingR314.3R3143 · missingR314.4R3144 · missingR314.3R3143 · missingR315.5R3155 · missing Current Package format Combined Current Package PDF Cross-linked file package Output name Cancel Publish Current Package",
+          "fieldValues": {
+            "[data-link-mode]": "combined",
+            "[data-output-name]": "Albuquerque 550-square-foot casita construction plans"
+          }
+        },
+        "reconciliationRows": [],
+        "compareRows": [],
+        "linkRows": [
+          {
+            "confidence": "high",
+            "checked": true,
+            "disabled": false,
+            "text": "A-101A101 · exact-context"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "DA-102DA102 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "CA-102CA102 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "HS2650HS2650 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "CW2650CW2650 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "P-100P100 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "SC3050SC3050 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "EA-102EA102 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "RJ-11RJ-11 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-49R-49 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "AA-101AA101 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-10R-10 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-10R-10 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-10R-10 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "x 144X144 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "SF550SF550 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "SF000SF000 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-10R-10 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-49R-49 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-6.2R6.2 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-4.04R4.04 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "LA-103LA103 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "HA-103HA103 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "GA-103GA103 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R-49R-49 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "D698D698 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "RJ-45RJ-45 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "RJ-45RJ-45 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "RG-6RG-6 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "RG-6RG-6 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "RG-6RG-6 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R314.5R3145 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R315.3R3153 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R315.4R3154 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R314.3R3143 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R315.3R3153 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R314.3R3143 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R314.4R3144 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R314.3R3143 · missing"
+          },
+          {
+            "confidence": "blocked",
+            "checked": false,
+            "disabled": true,
+            "text": "R315.5R3155 · missing"
+          }
+        ],
+        "resultSections": [],
+        "alignment": {
+          "status": "",
+          "confirmEnabled": true,
+          "panes": []
+        }
+      }
+    },
+    {
+      "stage": "published",
+      "screenshot": {
+        "relativePath": ".tmp/drawing-set-rollout/revision-package-ui/journey/screenshots/06-published.png",
+        "byteLength": 766489,
+        "sha256": "24ad1a40892ed8c111c1c4f4fa21160f8e313661ec3d9cf4f7a1d476903b7649"
+      },
+      "ui": {
+        "viewport": {
+          "width": 1539,
+          "height": 966,
+          "devicePixelRatio": 2
+        },
+        "panel": {
+          "panel": "drawingSets",
+          "visible": true,
+          "updateEnabled": true,
+          "text": "Albuquerque 550-square-foot casita construction plansSaved · Manifest revision 8 Update Package…Import → recognize → reconcile → review changes and impact → review references → publish Package tools Import Sources… Recognize Again Reconcile Sheets… Reference Review… Change Review… Recognition Setup… No package diagnostics Search sheets Current All revisions G G-001 Unclassified —Official baseline Current architectural A-101 Foundation Plan —Controlled Revision P1 Current A A-102 Unclassified —Official baseline Current A-103 Unclassified —Official baseline Current A-104 Unclassified —Official baseline Current A-105 Unclassified —Official baseline Current A-106 Unclassified —Official baseline Current A-107 Unclassified —Official baseline Current"
+        },
+        "dialog": {
+          "id": "drawingSet",
+          "title": "Revision Package Published",
+          "activeStage": "Publish",
+          "text": "Revision Package PublishedThe Current Package and Revision Report were created from the same reviewed revision state. Import → recognize → reconcile → review changes and impact → review references → publish1Import2Reconcile3Changes + impact4References5Publish Current PackagePublished/3c065bca-895c-43de-bf1c-182b3f793aba/Architecture Pilot Current Package - Current Package.pdfPublished/3c065bca-895c-43de-bf1c-182b3f793aba/reference-review.jsonPublished/3c065bca-895c-43de-bf1c-182b3f793aba/reference-review.csv Revision ReportPublished/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/A-101 Revision Report - Revision Report.pdfPublished/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/revision-report.jsonPublished/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/revision-report.csv Done",
+          "fieldValues": {}
+        },
+        "reconciliationRows": [],
+        "compareRows": [],
+        "linkRows": [],
+        "resultSections": [
+          {
+            "title": "Current Package",
+            "paths": [
+              "Published/3c065bca-895c-43de-bf1c-182b3f793aba/Architecture Pilot Current Package - Current Package.pdf",
+              "Published/3c065bca-895c-43de-bf1c-182b3f793aba/reference-review.json",
+              "Published/3c065bca-895c-43de-bf1c-182b3f793aba/reference-review.csv"
+            ]
+          },
+          {
+            "title": "Revision Report",
+            "paths": [
+              "Published/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/A-101 Revision Report - Revision Report.pdf",
+              "Published/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/revision-report.json",
+              "Published/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/revision-report.csv"
+            ]
+          }
+        ],
+        "alignment": {
+          "status": "",
+          "confirmEnabled": false,
+          "panes": []
+        }
+      }
+    }
+  ],
+  "assertions": {
+    "rendererUrlExact": true,
+    "issueAdded": true,
+    "manifestAdvanced": true,
+    "targetSheetPreserved": true,
+    "replacementBecameCurrent": true,
+    "previousRevisionSuperseded": true,
+    "currentRevisionAccepted": true,
+    "sourceSeedUnchanged": true,
+    "controlledRevisionUnchanged": true,
+    "currentPackagePdfPublished": true,
+    "revisionReportPdfPublished": true,
+    "uncertainMatchPresented": true,
+    "manualAlignmentCompleted": true,
+    "uncertainMatchResolved": true
+  },
+  "publications": [
+    {
+      "relativePath": "Published/3c065bca-895c-43de-bf1c-182b3f793aba/Architecture Pilot Current Package - Current Package.pdf",
+      "byteLength": 11767555,
+      "sha256": "96526b70d072ccee93194fd146f82c4561e45781586ef22ed7c4c09a5cda7058"
+    },
+    {
+      "relativePath": "Published/3c065bca-895c-43de-bf1c-182b3f793aba/reference-review.json",
+      "byteLength": 15371,
+      "sha256": "862b5fb6de0c4a90a2c4ee4d66894f51b35b60b16ac6336d6abb8559fc4f5ffc"
+    },
+    {
+      "relativePath": "Published/3c065bca-895c-43de-bf1c-182b3f793aba/reference-review.csv",
+      "byteLength": 7140,
+      "sha256": "ac2cbf272dcfda2bef6522d86cd5a5af9e7be67f1f2eab37dd6f2ae8ed8866ea"
+    },
+    {
+      "relativePath": "Published/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/A-101 Revision Report - Revision Report.pdf",
+      "byteLength": 11535869,
+      "sha256": "7921b86c773ce2280eb72b62ea3d605e56644d82a9a5036c01153c7e13f17002"
+    },
+    {
+      "relativePath": "Published/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/revision-report.json",
+      "byteLength": 7545,
+      "sha256": "2ba739ad75a220f3d1bd824fec88cae33de7c023ffbbe48b68cfbd851d61af78"
+    },
+    {
+      "relativePath": "Published/89ee040a-2ddc-4394-a2b2-e0a7e91cd533/revision-report.csv",
+      "byteLength": 2199,
+      "sha256": "a2ed9d606bafb6c34e9448087a5e45fcfe4ec12e92d6c8e0bb575f2b0a6f13a6"
+    }
+  ],
+  "log": {
+    "relativePath": ".tmp/drawing-set-rollout/revision-package-ui/journey/electron.log",
+    "byteLength": 1442,
+    "sha256": "52018024391d5eb69dbd8b3152052dc8d4a145ddd4d375b52edcaf438f344a84"
+  }
+}

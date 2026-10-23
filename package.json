@@ -1,0 +1,76 @@
+{
+  "name": "polypdf-landing",
+  "version": "1.0.0",
+  "private": true,
+  "_comment_proxy": "Dev server only — CRA ignores `proxy` in production builds, where nginx proxies /api/ to the licence API on 127.0.0.1:3087. Without it, `npm start` cannot exercise /api/commercial-offer or /api/checkout/session at all, which is how the founder deadline drifted twelve days out of sync with the server that enforces it (docs/conversion-audit.md P0-1).",
+  "proxy": "https://www.polypdf.com",
+  "dependencies": {
+    "@fontsource-variable/outfit": "^5.3.0",
+    "@jsquash/webp": "1.5.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "framer-motion": "^10.16.4",
+    "jszip": "^3.10.1",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^5.4.624",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-router": "^7.18.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "node scripts/toolkit/icons.cjs && node scripts/toolkit/prepare.cjs && node scripts/toolkit/package.mjs && python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs && NODE_ENV=production node scripts/build-localized-tracking.cjs && node scripts/international/build.cjs && TOOLKIT_ONLY=1 node scripts/prerender.js && node scripts/international/verify.cjs && node scripts/toolkit/verify-international.cjs",
+    "test": "react-scripts test",
+    "test:screenshot-evidence": "node --test test/verify-screenshot-evidence.test.mjs",
+    "refresh:screenshots": "node scripts/refresh-screenshot-inventory.mjs",
+    "test:post-deploy": "node --test test/post-deploy-smoke.test.mjs test/workflow-demo-evidence.test.mjs",
+    "verify:screenshots": "node scripts/verify-screenshot-evidence.mjs",
+    "smoke:production": "node scripts/post-deploy-smoke.mjs",
+    "eject": "react-scripts eject",
+    "build:english": "node scripts/toolkit/icons.cjs && python3 scripts/generate-evaluation-kit.py && python3 scripts/generate-electrical-review.py && node scripts/generate-discovery-files.js && npm run verify:screenshots && react-scripts build && node scripts/generate-route-metadata.mjs && node scripts/prerender.js && node scripts/verify-prerender.mjs",
+    "translations:extract": "npm run build:english && node scripts/international/build.cjs --extract",
+    "test:international": "node --test test/international.test.cjs",
+    "verify:international": "node scripts/international/verify.cjs",
+    "verify:seo-growth": "node scripts/verify-seo-growth.cjs",
+    "test:localized-consent": "node --test test/international-consent.test.cjs",
+    "smoke:international": "node scripts/international/smoke.mjs",
+    "generate:evaluation-kit": "python3 scripts/generate-evaluation-kit.py",
+    "verify:navigation": "node scripts/verify-site-navigation.cjs",
+    "test:pdf-tools": "node --test scripts/toolkit/engine.test.mjs scripts/toolkit/mcp.test.mjs scripts/toolkit/acceptance.test.mjs scripts/toolkit/form-edge.test.mjs scripts/toolkit/canvas-encode.test.mjs",
+    "translations:tools": "TOOLKIT_EXTRACT=1 node scripts/prerender.js",
+    "verify:tool-languages": "node scripts/toolkit/verify-international.cjs"
+  },
+  "overrides": {
+    "@tootallnate/once": "^1.1.2",
+    "nth-check": "^2.1.1",
+    "postcss": "^8.5.12",
+    "serialize-javascript": "^7.0.5",
+    "underscore": "^1.13.8"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "@napi-rs/canvas": "^0.1.80",
+    "axe-core": "4.10.3",
+    "jsdom": "16.7.0",
+    "opencc-js": "1.4.2",
+    "pngjs": "7.0.0",
+    "react-scripts": "5.0.1"
+  }
+}

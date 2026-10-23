@@ -1,0 +1,126 @@
+# PolyPDF
+
+> PolyPDF is a Mac and Windows desktop app for reviewing, measuring, and marking up PDF construction drawings. It is built for solo AEC professionals and sold without a recurring subscription.
+
+Key facts:
+
+- Current release: PolyPDF 1.6.20 (build 87) for macOS and Windows; /versions reads the live update feeds.
+- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. PolyPDF Pro removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for $74.95 USD once, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
+- New in 1.5.8: markups on rotated drawing sheets stay upright and in place. Autosize Text Box fits text boxes and callouts to their contents; PDF markup exchange and saving are more reliable.
+- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
+- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, error diagnostics and separately opted-in usage statistics, and customer support.
+- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.
+- Symbol Search auto-count (Pro): capture one drawing symbol, review candidate matches, and commit an auditable numbered count series.
+- Revision Packages (view and navigation in Free; changes and publication in Pro): import a drawing issue, reconcile sheets, carry reviewed work forward, inspect changes and available quantity or cost impact, review references, and publish a current package with a revision report.
+- Local AEC OCR: recover searchable text and current-session structure for schedules, title blocks, drawing labels, dimensions, and spreadsheet-ready tables. Recognition remains best-effort and requires review.
+- Tool Chest: built-in Architectural, Landscape, Doors, Windows, Fire Protection, and MUTCD sets, plus BTX, SVG, and DXF import.
+- Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.
+- Markup and review: callouts, text, highlights, shapes, freehand, interactive stamps, revision clouds, the Markup Table, and drawing-revision comparison. In 1.5.1, new interactive stamps start on a blank canvas; Add to toolset is optional and unchecked by default.
+- Presentation Mode: open a PDF, choose View > Presentation Mode, use arrow keys for pages and Escape to exit.
+- New metric dimensions default to millimetres. Explicit formats in existing documents are preserved; metric area and volume remain in square and cubic metres.
+- Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.
+- Pro plugins included with the app: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic, and PDF Maps places a map image for an address or place name. AISC Steel Sections performs no capacity or design checks, and a seal graphic is drafting artwork rather than a cryptographic digital signature: PolyPDF does not check licensure or board compliance.
+- Redaction can remove text mapped to supported PDF text-show operators, but it is not fail-closed for every content type: vector or outlined content and some nested images can remain under a black fill. Sanitize Document cleans selected structures but can miss some direct attachments and nested actions. Independently inspect sensitive output and use an approved specialist workflow when complete removal matters.
+- Privacy: PDF content and measurement work stay on the computer unless the user exports or shares it, or invokes a connected feature.
+
+## Product
+
+- [PolyPDF home](https://www.polypdf.com/): product overview, current offer, and free Mac and Windows downloads
+- [PolyPDF for Windows](https://www.polypdf.com/windows/): system requirements and Windows download
+- [Buy PolyPDF Pro](https://www.polypdf.com/buy/): one-time license terms, Stripe checkout, and license delivery
+- [Version history](https://www.polypdf.com/versions/): live Mac and Windows release feeds
+- [Bluebeam alternative for Mac](https://www.polypdf.com/bluebeam-alternative-for-mac/): a dated comparison of local PDF takeoff and markup, Bluebeam’s current Mac access routes, licensing, and collaboration limits
+
+## Practical guides
+
+- [What Is a Quantity Takeoff? From Drawing to Checked Quantities](https://www.polypdf.com/blog/quantity-takeoff/): Separate measured quantities from waste and pricing. Follow a practical area, length, and count workflow with downloadable practice files.
+- [Create Interactive PDF Review Stamps](https://www.polypdf.com/blog/create-interactive-pdf-stamps/): Build a review stamp from a blank canvas, arrange its fields, ask for details when placing it, and choose whether to save it for reuse.
+- [How to Calibrate a PDF Drawing Scale](https://www.polypdf.com/blog/calibrate-pdf-drawing-scale/): Set an accurate PDF drawing scale from a printed ratio or a known dimension, then check it against a second reference before starting takeoff.
+- [Why PDF Measurements Are Wrong (and How to Fix Them)](https://www.polypdf.com/blog/why-pdf-measurements-are-wrong/): Diagnose bad PDF dimensions by checking page scale, units, endpoints, detail regions, and scan distortion in a deliberate order.
+- [How to Measure PDF Area with Cutouts and Depth](https://www.polypdf.com/blog/measure-pdf-area-cutouts-depth/): Trace a net PDF area, subtract multiple interior openings, optionally convert it to volume with depth, and keep hatch styling separate from the math.
+- [PDF Takeoff Worked Example: Scale, Area, Length, and Count](https://www.polypdf.com/blog/pdf-takeoff-worked-example/): Follow one small plan takeoff from calibration through area, wall lengths, diffuser count, worksheet review, and CSV or PDF export.
+- [How to Count Symbols in a PDF Drawing](https://www.polypdf.com/blog/count-pdf-symbols/): Use PolyPDF Pro Symbol Search to find repeated plan symbols, review every candidate, and commit the accepted matches as one linked Count series.
+- [Use a PDF Markup Table for RFI and Punch-List Review](https://www.polypdf.com/blog/pdf-markup-table-rfi-punch-list/): Turn drawing markups into a filterable review register, with clear subjects, comments, statuses, and exports for an existing RFI or punch-list process.
+- [How to Compare PDF Drawing Revisions](https://www.polypdf.com/blog/compare-pdf-drawing-revisions/): Compare a baseline PDF with a revised file, review the detected regions, and issue a separate comparison record without overwriting the source.
+- [How to Create a Fillable PDF Form](https://www.polypdf.com/blog/create-fillable-pdf-form/): Add standard AcroForm fields to a compatible PDF, set names and tab order, test the saved copy, and recognize signed, secured, and XFA limits.
+- [How to OCR Scanned PDF Drawings](https://www.polypdf.com/blog/ocr-scanned-pdf-drawings/): Add a best-effort searchable text layer to scanned PDF drawings, then test search results and verify every value that could affect field or estimating work.
+- [Digital vs Visual PDF Signatures vs Professional Seals](https://www.polypdf.com/blog/digital-signature-vs-visual-signature-vs-seal/): Understand what a certificate-backed PDF signature verifies, what a visual signature mark does not, and why a professional seal is graphic artwork rather than a cryptographic signature.
+- [How to Redact and Sanitize a PDF: Limits to Know](https://www.polypdf.com/blog/redact-and-sanitize-pdf/): Use PolyPDF redaction for supported searchable text, understand what sanitation can miss, and independently inspect the saved copy before release.
+- [How to Prepare an Issued PDF Set](https://www.polypdf.com/blog/prepare-issued-pdf-set/): Build a repeatable issue workflow with page labels, visible Bates identifiers, headers and footers, watermarks, preflight, and final-viewer checks.
+
+## Workflow pages
+
+- [PDF takeoff software](https://www.polypdf.com/pdf-takeoff-software/): calibrate, measure, organize, and export takeoff records
+- [Revision Packages](https://www.polypdf.com/revision-packages/): reconcile drawing issues, carry reviewed work forward, review impact and references, and publish a current package
+- [Measure a PDF on Mac](https://www.polypdf.com/measure-pdf-on-mac/): calibrated drawing measurement on macOS
+- [Construction PDF markup](https://www.polypdf.com/construction-pdf-markup/): markups and review-list workflow
+- [Symbol Search PDF counting](https://www.polypdf.com/visual-search-pdf-count/): capture, review, and commit repeated-symbol matches
+- [Compare PDF drawings](https://www.polypdf.com/compare-pdf-drawings/): inspect revision differences and create review markups
+
+- [Free Construction Takeoff Spreadsheet for Excel](https://www.polypdf.com/tools/construction-takeoff-spreadsheet/): Download a free Excel takeoff template. Map PDF quantities to units and rates, avoid duplicate CSV totals, and inspect a real PolyPDF export.
+- [PolyPDF Product Facts: Platforms, Free & Pro, Limits](https://www.polypdf.com/product-facts/): Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.
+- [PDF Measuring Tool for Mac & Windows](https://www.polypdf.com/pdf-measuring-tool/): Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.
+- [Electrical Takeoff Software for Mac & Windows](https://www.polypdf.com/electrical-takeoff-software/): Review electrical fixture counts and route lengths on Mac or Windows. Try the E101 sample, compare Free and Pro, and export quantities for estimating.
+- [Flooring Takeoff Software for Mac & Windows](https://www.polypdf.com/flooring-takeoff-software/): Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.
+- [Bluebeam Alternative for Mac & Windows](https://www.polypdf.com/bluebeam-alternative/): Compare PolyPDF and Bluebeam for takeoff, markup and licensing. Use the migration checklist to test PDF handoff, quantities and Studio requirements.
+- [Construction PDF Samples & Quantity Worksheets](https://www.polypdf.com/samples/): Download 24 construction drawing sheets, architectural and MEP sample PDFs, detailed practice plans and quantity references. No signup required.
+- [PDF Scale Checker & Construction Calculators](https://www.polypdf.com/tools/): Check PDF scale accuracy against known dimensions, then calculate flooring waste and whole packs. Free tools with CSV records; no account required.
+- [PDF Scale Accuracy Checker: Free Reference Check](https://www.polypdf.com/tools/pdf-scale-checker/): Check horizontal and vertical PDF measurement errors against your project tolerance. Compare known dimensions and download a CSV record. Free, no upload.
+- [Flooring Waste Calculator: Area, Packs & Cost](https://www.polypdf.com/tools/flooring-waste-calculator/): Calculate flooring area with waste, round to whole packs, and estimate material cost. Add multiple rooms, switch units, and export your worksheet.
+
+## Free browser PDF tools
+
+- Browser tools process files locally without uploading PDFs. They are separate from the native desktop app and hosted connector. No account is required; file/page limits apply.
+- Automation: https://www.polypdf.com/tools/automation/ — downloadable local MCP server and a machine-readable tool manifest.
+- [Merge PDF](https://www.polypdf.com/tools/merge-pdf/): Combine two or more PDFs into a single file. Add your files, arrange them, and save a new PDF. Limit: Interactive forms are flattened in the combined copy; document bookmarks and signatures are not preserved.
+- [Split PDF](https://www.polypdf.com/tools/split-pdf/): Split a PDF into separate files by page count. Choose how many pages belong in each output, then download the group as a ZIP. Limit: Each output contains the selected source pages; interactive form values become static.
+- [Extract PDF pages](https://www.polypdf.com/tools/extract-pdf-pages/): Extract selected PDF pages using page numbers and ranges such as 1, 3-5. The original file stays unchanged. Limit: PDF page numbers count from 1 and may differ from printed drawing numbers.
+- [Delete PDF pages](https://www.polypdf.com/tools/delete-pdf-pages/): Remove selected pages from a PDF and download the remaining pages as a new file. At least one page must remain. Limit: Check the result before replacing an issued drawing set.
+- [Organize PDF](https://www.polypdf.com/tools/organize-pdf/): Reorder PDF pages by entering their new sequence. Use every page once to change order, or use Extract for a subset. Limit: Page numbers refer to the original file, not the position after reordering.
+- [Rotate PDF](https://www.polypdf.com/tools/rotate-pdf/): Rotate selected PDF pages by 90, 180, or 270 degrees clockwise. Leave the page range blank to rotate every page. Limit: Rotation changes viewing orientation without rasterizing page artwork.
+- [Duplicate PDF pages](https://www.polypdf.com/tools/duplicate-pdf-pages/): Duplicate selected PDF pages directly after their originals. Choose how many extra copies to add per selected page. Limit: Form values in copied pages become static to prevent conflicting field names.
+- [Reverse PDF pages](https://www.polypdf.com/tools/reverse-pdf-pages/): Reverse the order of every page in a PDF, so the last page becomes the first. Download a separate corrected copy. Limit: This changes page order, not the orientation of each page.
+- [Insert blank pages](https://www.polypdf.com/tools/insert-blank-pdf-pages/): Insert blank pages before or after a chosen PDF page. New pages match the selected page size. Limit: Inserted pages contain no fields or artwork.
+- [Interleave PDFs](https://www.polypdf.com/tools/interleave-pdf/): Interleave two PDFs by alternating pages from each file. Reverse the second file when the back-side scan is in reverse order. Limit: If the files have different page counts, remaining pages are appended.
+- [JPG to PDF](https://www.polypdf.com/tools/jpg-to-pdf/): Convert JPG images into PDF pages in your chosen order. Keep the image proportions and select A4, Letter, or original image size. Limit: Image-size mode uses 96 pixels per inch; verify scale before using a converted drawing for measurements.
+- [PNG to PDF](https://www.polypdf.com/tools/png-to-pdf/): Convert PNG images to a PDF in the browser, retaining transparency and image proportions. Choose page size and margins. Limit: A PDF wrapper does not turn a raster drawing into vector geometry.
+- [WebP to PDF](https://www.polypdf.com/tools/webp-to-pdf/): Convert WebP images into PDF pages locally. The images are decoded to PNG before embedding in the output PDF. Limit: Animated WebP input uses the decoded first frame only.
+- [PDF to JPG](https://www.polypdf.com/tools/pdf-to-jpg/): Convert PDF pages to JPG images at your chosen resolution. Download one image or a ZIP containing every selected page. Limit: JPEG is lossy and removes selectable text; use PNG for crisp linework.
+- [PDF to PNG](https://www.polypdf.com/tools/pdf-to-png/): Render PDF pages as PNG images in the browser. Select pages and resolution, then download the images together. Limit: PNG preserves rendered pixels, not editable PDF objects or measurement calibration.
+- [PDF to WebP](https://www.polypdf.com/tools/pdf-to-webp/): Render selected PDF pages as WebP images with a quality setting. Export one image or download multiple pages as a ZIP. Limit: WebP output is a page image, not an editable or searchable PDF.
+- [PDF to text](https://www.polypdf.com/tools/pdf-to-text/): Extract a PDF’s existing text layer to a UTF-8 text file. Page markers help you trace each section back to its source. Limit: Scanned pages without a text layer need OCR, which this browser tool does not perform. Reading order can differ on complex drawings.
+- [Text to PDF](https://www.polypdf.com/tools/text-to-pdf/): Convert plain text into a readable PDF with automatic line wrapping and page breaks. Add a title and choose a font size. Limit: The built-in font supports Latin characters; unsupported characters are rejected rather than silently changed.
+- [Compress PDF](https://www.polypdf.com/tools/compress-pdf/): Compress a PDF locally using lossless structural rewriting or a smaller, image-based copy. The result shows the actual size change. Limit: Image compression removes selectable text, links, forms, and vector detail. Lossless rewriting may not make an already optimized file smaller.
+- [Flatten PDF forms](https://www.polypdf.com/tools/flatten-pdf/): Flatten standard PDF form fields into static page content. Filled values remain visible but are no longer editable form fields. Limit: This flattens AcroForm fields, not every comment or layer. XFA forms and signed PDFs are unsupported.
+- [Fill PDF forms](https://www.polypdf.com/tools/fill-pdf-form/): Fill standard PDF forms locally, then download an interactive copy. The field list is read from your PDF, not guessed from its appearance. Limit: Scans and flat PDFs have no interactive fields. XFA and signed forms are unsupported.
+- [Extract form data](https://www.polypdf.com/tools/extract-pdf-form-data/): Read standard PDF form fields and export their current values as JSON. Use this record to review entries or prepare an automated workflow. Limit: This reports AcroForm fields; it does not infer fields from a scan or assess signature validity.
+- [Remove PDF annotations](https://www.polypdf.com/tools/remove-pdf-annotations/): Remove PDF comments and markup annotations from selected pages. Interactive fields and link annotations remain in the file. Limit: Artwork already flattened into page content cannot be removed by this tool. This is not secure redaction.
+- [Watermark PDF](https://www.polypdf.com/tools/watermark-pdf/): Add a translucent text watermark to selected PDF pages. Choose the text, size, color, and opacity before exporting a copy. Limit: Watermarks are visible labels, not copy protection or redaction.
+- [Number PDF pages](https://www.polypdf.com/tools/number-pdf-pages/): Add sequential page numbers to selected PDF pages. Choose a starting number, prefix, and header or footer placement. Limit: Numbers are added to page artwork and do not change PDF page labels or drawing sheet identifiers.
+- [Bates numbering](https://www.polypdf.com/tools/bates-number-pdf/): Add Bates numbers to a PDF using a prefix, starting number, and fixed digit count. Export a review copy with consecutive identifiers. Limit: Bates numbers identify pages; they do not certify completeness or replace a document-control register.
+- [Crop PDF](https://www.polypdf.com/tools/crop-pdf/): Crop PDF pages by setting margins in points, where 72 points equal one inch. The crop changes the visible page boundary. Limit: Cropped content remains in the PDF. Do not use cropping to remove sensitive information.
+- [Resize PDF pages](https://www.polypdf.com/tools/resize-pdf/): Resize PDF pages to a standard paper size while preserving artwork proportions. Content is centered on the new page. Limit: Resizing changes drawing scale. Recalibrate and check a known dimension before measuring.
+- [Add PDF margins](https://www.polypdf.com/tools/add-pdf-margins/): Add equal white margins around PDF pages without scaling the existing page artwork. Choose the border width in points. Limit: The page size increases. Print at actual size to retain the artwork’s original scale.
+- [Make a PDF booklet](https://www.polypdf.com/tools/pdf-booklet/): Arrange PDF pages in booklet order, two pages per landscape sheet. Blank panels pad the document to a multiple of four. Limit: Print double-sided with short-edge flipping and test one sheet first; printer settings vary.
+- [Multiple pages per sheet](https://www.polypdf.com/tools/n-up-pdf/): Create a two-up or four-up PDF contact sheet. Source pages retain their proportions and are placed in reading order. Limit: Reduced drawing pages are for review; their printed scale changes.
+- [Add text to PDF](https://www.polypdf.com/tools/add-text-to-pdf/): Add a new text label to selected PDF pages. Set its position from the top-left corner using percentages of the visible page. Limit: This adds text; it does not edit or erase existing text. The built-in font supports Latin characters.
+- [Add image to PDF](https://www.polypdf.com/tools/add-image-to-pdf/): Add a JPG or PNG image to selected PDF pages while preserving its proportions. Set its position and width as page percentages. Limit: A pasted signature image is not a cryptographic digital signature or a signature-request workflow.
+- [Edit PDF metadata](https://www.polypdf.com/tools/edit-pdf-metadata/): Edit a PDF’s standard document information fields locally. Replace the title, author, subject, and keywords, then save a copy. Limit: This is not a privacy scrubber: embedded files, XMP, comments, and page content can retain other information.
+- [Inspect PDF](https://www.polypdf.com/tools/inspect-pdf/): Inspect PDF page count, page dimensions, rotation, standard metadata, and form fields. Export a machine-readable JSON report. Limit: Inspection does not certify accessibility, archival compliance, signature validity, or drawing scale.
+- [Compare PDF text](https://www.polypdf.com/tools/compare-pdf-text/): Compare the existing text layers of two PDFs page by page. Export a JSON report of added and removed lines with page references. Limit: This is a text comparison, not a visual overlay. Scans without text and geometry-only changes are not detected.
+
+## Product notes
+
+- [PolyPDF 1.5.5: Zoom Controls and Snapshot Fixes](https://www.polypdf.com/blog/polypdf-1-5-5/): Set zoom controls for each page layout, pan with Shift, and paste snapshots with the right proportions and saved orientation.
+- [PolyPDF 1.5.4: Better Highlights, Arcs, and Area Cutouts](https://www.polypdf.com/blog/polypdf-1-5-4/): Highlight shapes, separate arc radius and sweep controls, movable area cutouts, estimate scrolling, and a Windows file-opening patch arrive in 1.5.4.
+- [PolyPDF 1.5.1: Interactive Stamps and Clearer Drawing Review](https://www.polypdf.com/blog/polypdf-1-5-1/): Build interactive stamps, explore expanded symbol libraries, and present PDFs. Version 1.5.1 also improves navigation, saved appearances, and responsiveness.
+- [Set Up PolyPDF Collaboration Beta](https://www.polypdf.com/blog/how-to-use-polypdf-collaboration-beta/): PolyPDF Collaboration keeps the PDF on your company share while approved Mac and Windows users exchange live markups, cursors, offline edits, and signed history through a customer-owned host.
+- [Introducing PolyPDF Plugins](https://www.polypdf.com/blog/introducing-polypdf-plugins/): How PolyPDF Pro plugins work: declarative packages, one-list management, sideload consent, host-owned generators, and the three generators that come with the app.
+
+## Support and policies
+
+- [Support](https://www.polypdf.com/support/)
+- [Feature requests](https://www.polypdf.com/feature-requests/)
+- [Terms of use](https://www.polypdf.com/terms/)
+- [Privacy policy](https://www.polypdf.com/privacy/)
+- [Refund policy](https://www.polypdf.com/refund/)

@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "available": true,
+  "desktopMinimumVersion": "1.6.0",
+  "manager": {
+    "version": "1.0.3",
+    "url": "https://www.polypdf.com/downloads/PolyPDF-License-Manager-Setup-1.0.3.exe",
+    "sha256": "695d9c8def89b9a49eeb5d5dbc369de9def7c722aa3176045fac93e49475047d"
+  }
+}

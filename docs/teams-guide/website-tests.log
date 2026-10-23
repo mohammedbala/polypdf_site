@@ -1,0 +1,36 @@
+
+> polypdf-landing@1.0.0 test
+> react-scripts test --watchAll=false --runInBand
+
+PASS src/content/guides/index.test.js
+PASS src/components/TeamsSeatPicker.test.js
+PASS src/components/Buy.test.js
+PASS src/components/WorkflowDemos.test.js
+PASS src/components/DirectCheckoutLink.test.js
+PASS src/components/WorkflowLanding.test.js
+PASS src/lib/consent.test.js
+PASS src/components/BlogImages.test.js
+PASS src/components/MagneticLink.test.js
+PASS src/lib/discovery-files.test.js
+PASS src/lib/analytics.test.js
+PASS src/lib/structured-data.test.js
+PASS src/components/HomeDensity.test.js
+PASS src/lib/checkout.test.js
+PASS src/lib/landingPages.test.js
+PASS src/components/HomeMotion.test.js
+PASS src/components/VersionHistory.test.js
+PASS src/components/FeatureRequests.test.js
+PASS src/components/TeamsGuide.test.js
+PASS src/components/LegalAccessibility.test.js
+PASS src/components/RefundGuarantee.test.js
+PASS src/components/SiteFooter.test.js
+PASS src/components/TeamsJourney.test.js
+PASS src/lib/attribution.test.js
+PASS src/lib/studentOffer.test.js
+PASS src/lib/route-metadata.test.js
+
+Test Suites: 26 passed, 26 total
+Tests:       118 passed, 118 total
+Snapshots:   0 total
+Time:        17.382 s
+Ran all test suites.

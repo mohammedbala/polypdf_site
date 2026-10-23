@@ -1,0 +1,5 @@
+Legend,Workspace,Subject,Status,Type,Quantity,Formula,Total,Unit,Pages
+A1,Unassigned,Area,No Status,Area,2,SUM(228 + 180),408,sq ft,1
+
+Group,Value,Count,Total,Unit
+Subject,Area,2,408,sq ft

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "release": {
+    "version": "1.5.0",
+    "build": 22,
+    "theme": "dark"
+  },
+  "publicationIdentity": {
+    "sourceCommit": "c3e448a2a2e87ac6c04aabca363a14a017aa6741",
+    "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rendererUrl": "file:///Users/mohammedbala/Projects/polypdfmac/polypdf/dist/renderer/index.html"
+  },
+  "capture": {
+    "path": "revision-package-changes-impact-v1-5-dark.png",
+    "sha256": "be9573c9a0494f5c255aa5cb99ed85b2926f204993753fb2b15057eddb3873e0",
+    "width": 3078,
+    "height": 1932,
+    "stage": "changes-impact"
+  },
+  "validation": {
+    "journeyPassed": true,
+    "nativeMaximized": true,
+    "viewportEmulation": false,
+    "styleToolbarStateValidated": true,
+    "pageOnlyCrop": false,
+    "note": "Authentic PolyPDF 1.5.0 build 22 Revision Package journey capture. The app frame, Revision Package sidebar, current drawing, and Change Review dialog are all visible."
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "status": "passed-with-runtime-caveat",
+  "appSource": {
+    "root": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "version": "1.3.4",
+    "build": "16"
+  },
+  "captureEnvironment": {
+    "appearance": "dark",
+    "nativeWindowState": "maximized",
+    "runtimeBounds": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "screenAvailableBounds": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "devicePixelRatio": 2,
+    "capturePixelSize": {
+      "width": 3420,
+      "height": 2146
+    },
+    "viewportEmulation": false,
+    "pageOnlyCrop": false,
+    "nativeBoundsProof": "The renderer outer bounds and exact-PID macOS Accessibility window bounds both equal Screen.avail. Electron 39 advertises Browser.getWindowForTarget but returns method-not-found, so Browser-domain windowState is unavailable."
+  },
+  "fixtures": [
+    {
+      "role": "current-file-a",
+      "path": "../fixtures/compare-rev-a.pdf",
+      "sha256": "76674331b45dbce381b916f8077403e18e70c9c63e8384ab985bbcf07865c7aa"
+    },
+    {
+      "role": "revised-file-b",
+      "path": "../fixtures/compare-rev-b.pdf",
+      "sha256": "02c58e9a30ba013142d4252b3a262c2b6082e2c7472a9af14bd493ed75a3fcea"
+    }
+  ],
+  "engineResult": {
+    "path": "../captures/compare-revisions-editable-clouds.pdf",
+    "sha256": "90490d6159667aa3ef3db0a5f17840bb376bb871c987d095286befc72f6989ca",
+    "byteLength": 25501,
+    "comparedPageCount": 1,
+    "differenceCount": 4,
+    "usedRasterDiff": true,
+    "editableClouds": true,
+    "pdfSyntaxCheck": "qpdf --check passed",
+    "popplerRenderVisualCheck": "passed; all four cloud appearances are visible and the controlled sheet remains legible without clipping or broken glyphs",
+    "annotationEvidence": {
+      "primaryEditablePolygonClouds": 4,
+      "primaryIds": [
+        "polypdf:comparecloud-p1-1",
+        "polypdf:comparecloud-p1-2",
+        "polypdf:comparecloud-p1-3",
+        "polypdf:comparecloud-p1-4"
+      ],
+      "companionAppearanceStamps": 4
+    }
+  },
+  "captures": [
+    {
+      "role": "compare-input-setup",
+      "path": "../captures/compare-documents-setup-dark.png",
+      "proof": "../captures/compare-documents-setup-dark.png.theme-proof.json",
+      "sha256": "97bded5d2f209ab45bc4e808a580760d9da98265bff5c5cd4823b30e502c0898",
+      "capturedAt": "2026-08-19T11:03:36.568Z",
+      "validatedState": {
+        "documentA": "compare-rev-a.pdf (Current)",
+        "documentB": "compare-rev-b.pdf",
+        "confirmEnabled": true,
+        "darkPixelGate": true,
+        "fullStyleBarVisible": true,
+        "runtimeMaximized": true,
+        "axMatchesRuntime": true
+      }
+    },
+    {
+      "role": "editable-compare-result",
+      "path": "../captures/compare-editable-clouds-dark.png",
+      "proof": "../captures/compare-editable-clouds-dark.png.theme-proof.json",
+      "sha256": "c8ef5798ad6171455540ee1aa8c4839029a673c13e2265aba4e58d7222fb1d84",
+      "capturedAt": "2026-08-19T11:05:29.181Z",
+      "validatedState": {
+        "revisionCloudCount": 4,
+        "selectedRevisionCloudCount": 1,
+        "selectedCloudId": "comparecloud-p1-1",
+        "markupTableVisible": true,
+        "markupRowCount": 4,
+        "selectedCloudContextControls": "Line: 100%, 2 pt; Cloud: Large; Fill: 18%",
+        "darkPixelGate": true,
+        "fullStyleBarVisible": true,
+        "styleControlCount": 9,
+        "visibleStyleControlCount": 9,
+        "runtimeMaximized": true,
+        "axMatchesRuntime": true
+      }
+    }
+  ],
+  "genuineWorkflowEvidence": [
+    "Opened compare-rev-a.pdf in a normal isolated current-development Electron instance.",
+    "Opened the product Compare Documents dialog through the app menu command.",
+    "Clicked the product Browse control and selected compare-rev-b.pdf through the native macOS file picker for the exact app PID.",
+    "Captured the enabled A/B setup dialog.",
+    "Invoked the current preload bridge's compareDocumentsPdf implementation with output=markups and wrote its returned bytes without modifying them.",
+    "Reopened the returned PDF in a second normal isolated current-development instance and allowed the standard annotation importer to create four editable revision-cloud objects.",
+    "Opened the real footer Markups List, selected a real revision cloud, and captured the app chrome, cloud handles, four table rows, and expanded context style controls."
+  ],
+  "publicationScope": {
+    "approvedPngs": [
+      "../captures/compare-editable-clouds-dark.png"
+    ],
+    "retainedButNotPublished": [
+      {
+        "path": "../captures/compare-documents-setup-dark.png",
+        "reason": "The file name and enabled Compare button prove the selected input, but the Revised File Pages summary was still displaying a stale No PDF selected message. The frame is retained as workflow evidence and excluded from the site to avoid a visibly contradictory setup claim."
+      }
+    ],
+    "deprecatedArtifactsMovedToTrash": [
+      "compare-engine-result.pdf",
+      "compare-generated-result.pdf",
+      "compare-functional-report.json",
+      "compare-functional-output/",
+      "compare-result-functional.json",
+      "compare-setup-functional.json",
+      "compare-theme-prime.json"
+    ],
+    "reason": "Those older compare-engine/functional artifacts predate the current-development native-maximized capture pass or do not contain imported editable-cloud DOM evidence."
+  },
+  "runtimeCaveat": "The same session's real Compare confirmation created the expected 'Compare — compare-rev-a vs compare-rev-b.pdf' tab, but that byte-open path remained at 'Opened PDF. Importing annotations...' in this automation run. To avoid presenting a stalled or fabricated result, the approved result screenshot reopens the unmodified PDF bytes returned by the same current Compare engine; the normal file-open importer then validated all four editable clouds."
+}

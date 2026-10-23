@@ -1,0 +1,2030 @@
+{
+  "schemaVersion": 1,
+  "records": [
+    {
+      "id": "wrong-scale",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/wrong-scale-dark.png",
+          "sha256": "2c4eee0b1ac58bd8abdb3d5181151ff0bc00b06bc856b9ba0b37d08f3cc34016",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/wrong-scale-dark.png.theme-proof.json",
+          "sha256": "59a2f1dd7f7e9ff129cb28abf0a9498ba490c68fa9dd0857baa415ca11312e93"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/wrong-scale-dark.png.theme-proof.json",
+          "sha256": "59a2f1dd7f7e9ff129cb28abf0a9498ba490c68fa9dd0857baa415ca11312e93"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/wrong-scale-v1-4-dark-web.png",
+          "sha256": "4c16945802e27e59740ce954a73cdd4a807f3013dc10d9334c78e26e690fb168",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/wrong-scale-dark.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/why-pdf-measurements-are-wrong.png",
+          "sha256": "4c16945802e27e59740ce954a73cdd4a807f3013dc10d9334c78e26e690fb168",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/wrong-scale-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "takeoff",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/takeoff-dark.png",
+          "sha256": "ba67718df5dce4cb816f756af9acf97257198ce26cdce75ee56cc4af804ff414",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/takeoff-dark.png.theme-proof.json",
+          "sha256": "0a847bcb64239b3c4a7d2468ad2b285ead708f840b68c3802373760f21fcb66f"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/takeoff-dark.png.theme-proof.json",
+          "sha256": "0a847bcb64239b3c4a7d2468ad2b285ead708f840b68c3802373760f21fcb66f"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "productFrameValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/takeoff-v1-4-dark-web.png",
+          "sha256": "0b588bda5e0b59bcecc742eaedc1db9937639c265493511b4121b4677fba8ef1",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/takeoff-dark.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/pdf-takeoff-worked-example.png",
+          "sha256": "0b588bda5e0b59bcecc742eaedc1db9937639c265493511b4121b4677fba8ef1",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/takeoff-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/quantity-takeoff.png",
+          "sha256": "0b588bda5e0b59bcecc742eaedc1db9937639c265493511b4121b4677fba8ef1",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/takeoff-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "markup",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/markup-dark.png",
+          "sha256": "b5253f56b47cf4e99666ce4181ae0e5a7f92e6308233cb5a4a10766351cd15dd",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/markup-dark.png.theme-proof.json",
+          "sha256": "5456b9516d15ec327580f1167f445b074fe594c1a63d4912292b5d99e28f3ee0"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/markup-dark.png.theme-proof.json",
+          "sha256": "5456b9516d15ec327580f1167f445b074fe594c1a63d4912292b5d99e28f3ee0"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/markup-v1-4-dark-web.png",
+          "sha256": "f418bffd7442d82a61e5f9ddc3424e98b824ff8a8e17639afa1c58a7c056ab05",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/markup-dark.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/pdf-markup-table-rfi-punch-list.png",
+          "sha256": "f418bffd7442d82a61e5f9ddc3424e98b824ff8a8e17639afa1c58a7c056ab05",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/markup-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "forms",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/forms-light.png",
+          "sha256": "b508b87d13acd70caca491ddd91c05472045105cd9c6eb0956b39cbd64b3a1d8",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/forms-light.png.theme-proof.json",
+          "sha256": "13c9ec8fdc6aeb0a3c95e7d09812a642fd42fdfa1e71fb29be6990eb91792b66"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/forms-light.png.theme-proof.json",
+          "sha256": "13c9ec8fdc6aeb0a3c95e7d09812a642fd42fdfa1e71fb29be6990eb91792b66"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/forms-v1-4-light-web.png",
+          "sha256": "15b2a6ed13ab1d3588a6a8c7d67a6992aa0d9487d1a4d7d83d41aa8af4fa4577",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/forms-light.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/create-fillable-pdf-form.png",
+          "sha256": "15b2a6ed13ab1d3588a6a8c7d67a6992aa0d9487d1a4d7d83d41aa8af4fa4577",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/forms-v1-4-light-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "symbol-search-review",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/symbol-search-review-dark.png",
+          "sha256": "50a8f9f7bd1118b6662fc5c4ccfd2e9536cc2c6337a7b1a93033450645f59cd4",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/symbol-search-review-dark.png.theme-proof.json",
+          "sha256": "0bede687bc4ce61bac189069334636d22375dfcf70b18689e3a11d5010fe1552"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/symbol-search-review-dark.png.theme-proof.json",
+          "sha256": "0bede687bc4ce61bac189069334636d22375dfcf70b18689e3a11d5010fe1552"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/symbol-search-review-v1-4-dark-web.png",
+          "sha256": "100a77a559397db28f7e920081d1c837c4a544ff65b5c30305a8a940c94980b5",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/symbol-search-review-dark.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/count-pdf-symbols.png",
+          "sha256": "100a77a559397db28f7e920081d1c837c4a544ff65b5c30305a8a940c94980b5",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/symbol-search-review-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "count-committed",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/count-committed-dark.png",
+          "sha256": "2844456247a9420142c2ee5d6d869a47f8414edbab5047071818b2687364cea9",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/count-committed-dark.png.theme-proof.json",
+          "sha256": "b04bcb00095de7662b6f41664988e59723c9b0428d3580b33e2e3f994d6be425"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/count-committed-dark.png.theme-proof.json",
+          "sha256": "b04bcb00095de7662b6f41664988e59723c9b0428d3580b33e2e3f994d6be425"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/count-committed-v1-4-dark-web.png",
+          "sha256": "dec20dec4bacc92d65bec9045aedb8bb62ee4735b8fca2ef457f179316029d6b",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/count-committed-dark.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "area-cutouts-depth",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/area-cutouts-depth-dark.png",
+          "sha256": "129a54ab7b8d36cc80d2ffe1e8ca09305b5c20f31a4d1e700a9535f9dd6e7c09",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/area-cutouts-depth-dark.png.theme-proof.json",
+          "sha256": "70a7c99ab9ece9ff7cdadae6df45b0b5f84015d568b942d8190c8cba208f38e4"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/area-cutouts-depth-dark.png.theme-proof.json",
+          "sha256": "70a7c99ab9ece9ff7cdadae6df45b0b5f84015d568b942d8190c8cba208f38e4"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/area-cutouts-depth-v1-4-dark-web.png",
+          "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/area-cutouts-depth-dark.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/measure-pdf-area-cutouts-depth.png",
+          "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/area-cutouts-depth-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/polypdf-1-5-4.png",
+          "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/area-cutouts-depth-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/polypdf-1-5-5.png",
+          "sha256": "341c1c41edd71358fd345249bf2435ce6148b29c55cf8d7efeddd52bb23c62aa",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/area-cutouts-depth-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "calibration-uncalibrated",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/calibration-uncalibrated-dark.png",
+          "sha256": "3d524e01914b144db6b2130df6a7f3fc24bcba7b02f977ac05c611b8f751caa3",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/calibration-uncalibrated-dark.png.theme-proof.json",
+          "sha256": "8112f76c5fcb3bb76b1e48f0c5dab911c176efbec10737b83d34a4e4efda33de"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/calibration-uncalibrated-dark.png.theme-proof.json",
+          "sha256": "8112f76c5fcb3bb76b1e48f0c5dab911c176efbec10737b83d34a4e4efda33de"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/calibration-uncalibrated-v1-4-dark-web.png",
+          "sha256": "404892474ed9c54ba43ca629570940ea9e20dc561ab2ac998d18994dd2a36df3",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/calibration-uncalibrated-dark.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "calibration-known-distance-dialog",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/calibration-known-distance-dialog-dark.png",
+          "sha256": "459f25ae9b536bb50db654261ca23c20247e4ddc1fee471003c3aaa57998dff2",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/calibration-known-distance-dialog-dark.png.theme-proof.json",
+          "sha256": "fd8a3d3bd3578092ed35ab951742e8570f7f8647b3bd249a5f4a8443b22bdba1"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/calibration-known-distance-dialog-dark.png.theme-proof.json",
+          "sha256": "fd8a3d3bd3578092ed35ab951742e8570f7f8647b3bd249a5f4a8443b22bdba1"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/calibration-known-distance-dialog-v1-4-dark-web.png",
+          "sha256": "213c5f29f27f6618954baaca9a772c2f08f6f1253248c93b1a09ed51e9e08728",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/calibration-known-distance-dialog-dark.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "calibration-verified-second-span",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/calibration-verified-second-span-dark.png",
+          "sha256": "eb7116dbeaef6e54df73157f8fb78456e394540a00f85c6dcd0201056b4133ce",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/calibration-verified-second-span-dark.png.theme-proof.json",
+          "sha256": "40cab86cf5d3c16ae987dadbba84c31c78361881197f621ab4a7c0ab55c5ad32"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/calibration-verified-second-span-dark.png.theme-proof.json",
+          "sha256": "40cab86cf5d3c16ae987dadbba84c31c78361881197f621ab4a7c0ab55c5ad32"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png",
+          "sha256": "27a2bb5ffe16d0867b7438b5c749606e1fcb531d53c9ba3c200e5d15e59d9a8b",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/calibration-verified-second-span-dark.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/calibrate-pdf-drawing-scale.png",
+          "sha256": "27a2bb5ffe16d0867b7438b5c749606e1fcb531d53c9ba3c200e5d15e59d9a8b",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/calibration-verified-second-span-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "compare-editable-clouds",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/compare-editable-clouds-dark.png",
+          "sha256": "ba60ce448361ee9f65e4be262a45d55361c8891b453545cc6469b53adfe18d38",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/compare-editable-clouds-dark.png.theme-proof.json",
+          "sha256": "7be6f524cbaa45baa1fe45606cebf3a5991e97720011d228c309e4d06be4b620"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/compare-editable-clouds-dark.png.theme-proof.json",
+          "sha256": "7be6f524cbaa45baa1fe45606cebf3a5991e97720011d228c309e4d06be4b620"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/compare-editable-clouds-v1-4-dark-web.png",
+          "sha256": "35e4f8725e08c29e55788d31db58dbbf9fc64a923871c646a1cc030f4b78f9f1",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/compare-editable-clouds-dark.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/compare-pdf-drawing-revisions.png",
+          "sha256": "35e4f8725e08c29e55788d31db58dbbf9fc64a923871c646a1cc030f4b78f9f1",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/compare-editable-clouds-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "ocr-no-text-before",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-light.png",
+          "sha256": "667f488bb4bb63309391d9a4648d2c5df5d25210277563008bf146893e9bb7d3",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-light.png.theme-proof.json",
+          "sha256": "5f1b3051bd96d9fd3508a22e7bd130682d203a6dba7869cfbe57d2c74d3f95c1"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-light.png.theme-proof.json",
+          "sha256": "5f1b3051bd96d9fd3508a22e7bd130682d203a6dba7869cfbe57d2c74d3f95c1"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/ocr-uss-akron-no-text-before-v1-4-light-web.png",
+          "sha256": "c033a84521f063f6b2fa75d69b5d3f4aeaf2bb76d23daf1e3ba118ef5e0fbe3d",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-no-text-before-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "ocr-complete",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-light.png",
+          "sha256": "310176e9b0ef100b7f53b7f24d4e5fd3a7fce2d93e7846540e2672dec7ece154",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-light.png.theme-proof.json",
+          "sha256": "c14756ce243d3929be7ea8851427a1a26b6336773100ce4e1935edb5a4be31c7"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-light.png.theme-proof.json",
+          "sha256": "c14756ce243d3929be7ea8851427a1a26b6336773100ce4e1935edb5a4be31c7"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/ocr-uss-akron-complete-v1-4-light-web.png",
+          "sha256": "911993184c43fedbaf48fcda74cc62b8ac1923d23e36bb19ac7dca5cd58204c9",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-complete-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "ocr-search-hit",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-light.png",
+          "sha256": "a36dcef1c57282b8a8bcbf497a87543dfccf0c9e3f8c4d3f51002fc1dfdc3f14",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-light.png.theme-proof.json",
+          "sha256": "78f726cb7623dee0f4c8dd55a55d0ef89b01c5471d5a97bc06405fbd44a84e4a"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-light.png.theme-proof.json",
+          "sha256": "78f726cb7623dee0f4c8dd55a55d0ef89b01c5471d5a97bc06405fbd44a84e4a"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png",
+          "sha256": "c89eb58178ae38303cd5262cf443d875e7ed98e7433e28269f5c29d4485ce977",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/ocr-uss-akron-search-hit-light.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/ocr-scanned-pdf-drawings.png",
+          "sha256": "c89eb58178ae38303cd5262cf443d875e7ed98e7433e28269f5c29d4485ce977",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/ocr-uss-akron-search-hit-v1-4-light-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "issued-final",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/issued-final-light.png",
+          "sha256": "7da9e4f7b7213a594827031c8604537ecf29c1c5fde3bdd3e40982de27853694",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/issued-final-light.png.theme-proof.json",
+          "sha256": "ec93b998f958f185d6c9a8c79ed5beeb3df84d2d6463e062202d3064b89b2e88"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/issued-final-light.png.theme-proof.json",
+          "sha256": "ec93b998f958f185d6c9a8c79ed5beeb3df84d2d6463e062202d3064b89b2e88"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/shot-issued-final-v1-4-light-web.png",
+          "sha256": "efe037a44f197b420840bd10f59990674fc8bc3228e8aa2476e4009f4c215443",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/issued-final-light.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/prepare-issued-pdf-set.png",
+          "sha256": "efe037a44f197b420840bd10f59990674fc8bc3228e8aa2476e4009f4c215443",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/shot-issued-final-v1-4-light-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "issued-headers",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-light.png",
+          "sha256": "4d96bcab8680c7bbb6f3314d1952a43fdfda8667b26d899564ffd1294203f07a",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-light.png.theme-proof.json",
+          "sha256": "008fcbdc1a093e4c10ff4bf415334c3a8ab6a16fa4f7fb5d7b6f884ab3ccb708"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-light.png.theme-proof.json",
+          "sha256": "008fcbdc1a093e4c10ff4bf415334c3a8ab6a16fa4f7fb5d7b6f884ab3ccb708"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/shot-issued-headers-v1-4-light-web.png",
+          "sha256": "e654a9462048b59026386f6f1768f78dfef67a97c8a1300ae728df23f1049ab0",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/issued-headers-footers-dialog-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "issued-bates",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/issued-bates-dialog-light.png",
+          "sha256": "f51adbc0b6d5ff8ab95b74ec7e3cf5cc098502686528748adc30aeabfbf14139",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/issued-bates-dialog-light.png.theme-proof.json",
+          "sha256": "5b9b6b05b2a17bdc562d85a35ad5c20f030b56c1ed57240e94a8e2e55908c8d2"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/issued-bates-dialog-light.png.theme-proof.json",
+          "sha256": "5b9b6b05b2a17bdc562d85a35ad5c20f030b56c1ed57240e94a8e2e55908c8d2"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/shot-issued-bates-v1-4-light-web.png",
+          "sha256": "fefceb9573b51034b9c8eed1293b8cc9aad2bd01375e684e3668821bab6384a7",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/issued-bates-dialog-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "issued-preflight",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/issued-preflight-light.png",
+          "sha256": "0e9dae01fc8a4ac0e096c240ff33968b54d3b70ae495ba42b16ca02d592a50f3",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/issued-preflight-light.png.theme-proof.json",
+          "sha256": "de13be2d1fd59b1ef3a03ae66b813d4df585aa2fb6aaa9867d6c325d53b2ec67"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/issued-preflight-light.png.theme-proof.json",
+          "sha256": "de13be2d1fd59b1ef3a03ae66b813d4df585aa2fb6aaa9867d6c325d53b2ec67"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/shot-issued-preflight-v1-4-light-web.png",
+          "sha256": "b4c0bf0fd39cc952811ed9a6e7e33e13677d42a1179467047791369359863b60",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/issued-preflight-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "plugins-sidebar",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png",
+          "sha256": "111bc3b6769dbf450fdaaa692bc3000f662d9931f03e83c8fdb64dc3fff67fcb",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png.theme-proof.json",
+          "sha256": "c2209f3549a95ffda81f35cae4ee27d0aad47d87c901333c60052d6c68e648b8"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png.theme-proof.json",
+          "sha256": "c2209f3549a95ffda81f35cae4ee27d0aad47d87c901333c60052d6c68e648b8"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/plugins-sidebar-v1-4-dark-web.png",
+          "sha256": "0cecb92c9760503ef9fc30b6103e74a4ccdd271bab02fcec7b799d1656043f3a",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/plugin-current-dev-sidebar-dark-maximized.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/introducing-polypdf-plugins.png",
+          "sha256": "0cecb92c9760503ef9fc30b6103e74a4ccdd271bab02fcec7b799d1656043f3a",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/plugins-sidebar-v1-4-dark-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "plugins-aisc-generator",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png",
+          "sha256": "741f9c4717954d23dfb8fec6ca1c4701eca4578b71a92f733d863bfcf76a4b2a",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png.theme-proof.json",
+          "sha256": "6f8f8b7a64d8bedff255467b5d1776546edd4aafcee20da4a4cb3493ae708aa6"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png.theme-proof.json",
+          "sha256": "6f8f8b7a64d8bedff255467b5d1776546edd4aafcee20da4a4cb3493ae708aa6"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/plugins-aisc-w24x55-generator-v1-4-dark-web.png",
+          "sha256": "6bb1c09da208b8513b9763841704e717508b48ba14449b255e3ecd07cd6a7926",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-generator-dark-maximized.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "plugins-aisc-result",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png",
+          "sha256": "4d5412e69eb7efd255e425498c4f70c38c0c12d57593c5e10818b13259220aed",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png.theme-proof.json",
+          "sha256": "28f9911f04c73fcd9bc22086021d6229d0ade8eaba1523edd41787becbc736dd"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png.theme-proof.json",
+          "sha256": "28f9911f04c73fcd9bc22086021d6229d0ade8eaba1523edd41787becbc736dd"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/plugins-aisc-w24x55-result-v1-4-dark-web.png",
+          "sha256": "b0548fdf5a08cc0d892f3265039e055ab5370fd6360cdf37b1c439d9fc503452",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/plugin-current-dev-aisc-inserted-dark-maximized.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "mutcd-r1-1-stop",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png",
+          "sha256": "c64091121822adc74d386b1516932e4199f41ce0f1b3737e8a0514d575487bff",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png.theme-proof.json",
+          "sha256": "0c9b0399fdea8dda2f7fff9cd77f26100251019b215acbfe5f14981be5c91edd"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png.theme-proof.json",
+          "sha256": "0c9b0399fdea8dda2f7fff9cd77f26100251019b215acbfe5f14981be5c91edd"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/mutcd-r1-1-stop-v1-4-dark-web.png",
+          "sha256": "6fabbe32af1d1866fa9a6372e57e8ec9645f8287f0d498bbc9073872d9f61180",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "signature-valid-certificate",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/signature-valid-certificate-light.png",
+          "sha256": "30877f2418c4e207a01c861f22b7ff424147471cfddfcd1b565f02c44037701c",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/signature-valid-certificate-light.png.theme-proof.json",
+          "sha256": "329eb511e8a1b2c2f8035522855c6c55b97aa69e8a27bdc3d6d81b0813a72a6f"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/signature-valid-certificate-light.png.theme-proof.json",
+          "sha256": "329eb511e8a1b2c2f8035522855c6c55b97aa69e8a27bdc3d6d81b0813a72a6f"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/signature-valid-certificate-v1-4-light-web.png",
+          "sha256": "b1ddc7aea6054a580971cad7a66e573b87849163b01eaaa87f2f1b77a03083e1",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-valid-certificate-light.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/digital-signature-vs-visual-signature-vs-seal.png",
+          "sha256": "b1ddc7aea6054a580971cad7a66e573b87849163b01eaaa87f2f1b77a03083e1",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/signature-valid-certificate-v1-4-light-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "signature-certificate-technical",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/signature-certificate-technical-light.png",
+          "sha256": "59aae6c5a289c29dfd72eacd5e6e065d36dbcdc230cf2d73d1281bdc05802a0e",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/signature-certificate-technical-light.png.theme-proof.json",
+          "sha256": "ba0bb2a5256f9c2b815a774866b8aed9cfef8e038d5fd757dde8751c0302574b"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/signature-certificate-technical-light.png.theme-proof.json",
+          "sha256": "ba0bb2a5256f9c2b815a774866b8aed9cfef8e038d5fd757dde8751c0302574b"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/signature-certificate-technical-v1-4-light-web.png",
+          "sha256": "1fa6428c1e5adb9b21213772fe6faff2585e5d91e3e7bdc6ac875fe5b04b4866",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-certificate-technical-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "signature-visual-chooser",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/signature-visual-chooser-light.png",
+          "sha256": "6eaf1a95df72d26ba2623eee2d75642d063fd2a2c525b23c2a44081053c35eca",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/signature-visual-chooser-light.png.theme-proof.json",
+          "sha256": "f8fee432185c6d7a4e0ae4bd329de35b234fbd28b9a5fa52b84e0613d2c4fa3c"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/signature-visual-chooser-light.png.theme-proof.json",
+          "sha256": "f8fee432185c6d7a4e0ae4bd329de35b234fbd28b9a5fa52b84e0613d2c4fa3c"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/signature-visual-chooser-v1-4-light-web.png",
+          "sha256": "17691607bfb72af41d9b35d56b5c98dd8089482a750aea5bf562ba6a8636a12e",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-visual-chooser-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "signature-visual-styles",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/signature-visual-styles-light.png",
+          "sha256": "6eaf1a95df72d26ba2623eee2d75642d063fd2a2c525b23c2a44081053c35eca",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/signature-visual-styles-light.png.theme-proof.json",
+          "sha256": "c98d342ea4d961739dd95fc1353a59b480854e373cc755dc9040b126ab0b9a58"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/signature-visual-styles-light.png.theme-proof.json",
+          "sha256": "c98d342ea4d961739dd95fc1353a59b480854e373cc755dc9040b126ab0b9a58"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/signature-visual-styles-v1-4-light-web.png",
+          "sha256": "17691607bfb72af41d9b35d56b5c98dd8089482a750aea5bf562ba6a8636a12e",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-visual-styles-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "signature-seal-builder-warning",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-light.png",
+          "sha256": "2aa89afb84ad92fd0bfe054065c92dca7e991a40854634a3fe9a4783a9d70137",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-light.png.theme-proof.json",
+          "sha256": "1322ae64c4ea918c549c1360fefd515806d6ca1bb7dbff889a915eff82b0a91c"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-light.png.theme-proof.json",
+          "sha256": "1322ae64c4ea918c549c1360fefd515806d6ca1bb7dbff889a915eff82b0a91c"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/signature-seal-builder-warning-v1-4-light-web.png",
+          "sha256": "370283dacb62087a555c9dc4d4b1e29c26d0225221bd41598dca1436f70227f4",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-seal-builder-warning-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "signature-seal-inserted",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/signature-seal-inserted-light.png",
+          "sha256": "b1f2890988613b81d46604e5b8d038805ce46ef90b4bacb2dd191e4b2ae0085f",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/signature-seal-inserted-light.png.theme-proof.json",
+          "sha256": "6ea02c45b3f5caa9ff15c143353a29fcb4dc0ccb1bdc0314d4219f0caa461148"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/signature-seal-inserted-light.png.theme-proof.json",
+          "sha256": "6ea02c45b3f5caa9ff15c143353a29fcb4dc0ccb1bdc0314d4219f0caa461148"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/signature-seal-inserted-v1-4-light-web.png",
+          "sha256": "b1bac781e05375ab02bc497cac0c262f64c21f6a30aadea3cff6b00392c61eda",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/signature-seal-inserted-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "redaction-search-no-matches",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-light.png",
+          "sha256": "ad8b8cbb10e4d3bf399951963c6c9c2fb0cde87940483aed710341d560cb9b19",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-light.png.theme-proof.json",
+          "sha256": "5660d5e317d7568cc08c72cb53e74573ec6b5e22329eb201acbab5c99e8b4598"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-light.png.theme-proof.json",
+          "sha256": "5660d5e317d7568cc08c72cb53e74573ec6b5e22329eb201acbab5c99e8b4598"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/redaction-reopened-search-no-matches-v1-4-light-web.png",
+          "sha256": "2dc88e556ad531a8407b039975f11ebf1db0b371ca697158d2feb9b665dd2453",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-reopened-search-no-matches-light.png",
+          "transform": "exact-50-percent"
+        },
+        {
+          "path": "public/guides/redact-and-sanitize-pdf.png",
+          "sha256": "2dc88e556ad531a8407b039975f11ebf1db0b371ca697158d2feb9b665dd2453",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "src/assets/screenshots/redaction-reopened-search-no-matches-v1-4-light-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "redaction-before",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/redaction-lab-before-light.png",
+          "sha256": "ed1cbf47314c00def53fcd260ab7ba30f9cdafc97001a1dc64589900ee8cfba2",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/redaction-lab-before-light.png.theme-proof.json",
+          "sha256": "75151974a0ce3042893a24e58cd90312abee800ae80e97fd5af20b695cad9faa"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/redaction-lab-before-light.png.theme-proof.json",
+          "sha256": "75151974a0ce3042893a24e58cd90312abee800ae80e97fd5af20b695cad9faa"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/redaction-lab-before-v1-4-light-web.png",
+          "sha256": "a736d477b3743677ad4c4a2774ac8c48447a793e52fc867f1fee6a37dacf3515",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-lab-before-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "redaction-marked",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/redaction-marked-text-light.png",
+          "sha256": "ac482f27dfd1dcc200186b78abbcf68e46eb813d75bf4c1108a040d4d0d0e063",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/redaction-marked-text-light.png.theme-proof.json",
+          "sha256": "67249e6230561a491216f69143687ad8ab06bff19277bd0f6bcf351b2a2a9b7c"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/redaction-marked-text-light.png.theme-proof.json",
+          "sha256": "67249e6230561a491216f69143687ad8ab06bff19277bd0f6bcf351b2a2a9b7c"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/redaction-marked-text-v1-4-light-web.png",
+          "sha256": "4d2dab39ed14bf52e07e5bcdfb9eabe8531a63107a70da778df034c3533d1e51",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-marked-text-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "redaction-confirmation",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-light.png",
+          "sha256": "0d769d3c4e50258f2cfbedc75380919fa2be18163fa2e5f77b961aa6552f6d36",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-light.png.theme-proof.json",
+          "sha256": "f2192bf640b6d0058c15f93fb45c7270ad1940ce9ae96ce4de74a4bdfe021796"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-light.png.theme-proof.json",
+          "sha256": "f2192bf640b6d0058c15f93fb45c7270ad1940ce9ae96ce4de74a4bdfe021796"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/redaction-apply-confirmation-v1-4-light-web.png",
+          "sha256": "a96bae21503309ece9e03fe56c5b6487bc9a194ffe38f66642ccc39891c86024",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-apply-confirmation-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "redaction-applied",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/redaction-applied-result-light.png",
+          "sha256": "4c9b35470e4d20488725b8505f1f3ca2dc03218855e3e75e5054de2d5fd516d4",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/redaction-applied-result-light.png.theme-proof.json",
+          "sha256": "03e0b270a68ec77e076dfb04347c2d3c7e92ff56de73ae810c6d72bcb0f767cc"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/redaction-applied-result-light.png.theme-proof.json",
+          "sha256": "03e0b270a68ec77e076dfb04347c2d3c7e92ff56de73ae810c6d72bcb0f767cc"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/redaction-applied-result-v1-4-light-web.png",
+          "sha256": "9d9e31eeabf2c0751567cba1f8fd13cc36dc9b100bdc2c0430cda74b995e5eef",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/redaction-applied-result-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "sanitize-options",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/sanitize-options-light.png",
+          "sha256": "47a4da99bf072916834d13fe63ebe5d16c2686302b1139721c847cb07e3ad0a1",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/sanitize-options-light.png.theme-proof.json",
+          "sha256": "7f94fc86a689c9197e1ac0ab81bb22b4ddef16cc4b690a50914cd0da5c91d631"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/sanitize-options-light.png.theme-proof.json",
+          "sha256": "7f94fc86a689c9197e1ac0ab81bb22b4ddef16cc4b690a50914cd0da5c91d631"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/sanitize-options-v1-4-light-web.png",
+          "sha256": "06ea56039c70c8dcf54d9ca977a00c031964ed481d2c5b699ae16a9ac8174fa1",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/sanitize-options-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "sanitize-result",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/sanitize-result-light.png",
+          "sha256": "6ad279d153774f89d79e4dfd014f1ff414764182c9f0cc915003856722786e52",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/sanitize-result-light.png.theme-proof.json",
+          "sha256": "92fc8b15831da337d4541f8ee03ef976645ab2439e1fb37ef2e56012fe9d3d41"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/sanitize-result-light.png.theme-proof.json",
+          "sha256": "92fc8b15831da337d4541f8ee03ef976645ab2439e1fb37ef2e56012fe9d3d41"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/sanitize-result-v1-4-light-web.png",
+          "sha256": "2b4040d3547afe9dc0c5d00a6c5b8016df8311270976b5b57d47f470a4d95f0a",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/sanitize-result-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "pdf-maps",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/pdf-maps-dark.png",
+          "sha256": "47d4a03d09010ee0e2da6e8d8210bc3423f625b8a6a0ddb90504c2c4c68cb058",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/pdf-maps-dark.png.theme-proof.json",
+          "sha256": "1bcb8bce13c88cb2a8280a8ff60f89a2b567a61504ddb56d673774cf5a6c26de"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/pdf-maps-dark.png.theme-proof.json",
+          "sha256": "1bcb8bce13c88cb2a8280a8ff60f89a2b567a61504ddb56d673774cf5a6c26de"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/pdf-maps-v1-4-dark-web.png",
+          "sha256": "519f56ccbdb5ecd30772ab7b61ca00cb15aa6a8f061baa3e1fc0d64ac40149ae",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/pdf-maps-dark.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "auto-area",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png",
+          "sha256": "4243b9d29076d96c801fe953ae7a33db1b24338fb3b8fe04880aa35b6e97ac1b",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png.theme-proof.json",
+          "sha256": "9ce093a89a8626e3736012e21392eaca87443762e02dc0a495383be838eff22c"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png.theme-proof.json",
+          "sha256": "9ce093a89a8626e3736012e21392eaca87443762e02dc0a495383be838eff22c"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "productFrameValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/auto-area-v1-4-dark-web.png",
+          "sha256": "716dfacfa33059d418ae6c5e1f48cd8e1227d082c2c4f19363e400d50c338574",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/auto-area-helper-dimensions-dark.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "custom-shortcuts",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/custom-shortcuts-settings-light.png",
+          "sha256": "c900adc8f00a9adc73d542c37431b0df9ed3ab420174e4b729da4984998678ea",
+          "width": 3420,
+          "height": 2146
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/custom-shortcuts-settings-light.png.theme-proof.json",
+          "sha256": "81ca9bbe1b06746eef9a6162effd594f5f3e23db3023398bf562c2d76d9c49f3"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/custom-shortcuts-settings-light.png.theme-proof.json",
+          "sha256": "81ca9bbe1b06746eef9a6162effd594f5f3e23db3023398bf562c2d76d9c49f3"
+        },
+        "fingerprint": {
+          "baseCommit": "ed65b0558a0bd6a7fb312f13826de37bfc056ad4",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/custom-shortcuts-v1-4-light-web.png",
+          "sha256": "f5056adcd33c717f9f1ea2518e55c8826b84e096b640ebd42a4026369a37f444",
+          "width": 1710,
+          "height": 1073,
+          "derivedFrom": "assets-source/blog-image-validation/captures/custom-shortcuts-settings-light.png",
+          "transform": "exact-50-percent"
+        }
+      ]
+    },
+    {
+      "id": "revision-package-changes-impact-v1-5",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/revision-package-changes-impact-v1-5-dark.png",
+          "sha256": "be9573c9a0494f5c255aa5cb99ed85b2926f204993753fb2b15057eddb3873e0",
+          "width": 3078,
+          "height": 1932
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/revision-package-changes-impact-v1-5-dark.png.theme-proof.json",
+          "sha256": "3e07a406f0270ef28b0adb2063cb20d9992933498afe2eec27661ce45712a543"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/revision-package-changes-impact-v1-5-dark.journey-report.json",
+          "sha256": "025ad7ec918ab306d34948af9bee85325e371f14a746e6db3b72e2ef48920924"
+        },
+        "fingerprint": {
+          "baseCommit": "c3e448a2a2e87ac6c04aabca363a14a017aa6741",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/revision-package-changes-impact-v1-5-dark.png",
+          "sha256": "be9573c9a0494f5c255aa5cb99ed85b2926f204993753fb2b15057eddb3873e0",
+          "width": 3078,
+          "height": 1932,
+          "derivedFrom": "assets-source/blog-image-validation/captures/revision-package-changes-impact-v1-5-dark.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "collaboration-beta-live",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/blog-image-validation/captures/collaboration-beta-settings-dark.png",
+          "sha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e",
+          "width": 1224,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/blog-image-validation/captures/collaboration-beta-settings-dark.png.theme-proof.json",
+          "sha256": "ca348225fa952cca28baed32f1c617b613d690bab90d7e0f2a7544f1bfeebff9"
+        },
+        "report": {
+          "path": "assets-source/blog-image-validation/captures/collaboration-beta-e2e-report.json",
+          "sha256": "1cf7555361654f542f86d8bc40f9e51d5f9083e59e77b069b220de2523f50347"
+        },
+        "fingerprint": {
+          "baseCommit": "179f0e1640e03fe94383bb81f26d0724d0c518d7",
+          "workingTreeProductDiffSha256": "4fe85022ee3cdc29f12a4d1b6e07a8716887e49200d34fadc614686422924069"
+        }
+      },
+      "assertions": {
+        "theme": "dark",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/collaboration-beta-live-v1-4-3-web.png",
+          "sha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e",
+          "width": 1224,
+          "height": 768,
+          "derivedFrom": "assets-source/blog-image-validation/captures/collaboration-beta-settings-dark.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/how-to-use-polypdf-collaboration-beta.png",
+          "sha256": "52ccb1966dcbe43291a9cb2fa5a0fa50d750d2b7a180a292f93ffed62603e55e",
+          "width": 1224,
+          "height": 768,
+          "derivedFrom": "src/assets/screenshots/collaboration-beta-live-v1-4-3-web.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-stamp-blank",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/stamp-blank.png",
+          "sha256": "f281cb881cc5c11e83b9c62c862bb90e50ae7a3b76bef4a320f9f7ace1a23219",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/stamp-blank.proof.json",
+          "sha256": "69651fb18ccaed26da2ae124922425cbb36e9149e53921867af224831bb3039d"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/stamp-blank.report.json",
+          "sha256": "e55f1d15d4b14f53b946a6a23e8d2bc2652a133ea96e68d0f54be0124b71a4b7"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/stamp-blank-v1-5-1.png",
+          "sha256": "f281cb881cc5c11e83b9c62c862bb90e50ae7a3b76bef4a320f9f7ace1a23219",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/stamp-blank.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-stamp-builder",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/stamp-builder.png",
+          "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/stamp-builder.proof.json",
+          "sha256": "ebfb2ceb1695dde04065f754fe9ddf38a8c56ad3b15e171994e2a018d3b4f88d"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/stamp-builder.report.json",
+          "sha256": "496812a5fbf6db85106e7b5d0f8c02cc49035995d062c4afda27dc97a45954b8"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/stamp-builder-v1-5-1.png",
+          "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/stamp-builder.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/create-interactive-pdf-stamps.png",
+          "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "src/assets/screenshots/stamp-builder-v1-5-1.png",
+          "transform": "byte-identical"
+        },
+        {
+          "path": "public/guides/polypdf-1-5-1.png",
+          "sha256": "206c5fdb919f7c567d8a4b3509d46689fca1bdcbe5332710e4c9256967681096",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "src/assets/screenshots/stamp-builder-v1-5-1.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-stamp-prompt",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/stamp-prompt.png",
+          "sha256": "bfe8fdc15fe529d7fd42c5d489a66cd97d385dd7ce870b1e910a09b6cd4fdbbb",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/stamp-prompt.proof.json",
+          "sha256": "ba61d527c3ad2c0c8d88c3e105b1f90efcc3db5beb6b7332bca519c488acc71f"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/stamp-prompt.report.json",
+          "sha256": "c55fddd23b5e52e14d46f646984c7608f75e6c3be9edcd2bbce39c25813621a4"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/stamp-prompt-v1-5-1.png",
+          "sha256": "bfe8fdc15fe529d7fd42c5d489a66cd97d385dd7ce870b1e910a09b6cd4fdbbb",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/stamp-prompt.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-stamp-placed",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/stamp-placed.png",
+          "sha256": "2b54b77d920ab43dd807477a65c560b4a665a7bc84f12e2ef2bc29dd3346c907",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/stamp-placed.proof.json",
+          "sha256": "0dbc6fe6ec9ab148ebfa826547918ba89e6abf1f4e77004af21feb2e13d92db9"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/stamp-placed.report.json",
+          "sha256": "7edf07ef38fc936f24ae010da8f8bba325d5b7ed43f3f63c64d3fb3b682ab06c"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/stamp-placed-v1-5-1.png",
+          "sha256": "2b54b77d920ab43dd807477a65c560b4a665a7bc84f12e2ef2bc29dd3346c907",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/stamp-placed.png",
+          "transform": "byte-identical"
+        }
+      ]
+    },
+    {
+      "id": "release-151-architectural-tools",
+      "publicationStatus": "publication-approved",
+      "source": {
+        "raw": {
+          "path": "assets-source/release-1.5.1/architectural-tools.png",
+          "sha256": "53e5e7e13f2aa2b4e7fc8e65c584659e001f978ea08ba9a846a5d3bcaa632319",
+          "width": 1233,
+          "height": 768
+        },
+        "proof": {
+          "path": "assets-source/release-1.5.1/architectural-tools.proof.json",
+          "sha256": "733663df062171a7739481a1b15fd34aca10aafc32964093d23991a97b24b1c3"
+        },
+        "fingerprint": {
+          "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+          "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "report": {
+          "path": "assets-source/release-1.5.1/architectural-tools.report.json",
+          "sha256": "3af0c0c6e2693f0f1467a11260bed4e12b218703676c93a1c56ce47af8a734f7"
+        }
+      },
+      "assertions": {
+        "theme": "light",
+        "nativeMaximized": true,
+        "viewportEmulation": false,
+        "styleToolbarStateValidated": true,
+        "pageOnlyCrop": false
+      },
+      "outputs": [
+        {
+          "path": "src/assets/screenshots/architectural-tools-v1-5-1.png",
+          "sha256": "53e5e7e13f2aa2b4e7fc8e65c584659e001f978ea08ba9a846a5d3bcaa632319",
+          "width": 1233,
+          "height": 768,
+          "derivedFrom": "assets-source/release-1.5.1/architectural-tools.png",
+          "transform": "byte-identical"
+        }
+      ]
+    }
+  ],
+  "ogComposites": [
+    {
+      "id": "site-og-image",
+      "publicationStatus": "publication-approved",
+      "output": {
+        "path": "public/og-image.png",
+        "sha256": "7bab30edc0b3cebf4029d88f787bd1bb78adca48d0693b59a1ea05cb7a3a89ab",
+        "width": 1200,
+        "height": 630
+      },
+      "template": {
+        "path": "assets-source/blog-image-validation/og-image.html",
+        "sha256": "8037a13791f817bca65c02c52e7e36b1b22b93f845e9a867d587a8cd5760aef8"
+      },
+      "dependencies": [
+        {
+          "path": "public/logo512.png",
+          "sha256": "f089bcd201dc9390b8b1fa049e77b7e80438acf9730cda15ca6b4f7288b04b8f"
+        },
+        {
+          "path": "src/assets/screenshots/takeoff-v1-4-dark-web.png",
+          "sha256": "0b588bda5e0b59bcecc742eaedc1db9937639c265493511b4121b4677fba8ef1"
+        }
+      ]
+    }
+  ]
+}

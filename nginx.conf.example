@@ -1,0 +1,179 @@
+# Example Nginx configuration for polypdf-site
+# Place this in /etc/nginx/sites-available/polypdf-site and create a symlink to sites-enabled
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name polypdf.com www.polypdf.com;
+
+    # Redirect to the canonical host explicitly. ($server_name expands to the FIRST name in the
+    # list — the apex — which contradicted every canonical/og:url tag on the site pointing at www.)
+    return 301 https://www.polypdf.com$request_uri;
+}
+
+# Canonical-host consolidation: every canonical tag, og:url, and the sitemap use www.polypdf.com,
+# so send https://polypdf.com there instead of serving duplicate content on both hosts.
+# EXCEPTION: /api/ keeps answering on the apex directly — shipped desktop apps may call the licence
+# API here, and a 301 on a POST is not reliably followed by HTTP clients.
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name polypdf.com;
+
+    ssl_certificate /etc/letsencrypt/live/polypdf.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/polypdf.com/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:3087/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 30s;
+    }
+
+    # NOTE before applying to production: if any shipped update feed (Sparkle/WinSparkle appcast)
+    # or installer link points at https://polypdf.com/downloads/..., verify the updater follows
+    # redirects — or copy the /downloads/ locations into this block instead of redirecting them.
+    location / {
+        return 301 https://www.polypdf.com$request_uri;
+    }
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name www.polypdf.com;
+
+    ssl_certificate /etc/letsencrypt/live/polypdf.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/polypdf.com/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    root /var/www/polypdf-site/current;
+    index index.html;
+
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1000;
+    gzip_types text/plain text/css text/xml text/javascript application/javascript application/xml+rss application/json;
+
+    location = /downloads {
+        return 302 /downloads/PolyPDFMac.dmg;
+    }
+
+    location = /downloads/ {
+        return 302 /downloads/PolyPDFMac.dmg;
+    }
+
+    location = /downloads/PolyPDFMac.dmg {
+        alias /var/www/polypdf-downloads/PolyPDFMac.dmg;
+        default_type application/octet-stream;
+        types {
+            application/x-apple-diskimage dmg;
+        }
+        add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0" always;
+        add_header Pragma "no-cache" always;
+        add_header Expires "0" always;
+    }
+
+    location = /downloads/PolyPDF-mac.dmg {
+        return 301 /downloads/PolyPDFMac.dmg;
+    }
+
+    location = /downloads/polypdfmac-appcast.xml {
+        alias /var/www/polypdf-downloads/polypdfmac-appcast.xml;
+        default_type application/xml;
+        add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0" always;
+        add_header Pragma "no-cache" always;
+        add_header Expires "0" always;
+    }
+
+    location = /downloads/appcast.xml {
+        return 301 /downloads/polypdfmac-appcast.xml;
+    }
+
+    location ^~ /downloads/ {
+        alias /var/www/polypdf-downloads/;
+        default_type application/octet-stream;
+        types {
+            application/x-apple-diskimage dmg;
+            application/xml xml;
+        }
+        add_header Cache-Control "public, max-age=31536000, immutable";
+        try_files $uri =404;
+    }
+
+    location /api/ {
+        proxy_pass http://127.0.0.1:3087/api/;
+        proxy_http_version 1.1;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_read_timeout 30s;
+    }
+
+    # Guide/social images use stable source files but versioned public URLs. Keep the underlying
+    # paths revalidatable so an operator or crawler that visits the bare URL never holds an old
+    # screenshot for a year. Exact and ^~ matches take precedence over the hashed-asset rule below.
+    location = /og-image.png {
+        add_header Cache-Control "public, max-age=0, must-revalidate" always;
+        try_files $uri =404;
+    }
+
+    location ^~ /guides/ {
+        add_header Cache-Control "public, max-age=0, must-revalidate" always;
+        try_files $uri =404;
+    }
+
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # The plugin packer. PLUGIN-AUTHORING.md and /build-a-plugin both tell authors to
+    # `curl -O https://www.polypdf.com/plugins/polypdf-plugin-pack.mjs`, so this path is a published
+    # promise. Two reasons it needs its own block:
+    #   1. `.mjs` is absent from nginx's default mime.types, so it would be served as
+    #      application/octet-stream. Fine for curl, wrong for anything that reads the type.
+    #   2. Without an explicit match, a typo'd or future /plugins/* path falls through to
+    #      `try_files … /index.html` and returns 200 with a page of HTML. `curl -O` then writes
+    #      HTML into a .mjs file and the author's next command fails for an invisible reason.
+    #      The `= ` exact match plus the `^~ /plugins/` guard makes a wrong path 404 honestly.
+    location = /plugins/polypdf-plugin-pack.mjs {
+        default_type text/javascript;
+        try_files $uri =404;
+    }
+
+    location ^~ /plugins/ {
+        try_files $uri =404;
+    }
+
+    # Serve the pre-rendered route directories directly. Unknown paths must be honest 404s rather
+    # than 200 responses carrying the homepage shell, which confuses both visitors and crawlers.
+    # polypdf-managed-static-404
+    error_page 404 /404.html;
+    location = /404.html {
+        internal;
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "no-referrer-when-downgrade" always;
+    add_header Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://*.googletagmanager.com https://www.googleadservices.com https://www.google.com https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net; connect-src 'self' https://api.stripe.com https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://*.googletagmanager.com https://*.analytics.google.com https://*.google.com https://pagead2.googlesyndication.com https://ad.doubleclick.net https://*.g.doubleclick.net https://google.com; frame-src 'self' https://checkout.stripe.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net https://*.googletagmanager.com https://analytics.google.com https://*.analytics.google.com https://*.google.com https://pagead2.googlesyndication.com https://ad.doubleclick.net https://*.g.doubleclick.net https://google.com; font-src 'self' data:;" always;
+    add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0" always;
+    add_header Pragma "no-cache" always;
+    add_header Expires "0" always;
+
+    access_log /var/log/nginx/polypdf-site.access.log;
+    error_log /var/log/nginx/polypdf-site.error.log;
+}

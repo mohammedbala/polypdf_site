@@ -1,0 +1,7 @@
+Legend,Workspace,Subject,Status,Type,Quantity,Formula,Total,Unit,Pages
+A1,Unassigned,Area Measurement,No Status,Area,1,SUM(5760),5760,sq ft,1
+L1,Unassigned,Length Measurement,No Status,Length,2,SUM(96 + 60),156,ft,1
+
+Group,Value,Count,Total,Unit
+Subject,Area Measurement,1,5760,sq ft
+Subject,Length Measurement,2,156,ft

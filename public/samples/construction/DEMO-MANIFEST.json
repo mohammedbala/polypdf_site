@@ -1,0 +1,1005 @@
+{
+  "project": {
+    "name": "Willow Creek Community Center",
+    "fictional": true,
+    "project_number": "WC-26-014",
+    "building_ft": [
+      96,
+      60
+    ],
+    "date_created": "2026-10-02"
+  },
+  "documents": [
+    {
+      "file": "01-Civil-Site-and-Grading.pdf",
+      "pages": [
+        {
+          "sheet": "C101",
+          "title": "SITE PLAN",
+          "scale": "1/16\" = 1'-0\"",
+          "revision": "A"
+        },
+        {
+          "sheet": "C501",
+          "title": "GRADING & CIVIL DETAILS",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "parcel_sf": 32000,
+        "building_footprint_sf": 5760,
+        "parking_stalls": 12,
+        "accessible_demo_stalls": 2,
+        "catch_basins": 2,
+        "bicycle_loops": 4,
+        "main_asphalt_apron_sf": 5160,
+        "site_points_per_ft": 4.5
+      }
+    },
+    {
+      "file": "02-Architectural-Revision-A.pdf",
+      "pages": [
+        {
+          "sheet": "A101",
+          "title": "GROUND FLOOR PLAN",
+          "scale": "1/4\" = 1'-0\"",
+          "revision": "A"
+        },
+        {
+          "sheet": "A201",
+          "title": "ELEVATIONS, SECTION & WALL DETAIL",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "footprint_ft": [
+          96,
+          60
+        ],
+        "gross_area_sf": 5760,
+        "gross_perimeter_ft": 312,
+        "calibration_20ft_points": 360,
+        "doors_plan": 12,
+        "meeting_room_103_sf": 576,
+        "maker_room_104_sf": 576,
+        "internal_detail_links": 2
+      }
+    },
+    {
+      "file": "03-Architectural-Revision-B.pdf",
+      "pages": [
+        {
+          "sheet": "A101",
+          "title": "GROUND FLOOR PLAN",
+          "scale": "1/4\" = 1'-0\"",
+          "revision": "B"
+        },
+        {
+          "sheet": "A201",
+          "title": "ELEVATIONS, SECTION & WALL DETAIL",
+          "scale": "AS NOTED",
+          "revision": "B"
+        }
+      ],
+      "facts": {
+        "footprint_ft": [
+          96,
+          60
+        ],
+        "gross_area_sf": 5760,
+        "gross_perimeter_ft": 312,
+        "calibration_20ft_points": 360,
+        "doors_plan": 12,
+        "meeting_room_103_sf": 720,
+        "maker_room_104_sf": 432,
+        "internal_detail_links": 2,
+        "changes": [
+          "A101: north partition between rooms103/104 shifts east from x72ft to x78ft (+6ft).",
+          "A101: room104 door hinge moves east from x81ft to x84ft (+3ft).",
+          "A101/A201 south elevation: add6ft glazing from x17ft to x23ft.",
+          "Revision/date fields and issue note update."
+        ]
+      }
+    },
+    {
+      "file": "04-Structural-Foundation-and-Framing.pdf",
+      "pages": [
+        {
+          "sheet": "S101",
+          "title": "FOUNDATION PLAN",
+          "scale": "1/4\" = 1'-0\"",
+          "revision": "A"
+        },
+        {
+          "sheet": "S501",
+          "title": "FRAMING & STRUCTURAL DETAILS",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "foundation_columns": 15,
+        "spread_footings": 15,
+        "grid_lines_x": 5,
+        "grid_lines_y": 3,
+        "gross_slab_sf": 5760,
+        "slab_thickness_in": 6,
+        "gross_slab_cy": 106.66666666666667,
+        "foundation_points_per_ft": 18,
+        "framing_points_per_ft": 9,
+        "footing_detail_points_per_ft": 36,
+        "base_plate_detail_points_per_ft": 108
+      }
+    },
+    {
+      "file": "05-Mechanical-HVAC.pdf",
+      "pages": [
+        {
+          "sheet": "M101",
+          "title": "HVAC DISTRIBUTION PLAN",
+          "scale": "1/4 IN = 1 FT",
+          "revision": "A"
+        },
+        {
+          "sheet": "M501",
+          "title": "HVAC DETAILS AND SCHEDULES",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "plan_sheet": "M101",
+        "detail_sheet": "M501",
+        "plan_scale_points_per_foot": 18,
+        "calibration_length_ft": 20,
+        "calibration_length_pdf_points": 360,
+        "plan_diffusers": 16,
+        "legend_diffusers": 1,
+        "plan_return_grilles": 6,
+        "legend_return_grilles": 1,
+        "plan_exhaust_terminals": 2,
+        "legend_exhaust_terminals": 1,
+        "supply_total_cfm": 2400,
+        "ahu_count": 1,
+        "exhaust_fan_count": 1,
+        "supply_trunk_centerline_ft": 79.0,
+        "supply_trunk_vertices_ft": [
+          [
+            78,
+            17
+          ],
+          [
+            78,
+            30
+          ],
+          [
+            12,
+            30
+          ]
+        ],
+        "diffuser_positions_ft": [
+          [
+            8,
+            49
+          ],
+          [
+            16,
+            49
+          ],
+          [
+            32,
+            49
+          ],
+          [
+            40,
+            49
+          ],
+          [
+            56,
+            49
+          ],
+          [
+            64,
+            49
+          ],
+          [
+            80,
+            49
+          ],
+          [
+            88,
+            49
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            32,
+            12
+          ],
+          [
+            40,
+            12
+          ],
+          [
+            54,
+            9
+          ],
+          [
+            66,
+            9
+          ],
+          [
+            78,
+            9
+          ],
+          [
+            90,
+            9
+          ]
+        ],
+        "schedule_rows": 9,
+        "hyperlinked_detail_callouts": 1
+      }
+    },
+    {
+      "file": "06-Electrical-Lighting-and-Power.pdf",
+      "pages": [
+        {
+          "sheet": "E101",
+          "title": "LIGHTING AND RECEPTACLE PLAN",
+          "scale": "1/4 IN = 1 FT",
+          "revision": "A"
+        },
+        {
+          "sheet": "E601",
+          "title": "ELECTRICAL DETAILS AND SCHEDULES",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "plan_sheet": "E101",
+        "detail_sheet": "E601",
+        "plan_scale_points_per_foot": 18,
+        "calibration_length_ft": 20,
+        "calibration_length_pdf_points": 360,
+        "plan_luminaires": 24,
+        "legend_luminaires": 1,
+        "emergency_luminaires": 4,
+        "plan_receptacles": 18,
+        "legend_receptacles": 1,
+        "gfci_receptacles": 2,
+        "plan_switches": 10,
+        "legend_switches": 1,
+        "panel_count": 1,
+        "home_run_centerline_ft": 46.0,
+        "home_run_vertices_ft": [
+          [
+            46,
+            21
+          ],
+          [
+            46,
+            29
+          ],
+          [
+            84,
+            29
+          ]
+        ],
+        "luminaire_positions_ft": [
+          [
+            6,
+            43
+          ],
+          [
+            18,
+            43
+          ],
+          [
+            6,
+            54
+          ],
+          [
+            18,
+            54
+          ],
+          [
+            30,
+            43
+          ],
+          [
+            42,
+            43
+          ],
+          [
+            30,
+            54
+          ],
+          [
+            42,
+            54
+          ],
+          [
+            54,
+            43
+          ],
+          [
+            66,
+            43
+          ],
+          [
+            54,
+            54
+          ],
+          [
+            66,
+            54
+          ],
+          [
+            78,
+            43
+          ],
+          [
+            90,
+            43
+          ],
+          [
+            78,
+            54
+          ],
+          [
+            90,
+            54
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            31,
+            12
+          ],
+          [
+            41,
+            12
+          ],
+          [
+            54,
+            12
+          ],
+          [
+            66,
+            12
+          ],
+          [
+            78,
+            10
+          ],
+          [
+            90,
+            12
+          ]
+        ],
+        "receptacle_positions_ft": [
+          [
+            2,
+            46
+          ],
+          [
+            22,
+            46
+          ],
+          [
+            12,
+            58
+          ],
+          [
+            26,
+            46
+          ],
+          [
+            46,
+            46
+          ],
+          [
+            36,
+            58
+          ],
+          [
+            50,
+            46
+          ],
+          [
+            70,
+            46
+          ],
+          [
+            60,
+            58
+          ],
+          [
+            74,
+            46
+          ],
+          [
+            94,
+            46
+          ],
+          [
+            84,
+            58
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            22,
+            8
+          ],
+          [
+            26,
+            8
+          ],
+          [
+            46,
+            8
+          ],
+          [
+            49.5,
+            18
+          ],
+          [
+            61.5,
+            18
+          ]
+        ],
+        "connected_load_va": 6480,
+        "panel_schedule_rows": 9,
+        "device_schedule_rows": 6,
+        "hyperlinked_detail_callouts": 1
+      }
+    },
+    {
+      "file": "07-Plumbing-Water-and-Drainage.pdf",
+      "pages": [
+        {
+          "sheet": "P101",
+          "title": "WATER AND DRAINAGE PLAN",
+          "scale": "1/4 IN = 1 FT",
+          "revision": "A"
+        },
+        {
+          "sheet": "P501",
+          "title": "PLUMBING DETAILS AND SCHEDULES",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "plan_sheet": "P101",
+        "detail_sheet": "P501",
+        "plan_scale_points_per_foot": 18,
+        "calibration_length_ft": 20,
+        "calibration_length_pdf_points": 360,
+        "plan_water_closets": 6,
+        "legend_water_closets": 1,
+        "plan_lavatories": 4,
+        "legend_lavatories": 1,
+        "plan_floor_drains": 4,
+        "legend_floor_drains": 1,
+        "plan_water_heaters": 1,
+        "plan_cleanouts": 2,
+        "plan_vent_through_roof": 2,
+        "sanitary_main_centerline_ft": 32.0,
+        "sanitary_main_vertices_ft": [
+          [
+            49,
+            3
+          ],
+          [
+            81,
+            3
+          ]
+        ],
+        "cold_water_main_centerline_ft": 40.0,
+        "cold_water_main_vertices_ft": [
+          [
+            78,
+            17
+          ],
+          [
+            78,
+            28
+          ],
+          [
+            49,
+            28
+          ]
+        ],
+        "wc_positions_ft": [
+          [
+            50,
+            6.5
+          ],
+          [
+            54,
+            6.5
+          ],
+          [
+            58,
+            6.5
+          ],
+          [
+            62,
+            6.5
+          ],
+          [
+            66,
+            6.5
+          ],
+          [
+            70,
+            6.5
+          ]
+        ],
+        "lavatory_positions_ft": [
+          [
+            51,
+            18.5
+          ],
+          [
+            57,
+            18.5
+          ],
+          [
+            63,
+            18.5
+          ],
+          [
+            69,
+            18.5
+          ]
+        ],
+        "floor_drain_positions_ft": [
+          [
+            55,
+            13
+          ],
+          [
+            67,
+            13
+          ],
+          [
+            75,
+            8
+          ],
+          [
+            81,
+            8
+          ]
+        ],
+        "schedule_rows": 6,
+        "hyperlinked_detail_callouts": 1
+      }
+    },
+    {
+      "file": "08-Fire-Protection-and-Life-Safety.pdf",
+      "pages": [
+        {
+          "sheet": "FP101",
+          "title": "FIRE PROTECTION AND LIFE SAFETY PLAN",
+          "scale": "1/4 IN = 1 FT",
+          "revision": "A"
+        },
+        {
+          "sheet": "FP501",
+          "title": "FIRE PROTECTION DETAILS AND SCHEDULES",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "plan_sheet": "FP101",
+        "detail_sheet": "FP501",
+        "plan_scale_points_per_foot": 18,
+        "calibration_length_ft": 20,
+        "calibration_length_pdf_points": 360,
+        "plan_sprinklers": 24,
+        "legend_sprinklers": 1,
+        "plan_smoke_detectors": 6,
+        "legend_smoke_detectors": 1,
+        "plan_exit_signs": 4,
+        "legend_exit_signs": 1,
+        "plan_risers": 1,
+        "wet_main_centerline_ft": 82.0,
+        "wet_main_vertices_ft": [
+          [
+            75,
+            17
+          ],
+          [
+            75,
+            30
+          ],
+          [
+            6,
+            30
+          ]
+        ],
+        "egress_a_centerline_ft": 31.0,
+        "egress_a_vertices_ft": [
+          [
+            12,
+            47
+          ],
+          [
+            9,
+            47
+          ],
+          [
+            9,
+            33
+          ],
+          [
+            3,
+            33
+          ],
+          [
+            3,
+            28
+          ],
+          [
+            0,
+            28
+          ]
+        ],
+        "egress_b_centerline_ft": 62.0,
+        "egress_b_vertices_ft": [
+          [
+            60,
+            47
+          ],
+          [
+            57,
+            47
+          ],
+          [
+            57,
+            33
+          ],
+          [
+            45,
+            33
+          ],
+          [
+            45,
+            0
+          ]
+        ],
+        "sprinkler_positions_ft": [
+          [
+            6,
+            43
+          ],
+          [
+            18,
+            43
+          ],
+          [
+            6,
+            54
+          ],
+          [
+            18,
+            54
+          ],
+          [
+            30,
+            43
+          ],
+          [
+            42,
+            43
+          ],
+          [
+            30,
+            54
+          ],
+          [
+            42,
+            54
+          ],
+          [
+            54,
+            43
+          ],
+          [
+            66,
+            43
+          ],
+          [
+            54,
+            54
+          ],
+          [
+            66,
+            54
+          ],
+          [
+            78,
+            43
+          ],
+          [
+            90,
+            43
+          ],
+          [
+            78,
+            54
+          ],
+          [
+            90,
+            54
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            17,
+            12
+          ],
+          [
+            31,
+            12
+          ],
+          [
+            41,
+            12
+          ],
+          [
+            54,
+            12
+          ],
+          [
+            66,
+            12
+          ],
+          [
+            78,
+            10
+          ],
+          [
+            90,
+            12
+          ]
+        ],
+        "smoke_detector_positions_ft": [
+          [
+            12,
+            47
+          ],
+          [
+            36,
+            47
+          ],
+          [
+            60,
+            47
+          ],
+          [
+            84,
+            47
+          ],
+          [
+            12,
+            19
+          ],
+          [
+            48,
+            33
+          ]
+        ],
+        "exit_sign_positions_ft": [
+          [
+            7,
+            27
+          ],
+          [
+            89,
+            27
+          ],
+          [
+            21,
+            2
+          ],
+          [
+            45,
+            2
+          ]
+        ],
+        "device_schedule_rows": 6,
+        "hyperlinked_detail_callouts": 1
+      }
+    },
+    {
+      "file": "09-Landscape-and-External-Works.pdf",
+      "pages": [
+        {
+          "sheet": "L101",
+          "title": "LANDSCAPE PLAN",
+          "scale": "1/16\" = 1'-0\"",
+          "revision": "A"
+        },
+        {
+          "sheet": "L501",
+          "title": "PLANTING & SITE DETAILS",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "plan_trees": 12,
+        "tree_legend_symbols_excluded": 1,
+        "maples": 4,
+        "serviceberries": 4,
+        "river_birches": 4,
+        "planting_beds": 4,
+        "planting_bed_sf": 6645,
+        "benches": 6,
+        "bollards": 4,
+        "landscape_points_per_ft": 4.5,
+        "tree_detail_points_per_ft": 36,
+        "bed_detail_points_per_ft": 108
+      }
+    },
+    {
+      "file": "10-Interiors-Finishes-and-Millwork.pdf",
+      "pages": [
+        {
+          "sheet": "I101",
+          "title": "FLOOR FINISH PLAN",
+          "scale": "1/4\" = 1'-0\"",
+          "revision": "A"
+        },
+        {
+          "sheet": "I501",
+          "title": "CASEWORK ELEVATION & INTERIOR DETAILS",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "resilient_floor_sf": 5184,
+        "tile_floor_sf": 576,
+        "total_finish_sf": 5760,
+        "base_cabinets": 6,
+        "countertop_sf": 60,
+        "toe_kick_lf": 24,
+        "detail_scales": [
+          "1:24",
+          "1:8",
+          "1:4"
+        ]
+      }
+    },
+    {
+      "file": "11-Coordination-and-Review.pdf",
+      "pages": [
+        {
+          "sheet": "X101",
+          "title": "MULTIDISCIPLINE COORDINATION",
+          "scale": "1/4\" = 1'-0\"",
+          "revision": "A"
+        },
+        {
+          "sheet": "X102",
+          "title": "ISSUE REGISTER & REVIEW DETAILS",
+          "scale": "AS NOTED",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "native_review_notes": 3,
+        "layers": [
+          "Architecture",
+          "Mechanical",
+          "Electrical",
+          "Review issues"
+        ],
+        "intentional_issues": 3
+      }
+    },
+    {
+      "file": "12-Scanned-Legacy-Drawings.pdf",
+      "pages": [
+        {
+          "sheet": "A101",
+          "title": "SCANNED FLOOR PLAN",
+          "scale": "SAME AS SOURCE IMAGE",
+          "revision": "A"
+        },
+        {
+          "sheet": "C101",
+          "title": "SCANNED SITE PLAN",
+          "scale": "SAME AS SOURCE IMAGE",
+          "revision": "A"
+        }
+      ],
+      "facts": {
+        "native_text_characters": 0,
+        "scan_resolution_dpi": 100,
+        "scan_source_files": [
+          "02-Architectural-Revision-A.pdf / A101",
+          "01-Civil-Site-and-Grading.pdf / C101"
+        ],
+        "ocr_search_targets": [
+          "COMMUNITY ROOM",
+          "GROUND FLOOR PLAN",
+          "SITE PLAN",
+          "WILLOW CREEK"
+        ]
+      }
+    }
+  ],
+  "demo_truth": {
+    "building_area_sf": 5760,
+    "building_perimeter_lf": 312,
+    "plan_points_per_ft": 18,
+    "plan_scale_ratio": 48,
+    "plan_bbox_pdf_bottom_left_points": [
+      180,
+      330,
+      1908,
+      1410
+    ],
+    "plan_bbox_polypdf_top_left_points": [
+      180,
+      318,
+      1908,
+      1398
+    ],
+    "graphic_scale_20ft_polypdf_top_left_points": [
+      [
+        1480,
+        1533
+      ],
+      [
+        1840,
+        1533
+      ]
+    ],
+    "room_areas_rev_a_sf": {
+      "101": 576,
+      "102": 576,
+      "103": 576,
+      "104": 576,
+      "105": 576,
+      "106": 576,
+      "107": 288,
+      "108": 288,
+      "109": 288,
+      "110": 288,
+      "111": 1152
+    },
+    "comparison_files": [
+      "02-Architectural-Revision-A.pdf",
+      "03-Architectural-Revision-B.pdf"
+    ]
+  },
+  "usage": "Original synthetic demonstration assets. Fictional project. Not for construction. Symbol matches require review. Quantities are authored exercise values, not engineering or code compliance evidence."
+}

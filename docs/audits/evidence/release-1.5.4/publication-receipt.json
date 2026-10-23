@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-11T14:55:14.587831+00:00",
+  "sourceCommit": "584a99c75fcd00f6ace90fc9b613c0778b4d6b55",
+  "version": "1.5.4",
+  "build": "26",
+  "verifiedFiles": 391,
+  "previousWebsite": "/var/www/polypdf-site/releases/7480fbc7de180cfa1b0775ee28f9fab0606f1e2a",
+  "candidateWebsite": "/var/www/polypdf-site/releases/584a99c75fcd00f6ace90fc9b613c0778b4d6b55",
+  "published": true,
+  "productionSmoke": {
+    "passed": true,
+    "checks": 72
+  },
+  "internationalSmoke": {
+    "passed": true,
+    "pages": 232,
+    "discoveryFiles": 16
+  },
+  "sourcePush": "master",
+  "transfer": "All 391 static build files matched their local SHA-256 manifest before activation."
+}

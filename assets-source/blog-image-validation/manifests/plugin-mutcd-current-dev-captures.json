@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "status": "publication-approved",
+  "appSource": {
+    "root": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeProductDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250",
+    "version": "1.3.4",
+    "build": "16",
+    "rendererBundleSha256": "c5cd81d05969d6a45ba416f52a42bf0bcf4dc36dab2eff0e76996d9c8b7fb1df",
+    "mainBundleSha256": "94585a99f0d877d9fc3c34c02c6d2a47de12a42a64b55d79de2718751a97cf11"
+  },
+  "captureEnvironment": {
+    "capturedOn": "2026-08-19",
+    "appearance": "dark",
+    "nativeWindowState": "maximized",
+    "runtimeBoundsCssPixels": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "screenAvailableBoundsCssPixels": {
+      "left": 0,
+      "top": 34,
+      "width": 1710,
+      "height": 1073
+    },
+    "devicePixelRatio": 2,
+    "capturePixelSize": {
+      "width": 3420,
+      "height": 2146
+    },
+    "viewportEmulation": false,
+    "pageOnlyCrop": false,
+    "nativeGeometryProof": "Renderer outer and inner geometry plus the exact root PID's CGWindow bounds equal the macOS available screen. Electron's Browser.getWindowForTarget method was unavailable, so no Browser-domain windowState claim is made.",
+    "fullStyleToolbarRule": "Each approved source proof records a visible contextual style toolbar whose clientWidth equals scrollWidth and whose overflow class is false."
+  },
+  "ownedInstanceTeardown": {
+    "userData": "/private/tmp/polypdf-plugin-current-dev-UDkryF",
+    "rootPid": 64240,
+    "recordedPidTree": [64240, 64313, 64340, 64352, 64504, 64600, 64601, 64602],
+    "result": "automation-instance verified all eight recorded processes gone after a clean quit; no signals were sent",
+    "debugPort": 9507,
+    "postTeardownChecks": {
+      "recordedPidTreeGone": true,
+      "debugPortClosed": true
+    }
+  },
+  "fixtures": [
+    {
+      "role": "owned-plugin-reference-sheet",
+      "path": "../fixtures/plugin-reference-sheet.pdf",
+      "sha256": "ffbff7ed4a15a51dee4bb870b40556f9d876df4a53bd33c6e64f18a1d1fdaf14",
+      "customerData": false
+    },
+    {
+      "role": "owned-context-correct-r1-1-reference-sheet",
+      "path": "../fixtures/mutcd-r1-1-reference-sheet.pdf",
+      "sha256": "fc39aa00ee56628d9930737914b9b8a399b465a7a80fee65bcce7969d7e78075",
+      "customerData": false,
+      "contextLabels": [
+        "OWNED TRAFFIC-CONTROL FIXTURE",
+        "MUTCD REGULATORY SIGN",
+        "R1-1 STOP DEMONSTRATION",
+        "R1-1 PLACEMENT TARGET",
+        "FICTIONAL DEMONSTRATION"
+      ],
+      "useBoundary": "Demonstration fixture only; not a traffic-control plan and not for field use."
+    }
+  ],
+  "captures": [
+    {
+      "role": "plugins-sidebar-hero",
+      "sourcePng": "../captures/plugin-current-dev-sidebar-dark-maximized.png",
+      "sourceSha256": "7c84629a595cfd41ec0f9eb81578e21697bdf1b1e6e1a3beeee62a9a35cbe1ab",
+      "sourcePixels": [3420, 2146],
+      "captureProof": "../captures/plugin-current-dev-sidebar-dark-maximized.png.capture-proof.json",
+      "captureProofSha256": "a4ee2bf20a99f102607b53f0afc1fb77176443f73d029b7a293284ad56dfce46",
+      "themeProof": "../captures/plugin-current-dev-sidebar-dark-maximized.png.theme-proof.json",
+      "themeProofSha256": "4ff9a18e14a8c73bca553c6d44b1b5c26f6be639b7ede1c9992b0e79b7ddc13e",
+      "proofCapturedAt": "2026-08-19T11:44:43.249Z",
+      "webPng": "../../../src/assets/screenshots/plugins-sidebar-currentdev-dark-web.png",
+      "webSha256": "ec2f1cfba31a97990f4e9e946673409efccc78313f3c1a571e70e6f73e4704d1",
+      "webPixels": [1710, 1073],
+      "claim": "The current Plugins sidebar lists AISC Steel Sections, PDF Maps, and Professional Seal Maker. Polygon is active only to expose the complete Line, Fill, and Hatch style controls; no plugin output is present in this frame."
+    },
+    {
+      "role": "aisc-w24x55-populated-generator",
+      "sourcePng": "../captures/plugin-current-dev-aisc-generator-dark-maximized.png",
+      "sourceSha256": "db343f4fcd16f8dbba40575d6ce446f02f5895e60e170c16476b064fa5e6d69b",
+      "sourcePixels": [3420, 2146],
+      "captureProof": "../captures/plugin-current-dev-aisc-generator-dark-maximized.png.capture-proof.json",
+      "captureProofSha256": "fd970e46e0eed0787ec0f5ddaadfb0955ae025eec66eaebc4ea52210f149320f",
+      "themeProof": "../captures/plugin-current-dev-aisc-generator-dark-maximized.png.theme-proof.json",
+      "themeProofSha256": "0405a5ce5cefc8a9317f33850ccc06258784140157e7c16b5bdac7c6039ca7d4",
+      "proofCapturedAt": "2026-08-19T11:31:16.109Z",
+      "webPng": "../../../src/assets/screenshots/plugins-aisc-w24x55-generator-currentdev-dark-web.png",
+      "webSha256": "7993ab509bc9ff864dcb3a3c29e5bc8b4c72759f61155ded61fbf030ea71ad82",
+      "webPixels": [1710, 1073],
+      "validatedSelection": {
+        "designation": "W24×55",
+        "units": "Customary (inches, lb/ft)",
+        "drawingScale": "1\" = 1'-0\"",
+        "lineWidthPoints": 2,
+        "color": "Blue"
+      },
+      "claim": "The live generator preview represents the selected W24×55 state. Publication copy must not restate the separate generic W12×26 helper example also visible in the dialog."
+    },
+    {
+      "role": "aisc-w24x55-genuine-inserted-output",
+      "sourcePng": "../captures/plugin-current-dev-aisc-inserted-dark-maximized.png",
+      "sourceSha256": "9b9feb4ffca97314dabde4343b4cdace1b3df66856ab59251888391d1ad57c72",
+      "sourcePixels": [3420, 2146],
+      "captureProof": "../captures/plugin-current-dev-aisc-inserted-dark-maximized.png.capture-proof.json",
+      "captureProofSha256": "4dbca5da4636957d6a88c846a957b52fdcf57d2823cc6fec273c30ec538ef0f4",
+      "themeProof": "../captures/plugin-current-dev-aisc-inserted-dark-maximized.png.theme-proof.json",
+      "themeProofSha256": "7f2106536d0c2998a83db6367069cea0054fcd293f0fbc7f1e63a63de2515c28",
+      "proofCapturedAt": "2026-08-19T11:31:42.030Z",
+      "webPng": "../../../src/assets/screenshots/plugins-aisc-w24x55-result-currentdev-dark-web.png",
+      "webSha256": "8a12630a39a12412f3dc1f93ec7dff2eed2b7156e22040a1a4abcd0f69a479c7",
+      "webPixels": [1710, 1073],
+      "validatedOutput": {
+        "annotationId": "aisc-W24X55-profile",
+        "tool": "polygon",
+        "label": "W24×55",
+        "pluginId": "com.polypdf.steel-sections",
+        "pluginVersion": "1.0.6",
+        "generatorId": "aisc-steel-section/v1",
+        "dataVersion": "AISC-v16.0",
+        "lineWidthPoints": 2,
+        "strokeColor": "#1a4d8f"
+      },
+      "claim": "The selected W24×55 profile is a genuine plugin-generated Polygon annotation on the owned reference sheet."
+    },
+    {
+      "role": "context-correct-mutcd-r1-1-browse-and-place",
+      "sourcePng": "../captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png",
+      "sourceSha256": "d5625064cf14a5e39e8a2fcd1eba551b79a0155b789336acc13e49061c13df21",
+      "sourcePixels": [3420, 2146],
+      "captureProof": "../captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png.capture-proof.json",
+      "captureProofSha256": "6bca21e7e78a7607a0cf31e32f9171c6c100dcf6fcdbfb9cdfecd3ca3c57435c",
+      "themeProof": "../captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png.theme-proof.json",
+      "themeProofSha256": "cf77422d45dcc781831dc0b17434e16b1dd9fad809d2c9cc8b8958a103f18d17",
+      "proofCapturedAt": "2026-08-19T11:43:29.602Z",
+      "webPng": "../../../src/assets/screenshots/mutcd-r1-1-stop-currentdev-dark-web.png",
+      "webSha256": "3507eb750ce5ed44bda4d86ad89356b7243626daa440627075bb8de4c755eec4",
+      "webPixels": [1710, 1073],
+      "validatedOutput": {
+        "toolset": "MUTCD Regulatory",
+        "toolsetType": "built-in",
+        "cardCount": 435,
+        "sourceCard": "R1-1 Stop",
+        "annotationTool": "imageStamp",
+        "annotationLabel": "R1-1 Stop",
+        "imageFilename": "mutcd/R01-01.pdf",
+        "pagePosition": { "x": 360, "y": 306, "width": 72, "height": 72 },
+        "selectedInDom": true
+      },
+      "claim": "The built-in MUTCD Regulatory chest remains open with the R1-1 source card visible, and the genuine placed R1-1 image annotation is selected inside the owned, context-correct R1-1 demonstration target. This is Toolsets evidence, not plugin evidence."
+    }
+  ],
+  "webTransformation": "Each web PNG is an exact 50 percent full-frame derivative of its 3420 × 2146 native-maximized source, producing 1710 × 1073 pixels. Metadata was stripped and PNG compression level 9 applied. No interface element was added, removed, rearranged, cropped, or retouched.",
+  "publicGuidePng": "../../../public/guides/introducing-polypdf-plugins.png",
+  "publicGuideSha256": "ec2f1cfba31a97990f4e9e946673409efccc78313f3c1a571e70e6f73e4704d1",
+  "publicGuidePixels": [1710, 1073],
+  "publicGuideIdentity": "Byte-identical to ../../../src/assets/screenshots/plugins-sidebar-currentdev-dark-web.png.",
+  "publicationScope": {
+    "approvedPngs": [
+      "../captures/plugin-current-dev-sidebar-dark-maximized.png",
+      "../captures/plugin-current-dev-aisc-generator-dark-maximized.png",
+      "../captures/plugin-current-dev-aisc-inserted-dark-maximized.png",
+      "../captures/mutcd-current-dev-r1-1-stop-placed-dark-maximized.png",
+      "../../../src/assets/screenshots/plugins-sidebar-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/plugins-aisc-w24x55-generator-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/plugins-aisc-w24x55-result-currentdev-dark-web.png",
+      "../../../src/assets/screenshots/mutcd-r1-1-stop-currentdev-dark-web.png",
+      "../../../public/guides/introducing-polypdf-plugins.png"
+    ],
+    "pdfMapsImageDecision": "No current PDF Maps capture with the required OpenFreeMap © OpenMapTiles Data from OpenStreetMap credit (or its short layout form) was validated, so no PDF Maps screenshot is approved or published."
+  },
+  "homeCandidates": [
+    {
+      "priority": 1,
+      "asset": "../../../src/assets/screenshots/mutcd-r1-1-stop-currentdev-dark-web.png",
+      "sha256": "3507eb750ce5ed44bda4d86ad89356b7243626daa440627075bb8de4c755eec4",
+      "copyBoundary": "Describe browsing and genuine placement from the built-in MUTCD Regulatory Toolset; do not call it a plugin or a field-ready plan."
+    },
+    {
+      "priority": 2,
+      "asset": "../../../src/assets/screenshots/plugins-sidebar-currentdev-dark-web.png",
+      "sha256": "ec2f1cfba31a97990f4e9e946673409efccc78313f3c1a571e70e6f73e4704d1",
+      "copyBoundary": "Describe the three visible first-party Plugin sidebar entries; no plugin output is inserted in this frame."
+    },
+    {
+      "priority": 3,
+      "asset": "../../../src/assets/screenshots/plugins-aisc-w24x55-result-currentdev-dark-web.png",
+      "sha256": "8a12630a39a12412f3dc1f93ec7dff2eed2b7156e22040a1a4abcd0f69a479c7",
+      "copyBoundary": "Describe the genuine selected W24×55 Polygon output only."
+    }
+  ]
+}

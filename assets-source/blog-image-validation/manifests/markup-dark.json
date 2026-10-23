@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "states": [
+    {
+      "id": "markup-review-dark",
+      "fixturePath": "../fixtures/markup-coordination-demo.pdf",
+      "currentPage": 1,
+      "zoomMode": "fitPage",
+      "windowSize": { "width": 1440, "height": 960 },
+      "sidebarPanel": "properties",
+      "selectedTool": "select",
+      "markupTable": true,
+      "selectedAnnotationId": "rfi-door-clearance",
+      "settleMs": 600000,
+      "annotations": [
+        {
+          "id": "rfi-door-clearance",
+          "kind": "text",
+          "tool": "detailBubble",
+          "page": 1,
+          "pageIndex": 0,
+          "x": 405,
+          "y": 160,
+          "width": 170,
+          "height": 58,
+          "label": "RFI - door clearance",
+          "nativeSubject": "RFI - door clearance",
+          "contents": "Confirm 18-inch latch-side clearance at Room 302 before framing.",
+          "author": "Alex Example",
+          "status": "open",
+          "createdAt": "2026-08-19T09:30:00.000Z",
+          "modifiedAt": "2026-08-19T09:42:00.000Z",
+          "points": [
+            { "x": -120, "y": 120 },
+            { "x": -52, "y": 29 },
+            { "x": 0, "y": 29 }
+          ],
+          "calloutShape": "rounded",
+          "strokeColor": "#F59E0B",
+          "fillColor": "#332A18",
+          "textColor": "#FFF4D6",
+          "fillOpacity": 0.95,
+          "lineWidth": 3,
+          "fontSize": 11,
+          "arrowEnd": "OpenArrow"
+        },
+        {
+          "id": "punch-ceiling-access",
+          "kind": "shape",
+          "tool": "revisionCloud",
+          "page": 1,
+          "pageIndex": 0,
+          "x": 520,
+          "y": 300,
+          "width": 120,
+          "height": 95,
+          "label": "Punch - ceiling access",
+          "nativeSubject": "Punch - ceiling access",
+          "contents": "Access panel is missing above Recovery 306.",
+          "author": "Morgan Example",
+          "status": "inProgress",
+          "createdAt": "2026-08-19T09:32:00.000Z",
+          "modifiedAt": "2026-08-19T09:44:00.000Z",
+          "points": [
+            { "x": 0, "y": 0 },
+            { "x": 120, "y": 0 },
+            { "x": 120, "y": 95 },
+            { "x": 0, "y": 95 }
+          ],
+          "strokeColor": "#FB7185",
+          "fillColor": "#FB7185",
+          "fillOpacity": 0.12,
+          "lineWidth": 4,
+          "lineStyle": "cloud"
+        },
+        {
+          "id": "verified-supply-room",
+          "kind": "shape",
+          "tool": "rectangle",
+          "page": 1,
+          "pageIndex": 0,
+          "x": 86,
+          "y": 320,
+          "width": 118,
+          "height": 84,
+          "label": "Verified - supply clearance",
+          "nativeSubject": "Verified - supply clearance",
+          "contents": "Clearance checked against Issue 02 and accepted.",
+          "author": "Taylor Example",
+          "status": "completed",
+          "createdAt": "2026-08-19T09:34:00.000Z",
+          "modifiedAt": "2026-08-19T09:46:00.000Z",
+          "strokeColor": "#34D399",
+          "fillColor": "#34D399",
+          "fillOpacity": 0.14,
+          "lineWidth": 3
+        }
+      ]
+    }
+  ]
+}

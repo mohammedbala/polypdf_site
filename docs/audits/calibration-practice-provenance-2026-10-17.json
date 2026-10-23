@@ -1,0 +1,16 @@
+{
+  "source": "/samples/takeoff/flooring-practice.pdf",
+  "sourceSha256": "55358ba8b583c98f0442f411b011791a8bb6b4adfa79b148db86c44ac931a71b",
+  "preview": "/samples/takeoff/flooring-practice-preview.png",
+  "previewSha256": "832af65e99ce4ac68023336da0b6c91582d77e371b8562c9dbbc9968dd8767f8",
+  "method": "pdftoppm -scale-to 1100 -png -singlefile; complete page render, not an app screenshot",
+  "referenceGeometry": {
+    "pointsPerFoot": 9,
+    "calibrationWidthFeet": 20,
+    "calibrationWidthPoints": 180,
+    "independentHorizontalFeet": 15,
+    "independentVerticalFeet": 12,
+    "room1NetSquareFeet": 228
+  },
+  "scope": "Reference geometry and exercise guidance; no new app runtime test."
+}

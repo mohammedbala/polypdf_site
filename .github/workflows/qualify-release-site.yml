@@ -1,0 +1,26 @@
+name: Qualify prepared release website
+on:
+  push:
+    branches:
+      - codex/combined-release-1.6.4
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --include=dev
+      - name: Check release pages
+        run: CI=true npm test -- --watchAll=false --runInBand src/lib/route-metadata.test.js src/components/VersionHistory.test.js
+      - name: Build and verify all languages
+        run: CI=false npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prepared-site-${{ github.sha }}
+          path: build/
+          retention-days: 7

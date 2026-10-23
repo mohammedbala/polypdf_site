@@ -1,0 +1,4 @@
+(() => {
+  window.close();
+  return true;
+})()

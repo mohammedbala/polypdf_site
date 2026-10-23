@@ -1,0 +1,23 @@
+{
+  "kind": "manual native UI capture observation",
+  "date": "2026-09-07",
+  "source": {
+    "baseCommit": "86870133c7128998c3d1974954bbb24141898917",
+    "workingTreeProductDiffSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rawPath": "assets-source/release-1.5.1/stamp-blank.png",
+    "rawSha256": "f281cb881cc5c11e83b9c62c862bb90e50ae7a3b76bef4a320f9f7ace1a23219"
+  },
+  "observations": {
+    "renderer": "signed PolyPDF.app/Contents/Resources/app.asar/dist/renderer/index.html",
+    "version": "1.5.1",
+    "build": "23",
+    "fixture": "Bundled Quick Start drawing; fictional Morgan Lee reviewer",
+    "frame": "Full native maximized app window, 1233 \u00d7 768, light appearance",
+    "ui": "No injected HTML, CSS, viewport emulation, or replacement UI. Blank canvas, field editor, optional toolset saving, placement prompt, stamp style controls and Tools inventory observed via Computer Use.",
+    "presentation": "View > Presentation Mode entered; Escape returned to document with sidebar and stamp intact."
+  },
+  "limitations": [
+    "This is a capture-session observation report, not a new cross-viewer compatibility qualification.",
+    "The screenshot adapter returned JPEG. The original is retained; the PNG is an encoding conversion with no UI edits."
+  ]
+}

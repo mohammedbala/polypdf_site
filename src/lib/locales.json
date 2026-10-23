@@ -1,0 +1,10 @@
+[
+  {"id":"es","language":"es","label":"Español","og":"es_ES","markets":["Mexico","Spain","Colombia","Chile"]},
+  {"id":"pt-br","language":"pt-BR","label":"Português (Brasil)","og":"pt_BR","markets":["Brazil"]},
+  {"id":"de","language":"de","label":"Deutsch","og":"de_DE","markets":["Germany","Austria","Switzerland"]},
+  {"id":"fr","language":"fr","label":"Français","og":"fr_FR","markets":["France","Canada","Belgium"]},
+  {"id":"ar","language":"ar","label":"العربية","og":"ar_SA","dir":"rtl","markets":["Saudi Arabia","United Arab Emirates","Egypt"]},
+  {"id":"hi","language":"hi","label":"हिन्दी","og":"hi_IN","markets":["India"]},
+  {"id":"zh-cn","language":"zh-CN","label":"简体中文","og":"zh_CN","markets":["China"]},
+  {"id":"ja","language":"ja","label":"日本語","og":"ja_JP","markets":["Japan"]}
+]

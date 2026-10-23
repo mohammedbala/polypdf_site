@@ -1,0 +1,41 @@
+{
+  "question": "What should you test before switching from Bluebeam?",
+  "answer": "Test a representative project from calibration through the recipient’s final review. Compare known dimensions, units, quantities, editable markups and exported totals. Record the app versions and any differences. A PDF that looks correct can still lose editable data or a required workflow. PolyPDF cannot join Bluebeam Studio; keep a supported Bluebeam solution when Studio is required.",
+  "checks": [
+    {
+      "title": "Keep an untouched source and define the handoff",
+      "test": "Work on a copy. Record the sheet, revision, source app, destination app and operating-system versions. Agree which outputs the recipient needs before testing.",
+      "record": "Source filename and revision; app versions; reviewer; required deliverables."
+    },
+    {
+      "title": "Verify scale in two directions",
+      "test": "Calibrate a known dimension, then check a different labeled span in the other direction. Repeat for pages or details with different scales. Agree the acceptable tolerance for this project.",
+      "record": "Reference lengths, measured lengths, units and agreed tolerance; any scan distortion."
+    },
+    {
+      "title": "Reconcile measurements and worksheet totals",
+      "test": "Compare representative lengths, net areas, exclusions and counts with the source record. Check subjects, units, rounding and page references. Do not assume that custom columns, formulas or toolsets transfer.",
+      "record": "Expected and actual quantities; missing fields; any values or workflows rebuilt manually."
+    },
+    {
+      "title": "Check editable markups after reopening",
+      "test": "Save a separate PDF, close it and reopen it. Inspect notes, callouts, measurement labels and any required properties in the recipient’s actual viewer. Check whether items remain editable when editing is required.",
+      "record": "Viewer and version; appearance, text and editability; any flattened or missing information."
+    },
+    {
+      "title": "Compare the CSV and PDF handoff",
+      "test": "Export the reviewed worksheet and open it in the intended spreadsheet or PDF viewer. Reconcile subjects, units, counts and totals against the saved drawing. Confirm that downstream pricing uses the intended units.",
+      "record": "Export filenames; worksheet totals; downstream units; reviewer’s discrepancies."
+    },
+    {
+      "title": "Test document controls and project requirements",
+      "test": "Check forms, signatures, permissions, links and revision procedures that the project actually needs. Test a typical large drawing set on the intended computer. Treat Studio access as a separate requirement.",
+      "record": "Required features tested; file size and page count; observed behavior; Studio dependency."
+    },
+    {
+      "title": "Get the recipient’s acceptance before changing tools",
+      "test": "Have the actual recipient review the saved PDF and exports. Resolve every failed required check, or retain the existing tool for that part of the workflow. Keep both the original record and the test evidence.",
+      "record": "Pass, Fail or Not applicable with a reason for each check; acceptance, reviewer and date."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+.takeoff-jump-links { display: flex; flex-wrap: wrap; gap: .7rem 1.3rem; margin-top: 1.5rem; font-size: .9rem; }
+.takeoff-jump-links a, .takeoff-decision a, .takeoff-evaluation a { color: var(--accent); text-underline-offset: .2em; }
+.takeoff-decision, .takeoff-evaluation { padding: clamp(3rem, 6vw, 5.5rem) 0; border-bottom: 1px solid var(--gray-200); }
+.takeoff-decision { background: #fff; }
+.takeoff-evaluation { background: var(--accent-soft); }
+.takeoff-decision-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 5rem); align-items: start; }
+.takeoff-decision h2, .takeoff-evaluation h2 { font-size: clamp(1.85rem, 3.2vw, 2.8rem); line-height: 1.12; margin: .8rem 0 1.25rem; max-width: 24ch; scroll-margin-top: 2rem; }
+.takeoff-decision p, .takeoff-evaluation p { line-height: 1.7; margin: 1rem 0; }
+.takeoff-decision .plan-comparison { margin-top: .8rem; min-width: 0; }
+.takeoff-license-facts { margin: 1.75rem 0; }
+.takeoff-license-facts > div { padding: 1rem 0; border-top: 1px solid var(--gray-200); }
+.takeoff-license-facts dt { font-weight: 700; margin-bottom: .35rem; }
+.takeoff-license-facts dd { margin: 0; line-height: 1.6; }
+.takeoff-decision .takeoff-small, .takeoff-evaluation .takeoff-small { font-size: .86rem; color: var(--gray-600); }
+.takeoff-fit { padding-top: 1.6rem; border-top: 1px solid var(--gray-200); }
+.takeoff-evaluation-steps { padding-inline-start: 1.4rem; line-height: 1.7; }
+.takeoff-evaluation-steps li { padding-inline-start: .35rem; margin: 1rem 0; }
+.takeoff-practice-files { border: 1px solid var(--gray-300); padding: clamp(1.25rem, 3vw, 2rem); background: #fff; }
+.takeoff-practice-files h3 { font-size: 1.5rem; line-height: 1.25; margin: 0 0 1rem; }
+.takeoff-practice-files ul { padding-inline-start: 1.2rem; }
+.takeoff-practice-files li { line-height: 1.6; margin: .9rem 0; }
+@media (max-width: 900px) { .takeoff-decision-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; } }

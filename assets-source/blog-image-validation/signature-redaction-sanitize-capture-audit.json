@@ -1,0 +1,78 @@
+{
+  "auditedAt": "2026-08-19T11:36:33Z",
+  "source": {
+    "appRoot": "/private/tmp/polypdf-blog-current-dev-JwqN0q/src/polypdf",
+    "baseCommit": "a0a709c39e35343d3c71f7d615fedffb007db619",
+    "workingTreeDiffSha256": "8d9daab35f0284ae867d294ed4e1638fffcf6fca1c5da51685f8c1226b764250"
+  },
+  "required": {
+    "darkAppearance": true,
+    "nativeWindowState": "maximized",
+    "noViewportEmulation": true,
+    "innerDimensions": "1710x1073",
+    "devicePixelRatio": 2,
+    "pngDimensions": "3420x2146",
+    "styleToolbarVisible": true,
+    "styleToolbarOverflow": false
+  },
+  "result": {
+    "screenshotsAudited": 13,
+    "screenshotsPassed": 13,
+    "screenshotsFailed": 0
+  },
+  "screenshots": [
+    {
+      "path": "captures/redaction-applied-result-dark.png",
+      "sha256": "ceb32ad616bbc377e03895e4710761da4f7a995823c9b024635bdf8dba43f84b"
+    },
+    {
+      "path": "captures/redaction-apply-confirmation-dark.png",
+      "sha256": "85d27f772c464b5385618b587dfb8a8945fc6417c69f27ab291a0952c6f87558"
+    },
+    {
+      "path": "captures/redaction-lab-before-dark.png",
+      "sha256": "40ceaed1040687c5d3bbad0d8e5ff0badad246b95a023919d3053f7265ee6a93"
+    },
+    {
+      "path": "captures/redaction-marked-text-dark.png",
+      "sha256": "96067b0185d993a3440fdabe8cc341b535d36e19525ef265071273e350c24d6e"
+    },
+    {
+      "path": "captures/redaction-reopened-search-no-matches-dark.png",
+      "sha256": "958ca8de299a8d6275ceda9a2b729e692c5f21b71d89d253ecc4b866203d3aec"
+    },
+    {
+      "path": "captures/sanitize-options-dark.png",
+      "sha256": "5737a7fa0a759ac88e2003c5942dbc4ad37de1ad59717f4080c67fa37df82171"
+    },
+    {
+      "path": "captures/sanitize-result-dark.png",
+      "sha256": "95b7b9ec7d6fd8d4f8766c466a36b0fcf4585f74ff79ff75e476ebd84881ce5e"
+    },
+    {
+      "path": "captures/signature-certificate-technical-dark.png",
+      "sha256": "e0574d474b36db8367c0f1743128411d71cf6efefbcb882d6e25f0f861cc9774"
+    },
+    {
+      "path": "captures/signature-seal-builder-warning-dark.png",
+      "sha256": "7d868a3748f7c2d9fe053efd8119e0ec33fe72f7bc3ff5a754399a9e4afe909e"
+    },
+    {
+      "path": "captures/signature-seal-inserted-dark.png",
+      "sha256": "588aaa1ec44c0c01264d339b7441887f02d433a0387218ee8f01b40b4e22e575"
+    },
+    {
+      "path": "captures/signature-valid-certificate-dark.png",
+      "sha256": "953adffc410748912609963737559751f223b3a61db0a241bb41af8067f89135"
+    },
+    {
+      "path": "captures/signature-visual-chooser-dark.png",
+      "sha256": "7a9302be2e86c7d364787f15557cc8270960a41285f8c8260a0895eb55125c38"
+    },
+    {
+      "path": "captures/signature-visual-styles-dark.png",
+      "sha256": "a777ef4835d8558614783aa81acf907229bdc81d6c4330ef9bb802e3a593a265"
+    }
+  ],
+  "proof": "Each PNG has a same-name .theme-proof.json sidecar confirming the exact source fingerprint, dark UI facts, work-area-filling native geometry, full non-overflowing style toolbar, and 3420x2146 pixel dimensions."
+}

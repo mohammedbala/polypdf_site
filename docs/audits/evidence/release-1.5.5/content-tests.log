@@ -1,0 +1,14 @@
+
+> polypdf-landing@1.0.0 test
+> react-scripts test --watchAll=false --runInBand src/lib/discovery-files.test.js src/lib/route-metadata.test.js src/lib/structured-data.test.js src/components/VersionHistory.test.js
+
+PASS src/lib/route-metadata.test.js
+PASS src/lib/discovery-files.test.js
+PASS src/lib/structured-data.test.js
+PASS src/components/VersionHistory.test.js
+
+Test Suites: 4 passed, 4 total
+Tests:       16 passed, 16 total
+Snapshots:   0 total
+Time:        1.889 s
+Ran all test suites matching /src\/lib\/discovery-files.test.js|src\/lib\/route-metadata.test.js|src\/lib\/structured-data.test.js|src\/components\/VersionHistory.test.js/i.

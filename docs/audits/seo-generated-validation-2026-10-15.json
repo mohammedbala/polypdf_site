@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-15",
+  "modifiedSpanishDescriptions": [
+    {
+      "path": "/es/blog/calibrate-pdf-drawing-scale/index.html",
+      "characters": 121
+    },
+    {
+      "path": "/es/blog/count-pdf-symbols/index.html",
+      "characters": 140
+    },
+    {
+      "path": "/es/blog/create-interactive-pdf-stamps/index.html",
+      "characters": 126
+    },
+    {
+      "path": "/es/blog/index.html",
+      "characters": 126
+    },
+    {
+      "path": "/es/blog/pdf-takeoff-worked-example/index.html",
+      "characters": 131
+    },
+    {
+      "path": "/es/blog/polypdf-1-5-1/index.html",
+      "characters": 107
+    },
+    {
+      "path": "/es/blog/polypdf-1-5-4/index.html",
+      "characters": 113
+    },
+    {
+      "path": "/es/blog/polypdf-1-5-5/index.html",
+      "characters": 143
+    },
+    {
+      "path": "/es/blog/why-pdf-measurements-are-wrong/index.html",
+      "characters": 129
+    },
+    {
+      "path": "/es/build-a-plugin/index.html",
+      "characters": 136
+    },
+    {
+      "path": "/es/index.html",
+      "characters": 134
+    },
+    {
+      "path": "/es/windows/index.html",
+      "characters": 135
+    }
+  ],
+  "evergreenDescriptionsChecked": 28,
+  "inboundLinksChecked": 18,
+  "comparison": {
+    "canonical": true,
+    "indexable": true,
+    "oneH1": true,
+    "rows": 5,
+    "downloadAndCheckout": true,
+    "existingDemoPoster": true,
+    "sitemapAndLlms": true
+  },
+  "historical155QuickAnswersChecked": 9,
+  "pdf": {
+    "bytes": 40107,
+    "sha256": "825f5d634fb97f2c7743e6bf81dde0a75b911639aced8643f5c65ae073e8434c"
+  }
+}

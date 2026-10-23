@@ -1,0 +1,5 @@
+Category,Description,ReferenceCount,Unit,Sheet,Revision,TagScope,ObservedCount,Status,AppVersionBuild,Platform,Edition,ReviewNotes,SourceURL
+LT-A,Standard luminaires,20,ea,E101 / E601,A,L-01 through L-24 excluding / E units,,NOT RUN,,,,,https://www.polypdf.com/samples/construction/06-Electrical-Lighting-and-Power.pdf
+LT-E,Emergency luminaires,4,ea,E101 / E601,A,L-01 / E; L-13 / E; L-17 / E; L-24 / E,,NOT RUN,,,,,https://www.polypdf.com/samples/construction/06-Electrical-Lighting-and-Power.pdf
+REC-A,General receptacles,16,ea,E101 / E601,A,R-01 through R-16,,NOT RUN,,,,,https://www.polypdf.com/samples/construction/06-Electrical-Lighting-and-Power.pdf
+REC-G,GFCI receptacles,2,ea,E101 / E601,A,R-17 G; R-18 G,,NOT RUN,,,,,https://www.polypdf.com/samples/construction/06-Electrical-Lighting-and-Power.pdf

@@ -1,0 +1,126 @@
+Local checkout path abbreviated; UI values unchanged.
+Window: "PolyPDF", App: PolyPDF.
+0 standard window PolyPDF, Secondary Actions: Raise
+	1 container PolyPDF
+		2 container
+			3 HTML content PolyPDF, URL: file://<desktop-checkout>/polypdf/.tmp/sparkle-private-1.5.1-23/install/PolyPDF.app/Contents/Resources/app.asar/dist/renderer/index.html
+				4 container Interactive Stamp
+					5 heading Interactive Stamp, Value: 2
+						6 text Interactive Stamp
+					7 container
+						8 container Add fields to your stamp, then choose what to ask each time it is placed.
+							9 container
+								10 text Stamp name
+								11 text field (settable) Stamp name, Value: Drawing Review
+							12 container
+								13 text Save in toolset
+								14 pop up button Save in toolset, Value: Interactive Stamps
+									15 (selected) Interactive Stamps
+						16 container Stamp preview
+							17 text Stamp preview
+							18 toggle button Fit stamp, Value: 1
+							19 toggle button Focus field, Value: 0
+							20 button Zoom out
+							21 text 193%
+							22 button Zoom in
+							23 button Select all fields
+							24 pop up button Align fields…
+							25 pop up button (disabled) Description: Align relative to, Value: To stamp
+							26 image Stamp preview
+							27 text Review date · 260 × 20 pt
+							28 text Drag fields to move; drag the corner to resize. Shift-click to select multiple fields, then align them.
+						29 container Stamp canvas
+							30 text Stamp canvas
+							31 container
+								32 text Width (pt)
+								33 stepper (settable, float) Width (pt), Value: 300
+							34 container
+								35 text Height (pt)
+								36 stepper (settable, float) Height (pt), Value: 180
+							37 container
+								38 text Fill
+								39 color well Fill, Value: rgb 1.00000 1.00000 1.00000 1
+							40 container
+								41 text Border
+								42 color well Border, Value: rgb 0.20000 0.20000 0.20000 1
+							43 container
+								44 text Border (pt)
+								45 stepper (settable, float) Border (pt), Value: 1
+						46 text Field
+						47 pop up button Field, Value: Review date
+							48 (selected) Review date
+						49 button Add Field
+						50 button Remove Field
+						51 text Label
+						52 text field (settable) Label, Value: Review date
+						53 text Type
+						54 pop up button Type, Value: Text
+							55 (selected) Text
+						56 text Default value
+						57 pop up button Default value, Value: Current date
+							58 (selected) Current date
+						59 text Custom default
+						60 text field (disabled) Custom default
+						61 checkbox Ask when placing, Help: Field values are filled when you place the stamp. Edit placed stamps using Properties., Value: 0
+						62 text Ask when placing
+						63 checkbox Required, Value: 0
+						64 text Required
+						65 container Description: Position & size (pt), Help: Positions are measured from the top-left of the stamp, in PDF points.
+							66 text Position & size (pt)
+							67 container
+								68 text Left
+								69 stepper (settable, float) Left, Value: 20
+							70 container
+								71 text Top
+								72 stepper (settable, float) Top, Value: 130
+							73 container
+								74 text Width
+								75 stepper (settable, float) Width, Value: 260
+							76 container
+								77 text Height
+								78 stepper (settable, float) Height, Value: 20
+						79 container Appearance
+							80 text Appearance
+							81 container
+								82 text Font
+								83 pop up button Font, Value: Arial
+									84 (selected) Arial
+							85 container
+								86 text Text size
+								87 stepper (settable, float) Text size, Help: Text fits down to 4 pt. Longer values need a larger field., Value: 14
+							88 container
+								89 text Ink color (hex)
+								90 text field (settable) Ink color (hex), Value: #000000
+							91 container
+								92 text Alignment
+								93 pop up button Alignment, Value: Left
+									94 (selected) Left
+							95 container
+								96 checkbox Bold, Value: 0
+								97 text Bold
+							98 container
+								99 checkbox Italic, Value: 0
+								100 text Italic
+					101 container
+						102 button Cancel
+						103 checkbox Add to toolset, Value: 1
+						104 text Add to toolset
+						105 button Insert on Page
+	106 close button
+	107 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	108 minimize button
+109 menu bar
+	110 PolyPDF
+	111 File
+	112 Edit​
+	113 View
+	114 Document
+	115 Tools
+	116 Window
+	117 Help
+
+Selected text: ```
+#000000
+```
+
+Note: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too).

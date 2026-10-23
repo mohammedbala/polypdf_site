@@ -1,0 +1,63 @@
+import React, { act } from 'react';
+import { createRoot } from 'react-dom/client';
+import DirectCheckoutLink from './DirectCheckoutLink';
+import CheckoutReviewProvider from './CheckoutReview';
+import { createStripeCheckoutSession } from '../lib/checkout';
+jest.mock('../lib/checkout', () => ({ ...jest.requireActual('../lib/checkout'), createStripeCheckoutSession: jest.fn() }));
+beforeEach(() => {
+  globalThis.IS_REACT_ACT_ENVIRONMENT = true;
+  HTMLDialogElement.prototype.showModal = function () { this.open = true; };
+  HTMLDialogElement.prototype.close = function () { this.open = false; };
+  window.localStorage.clear();
+  createStripeCheckoutSession.mockResolvedValue('https://checkout.stripe.com/c/pay/cs_test_direct');
+});
+afterEach(() => { globalThis.IS_REACT_ACT_ENVIRONMENT = false; jest.clearAllMocks(); });
+test('requires an unchecked terms agreement before creating any Stripe session', async () => {
+  const container=document.createElement('div'); document.body.appendChild(container);
+  const root=createRoot(container); const redirect=jest.fn();
+  await act(async()=>root.render(<CheckoutReviewProvider><DirectCheckoutLink source="website_hero" redirect={redirect}>Buy once</DirectCheckoutLink></CheckoutReviewProvider>));
+  await act(async()=>container.querySelector('a').click());
+  expect(container.querySelector('dialog').open).toBe(true);
+  expect(container.querySelector('dialog').textContent).toContain('Verified .edu email addresses receive 50% off');
+  expect(container.querySelector('input').checked).toBe(false);
+  expect(container.querySelector('button[type="submit"]').disabled).toBe(true);
+  expect(createStripeCheckoutSession).not.toHaveBeenCalled();
+  await act(async()=>container.querySelector('input').click());
+  await act(async()=>container.querySelector('form').dispatchEvent(new Event('submit',{bubbles:true,cancelable:true})));
+  expect(createStripeCheckoutSession).toHaveBeenCalledTimes(1);
+  expect(createStripeCheckoutSession.mock.calls[0][0]).toEqual({});
+  expect(createStripeCheckoutSession.mock.calls[0][2]).toEqual({accepted:true,version:'2026-09-09'});
+  expect(redirect).toHaveBeenCalledWith('https://checkout.stripe.com/c/pay/cs_test_direct');
+  act(()=>root.unmount()); container.remove();
+});
+test('Escape cancels review without payment, acceptance or cookie consent', async()=>{
+  const container=document.createElement('div');document.body.appendChild(container);const root=createRoot(container);
+  await act(async()=>root.render(<CheckoutReviewProvider><DirectCheckoutLink source="footer">Buy</DirectCheckoutLink></CheckoutReviewProvider>));
+  await act(async()=>container.querySelector('a').click());
+  await act(async()=>container.querySelector('dialog').dispatchEvent(new Event('cancel')));
+  expect(container.querySelector('dialog').open).toBe(false);
+  expect(createStripeCheckoutSession).not.toHaveBeenCalled();
+  expect(window.localStorage.length).toBe(0);
+  act(()=>root.unmount());container.remove();
+});
+
+test('an unavailable live offer cannot open review or create checkout, and recovers when available', async () => {
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  const root = createRoot(container);
+  const render = (available) => <CheckoutReviewProvider><DirectCheckoutLink source="website_hero" offer={{ loaded: true, available }}>Buy Pro</DirectCheckoutLink></CheckoutReviewProvider>;
+  await act(async () => root.render(render(false)));
+  const link = container.querySelector('a');
+  expect(link.getAttribute('aria-disabled')).toBe('true');
+  expect(link.textContent).toBe('Checkout unavailable');
+  await act(async () => link.click());
+  expect(container.querySelector('dialog').open).toBe(false);
+  expect(createStripeCheckoutSession).not.toHaveBeenCalled();
+  expect(container.querySelector('[role="alert"]').textContent).toContain('support@polypdf.com');
+  await act(async () => root.render(render(true)));
+  await act(async () => container.querySelector('a').click());
+  expect(container.querySelector('dialog').open).toBe(true);
+  expect(container.querySelector('[role="alert"]')).toBeNull();
+  act(() => root.unmount());
+  container.remove();
+});

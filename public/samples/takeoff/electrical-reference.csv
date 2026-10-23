@@ -1,0 +1,6 @@
+Item,Reference quantity,Unit,Calculation or scope
+Type A fixtures,8,count,Circle with cross
+Type B fixtures,4,count,Square
+Horizontal route leg,30,ft,270 PDF points / 9
+Vertical route leg,12,ft,108 PDF points / 9
+Total drawn route,42,ft,"30 + 12; excludes rises, drops, slack, fittings"
