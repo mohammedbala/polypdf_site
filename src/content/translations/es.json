@@ -2827,7 +2827,15 @@
     "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.16 (build 83) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenga ayuda con la instalación, los flujos de trabajo del producto, las compras y la activación de licencias. La versión pública actual es PolyPDF 1.6.16 (compilación 83) en Mac y Windows. Cuando escriba, incluya la versión que se muestra en Acerca de, su sistema operativo y los detalles del recibo de Stripe cuando sea relevante.",
     "PolyPDF 1.6.16 (build 83) · Mac & Windows": "PolyPDF 1.6.16 (compilación 83) · Mac y Windows",
     "Update to 1.6.16": "Actualización a 1.6.16",
-    "What changed in 1.6.16": "¿Qué cambió en 1.6.16?"
+    "What changed in 1.6.16": "¿Qué cambió en 1.6.16?",
+    "After relaunch, About should show version 1.6.20, build 87. Your existing PolyPDF 1.x Pro license continues to apply.": "Después del reinicio, Acerca de debería mostrar la versión 1.6.20, compilación 87. Su licencia PolyPDF 1.x Pro existente continúa aplicándose.",
+    "Current app: PolyPDF 1.6.20 (build 87) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Aplicación actual: PolyPDF 1.6.20 (compilación 87) · Formato del paquete: PolyPDF 1.3.1+ · La instalación y ejecución de complementos requiere PolyPDF Pro en 1.4.1+",
+    "Current version 1.6.20 (build 87).": "Versión actual 1.6.20 (compilación 87).",
+    "Explore the 1.6.20 update": "Explora la actualización 1.6.20",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.20 (build 87) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenga ayuda con la instalación, los flujos de trabajo del producto, las compras y la activación de licencias. La versión pública actual es PolyPDF 1.6.20 (compilación 87) en Mac y Windows. Cuando escriba, incluya la versión que se muestra en Acerca de, su sistema operativo y los detalles del recibo de Stripe cuando sea relevante.",
+    "PolyPDF 1.6.20 (build 87) · Mac & Windows": "PolyPDF 1.6.20 (compilación 87) · Mac y Windows",
+    "Update to 1.6.20": "Actualización a 1.6.20",
+    "What changed in 1.6.20": "¿Qué cambió en 1.6.20?"
   },
   "sourceHash": "4ed42ced7b6fe911cb903b0f8f99cea1c1eeca4f1dbe84b4b96ea45aa5f2b9fb",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

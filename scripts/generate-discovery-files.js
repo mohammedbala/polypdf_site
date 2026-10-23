@@ -182,7 +182,7 @@ const STATIC_LASTMOD = Object.freeze({
   '/support': siteRelease.releaseDate,
   '/windows': '2026-10-16',
   '/terms': '2026-09-03',
-  '/versions': '2026-10-15',
+  '/versions': siteRelease.releaseDate,
   '/revision-packages': '2026-09-07',
   '/pdf-takeoff-software': '2026-10-15',
   '/measure-pdf-on-mac': '2026-10-15',

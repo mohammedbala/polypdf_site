@@ -2827,7 +2827,15 @@
     "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.16 (build 83) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.6.16 (बिल्ड 83) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।",
     "PolyPDF 1.6.16 (build 83) · Mac & Windows": "PolyPDF 1.6.16 (बिल्ड 83) · मैक और विंडोज़",
     "Update to 1.6.16": "1.6.16 पर अद्यतन करें",
-    "What changed in 1.6.16": "1.6.16 में क्या बदला"
+    "What changed in 1.6.16": "1.6.16 में क्या बदला",
+    "After relaunch, About should show version 1.6.20, build 87. Your existing PolyPDF 1.x Pro license continues to apply.": "पुन: लॉन्च के बाद, अबाउट को संस्करण 1.6.20, बिल्ड 87 दिखाना चाहिए। आपका मौजूदा PolyPDF 1.एक्स प्रो लाइसेंस लागू होता रहेगा।",
+    "Current app: PolyPDF 1.6.20 (build 87) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "वर्तमान ऐप: PolyPDF 1.6.20 (बिल्ड 87) · पैकेज प्रारूप: PolyPDF 1.3.1+ · प्लगइन्स को स्थापित करने और चलाने के लिए 1.4.1+ में PolyPDF प्रो की आवश्यकता होती है",
+    "Current version 1.6.20 (build 87).": "वर्तमान संस्करण 1.6.20 (बिल्ड 87)।",
+    "Explore the 1.6.20 update": "1.6.20 अद्यतन का अन्वेषण करें",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.20 (build 87) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.6.20 (बिल्ड 87) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।",
+    "PolyPDF 1.6.20 (build 87) · Mac & Windows": "PolyPDF 1.6.20 (बिल्ड 87) · मैक और विंडोज़",
+    "Update to 1.6.20": "1.6.20 पर अद्यतन करें",
+    "What changed in 1.6.20": "1.6.20 में क्या बदला"
   },
   "sourceHash": "4ed42ced7b6fe911cb903b0f8f99cea1c1eeca4f1dbe84b4b96ea45aa5f2b9fb",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

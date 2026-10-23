@@ -89,7 +89,7 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.16 (build 83) preserves grouped text in saved tools, keeps Count active for consecutive clicks, adds stamp drawing-order controls, and improves tabs, combining PDFs, zoom and markup editing. Existing licenses, tools and company settings are preserved.";
+export const releaseAnswer = "PolyPDF 1.6.20 (build 87) keeps each open document’s Markups Table sort order and column filters when switching tabs or reopening the table. Custom Scale and line calibration support drawing-specific scales, alongside Explorer Combine, navigation and review improvements from build 86.";
 
 export const release1613Highlights = Object.freeze(["PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in."]);
 
@@ -105,4 +105,16 @@ export const release1616Highlights = Object.freeze([
   'Stamp Builder adds Bring to Front, Bring Forward, Send Backward and Send to Back controls without changing the prompt order of existing stamps.',
   'Tab reordering, PDF combine order, stamp folder access, 1000% zoom, Cloud+, hollow-selection behavior and No Border have been improved. Closing tabs cancels stale PDF text work.',
   'License Manager 1.0.3 adds optional per-computer seat allocation. Existing rights and company settings stay unchanged until an administrator chooses the option; Collaboration Host 1.6.15 remains compatible.'
+]);
+
+export const release1619Highlights = Object.freeze([
+  'Custom Scale accepts drawing-scale notation in Measurements and the footer scale menu. Calibrate by Drawing Line sets the same page scale from a known dimension; saved page scales remain available after reopening the PDF.',
+  'Combine in PolyPDF is enabled by default in Windows Explorer, with a file-order review before combining.',
+  'Page-key handling, thumbnail tracking and search or markup navigation keep the active document and visible drawing target aligned.',
+  'Review status commands and shortcuts work with imported markups. Column filtering fades excluded markups as context without changing their saved colors.'
+]);
+
+export const release1620Highlights = Object.freeze([
+  'Each open document keeps its own Markups Table sort order, column filters and saved-filter selection when switching tabs or hiding and reopening the table.',
+  'Restored filters also restore the faded markup preview. Table choices last while the document remains open and do not change saved markup data.'
 ]);

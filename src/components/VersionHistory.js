@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
-import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, release164Highlights, release165Highlights, release166Highlights, release167Highlights, release1613Highlights, release1615Highlights, release1616Highlights, releaseAnswer } from '../lib/releaseHighlights';
+import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, release164Highlights, release165Highlights, release166Highlights, release167Highlights, release1613Highlights, release1615Highlights, release1616Highlights, release1619Highlights, release1620Highlights, releaseAnswer } from '../lib/releaseHighlights';
 import siteRelease from '../lib/siteRelease.json';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
@@ -94,6 +94,10 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.6.20 (87)': release1620Highlights,
+  'Windows 1.6.20 (87)': release1620Highlights,
+  'macOS 1.6.19 (86)': release1619Highlights,
+  'Windows 1.6.19 (86)': release1619Highlights,
   'macOS 1.6.16 (83)': release1616Highlights,
   'Windows 1.6.16 (83)': release1616Highlights,
   'macOS 1.6.15 (82)': release1615Highlights,
@@ -253,10 +257,14 @@ const RELEASE_PROSE = {
 const proseKey = (release) => `${release.platform} ${release.version} (${release.build})`;
 
 // Rendered only while the feeds are still loading, or if one cannot be reached, so the page is never
-// empty. Anything the feeds return replaces it.
+// empty. Published history is retained when the feeds supply fresher release details.
 const FALLBACK_RELEASES = [
   { platform: 'macOS', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html` },
-  { platform: 'Windows', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html` },
+  { platform: 'Windows', version: siteRelease.version, build: Number(siteRelease.build), date: 'October 22, 2026', notes: `/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html` },
+  { platform: 'macOS', version: '1.6.19', build: 86, date: 'October 22, 2026', notes: '/downloads/PolyPDFMac-v1.6.19-86.html' },
+  { platform: 'Windows', version: '1.6.19', build: 86, date: 'October 22, 2026', notes: '/downloads/windows/PolyPDFWin-v1.6.19-86.html' },
+  { platform: 'macOS', version: '1.6.16', build: 83, date: 'October 19, 2026', notes: '/downloads/PolyPDFMac-v1.6.16-83.html' },
+  { platform: 'Windows', version: '1.6.16', build: 83, date: 'October 19, 2026', notes: '/downloads/windows/PolyPDFWin-v1.6.16-83.html' },
   { platform: 'macOS', version: '1.5.5', build: 27, date: 'September 13, 2026', notes: '/downloads/PolyPDFMac-v1.5.5-27.html' },
   { platform: 'Windows', version: '1.5.5', build: 27, date: 'September 13, 2026', notes: '/downloads/windows/PolyPDFWin-v1.5.5-27.html' },
   { platform: 'macOS', version: '1.5.0', build: 22, date: 'September 3, 2026', notes: '/downloads/PolyPDFMac-v1.5.0-22.html' },
@@ -287,6 +295,16 @@ const FALLBACK_RELEASES = [
   { platform: 'macOS', version: '1.0.2', build: 3, date: 'April 27, 2026', notes: null },
   { platform: 'macOS', version: '1.0.1', build: 2, date: 'April 27, 2026', notes: null }
 ].map((release) => ({ ...release, sortKey: Date.parse(release.date) }));
+
+// latest.yml contains only one Windows release. Retain published history for both platforms,
+// letting live entries replace the matching snapshot rather than discarding older releases.
+export const mergePublishedReleases = (liveReleases, publishedReleases = FALLBACK_RELEASES) => {
+  const byRelease = new Map(publishedReleases.map((release) => [proseKey(release), release]));
+  for (const release of liveReleases) byRelease.set(proseKey(release), release);
+  return [...byRelease.values()].sort(
+    (a, b) => (b.sortKey || 0) - (a.sortKey || 0) || (b.build || 0) - (a.build || 0)
+  );
+};
 
 const platformIcon = (platform) => (platform === 'Windows' ? <FaWindows /> : <FaApple />);
 
@@ -330,9 +348,7 @@ const VersionHistory = () => {
       const windowsReleases = windows.status === 'fulfilled' ? [windows.value] : fallbackFor('Windows');
 
       setFeedFailed(mac.status === 'rejected' || windows.status === 'rejected');
-      setReleases([...macReleases, ...windowsReleases].sort(
-        (a, b) => (b.sortKey || 0) - (a.sortKey || 0) || (b.build || 0) - (a.build || 0)
-      ));
+      setReleases(mergePublishedReleases([...macReleases, ...windowsReleases]));
     });
 
     return () => {
