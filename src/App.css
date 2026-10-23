@@ -3463,6 +3463,11 @@ h3 {
   z-index: 1;
 }
 
+/* Keep navigation menus above the homepage hero and preview, which also form stacking contexts. */
+.Home > .growth-header {
+  z-index: 30;
+}
+
 .Home > .header {
   position: fixed;
   z-index: 100;
