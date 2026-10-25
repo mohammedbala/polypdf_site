@@ -2835,7 +2835,15 @@
     "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.20 (build 87) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "获取有关安装、产品工作流程、购买和许可证激活的帮助。当前的公开版本是 Mac 和 Windows 上的 PolyPDF 1.6.20（版本 87）。当您写入时，请包括“关于”中显示的版本、您的操作系统以及相关的 Stripe 收据详细信息。",
     "PolyPDF 1.6.20 (build 87) · Mac & Windows": "PolyPDF 1.6.20（版本 87）·Mac 和 Windows",
     "Update to 1.6.20": "更新至1.6.20",
-    "What changed in 1.6.20": "1.6.20 中发生了什么变化"
+    "What changed in 1.6.20": "1.6.20 中发生了什么变化",
+    "Teams hosts: link the License Manager and trust the company CA": "Teams 主机：关联 License Manager 并信任公司 CA",
+    "If your Collaboration Host is linked to PolyPDF Teams, employees open Upgrade → Company license in PolyPDF and connect with their company sign-in and an active seat on their approved computer. The standalone Owner, Editor, and Viewer enrollment steps below apply to hosts that have not been paired with a License Manager; the screenshots show the earlier standalone workflow.": "如果您的 Collaboration Host 已关联 PolyPDF Teams，员工需在 PolyPDF 中打开 Upgrade → Company license，并在获批准的计算机上使用公司账号和有效的用户席位进行连接。下方的 Owner、Editor 和 Viewer 注册步骤适用于尚未与 License Manager 配对的独立主机；截图展示的是早期的独立使用流程。",
+    "In License Manager > Collaboration, create a setup code and run its pairing command on the Collaboration Host.": "在 License Manager > Collaboration 中创建设置代码，然后在 Collaboration Host 上运行对应的配对命令。",
+    "If the License Manager uses your company certificate authority, export the public root CA certificate and any intermediate CA certificates as Base-64 encoded X.509 (.CER). Put their complete -----BEGIN CERTIFICATE----- / -----END CERTIFICATE----- blocks in one PEM file, without private keys.": "如果 License Manager 使用公司的证书颁发机构，请将根 CA 的公共证书和所有中间 CA 证书导出为 Base-64 编码的 X.509（.CER）格式。将完整的 -----BEGIN CERTIFICATE----- / -----END CERTIFICATE----- 证书块放入同一个 PEM 文件，不要包含私钥。",
+    "Append --manager-ca \"C:\\Certificates\\Company-CA-chain.pem\" to the pairing command, using the actual path on the host. This file contains the CA certificates that issued the License Manager certificate. A CA-issued server certificate alone is not the root CA; the domain controller’s own server certificate is not a substitute either. An explicitly trusted self-signed License Manager certificate is also supported.": "在配对命令后添加 --manager-ca \"C:\\Certificates\\Company-CA-chain.pem\"，并使用主机上的实际路径。该文件应包含为 License Manager 签发证书的 CA 证书。仅有 CA 签发的服务器证书并不等于根 CA 证书；域控制器自身的服务器证书也不能替代根 CA 证书。此外，也支持您明确选择信任的 License Manager 自签名证书。",
+    "Compare the six-digit verification code with the one in the License Manager console and confirm it there. Wait for the command to print “Paired with” followed by your company name, then check that the host has current contact/sync in License Manager > Collaboration.": "将六位验证码与 License Manager 控制台中的验证码进行比较，并在控制台中确认。等待命令显示“Paired with”及其后的公司名称，再到 License Manager > Collaboration 中检查主机是否有近期的连接或同步记录。",
+    "The host stores the public CA content with its pairing and uses it after service restarts. The manager address must still match the certificate’s DNS name, and the certificate chain must be valid. Trust in a Windows browser does not guarantee trust in the host’s embedded runtime. Use a PEM certificate bundle, not a binary DER, P7B, or PFX export.": "主机会随配对信息保存 CA 证书的公共内容，并在服务重启后继续使用。管理器地址仍须与证书中的 DNS 名称匹配，证书链也必须有效。Windows 浏览器信任该证书，并不保证主机内嵌的运行时也信任它。请使用 PEM 证书包，不要使用二进制 DER、P7B 或 PFX 导出文件。",
+    "A verification code means the host has reached and authenticated the manager; it is not the final pairing confirmation. If the issuer changes, repeat pairing with a fresh setup code and the updated CA bundle. Editing the original CA file does not change the copy saved by the host.": "出现验证码意味着主机已连接到管理器并验证了其身份，但这并不是配对完成的最终确认。如果证书颁发机构发生变化，请使用新的设置代码和更新后的 CA 证书包重新配对。修改原始 CA 文件不会更改主机已保存的副本。"
   },
   "sourceHash": "4ed42ced7b6fe911cb903b0f8f99cea1c1eeca4f1dbe84b4b96ea45aa5f2b9fb",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2854,5 +2862,9 @@
   "releaseEditorialNote": "1.6.5 release additions translated editorially; earlier catalog entries retained.",
   "release167TranslationProvider": "OpenAI",
   "seoAuditEditorialReview": "2026-10-15: AI-assisted editorial fixes for metadata, historical release answers, comparison links, and current release labels checked against public 1.6.13 build 74 feeds. No independent native-speaker review.",
-  "markupEditorialReview": "Reviewed new headline, export-scope guidance, project-register wording and Mac-only sample limits; machine-assisted copy, not certified native-speaker review."
+  "markupEditorialReview": "Reviewed new headline, export-scope guidance, project-register wording and Mac-only sample limits; machine-assisted copy, not certified native-speaker review.",
+  "collaborationTeamsCaTranslation": {
+    "date": "2026-10-25",
+    "method": "AI-assisted complete translation of the Teams pairing and company CA section; tested English app control names, commands, certificate markers and paths preserved. No independent native-speaker review."
+  }
 }

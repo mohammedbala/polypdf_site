@@ -38,7 +38,7 @@ const productPosts = Object.freeze([
     title: 'Set Up PolyPDF Collaboration Beta',
     date: '2026-08-27',
     dateLabel: 'August 27, 2026',
-    dateModified: '2026-10-24',
+    dateModified: '2026-10-25',
     author: 'The PolyPDF team',
     readingTime: '9 min read',
     tag: 'Beta guide',
@@ -127,15 +127,15 @@ const productPosts = Object.freeze([
         "body": [
           {
             "kind": "p",
-            "text": "If your Collaboration Host is linked to PolyPDF Teams, employees connect with their company sign-in and an active seat on their approved computer. The standalone Owner, Editor, and Viewer enrollment steps below apply to hosts that have not been paired with a License Manager; the screenshots show the earlier standalone workflow."
+            "text": "If your Collaboration Host is linked to PolyPDF Teams, employees open Upgrade → Company license in PolyPDF and connect with their company sign-in and an active seat on their approved computer. The standalone Owner, Editor, and Viewer enrollment steps below apply to hosts that have not been paired with a License Manager; the screenshots show the earlier standalone workflow."
           },
           {
             "kind": "ol",
             "items": [
               "In License Manager > Collaboration, create a setup code and run its pairing command on the Collaboration Host.",
-              "If the License Manager uses your company certificate authority, export the public root CA certificate and any intermediate CA certificates as Base-64 encoded X.509 (.CER). Put their complete BEGIN CERTIFICATE / END CERTIFICATE blocks in one PEM file, without private keys.",
+              "If the License Manager uses your company certificate authority, export the public root CA certificate and any intermediate CA certificates as Base-64 encoded X.509 (.CER). Put their complete -----BEGIN CERTIFICATE----- / -----END CERTIFICATE----- blocks in one PEM file, without private keys.",
               "Append --manager-ca \"C:\\Certificates\\Company-CA-chain.pem\" to the pairing command, using the actual path on the host. This file contains the CA certificates that issued the License Manager certificate. A CA-issued server certificate alone is not the root CA; the domain controller’s own server certificate is not a substitute either. An explicitly trusted self-signed License Manager certificate is also supported.",
-              "Compare the six-digit verification code with the one in the License Manager console and confirm it there. Wait for the command to print Paired with your company name, then check that the host has current contact/sync in License Manager > Collaboration."
+              "Compare the six-digit verification code with the one in the License Manager console and confirm it there. Wait for the command to print “Paired with” followed by your company name, then check that the host has current contact/sync in License Manager > Collaboration."
             ]
           },
           {
