@@ -2843,7 +2843,15 @@
     "Append --manager-ca \"C:\\Certificates\\Company-CA-chain.pem\" to the pairing command, using the actual path on the host. This file contains the CA certificates that issued the License Manager certificate. A CA-issued server certificate alone is not the root CA; the domain controller’s own server certificate is not a substitute either. An explicitly trusted self-signed License Manager certificate is also supported.": "أضف --manager-ca \"C:\\Certificates\\Company-CA-chain.pem\" إلى أمر الإقران، مستخدمًا المسار الفعلي على المضيف. يحتوي هذا الملف على شهادات سلطات التصديق التي أصدرت شهادة License Manager. شهادة خادم صادرة عن سلطة تصديق لا تُعدّ بمفردها شهادة سلطة التصديق الجذرية؛ كما أن شهادة الخادم الخاصة بوحدة التحكم بالمجال ليست بديلًا عنها. تُدعم أيضًا شهادة License Manager ذاتية التوقيع التي تثق بها صراحةً.",
     "Compare the six-digit verification code with the one in the License Manager console and confirm it there. Wait for the command to print “Paired with” followed by your company name, then check that the host has current contact/sync in License Manager > Collaboration.": "قارن رمز التحقق المكوّن من ستة أرقام بالرمز الموجود في وحدة تحكم License Manager وأكّده هناك. انتظر حتى يعرض الأمر “Paired with” متبوعًا باسم شركتك، ثم تحقّق من وجود اتصال أو مزامنة حديثة للمضيف في License Manager > Collaboration.",
     "The host stores the public CA content with its pairing and uses it after service restarts. The manager address must still match the certificate’s DNS name, and the certificate chain must be valid. Trust in a Windows browser does not guarantee trust in the host’s embedded runtime. Use a PEM certificate bundle, not a binary DER, P7B, or PFX export.": "يحفظ المضيف المحتوى العام لشهادات سلطات التصديق مع بيانات الإقران ويستخدمه بعد إعادة تشغيل الخدمة. يجب أن يظل عنوان المدير مطابقًا لاسم DNS الموجود في الشهادة، وأن تكون سلسلة الشهادات صالحة. وثوق متصفح Windows بالشهادة لا يضمن وثوق بيئة التشغيل المضمّنة في المضيف بها. استخدم حزمة شهادات PEM، وليس ملف تصدير ثنائيًا بتنسيق DER أو P7B أو PFX.",
-    "A verification code means the host has reached and authenticated the manager; it is not the final pairing confirmation. If the issuer changes, repeat pairing with a fresh setup code and the updated CA bundle. Editing the original CA file does not change the copy saved by the host.": "ظهور رمز تحقق يعني أن المضيف وصل إلى المدير وتحقق من هويته؛ وليس تأكيدًا نهائيًا للإقران. إذا تغيّرت الجهة المُصدِرة، فأعد الإقران باستخدام رمز إعداد جديد وحزمة شهادات سلطات التصديق المحدّثة. تعديل ملف شهادات سلطة التصديق الأصلي لا يغيّر النسخة التي حفظها المضيف."
+    "A verification code means the host has reached and authenticated the manager; it is not the final pairing confirmation. If the issuer changes, repeat pairing with a fresh setup code and the updated CA bundle. Editing the original CA file does not change the copy saved by the host.": "ظهور رمز تحقق يعني أن المضيف وصل إلى المدير وتحقق من هويته؛ وليس تأكيدًا نهائيًا للإقران. إذا تغيّرت الجهة المُصدِرة، فأعد الإقران باستخدام رمز إعداد جديد وحزمة شهادات سلطات التصديق المحدّثة. تعديل ملف شهادات سلطة التصديق الأصلي لا يغيّر النسخة التي حفظها المضيف.",
+    "After relaunch, About should show version 1.6.21, build 88. Your existing PolyPDF 1.x Pro license continues to apply.": "بعد إعادة التشغيل، يجب أن يعرض About الإصدار 1.6.21، الإصدار 88. ويستمر تطبيق ترخيص PolyPDF 1.x Pro الحالي.",
+    "Current app: PolyPDF 1.6.21 (build 88) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "التطبيق الحالي: PolyPDF 1.6.21 (النسخة 88) · تنسيق الحزمة: PolyPDF 1.3.1+ · يتطلب تثبيت المكونات الإضافية وتشغيلها وجود PolyPDF Pro في الإصدار 1.4.1+",
+    "Current version 1.6.21 (build 88).": "الإصدار الحالي 1.6.21 (بناء 88).",
+    "Explore the 1.6.21 update": "اكتشف التحديث 1.6.21",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.21 (build 88) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "احصل على مساعدة بشأن التثبيت وسير عمل المنتج والمشتريات وتنشيط الترخيص. الإصدار العام الحالي هو PolyPDF 1.6.21 (النسخة 88) على أنظمة Mac وWindows. عند الكتابة، قم بتضمين الإصدار الموضح في \"حول\" ونظام التشغيل الخاص بك وتفاصيل إيصال Stripe عندما يكون ذلك مناسبًا.",
+    "PolyPDF 1.6.21 (build 88) · Mac & Windows": "PolyPDF 1.6.21 (النسخة 88) · ماك وويندوز",
+    "Update to 1.6.21": "التحديث إلى 1.6.21",
+    "What changed in 1.6.21": "ما الذي تغير في 1.6.21"
   },
   "sourceHash": "4ed42ced7b6fe911cb903b0f8f99cea1c1eeca4f1dbe84b4b96ea45aa5f2b9fb",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
@@ -2866,5 +2874,9 @@
   "collaborationTeamsCaTranslation": {
     "date": "2026-10-25",
     "method": "AI-assisted complete translation of the Teams pairing and company CA section; tested English app control names, commands, certificate markers and paths preserved. No independent native-speaker review."
+  },
+  "release1621Translation": {
+    "date": "2026-10-25",
+    "method": "Version/build-only updates to the eight existing current-release strings; existing translated prose and historical entries preserved."
   }
 }

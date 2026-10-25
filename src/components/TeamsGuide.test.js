@@ -23,8 +23,8 @@ test('customer guide has navigable steps and never exposes unavailable installer
   for (const text of ['Local invitations', 'Back up now', 'Restore backup', 'Install renewed certificate', '24 hours', 'ten-minute', 'Windows administrator']) expect(container.textContent).toContain(text);
   expect(container.textContent).not.toContain('administrator PowerShell window');
   expect(container.textContent).toContain('License Manager downloads are not available yet');
-  expect(Array.from(container.querySelectorAll('a[href$=".exe"]')).map(link => link.getAttribute('href'))).toEqual(['/downloads/collaboration/PolyPDF-Collaboration-Host-Setup.exe']);
-  for (const text of ['License Manager 1.0.3', 'PolyPDF 1.6.16', 'Create setup code', 'Check connectivity', 'Connect with company sign-in', 'up to three active', 'stays at one until changed', 'Add this computer without replacing another', 'Save limit']) expect(container.textContent).toContain(text);
+  expect(Array.from(container.querySelectorAll('a[href$=".exe"]')).map(link => link.getAttribute('href'))).toEqual(['/downloads/collaboration/PolyPDF-Collaboration-Host-Setup-1.6.21.exe']);
+  for (const text of ['License Manager 1.0.3', 'PolyPDF 1.6.21', 'Create setup code', 'Check connectivity', 'Connect with company sign-in', 'up to three active', 'stays at one until changed', 'Add this computer without replacing another', 'Save limit']) expect(container.textContent).toContain(text);
   expect(container.textContent).not.toMatch(/historical|synthetic|localhost|validation diary|worktree|September 22/i);
 });
 test('employee instructions copy without a private hostname and provide a manual fallback', async () => {

@@ -101,7 +101,7 @@ const productPosts = Object.freeze([
           },
           {
             kind: 'link',
-            href: '/downloads/collaboration/PolyPDF-Collaboration-Host-Setup.exe',
+            href: '/downloads/collaboration/PolyPDF-Collaboration-Host-Setup-1.6.21.exe',
             label: 'Download the Windows Server Collaboration Host (Beta)',
             text: 'Run it as an administrator on Windows Server 2022.'
           },
@@ -326,7 +326,7 @@ const productPosts = Object.freeze([
     cta: {
       body:
         'Install the latest PolyPDF update on each client, then pilot Collaboration Beta on a private company network with backed-up project files.',
-      primaryHref: 'https://www.polypdf.com/downloads/collaboration/PolyPDF-Collaboration-Host-Setup.exe',
+      primaryHref: 'https://www.polypdf.com/downloads/collaboration/PolyPDF-Collaboration-Host-Setup-1.6.21.exe',
       primaryLabel: 'Download the beta host',
       secondaryHref: 'mailto:support@polypdf.com?subject=PolyPDF%20Collaboration%20Beta',
       secondaryLabel: 'Contact support'
