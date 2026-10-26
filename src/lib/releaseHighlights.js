@@ -89,7 +89,7 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.22 (build 89) fixes collaboration uploads of imported PDF markups, shows queued or blocked changes, and waits for uploads before saving. It also fixes Windows thumbnail reordering and preserves taskbar shortcuts during same-folder upgrades. Collaboration requires Host 1.6.22 as well as the desktop update.";
+export const releaseAnswer = "PolyPDF 1.6.23 (build 90) restores markup click selection and resizing while search highlights are visible. Text boxes and callouts support text down to 1 pt, and imported formatted text keeps the chosen size when edited, saved and reopened. It includes the collaboration and Windows fixes from 1.6.22; Collaboration Host 1.6.22 remains current.";
 
 export const release1613Highlights = Object.freeze(["PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in."]);
 
@@ -129,4 +129,11 @@ export const release1622Highlights = Object.freeze([
   "Shows queued or blocked collaboration changes on the document. Save waits for uploads and explains when syncing cannot finish.",
   "Fixes Windows thumbnail reordering cancelling while the mouse button is still held.",
   "Preserves the existing Windows taskbar shortcut during a manual upgrade into the same installation folder."
+]);
+
+export const release1623Highlights = Object.freeze([
+  "Click to select and resize markups while search highlights remain visible.",
+  "Set text boxes and callouts below 6 pt, down to 1 pt. Small font defaults remain available for new markups.",
+  "Imported formatted text follows the chosen font size while editing and after saving and reopening.",
+  "Includes the collaboration, Windows thumbnail reordering and upgrade fixes from 1.6.22. Collaboration Host 1.6.22 remains current."
 ]);
