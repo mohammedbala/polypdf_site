@@ -1,11 +1,11 @@
 {
-  "version": "1.6.21",
-  "build": "88",
-  "releaseDate": "2026-10-25",
+  "version": "1.6.22",
+  "build": "89",
+  "releaseDate": "2026-10-26",
   "screenshotVersion": "1.4.3",
   "screenshotBuild": "20",
   "screenshotCacheToken": "1.4.3-20",
   "featuredCaptureVersion": "1.5.1",
   "featuredCaptureBuild": "23",
-  "collaborationHostVersion": "1.6.21"
+  "collaborationHostVersion": "1.6.22"
 }

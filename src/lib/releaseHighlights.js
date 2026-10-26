@@ -89,7 +89,7 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.21 (build 88) fixes Claude Desktop MCP connection startup and desktop profile discovery, including Windows standard-input handling. It improves collaboration catch-up after joining or reconnecting, including queued local edits and connection status.";
+export const releaseAnswer = "PolyPDF 1.6.22 (build 89) fixes collaboration uploads of imported PDF markups, shows queued or blocked changes, and waits for uploads before saving. It also fixes Windows thumbnail reordering and preserves taskbar shortcuts during same-folder upgrades. Collaboration requires Host 1.6.22 as well as the desktop update.";
 
 export const release1613Highlights = Object.freeze(["PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in."]);
 
@@ -122,4 +122,11 @@ export const release1620Highlights = Object.freeze([
 export const release1621Highlights = Object.freeze([
   "Fixes Claude Desktop MCP connection startup and desktop profile discovery, including Windows standard-input handling.",
   "Improves collaboration catch-up after joining or reconnecting, including queued local edits and connection status."
+]);
+
+export const release1622Highlights = Object.freeze([
+  "Fixes collaboration uploads of imported PDF markups. Update both the desktop app and Collaboration Host to 1.6.22.",
+  "Shows queued or blocked collaboration changes on the document. Save waits for uploads and explains when syncing cannot finish.",
+  "Fixes Windows thumbnail reordering cancelling while the mouse button is still held.",
+  "Preserves the existing Windows taskbar shortcut during a manual upgrade into the same installation folder."
 ]);
