@@ -132,8 +132,10 @@ export const release1622Highlights = Object.freeze([
 ]);
 
 export const release1623Highlights = Object.freeze([
+  "Concurrent reviewers keep teammate markups while sharing their own changes. Save waits for pending uploads, and blocked sharing offers a clear reason and Retry sharing.",
   "Click to select and resize markups while search highlights remain visible.",
   "Set text boxes and callouts below 6 pt, down to 1 pt. Small font defaults remain available for new markups.",
   "Imported formatted text follows the chosen font size while editing and after saving and reopening.",
-  "Includes the collaboration, Windows thumbnail reordering and upgrade fixes from 1.6.22. Collaboration Host 1.6.22 remains current."
+  "Includes the collaboration, Windows thumbnail reordering and upgrade fixes from 1.6.22. Collaboration Host 1.6.22 remains current.",
+  "Mac users who installed the earlier build 90 should download and reinstall this replacement."
 ]);
