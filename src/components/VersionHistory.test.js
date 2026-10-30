@@ -1,4 +1,5 @@
 import { fetchWindowsRelease, mergePublishedReleases } from './VersionHistory';
+import siteRelease from '../lib/siteRelease.json';
 
 afterEach(() => {
   jest.restoreAllMocks();
@@ -35,4 +36,14 @@ test('merges the single Windows feed entry without losing published history', ()
   expect(merged[0]).toEqual(live);
   expect(merged).toContainEqual(published[1]);
   expect(merged).toContainEqual(published[2]);
+});
+
+test('a new single-entry Windows feed retains previously published builds96 and90', () => {
+  const live = { platform: 'Windows', version: siteRelease.version, build: Number(siteRelease.build), sortKey: Date.parse(siteRelease.releaseDate), notes: 'current-live-notes' };
+  const merged = mergePublishedReleases([live]);
+  expect(merged.filter((release) => release.platform === 'Windows' && release.version === siteRelease.version && release.build === Number(siteRelease.build))).toEqual([live]);
+  expect(merged).toEqual(expect.arrayContaining([
+    expect.objectContaining({ platform: 'Windows', version: '1.6.25', build: 96, notes: '/downloads/windows/PolyPDFWin-v1.6.25-96.html' }),
+    expect.objectContaining({ platform: 'Windows', version: '1.6.23', build: 90, notes: '/downloads/windows/PolyPDFWin-v1.6.23-90.html' })
+  ]));
 });

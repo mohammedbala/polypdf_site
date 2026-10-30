@@ -89,7 +89,7 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.23 (build 90) restores markup click selection and resizing while search highlights are visible. Text boxes and callouts support text down to 1 pt, and imported formatted text keeps the chosen size when edited, saved and reopened. It includes the collaboration and Windows fixes from 1.6.22; Collaboration Host 1.6.22 remains current.";
+export const releaseAnswer = "PolyPDF 1.6.26 (build 97) adds a Shift or Ctrl override for freehand highlighting over recognized text, applies saved Callout defaults to new Cloud+ annotations, and keeps the Cloud+ leader attached to the nearest cloud edge when moving an unrotated text box. Image export offers 72–600 DPI, 10–100% JPEG quality, output-size previews and the chosen DPI in JPEG files. Collaboration Host 1.6.22 remains current.";
 
 export const release1613Highlights = Object.freeze(["PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in."]);
 
@@ -138,4 +138,13 @@ export const release1623Highlights = Object.freeze([
   "Imported formatted text follows the chosen font size while editing and after saving and reopening.",
   "Includes the collaboration, Windows thumbnail reordering and upgrade fixes from 1.6.22. Collaboration Host 1.6.22 remains current.",
   "Mac users who installed the earlier build 90 should download and reinstall this replacement."
+]);
+
+export const release1626Highlights = Object.freeze([
+  'Hold Shift or Ctrl when starting a Highlight drag to draw freehand over recognized text. Ordinary Highlight drags still select text.',
+  'New Cloud+ annotations use saved Callout text-box defaults, including font, fill, shape and opacity.',
+  'The Cloud+ leader stays attached to the nearest cloud edge when moving an unrotated text box across the cloud.',
+  'Choose 72–600 DPI and 10–100% JPEG quality for image exports. Export the current page or all pages and preview output dimensions before rendering.',
+  'JPEG files record the requested DPI. Oversized images are rejected before rendering instead of silently reducing resolution. Defaults are 150 DPI and 95% JPEG quality; PDF Save As continues to save PDFs.',
+  'Collaboration Host 1.6.22 remains current.'
 ]);
