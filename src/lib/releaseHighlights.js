@@ -89,7 +89,7 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.26 (build 97) adds a Shift or Ctrl override for freehand highlighting over recognized text, applies saved Callout defaults to new Cloud+ annotations, and keeps the Cloud+ leader attached to the nearest cloud edge when moving an unrotated text box. Image export offers 72–600 DPI, 10–100% JPEG quality, output-size previews and the chosen DPI in JPEG files. Collaboration Host 1.6.22 remains current.";
+export const releaseAnswer = "PolyPDF 1.6.26 (build 98) keeps footer coordinates in a stable position, lets snapshot fill opacity be adjusted down to 0%, and keeps moved markups reachable. Use Move onto page in the Markups List to recover editable off-page markups. It also adds Shift or Ctrl freehand highlighting, saved Callout defaults for Cloud+, and configurable image-export DPI and JPEG quality. Collaboration Host 1.6.22 remains current.";
 
 export const release1613Highlights = Object.freeze(["PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in."]);
 
@@ -141,6 +141,9 @@ export const release1623Highlights = Object.freeze([
 ]);
 
 export const release1626Highlights = Object.freeze([
+  "Coordinates stay in a fixed footer position without shifting as their values change.",
+  "Adjust snapshot Fill opacity directly in the style toolbar, including 0%.",
+  "Moved markups stay reachable at page edges. To recover existing editable off-page markups, choose Move onto page from the Markups List context menu; Undo restores the previous positions.",
   'Hold Shift or Ctrl when starting a Highlight drag to draw freehand over recognized text. Ordinary Highlight drags still select text.',
   'New Cloud+ annotations use saved Callout text-box defaults, including font, fill, shape and opacity.',
   'The Cloud+ leader stays attached to the nearest cloud edge when moving an unrotated text box across the cloud.',

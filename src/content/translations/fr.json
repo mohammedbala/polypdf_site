@@ -2859,9 +2859,14 @@
     "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.26 (build 97) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenez de l'aide pour l'installation, les flux de travail des produits, les achats et l'activation des licences. La version publique actuelle est PolyPDF 1.6.26 (build 97) sur Mac et Windows. Lorsque vous écrivez, incluez la version affichée dans À propos, votre système d'exploitation et les détails du reçu Stripe, le cas échéant.",
     "PolyPDF 1.6.26 (build 97) · Mac & Windows": "PolyPDF 1.6.26 (version 97) · Mac et Windows",
     "Update to 1.6.26": "Mise à jour vers 1.6.26",
-    "What changed in 1.6.26": "Ce qui a changé dans la version 1.6.26"
+    "What changed in 1.6.26": "Ce qui a changé dans la version 1.6.26",
+    "After relaunch, About should show version 1.6.26, build 98. Your existing PolyPDF 1.x Pro license continues to apply.": "Après la relance, À propos devrait afficher la version 1.6.26, build 98. Votre licence PolyPDF 1.x Pro existante continue de s'appliquer.",
+    "Current app: PolyPDF 1.6.26 (build 98) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Application actuelle : PolyPDF 1.6.26 (build 98) · Format du package : PolyPDF 1.3.1+ · L'installation et l'exécution des plugins nécessitent PolyPDF Pro dans la version 1.4.1+",
+    "Current version 1.6.26 (build 98).": "Version actuelle 1.6.26 (build 98).",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.26 (build 98) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenez de l'aide pour l'installation, les flux de travail des produits, les achats et l'activation des licences. La version publique actuelle est PolyPDF 1.6.26 (build 98) sur Mac et Windows. Lorsque vous écrivez, incluez la version affichée dans À propos, votre système d'exploitation et les détails du reçu Stripe, le cas échéant.",
+    "PolyPDF 1.6.26 (build 98) · Mac & Windows": "PolyPDF 1.6.26 (version 98) · Mac et Windows"
   },
-  "sourceHash": "4ed42ced7b6fe911cb903b0f8f99cea1c1eeca4f1dbe84b4b96ea45aa5f2b9fb",
+  "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
   "release154Translation": "New release copy translated locally with AI assistance; existing editorial translations retained. Not certified native-speaker review.",
   "release155Translation": "New release copy translated locally with AI assistance; historical translations retained. No certified native-speaker review.",
