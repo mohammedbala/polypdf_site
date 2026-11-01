@@ -42,6 +42,16 @@ test('dynamic result quantities translate their labels and page counts',()=>{
   expect(node.querySelector('p').textContent).toBe('2 archivos · 4.0 KB');
   expect(node.querySelector('small').textContent).toBe('4.0 KB · 3 páginas');act(()=>root.unmount());
 });
+test.each(locales)('$id: byte-size templates do not swallow result file labels',locale=>{
+  const language={locale,strings:require(`./translations/${locale.id}.json`).strings};
+  const node=document.createElement('div'),root=createRoot(node);
+  for(const count of [1,2]){
+    act(()=>root.render(localizeView(<p>{count}{" "}{count===1?"file":"files"} ·{" "}{'12.2 KB'}</p>,language)));
+    const label=language.strings[count===1?'file':'files'];
+    expect(node.querySelector('p').textContent).toBe(`${count} ${label} · ${translateText('12.2 KB',language)}`);
+  }
+  act(()=>root.unmount());
+});
 test('translates labels without changing field values, filenames or document content',()=>{
   const node=document.createElement('div'),root=createRoot(node);
   act(()=>root.render(localizeView(<div><button aria-label="Choose files">Choose files</button><select defaultValue="left"><option value="left">left</option></select><span translate="no">My report.pdf</span><pre>Choose files</pre><input defaultValue="Choose files"/></div>,spanish)));

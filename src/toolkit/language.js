@@ -14,6 +14,8 @@ export const ToolkitLanguageProvider = LanguageContext.Provider;
 export const useToolkitLanguage = () => useContext(LanguageContext);
 const patterns = new WeakMap();
 const escape = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+// Size placeholders are numeric; matching an entire result sentence would leave its labels untranslated.
+const templateCapture = source => /^\{0\} (?:KB|MB)$/.test(source) ? "(\\d+(?:\\.\\d+)?)" : "([\\s\\S]*?)";
 
 // Copy is translated; file bytes, form identifiers, typed values and MCP protocol keys are not.
 export function translateText(raw, language) {
@@ -26,7 +28,7 @@ export function translateText(raw, language) {
       .filter(([source]) => /\{\d+\}/.test(source))
       .sort(([a], [b]) => b.length - a.length)
       .map(([source, target]) => ({ target, keys: [...source.matchAll(/\{(\d+)\}/g)].map(m => m[1]),
-        regex: new RegExp("^" + source.split(/\{\d+\}/).map(escape).join("([\\s\\S]*?)") + "$") })));
+        regex: new RegExp("^" + source.split(/\{\d+\}/).map(escape).join(templateCapture(source)) + "$") })));
     for (const pattern of patterns.get(language.strings)) {
       const match = key.match(pattern.regex);
       if (match) { translated = pattern.target.replace(/\{(\d+)\}/g, (token, id) => match[pattern.keys.indexOf(id) + 1] ?? token); break; }
