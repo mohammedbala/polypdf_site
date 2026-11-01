@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "边距没有给图像留下空间。",
     "Margins must leave a visible page area.": "页边距必须留下可见的页面区域。",
     "Mark up": "标记",
-    "Measure, take off, and review in PolyPDF.": "在 PolyPDF 中测量、计算和检查。",
+    "Measure, take off, and review in PolyPDF.": "在 PolyPDF 中测量施工图纸、计算工程量并进行审阅。",
     "Merge & organize pages": "合并和组织页面",
     "Merge PDF": "合并PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "在线合并 PDF — 免费合并文件 | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "文件",
     "files": "文件",
     "is-dragging": "正在拖动",
-    "page": "页面"
+    "page": "页面",
+    "PDF takeoff": "PDF 工程量计算",
+    "PDF measurement": "PDF 测量",
+    "Construction PDF markup": "施工 PDF 图纸批注",
+    "Visual drawing comparison": "图纸可视化对比",
+    "Working with construction drawings?": "正在处理施工图纸？",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free：校准、批注，每份文档最多可手动创建 3 项测量。",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro：不限数量的手动测量、图纸叠加和 Symbol Search。",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "保存 PDF 后，在桌面应用中打开。文件不会自动传输。",
+    "Download for macOS": "下载 macOS 版",
+    "Download for Windows": "下载 Windows 版",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "适用于 macOS 14+ 或 64 位 Windows 10/11。桌面安装程序无法在手机或平板电脑上运行。",
+    "Desktop workflow": "桌面工作流程",
+    "See a measured drawing and worksheet": "查看已测量的图纸及工程量工作表",
+    "(English)": "(英语)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

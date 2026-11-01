@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "השוליים אינם משאירים מקום לתמונה.",
     "Margins must leave a visible page area.": "השוליים חייבים להשאיר אזור גלוי לדף.",
     "Mark up": "סמן",
-    "Measure, take off, and review in PolyPDF.": "למדוד, להמריא ולבדוק ב- PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "מדדו שרטוטים, חשבו כמויות ובדקו תוכניות ב-PolyPDF.",
     "Merge & organize pages": "מיזוג וארגן דפים",
     "Merge PDF": "מיזוג PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "מיזוג PDF באינטרנט — שילוב קבצים בחינם | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "קובץ",
     "files": "קבצים",
     "is-dragging": "הוא-גורר",
-    "page": "עמוד"
+    "page": "עמוד",
+    "PDF takeoff": "חישוב כמויות מתוך PDF",
+    "PDF measurement": "מדידה ב-PDF",
+    "Construction PDF markup": "הוספת הערות לשרטוטי בנייה ב-PDF",
+    "Visual drawing comparison": "השוואה חזותית של שרטוטים",
+    "Working with construction drawings?": "עובדים עם שרטוטי בנייה?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: כיול, הערות ועד 3 מדידות שנוצרו ידנית בכל מסמך.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: מדידות ידניות ללא הגבלה, שכבות שרטוט חופפות ו-Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "שמרו את ה-PDF ואז פתחו אותו ביישום למחשב. הקבצים אינם מועברים אוטומטית.",
+    "Download for macOS": "הורדה ל-macOS",
+    "Download for Windows": "הורדה ל-Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "עבור macOS 14+ או Windows 10/11 בגרסת 64 סיביות. תוכניות ההתקנה למחשב אינן פועלות בטלפונים או בטאבלטים.",
+    "Desktop workflow": "תהליך עבודה במחשב",
+    "See a measured drawing and worksheet": "צפייה בשרטוט מדוד ובגיליון הכמויות",
+    "(English)": "(אנגלית)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

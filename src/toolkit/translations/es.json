@@ -212,7 +212,7 @@
     "Compare PDF text online": "Comparar texto PDF en línea",
     "Compare PDF text workspace": "Comparar espacio de trabajo de texto PDF",
     "Compare PDF text — free browser PDF tool": "Comparar texto PDF: herramienta de PDF gratuita para navegador",
-    "Compare Pro pricing": "Comparar precios profesionales",
+    "Compare Pro pricing": "Comparar precios de Pro",
     "Compare text in two PDFs page by page. Download a JSON report of added and removed lines free. Local processing; no OCR or visual drawing comparison.": "Compare texto en dos archivos PDF página por página. Descargue gratis un informe JSON de líneas agregadas y eliminadas. Procesamiento local; sin OCR ni comparación de dibujos visuales.",
     "Compare the existing text layers of two PDFs page by page. Export a JSON report of added and removed lines with page references.": "Compare las capas de texto existentes de dos archivos PDF página por página. Exporte un informe JSON de líneas agregadas y eliminadas con referencias de páginas.",
     "Compare two specification revisions with matching page order. Choose the earlier PDF first and the later PDF second, then inspect the reported added and removed lines against their source pages.": "Compare dos revisiones de especificaciones con una secuencia de páginas coincidente. Elija primero el PDF anterior y en segundo lugar el PDF posterior, luego inspeccione las líneas agregadas y eliminadas reportadas en sus páginas de origen.",
@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Los márgenes no dejan espacio para la imagen.",
     "Margins must leave a visible page area.": "Los márgenes deben dejar un área de página visible.",
     "Mark up": "marcar",
-    "Measure, take off, and review in PolyPDF.": "Mida, despegue y revise en PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Mide, calcula cantidades y revisa planos en PolyPDF.",
     "Merge & organize pages": "Fusionar y organizar páginas",
     "Merge PDF": "Fusionar PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Fusionar PDF en línea: combinar archivos gratis | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "archivo",
     "files": "archivos",
     "is-dragging": "esta arrastrando",
-    "page": "página"
+    "page": "página",
+    "PDF takeoff": "Medición de cantidades en PDF",
+    "PDF measurement": "Medición de PDF",
+    "Construction PDF markup": "Anotación de planos de construcción en PDF",
+    "Visual drawing comparison": "Comparación visual de planos",
+    "Working with construction drawings?": "¿Trabajas con planos de construcción?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: calibración, anotaciones y hasta 3 mediciones creadas manualmente por documento.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: mediciones manuales ilimitadas, superposición de planos y Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Guarda tu PDF y ábrelo en la aplicación de escritorio. Los archivos no se transfieren automáticamente.",
+    "Download for macOS": "Descargar para macOS",
+    "Download for Windows": "Descargar para Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Para macOS 14+ o Windows 10/11 de 64 bits. Los instaladores de escritorio no funcionan en teléfonos ni tabletas.",
+    "Desktop workflow": "Flujo de trabajo de escritorio",
+    "See a measured drawing and worksheet": "Ver un plano medido y su hoja de cantidades",
+    "(English)": "(inglés)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

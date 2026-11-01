@@ -4,6 +4,7 @@ const fs=require('fs'),path=require('path'),crypto=require('crypto');
 const root=path.resolve(__dirname,'../..');
 const locales=require('../../src/toolkit/locales.json');
 const catalog=require('../../src/toolkit/catalog.json');
+const metadata=require('../../src/lib/route-metadata.json');
 const routes=['/tools','/tools/automation',...catalog.map(t=>'/tools/'+t.id)];
 const c=require('../international/content.cjs');
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
@@ -98,7 +99,7 @@ module.exports=function buildToolkitInternational({React,renderToString,StaticRo
     if(!routes.includes(route))return entry;
     return entry.replace(/<xhtml:link\b[^>]*\/>/g,'').replace('</url>',toolkitSEO(route,null).alternatives.map(a=>`<xhtml:link rel="alternate" hreflang="${a.language}" href="${a.href}"/>`).join('')+'</url>');
   });
-  sitemap=sitemap.replace('</urlset>',manifest.map(e=>`<url><loc>https://www.polypdf.com${e.route}</loc>${toolkitSEO(e.source,null).alternatives.map(a=>`<xhtml:link rel="alternate" hreflang="${a.language}" href="${a.href}"/>`).join('')}</url>`).join('\n')+'\n</urlset>');
+  sitemap=sitemap.replace('</urlset>',manifest.map(e=>`<url><loc>https://www.polypdf.com${e.route}</loc>${metadata[e.source]?.dateModified ? '<lastmod>'+metadata[e.source].dateModified+'</lastmod>' : ''}${toolkitSEO(e.source,null).alternatives.map(a=>`<xhtml:link rel="alternate" hreflang="${a.language}" href="${a.href}"/>`).join('')}</url>`).join('\n')+'\n</urlset>');
   fs.writeFileSync(sitemapFile,sitemap);
   fs.writeFileSync(path.join(build,'toolkit-international-manifest.json'),JSON.stringify({sourceHash,locales,routes:manifest},null,2)+'\n');
   fs.writeFileSync(path.join(build,'tools/languages.json'),JSON.stringify({defaultLanguage:'en',locales:locales.map(l=>({...l,hub:`/${l.id}/tools/`,discovery:`/${l.id}/tools/llms.txt`}))},null,2)+'\n');

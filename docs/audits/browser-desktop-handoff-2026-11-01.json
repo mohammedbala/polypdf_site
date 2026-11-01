@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-01",
+  "goal": "Qualified desktop downloads and verified Pro purchases from relevant free-browser-tool visits.",
+  "priorityBasis": "Owned-path inspection: all 36 tool pages had a generic homepage download hop below related tools; completed results offered only more browser tools. No new ranking, traffic or AI visibility sample was available.",
+  "change": [
+    "Add crawlable task-related measurement, markup, comparison or takeoff links before tool FAQs.",
+    "Offer direct Mac and Windows downloads with requirements and explicit Free/Pro boundaries.",
+    "Link to the version-labeled saved construction drawing and exported worksheet.",
+    "Keep the browser output download first and add one optional task-related result link.",
+    "Publish equivalent handoff copy across all 22 translated toolkit locales, labeling English-only destinations.",
+    "Refresh actual modification dates for the 36 changed tool pages and their translations."
+  ],
+  "coverage": {
+    "toolPagesPerLanguage": 36,
+    "languagesIncludingEnglish": 23,
+    "toolPageVariants": 828
+  },
+  "measurement": {
+    "clickEvent": "desktop_workflow_click",
+    "properties": [
+      "source",
+      "feature",
+      "section",
+      "target"
+    ],
+    "downloadEvent": "download_click",
+    "privacy": "Existing analytics consent and fixed allowlisted properties only; no file, typed field, filename or document data. No new storage or identity matching.",
+    "success": "Compare consented tool entry visits to desktop download intent and separately verified Pro purchases; guide clicks are diagnostic, not conversions.",
+    "limitations": [
+      "Download clicks do not prove installation or activation.",
+      "No before/after lift claimed.",
+      "GA4 dimension registration still needs access to the PolyPDF property.",
+      "No fresh OpenSEO collection; the connector is absent in this session."
+    ]
+  },
+  "sources": [
+    "https://developers.google.com/search/docs/appearance/ai-features",
+    "docs/audits/aeo-buyer-decisions-2026-11-01.json"
+  ],
+  "engineScope": "The PDF processing engine and downloadable MCP package are unchanged.",
+  "validation": {
+    "websiteTests": 385,
+    "websiteSuites": 38,
+    "build": "passed with successful compilation, prerender and static verification",
+    "translatedMarketingPages": 240,
+    "translatedToolPages": 836,
+    "updatedSitemapEntries": 828,
+    "builtConsentTests": 4,
+    "visualBrowser": "Safari on the Mac mini",
+    "mobileViewport": "320 CSS pixels in frames loading the actual built pages",
+    "visuallyCheckedLanguages": [
+      "en",
+      "de",
+      "ar",
+      "bn",
+      "he",
+      "ja"
+    ],
+    "desktopViewport": "1120 CSS pixels",
+    "functionalCheck": "Loaded the public architectural sample in Rotate PDF, generated the result, confirmed the output download stays first, and followed its construction next-step link to the takeoff guide.",
+    "limits": "This change does not claim a new all-tools/all-locales interactive sweep or a traffic/conversion lift."
+  },
+  "translationCorrection": "Corrected flight senses of takeoff and an English fallback in the shared construction heading across the 22 translated dictionaries."
+}

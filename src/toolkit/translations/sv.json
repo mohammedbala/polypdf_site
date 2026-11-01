@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Marginaler lämnar inget utrymme för bilden.",
     "Margins must leave a visible page area.": "Marginaler måste lämna ett synligt sidområde.",
     "Mark up": "Märk upp",
-    "Measure, take off, and review in PolyPDF.": "Mät, ta av och granska i PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Mät, gör mängdavtagning och granska ritningar i PolyPDF.",
     "Merge & organize pages": "Slå ihop och organisera sidor",
     "Merge PDF": "Slå samman PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Sammanfoga PDF Online — Kombinera filer gratis | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "fil",
     "files": "filer",
     "is-dragging": "drar",
-    "page": "sida"
+    "page": "sida",
+    "PDF takeoff": "Mängdavtagning i PDF",
+    "PDF measurement": "PDF-mätning",
+    "Construction PDF markup": "Kommentera byggritningar i PDF",
+    "Visual drawing comparison": "Visuell ritningsjämförelse",
+    "Working with construction drawings?": "Arbetar du med byggritningar?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: kalibrering, kommentarer och upp till 3 manuellt skapade mätningar per dokument.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: obegränsade manuella mätningar, ritningsöverlägg och Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Spara din PDF och öppna den sedan i skrivbordsappen. Filer överförs inte automatiskt.",
+    "Download for macOS": "Ladda ner för macOS",
+    "Download for Windows": "Ladda ner för Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "För macOS 14+ eller 64-bitars Windows 10/11. Installationsprogrammen för datorer fungerar inte på telefoner eller surfplattor.",
+    "Desktop workflow": "Arbetsflöde på datorn",
+    "See a measured drawing and worksheet": "Se en uppmätt ritning och mängdtabell",
+    "(English)": "(engelska)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

@@ -212,7 +212,7 @@
     "Compare PDF text online": "قارن نص PDF عبر الإنترنت",
     "Compare PDF text workspace": "قارن مساحة عمل نص PDF",
     "Compare PDF text — free browser PDF tool": "مقارنة نص PDF - أداة مجانية لمتصفح PDF",
-    "Compare Pro pricing": "قارن أسعار المحترفين",
+    "Compare Pro pricing": "مقارنة أسعار Pro",
     "Compare text in two PDFs page by page. Download a JSON report of added and removed lines free. Local processing; no OCR or visual drawing comparison.": "قارن النص في ملفي PDF صفحة بصفحة. قم بتنزيل تقرير JSON للخطوط المضافة والمحذوفة مجانًا. المعالجة المحلية؛ لا توجد مقارنة OCR أو الرسم المرئي.",
     "Compare the existing text layers of two PDFs page by page. Export a JSON report of added and removed lines with page references.": "قارن بين طبقات النص الموجودة في ملفي PDF صفحة تلو الأخرى. تصدير تقرير JSON للأسطر المضافة والمحذوفة مع مراجع الصفحات.",
     "Compare two specification revisions with matching page order. Choose the earlier PDF first and the later PDF second, then inspect the reported added and removed lines against their source pages.": "قارن بين مراجعتين للمواصفات مع تسلسل الصفحات المطابق. اختر PDF الأقدم أولاً ثم PDF الأحدث ثانيًا، ثم افحص الأسطر المضافة والمحذوفة المبلغ عنها مقابل صفحات المصدر الخاصة بها.",
@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "الهوامش لا تترك مجالا للصورة.",
     "Margins must leave a visible page area.": "يجب أن تترك الهوامش منطقة صفحة مرئية.",
     "Mark up": "ترميز",
-    "Measure, take off, and review in PolyPDF.": "القياس والإقلاع والمراجعة في PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "قياس مخططات البناء وحصر كمياتها ومراجعتها في PolyPDF.",
     "Merge & organize pages": "دمج وتنظيم الصفحات",
     "Merge PDF": "دمج PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Merge PDF Online — دمج الملفات مجانًا | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "ملف",
     "files": "ملفات",
     "is-dragging": "هو السحب",
-    "page": "الصفحة"
+    "page": "الصفحة",
+    "PDF takeoff": "حصر الكميات من PDF",
+    "PDF measurement": "القياس على PDF",
+    "Construction PDF markup": "التعليق على مخططات البناء بصيغة PDF",
+    "Visual drawing comparison": "المقارنة المرئية للمخططات",
+    "Working with construction drawings?": "هل تعمل على مخططات بناء؟",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: المعايرة والتعليقات وما يصل إلى 3 قياسات تُنشأ يدويًا لكل مستند.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: قياسات يدوية غير محدودة وتراكب المخططات وSymbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "احفظ ملف PDF ثم افتحه في تطبيق سطح المكتب. لا تُنقل الملفات تلقائيًا.",
+    "Download for macOS": "تنزيل لنظام macOS",
+    "Download for Windows": "تنزيل لنظام Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "لنظام macOS 14+ أو Windows 10/11 بنواة 64 بت. لا تعمل برامج تثبيت سطح المكتب على الهواتف أو الأجهزة اللوحية.",
+    "Desktop workflow": "سير العمل على سطح المكتب",
+    "See a measured drawing and worksheet": "عرض مخطط مقاس وجدول كمياته",
+    "(English)": "(الإنجليزية)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

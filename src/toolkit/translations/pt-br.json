@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "As margens não deixam espaço para a imagem.",
     "Margins must leave a visible page area.": "As margens devem deixar uma área de página visível.",
     "Mark up": "Marcar",
-    "Measure, take off, and review in PolyPDF.": "Meça, retire e revise no PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Meça, levante quantitativos e revise plantas no PolyPDF.",
     "Merge & organize pages": "Mesclar e organizar páginas",
     "Merge PDF": "Mesclar PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Mesclar PDF Online - Combine arquivos gratuitamente | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "arquivo",
     "files": "arquivos",
     "is-dragging": "está arrastando",
-    "page": "página"
+    "page": "página",
+    "PDF takeoff": "Levantamento de quantitativos em PDF",
+    "PDF measurement": "Medição de PDF",
+    "Construction PDF markup": "Anotações em plantas de construção em PDF",
+    "Visual drawing comparison": "Comparação visual de plantas",
+    "Working with construction drawings?": "Você trabalha com plantas de construção?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: calibração, anotações e até 3 medições criadas manualmente por documento.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: medições manuais ilimitadas, sobreposição de plantas e Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Salve seu PDF e abra-o no aplicativo de desktop. Os arquivos não são transferidos automaticamente.",
+    "Download for macOS": "Baixar para macOS",
+    "Download for Windows": "Baixar para Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Para macOS 14+ ou Windows 10/11 de 64 bits. Os instaladores de desktop não funcionam em celulares ou tablets.",
+    "Desktop workflow": "Fluxo de trabalho no desktop",
+    "See a measured drawing and worksheet": "Ver uma planta medida e sua planilha de quantitativos",
+    "(English)": "(inglês)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

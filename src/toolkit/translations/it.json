@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "I margini non lasciano spazio all'immagine.",
     "Margins must leave a visible page area.": "I margini devono lasciare un'area visibile della pagina.",
     "Mark up": "Segna",
-    "Measure, take off, and review in PolyPDF.": "Misura, decolla e rivedi in PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Misura, calcola le quantità e revisiona i disegni in PolyPDF.",
     "Merge & organize pages": "Unisci e organizza le pagine",
     "Merge PDF": "Unisci PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Unisci PDF online: combina file gratuitamente | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "file",
     "files": "file",
     "is-dragging": "sta trascinando",
-    "page": "pagina"
+    "page": "pagina",
+    "PDF takeoff": "Computo delle quantità da PDF",
+    "PDF measurement": "Misurazione PDF",
+    "Construction PDF markup": "Annotazioni su disegni edili PDF",
+    "Visual drawing comparison": "Confronto visivo dei disegni",
+    "Working with construction drawings?": "Lavori con disegni edili?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: calibrazione, annotazioni e fino a 3 misurazioni create manualmente per documento.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: misurazioni manuali illimitate, sovrapposizione dei disegni e Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Salva il PDF, poi aprilo nell’app desktop. I file non vengono trasferiti automaticamente.",
+    "Download for macOS": "Scarica per macOS",
+    "Download for Windows": "Scarica per Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Per macOS 14+ o Windows 10/11 a 64 bit. I programmi di installazione desktop non funzionano su telefoni o tablet.",
+    "Desktop workflow": "Flusso di lavoro desktop",
+    "See a measured drawing and worksheet": "Vedi un disegno misurato e il relativo foglio delle quantità",
+    "(English)": "(Inglese)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

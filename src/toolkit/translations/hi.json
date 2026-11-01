@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "हाशिया छवि के लिए कोई जगह नहीं छोड़ता।",
     "Margins must leave a visible page area.": "मार्जिन को एक दृश्य पृष्ठ क्षेत्र छोड़ना होगा।",
     "Mark up": "चिन्हित करें",
-    "Measure, take off, and review in PolyPDF.": "PolyPDF में मापें, उतारें और समीक्षा करें।",
+    "Measure, take off, and review in PolyPDF.": "PolyPDF में निर्माण ड्रॉइंग मापें, मात्राएँ निकालें और समीक्षा करें।",
     "Merge & organize pages": "पेजों को मर्ज और व्यवस्थित करें",
     "Merge PDF": "PDF को मर्ज करें",
     "Merge PDF Online — Combine Files Free | PolyPDF": "PDF को ऑनलाइन मर्ज करें - फ़ाइलों को निःशुल्क संयोजित करें | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "फ़ाइल",
     "files": "फ़ाइलें",
     "is-dragging": "है-खींचना",
-    "page": "पेज"
+    "page": "पेज",
+    "PDF takeoff": "PDF से मात्रा आकलन",
+    "PDF measurement": "PDF माप",
+    "Construction PDF markup": "निर्माण PDF पर टिप्पणियाँ",
+    "Visual drawing comparison": "ड्रॉइंग की दृश्य तुलना",
+    "Working with construction drawings?": "क्या आप निर्माण ड्रॉइंग पर काम कर रहे हैं?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: कैलिब्रेशन, टिप्पणियाँ और हर दस्तावेज़ में हाथ से बनाए गए अधिकतम 3 माप।",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: हाथ से बनाए गए असीमित माप, ड्रॉइंग ओवरले और Symbol Search।",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "अपना PDF सहेजें, फिर उसे डेस्कटॉप ऐप में खोलें। फ़ाइलें अपने आप स्थानांतरित नहीं होतीं।",
+    "Download for macOS": "macOS के लिए डाउनलोड करें",
+    "Download for Windows": "Windows के लिए डाउनलोड करें",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "macOS 14+ या 64-बिट Windows 10/11 के लिए। डेस्कटॉप इंस्टॉलर फ़ोन या टैबलेट पर नहीं चलते।",
+    "Desktop workflow": "डेस्कटॉप कार्यप्रवाह",
+    "See a measured drawing and worksheet": "मापी गई ड्रॉइंग और उसकी मात्रा कार्यपत्रक देखें",
+    "(English)": "(अंग्रेज़ी)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

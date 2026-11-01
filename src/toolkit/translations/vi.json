@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Lề không chừa chỗ cho hình ảnh.",
     "Margins must leave a visible page area.": "Lề phải để lại một vùng trang nhìn thấy được.",
     "Mark up": "Đánh dấu",
-    "Measure, take off, and review in PolyPDF.": "Đo lường, gỡ bỏ và đánh giá trong PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Đo bản vẽ, bóc tách khối lượng và rà soát trong PolyPDF.",
     "Merge & organize pages": "Hợp nhất và sắp xếp các trang",
     "Merge PDF": "Hợp nhất PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Hợp nhất PDF trực tuyến — Hợp nhất các tệp miễn phí | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "tập tin",
     "files": "tập tin",
     "is-dragging": "đang kéo",
-    "page": "trang"
+    "page": "trang",
+    "PDF takeoff": "Bóc tách khối lượng từ PDF",
+    "PDF measurement": "Đo trên PDF",
+    "Construction PDF markup": "Chú thích bản vẽ xây dựng PDF",
+    "Visual drawing comparison": "So sánh trực quan bản vẽ",
+    "Working with construction drawings?": "Bạn đang làm việc với bản vẽ xây dựng?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: hiệu chuẩn, chú thích và tối đa 3 phép đo tạo thủ công trên mỗi tài liệu.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: phép đo thủ công không giới hạn, chồng bản vẽ và Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Lưu PDF, sau đó mở trong ứng dụng máy tính. Tệp không được tự động chuyển sang ứng dụng.",
+    "Download for macOS": "Tải cho macOS",
+    "Download for Windows": "Tải cho Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Dành cho macOS 14+ hoặc Windows 10/11 64 bit. Trình cài đặt máy tính không chạy trên điện thoại hoặc máy tính bảng.",
+    "Desktop workflow": "Quy trình trên máy tính",
+    "See a measured drawing and worksheet": "Xem bản vẽ đã đo và bảng khối lượng",
+    "(English)": "(Tiếng Anh)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

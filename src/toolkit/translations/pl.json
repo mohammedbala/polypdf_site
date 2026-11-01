@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Marginesy nie pozostawiają miejsca na obraz.",
     "Margins must leave a visible page area.": "Marginesy muszą opuszczać widoczny obszar strony.",
     "Mark up": "Oznacz",
-    "Measure, take off, and review in PolyPDF.": "Zmierz, zdejmij i przejrzyj w PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Mierz rysunki, wykonuj przedmiary i przeglądaj plany w PolyPDF.",
     "Merge & organize pages": "Scal i uporządkuj strony",
     "Merge PDF": "Scal PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Scal PDF Online — łącz pliki za darmo | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "plik",
     "files": "pliki",
     "is-dragging": "jest-przeciąganie",
-    "page": "strona"
+    "page": "strona",
+    "PDF takeoff": "Przedmiar z PDF",
+    "PDF measurement": "Pomiar PDF",
+    "Construction PDF markup": "Adnotacje na rysunkach budowlanych PDF",
+    "Visual drawing comparison": "Wizualne porównywanie rysunków",
+    "Working with construction drawings?": "Pracujesz z rysunkami budowlanymi?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: kalibracja, adnotacje i do 3 pomiarów tworzonych ręcznie na dokument.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: nieograniczone pomiary ręczne, nakładanie rysunków i Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Zapisz PDF, a następnie otwórz go w aplikacji komputerowej. Pliki nie są przesyłane automatycznie.",
+    "Download for macOS": "Pobierz dla macOS",
+    "Download for Windows": "Pobierz dla Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Dla macOS 14+ lub 64-bitowego Windows 10/11. Instalatory komputerowe nie działają na telefonach ani tabletach.",
+    "Desktop workflow": "Praca w aplikacji komputerowej",
+    "See a measured drawing and worksheet": "Zobacz zmierzony rysunek i arkusz ilości",
+    "(English)": "(Angielski)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }
