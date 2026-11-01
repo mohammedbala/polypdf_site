@@ -1,0 +1,205 @@
+{
+  "reviewedOn": "2026-11-01",
+  "businessGoal": "Qualified Mac/Windows downloads and verified Pro purchases; browser completions are a separate product outcome.",
+  "methodSources": [
+    "https://x.com/wespreadjam/status/2115568290307469548",
+    "https://discoveredlabs.com/case-studies/granola",
+    "https://developers.google.com/search/docs/appearance/ai-features"
+  ],
+  "rules": [
+    "Diagnose buyer questions before creating content.",
+    "Improve an existing relevant page before adding another page.",
+    "Fix access and measurement problems on conversion paths first.",
+    "Classify external evidence as OWN, CLAIM, EARN or CONTEST before acting.",
+    "Keep Google performance, AI mentions/citations, referrals and product outcomes separate."
+  ],
+  "buyerDecisions": [
+    {
+      "prompt": "Can I use PolyPDF without downloading an app?",
+      "googleQuery": "free online pdf tools",
+      "page": "/product-facts/#choose-your-workflow",
+      "diagnosis": "weak_page",
+      "action": "Updated the existing reference to distinguish 36 browser operations from desktop takeoff.",
+      "outcome": "browser_tool_complete"
+    },
+    {
+      "prompt": "Can I measure construction drawings in the browser tools?",
+      "googleQuery": "measure construction pdf online",
+      "page": "/product-facts/#choose-your-workflow",
+      "diagnosis": "weak_page",
+      "action": "Added an explicit desktop requirement and a three-measurement evaluation path.",
+      "outcome": "download_click"
+    },
+    {
+      "prompt": "How much does PolyPDF Pro cost, and do the browser tools require it?",
+      "googleQuery": "polypdf pro price",
+      "page": "/product-facts/#free-and-pro",
+      "diagnosis": "weak_page",
+      "action": "Clarified one-time 1.x licensing and that browser tools remain free.",
+      "outcome": "purchase"
+    },
+    {
+      "prompt": "What limits apply to free browser PDF tools?",
+      "googleQuery": "free pdf tools no upload limits",
+      "page": "/product-facts/#browser-limits",
+      "diagnosis": "weak_page",
+      "action": "Published actual file, page, render and output limits alongside unsupported workflows.",
+      "outcome": "browser_tool_complete"
+    },
+    {
+      "prompt": "What is a Bluebeam alternative for Mac without a virtual machine?",
+      "googleQuery": "bluebeam alternative for mac",
+      "page": "/bluebeam-alternative-for-mac/",
+      "diagnosis": "existing_page_answers_question",
+      "action": "Keep the existing dated comparison; do not create a competing article.",
+      "outcome": "download_click"
+    },
+    {
+      "prompt": "Can PolyPDF join Bluebeam Studio?",
+      "googleQuery": "polypdf bluebeam studio",
+      "page": "/bluebeam-alternative/#handoff-checklist",
+      "diagnosis": "existing_page_answers_question",
+      "action": "Retain the direct no answer and project-specific handoff checklist.",
+      "outcome": "download_click"
+    },
+    {
+      "prompt": "Is there free construction takeoff software for Mac and Windows?",
+      "googleQuery": "free construction takeoff software",
+      "page": "/pdf-takeoff-software/#free-vs-pro",
+      "diagnosis": "existing_page_answers_question",
+      "action": "Retain Free limits, Pro terms, and the measurable practice workflow.",
+      "outcome": "download_click"
+    },
+    {
+      "prompt": "Can I inspect a saved construction takeoff before buying?",
+      "googleQuery": "pdf takeoff worked example",
+      "page": "/samples/",
+      "diagnosis": "existing_page_answers_question",
+      "action": "Use the existing architectural samples and version-labeled outputs.",
+      "outcome": "sample_download"
+    },
+    {
+      "prompt": "Can my AI assistant merge and organize PDFs locally?",
+      "googleQuery": "pdf mcp server",
+      "page": "/tools/automation/",
+      "diagnosis": "existing_page_answers_question",
+      "action": "Use the existing bounded local MCP package and 36-operation manifest.",
+      "outcome": "browser_tool_download"
+    },
+    {
+      "prompt": "Can I fill a PDF form without uploading it?",
+      "googleQuery": "fill pdf form without upload",
+      "page": "/tools/fill-pdf-form/",
+      "diagnosis": "existing_page_answers_question",
+      "action": "Use the existing form tool and practice form.",
+      "outcome": "browser_tool_complete"
+    },
+    {
+      "prompt": "How do I check PDF scale before taking off quantities?",
+      "googleQuery": "pdf scale checker",
+      "page": "/tools/pdf-scale-checker/",
+      "diagnosis": "existing_page_answers_question",
+      "action": "Use the existing independent-dimension check and CSV record.",
+      "outcome": "download_click"
+    },
+    {
+      "prompt": "Which license do I need for an estimating team?",
+      "googleQuery": "construction takeoff team license",
+      "page": "/product-facts/#free-and-pro",
+      "diagnosis": "existing_page_answers_question",
+      "action": "Use the existing reference for personal computer rights versus team seats, with a link to the intentionally noindex team transaction page.",
+      "outcome": "purchase"
+    }
+  ],
+  "technicalFinding": {
+    "status": "fixed",
+    "finding": "Valid toolkit routes in locales outside the eight marketing locales were being reported as /404/ in analytics.",
+    "coverage": "Exact route allowlist for all 22 translated toolkit locales, the hub, automation, and 36 tools; no broad locale wildcard.",
+    "preservedIntentionalExclusions": "Teams purchasing and account-specific controls remain noindex. The indexable product reference supplies the team-license decision answer."
+  },
+  "sourceActions": {
+    "OWN": {
+      "status": "implemented",
+      "targets": [
+        "/product-facts/",
+        "/tools/",
+        "/pdf-takeoff-software/"
+      ],
+      "action": "Improve the existing product reference and fix measurement; retain useful existing pages."
+    },
+    "CLAIM": {
+      "status": "requires_source_evidence",
+      "action": "Identify a relevant editable product listing from actual gap-answer citations before updating it."
+    },
+    "EARN": {
+      "status": "requires_source_evidence",
+      "action": "Read recurring review or community citations and contribute only where relevant. No automated posting or new outreach performed in this change."
+    },
+    "CONTEST": {
+      "status": "requires_source_evidence",
+      "action": "Record a specific incorrect statement and official correction evidence before requesting an update."
+    }
+  },
+  "measurement": {
+    "websiteEvents": [
+      "page_view",
+      "sample_download",
+      "browser_tool_complete",
+      "browser_tool_download",
+      "download_click",
+      "purchase"
+    ],
+    "newEventParameters": [
+      "acquisition_channel",
+      "acquisition_source",
+      "acquisition_basis",
+      "entry_page"
+    ],
+    "privacy": "Analytics consent only; session storage expires after 30 idle minutes, with known page paths and fixed categories. No arbitrary referrer URLs, document data, user identity or raw campaign codes.",
+    "interpretation": [
+      "download_click is intent, not a verified installer completion or activation.",
+      "purchase requires the existing paid first-party payment record.",
+      "AI referrals are observed referrers or explicit campaign tags, not proof of citation or model visibility.",
+      "Google referrals do not distinguish organic results, ads without click evidence, AI Overviews or AI Mode.",
+      "Missing referrers remain direct_or_unknown. Never infer AI traffic from direct visits.",
+      "The website does not join analytics to desktop installations, license activations or optional desktop usage identities."
+    ],
+    "reportingSetup": {
+      "ga4Property": "properties/559292415",
+      "customDimensions": [
+        {
+          "parameterName": "acquisition_channel",
+          "scope": "EVENT",
+          "disallowAdsPersonalization": true
+        },
+        {
+          "parameterName": "acquisition_source",
+          "scope": "EVENT",
+          "disallowAdsPersonalization": true
+        },
+        {
+          "parameterName": "acquisition_basis",
+          "scope": "EVENT",
+          "disallowAdsPersonalization": true
+        },
+        {
+          "parameterName": "entry_page",
+          "scope": "EVENT",
+          "disallowAdsPersonalization": true
+        }
+      ],
+      "status": "pending_access_to_PolyPDF_property",
+      "accessEvidence": "Available Google Analytics login exposed earthquake, License Stamps, MenaMeet, and PE Genius accounts, not the PolyPDF property. No account permissions or credentials changed."
+    },
+    "reevaluation": {
+      "prompts": "Reuse these exact buyer questions; record prompt, engine, date, country/language, answer status, mention, cited URLs, and brand presence on the source.",
+      "baselineStatus": "No fresh observed AI answers in this implementation. Do not invent a before/after visibility lift.",
+      "cadence": "Manual recheck after collection and indexing; no recurring paid schedule enabled.",
+      "comparison": "Compare equal question/engine/market sets; use OpenSEO comparable-trend results rather than mixing independent runs."
+    }
+  },
+  "validationLimitations": [
+    "Mac mini Screen Sharing stopped updating its remote frame. Reconnecting prompted for authentication; no new Safari visual validation completed. SSH development and build validation remained available.",
+    "Existing desktop product identities remain separate; activated users cannot be attributed from website download clicks."
+  ]
+}

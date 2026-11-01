@@ -1,7 +1,7 @@
 import { CONSENT_KEY, CONSENT_MAX_AGE, CONSENT_VERSION, clearOptionalStorage, hasConsent, readConsent, saveConsent } from './consent';
 import { captureAttribution, checkoutAttribution } from './attribution';
 
-beforeEach(() => { window.localStorage.clear(); Object.defineProperty(navigator, 'globalPrivacyControl', { configurable: true, value: false }); });
+beforeEach(() => { window.localStorage.clear(); window.sessionStorage.clear(); Object.defineProperty(navigator, 'globalPrivacyControl', { configurable: true, value: false }); });
 afterEach(() => { jest.restoreAllMocks(); });
 test('fails closed for missing, corrupt, old-version, future and expired choices', () => {
   for (const value of [null, '{', '{}', JSON.stringify({version:'old', savedAt:Date.now(), analytics:true,marketing:true}), JSON.stringify({version:CONSENT_VERSION,savedAt:Date.now()+10000,analytics:true,marketing:true}), JSON.stringify({version:CONSENT_VERSION,savedAt:Date.now()-CONSENT_MAX_AGE,analytics:true,marketing:true})]) {

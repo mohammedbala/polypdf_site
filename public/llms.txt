@@ -70,6 +70,7 @@ Key facts:
 
 ## Free browser PDF tools
 
+- Choose by task: use the 36 free browser tools to prepare PDF files without an account or Pro license. Calibrated drawing measurement and quantity takeoff require the Mac or Windows desktop app; browser tools do not measure drawing quantities.
 - Browser tools process files locally without uploading PDFs. They are separate from the native desktop app and hosted connector. No account is required; file/page limits apply.
 - Automation: https://www.polypdf.com/tools/automation/ — downloadable local MCP server and a machine-readable tool manifest.
 - [Merge PDF](https://www.polypdf.com/tools/merge-pdf/): Combine two or more PDFs into a single file. Add your files, arrange them, and save a new PDF. Limit: Interactive forms are flattened in the combined copy; document bookmarks and signatures are not preserved.

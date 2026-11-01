@@ -158,6 +158,8 @@ const buildRouteMetadata = () => {
   next['/construction-pdf-markup'].title = 'PDF Markup Software for Construction | PolyPDF';
   for (const route of ['/', '/pdf-takeoff-software', '/construction-pdf-markup']) next[route].dateModified = '2026-10-16';
   for (const route of ['/product-facts', '/samples', '/tools', '/tools/construction-takeoff-spreadsheet']) next[route].dateModified = '2026-10-17';
+  next['/product-facts'].dateModified = '2026-11-01';
+  for (const route of ['/privacy', '/cookies']) next[route].dateModified = '2026-11-01';
   const pdfTools = require('../src/toolkit/catalog.json');
   const toolContent = require('../src/toolkit/page-content.json');
   next['/tools'] = {title: '36 Free Online PDF Tools — No Upload | PolyPDF', description: 'Merge, split, convert, fill, number, and prepare PDFs in your browser. 36 free tools with local processing, previews, downloads, and MCP automation.', robots: 'index, follow', dateModified: '2026-10-18'};
@@ -351,6 +353,7 @@ const buildLlmsText = () => {
     '',
     '## Free browser PDF tools',
     '',
+    '- Choose by task: use the 36 free browser tools to prepare PDF files without an account or Pro license. Calibrated drawing measurement and quantity takeoff require the Mac or Windows desktop app; browser tools do not measure drawing quantities.',
     '- Browser tools process files locally without uploading PDFs. They are separate from the native desktop app and hosted connector. No account is required; file/page limits apply.',
     '- Automation: https://www.polypdf.com/tools/automation/ — downloadable local MCP server and a machine-readable tool manifest.',
     ...require('../src/toolkit/catalog.json').map(t => `${markdownLink(t.name, '/tools/' + t.id)}: ${t.answer} Limit: ${t.limitation}`),

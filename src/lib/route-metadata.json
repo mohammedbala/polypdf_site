@@ -223,7 +223,8 @@
   "/privacy": {
     "title": "Privacy Policy | PolyPDF",
     "description": "Learn how PolyPDF handles website, checkout, licensing, diagnostics, and support data while keeping your PDF content on your computer.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-11-01"
   },
   "/refund": {
     "title": "Refund Policy | PolyPDF",
@@ -293,7 +294,8 @@
   "/cookies": {
     "title": "Cookie Policy | PolyPDF",
     "description": "Choose optional cookies, learn what PolyPDF stores, and manage analytics and advertising measurement.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-11-01"
   },
   "/accessibility": {
     "title": "Accessibility | PolyPDF",
@@ -371,7 +373,7 @@
     "title": "PolyPDF Product Facts: Platforms, Free & Pro, Limits",
     "description": "Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.",
     "robots": "index, follow",
-    "dateModified": "2026-10-17"
+    "dateModified": "2026-11-01"
   },
   "/tools/pdf-scale-checker": {
     "title": "PDF Scale Accuracy Checker: Free Reference Check | PolyPDF",
