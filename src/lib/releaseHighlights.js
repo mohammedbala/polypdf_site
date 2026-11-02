@@ -89,7 +89,7 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.26 (build 98) keeps footer coordinates in a stable position, lets snapshot fill opacity be adjusted down to 0%, and keeps moved markups reachable. Use Move onto page in the Markups List to recover editable off-page markups. It also adds Shift or Ctrl freehand highlighting, saved Callout defaults for Cloud+, and configurable image-export DPI and JPEG quality. Collaboration Host 1.6.22 remains current.";
+export const releaseAnswer = "PolyPDF 1.6.27 (build 99) fixes opening and saving previously marked-up PDFs. Existing markups and links are preserved. Collaboration Host 1.6.22 remains current.";
 
 export const release1613Highlights = Object.freeze(["PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in."]);
 
@@ -150,4 +150,10 @@ export const release1626Highlights = Object.freeze([
   'Choose 72–600 DPI and 10–100% JPEG quality for image exports. Export the current page or all pages and preview output dimensions before rendering.',
   'JPEG files record the requested DPI. Oversized images are rejected before rendering instead of silently reducing resolution. Defaults are 150 DPI and 95% JPEG quality; PDF Save As continues to save PDFs.',
   'Collaboration Host 1.6.22 remains current.'
+]);
+
+export const release1627Highlights = Object.freeze([
+  "Fixes incomplete opening and blocked Save for previously marked-up PDFs whose saved markup identifiers collide with unrelated links.",
+  "Preserves separate markup and link identities through saving and reopening. Protection against saving genuinely incomplete imports remains active.",
+  "Collaboration Host 1.6.22 remains current."
 ]);

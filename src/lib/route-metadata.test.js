@@ -106,11 +106,11 @@ test('unknown URLs receive a truthful noindex 404 identity instead of home-page 
 
 test('separates the current app release from the verified screenshot release', () => {
   expect(siteRelease).toMatchObject({
-    version: '1.6.26',
-    build: '98',
+    version: '1.6.27',
+    build: '99',
     featuredCaptureVersion: '1.5.1',
     featuredCaptureBuild: '23',
-    releaseDate: '2026-10-31',
+    releaseDate: '2026-11-02',
     screenshotVersion: '1.4.3',
     screenshotBuild: '20',
     screenshotCacheToken: '1.4.3-20'

@@ -2864,7 +2864,16 @@
     "Current app: PolyPDF 1.6.26 (build 98) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Aplicativo atual: PolyPDF 1.6.26 (build 98) · Formato do pacote: PolyPDF 1.3.1+ · A instalação e execução de plug-ins requer PolyPDF Pro em 1.4.1+",
     "Current version 1.6.26 (build 98).": "Versão atual 1.6.26 (compilação 98).",
     "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.26 (build 98) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenha ajuda com instalação, fluxos de trabalho de produtos, compras e ativação de licença. A versão pública atual é PolyPDF 1.6.26 (build 98) no Mac e Windows. Ao escrever, inclua a versão mostrada em Sobre, seu sistema operacional e os detalhes do recibo do Stripe, quando relevante.",
-    "PolyPDF 1.6.26 (build 98) · Mac & Windows": "PolyPDF 1.6.26 (compilação 98) · Mac e Windows"
+    "PolyPDF 1.6.26 (build 98) · Mac & Windows": "PolyPDF 1.6.26 (compilação 98) · Mac e Windows",
+    "Explore the 1.6.27 update": "Explore a atualização 1.6.27",
+    "Update to 1.6.27": "Atualizar para 1.6.27",
+    "What changed in 1.6.27": "O que mudou em 1.6.27",
+    "After relaunch, About should show version 1.6.27, build 99. Your existing PolyPDF 1.x Pro license continues to apply.": "Após o relançamento, Sobre deve mostrar a versão 1.6.27, build 99. Sua licença existente do PolyPDF 1.x Pro continua em vigor.",
+    "Current app: PolyPDF 1.6.27 (build 99) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "Aplicativo atual: PolyPDF 1.6.27 (build 99) · Formato do pacote: PolyPDF 1.3.1+ · A instalação e execução de plug-ins requer PolyPDF Pro em 1.4.1+",
+    "Current version 1.6.27 (build 99).": "Versão atual 1.6.27 (compilação 99).",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.27 (build 99) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "Obtenha ajuda com instalação, fluxos de trabalho de produtos, compras e ativação de licença. A versão pública atual é PolyPDF 1.6.27 (build 99) no Mac e Windows. Ao escrever, inclua a versão mostrada em Sobre, seu sistema operacional e os detalhes do recibo do Stripe, quando relevante.",
+    "PolyPDF 1.6.27 (build 99) · Mac & Windows": "PolyPDF 1.6.27 (compilação 99) · Mac e Windows",
+    "PolyPDF 1.6.27 (build 99) fixes opening and saving previously marked-up PDFs. Existing markups and links are preserved. Collaboration Host 1.6.22 remains current.": "O PolyPDF 1.6.27 (build 99) corrige a abertura e o salvamento de PDFs com marcações anteriores. As marcações e os links existentes são preservados. O Collaboration Host 1.6.22 continua sendo a versão atual."
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",
