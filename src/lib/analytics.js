@@ -1,4 +1,5 @@
 import { hasConsent } from './consent';
+import { acquisitionContext } from './acquisition';
 import { ADS_PURCHASE_DESTINATION, GA_ID, safeAdsPageContext, safePageContext } from './tracking';
 
 // Keep events content-free even if a future caller passes form or URL data by mistake.
@@ -11,7 +12,7 @@ export const trackEvent = (name, properties = {}) => {
     if (SAFE_PROPERTIES.has(key) && (typeof value === 'number' ||
         (typeof value === 'string' && /^[a-z0-9._~-]{1,100}$/i.test(value)))) safe[key] = value;
   }
-  window.gtag('event', name, { ...safe, ...safePageContext(), send_to: GA_ID });
+  window.gtag('event', name, { ...safe, ...safePageContext(), ...acquisitionContext(), send_to: GA_ID });
   return true;
 };
 
@@ -65,7 +66,7 @@ export const trackVerifiedPurchase = (purchase) => {
     const key = provider.prefix + normalized.transaction_id;
     if (alreadySent(key)) continue;
     window.gtag('event', provider.event, {
-      ...normalized, ...provider.context(), send_to: provider.destination
+      ...normalized, ...provider.context(), ...(provider.category === 'analytics' ? acquisitionContext() : {}), send_to: provider.destination
     });
     rememberSent(key);
     sent = true;

@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-02",
+  "change": "Guided desktop evaluation at the existing download controls",
+  "businessGoal": "Help qualified construction visitors evaluate the desktop app and choose Free or Pro.",
+  "basis": {
+    "openSEO": "Saved buyer-decision audit and prior project context; no callable OpenSEO connector in this session.",
+    "observedGap": "The shared DownloadCTA only rendered generic next steps after a client-side installer click. It supplied neither a practice file nor expected readings, and did not exist in initial HTML for translated static pages.",
+    "platformDefect": "A MacIntel/Macintosh identity with multiple touch points was treated as a Mac, including iPadOS desktop browsing.",
+    "priority": "Improve a demonstrated gap at download intent before creating another overlapping keyword page. This is an inferred conversion opportunity, not a measured drop-off or ranking diagnosis."
+  },
+  "implementation": [
+    "Native, initially collapsed details is available in server-readable HTML before JavaScript, opens after an installer request, and stays manually usable without JavaScript.",
+    "Link the actual Willow Creek architectural Revision A PDF and the existing illustrated takeoff guide.",
+    "Calibrate the printed 20 ft reference, check 96 ft and 60 ft dimensions, then trace 5,760 sq ft gross area; two lengths and one area fit the Free allowance.",
+    "Review the worksheet, export, save and reopen; distinguish source references and the historical local Mac build from a fresh installed-version test.",
+    "Link the saved example and existing Free/Pro comparison.",
+    "Translate 13 new strings into the eight existing marketing languages; retain the source units and version labels.",
+    "Keep touch-capable Mac identities, mobile client hints, iPhone, iPad, iPod and Android on the platform-neutral desktop choices."
+  ],
+  "measurement": {
+    "events": [
+      "download_click",
+      "sample_download",
+      "download_evaluation_open",
+      "download_evaluation_click"
+    ],
+    "interpretation": "Clicks and disclosure opens are intent or engagement, not verified download completion, app installation, activation or purchase.",
+    "privacy": "Existing analytics consent gating, fixed guide/evidence/plans targets and source labels. No new storage, document contents, identity joins, marketing sends or recurring paid collection.",
+    "limitations": "No fresh Search Console, OpenSEO ranking, AI-citation or GA4 conversion baseline. No uplift is claimed."
+  },
+  "validation": {
+    "host": "Mohammeds-Mac-mini.local",
+    "websiteTests": 399,
+    "websiteSuites": 39,
+    "builtExerciseAndConsentTests": 6,
+    "pagesWithExercise": 219,
+    "exerciseModules": 268,
+    "languages": [
+      "en",
+      "es",
+      "pt-BR",
+      "de",
+      "fr",
+      "ar",
+      "hi",
+      "zh-CN",
+      "ja"
+    ],
+    "prerenderedEnglishRoutes": 91,
+    "translatedMarketingPages": 240,
+    "translatedToolkitPages": 836,
+    "linkChecks": "Actual nonempty source PDF, three steps, three existing destination fragments for every module; translated summaries differ from English.",
+    "visualLimitation": "Native Screen Sharing selection timed out twice after resetting the CUA runtime. App/browser inventory succeeded; no new visual screenshots or iPad hardware run completed.",
+    "scope": "Website only. No installer, app package, API, update-feed or server configuration changes.",
+    "navigation": {
+      "pages": 1172,
+      "internalLinks": 61491,
+      "fragments": 4635,
+      "accessibilityPages": 102,
+      "issues": 0,
+      "accessibilityLimit": "Static accessibility excludes color contrast; does not establish visual layout correctness."
+    }
+  },
+  "followUp": "Compare equal periods of consented download intent, sample and guide engagement, and verified Pro purchases once the PolyPDF analytics property is accessible. Keep desktop activation separate."
+}

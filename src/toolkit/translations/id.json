@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Margin tidak menyisakan ruang untuk gambar.",
     "Margins must leave a visible page area.": "Margin harus meninggalkan area halaman yang terlihat.",
     "Mark up": "Tandai",
-    "Measure, take off, and review in PolyPDF.": "Ukur, lepas landas, dan tinjau di PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Ukur gambar, hitung kuantitas, dan tinjau dengan PolyPDF.",
     "Merge & organize pages": "Gabungkan & atur halaman",
     "Merge PDF": "Gabungkan PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Gabungkan PDF Online — Gabungkan File Gratis | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "mengajukan",
     "files": "file",
     "is-dragging": "sedang menyeret",
-    "page": "halaman"
+    "page": "halaman",
+    "PDF takeoff": "Perhitungan kuantitas dari PDF",
+    "PDF measurement": "Pengukuran PDF",
+    "Construction PDF markup": "Anotasi gambar konstruksi PDF",
+    "Visual drawing comparison": "Perbandingan visual gambar",
+    "Working with construction drawings?": "Bekerja dengan gambar konstruksi?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: kalibrasi, anotasi, dan hingga 3 pengukuran yang dibuat secara manual per dokumen.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: pengukuran manual tanpa batas, overlay gambar, dan Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Simpan PDF Anda, lalu buka di aplikasi desktop. File tidak dipindahkan secara otomatis.",
+    "Download for macOS": "Unduh untuk macOS",
+    "Download for Windows": "Unduh untuk Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Untuk macOS 14+ atau Windows 10/11 64-bit. Penginstal desktop tidak berjalan di ponsel atau tablet.",
+    "Desktop workflow": "Alur kerja desktop",
+    "See a measured drawing and worksheet": "Lihat gambar yang telah diukur dan lembar kuantitasnya",
+    "(English)": "(bahasa Inggris)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

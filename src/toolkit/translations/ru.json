@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Поля не оставляют места для изображения.",
     "Margins must leave a visible page area.": "Поля должны оставлять видимую область страницы.",
     "Mark up": "Разметить",
-    "Measure, take off, and review in PolyPDF.": "Измерьте, снимите и просмотрите в PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Измеряйте чертежи, подсчитывайте объёмы и проверяйте планы в PolyPDF.",
     "Merge & organize pages": "Объединяйте и упорядочивайте страницы",
     "Merge PDF": "Объединить PDF-файл",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Объедините PDF онлайн — Объедините файлы бесплатно | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "файл",
     "files": "файлы",
     "is-dragging": "тянет",
-    "page": "страница"
+    "page": "страница",
+    "PDF takeoff": "Подсчёт объёмов по PDF",
+    "PDF measurement": "Измерения в PDF",
+    "Construction PDF markup": "Разметка строительных PDF-чертежей",
+    "Visual drawing comparison": "Визуальное сравнение чертежей",
+    "Working with construction drawings?": "Работаете со строительными чертежами?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: калибровка, разметка и до 3 измерений, созданных вручную, на документ.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: неограниченное число ручных измерений, наложение чертежей и Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Сохраните PDF и откройте его в настольном приложении. Файлы не передаются автоматически.",
+    "Download for macOS": "Скачать для macOS",
+    "Download for Windows": "Скачать для Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Для macOS 14+ или 64-разрядной Windows 10/11. Настольные установщики не работают на телефонах и планшетах.",
+    "Desktop workflow": "Работа в настольном приложении",
+    "See a measured drawing and worksheet": "Посмотреть измеренный чертёж и ведомость объёмов",
+    "(English)": "(английский)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

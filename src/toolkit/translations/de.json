@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Ränder lassen keinen Platz für das Bild.",
     "Margins must leave a visible page area.": "Ränder müssen einen sichtbaren Seitenbereich freilassen.",
     "Mark up": "Markieren",
-    "Measure, take off, and review in PolyPDF.": "Messen, messen und überprüfen Sie in PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Messen, Mengen ermitteln und Pläne prüfen mit PolyPDF.",
     "Merge & organize pages": "Seiten zusammenführen und organisieren",
     "Merge PDF": "PDF zusammenführen",
     "Merge PDF Online — Combine Files Free | PolyPDF": "PDF online zusammenführen – Dateien kostenlos kombinieren | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "Datei",
     "files": "Dateien",
     "is-dragging": "ist-ziehend",
-    "page": "Seite"
+    "page": "Seite",
+    "PDF takeoff": "Mengenermittlung im PDF",
+    "PDF measurement": "PDF-Messung",
+    "Construction PDF markup": "Baupläne im PDF kommentieren",
+    "Visual drawing comparison": "Visueller Planvergleich",
+    "Working with construction drawings?": "Arbeiten Sie mit Bauplänen?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: Kalibrierung, Anmerkungen und bis zu 3 manuell erstellte Messungen pro Dokument.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: unbegrenzte manuell erstellte Messungen, Planüberlagerungen und Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Speichern Sie Ihre PDF-Datei und öffnen Sie sie in der Desktop-App. Dateien werden nicht automatisch übertragen.",
+    "Download for macOS": "Für macOS herunterladen",
+    "Download for Windows": "Für Windows herunterladen",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Für macOS 14+ oder Windows 10/11 mit 64 Bit. Desktop-Installationsprogramme laufen nicht auf Smartphones oder Tablets.",
+    "Desktop workflow": "Desktop-Arbeitsablauf",
+    "See a measured drawing and worksheet": "Einen vermessenen Plan und die Mengentabelle ansehen",
+    "(English)": "(Englisch)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

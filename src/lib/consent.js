@@ -60,6 +60,9 @@ export function clearOptionalStorage({ analytics = false, marketing = false } = 
       }
     });
   } catch { /* Browsing and checkout work without storage. */ }
+  if (!analytics) {
+    try { window.sessionStorage.removeItem('polypdf.analytics-visit.v1'); } catch { /* Unavailable storage. */ }
+  }
   const names = document.cookie.split(';').map((cookie) => cookie.trim().split('=')[0]);
   const hosts = window.location.hostname.split('.');
   const domains = ['', ...hosts.map((_, i) => hosts.slice(i).join('.')).filter((host) => host.includes('.'))];

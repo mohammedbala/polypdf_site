@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Kenar boşlukları görüntüye yer bırakmaz.",
     "Margins must leave a visible page area.": "Kenar boşlukları görünür bir sayfa alanı bırakmalıdır.",
     "Mark up": "İşaretle",
-    "Measure, take off, and review in PolyPDF.": "PolyPDF'de ölçün, çıkarın ve inceleyin.",
+    "Measure, take off, and review in PolyPDF.": "PolyPDF ile çizimleri ölçün, metraj çıkarın ve inceleyin.",
     "Merge & organize pages": "Sayfaları birleştirme ve düzenleme",
     "Merge PDF": "PDF'yi birleştir",
     "Merge PDF Online — Combine Files Free | PolyPDF": "PDF Çevrimiçi Birleştir — Dosyaları Ücretsiz Birleştir | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "dosya",
     "files": "dosyalar",
     "is-dragging": "sürüklüyor",
-    "page": "sayfa"
+    "page": "sayfa",
+    "PDF takeoff": "PDF üzerinden metraj",
+    "PDF measurement": "PDF ölçümü",
+    "Construction PDF markup": "İnşaat PDF çizimlerine not ekleme",
+    "Visual drawing comparison": "Görsel çizim karşılaştırması",
+    "Working with construction drawings?": "İnşaat çizimleriyle mi çalışıyorsunuz?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: kalibrasyon, not ekleme ve belge başına elle oluşturulan en fazla 3 ölçüm.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: sınırsız elle oluşturulan ölçüm, çizim bindirmeleri ve Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "PDF dosyanızı kaydedin, ardından masaüstü uygulamasında açın. Dosyalar otomatik olarak aktarılmaz.",
+    "Download for macOS": "macOS için indir",
+    "Download for Windows": "Windows için indir",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "macOS 14+ veya 64 bit Windows 10/11 içindir. Masaüstü yükleyicileri telefon veya tabletlerde çalışmaz.",
+    "Desktop workflow": "Masaüstü iş akışı",
+    "See a measured drawing and worksheet": "Ölçülmüş bir çizimi ve metraj tablosunu görün",
+    "(English)": "(İngilizce)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

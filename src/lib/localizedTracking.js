@@ -43,8 +43,16 @@ if (root) {
     const url=new URL(link.href,location.href);
     if(url.origin!==location.origin) return;
     const platform = url.pathname === '/downloads/PolyPDFMac.dmg' ? 'mac' : url.pathname === '/downloads/windows/PolyPDFSetup.exe' ? 'windows' : null;
-    if(platform) trackEvent('download_click',{source:'localized_content',platform});
-    else if(url.pathname.startsWith('/samples/') && /\.(pdf|csv)$/.test(url.pathname)) trackEvent('sample_download',{source:'localized_content',feature:'practice_file'});
+    if(platform) {
+      trackEvent('download_click',{source:'localized_content',platform});
+      link.closest('.dl-cta')?.querySelector('.dl-evaluation details')?.setAttribute('open','');
+    }
+    else if(url.pathname.startsWith('/samples/') && /\.(pdf|csv)$/.test(url.pathname)) trackEvent('sample_download',{source:'localized_content',feature:link.closest('.dl-evaluation') ? 'download_evaluation' : 'practice_file'});
+    else if(link.closest('.dl-evaluation') && ['guide','evidence','plans'].includes(link.dataset.evaluationTarget)) trackEvent('download_evaluation_click',{source:'localized_content',target:link.dataset.evaluationTarget});
   });
+  document.addEventListener('toggle', e => {
+    if(e.target.matches?.('.dl-evaluation details') && e.target.open)
+      trackEvent('download_evaluation_open',{source:'localized_content'});
+  },true);
   update();
 }

@@ -1,7 +1,7 @@
 import { trackEvent, trackVerifiedPurchase } from './analytics';
 import { saveConsent } from './consent';
 const purchase = { status: 'paid', transaction_id: 'pi_paid_123', value: 49.99, currency: 'usd' };
-beforeEach(() => { window.localStorage.clear(); window.gtag = jest.fn(); });
+beforeEach(() => { window.localStorage.clear(); window.sessionStorage.clear(); window.gtag = jest.fn(); });
 afterEach(() => { delete window.gtag; });
 
 test('sends nothing and stores no purchase record before consent or after rejection', () => {
@@ -70,4 +70,25 @@ test('uses the dedicated destination once even when the old shared action was se
     send_to: 'AW-449436603/SnB-CKSb6okdELu3p9YB', transaction_id: purchase.transaction_id,
     value: 49.99, currency: 'USD'
   }));
+});
+
+test('carries observed AI acquisition through a download and verified purchase, only to analytics', () => {
+  saveConsent({ analytics: true, marketing: true });
+  Object.defineProperty(document, 'referrer', { configurable: true, value: 'https://chatgpt.com/c/private' });
+  window.history.replaceState({}, '', '/he/tools/fill-pdf-form/?utm_source=chatgpt.com#private');
+  trackEvent('download_click', { platform: 'mac', acquisition_source: 'untrusted' });
+  expect(window.gtag).toHaveBeenLastCalledWith('event', 'download_click', expect.objectContaining({
+    page_location: 'http://localhost/he/tools/fill-pdf-form/', entry_page: '/he/tools/fill-pdf-form/',
+    acquisition_channel: 'ai_referral', acquisition_source: 'chatgpt', acquisition_basis: 'campaign'
+  }));
+  window.history.replaceState({}, '', '/account/?session_id=private');
+  trackVerifiedPurchase({ ...purchase, transaction_id: 'pi_ai_referral' });
+  const paid = window.gtag.mock.calls.find(call => call[1] === 'purchase')[2];
+  const ad = window.gtag.mock.calls.find(call => call[1] === 'conversion')[2];
+  expect(paid.entry_page).toBe('/he/tools/fill-pdf-form/');
+  expect(paid.acquisition_source).toBe('chatgpt');
+  expect(ad).not.toHaveProperty('acquisition_source');
+  expect(JSON.stringify(window.gtag.mock.calls)).not.toMatch(/private|utm_source|untrusted/);
+  Object.defineProperty(document, 'referrer', { configurable: true, value: '' });
+  window.history.replaceState({}, '', '/');
 });

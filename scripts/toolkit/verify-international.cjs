@@ -62,6 +62,18 @@ for(const locale of locales) {
       const app=[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent)).find(s=>s['@type']==='WebApplication');
       assert(app,label);assert.equal(app.inLanguage,locale.language,label);assert.equal(app.url,origin+entry.route,label);assert.equal(app.description,dictionary.strings[tool.answer],label);assert.equal(app.offers.price,'0',label);
       assert(d.querySelector('.pdf-workspace button'),label+' working tool controls');controls++;
+      const handoff=d.querySelector('.pdf-desktop-cta');assert(handoff,label+' construction handoff');
+      assert(handoff.textContent.includes(dictionary.strings['Free: calibration, markup, and up to 3 hand-created measurements per document.']),label+' translated edition limit');
+      assert.deepEqual([...handoff.querySelectorAll('a[download]')].map(a=>a.getAttribute('href')),['/downloads/PolyPDFMac.dmg','/downloads/windows/PolyPDFSetup.exe'],label+' direct desktop builds');
+      assert.equal(handoff.querySelectorAll('.pdf-desktop-links a').length,3,label+' workflow, proof and pricing');
+      assert.equal(d.querySelectorAll('#pdf-desktop-title').length,1,label+' unique handoff title');
+      for(const a of handoff.querySelectorAll('.pdf-desktop-links a')) {
+        const url=new URL(a.getAttribute('href'),origin);const file=path.join(build,url.pathname,'index.html');
+        assert(fs.existsSync(file),label+' handoff destination '+url.pathname);
+        if(url.hash){const target=new JSDOM(fs.readFileSync(file,'utf8'));assert(target.window.document.getElementById(url.hash.slice(1)),label+' handoff fragment '+url.hash);target.window.close();}
+        if(!url.pathname.startsWith('/'+locale.id+'/'))assert.equal(a.hreflang,'en',label+' English-only destination identified');
+      }
+
       assert(fs.existsSync(path.join(build,'tools/icons',tool.id+'.svg')),label);assert(fs.existsSync(path.join(build,'tools/social',tool.id+'.png')),label);
     } else if(entry.source==='/tools')assert.equal(d.querySelectorAll('.pdf-tool-card').length,36,label);
     const walker=d.createTreeWalker(d.getElementById('root'),4);

@@ -6,6 +6,7 @@ import catalog from "../toolkit/catalog.json";
 import pageContent from "../toolkit/page-content.json";
 import { trackEvent } from "../lib/analytics";
 import { buyPath } from "../lib/attribution";
+import { DOWNLOADS } from "../lib/platform";
 import "./PdfTools.css";
 import PdfToolIcon from './PdfToolIcon';
 import { ToolkitHeader } from './ToolkitChrome';
@@ -34,6 +35,66 @@ function PrivacyLine() {
       <LockSimple size={16} aria-hidden="true" /> Files are processed on this
       device. No upload, account, or subscription.
     </p>, language);
+}
+// A browser result is not a desktop document handoff. Keep the PDF download first,
+// and offer an explicit, optional construction workflow without moving file bytes.
+const drawingWorkflows = {
+  takeoff: { path: "/pdf-takeoff-software/", label: "PDF takeoff" },
+  measurement: { path: "/pdf-measuring-tool/", label: "PDF measurement" },
+  markup: { path: "/construction-pdf-markup/", label: "Construction PDF markup" },
+  comparison: { path: "/compare-pdf-drawings/", label: "Visual drawing comparison" }
+};
+const drawingWorkflow = tool => drawingWorkflows[tool.id === "compare-pdf-text" ? "comparison"
+  : ["crop-pdf", "resize-pdf", "add-pdf-margins", "inspect-pdf"].includes(tool.id) ? "measurement"
+  : tool.category === "Mark up" || tool.id === "remove-pdf-annotations" ? "markup" : "takeoff"];
+export function PdfDrawingHandoff({ tool, compact = false }) {
+  const language = useToolkitLanguage();
+  const workflow = drawingWorkflow(tool);
+  const section = compact ? "result" : "guide";
+  const click = target => trackEvent("desktop_workflow_click", {
+    source: "browser_tools", feature: tool.id, section, target
+  });
+  const englishNote = language ? <small>({language.t ? language.t("English") : translateText("English", language)})</small> : null;
+  const guideIsEnglish = !!language && localizedHref(workflow.path, language) === workflow.path;
+  const guide = <Link to={workflow.path} hrefLang={guideIsEnglish ? "en" : undefined} onClick={() => click("workflow")}>
+    {workflow.label} {guideIsEnglish && englishNote} <ArrowRight size={17} aria-hidden="true" />
+  </Link>;
+  if (compact) return localizeView(<aside className="pdf-result-handoff" aria-label="Desktop workflow">
+    <p>Working with construction drawings?</p>
+    {guide}
+  </aside>, language);
+  return localizeView(<section className="pdf-desktop-cta" aria-labelledby="pdf-desktop-title">
+    <div>
+      <p className="pdf-eyebrow">WHEN THE FILE IS A DRAWING</p>
+      <h2 id="pdf-desktop-title">Measure, take off, and review in PolyPDF.</h2>
+      <p>Continue with calibrated measurements and construction markup on Mac and Windows.</p>
+      <ul className="pdf-desktop-editions">
+        <li>Free: calibration, markup, and up to 3 hand-created measurements per document.</li>
+        <li>Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.</li>
+      </ul>
+      <p className="pdf-desktop-note">Save your PDF, then open it in the desktop app. Files are not transferred automatically.</p>
+    </div>
+    <div className="pdf-desktop-actions">
+      <div className="pdf-desktop-downloads">
+        {Object.values(DOWNLOADS).map(platform => <a key={platform.key}
+          className="pdf-primary" href={platform.url} download
+          onClick={() => trackEvent("download_click", { source: "browser_tools", feature: tool.id, section: "desktop_guide", platform: platform.key })}>
+          {platform.key === "mac" ? "Download for macOS" : "Download for Windows"}
+          <DownloadSimple size={18} aria-hidden="true" />
+        </a>)}
+      </div>
+      <p className="pdf-desktop-note">For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.</p>
+      <nav className="pdf-desktop-links" aria-label="Desktop workflow">
+        {guide}
+        <Link to="/product-facts/#verified-construction-example" hrefLang={language && localizedHref("/product-facts/", language) === "/product-facts/" ? "en" : undefined} onClick={() => click("measured_example")}>
+          See a measured drawing and worksheet {language && localizedHref("/product-facts/", language) === "/product-facts/" && englishNote} <ArrowRight size={17} aria-hidden="true" />
+        </Link>
+        <Link to={buyPath("browser_tools")} hrefLang="en" onClick={() => click("pricing")}>
+          Compare Pro pricing {englishNote} <ArrowRight size={17} aria-hidden="true" />
+        </Link>
+      </nav>
+    </div>
+  </section>, language);
 }
 export function PdfToolsHub() {
   const language = useToolkitLanguage();
@@ -786,6 +847,7 @@ function Workspace({
               Need another step? <Link to="/tools/">Choose another tool</Link>.
               Your source files stay in this tab until cleared.
             </p>
+            <PdfDrawingHandoff tool={tool} compact />
           </section>}
         <PdfPreview file={preview} label={result ? "Result preview" : "Source preview"} page={page} setPage={setPage} />
         {first?.info && tool.id === "inspect-pdf" && <p>
@@ -844,6 +906,7 @@ export function PdfToolPage() {
             </p>
           </div>
         </section>
+        <PdfDrawingHandoff tool={tool} />
         <section className="pdf-answers">
           <h2>About {tool.name}</h2>
           {content.faqs.map(([question, answer]) => <details key={question}>
@@ -894,24 +957,7 @@ export function PdfToolPage() {
           })}
           </div>
         </section>
-        <section className="pdf-desktop-cta">
-          <div>
-            <p className="pdf-eyebrow">WHEN THE FILE IS A DRAWING</p>
-            <h2>Measure, take off, and review in PolyPDF.</h2>
-            <p>
-              Continue with calibrated measurements and construction markup on
-              Mac and Windows.
-            </p>
-          </div>
-          <div>
-            <Link className="pdf-primary" to="/#download">
-              Get PolyPDF
-            </Link>
-            <Link to={buyPath("browser_tools")}>
-              Compare Pro pricing <ArrowRight size={17} />
-            </Link>
-          </div>
-        </section>
+
       </main>
     </div>, language);
 }

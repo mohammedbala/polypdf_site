@@ -5,9 +5,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { JSDOM, VirtualConsole } = require('jsdom');
 const build = path.resolve(process.env.BUILD_PATH || 'build');
-function page(signal = false) {
+function page(signal = false, referrer = '') {
   const html = fs.readFileSync(path.join(build, 'es/pdf-takeoff-software/index.html'), 'utf8');
-  const dom = new JSDOM(html, { url: 'https://www.polypdf.com/es/pdf-takeoff-software/?private=never-send', runScripts: 'outside-only', virtualConsole: new VirtualConsole() });
+  const dom = new JSDOM(html, { url: 'https://www.polypdf.com/es/pdf-takeoff-software/?private=never-send', referrer: referrer || undefined, runScripts: 'outside-only', virtualConsole: new VirtualConsole() });
   const w = dom.window;
   w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
   w.HTMLDialogElement.prototype.close = function () { this.open = false; };
@@ -54,5 +54,52 @@ test('GPC disables optional categories and the accept button', () => {
   assert.equal(d.querySelector('[data-consent-action=accept]').disabled, true);
   assert.equal(d.querySelector('[data-privacy-signal]').hidden, false);
   assert.equal(d.querySelector('#polypdf-google-tag'), null);
+  dom.window.close();
+});
+
+test('built translated tracking carries safe AI referral context into a download and purges it on rejection', () => {
+  const dom = page(false, 'https://perplexity.ai/search/private-question?token=secret');
+  const w = dom.window, d = w.document;
+  d.querySelector('[data-consent-action=settings]').click();
+  d.querySelector('[name=analytics]').checked = true;
+  d.querySelector('[data-consent-action=save]').click();
+  const view = w.dataLayer.find(item => item[1] === 'page_view');
+  assert.equal(view[2].entry_page, '/es/pdf-takeoff-software/');
+  assert.equal(view[2].acquisition_source, 'perplexity');
+  assert.equal(view[2].acquisition_channel, 'ai_referral');
+  assert.equal(view[2].acquisition_basis, 'referrer');
+  const download = d.querySelector('a[href="/downloads/PolyPDFMac.dmg"]');
+  download.addEventListener('click', event => event.preventDefault()); download.click();
+  const event = w.dataLayer.find(item => item[1] === 'download_click');
+  assert.equal(event[2].entry_page, '/es/pdf-takeoff-software/');
+  assert.equal(event[2].acquisition_source, 'perplexity');
+  assert.doesNotMatch(JSON.stringify(w.dataLayer), /private-question|token=secret|private=never-send/);
+  assert.equal(JSON.parse(w.sessionStorage.getItem('polypdf.analytics-visit.v1')).context.acquisition_source, 'perplexity');
+  d.querySelector('[data-consent-action=reject]').click();
+  assert.equal(w.sessionStorage.getItem('polypdf.analytics-visit.v1'), null);
+  assert.equal(w.gtag, undefined);
+  dom.window.close();
+});
+
+test('translated installer clicks open the native exercise and keep sample and guide events distinct', () => {
+  const dom = page(); const w = dom.window, d = w.document;
+  const download = d.querySelector('a[href="/downloads/PolyPDFMac.dmg"]');
+  const exercise = download.closest('.dl-cta').querySelector('.dl-evaluation');
+  const details = exercise.querySelector('details');
+  const sample = exercise.querySelector('a[download]');
+  const guide = exercise.querySelector('[data-evaluation-target="guide"]');
+  for(const a of [download,sample,guide]) a.addEventListener('click',e=>e.preventDefault());
+  assert.equal(details.open,false);
+  download.click(); sample.click(); guide.click();
+  assert.equal(details.open,true);
+  assert.equal(w.dataLayer,undefined);
+  d.querySelector('[data-consent-action=settings]').click();
+  d.querySelector('[name=analytics]').checked = true;
+  d.querySelector('[data-consent-action=save]').click();
+  download.click(); sample.click(); guide.click();
+  assert.equal(w.dataLayer.filter(c=>c[1]==='download_click').length,1);
+  assert.equal(w.dataLayer.find(c=>c[1]==='sample_download')[2].feature,'download_evaluation');
+  assert.equal(w.dataLayer.find(c=>c[1]==='download_evaluation_click')[2].target,'guide');
+  assert.equal(w.dataLayer.some(c=>['purchase','conversion','browser_tool_complete'].includes(c[1])),false);
   dom.window.close();
 });

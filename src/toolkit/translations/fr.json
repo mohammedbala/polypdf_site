@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Les marges ne laissent aucune place à l'image.",
     "Margins must leave a visible page area.": "Les marges doivent laisser une zone de page visible.",
     "Mark up": "Annoter",
-    "Measure, take off, and review in PolyPDF.": "Mesurez, décollez et examinez dans PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Mesurez, réalisez vos métrés et révisez vos plans dans PolyPDF.",
     "Merge & organize pages": "Fusionner et organiser des pages",
     "Merge PDF": "Fusionner un PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Fusionner des PDF en ligne — Combiner des fichiers gratuitement | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "fichier",
     "files": "fichiers",
     "is-dragging": "traîne",
-    "page": "page"
+    "page": "page",
+    "PDF takeoff": "Métré sur PDF",
+    "PDF measurement": "Mesure sur PDF",
+    "Construction PDF markup": "Annotation de plans de construction PDF",
+    "Visual drawing comparison": "Comparaison visuelle de plans",
+    "Working with construction drawings?": "Vous travaillez avec des plans de construction ?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free : étalonnage, annotations et jusqu’à 3 mesures créées manuellement par document.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro : mesures manuelles illimitées, superposition de plans et Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Enregistrez votre PDF, puis ouvrez-le dans l’application de bureau. Les fichiers ne sont pas transférés automatiquement.",
+    "Download for macOS": "Télécharger pour macOS",
+    "Download for Windows": "Télécharger pour Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Pour macOS 14+ ou Windows 10/11 64 bits. Les programmes d’installation de bureau ne fonctionnent pas sur téléphone ou tablette.",
+    "Desktop workflow": "Flux de travail sur ordinateur",
+    "See a measured drawing and worksheet": "Voir un plan mesuré et sa feuille de quantités",
+    "(English)": "(anglais)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

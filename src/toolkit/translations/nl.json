@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Marges laten geen ruimte voor de afbeelding.",
     "Margins must leave a visible page area.": "Marges moeten een zichtbaar paginagebied achterlaten.",
     "Mark up": "Markeer",
-    "Measure, take off, and review in PolyPDF.": "Meten, opstijgen en beoordelen in PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Meet, bepaal hoeveelheden en controleer tekeningen in PolyPDF.",
     "Merge & organize pages": "Pagina's samenvoegen en ordenen",
     "Merge PDF": "PDF samenvoegen",
     "Merge PDF Online — Combine Files Free | PolyPDF": "PDF online samenvoegen — Bestanden gratis combineren | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "bestand",
     "files": "bestanden",
     "is-dragging": "is-slepen",
-    "page": "pagina"
+    "page": "pagina",
+    "PDF takeoff": "Hoeveelheden bepalen in PDF",
+    "PDF measurement": "PDF meten",
+    "Construction PDF markup": "Bouwtekeningen in PDF annoteren",
+    "Visual drawing comparison": "Tekeningen visueel vergelijken",
+    "Working with construction drawings?": "Werkt u met bouwtekeningen?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: kalibratie, annotaties en maximaal 3 handmatig gemaakte metingen per document.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: onbeperkte handmatige metingen, tekeningoverlays en Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Sla uw PDF op en open deze vervolgens in de desktopapp. Bestanden worden niet automatisch overgedragen.",
+    "Download for macOS": "Downloaden voor macOS",
+    "Download for Windows": "Downloaden voor Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Voor macOS 14+ of 64-bits Windows 10/11. Desktopinstallatieprogramma’s werken niet op telefoons of tablets.",
+    "Desktop workflow": "Desktopwerkproces",
+    "See a measured drawing and worksheet": "Bekijk een opgemeten tekening en de hoeveelhedenstaat",
+    "(English)": "(Engels)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "Поля не залишають місця для зображення.",
     "Margins must leave a visible page area.": "Поля мають залишати видиму область сторінки.",
     "Mark up": "Розмітка",
-    "Measure, take off, and review in PolyPDF.": "Вимірюйте, знімайте та переглядайте в PolyPDF.",
+    "Measure, take off, and review in PolyPDF.": "Вимірюйте креслення, підраховуйте обсяги та перевіряйте плани в PolyPDF.",
     "Merge & organize pages": "Об’єднайте та впорядкуйте сторінки",
     "Merge PDF": "Об’єднати PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "Об’єднайте PDF онлайн — об’єднайте файли безкоштовно | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "файл",
     "files": "файли",
     "is-dragging": "є-перетягування",
-    "page": "сторінки"
+    "page": "сторінки",
+    "PDF takeoff": "Підрахунок обсягів за PDF",
+    "PDF measurement": "Вимірювання в PDF",
+    "Construction PDF markup": "Анотації на будівельних PDF-кресленнях",
+    "Visual drawing comparison": "Візуальне порівняння креслень",
+    "Working with construction drawings?": "Працюєте з будівельними кресленнями?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: калібрування, анотації та до 3 вимірювань, створених вручну, на документ.",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: необмежена кількість ручних вимірювань, накладання креслень і Symbol Search.",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "Збережіть PDF, а потім відкрийте його в настільному застосунку. Файли не передаються автоматично.",
+    "Download for macOS": "Завантажити для macOS",
+    "Download for Windows": "Завантажити для Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "Для macOS 14+ або 64-бітної Windows 10/11. Настільні інсталятори не працюють на телефонах чи планшетах.",
+    "Desktop workflow": "Робота в настільному застосунку",
+    "See a measured drawing and worksheet": "Переглянути виміряне креслення та відомість обсягів",
+    "(English)": "(англійська)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

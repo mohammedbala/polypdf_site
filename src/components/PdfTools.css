@@ -1116,3 +1116,25 @@
   .pdf-localized-nav nav > div { gap:10px 18px; }
   .pdf-localized-nav nav > div a { font-size:14px; line-height:1.5; }
 }
+
+/* Construction next steps remain secondary to the browser result download. */
+.pdf-result-handoff { border-top:1px solid var(--pdf-line); margin-top:22px; padding-top:16px; }
+.pdf-result-handoff p { margin:0 0 8px; font-size:14px; color:var(--pdf-muted); }
+.pdf-result-handoff a,.pdf-desktop-links a { display:inline-flex; align-items:center; gap:8px; color:var(--pdf-accent); text-underline-offset:3px; }
+.pdf-result-handoff a { min-height:44px; }
+.pdf-desktop-cta { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); align-items:start; }
+.pdf-desktop-cta > div { min-width:0; }
+.pdf-desktop-editions { padding-inline-start:20px; margin:18px 0; }
+.pdf-desktop-editions li { margin:8px 0; line-height:1.65; }
+.pdf-desktop-cta .pdf-desktop-note { font-size:14px; line-height:1.65; color:var(--pdf-muted); }
+.pdf-desktop-downloads { display:flex; flex-wrap:wrap; gap:10px; width:100%; }
+.pdf-desktop-downloads .pdf-primary { white-space:normal; text-align:start; min-height:48px; }
+.pdf-desktop-links { display:grid; gap:10px; justify-items:start; }
+.pdf-desktop-links a { min-height:44px; }
+.pdf-desktop-links svg,.pdf-result-handoff svg { flex:none; }
+.pdf-toolkit-localized[dir=rtl] :is(.pdf-desktop-links,.pdf-result-handoff) a > svg { transform:scaleX(-1); }
+@media(max-width:767px) {
+  .pdf-desktop-cta { display:block; }
+  .pdf-desktop-downloads { flex-direction:column; align-items:stretch; }
+  .pdf-desktop-downloads .pdf-primary { justify-content:space-between; width:100%; box-sizing:border-box; }
+}

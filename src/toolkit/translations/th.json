@@ -540,7 +540,7 @@
     "Margins leave no room for the image.": "ขอบไม่มีที่ว่างสำหรับรูปภาพ",
     "Margins must leave a visible page area.": "ขอบจะต้องเหลือพื้นที่หน้าที่มองเห็นได้",
     "Mark up": "ทำเครื่องหมาย",
-    "Measure, take off, and review in PolyPDF.": "วัด ถอด และตรวจสอบใน PolyPDF",
+    "Measure, take off, and review in PolyPDF.": "วัดแบบ ถอดปริมาณ และตรวจสอบแบบใน PolyPDF",
     "Merge & organize pages": "ผสานและจัดระเบียบเพจ",
     "Merge PDF": "รวม PDF",
     "Merge PDF Online — Combine Files Free | PolyPDF": "รวม PDF ออนไลน์ — รวมไฟล์ฟรี | PolyPDF",
@@ -1011,7 +1011,22 @@
     "file": "ไฟล์",
     "files": "ไฟล์",
     "is-dragging": "กำลังลาก",
-    "page": "หน้า"
+    "page": "หน้า",
+    "PDF takeoff": "ถอดปริมาณจาก PDF",
+    "PDF measurement": "วัดระยะใน PDF",
+    "Construction PDF markup": "ใส่คำอธิบายบนแบบก่อสร้าง PDF",
+    "Visual drawing comparison": "เปรียบเทียบแบบด้วยภาพ",
+    "Working with construction drawings?": "กำลังทำงานกับแบบก่อสร้างอยู่ใช่ไหม?",
+    "Free: calibration, markup, and up to 3 hand-created measurements per document.": "Free: ปรับเทียบมาตราส่วน ใส่คำอธิบาย และสร้างการวัดด้วยตนเองได้สูงสุด 3 รายการต่อเอกสาร",
+    "Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.": "Pro: สร้างการวัดด้วยตนเองได้ไม่จำกัด ซ้อนทับแบบ และใช้ Symbol Search",
+    "Save your PDF, then open it in the desktop app. Files are not transferred automatically.": "บันทึก PDF แล้วเปิดในแอปเดสก์ท็อป ไฟล์จะไม่ถูกโอนโดยอัตโนมัติ",
+    "Download for macOS": "ดาวน์โหลดสำหรับ macOS",
+    "Download for Windows": "ดาวน์โหลดสำหรับ Windows",
+    "For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.": "สำหรับ macOS 14+ หรือ Windows 10/11 แบบ 64 บิต โปรแกรมติดตั้งเดสก์ท็อปไม่ทำงานบนโทรศัพท์หรือแท็บเล็ต",
+    "Desktop workflow": "ขั้นตอนการทำงานบนเดสก์ท็อป",
+    "See a measured drawing and worksheet": "ดูแบบที่วัดแล้วและตารางปริมาณ",
+    "(English)": "(อังกฤษ)",
+    "en": "en"
   },
-  "sourceHash": "90eb9dbc276637257d1124eff347e85ccae616164b36e75b76ff5b30d240ee9a"
+  "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

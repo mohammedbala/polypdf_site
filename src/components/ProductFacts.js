@@ -5,20 +5,37 @@ import { DOWNLOADS } from '../lib/platform';
 import { commercialOffer, licenseRightsText } from '../lib/commercialOffer';
 import siteRelease from '../lib/siteRelease.json';
 import EvaluationKit from './EvaluationKit';
+import catalog from '../toolkit/catalog.json';
 
 export default function ProductFacts() {
-  return <ResourceLayout eyebrow="Product reference · Reviewed October 17, 2026" title="PolyPDF: product facts and limits" intro="PolyPDF is desktop PDF measurement, takeoff, markup, and drawing-review software for construction professionals on Mac and Windows. Published by Euclidean Software LLC.">
+  return <ResourceLayout eyebrow="Product reference · Reviewed November 1, 2026" title="PolyPDF: product facts and limits" intro="PolyPDF is desktop PDF measurement, takeoff, markup, and drawing-review software for construction professionals on Mac and Windows. Published by Euclidean Software LLC.">
     <nav className="product-facts-contents" aria-label="On this page">
-      <a href="#platforms">Platforms</a><a href="#free-and-pro">Free and Pro</a><a href="#workflows">Workflows</a><a href="#local-processing">Local processing</a><a href="#compatibility">Compatibility</a><a href="#evidence">Examples and verification</a><a href="#evaluation-kit">Evaluation kit</a>
+      <a href="#choose-your-workflow">Browser or desktop?</a><a href="#platforms">Platforms</a><a href="#browser-limits">Browser limits</a><a href="#free-and-pro">Free and Pro</a><a href="#workflows">Workflows</a><a href="#local-processing">Local processing</a><a href="#compatibility">Compatibility</a><a href="#evidence">Examples and verification</a><a href="#evaluation-kit">Evaluation kit</a>
     </nav>
+    <section className="product-facts-section" aria-labelledby="choose-your-workflow">
+      <h2 id="choose-your-workflow">Should you use the browser tools or the desktop app?</h2>
+      <p>Use PolyPDF’s {catalog.length} free browser tools to merge, split, convert, organize, or fill PDF files without an account or a PDF upload. Choose the Mac or Windows desktop app for calibrated construction measurements, quantity takeoff, drawing overlays, and detailed markup. The browser tools do not measure quantities from drawings.</p>
+      <dl className="product-facts-list">
+        <div><dt>Prepare a PDF in your browser</dt><dd><Link to="/tools/merge-pdf/">Merge a drawing set</Link>, <Link to="/tools/extract-pdf-pages/">extract pages</Link>, <Link to="/tools/fill-pdf-form/">fill an existing form</Link>, or <Link to="/tools/pdf-to-webp/">convert pages to WebP</Link>. All {catalog.length} tools are free, with no daily download counter. <Link to="/tools/">Browse the complete PDF toolbox</Link>.</dd></div>
+        <div><dt>Measure construction drawings</dt><dd>Download the desktop app, calibrate against a known dimension, and check a second span. Free includes 3 hand-created measurements per document. Pro removes that cap and unlocks Pro workflows. <Link to="/pdf-takeoff-software/#try-a-takeoff">Try the three-measurement takeoff</Link>.</dd></div>
+        <div><dt>Choose a Pro license</dt><dd>Personal Pro is {commercialOffer.price} USD once for PolyPDF 1.x on up to 3 Mac or Windows computers. Future major upgrades may be paid. Browser tools remain free and do not require Pro. <Link to="/buy/">Review the current purchase terms</Link>.</dd></div>
+        <div><dt>Automate PDF preparation</dt><dd>The <Link to="/tools/automation/">downloadable local MCP server</Link> exposes the same {catalog.length} operations with structured inputs and file limits. It requires Node.js and an MCP client; it is separate from the desktop app and the hosted connector.</dd></div>
+      </dl>
+    </section>
     <section className="product-facts-section" aria-labelledby="platforms">
       <h2 id="platforms">Which platforms does PolyPDF support?</h2>
       <dl className="product-facts-list">
         <div><dt>Mac</dt><dd>{DOWNLOADS.mac.requirements}. <a href={DOWNLOADS.mac.url} download>Download the Mac app</a>.</dd></div>
         <div><dt>Windows</dt><dd>{DOWNLOADS.windows.requirements}. <Link to="/windows/">Windows installation and download</Link>.</dd></div>
         <div><dt>Release reference</dt><dd>PolyPDF {siteRelease.version}, build {siteRelease.build}, released {siteRelease.releaseDate}. <Link to="/versions/">Check the live release feeds and version history</Link>.</dd></div>
-        <div><dt>Browser tools</dt><dd>The <Link to="/tools/flooring-waste-calculator/">flooring waste calculator</Link> runs in a browser using quantities you enter. PDF measurement takes place in the desktop app. The desktop installers do not run on iPhone, iPad, Android, or Linux.</dd></div>
+        <div><dt>Browser tools</dt><dd>The <Link to="/tools/">free browser PDF toolbox</Link> runs in a modern browser without installing the desktop app. Resource limits apply. The separate <Link to="/tools/flooring-waste-calculator/">flooring waste calculator</Link> uses quantities you enter. Desktop installers do not run on iPhone, iPad, Android, or Linux.</dd></div>
       </dl>
+    </section>
+    <section className="product-facts-section" aria-labelledby="browser-limits">
+      <h2 id="browser-limits">What are the free browser tools’ limits?</h2>
+      <p>Inputs are limited to 30 MB per file, 80 MB combined, and 500 PDF pages. Image rendering is limited to 100 pages per operation and 16 megapixels per page; combined output is capped at 120 MB. A large architectural sheet may exceed the rendering limit even when its file size is small.</p>
+      <p>Browser tools do not provide OCR, Office conversion, or encrypted-PDF processing. Edits to digitally signed documents are rejected. Text generation uses built-in Latin fonts and rejects unsupported characters. Each <Link to="/tools/">tool page</Link> explains its own supported inputs and limitations before you run it.</p>
+      <p>Browser files are processed in memory on your device. Clear the files or close the tab when finished; downloaded results remain where you save them. The separate hosted connector has its own processing and retention policy.</p>
     </section>
     <section className="product-facts-section" aria-labelledby="free-and-pro">
       <h2 id="free-and-pro">Is PolyPDF free, and what does Pro include?</h2>
@@ -57,7 +74,7 @@ export default function ProductFacts() {
       <p>The <a href="#verified-construction-example">Willow Creek A101 saved example</a> retained 96 ft, 60 ft, and 5,760 sq ft after save, reopen, and unit-switch checks in local Mac build 1.6.14 build 76. Download the actual saved PDF and exported CSV below; this is a local development build test.</p>
       <p>The <Link to="/samples/">sample library</Link> contains synthetic drawings and independently calculated reference quantities. Separate Mac app exports demonstrate <strong>408 sq ft of flooring</strong> and a <strong>42 ft electrical route</strong>, exported and reopened in PolyPDF 1.6.6 build 38. Electrical fixture counts remain reference quantities.</p>
       <p>These samples identify the app version and platform used. They do not establish Windows verification, current-release parity, or complete cross-viewer compatibility. Product demonstrations retain their own version labels. <a href="/samples/takeoff/README.md">Read the takeoff sample provenance</a>.</p>
-      <p>This reference was reviewed by the PolyPDF publisher on <time dateTime="2026-10-17">October 17, 2026</time> against the published product, licensing, privacy, release, and sample records linked above. For a correction or a question about your workflow, <a href="mailto:support@polypdf.com">contact support@polypdf.com</a>.</p>
+      <p>This reference was reviewed by the PolyPDF publisher on <time dateTime="2026-11-01">November 1, 2026</time> against the published product, licensing, privacy, release, and sample records linked above. For a correction or a question about your workflow, <a href="mailto:support@polypdf.com">contact support@polypdf.com</a>.</p>
     </section>
     <EvaluationKit/>
   </ResourceLayout>;
