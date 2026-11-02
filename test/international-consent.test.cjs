@@ -80,3 +80,26 @@ test('built translated tracking carries safe AI referral context into a download
   assert.equal(w.gtag, undefined);
   dom.window.close();
 });
+
+test('translated installer clicks open the native exercise and keep sample and guide events distinct', () => {
+  const dom = page(); const w = dom.window, d = w.document;
+  const download = d.querySelector('a[href="/downloads/PolyPDFMac.dmg"]');
+  const exercise = download.closest('.dl-cta').querySelector('.dl-evaluation');
+  const details = exercise.querySelector('details');
+  const sample = exercise.querySelector('a[download]');
+  const guide = exercise.querySelector('[data-evaluation-target="guide"]');
+  for(const a of [download,sample,guide]) a.addEventListener('click',e=>e.preventDefault());
+  assert.equal(details.open,false);
+  download.click(); sample.click(); guide.click();
+  assert.equal(details.open,true);
+  assert.equal(w.dataLayer,undefined);
+  d.querySelector('[data-consent-action=settings]').click();
+  d.querySelector('[name=analytics]').checked = true;
+  d.querySelector('[data-consent-action=save]').click();
+  download.click(); sample.click(); guide.click();
+  assert.equal(w.dataLayer.filter(c=>c[1]==='download_click').length,1);
+  assert.equal(w.dataLayer.find(c=>c[1]==='sample_download')[2].feature,'download_evaluation');
+  assert.equal(w.dataLayer.find(c=>c[1]==='download_evaluation_click')[2].target,'guide');
+  assert.equal(w.dataLayer.some(c=>['purchase','conversion','browser_tool_complete'].includes(c[1])),false);
+  dom.window.close();
+});

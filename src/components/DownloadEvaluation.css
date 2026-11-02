@@ -1,0 +1,42 @@
+/* Keep the optional practice path compact until requested, including without JavaScript. */
+.dl-evaluation {
+  width: 100%;
+  min-width: 0;
+  max-width: 56ch;
+  color: var(--gray-700);
+  text-align: start;
+  font-size: .9rem;
+  line-height: 1.6;
+}
+.dl-evaluation-status { margin: .5rem 0; }
+.dl-evaluation details { border-block: 1px solid #c9cfc8; }
+.dl-evaluation summary {
+  min-height: 44px;
+  padding: .65rem .15rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--gray-900);
+}
+.dl-evaluation summary:focus-visible,
+.dl-evaluation a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.dl-evaluation-body { padding: .25rem .15rem .85rem; overflow-wrap: anywhere; }
+.dl-evaluation .dl-evaluation-body p { margin: .5rem 0; font-size: inherit; line-height: inherit; color: inherit; }
+.dl-evaluation-body :is(ol, ul) { padding-inline-start: 1.35rem; margin: .75rem 0; display: grid; gap: .55rem; }
+.dl-evaluation-links { display: flex; flex-wrap: wrap; gap: .1rem 1rem; }
+.dl-evaluation-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: .2rem;
+}
+.dl-evaluation-body .dl-evaluation-scope { font-size: .82rem; }
+.dl-evaluation.on-dark { color: rgba(255,255,255,.9); }
+.dl-evaluation.on-dark summary { color: #fff; }
+.dl-evaluation.on-dark details { border-color: rgba(255,255,255,.35); }
+@media (max-width: 640px) {
+  .dl-evaluation { max-width: 100%; }
+  .dl-evaluation-links { flex-direction: column; align-items: flex-start; }
+}

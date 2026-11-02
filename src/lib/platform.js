@@ -29,7 +29,10 @@ export function detectPlatform() {
   const uaData = navigator.userAgentData;
   const source = `${uaData?.platform ?? ''} ${navigator.platform ?? ''} ${navigator.userAgent ?? ''}`;
   // iPhones/iPads report Mac-like strings but cannot run the app; treat mobile as unknown.
-  if (/iphone|ipad|android/i.test(source)) return null;
+  if (uaData?.mobile || /iphone|ipad|ipod|android/i.test(source)) return null;
+  // iPadOS desktop browsing deliberately reports MacIntel/Macintosh. A touch-capable
+  // Mac identity is an iPad, so it must keep the platform-neutral desktop choices.
+  if (/mac/i.test(source) && navigator.maxTouchPoints > 1) return null;
   if (/mac/i.test(source)) return 'mac';
   if (/win/i.test(source)) return 'windows';
   return null;
