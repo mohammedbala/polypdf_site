@@ -92,3 +92,20 @@ test('carries observed AI acquisition through a download and verified purchase, 
   Object.defineProperty(document, 'referrer', { configurable: true, value: '' });
   window.history.replaceState({}, '', '/');
 });
+
+test('CTA placement stays separate from the observed visit and native acquisition fields', () => {
+  saveConsent({ analytics: true });
+  Object.defineProperty(document, 'referrer', { configurable: true, value: 'https://www.google.com/search?q=private' });
+  window.history.replaceState({}, '', '/pdf-takeoff-software/');
+  trackEvent('download_click', { source: 'home_hero', platform: 'windows' });
+  const event = window.gtag.mock.calls[0][2];
+  expect(event.cta_source).toBe('home_hero');
+  expect(event).not.toHaveProperty('source');
+  expect(event).not.toHaveProperty('campaign_source');
+  expect(event.acquisition_source).toBe('google');
+  expect(event.acquisition_channel).toBe('google_referral');
+  expect(event.page_referrer).toBe('https://www.google.com/');
+  expect(JSON.stringify(event)).not.toContain('q=private');
+  Object.defineProperty(document, 'referrer', { configurable: true, value: '' });
+  window.history.replaceState({}, '', '/');
+});

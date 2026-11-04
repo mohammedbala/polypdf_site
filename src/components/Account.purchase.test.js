@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { MemoryRouter } from 'react-router';
 import Account from './Account';
 import { saveConsent } from '../lib/consent';
+import { trackEvent } from '../lib/analytics';
 
 let root;
 let container;
@@ -15,6 +16,7 @@ const mount = async (url = '/account/?checkout=success&session_id=cs_fixture_123
 beforeEach(() => {
   globalThis.IS_REACT_ACT_ENVIRONMENT = true;
   window.localStorage.clear();
+  window.sessionStorage.clear();
   window.gtag = jest.fn();
   window.scrollTo = jest.fn();
   container = document.createElement('div');
@@ -28,6 +30,8 @@ afterEach(() => {
   container.remove();
   delete global.fetch;
   delete window.gtag;
+  Object.defineProperty(document, 'referrer', { configurable: true, value: '' });
+  window.history.replaceState({}, '', '/');
   jest.useRealTimers();
   globalThis.IS_REACT_ACT_ENVIRONMENT = false;
 });
@@ -69,4 +73,32 @@ test.each([409, 404])('never reports a failed or unknown payment (HTTP %s)', asy
     ? response(status, { error: 'payment_not_verified' }) : response(200, { authenticated: false }));
   await mount();
   expect(window.gtag).not.toHaveBeenCalled();
+});
+
+test('a fixture checkout return preserves the original acquisition and deduplicates the verified transaction after remount', async () => {
+  saveConsent({ analytics: true });
+  window.history.replaceState({}, '', '/pdf-takeoff-software/?private=entry');
+  Object.defineProperty(document, 'referrer', { configurable: true, value: 'https://www.google.com/search?q=private' });
+  trackEvent('begin_checkout', { source: 'takeoff_plan_comparison' });
+  expect(window.gtag).toHaveBeenLastCalledWith('event', 'begin_checkout', expect.objectContaining({
+    cta_source: 'takeoff_plan_comparison', entry_page: '/pdf-takeoff-software/',
+    acquisition_source: 'google', acquisition_channel: 'google_referral'
+  }));
+  window.history.replaceState({}, '', '/account/?checkout=success&session_id=cs_fixture_12345');
+  Object.defineProperty(document, 'referrer', { configurable: true, value: 'https://checkout.stripe.com/c/pay/private' });
+  await mount();
+  const purchases = () => window.gtag.mock.calls.filter(call => call[1] === 'purchase');
+  expect(purchases()).toHaveLength(1);
+  expect(purchases()[0][2]).toEqual(expect.objectContaining({
+    transaction_id: paid.transaction_id, value: 74.95, currency: 'USD',
+    page_location: 'http://localhost/account/', entry_page: '/pdf-takeoff-software/',
+    acquisition_source: 'google', acquisition_channel: 'google_referral', acquisition_basis: 'referrer'
+  }));
+  expect(JSON.stringify(window.gtag.mock.calls)).not.toMatch(/cs_fixture|private/);
+  expect(purchases()[0][2].page_referrer).toBe('https://checkout.stripe.com/');
+  expect(window.gtag.mock.calls.some(call => call[1] === 'conversion')).toBe(false);
+  await act(async () => root.unmount());
+  root = createRoot(container);
+  await mount();
+  expect(purchases()).toHaveLength(1);
 });

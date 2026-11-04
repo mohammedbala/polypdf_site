@@ -9,6 +9,12 @@ export const ADS_PURCHASE_DESTINATION = `${ADS_ID}/SnB-CKSb6okdELu3p9YB`;
 let active = { analytics: false, marketing: false };
 let lastPage = '';
 
+// Identify deliberate QA without an identity or raw query value. GA4 filters remain a separate setting.
+export function analyticsDebugContext({ hostname = window.location.hostname, search = window.location.search } = {}) {
+  return ['localhost', '127.0.0.1', '[::1]'].includes(hostname)
+    || new URLSearchParams(search).get('measurement_debug') === '1' ? { debug_mode: true } : {};
+}
+
 // Never send query strings, fragments, magic-link tokens, checkout session IDs or referrer paths.
 export function safePageContext() {
   let referrer = '';
@@ -77,7 +83,7 @@ export function syncTracking({ reload = () => window.location.reload() } = {}) {
   if (choice.analytics && !active.analytics) {
     window[`ga-disable-${GA_ID}`] = false;
     window.gtag('config', GA_ID, {
-      ...safePageContext(), send_page_view: false, cookie_expires: 60 * 60 * 24 * 180,
+      ...safePageContext(), ...analyticsDebugContext(), send_page_view: false, cookie_expires: 60 * 60 * 24 * 180,
       cookie_update: false, allow_google_signals: false, allow_ad_personalization_signals: false
     });
   }
@@ -94,7 +100,7 @@ export function syncTracking({ reload = () => window.location.reload() } = {}) {
   }
   const pathname = window.location.pathname;
   if (choice.analytics && pathname !== lastPage && !/^\/account(?:\/|$)/.test(pathname)) {
-    window.gtag('event', 'page_view', { ...safePageContext(), ...acquisitionContext(), send_to: GA_ID });
+    window.gtag('event', 'page_view', { ...safePageContext(), ...analyticsDebugContext(), ...acquisitionContext(), send_to: GA_ID });
     lastPage = pathname;
   }
 }

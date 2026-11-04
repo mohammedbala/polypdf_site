@@ -20,6 +20,7 @@ for(const locale of locales) {
   }
   for(const key of source.strings){
     const value=dictionary.strings[key];assert.equal(typeof value,'string',`${locale.id}: ${key}`);assert(value.trim());
+    if(key.length>60 && /[a-z]{3} [a-z]{3}/i.test(key))assert.notEqual(value,key,`${locale.id}: English prose fallback: ${key}`);
     assert.deepEqual([...value.matchAll(/\{\d+\}/g)].map(m=>m[0]).sort(),[...key.matchAll(/\{\d+\}/g)].map(m=>m[0]).sort(),`${locale.id}: preserved template values: ${key}`);
     assert(!/ZXQ|QXZ|\[X\d{4}X\]/.test(value),`${locale.id}: no translation markers`);
     const terms=key.match(/(?<![A-Za-z])(?:PolyPDF|WebMCP|WebP|PDF|JPEG|JPG|PNG|MCP|JSON|CSV|ZIP|DPI|OCR|SVG|RGB|JavaScript|Node\.js)(?![A-Za-z])/g)||[];

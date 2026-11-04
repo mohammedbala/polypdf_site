@@ -1,7 +1,8 @@
 import { hasConsent } from './consent';
 import { acquisitionContext } from './acquisition';
-import { ADS_PURCHASE_DESTINATION, GA_ID, safeAdsPageContext, safePageContext } from './tracking';
+import { ADS_PURCHASE_DESTINATION, GA_ID, analyticsDebugContext, safeAdsPageContext, safePageContext } from './tracking';
 
+// CTA placement uses cta_source, separate from native acquisition source.
 // Keep events content-free even if a future caller passes form or URL data by mistake.
 const SAFE_PROPERTIES = new Set(['source', 'platform', 'page_variant', 'offer_id', 'app_version', 'provider', 'reason', 'feature', 'section', 'target', 'position']);
 export const trackEvent = (name, properties = {}) => {
@@ -10,9 +11,9 @@ export const trackEvent = (name, properties = {}) => {
   const safe = {};
   for (const [key, value] of Object.entries(properties)) {
     if (SAFE_PROPERTIES.has(key) && (typeof value === 'number' ||
-        (typeof value === 'string' && /^[a-z0-9._~-]{1,100}$/i.test(value)))) safe[key] = value;
+        (typeof value === 'string' && /^[a-z0-9._~-]{1,100}$/i.test(value)))) safe[key === 'source' ? 'cta_source' : key] = value;
   }
-  window.gtag('event', name, { ...safe, ...safePageContext(), ...acquisitionContext(), send_to: GA_ID });
+  window.gtag('event', name, { ...safe, ...safePageContext(), ...analyticsDebugContext(), ...acquisitionContext(), send_to: GA_ID });
   return true;
 };
 
@@ -58,7 +59,7 @@ export const trackVerifiedPurchase = (purchase) => {
   if (!normalized) return false;
   let sent = false;
   const providers = [
-    { category: 'analytics', prefix: 'polypdf.ga4.purchase.v2.', event: 'purchase', destination: GA_ID, context: safePageContext },
+    { category: 'analytics', prefix: 'polypdf.ga4.purchase.v2.', event: 'purchase', destination: GA_ID, context: () => ({ ...safePageContext(), ...analyticsDebugContext() }) },
     { category: 'marketing', prefix: 'polypdf.ads.purchase.v2.', event: 'conversion', destination: ADS_PURCHASE_DESTINATION, context: safeAdsPageContext }
   ];
   for (const provider of providers) {

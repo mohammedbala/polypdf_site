@@ -111,7 +111,7 @@ test('does not consume the play milestone before consent, then records a new pla
     video.dispatchEvent(new Event('play'));
   });
   expect(window.gtag).toHaveBeenCalledTimes(1);
-  expect(window.gtag).toHaveBeenCalledWith('event', 'workflow_demo_play', expect.objectContaining({ source: 'home_workflows', feature: 'takeoff' }));
+  expect(window.gtag).toHaveBeenCalledWith('event', 'workflow_demo_play', expect.objectContaining({ cta_source: 'home_workflows', feature: 'takeoff' }));
   view.unmount();
 });
 

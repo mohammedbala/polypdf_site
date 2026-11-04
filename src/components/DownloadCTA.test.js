@@ -53,7 +53,7 @@ test.each([
 test('the architectural exercise is in initial HTML, usable without JavaScript and within Free', () => {
   const html = renderToStaticMarkup(<DownloadCTA source="hero" />);
   node.innerHTML = html;
-  const details = node.querySelector('details');
+  const details = node.querySelector('.dl-evaluation details');
   expect(details.open).toBe(false);
   expect(details.querySelector('summary').textContent).toBe('Try a checked construction takeoff');
   expect([...details.querySelectorAll('ol li')]).toHaveLength(3);
@@ -63,7 +63,7 @@ test('the architectural exercise is in initial HTML, usable without JavaScript a
   expect(details.textContent).toContain('local Mac build 1.6.14 build 76');
   expect(details.textContent).toContain('not for construction');
   expect(details.querySelector('a[download]').getAttribute('href')).toBe('/samples/construction/02-Architectural-Revision-A.pdf');
-  expect(node.querySelector('[role="status"]')).toBeNull();
+  expect(node.querySelector('.dl-evaluation [role="status"]')).toBeNull();
 });
 
 test('an iPad keeps both desktop choices with an explicit desktop-only exercise', () => {
@@ -78,17 +78,17 @@ test('an iPad keeps both desktop choices with an explicit desktop-only exercise'
 test('installer intent opens the exercise and labels the request without claiming completion', () => {
   setNavigator({ platform: 'Win32', userAgent: 'Windows NT 10.0' });
   render();
-  expect(node.querySelector('details').open).toBe(false);
+  expect(node.querySelector('.dl-evaluation details').open).toBe(false);
   const installer = node.querySelector('.dl-primary-row a');
   expect(installer.getAttribute('href')).toBe(DOWNLOADS.windows.url);
   click(installer);
-  expect(node.querySelector('details').open).toBe(true);
-  expect(node.querySelector('[role="status"]').textContent).toContain('Download requested for Windows');
-  expect(node.querySelector('[role="status"]').textContent).not.toMatch(/completed|installed|activated/i);
+  expect(node.querySelector('.dl-evaluation details').open).toBe(true);
+  expect(node.querySelector('.dl-evaluation [role="status"]').textContent).toContain('Download requested for Windows');
+  expect(node.querySelector('.dl-evaluation [role="status"]').textContent).not.toMatch(/completed|installed|activated/i);
   expect(window.gtag).not.toHaveBeenCalled();
-  node.querySelector('details').open = false;
+  node.querySelector('.dl-evaluation details').open = false;
   click(installer);
-  expect(node.querySelector('details').open).toBe(true);
+  expect(node.querySelector('.dl-evaluation details').open).toBe(true);
 });
 
 test('installer, sample and guide intent remain separate and analytics consent is required', () => {
@@ -103,8 +103,8 @@ test('installer, sample and guide intent remain separate and analytics consent i
   click(installer); click(sample); click(guide);
   const events = window.gtag.mock.calls;
   expect(events.filter(c => c[1] === 'download_click')).toHaveLength(1);
-  expect(events.find(c => c[1] === 'download_click')[2]).toMatchObject({ source: 'hero', platform: 'mac' });
-  expect(events.find(c => c[1] === 'sample_download')[2]).toMatchObject({ source: 'hero', feature: 'download_evaluation' });
-  expect(events.find(c => c[1] === 'download_evaluation_click')[2]).toMatchObject({ source: 'hero', target: 'guide' });
+  expect(events.find(c => c[1] === 'download_click')[2]).toMatchObject({ cta_source: 'hero', platform: 'mac' });
+  expect(events.find(c => c[1] === 'sample_download')[2]).toMatchObject({ cta_source: 'hero', feature: 'download_evaluation' });
+  expect(events.find(c => c[1] === 'download_evaluation_click')[2]).toMatchObject({ cta_source: 'hero', target: 'guide' });
   expect(events.some(c => ['purchase', 'conversion', 'browser_tool_complete'].includes(c[1]))).toBe(false);
 });

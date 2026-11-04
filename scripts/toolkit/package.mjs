@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import { execFileSync } from "node:child_process";
+import assert from "node:assert/strict";
 import JSZip from "jszip";
 import { manifest } from "./manifest.mjs";
 const root = path.resolve("."),
@@ -24,17 +24,13 @@ await fs.writeFile(
   path.join(stage, "package.json"),
   JSON.stringify(pkg, null, 2) + "\n",
 );
-execFileSync(
-  "npm",
-  [
-    "install",
-    "--package-lock-only",
-    "--ignore-scripts",
-    "--no-audit",
-    "--no-fund",
-  ],
-  { cwd: stage, stdio: "pipe" },
-);
+// The distribution has its own committed lock; rebuilding a page must not resolve new transitive versions.
+const lockBytes = await fs.readFile(path.join(root, "scripts/toolkit/package-lock.json"));
+const lock = JSON.parse(lockBytes);
+assert.equal(lock.name, pkg.name, "MCP lock package name");
+assert.equal(lock.version, pkg.version, "MCP lock package version");
+assert.deepEqual(lock.packages[""].dependencies, pkg.dependencies, "Update the MCP distribution lock when dependencies change");
+await fs.writeFile(path.join(stage, "package-lock.json"), lockBytes);
 const zip = new JSZip(),
   folder = zip.folder("polypdf-browser-tools-mcp");
 for (const f of [

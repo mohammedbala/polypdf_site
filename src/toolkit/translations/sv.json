@@ -694,7 +694,7 @@
     "Ready when you are": "Klar när du är",
     "Rearrange pages with a clear, numbered page order.": "Ordna om sidorna med en tydlig, numrerad sidsekvens.",
     "Reduce size with a choice between structural and image compression.": "Minska storleken med ett val mellan strukturell komprimering och bildkomprimering.",
-    "Reduced drawing pages are for review; their printed scale changes.": "Reduced drawing pages are for review; their printed scale changes.",
+    "Reduced drawing pages are for review; their printed scale changes.": "Förminskade ritningssidor är avsedda för granskning; deras tryckta skala ändras.",
     "Reject": "Avvisa",
     "Reject optional cookies": "Avvisa valfria cookies",
     "Reload tools": "Ladda om verktyg",
@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Arbetsflöde på datorn",
     "See a measured drawing and worksheet": "Se en uppmätt ritning och mängdtabell",
     "(English)": "(engelska)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Öppna på datorn",
+    "Copy this link and open it on a Mac or Windows PC.": "Kopiera länken och öppna den på en Mac eller Windows-dator.",
+    "Desktop setup link": "Installationslänk för datorappen",
+    "Copy link": "Kopiera länk",
+    "Share link": "Dela länk",
+    "Link copied.": "Länken har kopierats.",
+    "Link shared.": "Länken har delats.",
+    "Sharing cancelled. You can copy the link instead.": "Delningen avbröts. Du kan kopiera länken i stället.",
+    "Select and copy the link above.": "Markera och kopiera länken ovan."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }
