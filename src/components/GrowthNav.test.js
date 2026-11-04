@@ -52,3 +52,14 @@ test('following a navigation link closes its menu', () => {
   act(() => details.querySelector('a').dispatchEvent(new MouseEvent('click', { bubbles: true, button: 0 })));
   expect(details.open).toBe(false);
 });
+
+test('Escape dismisses an open menu after focus moves to a sibling navigation summary', () => {
+  const [product, solutions] = container.querySelectorAll('.growth-nav details');
+  open(product);
+  const nextSummary = solutions.querySelector('summary');
+  nextSummary.focus();
+  act(() => nextSummary.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true })));
+  expect(product.open).toBe(false);
+  expect(solutions.open).toBe(false);
+  expect(document.activeElement).toBe(product.querySelector('summary'));
+});

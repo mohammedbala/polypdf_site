@@ -10,7 +10,16 @@ const groups = [
 export default function GrowthNav() {
   const { pathname } = useLocation();
   const close = e => { if (e.target.closest('a')) e.currentTarget.querySelectorAll('details[open]').forEach(d => { d.open = false; }); };
-  return <header className="growth-header"><nav className="container growth-nav" aria-label="Main navigation" onClick={close} onKeyDown={e => { if(e.key === 'Escape') { const d = e.target.closest('details'); if(d) { d.open = false; d.querySelector('summary').focus(); } } }}>
+  const closeWithEscape = e => {
+    if (e.key !== 'Escape') return;
+    const openMenus = [...e.currentTarget.querySelectorAll('details[open]')];
+    if (!openMenus.length) return;
+    const activeMenu = e.target.closest('details[open]') || openMenus[0];
+    openMenus.forEach(menu => { menu.open = false; });
+    activeMenu.querySelector('summary').focus();
+    e.preventDefault();
+  };
+  return <header className="growth-header"><nav className="container growth-nav" aria-label="Main navigation" onClick={close} onKeyDown={closeWithEscape}>
     <Link to="/" className="growth-logo" aria-label="PolyPDF home"><img src={parrotIcon} width="32" height="32" alt=""/>PolyPDF</Link>
     <div className="growth-nav-groups">{groups.map(([label, links]) => <details key={label} name="main-navigation" onToggle={e => { if (e.currentTarget.open) { e.currentTarget.parentElement.querySelectorAll('details[open]').forEach(d => { if (d !== e.currentTarget) d.open = false; }); } }}><summary>{label}</summary><div className="growth-menu">{links.map(([href, text]) => <Link key={href} to={href} aria-current={pathname.replace(/\/$/,'') === href.replace(/\/$/,'') ? 'page' : undefined}>{text}</Link>)}</div></details>)}</div>
     <Link to="/buy/" className="growth-nav-price">Pricing</Link><Link to="/support/" className="growth-nav-support">Support</Link><a href="/#download" className="growth-nav-download">Download</a>
