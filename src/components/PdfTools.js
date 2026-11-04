@@ -8,6 +8,7 @@ import { trackEvent } from "../lib/analytics";
 import { buyPath } from "../lib/attribution";
 import { DOWNLOADS } from "../lib/platform";
 import "./PdfTools.css";
+import DesktopSetupLink from './DesktopSetupLink';
 import PdfToolIcon from './PdfToolIcon';
 import { ToolkitHeader } from './ToolkitChrome';
 import { useToolkitLanguage, localizeView, localizedHref, translateText } from '../toolkit/language';
@@ -84,6 +85,7 @@ export function PdfDrawingHandoff({ tool, compact = false }) {
         </a>)}
       </div>
       <p className="pdf-desktop-note">For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.</p>
+      <DesktopSetupLink source="browser_tools" />
       <nav className="pdf-desktop-links" aria-label="Desktop workflow">
         {guide}
         <Link to="/product-facts/#verified-construction-example" hrefLang={language && localizedHref("/product-facts/", language) === "/product-facts/" ? "en" : undefined} onClick={() => click("measured_example")}>

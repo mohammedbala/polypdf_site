@@ -1026,7 +1026,16 @@
     "Desktop workflow": "ขั้นตอนการทำงานบนเดสก์ท็อป",
     "See a measured drawing and worksheet": "ดูแบบที่วัดแล้วและตารางปริมาณ",
     "(English)": "(อังกฤษ)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "เปิดบนคอมพิวเตอร์ของคุณ",
+    "Copy this link and open it on a Mac or Windows PC.": "คัดลอกลิงก์นี้แล้วเปิดบน Mac หรือคอมพิวเตอร์ Windows",
+    "Desktop setup link": "ลิงก์ติดตั้งแอปเดสก์ท็อป",
+    "Copy link": "คัดลอกลิงก์",
+    "Share link": "แชร์ลิงก์",
+    "Link copied.": "คัดลอกลิงก์แล้ว",
+    "Link shared.": "แชร์ลิงก์แล้ว",
+    "Sharing cancelled. You can copy the link instead.": "ยกเลิกการแชร์แล้ว คุณสามารถคัดลอกลิงก์แทนได้",
+    "Select and copy the link above.": "เลือกและคัดลอกลิงก์ด้านบน"
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

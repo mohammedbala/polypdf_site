@@ -1,0 +1,12 @@
+/* Native disclosure and selectable URL remain usable without JavaScript. */
+.desktop-setup { width:100%; min-width:0; max-width:56ch; text-align:start; font-size:.9rem; line-height:1.6; color:inherit; }
+.desktop-setup summary { cursor:pointer; min-height:44px; padding:.6rem .15rem; font-weight:600; }
+.desktop-setup-body { padding:.15rem .15rem .75rem; overflow-wrap:anywhere; }
+.desktop-setup .desktop-setup-body p { margin:.5rem 0; font-size:inherit; line-height:inherit; color:inherit; }
+.desktop-setup label { display:grid; gap:.35rem; font-weight:600; }
+.desktop-setup input { width:100%; min-width:0; border:1px solid #aeb7ad; border-radius:6px; padding:.65rem .7rem; background:#fff; color:#172417; font:inherit; font-size:16px; direction:ltr; text-align:left; }
+.desktop-setup-actions { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.65rem; }
+.desktop-setup-actions button { min-height:44px; padding:.55rem .85rem; border:1px solid currentColor; border-radius:6px; background:transparent; color:inherit; font:inherit; font-weight:600; cursor:pointer; }
+.desktop-setup-actions button:disabled { opacity:.6; cursor:progress; }
+.desktop-setup [hidden] { display:none!important; }
+.desktop-setup :is(summary,input,button):focus-visible { outline:2px solid currentColor; outline-offset:3px; }

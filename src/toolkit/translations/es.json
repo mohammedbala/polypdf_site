@@ -232,7 +232,7 @@
     "Continue with calibrated measurements and construction markup on Mac and Windows.": "Continúe con mediciones calibradas y anotaciones de construcción en Mac y Windows.",
     "Convert": "Convertir",
     "Convert & download": "Convertir y descargar",
-    "Convert JPG and JPEG images into one PDF. Arrange photos, choose paper size and margins, then preview and download free. Your images stay in your browser.": "Convierta imágenes JPG y JPEG en un PDF. Organice fotografías, elija el tamaño del papel y los márgenes, luego obtenga una vista previa y descárguelas gratis. Tus imágenes permanecen en tu navegador.",
+    "Convert JPG and JPEG images into one PDF. Arrange photos, choose paper size and margins, then preview and download free. Your images stay in your browser.": "Convierte JPG y JPEG a PDF gratis en tu navegador, sin subir archivos ni crear una cuenta. Ordena las imágenes, ajusta el papel y descarga tu PDF.",
     "Convert JPG images into PDF pages in your chosen order. Keep the image proportions and select A4, Letter, or original image size.": "Convierta imágenes JPG en páginas PDF en el orden elegido. Mantenga las proporciones de la imagen y seleccione A4, Carta o el tamaño de imagen original.",
     "Convert PDF pages to JPG images at your chosen resolution. Download one image or a ZIP containing every selected page.": "Convierta páginas PDF a imágenes JPG con la resolución elegida. Descargue una imagen o un ZIP que contenga cada página seleccionada.",
     "Convert PDF pages to JPG images. Choose resolution and quality, preview, and download single images or a ZIP. Free browser conversion with no upload.": "Convierta páginas PDF a imágenes JPG. Elija resolución y calidad, obtenga una vista previa y descargue imágenes individuales o un ZIP. Conversión gratuita del navegador sin carga.",
@@ -501,7 +501,7 @@
     "JPEG is lossy and removes selectable text; use PNG for crisp linework.": "JPEG tiene pérdidas y elimina el texto seleccionable; utilice PNG para obtener líneas nítidas.",
     "JPG to PDF": "JPG a PDF",
     "JPG to PDF Online — Convert Photos Free | PolyPDF": "JPG a PDF en línea: convierte fotos gratis | PolyPDF",
-    "JPG to PDF online": "JPG a PDF en línea",
+    "JPG to PDF online": "JPG a PDF gratis y sin subir archivos",
     "JPG to PDF workspace": "Espacio de trabajo de JPG a PDF",
     "JPG to PDF — free browser PDF tool": "JPG a PDF: herramienta de PDF gratuita para el navegador",
     "JPG uses lossy compression and offers a quality control. PNG avoids lossy image compression and is usually a better choice for crisp linework. Both outputs are raster images without selectable PDF text.": "JPG utiliza compresión con pérdida y ofrece control de calidad. PNG evita la compresión de imágenes con pérdida y suele ser una mejor opción para obtener líneas nítidas. Ambas salidas son imágenes rasterizadas sin texto PDF seleccionable.",
@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Flujo de trabajo de escritorio",
     "See a measured drawing and worksheet": "Ver un plano medido y su hoja de cantidades",
     "(English)": "(inglés)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Ábralo en su ordenador",
+    "Copy this link and open it on a Mac or Windows PC.": "Copie este enlace y ábralo en un Mac o PC con Windows.",
+    "Desktop setup link": "Enlace para instalar en el ordenador",
+    "Copy link": "Copiar enlace",
+    "Share link": "Compartir enlace",
+    "Link copied.": "Enlace copiado.",
+    "Link shared.": "Enlace compartido.",
+    "Sharing cancelled. You can copy the link instead.": "Se canceló el envío. Puede copiar el enlace.",
+    "Select and copy the link above.": "Seleccione y copie el enlace de arriba."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

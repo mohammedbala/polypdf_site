@@ -2895,7 +2895,11 @@
     "Link copied.": "Lien copié.",
     "Link shared.": "Lien partagé.",
     "Sharing cancelled. You can copy the link instead.": "Partage annulé. Vous pouvez copier le lien à la place.",
-    "Select and copy the link above.": "Sélectionnez et copiez le lien ci-dessus."
+    "Select and copy the link above.": "Sélectionnez et copiez le lien ci-dessus.",
+    "Earlier flooring example · 408 sq ft": "Ancien exemple de revêtement de sol · 408 pi²",
+    "Download the app-exported quantities · CSV": "Télécharger les quantités exportées par l’application · CSV",
+    "Download the saved measured drawing · PDF": "Télécharger le plan mesuré enregistré · PDF",
+    "Read the test method, results, and file hashes": "Consulter le protocole de test, les résultats et les empreintes des fichiers"
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

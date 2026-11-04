@@ -6,13 +6,13 @@ import './DownloadEvaluation.css';
 
 // Native details keeps the practice path usable before hydration and on static translations.
 // An installer click opens it in place; it is a request, not proof of download or activation.
-export default function DownloadEvaluation({ detailsRef, requestedPlatform, source, tone = '' }) {
+export default function DownloadEvaluation({ detailsRef, requestedPlatform, source, tone = '', guideHref }) {
   const guideClick = (target) => trackEvent('download_evaluation_click', { source, target });
   return <div className={`dl-evaluation ${tone}`.trim()}>
     {requestedPlatform && <p className="dl-evaluation-status" role="status">
       Download requested for {DOWNLOADS[requestedPlatform].name}. Check your browser’s downloads, then install the file on that desktop.
     </p>}
-    <details ref={detailsRef} onToggle={(event) => {
+    {guideHref ? <p className="dl-evaluation-link"><a href={guideHref} data-evaluation-target="guide" onClick={() => guideClick('guide')}>Try a checked construction takeoff</a></p> : <details ref={detailsRef} onToggle={(event) => {
       if (event.currentTarget.open) trackEvent('download_evaluation_open', { source });
     }}>
       <summary>Try a checked construction takeoff</summary>
@@ -39,6 +39,6 @@ export default function DownloadEvaluation({ detailsRef, requestedPlatform, sour
         </div>
         <p className="dl-evaluation-scope">Synthetic practice drawing; not for construction. Desktop installers do not run on phones or tablets.</p>
       </div>
-    </details>
+    </details>}
   </div>;
 }

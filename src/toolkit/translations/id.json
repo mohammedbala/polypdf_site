@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Alur kerja desktop",
     "See a measured drawing and worksheet": "Lihat gambar yang telah diukur dan lembar kuantitasnya",
     "(English)": "(bahasa Inggris)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Buka di komputer Anda",
+    "Copy this link and open it on a Mac or Windows PC.": "Salin tautan ini dan buka di Mac atau PC Windows.",
+    "Desktop setup link": "Tautan penyiapan aplikasi desktop",
+    "Copy link": "Salin tautan",
+    "Share link": "Bagikan tautan",
+    "Link copied.": "Tautan disalin.",
+    "Link shared.": "Tautan dibagikan.",
+    "Sharing cancelled. You can copy the link instead.": "Berbagi dibatalkan. Anda dapat menyalin tautan.",
+    "Select and copy the link above.": "Pilih dan salin tautan di atas."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

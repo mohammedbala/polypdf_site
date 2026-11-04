@@ -20,3 +20,9 @@
 .takeoff-practice-files ul { padding-inline-start: 1.2rem; }
 .takeoff-practice-files li { line-height: 1.6; margin: .9rem 0; }
 @media (max-width: 900px) { .takeoff-decision-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; } }
+
+.takeoff-evaluation [id] { scroll-margin-top: 2rem; }
+.takeoff-practice-preview { display: block; width: 100%; height: auto; margin-bottom: 1rem; }
+.takeoff-historical { margin-top: 1.5rem; border-top: 1px solid var(--gray-300); padding-top: .5rem; }
+.takeoff-historical summary { min-height: 44px; padding: .75rem 0; cursor: pointer; font-weight: 650; line-height: 1.5; }
+.takeoff-historical summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

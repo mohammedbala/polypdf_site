@@ -47,7 +47,18 @@ for (const e of manifest.routes) {
   assert.equal(d.querySelectorAll('script:not([type="application/ld+json"])').length,1,prefix+'one consent-gated enhancement');
   assert.match(d.querySelector('script[src]')?.getAttribute('src'),/^\/static\/js\/localized-tracking\.[a-f0-9]{8}\.js$/,prefix+'no English app hydration');
   assert(d.querySelector('[data-local-consent] dialog'),prefix+'localized cookie settings');
-  assert.equal([...d.querySelectorAll('button,input,form,select')].filter(el=>!el.closest('[data-local-consent]')).length,0,prefix+'no inert React controls');
+  const setupControl = el => el.closest('[data-desktop-setup]') && (
+    (el.matches('input[type="url"][readonly]') && el.value === 'https://www.polypdf.com/#download')
+    || (el.matches('button[type="button"][data-desktop-link-action="copy"],button[type="button"][data-desktop-link-action="share"]') && el.hidden)
+  );
+  assert.equal([...d.querySelectorAll('button,input,form,select')].filter(el=>!el.closest('[data-local-consent]') && !setupControl(el)).length,0,prefix+'no inert React controls');
+  for(const setup of d.querySelectorAll('[data-desktop-setup]')) {
+    assert.equal(setup.tagName,'DETAILS',prefix+'native desktop-link disclosure');
+    assert.equal(setup.querySelectorAll('input').length,1,prefix+'one selectable setup URL');
+    assert.equal(setup.querySelectorAll('button').length,2,prefix+'bounded progressive copy/share controls');
+    assert.deepEqual([...setup.querySelectorAll('[data-desktop-link-status]')].map(n=>n.dataset.desktopLinkStatus),['copied','shared','cancelled','manual'],prefix+'localized link outcomes');
+    assert([...setup.querySelectorAll('[data-desktop-link-status]')].every(n=>n.hidden && n.textContent.trim()),prefix+'quiet initial status');
+  }
   assert(!/ZXQ|QXZ|\[X\d{4}X\]/i.test(html),prefix+'no translation tokens');
   assert(!/noindex/.test(d.querySelector('meta[name=robots]').content),prefix+'indexable');
   assert(locations.includes(c.ORIGIN+e.route),prefix+'sitemap');

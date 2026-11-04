@@ -1026,7 +1026,16 @@
     "Desktop workflow": "ডেস্কটপের কর্মপ্রবাহ",
     "See a measured drawing and worksheet": "পরিমাপ করা নকশা ও পরিমাণের কার্যপত্র দেখুন",
     "(English)": "(ইংরেজি)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "আপনার কম্পিউটারে খুলুন",
+    "Copy this link and open it on a Mac or Windows PC.": "এই লিঙ্কটি কপি করে Mac বা Windows PC-তে খুলুন।",
+    "Desktop setup link": "ডেস্কটপ অ্যাপ সেটআপের লিঙ্ক",
+    "Copy link": "লিঙ্ক কপি করুন",
+    "Share link": "লিঙ্ক শেয়ার করুন",
+    "Link copied.": "লিঙ্ক কপি হয়েছে।",
+    "Link shared.": "লিঙ্ক শেয়ার হয়েছে।",
+    "Sharing cancelled. You can copy the link instead.": "শেয়ার বাতিল হয়েছে। এর বদলে লিঙ্কটি কপি করতে পারেন।",
+    "Select and copy the link above.": "উপরের লিঙ্কটি নির্বাচন করে কপি করুন।"
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5",
   "editorialNotes": "Conversion direction and text-to-PDF labels clarified."

@@ -1026,7 +1026,16 @@
     "Desktop workflow": "데스크톱 작업 흐름",
     "See a measured drawing and worksheet": "측정된 도면과 물량 워크시트 보기",
     "(English)": "(영어)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "컴퓨터에서 열기",
+    "Copy this link and open it on a Mac or Windows PC.": "이 링크를 복사한 다음 Mac 또는 Windows PC에서 여세요.",
+    "Desktop setup link": "데스크톱 앱 설치 링크",
+    "Copy link": "링크 복사",
+    "Share link": "링크 공유",
+    "Link copied.": "링크를 복사했습니다.",
+    "Link shared.": "링크를 공유했습니다.",
+    "Sharing cancelled. You can copy the link instead.": "공유를 취소했습니다. 대신 링크를 복사할 수 있습니다.",
+    "Select and copy the link above.": "위 링크를 선택하여 복사하세요."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5",
   "editorialNotes": "Conversion direction and text-to-PDF labels clarified."

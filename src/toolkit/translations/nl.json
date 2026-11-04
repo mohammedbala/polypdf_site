@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Desktopwerkproces",
     "See a measured drawing and worksheet": "Bekijk een opgemeten tekening en de hoeveelhedenstaat",
     "(English)": "(Engels)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Open dit op uw computer",
+    "Copy this link and open it on a Mac or Windows PC.": "Kopieer deze link en open hem op een Mac of Windows-pc.",
+    "Desktop setup link": "Installatielink voor de desktopapp",
+    "Copy link": "Link kopiëren",
+    "Share link": "Link delen",
+    "Link copied.": "Link gekopieerd.",
+    "Link shared.": "Link gedeeld.",
+    "Sharing cancelled. You can copy the link instead.": "Delen geannuleerd. U kunt de link ook kopiëren.",
+    "Select and copy the link above.": "Selecteer en kopieer de bovenstaande link."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

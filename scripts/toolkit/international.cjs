@@ -13,7 +13,7 @@ const esc=c.esc;
 function extractLiterals(strings) {
   const babel=require('@babel/core'),traverse=require('@babel/traverse').default;
   const add=raw=>{const value=c.normalize(raw);if(c.isTranslatable(value) && !/^[./#]|^data:|^blob:|^(?:noindex|index),\s*(?:follow|nofollow)/.test(value))strings.add(value);};
-  for(const filename of ['src/components/PdfTools.js','src/components/CookieConsent.js','src/components/ToolkitChrome.js','src/toolkit/seo.js','src/toolkit/engine.mjs','src/toolkit/render-adapter.mjs','src/toolkit/browser-runtime.js','src/toolkit/canvas-encode.mjs']) {
+  for(const filename of ['src/components/DesktopSetupLink.js','src/components/PdfTools.js','src/components/CookieConsent.js','src/components/ToolkitChrome.js','src/toolkit/seo.js','src/toolkit/engine.mjs','src/toolkit/render-adapter.mjs','src/toolkit/browser-runtime.js','src/toolkit/canvas-encode.mjs']) {
     const ast=babel.parseSync(fs.readFileSync(path.join(root,filename),'utf8'),{sourceType:'module',parserOpts:{plugins:['jsx']},configFile:false,babelrc:false});
     traverse(ast,{
       JSXText(p){add(p.node.value);},

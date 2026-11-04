@@ -62,6 +62,7 @@ const WorkflowLanding = ({ page, children }) => {
                 <DownloadCTA
                   source={`${page.source}_hero`}
                   size="large"
+                  evaluationHref={page.path === '/pdf-takeoff-software' ? '#try-a-takeoff' : page.path === '/measure-pdf-on-mac' ? '#try-mac-measurement' : undefined}
                   onDownload={() => trackCta('download_click')}
                 />
                 <DirectCheckoutLink
@@ -122,7 +123,7 @@ const WorkflowLanding = ({ page, children }) => {
           </div>
         </section>
 
-        {!children && constructionExampleForPath[page.path] && <ConstructionExample kind={constructionExampleForPath[page.path]} context="workflow" />}
+        {!children && !['/pdf-takeoff-software', '/measure-pdf-on-mac'].includes(page.path) && constructionExampleForPath[page.path] && <ConstructionExample kind={constructionExampleForPath[page.path]} context="workflow" />}
         {children}
         {!children && page.path === '/pdf-takeoff-software' && <TakeoffEvaluation />}
         {!children && page.path === '/construction-pdf-markup' && <MarkupEvaluation />}

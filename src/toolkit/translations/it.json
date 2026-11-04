@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Flusso di lavoro desktop",
     "See a measured drawing and worksheet": "Vedi un disegno misurato e il relativo foglio delle quantità",
     "(English)": "(Inglese)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Apri sul computer",
+    "Copy this link and open it on a Mac or Windows PC.": "Copia questo link e aprilo su un Mac o PC Windows.",
+    "Desktop setup link": "Link per l’installazione sul computer",
+    "Copy link": "Copia link",
+    "Share link": "Condividi link",
+    "Link copied.": "Link copiato.",
+    "Link shared.": "Link condiviso.",
+    "Sharing cancelled. You can copy the link instead.": "Condivisione annullata. Puoi copiare il link.",
+    "Select and copy the link above.": "Seleziona e copia il link qui sopra."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

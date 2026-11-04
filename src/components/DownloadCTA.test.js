@@ -108,3 +108,17 @@ test('installer, sample and guide intent remain separate and analytics consent i
   expect(events.find(c => c[1] === 'download_evaluation_click')[2]).toMatchObject({ cta_source: 'hero', target: 'guide' });
   expect(events.some(c => ['purchase', 'conversion', 'browser_tool_complete'].includes(c[1]))).toBe(false);
 });
+
+test('a page-owned evaluation stays a single link after an installer request', () => {
+  setNavigator({ platform: 'Win32', userAgent: 'Windows NT 10.0' });
+  act(() => root.render(<DownloadCTA source="hero" evaluationHref="#try-a-takeoff" />));
+  const installer = node.querySelector('.dl-primary-row a');
+  click(installer);
+  expect(node.querySelector('.dl-evaluation details')).toBeNull();
+  expect(node.querySelector('.dl-evaluation a').getAttribute('href')).toBe('#try-a-takeoff');
+  expect(node.querySelector('.dl-evaluation [role="status"]').textContent).toContain('Download requested for Windows');
+  expect(window.gtag).not.toHaveBeenCalled();
+  saveConsent({ analytics: true });
+  click(node.querySelector('.dl-evaluation a'));
+  expect(window.gtag.mock.calls.find(c => c[1] === 'download_evaluation_click')[2]).toMatchObject({ cta_source: 'hero', target: 'guide' });
+});

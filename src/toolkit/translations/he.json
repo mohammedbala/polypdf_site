@@ -1026,7 +1026,16 @@
     "Desktop workflow": "תהליך עבודה במחשב",
     "See a measured drawing and worksheet": "צפייה בשרטוט מדוד ובגיליון הכמויות",
     "(English)": "(אנגלית)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "פתיחה במחשב",
+    "Copy this link and open it on a Mac or Windows PC.": "העתיקו את הקישור ופתחו אותו במחשב Mac או Windows.",
+    "Desktop setup link": "קישור להתקנת יישום המחשב",
+    "Copy link": "העתקת קישור",
+    "Share link": "שיתוף קישור",
+    "Link copied.": "הקישור הועתק.",
+    "Link shared.": "הקישור שותף.",
+    "Sharing cancelled. You can copy the link instead.": "השיתוף בוטל. אפשר להעתיק את הקישור במקום זאת.",
+    "Select and copy the link above.": "בחרו והעתיקו את הקישור למעלה."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

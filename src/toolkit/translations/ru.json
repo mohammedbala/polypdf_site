@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Работа в настольном приложении",
     "See a measured drawing and worksheet": "Посмотреть измеренный чертёж и ведомость объёмов",
     "(English)": "(английский)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Открыть на компьютере",
+    "Copy this link and open it on a Mac or Windows PC.": "Скопируйте эту ссылку и откройте её на Mac или ПК с Windows.",
+    "Desktop setup link": "Ссылка для установки настольного приложения",
+    "Copy link": "Копировать ссылку",
+    "Share link": "Поделиться ссылкой",
+    "Link copied.": "Ссылка скопирована.",
+    "Link shared.": "Ссылка отправлена.",
+    "Sharing cancelled. You can copy the link instead.": "Отправка отменена. Вместо этого можно скопировать ссылку.",
+    "Select and copy the link above.": "Выделите и скопируйте ссылку выше."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

@@ -1026,7 +1026,16 @@
     "Desktop workflow": "桌面工作流程",
     "See a measured drawing and worksheet": "查看已測量的圖面及工程量工作表",
     "(English)": "(英語)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "在電腦上開啟",
+    "Copy this link and open it on a Mac or Windows PC.": "複製此連結，然後在 Mac 或 Windows 電腦上開啟。",
+    "Desktop setup link": "桌面應用程式安裝連結",
+    "Copy link": "複製連結",
+    "Share link": "分享連結",
+    "Link copied.": "已複製連結。",
+    "Link shared.": "已分享連結。",
+    "Sharing cancelled. You can copy the link instead.": "已取消分享。您可以改為複製連結。",
+    "Select and copy the link above.": "選取並複製上方連結。"
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5",
   "scriptNormalization": "OpenCC 1.4.2 s2twp; Traditional Chinese Taiwan characters and phrases"

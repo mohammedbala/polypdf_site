@@ -1026,7 +1026,16 @@
     "Desktop workflow": "डेस्कटॉप कार्यप्रवाह",
     "See a measured drawing and worksheet": "मापी गई ड्रॉइंग और उसकी मात्रा कार्यपत्रक देखें",
     "(English)": "(अंग्रेज़ी)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "इसे अपने कंप्यूटर पर खोलें",
+    "Copy this link and open it on a Mac or Windows PC.": "इस लिंक को कॉपी करें और Mac या Windows PC पर खोलें।",
+    "Desktop setup link": "डेस्कटॉप सेटअप लिंक",
+    "Copy link": "लिंक कॉपी करें",
+    "Share link": "लिंक साझा करें",
+    "Link copied.": "लिंक कॉपी हो गया।",
+    "Link shared.": "लिंक साझा हो गया।",
+    "Sharing cancelled. You can copy the link instead.": "साझा करना रद्द किया गया। आप लिंक कॉपी कर सकते हैं।",
+    "Select and copy the link above.": "ऊपर दिया लिंक चुनें और कॉपी करें।"
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

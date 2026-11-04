@@ -1026,7 +1026,16 @@
     "Desktop workflow": "桌面工作流程",
     "See a measured drawing and worksheet": "查看已测量的图纸及工程量工作表",
     "(English)": "(英语)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "在电脑上打开",
+    "Copy this link and open it on a Mac or Windows PC.": "复制此链接，然后在 Mac 或 Windows 电脑上打开。",
+    "Desktop setup link": "桌面应用安装链接",
+    "Copy link": "复制链接",
+    "Share link": "分享链接",
+    "Link copied.": "链接已复制。",
+    "Link shared.": "链接已分享。",
+    "Sharing cancelled. You can copy the link instead.": "已取消分享。您可以改为复制链接。",
+    "Select and copy the link above.": "选中并复制上方链接。"
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

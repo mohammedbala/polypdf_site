@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Masaüstü iş akışı",
     "See a measured drawing and worksheet": "Ölçülmüş bir çizimi ve metraj tablosunu görün",
     "(English)": "(İngilizce)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Bilgisayarınızda açın",
+    "Copy this link and open it on a Mac or Windows PC.": "Bu bağlantıyı kopyalayıp bir Mac veya Windows bilgisayarda açın.",
+    "Desktop setup link": "Masaüstü uygulaması kurulum bağlantısı",
+    "Copy link": "Bağlantıyı kopyala",
+    "Share link": "Bağlantıyı paylaş",
+    "Link copied.": "Bağlantı kopyalandı.",
+    "Link shared.": "Bağlantı paylaşıldı.",
+    "Sharing cancelled. You can copy the link instead.": "Paylaşım iptal edildi. Bunun yerine bağlantıyı kopyalayabilirsiniz.",
+    "Select and copy the link above.": "Yukarıdaki bağlantıyı seçip kopyalayın."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

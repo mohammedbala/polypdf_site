@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Quy trình trên máy tính",
     "See a measured drawing and worksheet": "Xem bản vẽ đã đo và bảng khối lượng",
     "(English)": "(Tiếng Anh)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Mở trên máy tính",
+    "Copy this link and open it on a Mac or Windows PC.": "Sao chép liên kết này rồi mở trên máy Mac hoặc máy tính Windows.",
+    "Desktop setup link": "Liên kết cài đặt ứng dụng máy tính",
+    "Copy link": "Sao chép liên kết",
+    "Share link": "Chia sẻ liên kết",
+    "Link copied.": "Đã sao chép liên kết.",
+    "Link shared.": "Đã chia sẻ liên kết.",
+    "Sharing cancelled. You can copy the link instead.": "Đã hủy chia sẻ. Bạn có thể sao chép liên kết.",
+    "Select and copy the link above.": "Chọn và sao chép liên kết ở trên."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

@@ -3,6 +3,8 @@ import { CONSENT_CHANGED, CONSENT_KEY, CONSENT_MAX_AGE, readConsent, saveConsent
 import { syncTracking } from './tracking';
 import { trackEvent } from './analytics';
 import { captureAttribution } from './attribution';
+import { attachDesktopSetup } from './desktopSetup';
+document.querySelectorAll('[data-desktop-setup]').forEach(attachDesktopSetup);
 const root = document.querySelector('[data-local-consent]');
 if (root) {
   const banner = root.querySelector('[data-consent-banner]');

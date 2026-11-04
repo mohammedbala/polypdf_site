@@ -1026,7 +1026,16 @@
     "Desktop workflow": "Робота в настільному застосунку",
     "See a measured drawing and worksheet": "Переглянути виміряне креслення та відомість обсягів",
     "(English)": "(англійська)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "Відкрити на комп’ютері",
+    "Copy this link and open it on a Mac or Windows PC.": "Скопіюйте це посилання й відкрийте його на Mac або ПК з Windows.",
+    "Desktop setup link": "Посилання для встановлення настільної програми",
+    "Copy link": "Копіювати посилання",
+    "Share link": "Поділитися посиланням",
+    "Link copied.": "Посилання скопійовано.",
+    "Link shared.": "Посилання надіслано.",
+    "Sharing cancelled. You can copy the link instead.": "Надсилання скасовано. Натомість можна скопіювати посилання.",
+    "Select and copy the link above.": "Виділіть і скопіюйте посилання вище."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }

@@ -1026,7 +1026,16 @@
     "Desktop workflow": "سير العمل على سطح المكتب",
     "See a measured drawing and worksheet": "عرض مخطط مقاس وجدول كمياته",
     "(English)": "(الإنجليزية)",
-    "en": "en"
+    "en": "en",
+    "Open this on your computer": "افتح هذا على جهاز الكمبيوتر",
+    "Copy this link and open it on a Mac or Windows PC.": "انسخ هذا الرابط وافتحه على جهاز Mac أو كمبيوتر Windows.",
+    "Desktop setup link": "رابط إعداد تطبيق سطح المكتب",
+    "Copy link": "نسخ الرابط",
+    "Share link": "مشاركة الرابط",
+    "Link copied.": "تم نسخ الرابط.",
+    "Link shared.": "تمت مشاركة الرابط.",
+    "Sharing cancelled. You can copy the link instead.": "تم إلغاء المشاركة. يمكنك نسخ الرابط بدلاً من ذلك.",
+    "Select and copy the link above.": "حدد الرابط أعلاه وانسخه."
   },
   "sourceHash": "8e64c6898f282bf4f47b9d14d516b81270f469bd2d22317770f9db14ad1534c5"
 }
