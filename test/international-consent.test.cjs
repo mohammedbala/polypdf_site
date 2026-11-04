@@ -40,7 +40,7 @@ test('analytics-only consent uses the shared safe page context and controlled do
   const download = d.querySelector('a[href="/downloads/PolyPDFMac.dmg"]');
   download.addEventListener('click', event => event.preventDefault()); download.click();
   const event = w.dataLayer.find(item => item[1] === 'download_click');
-  assert.equal(event[2].platform, 'mac'); assert.equal(event[2].source, 'localized_content');
+  assert.equal(event[2].platform, 'mac'); assert.equal(event[2].cta_source, 'localized_content');
   assert.equal(JSON.stringify(w.dataLayer).includes('private=never-send'), false);
   d.querySelector('[data-consent-action=reject]').click();
   assert.equal(d.querySelector('#polypdf-google-tag'), null);
