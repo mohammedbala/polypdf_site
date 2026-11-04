@@ -1,0 +1,57 @@
+{
+  "testDate": "2026-11-04",
+  "publisher": "PolyPDF publisher, Euclidean Software LLC",
+  "platform": "Mac",
+  "os": "macOS 26.4",
+  "version": "1.6.27",
+  "build": 99,
+  "distribution": "Unmodified public Mac DMG; read-only mounted app; ordinary isolated user profile",
+  "installerUrl": "https://www.polypdf.com/downloads/PolyPDFMac-v1.6.27-99.dmg",
+  "installerSha256": "503c0ce8b995b20640e30989fff9bb78a676b9880356ca19fa76dfc726d696ac",
+  "sourceUrl": "https://www.polypdf.com/samples/construction/02-Architectural-Revision-A.pdf",
+  "sourceSha256": "0a05c64b7074e55576952ccc493fcc3f07761fe038c53f3ec0ac73562bcebe51",
+  "calibration": {
+    "referenceFeet": 20,
+    "referencePdfPoints": 360,
+    "pdfPointsPerFoot": 18
+  },
+  "results": {
+    "widthFeet": 96,
+    "depthFeet": 60,
+    "grossAreaSquareFeet": 5760,
+    "lengthQuantity": 2,
+    "lengthSumFeet": 156,
+    "areaQuantity": 1
+  },
+  "checks": {
+    "nativeCalibration": "passed",
+    "independentDimensions": "passed",
+    "grossArea": "passed",
+    "csvAndPdfSummaryExport": "passed",
+    "savedPdfDocumentReopen": "passed",
+    "coldAppRestartAndReopen": "passed",
+    "metricThenImperial": "passed",
+    "fourthMeasurementFreeLimit": "blocked as expected"
+  },
+  "metricView": {
+    "widthMillimeters": 29260.8,
+    "depthMillimeters": 18288,
+    "grossAreaSquareMetersDisplayed": 535.12,
+    "pdfPointsPerMeterDisplayed": 59.055118
+  },
+  "csv": {
+    "file": "willow-creek-a101-takeoff.csv",
+    "sha256": "0a362e42951f95643e99da68f88ef749cabf28c2bf9a31a5d9d2c7dddc38f61f",
+    "bytes": 291
+  },
+  "savedPdfBeforeStyleCheck": {
+    "sha256": "5c75f53ade4a2876767e7de29342d0ae6e33249b61d4064e540dc558794d6e33",
+    "publicDownload": false
+  },
+  "limitations": [
+    "The area caption overlaps the underlying corridor label in the saved drawing; this PDF is retained for QA, not distributed here. Numeric results and the CSV are unaffected.",
+    "The fourth hand-created measurement was refused with the Free three-measurement limit. A local Pro label also appeared in Upgrade; entitlement provenance was not established. No test license, license key entry or activation was used. This does not verify Pro activation or Pro workflows.",
+    "Windows, other PDF viewers, net flooring quantities, symbol counts, electrical/flooring trade workflows, and complete estimates were not verified in this test.",
+    "The worksheet summary repeats the same quantities by subject; do not add it to the detailed rows. The 156 ft sum is 96 + 60 ft, not a perimeter. Gross area includes walls."
+  ]
+}

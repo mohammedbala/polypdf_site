@@ -2,3 +2,7 @@
 .evaluation-kit > ol { max-width: 72ch; padding-left: 1.5em; margin: 0 0 24px; color: #4d5747; }
 .evaluation-kit > ol > li { padding-left: .3em; margin-bottom: 14px; line-height: 1.7; }
 .evaluation-kit .dl-cta { margin-top: 28px; }
+
+.evaluation-kit .public-mac-takeoff-check { margin: 1.5rem 0; padding: 1rem 1.2rem; border-inline-start: 3px solid var(--accent); background: var(--accent-soft); overflow-wrap: anywhere; }
+.evaluation-kit .public-mac-takeoff-check p:first-child { margin-top: 0; }
+.evaluation-kit .public-mac-takeoff-check p:last-child { margin-bottom: 0; }

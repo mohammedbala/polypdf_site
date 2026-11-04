@@ -2899,7 +2899,12 @@
     "Earlier flooring example · 408 sq ft": "以前の床面積の例 · 408 平方フィート",
     "Download the app-exported quantities · CSV": "アプリから書き出した数量をダウンロード · CSV",
     "Download the saved measured drawing · PDF": "寸法入りの保存済み図面をダウンロード · PDF",
-    "Read the test method, results, and file hashes": "テスト方法、結果、ファイルのハッシュを確認"
+    "Read the test method, results, and file hashes": "テスト方法、結果、ファイルのハッシュを確認",
+    "Public Mac check: 1.6.27 build 99": "公開 Mac 版の検証：1.6.27、ビルド 99",
+    "On November 4, 2026, the PolyPDF publisher verified 96 ft, 60 ft, and 5,760 sq ft using the public Mac build. The values and calibration were preserved after saving the PDF and restarting the app.": "2026年11月4日、PolyPDFの発行元は公開Mac版を使用し、96 ft、60 ft、5,760 sq ftを検証しました。PDFを保存してアプリを再起動した後も、数値とキャリブレーションは保持されました。",
+    "Read the test method and download the Mac CSV (English)": "テスト方法を確認し、MacのCSVをダウンロード（英語）",
+    "Windows, Pro workflows, and other PDF viewers were not verified in this check.": "この検証では、Windows、Proのワークフロー、他のPDFビューアーは確認していません。",
+    "The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity.": "408 sq ftの面積結果は、Mac版PolyPDF 1.6.6、ビルド38でエクスポートして再度開いたものです。これらのファイルはその2つの面積測定を検証したもので、現行版やWindowsでの同等の結果を示すものではありません。"
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

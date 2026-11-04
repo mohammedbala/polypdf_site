@@ -1,4 +1,5 @@
 import React from 'react';
+import PublicMacTakeoffCheck from './PublicMacTakeoffCheck';
 import { Link } from 'react-router';
 import SampleLink from './SampleLink';
 import SampleDrawingNote from './SampleDrawingNote';
@@ -37,6 +38,7 @@ export default function ArchitecturalTakeoffEvaluation({ anchor, filesId, source
           <li><a href={savedExample + '/verification.html'}>Read the test method, results, and file hashes</a></li>
         </ul>
         <p><Link to="/product-facts/#verified-construction-example">Inspect the saved Mac example and its tested local build →</Link></p>
+        <PublicMacTakeoffCheck />
         <p>No account or email is required for these files.</p>
         <p><Link to="/samples/#construction-library">Browse the complete drawing library →</Link></p>
         <p className="takeoff-small">Synthetic practice drawing; not for construction. Desktop installers do not run on phones or tablets.</p>
@@ -49,7 +51,7 @@ export default function ArchitecturalTakeoffEvaluation({ anchor, filesId, source
             <li><SampleLink href="/samples/takeoff/flooring-mac-worksheet.csv" source={source} feature="historical_worksheet">Mac worksheet export · CSV</SampleLink></li>
           </ul>
           <SampleDrawingNote />
-          <p className="takeoff-small">The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity. The three-measurement sequence above is an evaluation guide, not a separately verified app test.</p>
+          <p className="takeoff-small">The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity.</p>
           <p><Link to="/flooring-takeoff-software/">Flooring workflow</Link> · <Link to="/tools/flooring-waste-calculator/">Add your waste allowance</Link></p>
         </details>
       </div>

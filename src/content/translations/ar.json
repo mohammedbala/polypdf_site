@@ -2899,7 +2899,12 @@
     "Earlier flooring example · 408 sq ft": "مثال سابق للأرضيات · 408 قدم²",
     "Download the app-exported quantities · CSV": "تنزيل الكميات المصدرة من التطبيق · CSV",
     "Download the saved measured drawing · PDF": "تنزيل الرسم المحفوظ مع القياسات · PDF",
-    "Read the test method, results, and file hashes": "اقرأ طريقة الاختبار والنتائج وبصمات الملفات"
+    "Read the test method, results, and file hashes": "اقرأ طريقة الاختبار والنتائج وبصمات الملفات",
+    "Public Mac check: 1.6.27 build 99": "اختبار إصدار Mac العام: 1.6.27، البناء 99",
+    "On November 4, 2026, the PolyPDF publisher verified 96 ft, 60 ft, and 5,760 sq ft using the public Mac build. The values and calibration were preserved after saving the PDF and restarting the app.": "في 4 نوفمبر 2026، تحقّق ناشر PolyPDF من القياسات ⁦96 ft⁩ و⁦60 ft⁩ و⁦5,760 sq ft⁩ باستخدام إصدار Mac العام. حُفظت القيم والمعايرة بعد حفظ ملف PDF وإعادة تشغيل التطبيق.",
+    "Read the test method and download the Mac CSV (English)": "اقرأ طريقة الاختبار ونزّل ملف CSV الخاص بـ Mac (بالإنجليزية)",
+    "Windows, Pro workflows, and other PDF viewers were not verified in this check.": "لم يشمل هذا الاختبار التحقق من Windows أو مهام Pro أو برامج عرض PDF الأخرى.",
+    "The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity.": "تم تصدير نتيجة المساحة البالغة 408 sq ft وإعادة فتحها في PolyPDF 1.6.6، البناء 38، على Mac. تثبت هذه الملفات قياسي المساحة هذين؛ ولا تثبت تطابق النتائج مع الإصدار الحالي أو Windows."
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

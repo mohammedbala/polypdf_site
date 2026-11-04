@@ -2899,7 +2899,12 @@
     "Earlier flooring example · 408 sq ft": "Früheres Bodenbeispiel · 408 ft²",
     "Download the app-exported quantities · CSV": "Aus der App exportierte Mengen herunterladen · CSV",
     "Download the saved measured drawing · PDF": "Gespeicherten bemaßten Plan herunterladen · PDF",
-    "Read the test method, results, and file hashes": "Testmethode, Ergebnisse und Datei-Hashes lesen"
+    "Read the test method, results, and file hashes": "Testmethode, Ergebnisse und Datei-Hashes lesen",
+    "Public Mac check: 1.6.27 build 99": "Prüfung der öffentlichen Mac-Version: 1.6.27, Build 99",
+    "On November 4, 2026, the PolyPDF publisher verified 96 ft, 60 ft, and 5,760 sq ft using the public Mac build. The values and calibration were preserved after saving the PDF and restarting the app.": "Am 4. November 2026 prüfte der PolyPDF-Herausgeber 96 ft, 60 ft und 5,760 sq ft mit der öffentlichen Mac-Version. Die Werte und die Kalibrierung blieben nach dem Speichern der PDF und dem Neustart der App erhalten.",
+    "Read the test method and download the Mac CSV (English)": "Prüfmethode lesen und Mac-CSV herunterladen (Englisch)",
+    "Windows, Pro workflows, and other PDF viewers were not verified in this check.": "Windows, Pro-Arbeitsabläufe und andere PDF-Viewer wurden bei dieser Prüfung nicht verifiziert.",
+    "The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity.": "Das Flächenergebnis von 408 sq ft wurde in PolyPDF 1.6.6, Build 38, auf dem Mac exportiert und erneut geöffnet. Diese Dateien belegen die beiden Flächenmessungen; sie belegen keine Übereinstimmung mit der aktuellen Version oder mit Windows."
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

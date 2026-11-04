@@ -2899,7 +2899,12 @@
     "Earlier flooring example · 408 sq ft": "फ़्लोरिंग का पुराना उदाहरण · 408 वर्ग फ़ुट",
     "Download the app-exported quantities · CSV": "ऐप से निर्यात की गई मात्राएँ डाउनलोड करें · CSV",
     "Download the saved measured drawing · PDF": "मापों सहित सहेजी गई ड्रॉइंग डाउनलोड करें · PDF",
-    "Read the test method, results, and file hashes": "परीक्षण विधि, परिणाम और फ़ाइल हैश पढ़ें"
+    "Read the test method, results, and file hashes": "परीक्षण विधि, परिणाम और फ़ाइल हैश पढ़ें",
+    "Public Mac check: 1.6.27 build 99": "सार्वजनिक Mac संस्करण की जाँच: 1.6.27, बिल्ड 99",
+    "On November 4, 2026, the PolyPDF publisher verified 96 ft, 60 ft, and 5,760 sq ft using the public Mac build. The values and calibration were preserved after saving the PDF and restarting the app.": "4 नवंबर 2026 को PolyPDF के प्रकाशक ने सार्वजनिक Mac संस्करण में 96 ft, 60 ft और 5,760 sq ft की पुष्टि की। PDF सहेजने और ऐप दोबारा शुरू करने के बाद भी मान और कैलिब्रेशन सुरक्षित रहे।",
+    "Read the test method and download the Mac CSV (English)": "परीक्षण विधि पढ़ें और Mac CSV डाउनलोड करें (अंग्रेज़ी)",
+    "Windows, Pro workflows, and other PDF viewers were not verified in this check.": "इस जाँच में Windows, Pro कार्यप्रवाह और अन्य PDF व्यूअर सत्यापित नहीं किए गए।",
+    "The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity.": "408 sq ft क्षेत्रफल का परिणाम Mac पर PolyPDF 1.6.6, बिल्ड 38 में निर्यात करके दोबारा खोला गया था। ये फ़ाइलें उन दो क्षेत्रफल मापों की पुष्टि करती हैं; वे वर्तमान संस्करण या Windows के समान परिणाम सिद्ध नहीं करतीं।"
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

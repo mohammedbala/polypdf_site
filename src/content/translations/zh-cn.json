@@ -2899,7 +2899,12 @@
     "Earlier flooring example · 408 sq ft": "早期地板示例 · 408 平方英尺",
     "Download the app-exported quantities · CSV": "下载应用导出的工程量 · CSV",
     "Download the saved measured drawing · PDF": "下载已保存的测量图纸 · PDF",
-    "Read the test method, results, and file hashes": "查看测试方法、结果及文件哈希"
+    "Read the test method, results, and file hashes": "查看测试方法、结果及文件哈希",
+    "Public Mac check: 1.6.27 build 99": "公开 Mac 版本验证：1.6.27，构建 99",
+    "On November 4, 2026, the PolyPDF publisher verified 96 ft, 60 ft, and 5,760 sq ft using the public Mac build. The values and calibration were preserved after saving the PDF and restarting the app.": "2026 年 11 月 4 日，PolyPDF 发布方使用公开 Mac 版本验证了 96 ft、60 ft 和 5,760 sq ft。保存 PDF 并重新启动应用后，数值和校准均得到保留。",
+    "Read the test method and download the Mac CSV (English)": "阅读测试方法并下载 Mac CSV（英文）",
+    "Windows, Pro workflows, and other PDF viewers were not verified in this check.": "本次检查未验证 Windows、Pro 工作流程或其他 PDF 阅读器。",
+    "The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity.": "408 sq ft 的面积结果已在 Mac 版 PolyPDF 1.6.6（构建 38）中导出并重新打开。这些文件验证了那两项面积测量，但不能证明当前版本或 Windows 的结果相同。"
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

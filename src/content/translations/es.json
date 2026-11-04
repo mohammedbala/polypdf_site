@@ -2899,7 +2899,12 @@
     "Earlier flooring example · 408 sq ft": "Ejemplo anterior de suelos · 408 pies²",
     "Download the app-exported quantities · CSV": "Descargar las cantidades exportadas por la aplicación · CSV",
     "Download the saved measured drawing · PDF": "Descargar el plano medido y guardado · PDF",
-    "Read the test method, results, and file hashes": "Leer el método de prueba, los resultados y los hashes de los archivos"
+    "Read the test method, results, and file hashes": "Leer el método de prueba, los resultados y los hashes de los archivos",
+    "Public Mac check: 1.6.27 build 99": "Comprobación de la versión pública para Mac: 1.6.27, compilación 99",
+    "On November 4, 2026, the PolyPDF publisher verified 96 ft, 60 ft, and 5,760 sq ft using the public Mac build. The values and calibration were preserved after saving the PDF and restarting the app.": "El 4 de noviembre de 2026, el editor de PolyPDF verificó 96 ft, 60 ft y 5,760 sq ft con la versión pública para Mac. Los valores y la calibración se conservaron tras guardar el PDF y reiniciar la aplicación.",
+    "Read the test method and download the Mac CSV (English)": "Lee el método de prueba y descarga el CSV de Mac (en inglés)",
+    "Windows, Pro workflows, and other PDF viewers were not verified in this check.": "En esta prueba no se verificaron Windows, los flujos de trabajo Pro ni otros visores de PDF.",
+    "The 408 sq ft area result was exported and reopened in PolyPDF 1.6.6 build 38 on Mac. These files verify those two area measurements; they do not establish current-release or Windows parity.": "El resultado de área de 408 sq ft se exportó y volvió a abrir en PolyPDF 1.6.6, compilación 38, para Mac. Estos archivos verifican esas dos mediciones de área; no demuestran equivalencia con la versión actual ni con Windows."
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

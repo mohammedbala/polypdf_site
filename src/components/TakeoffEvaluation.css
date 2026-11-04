@@ -26,3 +26,7 @@
 .takeoff-historical { margin-top: 1.5rem; border-top: 1px solid var(--gray-300); padding-top: .5rem; }
 .takeoff-historical summary { min-height: 44px; padding: .75rem 0; cursor: pointer; font-weight: 650; line-height: 1.5; }
 .takeoff-historical summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.public-mac-takeoff-check { margin: 1.5rem 0; padding: 1rem 1.2rem; border-inline-start: 3px solid var(--accent); background: var(--accent-soft); overflow-wrap: anywhere; }
+.public-mac-takeoff-check p:first-child { margin-top: 0; }
+.public-mac-takeoff-check p:last-child { margin-bottom: 0; }
