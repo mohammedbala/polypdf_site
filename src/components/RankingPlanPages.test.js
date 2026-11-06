@@ -24,7 +24,8 @@ test('the takeoff page answers the Mac question with routes by category and no v
   expect(section.textContent).toContain('macOS 14 or newer, on Apple silicon and Intel Macs');
   expect(section.textContent).toContain('Updated November 2026');
   expect(section.textContent).toContain('Counts were not part of that test.');
-  expect(node.textContent).toContain('a plan drawn in metric has not been tested');
+  expect(node.textContent).toContain('Try the plan drawn in metres');
+  expect(node.querySelector('#metric-plan')).not.toBeNull();
   expect(section.textContent).not.toContain('this sequence');
   expect(section.querySelectorAll('tbody tr')).toHaveLength(4);
   expect(section.textContent).not.toMatch(/bluebeam|revu|parallels|vmware|togal|planswift|stack/i);

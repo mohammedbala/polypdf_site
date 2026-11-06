@@ -29,6 +29,23 @@ test('localizes only published pages and labels the English checkout handoff',()
  assert.equal(links[0].getAttribute('href'),'/es/blog/?source=sample#guide');assert.equal(links[1].hreflang,'en');assert.equal(links[1].getAttribute('href'),'/buy/?source=intl_es_article');assert.match(links[1].textContent,/English/);
  assert.equal(links[2].getAttribute('href'),'/downloads/PolyPDFMac.dmg');dom.window.close();
 });
+test('translated pages put the metric plan first and link the sheet in the reader language when one exists',()=>{
+ const page='<main><section id="construction-example-takeoff"></section><section id="metric-plan"><a data-metric-sheet="" href="/samples/metric/polypdf-metric-practice-plan-en.pdf"><img data-metric-sheet="" src="/samples/metric/previews/polypdf-metric-practice-plan-en-1600.webp" srcset="/samples/metric/previews/polypdf-metric-practice-plan-en-800.webp 800w, /samples/metric/previews/polypdf-metric-practice-plan-en-1600.webp 1600w"><span>Download</span></a></section></main>';
+ const run=(id)=>{const dom=new JSDOM(page);const d=dom.window.document;c.localizeMetricPlan(d,{id},s=>s);return d;};
+ const de=run('de');
+ assert.equal(de.querySelector('main').firstElementChild.id,'metric-plan');
+ assert.equal(de.querySelector('#metric-plan a').getAttribute('href'),'/samples/metric/polypdf-metric-practice-plan-de.pdf');
+ assert.equal(de.querySelector('#metric-plan img').getAttribute('src'),'/samples/metric/previews/polypdf-metric-practice-plan-de-1600.webp');
+ assert(!de.querySelector('#metric-plan img').getAttribute('srcset').includes('plan-en-'));
+ assert.equal(de.querySelector('[data-metric-sheet]'),null);
+ assert.equal(de.querySelector('#metric-plan a').hasAttribute('hreflang'),false);
+ const ja=run('ja');
+ assert.equal(ja.querySelector('main').firstElementChild.id,'metric-plan');
+ assert.equal(ja.querySelector('#metric-plan a').getAttribute('href'),'/samples/metric/polypdf-metric-practice-plan-en.pdf');
+ assert.equal(ja.querySelector('#metric-plan a').getAttribute('hreflang'),'en');
+ assert.match(ja.querySelector('#metric-plan a').textContent,/\(English\)/);
+ assert.equal(ja.querySelector('#metric-plan img').getAttribute('src'),'/samples/metric/previews/polypdf-metric-practice-plan-en-1600.webp');
+});
 test('symmetric hreflang includes self, English and x-default without fabricated regions',()=>{
  const alternates=c.alternatives('/blog/calibrate-pdf-drawing-scale');
  assert.equal(alternates.length,10);assert.equal(alternates.find(a=>a.language==='pt-BR').href,'https://www.polypdf.com/pt-br/blog/calibrate-pdf-drawing-scale/');

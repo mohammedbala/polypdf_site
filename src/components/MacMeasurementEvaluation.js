@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router';
 import DownloadCTA from './DownloadCTA';
 import ArchitecturalTakeoffEvaluation from './ArchitecturalTakeoffEvaluation';
+import MetricPracticePlan from './MetricPracticePlan';
 import { commercialOffer, licenseRightsText } from '../lib/commercialOffer';
 import './TakeoffEvaluation.css';
 
@@ -10,7 +11,7 @@ export default function MacMeasurementEvaluation() {
   useEffect(() => {
     let active = true;
     Promise.resolve(document.fonts?.ready).then(() => {
-      if (active && ['#preview-and-scale', '#try-mac-measurement'].includes(window.location.hash)) {
+      if (active && ['#preview-and-scale', '#try-mac-measurement', '#metric-plan'].includes(window.location.hash)) {
         document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ block: 'start', behavior: 'instant' });
       }
     });
@@ -43,5 +44,6 @@ export default function MacMeasurementEvaluation() {
       <p className="takeoff-small"><strong>Personal Pro: {commercialOffer.price} USD, one payment.</strong> {licenseRightsText}</p>
       <p><Link to="/blog/why-pdf-measurements-are-wrong/">Troubleshoot a measurement that does not match →</Link></p>
     </ArchitecturalTakeoffEvaluation>
+    <MetricPracticePlan source="mac_measurement_practice" />
   </>;
 }

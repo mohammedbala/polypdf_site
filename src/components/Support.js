@@ -60,7 +60,7 @@ const sections = [
       'Open the arrow beside Stamp > Create Interactive Stamp… to start with a blank canvas. Add to toolset is optional and unchecked by default.',
       'For a placed interactive stamp, use Properties to change its values. A visual stamp does not create a certificate signature.',
       'Open a PDF and choose View > Presentation Mode. Use arrow keys to change pages and Escape to return to the workspace.',
-      'New metric dimensions default to millimetres. Existing document formats are preserved; check Measurements > Formatting and verify the page scale when a displayed value is unexpected.'
+      'New metric dimensions default to millimetres. A saved format is kept when the file matches the unit system in Settings. In public Mac 1.6.29 build 101, a metric PDF showed feet and inches while that setting was on Imperial. If a displayed value is unexpected, check Settings, then Measurements > Formatting, and verify the page scale.'
     ]
   },
   {

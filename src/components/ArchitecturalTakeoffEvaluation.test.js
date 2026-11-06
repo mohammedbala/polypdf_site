@@ -26,7 +26,7 @@ test.each([
   expect(evaluation.querySelector('a[href$="public-mac-1.6.27-99/verification.html"]')).not.toBeNull();
   expect(evaluation.textContent).toContain('public Mac 1.6.27 build 99');
   expect(evaluation.textContent).toContain('535.12 sq m');
-  expect(evaluation.textContent).toContain('a plan drawn in metric has not been tested');
+  expect(evaluation.textContent).toContain('Try the plan drawn in metres');
   expect(evaluation.textContent).not.toMatch(/1\.6\.14|1\.6\.6|local Mac build|file hashes|republished/);
   expect(evaluation.querySelector('.takeoff-historical')).toBeNull();
   const ids = [...node.querySelectorAll('[id]')].map(el => el.id);

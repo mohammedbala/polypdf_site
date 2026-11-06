@@ -146,4 +146,27 @@ function localizeLinks(document, locale, t) {
     }
   }
 }
-module.exports = {root,metadata,locales,routes,toolkitRoutes,hubSummary,ORIGIN,normalize,esc,routePath,localizedPath,fileFor,sourceStrings,isTranslatable,mapSchema,translateDOM,translateFactory,languageNavigation,alternatives,sourcePage,localizeLinks,marketingLlms,homeProductSchema};
+// Metric practice sheets exist for these languages. Every other language links the English sheet and says so.
+const metricSheetLocales = ['de','fr','es','pt-br'];
+function localizeMetricPlan(document, locale, t) {
+  const section = document.getElementById('metric-plan');
+  if (!section) return;
+  // Readers of the translated pages work in metric, so the plan drawn in metres comes before the plan drawn in feet.
+  const feet = document.getElementById('construction-example-takeoff');
+  if (feet && feet.parentNode === section.parentNode) feet.parentNode.insertBefore(section, feet);
+  const hasOwnSheet = metricSheetLocales.includes(locale.id);
+  for (const element of section.querySelectorAll('[data-metric-sheet]')) {
+    element.removeAttribute('data-metric-sheet');
+    if (element.tagName === 'IMG') {
+      if (!hasOwnSheet) continue;
+      for (const attribute of ['src','srcset']) element.setAttribute(attribute, element.getAttribute(attribute).replaceAll('plan-en-', `plan-${locale.id}-`));
+    } else if (hasOwnSheet) {
+      element.setAttribute('href', element.getAttribute('href').replace('plan-en.pdf', `plan-${locale.id}.pdf`));
+    } else {
+      element.setAttribute('hreflang','en');
+      const span = document.createElement('span'); span.textContent = ` (${t('English')})`;
+      element.appendChild(span);
+    }
+  }
+}
+module.exports = {localizeMetricPlan,metricSheetLocales,root,metadata,locales,routes,toolkitRoutes,hubSummary,ORIGIN,normalize,esc,routePath,localizedPath,fileFor,sourceStrings,isTranslatable,mapSchema,translateDOM,translateFactory,languageNavigation,alternatives,sourcePage,localizeLinks,marketingLlms,homeProductSchema};

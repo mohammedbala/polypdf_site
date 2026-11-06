@@ -31,7 +31,7 @@ export default function ArchitecturalTakeoffEvaluation({ anchor, filesId, source
           <span>Download the architectural practice PDF</span>
         </SampleLink>
         <p className="takeoff-small">These are drawing reference values. The saved example below comes from public Mac 1.6.27 build 99; check your own result on the version you install.</p>
-        <PublicMacTakeoffCheck />
+        <PublicMacTakeoffCheck metricHref="#metric-plan" />
         <ul>
           <li><SampleLink href={savedExample + '/willow-creek-a101-measured.pdf'} source={source} feature="saved_measurements">Download the saved measured drawing · PDF</SampleLink></li>
           <li><SampleLink href={savedExample + '/willow-creek-a101-takeoff.csv'} source={source} feature="worksheet_export">Download the app-exported quantities · CSV</SampleLink></li>

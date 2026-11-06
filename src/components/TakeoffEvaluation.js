@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router';
 import PlanComparison from './PlanComparison';
 import ArchitecturalTakeoffEvaluation from './ArchitecturalTakeoffEvaluation';
+import MetricPracticePlan from './MetricPracticePlan';
 import { commercialOffer, licenseRightsText } from '../lib/commercialOffer';
 import './TakeoffEvaluation.css';
 import './Growth.css';
@@ -18,7 +19,7 @@ export default function TakeoffEvaluation() {
   useEffect(() => {
     let active = true;
     Promise.resolve(document.fonts?.ready).then(() => {
-      if (active && ['#takeoff-on-mac', '#free-vs-pro', '#try-a-takeoff'].includes(window.location.hash)) {
+      if (active && ['#takeoff-on-mac', '#free-vs-pro', '#try-a-takeoff', '#metric-plan'].includes(window.location.hash)) {
         document.getElementById(window.location.hash.slice(1))?.scrollIntoView({ block: 'start', behavior: 'instant' });
       }
     });
@@ -63,5 +64,6 @@ export default function TakeoffEvaluation() {
     </section>
 
     <ArchitecturalTakeoffEvaluation anchor="try-a-takeoff" filesId="takeoff-files-title" source="takeoff_evaluation" />
+    <MetricPracticePlan source="takeoff_evaluation" />
   </>;
 }

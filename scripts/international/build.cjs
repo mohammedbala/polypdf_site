@@ -24,6 +24,7 @@ for (const locale of allLocales) {
     c.translateDOM(d.body,t);
     d.querySelector('[data-language-slot]').outerHTML = c.languageNavigation(route,locale,t);
     c.localizeLinks(d,locale,t);
+    c.localizeMetricPlan(d,locale,t);
     const canonical = c.ORIGIN+c.localizedPath(locale.id,route);
     const translatedMeta = {...meta,title:t(meta.title),description:t(meta.description),imageAlt:t(meta.imageAlt || 'PolyPDF — PDF drawing measurement and markup on Mac and Windows')};
     translatedMeta.title = editorialTitles[locale.id]?.[route] || translatedMeta.title;

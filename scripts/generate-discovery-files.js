@@ -211,7 +211,8 @@ const sitemapSettings = (route) => {
 const EVIDENCE_RECORDS = [
   ['/samples/evaluation/public-mac-1.6.27-99/verification.html', '2026-11-06'],
   ['/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html', '2026-11-06'],
-  ['/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html', '2026-11-06']
+  ['/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html', '2026-11-06'],
+  ['/samples/evaluation/public-mac-1.6.29-101/metric-verification.html', '2026-11-06']
 ];
 const evidenceRecordUrls = EVIDENCE_RECORDS.map(([file, lastmod]) => [
   '  <url>',
@@ -338,7 +339,7 @@ const buildLlmsText = () => {
     '- Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.',
     '- Markup and review: callouts, text, highlights, shapes, freehand, interactive stamps, revision clouds, the Markup Table, and drawing-revision comparison.',
     '- Presentation Mode: open a PDF, choose View > Presentation Mode, use arrow keys for pages and Escape to exit.',
-    '- New metric dimensions default to millimetres. Explicit formats in existing documents are preserved; metric area and volume remain in square and cubic metres.',
+    '- New metric dimensions default to millimetres. A saved format is kept when the file matches the Unit system in Settings, which starts on Imperial; metric area and volume remain in square and cubic metres.',
     '- Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.',
     '- Pro plugins included with the app: AISC Steel Sections draws steel section profiles as vector geometry, Professional Seal Maker composes a seal graphic, and PDF Maps places a map image for an address or place name. AISC Steel Sections performs no capacity or design checks, and a seal graphic is drafting artwork rather than a cryptographic digital signature: PolyPDF does not check licensure or board compliance.',
     '- Redaction can remove text mapped to supported PDF text-show operators, but it is not fail-closed for every content type: vector or outlined content and some nested images can remain under a black fill. Sanitize Document cleans selected structures but can miss some direct attachments and nested actions. Independently inspect sensitive output and use an approved specialist workflow when complete removal matters.',
@@ -359,6 +360,7 @@ const buildLlmsText = () => {
     `${markdownLink('Architectural takeoff check', '/samples/evaluation/public-mac-1.6.27-99/verification.html')}: 96 ft and 60 ft independent dimensions and 5,760 sq ft gross footprint on sheet A101, including walls; not net flooring`,
     `${markdownLink('Flooring takeoff check', '/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html')}: F1 5,184 sq ft and F2 576 sq ft on sheet I101, to dimension boundaries with no wall deductions or waste`,
     `${markdownLink('Electrical route check', '/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html')}: 46 ft drawn route on sheet E101, circuit-diagram geometry rather than conduit; device counts not run`,
+    `${markdownLink('Metric plan check', '/samples/evaluation/public-mac-1.6.29-101/metric-verification.html')}: public Mac 1.6.29 build 101 on a fictional A1 plan at 1:100, with 40.00 m and 20.00 m dimensions, 800.00 sq m gross including walls, and 85.00 sq m of F2 flooring to dimension lines; not reviewed against a national drawing standard`,
     '',
     '## Practical guides',
     '',

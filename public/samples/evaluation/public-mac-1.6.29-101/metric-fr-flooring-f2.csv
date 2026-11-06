@@ -1,0 +1,5 @@
+Legend,Workspace,Subject,Status,Type,Quantity,Formula,Total,Unit,Pages
+A1,Unassigned,Area,No Status,Area,1,SUM(85),85,sq m,1
+
+Group,Value,Count,Total,Unit
+Subject,Area,1,85.0000000176,sq m

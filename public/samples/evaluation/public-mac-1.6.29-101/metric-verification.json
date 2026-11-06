@@ -1,0 +1,80 @@
+{
+  "testDate": "2026-11-06",
+  "publisher": "PolyPDF publisher, Euclidean Software LLC",
+  "platform": "Mac",
+  "os": "macOS 26.4.1",
+  "hardware": "MacBook Air with Apple silicon",
+  "version": "1.6.29",
+  "build": 101,
+  "distribution": "Unmodified public Mac DMG; read-only mounted app; fresh isolated user profile for each sheet; no license key entered",
+  "installerUrl": "https://www.polypdf.com/downloads/PolyPDFMac-v1.6.29-101.dmg",
+  "installerSha256": "33c4cfc0216525aafeeed5d3060d0f77c516c428b997bbe211ed4acc20e755b3",
+  "sheets": {
+    "en": {
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-en.pdf",
+      "sha256": "30955f76c8ce2a120847b03e3917ddd7030dc3000562f7ad2cee0258d187cfd9"
+    },
+    "de": {
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-de.pdf",
+      "sha256": "c817264d6c9017614cec48cecfb8c0ec94a10b3ccf3b007995c616920b470bac"
+    },
+    "fr": {
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-fr.pdf",
+      "sha256": "48529e0b3c96e3273fbc6a8e02c6af379eff70f31d08684f059cce0cf56035dd"
+    },
+    "es": {
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-es.pdf",
+      "sha256": "5f5a1b6d5fb992d7e44c8468756000d511eac548b479368bb50d9e744e84015f"
+    },
+    "pt-br": {
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-pt-br.pdf",
+      "sha256": "4598c01f3b6688258b3a9c9ceb5d9df711a3414e2f57c47dc41755bef60b79f9"
+    }
+  },
+  "measuredInApp": [
+    "de",
+    "fr"
+  ],
+  "drawnLinesIdenticalAcrossSheets": true,
+  "calibration": {
+    "referenceMetres": 10,
+    "referencePdfPoints": 283.465,
+    "pdfPointsPerMetre": 28.346457
+  },
+  "results": {
+    "widthMetres": 40,
+    "depthMetres": 20,
+    "grossAreaSquareMetres": 800,
+    "grossPerimeterMetres": 120,
+    "lengthQuantity": 2,
+    "lengthSumMetres": 60,
+    "areaQuantity": 1,
+    "f2AreaSquareMetres": 85,
+    "f2PerimeterMetres": 37
+  },
+  "reopened": {
+    "unitSystemMetric": {
+      "width": "40.00 m",
+      "depth": "20.00 m",
+      "grossArea": "800.00 sq m",
+      "pdfPointsPerMetre": 28.346457
+    },
+    "unitSystemImperial": {
+      "width": "131'-2 3/4\"",
+      "grossArea": "8611.13 sq ft",
+      "pdfPointsPerFoot": 8.64,
+      "worksheetLengthFormula": "SUM(131.234 + 65.617)"
+    }
+  },
+  "notCovered": [
+    "Windows",
+    "Pro features",
+    "symbol counts",
+    "electrical takeoff",
+    "F1 flooring area",
+    "complete estimates",
+    "Adobe Acrobat",
+    "review by a local construction professional",
+    "national drawing standards"
+  ]
+}

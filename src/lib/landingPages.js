@@ -91,7 +91,7 @@ export const landingPages = Object.freeze({
     problemTitle: 'Keep the quantity and its drawing context together.',
     problemCopy: 'A takeoff is easier to audit when every result still points back to the sheet it came from. PolyPDF places measurements on the drawing while the worksheet tracks subject, quantity, units, and totals in one desktop workspace.',
     workflow: [
-      ['Confirm the page scale', 'Choose a common architectural or engineering preset, or calibrate against a known distance. Use imperial or metric units to match the source sheet. New metric dimensions default to millimetres; existing document formats are preserved.'],
+      ['Confirm the page scale', 'Choose a common architectural or engineering preset, or calibrate against a known distance. Set the unit system in Settings to match the source sheet. New metric dimensions default to millimetres; a saved format is kept when the file matches that unit system.'],
       ['Create measurement subjects', 'Organize results by the material, assembly, or scope you are quantifying so repeated measurements land in a consistent worksheet row.'],
       ['Measure and count on the sheet', 'Place distance, area, perimeter, angle, and count annotations directly on the drawing while PolyPDF updates the worksheet.'],
       ['Export for pricing or review', 'Send the worksheet to CSV for estimating calculations or PDF for a readable project record.']
@@ -109,7 +109,7 @@ export const landingPages = Object.freeze({
       ['Can I export takeoff results?', 'Yes. The takeoff worksheet can be exported to CSV for downstream calculations or PDF for a readable record.'],
       ['Do I need the original CAD file?', 'No. PolyPDF works from the PDF drawing. You calibrate the page using its stated scale or a known distance.'],
       ['Can PolyPDF measure scanned drawings?', 'You can measure a raster or scanned drawing when it has a reliable scale or known reference distance. The source image quality and the accuracy of that reference still matter.'],
-      ['Which units does PolyPDF use?', 'Imperial or metric. New metric dimensions default to millimetres, and existing document formats are preserved. The publisher’s Mac test used a plan drawn in feet; a plan drawn in metric has not been tested.'],
+      ['Which units does PolyPDF use?', 'Imperial or metric. Choose in Settings, under Measurements. PolyPDF starts on Imperial, and your choice applies to every PDF you open. New metric dimensions default to millimetres, and you can change Length to metres or centimetres. The publisher measured a plan drawn in metres in public Mac 1.6.29 build 101.'],
       ['Does PolyPDF include labor and material prices?', 'No. PolyPDF measures, counts, and exports drawing quantities. It does not come with labor units, material prices, or assemblies, so any rates you use come from your own estimating process.'],
       ['Is PolyPDF takeoff free?', 'PolyPDF Free has no trial timer and includes calibration, markup, review, and up to 3 hand-created measurements per document. Pro removes that measurement cap and unlocks Symbol Search and other Pro workflows.'],
       ['How much does a PolyPDF Pro license cost?', `The personal Pro license costs ${commercialOffer.price} USD in one payment, with applicable taxes shown at checkout. ${licenseRightsText} Direct website purchases have a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee. Organization-managed seats have separate team licensing.`]
