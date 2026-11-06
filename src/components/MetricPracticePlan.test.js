@@ -19,19 +19,22 @@ test('the metric plan sets the unit first and states what was measured', () => {
   expect(steps[0]).toContain('set Unit system to Metric');
   expect(steps[1]).toContain('set Length to Meters');
   expect(steps[2]).toContain('10 m scale bar');
-  expect(steps[3]).toContain('40.00 m width and the 20.00 m depth');
+  expect(steps[2]).toContain('between snapped endpoints');
+  expect(steps[3]).toContain('40.00 m width');
   expect(steps[4]).toContain('800.00 sq m gross area, including walls');
+  expect(steps[4]).toContain('85.00 sq m');
+  expect(steps[4]).toContain('outer face of the wall');
   expect(node.textContent).toContain('public Mac 1.6.29 build 101');
-  expect(node.textContent).toContain('85.00 sq m');
-  expect(node.textContent).toContain('set Length to Meters, calibrate it');
-  expect(node.textContent).toContain('outer face of the wall');
-  expect(node.textContent).toContain('on the French sheet, and measured the German sheet using the Metric button');
-  expect(node.textContent).toContain('the saved German PDF');
+  expect(node.textContent).toContain('adds the two areas into one total');
+  expect(node.textContent).toContain('own plan, drawn for one market');
   expect(node.textContent).toContain('feet and inches');
-  expect(node.textContent).toContain('not the two dimension labels');
+  expect(node.textContent).toContain('not the dimension label');
   expect(node.textContent).toContain('not reviewed by a local construction professional');
   expect(node.textContent).not.toMatch(/regionally correct|compliant|conforms/i);
 });
+
+const IDS = ['en', 'de', 'fr', 'es', 'pt-br', 'ja', 'zh-cn', 'hi', 'ar'];
+const recordFile = (file) => path.join(process.cwd(), 'public/samples/evaluation/public-mac-1.6.29-101', file);
 
 test('every file the metric plan links to is published', () => {
   const node = render();
@@ -39,20 +42,25 @@ test('every file the metric plan links to is published', () => {
   expect(local.length).toBeGreaterThanOrEqual(3);
   const srcset = node.querySelector('img').getAttribute('srcset').split(',').map((part) => part.trim().split(' ')[0]);
   for (const file of [...local, ...srcset]) expect(fs.existsSync(path.join(process.cwd(), 'public', file))).toBe(true);
-  for (const id of ['en', 'de', 'fr', 'es', 'pt-br']) {
+  for (const id of IDS) {
     expect(fs.existsSync(path.join(process.cwd(), `public/samples/metric/polypdf-metric-practice-plan-${id}.pdf`))).toBe(true);
     expect(fs.existsSync(path.join(process.cwd(), `public/samples/metric/previews/polypdf-metric-practice-plan-${id}-1600.webp`))).toBe(true);
+    expect(fs.existsSync(recordFile(`metric-${id}-takeoff.csv`))).toBe(true);
   }
-  for (const file of ['polypdf-metric-practice-plan-de-measured.pdf', 'polypdf-metric-practice-plan-fr-measured.pdf', 'metric-de-takeoff.csv', 'metric-fr-takeoff.csv', 'metric-fr-flooring-f2.csv', 'metric-verification.json']) {
-    expect(fs.existsSync(path.join(process.cwd(), 'public/samples/evaluation/public-mac-1.6.29-101', file))).toBe(true);
+  for (const file of ['polypdf-metric-practice-plan-de-measured.pdf', 'polypdf-metric-practice-plan-ar-measured.pdf', 'metric-verification.html', 'metric-verification.json']) {
+    expect(fs.existsSync(recordFile(file))).toBe(true);
   }
 });
 
-test('the saved metric worksheets show two lengths and one area in metres', () => {
-  const read = (file) => fs.readFileSync(path.join(process.cwd(), 'public/samples/evaluation/public-mac-1.6.29-101', file), 'utf8');
-  for (const file of ['metric-de-takeoff.csv', 'metric-fr-takeoff.csv']) {
-    expect(read(file)).toContain('Area,1,SUM(800),800,sq m,1');
-    expect(read(file)).toContain('Length,2,SUM(40 + 20),60,m,1');
+test('each market worksheet holds one check length and the two traced areas that the record states', () => {
+  const record = JSON.parse(fs.readFileSync(recordFile('metric-verification.json'), 'utf8'));
+  expect(record.plans.map((plan) => plan.id).sort()).toEqual([...IDS].sort());
+  for (const plan of record.plans) {
+    const csv = fs.readFileSync(recordFile(`metric-${plan.id}-takeoff.csv`), 'utf8');
+    expect(csv).toContain(`Length,1,SUM(${Number(plan.check)}),${Number(plan.check)},m,1`);
+    expect(csv).toMatch(/Area,2,SUM\([\d.]+ \+ [\d.]+\)/);
+    const [gross, floor] = csv.match(/Area,2,SUM\(([\d.]+) \+ ([\d.]+)\)/).slice(1).map(Number);
+    expect(Math.abs(gross - Number(plan.gross))).toBeLessThan(0.006);
+    expect(Math.abs(floor - Number(plan.floor))).toBeLessThan(0.006);
   }
-  expect(read('metric-fr-flooring-f2.csv')).toContain('Area,1,SUM(85),85,sq m,1');
 });

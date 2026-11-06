@@ -1,7 +1,7 @@
 Legend,Workspace,Subject,Status,Type,Quantity,Formula,Total,Unit,Pages
-A1,Unassigned,Area,No Status,Area,1,SUM(800),800,sq m,1
-L1,Unassigned,Linear Dimension,No Status,Length,2,SUM(40 + 20),60,m,1
+A1,Unassigned,Area,No Status,Area,2,SUM(264.668 + 25.13),289.798,sq m,1
+L1,Unassigned,Linear Dimension,No Status,Length,1,SUM(19.99),19.99,m,1
 
 Group,Value,Count,Total,Unit
-Subject,Area,1,800,sq m
-Subject,Linear Dimension,2,60,m
+Subject,Area,2,289.797700097,sq m
+Subject,Linear Dimension,1,19.9899999847,m

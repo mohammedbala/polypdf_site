@@ -147,7 +147,7 @@ function localizeLinks(document, locale, t) {
   }
 }
 // Metric practice sheets exist for these languages. Every other language links the English sheet and says so.
-const metricSheetLocales = ['de','fr','es','pt-br'];
+const metricSheetLocales = ['de','fr','es','pt-br','ja','zh-cn','hi','ar'];
 function localizeMetricPlan(document, locale, t) {
   const section = document.getElementById('metric-plan');
   if (!section) return;

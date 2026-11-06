@@ -37,7 +37,7 @@ Publisher tests of the public Mac 1.6.27 build 99 app on synthetic drawings, wit
 - [Architectural takeoff check](https://www.polypdf.com/samples/evaluation/public-mac-1.6.27-99/verification.html): 96 ft and 60 ft independent dimensions and 5,760 sq ft gross footprint on sheet A101, including walls; not net flooring
 - [Flooring takeoff check](https://www.polypdf.com/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html): F1 5,184 sq ft and F2 576 sq ft on sheet I101, to dimension boundaries with no wall deductions or waste
 - [Electrical route check](https://www.polypdf.com/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html): 46 ft drawn route on sheet E101, circuit-diagram geometry rather than conduit; device counts not run
-- [Metric plan check](https://www.polypdf.com/samples/evaluation/public-mac-1.6.29-101/metric-verification.html): public Mac 1.6.29 build 101 on a fictional A1 plan at 1:100, with 40.00 m and 20.00 m dimensions, 800.00 sq m gross including walls, and 85.00 sq m of F2 flooring to dimension lines; not reviewed against a national drawing standard
+- [Metric plan check](https://www.polypdf.com/samples/evaluation/public-mac-1.6.29-101/metric-verification.html): public Mac 1.6.29 build 101 on nine fictional plans drawn in metres, one per language market, each with its own building, measured in the app; none was reviewed by a local construction professional or against a national drawing standard
 
 ## Practical guides
 

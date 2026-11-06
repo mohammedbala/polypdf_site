@@ -6,72 +6,159 @@
   "hardware": "MacBook Air with Apple silicon",
   "version": "1.6.29",
   "build": 101,
-  "distribution": "Unmodified public Mac DMG; read-only mounted app; fresh isolated user profile for each sheet; no license key entered",
+  "distribution": "Unmodified public Mac DMG; read-only mounted app; isolated user profile; no license key entered",
   "installerUrl": "https://www.polypdf.com/downloads/PolyPDFMac-v1.6.29-101.dmg",
   "installerSha256": "33c4cfc0216525aafeeed5d3060d0f77c516c428b997bbe211ed4acc20e755b3",
-  "sheets": {
-    "en": {
+  "plans": [
+    {
+      "id": "en",
+      "lang": "en",
+      "label": "English",
+      "building": "Fictional community centre, one building",
+      "sheet": "A1, 1:100",
+      "calibrate": "10 m scale bar",
+      "check": "40.00",
+      "gross_label": "Gross area, outer wall faces",
+      "gross": "800.00",
+      "floor_label": "Two F2 rooms",
+      "floor": "85.00",
       "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-en.pdf",
       "sha256": "30955f76c8ce2a120847b03e3917ddd7030dc3000562f7ad2cee0258d187cfd9"
     },
-    "de": {
+    {
+      "id": "de",
+      "lang": "de",
+      "label": "German",
+      "building": "Fictional village community hall (Dorfgemeinschaftshaus)",
+      "sheet": "A2, M 1:100",
+      "calibrate": "10 m scale bar in the title block",
+      "check": "19.99",
+      "gross_label": "BGF, outer wall faces",
+      "gross": "264.67",
+      "floor_label": "Finish B2, inner wall faces",
+      "floor": "25.13",
       "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-de.pdf",
-      "sha256": "c817264d6c9017614cec48cecfb8c0ec94a10b3ccf3b007995c616920b470bac"
+      "sha256": "77759ddfb0dd7b10adb694022d001fb985c43eb35276346c64b91622f677d1ae"
     },
-    "fr": {
+    {
+      "id": "fr",
+      "lang": "fr",
+      "label": "French",
+      "building": "Fictional municipal hall (salle polyvalente)",
+      "sheet": "A3, 1/100",
+      "calibrate": "Printed 24,00 dimension",
+      "check": "17.50",
+      "gross_label": "Surface bâtiment, outer wall faces",
+      "gross": "398.00",
+      "floor_label": "Parquet, inner wall faces",
+      "floor": "199.25",
       "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-fr.pdf",
-      "sha256": "48529e0b3c96e3273fbc6a8e02c6af379eff70f31d08684f059cce0cf56035dd"
+      "sha256": "702e30f263dabe7119336f9b957e696aa12e733ce7d47cec08b3e2d11e66ae17"
     },
-    "es": {
+    {
+      "id": "es",
+      "lang": "es",
+      "label": "Spanish",
+      "building": "Fictional municipal social centre (centro de convivencia)",
+      "sheet": "A2, 1/100",
+      "calibrate": "Printed 24,90 dimension",
+      "check": "19.60",
+      "gross_label": "Superficie construida, outer faces",
+      "gross": "418.29",
+      "floor_label": "Parquet PQ, inner wall faces",
+      "floor": "129.36",
       "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-es.pdf",
-      "sha256": "5f5a1b6d5fb992d7e44c8468756000d511eac548b479368bb50d9e744e84015f"
+      "sha256": "2cf0711ff0f19e8a189a7d8272f9a3c30bb187e20fa91934355bcd8cfea5fd33"
     },
-    "pt-br": {
+    {
+      "id": "pt-br",
+      "lang": "pt-BR",
+      "label": "Brazilian Portuguese",
+      "building": "Fictional primary-care clinic (UBS Porte I)",
+      "sheet": "A1, 1:50",
+      "calibrate": "5 m graphic scale",
+      "check": "27.00",
+      "gross_label": "Área construída, outer faces",
+      "gross": "380.00",
+      "floor_label": "Finish GA, blue outline",
+      "floor": "45.04",
       "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-pt-br.pdf",
-      "sha256": "4598c01f3b6688258b3a9c9ceb5d9df711a3414e2f57c47dc41755bef60b79f9"
-    }
-  },
-  "measuredInApp": [
-    "de",
-    "fr"
-  ],
-  "drawnLinesIdenticalAcrossSheets": true,
-  "calibration": {
-    "referenceMetres": 10,
-    "referencePdfPoints": 283.465,
-    "pdfPointsPerMetre": 28.346457
-  },
-  "results": {
-    "widthMetres": 40,
-    "depthMetres": 20,
-    "grossAreaSquareMetres": 800,
-    "grossPerimeterMetres": 120,
-    "lengthQuantity": 2,
-    "lengthSumMetres": 60,
-    "areaQuantity": 1,
-    "f2AreaSquareMetres": 85,
-    "f2PerimeterMetres": 37
-  },
-  "reopened": {
-    "unitSystemMetric": {
-      "width": "40.00 m",
-      "depth": "20.00 m",
-      "grossArea": "800.00 sq m",
-      "pdfPointsPerMetre": 28.346457
+      "sha256": "253cc9b1396c303bd0d3cb7f6a9273896fb88eb591a72232ebe0ec87844076e4"
     },
-    "unitSystemImperial": {
-      "width": "131'-2 3/4\"",
-      "grossArea": "8611.13 sq ft",
-      "pdfPointsPerFoot": 8.64,
-      "worksheetLengthFormula": "SUM(131.234 + 65.617)"
+    {
+      "id": "ja",
+      "lang": "ja",
+      "label": "Japanese",
+      "building": "Fictional timber neighbourhood hall (地区集会所)",
+      "sheet": "A3, 1/100",
+      "calibrate": "Printed 14,560 dimension",
+      "check": "10.92",
+      "gross_label": "床面積, wall centres",
+      "gross": "152.37",
+      "floor_label": "Meeting room, wall centres",
+      "floor": "59.62",
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-ja.pdf",
+      "sha256": "322271a055bdb8947c35c30fb20a96e9ae1b0a840479e7d3c83010703cd6fca0"
+    },
+    {
+      "id": "zh-cn",
+      "lang": "zh-CN",
+      "label": "Simplified Chinese",
+      "building": "Fictional community day-care centre for older people",
+      "sheet": "A1, 1:100",
+      "calibrate": "Printed 50600 dimension",
+      "check": "14.60",
+      "gross_label": "Gross area, outer corners",
+      "gross": "738.76",
+      "floor_label": "Finish 地1, zone outline",
+      "floor": "112.32",
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-zh-cn.pdf",
+      "sha256": "327c8461643d93df82e40a5f69246c12a9295f36117ef3889db759ec89ab03a5"
+    },
+    {
+      "id": "hi",
+      "lang": "hi",
+      "label": "Hindi",
+      "building": "Fictional village council office (ग्राम पंचायत भवन), bilingual labels",
+      "sheet": "A3, 1:100",
+      "calibrate": "10 m scale bar",
+      "check": "15.60",
+      "gross_label": "Plinth area, grid crossings",
+      "gross": "130.20",
+      "floor_label": "Kota stone, grid crossings",
+      "floor": "34.74",
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-hi.pdf",
+      "sha256": "7c16a8566230c8d0194b715173360dc32e6ae9a554d7f7656dd8458822127398"
+    },
+    {
+      "id": "ar",
+      "lang": "ar",
+      "label": "Arabic",
+      "building": "Fictional neighbourhood centre (مركز حي)",
+      "sheet": "A2, 1:100",
+      "calibrate": "Printed 29.10 dimension",
+      "check": "25.50",
+      "gross_label": "Gross area, outer wall faces",
+      "gross": "537.57",
+      "floor_label": "Granite lobby, drawn lines",
+      "floor": "32.20",
+      "url": "https://www.polypdf.com/samples/metric/polypdf-metric-practice-plan-ar.pdf",
+      "sha256": "70337c5239a72c476c549de3baa27eade3e2da7be1b19fc589bbbf4d6e23fa46"
     }
+  ],
+  "reopened": {
+    "sheets": [
+      "de",
+      "ar"
+    ],
+    "unitSystem": "Metric",
+    "result": "Labels and scale unchanged after quitting and reopening the app"
   },
   "notCovered": [
     "Windows",
     "Pro features",
     "symbol counts",
     "electrical takeoff",
-    "F1 flooring area",
     "complete estimates",
     "Adobe Acrobat",
     "review by a local construction professional",
