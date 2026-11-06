@@ -71,8 +71,8 @@ export default function SymbolCountEvaluation() {
               <li><SampleLink href="/samples/takeoff/electrical-reference.csv" source="symbol_count_evaluation" feature="reference_quantities">Reference quantities · CSV</SampleLink></li>
             </ul>
             <p>No account or email is required for these files. This synthetic drawing is for practice, not construction.</p>
-            <p className="takeoff-small">The fixture counts have not been verified by a current-release Mac or Windows Symbol Search run. The existing Mac 1.6.6 build 38 electrical output verifies only the 42 ft route. It does not prove automatic count accuracy.</p>
-            <p><Link to="/samples/">See sample evidence and verification limits →</Link></p>
+            <p className="takeoff-small">The fixture counts have not been verified by a current-release Mac or Windows Symbol Search run. The public Mac 1.6.27 build 99 electrical check, on a different Willow Creek drawing, measured a 46 ft drawn route only. It does not prove automatic count accuracy.</p>
+            <p><Link to="/samples/">See the sample files and test limits →</Link></p>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ export default function DownloadEvaluation({ detailsRef, requestedPlatform, sour
           <li>Trace the outside boundary: 5,760 sq ft gross area. Review the worksheet, export it, save a copy, and reopen the PDF to check all three measurements.</li>
         </ol>
         <p>Two length checks and one area use the three-measurement Free allowance. Gross area includes walls; it is not net flooring or a complete estimate.</p>
-        <p className="dl-evaluation-scope">These are drawing reference values. A saved example was verified in local Mac build 1.6.14 build 76; check your own result on the installed version.</p>
+        <p className="dl-evaluation-scope">These are drawing reference values. The saved example below comes from public Mac 1.6.27 build 99; check your own result on the version you install.</p>
         <div className="dl-evaluation-links">
           <a href="/product-facts/#verified-construction-example" data-evaluation-target="evidence" onClick={() => guideClick('evidence')}>Inspect the saved example and test scope</a>
           <a href="/pdf-takeoff-software/#free-vs-pro" data-evaluation-target="plans" onClick={() => guideClick('plans')}>Compare Free and Pro</a>

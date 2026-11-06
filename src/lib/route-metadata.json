@@ -3,12 +3,13 @@
     "title": "Construction PDF Takeoff & Markup Software | PolyPDF",
     "description": "Measure PDF drawings, count symbols, compare revisions, and review markups on Mac and Windows. Start free; unlock PolyPDF Pro with one payment.",
     "robots": "index, follow",
-    "dateModified": "2026-10-16"
+    "dateModified": "2026-11-06"
   },
   "/buy": {
     "title": "Buy PolyPDF Pro Once | Measurements, Search & Plugins",
     "description": "Unlock unlimited measurements, Symbol Search, plugins, and Revision Package updates on three Mac or Windows computers for $74.95 once.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-11-06"
   },
   "/upgrade": {
     "title": "Upgrade to PolyPDF Pro | Unlock Every Pro Workflow",
@@ -244,7 +245,8 @@
   "/windows": {
     "title": "PolyPDF for Windows | PDF Measurement and Markup",
     "description": "Download PolyPDF for Windows 10 and 11. Measure PDF drawings, review markups, and compare revisions. Start free with no trial timer.",
-    "robots": "index, follow"
+    "robots": "index, follow",
+    "dateModified": "2026-11-06"
   },
   "/terms": {
     "title": "Terms of Use | PolyPDF",
@@ -265,13 +267,13 @@
     "title": "Construction Takeoff Software for Mac & Windows | PolyPDF",
     "description": "Compare Free and Pro PDF takeoff for Mac and Windows. Try 3 measurements per document, inspect sample exports, and review one-time Pro licensing.",
     "robots": "index, follow",
-    "dateModified": "2026-10-16"
+    "dateModified": "2026-11-06"
   },
   "/measure-pdf-on-mac": {
     "title": "Measure a PDF on Mac | PolyPDF Drawing Tools",
     "description": "Measure PDF drawings on Mac with calibrated distance, area, perimeter, angle, and count tools in a local-first desktop app. Start free.",
     "robots": "index, follow",
-    "dateModified": "2026-10-16"
+    "dateModified": "2026-11-06"
   },
   "/construction-pdf-markup": {
     "title": "PDF Markup Software for Construction | PolyPDF",
@@ -283,7 +285,7 @@
     "title": "Visual Search PDF Symbol Count | PolyPDF",
     "description": "Count drawing symbols with PolyPDF Pro on Mac and Windows. Inspect a practice PDF, review fixture candidates, and check quantities before exporting.",
     "robots": "index, follow",
-    "dateModified": "2026-10-17"
+    "dateModified": "2026-11-06"
   },
   "/compare-pdf-drawings": {
     "title": "Compare PDF Drawings on Mac & Windows | PolyPDF",
@@ -331,7 +333,7 @@
     "title": "PDF Measuring Tool for Mac & Windows | PolyPDF",
     "description": "Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.",
     "robots": "index, follow",
-    "dateModified": "2026-10-16"
+    "dateModified": "2026-11-06"
   },
   "/electrical-takeoff-software": {
     "title": "Electrical Takeoff Software for Mac & Windows | PolyPDF",
@@ -355,7 +357,7 @@
     "title": "Construction PDF Samples & Quantity Worksheets | PolyPDF",
     "description": "Download 24 construction drawing sheets, architectural and MEP sample PDFs, detailed practice plans and quantity references. No signup required.",
     "robots": "index, follow",
-    "dateModified": "2026-10-17"
+    "dateModified": "2026-11-06"
   },
   "/tools": {
     "title": "36 Free Online PDF Tools — No Upload | PolyPDF",
@@ -371,7 +373,7 @@
   },
   "/product-facts": {
     "title": "PolyPDF Product Facts: Platforms, Free & Pro, Limits",
-    "description": "Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.",
+    "description": "Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample files.",
     "robots": "index, follow",
     "dateModified": "2026-11-06"
   },
@@ -383,9 +385,9 @@
   },
   "/tools/construction-takeoff-spreadsheet": {
     "title": "Free Construction Takeoff Spreadsheet for Excel | PolyPDF",
-    "description": "Download a free Excel takeoff template. Map PDF quantities to units and rates, avoid duplicate CSV totals, and inspect a real PolyPDF export.",
+    "description": "Download a free Excel takeoff template. Map PDF quantities to units and rates, avoid duplicate CSV totals, and inspect a PolyPDF CSV export.",
     "robots": "index, follow",
-    "dateModified": "2026-10-17"
+    "dateModified": "2026-11-06"
   },
   "/tools/automation": {
     "title": "PDF Tools for AI Agents & MCP | PolyPDF",

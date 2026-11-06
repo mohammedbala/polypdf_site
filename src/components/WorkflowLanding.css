@@ -638,3 +638,39 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+.workflow-step-note {
+  margin: 1.5rem 0 0;
+  color: var(--workflow-muted);
+  font-size: 0.9rem;
+}
+
+.workflow-step-list--illustrated {
+  margin-top: 2rem;
+}
+
+.workflow-step-list--illustrated li {
+  grid-template-columns: 48px minmax(0, 0.62fr) minmax(0, 1.38fr);
+}
+
+.workflow-step-list--illustrated .workflow-step-image-link {
+  grid-column: 2 / -1;
+}
+
+.workflow-step-list--illustrated .workflow-step-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--gray-300);
+  border-radius: 8px;
+}
+
+@media (max-width: 900px) {
+  .workflow-step-list--illustrated li {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .workflow-step-list--illustrated .workflow-step-image-link {
+    grid-column: 1 / -1;
+  }
+}

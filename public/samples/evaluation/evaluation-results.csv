@@ -1,4 +1,4 @@
-﻿Platform,Check,Sheet,Expected / scope,App version,Build,OS version,Edition,Actual result,Status,Saved output / evidence,Notes
+﻿Platform,Check,Sheet,Expected / scope,App version,Build,OS version,Edition,Actual result,Status,Saved output file,Notes
 Mac,Open and record environment,All,"Record app version/build, OS version, edition and source filenames.",,,,,,NOT RUN,,
 Mac,Calibrate and check dimensions,A101 Revision A,20 ft calibration; independent 96 ft and 60 ft dimensions.,,,,,,NOT RUN,,
 Mac,Measure gross area,A101 Revision A,5760 sq ft; two lengths plus one area fits Free measurement cap.,,,,,,NOT RUN,,

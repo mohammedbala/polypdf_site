@@ -36,23 +36,28 @@ test('does not advertise removed workflow videos on landing routes', () => {
   });
 });
 
-test('static application schema advertises Free but not a closable paid offer', () => {
+test('static application schema lists Free and the standard Pro price, never the ended Founder offer', () => {
   const application = buildStructuredData('/buy')
     .find((entry) => entry['@type'] === 'SoftwareApplication');
-  expect(application.offers).toMatchObject({
+  const [free, pro] = application.offers;
+  expect(application.offers).toHaveLength(2);
+  expect(free).toMatchObject({
     '@type': 'Offer',
     name: 'PolyPDF Free',
     price: '0',
     availability: 'https://schema.org/InStock'
   });
+  expect(pro).toMatchObject({ '@type': 'Offer', name: 'PolyPDF Pro', price: '74.95', priceCurrency: 'USD' });
+  expect(pro.description).toContain('up to 3 Mac or Windows computers');
+  expect(JSON.stringify(application)).not.toMatch(/aggregateRating|ratingValue|priceValidUntil|availabilityEnds/);
   expect(JSON.stringify(application.offers)).not.toContain('Founder');
   expect(JSON.stringify(application.offers)).not.toContain('49.99');
   expect(JSON.stringify(application.featureList)).not.toContain('permanently removes');
   expect(JSON.stringify(application.featureList)).toContain('documented limits');
   expect(JSON.stringify(application.featureList)).toContain('Revision Packages');
   expect(application.softwareVersion).toBe(siteRelease.version);
-  expect(application.offers.description).toContain('Revision Package viewing');
-  expect(application.offers.description).toContain('Revision Package changes or publishing require PolyPDF Pro');
+  expect(free.description).toContain('Revision Package viewing');
+  expect(free.description).toContain('Revision Package changes or publishing require PolyPDF Pro');
 });
 
 test('BlogPosting schema uses each post evidence image and reviewed dates', () => {

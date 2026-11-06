@@ -59,7 +59,8 @@ function assertLocalizedHomeSchema(blocks, description, label) {
   assert.equal(app['@id'], `${ORIGIN}/#software`, `${label}shared product identity`);
   assert(typeof description === 'string' && description.trim(), `${label}translated product description to check`);
   assert.equal(app.description, description, `${label}product description must be the translated product description`);
-  assert.equal(app.offers?.price, '0', `${label}only the Free offer is static`);
+  assert.equal([].concat(app.offers||[]).find((offer)=>offer.price==='0')?.price, '0', `${label}the Free offer must be listed`);
+  assert(![].concat(app.offers||[]).some((offer)=>/founder/i.test(JSON.stringify(offer))), `${label}the ended Founder offer must not be listed`);
   assert.equal(blocks.find((block) => block['@type'] === 'Organization')?.['@id'], `${ORIGIN}/#organization`, `${label}publisher entity`);
 }
 // Non-JavaScript crawlers read this template text first; it must not be English on a translated page.

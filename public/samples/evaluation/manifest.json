@@ -407,8 +407,8 @@
   "files": [
     {
       "path": "START-HERE.html",
-      "bytes": 8820,
-      "sha256": "5de4659927e7c89c0d7323177716f113528c6d332576023e11c501192893435b"
+      "bytes": 8847,
+      "sha256": "27ef1c51fb49fa085dda29a76e8e9338464dc47d3cde41894fd1cd7998a7b0ff"
     },
     {
       "path": "reference-quantities.csv",
@@ -417,8 +417,8 @@
     },
     {
       "path": "evaluation-results.csv",
-      "bytes": 3207,
-      "sha256": "95080a6947fae8b566f2cad36e48c2a0f14c9363709b88dc85114a29f88c2084"
+      "bytes": 3201,
+      "sha256": "3b9c73ee10980e2c4a11be714bde87cefd3637f0cec3305e246c79725423e82c"
     },
     {
       "path": "drawings/02-Architectural-Revision-A.pdf",

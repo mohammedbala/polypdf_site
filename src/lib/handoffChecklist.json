@@ -34,7 +34,7 @@
     },
     {
       "title": "Get the recipient’s acceptance before changing tools",
-      "test": "Have the actual recipient review the saved PDF and exports. Resolve every failed required check, or retain the existing tool for that part of the workflow. Keep both the original record and the test evidence.",
+      "test": "Have the actual recipient review the saved PDF and exports. Resolve every failed required check, or retain the existing tool for that part of the workflow. Keep both the original record and your saved test files.",
       "record": "Pass, Fail or Not applicable with a reason for each check; acceptance, reviewer and date."
     }
   ]

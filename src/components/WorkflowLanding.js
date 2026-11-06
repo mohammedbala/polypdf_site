@@ -76,7 +76,7 @@ const WorkflowLanding = ({ page, children }) => {
                 </DirectCheckoutLink>
               </div>
               {page.path === '/measure-pdf-on-mac' && <nav className="takeoff-jump-links" aria-label="Mac measurement decisions"><a href="#preview-and-scale">Preview and drawing scale</a><a href="#construction-example-takeoff">Try the Mac measurement sample</a></nav>}
-              {page.path === '/pdf-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Takeoff decisions"><a href="#free-vs-pro">Compare Free and Pro</a><a href="#construction-example-takeoff">Try the practice takeoff</a></nav>}
+              {page.path === '/pdf-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Takeoff decisions"><a href="#takeoff-on-mac">Takeoff on a Mac</a><a href="#free-vs-pro">Compare Free and Pro</a><a href="#construction-example-takeoff">Try the practice takeoff</a></nav>}
               {page.path === '/construction-pdf-markup' && <nav className="takeoff-jump-links" aria-label="Markup decisions"><a href="#markup-free-vs-pro">Compare Free and Pro</a><a href="#construction-example-review">Check the review handoff</a></nav>}
               {page.path === '/visual-search-pdf-count' && <nav className="takeoff-jump-links" aria-label="Symbol counting decisions"><a href="#counting-options">Choose Free or Pro for counting</a><a href="#construction-example-electrical">Check the fixture-count exercise</a></nav>}
               {page.path === '/electrical-takeoff-software' && <nav className="takeoff-jump-links" aria-label="Electrical takeoff decisions"><a href="#electrical-options">Choose Free or Pro</a><a href="#electrical-count-check">Check fixtures and receptacles</a></nav>}
@@ -137,8 +137,9 @@ const WorkflowLanding = ({ page, children }) => {
               <p className="workflow-section-index">02 / WORKFLOW</p>
               <h2>From source PDF to a result you can review.</h2>
             </div>
-            <ol className="workflow-step-list">
-              {page.workflow.map(([title, description], index) => (
+            {page.workflowNote && <p className="workflow-step-note">{page.workflowNote}</p>}
+            <ol className={page.workflowNote ? 'workflow-step-list workflow-step-list--illustrated' : 'workflow-step-list'}>
+              {page.workflow.map(([title, description, image], index) => (
                 <motion.li
                   key={title}
                   initial={{ opacity: 0, y: 16 }}
@@ -149,6 +150,7 @@ const WorkflowLanding = ({ page, children }) => {
                   <span className="workflow-step-number">0{index + 1}</span>
                   <h3>{title}</h3>
                   <p>{description}</p>
+                  {image && <a className="workflow-step-image-link" href={image.src}><img className="workflow-step-image" src={image.src} srcSet={image.srcSet} sizes="(max-width: 900px) 100vw, 1100px" alt={image.alt} width="1536" height="936" loading="lazy" /></a>}
                 </motion.li>
               ))}
             </ol>

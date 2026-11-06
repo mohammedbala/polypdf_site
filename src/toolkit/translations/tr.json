@@ -261,7 +261,7 @@
     "Crop PDF Online — Trim Visible Page Margins | PolyPDF": "PDF Çevrimiçi Kırpma — Görünür Sayfa Kenar Boşluklarını Kırp | PolyPDF",
     "Crop PDF online": "PDF kırpma: çevrimiçi ve ücretsiz",
     "Crop PDF page margins using top, right, bottom, and left values. Select pages, preview, and download free. Cropping hides content; it is not redaction.": "Üst, sağ, alt ve sol değerleri girerek PDF sayfa kenar boşluklarını kırpın. Sayfaları seçin, önizleyin ve ücretsiz indirin. Kırpma yalnızca içeriği gizler; hassas içeriği silmez.",
-    "Crop PDF pages by setting margins in points, where 72 points equal one inch. The crop changes the visible page boundary.": "Kenar boşluklarını nokta cinsinden ayarlayarak PDF sayfalarını kırpın; 72 nokta bir inçe eşittir. Kırpma görünür sayfa sınırını değiştirir.",
+    "Crop PDF pages by setting margins in points, where 72 points equal one inch. The crop changes the visible page boundary.": "Kenar boşluklarını nokta cinsinden ayarlayarak PDF sayfalarını kırpın; 72 nokta bir inçe (25,4 mm) eşittir. Kırpma görünür sayfa sınırını değiştirir.",
     "Crop PDF workspace": "PDF çalışma alanını kırp",
     "Crop PDF — free browser PDF tool": "PDF'yi Kırp — ücretsiz tarayıcı PDF aracı",
     "Cropped content remains in the PDF. Do not use cropping to remove sensitive information.": "Kırpılan içerik PDF'de kalır. Hassas bilgileri kaldırmak için kırpmayı kullanmayın.",

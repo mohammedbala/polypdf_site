@@ -108,6 +108,9 @@ export const landingPages = Object.freeze({
       ['What measurements can PolyPDF create?', 'PolyPDF supports distance, area, perimeter, angle, radius, diameter, dimension, and count workflows on calibrated PDF drawings.'],
       ['Can I export takeoff results?', 'Yes. The takeoff worksheet can be exported to CSV for downstream calculations or PDF for a readable record.'],
       ['Do I need the original CAD file?', 'No. PolyPDF works from the PDF drawing. You calibrate the page using its stated scale or a known distance.'],
+      ['Can PolyPDF measure scanned drawings?', 'You can measure a raster or scanned drawing when it has a reliable scale or known reference distance. The source image quality and the accuracy of that reference still matter.'],
+      ['Which units does PolyPDF use?', 'Imperial or metric. New metric dimensions default to millimetres, and existing document formats are preserved. The publisher’s Mac test used a plan drawn in feet; a plan drawn in metric has not been tested.'],
+      ['Does PolyPDF include labor and material prices?', 'No. PolyPDF measures, counts, and exports drawing quantities. It does not come with labor units, material prices, or assemblies, so any rates you use come from your own estimating process.'],
       ['Is PolyPDF takeoff free?', 'PolyPDF Free has no trial timer and includes calibration, markup, review, and up to 3 hand-created measurements per document. Pro removes that measurement cap and unlocks Symbol Search and other Pro workflows.'],
       ['How much does a PolyPDF Pro license cost?', `The personal Pro license costs ${commercialOffer.price} USD in one payment, with applicable taxes shown at checkout. ${licenseRightsText} Direct website purchases have a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee. Organization-managed seats have separate team licensing.`]
     ],
@@ -144,11 +147,13 @@ export const landingPages = Object.freeze({
     ],
     problemTitle: 'The scale is what turns pixels into useful dimensions.',
     problemCopy: 'A PDF viewer can show a drawing, but the measurement only becomes meaningful after the page is calibrated. PolyPDF lets you use a printed scale preset or define a known distance, then applies that calibration to the measurements you place on the sheet.',
+    workflowNote: 'Screens from PolyPDF for Mac 1.6.27 build 99, on the Willow Creek A101 practice drawing.',
     workflow: [
-      ['Open the PDF on your Mac', 'Launch PolyPDF from Applications and open the plan set from Finder or from inside the app.'],
-      ['Set or verify the scale', 'Select the sheet’s architectural or engineering scale, or calibrate against a dimension printed on the drawing.'],
-      ['Choose the quantity you need', 'Use distance for runs, area for finishes, perimeter for boundaries, angle for geometry, or count for repeated items.'],
-      ['Read and export the result', 'Keep the value on the drawing, review it in the worksheet, and export when the result needs to move into another process.']
+      ['Open the drawing and the Measurements panel', 'Open the DMG, drag PolyPDF to Applications, and launch it. Open your PDF with File > Open, then click the Measurements icon in the left sidebar. The Scale tab says Scale not set until you set one.', { src: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-1-measurements-panel-1536.webp', srcSet: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-1-measurements-panel-768.webp 768w, /samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-1-measurements-panel-1536.webp 1536w', alt: 'PolyPDF for Mac with the A101 practice plan open and the Measurements panel showing Scale not set' }],
+      ['Calibrate against a printed dimension', 'Turn on View > Snap to Content. Click Calibrate by Drawing Line, drag from one end of a dimension you trust to the other, and type its length in Known Distance. On the A101 practice plan, the printed 20 ft scale bar spans 360 PDF points.', { src: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-2-calibrate-1536.webp', srcSet: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-2-calibrate-768.webp 768w, /samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-2-calibrate-1536.webp 1536w', alt: 'Calibrate Page Scale dialog with 20 entered as the known distance, after capturing 360 PDF points between snapped endpoints' }],
+      ['Check dimensions you did not calibrate from', 'Choose Linear Dimension in the measuring toolbar, or press Shift-L, then drag along a printed dimension. Stop if the reading disagrees with the sheet. On A101, the width reads 96 ft and the depth reads 60 ft.', { src: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-3-check-dimensions-1536.webp', srcSet: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-3-check-dimensions-768.webp 768w, /samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-3-check-dimensions-1536.webp 1536w', alt: 'A101 plan with 96 ft and 60 ft dimensions added, and a Takeoff Worksheet showing a Linear Dimension total of 156 ft' }],
+      ['Trace the area', 'Choose Area, or press Shift-A. Click each corner, then click the first corner again to close the shape. On A101, the outside boundary reads 5,760 sq ft gross, which includes the walls.', { src: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-4-trace-area-1536.webp', srcSet: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-4-trace-area-768.webp 768w, /samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-4-trace-area-1536.webp 1536w', alt: 'A101 outside boundary selected as an area, with a panel showing a base area of 5760.00 sq ft' }],
+      ['Review the worksheet and export it', 'Open the Records tab to see the Takeoff Worksheet. Its CSV and PDF buttons export the quantities. The 156 ft total is the sum of the two lengths, not a perimeter. Save with File > Save As, then reopen the copy and compare. This example uses all 3 of Free\u2019s hand-created measurements per document.', { src: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-5-worksheet-1536.webp', srcSet: '/samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-5-worksheet-768.webp 768w, /samples/evaluation/public-mac-1.6.27-99/guide/mac-measure-5-worksheet-1536.webp 1536w', alt: 'Takeoff Worksheet listing an area of 5760 sq ft and a Linear Dimension total of 156 ft, with CSV and PDF export buttons' }]
     ],
     outcomeTitle: 'A direct Mac workflow for everyday drawing questions.',
     outcomes: [
@@ -170,6 +175,7 @@ export const landingPages = Object.freeze({
       ['/bluebeam-alternative', 'Compare with Bluebeam'],
       ['/bluebeam-alternative-for-mac', 'Compare PolyPDF and Bluebeam on Mac'],
       ['/blog/calibrate-pdf-drawing-scale', 'Calibrate a drawing scale'],
+      ['/blog/measure-pdf-area-cutouts-depth', 'Measure net area and cutouts'],
       ['/blog/why-pdf-measurements-are-wrong', 'Troubleshoot a wrong measurement'],
       ['/blog/ocr-scanned-pdf-drawings', 'OCR a scanned drawing'],
       ['/pdf-takeoff-software', 'PDF takeoff software'],

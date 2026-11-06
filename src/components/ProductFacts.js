@@ -8,7 +8,7 @@ import EvaluationKit from './EvaluationKit';
 import catalog from '../toolkit/catalog.json';
 
 export default function ProductFacts() {
-  return <ResourceLayout eyebrow="Product reference · Reviewed November 1, 2026" title="PolyPDF: product facts and limits" intro="PolyPDF is desktop PDF measurement, takeoff, markup, and drawing-review software for construction professionals on Mac and Windows. Published by Euclidean Software LLC.">
+  return <ResourceLayout eyebrow="Product reference · Reviewed November 6, 2026" title="PolyPDF: product facts and limits" intro="PolyPDF is desktop PDF measurement, takeoff, markup, and drawing-review software for construction professionals on Mac and Windows. Published by Euclidean Software LLC.">
     <nav className="product-facts-contents" aria-label="On this page">
       <a href="#choose-your-workflow">Browser or desktop?</a><a href="#platforms">Platforms</a><a href="#browser-limits">Browser limits</a><a href="#free-and-pro">Free and Pro</a><a href="#workflows">Workflows</a><a href="#local-processing">Local processing</a><a href="#compatibility">Compatibility</a><a href="#evidence">Examples and verification</a><a href="#evaluation-kit">Evaluation kit</a>
     </nav>
@@ -56,7 +56,8 @@ export default function ProductFacts() {
         <div><dt>Electrical quantities</dt><dd>Review fixture counts and drawn route lengths. Add scope-specific allowances and approved pricing separately. PolyPDF is not an electrical design or labor database. <Link to="/electrical-takeoff-software/">Electrical takeoff workflow</Link>.</dd></div>
         <div><dt>Flooring quantities</dt><dd>Measure room boundaries and exclusions, then calculate waste and whole-pack purchasing quantities. The documented workflow does not optimize roll layouts or seams. <Link to="/flooring-takeoff-software/">Flooring takeoff workflow</Link>.</dd></div>
         <div><dt>Markup and comparison</dt><dd>Add review notes, callouts, shapes, highlights, and revision clouds; compare drawing revisions and review detected differences. <Link to="/construction-pdf-markup/">Markup</Link> and <Link to="/compare-pdf-drawings/">drawing comparison</Link>.</dd></div>
-        <div><dt>Export</dt><dd>Takeoff worksheets support Excel, CSV, and PDF output. The downloadable verified Mac examples include CSV worksheets and PDF summaries. Review quantities, units, and assumptions before pricing or ordering.</dd></div>
+        <div><dt>What it does not include</dt><dd>PolyPDF measures, counts, and exports drawing quantities. It does not come with labor units, material prices, or assemblies.</dd></div>
+        <div><dt>Export</dt><dd>Takeoff worksheets export to CSV and PDF. Each public Mac test record offers the saved drawing PDF and the worksheet CSV. Review quantities, units, and assumptions before pricing or ordering.</dd></div>
       </dl>
     </section>
     <section className="product-facts-section" aria-labelledby="local-processing">
@@ -72,9 +73,8 @@ export default function ProductFacts() {
     <section className="product-facts-section" aria-labelledby="evidence">
       <h2 id="evidence">Which examples have been verified?</h2>
       <p>In the public Mac 1.6.27 build 99 app, publisher checks on November 4 and 5, 2026 measured the <a href="/samples/evaluation/public-mac-1.6.27-99/verification.html">Willow Creek A101 plan</a> at 96 ft, 60 ft, and 5,760 sq ft gross; the <a href="/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html">I101 finish plan</a> at 5,184 sq ft of F1 and 576 sq ft of F2, to room dimension boundaries; and the <a href="/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html">E101 drawn route</a> at 46 ft. Each record offers the saved PDF and the worksheet CSV. Electrical fixture counts were not run.</p>
-      <p>The <a href="#verified-construction-example">Willow Creek A101 saved example</a> retained 96 ft, 60 ft, and 5,760 sq ft after save, reopen, and unit-switch checks in local Mac build 1.6.14 build 76. Download the actual saved PDF and exported CSV below; this is a local development build test.</p>
-      <p>The <Link to="/samples/">sample library</Link> contains synthetic drawings and independently calculated reference quantities. Separate Mac app exports demonstrate <strong>408 sq ft of flooring</strong> and a <strong>42 ft electrical route</strong>, exported and reopened in PolyPDF 1.6.6 build 38. Electrical fixture counts remain reference quantities.</p>
-      <p>These samples identify the app version and platform used. None establishes Windows verification or complete cross-viewer compatibility, and the 1.6.14 and 1.6.6 samples do not establish current-release parity. Product demonstrations retain their own version labels. <a href="/samples/takeoff/README.md">Read how the takeoff samples were made</a>.</p>
+      <p>The <Link to="/samples/">sample library</Link> contains synthetic drawings and independently calculated reference quantities. Electrical fixture counts remain reference quantities.</p>
+      <p>These samples identify the app version and platform used. None establishes Windows verification or complete cross-viewer compatibility. Product demonstrations and older examples keep their own version labels. <a href="/samples/takeoff/README.md">Read how the takeoff samples were made</a>.</p>
       <p>This reference was reviewed by the PolyPDF publisher on <time dateTime="2026-11-06">November 6, 2026</time> against the published product, licensing, privacy, release, and sample records linked above. For a correction or a question about your workflow, <a href="mailto:support@polypdf.com">contact support@polypdf.com</a>.</p>
     </section>
     <EvaluationKit/>

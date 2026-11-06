@@ -9,8 +9,8 @@
  * the on-page claims. Deliberate omissions:
  * - No aggregateRating / review markup: PolyPDF has no collected ratings, and inventing them is
  *   exactly the kind of overclaim the product review process exists to catch.
- * - No paid Offer: founder availability is served dynamically by the app/API, so static InStock,
- *   availabilityEnds, or priceValidUntil claims can go stale. /buy remains authoritative.
+ * - The Pro offer mirrors the standard price the visible pages state (commercialOffer.js). It carries
+ *   no availabilityEnds or priceValidUntil, and the ended Founder offer never appears here.
  */
 
 'use strict';
@@ -26,6 +26,7 @@ const { growthPages } = req('lib/growthPages.js');
 const { blogPosts, blogPostPath } = req('lib/blogPosts.js');
 const { DOWNLOADS } = req('lib/platform.js');
 const siteRelease = req('lib/siteRelease.json');
+const { commercialOffer } = req('lib/commercialOffer.js');
 
 const ORIGIN = 'https://www.polypdf.com';
 const ORG_ID = `${ORIGIN}/#organization`;
@@ -68,7 +69,7 @@ const FEATURE_LIST = [
   'Highlight blending and filled highlight shapes, separate arc radius and sweep controls, movable area cutouts, and improved estimate scrolling',
   'Presentation Mode for focused PDF viewing and page navigation',
   'Measurement calibration with distance, area, perimeter, angle, radius, diameter, count, and dimension tools',
-  'Takeoff worksheets with Excel, CSV, and PDF export',
+  'Takeoff worksheets with CSV and PDF export',
   'Symbol Search (formerly Visual Search): capture one drawing symbol and auto-count matching instances',
   'Portable Revision Packages for issue import, sheet reconciliation, reviewed carryover, change and impact review, references, and publication',
   'Compare documents with revision clouds on detected differences',
@@ -95,9 +96,8 @@ const softwareApplication = (description) => ({
   downloadUrl: [`${ORIGIN}${DOWNLOADS.mac.url}`, `${ORIGIN}${DOWNLOADS.windows.url}`],
   featureList: FEATURE_LIST,
   publisher: { '@id': ORG_ID },
-  // The paid Founder offer can close by count, so static JSON-LD deliberately omits it.
-  // /buy and /api/commercial-offer are the live sources of truth. Free remains always available.
-  offers: {
+  // /buy and /api/commercial-offer stay the live sources of truth for checkout.
+  offers: [{
     '@type': 'Offer',
     name: 'PolyPDF Free',
     price: '0',
@@ -106,7 +106,16 @@ const softwareApplication = (description) => ({
     availability: 'https://schema.org/InStock',
     description:
       'Free download for Mac and Windows with markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing. Symbol Search, plugins, and Revision Package changes or publishing require PolyPDF Pro.'
-  }
+  }, {
+    '@type': 'Offer',
+    name: commercialOffer.name,
+    price: commercialOffer.price.replace('$', ''),
+    priceCurrency: 'USD',
+    url: `${ORIGIN}/buy/`,
+    availability: 'https://schema.org/InStock',
+    description:
+      'One payment for PolyPDF 1.x on up to 3 Mac or Windows computers in any mix, with no subscription. Removes the limit of 3 hand-created measurements per document and adds Pro workflows including Symbol Search. Future major versions may be optional paid upgrades.'
+  }]
 });
 
 const breadcrumbLabel = (route) => (route === '/' ? 'Home' : routeMetadata[route].title.split(' | ')[0]);

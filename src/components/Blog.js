@@ -78,7 +78,7 @@ const Blog = () => {
             <h1 ref={headingRef} tabIndex="-1">Practical answers for working with PDF drawings</h1>
             <p className="legal-subtitle">
               Guides for PolyPDF 1.6.2: rotated-sheet markups, text boxes, grouped symbols, mirroring, overlays, takeoff, comparison,
-              forms, signatures, and document preparation, illustrated with real app captures.
+              forms, signatures, and document preparation, illustrated with app captures.
             </p>
           </motion.header>
 

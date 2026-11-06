@@ -158,7 +158,7 @@ const buildRouteMetadata = () => {
   next['/construction-pdf-markup'].title = 'PDF Markup Software for Construction | PolyPDF';
   for (const route of ['/', '/pdf-takeoff-software', '/construction-pdf-markup']) next[route].dateModified = '2026-10-16';
   for (const route of ['/product-facts', '/samples', '/tools', '/tools/construction-takeoff-spreadsheet']) next[route].dateModified = '2026-10-17';
-  next['/product-facts'].dateModified = '2026-11-06';
+  for (const route of ['/', '/buy', '/windows', '/samples', '/product-facts', '/pdf-takeoff-software', '/measure-pdf-on-mac', '/pdf-measuring-tool', '/visual-search-pdf-count', '/tools/construction-takeoff-spreadsheet']) next[route].dateModified = '2026-11-06';
   for (const route of ['/electrical-takeoff-software', '/flooring-takeoff-software']) next[route].dateModified = '2026-11-06';
   for (const route of ['/privacy', '/cookies']) next[route].dateModified = '2026-11-01';
   const pdfTools = require('../src/toolkit/catalog.json');
@@ -330,13 +330,13 @@ const buildLlmsText = () => {
     `- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. ${commercialOffer.name} removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for ${commercialOffer.price} USD once, activates up to 3 computers in any Mac/Windows mix, and includes a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee for direct website purchases; /buy has the current terms.`,
     '- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.',
     '- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, error diagnostics and separately opted-in usage statistics, and customer support.',
-    '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.',
+    '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports CSV or PDF.',
     '- Symbol Search auto-count (Pro): capture one drawing symbol, review candidate matches, and commit an auditable numbered count series.',
     '- Revision Packages (view and navigation in Free; changes and publication in Pro): import a drawing issue, reconcile sheets, carry reviewed work forward, inspect changes and available quantity or cost impact, review references, and publish a current package with a revision report.',
     '- Local AEC OCR: recover searchable text and current-session structure for schedules, title blocks, drawing labels, dimensions, and spreadsheet-ready tables. Recognition remains best-effort and requires review.',
     '- Tool Chest: built-in Architectural, Landscape, Doors, Windows, Fire Protection, and MUTCD sets, plus BTX, SVG, and DXF import.',
     '- Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.',
-    '- Markup and review: callouts, text, highlights, shapes, freehand, interactive stamps, revision clouds, the Markup Table, and drawing-revision comparison. In 1.5.1, new interactive stamps start on a blank canvas; Add to toolset is optional and unchecked by default.',
+    '- Markup and review: callouts, text, highlights, shapes, freehand, interactive stamps, revision clouds, the Markup Table, and drawing-revision comparison.',
     '- Presentation Mode: open a PDF, choose View > Presentation Mode, use arrow keys for pages and Escape to exit.',
     '- New metric dimensions default to millimetres. Explicit formats in existing documents are preserved; metric area and volume remain in square and cubic metres.',
     '- Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.',

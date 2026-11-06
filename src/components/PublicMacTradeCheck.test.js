@@ -54,5 +54,14 @@ test('evidence downloads are counted like every other sample download', () => {
 });
 
 test('renders nothing for pages without a verified trade record', () => {
-  expect(renderToStaticMarkup(<PublicMacTradeCheck kind="measurement" />)).toBe('');
+  expect(renderToStaticMarkup(<PublicMacTradeCheck kind="comparison" />)).toBe('');
+});
+
+test('the measuring page check keeps gross area and the length sum labelled', () => {
+  const html = renderToStaticMarkup(<PublicMacTradeCheck kind="measurement" />);
+  expect(html).toContain('<strong>5,760 sq ft</strong> of gross area');
+  expect(html).toContain('Gross area includes walls and is not net flooring');
+  expect(html).toContain('156 ft total is the sum of the two lengths, not a perimeter');
+  expect(html).toContain('Windows and Pro workflows were not part of this check');
+  expect(html).toContain(`${BASE}/verification.html`);
 });

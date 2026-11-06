@@ -8,13 +8,13 @@ Key facts:
 - Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. PolyPDF Pro removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for $74.95 USD once, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
 - The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, error diagnostics and separately opted-in usage statistics, and customer support.
-- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.
+- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports CSV or PDF.
 - Symbol Search auto-count (Pro): capture one drawing symbol, review candidate matches, and commit an auditable numbered count series.
 - Revision Packages (view and navigation in Free; changes and publication in Pro): import a drawing issue, reconcile sheets, carry reviewed work forward, inspect changes and available quantity or cost impact, review references, and publish a current package with a revision report.
 - Local AEC OCR: recover searchable text and current-session structure for schedules, title blocks, drawing labels, dimensions, and spreadsheet-ready tables. Recognition remains best-effort and requires review.
 - Tool Chest: built-in Architectural, Landscape, Doors, Windows, Fire Protection, and MUTCD sets, plus BTX, SVG, and DXF import.
 - Collaboration Beta: approved Mac and Windows users can exchange live markups, cursors, offline edits, and signed history through a customer-owned host while the PDF remains on the company share.
-- Markup and review: callouts, text, highlights, shapes, freehand, interactive stamps, revision clouds, the Markup Table, and drawing-revision comparison. In 1.5.1, new interactive stamps start on a blank canvas; Add to toolset is optional and unchecked by default.
+- Markup and review: callouts, text, highlights, shapes, freehand, interactive stamps, revision clouds, the Markup Table, and drawing-revision comparison.
 - Presentation Mode: open a PDF, choose View > Presentation Mode, use arrow keys for pages and Escape to exit.
 - New metric dimensions default to millimetres. Explicit formats in existing documents are preserved; metric area and volume remain in square and cubic metres.
 - Document tools: form filling and form building, CMS/PKCS#7 digital signatures, visual signatures, OCR, Bates numbering, headers and footers, watermarks, and preflight.
@@ -64,8 +64,8 @@ Publisher tests of the public Mac 1.6.27 build 99 app on synthetic drawings, wit
 - [Symbol Search PDF counting](https://www.polypdf.com/visual-search-pdf-count/): capture, review, and commit repeated-symbol matches
 - [Compare PDF drawings](https://www.polypdf.com/compare-pdf-drawings/): inspect revision differences and create review markups
 
-- [Free Construction Takeoff Spreadsheet for Excel](https://www.polypdf.com/tools/construction-takeoff-spreadsheet/): Download a free Excel takeoff template. Map PDF quantities to units and rates, avoid duplicate CSV totals, and inspect a real PolyPDF export.
-- [PolyPDF Product Facts: Platforms, Free & Pro, Limits](https://www.polypdf.com/product-facts/): Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample evidence.
+- [Free Construction Takeoff Spreadsheet for Excel](https://www.polypdf.com/tools/construction-takeoff-spreadsheet/): Download a free Excel takeoff template. Map PDF quantities to units and rates, avoid duplicate CSV totals, and inspect a PolyPDF CSV export.
+- [PolyPDF Product Facts: Platforms, Free & Pro, Limits](https://www.polypdf.com/product-facts/): Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample files.
 - [PDF Measuring Tool for Mac & Windows](https://www.polypdf.com/pdf-measuring-tool/): Calibrate PDF drawings, measure distances and areas, and export quantities. Try PolyPDF on Mac or Windows with clear Free and Pro limits.
 - [Electrical Takeoff Software for Mac & Windows](https://www.polypdf.com/electrical-takeoff-software/): Review electrical fixture counts and route lengths on Mac or Windows. Try the E101 sample, compare Free and Pro, and export quantities for estimating.
 - [Flooring Takeoff Software for Mac & Windows](https://www.polypdf.com/flooring-takeoff-software/): Measure room areas and exclusions from PDF plans. Export flooring quantities, then calculate waste and whole packs with PolyPDF.

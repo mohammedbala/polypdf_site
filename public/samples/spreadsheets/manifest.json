@@ -1,6 +1,6 @@
 {
   "title": "Construction takeoff estimating template",
-  "version": "1.0",
+  "version": "1.1",
   "created": "2026-10-17",
   "kind": "Website-authored spreadsheet; not an app export",
   "sheets": [
@@ -9,10 +9,11 @@
   ],
   "preparedEstimateRows": 20,
   "currency": "USD",
-  "sourceCsv": "https://www.polypdf.com/samples/evaluation/local-build-1.6.14-76/willow-creek-a101-takeoff.csv",
-  "sourceCsvSha256": "f808a1720545693e917fd97346fc4fd3df2f99205952e96d150fe925b848a4e9",
+  "sourceCsv": "https://www.polypdf.com/samples/evaluation/public-mac-1.6.27-99/willow-creek-a101-takeoff.csv",
+  "sourceCsvSha256": "0a362e42951f95643e99da68f88ef749cabf28c2bf9a31a5d9d2c7dddc38f61f",
   "file": "polypdf-construction-takeoff-template.xlsx",
-  "sha256": "9cdc279825b8e2e85af04d9b1f252ecf52f32ae8b22ec02927f6c6d1177cbcc7",
-  "validation": "Formula recalculation and edited-input tests in Artifact Tool; original export cells and saved XLSX inspected. No native Excel runtime test claimed.",
-  "limits": "No automatic PDF extraction, app synchronization, unit conversion, pack rounding, tax, labor, overhead or profit. User supplies scope, quantities, allowances and rates. CSV example is a local Mac 1.6.14 build76 test, not public-installer/Windows qualification."
+  "sha256": "fa8a61ebbb86c11bea6aa71ea045ac7bcb4df7bacb2b8d75e65b0153c876d8e2",
+  "validation": "Formulas recalculated and edited inputs tested when the template was made; the example tab's source text was updated on 2026-11-06. No native Excel run is claimed.",
+  "limits": "No automatic PDF extraction, app synchronization, unit conversion, pack rounding, tax, labor, overhead or profit. User supplies scope, quantities, allowances and rates. The CSV example is from public Mac 1.6.27 build 99; Windows was not tested.",
+  "updated": "2026-11-06"
 }

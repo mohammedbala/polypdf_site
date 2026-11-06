@@ -5,6 +5,16 @@ import './TakeoffEvaluation.css';
 const BASE = '/samples/evaluation/public-mac-1.6.27-99';
 
 const checks = {
+  measurement: {
+    heading: 'Measurement check: 96 ft, 60 ft, and 5,760 sq ft on the Willow Creek A101 practice plan',
+    summary: <>On November 4, 2026, the PolyPDF publisher measured the Willow Creek A101 plan in the public Mac 1.6.27 build 99 app, on Free. The worksheet shows <strong>96 ft</strong> and <strong>60 ft</strong> as two length checks and <strong>5,760 sq ft</strong> of gross area. The values were unchanged after saving the PDF and quitting and reopening the app.</>,
+    limits: 'A101 is a synthetic practice drawing, not for construction. Gross area includes walls and is not net flooring. The worksheet\u2019s 156 ft total is the sum of the two lengths, not a perimeter. Windows and Pro workflows were not part of this check.',
+    pdf: 'willow-creek-a101-measured.pdf',
+    csv: 'willow-creek-a101-takeoff.csv',
+    record: 'verification.html',
+    label: 'A101',
+    recordLabel: 'Read the test method and limits',
+  },
   flooring: {
     heading: 'Flooring check: F1 and F2 areas on the Willow Creek I101 practice plan',
     summary: <>On November 5, 2026, the PolyPDF publisher measured the Willow Creek I101 finish plan in the public Mac 1.6.27 build 99 app, on Free. The worksheet shows <strong>5,184 sq ft of F1 resilient flooring</strong> and <strong>576 sq ft of F2 porcelain tile</strong> (288 + 288), matching the schedule printed on the sheet. Both values were unchanged after quitting and reopening the app.</>,

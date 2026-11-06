@@ -193,7 +193,9 @@ test('localized home product entity carries the translated product description, 
  assert.throws(()=>checks.assertLocalizedHomeSchema(withDescription(product),description,'/es/ '),/product description/,'an untranslated description is rejected');
  assert.throws(()=>checks.assertLocalizedHomeSchema(blocks,undefined,'/es/ '),/description to check/,'a missing expected description cannot pass');
  assert.throws(()=>checks.assertLocalizedHomeSchema([{'@type':'WebPage'}],description,'/es/ '),/product entity/,'the previous WebPage-only home is rejected');
- assert.throws(()=>checks.assertLocalizedHomeSchema([blocks[0],{...blocks[1],offers:{'@type':'Offer',price:'74.95'}}],description,'/es/ '),/Free offer/);
+ assert.throws(()=>checks.assertLocalizedHomeSchema([blocks[0],{...blocks[1],offers:{"@type":"Offer",price:"74.95"}}],description,"/es/ "),/Free offer/);
+ assert.doesNotThrow(()=>checks.assertLocalizedHomeSchema([blocks[0],{...blocks[1],offers:[{"@type":"Offer",price:"0"},{"@type":"Offer",price:"74.95"}]}],description,"/es/ "));
+ assert.throws(()=>checks.assertLocalizedHomeSchema([blocks[0],{...blocks[1],offers:[{"@type":"Offer",price:"0"},{"@type":"Offer",name:"Founder",price:"49.99"}]}],description,"/es/ "),/Founder/);
  assert.throws(()=>checks.assertLocalizedHomeSchema([blocks[1]],description,'/es/ '),/publisher/);
 });
 test('translated tool pages carry no English noscript or keywords shell',()=>{

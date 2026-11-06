@@ -5,16 +5,16 @@ import SampleLink from './SampleLink';
 import DownloadCTA from './DownloadCTA';
 import { buyPath } from '../lib/attribution';
 
-const exampleRoot = '/samples/evaluation/local-build-1.6.14-76';
+const exampleRoot = '/samples/evaluation/public-mac-1.6.27-99';
 
 export default function TakeoffSpreadsheetPage() {
-  return <ResourceLayout eyebrow="Free Excel resource · Construction quantities" title="Construction takeoff spreadsheet" intro="Carry checked PDF quantities into a simple estimate. Download an editable Excel workbook, inspect a real PolyPDF CSV, and keep scope, units, allowances, and rates together.">
+  return <ResourceLayout eyebrow="Free Excel resource · Construction quantities" title="Construction takeoff spreadsheet" intro="Carry checked PDF quantities into a simple estimate. Download an editable Excel workbook, inspect a PolyPDF CSV export, and keep scope, units, allowances, and rates together.">
     <section className="growth-prose" aria-labelledby="spreadsheet-download">
       <h2 id="spreadsheet-download">Download the free takeoff template</h2>
       <p>The workbook has 20 prepared estimate lines and a separate CSV example tab. Enter your checked quantities and USD unit rates. It calculates allowance-adjusted quantities, rounded line costs, and a subtotal of priced rows. Missing inputs remain visible.</p>
       <div className="construction-library-downloads">
         <SampleLink href="/samples/spreadsheets/polypdf-construction-takeoff-template.xlsx" source="takeoff_spreadsheet" feature="estimate_template">Download the takeoff spreadsheet · XLSX</SampleLink>
-        <SampleLink href={`${exampleRoot}/willow-creek-a101-takeoff.csv`} source="takeoff_spreadsheet" feature="actual_app_csv">Download the actual app export · CSV</SampleLink>
+        <SampleLink href={`${exampleRoot}/willow-creek-a101-takeoff.csv`} source="takeoff_spreadsheet" feature="actual_app_csv">Download the app export · CSV</SampleLink>
       </div>
       <p>No signup or PolyPDF license is needed for the workbook. It is a website-authored estimating template with formulas, not an export from the app. It does not measure PDFs or stay synchronized with a drawing.</p>
     </section>
@@ -46,7 +46,7 @@ export default function TakeoffSpreadsheetPage() {
       <p>After a blank line, this CSV contains a second table headed Group, Value, Count, Total, Unit. It summarizes the same measurements by subject. Adding that block to the first table would count the same amounts twice. Keep it as a cross-check, or use one table consistently.</p>
       <h3>Are these example amounts ready to price?</h3>
       <p>The 5,760 sq ft area is the building’s gross footprint, including walls. The 156 ft length total is 96 + 60 ft from independent width and depth checks; it is not a perimeter. Neither row is automatically a net flooring, conduit, or other material quantity. The workbook leaves the estimate blank so you can select the correct scope.</p>
-      <p>The source file was exported in <strong>local Mac build 1.6.14 build 76</strong>. Its saved-drawing checks retained 96 ft, 60 ft, and 5,760 sq ft. <Link to="/product-facts/#verified-construction-example">Inspect the measured PDF and exact test scope</Link>. This example does not establish current public-installer or Windows results.</p>
+      <p>The source file was exported from the <strong>public Mac 1.6.27 build 99</strong> app. Its saved drawing kept 96 ft, 60 ft, and 5,760 sq ft after saving and restarting the app. <a href={`${exampleRoot}/verification.html`}>Read the test method and limits</a>. Windows was not part of this test.</p>
     </section>
     <section className="growth-prose" aria-labelledby="estimate-formulas">
       <h2 id="estimate-formulas">How the spreadsheet calculates costs</h2>

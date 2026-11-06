@@ -14,11 +14,11 @@ The `*-practice.pdf`, `*-reference.csv`, and `*-reference.pdf` files are generat
 Verified October 16, 2026 in the installed PolyPDF **1.6.6 build 38 on macOS**, using Free mode. These files do not claim validation of the current shipping version or Windows.
 
 - `flooring-mac-measured.pdf`: two app-created area annotations, 228 and 180 sq ft. Saved, closed, and reopened with a worksheet total of 408 sq ft.
-- `flooring-mac-worksheet.csv` and `flooring-mac-summary.pdf`: actual worksheet exports totaling 408 sq ft.
+- `flooring-mac-worksheet.csv` and `flooring-mac-summary.pdf`: worksheet exports totaling 408 sq ft.
 - `electrical-mac-route.pdf`: app-created path through the two route legs, 42 ft. Saved, closed, and reopened with the same quantity.
-- `electrical-mac-route.csv` and `electrical-mac-route-summary.pdf`: actual route-only worksheet exports. They do not contain or verify the 12-fixture count. That test encountered the Free three-measurement limit.
+- `electrical-mac-route.csv` and `electrical-mac-route-summary.pdf`: route-only worksheet exports. They do not contain or verify the 12-fixture count. That test encountered the Free three-measurement limit.
 
-The measured PDFs are republished derivatives: their page content and resources were replaced with the October 17 drawing backgrounds, while all original annotations, appearance streams, scale/viewports and app measurement metadata were retained. The background update was structurally checked and independently rendered; these derivatives have not been reopened in the desktop app. The original PDFs remain in assets-source/samples/original-app-outputs for reproducible preservation checks. CSVs remain byte-identical app exports. Summary PDFs preserve the visible exported content and quantities; their local-machine source links were changed to the public sample URLs. `desktop-evidence.json` records original and published hashes and these transformations. “Open Source” links depend on the public samples being published and on the reader's link support.
+The measured PDFs keep the original annotations, scale and app measurements on the October 17 drawing backgrounds. They have not been reopened in the desktop app since that update. The CSV files are as the app exported them. Summary PDFs keep the exported content and quantities; their source links now point to the public sample files. “Open Source” links depend on the public samples being published and on the reader's link support.
 
 The flooring summary PDF abbreviates the formula to fit its column; the CSV preserves the full `SUM(228 + 180)` expression.
 

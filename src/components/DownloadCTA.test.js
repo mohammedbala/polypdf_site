@@ -60,7 +60,8 @@ test('the architectural exercise is in initial HTML, usable without JavaScript a
   expect(details.textContent).toContain('96 ft width and 60 ft depth');
   expect(details.textContent).toContain('5,760 sq ft gross area');
   expect(details.textContent).toContain('reopen the PDF');
-  expect(details.textContent).toContain('local Mac build 1.6.14 build 76');
+  expect(details.textContent).toContain('public Mac 1.6.27 build 99');
+  expect(details.textContent).not.toContain('local Mac build');
   expect(details.textContent).toContain('not for construction');
   expect(details.querySelector('a[download]').getAttribute('href')).toBe('/samples/construction/02-Architectural-Revision-A.pdf');
   expect(node.querySelector('.dl-evaluation [role="status"]')).toBeNull();

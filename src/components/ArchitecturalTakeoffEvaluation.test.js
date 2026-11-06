@@ -7,7 +7,7 @@ import { landingPages } from '../lib/landingPages';
 test.each([
   [landingPages.pdfTakeoffSoftware, 'try-a-takeoff', 'takeoff-files-title'],
   [landingPages.measurePdfOnMac, 'try-mac-measurement', 'mac-measurement-files']
-])('one architectural evaluation preserves source, anchors and historical evidence on $path', (page, anchor, filesId) => {
+])('one architectural evaluation keeps its source and anchors and leads with the public Mac record on $path', (page, anchor, filesId) => {
   const node = document.createElement('div');
   node.innerHTML = renderToStaticMarkup(<MemoryRouter><WorkflowLanding page={page} /></MemoryRouter>);
   const evaluation = node.querySelector('#construction-example-takeoff');
@@ -21,13 +21,14 @@ test.each([
   expect(steps.textContent).not.toContain('408');
   expect(evaluation.querySelector('a[href="/samples/construction/02-Architectural-Revision-A.pdf"]')).not.toBeNull();
   expect(evaluation.querySelector('a[href$="willow-creek-a101-takeoff.csv"]')).not.toBeNull();
-  expect(evaluation.textContent).toContain('local Mac build 1.6.14 build 76');
-  const historical = evaluation.querySelector('.takeoff-historical');
-  expect(historical.open).toBe(false);
-  expect(historical.textContent).toContain('408 sq ft');
-  expect(historical.textContent).toContain('1.6.6 build 38');
-  expect(historical.textContent).toContain('do not establish current-release or Windows parity');
-  expect(historical.querySelector('a[href="/samples/takeoff/flooring-mac-measured.pdf"]')).not.toBeNull();
+  expect(evaluation.querySelector('a[href$="public-mac-1.6.27-99/willow-creek-a101-measured.pdf"]')).not.toBeNull();
+  expect(evaluation.querySelector('a[href$="public-mac-1.6.27-99/willow-creek-a101-takeoff.csv"]')).not.toBeNull();
+  expect(evaluation.querySelector('a[href$="public-mac-1.6.27-99/verification.html"]')).not.toBeNull();
+  expect(evaluation.textContent).toContain('public Mac 1.6.27 build 99');
+  expect(evaluation.textContent).toContain('535.12 sq m');
+  expect(evaluation.textContent).toContain('a plan drawn in metric has not been tested');
+  expect(evaluation.textContent).not.toMatch(/1\.6\.14|1\.6\.6|local Mac build|file hashes|republished/);
+  expect(evaluation.querySelector('.takeoff-historical')).toBeNull();
   const ids = [...node.querySelectorAll('[id]')].map(el => el.id);
   expect(new Set(ids).size).toBe(ids.length);
   expect(node.querySelector('.workflow-hero .dl-evaluation details')).toBeNull();
