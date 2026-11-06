@@ -2956,7 +2956,16 @@
     "PolyPDF runs on macOS 14 or newer, on Apple silicon and Intel Macs.": "PolyPDF, Apple silicon और Intel Mac पर, macOS 14 या नए संस्करण में चलता है।",
     "Read the publisher’s test of calibration, lengths, area, and export in public Mac 1.6.27 build 99 (English)": "सार्वजनिक Mac संस्करण 1.6.27 build 99 में कैलिब्रेशन, लंबाई, क्षेत्रफल और निर्यात का प्रकाशक द्वारा किया गया परीक्षण पढ़ें (अंग्रेज़ी में)",
     "Imperial or metric. New metric dimensions default to millimetres, and existing document formats are preserved. The publisher’s Mac test used a plan drawn in feet; a plan drawn in metric has not been tested.": "इंपीरियल या मीट्रिक। नए मीट्रिक आयाम डिफ़ॉल्ट रूप से मिलीमीटर में होते हैं, और मौजूदा दस्तावेज़ों के प्रारूप बने रहते हैं। प्रकाशक के Mac परीक्षण में फ़ुट में बना प्लान इस्तेमाल हुआ; मीट्रिक में बने प्लान का परीक्षण नहीं किया गया है।",
-    "Takeoff worksheets with CSV and PDF export": "CSV और PDF निर्यात के साथ क्वांटिटी टेकऑफ़ वर्कशीट"
+    "Takeoff worksheets with CSV and PDF export": "CSV और PDF निर्यात के साथ क्वांटिटी टेकऑफ़ वर्कशीट",
+    "Explore the 1.6.29 update": "1.6.29 अद्यतन का अन्वेषण करें",
+    "Update to 1.6.29": "1.6.29 पर अद्यतन करें",
+    "What changed in 1.6.29": "1.6.29 में क्या बदला",
+    "After relaunch, About should show version 1.6.29, build 101. Your existing PolyPDF 1.x Pro license continues to apply.": "पुन: लॉन्च के बाद, अबाउट को संस्करण 1.6.29, बिल्ड 101 दिखाना चाहिए। आपका मौजूदा PolyPDF 1.एक्स Pro लाइसेंस लागू होता रहेगा।",
+    "Current app: PolyPDF 1.6.29 (build 101) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "वर्तमान ऐप: PolyPDF 1.6.29 (बिल्ड 101) · पैकेज प्रारूप: PolyPDF 1.3.1+ · प्लगइन्स को स्थापित करने और चलाने के लिए 1.4.1+ में PolyPDF Pro की आवश्यकता होती है",
+    "Current version 1.6.29 (build 101).": "वर्तमान संस्करण 1.6.29 (बिल्ड 101)।",
+    "PolyPDF 1.6.29 (build 101) · Mac & Windows": "PolyPDF 1.6.29 (बिल्ड 101) · मैक और विंडोज़",
+    "PolyPDF 1.6.29 (build 101) fixes saving after a markup is drawn while an annotated PDF is still loading, and saves text pasted into PDF form fields through the context menu. Existing markups stay protected during import. Collaboration Host 1.6.22 remains current.": "PolyPDF 1.6.29 (बिल्ड 101) मार्कअप वाला PDF लोड होते समय मार्कअप बनाने के बाद सहेजने की समस्या ठीक करता है, और संदर्भ मेनू से PDF फ़ॉर्म फ़ील्ड में पेस्ट किया गया टेक्स्ट सहेजता है। आयात के दौरान मौजूदा मार्कअप सुरक्षित रहते हैं। Collaboration Host 1.6.22 अभी भी वर्तमान संस्करण है।",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.29 (build 101) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "इंस्टॉलेशन, उत्पाद वर्कफ़्लो, खरीदारी और लाइसेंस सक्रियण में सहायता प्राप्त करें। वर्तमान सार्वजनिक रिलीज़ Mac और Windows पर PolyPDF 1.6.29 (बिल्ड 101) है। जब आप लिखते हैं, तो प्रासंगिक होने पर अबाउट में दिखाया गया संस्करण, अपना ऑपरेटिंग सिस्टम और स्ट्राइप रसीद विवरण शामिल करें।"
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

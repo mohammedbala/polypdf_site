@@ -2956,7 +2956,16 @@
     "PolyPDF runs on macOS 14 or newer, on Apple silicon and Intel Macs.": "يعمل PolyPDF على macOS 14 أو الإصدارات الأحدث، على أجهزة Mac المزوّدة بشرائح Apple silicon أو معالجات Intel.",
     "Read the publisher’s test of calibration, lengths, area, and export in public Mac 1.6.27 build 99 (English)": "اقرأ اختبار الناشر للمعايرة والأطوال والمساحة والتصدير في إصدار Mac العام ⁦1.6.27 build 99⁩ (بالإنجليزية)",
     "Imperial or metric. New metric dimensions default to millimetres, and existing document formats are preserved. The publisher’s Mac test used a plan drawn in feet; a plan drawn in metric has not been tested.": "الوحدات الإمبراطورية أو المترية. تكون الأبعاد المترية الجديدة بالمليمتر افتراضيًا، وتبقى تنسيقات المستندات الحالية كما هي. استخدم اختبار الناشر على Mac مخططًا مرسومًا بالأقدام؛ ولم يُختبر مخطط مرسوم بالنظام المتري.",
-    "Takeoff worksheets with CSV and PDF export": "أوراق عمل حصر الكميات مع تصدير CSV وPDF"
+    "Takeoff worksheets with CSV and PDF export": "أوراق عمل حصر الكميات مع تصدير CSV وPDF",
+    "Explore the 1.6.29 update": "اكتشف التحديث 1.6.29",
+    "Update to 1.6.29": "التحديث إلى 1.6.29",
+    "What changed in 1.6.29": "ما الذي تغير في 1.6.29",
+    "After relaunch, About should show version 1.6.29, build 101. Your existing PolyPDF 1.x Pro license continues to apply.": "بعد إعادة التشغيل، يجب أن يعرض About الإصدار 1.6.29، build 101. ويستمر تطبيق ترخيص PolyPDF 1.x Pro الحالي.",
+    "Current app: PolyPDF 1.6.29 (build 101) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "التطبيق الحالي: PolyPDF 1.6.29 (build 101) · تنسيق الحزمة: PolyPDF 1.3.1+‎ · يتطلب تثبيت المكونات الإضافية وتشغيلها وجود PolyPDF Pro في الإصدار ‎1.4.1+‎",
+    "Current version 1.6.29 (build 101).": "الإصدار الحالي 1.6.29 (build 101).",
+    "PolyPDF 1.6.29 (build 101) · Mac & Windows": "PolyPDF 1.6.29 (build 101) · Mac وWindows",
+    "PolyPDF 1.6.29 (build 101) fixes saving after a markup is drawn while an annotated PDF is still loading, and saves text pasted into PDF form fields through the context menu. Existing markups stay protected during import. Collaboration Host 1.6.22 remains current.": "يُصلح PolyPDF 1.6.29 (الإصدار 101) الحفظ بعد رسم تعليق توضيحي أثناء استمرار تحميل ملف PDF يحتوي على تعليقات، ويحفظ النص الملصق في حقول نماذج PDF عبر قائمة السياق. تظل التعليقات الحالية محمية أثناء الاستيراد. يظل Collaboration Host 1.6.22 هو الإصدار الحالي.",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.29 (build 101) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "احصل على مساعدة بشأن التثبيت وسير عمل المنتج والمشتريات وتنشيط الترخيص. الإصدار العام الحالي هو PolyPDF 1.6.29 (build 101) على أنظمة Mac وWindows. عند الكتابة، قم بتضمين الإصدار الموضح في \"حول\" ونظام التشغيل الخاص بك وتفاصيل إيصال Stripe عندما يكون ذلك مناسبًا."
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

@@ -2956,7 +2956,16 @@
     "PolyPDF runs on macOS 14 or newer, on Apple silicon and Intel Macs.": "PolyPDF は、macOS 14 以降を搭載した Apple silicon と Intel の Mac で動作します。",
     "Read the publisher’s test of calibration, lengths, area, and export in public Mac 1.6.27 build 99 (English)": "発行元が校正、長さ、面積、エクスポートを公開 Mac 版 1.6.27（ビルド 99）でテストした内容を読む（英語）",
     "Imperial or metric. New metric dimensions default to millimetres, and existing document formats are preserved. The publisher’s Mac test used a plan drawn in feet; a plan drawn in metric has not been tested.": "インペリアル単位またはメートル単位を使います。新しいメートル法の寸法は既定でミリメートルになり、既存の文書の形式は維持されます。発行元の Mac でのテストではフィートで作図された図面を使用しました。メートル法で作図された図面はテストしていません。",
-    "Takeoff worksheets with CSV and PDF export": "CSV・PDF エクスポート対応の数量拾いワークシート"
+    "Takeoff worksheets with CSV and PDF export": "CSV・PDF エクスポート対応の数量拾いワークシート",
+    "Explore the 1.6.29 update": "1.6.29 アップデートを確認する",
+    "Update to 1.6.29": "1.6.29にアップデート",
+    "What changed in 1.6.29": "1.6.29での変更点",
+    "After relaunch, About should show version 1.6.29, build 101. Your existing PolyPDF 1.x Pro license continues to apply.": "再起動後、About にはバージョン 1.6.29、ビルド 101 が表示されます。既存の PolyPDF 1.x Pro ライセンスは引き続き適用されます。",
+    "Current app: PolyPDF 1.6.29 (build 101) · Package format: PolyPDF 1.3.1+ · Installing and running plugins requires PolyPDF Pro in 1.4.1+": "現在のアプリ: PolyPDF 1.6.29 (ビルド 101) · パッケージ形式: PolyPDF 1.3.1+ · プラグインのインストールと実行には、1.4.1+ の PolyPDF Pro が必要です",
+    "Current version 1.6.29 (build 101).": "現在のバージョン 1.6.29 (ビルド 101)。",
+    "PolyPDF 1.6.29 (build 101) · Mac & Windows": "PolyPDF 1.6.29 (ビルド 101) · Mac および Windows",
+    "PolyPDF 1.6.29 (build 101) fixes saving after a markup is drawn while an annotated PDF is still loading, and saves text pasted into PDF form fields through the context menu. Existing markups stay protected during import. Collaboration Host 1.6.22 remains current.": "PolyPDF 1.6.29（ビルド 101）では、注釈付き PDF の読み込み中にマークアップを描いた後に保存する際の問題を修正し、コンテキストメニューから PDF フォーム フィールドに貼り付けたテキストを保存できるようにしました。既存のマークアップはインポート中も保護されます。Collaboration Host の現行バージョンは引き続き 1.6.22 です。",
+    "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.29 (build 101) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "インストール、製品のワークフロー、購入、ライセンスのアクティベーションに関するサポートが受けられます。現在のパブリック リリースは、Mac および Windows 上の PolyPDF 1.6.29 (ビルド 101) です。記入する際は、「バージョン情報」に表示されているバージョン、オペレーティング システム、および該当する場合は Stripe の領収書の詳細を含めてください。"
   },
   "sourceHash": "a796568798ee9013565c59c3f398007dd6ad378451e85bac7d76b689a0856e05",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

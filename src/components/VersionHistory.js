@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
-import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, release164Highlights, release165Highlights, release166Highlights, release167Highlights, release1613Highlights, release1615Highlights, release1616Highlights, release1619Highlights, release1620Highlights, release1621Highlights, release1622Highlights, release1623Highlights, release1626Highlights, release1627Highlights, releaseAnswer } from '../lib/releaseHighlights';
+import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, release164Highlights, release165Highlights, release166Highlights, release167Highlights, release1613Highlights, release1615Highlights, release1616Highlights, release1619Highlights, release1620Highlights, release1621Highlights, release1622Highlights, release1623Highlights, release1626Highlights, release1629Highlights, release1627Highlights, releaseAnswer } from '../lib/releaseHighlights';
 import siteRelease from '../lib/siteRelease.json';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
@@ -94,6 +94,8 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.6.29 (101)': release1629Highlights,
+  'Windows 1.6.29 (101)': release1629Highlights,
   'macOS 1.6.27 (99)': release1627Highlights,
   'Windows 1.6.27 (99)': release1627Highlights,
   'macOS 1.6.26 (98)': release1626Highlights,
