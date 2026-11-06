@@ -58,6 +58,8 @@ test('retains the known entry and provider across tools, downloads, and checkout
 test('expires after 30 idle minutes and rejects corrupt, future, or untrusted stored context', () => {
   saveConsent({ analytics: true });
   const now = Date.now();
+  // Hold the clock still: real milliseconds passing mid-test made the 30-minute boundary below race under load.
+  const clock = jest.spyOn(Date, 'now').mockReturnValue(now);
   for (const record of [
     '{', JSON.stringify({ lastSeen: now + 10000, context: { entry_page: '/private/' } }),
     JSON.stringify({ lastSeen: now, context: { entry_page: '/?email=private', acquisition_channel: 'ai_referral', acquisition_source: 'chatgpt', acquisition_basis: 'referrer' } })
@@ -66,7 +68,7 @@ test('expires after 30 idle minutes and rejects corrupt, future, or untrusted st
     expect(acquisitionContext().entry_page).toBe('/');
   }
   window.history.replaceState({}, '', '/tools/merge-pdf/');
-  jest.spyOn(Date, 'now').mockReturnValue(now + 30 * 60000 + 1);
+  clock.mockReturnValue(now + 30 * 60000 + 1);
   expect(acquisitionContext().entry_page).toBe('/tools/merge-pdf/');
 });
 test('storage blocking does not stop browsing and account-only entries are not captured', () => {

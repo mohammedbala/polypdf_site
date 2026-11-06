@@ -32,6 +32,7 @@ export default function EvaluationKit() {
     <p>The exported worksheet reports one area of 5,760 sq ft and two lengths totaling 156 ft (96 + 60 ft). That length total is two independent checks, not a perimeter. These files preserve the actual app output.</p>
     <p className="construction-library-note">This is a local development build test, not verification of the public installer or Windows. The measurements were originally created in 1.6.13 build 74, then saved and retested in local build 76. Pro workflows and other PDF viewers were not tested. <a href="/samples/evaluation/local-build-1.6.14-76/verification.html">Read the test method, results, and file hashes</a>.</p>
     <PublicMacTakeoffCheck />
+    <p>The same public Mac build also produced saved trade examples on November 5, 2026: a <a href="/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html">flooring finish takeoff</a> (F1 5,184 sq ft, F2 576 sq ft, to dimension boundaries) and an <a href="/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html">electrical drawn-route check</a> (46 ft of circuit diagram, not conduit). Device counts and Windows were not part of those checks.</p>
     <DownloadCTA source="evaluation_kit" />
     <p><Link to={buyPath('evaluation_kit')}>Review current Pro pricing and license rights</Link> after checking the workflow you need.</p>
   </section>;

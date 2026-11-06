@@ -3,12 +3,15 @@ import { Link } from 'react-router';
 import { OPEN_COOKIE_SETTINGS } from '../lib/consent';
 import { useToolkitLanguage, localizeView, toolkitLocales, sourceRoute } from '../toolkit/language';
 import { useLocation } from 'react-router';
+import marketingLocales from '../lib/locales.json';
 
 export function ToolkitHeader() {
   const language = useToolkitLanguage();
+  // English pages and the marketing locales have a home in their own language; the other tool locales land on English.
+  const homeInReaderLanguage = !language?.locale || marketingLocales.some(l => l.id === language.locale.id);
   return localizeView(<header className="pdf-localized-nav"><nav className="pdf-shell" aria-label="Main navigation">
     <Link to="/tools/" className="pdf-wordmark"><span translate="no">PolyPDF</span> <span>Tools</span></Link>
-    <div><Link to="/tools/">Tools</Link><Link to="/tools/automation/">AI & MCP</Link><a href="/#download" hrefLang="en">Desktop app (English)</a></div>
+    <div><Link to="/tools/">Tools</Link><Link to="/tools/automation/">AI & MCP</Link>{homeInReaderLanguage ? <a href="/#download">Desktop app</a> : <a href="/#download" hrefLang="en">Desktop app (English)</a>}</div>
   </nav></header>, language);
 }
 export function ToolkitLanguages() {

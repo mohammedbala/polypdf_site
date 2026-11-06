@@ -158,7 +158,8 @@ const buildRouteMetadata = () => {
   next['/construction-pdf-markup'].title = 'PDF Markup Software for Construction | PolyPDF';
   for (const route of ['/', '/pdf-takeoff-software', '/construction-pdf-markup']) next[route].dateModified = '2026-10-16';
   for (const route of ['/product-facts', '/samples', '/tools', '/tools/construction-takeoff-spreadsheet']) next[route].dateModified = '2026-10-17';
-  next['/product-facts'].dateModified = '2026-11-01';
+  next['/product-facts'].dateModified = '2026-11-06';
+  for (const route of ['/electrical-takeoff-software', '/flooring-takeoff-software']) next[route].dateModified = '2026-11-06';
   for (const route of ['/privacy', '/cookies']) next[route].dateModified = '2026-11-01';
   const pdfTools = require('../src/toolkit/catalog.json');
   const toolContent = require('../src/toolkit/page-content.json');
@@ -206,6 +207,21 @@ const sitemapSettings = (route) => {
   return { changefreq: 'monthly', priority: '0.7' };
 };
 
+// Dated publisher test records. They are static pages outside the route registry, so they are listed here.
+const EVIDENCE_RECORDS = [
+  ['/samples/evaluation/public-mac-1.6.27-99/verification.html', '2026-11-06'],
+  ['/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html', '2026-11-06'],
+  ['/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html', '2026-11-06']
+];
+const evidenceRecordUrls = EVIDENCE_RECORDS.map(([file, lastmod]) => [
+  '  <url>',
+  `    <loc>https://www.polypdf.com${file}</loc>`,
+  `    <lastmod>${lastmod}</lastmod>`,
+  '    <changefreq>yearly</changefreq>',
+  '    <priority>0.5</priority>',
+  '  </url>'
+].join('\n')).join('\n');
+
 const buildSitemap = (metadata) => {
   const postByRoute = new Map(blogPosts.map((entry) => [blogPostPath(entry.slug), entry]));
   const latestPostDate = blogPosts
@@ -247,6 +263,7 @@ const buildSitemap = (metadata) => {
     '<!-- Generated from src/lib/route-metadata.json and the shared blog registry. -->',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
     urls,
+    evidenceRecordUrls,
     '</urlset>',
     ''
   ].join('\n');
@@ -311,7 +328,6 @@ const buildLlmsText = () => {
     '',
     `- Current release: PolyPDF ${siteRelease.version} (build ${siteRelease.build}) for macOS and Windows; /versions reads the live update feeds.`,
     `- Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. ${commercialOffer.name} removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for ${commercialOffer.price} USD once, activates up to 3 computers in any Mac/Windows mix, and includes a ${commercialOffer.moneyBackGuaranteeDays}-day money-back guarantee for direct website purchases; /buy has the current terms.`,
-    '- New in 1.5.8: markups on rotated drawing sheets stay upright and in place. Autosize Text Box fits text boxes and callouts to their contents; PDF markup exchange and saving are more reliable.',
     '- Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.',
     '- The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, error diagnostics and separately opted-in usage statistics, and customer support.',
     '- Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.',
@@ -335,6 +351,14 @@ const buildLlmsText = () => {
     `${markdownLink('Buy PolyPDF Pro', '/buy')}: one-time license terms, Stripe checkout, and license delivery`,
     `${markdownLink('Version history', '/versions')}: live Mac and Windows release feeds`,
     `${markdownLink('Bluebeam alternative for Mac', '/bluebeam-alternative-for-mac')}: a dated comparison of local PDF takeoff and markup, Bluebeam’s current Mac access routes, licensing, and collaboration limits`,
+    '',
+    '## Verified examples',
+    '',
+    'Publisher tests of the public Mac 1.6.27 build 99 app on synthetic drawings, with downloadable saved PDFs and native CSV exports. Windows and Pro workflows were not covered by these records.',
+    '',
+    `${markdownLink('Architectural takeoff check', '/samples/evaluation/public-mac-1.6.27-99/verification.html')}: 96 ft and 60 ft independent dimensions and 5,760 sq ft gross footprint on sheet A101, including walls; not net flooring`,
+    `${markdownLink('Flooring takeoff check', '/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html')}: F1 5,184 sq ft and F2 576 sq ft on sheet I101, to dimension boundaries with no wall deductions or waste`,
+    `${markdownLink('Electrical route check', '/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html')}: 46 ft drawn route on sheet E101, circuit-diagram geometry rather than conduit; device counts not run`,
     '',
     '## Practical guides',
     '',

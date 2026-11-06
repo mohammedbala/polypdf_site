@@ -49,9 +49,106 @@
     "publicDownload": false
   },
   "limitations": [
-    "The area caption overlaps the underlying corridor label in the saved drawing; this PDF is retained for QA, not distributed here. Numeric results and the CSV are unaffected.",
-    "The fourth hand-created measurement was refused with the Free three-measurement limit. A local Pro label also appeared in Upgrade; entitlement provenance was not established. No test license, license key entry or activation was used. This does not verify Pro activation or Pro workflows.",
-    "Windows, other PDF viewers, net flooring quantities, symbol counts, electrical/flooring trade workflows, and complete estimates were not verified in this test.",
-    "The worksheet summary repeats the same quantities by subject; do not add it to the detailed rows. The 156 ft sum is 96 + 60 ft, not a perimeter. Gross area includes walls."
-  ]
+    "The fourth hand-created measurement was refused under the Free limit of 3 per document. On both test Macs the Upgrade dialog showed a notice that the app could not confirm a Pro license; no license key was entered, Free limits stayed in force, and Pro was not activated or tested.",
+    "In the November 4 A101 run, Windows, other PDF viewers, net flooring quantities, symbol counts and complete estimates were not verified. Flooring and electrical are covered only by tradeChecks, and Windows remains untested.",
+    "The worksheet summary repeats the same quantities by subject; do not add it to the detailed rows. The 156 ft sum is 96 + 60 ft, not a perimeter. Gross area includes walls.",
+    "The November 4 saved drawing has a caption overlap and stays private. The published November 5 drawing moved captions with the app's Shift+drag; values did not change.",
+    "Adobe Acrobat and other PDF viewers beyond Apple Preview and Poppler were not checked."
+  ],
+  "repeatRun": {
+    "testDate": "2026-11-05",
+    "machine": "MacBook Air (Apple silicon), macOS 26.4.1",
+    "version": "1.6.27",
+    "build": 99,
+    "installerSha256": "503c0ce8b995b20640e30989fff9bb78a676b9880356ca19fa76dfc726d696ac",
+    "operation": "Publisher test using automated control of the app's normal interface; separate profile; Free limits in force",
+    "measuredPdf": {
+      "file": "willow-creek-a101-measured.pdf",
+      "sha256": "dbdbad679f5ac1f50d22c5a6bf571e9b2fee5f82183d999a0758c48663230f76",
+      "bytes": 109064
+    },
+    "csv": {
+      "file": "willow-creek-a101-takeoff.csv",
+      "sha256": "0a362e42951f95643e99da68f88ef749cabf28c2bf9a31a5d9d2c7dddc38f61f",
+      "bytes": 291,
+      "byteIdenticalToNovember4": true
+    },
+    "coldRestartReopen": "passed",
+    "viewers": {
+      "poppler": "rendered",
+      "applePreview": "viewed",
+      "adobeAcrobat": "not checked"
+    },
+    "timeZone": "America/New_York",
+    "pdfTimestampsUtc": "2026-11-06T01:49Z to 2026-11-06T02:08Z",
+    "notRepeated": [
+      "Metric then Imperial switch",
+      "fourth-measurement Free limit on A101 (observed on E101 instead)"
+    ]
+  },
+  "tradeChecks": {
+    "flooring": {
+      "record": "flooring-verification.html",
+      "testDate": "2026-11-05",
+      "machine": "MacBook Air (Apple silicon), macOS 26.4.1",
+      "coldRestartReopen": "passed",
+      "viewers": {
+        "poppler": "rendered",
+        "applePreview": "viewed",
+        "adobeAcrobat": "not checked"
+      },
+      "source": "https://www.polypdf.com/samples/construction/10-Interiors-Finishes-and-Millwork.pdf",
+      "results": {
+        "f1ResilientSquareFeet": 5184,
+        "f2PorcelainTileSquareFeet": 576,
+        "f2ZonesSquareFeet": [
+          288,
+          288
+        ]
+      },
+      "basis": "Room dimension boundaries; no wall-thickness deductions; excludes waste. Not net installed flooring.",
+      "files": {
+        "willow-creek-i101-measured.pdf": {
+          "sha256": "8344fdce6c8fad135441d9f704a668518d7f365b2a2685caedff3299ea9a28c4",
+          "bytes": 102907
+        },
+        "willow-creek-i101-takeoff.csv": {
+          "sha256": "e7883acd14fc4677b09f94b784ffb1528f7d577fb3a238fa50e058e879b735f1",
+          "bytes": 333
+        }
+      }
+    },
+    "electrical": {
+      "record": "electrical-verification.html",
+      "testDate": "2026-11-05",
+      "machine": "MacBook Air (Apple silicon), macOS 26.4.1",
+      "coldRestartReopen": "passed",
+      "viewers": {
+        "poppler": "rendered",
+        "applePreview": "viewed",
+        "adobeAcrobat": "not checked"
+      },
+      "source": "https://www.polypdf.com/samples/construction/06-Electrical-Lighting-and-Power.pdf",
+      "results": {
+        "drawnRouteFeet": 46,
+        "segmentsFeet": [
+          8,
+          38
+        ]
+      },
+      "basis": "Drawn circuit-diagram geometry, not conduit or conductor quantity.",
+      "deviceCounts": "not run; Symbol Search and Pro not tested",
+      "freeCountAllowance": "Each hand-placed Count mark uses one of 3 measurements per document; observed.",
+      "files": {
+        "willow-creek-e101-measured.pdf": {
+          "sha256": "a395d7b5615028ec4042d5c108f9930963a6a81eef5e386045200683d82aa145",
+          "bytes": 90394
+        },
+        "willow-creek-e101-takeoff.csv": {
+          "sha256": "ec3ca06d49f474ae9c32fb2712a3d2fdb618f04b2b7b0015e707c5fc66fc94cb",
+          "bytes": 215
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,7 @@
+Legend,Workspace,Subject,Status,Type,Quantity,Formula,Total,Unit,Pages
+A1,Unassigned,F1 Resilient Flooring,No Status,Area,1,SUM(5184),5184,sq ft,1
+A2,Unassigned,F2 Porcelain Tile,No Status,Area,2,SUM(288 + 288),576,sq ft,1
+
+Group,Value,Count,Total,Unit
+Subject,F1 Resilient Flooring,1,5184,sq ft
+Subject,F2 Porcelain Tile,2,576,sq ft

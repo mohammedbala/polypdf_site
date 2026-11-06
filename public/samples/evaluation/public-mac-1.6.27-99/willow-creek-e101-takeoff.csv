@@ -1,0 +1,5 @@
+Legend,Workspace,Subject,Status,Type,Quantity,Formula,Total,Unit,Pages
+L1,Unassigned,LP-1 drawn circuit route,No Status,Length,1,SUM(46),46,ft,1
+
+Group,Value,Count,Total,Unit
+Subject,LP-1 drawn circuit route,1,46,ft

@@ -10,6 +10,12 @@ const c=require('../international/content.cjs');
 const json=value=>JSON.stringify(value).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
 const esc=c.esc;
 
+// Mirrors the desktop handoff on every tool page: its sentences, requirements, edition limits and links.
+function toolsLlms(locale,entries,t,localize) {
+  const origin='https://www.polypdf.com',takeoff=localize('/pdf-takeoff-software/'),english=` (${t('English')})`;
+  const hasEdition=takeoff!=='/pdf-takeoff-software/';
+  return `# PolyPDF — ${locale.label}\n\n${t('36 free browser PDF tools')}\n\n${entries.map(e=>`- [${e.title}](${origin}${e.route}): ${e.description}`).join('\n')}\n\n${t('Files stay on your device. No account required.')}\n\nMCP: ${origin}/${locale.id}/tools/automation/\nManifest: ${origin}/tools/tool-manifest.json\n\n## ${t('Measure, take off, and review in PolyPDF.')}\n\n${t('Continue with calibrated measurements and construction markup on Mac and Windows.')} ${t('For macOS 14+ or 64-bit Windows 10/11. Desktop installers do not run on phones or tablets.')}\n\n- ${t('Free: calibration, markup, and up to 3 hand-created measurements per document.')}\n- ${t('Pro: unlimited hand-created measurements, drawing overlays, and Symbol Search.')}\n- [${t('Download for macOS')}](${origin}/downloads/PolyPDFMac.dmg)\n- [${t('Download for Windows')}](${origin}/downloads/windows/PolyPDFSetup.exe)\n- [${t('PDF takeoff')}${hasEdition?'':english}](${origin}${takeoff})\n- [${t('Compare Pro pricing')}${english}](${origin}${localize('/buy/?source=llms')})\n${hasEdition?`- [PolyPDF — ${locale.label}](${origin}/${locale.id}/llms.txt)\n`:''}`;
+}
 function extractLiterals(strings) {
   const babel=require('@babel/core'),traverse=require('@babel/traverse').default;
   const add=raw=>{const value=c.normalize(raw);if(c.isTranslatable(value) && !/^[./#]|^data:|^blob:|^(?:noindex|index),\s*(?:follow|nofollow)/.test(value))strings.add(value);};
@@ -34,7 +40,7 @@ function extractLiterals(strings) {
 
 module.exports=function buildToolkitInternational({React,renderToString,StaticRouter,AppRoutes,build}) {
   const {toolkitSEO,toolkitMetaValues}=require('../../src/toolkit/seo.js');
-  const {translateText}=require('../../src/toolkit/language.js');
+  const {translateText,localizedHref}=require('../../src/toolkit/language.js');
   const collect=process.env.TOOLKIT_EXTRACT==='1';
   const sourceStrings=new Set();extractLiterals(sourceStrings);
   sourceStrings.add('Reload tools');
@@ -68,6 +74,8 @@ module.exports=function buildToolkitInternational({React,renderToString,StaticRo
       html=html.replace(/<html[^>]*>/,`<html lang="${locale.language}" dir="${locale.dir||'ltr'}">`)
         .replace(/<title>[\s\S]*?<\/title>/,`<title>${esc(seo.title)}</title>`)
         .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g,'')
+        .replace(/<noscript>[\s\S]*?<\/noscript>/g,'')
+        .replace(/<meta\b[^>]*\bname="keywords"[^>]*>/g,'')
         .replace(/<link\b[^>]*\bhreflang=[^>]*>/g,'')
         .replace(/<div id="root">[\s\S]*<\/div>(?=\s*<\/body>)/,`<div id="root">${markup}</div>`);
       const {JSDOM}=require('jsdom');const dom=new JSDOM(html),d=dom.window.document;
@@ -81,7 +89,8 @@ module.exports=function buildToolkitInternational({React,renderToString,StaticRo
       const file=c.fileFor(build,localized);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,dom.serialize());dom.window.close();
       entries.push({route:localized,source:route,language:locale.language,title:seo.title,description:seo.description});
     }
-    const llms=`# PolyPDF — ${locale.label}\n\n${translateText('36 free browser PDF tools',language)}\n\n${entries.map(e=>`- [${e.title}](https://www.polypdf.com${e.route}): ${e.description}`).join('\n')}\n\n${translateText('Files stay on your device. No account required.',language)}\n\nMCP: https://www.polypdf.com/${locale.id}/tools/automation/\nManifest: https://www.polypdf.com/tools/tool-manifest.json\n`;
+    const llmsText=key=>{if(!dictionary.strings[key])throw new Error(`${locale.id}: missing tools llms translation: ${key}`);return dictionary.strings[key];};
+    const llms=toolsLlms(locale,entries,llmsText,href=>localizedHref(href,language));
     fs.writeFileSync(path.join(build,locale.id,'tools','llms.txt'),llms);
     manifest.push(...entries);console.log(`Toolkit localized: ${locale.id} (${entries.length} interactive pages).`);
   }
@@ -106,3 +115,4 @@ module.exports=function buildToolkitInternational({React,renderToString,StaticRo
   const llmsFile=path.join(build,'llms.txt');fs.writeFileSync(llmsFile,fs.readFileSync(llmsFile,'utf8').split('\n## Browser tools in 23 languages\n')[0]+'\n## Browser tools in 23 languages\n\n'+locales.map(l=>`- [${l.label}](https://www.polypdf.com/${l.id}/tools/llms.txt)`).join('\n')+'\n');
   console.log(`Toolkit international publishing: ${manifest.length} pages; 23 languages including English.`);
 };
+module.exports.toolsLlms=toolsLlms;

@@ -77,15 +77,18 @@ function languageNavigation(route, locale, t) {
 function alternatives(route) {
   return [{language:'en',href:ORIGIN+routePath(route)},...locales.map((l)=>({language:l.language,href:ORIGIN+localizedPath(l.id,route)})),{language:'x-default',href:ORIGIN+routePath(route)}];
 }
+const hubSummary = 'PolyPDF helps estimators, contractors, architects, and engineers calibrate drawing scale, measure quantities, count symbols, compare revisions, and coordinate PDF markups on Mac and Windows.';
+const hubEditions = 'macOS 14 or newer, Apple silicon and Intel; Windows 10 or 11, 64-bit. Start free with markup, review, calibration, and up to 3 hand-created measurements per document. Unlimited measurements, Symbol Search, plugins, and Revision Package changes or publishing require Pro.';
+const hubPricing = 'View current Pro pricing and license terms';
 function hubHTML() {
   const list = (selected) => `<ul class="hub-links">${selected.map((route)=>`<li><a href="${routePath(route)}"><strong>${esc(metadata[route].title.replace(/ \| PolyPDF(?: Guide)?$/,''))}</strong><span>${esc(metadata[route].description)}</span></a></li>`).join('')}</ul>`;
   return `<header class="legal-header"><nav class="nav container" aria-label="Main navigation"><a href="/" class="logo">PolyPDF</a><a href="/blog/" class="back-link">All guides</a></nav></header><main class="international-hub" id="site-content">
 <p>PolyPDF ${siteRelease.version} (build ${siteRelease.build}) · Mac &amp; Windows</p><p>PDF tools for construction teams</p><h1>Measure and review construction drawings in PDF</h1>
-<p>PolyPDF helps estimators, contractors, architects, and engineers calibrate drawing scale, measure quantities, count symbols, compare revisions, and coordinate PDF markups on Mac and Windows.</p>
+<p>${hubSummary}</p>
 <div class="blog-quick-answer"><h2>How do you take quantities from a PDF plan?</h2><p>Calibrate the drawing using a known dimension, verify a second dimension, then measure lengths and net areas and count repeated symbols. Keep the drawing revision, measurement units, and exclusions with the result. Export the reviewed takeoff to CSV or PDF.</p></div>
 <div id="download" class="dl-both"><a class="primary-btn" href="/downloads/PolyPDFMac.dmg" download>Download for macOS</a><a class="primary-btn" href="/downloads/windows/PolyPDFSetup.exe" download>Download for Windows</a></div>
-<p>macOS 14 or newer, Apple silicon and Intel; Windows 10 or 11, 64-bit. Start free with markup, review, calibration, and up to 3 hand-created measurements per document. Unlimited measurements, Symbol Search, plugins, and Revision Package changes or publishing require Pro.</p>
-<p><a href="/buy/?source=international_hub">View current Pro pricing and license terms</a></p>
+<p>${hubEditions}</p>
+<p><a href="/buy/?source=international_hub">${hubPricing}</a></p>
 <h2>Current release and updates</h2><p>See the version history for current Mac and Windows releases, fixes, and update instructions.</p><p><a href="/versions/">Explore the ${siteRelease.version} update</a></p>
 <h2>Using metric construction drawings</h2><p>Choose the units shown on the drawing and calibrate from a known dimension. For a 1:100 drawing, 10 mm on the correctly sized page represents 1 m on site. A 5 m by 4 m rectangle has an area of 20 m²; subtract a 1 m² opening to obtain 19 m² net. At a depth of 0.15 m, that net area corresponds to 2.85 m³. Check a second known dimension before using any quantity in an estimate.</p>
 <p>Do not mix paper dimensions with site dimensions, metres with millimetres, or net quantities with waste allowances. Original guide screenshots may use feet and inches; preserve those units when following the example. Confirm project specifications and local measurement rules separately.</p>
@@ -99,6 +102,14 @@ const hubMetadata = {
   description: 'Measure construction PDFs, calculate quantities, compare drawing revisions, and review markups. Practical PolyPDF guides for construction teams.',
   robots: 'index, follow',
 };
+// Discovery text reuses the translated home sentences, so it makes no claim the home does not.
+function marketingLlms(locale, entries, t) {
+  const pricing = `${t(hubPricing)} (${t('English')})`;
+  return `# PolyPDF — ${locale.label}\n\n> ${t(hubSummary)}\n\n${t(hubEditions)}\n\n- [${t('Download for macOS')}](${ORIGIN}/downloads/PolyPDFMac.dmg)\n- [${t('Download for Windows')}](${ORIGIN}/downloads/windows/PolyPDFSetup.exe)\n- [${pricing}](${ORIGIN}/buy/?source=intl_${locale.id}_llms)\n- [${t('PDF tools')}](${ORIGIN}/${locale.id}/tools/llms.txt)\n- [English](${ORIGIN}/llms.txt)\n\n## ${t('PDF tools for construction teams')}\n\n${entries.map((e)=>`- [${e.title}](${ORIGIN+e.route}): ${e.description}`).join('\n')}\n`;
+}
+// The translated home keeps the shared product and publisher entities. The product keeps its own
+// description, which mapSchema translates; the hub page's meta description describes the guides.
+const homeProductSchema = (schema) => schema.filter((block)=>['Organization','SoftwareApplication'].includes(block['@type']));
 function sourcePage(build, route) {
   const dom = new JSDOM(fs.readFileSync(fileFor(build,route),'utf8'));
   const d = dom.window.document;
@@ -112,7 +123,7 @@ function sourcePage(build, route) {
   const schema = [...d.querySelectorAll('script[type="application/ld+json"]')].map((s)=>JSON.parse(s.textContent));
   const assets = [...d.head.querySelectorAll('link[rel="stylesheet"],link[rel="preload"][as="font"]')].map((el)=>el.outerHTML).join('');
   dom.window.close();
-  return {dom:bodyDom, assets, schema:route === '/' ? [] : schema, meta:route === '/' ? hubMetadata : metadata[route]};
+  return {dom:bodyDom, assets, schema:route === '/' ? homeProductSchema(schema) : schema, meta:route === '/' ? hubMetadata : metadata[route]};
 }
 function localizeLinks(document, locale, t) {
   for (const a of document.querySelectorAll('a[href]')) {
@@ -135,4 +146,4 @@ function localizeLinks(document, locale, t) {
     }
   }
 }
-module.exports = {root,metadata,locales,routes,ORIGIN,normalize,esc,routePath,localizedPath,fileFor,sourceStrings,isTranslatable,mapSchema,translateDOM,translateFactory,languageNavigation,alternatives,sourcePage,localizeLinks};
+module.exports = {root,metadata,locales,routes,toolkitRoutes,hubSummary,ORIGIN,normalize,esc,routePath,localizedPath,fileFor,sourceStrings,isTranslatable,mapSchema,translateDOM,translateFactory,languageNavigation,alternatives,sourcePage,localizeLinks,marketingLlms,homeProductSchema};

@@ -5,6 +5,8 @@ const path = require('path');
 const assert = require('node:assert/strict');
 const { JSDOM } = require('jsdom');
 const c = require('./content.cjs');
+const checks = require('./discovery-checks.cjs');
+const pageDates = require('./page-dates.cjs');
 const build = path.resolve(c.root,process.env.BUILD_PATH || 'build');
 const manifest = JSON.parse(fs.readFileSync(path.join(build,'international-manifest.json'),'utf8'));
 assert.equal(manifest.routes.length,c.routes.length*c.locales.length);
@@ -13,6 +15,10 @@ const sitemap = sitemapDom.window.document;
 const urls = [...sitemap.querySelectorAll('url')];
 const locations = urls.map((u)=>u.querySelector('loc').textContent);
 assert.equal(new Set(locations).size,locations.length,'duplicate sitemap URLs');
+const lastmod = (location) => urls.find((u)=>u.querySelector('loc').textContent===location)?.querySelector('lastmod')?.textContent;
+const ledger = pageDates.readLedger();
+const strings = Object.fromEntries(c.locales.map((l)=>[l.id,JSON.parse(fs.readFileSync(path.join(c.root,'src/content/translations',`${l.id}.json`),'utf8')).strings]));
+let productDescription;
 const englishStructures = new Map();
 for (const route of c.routes) {
   const dom = new JSDOM(fs.readFileSync(c.fileFor(build,route),'utf8'));
@@ -27,6 +33,7 @@ for (const route of c.routes) {
   });
   const alternates=[...d.querySelectorAll('head link[hreflang]')].map((a)=>({language:a.hreflang,href:a.href}));
   assert.deepEqual(alternates,c.alternatives(route),`${route}: reciprocal English hreflang`);
+  if(route==='/')productDescription=[...d.querySelectorAll('script[type="application/ld+json"]')].map((s)=>JSON.parse(s.textContent)).find((b)=>b['@type']==='SoftwareApplication')?.description;
   dom.window.close();
 }
 let count=0;
@@ -43,7 +50,7 @@ for (const e of manifest.routes) {
   assert.deepEqual([...d.querySelectorAll('head link[hreflang]')].map((a)=>({language:a.hreflang,href:a.href})),c.alternatives(e.source),prefix+'alternates');
   assert.equal(d.querySelectorAll('h1').length,1,prefix+'single H1');
   assert(d.querySelector('[data-site-footer]').textContent.includes('Euclidean Software LLC'),prefix+'publisher identity');
-  assert(d.querySelector('h1').textContent.trim().length>0,prefix+'translated H1');
+  checks.assertVisibleHeading(d.querySelector('h1').textContent,prefix);
   assert.equal(d.querySelectorAll('script:not([type="application/ld+json"])').length,1,prefix+'one consent-gated enhancement');
   assert.match(d.querySelector('script[src]')?.getAttribute('src'),/^\/static\/js\/localized-tracking\.[a-f0-9]{8}\.js$/,prefix+'no English app hydration');
   assert(d.querySelector('[data-local-consent] dialog'),prefix+'localized cookie settings');
@@ -64,6 +71,8 @@ for (const e of manifest.routes) {
   assert(locations.includes(c.ORIGIN+e.route),prefix+'sitemap');
   const url=urls.find((u)=>u.querySelector('loc').textContent===c.ORIGIN+e.route);
   assert.equal(url.getElementsByTagNameNS('http://www.w3.org/1999/xhtml','link').length,c.locales.length+2,prefix+'sitemap alternatives');
+  checks.assertLocalizedLastmod(url.querySelector('lastmod')?.textContent,pageDates.expectedLastmod({path:e.route,kind:'marketing'},pageDates.documentContentHash(d),ledger,lastmod(c.ORIGIN+c.routePath(e.source))),prefix);
+  if(e.source==='/')checks.assertLocalizedHomeSchema([...d.querySelectorAll('script[type="application/ld+json"]')].map((s)=>JSON.parse(s.textContent)),strings[locale.id][productDescription],prefix);
   if(e.source!=='/') {
     const original=englishStructures.get(e.source);
     assert.equal(d.querySelectorAll('#localized-content .legal-section').length,original.sections,prefix+'all sections retained');
@@ -103,6 +112,12 @@ for (const e of manifest.routes) {
   for(const img of d.querySelectorAll('img'))assert(img.hasAttribute('alt'),prefix+'image alt');
   dom.window.close();count++;
   if(count%c.routes.length===0)console.log(`Verified ${locale.label}: ${c.routes.length} full pages.`);
+}
+for(const locale of c.locales) {
+  const pages=manifest.routes.filter((e)=>e.language===locale.language);
+  assert.deepEqual(pages.map((e)=>e.route),c.routes.map((route)=>c.localizedPath(locale.id,route)),`${locale.id}: localized page inventory`);
+  checks.assertMarketingLlms(fs.readFileSync(path.join(build,locale.id,'llms.txt'),'utf8'),locale.id,pages.map((e)=>e.route),strings[locale.id][c.hubSummary]);
+  checks.assertLocalizedFeedDates(fs.readFileSync(path.join(build,locale.id,'feed.xml'),'utf8'),locale.id,pages.filter((e)=>e.type==='article'));
 }
 sitemapDom.window.close();
 console.log(`International SEO/AEO verification passed: ${count} pages, 8 languages; content parity, code, assets, links, schema, canonical, hreflang, RTL and sitemap.`);

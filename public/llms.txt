@@ -6,7 +6,6 @@ Key facts:
 
 - Current release: PolyPDF 1.6.27 (build 99) for macOS and Windows; /versions reads the live update feeds.
 - Free download: the Free edition includes markup, review, calibration, up to 3 hand-created measurements per document, and Revision Package viewing and navigation. PolyPDF Pro removes the measurement cap and unlocks PDF content editing, toolsets, overlay, Symbol Search, installed plugins, and Revision Package creation, changes, and publishing for $74.95 USD once, activates up to 3 computers in any Mac/Windows mix, and includes a 14-day money-back guarantee for direct website purchases; /buy has the current terms.
-- New in 1.5.8: markups on rotated drawing sheets stay upright and in place. Autosize Text Box fits text boxes and callouts to their contents; PDF markup exchange and saving are more reliable.
 - Core PDF opening, rendering, markup, measurement, takeoff, OCR, forms, signatures, and export work is performed locally on the computer.
 - The PDF Maps plugin requests map imagery over the internet. Other connections may be needed for optional signature timestamping, license activation and validation, updates and downloads, purchases, account access, error diagnostics and separately opted-in usage statistics, and customer support.
 - Measurement and takeoff: page or region calibration, distance, area, perimeter, angle, radius, diameter, count, and dimension tools, plus a worksheet that exports Excel, CSV, or PDF.
@@ -30,6 +29,14 @@ Key facts:
 - [Buy PolyPDF Pro](https://www.polypdf.com/buy/): one-time license terms, Stripe checkout, and license delivery
 - [Version history](https://www.polypdf.com/versions/): live Mac and Windows release feeds
 - [Bluebeam alternative for Mac](https://www.polypdf.com/bluebeam-alternative-for-mac/): a dated comparison of local PDF takeoff and markup, Bluebeam’s current Mac access routes, licensing, and collaboration limits
+
+## Verified examples
+
+Publisher tests of the public Mac 1.6.27 build 99 app on synthetic drawings, with downloadable saved PDFs and native CSV exports. Windows and Pro workflows were not covered by these records.
+
+- [Architectural takeoff check](https://www.polypdf.com/samples/evaluation/public-mac-1.6.27-99/verification.html): 96 ft and 60 ft independent dimensions and 5,760 sq ft gross footprint on sheet A101, including walls; not net flooring
+- [Flooring takeoff check](https://www.polypdf.com/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html): F1 5,184 sq ft and F2 576 sq ft on sheet I101, to dimension boundaries with no wall deductions or waste
+- [Electrical route check](https://www.polypdf.com/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html): 46 ft drawn route on sheet E101, circuit-diagram geometry rather than conduit; device counts not run
 
 ## Practical guides
 

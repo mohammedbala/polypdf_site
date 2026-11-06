@@ -3,9 +3,11 @@ const fs=require('fs'),path=require('path'),assert=require('node:assert/strict')
 const {JSDOM}=require('jsdom');
 const locales=require('../../src/toolkit/locales.json'),catalog=require('../../src/toolkit/catalog.json'),copy=require('../../src/toolkit/page-content.json');
 const icons=require('../../src/toolkit/icons.json');
+const checks=require('../international/discovery-checks.cjs'),pageDates=require('../international/page-dates.cjs'),marketingLocales=require('../../src/lib/locales.json');
 const root=path.resolve(__dirname,'../..'),build=path.resolve(root,process.env.BUILD_PATH||'build'),origin='https://www.polypdf.com';
 const manifest=JSON.parse(fs.readFileSync(path.join(build,'toolkit-international-manifest.json'),'utf8'));
 const sitemap=fs.readFileSync(path.join(build,'sitemap.xml'),'utf8');
+const lastmods=pageDates.sitemapDates(sitemap),ledger=pageDates.readLedger();
 const locations=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);assert.equal(new Set(locations).size,locations.length,'unique sitemap URLs');
 assert.equal(manifest.routes.length,locales.length*38);assert.equal(new Set(Object.values(icons)).size,36);
 const source=JSON.parse(fs.readFileSync(path.join(root,'.tmp/toolkit-international/source-strings.json'),'utf8'));
@@ -32,6 +34,7 @@ for(const locale of locales) {
   for(const entry of manifest.routes.filter(e=>e.language===locale.language)) {
     const file=path.join(build,entry.route,'index.html'),html=fs.readFileSync(file,'utf8'),dom=new JSDOM(html),d=dom.window.document;
     const label=entry.route;
+    checks.assertNoEnglishToolShell(html,label);
     assert.equal(d.documentElement.lang,locale.language,label);assert.equal(d.documentElement.dir,locale.dir||'ltr',label);
     assert.equal(d.title,entry.title,label);assert(!titles.has(entry.title),label+' unique title');titles.add(entry.title);
     assert.equal(d.querySelector('meta[name=title]').content,entry.title,label+' title parity');
@@ -45,6 +48,7 @@ for(const locale of locales) {
     const alternates=[...d.querySelectorAll('link[hreflang]')];assert.equal(alternates.length,locales.length+2,label);
     for(const l of locales)assert.equal(alternates.find(a=>a.hreflang===l.language)?.href,origin+'/'+l.id+entry.source+'/',label);
     assert(sitemap.includes('<loc>'+origin+entry.route+'</loc>'),label+' sitemap');
+    checks.assertLocalizedLastmod(lastmods.get(origin+entry.route),pageDates.expectedLastmod({path:entry.route,kind:'tool'},pageDates.documentContentHash(d),ledger,lastmods.get(origin+entry.source+'/')),label+' ');
     const boot=JSON.parse(d.getElementById('pdf-tool-language').textContent);assert.equal(boot.locale,locale.id);
     const bytes=fs.readFileSync(path.join(build,boot.src));assert(boot.src.includes(crypto.createHash('sha256').update(bytes).digest('hex').slice(0,12)),label+' language content hash');
     assert.deepEqual(JSON.parse(bytes).strings,dictionary.strings,label+' saved language dictionary');
@@ -93,6 +97,7 @@ for(const locale of locales) {
     }
     dom.window.close();
   }
+  checks.assertToolsLlms(fs.readFileSync(path.join(build,locale.id,'tools/llms.txt'),'utf8'),locale.id,marketingLocales.some(l=>l.id===locale.id),['/tools','/tools/automation',...catalog.map(t=>'/tools/'+t.id)].map(route=>'/'+locale.id+route+'/'));
   reports.push({language:locale.language,pages:38,toolPages:controls,translatedStrings:source.strings.length,rtl:locale.dir==='rtl'});
   console.log(`Verified ${locale.label}: 38 interactive pages, translated content/controls, canonicals, 24 alternates, answers, schema, icons and destinations.`);
 }
