@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-12",
+  "scope": "Website SEO presentation and localized guide discovery. No installer, update-feed, license, checkout or analytics configuration change.",
+  "baseline": "cf9f18a3125fa8c085677752b09b23daa9b33d28",
+  "checks": {
+    "sitemapPages": 1167,
+    "reciprocalLanguageLinks": 23676,
+    "guideCards": 171,
+    "contextualGuideLinks": 828,
+    "noindexRoutesPreserved": 4,
+    "localNavigationPages": 1176,
+    "internalLinks": 62273,
+    "fragments": 4387,
+    "staticAccessibilityExistingPages": 106,
+    "staticAccessibilityChangedPages": 14,
+    "reactTests": 30,
+    "nodeTests": 29,
+    "deploymentFixtureTests": 10
+  },
+  "changed": {
+    "regionalSearchDescriptions": 27,
+    "formGuidesWithCreationInstructions": 3,
+    "guideIndexes": 9,
+    "primaryEnglishRoutesWithLargePreviewPermission": 87
+  },
+  "limits": [
+    "Static axe checks exclude color contrast and do not establish WCAG conformance.",
+    "Native screenshots retain their original version, platform and validation scope.",
+    "Archived evidence bytes and existing installer artifacts are preserved.",
+    "Search outcomes require recrawling and subsequent measurement."
+  ]
+}

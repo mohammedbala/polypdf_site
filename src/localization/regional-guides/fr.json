@@ -19,7 +19,10 @@
     "source": "Ouvrir le dessin",
     "practice": "Formulaire A4 à remplir",
     "notice": "Édition adaptée aux plans français. Les menus de fichiers de macOS suivent la langue du système. Les prix, le paiement et les politiques restent sur les pages en anglais.",
-    "fieldMap": "Liste des champs du formulaire · CSV"
+    "fieldMap": "Liste des champs du formulaire · CSV",
+    "browserForm": "Remplir un formulaire existant dans le navigateur",
+    "browserFormNote": "Pour remplir des champs déjà présents, utilisez l’outil gratuit dans le navigateur. Pour créer de nouveaux champs, suivez la procédure dans l’application de bureau ci-dessous.",
+    "updated": "Mis à jour le"
   },
   "guides": [
     {
@@ -39,7 +42,8 @@
       ],
       "check": "Référence : 5000 mm = 5,00 m. Contrôle indépendant : 24,00 m ; emprise théorique : 360,00 m². Une mesure cliquée doit être rapprochée de ces cotes, sans imposer artificiellement le résultat.",
       "pitfall": "Un clic approximatif sur une petite barre affecte toutes les quantités. Si les extrémités ne sont pas alignées, zoomez ou utilisez l’alignement au contenu, puis recommencez.",
-      "caption": "Saisie de 5000 mm pour la référence française de 5,00 m."
+      "caption": "Saisie de 5000 mm pour la référence française de 5,00 m.",
+      "description": "Apprenez à étalonner un plan PDF avec une cote connue dans PolyPDF. Exercice métrique français, capture de l’interface et contrôle d’une seconde dimension."
     },
     {
       "id": "area",
@@ -58,7 +62,8 @@
       ],
       "check": "Références géométriques : 360,00 − 18,00 = 342,00 m² nets ; 342,00 × 0,12 = 41,04 m³. Les pertes et règles de métré du projet se traitent séparément.",
       "pitfall": "La capture montre un tracé manuel et son volume brut. Ce n’est pas le résultat net de l’exercice. Corrigez un écart de tracé ou d’étalonnage avant d’utiliser une quantité.",
-      "caption": "Surface tracée manuellement et profondeur de 120 mm dans l’interface française."
+      "caption": "Surface tracée manuellement et profondeur de 120 mm dans l’interface française.",
+      "description": "Mesurez une surface nette et calculez un volume dans PolyPDF. Plan français à télécharger, déduction d’un local et contrôle séparé des valeurs de référence."
     },
     {
       "id": "count",
@@ -77,7 +82,8 @@
       ],
       "check": "16 bouches de soufflage dans le plan. La légende en ajoute une : 17 symboles dessinés ne signifient donc pas 17 équipements à poser.",
       "pitfall": "Le nombre de correspondances brutes dépend du cadrage et des réglages. Ne publiez pas ce nombre avant d’avoir examiné chaque résultat. Contrôle du 12/11/2026 sur Mac, build 114 : la sélection d’un échantillon par partage d’écran a renvoyé « Invalid PDF tile render request ». La capture conserve ce message ; aucun comptage automatique n’est validé par ce contrôle. Si ce message apparaît, arrêtez la recherche et comptez les 16 symboles du plan manuellement ; n’utilisez pas un résultat incomplet.",
-      "caption": "Recherche de symboles en français sur M101 : message d’erreur rencontré pendant le contrôle par partage d’écran. La quantité de référence doit être vérifiée manuellement."
+      "caption": "Recherche de symboles en français sur M101 : message d’erreur rencontré pendant le contrôle par partage d’écran. La quantité de référence doit être vérifiée manuellement.",
+      "description": "Comptez les symboles d’un plan PDF sans inclure la légende. Exercice de ventilation français, comptage manuel et limites observées de la recherche de symboles."
     },
     {
       "id": "compare",
@@ -97,7 +103,8 @@
       ],
       "check": "Trois changements géométriques sont annoncés : cloison 103/104 déplacée de 1,50 m ; porte 104 déplacée de 0,75 m vers l’est ; fenêtre de 1,50 m ajoutée en façade sud.",
       "pitfall": "Le nombre de nuages n’est pas un nombre contractuel de modifications. Des zones proches peuvent être regroupées et le cartouche peut aussi être signalé.",
-      "caption": "Choix des fichiers et des pages pour une comparaison en français."
+      "caption": "Choix des fichiers et des pages pour une comparaison en français.",
+      "description": "Comparez deux révisions d’un plan PDF dans PolyPDF. Téléchargez les indices A et B du projet français et contrôlez les changements feuille par feuille."
     },
     {
       "id": "markup",
@@ -116,7 +123,8 @@
       ],
       "check": "Retrouvez les trois notes initiales, les quatre calques et chaque annotation ajoutée. Un export doit conserver le lien logique entre remarque, feuille, responsable et suite à donner.",
       "pitfall": "Les noms des calques viennent du PDF ; ils peuvent différer des intitulés des outils. Évitez de remplacer une observation précise par un simple statut.",
-      "caption": "Tableau des annotations en français, illustré ici avec les nuages de comparaison du plan A101. L’exercice ci-dessous utilise la feuille de synthèse X101."
+      "caption": "Tableau des annotations en français, illustré ici avec les nuages de comparaison du plan A101. L’exercice ci-dessous utilise la feuille de synthèse X101.",
+      "description": "Organisez les annotations d’un plan PDF pour suivre les remarques de chantier. Exercice français avec calques, responsables et contrôle du tableau des annotations."
     },
     {
       "id": "ocr",
@@ -135,11 +143,12 @@
       ],
       "check": "Le texte doit être sélectionnable et retrouvable sur les pages traitées. Le résultat OCR reste à relire ; il ne remplace ni l’image ni les cotes validées.",
       "pitfall": "L’OCR n’étalonne pas le dessin et ne transforme pas automatiquement les traits du scan en géométrie mesurable.",
-      "caption": "Suivi du traitement OCR dans l’interface française."
+      "caption": "Suivi du traitement OCR dans l’interface française.",
+      "description": "Rendez un plan PDF numérisé recherchable avec l’OCR de PolyPDF. Deux pages françaises à télécharger et une méthode pour relire le texte reconnu."
     },
     {
       "id": "forms",
-      "title": "Remplir et créer des champs de formulaire PDF",
+      "title": "Créer un formulaire PDF remplissable",
       "intro": "La fiche A4 de revue de chantier utilise le projet français, la date JJ/MM/AAAA et dix champs logiques, dont un groupe de trois boutons radio.",
       "documents": [],
       "form": true,
@@ -153,7 +162,18 @@
       ],
       "check": "La fiche source contient 10 champs logiques et 12 widgets. Le groupe radio n’autorise qu’un état à la fois. Testez la copie enregistrée dans le lecteur prévu pour le destinataire.",
       "pitfall": "Un texte dessiné sur la page n’est pas un champ interactif. Ne déduisez pas la persistance des valeurs de leur seul affichage avant l’enregistrement.",
-      "caption": "Commandes de création de champs dans l’interface française."
+      "caption": "Commandes de création de champs dans l’interface française.",
+      "description": "Créez et remplissez des champs PDF dans PolyPDF sur Mac ou Windows. Fiche de chantier A4 en français, noms de champs et contrôles après enregistrement.",
+      "creationHeading": "Créer les champs du formulaire",
+      "creationSteps": [
+        "Ouvrez une copie PDF non signée et sans restriction de modification. Affichez le panneau Formulaires ; la palette présente les types de champs disponibles.",
+        "Faites glisser Texte sur la page pour une réponse courte, ou Texte Multiligne pour une observation. Placez le champ dans une zone libre, près de son libellé.",
+        "Donnez au champ un nom unique, par exemple revue_complementaire, et une infobulle compréhensible. Évitez les noms vides, les doublons et les points.",
+        "Utilisez une Case à cocher pour un choix indépendant. Pour un groupe de Boutons radio, prévoyez au moins deux options et une seule réponse possible ; saisissez les options une par ligne.",
+        "Déplacez le champ et redimensionnez-le avec ses poignées. Réglez l’ordre de tabulation et les propriétés nécessaires, puis testez une saisie longue pour vérifier qu’elle reste lisible.",
+        "Enregistrez une nouvelle copie, puis remplissez-la sans modifier sa disposition. Fermez-la et rouvrez-la dans le lecteur du destinataire pour contrôler les valeurs et la sélection des options."
+      ],
+      "stepsHeading": "Remplir et vérifier la fiche"
     },
     {
       "id": "stamps",
@@ -172,7 +192,8 @@
       ],
       "check": "Le nom et la date doivent être lisibles sans chevauchement. Placez une seconde instance pour vérifier que les valeurs variables ne sont pas figées dans le modèle.",
       "pitfall": "Un tampon de revue n’est pas une signature numérique et ne prouve pas à lui seul une approbation contractuelle.",
-      "caption": "Champ Responsable et option obligatoire dans l’éditeur de tampon français."
+      "caption": "Champ Responsable et option obligatoire dans l’éditeur de tampon français.",
+      "description": "Créez un tampon de revue PDF avec un nom et une date dans PolyPDF. Exercice sur un plan français et contrôles des champs variables à chaque insertion."
     },
     {
       "id": "redaction",
@@ -191,7 +212,8 @@
       ],
       "check": "L’adresse visée doit être absente de la recherche et de la sélection de texte dans la copie finale, avec une apparence de page cohérente.",
       "pitfall": "Le contrôle d’un exercice ne garantit pas le nettoyage de tous les PDF. Examinez les données réellement présentes et les éléments conservés par les options choisies.",
-      "caption": "Options d’assainissement dans l’interface française."
+      "caption": "Options d’assainissement dans l’interface française.",
+      "description": "Caviardez du texte pris en charge et contrôlez une copie PDF dans PolyPDF. Exercice français, recherche après enregistrement et limites à connaître."
     }
   ]
 }

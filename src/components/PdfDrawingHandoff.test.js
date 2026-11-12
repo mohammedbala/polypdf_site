@@ -58,7 +58,7 @@ test('handoff clicks require analytics consent and do not report a purchase or b
   const calls = window.gtag.mock.calls;
   expect(calls.filter(c => c[1] === 'download_click').map(c => c[2].platform)).toEqual(['mac', 'windows']);
   expect(calls.filter(c => c[1] === 'desktop_workflow_click').map(c => c[2].target))
-    .toEqual(['workflow', 'measured_example', 'pricing']);
+    .toEqual(['workflow', 'measured_example', 'pricing', 'guide']);
   expect(calls.every(c => c[2].feature === 'merge-pdf' && c[2].send_to === 'G-GB6LW050TM')).toBe(true);
   expect(calls.some(c => ['purchase', 'conversion', 'browser_tool_complete'].includes(c[1]))).toBe(false);
   window.gtag.mockClear();
@@ -87,4 +87,26 @@ test.each(locales)('$id keeps downloads intact, translates limits and labels Eng
   expect(node.textContent).toContain(strings['Free: calibration, markup, and up to 3 hand-created measurements per document.']);
   expect([...node.querySelectorAll('a[download]')].map(a => a.getAttribute('href')))
     .toEqual(Object.values(DOWNLOADS).map(p => localizedHref(p.url, language)));
+});
+
+
+test('form filling links to field creation in the matching guide edition', () => {
+  const locale = locales.find(l => l.id === 'fr');
+  render('fill-pdf-form', false, {locale, strings: require('../toolkit/translations/fr.json').strings});
+  const link = node.querySelector('[data-drawing-guide]');
+  expect(link.getAttribute('href')).toBe('/fr/blog/create-fillable-pdf-form/');
+  expect(link.getAttribute('hreflang')).toBe('fr');
+  expect(link.textContent).toContain('Créer un formulaire PDF remplissable');
+  expect(link.textContent).not.toContain('English');
+});
+
+test('a tool-only locale explicitly identifies its English drawing guide', () => {
+  const locale = locales.find(l => l.id === 'ru');
+  render('compare-pdf-text', false, {locale, strings: require('../toolkit/translations/ru.json').strings});
+  const link = node.querySelector('[data-drawing-guide]');
+  expect(link.getAttribute('href')).toBe('/blog/compare-pdf-drawing-revisions/');
+  expect(link.getAttribute('hreflang')).toBe('en');
+  expect(link.getAttribute('lang')).toBe('en');
+  expect(link.querySelector('small').getAttribute('lang')).toBe('ru');
+  expect(link.textContent).toContain(require('../toolkit/translations/ru.json').strings.English);
 });

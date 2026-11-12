@@ -2993,7 +2993,8 @@
     "Current version 1.6.32 (build 114).": "現在のバージョン 1.6.32 (ビルド 114)。",
     "PolyPDF 1.6.32 (build 114) · Mac & Windows": "PolyPDF 1.6.32 (ビルド 114) · Mac および Windows",
     "Get help with installation, product workflows, purchases, and license activation. The current public release is PolyPDF 1.6.32 (build 114) on Mac and Windows. When you write in, include the version shown in About, your operating system, and Stripe receipt details when relevant.": "インストール、製品のワークフロー、購入、ライセンスのアクティベーションに関するサポートが受けられます。現在のパブリック リリースは、Mac および Windows 上の PolyPDF 1.6.32 (ビルド 114) です。記入する際は、「バージョン情報」に表示されているバージョン、オペレーティング システム、および該当する場合は Stripe の領収書の詳細を含めてください。",
-    "PolyPDF 1.6.32 (build 114) fixes saving edited markups, flattening, saving large combined PDFs, and reducing embedded photos. Mac printing respects the chosen scale. Collaboration Host 1.6.22 remains current.": "PolyPDF 1.6.32（ビルド114）では、編集したマークアップの保存、フラット化、大きな結合PDFの保存、埋め込み写真の圧縮に関する不具合を修正しました。Macでの印刷に選択した縮尺が反映されます。Collaboration Hostの現行バージョンは引き続き1.6.22です。"
+    "PolyPDF 1.6.32 (build 114) fixes saving edited markups, flattening, saving large combined PDFs, and reducing embedded photos. Mac printing respects the chosen scale. Collaboration Host 1.6.22 remains current.": "PolyPDF 1.6.32（ビルド114）では、編集したマークアップの保存、フラット化、大きな結合PDFの保存、埋め込み写真の圧縮に関する不具合を修正しました。Macでの印刷に選択した縮尺が反映されます。Collaboration Hostの現行バージョンは引き続き1.6.22です。",
+    "Practical guides to PDF measurement, takeoff, markup, revisions, forms, and document preparation. Each guide identifies its example files and the scope of its screenshots or checks.": "PDFの計測、数量拾い、注釈、改訂比較、フォーム、文書準備の実践ガイドです。各ガイドにサンプルファイルと、画面キャプチャや検証の範囲を明記しています。"
   },
   "sourceHash": "31c6c9aa6af6f2a976c05acdd5e3b1e754bf904f0d81475e2df3dc42b484169e",
   "editorialReview": "Brand spelling, construction vocabulary and separately authored SEO titles; machine-assisted full prose, not certified native-speaker review.",

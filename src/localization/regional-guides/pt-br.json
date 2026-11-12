@@ -19,7 +19,10 @@
     "source": "Abrir a planta",
     "practice": "Ficha A4 preenchível",
     "notice": "Edição adaptada às plantas brasileiras. As janelas de arquivos do macOS seguem o idioma do sistema. Os preços, o pagamento e as políticas permanecem nas páginas em inglês.",
-    "fieldMap": "Mapa de campos do formulário · CSV"
+    "fieldMap": "Mapa de campos do formulário · CSV",
+    "browserForm": "Preencher um formulário existente no navegador",
+    "browserFormNote": "Para preencher campos que já existem, use a ferramenta gratuita no navegador. Para criar novos campos, siga abaixo o procedimento do aplicativo para computador.",
+    "updated": "Atualizado em"
   },
   "guides": [
     {
@@ -39,7 +42,8 @@
       ],
       "check": "5000 mm = 5,00 m. Cota independente: 24,00 m. Área externa teórica: 360,00 m². Compare as medições traçadas com essas referências.",
       "pitfall": "Um ponto mal posicionado afeta todos os quantitativos. Amplie a planta ou use o ajuste ao conteúdo e refaça a calibração quando houver divergência.",
-      "caption": "Calibração da referência de 5,00 m na interface em português do Brasil."
+      "caption": "Calibração da referência de 5,00 m na interface em português do Brasil.",
+      "description": "Calibre a escala de uma planta PDF com uma cota conhecida no PolyPDF. Exercício métrico brasileiro, captura da interface e conferência de uma segunda medida."
     },
     {
       "id": "area",
@@ -58,7 +62,8 @@
       ],
       "check": "Referências geométricas: 360,00 − 18,00 = 342,00 m² líquidos; 342,00 × 0,12 = 41,04 m³. Perdas e critérios específicos do projeto devem ser tratados separadamente.",
       "pitfall": "A imagem apresenta os controles de área e profundidade. Ela não substitui a conferência das cotas nem representa um quantitativo certificado.",
-      "caption": "Medição manual na interface brasileira: 357,44 m² e profundidade de 120 mm resultam em 42,89 m³ nesta captura. A referência geométrica do exercício é 360,00 m² antes do recorte de 18,00 m²."
+      "caption": "Medição manual na interface brasileira: 357,44 m² e profundidade de 120 mm resultam em 42,89 m³ nesta captura. A referência geométrica do exercício é 360,00 m² antes do recorte de 18,00 m².",
+      "description": "Meça a área líquida e calcule o volume de uma planta PDF no PolyPDF. Baixe o exercício brasileiro e confira recortes, profundidade e valores de referência."
     },
     {
       "id": "count",
@@ -77,7 +82,8 @@
       ],
       "check": "16 difusores na planta. Os 17 símbolos desenhados incluem um exemplo de legenda, que não representa um equipamento a instalar.",
       "pitfall": "O resultado inicial depende do enquadramento e das configurações. Use o total revisado, não a quantidade automática sem conferência. Em uma conferência com a interface francesa de 12/11/2026 no Mac, build 114, a seleção de uma amostra pelo compartilhamento de tela retornou « Invalid PDF tile render request ». A captura mostra a preparação, não uma contagem automática validada. Se essa mensagem aparecer, interrompa a busca e conte manualmente os 16 símbolos da planta; não use um resultado incompleto.",
-      "caption": "Busca de símbolos na interface em português do Brasil."
+      "caption": "Busca de símbolos na interface em português do Brasil.",
+      "description": "Conte símbolos em uma planta PDF sem incluir a legenda. Exercício brasileiro de ventilação, contagem manual e limites observados da busca de símbolos."
     },
     {
       "id": "compare",
@@ -97,7 +103,8 @@
       ],
       "check": "Há três mudanças geométricas anunciadas: divisória 103/104 deslocada 1,50 m; porta 104 deslocada 0,75 m para leste; janela de 1,50 m adicionada na fachada sul.",
       "pitfall": "A quantidade de nuvens não equivale necessariamente ao número de alterações: regiões próximas podem ser agrupadas, e o carimbo também pode ser apontado.",
-      "caption": "Revisões A e B selecionadas na interface brasileira, antes de limitar a comparação à página 1 e executar a análise."
+      "caption": "Revisões A e B selecionadas na interface brasileira, antes de limitar a comparação à página 1 e executar a análise.",
+      "description": "Compare duas revisões de uma planta PDF no PolyPDF. Baixe as revisões A e B do projeto brasileiro e confira as alterações de cada prancha."
     },
     {
       "id": "markup",
@@ -116,7 +123,8 @@
       ],
       "check": "Confira as três notas de origem, as quatro camadas e as marcações acrescentadas. Cada pendência deve permitir identificar seu local e a próxima ação.",
       "pitfall": "Os nomes das camadas vêm do próprio PDF. Uma situação isolada não substitui a descrição clara de uma pendência.",
-      "caption": "Tabela de marcações na interface em português do Brasil."
+      "caption": "Tabela de marcações na interface em português do Brasil.",
+      "description": "Organize anotações PDF para acompanhar pendências de obra no PolyPDF. Exercício brasileiro com camadas, responsáveis e conferência da tabela de anotações."
     },
     {
       "id": "ocr",
@@ -135,11 +143,12 @@
       ],
       "check": "O texto deve permitir seleção e pesquisa nas páginas processadas. Revise erros de reconhecimento antes de reutilizar o conteúdo.",
       "pitfall": "O OCR não calibra a planta nem transforma automaticamente suas linhas digitalizadas em geometria vetorial.",
-      "caption": "Andamento do reconhecimento OCR na interface brasileira."
+      "caption": "Andamento do reconhecimento OCR na interface brasileira.",
+      "description": "Torne uma planta PDF digitalizada pesquisável com o OCR do PolyPDF. Baixe duas páginas em português e confira o texto reconhecido sobre a imagem original."
     },
     {
       "id": "forms",
-      "title": "Preencher e criar campos de formulário PDF",
+      "title": "Criar um formulário PDF preenchível",
       "intro": "A ficha A4 usa o projeto dos Ipês e datas DD/MM/AAAA. Ela contém dez campos lógicos, incluindo um grupo de três opções exclusivas.",
       "documents": [],
       "form": true,
@@ -153,7 +162,18 @@
       ],
       "check": "A ficha original contém 10 campos lógicos e 12 widgets. Apenas uma opção do grupo de situação pode ficar marcada. Teste também no leitor usado pelo destinatário.",
       "pitfall": "Um texto desenhado na página não é um campo preenchível. A aparência antes de salvar não comprova que os valores foram preservados.",
-      "caption": "Ferramentas de criação de campos na interface brasileira."
+      "caption": "Ferramentas de criação de campos na interface brasileira.",
+      "description": "Crie e preencha campos PDF no PolyPDF para Mac ou Windows. Ficha de revisão de obra A4 em português, nomes dos campos e conferência após salvar.",
+      "creationHeading": "Criar os campos do formulário",
+      "creationSteps": [
+        "Abra uma cópia PDF sem assinatura digital e sem restrições de edição. Exiba o painel Formulários para acessar a paleta de tipos de campo.",
+        "Arraste um campo de texto para a página para uma resposta curta, ou um campo de texto multilinha para uma observação. Posicione-o em uma área livre junto ao rótulo.",
+        "Atribua um nome único ao campo, por exemplo revisao_adicional, e uma dica de preenchimento clara. Evite nomes vazios, duplicados e pontos.",
+        "Use uma caixa de seleção para uma escolha independente. Para um grupo de botões de opção, defina ao menos duas opções e apenas uma resposta possível; escreva uma opção por linha.",
+        "Mova o campo e ajuste seu tamanho pelas alças. Configure a ordem de tabulação e as propriedades necessárias; teste um texto longo e confira se continua legível.",
+        "Salve uma nova cópia e preencha-a sem alterar a disposição. Feche e abra novamente no leitor do destinatário para conferir os valores e as opções selecionadas."
+      ],
+      "stepsHeading": "Preencher e conferir a ficha"
     },
     {
       "id": "stamps",
@@ -172,7 +192,8 @@
       ],
       "check": "Nome e data devem permanecer legíveis, sem sobreposição. Coloque uma segunda instância para verificar se os valores variáveis não ficaram fixos no modelo.",
       "pitfall": "Um carimbo de revisão não é uma assinatura digital nem comprova, sozinho, uma aprovação contratual.",
-      "caption": "Configuração de campos de um carimbo interativo em português."
+      "caption": "Configuração de campos de um carimbo interativo em português.",
+      "description": "Crie um carimbo de revisão PDF com nome e data no PolyPDF. Exercício com uma planta brasileira e conferência dos campos variáveis a cada inserção."
     },
     {
       "id": "redaction",
@@ -191,7 +212,8 @@
       ],
       "check": "O endereço escolhido deve deixar de aparecer na pesquisa e na seleção de texto da cópia final, preservando a aparência do conteúdo que deve permanecer.",
       "pitfall": "O exercício não garante a higienização de qualquer PDF. Examine os dados realmente presentes e as categorias preservadas pelas opções selecionadas.",
-      "caption": "Opções de higienização na interface brasileira."
+      "caption": "Opções de higienização na interface brasileira.",
+      "description": "Remova texto compatível e confira uma cópia PDF no PolyPDF. Exercício brasileiro, pesquisa após salvar e limites da remoção de informações."
     }
   ]
 }

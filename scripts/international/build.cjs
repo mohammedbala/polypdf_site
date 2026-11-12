@@ -5,6 +5,7 @@ const path = require('path');
 const crypto = require('crypto');
 const c = require('./content.cjs');
 const regionalGuides = require('../localization/regional-guides.cjs');
+const guideDiscovery = require('../localization/guide-discovery.cjs');
 regionalGuides.validateCatalogs();
 const { assetPath, localizeWalkthroughMedia, localizeRegionalCopy, resolveAsset, verifyMediaFiles } = require('../localization/media.cjs');
 const walkthroughMedia = require('../../src/localization/walkthrough-media.json');
@@ -57,11 +58,12 @@ for (const locale of allLocales) {
     else c.localizeMetricPlan(d,locale,t);
     localizePageLinks(d,locale,page,value=>fs.readFileSync(path.join(build,value)));
     if(guide || page)regionalGuides.localizeEvaluation(d,locale.id);
+    if (route === '/blog') guideDiscovery.localizeBlogIndex(d, locale, build);
     const guideCapture = guide ? regionalGuides.render(d,guide,build) : null;
     const canonical = c.ORIGIN+c.localizedPath(locale.id,route);
     const translatedMeta = {...meta,title:t(meta.title),description:t(meta.description),imageAlt:t(meta.imageAlt || 'PolyPDF — PDF drawing measurement and markup on Mac and Windows')};
     translatedMeta.title = guide ? guide.title+' | PolyPDF' : editorialTitles[locale.id]?.[route] || translatedMeta.title;
-    if(guide){translatedMeta.description=guide.intro;translatedMeta.imageAlt=guide.caption;}
+    if(guide){translatedMeta.description=guide.description;translatedMeta.imageAlt=guide.caption;}
     // The title tag may add a "| suffix"; the visible H1 and the article headline are the text before it.
     const visibleTitle = translatedMeta.title.split('|')[0].trim();
     d.querySelector('h1').textContent = visibleTitle;
@@ -76,12 +78,17 @@ for (const locale of allLocales) {
     if (useRegionalMedia) localizeArticleImages(blocks,locale,walkthroughMedia);
     for (const block of blocks) {
       if (block['@type'] === 'BlogPosting') {
-        if(guide){block.description=guide.intro;block.image=c.ORIGIN+guideCapture.path;block.dateModified='2026-11-12';}
+        if(guide){block.description=guide.description;block.image=c.ORIGIN+guideCapture.path;block.dateModified='2026-11-12';}
         block.inLanguage = locale.language;
         block.headline = visibleTitle;
         block.translationOfWork = {'@type':'BlogPosting',url:c.ORIGIN+c.routePath(route),inLanguage:'en'};
       }
       if (['WebPage','Blog'].includes(block['@type'])) { block.inLanguage = locale.language; block.name = translatedMeta.title; }
+    }
+    if (route === '/blog') guideDiscovery.localizeBlogSchema(blocks, locale, build);
+    for (const block of blocks) if (block['@type'] === 'BreadcrumbList') {
+      const current = block.itemListElement.at(-1);
+      if (current?.item === canonical) current.name = visibleTitle;
     }
     if (route === '/') blocks.push({'@context':'https://schema.org','@type':'WebPage',url:canonical,name:translatedMeta.title,description:translatedMeta.description,inLanguage:locale.language,isPartOf:{'@id':c.ORIGIN+'/#website'}});
     const consentUI = `<section data-local-consent class="localized-consent"><aside data-consent-banner hidden class="cookie-banner"><div class="container cookie-banner-inner"><p>${c.esc(t('Google cookies measure visits and ad results, only with your permission.'))} <a href="/cookies/" hreflang="en">${c.esc(t('Details'))}</a></p><div class="cookie-banner-actions"><button data-consent-action="reject">${c.esc(t('Reject optional cookies'))}</button><button data-consent-action="accept">${c.esc(t('Accept optional cookies'))}</button><button data-consent-action="settings">${c.esc(t('Cookie settings'))}</button></div></div></aside><button class="localized-cookie-settings" data-consent-action="settings">${c.esc(t('Cookie settings'))}</button><dialog class="privacy-dialog" aria-labelledby="local-cookie-title"><h2 id="local-cookie-title">${c.esc(t('Cookie settings'))}</h2><p>${c.esc(t('Choose how this browser shares information. You can change your choice here at any time.'))}</p><p data-privacy-signal hidden>${c.esc(t('Your browser privacy signal keeps optional tracking off.'))}</p><label class="privacy-option"><input type="checkbox" name="analytics"><span>${c.esc(t('Analytics'))} — ${c.esc(t('Google cookies measure visits and ad results, only with your permission.'))}</span></label><label class="privacy-option"><input type="checkbox" name="marketing"><span>${c.esc(t('Advertising measurement'))}</span></label><p><a href="/cookies/" hreflang="en">${c.esc(t('Cookie details and durations'))}</a> · <a href="/privacy/" hreflang="en">${c.esc(t('Privacy policy and your rights'))}</a></p><div class="privacy-actions"><button data-consent-action="reject">${c.esc(t('Reject optional cookies'))}</button><button data-consent-action="accept">${c.esc(t('Accept optional cookies'))}</button><button data-consent-action="save">${c.esc(t('Save choices'))}</button><button data-consent-action="close">${c.esc(t('Close without saving'))}</button></div><p>${c.esc(t('Changing a previously allowed category to off reloads this page to stop already loaded tracking. If browser storage is blocked, your choice lasts for this page only.'))}</p></dialog></section>`;

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 'use strict';
+const guideDiscovery = require('../localization/guide-discovery.cjs');
 const fs = require('fs');
 const path = require('path');
 const assert = require('node:assert/strict');
@@ -90,7 +91,11 @@ for (const e of manifest.routes) {
     const useRegionalMedia = walkthroughMedia.locales[locale.id]?.status === 'complete'
       || Boolean(regionalPage)
       || (process.env.POLYPDF_LOCALIZED_MEDIA_LOCALES || '').split(',').includes(locale.id);
-    if (useRegionalMedia) {
+    if (e.source === '/blog') {
+      const source = c.sourcePage(build, '/blog');
+      guideDiscovery.verifyBlogIndex(d, locale, source.dom.window.document, build);
+      source.dom.window.close();
+    } else if (useRegionalMedia) {
       const expectedImages = useRegionalMedia ? original.images.map(src=>resolveAsset(src,locale,walkthroughMedia)) : original.images;
     assert.deepEqual([...d.querySelectorAll('#localized-content img')].map((n)=>n.getAttribute('src')),expectedImages,prefix+'authentic source or verified regional images');
     } else {

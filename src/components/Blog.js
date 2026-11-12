@@ -77,8 +77,7 @@ const Blog = () => {
             <p className="blog-eyebrow">PolyPDF guides &amp; reference</p>
             <h1 ref={headingRef} tabIndex="-1">Practical answers for working with PDF drawings</h1>
             <p className="legal-subtitle">
-              Guides for PolyPDF 1.6.2: rotated-sheet markups, text boxes, grouped symbols, mirroring, overlays, takeoff, comparison,
-              forms, signatures, and document preparation, illustrated with app captures.
+              Practical guides to PDF measurement, takeoff, markup, revisions, forms, and document preparation. Each guide identifies its example files and the scope of its screenshots or checks.
             </p>
           </motion.header>
 

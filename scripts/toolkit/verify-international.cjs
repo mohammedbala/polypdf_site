@@ -70,7 +70,7 @@ for(const locale of locales) {
       const handoff=d.querySelector('.pdf-desktop-cta');assert(handoff,label+' construction handoff');
       assert(handoff.textContent.includes(dictionary.strings['Free: calibration, markup, and up to 3 hand-created measurements per document.']),label+' translated edition limit');
       assert.deepEqual([...handoff.querySelectorAll('a[download]')].map(a=>a.getAttribute('href')),['/downloads/PolyPDFMac.dmg','/downloads/windows/PolyPDFSetup.exe'].map(href=>require('../../src/lib/websiteDownloads.cjs').websiteDownloadHref(href,locale.id)),label+' direct desktop builds');
-      assert.equal(handoff.querySelectorAll('.pdf-desktop-links a').length,3,label+' workflow, proof and pricing');
+      assert.equal(handoff.querySelectorAll('.pdf-desktop-links a').length,4,label+' workflow, proof, pricing and guide');
       assert.equal(d.querySelectorAll('#pdf-desktop-title').length,1,label+' unique handoff title');
       for(const a of handoff.querySelectorAll('.pdf-desktop-links a')) {
         const url=new URL(a.getAttribute('href'),origin);const file=path.join(build,url.pathname,'index.html');

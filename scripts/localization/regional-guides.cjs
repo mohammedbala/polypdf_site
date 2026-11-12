@@ -30,8 +30,10 @@ function render(d,g,base){
  article.dataset.regionalGuide=g.id;article.dataset.guideLocale=g.pack.locale;
  article.innerHTML='<header class="legal-hero blog-hero"><p class="blog-card-meta">'+esc(l.edition)+' · <time datetime="2026-11-12">'+esc(g.pack.date)+'</time></p><h1 id="blog-article-title">'+esc(g.title)+'</h1><p class="regional-intro">'+esc(g.intro)+'</p></header>'
  +'<section class="legal-section" aria-labelledby="regional-files"><h2 id="regional-files">'+esc(l.files)+'</h2><ul class="regional-files">'+files.map(f=>'<li><a href="'+esc(f.path)+'" download>'+esc(f.label)+'</a></li>').join('')+'</ul><p><a href="'+prefix+'/samples/construction/DEMO-GUIDE.html">'+esc(l.library)+'</a></p><p>'+esc(l.scope)+'</p></section>'
+ +(g.id==='forms'?'<div class="blog-quick-answer" data-browser-form-guide><p>'+esc(l.browserFormNote)+'</p><a href="/'+g.siteLocale+'/tools/fill-pdf-form/">'+esc(l.browserForm)+'</a></div>':'')
  +'<figure class="regional-capture"><a href="'+esc(capture.path)+'"><img src="'+esc(capture.path)+'" width="'+capture.width+'" height="'+capture.height+'" alt="'+esc(g.caption)+'" loading="eager"></a><figcaption>'+esc(g.caption)+'</figcaption></figure>'
- +'<section class="legal-section"'+(g.id==='calibration'?' id="practice-calibration"':'')+'><h2>'+esc(l.steps)+'</h2><ol data-regional-steps>'+g.steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol></section>'
+ +(g.creationSteps?'<section class="legal-section" data-form-creation><h2>'+esc(g.creationHeading)+'</h2><ol>'+g.creationSteps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol></section>':'')
+ +'<section class="legal-section"'+(g.id==='calibration'?' id="practice-calibration"':'')+'><h2>'+esc(g.stepsHeading||l.steps)+'</h2><ol data-regional-steps>'+g.steps.map(s=>'<li>'+esc(s)+'</li>').join('')+'</ol></section>'
  +'<section class="blog-quick-answer" data-regional-check><h2>'+esc(l.check)+'</h2><p>'+esc(g.check)+'</p></section>'
  +'<section class="legal-section" data-regional-pitfall><h2>'+esc(l.pitfall)+'</h2><p>'+esc(g.pitfall)+'</p></section>'
  +'<p class="regional-evidence">'+esc(l.evidence)+'</p>'
@@ -44,6 +46,8 @@ function verifyDocument(d,g,base){
  assert.equal(article?.dataset.regionalGuide,g.id);assert.equal(article.dataset.guideLocale,g.pack.locale);
  assert.equal(article.querySelector('h1').textContent,g.title);
  if(g.id==='calibration')assert(article.querySelector('#practice-calibration'),'Existing calibration deep links resolve');
+ assert(g.description?.trim(),'Task-specific search description');
+ if(g.id==='forms'){assert.equal(g.creationSteps.length,6);assert.deepEqual([...article.querySelectorAll('[data-form-creation] li')].map(n=>n.textContent),g.creationSteps);}
  assert.equal(g.steps.length,6);assert.deepEqual([...article.querySelectorAll('[data-regional-steps] li')].map(n=>n.textContent),g.steps);
  assert(g.steps.every(s=>s.length>=40));assert(g.check.length>=100);assert(g.pitfall.length>=80);
  assert.equal(article.querySelector('[data-regional-check] p').textContent,g.check);

@@ -8,6 +8,7 @@ import { trackEvent } from "../lib/analytics";
 import { buyPath } from "../lib/attribution";
 import { DOWNLOADS } from "../lib/platform";
 import "./PdfTools.css";
+import { drawingGuideLink } from '../lib/drawingGuideLinks';
 import DesktopSetupLink from './DesktopSetupLink';
 import PdfToolIcon from './PdfToolIcon';
 import { ToolkitHeader } from './ToolkitChrome';
@@ -51,11 +52,12 @@ const drawingWorkflow = tool => drawingWorkflows[tool.id === "compare-pdf-text" 
 export function PdfDrawingHandoff({ tool, compact = false }) {
   const language = useToolkitLanguage();
   const workflow = drawingWorkflow(tool);
+  const article = drawingGuideLink(tool, language?.locale);
   const section = compact ? "result" : "guide";
   const click = target => trackEvent("desktop_workflow_click", {
     source: "browser_tools", feature: tool.id, section, target
   });
-  const englishNote = language ? <small>({language.t ? language.t("English") : translateText("English", language)})</small> : null;
+  const englishNote = language ? <small lang={language.locale.language}>({language.t ? language.t("English") : translateText("English", language)})</small> : null;
   const guideIsEnglish = !!language && localizedHref(workflow.path, language) === workflow.path;
   const guide = <Link to={workflow.path} hrefLang={guideIsEnglish ? "en" : undefined} onClick={() => click("workflow")}>
     {workflow.label} {guideIsEnglish && englishNote} <ArrowRight size={17} aria-hidden="true" />
@@ -94,6 +96,10 @@ export function PdfDrawingHandoff({ tool, compact = false }) {
         <Link to={buyPath("browser_tools")} hrefLang="en" onClick={() => click("pricing")}>
           Compare Pro pricing {englishNote} <ArrowRight size={17} aria-hidden="true" />
         </Link>
+        <a href={article.href} hrefLang={article.language} lang={article.language} translate="no"
+          data-drawing-guide onClick={() => click("guide")}>
+          {article.title} {article.englishFallback && englishNote} <ArrowRight size={17} aria-hidden="true" />
+        </a>
       </nav>
     </div>
   </section>, language);

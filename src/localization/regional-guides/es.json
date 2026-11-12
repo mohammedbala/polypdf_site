@@ -19,7 +19,10 @@
     "source": "Abrir el plano",
     "practice": "Ficha A4 rellenable",
     "notice": "Edición adaptada a los planos españoles. Los cuadros de archivos de macOS siguen el idioma del sistema. Los precios, el pago y las políticas permanecen en las páginas en inglés.",
-    "fieldMap": "Mapa de campos del formulario · CSV"
+    "fieldMap": "Mapa de campos del formulario · CSV",
+    "browserForm": "Rellenar un formulario existente en el navegador",
+    "browserFormNote": "Para rellenar campos que ya existen, utilice la herramienta gratuita del navegador. Para crear campos nuevos, siga el procedimiento de la aplicación de escritorio que aparece a continuación.",
+    "updated": "Actualizado el"
   },
   "guides": [
     {
@@ -39,7 +42,8 @@
       ],
       "check": "5000 mm = 5,00 m. Cota independiente: 24,00 m. Superficie exterior teórica: 360,00 m². Compare las medidas trazadas con estas referencias.",
       "pitfall": "Un extremo mal situado altera todas las cantidades. Amplíe el dibujo o use el ajuste al contenido y repita la calibración si la comprobación no coincide.",
-      "caption": "Calibración de la referencia de 5,00 m en la interfaz española."
+      "caption": "Calibración de la referencia de 5,00 m en la interfaz española.",
+      "description": "Calibre la escala de un plano PDF con una cota conocida en PolyPDF. Ejercicio métrico para España, captura de la interfaz y comprobación de una segunda medida."
     },
     {
       "id": "area",
@@ -58,7 +62,8 @@
       ],
       "check": "Referencias geométricas: 360,00 − 18,00 = 342,00 m² netos; 342,00 × 0,12 = 41,04 m³. Las mermas y los criterios del proyecto se añaden por separado.",
       "pitfall": "La imagen ilustra los controles de área y profundidad. No sustituye la comprobación de las cotas ni representa una cantidad certificada.",
-      "caption": "Medición manual en A101 con la interfaz en español: 358,26 m² y profundidad de 120 mm, con 42,99 m³ mostrados. Es una captura ilustrativa; los 360 m² nominales y el recorte de 18 m² se comprueban por separado."
+      "caption": "Medición manual en A101 con la interfaz en español: 358,26 m² y profundidad de 120 mm, con 42,99 m³ mostrados. Es una captura ilustrativa; los 360 m² nominales y el recorte de 18 m² se comprueban por separado.",
+      "description": "Mida la superficie neta y calcule el volumen de un plano PDF en PolyPDF. Descargue el ejercicio español y compruebe huecos, profundidad y valores de referencia."
     },
     {
       "id": "count",
@@ -77,7 +82,8 @@
       ],
       "check": "16 difusores en el plano. Los 17 símbolos dibujados incluyen uno de leyenda, que no corresponde a un equipo que deba instalarse.",
       "pitfall": "Las coincidencias iniciales dependen del encuadre y de los ajustes. El total válido es el revisado, no el resultado automático sin comprobar. En una comprobación con la interfaz francesa del 12/11/2026 en Mac, build 114, la selección de una muestra mediante pantalla compartida devolvió « Invalid PDF tile render request ». La captura muestra la preparación, no un recuento automático validado. Si aparece ese mensaje, detenga la búsqueda y cuente manualmente los 16 símbolos del plano; no use un resultado incompleto.",
-      "caption": "Búsqueda de símbolos en la interfaz española."
+      "caption": "Búsqueda de símbolos en la interfaz española.",
+      "description": "Cuente símbolos de un plano PDF sin incluir la leyenda. Ejercicio español de ventilación, recuento manual y límites observados de la búsqueda de símbolos."
     },
     {
       "id": "compare",
@@ -97,7 +103,8 @@
       ],
       "check": "Se anuncian tres cambios geométricos: tabique 103/104 desplazado 1,50 m; puerta 104 desplazada 0,75 m al este; ventana de 1,50 m añadida en la fachada sur.",
       "pitfall": "El número de nubes no equivale necesariamente al número de cambios de proyecto: pueden agrupar zonas próximas o señalar el cajetín.",
-      "caption": "Preparación de la comparación en español con las revisiones A y B del proyecto Los Olmos. La captura muestra la selección de archivos antes de limitar las páginas y ejecutar la comparación."
+      "caption": "Preparación de la comparación en español con las revisiones A y B del proyecto Los Olmos. La captura muestra la selección de archivos antes de limitar las páginas y ejecutar la comparación.",
+      "description": "Compare dos revisiones de un plano PDF en PolyPDF. Descargue las revisiones A y B del proyecto español y revise los cambios de cada hoja."
     },
     {
       "id": "markup",
@@ -116,7 +123,8 @@
       ],
       "check": "Deben conservarse las tres notas de origen, las cuatro capas y las anotaciones añadidas. Cada observación debe permitir identificar su ubicación y la acción correspondiente.",
       "pitfall": "Los nombres de capa proceden del propio PDF. Un estado aislado no sustituye una descripción clara de la incidencia.",
-      "caption": "Tabla de anotaciones en la interfaz española."
+      "caption": "Tabla de anotaciones en la interfaz española.",
+      "description": "Organice anotaciones PDF para seguir incidencias de obra en PolyPDF. Ejercicio español con capas, responsables y comprobación de la tabla de anotaciones."
     },
     {
       "id": "ocr",
@@ -135,11 +143,12 @@
       ],
       "check": "El texto debe poder seleccionarse y encontrarse en las páginas tratadas. Revise los errores de reconocimiento antes de reutilizarlo.",
       "pitfall": "El OCR no calibra el plano ni convierte automáticamente sus líneas escaneadas en geometría vectorial.",
-      "caption": "Seguimiento del reconocimiento OCR en la interfaz española."
+      "caption": "Seguimiento del reconocimiento OCR en la interfaz española.",
+      "description": "Haga búsquedas en un plano PDF escaneado con el OCR de PolyPDF. Descargue dos páginas en español y revise el texto reconocido sobre la imagen original."
     },
     {
       "id": "forms",
-      "title": "Rellenar y crear campos de formulario PDF",
+      "title": "Crear un formulario PDF rellenable",
       "intro": "La ficha A4 utiliza el proyecto Los Olmos y fechas DD/MM/AAAA. Contiene diez campos lógicos, incluido un grupo de tres opciones excluyentes.",
       "documents": [],
       "form": true,
@@ -153,7 +162,18 @@
       ],
       "check": "La ficha de origen contiene 10 campos lógicos y 12 widgets. Solo una opción del grupo de estado puede quedar seleccionada. Pruebe también el lector del destinatario.",
       "pitfall": "Un texto colocado sobre la página no es un campo rellenable. La apariencia antes de guardar no demuestra que el dato se conserve.",
-      "caption": "Herramientas de creación de campos en la interfaz española."
+      "caption": "Herramientas de creación de campos en la interfaz española.",
+      "description": "Cree y rellene campos PDF en PolyPDF para Mac o Windows. Ficha de revisión de obra A4 en español, nombres de campos y comprobación al volver a abrir el archivo.",
+      "creationHeading": "Crear los campos del formulario",
+      "creationSteps": [
+        "Abra una copia PDF sin firma digital y sin restricciones de edición. Muestre el panel Formularios para acceder a la paleta de tipos de campo.",
+        "Arrastre un campo de texto a la página para una respuesta corta, o un campo de texto multilínea para una observación. Colóquelo en un espacio libre junto a su etiqueta.",
+        "Asigne un nombre único al campo, por ejemplo revision_adicional, y una descripción de ayuda clara. Evite nombres vacíos, duplicados y puntos.",
+        "Use una casilla para una elección independiente. Para un grupo de botones de opción, defina al menos dos opciones y una sola respuesta posible; escriba las opciones una por línea.",
+        "Mueva el campo y ajuste su tamaño con los tiradores. Configure el orden de tabulación y las propiedades necesarias; pruebe un texto largo y compruebe que siga siendo legible.",
+        "Guarde una copia nueva y rellénela sin modificar la distribución. Ciérrela y vuelva a abrirla en el lector del destinatario para verificar los valores y las opciones seleccionadas."
+      ],
+      "stepsHeading": "Rellenar y comprobar la ficha"
     },
     {
       "id": "stamps",
@@ -172,7 +192,8 @@
       ],
       "check": "Nombre y fecha deben quedar legibles, sin superponerse. Coloque una segunda instancia para comprobar que los valores variables no quedaron fijados en el modelo.",
       "pitfall": "Un sello de revisión no es una firma digital ni acredita por sí solo una aprobación contractual.",
-      "caption": "Configuración de campos de un sello interactivo en español."
+      "caption": "Configuración de campos de un sello interactivo en español.",
+      "description": "Cree un sello de revisión PDF con nombre y fecha en PolyPDF. Ejercicio con un plano español y comprobación de los campos variables en cada inserción."
     },
     {
       "id": "redaction",
@@ -191,7 +212,8 @@
       ],
       "check": "La dirección elegida debe dejar de aparecer en la búsqueda y selección de texto de la copia final, sin dañar el contenido que debe conservarse.",
       "pitfall": "Este ejercicio no garantiza el saneamiento de cualquier PDF. Compruebe los datos reales del archivo y las categorías que la operación conserva.",
-      "caption": "Opciones de saneamiento en la interfaz española."
+      "caption": "Opciones de saneamiento en la interfaz española.",
+      "description": "Censure texto compatible y compruebe una copia PDF en PolyPDF. Ejercicio español, revisión tras guardar y límites de la eliminación de información."
     }
   ]
 }
