@@ -89,7 +89,7 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.29 (build 101) fixes saving after a markup is drawn while an annotated PDF is still loading, and saves text pasted into PDF form fields through the context menu. Existing markups stay protected during import. Collaboration Host 1.6.22 remains current.";
+export const releaseAnswer = "PolyPDF 1.6.32 (build 114) fixes saving edited markups, flattening, saving large combined PDFs, and reducing embedded photos. Mac printing respects the chosen scale. Collaboration Host 1.6.22 remains current.";
 
 export const release1613Highlights = Object.freeze(["PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in."]);
 

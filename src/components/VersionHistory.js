@@ -94,6 +94,8 @@ export const fetchWindowsRelease = async () => {
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
 const RELEASE_PROSE = {
+  'macOS 1.6.32 (114)': [releaseAnswer],
+  'Windows 1.6.32 (114)': [releaseAnswer],
   'macOS 1.6.29 (101)': release1629Highlights,
   'Windows 1.6.29 (101)': release1629Highlights,
   'macOS 1.6.27 (99)': release1627Highlights,
