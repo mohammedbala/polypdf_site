@@ -93,7 +93,7 @@ test('localized tool llms.txt lists every tool page and reaches the desktop path
  const pages=(id)=>[{title:'Herramientas',route:`/${id}/tools/`,description:'D'},{title:'MCP',route:`/${id}/tools/automation/`,description:'D'},{title:'Unir',route:`/${id}/tools/merge-pdf/`,description:'D'}];
  const seen=new Set(),t=s=>{seen.add(s);return s;};
  const esRoutes=pages('es').map(e=>e.route),itRoutes=pages('it').map(e=>e.route);
- const marketing=toolsLlms({id:'es',label:'Español'},pages('es'),t,h=>h.startsWith('/downloads/')?require('../src/lib/websiteDownloads.cjs').websiteDownloadHref(h,'es'):h==='/buy/?source=llms'?'/buy/?source=intl_es_llms':'/es'+h);
+ const marketing=toolsLlms({id:'es',label:'Español'},pages('es'),t,h=>h.startsWith('/downloads/')?require('../src/lib/websiteDownloads.js').websiteDownloadHref(h,'es'):h==='/buy/?source=llms'?'/buy/?source=intl_es_llms':'/es'+h);
  checks.assertToolsLlms(marketing,'es',true,esRoutes);assert(marketing.includes('[PDF takeoff](https://www.polypdf.com/es/pdf-takeoff-software/)'));
  const toolOnly=toolsLlms({id:'it',label:'Italiano'},pages('it'),t,h=>h==='/buy/?source=llms'?'/buy/?source=intl_it_llms':h);
  checks.assertToolsLlms(toolOnly,'it',false,itRoutes);assert(toolOnly.includes('[PDF takeoff (English)](https://www.polypdf.com/pdf-takeoff-software/)'));assert(!toolOnly.includes('/it/llms.txt'),'no link to an edition that does not exist');

@@ -37,7 +37,7 @@ function render(d,g,base){
  +'<section class="blog-quick-answer" data-regional-check><h2>'+esc(l.check)+'</h2><p>'+esc(g.check)+'</p></section>'
  +'<section class="legal-section" data-regional-pitfall><h2>'+esc(l.pitfall)+'</h2><p>'+esc(g.pitfall)+'</p></section>'
  +'<p class="regional-evidence">'+esc(l.evidence)+'</p>'
- +'<section class="legal-section"><h2>'+esc(l.download)+'</h2><div class="regional-downloads">'+['mac','windows'].map(platform=>'<a class="primary-btn" href="'+require('../../src/lib/websiteDownloads.cjs').websiteDownloadHref(platform==='mac'?'/downloads/PolyPDFMac.dmg':'/downloads/windows/PolyPDFSetup.exe',g.siteLocale)+'">'+esc(l[platform])+'</a>').join('')+'</div></section>'
+ +'<section class="legal-section"><h2>'+esc(l.download)+'</h2><div class="regional-downloads">'+['mac','windows'].map(platform=>'<a class="primary-btn" href="'+require('../../src/lib/websiteDownloads.js').websiteDownloadHref(platform==='mac'?'/downloads/PolyPDFMac.dmg':'/downloads/windows/PolyPDFSetup.exe',g.siteLocale)+'">'+esc(l[platform])+'</a>').join('')+'</div></section>'
  +'<nav class="legal-section regional-related" aria-label="'+esc(l.related)+'"><h2>'+esc(l.related)+'</h2><ul>'+g.pack.guides.map(item=>'<li><a href="/'+g.siteLocale+routes[item.id]+'/"'+(item.id===g.id?' aria-current="page"':'')+'>'+esc(item.title)+'</a></li>').join('')+'</ul></nav>';
  d.querySelector('.translation-note').textContent=l.notice;return capture;
 }

@@ -1,6 +1,6 @@
 import { trackEvent } from './analytics';
 
-import websiteDownloads from './websiteDownloads.cjs';
+import websiteDownloads from './websiteDownloads.js';
 const { safeDesktopSetupUrl } = websiteDownloads;
 export const { DESKTOP_SETUP_URL } = websiteDownloads;
 

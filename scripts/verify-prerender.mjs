@@ -27,6 +27,15 @@ const assert = (condition, message) => {
   if (!condition) failures.push(message);
 };
 
+// CRA's file loader can turn an unsupported source extension into a URL.
+// Source-level SSR tests still pass in that case, but the browser cannot call
+// the imported helpers. Reject executable modules emitted as media assets.
+const assets = JSON.parse(fs.readFileSync(path.join(buildDirectory, 'asset-manifest.json'), 'utf8'));
+for (const asset of Object.values(assets.files)) {
+  assert(!/\/static\/media\/[^?#]+\.(?:cjs|mjs|js)(?:[?#]|$)/.test(asset),
+    'Executable module emitted as a media URL: ' + asset);
+}
+
 for (const [route, metadata] of Object.entries(routeMetadata)) {
   const htmlPath = route === '/'
     ? path.join(buildDirectory, 'index.html')

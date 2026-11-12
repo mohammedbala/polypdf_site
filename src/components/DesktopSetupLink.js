@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { attachDesktopSetup } from '../lib/desktopSetup';
-import websiteDownloads from '../lib/websiteDownloads.cjs';
+import websiteDownloads from '../lib/websiteDownloads.js';
 import { localizeView, useToolkitLanguage } from '../toolkit/language';
 import './DesktopSetupLink.css';
 const { desktopSetupUrl } = websiteDownloads;

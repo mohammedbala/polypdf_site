@@ -3,7 +3,7 @@
 // test/international.test.cjs can prove that each one rejects the broken input it guards against.
 const assert = require('node:assert/strict');
 const ORIGIN = 'https://www.polypdf.com';
-const { websiteDownloadHref } = require('../../src/lib/websiteDownloads.cjs');
+const { websiteDownloadHref } = require('../../src/lib/websiteDownloads.js');
 const MAC = `${ORIGIN}/downloads/PolyPDFMac.dmg`;
 const WINDOWS = `${ORIGIN}/downloads/windows/PolyPDFSetup.exe`;
 const links = (text, label, targets) => { for (const target of targets) assert(text.includes(`](${target})`), `${label}: llms.txt must link ${target}`); };

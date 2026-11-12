@@ -4,7 +4,7 @@ import { syncTracking } from './tracking';
 import { trackEvent } from './analytics';
 import { captureAttribution } from './attribution';
 import { attachDesktopSetup } from './desktopSetup';
-import websiteDownloads from './websiteDownloads.cjs';
+import websiteDownloads from './websiteDownloads.js';
 const { downloadPlatform } = websiteDownloads;
 document.querySelectorAll('[data-desktop-setup]').forEach(attachDesktopSetup);
 const root = document.querySelector('[data-local-consent]');

@@ -8,7 +8,7 @@ const siteRelease = require('../../src/lib/siteRelease.json');
 const locales = require('../../src/lib/locales.json');
 const englishOnly = require('../../src/lib/englishOnlyRoutes.json');
 const ORIGIN = 'https://www.polypdf.com';
-const { websiteDownloadHref, downloadPlatform, downloadFilename, desktopSetupUrl } = require('../../src/lib/websiteDownloads.cjs');
+const { websiteDownloadHref, downloadPlatform, downloadFilename, desktopSetupUrl } = require('../../src/lib/websiteDownloads.js');
 // Interactive tools are rendered by toolkit/international.cjs, with their React controls intact.
 const toolkitRoutes = ['/tools','/tools/automation',...require('../../src/toolkit/catalog.json').map(t=>'/tools/'+t.id)];
 const routes = Object.keys(metadata).filter((r) => !englishOnly.includes(r) && !toolkitRoutes.includes(r) && !metadata[r].robots.includes('noindex'));

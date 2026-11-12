@@ -1,7 +1,7 @@
 import React, { createContext, useContext } from "react";
 import locales from "./locales.json";
 import catalog from "./catalog.json";
-import websiteDownloads from "../lib/websiteDownloads.cjs";
+import websiteDownloads from "../lib/websiteDownloads.js";
 import marketingLocales from "../lib/locales.json";
 import { localizedRoutes } from "../lib/internationalRoutes";
 const { websiteDownloadHref, downloadFilename } = websiteDownloads;

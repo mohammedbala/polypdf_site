@@ -2,7 +2,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const { JSDOM } = require('jsdom');
-const { websiteDownloadHref, downloadPlatform, desktopSetupUrl, safeDesktopSetupUrl } = require('../src/lib/websiteDownloads.cjs');
+const { websiteDownloadHref, downloadPlatform, desktopSetupUrl, safeDesktopSetupUrl } = require('../src/lib/websiteDownloads.js');
 const { localizeLinks } = require('../scripts/international/content.cjs');
 
 test('all four website languages preserve download filenames and the desktop setup language', () => {
