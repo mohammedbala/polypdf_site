@@ -1,16 +1,19 @@
 import { trackEvent } from './analytics';
 
-export const DESKTOP_SETUP_URL = 'https://www.polypdf.com/#download';
+import websiteDownloads from './websiteDownloads.cjs';
+const { safeDesktopSetupUrl } = websiteDownloads;
+export const { DESKTOP_SETUP_URL } = websiteDownloads;
 
 // No documents, campaign tags or identifiers enter the copied/shared URL.
 export async function performDesktopSetupAction(action, { browser = navigator, input } = {}) {
+  const url = safeDesktopSetupUrl(input?.value);
   try {
     if (action === 'copy' && typeof browser.clipboard?.writeText === 'function') {
-      await browser.clipboard.writeText(DESKTOP_SETUP_URL);
+      await browser.clipboard.writeText(url);
       return 'copied';
     }
     if (action === 'share' && typeof browser.share === 'function') {
-      await browser.share({ title: 'PolyPDF', url: DESKTOP_SETUP_URL });
+      await browser.share({ title: 'PolyPDF', url });
       return 'shared';
     }
   } catch (error) {

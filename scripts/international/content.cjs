@@ -8,6 +8,7 @@ const siteRelease = require('../../src/lib/siteRelease.json');
 const locales = require('../../src/lib/locales.json');
 const englishOnly = require('../../src/lib/englishOnlyRoutes.json');
 const ORIGIN = 'https://www.polypdf.com';
+const { websiteDownloadHref, downloadPlatform, downloadFilename, desktopSetupUrl } = require('../../src/lib/websiteDownloads.cjs');
 // Interactive tools are rendered by toolkit/international.cjs, with their React controls intact.
 const toolkitRoutes = ['/tools','/tools/automation',...require('../../src/toolkit/catalog.json').map(t=>'/tools/'+t.id)];
 const routes = Object.keys(metadata).filter((r) => !englishOnly.includes(r) && !toolkitRoutes.includes(r) && !metadata[r].robots.includes('noindex'));
@@ -105,7 +106,7 @@ const hubMetadata = {
 // Discovery text reuses the translated home sentences, so it makes no claim the home does not.
 function marketingLlms(locale, entries, t) {
   const pricing = `${t(hubPricing)} (${t('English')})`;
-  return `# PolyPDF — ${locale.label}\n\n> ${t(hubSummary)}\n\n${t(hubEditions)}\n\n- [${t('Download for macOS')}](${ORIGIN}/downloads/PolyPDFMac.dmg)\n- [${t('Download for Windows')}](${ORIGIN}/downloads/windows/PolyPDFSetup.exe)\n- [${pricing}](${ORIGIN}/buy/?source=intl_${locale.id}_llms)\n- [${t('PDF tools')}](${ORIGIN}/${locale.id}/tools/llms.txt)\n- [English](${ORIGIN}/llms.txt)\n\n## ${t('PDF tools for construction teams')}\n\n${entries.map((e)=>`- [${e.title}](${ORIGIN+e.route}): ${e.description}`).join('\n')}\n`;
+  return `# PolyPDF — ${locale.label}\n\n> ${t(hubSummary)}\n\n${t(hubEditions)}\n\n- [${t('Download for macOS')}](${ORIGIN}${websiteDownloadHref('/downloads/PolyPDFMac.dmg', locale.id)})\n- [${t('Download for Windows')}](${ORIGIN}${websiteDownloadHref('/downloads/windows/PolyPDFSetup.exe', locale.id)})\n- [${pricing}](${ORIGIN}/buy/?source=intl_${locale.id}_llms)\n- [${t('PDF tools')}](${ORIGIN}/${locale.id}/tools/llms.txt)\n- [English](${ORIGIN}/llms.txt)\n\n## ${t('PDF tools for construction teams')}\n\n${entries.map((e)=>`- [${e.title}](${ORIGIN+e.route}): ${e.description}`).join('\n')}\n`;
 }
 // The translated home keeps the shared product and publisher entities. The product keeps its own
 // description, which mapSchema translates; the hub page's meta description describes the guides.
@@ -126,12 +127,21 @@ function sourcePage(build, route) {
   return {dom:bodyDom, assets, schema:route === '/' ? homeProductSchema(schema) : schema, meta:route === '/' ? hubMetadata : metadata[route]};
 }
 function localizeLinks(document, locale, t) {
+  for (const input of document.querySelectorAll('[data-desktop-setup] input[type="url"][readonly]')) {
+    input.setAttribute('value', desktopSetupUrl(locale.id));
+  }
   for (const a of document.querySelectorAll('a[href]')) {
     const raw = a.getAttribute('href');
     if (a.hasAttribute('data-english-original') || a.closest('[data-language-options]')) continue;
     if (!raw || raw.startsWith('#')) continue;
     const url = new URL(raw, ORIGIN);
     if (url.origin !== ORIGIN || !['http:','https:'].includes(url.protocol)) continue;
+    if (downloadPlatform(raw)) {
+      const href = websiteDownloadHref(raw, locale.id);
+      a.setAttribute('href', href);
+      if (a.hasAttribute('download')) a.setAttribute('download', downloadFilename(href));
+      continue;
+    }
     const route = url.pathname.replace(/\/+$/, '') || '/';
     if (routes.includes(route) || toolkitRoutes.includes(route)) a.href = `${localizedPath(locale.id,route)}${url.search}${url.hash}`;
     else if (englishOnly.includes(route)) {

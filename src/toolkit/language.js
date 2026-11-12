@@ -1,8 +1,10 @@
 import React, { createContext, useContext } from "react";
 import locales from "./locales.json";
 import catalog from "./catalog.json";
+import websiteDownloads from "../lib/websiteDownloads.cjs";
 import marketingLocales from "../lib/locales.json";
 import { localizedRoutes } from "../lib/internationalRoutes";
+const { websiteDownloadHref, downloadFilename } = websiteDownloads;
 
 export const toolkitLocales = locales;
 export const toolkitRoutes = ["/tools", "/tools/automation", ...catalog.map(t => `/tools/${t.id}`)];
@@ -40,6 +42,8 @@ export function translateText(raw, language) {
 
 export function localizedHref(raw, language) {
   if (!language?.locale || typeof raw !== "string" || !raw.startsWith("/") || raw.startsWith("//")) return raw;
+  const download = websiteDownloadHref(raw, language.locale.id);
+  if (download !== raw) return download;
   const url = new URL(raw, "https://www.polypdf.com");
   const route = url.pathname.replace(/\/+$/, "") || "/";
   const supported = toolkitRoutes.includes(route) || (marketingLocales.some(l => l.id === language.locale.id) && localizedRoutes.includes(route));
@@ -60,6 +64,7 @@ export function localizeView(tree, language) {
     const props = {};
     for (const attr of ["aria-label", "title", "alt", "placeholder"]) if (typeof node.props[attr] === "string") props[attr] = translateText(node.props[attr], language);
     for (const attr of ["to", "href"]) if (typeof node.props[attr] === "string") props[attr] = localizedHref(node.props[attr], language);
+    if (node.type === "a" && node.props.download !== undefined && downloadFilename(props.href)) props.download = downloadFilename(props.href);
     const children = React.Children.toArray(node.props.children);
     const translatedChildren = [];
     for (let i = 0; i < children.length; i++) {

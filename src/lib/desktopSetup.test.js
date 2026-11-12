@@ -86,3 +86,17 @@ test('progressive controls report link actions only after consent, preserve keyb
   cleanup(); copy.click(); await flush();
   expect(window.gtag).toHaveBeenCalledTimes(1);
 });
+
+test('copy and share preserve only the four public website language links', async () => {
+  const writeText = jest.fn(), share = jest.fn();
+  for (const id of ['de', 'fr', 'es', 'pt-br']) {
+    const input = { value: `https://www.polypdf.com/${id}/#download` };
+    await performDesktopSetupAction('copy', { browser: { clipboard: { writeText } }, input });
+    expect(writeText).toHaveBeenLastCalledWith(input.value);
+    await performDesktopSetupAction('share', { browser: { share }, input });
+    expect(share).toHaveBeenLastCalledWith({ title: 'PolyPDF', url: input.value });
+  }
+  await performDesktopSetupAction('copy', { browser: { clipboard: { writeText } },
+    input: { value: 'https://www.polypdf.com/de/?document=private#download' } });
+  expect(writeText).toHaveBeenLastCalledWith(DESKTOP_SETUP_URL);
+});

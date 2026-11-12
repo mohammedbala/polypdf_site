@@ -86,5 +86,5 @@ test.each(locales)('$id keeps downloads intact, translates limits and labels Eng
   expect(pricing.textContent).toContain(strings.English);
   expect(node.textContent).toContain(strings['Free: calibration, markup, and up to 3 hand-created measurements per document.']);
   expect([...node.querySelectorAll('a[download]')].map(a => a.getAttribute('href')))
-    .toEqual(Object.values(DOWNLOADS).map(p => p.url));
+    .toEqual(Object.values(DOWNLOADS).map(p => localizedHref(p.url, language)));
 });

@@ -4,6 +4,8 @@ import { syncTracking } from './tracking';
 import { trackEvent } from './analytics';
 import { captureAttribution } from './attribution';
 import { attachDesktopSetup } from './desktopSetup';
+import websiteDownloads from './websiteDownloads.cjs';
+const { downloadPlatform } = websiteDownloads;
 document.querySelectorAll('[data-desktop-setup]').forEach(attachDesktopSetup);
 const root = document.querySelector('[data-local-consent]');
 if (root) {
@@ -44,7 +46,7 @@ if (root) {
     if(!link) return;
     const url=new URL(link.href,location.href);
     if(url.origin!==location.origin) return;
-    const platform = url.pathname === '/downloads/PolyPDFMac.dmg' ? 'mac' : url.pathname === '/downloads/windows/PolyPDFSetup.exe' ? 'windows' : null;
+    const platform = downloadPlatform(url.href);
     if(platform) {
       trackEvent('download_click',{source:'localized_content',platform});
       link.closest('.dl-cta')?.querySelector('.dl-evaluation details')?.setAttribute('open','');

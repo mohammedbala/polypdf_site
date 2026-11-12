@@ -55,7 +55,7 @@ for (const e of manifest.routes) {
   assert.match(d.querySelector('script[src]')?.getAttribute('src'),/^\/static\/js\/localized-tracking\.[a-f0-9]{8}\.js$/,prefix+'no English app hydration');
   assert(d.querySelector('[data-local-consent] dialog'),prefix+'localized cookie settings');
   const setupControl = el => el.closest('[data-desktop-setup]') && (
-    (el.matches('input[type="url"][readonly]') && el.value === 'https://www.polypdf.com/#download')
+    (el.matches('input[type="url"][readonly]') && el.value === require('../../src/lib/websiteDownloads.cjs').desktopSetupUrl(locale.id))
     || (el.matches('button[type="button"][data-desktop-link-action="copy"],button[type="button"][data-desktop-link-action="share"]') && el.hidden)
   );
   assert.equal([...d.querySelectorAll('button,input,form,select')].filter(el=>!el.closest('[data-local-consent]') && !setupControl(el)).length,0,prefix+'no inert React controls');

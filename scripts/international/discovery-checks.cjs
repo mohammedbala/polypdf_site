@@ -3,6 +3,7 @@
 // test/international.test.cjs can prove that each one rejects the broken input it guards against.
 const assert = require('node:assert/strict');
 const ORIGIN = 'https://www.polypdf.com';
+const { websiteDownloadHref } = require('../../src/lib/websiteDownloads.cjs');
 const MAC = `${ORIGIN}/downloads/PolyPDFMac.dmg`;
 const WINDOWS = `${ORIGIN}/downloads/windows/PolyPDFSetup.exe`;
 const links = (text, label, targets) => { for (const target of targets) assert(text.includes(`](${target})`), `${label}: llms.txt must link ${target}`); };
@@ -43,14 +44,14 @@ function assertLocalizedFeedDates(xml, label, articles) {
   }
 }
 function assertMarketingLlms(text, id, routes, summary) {
-  links(text, id, [MAC, WINDOWS, `${ORIGIN}/buy/?source=intl_${id}_llms`, `${ORIGIN}/${id}/tools/llms.txt`, `${ORIGIN}/llms.txt`]);
+  links(text, id, [websiteDownloadHref(MAC, id), websiteDownloadHref(WINDOWS, id), `${ORIGIN}/buy/?source=intl_${id}_llms`, `${ORIGIN}/${id}/tools/llms.txt`, `${ORIGIN}/llms.txt`]);
   assert(typeof summary === 'string' && summary.trim(), `${id}: llms.txt needs the translated product summary to check`);
   assert.equal(text.match(/^> (.*)$/m)?.[1], summary, `${id}: llms.txt must open with the translated product summary`);
   inventory(text, id, routes);
 }
 function assertToolsLlms(text, id, hasMarketingEdition, routes) {
   const takeoff = hasMarketingEdition ? `${ORIGIN}/${id}/pdf-takeoff-software/` : `${ORIGIN}/pdf-takeoff-software/`;
-  links(text, `${id} tools`, [MAC, WINDOWS, takeoff, `${ORIGIN}/buy/?source=intl_${id}_llms`, ...(hasMarketingEdition ? [`${ORIGIN}/${id}/llms.txt`] : [])]);
+  links(text, `${id} tools`, [websiteDownloadHref(MAC, id), websiteDownloadHref(WINDOWS, id), takeoff, `${ORIGIN}/buy/?source=intl_${id}_llms`, ...(hasMarketingEdition ? [`${ORIGIN}/${id}/llms.txt`] : [])]);
   inventory(text, `${id} tools`, routes);
 }
 function assertLocalizedHomeSchema(blocks, description, label) {
