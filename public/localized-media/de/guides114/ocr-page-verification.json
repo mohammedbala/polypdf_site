@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "route": "/de/blog/ocr-scanned-pdf-drawings/",
+  "htmlSha256": "b5949c8a488ea6b63d34cd18ab5a05288f8220978511ab26996a59b684348fb0",
+  "localizedImages": 4,
+  "localizedPdfDownloads": 2,
+  "sourceFiles": {
+    "scripts/localization/ocr-de.json": "7246e5716c4842ee8385d94bf64bcf4e29865fbac3c5fe754003003bc687a253",
+    "scripts/localization/prepare-ocr-de.py": "c01a3d428df6dfbd8b1946171eb5322ced625d64468a51ef1bde42a5179e7211",
+    "scripts/localization/capture-ocr-de.mjs": "757fdee2374e7f9f01f383c21882ddbfb6224fd7457cad326f0ea3018684af74",
+    "scripts/localization/register-ocr-de.cjs": "aca7b53772740fdf6200cac84bcce0feb79e3028e8f89a4dfa6ac6f7be706952",
+    "scripts/localization/verify-ocr-de.py": "f74273ebdaa809feb26745d5bd2baef2117184218e4fdd6db9c1bc9610a5c3be",
+    "scripts/localization/verify-ocr-page.cjs": "bdb9aed9063dd6cc10efa1fa22d60beee735c3889d4badc1edbc2b04dd20a571",
+    "src/content/guides/ocr-scanned-pdf-drawings.js": "11db745078fbcc70f64ce840335c08974221d38c54e05e6cc3fd7f4b2257b104",
+    "src/localization/walkthrough-media.json": "50810412d805aa77ee06b728706f75d1802decd33d869c7d7e3a0a2677f9d026"
+  },
+  "checks": [
+    "German actual app images and regional drawing preview",
+    "Original image-only scan and saved searchable PDF verified by hash",
+    "One search hit on each page survives a full app restart",
+    "Recognition errors, faint OCR rendering and incomplete Office localization disclosed",
+    "English source retained; new regional guides validated separately"
+  ],
+  "evidenceScope": "Historical native captures and output receipts retain their original version and scope; this check validates website integration.",
+  "limitations": [
+    "No new end-to-end qualification of every historical German workflow",
+    "No new Windows or native iPad qualification"
+  ]
+}

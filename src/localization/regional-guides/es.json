@@ -1,0 +1,197 @@
+{
+  "locale": "es-ES",
+  "region": "ES",
+  "project": "Centro Vecinal Los Olmos",
+  "date": "12/11/2026",
+  "labels": {
+    "edition": "Ejercicios para España",
+    "files": "Archivos del ejercicio",
+    "steps": "Procedimiento",
+    "check": "Resultado que debe comprobar",
+    "pitfall": "Punto de atención",
+    "related": "Los nueve ejercicios",
+    "library": "Biblioteca de planos: 12 PDF, 24 hojas A1",
+    "download": "Descargar PolyPDF en español",
+    "mac": "Mac",
+    "windows": "Windows",
+    "evidence": "Interfaz real de PolyPDF 1.6.32, compilación 114, en Mac. Las capturas muestran el paso indicado; los valores de referencia proceden de los planos de práctica.",
+    "scope": "Proyecto ficticio. Planos en metros, detalles en milímetros y fechas DD/MM/AAAA. Estos documentos permiten aprender las herramientas; no son planos de ejecución.",
+    "source": "Abrir el plano",
+    "practice": "Ficha A4 rellenable",
+    "notice": "Edición adaptada a los planos españoles. Los cuadros de archivos de macOS siguen el idioma del sistema. Los precios, el pago y las políticas permanecen en las páginas en inglés.",
+    "fieldMap": "Mapa de campos del formulario · CSV"
+  },
+  "guides": [
+    {
+      "id": "calibration",
+      "title": "Calibrar la escala de un plano PDF",
+      "intro": "Utilice la hoja A101 de la revisión A. La referencia mide 5,00 m y el contorno exterior del edificio, 24,00 × 15,00 m.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Abra una copia del PDF 02, primera página A101. Compruebe la revisión A en el cajetín.",
+        "Abra el panel de medidas y su pestaña de escala. Seleccione unidades métricas.",
+        "Active la calibración mediante una línea. Amplíe la barra de 5,00 m y marque sus dos extremos.",
+        "Introduzca 5000 como distancia conocida: en este diálogo, los números sin unidad se interpretan en milímetros. Confirme.",
+        "Mida una segunda cota, por ejemplo la fachada exterior de 24,00 m. Compruebe la unidad de visualización.",
+        "Guarde una copia con su revisión y vuelva a abrirla. Revise la escala de cada página; los detalles pueden tener otra escala."
+      ],
+      "check": "5000 mm = 5,00 m. Cota independiente: 24,00 m. Superficie exterior teórica: 360,00 m². Compare las medidas trazadas con estas referencias.",
+      "pitfall": "Un extremo mal situado altera todas las cantidades. Amplíe el dibujo o use el ajuste al contenido y repita la calibración si la comprobación no coincide.",
+      "caption": "Calibración de la referencia de 5,00 m en la interfaz española."
+    },
+    {
+      "id": "area",
+      "title": "Medir una superficie neta y calcular su volumen",
+      "intro": "Parta del contorno de A101, de 24,00 × 15,00 m. En este ejercicio se descuenta el aseo 1, de 18,00 m², y se aplica un espesor de 120 mm.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Calibre A101 con la referencia de 5,00 m y compruebe una segunda cota.",
+        "Elija la herramienta de área, marque las cuatro esquinas exteriores y termine el polígono con un doble clic.",
+        "Seleccione la medición y revise el contorno. La huella exterior incluye elementos que no forman parte de la superficie útil.",
+        "Añada un recorte en el aseo 1, recinto 107. Compruebe que se resta de la medición correcta.",
+        "Introduzca una profundidad de 120 mm, equivalente a 0,12 m.",
+        "Revise el registro de medidas y exporte el resultado. Mantenga identificadas el área bruta, el recorte, el área neta y la profundidad."
+      ],
+      "check": "Referencias geométricas: 360,00 − 18,00 = 342,00 m² netos; 342,00 × 0,12 = 41,04 m³. Las mermas y los criterios del proyecto se añaden por separado.",
+      "pitfall": "La imagen ilustra los controles de área y profundidad. No sustituye la comprobación de las cotas ni representa una cantidad certificada.",
+      "caption": "Medición manual en A101 con la interfaz en español: 358,26 m² y profundidad de 120 mm, con 42,99 m³ mostrados. Es una captura ilustrativa; los 360 m² nominales y el recorte de 18 m² se comprueban por separado."
+    },
+    {
+      "id": "count",
+      "title": "Contar símbolos y excluir la leyenda",
+      "intro": "La hoja M101 del PDF de ventilación contiene 16 difusores de impulsión en el plano y otro símbolo en la leyenda.",
+      "documents": [
+        "05"
+      ],
+      "steps": [
+        "Abra el PDF 05 y sitúese en M101. Localice un difusor y la leyenda de la derecha.",
+        "Abra la búsqueda de símbolos y encuadre un símbolo limpio, sin su etiqueta ni líneas cercanas.",
+        "Limite la búsqueda a la primera página. La búsqueda de símbolos requiere Pro.",
+        "Revise cada coincidencia. Descarte el ejemplo de la leyenda y las detecciones de otros equipos.",
+        "Convierta las coincidencias aceptadas en marcadores de recuento. Añada manualmente un símbolo omitido solo después de comprobarlo.",
+        "Asigne un nombre a la serie y exporte el registro con la hoja y la revisión. Contraste el total con los marcadores visibles."
+      ],
+      "check": "16 difusores en el plano. Los 17 símbolos dibujados incluyen uno de leyenda, que no corresponde a un equipo que deba instalarse.",
+      "pitfall": "Las coincidencias iniciales dependen del encuadre y de los ajustes. El total válido es el revisado, no el resultado automático sin comprobar. En una comprobación con la interfaz francesa del 12/11/2026 en Mac, build 114, la selección de una muestra mediante pantalla compartida devolvió « Invalid PDF tile render request ». La captura muestra la preparación, no un recuento automático validado. Si aparece ese mensaje, detenga la búsqueda y cuente manualmente los 16 símbolos del plano; no use un resultado incompleto.",
+      "caption": "Búsqueda de símbolos en la interfaz española."
+    },
+    {
+      "id": "compare",
+      "title": "Comparar dos revisiones de un plano PDF",
+      "intro": "Los PDF 02 y 03 corresponden a las revisiones A y B de Los Olmos. Compare A101 con A101 antes de revisar los detalles.",
+      "documents": [
+        "02",
+        "03"
+      ],
+      "steps": [
+        "Abra el PDF 02 y seleccione la comparación de documentos en el menú Documento.",
+        "Elija el PDF 03 como documento revisado. Compruebe los cajetines, el tamaño A1 y la orientación.",
+        "Seleccione la página 1 de ambos archivos para comparar la misma hoja A101.",
+        "Genere un documento de comparación nuevo y conserve los originales.",
+        "Revise las zonas señaladas frente a ambos planos. Distinga los cambios de geometría de las fechas, textos y cajetines.",
+        "Añada comentarios útiles y guarde el resultado con un nombre que incluya las revisiones A y B."
+      ],
+      "check": "Se anuncian tres cambios geométricos: tabique 103/104 desplazado 1,50 m; puerta 104 desplazada 0,75 m al este; ventana de 1,50 m añadida en la fachada sur.",
+      "pitfall": "El número de nubes no equivale necesariamente al número de cambios de proyecto: pueden agrupar zonas próximas o señalar el cajetín.",
+      "caption": "Preparación de la comparación en español con las revisiones A y B del proyecto Los Olmos. La captura muestra la selección de archivos antes de limitar las páginas y ejecutar la comparación."
+    },
+    {
+      "id": "markup",
+      "title": "Organizar observaciones en la tabla de anotaciones",
+      "intro": "El PDF 11 reúne las hojas de coordinación X101 y X102. X101 incluye cuatro capas y tres notas editables para practicar la revisión.",
+      "documents": [
+        "11"
+      ],
+      "steps": [
+        "Abra una copia nueva del PDF 11 y muestre X101.",
+        "Active y oculte las capas por disciplinas para examinar los conflictos descritos en las tres notas.",
+        "Añada una nube y un comentario concreto. Identifique hoja, recinto, observación y acción pendiente.",
+        "Abra la tabla de anotaciones y complete un asunto coherente y los campos de seguimiento disponibles.",
+        "Filtre y revise las filas. Compruebe sobre el plano la ubicación de cada observación.",
+        "Exporte la tabla y guarde el PDF anotado. Vuelva a abrir ambos y compruebe texto, acentos y referencias."
+      ],
+      "check": "Deben conservarse las tres notas de origen, las cuatro capas y las anotaciones añadidas. Cada observación debe permitir identificar su ubicación y la acción correspondiente.",
+      "pitfall": "Los nombres de capa proceden del propio PDF. Un estado aislado no sustituye una descripción clara de la incidencia.",
+      "caption": "Tabla de anotaciones en la interfaz española."
+    },
+    {
+      "id": "ocr",
+      "title": "Buscar texto en un plano escaneado mediante OCR",
+      "intro": "El PDF 12 contiene dos páginas escaneadas del proyecto español. Trabaje sobre una copia y contraste el texto reconocido con la imagen.",
+      "documents": [
+        "12"
+      ],
+      "steps": [
+        "Abra el PDF 12 e intente seleccionar o buscar una palabra impresa para comprobar el estado inicial.",
+        "Abra OCR en el menú Documento. PolyPDF inicia el reconocimiento con el motor disponible en este equipo.",
+        "Espere a que termine. El diálogo indica el progreso y las limitaciones de los sistemas de escritura compatibles.",
+        "Después del reconocimiento, busque OLMOS en la primera página y una cota que se lea con claridad.",
+        "Seleccione un fragmento y compruebe los acentos, las comas decimales y las referencias de los recintos.",
+        "Guarde una copia OCR, ciérrela y ábrala de nuevo. Repita la búsqueda y compruebe ambas páginas y su orientación."
+      ],
+      "check": "El texto debe poder seleccionarse y encontrarse en las páginas tratadas. Revise los errores de reconocimiento antes de reutilizarlo.",
+      "pitfall": "El OCR no calibra el plano ni convierte automáticamente sus líneas escaneadas en geometría vectorial.",
+      "caption": "Seguimiento del reconocimiento OCR en la interfaz española."
+    },
+    {
+      "id": "forms",
+      "title": "Rellenar y crear campos de formulario PDF",
+      "intro": "La ficha A4 utiliza el proyecto Los Olmos y fechas DD/MM/AAAA. Contiene diez campos lógicos, incluido un grupo de tres opciones excluyentes.",
+      "documents": [],
+      "form": true,
+      "steps": [
+        "Descargue la ficha A4 de revisión y abra una copia en PolyPDF.",
+        "Complete proyecto, fecha de visita, persona revisora y referencia del plano.",
+        "Elija una especialidad y un único estado; marque las comprobaciones realizadas.",
+        "Escriba una observación con responsable y siguiente acción. Revise que el contenido se vea dentro del campo.",
+        "Para añadir un campo, active la creación de formularios, seleccione el tipo y asígnele un nombre único. Compruebe su posición.",
+        "Guarde con otro nombre, cierre y vuelva a abrir el archivo. Verifique textos, casillas y estado seleccionado."
+      ],
+      "check": "La ficha de origen contiene 10 campos lógicos y 12 widgets. Solo una opción del grupo de estado puede quedar seleccionada. Pruebe también el lector del destinatario.",
+      "pitfall": "Un texto colocado sobre la página no es un campo rellenable. La apariencia antes de guardar no demuestra que el dato se conserve.",
+      "caption": "Herramientas de creación de campos en la interfaz española."
+    },
+    {
+      "id": "stamps",
+      "title": "Crear un sello de revisión con datos variables",
+      "intro": "Prepare un sello para Los Olmos con una persona responsable y una fecha. Colóquelo sobre una copia de A101.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "En Herramientas, abra los sellos y elija crear un sello interactivo.",
+        "Asigne un nombre y ajuste las dimensiones en puntos PDF. Son medidas del sello sobre el papel, independientes de la escala del edificio.",
+        "Añada una etiqueta y un campo de texto Responsable. Solicite el valor al colocarlo y marque el campo como obligatorio.",
+        "Añada la fecha y compruebe su origen y formato visible.",
+        "Alinee los elementos, revise la vista previa y guarde el modelo en el conjunto de herramientas.",
+        "Insértelo en la copia del plano, rellene los datos solicitados y compruebe el resultado después de guardar y reabrir."
+      ],
+      "check": "Nombre y fecha deben quedar legibles, sin superponerse. Coloque una segunda instancia para comprobar que los valores variables no quedaron fijados en el modelo.",
+      "pitfall": "Un sello de revisión no es una firma digital ni acredita por sí solo una aprobación contractual.",
+      "caption": "Configuración de campos de un sello interactivo en español."
+    },
+    {
+      "id": "redaction",
+      "title": "Censurar información y sanear una copia PDF",
+      "intro": "Practique con la dirección ficticia del cajetín de A101. Conserve el original y prepare una copia para compartir.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Localice la dirección del cajetín y busque otras apariciones en el documento.",
+        "Active Censurar y trace una zona sobre la dirección de la copia. Al terminar el rectángulo aparece la confirmación.",
+        "Compruebe la zona antes de confirmar Aplicar censura; cancele si es incorrecta. Un rectángulo opaco de dibujo no elimina el contenido subyacente.",
+        "Abra Documento > Sanear documento. Examine las categorías ofrecidas, como metadatos y archivos adjuntos; el cuadro se titula Sanitizar documento.",
+        "Guarde un archivo nuevo para la entrega, ciérrelo y ábralo de nuevo.",
+        "Inspeccione las zonas y busque el texto eliminado. Revise también comentarios, adjuntos y propiedades antes de compartirlo."
+      ],
+      "check": "La dirección elegida debe dejar de aparecer en la búsqueda y selección de texto de la copia final, sin dañar el contenido que debe conservarse.",
+      "pitfall": "Este ejercicio no garantiza el saneamiento de cualquier PDF. Compruebe los datos reales del archivo y las categorías que la operación conserva.",
+      "caption": "Opciones de saneamiento en la interfaz española."
+    }
+  ]
+}

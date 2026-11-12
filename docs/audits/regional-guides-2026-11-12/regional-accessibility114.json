@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-12",
+  "scope": "36 localized guide pages; static accessibility excluding color contrast; not a WCAG conformance claim",
+  "results": [
+    {
+      "route": "/de/blog/calibrate-pdf-drawing-scale/",
+      "violations": []
+    },
+    {
+      "route": "/de/blog/measure-pdf-area-cutouts-depth/",
+      "violations": []
+    },
+    {
+      "route": "/de/blog/count-pdf-symbols/",
+      "violations": []
+    },
+    {
+      "route": "/de/blog/compare-pdf-drawing-revisions/",
+      "violations": []
+    },
+    {
+      "route": "/de/blog/pdf-markup-table-rfi-punch-list/",
+      "violations": []
+    },
+    {
+      "route": "/de/blog/ocr-scanned-pdf-drawings/",
+      "violations": []
+    },
+    {
+      "route": "/de/blog/create-fillable-pdf-form/",
+      "violations": []
+    },
+    {
+      "route": "/de/blog/create-interactive-pdf-stamps/",
+      "violations": []
+    },
+    {
+      "route": "/de/blog/redact-and-sanitize-pdf/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/calibrate-pdf-drawing-scale/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/measure-pdf-area-cutouts-depth/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/count-pdf-symbols/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/compare-pdf-drawing-revisions/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/pdf-markup-table-rfi-punch-list/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/ocr-scanned-pdf-drawings/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/create-fillable-pdf-form/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/create-interactive-pdf-stamps/",
+      "violations": []
+    },
+    {
+      "route": "/fr/blog/redact-and-sanitize-pdf/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/calibrate-pdf-drawing-scale/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/measure-pdf-area-cutouts-depth/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/count-pdf-symbols/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/compare-pdf-drawing-revisions/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/pdf-markup-table-rfi-punch-list/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/ocr-scanned-pdf-drawings/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/create-fillable-pdf-form/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/create-interactive-pdf-stamps/",
+      "violations": []
+    },
+    {
+      "route": "/es/blog/redact-and-sanitize-pdf/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/calibrate-pdf-drawing-scale/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/measure-pdf-area-cutouts-depth/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/count-pdf-symbols/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/compare-pdf-drawing-revisions/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/pdf-markup-table-rfi-punch-list/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/ocr-scanned-pdf-drawings/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/create-fillable-pdf-form/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/create-interactive-pdf-stamps/",
+      "violations": []
+    },
+    {
+      "route": "/pt-br/blog/redact-and-sanitize-pdf/",
+      "violations": []
+    }
+  ]
+}

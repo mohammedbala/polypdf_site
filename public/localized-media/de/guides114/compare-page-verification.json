@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "route": "/de/blog/compare-pdf-drawing-revisions/",
+  "htmlSha256": "daf161a69ad4c99c9f2fd861320f6ff56393f5f2ed591aa8fea811bc12045e8c",
+  "localizedImages": 3,
+  "localizedDownloads": 6,
+  "sourceFiles": {
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/localization/compare-de.json": "aef269830a6362f99d44a7381d7e703b452c90741caf77f27c00a0ba39f73cde",
+    "scripts/localization/prepare-compare-de.py": "54efab22610846741c3a01112e614e0cf2aa3590b38d19cde73fe1c5cd98a26d",
+    "scripts/localization/verify-compare-pdfs.py": "9146f4cd9ec20677146732f8035470cb16c9db38de7e711658c49daad26693e6",
+    "scripts/localization/capture-compare-de.mjs": "557c83771ac5d42cd87589e039588fd0341383916dbd3bb0bceb5c74f7a6912e",
+    "scripts/localization/register-compare-de.cjs": "22946d9905ba8e99f530869f4ad4609678f24939c2193b72777a60af09308860",
+    "scripts/localization/verify-compare-page.cjs": "98c00605b4b1967a73ee38b282aba389ebdd21adedce78dd6156b2384f6f52f9",
+    "src/content/guides/compare-pdf-drawing-revisions.js": "9208a316678c1f6d5877a0f154812f6521b747e168327d27aa36cd3db8b964bb",
+    "src/localization/walkthrough-media.json": "50810412d805aa77ee06b728706f75d1802decd33d869c7d7e3a0a2677f9d026"
+  },
+  "checks": [
+    "Three instructional images use hash-verified German assets",
+    "Both source PDFs and the saved comparison match the actual Mac capture",
+    "PDF download cards retain their previews and German accessible labels",
+    "Twelve German clouds, two original links, metric source changes and saved-reopen instructions agree",
+    "Hero, social and Article image metadata agree",
+    "English source retained; new regional guides validated separately"
+  ],
+  "evidenceScope": "Historical native captures and output receipts retain their original version and scope; this check validates website integration.",
+  "limitations": [
+    "No new end-to-end qualification of every historical German workflow",
+    "No new Windows or native iPad qualification"
+  ]
+}

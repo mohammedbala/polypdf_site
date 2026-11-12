@@ -1,0 +1,11 @@
+Language,Field name,Field type,Visible label
+pt-br,project,text,Projeto / local
+pt-br,visit_date,text,Data da visita (DD/MM/AAAA)
+pt-br,reviewer,text,Revisado por
+pt-br,drawing_revision,text,Prancha / revisão
+pt-br,trade,combo box,Disciplina
+pt-br,review_status,radio group,Situação
+pt-br,drawing_checked,checkbox,Revisão da prancha registrada
+pt-br,photos_referenced,checkbox,Referências das fotos incluídas
+pt-br,action_assigned,checkbox,Responsável pela ação definido
+pt-br,observation,multiline text,"Observação, responsável e próxima ação"

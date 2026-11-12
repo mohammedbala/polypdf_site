@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "locale": "pt-BR",
+  "appBuild": 114,
+  "version": "1.6.32",
+  "platform": "macOS",
+  "asarSha256": "aefb8f96296779d4f222408d18a675626224739a6a397ae40cf665942e86621f",
+  "captures": {
+    "calibration": {
+      "path": "/localized-media/pt-br/guides114/calibration.webp",
+      "sha256": "c692137b295f7baa24ac4759a722ab29661f33b5b835fb93627ffaca5172b3f4",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "cb8afd1f186f0835e1b020393da2300d1aebbe5556c9abbf99d4eb3f69e0581d",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "area": {
+      "path": "/localized-media/pt-br/guides114/area.webp",
+      "sha256": "5bad3712b96f3923a4a445336228d6ec0acd7e259b044edda2ef4c760db167af",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "b95c120798f137ed799f1c3b00cfb5e81bd2bc348f3ac5e2a21d173ba58eb4fa",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "count": {
+      "path": "/localized-media/pt-br/guides114/count.webp",
+      "sha256": "e894c7c762991fbab14dbbb255bfa623b309967ba8a8ecbe09f6a868489449ee",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "bb2590f2730282943a46bc68d7f54e97f24d69ef15d9ac66d9f89b40f8d8cf19",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "compare": {
+      "path": "/localized-media/pt-br/guides114/compare.webp",
+      "sha256": "a5c766e539b9278694e85dc4386a3eeb61a6bba64b0672c87c148c7b62ddde14",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "1a3f40fb409bfa07c604545b88716771bbe80a27b0221ef0afbdfb0acad5d0cc",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "markup": {
+      "path": "/localized-media/pt-br/guides114/markup.webp",
+      "sha256": "347da2128a30125904ad2aabb1d1eedb6246261fef1f6dea97a8a0010a326547",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "4717ac9a900f41e948932ff5b434332efa51686adc286624dd0d423e58a82bd7",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "ocr": {
+      "path": "/localized-media/pt-br/guides114/ocr.webp",
+      "sha256": "98891c4dfb38907726af128bfc1180f0eaec92fb1ceffa5871842d289c29f1f9",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "79766f4d5a68b340cf2ff48dfb90bcf4870bd8adb7cf529a0534f98c8cab84c7",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "forms": {
+      "path": "/localized-media/pt-br/guides114/forms.webp",
+      "sha256": "7786402a35d8e307aea2192e6550f310a4ac87cd4fdf984d01825a7e7c813d38",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "1c249bdc521b5ca5857d6ceb7ca2c56f7dc9edafbdfd52115a2c016b72ca138d",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "stamps": {
+      "path": "/localized-media/pt-br/guides114/stamps.webp",
+      "sha256": "3723a58a82a14fdb60d663f1575025f761502825400c761781759faecef93cb0",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "29bb64d75b837d8a105eed6f68e64529207f2c90c3de2990ee47736105e0321f",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "redaction": {
+      "path": "/localized-media/pt-br/guides114/redaction.webp",
+      "sha256": "f7434796e5e825e9d8b3dc3e7adcf2ec1a49964f39f0919dc10cedfed1e24be8",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "a1527905f84ba3b29d8d646d71bdf0ab1ff222e09a236f6ad8b53d138500d0fe",
+      "sourceSize": [
+        3350,
+        1988
+      ],
+      "crop": [
+        0,
+        156,
+        3350,
+        1988
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    }
+  },
+  "resources": [
+    {
+      "path": "/localized-media/pt-br/samples/construction/01-Implantacao-e-terreno.pdf",
+      "sha256": "cfdd6c314d8ed50bceabc06cf97c77b19dedc92bc8c4dd581b2ea3739f25d7bd"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/02-Arquitetura-Revisao-A.pdf",
+      "sha256": "d84dd82a5d5fe65381010784c486228de9f22acb6d02a51e425bc15580926512"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/03-Arquitetura-Revisao-B.pdf",
+      "sha256": "0865d84b82e16985a621376d207dcdb35c8e6a69dd3f9e25679aa7153c136275"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/04-Fundacoes-e-estrutura.pdf",
+      "sha256": "39d83135fa6b9576b4f12939d843e7bfe89a48e755559ac3836e1fd4415c251a"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/05-Ventilacao.pdf",
+      "sha256": "eda4753c64f09aeaf5bcec2838ce62784839673fa93a72c9070ee1017a3055bf"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/06-Iluminacao-e-eletrica.pdf",
+      "sha256": "38eddf0b432d6600efcbaa391f92463380012d913934ec64fe7a295eebeb87cc"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/07-Agua-e-esgoto.pdf",
+      "sha256": "b7d82c0f3666a764b8b9aa478b30c421e2830d9d75bafaf7e7a0b0d8991db8f0"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/08-Protecao-contra-incendio-Exercicio.pdf",
+      "sha256": "85734be53eaab4bf5f9f645f8165c76971e698ee87ff9b6c262faba73b5a6d85"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/09-Paisagismo-e-areas-externas.pdf",
+      "sha256": "20d751a48ee87673845e09f88a48ab2015600d3efc3b520a263b16d55b08c5b5"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/10-Acabamentos-e-marcenaria.pdf",
+      "sha256": "2194645b1496b3c0e063564ac841f9ace29ab9e7ed567c11dee63b9f429178d2"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/11-Compatibilizacao-e-revisao.pdf",
+      "sha256": "6c7ae4a3dabaf71a6897397c3f4d41e45e0547d9172281b8b66f40b2f10ae84e"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/construction/12-Plantas-existentes-digitalizadas.pdf",
+      "sha256": "445f59b4eb87cdcc8d52c045c210e0f9702a0db43d7e4153b4f4ee34a2d98348"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/forms114/construction-review-field-map.csv",
+      "sha256": "530e4dc89b377c18dabeb73021af51a72841c02686b31460151f729fa8f8db0d"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/forms114/construction-review-form-pt-br.pdf",
+      "sha256": "12f9c4dfdecee5d081ecbf30a91fcb4d80f1e9818b2cd71287a251352d54ff09"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/forms114/manifest.json",
+      "sha256": "d82bed5a5aa79e4c3eaef819ba53e70ca1260c358731e8670629723dcfae975f"
+    },
+    {
+      "path": "/localized-media/pt-br/samples/forms114/source-verification.json",
+      "sha256": "284c6f3778a2c331a20e6b3fe09d5b0cc5de8f2a65b519bf137f3882a200e5e2"
+    }
+  ]
+}

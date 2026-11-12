@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "route": "/de/blog/count-pdf-symbols/",
+  "htmlSha256": "4e1065ad3efc4f028da66f8587e1c0eb47a1089096df1199423d81c4a63a2c0f",
+  "localizedImages": 3,
+  "localizedDownloads": 5,
+  "sourceFiles": {
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/localization/count-de.json": "c098c8bbf92aac46863d1a75e7dae5d97e3ada3f10d32170c9c27f5bdd31cb02",
+    "scripts/localization/prepare-count-de.py": "3e6b650fd7337101928c3f6a7430f8cb10aaa703061700d737f7814a3acb4e42",
+    "scripts/localization/capture-count-de.mjs": "67a3e1e7ffd5f5da929d3c706a68cd37420c8edbc44369bf662d1a244db695d5",
+    "scripts/localization/register-count-de.cjs": "29733e82fdb6d7b676b83f24825671328c9570442f661767241546febd5f7325",
+    "scripts/localization/verify-count-page.cjs": "a477e05ec6f2db2e51ce703ecf0a875bf3fc0081699aab28dccc37f68e6c9923",
+    "src/content/guides/count-pdf-symbols.js": "632730bd474b42b1bb26a517c84906a43a4bea7303b5ec33a504133af984b9de",
+    "src/localization/walkthrough-media.json": "50810412d805aa77ee06b728706f75d1802decd33d869c7d7e3a0a2677f9d026"
+  },
+  "checks": [
+    "Three instructional images use hash-verified German assets",
+    "Q-101 PDF and physical geometry downloads have German labels and bound hashes",
+    "17 candidates, excluded legend, 16 markers and one worksheet row agree",
+    "Hero, social, Article metadata and accessible image labels describe the same capture",
+    "Supplemental E101/E501 German references remain distinct from Q-101 app results",
+    "English source retained; new regional guides validated separately"
+  ],
+  "evidenceScope": "Historical native captures and output receipts retain their original version and scope; this check validates website integration.",
+  "limitations": [
+    "No new end-to-end qualification of every historical German workflow",
+    "No new Windows or native iPad qualification"
+  ]
+}

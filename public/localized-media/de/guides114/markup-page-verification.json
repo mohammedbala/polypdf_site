@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "route": "/de/blog/pdf-markup-table-rfi-punch-list/",
+  "htmlSha256": "5a04983128609677c845758eb4c925705cede1aceb9591501dbecf9cb2c2ec40",
+  "localizedImages": 2,
+  "localizedDownloads": 4,
+  "sourceFiles": {
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/localization/markup-de.json": "8eab279e0a6ec8ea26380cb65c30e59492fd1f6976ea8a2a19ab811d5215302f",
+    "scripts/localization/prepare-markup-de.py": "7924f3d3dab2688c4c91cafe1a832b7e3085f38aa7b5e11a020fe5fdd6bbf315",
+    "scripts/localization/capture-markup-de.mjs": "318e1f7c545a67bb12eebc50906e6a74d0def4725117bad262557128b992ba33",
+    "scripts/localization/register-markup-de.cjs": "43852107741c06d1dd9ecfab4a1597d5a36f690e2d4e66e66c47e2c2e61469cc",
+    "scripts/localization/verify-markup-pdfs.py": "6e6b9b233ebf83da671e02478dc5f2c8d1a73c468ca043b7ab068f1125acb699",
+    "scripts/localization/verify-markup-page.cjs": "d070f959a7c6ca025013bd7b49832e60ff1738c624617a273629aa53f79e37b3",
+    "src/content/guides/pdf-markup-table-rfi-punch-list.js": "48b3eb3009adbaaed0913f012486ecc6319bf280a894b9562eee879b2b5534c4",
+    "src/localization/walkthrough-media.json": "50810412d805aa77ee06b728706f75d1802decd33d869c7d7e3a0a2677f9d026"
+  },
+  "checks": [
+    "German hero and drawing preview with verified hashes",
+    "German source, saved PDF, complete CSV and public summary download links",
+    "All three reopened statuses and full comments agree with native exports",
+    "Summary shortening disclosed; full CSV and editable PDF provided",
+    "English source retained; new regional guides validated separately"
+  ],
+  "evidenceScope": "Historical native captures and output receipts retain their original version and scope; this check validates website integration.",
+  "limitations": [
+    "No new end-to-end qualification of every historical German workflow",
+    "No new Windows or native iPad qualification"
+  ]
+}

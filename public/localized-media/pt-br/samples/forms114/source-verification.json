@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-12",
+  "pdfSha256": "12f9c4dfdecee5d081ecbf30a91fcb4d80f1e9818b2cd71287a251352d54ff09",
+  "language": "pt-BR",
+  "pages": 1,
+  "fields": 10,
+  "widgets": 12,
+  "allWidgetsHaveAppearanceStreams": true,
+  "fieldNames": [
+    "action_assigned",
+    "drawing_checked",
+    "drawing_revision",
+    "observation",
+    "photos_referenced",
+    "project",
+    "review_status",
+    "reviewer",
+    "trade",
+    "visit_date"
+  ],
+  "visualReview": "Poppler render inspected: accents, labels, fields and A4 page fit pass",
+  "scope": "Source PDF structure and rendered appearance. Does not certify a filled-file save/reopen round trip in every PDF viewer.",
+  "generatorSha256": "f29920a5852c5a5ab845d301f4e0a9186efcb85bee8089df41e0e7412aa17927",
+  "reportlab": "4.3.1"
+}

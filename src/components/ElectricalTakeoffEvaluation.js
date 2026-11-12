@@ -47,8 +47,8 @@ export default function ElectricalTakeoffEvaluation() {
         <p className="growth-kicker"><span data-regional-copy="electrical.categories">One plan, four distinct categories</span></p>
         <h2 id="electrical-count-check"><span data-regional-copy="electrical.heading">Reconcile fixture and receptacle counts before pricing.</span></h2>
         <p><span data-regional-copy="electrical.counts">Count only the E101 plan boundary, then compare with the E601 fixture and device schedule. The plan contains 24 luminaires, including 4 emergency units, and 18 receptacles, including 2 GFCI devices. The categories below separate those subsets so each item appears once.</span></p>
-        <div className="growth-table-wrap" role="region" aria-labelledby="electrical-count-check" tabIndex="0">
-          <table data-regional-table="electrical.counts"><caption>Authored E101/E601 drawing references, not automatic-count results</caption><thead><tr><th scope="col">Schedule category</th><th scope="col">What to inspect on E101</th><th scope="col">Reference count</th></tr></thead><tbody>
+        <div className="growth-table-wrap" role="region" aria-labelledby="electrical-count-caption" tabIndex="0">
+          <table data-regional-table="electrical.counts"><caption id="electrical-count-caption">Authored E101/E601 drawing references, not automatic-count results</caption><thead><tr><th scope="col">Schedule category</th><th scope="col">What to inspect on E101</th><th scope="col">Reference count</th></tr></thead><tbody>
             <tr><th scope="row">LT-A · Standard luminaires</th><td>L-01 through L-24, excluding the four / E units.</td><td>20 ea</td></tr>
             <tr><th scope="row">LT-E · Emergency luminaires</th><td>L-01 / E, L-13 / E, L-17 / E, and L-24 / E.</td><td>4 ea</td></tr>
             <tr><th scope="row">REC-A · General receptacles</th><td>R-01 through R-16.</td><td>16 ea</td></tr>

@@ -614,7 +614,7 @@
           "region": "DE",
           "appBuild": "1.6.17+84",
           "status": "verified",
-          "sourceSha256": "2b5ac2c757e289593cc90a3df9a9d5f730f803b4f6d80f22cbecbc9a32f810ff",
+          "sourceSha256": "4609427c43ae9301d0fe89743db9a8c851e0675b91925bfe7cde983c9619b25e",
           "sha256": "293589e58d0625c3c2154e6da871a7863a9f82eba626baa8de4c17603afffe95",
           "verification": "/localized-media/de/samples/evaluation/verification.json",
           "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
@@ -626,7 +626,7 @@
           "region": "DE",
           "appBuild": "1.6.17+84",
           "status": "verified",
-          "sourceSha256": "6cf2eb7a7adfa77feca90a54a4ba104ecd052d296638d2417474787c6bf44033",
+          "sourceSha256": "61af8f92e5bc79684f6196e3de1e4f96e531a1bc0db7b3e6d87a064b8bbf89ea",
           "sha256": "42e02d2dd12918d4603fdf2848ffa5615f9f2ee9a9f1537f596d1d853180bed8",
           "verification": "/localized-media/de/samples/evaluation/verification.json",
           "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
@@ -650,7 +650,7 @@
           "region": "DE",
           "appBuild": "1.6.17+84",
           "status": "verified",
-          "sourceSha256": "95080a6947fae8b566f2cad36e48c2a0f14c9363709b88dc85114a29f88c2084",
+          "sourceSha256": "3b9c73ee10980e2c4a11be714bde87cefd3637f0cec3305e246c79725423e82c",
           "sha256": "9f4f809efb80ee145c61dfd32fee8603c54024915974832943c5e6935ab781ba",
           "verification": "/localized-media/de/samples/evaluation/verification.json",
           "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
@@ -662,7 +662,7 @@
           "region": "DE",
           "appBuild": "1.6.17+84",
           "status": "verified",
-          "sourceSha256": "6831f5dead8a4bea481af13f481ca2fa787b61ae73b76ce7919c2e06ab6a803c",
+          "sourceSha256": "0be00d9095e40bba1e0b273a1d7d570091b4f3eb30a303989bef21548cfec712",
           "sha256": "8c682f76c5d01f6f5387ed9c909bbb49c719834e2957e1154fcf6fe5e2be598a",
           "verification": "/localized-media/de/samples/evaluation/verification.json",
           "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
@@ -674,7 +674,7 @@
           "region": "DE",
           "appBuild": "1.6.17+84",
           "status": "verified",
-          "sourceSha256": "b36a31ffed5713a6df88a7480fb0728b4dd21f18baeb2f5fcc62338575583e21",
+          "sourceSha256": "035113acbd54d70d45e4d285b5767a4a312890c5ce3c716c6aabadb0df6e807a",
           "sha256": "b6565c02f697334c6c7f59d47dfac42df604d0f02748ffe459d648048d65be80",
           "verification": "/localized-media/de/samples/evaluation/verification.json",
           "visualReview": "/localized-media/de/samples/evaluation/visual-review.json",
@@ -698,7 +698,7 @@
           "region": "DE",
           "appBuild": "1.6.17+84",
           "status": "verified",
-          "sourceSha256": "723ae7e35fb29a4881b6a706ce0af64a69543a3ce134af0fb9ad60dd959eb038",
+          "sourceSha256": "c26ffeba5fc6aba13319e24cc6420ea81a57068f2c4e08fe7c430db259cf773b",
           "sha256": "658fc57c3f84c942b7eba5f0882d2474ab5f6486aa931391bb7e48a3ef6c5032",
           "verification": "/localized-media/de/samples/electrical/verification.json",
           "visualReview": "/localized-media/de/samples/electrical/visual-review.json",
@@ -824,7 +824,7 @@
           "region": "DE",
           "appBuild": "1.6.17+84",
           "status": "verified",
-          "sourceSha256": "5e487a329d352bf1d1c78e8ff10128434407acb7cc3e8899cd7e97dae2de3b5b",
+          "sourceSha256": "f92344243d4f83fb9a6426a9b20bd4cf78ae9b6ffce13f0fc1ee33fadf036f3f",
           "sha256": "78fd407f336f6bc9e55b57589a028dd64fbf338fbc4e094bf3c76412e939799b",
           "verification": "/localized-media/de/samples/takeoff/verification.json",
           "visualReview": "/localized-media/de/samples/takeoff/visual-review.json",
@@ -1731,7 +1731,7 @@
           "target": "Die Werte sind Zeichnungsreferenzen, keine neuen App-Testergebnisse. Arbeiten Sie auf einer Kopie und prüfen Sie Ihre gespeicherte Datei."
         },
         "exercise.historicalMac": {
-          "source": "Inspect the saved Mac example and its tested local build →",
+          "source": "Inspect the saved Mac example and its test record →",
           "target": "Früheres US-Beispiel: gespeicherte Mac-Datei und getesteten lokalen Build ansehen →"
         },
         "exercise.download.A": {
@@ -2132,7 +2132,7 @@
             "Open A101, Revision A. Calibrate the printed 20 ft reference; it spans 360 PDF points.": "Öffnen Sie den deutschen Plan A101, Revision A. Kalibrieren Sie die gedruckte 5,00-m-Referenz; sie umfasst bei 1:50 rund 283,46457 PDF-Punkte.",
             "Check the independent 96 ft width and 60 ft depth, then trace the outside building boundary.": "Prüfen Sie unabhängig die Breite von 24,00 m und die Tiefe von 15,00 m. Zeichnen Sie anschließend die äußere Gebäudegrenze nach.",
             "Compare the gross area with 5,760 sq ft. Keep sheet, revision, subject, unit, and total with the exported record.": "Vergleichen Sie die Brutto-Grundfläche mit 360,00 m². Halten Sie Plan, Revision, Betreff, Einheit und Summe im exportierten Datensatz fest.",
-            "Inspect the saved Mac example and its tested local build →": "Zum historischen englischen Mac-Beispiel; kein Nachweis für diese deutsche Zeichnung →",
+            "Inspect the saved Mac example and its test record →": "Zum historischen englischen Mac-Beispiel; kein Nachweis für diese deutsche Zeichnung →",
             "Translated from the English edition. Screenshots and app control names may remain in English. Original example units and verification dates are preserved. Prices are in USD; checkout, account, release feeds, and policies are in English.": "Diese Seite verwendet deutsche App-Aufnahmen und metrische deutsche Übungspläne. Der Kalibrierungsdurchlauf wurde im lokalen Mac-Entwicklungsstand geprüft. Windows und natives iPad wurden dafür nicht geprüft. Preise sind in USD; Checkout, Konto, Release-Feeds und Richtlinien sind auf Englisch.",
             "Do not mix values from calibrated and uncalibrated pages. In PolyPDF 1.4.0, an uncalibrated page reports physical PDF points or square points rather than inventing a real-world scale.": "Mischen Sie keine Werte von kalibrierten und unkalibrierten Seiten. Ohne festgelegten Maßstab gibt PolyPDF physische PDF-Punkte beziehungsweise Quadratpunkte aus.",
             "The exercise above uses the Willow Creek library. Earlier walkthrough screenshots and saved examples below retain their original drawings, versions, and quantities.": "Die zusätzliche Übung oben verwendet den deutschen Architekturplan A101. Die folgenden App-Aufnahmen zeigen den separaten deutschen Bodenbelagsplan F-101. Jeder Plan muss anhand seiner eigenen gedruckten Maße kalibriert werden.",
@@ -4101,7 +4101,7 @@
           "target": "Les valeurs sont des références du dessin, pas de nouveaux résultats de tests de l’application. Travaillez sur une copie et vérifiez votre fichier enregistré."
         },
         "exercise.historicalMac": {
-          "source": "Inspect the saved Mac example and its tested local build →",
+          "source": "Inspect the saved Mac example and its test record →",
           "target": "Ancien exemple américain : consulter le fichier Mac enregistré et la version locale testée →"
         },
         "exercise.download.A": {
@@ -5081,7 +5081,7 @@
           "target": "Los valores son referencias del dibujo, no nuevos resultados de pruebas de la aplicación. Trabaje sobre una copia y compruebe el archivo guardado."
         },
         "exercise.historicalMac": {
-          "source": "Inspect the saved Mac example and its tested local build →",
+          "source": "Inspect the saved Mac example and its test record →",
           "target": "Ejemplo estadounidense anterior: ver el archivo guardado en Mac y la versión local probada →"
         },
         "exercise.download.A": {
@@ -6061,7 +6061,7 @@
           "target": "Os valores são referências do desenho, não novos resultados de testes do aplicativo. Trabalhe em uma cópia e confira o arquivo salvo."
         },
         "exercise.historicalMac": {
-          "source": "Inspect the saved Mac example and its tested local build →",
+          "source": "Inspect the saved Mac example and its test record →",
           "target": "Exemplo anterior dos EUA: ver o arquivo salvo no Mac e a versão local testada →"
         },
         "exercise.download.A": {
@@ -7041,7 +7041,7 @@
           "target": "I valori sono riferimenti del disegno, non nuovi risultati di test dell'app. Lavora su una copia e controlla il file salvato."
         },
         "exercise.historicalMac": {
-          "source": "Inspect the saved Mac example and its tested local build →",
+          "source": "Inspect the saved Mac example and its test record →",
           "target": "Precedente esempio statunitense: esamina il file salvato su Mac e la versione locale verificata →"
         },
         "exercise.download.A": {
@@ -8021,7 +8021,7 @@
           "target": "Dit zijn referentiewaarden uit de tekening, geen nieuwe app-testresultaten. Werk op een kopie en controleer je opgeslagen bestand."
         },
         "exercise.historicalMac": {
-          "source": "Inspect the saved Mac example and its tested local build →",
+          "source": "Inspect the saved Mac example and its test record →",
           "target": "Eerder Amerikaans voorbeeld: bekijk het op de Mac opgeslagen bestand en de geteste lokale versie →"
         },
         "exercise.download.A": {
@@ -9001,7 +9001,7 @@
           "target": "To wartości odniesienia z rysunku, nie nowe wyniki testów aplikacji. Pracuj na kopii i sprawdź własny zapisany plik."
         },
         "exercise.historicalMac": {
-          "source": "Inspect the saved Mac example and its tested local build →",
+          "source": "Inspect the saved Mac example and its test record →",
           "target": "Wcześniejszy przykład amerykański: sprawdź plik zapisany na Macu i testowaną wersję lokalną →"
         },
         "exercise.download.A": {
@@ -9981,7 +9981,7 @@
           "target": "Bunlar çizimdeki referans değerlerdir; yeni uygulama testi sonuçları değildir. Kopya üzerinde çalışın ve kendi kaydettiğiniz çıktıyı kontrol edin."
         },
         "exercise.historicalMac": {
-          "source": "Inspect the saved Mac example and its tested local build →",
+          "source": "Inspect the saved Mac example and its test record →",
           "target": "Önceki ABD örneği: Mac'te kaydedilen dosyayı ve test edilen yerel sürümü inceleyin →"
         },
         "exercise.download.A": {

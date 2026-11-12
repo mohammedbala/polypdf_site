@@ -1,0 +1,51 @@
+[
+  {
+    "source": "/samples/evaluation/polypdf-construction-evaluation-kit.zip",
+    "previousSourceSha256": "2b5ac2c757e289593cc90a3df9a9d5f730f803b4f6d80f22cbecbc9a32f810ff",
+    "currentSourceSha256": "4609427c43ae9301d0fe89743db9a8c851e0675b91925bfe7cde983c9619b25e",
+    "localizedSha256Unchanged": "293589e58d0625c3c2154e6da871a7863a9f82eba626baa8de4c17603afffe95",
+    "review": "Compared source diff: copy simplification and current release metadata only; drawing PDF geometry and all localized outputs unchanged."
+  },
+  {
+    "source": "/samples/evaluation/START-HERE.html",
+    "previousSourceSha256": "6cf2eb7a7adfa77feca90a54a4ba104ecd052d296638d2417474787c6bf44033",
+    "currentSourceSha256": "61af8f92e5bc79684f6196e3de1e4f96e531a1bc0db7b3e6d87a064b8bbf89ea",
+    "localizedSha256Unchanged": "42e02d2dd12918d4603fdf2848ffa5615f9f2ee9a9f1537f596d1d853180bed8",
+    "review": "Compared source diff: copy simplification and current release metadata only; drawing PDF geometry and all localized outputs unchanged."
+  },
+  {
+    "source": "/samples/evaluation/evaluation-results.csv",
+    "previousSourceSha256": "95080a6947fae8b566f2cad36e48c2a0f14c9363709b88dc85114a29f88c2084",
+    "currentSourceSha256": "3b9c73ee10980e2c4a11be714bde87cefd3637f0cec3305e246c79725423e82c",
+    "localizedSha256Unchanged": "9f4f809efb80ee145c61dfd32fee8603c54024915974832943c5e6935ab781ba",
+    "review": "Compared source diff: copy simplification and current release metadata only; drawing PDF geometry and all localized outputs unchanged."
+  },
+  {
+    "source": "/samples/evaluation/manifest.json",
+    "previousSourceSha256": "6831f5dead8a4bea481af13f481ca2fa787b61ae73b76ce7919c2e06ab6a803c",
+    "currentSourceSha256": "0be00d9095e40bba1e0b273a1d7d570091b4f3eb30a303989bef21548cfec712",
+    "localizedSha256Unchanged": "8c682f76c5d01f6f5387ed9c909bbb49c719834e2957e1154fcf6fe5e2be598a",
+    "review": "Compared source diff: copy simplification and current release metadata only; drawing PDF geometry and all localized outputs unchanged."
+  },
+  {
+    "source": "/samples/evaluation/SHA256SUMS.txt",
+    "previousSourceSha256": "b36a31ffed5713a6df88a7480fb0728b4dd21f18baeb2f5fcc62338575583e21",
+    "currentSourceSha256": "035113acbd54d70d45e4d285b5767a4a312890c5ce3c716c6aabadb0df6e807a",
+    "localizedSha256Unchanged": "b6565c02f697334c6c7f59d47dfac42df604d0f02748ffe459d648048d65be80",
+    "review": "Compared source diff: copy simplification and current release metadata only; drawing PDF geometry and all localized outputs unchanged."
+  },
+  {
+    "source": "/samples/electrical/README.html",
+    "previousSourceSha256": "723ae7e35fb29a4881b6a706ce0af64a69543a3ce134af0fb9ad60dd959eb038",
+    "currentSourceSha256": "c26ffeba5fc6aba13319e24cc6420ea81a57068f2c4e08fe7c430db259cf773b",
+    "localizedSha256Unchanged": "658fc57c3f84c942b7eba5f0882d2474ab5f6486aa931391bb7e48a3ef6c5032",
+    "review": "Compared source diff: copy simplification and current release metadata only; drawing PDF geometry and all localized outputs unchanged."
+  },
+  {
+    "source": "/samples/takeoff/README.md",
+    "previousSourceSha256": "5e487a329d352bf1d1c78e8ff10128434407acb7cc3e8899cd7e97dae2de3b5b",
+    "currentSourceSha256": "f92344243d4f83fb9a6426a9b20bd4cf78ae9b6ffce13f0fc1ee33fadf036f3f",
+    "localizedSha256Unchanged": "78fd407f336f6bc9e55b57589a028dd64fbf338fbc4e094bf3c76412e939799b",
+    "review": "Compared source diff: copy simplification and current release metadata only; drawing PDF geometry and all localized outputs unchanged."
+  }
+]

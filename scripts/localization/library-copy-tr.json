@@ -233,7 +233,7 @@
       "target": "Bunlar çizimdeki referans değerlerdir; yeni uygulama testi sonuçları değildir. Kopya üzerinde çalışın ve kendi kaydettiğiniz çıktıyı kontrol edin."
     },
     "exercise.historicalMac": {
-      "source": "Inspect the saved Mac example and its tested local build →",
+      "source": "Inspect the saved Mac example and its test record →",
       "target": "Önceki ABD örneği: Mac'te kaydedilen dosyayı ve test edilen yerel sürümü inceleyin →"
     },
     "exercise.download.A": {

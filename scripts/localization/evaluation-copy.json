@@ -1,0 +1,46 @@
+{
+  "de": {
+    "intro": "Verwenden Sie den deutschen Übungsplan A101. Zwei Kontrolllängen und eine Flächenmessung passen in den Free-Umfang; ein Konto ist dafür nicht erforderlich.",
+    "steps": [
+      "Kalibrieren Sie A101, Revision A, anhand einer beschrifteten Referenzstrecke.",
+      "Prüfen Sie unabhängig die Breite von 24,00 m und die Tiefe von 15,00 m. Bei Abweichungen zuerst die Kalibrierung korrigieren.",
+      "Messen Sie die äußere Begrenzung: 360,00 m² Bruttofläche. Prüfen und exportieren Sie die Tabelle, speichern Sie eine Kopie und öffnen Sie die PDF erneut."
+    ],
+    "scope": "Die Maße sind Sollwerte des Übungsplans. Prüfen Sie Ihre eigenen Messungen in der installierten Version; die deutsche Anleitung bezeichnet ihre Aufnahmen und Testgrenzen.",
+    "guide": "Deutsche Anleitung und Prüfgrenzen ansehen",
+    "file": "02-Architektur-Revision-A.pdf"
+  },
+  "fr": {
+    "intro": "Utilisez le plan français A101 des Tilleuls. Deux longueurs de contrôle et une surface entrent dans la limite Free ; aucun compte n’est nécessaire.",
+    "steps": [
+      "Étalonnez A101, indice A, à partir de la référence imprimée de 5,00 m.",
+      "Contrôlez séparément la largeur de 24,00 m et la profondeur de 15,00 m. Corrigez l’étalonnage avant de poursuivre si les valeurs diffèrent.",
+      "Mesurez le contour extérieur : 360,00 m² bruts. Vérifiez et exportez le tableau, enregistrez une copie et rouvrez le PDF."
+    ],
+    "scope": "Ces quantités sont les références du dessin. Vérifiez vos propres mesures dans la version installée ; les captures de la procédure précisent l’étape montrée.",
+    "guide": "Voir la procédure française et les contrôles",
+    "file": "02-Architecture-Indice-A.pdf"
+  },
+  "es": {
+    "intro": "Utilice el plano español A101 de Los Olmos. Dos longitudes de control y una superficie caben en el límite de Free; no hace falta una cuenta.",
+    "steps": [
+      "Calibre A101, revisión A, con la referencia impresa de 5,00 m.",
+      "Compruebe por separado la anchura de 24,00 m y el fondo de 15,00 m. Corrija la calibración si alguna medida no coincide.",
+      "Mida el contorno exterior: 360,00 m² brutos. Revise y exporte la tabla, guarde una copia y vuelva a abrir el PDF."
+    ],
+    "scope": "Son valores de referencia del dibujo. Compruebe sus propias mediciones en la versión instalada; cada captura indica la etapa mostrada.",
+    "guide": "Ver el procedimiento español y las comprobaciones",
+    "file": "02-Arquitectura-Revision-A.pdf"
+  },
+  "pt-br": {
+    "intro": "Use a prancha brasileira A101 dos Ipês. Duas medidas de conferência e uma área cabem no limite do Free; não é necessário criar uma conta.",
+    "steps": [
+      "Calibre A101, revisão A, pela referência impressa de 5,00 m.",
+      "Confira separadamente a largura de 24,00 m e a profundidade de 15,00 m. Corrija a calibração se alguma medida não conferir.",
+      "Meça o contorno externo: 360,00 m² de área bruta. Confira e exporte a tabela, salve uma cópia e reabra o PDF."
+    ],
+    "scope": "As quantidades são referências do desenho. Confira suas próprias medidas na versão instalada; cada captura identifica a etapa apresentada.",
+    "guide": "Ver o procedimento brasileiro e as conferências",
+    "file": "02-Arquitetura-Revisao-A.pdf"
+  }
+}

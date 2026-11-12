@@ -45,6 +45,7 @@ assert.equal(document.querySelectorAll('[data-regional-copy]').length, 13);
 m.localizeRegionalCopy(document, { id: 'de' }, manifest);
 m.localizeWalkthroughMedia(document, { id: 'de' }, manifest);
 c.translateDOM(document.body, c.translateFactory(JSON.parse(read('src/content/translations/de.json'))));
+require('./regional-guides.cjs').localizeEvaluation(document, 'de');
 assert.equal(document.querySelectorAll('tbody tr').length, 3);
 assert.deepEqual([...document.querySelectorAll('tbody tr')].map(row => row.lastElementChild.textContent),
   ['24 Stück', '12 Stück', '8 Stück']);
@@ -53,8 +54,9 @@ assert.ok(document.body.textContent.includes('34,5 m'));
 assert.equal(document.querySelector('a[href$="06-Beleuchtung-und-Elektro.pdf"]').textContent,
   'Grundriss E101 und Schema/Liste E501 · PDF');
 const html = view.serialize();
-fs.writeFileSync(path.join(root, 'build/local-electrical-preview.html'), html);
-const receiptPath = path.join(root, 'public/localized-media/de/samples/electrical/page-validation.json');
+fs.mkdirSync(path.join(root, '.tmp'), {recursive:true});
+fs.writeFileSync(path.join(root, '.tmp/local-electrical-preview.html'), html);
+const receiptPath = path.join(root, 'public/localized-media/de/guides114/electrical-preview-verification.json');
 const previous = fs.existsSync(receiptPath) ? JSON.parse(fs.readFileSync(receiptPath)) : undefined;
 const report = {
   status: 'passed',
@@ -67,7 +69,7 @@ const report = {
     'No US project, E601, GFCI or US route references in the four exercise sections',
     'Strict German translation completed without fallback', 'German PDF/CSV/guide destinations resolved'],
   limitations: ['Four exercise sections only; full page screenshots, metadata, FAQ and route policy remain pending',
-    'The media pack remains pilot and inactive']
+    'This standalone electrical preview is not a published localized route']
 };
 if (previous?.previewSha256 === report.previewSha256 && previous.visualReview) report.visualReview = previous.visualReview;
 fs.writeFileSync(receiptPath, JSON.stringify(report, null, 2)+'\n');

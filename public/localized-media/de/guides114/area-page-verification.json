@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "route": "/de/blog/measure-pdf-area-cutouts-depth/",
+  "htmlSha256": "c6bd343b88c8ed59207ba76d71ebee6c87ff3899ef457e933dca6a94f827e740",
+  "localizedImages": 3,
+  "localizedDownloads": 12,
+  "sourceFiles": {
+    "scripts/international/build.cjs": "88b1baf7c4dca38a5f3670494fba8280363bda047bc4a9edce2d9e82dda98874",
+    "scripts/international/verify.cjs": "110cf6666bf7bbfbb3e09bb9eb0c38c085f05445e9eeae5ca6bdd3b5c5127195",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/localization/area-de.json": "77c80217149800a6d8cd33ad3949fa4eb431ac2b92e5a77e7cfc8df0d1b29f6c",
+    "scripts/localization/capture-area-de.mjs": "273f41cb7fa024fbe28ad0c089e7078a2c55017e54a153c157e2b7fd646c470d",
+    "scripts/localization/register-area-de.cjs": "2888ee28dd303afd5aed7fe02f2019cd2bcb68472929a3bc779a09fa4f863548",
+    "scripts/localization/verify-area-page.cjs": "6856f275a363ebfc9b05e866098beaa89143965a4b2d37f508cb5701022f66f9",
+    "scripts/generate-area-demo-de.py": "a2e270f77969b4df48c6692ddef6c29ca9f331f0627d8566b899e6fafb8b12e9",
+    "scripts/verify-area-demo-de.py": "380db043549ff056114be45769526644aba39ca277908d0ec412b16f262b6d1c",
+    "src/content/guides/measure-pdf-area-cutouts-depth.js": "3f1207a62dec8da432d8669e2ca43df1caa1e68703abf434d660f74792bc6347",
+    "src/localization/walkthrough-media.json": "50810412d805aa77ee06b728706f75d1802decd33d869c7d7e3a0a2677f9d026"
+  },
+  "checks": [
+    "Three instructional images use exact German bytes",
+    "Source PDF, reference CSV and geometry receipt have bound hashes and German link labels",
+    "Hero, social and Article image metadata agree",
+    "Metric quantities, formulas, captions, drawing attribution and supplemental exercises match regional PDFs",
+    "English source retained; new regional guides validated separately"
+  ],
+  "evidenceScope": "Historical native captures and output receipts retain their original version and scope; this check validates website integration.",
+  "limitations": [
+    "No new end-to-end qualification of every historical German workflow",
+    "No new Windows or native iPad qualification"
+  ]
+}

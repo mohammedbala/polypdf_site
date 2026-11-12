@@ -1,0 +1,11 @@
+Language,Field name,Field type,Visible label
+es,project,text,Proyecto / lugar
+es,visit_date,text,Fecha de visita (DD/MM/AAAA)
+es,reviewer,text,Revisado por
+es,drawing_revision,text,Plano / revisión
+es,trade,combo box,Especialidad
+es,review_status,radio group,Estado
+es,drawing_checked,checkbox,Revisión del plano registrada
+es,photos_referenced,checkbox,Referencias de fotos añadidas
+es,action_assigned,checkbox,Responsable de la acción asignado
+es,observation,multiline text,"Observación, responsable y siguiente acción"

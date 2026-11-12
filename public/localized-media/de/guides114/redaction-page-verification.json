@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "route": "/de/blog/redact-and-sanitize-pdf/",
+  "htmlSha256": "431439f7fa8746ff23bc704732f08ece6729afdac3a99b3ed2d9e50019f577b5",
+  "localizedImageSlots": 7,
+  "distinctDisplayedCaptures": 6,
+  "retainedNativeCaptures": 7,
+  "localizedPdfDownloads": 4,
+  "sourceFiles": {
+    "scripts/localization/redaction-de.json": "a0920c6865e88d6e25b53ca775731ee70b07f7eca9e361e67b76017322dcd0f3",
+    "scripts/localization/generate-redaction-de.py": "058608fbc509beaa5cce3a68647fa83598a30d2ed4ec6eb02895be9fba3b705b",
+    "scripts/localization/capture-redaction-de.mjs": "db012004b5a7c4c8d19c0bfe1928aae45ac138a16cb6684afbbf83b9f8095b23",
+    "scripts/localization/register-redaction-de.cjs": "7c7c9f85f4b733b455be579d0cba73917d228ef87dd63158ce98f8a0130fd453",
+    "scripts/localization/verify-redaction-de.py": "f46f41d336d184abfd4054ec496e58c999452d969cc0425031d2c4993712c5d7",
+    "scripts/localization/verify-redaction-page.cjs": "f3b49fa90e9f53f16c60fd68b6fe7d4caf8e6f26840915fc3e76625cd09e2dfa",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/international/build.cjs": "88b1baf7c4dca38a5f3670494fba8280363bda047bc4a9edce2d9e82dda98874",
+    "src/content/guides/redact-and-sanitize-pdf.js": "450e758f425ee1782c29506629c810fa402584ad6f6700933d5e82a979c1af7d",
+    "src/localization/walkthrough-media.json": "50810412d805aa77ee06b728706f75d1802decd33d869c7d7e3a0a2677f9d026"
+  },
+  "checks": [
+    "Seven image slots use verified German app states in their actual sequence",
+    "Four regional PDF downloads verified by hash",
+    "Full-process reopen and independent output verification",
+    "Immediate confirmation, retained page attachment, fresh metadata and host-language Save dialog documented",
+    "Visible, Open Graph and Article images agree in URL and dimensions",
+    "English source retained; new regional guides validated separately"
+  ],
+  "evidenceScope": "Historical native captures and output receipts retain their original version and scope; this check validates website integration.",
+  "limitations": [
+    "No new end-to-end qualification of every historical German workflow",
+    "No new Windows or native iPad qualification"
+  ]
+}

@@ -233,7 +233,7 @@
       "target": "Les valeurs sont des références du dessin, pas de nouveaux résultats de tests de l’application. Travaillez sur une copie et vérifiez votre fichier enregistré."
     },
     "exercise.historicalMac": {
-      "source": "Inspect the saved Mac example and its tested local build →",
+      "source": "Inspect the saved Mac example and its test record →",
       "target": "Ancien exemple américain : consulter le fichier Mac enregistré et la version locale testée →"
     },
     "exercise.download.A": {

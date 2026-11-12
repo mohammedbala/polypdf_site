@@ -1,0 +1,256 @@
+{
+  "schemaVersion": 1,
+  "locale": "fr-FR",
+  "appBuild": 114,
+  "version": "1.6.32",
+  "platform": "macOS",
+  "asarSha256": "aefb8f96296779d4f222408d18a675626224739a6a397ae40cf665942e86621f",
+  "captures": {
+    "calibration": {
+      "path": "/localized-media/fr/guides114/calibration.webp",
+      "sha256": "621b5753e59b42265f49b4e4337e5e12f6d48e7eeeceea1bc22a45e65f4af90e",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "07e3df6b38bbcde1c858543913950a0bf2ef9836fe4de491bb86b9f555f7fc8d",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "area": {
+      "path": "/localized-media/fr/guides114/area.webp",
+      "sha256": "12a2b7c5af3ae0430e449a283d8dc1528a7ef5b05b64e2c3c66cfc597f71b8dc",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "a844c0b6399521eeb4a23956ce0c50bd12916fa798e9a6b9129a08e517ca1508",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "count": {
+      "path": "/localized-media/fr/guides114/count.webp",
+      "sha256": "3d8cab5e9463e5b4a3029150e4c44c73c81c8e6ef530a08c60b257d1c892301e",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "c3eca39778fd776e404aed1c115075fb673e77e1b22c865c86673e5487d87d03",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "compare": {
+      "path": "/localized-media/fr/guides114/compare.webp",
+      "sha256": "6a239e95af6e5fd17a696314ed788def98dcdf179b76c0e5f61240904fe5bc2f",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "098170b2b9c18e961dd00c3b4c1d2d34c08644c7d3d15f80cceb5c48c9fb441b",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "markup": {
+      "path": "/localized-media/fr/guides114/markup.webp",
+      "sha256": "81207250e99e9214df57516c39c2cbfa20c880a0a32540c8c3aa223c159729a0",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "47fe52fb2ca62e26df756941bb50b962c8bc1a76b8cbc2f2779a1970c32e8471",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "ocr": {
+      "path": "/localized-media/fr/guides114/ocr.webp",
+      "sha256": "00a5ca2881426422be661f166ce5033108468ad951c2a25af6b5a9d4bddbaeef",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "30d6d19d1f209f0e040aabf3defc0f2566e5ea6ce6590038683755170a827602",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "forms": {
+      "path": "/localized-media/fr/guides114/forms.webp",
+      "sha256": "40ebc5bffc81961a4bf5ffeaa6a03a99fc34ef942c90fe28ad3559950b6c97c9",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "b2a92f5eceaaa6c002fb1562d2832e98aa008015ff330a704e5aedc2a3b7364f",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "stamps": {
+      "path": "/localized-media/fr/guides114/stamps.webp",
+      "sha256": "180edb12504df1247e645824365626371ab59b731ae8af0c1de47a6d4b7022c4",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "8e028568a458e4383e9024db9bd08d497278114c872c4ab33961a4dfad4eff4b",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    },
+    "redaction": {
+      "path": "/localized-media/fr/guides114/redaction.webp",
+      "sha256": "e118e686357b920593b7c8d606d4db50642385acf15029737371de1e8b8e5457",
+      "width": 2200,
+      "height": 1203,
+      "kind": "native-interface",
+      "sourceSha256": "66c02bde09a25119184c4b6161b3586c3eb8b77f7fddeadc2f185aeb3ff80f04",
+      "sourceSize": [
+        3420,
+        2028
+      ],
+      "crop": [
+        0,
+        158,
+        3420,
+        2028
+      ],
+      "capturedAt": "2026-11-12",
+      "scope": "Interface state shown; not a complete saved-output qualification"
+    }
+  },
+  "resources": [
+    {
+      "path": "/localized-media/fr/samples/construction/01-Plan-de-masse-et-terrain.pdf",
+      "sha256": "354403216dd1474e9cb17aa324b3e59d42efb3b146f026c9768692a45a993ab5"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/02-Architecture-Indice-A.pdf",
+      "sha256": "1c74b81bab45046991836c27adfd3e60a5573787a88bf0b41dce3d7e45d727af"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/03-Architecture-Indice-B.pdf",
+      "sha256": "3f5c40af9e0239c116c1c28b99bdd0940d0d6985725c4acc75dcb71e5ae3c20f"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/04-Fondations-et-structure.pdf",
+      "sha256": "f811af1b75e09f586be574429d6e3a83376c4377aa479d172669b40590275580"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/05-Ventilation.pdf",
+      "sha256": "85be8f2049ab0d1888d8c969223d8217a0a1f047772f9d85f93c9e5693b7d2cc"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/06-Eclairage-et-electricite.pdf",
+      "sha256": "6f892ae33c460d3e1f1a3ebe7b2c48f5f506988a44369c0e0671192b1dde771c"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/07-Eau-potable-et-evacuation.pdf",
+      "sha256": "4b166b450dc7f3c9bcaeff93da48627a2be859951fefb6e8172847d47ac0ea31"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/08-Securite-incendie-Exercice.pdf",
+      "sha256": "0f161707a35464ec8f18fb30b079bcbd0ce1964a8613d3d5f2d37e0199cddb56"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/09-Amenagements-paysagers.pdf",
+      "sha256": "54c63765da4582cdcad9a341dcaf629193a6562d4227956ab95d3b501c3d9874"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/10-Revetements-et-mobilier-integre.pdf",
+      "sha256": "45a557222e6e0c4dce9730201d765e30c7244b0a9ddea55953b5a820b4881ec8"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/11-Synthese-et-verification.pdf",
+      "sha256": "47e7f5a121041ac7d8e0f350c3234bdca1b1c1c4a0a9866acf0e929bcf004027"
+    },
+    {
+      "path": "/localized-media/fr/samples/construction/12-Plans-existants-numerises.pdf",
+      "sha256": "586173211ca8bf882acb2aa7de93c7c788c9c8375dfc667dbc2ad3417ec014f3"
+    },
+    {
+      "path": "/localized-media/fr/samples/forms114/construction-review-field-map.csv",
+      "sha256": "ae15057a2e329c0a7b52bdb3c3610962ac305caa89630d111bbd332be3e3b4c1"
+    },
+    {
+      "path": "/localized-media/fr/samples/forms114/construction-review-form-fr.pdf",
+      "sha256": "16fca8fa5cd1507f6ebb224236d1b6593cfe78fb25629d92268ef97a2fe14775"
+    },
+    {
+      "path": "/localized-media/fr/samples/forms114/manifest.json",
+      "sha256": "f36d7db85f6ea046818bcda000f749eaea4e6380757b27bb56d1570af87253fb"
+    },
+    {
+      "path": "/localized-media/fr/samples/forms114/source-verification.json",
+      "sha256": "d2a0a0bbb558d76572507ef4e69e2b812f48d97a345627a2a1dd42c1e7db086c"
+    }
+  ]
+}

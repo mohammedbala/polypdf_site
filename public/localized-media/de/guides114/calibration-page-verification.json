@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "route": "/de/blog/calibrate-pdf-drawing-scale/",
+  "htmlSha256": "f441ffbc53dd8ccc91e265c3f594f2de6cf966f408ebf2cb4ad72583ef6b9017",
+  "localizedImages": 5,
+  "localizedDownloads": 5,
+  "sourceFiles": {
+    "scripts/international/build.cjs": "88b1baf7c4dca38a5f3670494fba8280363bda047bc4a9edce2d9e82dda98874",
+    "scripts/international/verify.cjs": "110cf6666bf7bbfbb3e09bb9eb0c38c085f05445e9eeae5ca6bdd3b5c5127195",
+    "scripts/localization/media.cjs": "66ff44d39d7374a2c14fd872e666dc1c684b8b8026e9d833e5163566f7336d9c",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/localization/calibration-de.json": "8bb5b40231fdf46ddfe47f175e26985d8b232942d3a7e69baa5f21cd35a6d6f8",
+    "scripts/localization/capture-calibration-de.mjs": "78929d3f7c7e2b3bcca820ce40308d3a40c869e812dd124e7aeaf40a2933262d",
+    "scripts/localization/register-calibration-de.cjs": "b5c97cb980ba57ce126d4f3ddfb05de1f5cceca4100718430d3702c83f72304c",
+    "scripts/localization/verify-calibration-page.cjs": "dcc484667f2fc8b4ed09720ecf83d18bff78a3b730cdad3df80a223b90c9ad2a",
+    "src/content/guides/calibrate-pdf-drawing-scale.js": "da24cdcb32348803ae808665673398ba06440f56e56340926ffe8d2d6a7a4685",
+    "src/content/translations/de.json": "108d9d6d70db82c962ecc4ad68e08c05da2376138b5772860df333e8b36537ee",
+    "src/lib/route-metadata.json": "0ed24ababf72a9bcc295576272e4657332ac567848f1e538beb3b7e35496f9a5",
+    "src/components/CalibrationPractice.js": "9cba1d4686b44596ea3a026ff118a260c68744cff5d4da2d17b0a5aec153576c",
+    "src/components/BlogPost.js": "c5f1615a9d4096bbe03ef1ee497faf63f593c5ab464cf0816464b1a5450ecb73",
+    "src/localization/walkthrough-media.json": "50810412d805aa77ee06b728706f75d1802decd33d869c7d7e3a0a2677f9d026"
+  },
+  "checks": [
+    "All five instructional images and drawing previews resolve to exact verified German bytes",
+    "All regional downloads point into the German media pack",
+    "Visible hero, Open Graph, Twitter and Article image agree",
+    "Captions, formulas, reference dimensions and verification scope match the German exercise",
+    "English source retained; new regional guides validated separately"
+  ],
+  "evidenceScope": "Historical native captures and output receipts retain their original version and scope; this check validates website integration.",
+  "limitations": [
+    "No new end-to-end qualification of every historical German workflow",
+    "No new Windows or native iPad qualification"
+  ]
+}

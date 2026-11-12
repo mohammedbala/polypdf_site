@@ -5,6 +5,8 @@ const path = require('path');
 const assert = require('node:assert/strict');
 const { JSDOM } = require('jsdom');
 const c = require('./content.cjs');
+const regionalGuides = require('../localization/regional-guides.cjs');
+regionalGuides.validateCatalogs();
 const checks = require('./discovery-checks.cjs');
 const pageDates = require('./page-dates.cjs');
 const walkthroughMedia = require('../../src/localization/walkthrough-media.json');
@@ -76,7 +78,9 @@ for (const e of manifest.routes) {
   assert.equal(url.getElementsByTagNameNS('http://www.w3.org/1999/xhtml','link').length,c.locales.length+2,prefix+'sitemap alternatives');
   checks.assertLocalizedLastmod(url.querySelector('lastmod')?.textContent,pageDates.expectedLastmod({path:e.route,kind:'marketing'},pageDates.documentContentHash(d),ledger,lastmod(c.ORIGIN+c.routePath(e.source))),prefix);
   if(e.source==='/')checks.assertLocalizedHomeSchema([...d.querySelectorAll('script[type="application/ld+json"]')].map((s)=>JSON.parse(s.textContent)),strings[locale.id][productDescription],prefix);
-  if(e.source!=='/') {
+  const authoredGuide=regionalGuides.find(locale.id,e.source);
+  if(authoredGuide)regionalGuides.verifyDocument(d,authoredGuide,build);
+  if(e.source!=='/' && !authoredGuide) {
     const original=englishStructures.get(e.source);
     const regionalPage=localizedPage(walkthroughMedia,locale,e.source);
     assert.equal(d.querySelectorAll('#localized-content .legal-section').length,original.sections,prefix+'all sections retained');

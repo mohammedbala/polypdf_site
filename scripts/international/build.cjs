@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const c = require('./content.cjs');
+const regionalGuides = require('../localization/regional-guides.cjs');
+regionalGuides.validateCatalogs();
 const { assetPath, localizeWalkthroughMedia, localizeRegionalCopy, resolveAsset, verifyMediaFiles } = require('../localization/media.cjs');
 const walkthroughMedia = require('../../src/localization/walkthrough-media.json');
 const {localizedPage,pageTranslator,localizePageElements,localizePageLinks,localizeArticleImages} = require('../localization/pages.cjs');
@@ -40,6 +42,7 @@ for (const locale of allLocales) {
   const t = baseTranslate;
   const entries = [];
   for (const route of c.routes) {
+    const guide = collect ? null : regionalGuides.find(locale.id,route);
     const page = collect ? null : localizedPage(walkthroughMedia,locale,route);
     const useRegionalMedia = !collect && (localizedMediaLocales.has(locale.id) || Boolean(page));
     const t = pageTranslator(baseTranslate,page);
@@ -53,23 +56,27 @@ for (const locale of allLocales) {
     if (useRegionalMedia) localizeWalkthroughMedia(d, locale, walkthroughMedia, page);
     else c.localizeMetricPlan(d,locale,t);
     localizePageLinks(d,locale,page,value=>fs.readFileSync(path.join(build,value)));
+    if(guide || page)regionalGuides.localizeEvaluation(d,locale.id);
+    const guideCapture = guide ? regionalGuides.render(d,guide,build) : null;
     const canonical = c.ORIGIN+c.localizedPath(locale.id,route);
     const translatedMeta = {...meta,title:t(meta.title),description:t(meta.description),imageAlt:t(meta.imageAlt || 'PolyPDF — PDF drawing measurement and markup on Mac and Windows')};
-    translatedMeta.title = editorialTitles[locale.id]?.[route] || translatedMeta.title;
+    translatedMeta.title = guide ? guide.title+' | PolyPDF' : editorialTitles[locale.id]?.[route] || translatedMeta.title;
+    if(guide){translatedMeta.description=guide.intro;translatedMeta.imageAlt=guide.caption;}
     // The title tag may add a "| suffix"; the visible H1 and the article headline are the text before it.
     const visibleTitle = translatedMeta.title.split('|')[0].trim();
     d.querySelector('h1').textContent = visibleTitle;
     const sourceImage = meta.image || `/og-image.png?v=${require('../../src/lib/siteRelease.json').screenshotCacheToken}`;
-    const image = new URL(useRegionalMedia ? resolveAsset(sourceImage, locale, walkthroughMedia) : sourceImage,c.ORIGIN).href;
+    const image = new URL(guideCapture ? guideCapture.path : useRegionalMedia ? resolveAsset(sourceImage, locale, walkthroughMedia) : sourceImage,c.ORIGIN).href;
     const regionalImage = useRegionalMedia ? walkthroughMedia.locales[locale.id].assets[assetPath(sourceImage)] : null;
-    const imageWidth = regionalImage?.width || meta.imageWidth || 1200;
-    const imageHeight = regionalImage?.height || meta.imageHeight || 630;
+    const imageWidth = guideCapture?.width || regionalImage?.width || meta.imageWidth || 1200;
+    const imageHeight = guideCapture?.height || regionalImage?.height || meta.imageHeight || 630;
     const blocks = c.mapSchema(schema,t,locale);
     // The product is one shared entity (@id .../#software): it keeps the same url on every localized home.
     if (route === '/') blocks.forEach((block,i)=>{ if (block['@type'] === 'SoftwareApplication' && schema[i]?.url) block.url = schema[i].url; });
     if (useRegionalMedia) localizeArticleImages(blocks,locale,walkthroughMedia);
     for (const block of blocks) {
       if (block['@type'] === 'BlogPosting') {
+        if(guide){block.description=guide.intro;block.image=c.ORIGIN+guideCapture.path;block.dateModified='2026-11-12';}
         block.inLanguage = locale.language;
         block.headline = visibleTitle;
         block.translationOfWork = {'@type':'BlogPosting',url:c.ORIGIN+c.routePath(route),inLanguage:'en'};
@@ -78,7 +85,7 @@ for (const locale of allLocales) {
     }
     if (route === '/') blocks.push({'@context':'https://schema.org','@type':'WebPage',url:canonical,name:translatedMeta.title,description:translatedMeta.description,inLanguage:locale.language,isPartOf:{'@id':c.ORIGIN+'/#website'}});
     const consentUI = `<section data-local-consent class="localized-consent"><aside data-consent-banner hidden class="cookie-banner"><div class="container cookie-banner-inner"><p>${c.esc(t('Google cookies measure visits and ad results, only with your permission.'))} <a href="/cookies/" hreflang="en">${c.esc(t('Details'))}</a></p><div class="cookie-banner-actions"><button data-consent-action="reject">${c.esc(t('Reject optional cookies'))}</button><button data-consent-action="accept">${c.esc(t('Accept optional cookies'))}</button><button data-consent-action="settings">${c.esc(t('Cookie settings'))}</button></div></div></aside><button class="localized-cookie-settings" data-consent-action="settings">${c.esc(t('Cookie settings'))}</button><dialog class="privacy-dialog" aria-labelledby="local-cookie-title"><h2 id="local-cookie-title">${c.esc(t('Cookie settings'))}</h2><p>${c.esc(t('Choose how this browser shares information. You can change your choice here at any time.'))}</p><p data-privacy-signal hidden>${c.esc(t('Your browser privacy signal keeps optional tracking off.'))}</p><label class="privacy-option"><input type="checkbox" name="analytics"><span>${c.esc(t('Analytics'))} — ${c.esc(t('Google cookies measure visits and ad results, only with your permission.'))}</span></label><label class="privacy-option"><input type="checkbox" name="marketing"><span>${c.esc(t('Advertising measurement'))}</span></label><p><a href="/cookies/" hreflang="en">${c.esc(t('Cookie details and durations'))}</a> · <a href="/privacy/" hreflang="en">${c.esc(t('Privacy policy and your rights'))}</a></p><div class="privacy-actions"><button data-consent-action="reject">${c.esc(t('Reject optional cookies'))}</button><button data-consent-action="accept">${c.esc(t('Accept optional cookies'))}</button><button data-consent-action="save">${c.esc(t('Save choices'))}</button><button data-consent-action="close">${c.esc(t('Close without saving'))}</button></div><p>${c.esc(t('Changing a previously allowed category to off reloads this page to stop already loaded tracking. If browser storage is blocked, your choice lasts for this page only.'))}</p></dialog></section>`;
-    const html = `<!doctype html><html lang="${locale.language}" dir="${locale.dir || 'ltr'}" class="localized-page"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${c.esc(translatedMeta.title)}</title><meta name="description" content="${c.esc(translatedMeta.description)}"><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="${canonical}">${c.alternatives(route).map((a)=>`<link rel="alternate" hreflang="${a.language}" href="${a.href}">`).join('')}<link rel="alternate" type="application/rss+xml" href="/${locale.id}/feed.xml" title="PolyPDF — ${locale.label}"><meta property="og:type" content="${meta.type || 'website'}"><meta property="og:url" content="${canonical}"><meta property="og:title" content="${c.esc(translatedMeta.title)}"><meta property="og:description" content="${c.esc(translatedMeta.description)}"><meta property="og:locale" content="${locale.og}"><meta property="og:image" content="${image}"><meta property="og:image:alt" content="${c.esc(translatedMeta.imageAlt)}"><meta property="og:image:width" content="${imageWidth}"><meta property="og:image:height" content="${imageHeight}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${c.esc(translatedMeta.title)}"><meta name="twitter:description" content="${c.esc(translatedMeta.description)}"><meta name="twitter:image" content="${image}"><meta name="twitter:image:alt" content="${c.esc(translatedMeta.imageAlt)}"><link rel="icon" href="/favicon.ico">${assets}${blocks.map((b)=>`<script type="application/ld+json">${json(b)}</script>`).join('')}</head><body>${d.body.innerHTML}${consentUI}<script defer src="${trackingScript}"></script></body></html>`;
+    const html = `<!doctype html><html lang="${locale.language}" dir="${locale.dir || 'ltr'}" class="localized-page"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${c.esc(translatedMeta.title)}</title><meta name="description" content="${c.esc(translatedMeta.description)}"><meta name="robots" content="index, follow, max-image-preview:large"><link rel="canonical" href="${canonical}">${c.alternatives(route).map((a)=>`<link rel="alternate" hreflang="${a.language}" href="${a.href}">`).join('')}<link rel="alternate" type="application/rss+xml" href="/${locale.id}/feed.xml" title="PolyPDF — ${locale.label}"><meta property="og:type" content="${meta.type || 'website'}"><meta property="og:url" content="${canonical}"><meta property="og:title" content="${c.esc(translatedMeta.title)}"><meta property="og:description" content="${c.esc(translatedMeta.description)}"><meta property="og:locale" content="${locale.og}"><meta property="og:image" content="${image}"><meta property="og:image:alt" content="${c.esc(translatedMeta.imageAlt)}"><meta property="og:image:width" content="${imageWidth}"><meta property="og:image:height" content="${imageHeight}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${c.esc(translatedMeta.title)}"><meta name="twitter:description" content="${c.esc(translatedMeta.description)}"><meta name="twitter:image" content="${image}"><meta name="twitter:image:alt" content="${c.esc(translatedMeta.imageAlt)}"><link rel="icon" href="/favicon.ico">${assets}${guide ? '<link rel="stylesheet" href="/regional-guides.css">' : ''}${blocks.map((b)=>`<script type="application/ld+json">${json(b)}</script>`).join('')}</head><body>${d.body.innerHTML}${consentUI}<script defer src="${trackingScript}"></script></body></html>`;
     const entry = {route:c.localizedPath(locale.id,route),source:route,language:locale.language,title:translatedMeta.title,description:translatedMeta.description,type:meta.type || 'website',image,published:blocks.find((b)=>b['@type']==='BlogPosting')?.datePublished};
     entries.push(entry); manifest.push(entry);
     t.verify();

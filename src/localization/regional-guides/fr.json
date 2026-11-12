@@ -1,0 +1,197 @@
+{
+  "locale": "fr-FR",
+  "region": "FR",
+  "project": "Maison de quartier des Tilleuls",
+  "date": "12/11/2026",
+  "labels": {
+    "edition": "Exercices pour la France",
+    "files": "Fichiers de l’exercice",
+    "steps": "Procédure",
+    "check": "Résultat à contrôler",
+    "pitfall": "Point de vigilance",
+    "related": "Les neuf exercices",
+    "library": "Bibliothèque de plans : 12 PDF, 24 feuilles A1",
+    "download": "Télécharger PolyPDF en français",
+    "mac": "Mac",
+    "windows": "Windows",
+    "evidence": "Interface réelle de PolyPDF 1.6.32, build 114, sur Mac. Les captures montrent l’étape indiquée ; les valeurs de référence viennent des dessins d’exercice.",
+    "scope": "Projet fictif. Plans en mètres, détails en millimètres et dates au format JJ/MM/AAAA. Ces documents servent à apprendre les outils ; ils ne constituent pas un dossier d’exécution.",
+    "source": "Ouvrir le dessin",
+    "practice": "Formulaire A4 à remplir",
+    "notice": "Édition adaptée aux plans français. Les menus de fichiers de macOS suivent la langue du système. Les prix, le paiement et les politiques restent sur les pages en anglais.",
+    "fieldMap": "Liste des champs du formulaire · CSV"
+  },
+  "guides": [
+    {
+      "id": "calibration",
+      "title": "Étalonner un plan PDF avec une cote connue",
+      "intro": "Utilisez la feuille A101 de l’indice A. Sa barre de référence mesure 5,00 m et son emprise extérieure 24,00 × 15,00 m.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Ouvrez une copie du PDF 02 et affichez la première page, A101. Vérifiez l’indice A dans le cartouche.",
+        "Ouvrez Mesures, puis Échelle. Choisissez Métrique.",
+        "Cliquez sur Étalonner en traçant une ligne. Zoomez sur la barre de référence de 5,00 m et pointez ses deux extrémités.",
+        "Dans Distance connue, saisissez 5000 : le dialogue interprète ici les nombres seuls en millimètres. Validez avec OK.",
+        "Mesurez une seconde cote : la façade extérieure doit correspondre à 24,00 m. Vérifiez les unités d’affichage.",
+        "Enregistrez une copie avec son indice et rouvrez-la. Contrôlez l’échelle de chaque page utilisée ; la deuxième page comporte des détails différents."
+      ],
+      "check": "Référence : 5000 mm = 5,00 m. Contrôle indépendant : 24,00 m ; emprise théorique : 360,00 m². Une mesure cliquée doit être rapprochée de ces cotes, sans imposer artificiellement le résultat.",
+      "pitfall": "Un clic approximatif sur une petite barre affecte toutes les quantités. Si les extrémités ne sont pas alignées, zoomez ou utilisez l’alignement au contenu, puis recommencez.",
+      "caption": "Saisie de 5000 mm pour la référence française de 5,00 m."
+    },
+    {
+      "id": "area",
+      "title": "Mesurer une surface nette et son volume",
+      "intro": "Sur A101, partez de l’emprise de 24,00 × 15,00 m. Pour l’exercice, excluez le local WC 1 de 18,00 m² et appliquez une profondeur de 120 mm.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Étalonnez A101 avec la barre de 5,00 m et contrôlez une seconde cote avant de tracer une surface.",
+        "Choisissez l’outil Surface. Pointez les quatre angles extérieurs et terminez le polygone par un double-clic.",
+        "Sélectionnez la surface et contrôlez son contour. Ne confondez pas l’emprise extérieure avec la surface utile intérieure.",
+        "Ajoutez une découpe correspondant au local WC 1, repère 107. Vérifiez que la zone est retranchée de la bonne surface.",
+        "Renseignez une profondeur de 120 mm, soit 0,12 m, dans les propriétés de la surface.",
+        "Consultez les mesures et exportez le relevé. Gardez séparées la surface brute, la découpe, la surface nette et la profondeur."
+      ],
+      "check": "Références géométriques : 360,00 − 18,00 = 342,00 m² nets ; 342,00 × 0,12 = 41,04 m³. Les pertes et règles de métré du projet se traitent séparément.",
+      "pitfall": "La capture montre un tracé manuel et son volume brut. Ce n’est pas le résultat net de l’exercice. Corrigez un écart de tracé ou d’étalonnage avant d’utiliser une quantité.",
+      "caption": "Surface tracée manuellement et profondeur de 120 mm dans l’interface française."
+    },
+    {
+      "id": "count",
+      "title": "Compter les symboles sans inclure la légende",
+      "intro": "La première feuille du PDF de ventilation, M101, contient 16 bouches de soufflage dans le plan et un symbole supplémentaire dans la légende.",
+      "documents": [
+        "05"
+      ],
+      "steps": [
+        "Ouvrez le PDF 05, page M101. Repérez une bouche de soufflage et la légende située à droite.",
+        "Dans la recherche, choisissez la recherche de symboles et délimitez un symbole propre, sans son repère ni les traits voisins.",
+        "Limitez la recherche à la première page et lancez-la. La recherche de symboles nécessite Pro.",
+        "Examinez chaque proposition. Écartez le symbole de légende et toute détection portant sur un autre équipement.",
+        "Transformez les correspondances retenues en marqueurs de comptage ; ajoutez manuellement un symbole manqué après contrôle visuel.",
+        "Nommez la série, vérifiez les marqueurs sur le dessin et exportez le tableau avec la feuille et l’indice."
+      ],
+      "check": "16 bouches de soufflage dans le plan. La légende en ajoute une : 17 symboles dessinés ne signifient donc pas 17 équipements à poser.",
+      "pitfall": "Le nombre de correspondances brutes dépend du cadrage et des réglages. Ne publiez pas ce nombre avant d’avoir examiné chaque résultat. Contrôle du 12/11/2026 sur Mac, build 114 : la sélection d’un échantillon par partage d’écran a renvoyé « Invalid PDF tile render request ». La capture conserve ce message ; aucun comptage automatique n’est validé par ce contrôle. Si ce message apparaît, arrêtez la recherche et comptez les 16 symboles du plan manuellement ; n’utilisez pas un résultat incomplet.",
+      "caption": "Recherche de symboles en français sur M101 : message d’erreur rencontré pendant le contrôle par partage d’écran. La quantité de référence doit être vérifiée manuellement."
+    },
+    {
+      "id": "compare",
+      "title": "Comparer deux indices d’un plan de construction",
+      "intro": "Les PDF 02 et 03 représentent les indices A et B du même projet. Comparez les feuilles A101 entre elles avant de passer aux détails.",
+      "documents": [
+        "02",
+        "03"
+      ],
+      "steps": [
+        "Ouvrez le PDF 02, indice A, puis Document > Comparer les documents.",
+        "Choisissez le PDF 03 comme fichier révisé. Confirmez les cartouches, l’orientation et le format A1.",
+        "Saisissez la page 1 des deux fichiers pour comparer A101 avec A101.",
+        "Créez un nouveau document de comparaison afin de conserver les fichiers sources.",
+        "Examinez les zones signalées avec les deux plans sous les yeux. Distinguez la géométrie modifiée du cartouche et des textes de révision.",
+        "Ajoutez les commentaires utiles et enregistrez le résultat sous un nom contenant les indices A et B."
+      ],
+      "check": "Trois changements géométriques sont annoncés : cloison 103/104 déplacée de 1,50 m ; porte 104 déplacée de 0,75 m vers l’est ; fenêtre de 1,50 m ajoutée en façade sud.",
+      "pitfall": "Le nombre de nuages n’est pas un nombre contractuel de modifications. Des zones proches peuvent être regroupées et le cartouche peut aussi être signalé.",
+      "caption": "Choix des fichiers et des pages pour une comparaison en français."
+    },
+    {
+      "id": "markup",
+      "title": "Suivre les remarques dans le tableau des annotations",
+      "intro": "Le PDF 11 rassemble les plans de synthèse X101 et X102. X101 comporte quatre calques et trois notes modifiables pour l’exercice.",
+      "documents": [
+        "11"
+      ],
+      "steps": [
+        "Ouvrez une nouvelle copie du PDF 11 et affichez X101.",
+        "Dans Calques, affichez et masquez les disciplines pour examiner les conflits indiqués par les trois notes.",
+        "Ajoutez un nuage et un commentaire précis autour d’un point à clarifier. Indiquez la feuille, le local et l’action attendue.",
+        "Ouvrez le tableau des annotations. Renseignez un objet cohérent et les champs de suivi disponibles.",
+        "Filtrez le tableau pour relire les remarques concernées. Vérifiez sur le dessin que chaque ligne correspond à la bonne zone.",
+        "Exportez le tableau et enregistrez le PDF annoté. Rouvrez les deux fichiers pour vérifier le texte, les accents et les références."
+      ],
+      "check": "Retrouvez les trois notes initiales, les quatre calques et chaque annotation ajoutée. Un export doit conserver le lien logique entre remarque, feuille, responsable et suite à donner.",
+      "pitfall": "Les noms des calques viennent du PDF ; ils peuvent différer des intitulés des outils. Évitez de remplacer une observation précise par un simple statut.",
+      "caption": "Tableau des annotations en français, illustré ici avec les nuages de comparaison du plan A101. L’exercice ci-dessous utilise la feuille de synthèse X101."
+    },
+    {
+      "id": "ocr",
+      "title": "Rendre un plan numérisé recherchable avec l’OCR",
+      "intro": "Le PDF 12 contient deux pages numérisées du projet français. Utilisez une copie et contrôlez le texte reconnu sur l’image originale.",
+      "documents": [
+        "12"
+      ],
+      "steps": [
+        "Ouvrez le PDF 12 et essayez de sélectionner ou rechercher un mot imprimé pour vérifier l’absence de texte exploitable.",
+        "Ouvrez Document > OCR. PolyPDF lance le traitement avec le moteur disponible sur cet ordinateur.",
+        "Attendez la fin du traitement. Le dialogue indique la progression et les limites des écritures prises en charge.",
+        "Après traitement, recherchez TILLEULS sur la première page et une cote clairement lisible.",
+        "Sélectionnez un passage reconnu et comparez-le visuellement au scan, notamment les accents, virgules décimales et repères.",
+        "Enregistrez une copie OCR et rouvrez-la. Refaites une recherche et vérifiez que les deux pages et leur orientation sont conservées."
+      ],
+      "check": "Le texte doit être sélectionnable et retrouvable sur les pages traitées. Le résultat OCR reste à relire ; il ne remplace ni l’image ni les cotes validées.",
+      "pitfall": "L’OCR n’étalonne pas le dessin et ne transforme pas automatiquement les traits du scan en géométrie mesurable.",
+      "caption": "Suivi du traitement OCR dans l’interface française."
+    },
+    {
+      "id": "forms",
+      "title": "Remplir et créer des champs de formulaire PDF",
+      "intro": "La fiche A4 de revue de chantier utilise le projet français, la date JJ/MM/AAAA et dix champs logiques, dont un groupe de trois boutons radio.",
+      "documents": [],
+      "form": true,
+      "steps": [
+        "Téléchargez la fiche de revue A4. Ouvrez une copie dans PolyPDF.",
+        "Renseignez le projet, la date de visite, la personne chargée de la revue et la référence du plan.",
+        "Choisissez un lot, sélectionnez un seul état et cochez les contrôles effectués.",
+        "Ajoutez une observation avec un responsable et une prochaine action. Vérifiez que le texte reste visible dans le champ.",
+        "Pour créer un champ supplémentaire, activez le mode de création de formulaire et choisissez son type. Donnez-lui un nom unique et vérifiez sa position.",
+        "Enregistrez sous un nouveau nom, fermez et rouvrez le PDF. Vérifiez chaque valeur, les cases cochées et le choix du groupe radio."
+      ],
+      "check": "La fiche source contient 10 champs logiques et 12 widgets. Le groupe radio n’autorise qu’un état à la fois. Testez la copie enregistrée dans le lecteur prévu pour le destinataire.",
+      "pitfall": "Un texte dessiné sur la page n’est pas un champ interactif. Ne déduisez pas la persistance des valeurs de leur seul affichage avant l’enregistrement.",
+      "caption": "Commandes de création de champs dans l’interface française."
+    },
+    {
+      "id": "stamps",
+      "title": "Créer un tampon de revue avec des champs à renseigner",
+      "intro": "Créez un tampon de suivi pour les plans des Tilleuls avec une personne responsable et une date. Placez-le sur une copie d’A101.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Ouvrez Outils > Tampons > Créer un tampon interactif.",
+        "Nommez le modèle et réglez ses dimensions en points PDF. Cette taille correspond au tampon sur la page, pas à l’échelle du bâtiment.",
+        "Ajoutez une étiquette de revue et un champ texte Responsable. Activez la demande lors du placement et rendez ce champ obligatoire.",
+        "Ajoutez un champ de date, vérifiez sa source de valeur et le format affiché.",
+        "Alignez les éléments et prévisualisez le tampon. Conservez le modèle dans le jeu d’outils pour le réutiliser.",
+        "Insérez-le sur une copie du plan, renseignez les valeurs demandées et vérifiez le tampon après enregistrement et réouverture."
+      ],
+      "check": "Le nom et la date doivent être lisibles sans chevauchement. Placez une seconde instance pour vérifier que les valeurs variables ne sont pas figées dans le modèle.",
+      "pitfall": "Un tampon de revue n’est pas une signature numérique et ne prouve pas à lui seul une approbation contractuelle.",
+      "caption": "Champ Responsable et option obligatoire dans l’éditeur de tampon français."
+    },
+    {
+      "id": "redaction",
+      "title": "Caviarder une information et assainir une copie PDF",
+      "intro": "Exercez-vous sur l’adresse fictive du cartouche d’A101. Conservez toujours le PDF de départ et travaillez sur une copie destinée à la diffusion.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Repérez l’adresse fictive dans le cartouche et recherchez ses autres occurrences dans le document.",
+        "Activez Caviarder et tracez une zone sur l’adresse de la copie. La confirmation apparaît dès que vous terminez le rectangle.",
+        "Vérifiez la zone avant de confirmer le caviardage ; annulez si elle est incorrecte. Un rectangle de dessin opaque ne supprime pas le contenu sous-jacent.",
+        "Ouvrez Document > Assainir le document. Examinez les catégories proposées, notamment les métadonnées et pièces jointes.",
+        "Enregistrez un nouveau fichier de diffusion, fermez-le et rouvrez-le.",
+        "Contrôlez visuellement les zones et recherchez le texte retiré. Vérifiez aussi les commentaires, pièces jointes et propriétés avant de transmettre."
+      ],
+      "check": "L’adresse visée doit être absente de la recherche et de la sélection de texte dans la copie finale, avec une apparence de page cohérente.",
+      "pitfall": "Le contrôle d’un exercice ne garantit pas le nettoyage de tous les PDF. Examinez les données réellement présentes et les éléments conservés par les options choisies.",
+      "caption": "Options d’assainissement dans l’interface française."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "route": "/de/blog/create-interactive-pdf-stamps/",
+  "htmlSha256": "4c684d81685af6ecd74a4f9fae5f34b41b796853f751825fc889d25d36ca1195",
+  "localizedImages": 4,
+  "localizedPdfDownloads": 2,
+  "sourceFiles": {
+    "scripts/localization/stamps-de.json": "f73ec8d36e6adf7e4dd2d35ff06b63d514fa34f597c55472dc9f62fd7755a119",
+    "scripts/localization/prepare-stamps-de.cjs": "62fe87eca7d846b3b4c643283b0704f69f43e11d95592ec5fe4cbba9953cff25",
+    "scripts/localization/capture-stamps-de.mjs": "5b39d364886d700d7b3ee155d955a7d2ff522cb5ef08b477be82978f403359c1",
+    "scripts/localization/register-stamps-de.cjs": "0c3581cceeb7ea6416770de428395d6792d5b75a6da6e4525911f6d18b8177a2",
+    "scripts/localization/verify-stamps-de.py": "2578770d85d17a83dfd0907fc208d72ec11863bdc6d7d31ad53a9dd2284eba95",
+    "scripts/localization/verify-stamps-page.cjs": "80900770f2f24c9149631c3ca8f76225b8288ec2ff9eb62d73560967d817059f",
+    "scripts/localization/pages.cjs": "4262aa51f2db8735e959140de184c9226db2297b4515a2b21f6c92ea0dca7378",
+    "scripts/international/build.cjs": "88b1baf7c4dca38a5f3670494fba8280363bda047bc4a9edce2d9e82dda98874",
+    "src/content/guides/create-interactive-pdf-stamps.js": "61abb94e517be3498a3d7c4aa682138faa124b7e4221a3965e81bb94a98e393f",
+    "src/localization/walkthrough-media.json": "50810412d805aa77ee06b728706f75d1802decd33d869c7d7e3a0a2677f9d026"
+  },
+  "checks": [
+    "Four actual German app images and matching social image",
+    "Two regional PDF downloads verified by hash",
+    "Full process reopen and retained template with empty reviewer prompt",
+    "Actual 300 × 140 dimensions, checked default and reopened-value edit limitation documented",
+    "English source retained; new regional guides validated separately"
+  ],
+  "evidenceScope": "Historical native captures and output receipts retain their original version and scope; this check validates website integration.",
+  "limitations": [
+    "No new end-to-end qualification of every historical German workflow",
+    "No new Windows or native iPad qualification"
+  ]
+}

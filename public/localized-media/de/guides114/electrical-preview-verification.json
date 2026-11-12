@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "sourceComponentSha256": "63bc16f76c5d20a13d977bfe0fcc0fd5486d13845313c8a15f2dd79b6803c36f",
+  "catalogSha256": "108d9d6d70db82c962ecc4ad68e08c05da2376138b5772860df333e8b36537ee",
+  "regionalProfileSha256": "7324e9eaf76de861fe7823cce01c92db27c5f30fbcd57078e73633bbf7cfe683",
+  "previewSha256": "3a1195a5e4bef8e7358df8ab728cf444cfaf47fd197be6f2e41dab8a39fca811",
+  "checks": [
+    "13 exact-source regional text replacements",
+    "Four US table rows replaced with three German rows",
+    "24/12/8 counts and 34.5 m line agree with regional drawing",
+    "No US project, E601, GFCI or US route references in the four exercise sections",
+    "Strict German translation completed without fallback",
+    "German PDF/CSV/guide destinations resolved"
+  ],
+  "limitations": [
+    "Four exercise sections only; full page screenshots, metadata, FAQ and route policy remain pending",
+    "This standalone electrical preview is not a published localized route"
+  ]
+}

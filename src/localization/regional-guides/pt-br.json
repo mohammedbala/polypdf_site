@@ -1,0 +1,197 @@
+{
+  "locale": "pt-BR",
+  "region": "BR",
+  "project": "Centro Comunitário dos Ipês",
+  "date": "12/11/2026",
+  "labels": {
+    "edition": "Exercícios para o Brasil",
+    "files": "Arquivos do exercício",
+    "steps": "Passo a passo",
+    "check": "Resultado a conferir",
+    "pitfall": "Ponto de atenção",
+    "related": "Os nove exercícios",
+    "library": "Biblioteca de plantas: 12 PDFs, 24 pranchas A1",
+    "download": "Baixar o PolyPDF em português",
+    "mac": "Mac",
+    "windows": "Windows",
+    "evidence": "Interface real do PolyPDF 1.6.32, build 114, no Mac. As capturas mostram a etapa indicada; os valores de referência vêm das plantas de exercício.",
+    "scope": "Projeto fictício. Plantas em metros, detalhes em milímetros e datas DD/MM/AAAA. Estes documentos servem para aprender as ferramentas; não são projetos executivos.",
+    "source": "Abrir a planta",
+    "practice": "Ficha A4 preenchível",
+    "notice": "Edição adaptada às plantas brasileiras. As janelas de arquivos do macOS seguem o idioma do sistema. Os preços, o pagamento e as políticas permanecem nas páginas em inglês.",
+    "fieldMap": "Mapa de campos do formulário · CSV"
+  },
+  "guides": [
+    {
+      "id": "calibration",
+      "title": "Calibrar a escala de uma planta em PDF",
+      "intro": "Use a prancha A101 da revisão A. A barra de referência mede 5,00 m e o contorno externo da edificação, 24,00 × 15,00 m.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Abra uma cópia do PDF 02 na primeira página, A101. Confira a revisão A no carimbo da prancha.",
+        "Abra o painel de medições e a aba de escala. Selecione o sistema métrico.",
+        "Ative a calibração por linha. Amplie a barra de 5,00 m e marque suas duas extremidades.",
+        "Digite 5000 como distância conhecida: nesse diálogo, números sem unidade são interpretados em milímetros. Confirme.",
+        "Meça uma segunda cota, como a fachada externa de 24,00 m. Confira a unidade exibida.",
+        "Salve uma cópia com a revisão e abra novamente. Verifique a escala de cada página; os detalhes podem usar outra escala."
+      ],
+      "check": "5000 mm = 5,00 m. Cota independente: 24,00 m. Área externa teórica: 360,00 m². Compare as medições traçadas com essas referências.",
+      "pitfall": "Um ponto mal posicionado afeta todos os quantitativos. Amplie a planta ou use o ajuste ao conteúdo e refaça a calibração quando houver divergência.",
+      "caption": "Calibração da referência de 5,00 m na interface em português do Brasil."
+    },
+    {
+      "id": "area",
+      "title": "Medir uma área líquida e calcular seu volume",
+      "intro": "Parta do contorno de A101, com 24,00 × 15,00 m. No exercício, desconte o sanitário 1, de 18,00 m², e aplique uma espessura de 120 mm.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Calibre A101 com a referência de 5,00 m e confira uma segunda cota.",
+        "Escolha a ferramenta de área, marque os quatro cantos externos e finalize o polígono com um clique duplo.",
+        "Selecione a medição e confira seu contorno. A projeção externa não equivale à área útil interna.",
+        "Adicione um recorte no sanitário 1, ambiente 107. Confira se ele foi subtraído da medição correta.",
+        "Informe a profundidade de 120 mm, equivalente a 0,12 m.",
+        "Revise o registro de medições e exporte os quantitativos, identificando área bruta, recorte, área líquida e profundidade."
+      ],
+      "check": "Referências geométricas: 360,00 − 18,00 = 342,00 m² líquidos; 342,00 × 0,12 = 41,04 m³. Perdas e critérios específicos do projeto devem ser tratados separadamente.",
+      "pitfall": "A imagem apresenta os controles de área e profundidade. Ela não substitui a conferência das cotas nem representa um quantitativo certificado.",
+      "caption": "Medição manual na interface brasileira: 357,44 m² e profundidade de 120 mm resultam em 42,89 m³ nesta captura. A referência geométrica do exercício é 360,00 m² antes do recorte de 18,00 m²."
+    },
+    {
+      "id": "count",
+      "title": "Contar símbolos sem incluir a legenda",
+      "intro": "A prancha M101 do PDF de ventilação contém 16 difusores de insuflação na planta e mais um símbolo na legenda.",
+      "documents": [
+        "05"
+      ],
+      "steps": [
+        "Abra o PDF 05 na prancha M101. Localize um difusor e a legenda à direita.",
+        "Abra a busca de símbolos e delimite um símbolo limpo, sem sua identificação nem linhas próximas.",
+        "Restrinja a busca à primeira página. A busca de símbolos exige Pro.",
+        "Revise cada correspondência. Exclua o símbolo da legenda e as detecções de outros equipamentos.",
+        "Converta as correspondências aceitas em marcadores de contagem. Acrescente manualmente um símbolo omitido após conferência visual.",
+        "Nomeie a série e exporte o registro com a prancha e a revisão. Compare o total com os marcadores visíveis."
+      ],
+      "check": "16 difusores na planta. Os 17 símbolos desenhados incluem um exemplo de legenda, que não representa um equipamento a instalar.",
+      "pitfall": "O resultado inicial depende do enquadramento e das configurações. Use o total revisado, não a quantidade automática sem conferência. Em uma conferência com a interface francesa de 12/11/2026 no Mac, build 114, a seleção de uma amostra pelo compartilhamento de tela retornou « Invalid PDF tile render request ». A captura mostra a preparação, não uma contagem automática validada. Se essa mensagem aparecer, interrompa a busca e conte manualmente os 16 símbolos da planta; não use um resultado incompleto.",
+      "caption": "Busca de símbolos na interface em português do Brasil."
+    },
+    {
+      "id": "compare",
+      "title": "Comparar duas revisões de uma planta PDF",
+      "intro": "Os PDFs 02 e 03 correspondem às revisões A e B do Centro Comunitário dos Ipês. Compare A101 com A101 antes de analisar os detalhes.",
+      "documents": [
+        "02",
+        "03"
+      ],
+      "steps": [
+        "Abra o PDF 02 e escolha a comparação de documentos no menu Documento.",
+        "Selecione o PDF 03 como arquivo revisado. Confira os carimbos, o formato A1 e a orientação.",
+        "Selecione a página 1 dos dois arquivos para comparar a mesma prancha A101.",
+        "Crie um novo documento de comparação e preserve os arquivos de origem.",
+        "Analise as áreas indicadas junto aos dois desenhos. Separe mudanças de geometria das alterações de datas, textos e carimbos.",
+        "Adicione comentários úteis e salve o resultado com um nome que identifique as revisões A e B."
+      ],
+      "check": "Há três mudanças geométricas anunciadas: divisória 103/104 deslocada 1,50 m; porta 104 deslocada 0,75 m para leste; janela de 1,50 m adicionada na fachada sul.",
+      "pitfall": "A quantidade de nuvens não equivale necessariamente ao número de alterações: regiões próximas podem ser agrupadas, e o carimbo também pode ser apontado.",
+      "caption": "Revisões A e B selecionadas na interface brasileira, antes de limitar a comparação à página 1 e executar a análise."
+    },
+    {
+      "id": "markup",
+      "title": "Organizar pendências na tabela de marcações",
+      "intro": "O PDF 11 reúne as pranchas de compatibilização X101 e X102. X101 possui quatro camadas e três notas editáveis para praticar a revisão.",
+      "documents": [
+        "11"
+      ],
+      "steps": [
+        "Abra uma cópia nova do PDF 11 e exiba X101.",
+        "Ative e oculte as camadas por disciplina para analisar os conflitos descritos nas três notas.",
+        "Adicione uma nuvem e um comentário objetivo. Identifique prancha, ambiente, observação e ação necessária.",
+        "Abra a tabela de marcações e preencha um assunto coerente e os campos de acompanhamento disponíveis.",
+        "Filtre e revise as linhas, conferindo a localização de cada observação na planta.",
+        "Exporte a tabela e salve o PDF marcado. Abra ambos novamente e confira textos, acentos e referências."
+      ],
+      "check": "Confira as três notas de origem, as quatro camadas e as marcações acrescentadas. Cada pendência deve permitir identificar seu local e a próxima ação.",
+      "pitfall": "Os nomes das camadas vêm do próprio PDF. Uma situação isolada não substitui a descrição clara de uma pendência.",
+      "caption": "Tabela de marcações na interface em português do Brasil."
+    },
+    {
+      "id": "ocr",
+      "title": "Pesquisar texto em uma planta digitalizada com OCR",
+      "intro": "O PDF 12 contém duas páginas digitalizadas do projeto brasileiro. Trabalhe em uma cópia e compare o texto reconhecido com a imagem.",
+      "documents": [
+        "12"
+      ],
+      "steps": [
+        "Abra o PDF 12 e tente selecionar ou pesquisar uma palavra impressa para conferir a condição inicial.",
+        "Abra OCR no menu Documento. O PolyPDF inicia o reconhecimento com o mecanismo disponível neste computador.",
+        "Aguarde a conclusão. O diálogo informa o andamento e as limitações dos sistemas de escrita compatíveis.",
+        "Após o processamento, pesquise COMUNITÁRIO na primeira página e uma cota legível.",
+        "Selecione um trecho e confira os acentos, as vírgulas decimais e os identificadores dos ambientes.",
+        "Salve uma cópia com OCR, feche e abra novamente. Repita a busca e verifique as duas páginas e sua orientação."
+      ],
+      "check": "O texto deve permitir seleção e pesquisa nas páginas processadas. Revise erros de reconhecimento antes de reutilizar o conteúdo.",
+      "pitfall": "O OCR não calibra a planta nem transforma automaticamente suas linhas digitalizadas em geometria vetorial.",
+      "caption": "Andamento do reconhecimento OCR na interface brasileira."
+    },
+    {
+      "id": "forms",
+      "title": "Preencher e criar campos de formulário PDF",
+      "intro": "A ficha A4 usa o projeto dos Ipês e datas DD/MM/AAAA. Ela contém dez campos lógicos, incluindo um grupo de três opções exclusivas.",
+      "documents": [],
+      "form": true,
+      "steps": [
+        "Baixe a ficha A4 de revisão e abra uma cópia no PolyPDF.",
+        "Preencha projeto, data da visita, pessoa responsável pela revisão e referência da prancha.",
+        "Escolha uma disciplina e apenas uma situação; marque as conferências realizadas.",
+        "Escreva uma observação com responsável e próxima ação. Confira se o texto fica visível dentro do campo.",
+        "Para acrescentar um campo, ative a criação de formulários, escolha o tipo e atribua um nome único. Confira sua posição.",
+        "Salve com outro nome, feche e abra o arquivo novamente. Verifique textos, caixas de seleção e situação escolhida."
+      ],
+      "check": "A ficha original contém 10 campos lógicos e 12 widgets. Apenas uma opção do grupo de situação pode ficar marcada. Teste também no leitor usado pelo destinatário.",
+      "pitfall": "Um texto desenhado na página não é um campo preenchível. A aparência antes de salvar não comprova que os valores foram preservados.",
+      "caption": "Ferramentas de criação de campos na interface brasileira."
+    },
+    {
+      "id": "stamps",
+      "title": "Criar um carimbo de revisão com campos variáveis",
+      "intro": "Prepare um carimbo para o projeto dos Ipês, com responsável e data. Coloque-o em uma cópia de A101.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Em Ferramentas, abra os carimbos e escolha criar um carimbo interativo.",
+        "Nomeie o modelo e ajuste suas dimensões em pontos PDF. Essa é a medida do carimbo no papel, independente da escala da edificação.",
+        "Adicione um rótulo e um campo de texto Responsável. Solicite o valor ao posicionar o carimbo e torne o campo obrigatório.",
+        "Acrescente a data e confira a origem do valor e seu formato visível.",
+        "Alinhe os elementos, revise a prévia e salve o modelo no conjunto de ferramentas.",
+        "Insira o carimbo na cópia da planta, preencha os valores solicitados e confira o resultado após salvar e reabrir."
+      ],
+      "check": "Nome e data devem permanecer legíveis, sem sobreposição. Coloque uma segunda instância para verificar se os valores variáveis não ficaram fixos no modelo.",
+      "pitfall": "Um carimbo de revisão não é uma assinatura digital nem comprova, sozinho, uma aprovação contratual.",
+      "caption": "Configuração de campos de um carimbo interativo em português."
+    },
+    {
+      "id": "redaction",
+      "title": "Remover informações e higienizar uma cópia PDF",
+      "intro": "Pratique com o endereço fictício no carimbo de A101. Preserve o original e prepare uma cópia para compartilhamento.",
+      "documents": [
+        "02"
+      ],
+      "steps": [
+        "Localize o endereço no carimbo e pesquise outras ocorrências no documento.",
+        "Ative Ocultar e desenhe uma região sobre o endereço da cópia. A confirmação aparece assim que o retângulo é concluído.",
+        "Confira a região antes de confirmar Aplicar ocultação; cancele se estiver incorreta. Um retângulo opaco de desenho não elimina o conteúdo por baixo dele.",
+        "Abra Documento > Sanitizar Documento. Confira as categorias disponíveis, como metadados e anexos.",
+        "Salve um arquivo novo para entrega, feche e abra novamente.",
+        "Inspecione as regiões e pesquise o texto removido. Confira também comentários, anexos e propriedades antes de compartilhar."
+      ],
+      "check": "O endereço escolhido deve deixar de aparecer na pesquisa e na seleção de texto da cópia final, preservando a aparência do conteúdo que deve permanecer.",
+      "pitfall": "O exercício não garante a higienização de qualquer PDF. Examine os dados realmente presentes e as categorias preservadas pelas opções selecionadas.",
+      "caption": "Opções de higienização na interface brasileira."
+    }
+  ]
+}
