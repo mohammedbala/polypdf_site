@@ -49,7 +49,7 @@ test('defines unique, server-renderable metadata for every public route', () => 
     expect(entry.title.length).toBeLessThanOrEqual(60);
     expect(entry.description.length).toBeGreaterThan(50);
     expect(entry.description.length).toBeLessThanOrEqual(155);
-    expect(['index, follow', 'noindex, follow', 'noindex, nofollow']).toContain(entry.robots);
+    expect(['index, follow, max-image-preview:large', 'noindex, follow', 'noindex, nofollow']).toContain(entry.robots);
   });
   expect(routeMetadata['/account'].robots).toBe('noindex, nofollow');
   // /upgrade is /buy rewritten for someone who already has the app open, so it must never be
@@ -106,11 +106,11 @@ test('unknown URLs receive a truthful noindex 404 identity instead of home-page 
 
 test('separates the current app release from the verified screenshot release', () => {
   expect(siteRelease).toMatchObject({
-    version: '1.6.32',
-    build: '114',
+    version: '1.6.35',
+    build: '117',
     featuredCaptureVersion: '1.5.1',
     featuredCaptureBuild: '23',
-    releaseDate: '2026-11-12',
+    releaseDate: '2026-11-20',
     screenshotVersion: '1.4.3',
     screenshotBuild: '20',
     screenshotCacheToken: '1.4.3-20'

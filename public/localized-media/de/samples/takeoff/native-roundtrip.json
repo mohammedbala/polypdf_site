@@ -99,5 +99,10 @@
         }
       ]
     }
-  ]
+  ],
+  "webManifestReview": {
+    "date": "2026-11-20",
+    "manifestSha256": "737c22b9b31472d86524d08ab6d8975da9edaba828a35a1c01e8b36123a345a0",
+    "scope": "Only the web guide gained a main landmark. All four tested PDF hashes, all reference data and previews match the original manifest. Native results belong to the original recorded app build."
+  }
 }

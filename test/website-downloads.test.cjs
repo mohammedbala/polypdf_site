@@ -5,13 +5,13 @@ const { JSDOM } = require('jsdom');
 const { websiteDownloadHref, downloadPlatform, desktopSetupUrl, safeDesktopSetupUrl } = require('../src/lib/websiteDownloads.js');
 const { localizeLinks } = require('../scripts/international/content.cjs');
 
-test('all four website languages preserve download filenames and the desktop setup language', () => {
-  for (const [id, tag] of Object.entries({ de:'de-DE', fr:'fr-FR', es:'es-ES', 'pt-br':'pt-BR' })) {
+test('each translated page downloads the current desktop release and shares its own setup URL', () => {
+  for (const id of ['de', 'fr', 'es', 'pt-br', 'ar', 'hi', 'zh-cn', 'ja']) {
     const dom = new JSDOM('<a href="/downloads/PolyPDFMac.dmg" download>Mac</a><a href="/downloads/windows/PolyPDFSetup.exe" download>Windows</a><details data-desktop-setup><input readonly type="url" value="https://www.polypdf.com/#download"></details>');
     localizeLinks(dom.window.document, { id }, s => s);
     const anchors = [...dom.window.document.querySelectorAll('a')];
-    assert.deepEqual(anchors.map(a => a.getAttribute('href')), [`/downloads/PolyPDFMac-${tag}.dmg`, `/downloads/windows/PolyPDFSetup-${tag}.exe`]);
-    assert.deepEqual(anchors.map(a => a.download), [`PolyPDFMac-${tag}.dmg`, `PolyPDFSetup-${tag}.exe`]);
+    assert.deepEqual(anchors.map(a => a.getAttribute('href')), ['/downloads/PolyPDFMac.dmg', '/downloads/windows/PolyPDFSetup.exe']);
+    assert.deepEqual(anchors.map(a => a.download), ['PolyPDFMac.dmg', 'PolyPDFSetup.exe']);
     assert.equal(dom.window.document.querySelector('input').value, desktopSetupUrl(id));
     assert.equal(safeDesktopSetupUrl(desktopSetupUrl(id)), desktopSetupUrl(id));
     dom.window.close();
@@ -25,7 +25,9 @@ test('only allowlisted public downloads and setup links receive a language hint'
     assert.equal(websiteDownloadHref(href, 'de'), href);
     assert.equal(downloadPlatform(href), null);
   }
-  for (const value of ['https://elsewhere.test/de/#download', 'https://www.polypdf.com/de/?private=secret#download', 'https://www.polypdf.com/ja/#download']) {
+  assert.equal(websiteDownloadHref('https://www.polypdf.com/downloads/PolyPDFMac-fr-FR.dmg?from=guide#mac', 'fr'),
+    'https://www.polypdf.com/downloads/PolyPDFMac.dmg?from=guide#mac');
+  for (const value of ['https://elsewhere.test/de/#download', 'https://www.polypdf.com/de/?private=secret#download', 'https://www.polypdf.com/it/#download']) {
     assert.equal(safeDesktopSetupUrl(value), 'https://www.polypdf.com/#download');
   }
 });

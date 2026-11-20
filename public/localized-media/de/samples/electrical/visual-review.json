@@ -2,6 +2,20 @@
   "locale": "de-DE",
   "region": "DE",
   "status": "passed",
-  "guideSha256": "658fc57c3f84c942b7eba5f0882d2474ab5f6486aa931391bb7e48a3ef6c5032",
-  "scope": "Full-page German guide inspected in the in-app browser: heading, all three count rows, scale/route instructions and footer readable; every local link resolves. No app execution or platform qualification is claimed."
+  "guideSha256": "a086b99565d3a06339674fd836aea6a6209e4d3fbf6e2a6eaa73a2531bb336c8",
+  "scope": "Full-page German guide inspected in the in-app browser: heading, all three count rows, scale/route instructions and footer readable; every local link resolves. No app execution or platform qualification is claimed.",
+  "priorGuideSha256": "658fc57c3f84c942b7eba5f0882d2474ab5f6486aa931391bb7e48a3ef6c5032",
+  "webReview": {
+    "date": "2026-11-20",
+    "viewports": [
+      390,
+      1440
+    ],
+    "browser": "Chrome",
+    "checks": [
+      "One visible main heading and main landmark",
+      "Page fits both viewport widths",
+      "German symbol-counting guide link resolves"
+    ]
+  }
 }

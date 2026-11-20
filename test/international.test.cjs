@@ -27,7 +27,7 @@ test('localizes only published pages and labels the English checkout handoff',()
  c.localizeLinks(dom.window.document,c.locales[0],s=>s);
  const links=[...dom.window.document.querySelectorAll('a')];
  assert.equal(links[0].getAttribute('href'),'/es/blog/?source=sample#guide');assert.equal(links[1].hreflang,'en');assert.equal(links[1].getAttribute('href'),'/buy/?source=intl_es_article');assert.match(links[1].textContent,/English/);
- assert.equal(links[2].getAttribute('href'),'/downloads/PolyPDFMac-es-ES.dmg');dom.window.close();
+ assert.equal(links[2].getAttribute('href'),'/downloads/PolyPDFMac.dmg');dom.window.close();
 });
 test('translated pages put the metric plan first and link the market sheet, and every language has one',()=>{
  for(const id of ['de','fr','es','pt-br','ja','zh-cn','hi','ar'])assert(c.metricSheetLocales.includes(id),id);

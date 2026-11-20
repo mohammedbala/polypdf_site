@@ -258,7 +258,7 @@ def guide():
     ])
     return f"""<!doctype html><html lang="de-DE"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1"><title>Deutsche Mengenermittlung - Übungsunterlagen</title>
-<style>body{{font:16px/1.6 system-ui,sans-serif;color:#202629;max-width:980px;margin:48px auto;padding:0 24px}}h1{{font-size:2rem}}h2{{margin-top:2em}}a{{color:#075599}}img{{width:100%;height:auto;border:1px solid #ccc}}code{{font-size:.95em}}li{{margin:.5em 0}}.note{{border-left:4px solid #68757a;padding:12px 20px;background:#f4f6f6}}</style></head><body>
+<style>body{{font:16px/1.6 system-ui,sans-serif;color:#202629;max-width:980px;margin:48px auto;padding:0 24px}}h1{{font-size:2rem}}h2{{margin-top:2em}}a{{color:#075599}}img{{width:100%;height:auto;border:1px solid #ccc}}code{{font-size:.95em}}li{{margin:.5em 0}}.note{{border-left:4px solid #68757a;padding:12px 20px;background:#f4f6f6}}</style></head><body><main>
 <h1>Mengenermittlung an deutschen Übungsplänen</h1><p>{html.escape(PROFILE['project'])} · {PROFILE['date']} · {PROFILE['issue']}.</p>
 <p>Fiktive A2-Pläne im Maßstab 1:50. Diese Unterlagen sind keine Ausführungsplanung und kein Nachweis der Normenkonformität. Die Referenzen beruhen auf der gezeichneten Geometrie; sie sind keine App-Exporte.</p>
 <h2>Dateien</h2><ul>{items}</ul>
@@ -276,7 +276,7 @@ def guide():
 <h2>Referenzen und eigene Ergebnisse vergleichen</h2>
 <p>Die UTF-8-CSV-Dateien verwenden Semikolon und Dezimalkomma. Die Bodenbelagsdatei enthält erläuternde Einzelwerte, Abzüge, Zwischen- und Gesamtsummen: Addieren Sie nicht die gesamte Mengenspalte. Prüfen Sie Ihre eigenen Anmerkungen, Einheiten und exportierten Formeln vor einer Weiterverwendung.</p>
 <p class="note">Die englischen historischen Mac-Exporte gehören zu anderen Zeichnungen und Fußmaßen. Sie wurden nicht als deutsche Ergebnisse umetikettiert. Neue deutsche App-Exporte und vollständige Mac-/Windows-/iPad-Übungen werden gesondert dokumentiert.</p>
-</body></html>"""
+</main></body></html>"""
 
 
 def main():

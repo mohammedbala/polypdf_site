@@ -161,6 +161,10 @@ const buildRouteMetadata = () => {
   for (const route of ['/', '/buy', '/windows', '/samples', '/product-facts', '/pdf-takeoff-software', '/measure-pdf-on-mac', '/pdf-measuring-tool', '/visual-search-pdf-count', '/tools/construction-takeoff-spreadsheet']) next[route].dateModified = '2026-11-06';
   for (const route of ['/electrical-takeoff-software', '/flooring-takeoff-software']) next[route].dateModified = '2026-11-06';
   for (const route of ['/privacy', '/cookies']) next[route].dateModified = '2026-11-01';
+  // These pages display the published desktop build or its release notes.
+  for (const route of ['/', '/windows', '/support', '/versions', '/product-facts', '/teams/guide', '/build-a-plugin']) {
+    next[route].dateModified = [next[route].dateModified, siteRelease.releaseDate].filter(Boolean).sort().at(-1);
+  }
   const pdfTools = require('../src/toolkit/catalog.json');
   const toolContent = require('../src/toolkit/page-content.json');
   next['/tools'] = {title: '36 Free Online PDF Tools — No Upload | PolyPDF', description: 'Merge, split, convert, fill, number, and prepare PDFs in your browser. 36 free tools with local processing, previews, downloads, and MCP automation.', robots: 'index, follow', dateModified: '2026-10-18'};

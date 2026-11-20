@@ -67,6 +67,42 @@ const smokeHeaders = {
   'User-Agent': 'PolyPDF-Deploy-Monitor/1.0'
 };
 
+export async function verifyPublishedReleaseFeeds(base, fetchImpl = fetch) {
+  const results = [];
+  const appcastResponse = await fetchImpl(`${base}${releaseFeedRoutes[0]}?smoke=${Date.now()}`, {
+    headers: smokeHeaders
+  });
+  const appcast = await appcastResponse.text();
+  const firstAppcastItem = appcast.match(/<item>[\s\S]*?<\/item>/)?.[0] || '';
+  const macVersion = firstAppcastItem.match(/<sparkle:shortVersionString>([^<]+)<\/sparkle:shortVersionString>/)?.[1];
+  const macBuild = firstAppcastItem.match(/<sparkle:version>([^<]+)<\/sparkle:version>/)?.[1];
+  assertResponse(appcastResponse.ok, `${releaseFeedRoutes[0]} returned HTTP ${appcastResponse.status}`);
+  assertResponse(
+    macVersion === siteRelease.version && macBuild === String(siteRelease.build),
+    `macOS update feed is ${macVersion || 'unknown'} build ${macBuild || 'unknown'}, but the website advertises ${siteRelease.version} build ${siteRelease.build}`
+  );
+  results.push({ route: releaseFeedRoutes[0], status: appcastResponse.status });
+
+  const windowsFeedResponse = await fetchImpl(`${base}${releaseFeedRoutes[1]}?smoke=${Date.now()}`, {
+    headers: smokeHeaders
+  });
+  const windowsFeed = await windowsFeedResponse.text();
+  const windowsVersion = windowsFeed.match(/^version:\s*['"]?([^'"\s]+)['"]?\s*$/m)?.[1];
+  const installerIdentity = windowsFeed.match(/^path:\s*['"]?PolyPDFSetup-v([^-'"\s]+)-(\d+)\.exe['"]?\s*$/m);
+  const windowsInstallerVersion = installerIdentity?.[1];
+  const windowsBuild = installerIdentity?.[2];
+  assertResponse(windowsFeedResponse.ok, `${releaseFeedRoutes[1]} returned HTTP ${windowsFeedResponse.status}`);
+  assertResponse(
+    windowsVersion === siteRelease.version
+      && windowsInstallerVersion === siteRelease.version
+      && windowsBuild === String(siteRelease.build),
+    `Windows update feed is ${windowsVersion || 'unknown'} build ${windowsBuild || 'unknown'}, but the website advertises ${siteRelease.version} build ${siteRelease.build}`
+  );
+  results.push({ route: releaseFeedRoutes[1], status: windowsFeedResponse.status });
+
+  return results;
+}
+
 export async function runPostDeploySmoke({
   baseURL = 'https://www.polypdf.com',
   fetchImpl = fetch,
@@ -323,36 +359,7 @@ export async function runPostDeploySmoke({
   );
   results.push({ route: mainBundlePath, status: bundleResponse.status });
 
-  const appcastResponse = await fetchImpl(`${base}${releaseFeedRoutes[0]}?smoke=${Date.now()}`, {
-    headers: smokeHeaders
-  });
-  const appcast = await appcastResponse.text();
-  const firstAppcastItem = appcast.match(/<item>[\s\S]*?<\/item>/)?.[0] || '';
-  const macVersion = firstAppcastItem.match(/<sparkle:shortVersionString>([^<]+)<\/sparkle:shortVersionString>/)?.[1];
-  const macBuild = firstAppcastItem.match(/<sparkle:version>([^<]+)<\/sparkle:version>/)?.[1];
-  assertResponse(appcastResponse.ok, `${releaseFeedRoutes[0]} returned HTTP ${appcastResponse.status}`);
-  assertResponse(
-    macVersion === siteRelease.version && macBuild === String(siteRelease.build),
-    `macOS update feed is ${macVersion || 'unknown'} build ${macBuild || 'unknown'}, but the website advertises ${siteRelease.version} build ${siteRelease.build}`
-  );
-  results.push({ route: releaseFeedRoutes[0], status: appcastResponse.status });
-
-  const windowsFeedResponse = await fetchImpl(`${base}${releaseFeedRoutes[1]}?smoke=${Date.now()}`, {
-    headers: smokeHeaders
-  });
-  const windowsFeed = await windowsFeedResponse.text();
-  const windowsVersion = windowsFeed.match(/^version:\s*['"]?([^'"\s]+)['"]?\s*$/m)?.[1];
-  const installerIdentity = windowsFeed.match(/^path:\s*['"]?PolyPDFSetup-v([^-'"\s]+)-(\d+)\.exe['"]?\s*$/m);
-  const windowsInstallerVersion = installerIdentity?.[1];
-  const windowsBuild = installerIdentity?.[2];
-  assertResponse(windowsFeedResponse.ok, `${releaseFeedRoutes[1]} returned HTTP ${windowsFeedResponse.status}`);
-  assertResponse(
-    windowsVersion === siteRelease.version
-      && windowsInstallerVersion === siteRelease.version
-      && windowsBuild === String(siteRelease.build),
-    `Windows update feed is ${windowsVersion || 'unknown'} build ${windowsBuild || 'unknown'}, but the website advertises ${siteRelease.version} build ${siteRelease.build}`
-  );
-  results.push({ route: releaseFeedRoutes[1], status: windowsFeedResponse.status });
+  results.push(...await verifyPublishedReleaseFeeds(base, fetchImpl));
 
   for (const route of downloadRoutes) {
     const response = await fetchImpl(`${base}${route}`, {
@@ -435,10 +442,11 @@ function argumentValue(flag) {
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {
-  runPostDeploySmoke({
-    baseURL: argumentValue('--base-url') || process.env.POLYPDF_SITE_BASE_URL || 'https://www.polypdf.com',
-    requireCheckout: !process.argv.includes('--skip-checkout')
-  })
+  const baseURL = argumentValue('--base-url') || process.env.POLYPDF_SITE_BASE_URL || 'https://www.polypdf.com';
+  const checks = process.argv.includes('--release-feeds-only')
+    ? verifyPublishedReleaseFeeds(baseURL.replace(/\/+$/, ''))
+    : runPostDeploySmoke({ baseURL, requireCheckout: !process.argv.includes('--skip-checkout') });
+  checks
     .then((results) => {
       for (const result of results) {
         console.log(`ok ${result.status} ${result.route}`);

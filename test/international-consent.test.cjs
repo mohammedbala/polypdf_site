@@ -38,7 +38,7 @@ test('analytics-only consent uses the shared safe page context and controlled do
   const config = w.dataLayer.find(item => item[0] === 'config');
   assert.equal(config[1], 'G-GB6LW050TM');
   assert.equal(config[2].page_location, 'https://www.polypdf.com/es/pdf-takeoff-software/');
-  const download = d.querySelector('a[href="/downloads/PolyPDFMac-es-ES.dmg"]');
+  const download = d.querySelector('a[href="/downloads/PolyPDFMac.dmg"]');
   download.addEventListener('click', event => event.preventDefault()); download.click();
   const event = w.dataLayer.find(item => item[1] === 'download_click');
   assert.equal(event[2].platform, 'mac'); assert.equal(event[2].cta_source, 'localized_content');
@@ -69,7 +69,7 @@ test('built translated tracking carries safe AI referral context into a download
   assert.equal(view[2].acquisition_source, 'perplexity');
   assert.equal(view[2].acquisition_channel, 'ai_referral');
   assert.equal(view[2].acquisition_basis, 'referrer');
-  const download = d.querySelector('a[href="/downloads/PolyPDFMac-es-ES.dmg"]');
+  const download = d.querySelector('a[href="/downloads/PolyPDFMac.dmg"]');
   download.addEventListener('click', event => event.preventDefault()); download.click();
   const event = w.dataLayer.find(item => item[1] === 'download_click');
   assert.equal(event[2].entry_page, '/es/pdf-takeoff-software/');
@@ -85,7 +85,7 @@ test('built translated tracking carries safe AI referral context into a download
 test('translated primary evaluation keeps installer, sample and guide events distinct', () => {
   const dom = page(); const w = dom.window, d = w.document;
   try {
-    const download = d.querySelector('a[href="/downloads/PolyPDFMac-es-ES.dmg"]');
+    const download = d.querySelector('a[href="/downloads/PolyPDFMac.dmg"]');
     const exercise = download.closest('.dl-cta').querySelector('.dl-evaluation');
     const sample = d.querySelector('#construction-example-takeoff a[href="/samples/construction/02-Architectural-Revision-A.pdf"]');
     const guide = exercise.querySelector('[data-evaluation-target="guide"]');

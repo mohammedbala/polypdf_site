@@ -15,7 +15,7 @@
   "scaleRatio": 50,
   "pointsPerMetre": 56.69291338582678,
   "profileSha256": "abb43b57618c8afbdc2e35a731c9f66b46995abb392a68e68756188ef13e3115",
-  "generatorSha256": "55c63f53e4c7681b3ae455bd5bf02c016afb617a5aa57c2b47ff8a0ce6101a71",
+  "generatorSha256": "e00b7a66b99ac1361192fcd3834cfe3a211879a9f412191a87ac80a814446ed8",
   "drawingGeometrySourceSha256": "1c4966c29c56763897453e5dd4013566c32a5585e36fdaf3d80ecc8b5c4ec582",
   "flooring": {
     "file": "bodenbelag-uebung.pdf",
@@ -301,7 +301,7 @@
     "README.md": "README.html"
   },
   "files": {
-    "README.html": "78fd407f336f6bc9e55b57589a028dd64fbf338fbc4e094bf3c76412e939799b",
+    "README.html": "8e928b6228af40527fe28d797a8a08c5b158264defb969cefe1387a50e21e52c",
     "bodenbelag-referenz.csv": "1b78cad54428d9f2580cc3e073561c714697af9d07a07833f02bd8d3bb7036f6",
     "bodenbelag-referenz.pdf": "dbf9c90967c8039c199f0f1d739e443ddc23df4aa434e916b8fe7db88b5ebe4c",
     "bodenbelag-referenz.png": "8415fec361d2dfc4582c8db1212c672681efa036e6bd2d4fd5eff562cee4a1ee",

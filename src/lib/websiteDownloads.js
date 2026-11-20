@@ -1,5 +1,11 @@
 'use strict';
-const languages = require('./websiteDownloadLanguages.json');
+const siteRelease = require('./siteRelease.json');
+const localizedRelease = require('./websiteDownloadLanguages.json');
+const { languages } = localizedRelease;
+const siteLocales = require('./locales.json');
+// Language-specific installers are published separately from the stable download URLs.
+const localizedInstallersCurrent = localizedRelease.version === siteRelease.version
+  && localizedRelease.build === siteRelease.build;
 const ORIGIN = 'https://www.polypdf.com';
 const paths = { mac: '/downloads/PolyPDFMac.dmg', windows: '/downloads/windows/PolyPDFSetup.exe' };
 const localizedPath = (platform, tag) => platform === 'mac'
@@ -16,9 +22,10 @@ function downloadPlatform(raw) {
 
 function websiteDownloadHref(raw, localeId) {
   const platform = downloadPlatform(raw), tag = languages[localeId];
-  if (!platform || typeof tag !== 'string') return raw;
+  if (!platform) return raw;
   const url = new URL(raw, ORIGIN);
-  const result = localizedPath(platform, tag) + url.search + url.hash;
+  const pathname = localizedInstallersCurrent && typeof tag === 'string' ? localizedPath(platform, tag) : paths[platform];
+  const result = pathname + url.search + url.hash;
   return raw.startsWith('/') && !raw.startsWith('//') ? result : ORIGIN + result;
 }
 
@@ -27,9 +34,8 @@ function downloadFilename(raw) {
 }
 
 const DESKTOP_SETUP_URL = ORIGIN + '/#download';
-const desktopSetupUrl = localeId => typeof languages[localeId] === 'string'
-  ? `${ORIGIN}/${localeId}/#download` : DESKTOP_SETUP_URL;
-const safeDesktopSetupUrl = value => Object.keys(languages).map(desktopSetupUrl).includes(value)
-  ? value : DESKTOP_SETUP_URL;
+const setupLinks = new Map(siteLocales.map(({ id }) => [id, `${ORIGIN}/${id}/#download`]));
+const desktopSetupUrl = localeId => setupLinks.get(localeId) || DESKTOP_SETUP_URL;
+const safeDesktopSetupUrl = value => [...setupLinks.values()].includes(value) ? value : DESKTOP_SETUP_URL;
 
 module.exports = { websiteDownloadHref, downloadPlatform, downloadFilename, desktopSetupUrl, safeDesktopSetupUrl, DESKTOP_SETUP_URL };

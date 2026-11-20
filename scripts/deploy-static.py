@@ -270,6 +270,8 @@ def clean_source(repo, sha):
 def run_local(args):
     repo = Path(__file__).resolve().parent.parent
     clean_source(repo, args.source_sha)
+    subprocess.run(["node", "scripts/post-deploy-smoke.mjs", "--base-url", ORIGIN, "--release-feeds-only"],
+                   cwd=repo, check=True)
     evidence = repo / ".tmp" / "deploy-static" / args.source_sha
     evidence.mkdir(parents=True, exist_ok=True)
     if args.activate:

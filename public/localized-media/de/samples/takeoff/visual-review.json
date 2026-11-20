@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "manifestSha256": "d1a6e685f6acd8b9d04a45683abab11d19601256b7c6a8e101ddc9749a522607",
+  "manifestSha256": "737c22b9b31472d86524d08ab6d8975da9edaba828a35a1c01e8b36123a345a0",
   "checks": [
     "Four final PDF pages inspected at full rendered size",
     "German copy, accents, dimensions, legend, title blocks and tables legible",
@@ -16,7 +16,7 @@
     "elektro-uebung.png": "3d2d30765892734954bee4737f3dbd4afdf1072f4c051ab4983870e92c6c1b76"
   },
   "scope": "PDF page rendering only; HTML guide and app output review recorded separately",
-  "guideSha256": "78fd407f336f6bc9e55b57589a028dd64fbf338fbc4e094bf3c76412e939799b",
+  "guideSha256": "8e928b6228af40527fe28d797a8a08c5b158264defb969cefe1387a50e21e52c",
   "guideReview": {
     "status": "passed",
     "surface": "Built-in browser, full-page screenshot",
@@ -24,6 +24,20 @@
       "Both German source previews loaded",
       "Six localized downloads present",
       "Regional units, arithmetic and provenance readable; no clipped text"
+    ]
+  },
+  "priorGuideSha256": "78fd407f336f6bc9e55b57589a028dd64fbf338fbc4e094bf3c76412e939799b",
+  "webReview": {
+    "date": "2026-11-20",
+    "viewports": [
+      390,
+      1440
+    ],
+    "browser": "Chrome",
+    "checks": [
+      "One visible main heading and main landmark",
+      "Page fits both viewport widths",
+      "Both source plan previews load"
     ]
   }
 }

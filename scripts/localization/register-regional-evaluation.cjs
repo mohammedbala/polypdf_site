@@ -63,6 +63,9 @@ pack.regionalText = { ...pack.regionalText,
   }
 };
 const registry = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/product-locales.json'))).locales;
-verifyMediaFiles(media, registry, asset => fs.readFileSync(path.join(root, 'public', asset)), ['de']);
+verifyMediaFiles(media, registry, asset => {
+  const publicFile = path.join(root, 'public', asset);
+  return fs.readFileSync(fs.existsSync(publicFile) ? publicFile : path.join(root, 'build', asset));
+}, ['de']);
 fs.writeFileSync(mediaPath, JSON.stringify(media, null, 2)+'\n');
 console.log(`Registered German evaluation kit, references, blank results and regional exercise text. Pack status: ${pack.status}.`);

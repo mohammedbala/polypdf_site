@@ -3,7 +3,7 @@
     "title": "Construction PDF Takeoff & Markup Software | PolyPDF",
     "description": "Measure PDF drawings, count symbols, compare revisions, and review markups on Mac and Windows. Start free; unlock PolyPDF Pro with one payment.",
     "robots": "index, follow, max-image-preview:large",
-    "dateModified": "2026-11-06"
+    "dateModified": "2026-11-20"
   },
   "/buy": {
     "title": "Buy PolyPDF Pro Once | Measurements, Search & Plugins",
@@ -19,7 +19,8 @@
   "/build-a-plugin": {
     "title": "Build a PolyPDF Plugin | Developer Guide",
     "description": "Build signed, no-code PolyPDF plugin packages with Node and a drawing tool. Installing and running plugin workflows requires PolyPDF Pro.",
-    "robots": "index, follow, max-image-preview:large"
+    "robots": "index, follow, max-image-preview:large",
+    "dateModified": "2026-11-20"
   },
   "/account": {
     "title": "PolyPDF Account | Manage Your License",
@@ -241,13 +242,14 @@
   "/support": {
     "title": "PolyPDF Support | Help With PDF Measurement and Licensing",
     "description": "Get help with PolyPDF installation, PDF measurement and markup workflows, license activation, and account access.",
-    "robots": "index, follow, max-image-preview:large"
+    "robots": "index, follow, max-image-preview:large",
+    "dateModified": "2026-11-20"
   },
   "/windows": {
     "title": "PolyPDF for Windows | PDF Measurement and Markup",
     "description": "Download PolyPDF for Windows 10 and 11. Measure PDF drawings, review markups, and compare revisions. Start free with no trial timer.",
     "robots": "index, follow, max-image-preview:large",
-    "dateModified": "2026-11-06"
+    "dateModified": "2026-11-20"
   },
   "/terms": {
     "title": "Terms of Use | PolyPDF",
@@ -257,7 +259,8 @@
   "/versions": {
     "title": "PolyPDF Version History | Release Notes",
     "description": "Read PolyPDF release notes for Mac and Windows, including current versions, fixes, and the update history for your desktop app.",
-    "robots": "index, follow, max-image-preview:large"
+    "robots": "index, follow, max-image-preview:large",
+    "dateModified": "2026-11-20"
   },
   "/revision-packages": {
     "title": "Revision Package Workflow for PDF Drawings | PolyPDF",
@@ -319,7 +322,7 @@
     "title": "PolyPDF Teams Setup Guide | Install, Assign & Sign In",
     "description": "Set up the PolyPDF License Manager, connect Microsoft Entra, assign team seats and help employees sign in. Includes troubleshooting and server maintenance.",
     "robots": "index, follow, max-image-preview:large",
-    "dateModified": "2026-09-25"
+    "dateModified": "2026-11-20"
   },
   "/bluebeam-alternative-for-mac": {
     "title": "Bluebeam Alternative for Mac | PolyPDF Takeoff & Markup",
@@ -376,7 +379,7 @@
     "title": "PolyPDF Product Facts: Platforms, Free & Pro, Limits",
     "description": "Check PolyPDF platform requirements, Free and Pro limits, one-time licensing, local processing, exports, and version-labeled sample files.",
     "robots": "index, follow, max-image-preview:large",
-    "dateModified": "2026-11-06"
+    "dateModified": "2026-11-20"
   },
   "/tools/pdf-scale-checker": {
     "title": "PDF Scale Accuracy Checker: Free Reference Check | PolyPDF",

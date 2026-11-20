@@ -2,6 +2,14 @@
 
 This guide explains how to deploy the PolyPDF landing page and its direct-download artifacts to the production server.
 
+## Updating the website for a published desktop release
+
+Start from the site commit selected by the production `current` symlink. Production can be ahead of the default Git branch. Check the Mac appcast, the Windows feed, and both linked release notes before updating `src/lib/siteRelease.json`. The homepage, structured data, support pages, and evaluation kit read this record. Update the eight marketing translation catalogs and keep the previous build in the fallback version history.
+
+Language-specific installers have a separate publication record in `src/lib/websiteDownloadLanguages.json`. Update that record when the corresponding installers are public and verified. Other desktop releases use the stable Mac and Windows URLs. Shared setup links use the website language.
+
+Run `npm run build:english`, then `node scripts/localization/register-regional-evaluation.cjs` to bind the translated kit to the regenerated English source. Run the full build with `PAGE_DATES_RECORD=YYYY-MM-DD npm run build`, using the actual website revision date. Check the built site with `npm run verify:navigation`. The two-phase website publisher checks both live desktop feeds before staging and again before activation. Both operations use the same reviewed website commit.
+
 ## Prerequisites
 
 1. A DigitalOcean droplet (or any Linux server)

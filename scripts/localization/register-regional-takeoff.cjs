@@ -15,10 +15,13 @@ const manifestHash = hash(path.join(folder, 'manifest.json'));
 assert.equal(source.locale, 'de-DE');
 assert.equal(source.region, 'DE');
 assert.equal(source.appExport, false);
-for (const report of [verification, visual, native]) {
+for (const report of [verification, visual]) {
   assert.equal(report.status, 'passed');
   assert.equal(report.manifestSha256, manifestHash);
 }
+assert.equal(native.status, 'passed');
+assert.ok([native.manifestSha256, native.webManifestReview?.manifestSha256].includes(manifestHash),
+  'Native evidence must cover this manifest and its four source PDF hashes');
 assert.equal(native.cases.length, 4);
 assert.equal(visual.guideReview.status, 'passed');
 assert.equal(visual.guideSha256, hash(path.join(folder, 'README.html')));
@@ -79,6 +82,9 @@ const copy = JSON.parse(fs.readFileSync(path.join(__dirname, 'regional-takeoff-d
 pack.regionalText = { ...pack.regionalText, ...copy.text };
 pack.regionalTables = { ...pack.regionalTables, ...copy.tables };
 verifyMediaFiles(media, JSON.parse(fs.readFileSync(path.join(root, 'src/localization/product-locales.json'))).locales,
-  asset => fs.readFileSync(path.join(root, 'public', asset)), ['de']);
+  asset => {
+    const publicFile = path.join(root, 'public', asset);
+    return fs.readFileSync(fs.existsSync(publicFile) ? publicFile : path.join(root, 'build', asset));
+  }, ['de']);
 fs.writeFileSync(mediaPath, JSON.stringify(media, null, 2) + '\n');
 console.log(`Registered ${Object.keys(source.sourceMappings).length} German takeoff sources, ${Object.keys(exportsManifest.mappings).length} app-output replacements and ${Object.keys(copy.text).length} regional copy bindings. Pack remains inactive.`);

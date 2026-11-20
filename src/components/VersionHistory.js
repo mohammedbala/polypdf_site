@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { FaArrowLeft, FaTag, FaApple, FaWindows } from 'react-icons/fa';
 import parrotIcon from '../assets/polypdf_icon-96.png';
 import stampBuilderImage from '../assets/screenshots/stamp-builder-v1-5-1.png';
-import { releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, release164Highlights, release165Highlights, release166Highlights, release167Highlights, release1613Highlights, release1615Highlights, release1616Highlights, release1619Highlights, release1620Highlights, release1621Highlights, release1622Highlights, release1623Highlights, release1626Highlights, release1629Highlights, release1627Highlights, releaseAnswer } from '../lib/releaseHighlights';
+import { release1632Highlights, releaseHighlights, release152Highlights, release153Highlights, release154Highlights, release154WindowsFix, release155Highlights, release156Highlights, release157Highlights, release158Highlights, release160Highlights, release161Highlights, release162Highlights, release164Highlights, release165Highlights, release166Highlights, release167Highlights, release1613Highlights, release1615Highlights, release1616Highlights, release1619Highlights, release1620Highlights, release1621Highlights, release1622Highlights, release1623Highlights, release1626Highlights, release1629Highlights, release1627Highlights, releaseAnswer } from '../lib/releaseHighlights';
 import siteRelease from '../lib/siteRelease.json';
 
 // This page reads the same feeds the apps update from — the Sparkle appcast on Mac and
@@ -93,9 +93,17 @@ export const fetchWindowsRelease = async () => {
 
 // Human summaries, keyed by platform, version and build. A release the feed carries without an entry
 // here still renders — it just shows its date and its release-notes link.
+const release115 = ['Print the current view, use Full Screen Editing, and sort filenames in natural order when combining PDFs.'];
+const release116 = ['Open detailed drawings more reliably, synchronize zoom and pan in split views, and retain visible signatures on printed copies.'];
 const RELEASE_PROSE = {
-  'macOS 1.6.32 (114)': [releaseAnswer],
-  'Windows 1.6.32 (114)': [releaseAnswer],
+  'macOS 1.6.34 (116)': release116,
+  'Windows 1.6.34 (116)': release116,
+  'macOS 1.6.33 (115)': release115,
+  'Windows 1.6.33 (115)': release115,
+  [`macOS ${siteRelease.version} (${siteRelease.build})`]: [releaseAnswer],
+  [`Windows ${siteRelease.version} (${siteRelease.build})`]: [releaseAnswer],
+  'macOS 1.6.32 (114)': release1632Highlights,
+  'Windows 1.6.32 (114)': release1632Highlights,
   'macOS 1.6.29 (101)': release1629Highlights,
   'Windows 1.6.29 (101)': release1629Highlights,
   'macOS 1.6.27 (99)': release1627Highlights,
@@ -275,6 +283,14 @@ const proseKey = (release) => `${release.platform} ${release.version} (${release
 const FALLBACK_RELEASES = [
   { platform: 'macOS', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/PolyPDFMac-v${siteRelease.version}-${siteRelease.build}.html` },
   { platform: 'Windows', version: siteRelease.version, build: Number(siteRelease.build), date: formatFeedDate(siteRelease.releaseDate), notes: `/downloads/windows/PolyPDFWin-v${siteRelease.version}-${siteRelease.build}.html` },
+  ...[
+    { version: '1.6.34', build: 116, macDate: 'November 18, 2026', windowsDate: 'November 19, 2026' },
+    { version: '1.6.33', build: 115, macDate: 'November 13, 2026', windowsDate: 'November 13, 2026' },
+    { version: '1.6.32', build: 114, macDate: 'November 10, 2026', windowsDate: 'November 12, 2026' }
+  ].flatMap(({ version, build, macDate, windowsDate }) => [
+    { platform: 'macOS', version, build, date: macDate, notes: `/downloads/PolyPDFMac-v${version}-${build}.html` },
+    { platform: 'Windows', version, build, date: windowsDate, notes: `/downloads/windows/PolyPDFWin-v${version}-${build}.html` }
+  ]),
   { platform: 'macOS', version: '1.6.25', build: 96, date: 'October 29, 2026', notes: '/downloads/PolyPDFMac-v1.6.25-96.html' },
   { platform: 'Windows', version: '1.6.25', build: 96, date: 'October 29, 2026', notes: '/downloads/windows/PolyPDFWin-v1.6.25-96.html' },
   { platform: 'macOS', version: '1.6.23', build: 90, date: 'October 26, 2026', notes: '/downloads/PolyPDFMac-v1.6.23-90.html' },

@@ -1,7 +1,8 @@
 {
-  "version": "1.6.32",
-  "build": "114",
-  "releaseDate": "2026-11-12",
+  "version": "1.6.35",
+  "build": "117",
+  "releaseDate": "2026-11-20",
+  "summary": "Align drawing revisions with three matching points, open images as PDFs, and keep your zoom and position when turning pages in single-page view.",
   "screenshotVersion": "1.4.3",
   "screenshotBuild": "20",
   "screenshotCacheToken": "1.4.3-20",

@@ -11,7 +11,7 @@ const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).d
 const manifest = read('manifest.json');
 const verification = read('verification.json');
 const visual = read('visual-review.json');
-const page = read('page-validation.json');
+const page = read('../../guides114/electrical-preview-verification.json');
 const library = path.join(folder, '../construction');
 const sourceHash = hash(path.join(library, 'DEMO-MANIFEST.json'));
 const native = JSON.parse(fs.readFileSync(path.join(library, 'native-roundtrip.json')));
@@ -47,6 +47,9 @@ const copy = JSON.parse(fs.readFileSync(path.join(__dirname, 'regional-electrica
 pack.regionalText = { ...pack.regionalText, ...copy.text };
 pack.regionalTables = { ...pack.regionalTables, ...copy.tables };
 const registry = JSON.parse(fs.readFileSync(path.join(root, 'src/localization/product-locales.json'))).locales;
-verifyMediaFiles(media, registry, asset => fs.readFileSync(path.join(root, 'public', asset)), ['de']);
+verifyMediaFiles(media, registry, asset => {
+    const publicFile = path.join(root, 'public', asset);
+    return fs.readFileSync(fs.existsSync(publicFile) ? publicFile : path.join(root, 'build', asset));
+  }, ['de']);
 fs.writeFileSync(mediaPath, JSON.stringify(media, null, 2)+'\n');
 console.log(`Registered German electrical review and three-category exercise. Pack status: ${pack.status}.`);

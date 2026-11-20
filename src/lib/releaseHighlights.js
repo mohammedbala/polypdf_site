@@ -1,3 +1,5 @@
+import siteRelease from './siteRelease.json';
+
 export const releaseHighlights = Object.freeze([
   'Create interactive stamps on a blank canvas. Arrange and style fields, enter values when placing a stamp, and optionally save it to a toolset for reuse.',
   'Use expanded Architectural, Landscape, Windows, and Fire Protection symbol libraries from the Tools sidebar.',
@@ -89,7 +91,9 @@ const release167Answer = "PolyPDF 1.6.7 (build 39) fixes repeated Save errors af
 
 export const release167Highlights = Object.freeze([release167Answer]);
 
-export const releaseAnswer = "PolyPDF 1.6.32 (build 114) fixes saving edited markups, flattening, saving large combined PDFs, and reducing embedded photos. Mac printing respects the chosen scale. Collaboration Host 1.6.22 remains current.";
+export const release1632Highlights = Object.freeze(["PolyPDF 1.6.32 (build 114) fixes saving edited markups, flattening, saving large combined PDFs, and reducing embedded photos. Mac printing respects the chosen scale. Collaboration Host 1.6.22 remains current."]);
+
+export const releaseAnswer = `PolyPDF ${siteRelease.version} (build ${siteRelease.build}). ${siteRelease.summary}`;
 
 export const release1613Highlights = Object.freeze(["PolyPDF 1.6.15 (build 82) lets a company administrator allow up to three computers per named Teams employee on one seat. Upgrade License Manager to 1.0.2 and paired Collaboration Hosts to 1.6.15 before changing the company-wide limit; existing installations stay at one computer until an administrator opts in."]);
 

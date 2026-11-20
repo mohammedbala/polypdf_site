@@ -68,7 +68,7 @@ def build(source, output):
 <p>Für die Übung mit drei manuellen Messungen verwenden Sie die unabhängige Gebäudebreite und die ersten beiden Linienabschnitte (6,5 m und 22 m). Die Kalibrierung legt den Maßstab fest. Für alle drei Abschnitte zusätzlich zur Breitenprüfung benötigen Sie eine weitere Messung.</p>
 <p>Das Stromlaufschema auf E501 ist ohne Maßstab. Nur das gesondert beschriftete Leuchtendetail verwendet 1:5 mit einer eigenen 0,50-m-Referenz; wenden Sie darauf nicht den Maßstab des Grundrisses an.</p>
 <h2>Weitergabe</h2><p>Die CSV verwendet UTF-8, Semikolons und deutsche Überschriften. Ordnen Sie jeder geprüften Menge Blatt, Revision, Bezeichnung und Einheit zu. Materialpreise, Arbeitszeiten, Zuschläge und tatsächlich benötigte Leitungswege sind separat zu bestimmen.</p>
-<p><a href="manifest.json">Quellen und Referenzdaten</a> · <a href="../construction/DEMO-MANIFEST.json">Zeichnungsnachweis</a> · <a href="https://www.polypdf.com/de/electrical-takeoff-software/">Elektro-Aufmaß mit PolyPDF</a></p>
+<p><a href="manifest.json">Quellen und Referenzdaten</a> · <a href="../construction/DEMO-MANIFEST.json">Zeichnungsnachweis</a> · <a href="https://www.polypdf.com/de/blog/count-pdf-symbols/">Symbole im PDF-Plan zählen</a></p>
 """).encode("utf-8")
     record = {
         "locale": "de-DE", "region": "DE", "preparedAt": "2026-10-20", "referenceOnly": True,

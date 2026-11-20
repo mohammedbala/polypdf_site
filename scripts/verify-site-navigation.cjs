@@ -7,8 +7,13 @@ const build = path.resolve(process.env.BUILD_PATH || 'build');
 const metadata = require('../src/lib/route-metadata.json');
 const localized = JSON.parse(fs.readFileSync(path.join(build, 'international-manifest.json'), 'utf8')).routes;
 const toolkitLocalized = JSON.parse(fs.readFileSync(path.join(build, 'toolkit-international-manifest.json'), 'utf8')).routes;
-const supplemental = ['/404.html', '/samples/construction/DEMO-GUIDE.html', '/samples/electrical/README.html', '/samples/evaluation/START-HERE.html', '/samples/evaluation/local-build-1.6.14-76/verification.html', '/samples/evaluation/public-mac-1.6.27-99/verification.html', '/samples/evaluation/public-mac-1.6.27-99/flooring-verification.html', '/samples/evaluation/public-mac-1.6.27-99/electrical-verification.html', '/samples/evaluation/public-mac-1.6.29-101/metric-verification.html'];
-const routes = [...Object.keys(metadata), ...localized.map(entry => entry.route), ...toolkitLocalized.map(entry => entry.route), ...supplemental];
+const registered = [...Object.keys(metadata), ...localized.map(entry => entry.route), ...toolkitLocalized.map(entry => entry.route)];
+const registeredFiles = new Set(registered.map(route => path.posix.join(route, 'index.html')));
+const supplemental = fs.readdirSync(build, { recursive: true })
+  .filter(file => file.endsWith('.html'))
+  .map(file => '/' + file.split(path.sep).join('/'))
+  .filter(route => !registeredFiles.has(route));
+const routes = [...registered, ...supplemental];
 const origin = 'https://www.polypdf.com';
 const documents = new Map();
 const targetIds = new Map();

@@ -8,7 +8,7 @@ test('defines six substantial, uniquely attributed workflow landing pages', () =
   expect(new Set(landingPageRoutes.map(({ title }) => title)).size).toBe(6);
 
   landingPageRoutes.forEach((page) => {
-    expect(routeMetadata[page.path]?.robots).toBe('index, follow');
+    expect(routeMetadata[page.path]?.robots).toBe('index, follow, max-image-preview:large');
     expect(page.source).toMatch(/^landing_[a-z0-9_]+$/);
     expect(page.title.length).toBeGreaterThan(35);
     expect(page.problemCopy.length).toBeGreaterThan(140);
@@ -30,7 +30,7 @@ test('defines six substantial, uniquely attributed workflow landing pages', () =
     expect(new Set(relatedPaths).size).toBe(page.related.length);
     relatedPaths.forEach((path) => {
       expect(path).not.toBe(page.path);
-      expect(routeMetadata[path]?.robots).toBe('index, follow');
+      expect(routeMetadata[path]?.robots).toBe('index, follow, max-image-preview:large');
     });
   });
 });

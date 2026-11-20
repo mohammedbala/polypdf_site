@@ -1,6 +1,10 @@
 {
-  "de": "de-DE",
-  "fr": "fr-FR",
-  "es": "es-ES",
-  "pt-br": "pt-BR"
+  "version": "1.6.32",
+  "build": "114",
+  "languages": {
+    "de": "de-DE",
+    "fr": "fr-FR",
+    "es": "es-ES",
+    "pt-br": "pt-BR"
+  }
 }
